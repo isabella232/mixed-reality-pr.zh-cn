@@ -1,0 +1,129 @@
+---
+title: Unity 开发概述
+description: 在 Unity 中构建混合现实应用入门。
+author: thetuvix
+ms.author: kurtie
+ms.date: 08/04/2020
+ms.topic: article
+ms.localizationpriority: high
+keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档
+ms.openlocfilehash: ed6e3482194b17ec3b6dfa2abe309f3519c64662
+ms.sourcegitcommit: 9ab467e36d7d9fad51b0e93a56038a6421a7b09d
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91980308"
+---
+# <a name="unity-development-overview"></a><span data-ttu-id="84de5-104">Unity 开发概述</span><span class="sxs-lookup"><span data-stu-id="84de5-104">Unity development overview</span></span>
+
+![Unity 横幅徽标](../images/unity_logo_banner.png)
+
+<span data-ttu-id="84de5-106">在 [Unity](https://unity.com) 中生成[混合现实应用](../../design/app-views.md)的最快途径是使用混合现实工具包。</span><span class="sxs-lookup"><span data-stu-id="84de5-106">The fastest path to building a [mixed reality app](../../design/app-views.md) in [Unity](https://unity.com) is with the Mixed Reality Toolkit.</span></span> <span data-ttu-id="84de5-107">如果你尚不熟悉 Unity，我们建议你先在 Unity Learn 平台上浏览初学者级别[教程](https://unity3d.com/learn/tutorials)，然后再继续操作。</span><span class="sxs-lookup"><span data-stu-id="84de5-107">If you're brand new to Unity, we recommend that you explore the beginner level [tutorials](https://unity3d.com/learn/tutorials) on the Unity Learn platform before continuing.</span></span> <span data-ttu-id="84de5-108">访问综合性的 [Asset Store](https://www.assetstore.unity3d.com/) 和 [Unity 混合现实论坛](https://forum.unity3d.com/forums/hololens.102/)，与在线社区一起生成混合现实应用程序也是一个好主意。</span><span class="sxs-lookup"><span data-stu-id="84de5-108">It's also a good idea to visit the comprehensive [Asset Store](https://www.assetstore.unity3d.com/) and the [Unity Mixed Reality forums](https://forum.unity3d.com/forums/hololens.102/) to engage with the online community building mixed reality apps.</span></span> <span data-ttu-id="84de5-109">你永远都不知道你可能会在未知领域发现什么样的绝佳资产或解决方案。</span><span class="sxs-lookup"><span data-stu-id="84de5-109">You never know what cool assets or solutions you might find out in the wild.</span></span> <span data-ttu-id="84de5-110">准备好开始使用 MRTK 时，请前往下面的开发检查点！</span><span class="sxs-lookup"><span data-stu-id="84de5-110">When you're ready to get started with MRTK head to the development checkpoints below!</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="84de5-111">如果你有一个想要引入到 HoloLens 2 的现有 Unity 项目，请查看 **[移植指南](../porting-apps/porting-guides.md)** 。</span><span class="sxs-lookup"><span data-stu-id="84de5-111">Take a look at our **[porting guides](../porting-apps/porting-guides.md)** if you have an existing Unity project that you want to bring over to HoloLens 2.</span></span> <span data-ttu-id="84de5-112">对于使用 HTK、MRTK v1、SteamVR 或针对沉浸式头戴显示设备开发的项目（例如 Oculus Rift 或 HTC Vive），我们有一些指导。</span><span class="sxs-lookup"><span data-stu-id="84de5-112">We have guides for projects that are using HTK, MRTK v1, SteamVR or were developed for immersive headsets such as the Oculus Rift or HTC Vive.</span></span>
+
+## <a name="development-checkpoints"></a><span data-ttu-id="84de5-113">开发检查点</span><span class="sxs-lookup"><span data-stu-id="84de5-113">Development checkpoints</span></span>
+
+<span data-ttu-id="84de5-114">使用以下检查点，将 Unity 游戏和应用程序带入混合现实的世界。</span><span class="sxs-lookup"><span data-stu-id="84de5-114">Use the following checkpoints to bring your Unity games and applications into the world of mixed reality.</span></span> <span data-ttu-id="84de5-115">如果你尚未浏览[设计全息影像示例应用程序](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)，我们建议下载并使用它来熟悉混合现实 UX 的基本知识。</span><span class="sxs-lookup"><span data-stu-id="84de5-115">If you haven't already explored the [Designing Holograms sample application](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd), we recommend downloading and using it to familiarize yourself with the basics of Mixed Reality UX.</span></span> 
+
+### <a name="1-getting-started"></a><span data-ttu-id="84de5-116">1.入门</span><span class="sxs-lookup"><span data-stu-id="84de5-116">1. Getting started</span></span>
+<span data-ttu-id="84de5-117">若要在 Unity 中进行开发，最简单的方法是使用混合现实工具包。</span><span class="sxs-lookup"><span data-stu-id="84de5-117">The easiest way to develop in Unity is with the Mixed Reality Toolkit.</span></span> <span data-ttu-id="84de5-118">MRTK 将帮助你自动为混合现实设置项目，并提供一组功能以加速开发过程。</span><span class="sxs-lookup"><span data-stu-id="84de5-118">MRTK will help you automatically setup a project for Mixed Reality and provide a set of features to accelerate your development process.</span></span> <span data-ttu-id="84de5-119">本部分结束时，你将对混合现实工具包有一个基本的了解、对混合现实应用有一个正确配置的开发环境以及一个你自己构建的、可在 Unity 中正常工作的 MRTK 项目。</span><span class="sxs-lookup"><span data-stu-id="84de5-119">By the end of this section, you'll have a basic understanding of the Mixed Reality Toolkit, a properly configured development environment for Mixed Reality apps, and a working MRTK project in Unity that you built yourself.</span></span>
+
+|  <span data-ttu-id="84de5-120">Checkpoint</span><span class="sxs-lookup"><span data-stu-id="84de5-120">Checkpoint</span></span>  |  <span data-ttu-id="84de5-121">业务成效</span><span class="sxs-lookup"><span data-stu-id="84de5-121">Outcome</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="84de5-122">什么是 MRTK？</span><span class="sxs-lookup"><span data-stu-id="84de5-122">What is MRTK?</span></span>](mrtk-getting-started.md) | <span data-ttu-id="84de5-123">通过熟悉混合现实工具包及其所提供的功能开始历程</span><span class="sxs-lookup"><span data-stu-id="84de5-123">Begin your journey by getting acquainted with the Mixed Reality Toolkit and what it has to offer</span></span> |
+| [<span data-ttu-id="84de5-124">安装最新工具</span><span class="sxs-lookup"><span data-stu-id="84de5-124">Install the latest tools</span></span>](../install-the-tools.md) | <span data-ttu-id="84de5-125">下载并安装最新 Unity 包，并为混合现实设置你的项目</span><span class="sxs-lookup"><span data-stu-id="84de5-125">Download and install the latest Unity package and setup your project for mixed reality</span></span> |
+| [<span data-ttu-id="84de5-126">HoloLens 2 教程系列</span><span class="sxs-lookup"><span data-stu-id="84de5-126">HoloLens 2 tutorial series</span></span>](tutorials/mr-learning-base-01.md) | <span data-ttu-id="84de5-127">深入研究 HoloLens 2 硬件的初学者级别 MRTK 教程</span><span class="sxs-lookup"><span data-stu-id="84de5-127">Dive into beginner level MRTK tutorials for HoloLens 2 hardware</span></span> |
+
+> [!IMPORTANT]
+> <span data-ttu-id="84de5-128">若要在不导入混合现实工具包的情况下创建新的 Unity 项目，需针对 Windows Mixed Reality 手动更改一小组 Unity 设置。</span><span class="sxs-lookup"><span data-stu-id="84de5-128">If you'd like to create a new Unity project without importing Mixed Reality Toolkit, there are a small set of Unity settings you'll need to manually change for Windows Mixed Reality.</span></span> <span data-ttu-id="84de5-129">这些设置分为两个类别：按项目设置和按场景设置。</span><span class="sxs-lookup"><span data-stu-id="84de5-129">These are broken down into two categories: per-project and per-scene.</span></span> <span data-ttu-id="84de5-130">有关分步过程，请参阅我们的配置指南。</span><span class="sxs-lookup"><span data-stu-id="84de5-130">Take a look at our configuration guide for the step-by-step process.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="84de5-131">在项目中设置 MRTK V2，标准的 Unity 游戏对象（例如相机）就会立即启动，为你带来坐定式体验。</span><span class="sxs-lookup"><span data-stu-id="84de5-131">Once you've setup MRTK V2 in your project, standard Unity game objects like the camera will light up immediately for a seated-scale experience.</span></span> <span data-ttu-id="84de5-132">可在“坐标系统”页上找到有关更改应用程序的体验范围的说明。</span><span class="sxs-lookup"><span data-stu-id="84de5-132">You can find instructions on changing the experience scale of your application on the coordinate systems page.</span></span>
+
+### <a name="2-core-building-blocks"></a><span data-ttu-id="84de5-133">2.核心构建基块</span><span class="sxs-lookup"><span data-stu-id="84de5-133">2. Core building blocks</span></span>
+
+<span data-ttu-id="84de5-134">混合现实应用程序的所有核心构建基块的公开方式与其他 Unity API 一致。</span><span class="sxs-lookup"><span data-stu-id="84de5-134">All of the core building blocks for mixed reality applications are exposed in a manner consistent with other Unity APIs.</span></span> <span data-ttu-id="84de5-135">这些构建基块可以作为独立功能提供，也可以通过混合现实工具包提供。</span><span class="sxs-lookup"><span data-stu-id="84de5-135">These building blocks are available as standalone features and through the Mixed Reality Toolkit.</span></span> <span data-ttu-id="84de5-136">你可能不需要一次全部使用它们，但建议你尽早进行使用。</span><span class="sxs-lookup"><span data-stu-id="84de5-136">You might not need all of them at once, but we recommend exploring early on.</span></span> <span data-ttu-id="84de5-137">深入了解下面列出的核心构建基块后，你将拥有一个工具箱，其中包含了各种你可以集成到混合现实项目中的功能（通过这些功能本身或通过 MRTK 实现）。</span><span class="sxs-lookup"><span data-stu-id="84de5-137">After diving into the core building blocks listed below, you'll have a toolbox full of features you can integrate into a Mixed Reality project by themselves or through MRTK.</span></span>
+
+[!INCLUDE[](../includes/unity-building-blocks.md)]
+
+### <a name="3-platform-capabilities-and-apis"></a><span data-ttu-id="84de5-138">3.平台功能和 API</span><span class="sxs-lookup"><span data-stu-id="84de5-138">3. Platform capabilities and APIs</span></span>
+
+<span data-ttu-id="84de5-139">在混合现实应用程序中起作用的其他关键功能可通过 Unity API 获得，而无需任何额外的包或设置。</span><span class="sxs-lookup"><span data-stu-id="84de5-139">Other key features that play a role in mixed reality applications are available through Unity APIs without any extra packages or setup.</span></span> <span data-ttu-id="84de5-140">可以在安装或未安装 MRTK 的情况下将这些功能添加到 Unity 项目中。</span><span class="sxs-lookup"><span data-stu-id="84de5-140">These features can be added to Unity projects with or without MRTK installed.</span></span> <span data-ttu-id="84de5-141">深入了解 Unity 提供的更高级功能后，你将能够生成更深层、更复杂的混合现实应用。</span><span class="sxs-lookup"><span data-stu-id="84de5-141">After diving into the more advanced capabilities that Unity offers, you'll be able to build deeper, complex Mixed Reality apps.</span></span>
+
+|  <span data-ttu-id="84de5-142">功能</span><span class="sxs-lookup"><span data-stu-id="84de5-142">Feature</span></span>  |  <span data-ttu-id="84de5-143">功能</span><span class="sxs-lookup"><span data-stu-id="84de5-143">Capabilities</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="84de5-144">共享体验</span><span class="sxs-lookup"><span data-stu-id="84de5-144">Shared experiences</span></span>](shared-experiences-in-unity.md) | <span data-ttu-id="84de5-145">使用空间定位点共享，在空间中的固定点共同观看同一全息影像并与之交互</span><span class="sxs-lookup"><span data-stu-id="84de5-145">View and interact collectively with the same hologram at a fixed point in space using spatial anchor sharing</span></span> |
+| [<span data-ttu-id="84de5-146">可定位相机</span><span class="sxs-lookup"><span data-stu-id="84de5-146">Locatable camera</span></span>](locatable-camera-in-unity.md) | <span data-ttu-id="84de5-147">在混合现实应用程序中捕获照片和视频内容</span><span class="sxs-lookup"><span data-stu-id="84de5-147">Capture photos and video content in your Mixed Reality application</span></span> |
+| [<span data-ttu-id="84de5-148">焦点</span><span class="sxs-lookup"><span data-stu-id="84de5-148">Focus point</span></span>](focus-point-in-unity.md) | <span data-ttu-id="84de5-149">向 HoloLens 提供有关如何最好地对当前显示的全息影像执行稳定化的提示</span><span class="sxs-lookup"><span data-stu-id="84de5-149">Provide HoloLens a hint about how to best perform stabilization on the holograms currently being displayed</span></span> |
+| [<span data-ttu-id="84de5-150">失跟</span><span class="sxs-lookup"><span data-stu-id="84de5-150">Tracking loss</span></span>](tracking-loss-in-unity.md) | <span data-ttu-id="84de5-151">处理设备无法在应用程序世界空间中定位自己的情况</span><span class="sxs-lookup"><span data-stu-id="84de5-151">Handle scenarios where your device can't locate itself in the applications world space</span></span> |
+| [<span data-ttu-id="84de5-152">键盘输入</span><span class="sxs-lookup"><span data-stu-id="84de5-152">Keyboard input</span></span>](keyboard-input-in-unity.md) | <span data-ttu-id="84de5-153">在应用中获取来自现实世界和混合现实键盘的输入</span><span class="sxs-lookup"><span data-stu-id="84de5-153">Get input from real-world and Mixed Reality keyboards in your apps</span></span> |
+
+### <a name="4-deploying-to-a-device-or-emulator"></a><span data-ttu-id="84de5-154">4.部署到设备或仿真器</span><span class="sxs-lookup"><span data-stu-id="84de5-154">4. Deploying to a device or emulator</span></span>
+
+<span data-ttu-id="84de5-155">准备好对全息 Unity 项目进行测试以后，下一步是导出和构建 Unity Visual Studio 解决方案。</span><span class="sxs-lookup"><span data-stu-id="84de5-155">Once you've got your holographic Unity project ready for testing, your next step is to export and build a Unity Visual Studio solution.</span></span> <span data-ttu-id="84de5-156">有了该 VS 解决方案以后，即可使用下述三种方法之一在真实的或模拟的设备运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="84de5-156">With that VS solution in hand, you can run your application in one of three ways on a real or simulated device.</span></span> <span data-ttu-id="84de5-157">本部分结束后，你将能够在适合你的开发需求的任何设备或仿真器上部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="84de5-157">By the end of this section, you'll be able to deploy your application on whichever device or emulator fits your development needs.</span></span>
+
+* [<span data-ttu-id="84de5-158">HoloLens 或 Windows Mixed Reality 沉浸式头戴显示设备</span><span class="sxs-lookup"><span data-stu-id="84de5-158">HoloLens or Windows Mixed Reality immersive headset</span></span>](../platform-capabilities-and-apis/using-visual-studio.md)
+* [<span data-ttu-id="84de5-159">HoloLens 仿真器</span><span class="sxs-lookup"><span data-stu-id="84de5-159">HoloLens emulator</span></span>](../platform-capabilities-and-apis/using-the-hololens-emulator.md)
+* [<span data-ttu-id="84de5-160">Windows Mixed Reality 沉浸式头戴显示设备模拟器</span><span class="sxs-lookup"><span data-stu-id="84de5-160">Windows Mixed Reality immersive headset simulator</span></span>](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md)
+
+### <a name="5-adding-services"></a><span data-ttu-id="84de5-161">5.添加服务</span><span class="sxs-lookup"><span data-stu-id="84de5-161">5. Adding services</span></span>
+
+<span data-ttu-id="84de5-162">在开发历程中的这个阶段，你可能希望添加服务或寻求商业部署方面的帮助。</span><span class="sxs-lookup"><span data-stu-id="84de5-162">At this point in your development journey you might be looking to add services or for a helping hand with commercial deployment.</span></span> <span data-ttu-id="84de5-163">将 [Azure 云服务](../mixed-reality-cloud-services.md) 与 Dynamics 365 功能集成可以在很大程度上提高项目的水平。</span><span class="sxs-lookup"><span data-stu-id="84de5-163">Integrating [Azure Cloud Services](../mixed-reality-cloud-services.md) and Dynamics 365 features can level up your projects in a major way.</span></span> <span data-ttu-id="84de5-164">我们已编译了几个入门点，用于探索和扩展你的混合现实知识。</span><span class="sxs-lookup"><span data-stu-id="84de5-164">We've compiled a few starting points for you to explore and expand your Mixed Reality knowledge.</span></span>
+
+[!INCLUDE[](../includes/unity-cloud-services-d365.md)]
+
+<span data-ttu-id="84de5-165">我们还提供了一个[针对其他 Azure 服务的支持文档的完整列表](../mixed-reality-cloud-services.md#standalone-unity-services)，你可以自行将这些服务添加到 Unity 项目中。</span><span class="sxs-lookup"><span data-stu-id="84de5-165">We also have a [comprehensive list of support documentation for additional Azure services](../mixed-reality-cloud-services.md#standalone-unity-services) that you can add to your Unity projects on a self-serve basis.</span></span>
+
+## <a name="whats-next"></a><span data-ttu-id="84de5-166">下一步操作</span><span class="sxs-lookup"><span data-stu-id="84de5-166">What's next?</span></span>
+
+<span data-ttu-id="84de5-167">开发人员的工作一直在更新，特别是在学习新工具或 SDK 时。</span><span class="sxs-lookup"><span data-stu-id="84de5-167">A developers job is never done, especially when learning a new tool or SDK.</span></span> <span data-ttu-id="84de5-168">以下部分将带你进入你已完成的初学者级别资料之外的其他领域，并在你遇到问题时提供有用的资源。</span><span class="sxs-lookup"><span data-stu-id="84de5-168">The following sections can take you into areas beyond the beginner level material you've already completed, along with helpful resources if you get stuck.</span></span> <span data-ttu-id="84de5-169">请注意，这些主题和资源不按任何顺序排列，因此请随意查看并探索！</span><span class="sxs-lookup"><span data-stu-id="84de5-169">Note that these topics and resources aren't in any sequential order, so feel free to jump around and explore!</span></span>
+
+### <a name="porting"></a><span data-ttu-id="84de5-170">移植</span><span class="sxs-lookup"><span data-stu-id="84de5-170">Porting</span></span>
+
+<span data-ttu-id="84de5-171">如果你有想要移植的现有应用，则以下列出的文章是你接下来探索的部分/</span><span class="sxs-lookup"><span data-stu-id="84de5-171">If you have existing apps that you'd like to port over, the articles listed below are your next stop/</span></span>
+
+* [<span data-ttu-id="84de5-172">HoloToolkit/MRTK 到 MRTK v2</span><span class="sxs-lookup"><span data-stu-id="84de5-172">HoloToolkit/MRTK to MRTK v2</span></span>](mrtk-porting-guide.md)
+* [<span data-ttu-id="84de5-173">沉浸式应用移植指南</span><span class="sxs-lookup"><span data-stu-id="84de5-173">Porting guide for immersive apps</span></span>](../porting-apps/porting-guides.md)
+* [<span data-ttu-id="84de5-174">输入移植指南</span><span class="sxs-lookup"><span data-stu-id="84de5-174">Input porting guide</span></span>](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md)
+
+### <a name="tutorials"></a><span data-ttu-id="84de5-175">教程</span><span class="sxs-lookup"><span data-stu-id="84de5-175">Tutorials</span></span>
+
+<span data-ttu-id="84de5-176">如果你希望将特定的混合现实功能添加到应用程序，我们提供了一些精选的教程，可以指导你从头到尾完成整个过程。</span><span class="sxs-lookup"><span data-stu-id="84de5-176">If you're looking to add specific Mixed Reality features to your applications, we have several curated tutorials that can run you through the process from end-to-end.</span></span> <span data-ttu-id="84de5-177">下面列出了最受欢迎的 HoloLens 2 和 HoloLens（第一代）内容，但你可以通过访问教程概述查找整个集合。</span><span class="sxs-lookup"><span data-stu-id="84de5-177">Our most popular HoloLens 2 and HoloLens (1st Gen) content is listed below, but you can find the entire collection by visiting the tutorials overview.</span></span>
+
+[!INCLUDE[](../includes/unity-tutorials.md)]
+
+### <a name="additional-resources"></a><span data-ttu-id="84de5-178">其他资源</span><span class="sxs-lookup"><span data-stu-id="84de5-178">Additional resources</span></span>
+
+<span data-ttu-id="84de5-179">在你自己进入混合现实世界之前，我们建议你先阅读下面列出的与 MRTK 相关的文档。</span><span class="sxs-lookup"><span data-stu-id="84de5-179">Before going out into the world of mixed reality on your own, we recommend taking a look at the MRTK-related documentation listed below.</span></span> <span data-ttu-id="84de5-180">这些文章详细介绍了 MRTK 是如何工作的，是非常好的起始点，它们将使你深入了解如何使应用更高效。</span><span class="sxs-lookup"><span data-stu-id="84de5-180">These articles are great jumping off points for understanding how MRTK works in greater detail and will give you insight into making your app more performant.</span></span>
+
+|  <span data-ttu-id="84de5-181">主题</span><span class="sxs-lookup"><span data-stu-id="84de5-181">Topic</span></span>  |  <span data-ttu-id="84de5-182">说明</span><span class="sxs-lookup"><span data-stu-id="84de5-182">Description</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="84de5-183">MRTK 体系结构概述</span><span class="sxs-lookup"><span data-stu-id="84de5-183">MRTK Architecture overview</span></span>](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/Overview.html) | <span data-ttu-id="84de5-184">更深入地了解 MRTK SDK 在项目中的工作方式</span><span class="sxs-lookup"><span data-stu-id="84de5-184">Get a deeper understanding of how the MRTK SDK works in your projects</span></span> |
+| [<span data-ttu-id="84de5-185">设置和性能</span><span class="sxs-lookup"><span data-stu-id="84de5-185">Settings and performance</span></span>](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Performance/PerfGettingStarted.html) | <span data-ttu-id="84de5-186">分析你的应用、更新 Unity 设置并实现最佳的全息影像稳定性能</span><span class="sxs-lookup"><span data-stu-id="84de5-186">Profile your app, update your Unity settings, and get the best hologram stabilization performance available</span></span> |
+| [<span data-ttu-id="84de5-187">MRTK + XR 入门</span><span class="sxs-lookup"><span data-stu-id="84de5-187">Getting started with MRTK + XR</span></span>](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithMRTKAndXRSDK.html) | <span data-ttu-id="84de5-188">转到 Unity 提供的替代 XR 管道</span><span class="sxs-lookup"><span data-stu-id="84de5-188">Transfer over to the alternative XR pipeline provided by Unity</span></span> |
+
+### <a name="unity-resources"></a><span data-ttu-id="84de5-189">Unity 资源</span><span class="sxs-lookup"><span data-stu-id="84de5-189">Unity resources</span></span>
+
+<span data-ttu-id="84de5-190">除了 docs.microsoft.com 上提供的此文档，Unity 还配置了适用于 Windows Mixed Reality 功能和 Unity 编辑器的文档。</span><span class="sxs-lookup"><span data-stu-id="84de5-190">In addition to this documentation available on docs.microsoft.com, Unity installs documentation for Windows Mixed Reality functionality alongside the Unity Editor.</span></span> <span data-ttu-id="84de5-191">Unity 提供的文档包括两个单独的部分。</span><span class="sxs-lookup"><span data-stu-id="84de5-191">The Unity provided documentation includes two separate sections.</span></span>
+
+|  <span data-ttu-id="84de5-192">资源</span><span class="sxs-lookup"><span data-stu-id="84de5-192">Resource</span></span>  |  <span data-ttu-id="84de5-193">说明</span><span class="sxs-lookup"><span data-stu-id="84de5-193">Description</span></span>  |
+| --- | --- |
+| [<span data-ttu-id="84de5-194">脚本引用</span><span class="sxs-lookup"><span data-stu-id="84de5-194">Scripting reference</span></span>](https://docs.unity3d.com/ScriptReference/) | <span data-ttu-id="84de5-195">本文档的此部分包含 Unity 提供的脚本编写 API 的详细信息，并可在 Unity 编辑器中通过单击“帮助”>“脚本编写参考”在线进行访问</span><span class="sxs-lookup"><span data-stu-id="84de5-195">This section of the documentation contains details of the scripting API that Unity provides and is accessible online from the Unity Editor by clicking **Help > Scripting Reference**</span></span> |
+| [<span data-ttu-id="84de5-196">手动</span><span class="sxs-lookup"><span data-stu-id="84de5-196">Manual</span></span>](https://docs.unity3d.com/Manual/index.html) | <span data-ttu-id="84de5-197">本手册旨在帮助你了解如何使用 Unity（从基本方法到高级方法），并可在 Unity 编辑器中通过单击“帮助”>“手册”在线进行访问</span><span class="sxs-lookup"><span data-stu-id="84de5-197">This manual is designed to help you learn how to use Unity, from basic to advanced techniques, and is accessible online or from the Unity Editor by clicking **Help > Manual**</span></span> |
+
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="84de5-198">探索 MRTK</span><span class="sxs-lookup"><span data-stu-id="84de5-198">Explore MRTK</span></span>](mrtk-getting-started.md)
+
+## <a name="see-also"></a><span data-ttu-id="84de5-199">另请参阅</span><span class="sxs-lookup"><span data-stu-id="84de5-199">See also</span></span>
+* [<span data-ttu-id="84de5-200">混合现实工具包 v2</span><span class="sxs-lookup"><span data-stu-id="84de5-200">Mixed Reality Toolkit v2</span></span>](mrtk-getting-started.md)
+* [<span data-ttu-id="84de5-201">MR 基础知识 100：Unity 入门</span><span class="sxs-lookup"><span data-stu-id="84de5-201">MR Basics 100: Getting started with Unity</span></span>](tutorials/holograms-100.md)
+* [<span data-ttu-id="84de5-202">建议用于 Unity 的设置</span><span class="sxs-lookup"><span data-stu-id="84de5-202">Recommended settings for Unity</span></span>](recommended-settings-for-unity.md)
+* [<span data-ttu-id="84de5-203">针对 Unity 的性能建议</span><span class="sxs-lookup"><span data-stu-id="84de5-203">Performance recommendations for Unity</span></span>](performance-recommendations-for-unity.md)
+* [<span data-ttu-id="84de5-204">导出和构建 Unity Visual Studio 解决方案</span><span class="sxs-lookup"><span data-stu-id="84de5-204">Exporting and building a Unity Visual Studio solution</span></span>](exporting-and-building-a-unity-visual-studio-solution.md)
+* [<span data-ttu-id="84de5-205">将 Windows 命名空间与 Unity 应用配合用于 HoloLens</span><span class="sxs-lookup"><span data-stu-id="84de5-205">Using the Windows namespace with Unity apps for HoloLens</span></span>](using-the-windows-namespace-with-unity-apps-for-hololens.md)
+* [<span data-ttu-id="84de5-206">使用 Unity 和 Visual Studio 的最佳做法</span><span class="sxs-lookup"><span data-stu-id="84de5-206">Best practices for working with Unity and Visual Studio</span></span>](best-practices-for-working-with-unity-and-visual-studio.md)
+* [<span data-ttu-id="84de5-207">Unity 播放模式</span><span class="sxs-lookup"><span data-stu-id="84de5-207">Unity Play Mode</span></span>](unity-play-mode.md)
+* [<span data-ttu-id="84de5-208">移植指南</span><span class="sxs-lookup"><span data-stu-id="84de5-208">Porting guides</span></span>](../porting-apps/porting-guides.md)
