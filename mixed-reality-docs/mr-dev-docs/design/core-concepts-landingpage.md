@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 10/02/2019
 ms.topic: overview
 keywords: Windows Mixed Reality，设计，应用模式，控件，样式，HoloLens，交互，UX 元素，行为，构建基块
-ms.openlocfilehash: cece64194100e35ea836a23a645079e64332ec32
-ms.sourcegitcommit: ccc7c9ee0bb65e1bc672482592ebfddbba40d7da
+ms.openlocfilehash: cebcb99124ed71ed170210f2de9ce2f24bcb514d
+ms.sourcegitcommit: 53a00690f32a0a629ed23aefaae5a888f669dcb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/16/2020
-ms.locfileid: "92113521"
+ms.locfileid: "92138017"
 ---
 # <a name="core-concepts-overview"></a>核心概念概述
 
@@ -19,10 +19,6 @@ ms.locfileid: "92113521"
 
 
 在深入研究您的体验之前，了解一些核心概念会很有帮助。 下面的每个主题都是基本因素，主要影响和影响你为用户创建的混合现实体验的质量。 
-
-
-
-混合现实应用的[ ![ 类型](images/enhancedenvironmentapps-640px.jpg)](types-of-mixed-reality-apps.md)混合**[现实应用](types-of-mixed-reality-apps.md)**
 
 :::row:::
     :::column:::
@@ -50,13 +46,13 @@ ms.locfileid: "92113521"
 
 :::row:::
     :::column:::
-       [ ![ 空间映射](images/surfacereconstruction.jpg)](spatial-mapping.md) **[空间映射](spatial-mapping.md)**
+        [ ![ 空间锚](images/azurespatialanchors.jpg)](spatial-anchors.md)定**[空间](spatial-anchors.md)锚**
     :::column-end:::
     :::column:::
-       
+        [ ![ 空间映射](images/surfacereconstruction.jpg)](spatial-mapping.md) **[空间映射](spatial-mapping.md)**
     :::column-end:::
     :::column:::
-       [ ![ 空间锚](images/azurespatialanchors.jpg)](spatial-anchors.md)定**[空间](spatial-anchors.md)锚**
+        混合现实应用的[ ![ 类型](images/enhancedenvironmentapps-640px.jpg)](types-of-mixed-reality-apps.md)混合**[现实应用](types-of-mixed-reality-apps.md)**
     :::column-end:::
 :::row-end:::
 
