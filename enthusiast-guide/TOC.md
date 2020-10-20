@@ -43,8 +43,7 @@
 ### [WebVR](webvr-questions.md)
 ### [其他问题](other-questions.md)
 
-## 附录
+## 资源
 ### [提交 bug 和反馈](filing-feedback.md)
 ### [Mixed Reality 软件概述和版本历史记录](mixed-reality-software.md)
-### [运动控制器的工作原理](motion-controllers.md)
 ### [由内而外跟踪的工作原理](tracking-system.md)
