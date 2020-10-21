@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 398b9ee312c8d49e3468980e5e2c1be556c17162
-ms.sourcegitcommit: 252b52f7541a6e15aa33322286855af8a3924fc1
+ms.openlocfilehash: 98030e55736d423d1fb84d2b965f6ed40246d8f4
+ms.sourcegitcommit: 9c88703a832fb8ca8476e808499d06239ea5d2cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862994"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92011485"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
@@ -374,3 +374,20 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页**
 ## <a name="device-portal-rest-apis"></a>设备门户 REST API
 
 设备门户中的所有内容都是基于 [REST API](device-portal-api-reference.md) 创建的，你可以选择性地使用这些 API 来访问数据和以编程方式控制设备。
+
+## <a name="troubleshooting"></a>故障排除
+
+### <a name="how-to-fix-the-its-lonely-here-message"></a>如何消除“此处没有其他内容”消息
+
+> [!NOTE]
+> 如果页面在 HoloLens（第 1 代）上使用之前先在 HoloLens 2 上使用，那么在从 HoloLens 2 转到 HoloLens（第 1 代）后，可能导致只有这些页面，不显示其他任何内容。
+
+![“设备门户”页面中的“此处没有其他内容”消息](images/using-windows-portal-img-19.png)
+
+1. 从右上角菜单中选择“重置布局”：
+
+![从设备门户菜单中选择“重置布局”](images/using-windows-portal-img-20.png)
+
+2. 在“重置工作区”标题下单击“重置布局” 。 门户页面将自动刷新并显示你的内容。
+
+![从“重置工作区”页面中选择“重置布局”](images/using-windows-portal-img-21.png)

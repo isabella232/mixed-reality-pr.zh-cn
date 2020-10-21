@@ -14,7 +14,6 @@
 ### [安装 Windows Mixed Reality](install-windows-mixed-reality.md)
 ### [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
 ### [Windows Mixed Reality 开发人员工具包常见问题解答](wmr-setup-faq.md)
-### [沉浸式头戴显示设备运行状况、安全和舒适](wmr-health-safety-comfort.md)
 
 ## 使用 Windows Mixed Reality
 ### [了解 Mixed Reality](learn-mixed-reality.md)
@@ -28,6 +27,7 @@
 ### [使用 Windows Mixed Reality 常见问题解答](using-wmr-faq.md)
 
 ## 故障排查常见问题解答
+### [提交 bug 和反馈](filing-feedback.md)
 ### [常见问题解答](troubleshooting-windows-mixed-reality.md)
 ### [安装错误](installation_errors.md)
 ### [安装](set-up-questions.md)
@@ -44,6 +44,6 @@
 ### [其他问题](other-questions.md)
 
 ## 资源
-### [提交 bug 和反馈](filing-feedback.md)
+### [沉浸式头戴显示设备运行状况、安全和舒适](wmr-health-safety-comfort.md)
 ### [Mixed Reality 软件概述和版本历史记录](mixed-reality-software.md)
 ### [由内而外跟踪的工作原理](tracking-system.md)
