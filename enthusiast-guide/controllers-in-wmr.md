@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 56238f302074bb4de21acbc0575f4ab913cb84b1
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: 360b8fea1744e2753aaa5310d79e82f978d92f67
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174429"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293116"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Windows Mixed Reality 中的运动控制器
 
@@ -42,7 +42,6 @@ Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，�
 4. 按照屏幕上提供的说明进行操作。
 
 > [!NOTE]
-
 > * 对于直接与电脑配对的控制器，需要将它们打开并按下电池隔离舱内的 "配对" 按钮，将其置于配对模式，直至指示灯开始闪烁。  
 > * 运动控制器每次仅支持成对一台计算机或 PC。 如果需要将它们用于不同的耳机，则需要完成配对过程。 请参阅 [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
 
@@ -136,7 +135,7 @@ Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，�
   * 启动 **混合现实门户** ，并输入混合现实主页。
   * 移动控制器并验证跟踪、测试按钮并验证 teleportation 是否正常工作。 如果没有，请查看 [运动控制器故障排除部分](motion-controller-problems.md)
 
-## <a name="faq"></a>常见问题解答
+## <a name="faq"></a>常见问题
 
 ### <a name="how-can-i-check-battery-level"></a>如何检查电池电量级别？
 

@@ -3,20 +3,20 @@ title: 混合现实主页
 description: 如何在 Windows Mixed Reality 主页中导航和传送，启动应用和游戏，个性化家庭，并更改视觉对象、音频和语音设置。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，导航，接收，应用，游戏
-ms.openlocfilehash: f8a525ad0c278517950c06c821d2b7936ec584a7
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: 6537bca13a7eb133d7f78e7922ea91304fdc90f2
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174287"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293087"
 ---
-# <a name="your-mixed-reality-home"></a>混合现实主页
+# <a name="your-windows-mixed-reality-home"></a>Windows Mixed Reality 主页
 
-## <a name="what-is-the-mixed-reality-home"></a>混合现实的目标是什么
+## <a name="what-is-the-windows-mixed-reality-home"></a>什么是 Windows Mixed Reality 主页
 
 Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕和2D 界面，而是利用我们的 instinctual 功能来浏览三维空间。 每个位置都有一个用途，内容具有上下文。 正如你的电脑从桌面界面开始，你的手机始于主屏幕一样，Windows Mixed Reality 在混合现实家里开始。 这是一种环境，你可以进行导航和个性化设置，使其成为自己的环境。 它是 Microsoft Store 中提供的数千个应用程序的画布。 您可以通过这些应用程序进行多重处理，就像您从未能够在三维位置上几乎无限制的情况。
 
-## <a name="move-through-the-mixed-reality-home"></a>贯穿混合现实主页
+## <a name="move-through-the-windows-mixed-reality-home"></a>在 Windows Mixed Reality 主页上移动
 
 * **物理遍历：** 如果你已设置头戴显示房间边界，并已清除可用空间来安全地进行演练，则可以采取物理措施在家里移动短距离。 现实世界中的一个步骤是虚拟体验中的一个步骤。
 * **使用运动控制器) 的 Teleporting (：** 可以通过 teleporting 快速跳转到某个位置。 使用运动控制器，可以通过向右或向左的操纵杆向前推送，想要转到的方向，然后释放操纵杆来传送操纵杆。
@@ -28,7 +28,7 @@ Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕
 
 ## <a name="launch-an-app"></a>启动应用
 
-1. 在混合现实中，按下控制器上的 Windows 按钮启动 "开始" 菜单。
+1. 在 Windows Mixed Reality 主页中，按下控制器上的 Windows 按钮启动 "开始" 菜单。
 2. 选择要启动的应用。
 3. 将应用放在要使用的位置，并启动该应用。
 4. 从现在开始，只需单击3D 模型即可启动该应用。
@@ -49,11 +49,11 @@ Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕
 2. 启动 Microsoft Store。
 3. 浏览所需的应用或游戏，然后单击 "获取" 或 "购买"。
 
-或者，你可以使用 "新建你的" 应用来浏览内容，该内容在混合现实主页中显示为购物袋。
+或者，你可以使用 "新建你的" 应用来浏览内容，该内容在 Windows Mixed Reality 主页中显示为购物袋。
 
 ## <a name="what-is-the-new-for-you-app"></a>"新的" 应用程序
 
-你可能会注意到混合现实主页中有一个 Microsoft Store 袋。 单击它将显示可以下载和/或购买的全新、激动人心的应用。
+你可能会注意到，Windows Mixed Reality 主页中有 Microsoft Store 袋。 单击它将显示可以下载和/或购买的全新、激动人心的应用。
 
 ## <a name="personalize-my-home"></a>个性化我的主页
 
@@ -68,12 +68,12 @@ Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕
 ## <a name="uninstall-windows-mixed-reality"></a>卸载 Windows Mixed Reality
 
 1. 拔出耳机
-2. 关闭混合现实门户
+2. 关闭 Windows Mixed Reality 门户
 3. 请参阅 " **设置" > 混合现实 > 卸载 > 卸载** ![ Windows 设置面板以卸载混合现实](images/1050px-uninstall2.png)
 
 ## <a name="turn-off-the-boundary"></a>关闭边界
 
-中转到混合现实门户，并打开屏幕左上角的菜单。 选择 " **运行" 设置 > 房间边界**。 切换切换为 "关闭"。 如果关闭边界，应将其放在办公桌上。
+请参阅 Windows Mixed Reality 门户，并打开屏幕左上角的菜单。 选择 " **运行" 设置 > 房间边界**。 切换切换为 "关闭"。 如果关闭边界，应将其放在办公桌上。
 
 ## <a name="spatial-sound-in-the-windows-mixed-reality-home"></a>Windows Mixed Reality 主页中的空间音效
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 在购买前，Windows Mixed Reality，混合现实，虚拟现实，VR，先生，预销售，调查，购买
 appliesto:
 - Windows 10
-ms.openlocfilehash: 3adaf5e3bef3144d23a57ce8729f3f169ec630f3
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: de697bc7002ab342241acc2bdc989a3e1e397632
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174478"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293033"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -308,8 +308,6 @@ ms.locfileid: "92174478"
 ### <a name="does-the-windows-mixed-reality-platform-support-rift-and-vive-hardware"></a>Windows Mixed Reality 平台是否支持 Rift 和 Naopak 硬件？
 
 **快速解答：** Windows Mixed Reality 仅适用于已批准的 Windows Mixed Reality 耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/b/virtualreality>
-
-
 
 ## <a name="motion-controllers"></a>运动控制器
 

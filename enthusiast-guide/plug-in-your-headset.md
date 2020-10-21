@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，耳机，设置，入门
 appliesto:
 - Windows 10
-ms.openlocfilehash: 46b40a09c88013515911026cbd03a6fc6d19e1ca
-ms.sourcegitcommit: 2cdc2e38990fff24972d98f9e74f0dabacbffa7d
+ms.openlocfilehash: 16c06e14566671e44b1424447b02493ba1ff1a83
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92153508"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92292972"
 ---
 # <a name="plug-in-your-headset"></a>接入头戴显示设备
 
@@ -32,10 +32,11 @@ ms.locfileid: "92153508"
 除非你购买了 HMD 太空耳机、HP 回音或 HP 回音 G2 (（它们具有集成的 AKG 耳机和集成的双阵列麦克风) ），否则，你将需要连接耳机，)  (可以将耳机插入耳机的 3.5 mm 音频插孔。
 
 ## <a name="common-issues"></a>常见问题
+
 * 在插入 USB 3.0 电缆之前插入了 HDMI 电缆。  请确保在插入 HDMI 电缆 **之前** 插入 USB 3.0 电缆。
 * 已在 HMD 的 USB 电缆旁插入蓝牙适配器。  如果使用的是蓝牙适配器， **请勿** 将耳机的 USB 电缆插在该适配器旁边，因为产生的无线电干扰可能会对蓝牙性能产生负面影响。
 * 将 HDMI 电缆插入到 iGPU HDMI 端口，而不是 dGPU HDMI 端口 (适用于) 的 Pc。 某些台式 Pc 既有 (iGPU) 的集成的图形处理单元，又 (dGPU) ，并且通常会禁用 iGPU 端口。 如果你的电脑有 dGPU，则你的耳机需要插入到 dGPU 中。  
-* 如果你的电脑没有 HDMI 端口，则可能需要一个适配器。 在[此处查看推荐的适配器的完整列表](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。 
+* 如果你的电脑没有 HDMI 端口，则可能需要一个适配器。 在[此处查看推荐的适配器的完整列表](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。
 * 正在将耳机连接到 Surface 设备。 请阅读 [使用带有 Windows Mixed Reality 的图面](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md#windows-mixed-reality-and-surface)。
 
 ## <a name="see-also"></a>另请参阅

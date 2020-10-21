@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，兼容，兼容性，入门，安装，PC，系统要求
 appliesto:
 - Windows 10
-ms.openlocfilehash: c76f670230a4a19b53b7e8f938b13e79bb7c8db7
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: b10fc9962d899b0a2c2ee15e6d039fc6bfb6d503
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174444"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293059"
 ---
 # <a name="before-you-start"></a>开始之前
 
@@ -52,7 +52,7 @@ ms.locfileid: "92174444"
 
 ## <a name="make-sure-you-have-a-compatible-graphics-driver"></a>请确保您有兼容的图形驱动程序
 
-你的 PC 必须具有 WDDM 2.2 或更高版本的图形驱动程序才能完成混合现实设置。 如果它尚不具有兼容的图形驱动程序，请尝试以下源：
+你的 PC 必须具有 WDDM 2.2 或更高版本的图形驱动程序才能完成 Windows Mixed Reality 设置。 如果它尚不具有兼容的图形驱动程序，请尝试以下源：
 
 * 使用 Windows 更新检查是否有最新的关键驱动程序更新 (**启动 > Windows 设置 > 更新和安全检查更新** >
 * 检查是否有最新的可选驱动程序更新：
@@ -64,7 +64,7 @@ ms.locfileid: "92174444"
 
 ## <a name="make-sure-that-you-have-any-required-adapters"></a>请确保具有任何所需的适配器
 
-您的 Windows Mixed Reality 兼容 PC 可能没有连接沉浸式耳机所需的全尺寸 HDMI 和 USB 3.0 端口。 或者，你可能需要一个蓝牙适配器以满足混合现实门户的要求。  如果是这种情况，则需要用于连接耳机和运动控制器的适配器。 可在 [此处](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)找到可能需要的适配器类型列表，以及有关特定适配器型号的一些建议。
+您的 Windows Mixed Reality 兼容 PC 可能没有连接沉浸式耳机所需的全尺寸 HDMI 和 USB 3.0 端口。 或者，你可能需要一个蓝牙适配器来满足 Windows Mixed Reality 门户要求。  如果是这种情况，则需要用于连接耳机和运动控制器的适配器。 请确保查看 [可能需要的适配器类型列表，以及有关特定适配器型号的一些建议](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。
 
 ## <a name="make-sure-that-you-have-input-devices"></a>请确保具有输入设备
 
@@ -76,7 +76,7 @@ Windows Mixed Reality 旨在最适用于 Windows Mixed Reality 运动控制器�
 
 ## <a name="make-sure-that-you-have-a-large-open-space"></a>请确保有一个较大的开放空间
 
-如果要在使用 Windows Mixed Reality 时四处移动，则需要有一个大的开放空间。  在安装过程中，系统将要求你选择 "已安装" 或 "所有体验"。 如果要四处移动，请选择 "所有体验" 并设置边界。
+如果要在使用 Windows Mixed Reality 时四处移动，则需要有一个大的开放空间。  在安装过程中，系统将要求你选择 "已安装" 或 "所有体验"。 如果要四处移动，请选择 "所有体验" 并设置边界。 查看 [沉浸式头戴显示健康、安全和舒适指导原则，](wmr-health-safety-comfort.md) 了解空间需求。
 
 ### <a name="seated-and-standing-no-boundary"></a>固定和不 (边界) 
 
