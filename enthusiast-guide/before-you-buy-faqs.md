@@ -8,16 +8,16 @@ ms.topic: article
 keywords: 在购买前，Windows Mixed Reality，混合现实，虚拟现实，VR，先生，预销售，调查，购买
 appliesto:
 - Windows 10
-ms.openlocfilehash: de697bc7002ab342241acc2bdc989a3e1e397632
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: b665d0d84f511ae5e6383c5d4b5aadea400b2033
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293033"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434615"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
-## <a name="general-questions"></a>常规问题
+## <a name="general-questions"></a>一般问题
 
 ### <a name="where-can-i-buy-a-windows-mixed-reality-ready-pc-or-headset"></a>在哪里可以购买 Windows Mixed Reality ready PC 或耳机？
 
@@ -31,15 +31,11 @@ ms.locfileid: "92293033"
 
 ### <a name="which-manufacturers-are-selling-windows-mixed-reality-devices"></a>哪些制造商正在出售 Windows Mixed Reality 设备？
 
-**快速解答：** 耳机和运动控制器目前在 Acer、ASUS、Samsung 和 HP 中可用。 请参见<https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality?icid=ARVRcat_Feature1_WMRIntro>
+**快速解答：** 现在 HP 提供耳机和运动控制器。 请参阅<https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality?icid=ARVRcat_Feature1_WMRIntro>
 
 ### <a name="where-can-i-buy-standalone-motion-controllers"></a>在哪里可以购买独立的运动控制器？
 
 **快速解答：** 遗憾的是，我们目前并不知道销售独立运动控制器的任何零售商。
-
-### <a name="what-is-the-price-point"></a>价格是多少？
-
-**快速解答：** 按制造商和零售商，耳机和控制器定价会有所不同。 请参阅 <https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality?icid=ARVRcat_Feature1_WMRIntro> 当前用于 Microsoft 销售的混合现实设备。
 
 ### <a name="what-is-the-difference-between-a-windows-mixed-reality-pc-and-a-windows-mixed-reality-ultra-pc"></a>Windows Mixed Reality PC 与 Windows Mixed Reality 超 PC 之间的区别是什么？
 
@@ -47,7 +43,7 @@ ms.locfileid: "92293033"
 
 ### <a name="why-is-this-called-windows-mixed-reality-when-the-devices-look-like-they-provide-a-virtual-reality-experience"></a>为什么当设备看上去提供 "虚拟现实" 体验时，这称为 Windows "Mixed Reality" 呢？
 
-**快速解答：** 混合现实指的是完整的空间计算能力，从扩充的现实和全息到虚拟现实。 Microsoft Mixed Reality 平台支持虚拟现实和增加的现实。 目前，我们支持两种设备类型，具有相同技术： HoloLens (AR) 和 Windows Mixed Reality (VR) 带有运动控制器的耳机。
+**快速解答：** 混合现实指的是完整的空间计算能力，从扩充的现实和全息到虚拟现实。 Windows Mixed Reality 平台跨虚拟现实 (VR) 和增强的现实 (AR) 支持设备。 目前，我们支持两种设备类型，具有相同技术： HoloLens (AR) 和 Windows Mixed Reality (VR) 带有运动控制器的耳机。
 
 在此处了解有关混合现实的详细信息： <https://docs.microsoft.com/windows/mixed-reality/mixed-reality>
 
@@ -61,7 +57,7 @@ ms.locfileid: "92293033"
 
 **快速解答：** 不能，Windows Mixed Reality 耳机上的内联网相机仅用于位置跟踪。 Windows Mixed Reality 耳机是封闭像素的，这意味着它们适用于虚拟现实，而且不提供现实世界的视图或增加的现实。 
 
-### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>什么是内部跟踪？ 它与外部跟踪或 Lighthouse 跟踪有何不同？
+### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>什么是内部跟踪？ 它与外部跟踪或 lighthouse 跟踪有何不同？
 
 * **内部跟踪** Windows Mixed Reality 使用内部跟踪。 带外跟踪相机内置于耳机并跟踪环境中的更改，以便在移动时确定耳机位置与环境相关。
 
@@ -71,7 +67,7 @@ ms.locfileid: "92293033"
 
 ### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>由于相机 FOV，运动控制器的跟踪是否会影响游戏播放？
 
- 与耳机一样，Windows Mixed Reality 运动控制器不需要外部跟踪传感器的设置。 相反，控制器由耳机本身中的传感器跟踪。 如果用户将控制器移出耳机的视图，则在大多数情况下，Windows 将继续推断控制器位置，并将其提供给应用。 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。 此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器来指向和激活 UI 元素的应用程序可以正常运行，而无需用户进行注意。 为此，最好的方法是亲自尝试一下。 尝试访问你附近的 Microsoft 应用商店，并将其签出！ 同时，这里提供了一个视频，其中包含可用于跨各种跟踪状态的运动控制器的沉浸式内容：
+ 与耳机一样，Windows Mixed Reality 运动控制器不需要外部跟踪传感器的设置。 相反，控制器由耳机本身中的传感器跟踪。 如果用户将控制器移出耳机的视图，则在大多数情况下，Windows 将继续推断控制器位置，并将其提供给应用。 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。 此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器来指向和激活 UI 元素的应用程序可以正常运行，而无需用户进行注意。 为此，最好的方法是亲自尝试一下。
 
 ### <a name="how-is-windows-mixed-reality-different-from-samsung-gear-vr"></a>Windows Mixed Reality 与 Samsung 齿轮 VR 有何不同？
 
@@ -307,7 +303,7 @@ ms.locfileid: "92293033"
 
 ### <a name="does-the-windows-mixed-reality-platform-support-rift-and-vive-hardware"></a>Windows Mixed Reality 平台是否支持 Rift 和 Naopak 硬件？
 
-**快速解答：** Windows Mixed Reality 仅适用于已批准的 Windows Mixed Reality 耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/b/virtualreality>
+**快速解答：** Windows Mixed Reality 仅适用于已批准的 Windows Mixed Reality 耳机/控制器。 请参阅<https://www.microsoft.com/en-us/store/b/virtualreality>
 
 ## <a name="motion-controllers"></a>运动控制器
 
@@ -315,7 +311,7 @@ ms.locfileid: "92293033"
 
 **快速解答：** Windows Mixed Reality 运动控制器使用蓝牙。 根据耳机，运动控制器会与耳机上的蓝牙无线电设备配对 (（如果有），或者设备上的蓝牙无线电) 。
 
-* 某些 Windows Mixed Reality 耳机，包括 Acer OJO 500、Samsung 太空 + 和 HP 回音，内置蓝牙无线电收发器用于运动控制器。 这些耳机附带的运动控制器与工厂中的耳机预配对，无需您的 PC 具有单独的蓝牙收音机。
+* 一些 Windows Mixed Reality 耳机，包括 Acer OJO 500、Samsung 太空 +、HP 回音和 HP 回音 G2 功能，内置蓝牙无线电收发器用于运动控制器。 这些耳机附带的运动控制器与工厂中的耳机预配对，无需您的 PC 具有单独的蓝牙收音机。
 * 其他 Windows Mixed Reality 耳机需要与电脑上的蓝牙无线电配对。
 
 ### <a name="are-windows-mixed-reality-motion-controllers-cross-compatible-between-windows-mixed-reality-headsets"></a>Windows 混合现实耳机间的 Windows Mixed Reality 运动控制器是否交叉兼容？
@@ -336,11 +332,11 @@ ms.locfileid: "92293033"
 
 ### <a name="will-windows-mixed-reality-work-with-my-oculus-touch-controllers-or-htc-vive-headsets--controllers"></a>Windows Mixed Reality 是否适用于我的 Oculus 触控控制器或 HTC Naopak 耳机/控制器？
 
-**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
+**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参阅<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
 
 ### <a name="will-windows-mixed-reality-work-with-my-steamvr-knuckle-controllers"></a>Windows Mixed Reality 是否适用于我的 SteamVR Knuckle 控制器？
 
-**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
+**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参阅<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
 
 ### <a name="will-windows-mixed-reality-support-my-xbox-one-controller-with-the-wireless-xbox-adapter"></a>Windows Mixed Reality 是否会通过无线 Xbox 适配器支持我的 Xbox One 控制器？
 

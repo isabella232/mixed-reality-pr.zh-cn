@@ -3,12 +3,12 @@ title: 设置 Windows Mixed Reality
 description: 如何设置 Windows Mixed Reality 运动控制器、语音和音频，并为安全播放空间定义房间边界。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，运动控制器，控制器，语音，音频，固定，下，边界，图形驱动程序，Microsoft Edge，chromium
-ms.openlocfilehash: 71775ba03cb143b83f1a4514f62f20df903df96d
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: cd59fd34dd00edc98d209681cc1239895c36ada2
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174460"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434631"
 ---
 # <a name="set-up-windows-mixed-reality"></a>设置 Windows Mixed Reality
 
@@ -86,7 +86,7 @@ ms.locfileid: "92174460"
 
 ## <a name="what-is-the-maximum-size-of-the-boundary"></a>边界的最大大小是多少？
 
-Windows Mixed Reality 中当前支持的最大边界大小为 18x18ft (5.7 x 5.7 m) 或 13ft (4 分钟) radius （中心）。  边界大小取决于锚点，以及从锚点到该点之间的距离，你可以在风险的稳定性之前进行移动。  Windows Mixed Reality 建立在平台中的一个阶段抽象基础之上，这一阶段就是您在其中移动的空间，而此阶段依赖于单个定位点 (每个应用程序也会假设，这也是 Naopak 和 Oculus 的工作方式，因为它们只有单个坐标系统) 。  这一点很重要的原因是，使用内部跟踪，因为从锚点中进一步移动时，耳机跟踪在保持边界稳定时是可靠的。  如果边界旨在帮助避免物理障碍，就会越来越多地从中心开始更多问题。  两个因素决定了最大边界大小;Windows Mixed Reality 耳机可提供最佳房间缩放体验的最大距离（对于大多数 Windows Mixed Reality 耳机，最大限度地减少了头戴式耳机线）的 (10ft) 。 
+Windows Mixed Reality 中当前支持的最大边界大小为 18x18ft (5.7 x 5.7 m) 或 13ft (4 分钟) radius （中心）。  边界大小取决于锚点，以及从锚点到该点之间的距离，你可以在风险的稳定性之前进行移动。  Windows Mixed Reality 建立在平台中的一个阶段抽象基础之上，这一阶段就是您在其中移动的空间，而此阶段依赖于单个定位点 (每个应用程序也会假设，这也是 Naopak 和 Oculus 的工作方式，因为它们只有单个坐标系统) 。  这一点很重要的原因是，使用内部跟踪，因为从锚点中进一步移动时，耳机跟踪在保持边界稳定时是可靠的。  如果边界旨在帮助避免物理障碍，就会越来越多地从中心开始更多问题。  两个因素决定了最大边界大小;Windows Mixed Reality 耳机可提供最佳房间缩放体验的最大距离（对于大多数 Windows Mixed Reality 耳机，最大限度地减少了头戴式耳机线）的 (10ft) 。
 
 ## <a name="set-up-speech"></a>设置语音
 
@@ -112,7 +112,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 
 如果连接带有较高分辨率的耳机 (例如，使用4320x2160 的耳机显示 PC) ，你将看到一个调整混合现实显示分辨率的设置。
 
-* 此设置为 Windows Mixed Reality 组合堆栈提供选项，以在 4320x2160) 的情况下呈现本机 (例如，在上呈现组合堆栈，或在较低的分辨率和 upscale 上呈现组合堆栈 (例如，在2880x1440 和 upscale 呈现到4320x2160。
+* 此设置为 Windows Mixed Reality 组合堆栈提供选项，以在 4320x2160) 的情况下呈现本机 (例如，在上呈现组合堆栈，或在较低的分辨率和 upscale 上呈现组合堆栈 (例如，在2880x1440 和 upscale 呈现为 4320x2160) 。
 * 默认设置为以本机方式呈现 (例如， **4320 x 2160 (最佳质量) ** 选项) 以提供可从耳机获得最佳视觉质量。
 * 如果你的电脑不满足具有更高分辨率显示器的头戴显示设备的最低图形硬件要求，并且/或者如果你看到图形性能问题，则可以尝试使用选择 " **自动增加 (最佳性能) ** " 选项。
 
@@ -131,9 +131,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 * **90Hz**
 
 >[!Note]
->HP 回音 G2 的自动刷新率设置为90Hz
-
-某些 Windows Mixed Reality 功能（包括混合现实门户预览）和更大的头戴显示 FOV 仅适用于90Hz 体验。
+>第一次设置 HP 回音 G2 耳机时，体验将更改为90Hz，以确保获得最佳体验。  如果需要，可以将其更改回 "自动"。
 
 ### <a name="input-switching"></a>输入切换
 
@@ -180,5 +178,5 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 * [排查安装问题](installation_errors.md)
 * [安装疑难解答](set-up-questions.md)
 * [了解 Mixed Reality](learn-mixed-reality.md)
-* [运动控制器的工作原理](controllers-in-wmr.md)
+* [运动控制器](controllers-in-wmr.md)
 * [由内而外跟踪的工作原理](tracking-system.md)

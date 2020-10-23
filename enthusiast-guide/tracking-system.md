@@ -3,12 +3,12 @@ title: 由内而外跟踪的工作原理
 description: 有关在 Windows Mixed Reality 耳机中使用的基于照相机的内部跟踪系统的信息。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，从内到外，内幕，跟踪，照相机
-ms.openlocfilehash: a91b5fba399e9bb328fd579811a64aee03b49efd
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: eda1b323915788f72ae6f4a2efcf51850734eac9
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174332"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434606"
 ---
 # <a name="inside-out-tracking"></a>内部跟踪
 
@@ -72,6 +72,6 @@ Windows Mixed Reality 中的跟踪非常易于使用。 不需要任何基础结
 
 ## <a name="see-also"></a>另请参阅
 * [跟踪系统疑难解答](tracking.md)
-* [运动控制器的工作原理](controller-in-wmr.md)
+* [运动控制器](controller-in-wmr.md)
 * [Windows Mixed Reality 主页](your-mixed-reality-home.md)
 * [在 Windows Mixed Reality 中使用游戏和应用](using-games-and-apps-in-windows-mixed-reality.md)

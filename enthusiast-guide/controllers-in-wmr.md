@@ -8,29 +8,20 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 360b8fea1744e2753aaa5310d79e82f978d92f67
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: d1cf8e56d19ef9ae62d9f83811e843f34b1c2d8c
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293116"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434587"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Windows Mixed Reality 中的运动控制器
 
 运动控制器是允许用户在混合现实中采取措施的硬件附件。 动作控制器优于手势的优势在于，控制器在空间中具有精确的位置，允许与数字对象进行精细的交互。 对于 Windows Mixed Reality 沉浸式耳机，运动控制器是用户在其世界中采取措施的主要方式。
+
 Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供精确而快速的移动性跟踪，这意味着无需在空间中的墙壁上安装硬件。 这些运动控制器将提供与 Windows Mixed Reality 沉浸式耳机相同的设置和可移植性。
 
-Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，它们提供自然、精确的交互，无需在墙壁上安装硬件。
-
 你还可以使用 Xbox 控制器、鼠标和键盘，或 [仅使用你的语音](using-speech-in-wmr.md)进行浏览。
-
-**功能：**
-
-* 光学跟踪
-* 触发器
-* 抓取按钮
-* 控制
-* 触摸板
 
 ## <a name="motion-controller-setup"></a>运动控制器设置
 
@@ -38,12 +29,12 @@ Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，�
 
 1. 启动 **混合现实门户** 并连接手机网络。  
 2. 在左下角选择 "..." **> 设置控制器**。
-3. 将2个 AA 电池插入每个控制器并将控制器置于配对模式 (参阅配对运动控制器部分中的说明) 
+3. 将 2 AA 电池插入每个控制器，并将控制器置于配对模式 (参阅配对[运动控制器部分](controllers-in-wmr.md#Pair-motion-controllers)中的说明
 4. 按照屏幕上提供的说明进行操作。
 
 > [!NOTE]
-> * 对于直接与电脑配对的控制器，需要将它们打开并按下电池隔离舱内的 "配对" 按钮，将其置于配对模式，直至指示灯开始闪烁。  
-> * 运动控制器每次仅支持成对一台计算机或 PC。 如果需要将它们用于不同的耳机，则需要完成配对过程。 请参阅 [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
+> * 对于直接与电脑配对的控制器，需要将它们打开并按下电池隔离舱内的 "配对" 按钮，将其置于配对模式，直至指示灯开始闪烁。
+> * 运动控制器仅支持一次配对到一台 PC。 如果需要将它们用于不同的耳机，则需要完成配对过程。 请参阅 [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
 
 [获取帮助连接](wmr-setup-faq.md#my-motion-controllers-arent-working)
 
@@ -58,20 +49,29 @@ Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，�
 
 ## <a name="pair-motion-controllers"></a>配对运动控制器
 
+如果使用的是包含集成蓝牙控制器的耳机，如 Samsung 太空 + 或 HP 回音，则控制器应已配对。 但你仍可以使用设置应用来配对控制器 (应在 HMD 设置过程中安装。 你还可以从 Microsoft store) 获取它。
+
+### <a name="pair-motion-controllers-to-hmd"></a>将运动控制器配对到 HMD
+
 按下 Windows 按钮2秒钟，使控制器通电，直至 Led 亮起。
 
 从控制器中取出电池盖，并找到控制器边缘的小型配对按钮。 按下此按钮可与电脑配对。
+    ![运动控制器配对](images/connect_controller.png)
 
-如果使用的是 HP 回音 G2 耳机，控制器应该已经配对。 但你可以通过使用 HP 回音： VR VR 设置应用来配对控制器， (应在安装过程中安装该应用。 你还可以从 Microsoft store) 获取它。 此外，还可以通过添加另一个 bluetooth 设备将控制器配对到 PV：
+启动 **混合现实门户** 并连接手机网络。  
+在左下角选择 "..." **> 设置控制器**。
+按照屏幕上的说明进行操作。
+
+### <a name="pair-motion-controllers-to-pc"></a>将运动控制器配对到 PC
+
+可以通过添加另一个蓝牙设备将控制器配对到 PC。
+
+为控制器供电，并将其置于配对模式，如上所述。
 
 * 导航到计算机设置
 * 设备/添加蓝牙或其他设备。
 
-![运动控制器配对](images/connect_controller.png)
-
-你可能会在屏幕的右下角看到一条消息，因为控制器上的固件会更新。 在这种情况下，您可以转到本教程的下一步，但不要关闭控制器。
-
-控制器固件更新完成后，将重新启动并重新连接到主机。 Led 将稳定亮起。
+配对完成后，Led 就会稳定亮起。
 
 ### <a name="common-issues"></a>常见问题
 
@@ -129,13 +129,13 @@ Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，�
 * 如果沉浸式耳机连接到您的 PC，并且有新的控制器固件可用，则该固件将在下一次打开时自动推送到运动控制器。
 * 控制器固件更新通过一种在循环动作中照亮 LED 象限的模式来表示，并且需要1-2 分钟。 有时，固件更新可能需要更长的时间，长达10分钟，这可能表示 Bluetooth 连接或无线电干扰较差。
 * 如果固件更新中断 (控制器断电或电池) ，则在下一次开机时将再次尝试。
-* 固件更新完成后，控制器将重新启动并重新连接。 
-* 这两个控制器现在都应连接。  (检查蓝牙和其他设备的以下) ： ![已连接控制器](images/cyk-connected.jpg)
+* 固件更新完成后，控制器将重新启动并重新连接。
+* 这两个控制器现在都应连接。 导航到混合现实门户以检查控制器的状态。
 * 验证控制器是否正常工作：
   * 启动 **混合现实门户** ，并输入混合现实主页。
   * 移动控制器并验证跟踪、测试按钮并验证 teleportation 是否正常工作。 如果没有，请查看 [运动控制器故障排除部分](motion-controller-problems.md)
 
-## <a name="faq"></a>常见问题
+## <a name="faq"></a>常见问题解答
 
 ### <a name="how-can-i-check-battery-level"></a>如何检查电池电量级别？
 
@@ -155,4 +155,4 @@ Windows Mixed Reality 旨在最大程度地利用混合现实运动控制器，�
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
 * [故障排除](troubleshooting-windows-mixed-reality.md)
 
-运动控制器遇到问题？ [获取帮助](using-wmr-faq.md#im-having-trouble-with-my-motion-controllers)
+运动控制器遇到问题？ [获取帮助](motion-controller-problems.md)

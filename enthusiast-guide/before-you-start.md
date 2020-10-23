@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，兼容，兼容性，入门，安装，PC，系统要求
 appliesto:
 - Windows 10
-ms.openlocfilehash: b10fc9962d899b0a2c2ee15e6d039fc6bfb6d503
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 84001a46826ada06e315f1707ee9516c3da063bd
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293059"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434569"
 ---
 # <a name="before-you-start"></a>开始之前
 
@@ -35,10 +35,12 @@ ms.locfileid: "92293059"
 
 ## <a name="make-sure-you-have-the-windows-10-version-1709-or-newer-installed"></a>请确保已安装 Windows 10 版本1709或更高版本
 
-若要使用 Windows Mixed Reality，你必须运行 Windows 10 版本 1709 (秋季创意者更新) 或更高版本。 Windows 10 的兼容版本包括：
-* Windows 10 版本 1709 (秋季创意者更新，版本 16299) 
-* Windows 10 版本 1803 (弹簧更新，版本 17134) 
-* Windows 10 版本 1809 (10 月更新版，版本 17763) 
+必须运行 Windows 10 版本1903或更高版本，才能使用 Windows Mixed Reality。 Windows 10 的兼容版本包括：
+
+* Windows 10 版本1903
+* Windows 10 版本1909
+* Windows 10 版本2004
+* Windows 10 版本20H2
 
 若要查看设备当前正在运行的 Windows 10 版本，请选择 " **开始** " 按钮，然后选择 " **设置" > 系统 > 关于**"。
 
@@ -48,7 +50,7 @@ ms.locfileid: "92293059"
 
 ## <a name="make-sure-your-pc-is-connected-to-the-internet"></a>确保你的电脑已连接到 internet
 
-检查你的电脑是否已连接到 Internet。 需要下载驱动程序和其他一些软件，使 Windows Mixed Reality 启动并运行。  如果 Wi-Fi 网络连接设置为 "按流量计费"，请将其更改为 "未计量"。 [了解详细信息](https://support.microsoft.com/en-us/help/4028458/windows-metered-connections-in-windows-10)。
+检查你的电脑是否已连接到 Internet。 需要下载驱动程序和其他一些软件，使 Windows Mixed Reality 启动并运行。
 
 ## <a name="make-sure-you-have-a-compatible-graphics-driver"></a>请确保您有兼容的图形驱动程序
 
@@ -69,10 +71,6 @@ ms.locfileid: "92293059"
 ## <a name="make-sure-that-you-have-input-devices"></a>请确保具有输入设备
 
 Windows Mixed Reality 旨在最适用于 Windows Mixed Reality 运动控制器，它们提供自然、精确的交互，无需在墙壁上安装硬件。 但也可以使用 Xbox 控制器或鼠标和键盘。
-
-## <a name="get-headphones-if-your-headset-didnt-come-with-them"></a>如果你的耳机未随附，请获取耳机
-
-除非购买的是 Samsung HMD 太空、HP 回音或 HP 回音 (，而该耳机) 集成了 AKG 耳机和集成的双阵列麦克风，否则，需要获取音频耳机，一对耳机，可以插入 HMD 的 headset's 3.5 mm 音频插孔。
 
 ## <a name="make-sure-that-you-have-a-large-open-space"></a>请确保有一个较大的开放空间
 

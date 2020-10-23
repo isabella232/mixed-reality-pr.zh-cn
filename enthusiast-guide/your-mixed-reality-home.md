@@ -3,18 +3,18 @@ title: 混合现实主页
 description: 如何在 Windows Mixed Reality 主页中导航和传送，启动应用和游戏，个性化家庭，并更改视觉对象、音频和语音设置。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，导航，接收，应用，游戏
-ms.openlocfilehash: 6537bca13a7eb133d7f78e7922ea91304fdc90f2
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 177a9db67f304c163356a814b5c4d2e54ba4867d
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293087"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434624"
 ---
 # <a name="your-windows-mixed-reality-home"></a>Windows Mixed Reality 主页
 
 ## <a name="what-is-the-windows-mixed-reality-home"></a>什么是 Windows Mixed Reality 主页
 
-Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕和2D 界面，而是利用我们的 instinctual 功能来浏览三维空间。 每个位置都有一个用途，内容具有上下文。 正如你的电脑从桌面界面开始，你的手机始于主屏幕一样，Windows Mixed Reality 在混合现实家里开始。 这是一种环境，你可以进行导航和个性化设置，使其成为自己的环境。 它是 Microsoft Store 中提供的数千个应用程序的画布。 您可以通过这些应用程序进行多重处理，就像您从未能够在三维位置上几乎无限制的情况。
+Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕和2D 界面，而是利用我们的 instinctual 功能来浏览三维空间。 每个位置都有一个用途，内容具有上下文。 正如你的电脑从桌面界面开始，你的手机始于主屏幕一样，Windows Mixed Reality 在混合现实家里开始。 这是一种环境，你可以进行导航和个性化设置，使其成为自己的环境。 它是 Microsoft Store 或 SteamVR 中提供的数千个应用程序的画布。 您可以通过这些应用程序进行多重处理，就像您从未能够在三维位置上几乎无限制的情况。
 
 ## <a name="move-through-the-windows-mixed-reality-home"></a>在 Windows Mixed Reality 主页上移动
 
@@ -73,7 +73,7 @@ Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕
 
 ## <a name="turn-off-the-boundary"></a>关闭边界
 
-请参阅 Windows Mixed Reality 门户，并打开屏幕左上角的菜单。 选择 " **运行" 设置 > 房间边界**。 切换切换为 "关闭"。 如果关闭边界，应将其放在办公桌上。
+中转到混合现实门户，并打开屏幕左上角的菜单。 选择 " **运行" 设置 > 房间边界**。 切换切换为 "关闭"。 如果关闭边界，应将其放在办公桌上。
 
 ## <a name="spatial-sound-in-the-windows-mixed-reality-home"></a>Windows Mixed Reality 主页中的空间音效
 

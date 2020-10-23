@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，适配器，转换器，HDMI，USB，DisplayPort
 appliesto:
 - Windows 10
-ms.openlocfilehash: bcdc25c0f6e678666a713d01aaa4fb15da31e90c
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: ea0cd3c87fecda310ec72ba50d8f5982d1782b31
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174405"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434596"
 ---
 # <a name="recommended-adapters"></a>推荐的适配器
 > [!NOTE]
@@ -263,7 +263,7 @@ ms.locfileid: "92174405"
 
 如果头戴显示在2018之后，则不需要适配器，控制器与耳机配对。
 
-2017或更低版本随附的设备需要用于控制器的适配器。 如果你的电脑未包含用于配对 [Windows Mixed Reality 运动控制器](controllers-in-wmr.md)的蓝牙，则可以使用类似于 Plugable USB 蓝牙4.0 低能量微适配器的适配器。
+2017或更低版本随附的设备需要用于控制器的适配器。 如果你的电脑未包含用于配对 [Windows Mixed Reality 运动控制器](controllers-in-wmr.md#Pair-motion-controllers)的蓝牙，则可以使用类似于 Plugable USB 蓝牙4.0 低能量微适配器的适配器。
 
 > [!NOTE]
 > Microsoft 不制造、测试、认证和保证任何适配器的功能、可靠性或质量。 对于任何适配器问题、问题和问题，应联系适配器的卖方或制造商。
