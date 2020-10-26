@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Windows Mixed Reality VR 文档
-summary: 适用于中级到高级客户的有关如何充分利用 Windows Mixed Reality 的详细信息。
+summary: 在游戏、旅游和直播中体验虚拟现实带来的刺激。 在此处，你可了解如何在 Windows Mixed Reality 中开始使用 VR 并进一步操作。
 brand: windows
 metadata:
   title: Windows Mixed Reality VR 文档
-  description: 适用于中级到高级客户的有关如何充分利用 Windows Mixed Reality 的详细信息。
+  description: 在游戏、旅游和直播中体验虚拟现实带来的刺激。 在此处，你可了解如何在 Windows Mixed Reality 中开始使用 VR 并进一步操作
   services: guidance
   ms.service: guidance
   ms.topic: hub-page
@@ -12,38 +12,90 @@ metadata:
   ms.technology: enthusiast-guide
   author: mattwojo
   ms.author: mattwoj
-  ms.openlocfilehash: b791970df40711c298501b2db09cff8ec342de8a
-  ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+  ms.openlocfilehash: 3c485d7214da9109d8f1120e88cb02449b386cff
+  ms.sourcegitcommit: 1aae69e26ae872b724be1bd1ae0b3158c49dc7e2
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/19/2020
-  ms.locfileid: "92174387"
+  ms.lasthandoff: 10/24/2020
+  ms.locfileid: "92499572"
 highlightedContent:
   items:
-  - title: 购买前
+  - title: 关于 Windows Mixed Reality VR
+    itemType: overview
+    url: vr-journey.md
+  - title: 如何购买头戴显示设备
+    itemType: learn
+    url: https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality?rtc=1
+  - title: 了解邮件要求
     itemType: learn
     url: windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md
-  - title: 入门
+  - title: 虚拟现实入门
     itemType: get-started
-    url: before-you-start.md
-  - title: 了解 Mixed Reality
-    itemType: how-to-guide
-    url: learn-mixed-reality.md
-  - title: Windows Mixed Reality 学院
-    itemType: video
-    url: https://developer.microsoft.com/en-us/windows/mixed-reality/academy
+    url: set-up-windows-mixed-reality.md
+  - title: 健康和安全指南
+    itemType: concept
+    url: wmr-health-safety-comfort.md
+  - title: Mixed Reality 软件概述和版本历史记录
+    itemType: concept
+    url: mixed-reality-software.md
+conceptualContent:
+  title: 从 Windows Mixed Reality 开始
+  summary: 查找有关 Mixed Reality 软件、硬件和疑难解答的其他信息。
+  items:
+  - title: 操作说明
+    links:
+    - url: plug-in-your-headset.md
+      itemType: quickstart
+      text: 连接头戴显示设备
+    - url: install-windows-mixed-reality.md
+      itemType: quickstart
+      text: 安装 Windows Mixed Reality 软件
+    - url: learn-mixed-reality.md
+      itemType: quickstart
+      text: 运行学习体验
+    - url: using-games-and-apps-in-windows-mixed-reality.md
+      itemType: quickstart
+      text: 使用游戏和应用
+  - title: 参考
+    links:
+    - url: your-mixed-reality-home.md
+      itemType: concept
+      text: 混合现实主页
+    - url: controllers-in-wmr.md
+      itemType: concept
+      text: Windows Mixed Reality 中的运动控制器
+    - url: using-steamvr-with-windows-mixed-reality.md
+      itemType: concept
+      text: 使用 Windows Mixed Reality 的 SteamVR
+    - url: using-speech-in-wmr.md
+      itemType: concept
+      text: Windows Mixed Reality 中的语音功能
+  - title: 故障排除
+    links:
+    - url: troubleshooting-windows-mixed-reality.md
+      itemType: concept
+      text: 常见问题解答
+    - url: filing-feedback.md
+      itemType: concept
+      text: 提交 bug 和反馈
+    - url: error-codes.md
+      itemType: concept
+      text: 错误代码
+    - url: installation_errors.md
+      itemType: concept
+      text: 安装错误
 additionalContent:
   sections:
   - title: 更多资源
-    summary: 查找故障排除、开发文档和论坛的相关链接。
+    summary: 查找其他资源开发文档和论坛的相关链接。
     items:
-    - title: 故障排除
-      summary: 对 Windows Mixed Reality 的所有区域进行彻头彻尾的故障排除
-      url: installation_errors.md
-    - title: 反馈
-      summary: 收集深入介绍 Windows Mixed Reality 的其他文章，从提供有用的反馈到子系统工作原理。
-      url: filing-feedback.md
-    - title: 开发文档
+    - title: 由内而外跟踪
+      summary: 了解由内而外跟踪的工作原理
+      url: tracking-system.md
+    - title: Mixed Reality 软件概述
+      summary: Mixed Reality 软件概述和版本历史记录
+      url: mixed-reality-software.md
+    - title: 在 Windows Mixed Reality 中开发
       summary: 开发和设计文档
-      url: https://developer.microsoft.com/windows/mixed-reality
+      url: https://docs.microsoft.com/en-us/windows/mixed-reality/develop/development?tabs=unity
   footer: 在我们的网站上发现了问题？ [请告诉我们！](https://forums.hololens.com/categories/using-windows-mixed-reality)
