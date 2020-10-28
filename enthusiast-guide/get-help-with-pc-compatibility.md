@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: b9b9d46e2ab71fa90960e403ceac94b95ba01440
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 75d8ade12d5534a1eb86f36bcdd590539a6811b5
+ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293080"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92683173"
 ---
 # <a name="get-help-with-pc-compatibility-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中获取有关 PC 兼容性的帮助
 
@@ -41,11 +41,11 @@ ms.locfileid: "92293080"
 
 ### <a name="this-pc-has-a-hybrid-graphics-configuration-with-an-incompatible-pcie-link"></a>这台电脑的混合图形配置具有不兼容的 PCIe 链接
 
-PCIe 代表 *外围组件互连 Express*。 这是电脑用来与图形卡通信的连接。 您的配置可能会正常运行，但如果遇到问题，则需要切换到兼容的 [PC](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)。
+PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通信的连接。 您的配置可能会正常运行，但如果遇到问题，则需要切换到兼容的 [PC](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)。
 
 ### <a name="this-pcs-graphics-driver-might-not-work-well-with-windows-mixed-reality"></a>这台电脑的图形驱动程序可能无法正常使用 Windows Mixed Reality
 
-如果遇到问题，请尝试使用 Windows 更新下载新的图形驱动程序 (**启动 > 设置 > 更新 & 安全 > 检查更新**) ，或访问电脑制造商或图形卡制造商的网站。
+如果遇到问题，请尝试使用 Windows 更新下载新的图形驱动程序 ( **启动 > 设置 > 更新 & 安全 > 检查更新** ) ，或访问电脑制造商或图形卡制造商的网站。
 
 > [!div class="nextstepaction"]
 > [检查更新](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
@@ -63,10 +63,10 @@ PCIe 代表 *外围组件互连 Express*。 这是电脑用来与图形卡通信
 * 将耳机插入到其他 USB 端口（如果可用）。
 * 如果这不起作用，请卸载您的 PC 的当前 USB 驱动程序，然后重新安装 Microsoft 驱动程序：
 
-1. 选择 " **开始**"，然后在 **搜索** 框中键入 "设备管理器"。
+1. 选择 " **开始** "，然后在 **搜索** 框中键入 "设备管理器"。
 2. 从结果中选择 " **设备管理器** "。
 3. 展开 "通用串行总线控制器" 类别，查看列出的设备并卸载所有不兼容的驱动程序。
-    * 如果该列表包含的 "可扩展主机控制器" 项在设备名称的末尾没有 "Microsoft"，则该驱动程序与 Windows Mixed Reality 不兼容。 需要将其卸载。 若要卸载某个驱动程序，请在列表中右键单击该设备，然后选择 " **卸载设备**"。 选中 " **删除此设备的驱动程序软件** " 复选框，然后选择 " **卸载**"。
+    * 如果该列表包含的 "可扩展主机控制器" 项在设备名称的末尾没有 "Microsoft"，则该驱动程序与 Windows Mixed Reality 不兼容。 需要将其卸载。 若要卸载某个驱动程序，请在列表中右键单击该设备，然后选择 " **卸载设备** "。 选中 " **删除此设备的驱动程序软件** " 复选框，然后选择 " **卸载** "。
     * 如果该列表包含名称中包含 "Etron" 的 "可扩展主机控制器" 项，该 USB 控制器与 Windows Mixed Reality 不兼容。 需要在电脑上使用不同的 USB 端口，或购买不同的 USB 3.0 主机控制器。
 4. 重启你的电脑。
 5. 返回到设备管理器并再次查找可扩展的主机控制器项。 如果你现在在设备名称的末尾看到 "Microsoft"，你就可以开始了。 如果没有，请重复执行卸载步骤来删除任何其他非 Microsoft 驱动程序版本。
@@ -99,7 +99,7 @@ PCIe 代表 *外围组件互连 Express*。 这是电脑用来与图形卡通信
 
 ### <a name="this-pcs-graphics-driver-wont-work-with-windows-mixed-reality"></a>这台电脑的图形驱动程序不能与 Windows Mixed Reality 一起使用
 
-这台电脑的图形驱动程序不能与 Windows Mixed Reality 一起使用。 尝试使用 Windows 更新下载新的图形驱动程序 (**启动 > 设置 > 更新 & 安全 > 检查是否有更新**) ），或切换到电脑制造商或图形卡制造商的网站。 
+这台电脑的图形驱动程序不能与 Windows Mixed Reality 一起使用。 尝试使用 Windows 更新下载新的图形驱动程序 ( **启动 > 设置 > 更新 & 安全 > 检查是否有更新** ) ），或切换到电脑制造商或图形卡制造商的网站。 
 
 > [!div class="nextstepaction"]
 > [检查更新](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
@@ -108,7 +108,7 @@ PCIe 代表 *外围组件互连 Express*。 这是电脑用来与图形卡通信
 
 ### <a name="this-pcs-processor-wont-work-with-windows-mixed-reality"></a>这台电脑的处理器不适用于 Windows Mixed Reality
 
-这台电脑的处理器不 supprot AVX/Popcnt 说明。 若要运行 Windows Mixed Reality，你需要将其替换为 [兼容的图形卡](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md#compatibility-guidelines) 或切换到 [兼容的 PC](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)。
+这台电脑的处理器不支持 AVX/Popcnt 指令。 若要运行 Windows Mixed Reality，你需要将其替换为 [兼容的图形卡](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md#compatibility-guidelines) 或切换到 [兼容的 PC](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)。
 
 ### <a name="this-pc-doesnt-have-enough-free-disk-space-to-run-windows-mixed-reality"></a>这台电脑的可用磁盘空间不足，无法运行 Windows Mixed Reality
 
