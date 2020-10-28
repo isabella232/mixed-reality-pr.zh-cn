@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 手势，运动控制器，unity，注视，输入
-ms.openlocfilehash: 6b132e56e5d60e59fda53b95328580ed861ce75c
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+ms.openlocfilehash: 6c41de0a0b5d2879b2f3a0be90c9456100599d2b
+ms.sourcegitcommit: 8b16945d6a551f174a65fa3980ba392682ca45d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638554"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92886270"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Unity 中的手势和运动控制器
 
@@ -68,32 +68,32 @@ Windows Mixed Reality 的按钮/轴 ID 映射在以下两个方面不同于 Open
 >[!NOTE]
 >这些按钮/轴 Id 不同于 Unity 用于 OpenVR 的 Id，因为 gamepads、Oculus 触控和 OpenVR 所使用的映射中出现冲突。
 
-### <a name="using-hp-reverb-g2-controllers"></a>使用 HP 回音 G2 控制器
+<!-- ### Using HP Reverb G2 controllers
 
-如果使用的是 HP 回音 G2 控制器，请参阅下表中的按钮和轴 Id。
+If you're using the HP Reverb G2 controllers, refer to the table below for button and axis IDs.
 
 <table>
 <tr>
-<th rowspan="2"><a href="https://docs.unity3d.com/ScriptReference/XR.CommonUsages.html">输入 </th><th colspan="2">公共 Unity Api</a><br /> (GetButton/GetAxis)  </th><th rowspan="2">HP 回音</a></th>
+<th rowspan="2"><a href="https://docs.unity3d.com/ScriptReference/XR.CommonUsages.html">Input </th><th colspan="2">Common Unity APIs</a><br />(Input.GetButton/GetAxis) </th><th rowspan="2">HP Reverb G2 Input API</a></th>
 </tr><tr>
-<th> 左手 </th><th> 右手</th>
+<th> Left hand </th><th> Right hand</th>
 </tr><tr>
-<td> Primary2DAxis </td><td> 轴 1 (X) /轴 2 (Y)  </td><td> 轴 4 (X) /轴 5 (Y)  </td><td> 控制</td>
+<td> Primary2DAxis </td><td> Axis 1 (X) / Axis 2 (Y) </td><td> Axis 4 (X) / Axis 5(Y) </td><td> Thumbstick</td>
 </tr><tr>
-<td> 按下触发器 </td><td> 轴9 </td><td> 轴10 </td><td> 索引触发器</td>
+<td> Trigger pressed </td><td> Axis 9 </td><td> Axis 10 </td><td> Index trigger</td>
 </tr><tr>
-<td> 调整 </td><td> 轴11d </td><td> 轴12 </td><td> 抓握触发器</td>
+<td> Grip </td><td> Axis 11d </td><td> Axis 12 </td><td> Grip trigger</td>
 </tr><tr>
-<td> PrimaryButton 按下 </td><td> 按钮2 </td><td> 按钮0 </td><td> 按下菜单按钮</td>
+<td> PrimaryButton pressed </td><td> Button 2 </td><td> Button 0 </td><td> Menu button pressed</td>
 </tr><tr>
-<td> SecondaryButton 按下 </td><td> 按钮3 </td><td> 按钮1 </td><td> A/X 按钮</td>
+<td> SecondaryButton pressed </td><td> Button 3 </td><td> Button 1 </td><td> A/X button</td>
 </tr><tr>
-<td> GripButton </td><td> 按钮4 </td><td> 按钮5 </td><td> 抓握触发器</td>
+<td> GripButton </td><td> Button 4 </td><td> Button 5 </td><td> Grip trigger</td>
 </tr><tr>
-<td> TriggerButton </td><td> 按钮14 </td><td> 按钮15 </td><td> 索引触发器</td>
+<td> TriggerButton </td><td> Button 14 </td><td> Button 15 </td><td> Index trigger</td>
 </tr><tr>
 </tr>
-</table>
+</table> -->
 
 
 ## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指针姿势
