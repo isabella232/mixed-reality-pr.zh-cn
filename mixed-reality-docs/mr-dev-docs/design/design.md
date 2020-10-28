@@ -7,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互
-ms.openlocfilehash: 947d9378cd65ceda11cf5dbb1d103a8f9bcc6e63
-ms.sourcegitcommit: 8aa3b0034f9f2ff0973d49061c669a82c2c8d7e6
+ms.openlocfilehash: 7333163a01496f41c4cb3cd98f54012e5c58a8d4
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92058581"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293122"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
@@ -32,9 +32,9 @@ ms.locfileid: "92058581"
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 从 Microsoft 内外的混合现实开发人员处，了解所收集的方法、见解和设计理论的第一手资料 |
+| [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 亲眼见证从 Microsoft 内外的设计师处收集的混合现实设计过程 |
 | [混合现实应用的类型](types-of-mixed-reality-apps.md) | 确定你的应用体验在混合现实范围内的位置 |
-| [“设计全息影像”应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | 了解混合现实 UX 设计的基础知识，只需深入了解混合现实行为以及与创建出色 HoloLens 应用相关的提示和建议即可 |
+| [“设计全息影像”应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | 了解混合现实 UX 设计的基础知识，只需深入了解混合现实行为以及与创建出色 HoloLens 应用相关的提示和建议即可（可在 HoloLens 2 中从 Microsoft Store 下载） |
 
 ### <a name="2-core-concepts"></a>2.核心概念
 
@@ -46,7 +46,7 @@ ms.locfileid: "92058581"
 | --- | --- |
 | [全息帧](holographic-frame.md) | 了解用户佩戴着其头戴显示设备时如何看到覆盖到现实世界的内容 |
 | [坐标系统](coordinate-systems.md) | 了解如何将全息影像置于世界上对用户有意义的各个位置，该位置可能是用户的物理室，也可能是你创建的某个虚拟领域 |
-| [空间映射](spatial-mapping.md) | 在用户的世界中锚定对象，并利用真实世界的深度提示 |
+| [空间映射](spatial-mapping.md) | 在用户的世界中锚定对象，并利用真实世界的物理表面 |
 | [舒适感注意事项](comfort.md) | 通过以模仿自然世界的方式创建和呈现沉浸式内容，确保用户的舒适感和安全性 |
 
 ### <a name="3-interaction-design"></a>3.交互设计
