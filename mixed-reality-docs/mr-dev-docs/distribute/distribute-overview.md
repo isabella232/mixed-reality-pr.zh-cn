@@ -13,6 +13,6 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92638514"
 ---
-# <a name="distribution-overview"></a><span data-ttu-id="1748d-104">分发概述</span><span class="sxs-lookup"><span data-stu-id="1748d-104">Distribution overview</span></span>
+# <a name="distribution-overview"></a><span data-ttu-id="8ed48-104">分发概述</span><span class="sxs-lookup"><span data-stu-id="8ed48-104">Distribution overview</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1748d-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1748d-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ed48-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8ed48-105">See also</span></span>

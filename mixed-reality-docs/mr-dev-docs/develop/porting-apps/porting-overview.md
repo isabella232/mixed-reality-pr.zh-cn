@@ -13,6 +13,6 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92638494"
 ---
-# <a name="porting-overview"></a><span data-ttu-id="e5e15-104">移植概述</span><span class="sxs-lookup"><span data-stu-id="e5e15-104">Porting overview</span></span>
+# <a name="porting-overview"></a><span data-ttu-id="9b60d-104">移植概述</span><span class="sxs-lookup"><span data-stu-id="9b60d-104">Porting overview</span></span>
 
-<span data-ttu-id="e5e15-105">[//TODO：需要标头图像]</span><span class="sxs-lookup"><span data-stu-id="e5e15-105">[//TODO: Need header image]</span></span>
+<span data-ttu-id="9b60d-105">[//TODO：需要标头图像]</span><span class="sxs-lookup"><span data-stu-id="9b60d-105">[//TODO: Need header image]</span></span>
