@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 在购买前，Windows Mixed Reality，混合现实，虚拟现实，VR，先生，预销售，调查，购买
 appliesto:
 - Windows 10
-ms.openlocfilehash: b665d0d84f511ae5e6383c5d4b5aadea400b2033
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: a38b6ed8625fbb419ad24f2e27acec881d7b85a7
+ms.sourcegitcommit: ea7d806c9aa88d1295493a25f47e58bb72a4000a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434615"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907439"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -21,17 +21,17 @@ ms.locfileid: "92434615"
 
 ### <a name="where-can-i-buy-a-windows-mixed-reality-ready-pc-or-headset"></a>在哪里可以购买 Windows Mixed Reality ready PC 或耳机？
 
-**快速解答：** 你可以在批准的本地零售商处购买 Windows Mixed Reality ready PC 或耳机，也可以从包含 Microsoft Store 在内的各种零售商处在线购买。 查找 Windows Mixed Reality ready PC 或在线耳机： <https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality?icid=ARVRcat_Feature1_WMRIntro>
+**快速解答：** 你可以在批准的本地零售商处购买 Windows Mixed Reality ready PC 或耳机，也可以从包含 Microsoft Store 在内的各种零售商处在线购买。 查找 Windows Mixed Reality ready PC 或在线耳机： <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
 
 ### <a name="where-can-i-try-windows-mixed-reality"></a>在哪里可以尝试 Windows Mixed Reality？
 
-**快速解答：** 你可以在你附近的 [Microsoft 反应器](https://developer.microsoft.com/reactor/?WT.mc_id=docs-faq-ayyonet) 上尝试 Windows Mixed Reality。  
-* 查找本地 Microsoft 反应器： <https://www.microsoft.com/en-us/store/locations/all-locations>
+**快速解答：** 你可以在你附近的 [Microsoft 反应器](https://developer.microsoft.com/reactor/?WT.mc_id=docs-faq-ayyonet) 上尝试 Windows Mixed Reality。
+
 * 在 Meetup.com 上查找 Microsoft 反应器事件： <https://www.meetup.com/pro/microsoft-reactor>
 
 ### <a name="which-manufacturers-are-selling-windows-mixed-reality-devices"></a>哪些制造商正在出售 Windows Mixed Reality 设备？
 
-**快速解答：** 现在 HP 提供耳机和运动控制器。 请参阅<https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality?icid=ARVRcat_Feature1_WMRIntro>
+**快速解答：** 现在 HP 提供耳机和运动控制器。 请参见<https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
 
 ### <a name="where-can-i-buy-standalone-motion-controllers"></a>在哪里可以购买独立的运动控制器？
 
@@ -51,7 +51,7 @@ ms.locfileid: "92434615"
 
 **快速解答：** Windows Mixed Reality 耳机功能 (跟踪相机位于耳机) 以及 Windows 10 的即插即用设置。
 
-**更多详细信息**： Windows Mixed Reality 提供多种功能，包括轻松安装 (无需外部传感器跟踪你和控制器) ，你选择的耳机用于满足你的舒适和价格点，具有竞争性解决方案的耳机，最后提供了一个独特的用户体验，可让你从 Microsoft Store 使用成千上万的应用程序。
+**更多详细信息** ： Windows Mixed Reality 提供多种功能，包括轻松安装 (无需外部传感器跟踪你和控制器) ，你选择的耳机用于满足你的舒适和价格点，具有竞争性解决方案的耳机，最后提供了一个独特的用户体验，可让你从 Microsoft Store 使用成千上万的应用程序。
 
 ### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>混合现实是否意味着可以通过 "内部" 相机？ 除虚拟现实外，是否还会遇到更进一步的现实？
 
@@ -257,7 +257,7 @@ ms.locfileid: "92434615"
 
 ### <a name="do-the-mixed-reality-headsets-have-ipd-adjustment"></a>混合现实耳机是否有 IPD 调整？
 
-**快速解答：** 根据耳机，一些混合现实耳机功能机械 IPD 调整。 其他耳机功能软件 IPD 调整，可根据 IPD 提高图像扭曲和深度准确性。 用户可以通过 **设置 > 混合现实 > 耳机显示 > 校准**来设置其自定义 IPD。
+**快速解答：** 根据耳机，一些混合现实耳机功能机械 IPD 调整。 其他耳机功能软件 IPD 调整，可根据 IPD 提高图像扭曲和深度准确性。 用户可以通过 **设置 > 混合现实 > 耳机显示 > 校准** 来设置其自定义 IPD。
 
 ### <a name="do-the-mixed-reality-headsets-have-eye-relief-adjustment"></a>混合现实耳机是否有眼睛起伏调整？
 
@@ -303,7 +303,7 @@ ms.locfileid: "92434615"
 
 ### <a name="does-the-windows-mixed-reality-platform-support-rift-and-vive-hardware"></a>Windows Mixed Reality 平台是否支持 Rift 和 Naopak 硬件？
 
-**快速解答：** Windows Mixed Reality 仅适用于已批准的 Windows Mixed Reality 耳机/控制器。 请参阅<https://www.microsoft.com/en-us/store/b/virtualreality>
+**快速解答：** Windows Mixed Reality 仅适用于已批准的 Windows Mixed Reality 耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/b/virtualreality>
 
 ## <a name="motion-controllers"></a>运动控制器
 
@@ -332,11 +332,11 @@ ms.locfileid: "92434615"
 
 ### <a name="will-windows-mixed-reality-work-with-my-oculus-touch-controllers-or-htc-vive-headsets--controllers"></a>Windows Mixed Reality 是否适用于我的 Oculus 触控控制器或 HTC Naopak 耳机/控制器？
 
-**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参阅<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
+**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
 
 ### <a name="will-windows-mixed-reality-work-with-my-steamvr-knuckle-controllers"></a>Windows Mixed Reality 是否适用于我的 SteamVR Knuckle 控制器？
 
-**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参阅<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
+**快速解答：** 否，Windows Mixed Reality 仅适用于已批准的耳机/控制器。 请参见<https://www.microsoft.com/en-us/store/collections/VRandMixedrealityheadsets>
 
 ### <a name="will-windows-mixed-reality-support-my-xbox-one-controller-with-the-wireless-xbox-adapter"></a>Windows Mixed Reality 是否会通过无线 Xbox 适配器支持我的 Xbox One 控制器？
 
