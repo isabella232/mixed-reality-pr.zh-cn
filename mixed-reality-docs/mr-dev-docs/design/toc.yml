@@ -1,0 +1,152 @@
+- name: 开始设计和原型制作
+  href: design.md
+- name: 关于此设计指南
+  href: about-this-design-guidance.md
+- name: 核心概念
+  items:
+    - name: 概述
+      href: core-concepts-landingpage.md
+    - name: 应用模型
+      href: app-model.md
+    - name: 应用视图
+      href: app-views.md
+    - name: 舒适感
+      href: comfort.md
+    - name: 坐标系统
+      href: coordinate-systems.md
+    - name: 眼动跟踪
+      href: eye-tracking.md
+    - name: 全息帧
+      href: holographic-frame.md
+    - name: 房间扫描可视化
+      href: room-scan-visualization.md
+    - name: 场景理解
+      href: scene-understanding.md
+    - name: 空间定位点
+      href: spatial-anchors.md
+    - name: 声音
+      href: spatial-sound.md
+    - name: 空间映射
+      href: spatial-mapping.md
+    - name: 系统手势
+      href: system-gesture.md
+    - name: Mixed Reality 应用的类型
+      href: types-of-mixed-reality-apps.md
+    - name: 设计适用于全息显示器的内容
+      href: designing-content-for-holographic-display.md
+- name: 交互模型
+  items:
+    - name: 本能交互
+      href: interaction-fundamentals.md
+    - name: 手部和运动控制器模型
+      items:
+        - name: 用手直接操作
+          href: direct-manipulation.md
+        - name: 手部和运动控制器
+          href: hands-and-tools.md
+        - name: 运动控制器
+          href: motion-controllers.md
+        - name: 用手指向并提交
+          href: point-and-commit.md
+    - name: 免手动模型
+      items:
+        - name: 免手动
+          href: hands-free.md
+        - name: 语音输入
+          href: voice-input.md
+        - name: 凝视和停留
+          items:
+            - name: 凝视和停留
+              href: gaze-and-dwell.md
+            - name: 眼睛凝视和停留
+              href: gaze-and-dwell-eyes.md
+            - name: 头部凝视和停留
+              href: gaze-and-dwell-head.md
+    - name: 凝视并提交
+      items:
+        - name: 凝视并提交
+          href: gaze-and-commit.md
+        - name: 眼睛凝视和提交
+          href: gaze-and-commit-eyes.md
+        - name: 头部凝视和提交
+          href: gaze-and-commit-head.md
+    - name: 基于眼睛凝视的交互
+      href: eye-gaze-interaction.md
+- name: UX 元素
+  items:
+    - name: 概述
+      href: app-patterns-landingpage.md
+    - name: 基础元素
+      items:
+        - name: 颜色、光线和材料
+          href: color-light-and-materials.md
+        - name: 缩放
+          href: scale.md
+        - name: 版式
+          href: typography.md
+        - name: 声音
+          items:
+            - name: 声音
+              href: spatial-sound-design.md
+            - name: 案例研究 - Holotour
+              href: case-study-spatial-sound-design-for-holotour.md
+            - name: 案例研究 - Roboraid
+              href: case-study-using-spatial-sound-in-roboraid.md
+    - name: 控件和行为
+      items:
+        - name: 光标
+          href: cursors.md
+        - name: 手部射线
+          href: point-and-commit.md
+        - name: Button
+          href: button.md
+        - name: 可交互对象
+          href: interactable-object.md
+        - name: 边界框和应用栏
+          href: app-bar-and-bounding-box.md
+        - name: 操作
+          href: direct-manipulation.md
+        - name: 手动菜单
+          href: hand-menu.md
+        - name: 追踪菜单
+          href: near-menu.md
+        - name: 对象集合
+          href: object-collection.md
+        - name: 语音输入
+          href: voice-input.md
+        - name: 键盘
+          href: keyboard.md
+        - name: 工具提示
+          href: tooltip.md
+        - name: 平板
+          href: slate.md
+        - name: 滑块
+          href: slider.md
+        - name: 着色器
+          href: shader.md
+        - name: 对话框
+          href: dialog-ui.md
+        - name: 手部指导
+          href: hand-coach.md
+        - name: 空间网格
+          href: spatial-mesh-ux.md
+        - name: 公告和尾随
+          href: billboarding-and-tag-along.md
+        - name: 显示进度
+          href: progress.md
+        - name: 表面磁吸
+          href: surface-magnetism.md
+- name: 资源
+  items:
+    - name: 了解 Unity
+      href: 'https://learn.unity.com/'
+    - name: 混合现实工具包
+      href: 'https://github.com/Microsoft/MixedRealityToolkit-Unity'
+    - name: 混合现实设计实验室
+      href: 'https://github.com/microsoft/MixedRealityDesignLabs_Unity'
+    - name: Microsoft Maquette
+      href: 'https://www.maquette.ms/'
+    - name: 资产创建过程
+      href: asset-creation-process.md
+    - name: 设计自己的沉浸式环境
+      href: add-custom-home-environments.md
