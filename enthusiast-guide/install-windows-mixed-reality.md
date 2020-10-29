@@ -8,14 +8,17 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，混合现实门户
 appliesto:
 - Windows 10
-ms.openlocfilehash: 5e04f29f834b2220f51f1748aa59e4188d8ad38d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: b07e1a90247072952969cb2e2fc845bdb906bcae
+ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677763"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92915562"
 ---
 # <a name="install-windows-mixed-reality-software"></a>安装 Windows Mixed Reality 软件
+
+> [!div class="nextstepaction"]
+> [获取混合现实门户](https://www.microsoft.com/p/mixed-reality-portal/9ng1h8b3zc7m?activetab=pivot:overviewtab)
 
 ## <a name="launch-mixed-reality-portal"></a>启动混合现实门户
 
@@ -66,7 +69,7 @@ Windows Mixed Reality 大小约为1GB，下载时间取决于你的 internet 连
 | 如果看到此消息 | 尝试此操作 |
 | --- | --- |
 | 检查 USB 电缆 | 将耳机连接到不同的 USB 端口 (，并确保它是 SuperSpeed USB 3.0) 。 同时，尝试删除耳机与计算机之间的所有扩展器或集线器。 |
-| 检查显示电缆 | 请尝试以下做法： <ul><li>将耳机连接到 DisplayPort 1.2 或更高版本，1.4 或者连接到或更高版本。 确保端口与电脑上最先进的图形卡相对应。</li><li>如果使用的是适配器，请确保它支持4K</li><li>尝试使用不同的 HDMI 端口</li><li>如果将外部监视器连接到 HDMI 端口，请尝试将其插入 DisplayPort，并将 HDMI 端口用于耳机</li></ul> |
+| 检查显示电缆 | 请尝试以下内容： <ul><li>将耳机连接到 DisplayPort 1.2 或更高版本，1.4 或者连接到或更高版本。 确保端口与电脑上最先进的图形卡相对应。</li><li>如果使用的是适配器，请确保它支持4K</li><li>尝试使用不同的 HDMI 端口</li><li>如果将外部监视器连接到 HDMI 端口，请尝试将其插入 DisplayPort，并将 HDMI 端口用于耳机</li></ul> |
 | 出现问题 | 遵循上述一般故障排除步骤。 |
 
 ## <a name="review-and-accept-terms-and-conditions"></a>查看并接受条款和条件
