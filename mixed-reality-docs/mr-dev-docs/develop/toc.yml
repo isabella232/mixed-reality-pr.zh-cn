@@ -1,0 +1,450 @@
+- name: 混合现实开发简介
+  href: development.md
+- name: Azure 云服务
+  href: mixed-reality-cloud-services.md
+- name: 安装工具
+  href: install-the-tools.md
+- name: 移植应用
+  items:
+    - name: 让现有应用准备好使用 HoloLens 2
+      href: unity/mrtk-porting-guide.md
+    - name: 沉浸式应用移植指南
+      href: porting-apps/porting-guides.md
+    - name: SteamVR 更新
+      href: porting-apps/updating-your-steamvr-application-for-windows-mixed-reality.md
+    - name: 更新 Mixed Reality 的 2D UWP 应用
+      href: porting-apps/building-2d-apps.md
+- name: Unity
+  items:
+    - name: Unity 开发概述
+      href: unity/unity-development-overview.md
+    - name: 入门
+      items:
+        - name: 混合现实工具包 v2 入门
+          href: unity/mrtk-getting-started.md
+        - name: 配置用于 Windows Mixed Reality 的 Unity 项目
+          href: unity/configure-unity-project.md
+        - name: 让现有应用准备好使用 HoloLens 2
+          href: unity/mrtk-porting-guide.md
+    - name: 教程
+      items:
+        - name: 概述
+          href: unity/tutorials.md
+        - name: HoloLens 2 教程
+          items:
+            - name: 入门教程
+              items:
+                - name: 1. 简介
+                  href: unity/tutorials/mr-learning-base-01.md
+                - name: 2. 初始化你的项目和第一个应用程序
+                  href: unity/tutorials/mr-learning-base-02.md
+                - name: 3. 配置 Mixed Reality 工具包配置文件
+                  href: unity/tutorials/mr-learning-base-03.md
+                - name: 4. 定位场景中的对象
+                  href: unity/tutorials/mr-learning-base-04.md
+                - name: 5. 使用求解器创建动态内容
+                  href: unity/tutorials/mr-learning-base-05.md
+                - name: 6. 创建用户界面
+                  href: unity/tutorials/mr-learning-base-06.md
+                - name: 7. 与 3D 对象交互
+                  href: unity/tutorials/mr-learning-base-07.md
+                - name: 8. 使用眼动跟踪
+                  href: unity/tutorials/mr-learning-base-08.md
+                - name: 9. 使用语音命令
+                  href: unity/tutorials/mr-learning-base-09.md
+            - name: Azure 空间定位点教程
+              items:
+                - name: 1. 简介
+                  href: unity/tutorials/mr-learning-asa-01.md
+                - name: 2. Azure 空间定位点入门
+                  href: unity/tutorials/mr-learning-asa-02.md
+                - name: 3. 保存、检索和共享 Azure 空间定位点
+                  href: unity/tutorials/mr-learning-asa-03.md
+                - name: 4. 显示 Azure 空间定位点反馈
+                  href: unity/tutorials/mr-learning-asa-04.md
+                - name: 5. 适用于 Android 和 iOS 的 Azure 空间定位点
+                  href: unity/tutorials/mr-learning-asa-05.md
+            - name: 多用户功能教程
+              items:
+                - name: 1. 简介
+                  href: unity/tutorials/mr-learning-sharing-01.md
+                - name: 2. 设置 Photon Unity Networking
+                  href: unity/tutorials/mr-learning-sharing-02.md
+                - name: 3. 连接多个用户
+                  href: unity/tutorials/mr-learning-sharing-03.md
+                - name: 4. 与多个用户共享对象运动
+                  href: unity/tutorials/mr-learning-sharing-04.md
+                - name: 5. 将 Azure 空间定位点集成到共享体验中
+                  href: unity/tutorials/mr-learning-sharing-05.md
+            - name: Azure 语音服务教程
+              items:
+                - name: 1. 集成并使用语音识别和听录
+                  href: unity/tutorials/mrlearning-speechsdk-ch1.md
+                - name: 2. 为本地语音到文本翻译添加脱机模式
+                  href: unity/tutorials/mrlearning-speechsdk-ch2.md
+                - name: 3. 添加 Azure 认知服务语音翻译组件
+                  href: unity/tutorials/mrlearning-speechsdk-ch3.md
+                - name: 4. 设置意向和自然语言理解
+                  href: unity/tutorials/mrlearning-speechsdk-ch4.md
+            - name: 空间音频教程
+              items:
+                - name: 1. 在项目中添加空间音频
+                  href: unity/tutorials/unity-spatial-audio-ch1.md
+                - name: 2.将按钮交互声音空间化
+                  href: unity/tutorials/unity-spatial-audio-ch2.md
+                - name: 3. 将视频中的音频空间化
+                  href: unity/tutorials/unity-spatial-audio-ch3.md
+                - name: 4. 在运行时启用和禁用空间音频
+                  href: unity/tutorials/unity-spatial-audio-ch4.md
+                - name: 5. 使用混响为空间音频添加距离感
+                  href: unity/tutorials/unity-spatial-audio-ch5.md
+            - name: Azure 云服务教程
+              items:
+                - name: 1. 适用于 HoloLens 2 的 Azure 云服务
+                  href: unity/tutorials/mr-learning-azure-01.md
+                - name: 2. 集成 Azure 存储
+                  href: unity/tutorials/mr-learning-azure-02.md
+                - name: 3. 集成 Azure 自定义视觉
+                  href: unity/tutorials/mr-learning-azure-03.md
+                - name: 4. 集成 Azure 空间定位点
+                  href: unity/tutorials/mr-learning-azure-04.md
+                - name: 5. 集成 Azure 机器人服务
+                  href: unity/tutorials/mr-learning-azure-05.md
+            - name: 电脑全息远程处理教程
+              items:
+                - name: 1. 电脑全息远程处理入门
+                  href: unity/tutorials/mr-learning-pc-holographic-remoting-01.md
+                - name: 2. 创建全息远程处理电脑应用程序
+                  href: unity/tutorials/mr-learning-pc-holographic-remoting-02.md
+        - name: HoloLens（第 1 代）和沉浸式头戴显示设备教程
+          items:
+            - name: MR 基础 100 - Unity 入门
+              href: unity/tutorials/holograms-100.md
+            - name: MR 基础 101 - 使用设备完成项目
+              href: unity/tutorials/holograms-101.md
+            - name: MR 基础 101 - 使用模拟器完成项目
+              href: unity/tutorials/holograms-101e.md
+            - name: MR 输入 210 - 凝视
+              href: unity/tutorials/holograms-210.md
+            - name: MR 输入 211 - 手势
+              href: unity/tutorials/holograms-211.md
+            - name: MR 输入 212 - 语音
+              href: unity/tutorials/holograms-212.md
+            - name: MR 空间 220 - 空间音效
+              href: unity/tutorials/holograms-220.md
+            - name: MR 空间 230 - 空间映射
+              href: unity/tutorials/holograms-230.md
+            - name: MR 共享 240 - 多个 HoloLens 设备
+              href: unity/tutorials/holograms-240.md
+        - name: 混合现实和 Azure 服务教程
+          items:
+            - name: MR 和 Azure 301 - 语言翻译
+              href: unity/tutorials/mr-azure-301.md
+            - name: MR 和 Azure 302 - 计算机视觉
+              href: unity/tutorials/mr-azure-302.md
+            - name: MR 和 Azure 302b - 自定义视觉
+              href: unity/tutorials/mr-azure-302b.md
+            - name: MR 和 Azure 303 - 自然语言理解
+              href: unity/tutorials/mr-azure-303.md
+            - name: MR 和 Azure 304 - 人脸识别
+              href: unity/tutorials/mr-azure-304.md
+            - name: MR 和 Azure 305 - 功能和存储
+              href: unity/tutorials/mr-azure-305.md
+            - name: MR 和 Azure 306 - 流式传输视频
+              href: unity/tutorials/mr-azure-306.md
+            - name: MR 和 Azure 307 - 机器学习
+              href: unity/tutorials/mr-azure-307.md
+            - name: MR 和 Azure 308 - 跨设备通知
+              href: unity/tutorials/mr-azure-308.md
+            - name: MR 和 Azure 309 - 应用程序见解
+              href: unity/tutorials/mr-azure-309.md
+            - name: MR 和 Azure 310 - 对象检测
+              href: unity/tutorials/mr-azure-310.md
+            - name: MR 和 Azure 311 - Microsoft Graph
+              href: unity/tutorials/mr-azure-311.md
+            - name: MR 和 Azure 312 - 机器人集成
+              href: unity/tutorials/mr-azure-312.md
+            - name: MR 和 Azure 313 - IoT 中心服务
+              href: unity/tutorials/mr-azure-301.md
+    - name: 核心构建基块
+      items:
+        - name: MRTK 101 - 如何使用 Mixed Reality 工具包 Unity 进行基本的交互
+          href: unity/mrtk-101.md
+        - name: Unity 中的相机
+          href: unity/camera-in-unity.md
+        - name: Unity 中的坐标系统
+          href: unity/coordinate-systems-in-unity.md
+        - name: Unity 中的持久性
+          href: unity/persistence-in-unity.md
+        - name: Unity 中的凝视
+          href: unity/gaze-in-unity.md
+        - name: Unity 中的文本
+          href: unity/text-in-unity.md
+        - name: Unity 中的手势和运动控制器
+          href: unity/gestures-and-motion-controllers-in-unity.md
+        - name: 在 Unity 中进行手和眼的跟踪
+          href: unity/hand-eye-in-unit.md
+        - name: Unity 中的语音输入
+          href: unity/voice-input-in-unity.md
+        - name: Unity 中的空间映射
+          href: unity/spatial-mapping-in-unity.md
+        - name: Unity 中的空间音效
+          href: unity/spatial-sound-in-unity.md
+    - name: 平台功能和 API
+      items:
+        - name: Unity 中的共享体验
+          href: unity/shared-experiences-in-unity.md
+        - name: Unity 中的可定位相机
+          href: unity/locatable-camera-in-unity.md
+        - name: Unity 中的焦点
+          href: unity/focus-point-in-unity.md
+        - name: Unity 中的失跟
+          href: unity/tracking-loss-in-unity.md
+        - name: Unity 中的键盘输入
+          href: unity/keyboard-input-in-unity.md
+        - name: 将 Windows 命名空间与 Unity 应用配合用于 HoloLens
+          href: unity/using-the-windows-namespace-with-unity-apps-for-hololens.md
+        - name: Unity 中的混合现实原生对象
+          href: unity/unity-xrdevice-advanced.md
+        - name: 将 Vuforia 与 Unity 配合使用
+          href: unity/vuforia-development-overview.md
+    - name: 沉浸式 VR
+      items:
+        - name: Unity 中的 HP Reverb G2 手柄
+          href: unity/unity-reverb-g2-controllers.md
+    - name: 示例应用
+      items:
+        - name: 概述
+          href: unity/samples.md
+        - name: HoloLens 2
+          items:
+            - name: 表面
+              href: null
+            - name: 元素周期表 2.0
+              href: 'https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158'
+            - name: 星系探索者 2.0
+              href: unity/galaxy-explorer-update.md
+        - name: HoloLens（第 1 代）
+          items:
+            - name: 元素周期表
+              href: unity/periodic-table-of-the-elements.md
+            - name: 星系探索者 1.0
+              href: unity/galaxy-explorer.md
+            - name: 登月舱
+              href: unity/lunar-module.md
+    - name: 设置和调试
+      items:
+        - name: 使用 Unity IL2CPP 进行托管调试
+          href: unity/managed-debugging-with-unity-il2cpp.md
+        - name: 建议用于 Unity 的设置
+          href: unity/recommended-settings-for-unity.md
+        - name: Unity 播放模式
+          href: unity/unity-play-mode.md
+    - name: Visual Studio 解决方案
+      items:
+        - name: 导出和构建 Unity Visual Studio 解决方案
+          href: unity/exporting-and-building-a-unity-visual-studio-solution.md
+        - name: 使用 Unity 和 Visual Studio 的最佳做法
+          href: unity/best-practices-for-working-with-unity-and-visual-studio.md
+- name: Unreal
+  items:
+    - name: Unreal 开发概述
+      href: unreal/unreal-development-overview.md
+    - name: 教程
+      items:
+        - name: 使用 MRTK UX 工具构建国际象棋应用
+          items:
+            - name: 入门
+              href: unreal/tutorials/unreal-uxt-ch1.md
+            - name: 初始化你的项目
+              href: unreal/tutorials/unreal-uxt-ch2.md
+            - name: Mixed Reality 设置
+              href: unreal/tutorials/unreal-uxt-ch3.md
+            - name: 添加交互性
+              href: unreal/tutorials/unreal-uxt-ch4.md
+            - name: UI 和函数
+              href: unreal/tutorials/unreal-uxt-ch5.md
+            - name: 打包和部署
+              href: unreal/tutorials/unreal-uxt-ch6.md
+    - name: 核心构建基块
+      items:
+        - name: Unreal 中的凝视输入
+          href: unreal/unreal-gaze-input.md
+        - name: Unreal 中的手部跟踪
+          href: unreal/unreal-hand-tracking.md
+        - name: Unreal 中的空间映射
+          href: unreal/unreal-spatial-mapping.md
+        - name: Unreal 中的空间音频
+          href: unreal/unreal-spatial-audio.md
+        - name: Unreal 中的本地空间定位点
+          href: unreal/unreal-spatial-anchors.md
+        - name: Unreal 中的 Azure 空间定位点
+          href: unreal/unreal-azure-spatial-anchors.md
+        - name: Unity 中的语音输入
+          href: unreal/unreal-voice-input.md
+    - name: 平台功能和 API
+      items:
+        - name: Unreal 中的 HoloLens 照片/视频摄像头
+          href: unreal/unreal-hololens-camera.md
+        - name: Unreal 中的 QR 码
+          href: unreal/unreal-qr-codes.md
+        - name: Unreal 中的 WinRT
+          href: unreal/unreal-winrt.md
+    - name: 沉浸式 VR
+      items:
+        - name: Unreal 中的 HP Reverb G2 手柄
+          href: unreal/unreal-reverb-g2-controllers.md
+    - name: 示例应用
+      items:
+        - name: 概述
+          href: unreal/unreal-samples.md
+        - name: Kippy 的转义
+          href: unreal/unreal-kippys-escape.md
+    - name: 部署和性能
+      items:
+        - name: 在 Unreal 中部署到设备
+          href: unreal/unreal-deploying.md
+        - name: 针对 Unreal 的性能建议
+          href: unreal/performance-recommendations-for-unreal.md
+        - name: Unreal 中的材料建议
+          href: unreal/unreal-materials.md
+        - name: Unreal 中的流式传输
+          href: unreal/unreal-streaming.md
+- name: Web
+  items:
+    - name: Web 开发概述
+      href: web/javascript-development-overview.md
+    - name: WebXR
+      href: web/webxr-overview.md
+    - name: WebVR
+      href: web/webvr-overview.md
+- name: 本机
+  items:
+    - name: 原生开发概述
+      href: native/directx-development-overview.md
+    - name: OpenXR
+      items:
+        - name: OpenXR 概述
+          href: native/openxr.md
+        - name: OpenXR 入门
+          href: native/openxr-getting-started.md
+        - name: OpenXR 最佳做法
+          href: native/openxr-best-practices.md
+        - name: OpenXR 性能
+          href: native/openxr-performance.md
+        - name: OpenXR 故障排除
+          href: native/openxr-troubleshooting.md
+    - name: WinRT（旧版）
+      items:
+        - name: 入门
+          items:
+            - name: 创建本机全息项目
+              href: native/creating-a-holographic-directx-project.md
+            - name: 获取 HolographicSpace
+              href: native/getting-a-holographicspace.md
+            - name: 本机呈现
+              href: native/rendering-in-directx.md
+            - name: 坐标系统
+              href: native/coordinate-systems-in-directx.md
+        - name: 核心构建基块
+          items:
+            - name: 头部和眼部凝视
+              href: native/gaze-in-directx.md
+            - name: 手部和运动控制器
+              href: native/hands-and-motion-controllers-in-directx.md
+            - name: 语音输入
+              href: native/voice-input-in-directx.md
+            - name: 空间映射
+              href: native/spatial-mapping-in-directx.md
+- name: 平台功能和 API
+  items:
+    - name: 核心构建基块
+      items:
+        - name: 场景理解
+          href: platform-capabilities-and-apis/scene-understanding-sdk.md
+        - name: 共享空间定位点
+          href: platform-capabilities-and-apis/shared-spatial-anchors-in-directx.md
+        - name: 键盘、鼠标和控制器输入
+          href: platform-capabilities-and-apis/keyboard-mouse-and-controller-input-in-directx.md
+        - name: 将 XAML 与全息 DirectX 应用配合使用
+          href: platform-capabilities-and-apis/using-xaml-with-holographic-directx-apps.md
+        - name: QR 码跟踪
+          href: platform-capabilities-and-apis/qr-code-tracking.md
+    - name: Mixed Reality 中的共享体验
+      items:
+        - name: Mixed Reality 中的共享体验
+          href: platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md
+        - name: Azure 空间定位点
+          href: 'https://docs.microsoft.com/azure/spatial-anchors/'
+        - name: 旁观视图
+          href: platform-capabilities-and-apis/spectator-view.md
+        - name: WebRTC
+          href: 'https://github.com/microsoft/MixedReality-WebRTC'
+    - name: 相机和捕获
+      items:
+        - name: 可定位相机
+          href: platform-capabilities-and-apis/locatable-camera.md
+        - name: 面向开发人员的 Mixed Reality 捕获
+          href: platform-capabilities-and-apis/mixed-reality-capture-for-developers.md
+        - name: 工作原理 - 混合现实捕获工作室
+          href: platform-capabilities-and-apis/how-it-works-mixed-reality-capture-studios.md
+    - name: 全息远程处理
+      items:
+        - name: 全息远程播放器
+          href: platform-capabilities-and-apis/holographic-remoting-player.md
+        - name: 编写全息远程处理远程应用
+          href: platform-capabilities-and-apis/holographic-remoting-create-host.md
+        - name: 编写自定义全息远程处理播放器应用
+          href: platform-capabilities-and-apis/holographic-remoting-create-player.md
+        - name: 自定义全息远程处理数据通道
+          href: platform-capabilities-and-apis/holographic-remoting-custom-data-channels.md
+        - name: 使用全息远程处理时建立安全连接
+          href: platform-capabilities-and-apis/holographic-remoting-secure-connection.md
+        - name: 故障排除和限制
+          href: platform-capabilities-and-apis/holographic-remoting-troubleshooting.md
+        - name: 版本历史记录
+          href: platform-capabilities-and-apis/holographic-remoting-version-history.md
+        - name: 全息远程处理软件许可条款
+          href: 'https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms'
+        - name: HoloLens（第 1 代）的全息远程处理
+          href: 'https://docs.microsoft.com'
+        - name: 添加全息远程处理
+          href: platform-capabilities-and-apis/add-holographic-remoting.md
+    - name: 应用质量和测试
+      items:
+        - name: 应用质量标准
+          href: platform-capabilities-and-apis/app-quality-criteria.md
+        - name: 全息渲染
+          href: platform-capabilities-and-apis/rendering.md
+        - name: 立体渲染
+          href: platform-capabilities-and-apis/volume-rendering.md
+        - name: 全息影像稳定性
+          href: platform-capabilities-and-apis/hologram-stability.md
+        - name: 使用防抖动平面减少全息湍流
+          href: platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md
+        - name: 了解混合现实的性能
+          href: platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md
+        - name: 针对 Unity 的性能建议
+          href: unity/performance-recommendations-for-unity.md
+        - name: 使用 Visual Studio 进行部署和调试
+          href: platform-capabilities-and-apis/using-visual-studio.md
+        - name: 在 HoloLens 上测试应用
+          href: platform-capabilities-and-apis/testing-your-app-on-hololens.md
+        - name: 使用 HoloLens 仿真器
+          href: platform-capabilities-and-apis/using-the-hololens-emulator.md
+        - name: 使用 Windows Mixed Reality 模拟器
+          href: platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md
+        - name: 高级 HoloLens 仿真器和混合现实模拟器输入
+          href: platform-capabilities-and-apis/advanced-hololens-emulator-and-mixed-reality-simulator-input.md
+        - name: HoloLens 仿真器存档
+          href: platform-capabilities-and-apis/hololens-emulator-archive.md
+        - name: 感知模拟
+          href: platform-capabilities-and-apis/perception-simulation.md
+    - name: 研究工具
+      items:
+        - name: 使用 Windows 设备门户
+          href: platform-capabilities-and-apis/using-the-windows-device-portal.md
+        - name: 设备门户 API 参考
+          href: platform-capabilities-and-apis/device-portal-api-reference.md
+        - name: HoloLens 研究模式
+          href: platform-capabilities-and-apis/research-mode.md
