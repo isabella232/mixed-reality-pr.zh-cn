@@ -13,12 +13,12 @@ metadata:
   author: hferrone
   ms.author: v-haferr
   ms.date: 07/23/2020
-  ms.openlocfilehash: e968b311ca93ccf3f197fbc4a6d2abec7284a686
-  ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+  ms.openlocfilehash: 7d5ba4ded77079858ef36c62a4c90e2fdd5794f5
+  ms.sourcegitcommit: 4cb579ac0413fc2dfad5da6506437246f6653926
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/03/2020
-  ms.locfileid: "91674612"
+  ms.lasthandoff: 10/30/2020
+  ms.locfileid: "93036273"
 highlightedContent:
   items:
   - title: 什么是混合现实？
@@ -42,9 +42,9 @@ highlightedContent:
   - title: VR 发烧友
     itemType: how-to-guide
     url: https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/
-  - title: 尝试示例应用
-    itemType: sample
-    url: develop/unity/samples.md
+  - title: 混合现实学习模块
+    itemType: learn
+    url: develop/mr-learning-overview.md
 productDirectory:
   title: 深入了解混合现实
   summary: 无论你是设计人员、开发人员还是 IT 专业人员，我们都有精心编制的适当路径让你在运行之前进行演练。
