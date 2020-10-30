@@ -8,28 +8,26 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 75d8ade12d5534a1eb86f36bcdd590539a6811b5
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+ms.openlocfilehash: a1ab7ae441796eafde9f085a744015c972cb4b6b
+ms.sourcegitcommit: 4cb579ac0413fc2dfad5da6506437246f6653926
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683173"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036263"
 ---
 # <a name="get-help-with-pc-compatibility-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中获取有关 PC 兼容性的帮助
 
-当你在计算机上设置 Windows Mixed Reality 或运行 [Windows Mixed REALITY PC 检查](https://www.microsoft.com/p/windows-mixed-reality-pc-check/9nzvl19n7cnc?rtc=1#activetab=pivot:overviewtab) 应用时，你会收到一份报告，指出你的电脑是否已准备好运行。 下面是你可能会看到的一些详细信息。
+当你在计算机上设置 Windows Mixed Reality 或运行 [Windows Mixed REALITY PC 检查](https://www.microsoft.com/p/windows-mixed-reality-pc-check/9nzvl19n7cnc?rtc=1#activetab=pivot:overviewtab) 应用时，你会收到一份报告，指出你的电脑是否已准备好运行。 本文详细介绍了你可能会在以下部分中看到的内容。
 
-若要确保可以运行混合现实，请查看 [最小计算机硬件兼容性要求](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)。
+在继续之前，请确保计算机满足 [最低要求的 PC 硬件兼容性要求](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 才能运行混合现实。
 
 ## <a name="youre-good-to-go"></a>准备就绪
 
-好消息-你的电脑可以运行 Windows Mixed Reality。 但请记住，计算机硬件和配置之间仍存在差异，因此每台电脑上的混合现实体验可能不相同。
+好消息，你的电脑可以运行 Windows Mixed Reality！ 请记住，计算机硬件和配置之间仍存在差异，因此每台电脑上的混合现实体验可能不相同。
 
 ## <a name="supports-some-features"></a>支持某些功能
 
-你的电脑应能够运行一些 Windows Mixed Reality 体验，但可能无法提供最佳体验。 图形可能会滞后，某些应用程序和游戏可能性能不佳，并且某些应用程序可能根本无法运行。 
-
-下面是你可能会看到的消息，以及如何处理它们：
+你的电脑能够运行一些 Windows Mixed Reality 体验，但可能无法提供最佳体验。 可能的缺点包括滞后图形、应用程序和游戏的性能点击，某些应用程序和游戏根本无法运行。 我们列出了你可能会看到的消息，以及以下内容：
 
 ### <a name="this-pc-has-an-integrated-graphics-card-with-single-channel-ram"></a>这台电脑的集成显卡包含单声道 RAM
 
@@ -45,7 +43,7 @@ PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通�
 
 ### <a name="this-pcs-graphics-driver-might-not-work-well-with-windows-mixed-reality"></a>这台电脑的图形驱动程序可能无法正常使用 Windows Mixed Reality
 
-如果遇到问题，请尝试使用 Windows 更新下载新的图形驱动程序 ( **启动 > 设置 > 更新 & 安全 > 检查更新** ) ，或访问电脑制造商或图形卡制造商的网站。
+尝试使用 Windows 更新下载新的图形驱动程序，方法是选择 " **启动 > 设置" > 更新 & 安全性 > 检查是否有更新** ，或切换到你的电脑制造商或图形卡制造商的网站。
 
 > [!div class="nextstepaction"]
 > [检查更新](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
@@ -54,7 +52,7 @@ PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通�
 
 ### <a name="this-pcs-processor-might-not-work-well-with-windows-mixed-reality"></a>这台电脑的处理器可能无法与 Windows Mixed Reality 很好地配合使用
 
-这台电脑的处理器可能无法与 Windows Mixed Reality 很好地配合工作，因为它没有足够的核心。 如果 Windows Mixed Reality 运行不正常，请将处理器替换为 [兼容](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 的处理器，或切换到 [兼容的 PC](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)。
+计算机的处理器可能无法与 Windows Mixed Reality 很好地配合工作，因为它没有足够的核心。 如果 Windows Mixed Reality 运行不正常，请将处理器替换为 [兼容](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 的处理器，或切换到 [兼容的 PC](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)。
 
 ### <a name="this-pc-might-not-have-a-compatible-usb-configuration"></a>这台电脑可能没有兼容的 USB 配置
 
@@ -79,7 +77,7 @@ PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通�
 
 ### <a name="depending-on-your-headset-you-may-need-a-bluetooth-adapter-to-use-motion-controllers"></a>根据你的耳机，你可能需要蓝牙适配器才能使用运动控制器
 
-某些耳机内置了蓝牙，使控制器可以直接配对耳机。 其他人需要电脑中的蓝牙无线电 (或单独的转换器) 才能使用运动控制器。 [查看建议的适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+某些耳机内置了蓝牙，因此控制器可以直接配对耳机。 其他人需要电脑中的蓝牙无线电 (或单独的转换器) 才能使用运动控制器。 有关详细信息，[请参阅推荐的适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)页。
 
 ### <a name="this-pc-doesnt-have-a-self-powered-usb-port"></a>这台电脑没有自供电 USB 端口
 
@@ -91,7 +89,7 @@ PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通�
 
 ## <a name="cant-run-windows-mixed-reality"></a>无法运行 Windows Mixed Reality
 
-下面是你可能会看到的消息，以及如何处理它们：
+如果无法运行 Windows Mixed Reality，请参阅下面所示的消息列表，以及可能的解决方案：
 
 ### <a name="this-pcs-graphics-card-wont-work-with-windows-mixed-reality"></a>这台电脑的显卡不适用于 Windows Mixed Reality
 
@@ -99,7 +97,7 @@ PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通�
 
 ### <a name="this-pcs-graphics-driver-wont-work-with-windows-mixed-reality"></a>这台电脑的图形驱动程序不能与 Windows Mixed Reality 一起使用
 
-这台电脑的图形驱动程序不能与 Windows Mixed Reality 一起使用。 尝试使用 Windows 更新下载新的图形驱动程序 ( **启动 > 设置 > 更新 & 安全 > 检查是否有更新** ) ），或切换到电脑制造商或图形卡制造商的网站。 
+这台电脑的图形驱动程序不能与 Windows Mixed Reality 一起使用。 尝试通过选择 " **启动 > 设置" > 更新 & 安全性** 来下载新的图形驱动 Windows 更新程序，> 检查是否有更新，或者前往您的 PC 制造商或图形卡制造商的网站。 
 
 > [!div class="nextstepaction"]
 > [检查更新](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
@@ -112,7 +110,7 @@ PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通�
 
 ### <a name="this-pc-doesnt-have-enough-free-disk-space-to-run-windows-mixed-reality"></a>这台电脑的可用磁盘空间不足，无法运行 Windows Mixed Reality
 
-Windows Mixed Reality 需要10GB 的可用磁盘空间以进行设置和获得最佳性能。 请清除驱动器上的一些空间，然后重试安装。
+Windows Mixed Reality 需要10GB 的可用磁盘空间以进行设置和获得最佳性能。 请清除驱动器上的一些空间，然后重新尝试设置。
 
 ### <a name="this-pc-is-running-an-edition-of-windows-that-doesnt-support-windows-mixed-reality"></a>这台电脑运行的 Windows 版本不支持 Windows Mixed Reality
 
@@ -128,7 +126,7 @@ Windows Mixed Reality 需要 Windows 10 秋季创意者更新。 请[更新你�
 
 ### <a name="you-cant-run-this-app-via-remote-desktop"></a>无法通过远程桌面运行此应用
 
-若要使用 Windows Mixed Reality，你将拥有一个连接了监视器的 PC。 如果你使用的是虚拟机或没有监视器，请尝试使用虚拟显示适配器。 这是一种插入 PC DisplayPort 并模拟计算机显示的设备。 
+若要使用 Windows Mixed Reality，需要一个连接了监视器的 PC。 如果你使用的是虚拟机或没有监视器，请尝试使用虚拟显示适配器。 这是一种插入 PC DisplayPort 并模拟计算机显示的设备。 
 
 ## <a name="getting-the-best-performance"></a>获得最佳性能
 
@@ -142,7 +140,7 @@ Windows Mixed Reality 需要 Windows 10 秋季创意者更新。 请[更新你�
 > [!NOTE]
 > 如果看到一条消息，指出： "此硬件配置可能与 Windows Mixed Reality 一起工作，但尚未对其进行测试"，则在长时间运行 Windows Mixed Reality 时可能会遇到一些性能问题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
