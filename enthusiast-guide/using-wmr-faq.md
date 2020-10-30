@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 62b6b61f74abfd77ba61563639ff719576551f07
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: cf02ccfc92d80ee1d1a8f6ca3d4ab55650f4a62c
+ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677538"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044440"
 ---
 # <a name="using-windows-mixed-reality-faq"></a>使用 Windows Mixed Reality 常见问题解答
 
@@ -61,7 +61,7 @@ Windows Mixed Reality 旨在在您戴上声音时通过沉浸式耳机播放声�
     * 就绪–控制器都已设置好。
     * 丢失跟踪–混合现实门户找不到控制器。 将其放在头戴戴显示设备前面，按 " **Windows** " 按钮4秒钟再重新启动，然后再次2秒钟。
     * 电池电量低–更换控制器电池。
-* 如果使用 Wi-fi，请尝试将电脑连接到 5GHz Wi-fi 网络，以减少无线干扰。 
+* 如果使用 Wi-fi，请尝试将电脑连接到 5GHz Wi-Fi 网络以减少无线干扰。 
 * 对于直接与控制器配对的较新耳机，选择 **"..."** 按钮， **然后选择** " **设置控制器** "。 这会转到耳机应用，将控制器与耳机配对。  
 * 对于不具备内置蓝牙以便控制器直接配对的老式耳机：  
     * 选择 "设置" > 设备 > 蓝牙 & 计算机上的其他设备，并确保控制器已按配对方式列出。如果不是，则需要将它们配对。 
@@ -95,7 +95,7 @@ Windows Mixed Reality 旨在在您戴上声音时通过沉浸式耳机播放声�
 
 ## <a name="i-got-a-message-that-said-to-plug-in-and-charge-my-pc-why"></a>我收到一条消息，指出我的 PC 已接通电源并向其收费。 为什么？
 
-如果使用便携式计算机，则当电脑完全充电并接通电源时，Windows Mixed Reality 的效果最佳。 
+如果使用便携式计算机，则当电脑完全充电并接通电源时，Windows Mixed Reality 的效果最佳。
 
 ## <a name="how-do-i-uninstall-windows-mixed-reality"></a>如何实现卸载 Windows Mixed Reality？
 
@@ -106,14 +106,14 @@ Windows Mixed Reality 旨在在您戴上声音时通过沉浸式耳机播放声�
 > [!NOTE]
 > 如果看到一条消息，指出 "我们无法完成 Windows Mixed Reality 的删除操作"，这意味着某些文件（包括有关环境的信息）可能仍在计算机上。 如果以后决定重新安装 Windows Mixed Reality，这可能会导致问题。
 > 
-> 若要了解如何从你的电脑中手动删除任何剩余的 Windows Mixed Reality 信息，请参阅 **[此文](troubleshooting-windows-mixed-reality.md#how-to-uninstall-windows-mixed-reality)** 。 
+> 若要了解如何从你的电脑中手动删除任何剩余的 Windows Mixed Reality 信息，请参阅 **[此文](installation_errors.md)** 。
 
-## <a name="my-wi-fi-slows-down-when-im-using-windows-mixed-reality"></a>使用 Windows Mixed Reality 时，Wi-fi 会变慢
+## <a name="my-wi-fi-slows-down-when-im-using-windows-mixed-reality"></a>使用 Windows Mixed Reality 时，Wi-Fi 会减缓
 
-如果使用的是 2.4 GHz Wi-fi 连接，则运动控制器可能会减慢 Wi-fi 的速度。 尝试以下任一项：
+如果使用 2.4 GHz Wi-Fi 连接，则运动控制器可能会减慢 Wi-fi 的速度。 尝试以下任一项：
 
 <!-- TODO: Use Windows Mixed Reality PC hardware guidelines interlink -->
-* 切换到 5GHz Wi-fi 连接（如果有）。 [了解详细信息](https://support.microsoft.com/help/4000461)
+* 切换到 5GHz Wi-Fi 连接（如果有）。 [了解详细信息](https://support.microsoft.com/help/4000461)
 * 使用单独的蓝牙适配器将运动控制器连接到您的 PC。 [查看建议的适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 ## <a name="what-is-the-experience-options-setting"></a>什么是体验选项设置？
