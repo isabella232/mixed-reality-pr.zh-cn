@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: d1cf8e56d19ef9ae62d9f83811e843f34b1c2d8c
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: 892236c632d21620e48ced55d594bd059704a423
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434587"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132051"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Windows Mixed Reality 中的运动控制器
 
@@ -28,8 +28,8 @@ Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供�
 大多数耳机都直接与耳机直接配对，但某些提前耳机要求运动控制器与蓝牙4.0 配对。 首次连接沉浸式头戴式耳机时，将在安装过程中遍历移动控制器。 但如果以后需要重新配对，请参阅以下内容：
 
 1. 启动 **混合现实门户** 并连接手机网络。  
-2. 在左下角选择 "..." **> 设置控制器**。
-3. 将 2 AA 电池插入每个控制器，并将控制器置于配对模式 (参阅配对[运动控制器部分](controllers-in-wmr.md#Pair-motion-controllers)中的说明
+2. 在左下角选择 "..." **> 设置控制器** 。
+3. 将 2 AA 电池插入每个控制器，并将控制器置于配对模式 (参阅配对[运动控制器部分](controllers-in-wmr.md#pair-motion-controllers)中的说明
 4. 按照屏幕上提供的说明进行操作。
 
 > [!NOTE]
@@ -45,7 +45,7 @@ Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供�
 > 
 > 如果有有线 Xbox 控制器，请将其插入 PC。
 > 
-> 有些游戏和应用程序使用 Xbox 控制器与在混合现实中的使用方式不同。 若要将控制器用于游戏或应用，请选择 "在应用栏上 **使用游戏板** " 或说 "用作游戏板"。 若要将控制器切换回 mixed reality，请再次选择 "用作 **游戏板**"，或者说 "使用注视"。  
+> 有些游戏和应用程序使用 Xbox 控制器与在混合现实中的使用方式不同。 若要将控制器用于游戏或应用，请选择 "在应用栏上 **使用游戏板** " 或说 "用作游戏板"。 若要将控制器切换回 mixed reality，请再次选择 "用作 **游戏板** "，或者说 "使用注视"。  
 
 ## <a name="pair-motion-controllers"></a>配对运动控制器
 
@@ -59,7 +59,7 @@ Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供�
     ![运动控制器配对](images/connect_controller.png)
 
 启动 **混合现实门户** 并连接手机网络。  
-在左下角选择 "..." **> 设置控制器**。
+在左下角选择 "..." **> 设置控制器** 。
 按照屏幕上的说明进行操作。
 
 ### <a name="pair-motion-controllers-to-pc"></a>将运动控制器配对到 PC
@@ -94,9 +94,9 @@ Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供�
 |  任务  |  运动控制器  | 游戏板 | 鼠标 + 键盘 |
 | --- | --- | --- | --- |
 | 过去 | 向前按操纵杆，然后将控制器指向你要转到的位置。 释放操纵杆。 | 向前按左操纵杆，然后查看要转到的位置。 释放操纵杆。 | 单击并按住鼠标右键，然后将鼠标指向要移至的位置。 释放该按钮。 |
-| 选择 | 指向控制器，然后拉取触发器或单击触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
-| 打开“开始”菜单 | 按 **Windows** 按钮。 | 按 **Xbox** 按钮。 | 按 **Windows 徽标键**。 |
-| 离开沉浸式应用 | 按 **Windows** 按钮。 然后，在 "快速操作" 菜单中选择 " **混合现实主页** "。 | 按 **Xbox** 按钮。 然后选择 "快速操作" 菜单上的 " **混合现实主页** " 按钮。 | 按 **Windows 徽标键**。然后在显示的 "快速操作" 菜单上选择 " **混合现实" 主页** 按钮。 |
+| Select | 指向控制器，然后拉取触发器或单击触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
+| 打开“开始”菜单 | 按 **Windows** 按钮。 | 按 **Xbox** 按钮。 | 按 **Windows 徽标键** 。 |
+| 离开沉浸式应用 | 按 **Windows** 按钮。 然后，在 "快速操作" 菜单中选择 " **混合现实主页** "。 | 按 **Xbox** 按钮。 然后选择 "快速操作" 菜单上的 " **混合现实主页** " 按钮。 | 按 **Windows 徽标键** 。然后在显示的 "快速操作" 菜单上选择 " **混合现实" 主页** 按钮。 |
 | 旋转 | 向左或向右移动操纵杆。 | 向左或向右移动右摇杆。 | 不可用。 |
 | 备份 | 向后移动操纵杆。 | 将左摇杆向后移动。 | 不可用。 |
 | 步行 | 直接向下推送操纵杆，并按你要走的方向按下。 | 将左摇杆向下直接推送，并按你要走的方向按下。 | 不可用。 |
@@ -135,7 +135,7 @@ Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供�
   * 启动 **混合现实门户** ，并输入混合现实主页。
   * 移动控制器并验证跟踪、测试按钮并验证 teleportation 是否正常工作。 如果没有，请查看 [运动控制器故障排除部分](motion-controller-problems.md)
 
-## <a name="faq"></a>常见问题解答
+## <a name="faq"></a>FAQ
 
 ### <a name="how-can-i-check-battery-level"></a>如何检查电池电量级别？
 
@@ -151,8 +151,10 @@ Windows Mixed Reality 动作控制器使用沉浸式耳机中的传感器提供�
 
 ## <a name="see-also"></a>另请参阅
 
-* [询问社区](https://answers.microsoft.com)
-* [联系我们以获取支持](https://support.microsoft.com/contactus/)
-* [故障排除](troubleshooting-windows-mixed-reality.md)
+- [Unity 中的 HP 控制器](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+- [Unreal 中的 HP 控制器](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+- [询问社区](https://answers.microsoft.com)
+- [联系我们以获取支持](https://support.microsoft.com/contactus/)
+- [故障排除](troubleshooting-windows-mixed-reality.md)
 
 运动控制器遇到问题？ [获取帮助](motion-controller-problems.md)

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: cd7a1ba20fa695bf5c13adef301f63491b1ca586
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: b65be6082967b49ee9d3c8b97cb0a18f9149a3ca
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677542"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93131951"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中使用语音
 
@@ -36,7 +36,7 @@ ms.locfileid: "91677542"
 
 在整个 Windows Mixed Reality 中使用这些方法，以加快速度。 某些命令使用注视光标，并显示 "select"。
 
-| 要执行此操作 | 说出的内容 |
+| 任务 | 说出的内容 |
 | --- | --- |
 | Select | 说 "选择" 以显示注视光标。 然后，将光标放在要选择的内容上，并再次说 "选择"。 |
 | 打开“开始”菜单 | 转到“开始”菜单 |
@@ -54,7 +54,7 @@ ms.locfileid: "91677542"
 
 注视3D 对象、全息图或应用窗口以使用以下命令：
 
-| 要执行此操作 | 说出的内容 |
+| 任务 | 说出的内容 |
 | --- | --- |
 | 使其变大 | 更 |
 | 使其变小 | 超过 |
@@ -66,7 +66,7 @@ ms.locfileid: "91677542"
 
 在应用程序窗口或3D 对象上注视以下命令：
 
-| 要执行此操作 | 说出的内容 |
+| 任务 | 说出的内容 |
 | --- | --- |
 | 关闭应用或三维对象 | 关闭 |
 | 调整大小或移动)  ( | Adjust |
@@ -81,7 +81,7 @@ ms.locfileid: "91677542"
 
 请在 "开始" 菜单中，使用以下命令：
 
-| 要执行此操作 | 说出的内容 |
+| 任务 | 说出的内容 |
 | --- | --- |
 | 中转到 "所有应用" 列表 | 所有应用 |
 | 开始或所有应用时向上或向下移动 | 向上/向下翻页 |
@@ -98,7 +98,7 @@ ms.locfileid: "91677542"
 
 说 "你好 Cortana"，然后使用以下命令之一：
 
-| 要执行此操作 | 说出的内容 |
+| 任务 | 说出的内容 |
 | --- | --- |
 | 了解你对 Cortana 的看法 | 我可以说什么？ |
 | 增大/减小音量 | 打开或关闭音量 |
@@ -123,11 +123,11 @@ ms.locfileid: "91677542"
 在键盘处于活动状态时切换到听写模式，以便能够轻松地键入。 选择键盘上的麦克风（或只是说 "开始口述"）即可开始。
 
 > [!NOTE]
-> 混合现实键盘仅提供英语版本，但你可以使用任何受支持的 [Windows Mixed reality 语言](wmr-setup-faq.md#what-languages-are-supported-in-windows-mixed-reality)的听写。
+> 混合现实键盘仅提供英语版本，但你可以使用任何受支持的 [Windows Mixed reality 语言](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)的听写。
 
-### <a name="keyboard-dictation-commands"></a>键盘听写命令 
+### <a name="keyboard-dictation-commands"></a>键盘听写命令
 
-| 要执行此操作 | 说出的内容 |
+| 任务 | 说出的内容 |
 | --- | --- |
 | 关闭键盘 | 关闭 |
 | 开始听写 | 开始口述 |
@@ -136,6 +136,7 @@ ms.locfileid: "91677542"
 | 选择听写框中的所有内容 | 全选 |
 
 ### <a name="punctuation"></a>标点
+
 你需要指出要使用的标点的名称。 例如，你可能会说 "你好 **逗号** ，你是什么？ **"。**
 
 下面是可以使用的标点关键字：
@@ -146,12 +147,12 @@ ms.locfileid: "91677542"
 * 左引号 (s) ， () 的右引号
 * 井号、笑脸/笑脸、皱眉、眨眼
 * 美元，百分比
- 
-有时会对诸如电子邮件地址之类的东西进行拼写检查。 例如，若要口述 example@outlook.com ，你应说 "E X A M P L e at outlook .com"。
 
+有时会对诸如电子邮件地址之类的东西进行拼写检查。 例如，若要口述 example@outlook.com ，你应说 "E X A M P L e at outlook .com"。
 
 若要停止口述，请选择 " **完成** "。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
+
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)

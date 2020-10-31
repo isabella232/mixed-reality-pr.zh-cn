@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，卸载 Windows Mixed Reality，支持的语言
 appliesto:
 - Windows 10
-ms.openlocfilehash: aa61148a115ae295c1dc64b575a2fae7b0111470
-ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
+ms.openlocfilehash: a49008cb7d6a51385cb0d4ece7dfae3018aefe88
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044458"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93131861"
 ---
 # <a name="other-questions"></a>其他问题
 
@@ -29,7 +29,7 @@ ms.locfileid: "93044458"
     * 使用 Windows 更新更新驱动程序。
     * 如果该更新未解决此问题，请前往制造商的网站并安装最新的驱动程序更新。 
     * 如果更新不适用于 GPU，则设备上可能不支持 WMR。 如果你认为它应为，请联系 [支持人员](https://support.microsoft.com)。
-    
+
 如果 Windows Mixed Reality 安装程序显示您的图形卡无法满足要求，而您认为图形卡有问题，请确保将您的耳机插入正确的卡。
 
 ## <a name="my-samsung-odyssey-or-odyssey-headset-firmware-update-is-stuck"></a>我的 Samsung 太空或太空 + 耳机固件更新停滞。
@@ -37,6 +37,7 @@ ms.locfileid: "93044458"
 Samsung 拥有并发布通过其 "Samsung HMD 太空安装程序" 和 "Samsung HMD 太空 + Setup" 设备配套应用交付的耳机固件更新。 若要获得更多详细信息并了解 Samsung 固件更新问题，请联系 Samsung 客户服务。
 
 如果固件更新过程停滞，而且没有进展超过五分钟：
+
 * 暂时拔出所有其他 USB 设备，然后重试固件更新。
 * 将 Samsung 耳机连接到电脑上的其他 USB 3.0 端口。
 * 禁用和/或卸载任何可能会干扰固件更新的软件，例如千兆 AORUS App Center。
@@ -45,28 +46,32 @@ Samsung 拥有并发布通过其 "Samsung HMD 太空安装程序" 和 "Samsung H
 ## <a name="how-do-i-access-my-pc-desktop-in-mixed-reality"></a>如何实现在混合现实中访问我的 PC 桌面？
 通过 Windows 中的 "耳机" 按钮启动桌面应用， **> 所有应用 > 桌面** 在混合现实中访问电脑桌面。
 
-## <a name="how-can-i-see-multiple-monitors-in-mixed-reality"></a>如何在混合现实中查看多个监视器？
-默认情况下，桌面应用会自动切换为显示具有焦点的监视器。 如果要在混合现实中查看所有监视器： 
+## <a name="how-can-i-see-multiple-monitors-in-mixed-reality"></a>如何在混合现实中查看多个监视器
+
+默认情况下，桌面应用会自动切换为显示具有焦点的监视器。 如果要在混合现实中查看所有监视器：
+
 * 单击应用左上角的 "监视" 图标。
 * 禁用 "自动切换监视器"。
 * 选择要查看的监视器。
 * 启动桌面应用程序的另一个实例。
 * 选择要在该实例上查看的监视器。
 * 对于所有物理监视器重复此操作。
-请注意，每次重新启动混合现实时，都必须重新选择要在每个桌面应用上显示的监视器。 
+请注意，每次重新启动混合现实时，都必须重新选择要在每个桌面应用上显示的监视器。
 
-## <a name="my-desktop-app-only-shows-a-black-screen"></a>我的桌面应用程序只显示黑屏。
+## <a name="my-desktop-app-only-shows-a-black-screen"></a>我的桌面应用程序只显示黑屏
+
 如果你的电脑具有 Nvidia 混合 GPU，则问题可能是由于 Nvidia 设备在离散 GPU 而不是集成的 GPU 上运行 runtimebroker.exe。 若要解决此问题，请按照 "[如何实现创建新程序的 Optimus 设置](http://nvidia.custhelp.com/app/answers/detail/a_id/2615/~/how-do-i-customize-optimus-profiles-and-settings%3F)" 下的说明操作。 添加 C:\windows\system32\runtimebroker.exe，并强制其在 "集成图形" 处理器上运行。 
 
 ## <a name="my-wi-fi-slows-down-when-im-using-windows-mixed-reality"></a>使用 Windows Mixed Reality 时，Wi-Fi 会减慢。
 
 如果使用 2.4 GHz Wi-Fi 连接，则运动控制器可能会减慢 Wi-fi 的速度。 尝试以下任一项：
-* 切换到 5GHz Wi-Fi 连接（如果有）。 [了解详细信息](https://support.microsoft.com/en-us/help/4000461)。
-* 使用单独的蓝牙适配器将运动控制器连接到您的 PC。 请参阅 [建议的适配器](https://support.microsoft.com/en-us/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)。
+
+* 切换到 5GHz Wi-Fi 连接（如果有）。 [了解详细信息](https://support.microsoft.com/help/4000461)。
+* 使用单独的蓝牙适配器将运动控制器连接到您的 PC。 请参阅 [建议的适配器](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)。
 
 ## <a name="i-got-a-message-that-said-to-plug-in-and-charge-my-pc-why"></a>我收到一条消息，指出我的 PC 已接通电源并向其收费。 为什么？
 
-如果使用便携式计算机，则当电脑完全充电并接通电源时，Windows Mixed Reality 的效果最佳。 
+如果使用便携式计算机，则当电脑完全充电并接通电源时，Windows Mixed Reality 的效果最佳。
 
 ## <a name="what-is-the-experience-options-setting"></a>什么是体验选项设置？
 
@@ -75,9 +80,10 @@ Samsung 拥有并发布通过其 "Samsung HMD 太空安装程序" 和 "Samsung H
 * 60Hz：将刷新率设置为60Hz，并关闭某些功能，如混合现实门户中的视频捕获和预览。
 * 90Hz：将刷新率设置为90Hz。
 
-## <a name="what-languages-are-supported-in-windows-mixed-reality"></a>Windows Mixed Reality 支持哪些语言？
+## <a name="what-languages-are-supported-in-windows-mixed-reality"></a>Windows Mixed Reality 支持的语言
 
 Windows Mixed Reality 提供以下语言版本：
+
 * 简体中文（中国）
 * 英语（澳大利亚）
 * 英语（加拿大）

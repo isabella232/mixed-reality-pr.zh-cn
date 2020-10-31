@@ -3,12 +3,12 @@ title: 混合现实主页
 description: 如何在 Windows Mixed Reality 主页中导航和传送，启动应用和游戏，个性化家庭，并更改视觉对象、音频和语音设置。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，导航，接收，应用，游戏
-ms.openlocfilehash: 177a9db67f304c163356a814b5c4d2e54ba4867d
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: ce4774f4a8f752d5e508d8daa66c050b2a6f28ca
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434624"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132111"
 ---
 # <a name="your-windows-mixed-reality-home"></a>Windows Mixed Reality 主页
 
@@ -73,7 +73,7 @@ Windows Mixed Reality 是第一个空间操作系统。 它不使用平面屏幕
 
 ## <a name="turn-off-the-boundary"></a>关闭边界
 
-中转到混合现实门户，并打开屏幕左上角的菜单。 选择 " **运行" 设置 > 房间边界**。 切换切换为 "关闭"。 如果关闭边界，应将其放在办公桌上。
+中转到混合现实门户，并打开屏幕左上角的菜单。 选择 " **运行" 设置 > 房间边界** 。 切换切换为 "关闭"。 如果关闭边界，应将其放在办公桌上。
 
 ## <a name="spatial-sound-in-the-windows-mixed-reality-home"></a>Windows Mixed Reality 主页中的空间音效
 
@@ -84,7 +84,7 @@ Windows Mixed Reality 主页包含一个空间音效模拟，其中每个应用�
 
 ## <a name="see-also"></a>另请参阅
 
-* [Windows Mixed Reality 主页疑难解答](set-up-questions.md#my-controllers-arent-showing-in-my-windows-mixed-reality-home)
+* [Windows Mixed Reality 主页疑难解答](wmr-setup-faq.md#my-motion-controllers-arent-working)
 * [在 Windows Mixed Reality 中使用游戏和应用](using-games-and-apps-in-windows-mixed-reality.md)
 * [由内而外跟踪的工作原理](tracking-system.md)
 * [运动控制器的工作原理](controllers-in-wmr.md)

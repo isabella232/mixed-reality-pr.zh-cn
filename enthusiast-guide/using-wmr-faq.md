@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: cf02ccfc92d80ee1d1a8f6ca3d4ab55650f4a62c
-ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
+ms.openlocfilehash: 9c31f772baa434a4c14157ae91c97454f1910a3c
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044440"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93131821"
 ---
 # <a name="using-windows-mixed-reality-faq"></a>使用 Windows Mixed Reality 常见问题解答
 
@@ -40,7 +40,7 @@ Windows Mixed Reality 旨在在您戴上声音时通过沉浸式耳机播放声�
 
 ## <a name="speech-commands-arent-working"></a>语音命令不起作用
 
-若要使用语音命令，你的电脑的语音和语言设置必须设置为 [受支持的 Windows Mixed Reality 区域和语言](wmr-setup-faq.md#what-languages-are-supported-in-windows-mixed-reality)。 若要检查您的 Windows 区域和语言，请选择 " **设置" > Time & language > region & language** "。 若要检查您的语音语言，请选择 " **设置" > Time & language > Speech** "。
+若要使用语音命令，你的电脑的语音和语言设置必须设置为 [受支持的 Windows Mixed Reality 区域和语言](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)。 若要检查您的 Windows 区域和语言，请选择 " **设置" > Time & language > region & language** "。 若要检查您的语音语言，请选择 " **设置" > Time & language > Speech** "。
 
 如果耳机没有内置麦克风，请将耳机和麦克风一起连接到耳机或电脑。 若要在耳机直接连接到耳机时自动切换到你的耳机，请选择 " **设置" > 混合现实 > 音频和语音** ，并确保在戴上 **耳机时，切换到 "耳机麦克风** "。
 
@@ -132,6 +132,6 @@ Windows Mixed Reality 旨在在您戴上声音时通过沉浸式耳机播放声�
 
 仍需帮助？ 若要进行高级故障排除，请参阅 [此文](troubleshooting-windows-mixed-reality.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)

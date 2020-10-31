@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，混合现实门户
 appliesto:
 - Windows 10
-ms.openlocfilehash: b07e1a90247072952969cb2e2fc845bdb906bcae
-ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
+ms.openlocfilehash: a9333e9f4d80ea73724e2530f2e94c3d0e32d0d4
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92915562"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132101"
 ---
 # <a name="install-windows-mixed-reality-software"></a>安装 Windows Mixed Reality 软件
 
@@ -51,9 +51,10 @@ Windows Mixed Reality 大小约为1GB，下载时间取决于你的 internet 连
 
 **确保你的电脑能识别你的耳机**
 
-如果重新启动不起作用，请确保电脑能够识别你的耳机。 选择 "开始"，在搜索框中键入 "设备管理器"，然后在列表中选择它。 展开 Mixed reality 设备，查看是否列出了你的耳机。 
+如果重新启动不起作用，请确保电脑能够识别你的耳机。 选择 "开始"，在搜索框中键入 "设备管理器"，然后在列表中选择它。 展开 Mixed reality 设备，查看是否列出了你的耳机。
 
 如果未列出，请尝试以下操作：
+
 * 将耳机插入电脑上的不同端口（如果可用）。
 * 查看 [Windows 更新](https://support.microsoft.com/help/12373)中的最新软件更新。
 * 卸载并重新安装 Windows Mixed Reality：
@@ -90,9 +91,10 @@ Windows Mixed Reality 大小约为1GB，下载时间取决于你的 internet 连
 
 ![准备好设置](images/1050px-gettingsetup.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
+
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
 * [安装疑难解答](installation_errors.md)
-* [安装疑难解答](set-up-questions.md)
+* [安装疑难解答](wmr-setup-faq.md)
 * [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)

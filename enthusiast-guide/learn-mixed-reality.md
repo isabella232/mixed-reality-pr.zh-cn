@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，教程，入门
 appliesto:
 - Windows 10
-ms.openlocfilehash: 94b23785861ad70630a14d26668164fdf699fcce
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: be85b88f356532df736d69f8319ca6a7337ae824
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92292988"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132061"
 ---
 # <a name="learn-mixed-reality"></a>了解 Mixed Reality
 
@@ -45,7 +45,7 @@ ms.locfileid: "92292988"
 
 ## <a name="use-voice-commands-and-cortana-inside-of-the-windows-mixed-reality-home"></a>在 Windows Mixed Reality 主页中使用语音命令和 Cortana
 
-[了解可在 Windows Mixed Reality 主页中使用的语音命令](https://support.microsoft.com/en-us/help/4041322/windows-10-speech-in-windows-mixed-reality)
+[了解可在 Windows Mixed Reality 主页中使用的语音命令](https://support.microsoft.com/help/4041322/windows-10-speech-in-windows-mixed-reality)
 
 ## <a name="show-a-preview-of-what-im-seeing-in-my-headset-on-my-desktops-screen"></a>在我的桌面屏幕上显示我在我的耳机中看到的内容的预览
 
@@ -54,5 +54,5 @@ ms.locfileid: "92292988"
 ## <a name="see-also"></a>另请参阅
 
 * [排查安装问题](installation_errors.md)
-* [安装疑难解答](set-up-questions.md)
+* [安装疑难解答](wmr-setup-faq.md)
 * [混合现实主页](your-mixed-reality-home.md)
