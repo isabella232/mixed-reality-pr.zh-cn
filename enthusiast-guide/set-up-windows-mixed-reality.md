@@ -3,12 +3,12 @@ title: 设置 Windows Mixed Reality
 description: 如何设置 Windows Mixed Reality 运动控制器、语音和音频，并为安全播放空间定义房间边界。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，运动控制器，控制器，语音，音频，固定，下，边界，图形驱动程序，Microsoft Edge，chromium
-ms.openlocfilehash: cd59fd34dd00edc98d209681cc1239895c36ada2
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: 95ca5b8d86e26061e565a74efa36e49cc3d1b92b
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434631"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132141"
 ---
 # <a name="set-up-windows-mixed-reality"></a>设置 Windows Mixed Reality
 
@@ -40,7 +40,7 @@ ms.locfileid: "92434631"
 
 如果只计划使用 Xbox 游戏板或键盘和鼠标，则无需配对控制器。  如果你计划使用控制器，你应该将它们配对。
 
-**注意**： Windows Mixed Reality 运动控制器需要蓝牙4.0。 如果你的电脑没有内置蓝牙，你将需要插入支持蓝牙4.0 的 USB 蓝牙适配器，才能启用运动控制器。 如果你使用的是耳机中的内置广播，则不需要蓝牙适配器。
+**注意** ： Windows Mixed Reality 运动控制器需要蓝牙4.0。 如果你的电脑没有内置蓝牙，你将需要插入支持蓝牙4.0 的 USB 蓝牙适配器，才能启用运动控制器。 如果你使用的是耳机中的内置广播，则不需要蓝牙适配器。
 
 ![熟悉运动控制器](images/get_to_know_controllers.png)
 
@@ -50,9 +50,9 @@ ms.locfileid: "92434631"
 
 选择会议室或书桌规模体验：
 
-**选项1：设置) 的所有体验 (也称为 "空间缩放" ** 使你可以浏览房间，并且是最能沉浸的混合现实体验。 建议在混合现实中清除至少5英尺 x 7 英尺 (1.5 米 x 2 米) 空间。
+**选项1：设置) 的所有体验 (也称为 "空间缩放"** 使你可以浏览房间，并且是最能沉浸的混合现实体验。 建议在混合现实中清除至少5英尺 x 7 英尺 (1.5 米 x 2 米) 空间。
 
-**选项2：设置 " (" （也称为 "桌面"）) ** 体验在你的办公桌上工作。 如果空间中没有很多空间，则这是一个不错的选择。 这也意味着你将在没有边界的情况下使用耳机。 你需要保留在一个位置，因为你没有边界来帮助你避免物理障碍。 此外，某些应用和游戏可能设计为与边界一起使用，因此它们可能无法按预期工作。
+**选项2：设置 " (" （也称为 "桌面"）)** 体验在你的办公桌上工作。 如果空间中没有很多空间，则这是一个不错的选择。 这也意味着你将在没有边界的情况下使用耳机。 你需要保留在一个位置，因为你没有边界来帮助你避免物理障碍。 此外，某些应用和游戏可能设计为与边界一起使用，因此它们可能无法按预期工作。
 
 ![选择安装](images/1050px-chooseasetup.png)
 
@@ -100,7 +100,7 @@ Windows Mixed Reality 中当前支持的最大边界大小为 18x18ft (5.7 x 5.7
 
 ## <a name="adjusting-your-headsets-display-settings"></a>调整头戴显示设备的显示设置
 
-Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平衡质量和性能的显示设置。 若要调整这些设置，请参阅 " **设置" > 混合现实 > 耳机显示**。
+Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平衡质量和性能的显示设置。 若要调整这些设置，请参阅 " **设置" > 混合现实 > 耳机显示** 。
 
 ### <a name="visuals"></a>视觉对象
 
@@ -113,8 +113,8 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 如果连接带有较高分辨率的耳机 (例如，使用4320x2160 的耳机显示 PC) ，你将看到一个调整混合现实显示分辨率的设置。
 
 * 此设置为 Windows Mixed Reality 组合堆栈提供选项，以在 4320x2160) 的情况下呈现本机 (例如，在上呈现组合堆栈，或在较低的分辨率和 upscale 上呈现组合堆栈 (例如，在2880x1440 和 upscale 呈现为 4320x2160) 。
-* 默认设置为以本机方式呈现 (例如， **4320 x 2160 (最佳质量) ** 选项) 以提供可从耳机获得最佳视觉质量。
-* 如果你的电脑不满足具有更高分辨率显示器的头戴显示设备的最低图形硬件要求，并且/或者如果你看到图形性能问题，则可以尝试使用选择 " **自动增加 (最佳性能) ** " 选项。
+* 默认设置为以本机方式呈现 (例如， **4320 x 2160 (最佳质量)** 选项) 以提供可从耳机获得最佳视觉质量。
+* 如果你的电脑不满足具有更高分辨率显示器的头戴显示设备的最低图形硬件要求，并且/或者如果你看到图形性能问题，则可以尝试使用选择 " **自动增加 (最佳性能)** " 选项。
 
 此设置在 Windows 10 版本1903或更高版本上可用。
 
@@ -126,7 +126,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 
 此高级设置将覆盖默认的耳机显示刷新频率体验。
 
-* **自动 (默认) **：根据电脑的硬件配置，自动选择60Hz 或90Hz 体验。
+* **自动 (默认)** ：根据电脑的硬件配置，自动选择60Hz 或90Hz 体验。
 * **60Hz**
 * **90Hz**
 
@@ -138,7 +138,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 此设置控制 Windows Mixed Reality 为响应头戴显示传感器的行为：
 
 * **使用耳机状态传感器自动切换** (默认) ：在戴上耳机时，windows 将自动将输入 (键盘、鼠标 ... ) 到 Windows Mixed Reality。 可以通过 Win + Y 随时替代此情况。
-* **使用 Windows 徽标键 + Y 手动切换**： windows 不会使用耳机状态传感器来检测戴戴显示设备。 需要使用 Win + Y 在 PC 桌面和 Windows Mixed Reality 之间切换输入。
+* **使用 Windows 徽标键 + Y 手动切换** ： windows 不会使用耳机状态传感器来检测戴戴显示设备。 需要使用 Win + Y 在 PC 桌面和 Windows Mixed Reality 之间切换输入。
 
 此设置在 Windows 10 版本1903或更高版本上可用。
 
@@ -151,7 +151,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 
 ### <a name="issues-with-the-new-microsoft-edge-in-windows-mixed-reality"></a>Windows Mixed Reality 中新的 Microsoft Edge 的问题
 
-**2020-01 (或更高1903版本的 Windows 10 累积更新解决了已知问题) **
+**2020-01 (或更高1903版本的 Windows 10 累积更新解决了已知问题)**
 
 - 启动任何 Win32 应用程序（包括新的 Microsoft Edge）都会导致耳机显示暂时冻结。
 - Microsoft Edge 磁贴从 Windows Mixed Reality 开始菜单中消失 (你可以在) 的 "经典应用" 文件夹中找到它。
@@ -165,7 +165,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 - 当混合现实门户关闭时，在 Windows Mixed Reality 中打开的网站将会丢失，但 Microsoft Edge 窗口仍会保留在混合现实中的位置。
 - Microsoft Edge windows 中的音频未 spatialized。
 - 修复了360查看器扩展版本2.3.8：在 Windows Mixed Reality 中从 YouTube 打开360视频可能会导致耳机上出现视频失真。 重启边缘应在不可见的情况下更新360查看器扩展以解决此问题。 您可以通过 `edge://system/` 在地址栏中输入，然后选择 "扩展" 旁边的 "展开" 按钮，确认您所拥有的扩展版本。
-- 在 Windows Mixed Reality 会话期间，虚拟监视器将在 " **设置" > 系统 > 显示**中显示为一般物理监视器。
+- 在 Windows Mixed Reality 会话期间，虚拟监视器将在 " **设置" > 系统 > 显示** 中显示为一般物理监视器。
 
 ## <a name="launching-mixed-reality-after-the-first-time"></a>首次启动混合现实
 
@@ -176,7 +176,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
 * [排查安装问题](installation_errors.md)
-* [安装疑难解答](set-up-questions.md)
+* [安装疑难解答](wmr-setup-faq.md)
 * [了解 Mixed Reality](learn-mixed-reality.md)
 * [运动控制器](controllers-in-wmr.md)
 * [由内而外跟踪的工作原理](tracking-system.md)

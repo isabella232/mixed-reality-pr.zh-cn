@@ -3,12 +3,12 @@ title: Windows Mixed Reality 疑难解答
 description: Windows Mixed Reality 故障排除，超出了标准使用者支持文档的范围。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
-ms.openlocfilehash: d51b5fab0759ab58b9becfd9287582d126bd629e
-ms.sourcegitcommit: e8b0c18c293d7ee22c06fd5ed8c9ab212e6205da
+ms.openlocfilehash: 75f1365b8cc0acc540db8932d6672ab11219749a
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93061835"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93131941"
 ---
 # <a name="troubleshooting-windows-mixed-reality-faqs"></a>Windows Mixed Reality (常见问题的疑难解答) 
 
@@ -16,7 +16,7 @@ ms.locfileid: "93061835"
 请参阅以下文章，了解你遇到的问题。
 
 - [安装错误](installation_errors.md)
-- [安装](set-up-questions.md)
+- [安装](wmr-setup-faq.md)
 - [边界](boundary-questions.md)
 - [头戴显示设备连接性](headset-connectivity.md)
 - [头戴显示设备显示](headset-display.md)
