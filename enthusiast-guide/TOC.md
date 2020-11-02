@@ -26,13 +26,12 @@
 ### [什么是 WebVR](webvr.md)
 ### [使用 Windows Mixed Reality 常见问题解答](using-wmr-faq.md)
 
-## 故障排查常见问题解答
+## 排除故障和常见问题解答
 ### [提交 bug 和反馈](filing-feedback.md)
+### [错误代码](error-codes.md)
 ### [常见问题解答](troubleshooting-windows-mixed-reality.md)
 ### [安装错误](installation_errors.md)
-### [安装](set-up-questions.md)
 ### [边界](boundary-questions.md)
-### [错误代码](error-codes.md)
 ### [头戴显示设备连接性](headset-connectivity.md)
 ### [头戴显示设备显示](headset-display.md)
 ### [运动控制器](motion-controller-problems.md)
@@ -42,8 +41,11 @@
 ### [跟踪系统](tracking.md)
 ### [WebVR](webvr-questions.md)
 ### [其他问题](other-questions.md)
+### [HP Reverb G2 常见问题解答](reverbG2-faq.md)
 
 ## 资源
 ### [沉浸式头戴显示设备运行状况、安全和舒适](wmr-health-safety-comfort.md)
 ### [Mixed Reality 软件概述和版本历史记录](mixed-reality-software.md)
 ### [由内而外跟踪的工作原理](tracking-system.md)
+### [Unity 中的 HP Reverb G2 手柄](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+### [Unreal 中的 HP Reverb G2 手柄](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)

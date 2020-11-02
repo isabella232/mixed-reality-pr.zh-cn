@@ -2,6 +2,8 @@
   href: development.md
 - name: Azure 云服务
   href: mixed-reality-cloud-services.md
+- name: 混合现实学习概述
+  href: mr-learning-overview.md
 - name: 安装工具
   href: install-the-tools.md
 - name: 移植应用
