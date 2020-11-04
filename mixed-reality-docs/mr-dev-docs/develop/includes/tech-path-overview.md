@@ -1,20 +1,16 @@
 ---
-ms.openlocfilehash: 514062ea4b0343eae6d4e0b05097b4c65ca3de22
-ms.sourcegitcommit: 8e91ff47ef70e80a41137f80aa1093e711d27bf7
+ms.openlocfilehash: 11533175057217bddcc7e121a524da1f26d2764e
+ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91989444"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92915534"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
 ![Unity](../images/unity_logo_banner.png)<br>
 
 使用 Unity 构建跨平台、功能齐全的混合现实应用。 请参阅 [Unity 开发概述](../unity/unity-development-overview.md)，开始针对 HoloLens 或 Windows Mixed Reality 沉浸式头戴显示设备进行 Unity 开发。
-
-## <a name="what-does-unity-offer"></a>Unity 提供了哪些功能？
-
-Unity 是市面上领先的实时开发平台之一，它的生态系统中包含专门的[学习平台](https://unity.com/products/learn-premium)、[资产存储](https://assetstore.unity.com/)、[完整文档](https://docs.unity3d.com/Manual/index.html)和蓬勃发展的社区。 Unity 的底层运行时代码是用 C++ 编写的，但所有的开发脚本都是在 C# 中完成的。 无论你是想创建游戏、电影和动画，还是想在虚拟世界中呈现建筑或工程概念，Unity 都有提供支持的基础结构。
 
 ## <a name="available-hardware-platforms"></a>可用硬件平台
 
@@ -65,10 +61,6 @@ Unity 是市面上领先的实时开发平台之一，它的生态系统中包�
 ![Unreal](../images/unreal_logo_banner.png)
 
 使用 Unreal 构建功能齐全的跨平台混合现实应用。 请参阅 [Unreal 开发概述](../unreal/unreal-development-overview.md)，开始针对 HoloLens 进行 Unreal 开发。
-
-## <a name="what-does-unreal-offer"></a>Unreal 提供了哪些功能？
-
-Unreal Engine 4 是一种强大的开源创建引擎，全面支持采用 C++ 和 Azure 蓝图编写的混合现实。 从 Unreal Engine 4.25 开始，HoloLens 提供完备的支持，且已准备好投入生产。
 
 ## <a name="available-hardware-platforms"></a>可用硬件平台
 
@@ -122,10 +114,6 @@ WebXR 设备 API 是一种开放式规范，你可用它在任意平台中通过
 
 创建直接针对 Windows Mixed Reality API 的混合现实应用。 请参阅[原生开发概述](../native/directx-development-overview.md)，开始使用 OpenXR 或旧版 WinRT针对 HoloLens 2 或 Windows Mixed Reality 沉浸式头戴显示设备进行原生应用开发。 Windows Mixed Reality API 支持用 C++ 和 C# 编写的应用程序，让你能够在任一语言中构建自己的框架或中间件。
 
-## <a name="what-does-openxr-offer"></a>OpenXR 提供了哪些功能？
-
-OpenXR 是来自 Khronos 的开放式免版税 API 标准，它对供应商提供的涵盖广泛的混合现实的各种设备提供引擎本机访问。 你可在桌面上的 HoloLens 2 或 Windows Mixed Reality 沉浸式头戴显示设备上使用 OpenXR 进行开发。 如果你无权访问头戴显示设备，可使用 HoloLens 2 和 Windows Mixed Reality 头戴显示设备的仿真器。
-
 ## <a name="available-hardware-platforms"></a>可用硬件平台
 
 通过 OpenXR 开发构建混合现实应用时，有几个硬件、仿真器和流式处理选项供你使用。 
@@ -147,7 +135,7 @@ OpenXR 是来自 Khronos 的开放式免版税 API 标准，它对供应商提�
 
 |  工具/SDK  |  说明  |
 | --- | --- |
-| [OpenXR 开发人员工具](../native/openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-tools) | 提供了一个演示场景和一个系统状态页，场景中展示了 OpenXR 的各种功能，页面中提供了有关活动运行时和当前头戴显示设备的关键信息。 |
+| [OpenXR 开发人员工具](../native/openxr-getting-started.md#getting-the-openxr-developer-tools-for-windows-mixed-reality) | 提供了一个演示场景和一个系统状态页，场景中展示了 OpenXR 的各种功能，页面中提供了有关活动运行时和当前头戴显示设备的关键信息。 |
 | [OpenXR 规范](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) |  介绍什么是 OpenXR、它提供哪些功能和特性，以及如何在你自己的项目中实现它。 |
 | [OpenXR 加载程序](../native/openxr-getting-started.md#integrate-the-openxr-loader-into-a-project) | 发现设备上的活动 OpenXR 运行时，并提供对其实现的核心功能和扩展功能的访问。 |
 
@@ -157,3 +145,6 @@ OpenXR 是来自 Khronos 的开放式免版税 API 标准，它对供应商提�
 
 <!-- Go to actual GH link for more samples -->
 * [BasicXrApp](https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp) - 演示了一个简单的 OpenXR 示例，该示例中有两个 Visual Studio 项目文件，一个用于 Win32 桌面应用，另一个用于 UWP HoloLens 2 应用。
+
+你还可观看 60 分钟的 BasicXrApp 演练，其中介绍了 Visual Studio 中 OpenXR API 的所有关键组件：
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/OpenXR-Cross-platform-native-mixed-reality/player?format=ny]
