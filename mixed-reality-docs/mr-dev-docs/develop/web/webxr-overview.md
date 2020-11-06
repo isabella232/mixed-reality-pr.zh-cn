@@ -6,12 +6,12 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR，WinMR，WebAR，WebVR，WindowsMixedReality，HoloLens，windows mixed reality，web vr，web xr，web mr，web ar，360，360视频，360视频，360照片，360照片，360内容，沉浸式 web，immersiveweb，IW
-ms.openlocfilehash: 01e6cd44e9879cd7fd9b11e178134eaf364cc53c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: b72d4968e59e3e631138b1ecfd17ca9bbdd95c84
+ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678928"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93416868"
 ---
 # <a name="webxr-overview"></a>WebXR 概述
 
@@ -22,6 +22,11 @@ ms.locfileid: "91678928"
 详细了解 [Windows Mixed Reality 和新的 Microsoft Edge](https://docs.microsoft.com/windows/mixed-reality/new-microsoft-edge#introducing-the-new-microsoft-edge)新增 [功能](https://docs.microsoft.com/windows/mixed-reality/mrtk-porting-guide) 部分。
 
 ## <a name="viewing-webxr"></a>查看 WebXR
+
+> [!IMPORTANT]
+> Microsoft Edge (传统) 仅支持在当前浏览器中不可用的已弃用的 API。 但是，基于 Chromium 的新的 **[边缘浏览器](../../whats-new/new-microsoft-edge.md)** 支持 WebXR，适用于 Windows Mixed Reality 中的 VR 原型。 WebVR 将无法在新的基于 Chromium 的边缘浏览器中使用。
+> 
+> 如果你正在寻找一种方法，以便在今天的 HoloLens 2 上构建 WebXR 原型，请查看 [Firefox 现实](https://mixedreality.mozilla.org/firefox-reality/)。
 
 若要测试你的浏览器是否支持 WebXR，你可以在浏览器中导航到 [WebXR 示例](https://immersive-web.github.io/webxr-samples/) 。
 
