@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，HoloLens，全息影像，设计，交互
-ms.openlocfilehash: f5c42d197316169a99e388e40bf97a03682630ce
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 5e0ef2768b6e79136f8144492d6825107a6ed88e
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678721"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340695"
 ---
 # <a name="what-is-a-hologram"></a>什么是全息图？
 
@@ -72,7 +72,7 @@ HoloLens [呈现](../develop/platform-capabilities-and-apis/rendering.md) 的全
 
 某些全息影像会按用户进行操作。 这些基于标记的影像的位置本身相对于用户，而不管它们在何处。 你甚至可以选择将一段时间带到一段时间，然后将其放在墙上的另一个房间。
 
-**最佳做法**
+**最佳实践**
 * 在某些情况下，可能需要在整个体验中轻松发现和查看全息影像。 此类定位有两个高级方法。 让我们将它们称为 **"显示-锁定"** 和 **"正文锁定"** 。
    * 显示锁定的内容按位置 "锁定" 到设备显示。 这是一种很难的原因，其中包括 "clingyness" 的非自然感觉，这使得许多用户感到沮丧并希望 "晃动它"。 通常，许多设计人员发现，更好的做法是避免显示锁定内容。
    * 主体锁定的方法远远 forgivable。 正文锁定是指受限用户的主体或注视，而将其置于3d 空间中以环绕用户的情况。 许多经验都采用了一种正文锁定行为，其中全息图 "跟随" 用户看，这使用户可以旋转其身体，而不会丢失全息影像。 合并延迟有助于使全息图移动更加自然。 例如，Windows 全息版 OS 的某些核心 UI 使用的是正文锁定，这种情况下，用户将看起来像是一种灵活的、弹性的延迟，同时用户会将其标头。
@@ -126,6 +126,17 @@ HoloLens [呈现](../develop/platform-capabilities-and-apis/rendering.md) 的全
 
 ---
 
+## <a name="next-discovery-checkpoint"></a>下一个发现检查点
+
+如果您关注的是我们所做的 [发现旅程](get-started-with-mr.md) ，就是在探讨混合现实的基本知识。 在这里，你可以继续学习下一基础主题： 
+
+> [!div class="nextstepaction"]
+> [新的工作愿景](https://dynamics.microsoft.com//mixed-reality/overview/)
+
+或跳转到：
+
+> [!div class="nextstepaction"]
+> [追求更多个人计算](../out-of-scope/case-study-the-pursuit-of-more-personal-computing.md)
 
 ## <a name="see-also"></a>请参阅
 * [扩展设计过程](case-study-expanding-the-design-process-for-mixed-reality.md)

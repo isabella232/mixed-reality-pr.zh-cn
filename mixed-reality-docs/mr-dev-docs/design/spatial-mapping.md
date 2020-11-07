@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 空间映射，HoloLens，混合现实，表面重建，网格
-ms.openlocfilehash: 83c235cb7a5111be2b7e01d6c5864c1d06e9c6dc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6ca545327e412eaba5ee79959dfa9d01380b18c6
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677655"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340665"
 ---
 # <a name="spatial-mapping"></a>空间映射
 
@@ -368,6 +368,13 @@ ms.locfileid: "91677655"
 ## <a name="troubleshooting"></a>疑难解答
 * 为了使 surface 网格正确面向，每个 GameObject 都需要处于活动状态，然后才能将其发送到 SurfaceObserver 来构造其网格。 否则，网格将显示在您的空间中，但会旋转为古怪度。
 * 需要将运行与 SurfaceObserver 通信的脚本的 GameObject 设置为源。 否则，你创建并发送到 SurfaceObserver 的所有 Gameobject 都具有与父游戏对象的偏移量相等的偏移量。 这会使你的网格显示多个计量仪，这使得调试正在进行的操作非常困难。
+
+## <a name="next-discovery-checkpoint"></a>下一个发现检查点
+
+如果您关注的是我们所做的 [发现旅程](../discover/get-started-with-mr.md) ，就是在探讨混合现实的基本知识。 在这里，你可以继续学习下一基础主题： 
+
+> [!div class="nextstepaction"]
+> [建议对象的比例 -（比例）](../design/scale.md)
 
 ## <a name="see-also"></a>请参阅
 * [坐标系统](coordinate-systems.md)

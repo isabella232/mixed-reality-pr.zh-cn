@@ -8,20 +8,21 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，兼容，兼容性，PC，系统要求
 appliesto:
 - Windows 10
-ms.openlocfilehash: 5cf84768984691c253a557f6576685e89fb61078
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 464a2709600f7fff076053026797ce809b8fbf73
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677239"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340625"
 ---
 # <a name="windows-mixed-reality-pc-check-app"></a>Windows Mixed Reality PC 检查应用
 
-**[Windows Mixed REALITY PC 检查](windows-mixed-reality-pc-check-app.md)** 应用是确保您的 PC 准备好运行 Windows mixed reality 的最佳方式。 
+**[Windows Mixed REALITY PC 检查](windows-mixed-reality-pc-check-app.md)** 应用是确保您的 PC 准备好运行 Windows mixed reality 的最佳方式。
 
 <a href="https://www.microsoft.com/store/productid/9NZVL19N7CNC"><img alt="Download Windows Mixed Reality PC Check app" src="images/WMR-PC-Check-app.png"/></a>
 
 运行应用后，会收到以下消息之一：
+
 * **准备好了。** 你的电脑具有运行 Windows Mixed Reality 所需要的功能。
 * **就是这样。** 这台电脑或许能够运行 Windows Mixed Reality，但某些功能可能会受到限制。
 * **无法运行混合现实。** 这台电脑不满足运行 Windows Mixed Reality 所需的最低要求。
@@ -43,49 +44,50 @@ ms.locfileid: "91677239"
 
 ## <a name="get-help-with-windows-mixed-reality-pc-check-results"></a>获取有关 Windows Mixed Reality PC 检查结果的帮助
 
-当你在计算机上设置 Windows Mixed Reality 或运行 Windows Mixed Reality PC 检查应用时，你会收到一份报告，指出你的电脑是否已准备好运行。 下面是你可能会看到的一些详细信息。 
+当你在计算机上设置 Windows Mixed Reality 或运行 Windows Mixed Reality PC 检查应用时，你会收到一份报告，指出你的电脑是否已准备好运行。 下面是你可能会看到的一些详细信息。
 
 ### <a name="youre-good-to-go"></a>![准备就绪](images/glyph-succeeded.png)
 
-好消息-你的电脑可以运行 Windows Mixed Reality。 但请记住，计算机硬件和配置之间仍存在差异，因此每台电脑上的混合现实体验可能不相同。 
+好消息-你的电脑可以运行 Windows Mixed Reality。 但请记住，计算机硬件和配置之间仍存在差异，因此每台电脑上的混合现实体验可能不相同。
 
 >[!NOTE]
 >如果看到一条消息，指出： "此硬件配置可能与 Windows Mixed Reality 一起工作，但尚未对其进行测试"，则在长时间运行 Windows Mixed Reality 时可能会遇到一些性能问题。
 
-
 ### <a name="youre-nearly-there"></a>![您差不多](images/glyph-warning.png)
 
-你的电脑应能够运行 Windows Mixed Reality，但可能无法提供最佳体验。 图形可能会滞后，某些应用程序和游戏可能性能不佳，并且某些应用程序可能根本无法运行。 
+你的电脑应能够运行 Windows Mixed Reality，但可能无法提供最佳体验。 图形可能会滞后，某些应用程序和游戏可能性能不佳，并且某些应用程序可能根本无法运行。
 
 下面是你可能会看到的消息，以及如何处理它们：
 
-#### <a name="this-pc-has-an-integrated-graphics-card-with-single-channel-ram"></a>这台电脑的集成显卡包含单声道 RAM。
+#### <a name="this-pc-has-an-integrated-graphics-card-with-single-channel-ram"></a>这台电脑的集成显卡包含单声道 RAM
 
 集成图形卡将在具有双通道 RAM 的 Pc 上提供最佳的 Windows Mixed Reality 体验。 如果遇到性能问题，请尝试以下操作之一：
 
 * 安装 [兼容的单独图形卡](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)。
-* 安装其他 RAM 杆以创建双通道 RAM。 
-* 切换到 [兼容的 PC](https://www.microsoft.com/en-us/windows/windows-mixed-reality-devices)。
+* 安装其他 RAM 杆以创建双通道 RAM。
+* 切换到 [兼容的 PC](https://www.microsoft.com/windows/windows-mixed-reality-devices)。
 
-#### <a name="this-pc-has-a-hybrid-graphics-configuration-with-an-incompatible-pcie-link"></a>这台电脑的混合图形配置具有不兼容的 PCIe 链接。
+#### <a name="this-pc-has-a-hybrid-graphics-configuration-with-an-incompatible-pcie-link"></a>这台电脑的混合图形配置具有不兼容的 PCIe 链接
 
-PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通信的连接。 您的配置可能会正常运行，但如果遇到问题，则需要切换到兼容的 [PC](https://www.microsoft.com/en-us/windows/windows-mixed-reality-devices)。
+PCIe 代表 *外围组件互连 Express* 。 这是电脑用来与图形卡通信的连接。 您的配置可能会正常运行，但如果遇到问题，则需要切换到兼容的 [PC](https://www.microsoft.com/windows/windows-mixed-reality-devices)。
 
-#### <a name="this-pcs-graphics-driver-might-not-work-well-with-windows-mixed-reality"></a>对于 Windows Mixed Reality，这台电脑的图形驱动程序可能无法正常工作。
+#### <a name="this-pcs-graphics-driver-might-not-work-well-with-windows-mixed-reality"></a>这台电脑的图形驱动程序可能无法正常使用 Windows Mixed Reality
 
-如果遇到问题，请尝试使用 Windows 更新下载新的图形驱动程序 ( **启动 > 设置 > 更新 & 安全 > 检查更新** ) ，或访问电脑制造商或图形卡制造商的网站。 
+如果遇到问题，请尝试使用 Windows 更新下载新的图形驱动程序 ( **启动 > 设置 > 更新 & 安全 > 检查更新** ) ，或访问电脑制造商或图形卡制造商的网站。
 
-如果这不起作用，则需要添加兼容的 [图形卡](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 或切换到兼容的 [PC](https://www.microsoft.com/en-us/windows/windows-mixed-reality-devices)。
+如果这不起作用，则需要添加兼容的 [图形卡](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 或切换到兼容的 [PC](https://www.microsoft.com/windows/windows-mixed-reality-devices)。
 
-#### <a name="this-pcs-processor-might-not-work-well-with-windows-mixed-reality"></a>这台电脑的处理器可能无法与 Windows Mixed Reality 很好地配合工作。
+#### <a name="this-pcs-processor-might-not-work-well-with-windows-mixed-reality"></a>这台电脑的处理器可能无法与 Windows Mixed Reality 很好地配合使用
 
-这台电脑的处理器可能无法与 Windows Mixed Reality 很好地配合工作，因为它没有足够的核心。 如果 Windows Mixed Reality 运行不正常，请将处理器替换为 [兼容](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 的处理器，或切换到 [兼容的 PC](https://www.microsoft.com/en-us/windows/windows-mixed-reality-devices)。
+这台电脑的处理器可能无法与 Windows Mixed Reality 很好地配合工作，因为它没有足够的核心。 如果 Windows Mixed Reality 运行不正常，请将处理器替换为 [兼容](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) 的处理器，或切换到 [兼容的 PC](https://www.microsoft.com/windows/windows-mixed-reality-devices)。
 
-#### <a name="this-pc-might-not-have-a-compatible-usb-configuration"></a>这台电脑可能没有兼容的 USB 配置。
+#### <a name="this-pc-might-not-have-a-compatible-usb-configuration"></a>这台电脑可能没有兼容的 USB 配置
 
 如果遇到运行 Windows Mixed Reality 的问题，请尝试以下操作：
+
 * 将耳机插入到其他 USB 端口（如果可用）。
 * 如果这不起作用，请卸载您的 PC 的当前 USB 驱动程序，然后重新安装 Microsoft 驱动程序：
+
 1. 选择 " **开始** "，然后在搜索框中键入 **"设备管理器"** 。
 1. 从结果中选择 " **设备管理器** "。
 1. 展开 "通用串行总线控制器" 类别，查看列出的设备并卸载所有不兼容的驱动程序。 

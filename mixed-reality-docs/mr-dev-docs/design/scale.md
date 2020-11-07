@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，样式，设计
-ms.openlocfilehash: a9a02d681986df3d73c7990fc975e659e5326981
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 7d35da2d86d8d3b7f444974d87e5aa10e58ed2c8
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677134"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340655"
 ---
 # <a name="scale"></a>缩放
 
@@ -79,6 +79,18 @@ ms.locfileid: "91677134"
 <br>
 
 ---
+
+## <a name="next-discovery-checkpoint"></a>下一个发现检查点
+
+如果您关注的是我们所做的 [发现旅程](../discover/get-started-with-mr.md) ，就是您的初始体验到混合现实基础。 您可以在现实世界中查看行业合作伙伴在混合现实中的作用： 
+
+> [!div class="nextstepaction"]
+> [了解行业合作伙伴如何使用混合现实](../discover/get-started-with-mr.md#see-how-industry-partners-are-using-mixed-reality)
+
+或继续学习设计旅程：
+
+> [!div class="nextstepaction"]
+> [开始设计旅程](../design/design.md)
 
 ## <a name="see-also"></a>请参阅
 * [颜色、光线和材料](../color,-light-and-materials.md)
