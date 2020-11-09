@@ -27,9 +27,9 @@
 ### [使用 Windows Mixed Reality 常见问题解答](using-wmr-faq.md)
 
 ## 排除故障和常见问题解答
+### [FAQ 概述](troubleshooting-windows-mixed-reality.md)
 ### [提交 bug 和反馈](filing-feedback.md)
 ### [错误代码](error-codes.md)
-### [常见问题解答](troubleshooting-windows-mixed-reality.md)
 ### [安装错误](installation_errors.md)
 ### [边界](boundary-questions.md)
 ### [头戴显示设备连接性](headset-connectivity.md)
