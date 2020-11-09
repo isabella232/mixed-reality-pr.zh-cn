@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，HoloLens，全息影像，设计，交互
-ms.openlocfilehash: 5e0ef2768b6e79136f8144492d6825107a6ed88e
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+ms.openlocfilehash: c26cbbaa011c9e7ec92ea45dfd9491dbd178a025
+ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340695"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94386233"
 ---
 # <a name="what-is-a-hologram"></a>什么是全息图？
 
@@ -131,14 +131,8 @@ HoloLens [呈现](../develop/platform-capabilities-and-apis/rendering.md) 的全
 如果您关注的是我们所做的 [发现旅程](get-started-with-mr.md) ，就是在探讨混合现实的基本知识。 在这里，你可以继续学习下一基础主题： 
 
 > [!div class="nextstepaction"]
-> [新的工作愿景](https://dynamics.microsoft.com//mixed-reality/overview/)
-
-或跳转到：
-
-> [!div class="nextstepaction"]
-> [追求更多个人计算](../out-of-scope/case-study-the-pursuit-of-more-personal-computing.md)
+> [扩展设计过程](case-study-expanding-the-design-process-for-mixed-reality.md)
 
 ## <a name="see-also"></a>请参阅
-* [扩展设计过程](case-study-expanding-the-design-process-for-mixed-reality.md)
 * [空间音效](../design/spatial-sound.md)
 * [颜色、光线和材料](../color,-light-and-materials.md)

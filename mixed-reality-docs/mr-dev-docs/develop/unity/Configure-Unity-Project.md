@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目
-ms.openlocfilehash: 3ddca223df94f4aa748ee510c3198389acecdedc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f1465dcb31718b9d3faeb64d24e33d9f9ffeb7cc
+ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676959"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94386213"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>为 Windows Mixed Reality 配置新的 Unity 项目 
 
@@ -19,7 +19,7 @@ ms.locfileid: "91676959"
 
 Windows Mixed Reality (WMR) 是作为 Windows 10 操作系统的一部分引入的 Microsoft 平台。 WMR 平台使你能够生成在全息和 VR 显示设备上呈现数字内容的应用程序。
 
-设置 WMR 时，可以采用两个路径。 第一种方法是安装 [混合现实工具包](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) (MRTK) v2，这将自动设置 WMR 环境。 第二种方法是手动更改一些 Unity 设置以使用 WMR 进行滚动。 
+设置 WMR 时，可以采用两个路径。 第一种方法是安装 [混合现实工具包 (MRTK) ](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)，它将自动设置 WMR 环境。 第二种方法是手动更改一些 Unity 设置以使用 WMR 进行滚动。 
 
 > [!NOTE]
 > 你始终可以在以后导入 MRTK，因此，不会产生要首先进行手动路由的损失。
@@ -36,7 +36,7 @@ Windows Mixed Reality (WMR) 是作为 Windows 10 操作系统的一部分引入�
 5. 将 **生成类型** 设置为 **D3D**
 6. 将 **UWP SDK** 设置为 **安装的最新版本**
 
-![Unity XR 设置](images/unity-uwp-settings.png)<br>
+<img src="images/unity-uwp-settings.png" width="550px" alt="Unity XR Settings">
 *Unity XR 设置*
 
 正确配置平台后，需要让 Unity 知道应用在导出时应创建 [沉浸式视图](../../design/app-views.md) 而不是2d 视图：
@@ -90,6 +90,8 @@ HoloLens 具有移动类 GPU。 如果你的应用面向 HoloLens，你需要调
 > [!IMPORTANT]
 > 如果删除并创建新相机，请确保将新相机标记为 " **MainCamera** "。
 
-## <a name="see-also"></a>另请参阅
-* [混合现实工具包 v2](mrtk-getting-started.md)
+## <a name="see-also"></a>请参阅
+* [MRTK-安装指南 (GitHub) ](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)
+* [MRTK 主页 (GitHub) ](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
+* [安装工具](../install-the-tools.md)
 * [Unity 开发概述](unity-development-overview.md)
