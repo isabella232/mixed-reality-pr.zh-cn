@@ -7,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互
-ms.openlocfilehash: 7333163a01496f41c4cb3cd98f54012e5c58a8d4
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 2ee127b05a8ad88e49eda6d088f84e895aeaf511
+ms.sourcegitcommit: 4e618948e1e2e0baf4bb3e8b67513fa7716aa815
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293122"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94361685"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
@@ -88,17 +88,17 @@ ms.locfileid: "92293122"
         了解如何使用 Unity 创建交互式体验。 从头至尾从实践中学习。
     :::column-end:::    
     :::column:::    
-        [![混合现实工具包 (MRTK)](images/Final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
+        [![混合现实工具包 (MRTK)](images/74-12.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
         **[混合现实工具包 (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
         使用空间交互和 UI 构建基块，通过 Unity 立即开始混合现实设计和开发。   
     :::column-end:::
     :::column:::    
-        [![混合现实设计实验室](images/Final_mrdl_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        [![混合现实设计实验室](images/74-13.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
         **[混合现实设计实验室](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
         获取示例应用，这些应用会演示如何使用 MRTK 的构建基块来创建美好的混合现实体验。
     :::column-end:::        
     :::column:::    
-        [![Microsoft Maquette](images/Final_maquette_logo.png)](https://www.maquette.ms/)<br>
+        [![Microsoft Maquette](images/74-14.png)](https://www.maquette.ms/)<br>
         **[Microsoft Maquette](https://www.maquette.ms/)**<br>  
         为 VR 而设计。 可以使用 Microsoft Maquette 快速便捷地进行沉浸式空间原型制作。 
     :::column-end:::    
@@ -112,22 +112,22 @@ ms.locfileid: "92293122"
 
 :::row:::
     :::column:::
-       [![了解基础知识](images/icon-lightbulb.png)](../discover/get-started-with-mr.md#understand-the-basics)<br>
+       [![了解基础知识](images/74-15.png)](../discover/get-started-with-mr.md#understand-the-basics)<br>
         **[了解基础知识](../discover/get-started-with-mr.md#understand-the-basics)**<br>
         更好地了解是什么定义了混合现实，以及如何使用混合现实。
     :::column-end:::
     :::column:::
-        [![参加活动](images/icon-calendar.jpg)](../whats-new/sf-academy-events.md)<br>
+        [![参加活动](images/74-16.png)](../whats-new/sf-academy-events.md)<br>
          **[参加活动](../whats-new/sf-academy-events.md)**<br>
         查看硬件并获取动手教程，以便创建第一个 HoloLens 2 应用程序。
     :::column-end:::
     :::column:::
-        [![安装工具](images/icon-design.png)](../develop/install-the-tools.md)<br>
+        [![安装工具](images/74-17.png)](../develop/install-the-tools.md)<br>
          **[安装工具](../develop/install-the-tools.md)**<br>
         使用安装清单获取为 HoloLens 和混合现实构建应用所需的工具。
     :::column-end:::
     :::column:::
-        [![开始开发](images/icon-developer.png)](../develop/development.md)<br>
+        [![开始开发](images/74-18.png)](../develop/development.md)<br>
         **[开始开发](../develop/development.md)**<br>
         根据技能水平、工作风格或平台兴趣选择开发路径。
     :::column-end:::
