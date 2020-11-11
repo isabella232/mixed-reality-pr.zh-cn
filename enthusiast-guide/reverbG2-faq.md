@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 82f9accc8e24574faf7c826aff1908bea7350b08
-ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
+ms.openlocfilehash: c24f6766cab242332e79a0c5cf5ed3cd92c4687d
+ms.sourcegitcommit: f459c7deb254409fd5db3967bcc875bcbc367e77
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049467"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94482395"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -73,3 +73,16 @@ HP 建议：
 - 显示错误的模型：修复此问题需要游戏更新。 通常，这不会阻止游戏的任何功能，但可能会导致混乱甚至视觉对象。
 - 依赖于触摸板或更常见的依赖于控制器的输入布局。 SteamVR 允许创建自定义绑定，以帮助规避此类问题：
     - 适用于 SteamVR 的 Windows Mixed Reality 包含某些游戏的自定义绑定。 启动游戏时，将自动使用这些绑定，无需用户执行任何操作。
+
+## <a name="my-steamvr-games-dont-appear-to-work-correctly-with-my-hp-motion-controllers"></a>我的 SteamVR 游戏似乎无法与我的 HP 运动控制器一起正常工作
+
+虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 对于 "SteamVR 的 Windows Mixed Reality" 已完全更新到版本1.2.444，当游戏运行时，应自动选取这些绑定。 但是，如果你目前没有注册操作，你可以使用 "SteamVR 设置" 菜单手动搜索自定义绑定配置文件。
+任务
+
+- 按下右运动控制器的菜单按钮打开 SteamVR 菜单
+- 选择 SteamVR 菜单右下角的 "设置" 图标
+- 选择 "控制器" 选项卡
+- 选择 "管理控制器绑定" 选项
+
+在此处，你可以将活动控制器绑定更改为 "自定义"，这将打开用于尝试社区共享游戏绑定的选项。
+如果尚未为此游戏共享自定义游戏绑定 (或者你对) 尝试过的内容不完全满意，则还可以创建你自己的自定义游戏绑定，甚至还可以通过在几个游戏会话后共享他们来帮助其他人。
