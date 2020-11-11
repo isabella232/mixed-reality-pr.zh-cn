@@ -5,19 +5,19 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 08/04/2020
 ms.topic: article
-keywords: 边缘，新，沉浸式 web，microsoft edge，browser，vr
-ms.openlocfilehash: 0f4ecdd26624e9b1e5b8e151e1ac074ece9c9769
-ms.sourcegitcommit: 1aae69e26ae872b724be1bd1ae0b3158c49dc7e2
+keywords: 边缘，新，沉浸式 web，microsoft edge，浏览器，vr，360，360视频，360 viewer，webxr，webvr
+ms.openlocfilehash: b20d21a3cd4cc77af86021e2b82555ba9c48478e
+ms.sourcegitcommit: 434ed0621af05307bb67b15cabf164561ec96ead
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92499582"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520774"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality 和新的 Microsoft Edge
 
 [新的 Microsoft Edge 现在可供下载](https://blogs.windows.com/windowsexperience/?p=173496)，但客户也可以在未来的几个月内通过一种经过衡量的推出方法，[等待它安装到 Windows 10 的未来更新中](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/)。 
 
-在此新闻中， **我们希望让 Windows Mixed REALITY VR 耳机客户知道从新的 Microsoft Edge 获得的内容，并通知你一些会在 Windows Mixed Reality 中提高你的 web 浏览体验的待定更新**。
+在此新闻中， **我们希望让 Windows Mixed REALITY VR 耳机客户知道从新的 Microsoft Edge 获得的内容，并通知你一些会在 Windows Mixed Reality 中提高你的 web 浏览体验的待定更新** 。
 
 ## <a name="introducing-the-new-microsoft-edge"></a>推出新的 Microsoft Edge
 
@@ -28,9 +28,9 @@ ms.locfileid: "92499582"
 
 ## <a name="getting-ready-for-the-new-microsoft-edge"></a>准备好开始新的 Microsoft Edge
 
-如果 Windows Mixed Reality 需要在混合现实中使用新的 Microsoft Edge，则需要 **升级到 Windows 10 1903 版或更高版本，以便对 Win32 应用程序的本机支持 (如混合现实中的新 Microsoft edge) ** 。 请检查 Windows 更新或 [手动安装最新版本的 Windows 10](https://www.microsoft.com/en-us/software-download/windows10)。
+如果 Windows Mixed Reality 需要在混合现实中使用新的 Microsoft Edge，则需要 **升级到 Windows 10 1903 版或更高版本，以便对 Win32 应用程序的本机支持 (如混合现实中的新 Microsoft edge)** 。 请检查 Windows 更新或 [手动安装最新版本的 Windows 10](https://www.microsoft.com/en-us/software-download/windows10)。
 
-为了在混合现实主页中获得最佳的 Microsoft Edge 体验，我们还建议你等待 windows **10 版本 1903 (或更) 高版本的2020-01 累积更新（年结束时 Windows 更新提供）的 Windows Mixed reality 优化。 **
+为了在混合现实主页中获得最佳的 Microsoft Edge 体验，我们还建议你等待 windows **10 版本 1903 (或更) 高版本的2020-01 累积更新（年结束时 Windows 更新提供）的 Windows Mixed reality 优化。**
 
 >[!IMPORTANT]
 >如果你选择在执行这些更新之前下载新的 Microsoft Edge，则在 Windows Mixed Reality (会出现一些已知问题，你可以在) 了解相关信息。
@@ -81,6 +81,6 @@ Windows [10 2019 更新](https://docs.microsoft.com/windows/mixed-reality/enthus
 ### <a name="additional-known-issues"></a>其他已知问题
 
 -   当混合现实门户关闭时，在 Windows Mixed Reality 中打开的网站将会丢失，但 Microsoft Edge 窗口仍会保留在混合现实中的位置。
-- WebXR 体验，包括360查看器扩展，可能无法在具有混合 GPU 设置的电脑上正常启动。 通过选择专用 GPU 作为图形卡软件中的默认 GPU，可以解决此问题。
+- WebXR 体验，包括360查看器扩展，可能无法在具有混合 GPU 设置的电脑上正常启动。 通过在新的 Microsoft Edge 中启用预览功能，可以解决此问题。 导航到 `edge://flags` ，搜索 "多个 gpu" 并启用名为 **WEBXR 多 gpu 支持** 的标志。
 -   Microsoft Edge windows 中的音频未 spatialized。
--   **修复了360查看器扩展版本 2.3.8**：在 Windows Mixed Reality 中从 YouTube 打开360视频可能会导致耳机上出现视频失真。 重启边缘应在不可见的情况下更新360查看器扩展以解决此问题。 您可以通过 `edge://system/` 在地址栏中输入，然后选择 "扩展" 旁边的 **展开** 按钮，确认您所拥有的扩展版本。
+-   **修复了360查看器扩展版本 2.3.8** ：在 Windows Mixed Reality 中从 YouTube 打开360视频可能会导致耳机上出现视频失真。 重启边缘应在不可见的情况下更新360查看器扩展以解决此问题。 您可以通过 `edge://system/` 在地址栏中输入，然后选择 "扩展" 旁边的 **展开** 按钮，确认您所拥有的扩展版本。
