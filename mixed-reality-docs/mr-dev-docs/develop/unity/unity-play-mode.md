@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity、远程处理、全息远程处理、全息远程处理播放器
-ms.openlocfilehash: d7806493d9a3142f7f5ed78116a16a76adefc259
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 4239eba84bd94c0bdc596392fdf7a0c780778850
+ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676916"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549090"
 ---
 # <a name="unity-play-mode"></a>Unity 播放模式
 
@@ -22,13 +22,13 @@ ms.locfileid: "91676916"
 通过全息远程处理，你可以在 HoloLens 上体验你的应用程序，而在你的电脑上运行 Unity 编辑器。 注视、手势、语音和空间映射输入将从你的 HoloLens 发送到你的电脑。 然后，将呈现的帧发送回 HoloLens。 这是一种快速调试应用程序的绝佳方式，无需生成和部署完整项目。
 1. 在 HoloLens 上，中转到 **Microsoft Store** 并安装 **[全息远程处理播放器](https://www.microsoft.com/store/p/holographic-remoting-player/9nblggh4sv40)** 应用。
 2. 在 HoloLens 上，启动 **全息远程处理播放器** 应用。
-3. 在 Unity 中，单击 " **窗口** " 菜单，并选择 " **全息模拟** "。
+3. 在 Unity 中，单击 " **窗口** " 菜单，展开 " **XR** " 子菜单，然后选择 " **全息模拟** "。
 4. 将 **仿真模式** 设置为 **远程设备** 。
 5. 对于 **远程计算机** ，请输入 HOLOLENS 的 IP 地址。
 6. 单击“连接”。 应会看到 **连接状态** 更改为 " **已连接** "，并且会在 HoloLens 中看到屏幕显示为空白。
 7. 单击 " **播放** " 按钮以启动播放模式，并在 HoloLens 上体验应用。
 
-全息远程处理需要快速的 PC 和 Wi-fi 连接。 有关完整详细信息，请参阅 [全息远程处理播放器](../platform-capabilities-and-apis/holographic-remoting-player.md) 。
+全息远程处理需要快速的 PC 和 Wi-Fi 的连接。 有关完整详细信息，请参阅 [全息远程处理播放器](../platform-capabilities-and-apis/holographic-remoting-player.md) 。
 
 为了获得最佳结果，请确保应用正确设置了 [焦点](focus-point-in-unity.md)。 这有助于全息远程处理最好地使场景适应无线连接的延迟。
 
