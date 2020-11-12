@@ -1,18 +1,18 @@
 ---
 title: Azure 空间定位点教程 - 4. 显示 Azure 空间定位点反馈
-description: 完成本课程可以了解如何在混合现实应用程序中实现 Azure 空间定位点。
+description: 请完成本课程，了解如何在混合现实应用程序中显示来自 Azure 空间定位点的反馈。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: c36fa20ae6438aee92d5d853febd683e01e81ea7
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 4c35af1f5a2a723df6603fbdf41dd18a2e9ee45d
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695944"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353335"
 ---
 # <a name="4-displaying-feedback-from-azure-spatial-anchors"></a>4.显示来自 Azure 空间定位点的反馈
 
@@ -27,7 +27,7 @@ ms.locfileid: "91695944"
 
 在“层次结构”窗口中，右键单击“说明” > “TextContent”对象 。 选择“3D 对象” > “Text - TextMeshPro”，创建作为“说明”>“TextContent 对象”的子级的 TextMeshPro 文本对象： 
 
-![mr-learning-asa](images/mr-learning-asa/asa-04-section1-step1-1.png)
+![选中新创建的 TextMeshPro 对象的 Unity](images/mr-learning-asa/asa-04-section1-step1-1.png)
 
 > [!TIP]
 > 为了更轻松地在场景中操作，请单击“ParentAnchor”对象左侧的眼睛图标，将此对象的“场景可见性”设置为关闭。<a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank"></a> 这会在“场景”窗口中隐藏该对象，但在游戏中不会改变其可见性。
@@ -44,13 +44,13 @@ ms.locfileid: "91695944"
 * 将 TextMeshPro - Text 组件的字体大小更改为 0.17。
 * 将 TextMeshPro - Text 组件的对齐方式更改为“居中”。
 
-![mr-learning-asa](images/mr-learning-asa/asa-04-section1-step1-2.png)
+![配置了 Feedback 对象的 Unity](images/mr-learning-asa/asa-04-section1-step1-2.png)
 
 还是在“层次结构”窗口中选择 Feedback 对象，然后在检查器窗口中，使用“添加组件”按钮添加“定位点反馈脚本(脚本)”组件，并按如下所述配置该组件：  
 
 * 将 Feedback 对象本身分配到“定位点反馈脚本(脚本)”组件的“反馈文本”字段  。
 
-![mr-learning-asa](images/mr-learning-asa/asa-04-section1-step1-3.png)
+![配置了“定位点反馈脚本”组件的 Unity](images/mr-learning-asa/asa-04-section1-step1-3.png)
 
 ## <a name="congratulations"></a>祝贺
 

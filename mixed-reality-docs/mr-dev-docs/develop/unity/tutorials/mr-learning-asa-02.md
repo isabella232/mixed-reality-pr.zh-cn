@@ -1,18 +1,18 @@
 ---
 title: Azure 空间定位点教程 - 2. Azure 空间定位点入门
-description: 完成本课程可以了解如何在混合现实应用程序中实现 Azure 空间定位点。
+description: 请完成本课程，了解如何在混合现实应用程序中使用 Azure 空间定位点来进行数据定位。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: e5553df4256e0535d5becb94f22b9ce8eac228dc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c73ddec2fc1be20a4a2c582948cd240be7fe23db
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695951"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353445"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2.Azure 空间定位点入门
 
@@ -47,7 +47,7 @@ ms.locfileid: "91695951"
 
 在 Unity 菜单中，选择“窗口” > “包管理器”打开“包管理器”窗口，然后选择“AR Foundation”并单击“安装”按钮以安装包   ：
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section2-step1-1.png)
+![选中 AR Foundation 的 Unity 包管理器](images/mr-learning-asa/asa-02-section2-step1-1.png)
 
 > [!NOTE]
 > 你要安装 AR Foundation 包，因为在下一部分中导入 Azure 空间定位点 SDK 时必须使用它。
@@ -62,7 +62,7 @@ ms.locfileid: "91695951"
 
 导入教程资产后，“项目”窗口应如下所示：
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section3-step1-1.png)
+![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-asa/asa-02-section3-step1-1.png)
 
 > [!NOTE]
 > 如果看到任何有关“WorldAnchor.SetNativeSpatialAnchorPtr(IntPtr) 已过时”的 CS0618 警告，则可以忽略这些警告。
@@ -81,7 +81,7 @@ ms.locfileid: "91695951"
 * Instructions 预制件
 * ParentAnchor 预制件
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section4-step1-1.png)
+![选中新增的预制件的 Unity](images/mr-learning-asa/asa-02-section4-step1-1.png)
 
 > [!TIP]
 > 如果在场景中看到很大的图标（例如，框住的“T”图标会分散注意力），可以通过<a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">将调节器 (Gizmos) 切换</a>到关闭位置来隐藏这些图标，如上图所示。
@@ -95,14 +95,14 @@ ms.locfileid: "91695951"
 * 向“无(对象)”字段分配“ParentAnchor”对象 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “StartAzureSession ()”，将此函数设置为触发事件时要执行的操作  
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section5-step1-1.png)
+![配置了 StartAzureSession 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-1.png)
 
 在“层次结构”窗口中选择名为“StopAzureSession”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
 * 向“无(对象)”字段分配“ParentAnchor”对象 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “StopAzureSession ()”将此函数设置为触发事件时要执行的操作  
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section5-step1-2.png)
+![配置了 StopAzureSession 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-2.png)
 
 在“层次结构”窗口中选择名为“CreateAzureAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
@@ -110,7 +110,7 @@ ms.locfileid: "91695951"
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “CreateAzureAnchor ()”将此函数设置为触发事件时要执行的操作  
 * 将 ParentAnchor 对象分配到空的“无(游戏对象)”字段，使其成为 CreateAzureAnchor () 函数的参数 
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section5-step1-3.png)
+![配置了 CreateAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-3.png)
 
 在“层次结构”窗口中选择名为“RemoveLocalAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
@@ -118,21 +118,21 @@ ms.locfileid: "91695951"
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “RemoveLocalAnchor ()”将此函数设置为触发事件时要执行的操作  
 * 将 ParentAnchor 对象分配到空的“无(游戏对象)”字段，使其成为 RemoveLocalAnchor () 函数的参数 
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section5-step1-4.png)
+![配置了 RemoveLocalAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-4.png)
 
 在“层次结构”窗口中选择名为“FindAzureAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
 * 向“无(对象)”字段分配“ParentAnchor”对象 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “FindAzureAnchor ()”将此函数设置为触发事件时要执行的操作  
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section5-step1-5.png)
+![配置了 FindAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-5.png)
 
 在“层次结构”窗口中选择名为“DeleteAzureAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 向“无(对象)”字段分配 DeleteAzureAnchor 对象 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “DeleteAzureAnchor ()”将此函数设置为触发事件时要执行的操作  
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section5-step1-6.png)
+![配置了 DeleteAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-6.png)
 
 ## <a name="connecting-the-scene-to-the-azure-resource"></a>将场景连接到 Azure 资源
 
@@ -141,7 +141,7 @@ ms.locfileid: "91695951"
 * 在“空间定位点帐户 ID”字段中，粘贴来自你的 Azure 空间定位点帐户的“帐户 ID”
 * 在“空间定位点帐户密钥”字段中，粘贴来自你的 Azure 空间定位点帐户的主“访问密钥”或辅助“访问密钥”
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section6-step1-1.png)
+![配置了空间定位点管理器的 Unity](images/mr-learning-asa/asa-02-section6-step1-1.png)
 
 ## <a name="trying-the-basic-behaviors-of-azure-spatial-anchors"></a>尝试 Azure 空间定位点的基本行为
 
@@ -163,7 +163,7 @@ Azure 空间定位点不能在 Unity 中运行，因此，若要测试 Azure 空
 1. 删除 Azure 定位点
 1. 停止 Azure 会话
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section7-step1-1.png)
+![选中 Instructions 对象的 Unity](images/mr-learning-asa/asa-02-section7-step1-1.png)
 
 > [!CAUTION]
 > Azure 空间定位点将使用 Internet 来保存和加载定位点数据，因此请确保设备已连接到 Internet。
@@ -177,15 +177,15 @@ Azure 空间定位点不能在 Unity 中运行，因此，若要测试 Azure 空
 * 将“比例 X”改为 1.1
 * 将“比例 Z”改为 1.1
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section8-step1-1.png)
+![已选择、定位和缩放 ParentAnchor 对象的 Unity](images/mr-learning-asa/asa-02-section8-step1-1.png)
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.GettingStarted” > “预制件” > 探测器”文件夹，然后单击并将“RoverExplorer_Complete”预制件拖动到“层次结构”窗口中，以将其添加到场景中    ：
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section8-step1-2.png)
+![选中新增的 RoverExplorer_Complete 预制件的 Unity](images/mr-learning-asa/asa-02-section8-step1-2.png)
 
 在“层次结构”窗口中新添加的 RoverModule_Complete 对象仍处于选中状态的情况下，将其拖动到“ParentAnchor”对象上，使其成为 ParentAnchor 对象的子级：
 
-![mr-learning-asa](images/mr-learning-asa/asa-02-section8-step1-3.png)
+![将 RoverExplorer_Complete 对象设置为 ParentAnchor 的子级的 Unity](images/mr-learning-asa/asa-02-section8-step1-3.png)
 
 如果现在重建项目并将应用部署到设备，可以通过移动已调整大小的多维数据集来重新定位整个漫游者探测器。
 

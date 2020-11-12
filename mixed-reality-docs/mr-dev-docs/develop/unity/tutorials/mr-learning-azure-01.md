@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: azure, 混合现实, unity, 教程, hololens, hololens 2, azure blob 存储, azure 表存储, azure 空间定位点, azure bot framework
 ms.localizationpriority: high
-ms.openlocfilehash: 115044aa8fa5f143358b8014442bce26d4f3fec5
-ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
+ms.openlocfilehash: 878fd92a946b70ba3b0a867722f86ab801a79032
+ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92915572"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93416973"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1.适用于 HoloLens 2 的 Azure 云服务
 
@@ -75,10 +75,10 @@ ms.locfileid: "92915572"
 * 一些基本的 C# 编程功能
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
 * 一个联网的摄像头（如果要通过 Unity 编辑器进行测试）
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019.3.X 并添加了通用 Windows 平台生成支持模块
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块
 
 > [!CAUTION]
-> 建议对本系列教程使用 Unity 2019.3.X。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求或建议。
+> 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求或建议。
 
 ## <a name="creating-and-preparing-the-unity-project"></a>创建和准备 Unity 项目
 
