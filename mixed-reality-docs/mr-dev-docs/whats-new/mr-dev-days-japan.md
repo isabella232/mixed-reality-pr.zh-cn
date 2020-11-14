@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: af9055c4e6074c4d4b10b4f0a6ac135c858b57a7
-ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
-ms.translationtype: MT
+ms.openlocfilehash: 746b6257e6a3ab28424d7b74e43a1b6541d6fad0
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/12/2020
-ms.locfileid: "94549110"
+ms.locfileid: "94573281"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>混合现实开发天数日本
 
@@ -40,7 +40,7 @@ ms.locfileid: "94549110"
 ### <a name="december-16th"></a>12月16日
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
-|10： 00 (：50am|打开主题|TBD|JA/EN|空值|
+|10： 00 (：50am|打开主题|TBD|JA/EN|不可用|
 |10： 50am-11： 00 (|**分**||||
 |11： 00 (-11：25am|*会话 1* 什么是混合现实？您可以对 HL2 做些什么？MR 技术人员|Atsushi Suzuki|JA|100|
 |11：上午 9:30-11：55am|*会话 2* 与客户和合作伙伴案例研究的日本商业市场动力更新|Tetsu Muranaka|JA|200|
@@ -48,18 +48,17 @@ ms.locfileid: "94549110"
 |12：50pm： 00 (|**分**||||
 |1： 00 (：25pm|*会话 3* HoloLens 2 开发概述|Madoka Chiyoda|JA|200|
 |1：下午6:30：55pm|*会话 4* HoloLens 2 & MRTK (MRTK-Unity) |Yoon 寄存|JA|300|
-|2： 00 (：20pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
+|2： 00 (：25pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
 |2：下午6:30：55pm|*会话 6* MR 应用程序设计 (为 HL2 应用程序创建 UI/UX 的最佳实践) |Daniel Escudero|CN|300|
-|2：55pm：15pm|**分**||||
-|3：15pm：40pm|*会话 7* Azure 对象锚|TBD|CN|300|
-|3：45pm：10pm|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
-|4：15pm：40pm|*会话 9* Azure 空间锚|TBD|CN|300|
-<!--|4：45pm：10pm|*会话 10* Unity + PiXYZ| (Unity 日本) |JA|200|-->
-|4：45pm：10pm|*会话 10* TBD|TBD|JA|200|
-|5：15pm：40pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
-|5：45pm： 00 (|关闭|Madoka Chiyoda|JA|NA|
+|2：55pm：10pm|**分**||||
+|3：10pm：35pm|*会话 7* Azure 对象锚|TBD|CN|300|
+|3：40pm： 1:05 (|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
+|4：10pm：35pm|*会话 9* Azure 空间锚|TBD|CN|300|
+|4：40pm： 1:05 (|*会话 10* TBD|TBD|JA|200|
+|5：10pm：35pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
+|5：35pm：50pm|关闭|Madoka Chiyoda|JA|NA|
 
-#### <a name="contributors-english-subtitle-reviewers"></a>参与者 (英语副标题审阅者) 
+#### <a name="contributors-technical-reviewers-for-the-subtitles"></a>撰稿人 (技术审阅者) 
 
 Futo Horio ([@Futo_Horio](https://twitter.com/Futo_Horio)) ，Takahiro Miyaura ([@takabrz1](https://twitter.com/takabrz1)) ，Akihiro Ueyama ([@akihiro01051](https://twitter.com/akihiro01051)) ，Kaoru Nakamura ([@kaorun55](https://twitter.com/kaorun55)) ，Shinya Tachihara ([@deco_c_](https://twitter.com/deco_c_)) 
 

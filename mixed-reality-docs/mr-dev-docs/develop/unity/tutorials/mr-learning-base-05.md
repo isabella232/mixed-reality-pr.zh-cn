@@ -1,18 +1,18 @@
 ---
 title: 入门教程 - 5. 使用求解器创建动态内容
-description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建混合现实应用程序。
+description: 本课程介绍如何使用混合现实工具包 (MRTK) 求解器创建动态内容。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: c6ddbbd8bb65aa93c80f1e4499e976c7c24af7ec
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 64b5c3c719ce72260a10226d22c178d4016e403b
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293221"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353525"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -30,7 +30,7 @@ ms.locfileid: "92293221"
 
  MRTK 的解算器位于 MRTK SDK 文件夹中。 若要在项目中查看可用的求解器，请在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “功能” > “实用工具” > “求解器”     ：
 
-![mr-learning-base](images/mr-learning-base/base-05-section1-step1-1.png)
+![选中了 SOlvers 文件夹的 Unity“项目”窗口](images/mr-learning-base/base-05-section1-step1-1.png)
 
 本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[求解器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)指南。
 
@@ -41,14 +41,14 @@ ms.locfileid: "92293221"
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.GettingStarted” > “预制件”文件夹，单击 V 形预制件并将其拖放到“层次结构”窗口中，然后将其“转换”位置设置为 X = 0、Y = 0、Z = 2，使其定位到 RoverExplorer 对象附近    ：
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-1.png)
+![选中了新增的 Chevron 预制件的 Unity](images/mr-learning-base/base-05-section2-step1-1.png)
 
 > [!TIP]
 > 如果在场景中发现相机或任何其他图标隐藏了对象或让人分心，则可以通过<a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">切换调节器</a>（切换到关闭位置）来隐藏这些图标，如下图所示。 若要详细了解调节器菜单以及如何使用它来优化场景视图，可以参阅 Unity 的<a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">调节器菜单</a>文档。
 
 重命名新添加的 V 形对象指示器，然后在“检查器”窗口中，使用“添加组件”按钮添加 DirectionalIndicator：  
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-2.png)
+![添加了 DirectionalIndicator 求解器组件的 Unity](images/mr-learning-base/base-05-section2-step1-2.png)
 
 > [!NOTE]
 > 添加求解器（在本例中为 DirectionalIndicator 组件）时，系统会自动添加 SolverHandler 组件，因为求解器需要该组件。
@@ -62,13 +62,13 @@ ms.locfileid: "92293221"
 * 将 RoverExplorer 分配到 DirectionalIndicator 组件的方向目标，具体方法是将其从“层次结构”窗口拖到“无(转换)”字段   
 * 将“视图偏移量”更改为 0.2
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-3.png)
+![配置了 DirectionalIndicator 求解器组件的 Unity](images/mr-learning-base/base-05-section2-step1-3.png)
 
 按“播放”按钮进入“游戏”模式，然后在按住鼠标右键的同时在左右移动鼠标以旋转视线方向，此时你会注意到以下情况：
 
 * 当你将视线从 RoverExplorer 对象移开时，将看到 Indicator 对象，它指向 RoverExplorer 对象
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-4.png)
+![显示 DirectionalIndicator 求解器正在使用中的 Unity“播放”模式分屏视图](images/mr-learning-base/base-05-section2-step1-4.png)
 
 > [!NOTE]
 > 如果在“场景”窗口中未看到相机光线，请确保已启用调节器菜单，如上图所示。
@@ -87,7 +87,7 @@ ms.locfileid: "92293221"
 * 选中“保持垂直方向”复选框
 * 从“磁性界面” > “元素 0”下拉列表中，取消选中除“空间感知”以外的所有选项  
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-1.png)
+![添加并配置了 TapToPlace 求解器组件的 Unity](images/mr-learning-base/base-05-section3-step1-1.png)
 
 > [!NOTE]
 > 磁性界面设置可确定放置对象时“点击放置(脚本)”组件可以检测的对象。 将设置更改为仅“空间感知”后，“点击放置(脚本)”组件将只能在名为“空间感知”的 Unity 层上放置对象的探测器，默认情况下，它是由 HoloLens 生成的空间感知网格。
@@ -99,7 +99,7 @@ ms.locfileid: "92293221"
 
 仍在“层次结构”窗口中选中“RoverAssembly”对象，在“检查器”窗口中找到“On Placing Started ()”事件，然后单击 + 图标以添加新事件 ：
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-2.png)
+![添加了 TapToPlace OnPlacingStarted 事件的 Unity](images/mr-learning-base/base-05-section3-step1-2.png)
 
 按如下所示配置事件：
 
@@ -107,7 +107,7 @@ ms.locfileid: "92293221"
 * 在“无函数”下拉列表中，选择“TapToPlace” > “float SurfaceNormalOffset”，以便在触发事件时更新 SurfaceNormalOffset 属性值  
 * 验证参数是否设置为 0
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-3.png)
+![配置了 TapToPlace OnPlacingStarted 事件的 Unity](images/mr-learning-base/base-05-section3-step1-3.png)
 
 在“层次结构”窗口中，右键单击空白区域，然后选择“3D 对象” > “Cube”，创建代表地面的临时对象，并按如下所示配置“转换”组件  ：
 
@@ -115,27 +115,27 @@ ms.locfileid: "92293221"
 * **旋转** ：X = 0, Y = 0, Z = 0
 * **缩放** ：X = 10, Y = 0.2, Z = 10
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-4.png)
+![添加并定位了临时地面多维数据集对象的 Unity](images/mr-learning-base/base-05-section3-step1-4.png)
 
 仍在“层次结构”窗口中选中临时 Cube，在“检查器”窗口中使用“层”下拉列表来更改 Cube 的层设置，使之仅包含“空间感知”层 ：
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-5.png)
+![临时地面多维数据集对象层设为“空间感知”的 Unity](images/mr-learning-base/base-05-section3-step1-5.png)
 
 按下“播放”按钮进入“游戏”模式，然后在按住鼠标右键的同时向下移动鼠标，直到视线瞄准 RoverAssembly 对象：
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-6.png)
+![视线对准 RoverAssembly 对象的 Unity“播放”模式分屏视图](images/mr-learning-base/base-05-section3-step1-6.png)
 
 单击鼠标左键以启动“点击放置”过程：
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-7.png)
+![显示 TapToPlace 已开始放置的 Unity“播放”模式分屏视图](images/mr-learning-base/base-05-section3-step1-7.png)
 
 按住鼠标右键的同时左右移动鼠标以旋转视线方向，对定位感到满意后，单击鼠标左键：
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-8.png)
+![显示 TapToPlace 放置已结束的 Unity“播放”模式分屏视图](images/mr-learning-base/base-05-section3-step1-8.png)
 
 在“游戏”模式下测试完功能后，右键单击 Cube 对象，然后选择“删除”，以从场景中将其删除：
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-9.png)
+![选中了临时地面多维数据集且显示了“删除”上下文弹出菜单的 Unity](images/mr-learning-base/base-05-section3-step1-9.png)
 
 ## <a name="congratulations"></a>祝贺
 

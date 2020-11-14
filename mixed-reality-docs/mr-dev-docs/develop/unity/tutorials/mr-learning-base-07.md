@@ -1,18 +1,18 @@
 ---
 title: 入门教程 - 7. 与 3D 对象交互
-description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建混合现实应用程序。
+description: 本课程介绍如何使用混合现实工具包 (MRTK) 与 3D 对象进行交互。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 0cedd731fc795341532a8a330f4fdcce9fba47b0
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1e91cc97f68a4d4b5bcb015184e96582533d1f96
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695815"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353515"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 
@@ -53,7 +53,7 @@ ms.locfileid: "91695815"
 * “NearInteractionGrabbable”组件
 * “部件程序集控制器(脚本)”组件
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-1.png)
+![选中了 RoverAssembly 和所有探测器部件对象并添加了组件的 Unity](images/mr-learning-base/base-07-section1-step1-1.png)
 
 > [!TIP]
 > 若要选择不相邻的多个对象，请在按住 CTRL 键的同时使用鼠标选择任何对象。
@@ -68,14 +68,14 @@ ms.locfileid: "91695815"
 
 * 从“双手操作类型”下拉列表中取消选中“缩放”，以便仅启用“移动”和“旋转”  
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-2.png)
+![配置了“双手操作类型”的 Unity](images/mr-learning-base/base-07-section1-step1-2.png)
 
 > [!NOTE]
 > 至此，已为所有探测器部件对象和 RoverAssembly 对象启用了对象操作。
 
 在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “StandardAssets” > “音频”文件夹来查找音频剪辑    ：
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-3.png)
+![选中了音频文件夹的 Unity 项目窗口](images/mr-learning-base/base-07-section1-step1-3.png)
 
 在“层次结构”窗口中重新选择所有探测器部件对象，然后在“检查器”窗口中，使用“添加组件”按钮添加“音频资源”组件，并按如下所述配置该组件  ：
 
@@ -83,13 +83,13 @@ ms.locfileid: "91695815"
 * 取消选中“唤醒时播放”复选框
 * 将“空间混合”更改为 1
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-4.png)
+![选中了所有探测器部件并添加和配置了“音频源”组件的 Unity](images/mr-learning-base/base-07-section1-step1-4.png)
 
 在“层次结构”窗口中，展开“RoverAssembly”>“RoverModel_PlacementHints_XRay”>“Parts_PlacementHints”对象以显示所有放置提示对象，然后选择第一个探测器部件，“RoverParts”>“Camera_Part”，并配置“部件程序集控制器(脚本)”组件，如下所示  ：
 
 * 将“Camera_PlacementHint”对象分配到“定位位置”字段 
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-5.png)
+![配置了 Camera_Part PartAssemblyController 组件的 Unity](images/mr-learning-base/base-07-section1-step1-5.png)
 
 对其余的每个探测器部件对象重复该步骤，以配置“部件程序集控制器(脚本)”组件，如下所示 ：
 
@@ -104,11 +104,11 @@ ms.locfileid: "91695815"
 * 向“无(对象)”字段分配“RoverAssembly”对象 
 * 从“无函数”下拉列表中，选择“PartAssemblyController” > “ResetPlacement ()”将此函数设置为触发事件时要执行的操作  
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-6.png)
+![配置了“重置”按钮对象 OnClick 事件的 Unity](images/mr-learning-base/base-07-section1-step1-6.png)
 
 如果现在进入“游戏”模式，就可以使用近距或远距交互将探测器部件放置到探测器上。 一旦部件靠近相应的放置提示，它将贴靠到位并成为探测器的一部分。 若要重置放置，可以按“重置”按钮：
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-7.png)
+![显示正在按下“重置”按钮的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section1-step1-7.png)
 
 若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
 
@@ -125,7 +125,7 @@ ms.locfileid: "91695815"
 
 然后取消选中两个组件旁边的复选框，以使其默认为“禁用” ：
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-1.png)
+![选中 RoverExplorer 对象并添加和禁用了组件的 Unity](images/mr-learning-base/base-07-section2-step1-1.png)
 
 > [!NOTE]
 > 边界框可视化效果是在运行时创建的，因此在进入“游戏”模式之前不可见。
@@ -145,7 +145,7 @@ ms.locfileid: "91695815"
 * 验证是否已选中参数复选框
 * 将图标保留为“带有边界框的多维数据集”图标
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-2.png)
+![选中了 BoundingBox_Enable 按钮对象并配置了“按钮配置帮助程序”组件的 Unity](images/mr-learning-base/base-07-section2-step1-2.png)
 
 将第四个和最后一个按钮重命名为“BoundingBox_Disable”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示 ：
 
@@ -159,11 +159,11 @@ ms.locfileid: "91695815"
 * 验证是否已取消选中参数复选框
 * 将图标更改为“带有边界框的多维数据集”图标
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-3.png)
+![选中了 BoundingBox_Disable 按钮对象并配置了“按钮配置帮助程序”组件的 Unity](images/mr-learning-base/base-07-section2-step1-3.png)
 
 如果现在进入“游戏”模式并通过单击“启用”按钮启用边界框，则可以使用近距或远距交互来移动、旋转和缩放边界框，然后使用“禁用”按钮再次禁用边界框：
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-4.png)
+![显示正在操作边界框的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section2-step1-4.png)
 
 若要详细了解“边界框”组件及其相关属性，可以访问 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[边界框](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)指南。
 

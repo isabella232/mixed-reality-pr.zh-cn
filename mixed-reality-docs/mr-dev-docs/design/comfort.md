@@ -7,12 +7,12 @@ ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 设计, 舒适感, HoloLens 2, HoloLens（第一代）
-ms.openlocfilehash: 6528dca71a1e0cd92b621cab8b1b7ba547fcb71e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f53c91b10f9dfc37678356c914e486f61eea6382
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696659"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340645"
 ---
 # <a name="comfort"></a>舒适感
 
@@ -162,6 +162,13 @@ Windows Mixed Reality 沉浸式 HMD 不会自动校准 IPD 或 VO。 可以在�
 ## <a name="arm-positions"></a>手臂位置
 
 如果用户在整个体验过程中都要抬手，则肌肉疲劳可能会累积。 如果用户在长时间内需要反复执行隔空敲击手势，也可能会产生疲劳感。 因此，我们建议在体验中避免反复不断的手势输入。 若要实现此目标，可以引入短暂的休息，或者允许混合使用手势与语音输入来与应用交互。
+
+## <a name="next-discovery-checkpoint"></a>下一个发现检查点
+
+如果你按我们介绍的[发现之旅](../discover/get-started-with-mr.md)操作，那么你对混合现实基本知识的探索已完成了一部分了。 从这里，你可以进入下一基本主题： 
+
+> [!div class="nextstepaction"]
+> [用户如何看到世界 -（全息框）](../design/holographic-frame.md)
 
 ## <a name="see-also"></a>另请参阅
 * [凝视](gaze-and-commit.md)

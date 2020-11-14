@@ -1,18 +1,18 @@
 ---
 title: 电脑全息远程处理教程 - 2. 创建全息远程处理电脑应用程序
-description: 完成本课程可以了解如何远程处理从电脑到 HoloLens 2 的混合现实体验。
+description: 完成本课程可以了解如何创建电脑应用程序来远程处理从电脑到 HoloLens 2 的混合现实体验。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 6d11d91a0e08c48c09f676171dcb9bb8a0ff74de
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 30ef793511285fe2fe52810912f6c5c06c8550dc
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697056"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353455"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2.创建全息远程处理电脑应用程序
 
@@ -30,7 +30,7 @@ ms.locfileid: "91697056"
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.PCHolograhicRemoting” > “预制件”文件夹，然后单击“HolographicRemoting”预制件并将其拖放到场景中   。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section1-Step1-1.png)
+![新增的 HolographicRemoting 预制件仍处于选中状态的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial2-Section1-Step1-1.png)
 
 ## <a name="build-your-application-to-pc"></a>在电脑上构建应用程序
 
@@ -42,7 +42,7 @@ ms.locfileid: "91697056"
 
 在“XR 设置”部分，选中“支持的 WSA 全息远程处理”复选框，启用全息远程处理 。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step1-1.png)
+![启用了“支持 WSA 全息远程处理”的 Unity XR 设置窗口](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step1-1.png)
 
 ### <a name="2-build-the-unity-project"></a>2.生成 Unity 项目
 
@@ -50,28 +50,28 @@ ms.locfileid: "91697056"
 
 在“生成设置”窗口中，单击“添加打开场景”按钮，将当前场景添加到“场景”中。 在“生成”列表中，单击“生成”按钮以打开“生成通用 Windows 平台”窗口：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-1.png)
+![添加了场景的 Unity“生成设置”窗口](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-1.png)
 
 在“生成通用 Windows 平台”窗口中，选择一个合适的位置来存储生成结果，例如 Documents\MixedRealityLearning。 创建一个新文件夹并为其指定合适的名称，例如 PCHolographicRemoting。 然后单击“选择文件夹”按钮，开始生成过程：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-2.png)
+![具有“选择文件夹”提示窗口的 Unity“生成设置”窗口](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-2.png)
 
 等待 Unity 完成生成过程。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-3.png)
+![Unity 正在生成进程](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-3.png)
 
 ### <a name="3-build-and-deploy-the-application"></a>3.生成并部署应用程序
 
 生成过程完成后，Unity 会提示 Windows 文件资源管理器打开你存储生成的位置。 在文件夹内导航，然后双击 .sln 文件，在 Visual Studio 中其打开：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-1.png)
+![选中了新建的“Visual Studio 解决方案”的 Windows 资源管理器](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-1.png)
 
 > [!NOTE]
 > 如果 Visual Studio 要求安装新组件，请花一点时间确保按照安装工具文档中的说明安装所有必备组件。
 
 通过选择“发布配置”、“x64 体系结构”和“本地计算机”作为目标，配置 PC 版 Visual Studio：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-2.png)
+![配置了“本地计算机”的 Visual Studio](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-2.png)
 
 单击“本地计算机”按钮。 它会开始生成应用程序并将其部署到你的电脑。 该应用程序将默认安装在你的电脑中。
 
@@ -81,7 +81,7 @@ ms.locfileid: "91697056"
 
 ### <a name="1-install-the-remoting-player-application-on-hololens-2-device"></a>1.在 HoloLens 2 设备上安装“远程播放器”应用程序
 
-* 在 HoloLens 2 上，访问 Store 应用并搜索“远程播放器”。
+_ 在 HoloLens 2 上，访问 Store 应用并搜索“远程播放器”。
 * 选择“远程播放器”应用。
 * 点击“安装”，下载并安装该应用。
 

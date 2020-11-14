@@ -7,16 +7,22 @@ ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目
-ms.openlocfilehash: 4894383b5e4ae600555e5bd31ebc4c6f041445f3
-ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
+ms.openlocfilehash: 34c78c277e0b184c0421c2bdd56ef13411a5bf29
+ms.sourcegitcommit: bd359c269add7ac76f0c2c26ca7caedba14749b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92915582"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94417832"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 
+![虚拟蜂鸟与人手](images/01_MixedReality.png)
+
+混合现实生态系统是物理与数字交互领域中的新兴事物，其发展潜力只受限于人类的想象力。 无论你是经验丰富的开发人员还是毫无经验的新手，我们都建议使用以下链接中列出的资源开启你的“混合现实”之旅。 接下来我们还将介绍许多新内容，让我们开始吧！ 
+
 ## <a name="choose-your-track"></a>选择你的路径
+
+如果知道自己想了解混合现实的哪一个领域，请随时跳转到下方的任意路径。 但请将此页面保留在书签中，以便后续参考基本的概念内容。
 
 :::row:::
     :::column:::
@@ -34,64 +40,33 @@ ms.locfileid: "92915582"
         **[我是开发人员](../develop/development.md)**<br>
         了解工具和体系结构
     :::column-end:::
-    <!-- :::column:::
-       [![Jump in with Unity and MRTK](../images/Unity-tile.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)<br>
-        **[Jump in with Unity and MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)**<br>
-        Optimize Unity for MR development
-    :::column-end::: -->
 :::row-end:::
-
 
 <br>
 
 ---
-
-<br>
 
 ## <a name="understand-the-basics"></a>了解基础知识
 
-如果不熟悉混合现实，则需知道它是什么并了解它的功能。
-
-
-![虚拟蜂鸟与人手](images/01_MixedReality.png)
+如果你是首次接触混合现实，请务必从头开始，逐步了解其核心概念、体验和功能。 我们创建了一系列内容丰富的教程，可帮助你为在“混合现实”中设计和形成自己的创意奠定坚实基础。
 
 ### <a name="what-is-mixed-reality"></a>什么是混合现实？
 
+![混合现实有哪些用途？](images/HLS19_remoteAssistHologram_001.jpg)
 
-#### <a name="mixed-reality-is-a-spectrum"></a>[混合现实是一个范围](../discover/mixed-reality.md)
-混合现实是将物理世界与数字世界相混合的结果。 它是人类、计算机和环境交互方面的下一次演进，释放了此前受限于我们想象力的可能性。
+深入了解应用程序设计或开发前，需要理解混合现实的含义。 本部分旨在从多个方面介绍混合现实，包括环境输入范围、感知变化、设计挑战以及相关设备。 
+
+|  概念  |  业务成效  |
+| --- | --- |
+| [混合现实是一个范围](../discover/mixed-reality.md) | 混合现实融合了物理与数字，是人类、计算机和环境交互下的新一代产物 |
+| [什么是全息图？](../discover/hologram.md) | 通过 HoloLens 可以创建全息影像，它们是由出现在你周围的光线和声音组成的对象，就像真实对象一样。 全息影像会响应你的注视、手势和语音命令，并可与你周围的实际表面交互 |
+| [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 创建沉浸式体验时，可以通过空间思考、身体风暴和实时操作来开阔设计思维  |
 
 <br>
-
-
-#### <a name="what-is-a-hologram"></a>[什么是全息图？](../discover/hologram.md)
-通过 HoloLens 可以创建全息影像，它们是由出现在你周围的光线和声音组成的对象，就像真实对象一样。 全息影像会响应你的注视、手势和语音命令，并可与你周围的实际表面交互。 利用全息影像，可以创建属于你的世界的数字对象。
-
-<br>
-
 
 ---
 
-<br>
-
-![混合现实有哪些用途？](images/HLS19_remoteAssistHologram_001.jpg)
-
-### <a name="what-can-you-do-with-mixed-reality"></a>混合现实有哪些用途？
-
-#### <a name="a-new-vision-for-work"></a>[新的工作愿景](https://dynamics.microsoft.com//mixed-reality/overview/)
-在 Microsoft 内部，我们正在创建混合现实应用程序，以便为员工提供助力并优化操作。 Dynamics 365 团队已经开展了一系列展示这些可能性的项目，其中包括 [Remote Assist](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview)、[Layout](https://docs.microsoft.com/dynamics365/mixed-reality/layout/)和[Guides](https://docs.microsoft.com/dynamics365/mixed-reality/guides/)。
-
-<br>
-
-#### <a name="the-pursuit-of-more-personal-computing"></a>[追求更多个人计算](../out-of-scope/case-study-the-pursuit-of-more-personal-computing.md)
-未来的机会通过在今天构建产品来揭示。 这些产品提供的解决方案展示了推动未来的进步需要什么。 有了混合现实，这一点尤为真实：有意义的见解源于从事实际工作 — 实际设备、真实客户和真正问题。
-
-
-<br>
-
-
 ## <a name="see-how-industry-partners-are-using-mixed-reality"></a>了解行业合作伙伴如何使用混合现实
-
 
 :::row:::
     :::column:::
@@ -129,76 +104,37 @@ ms.locfileid: "92915582"
 
 <br>
 
-<br>
-
 ---
 
-<br>
+### <a name="explore-hololens-and-mixed-reality-services"></a>了解 HoloLens 和混合现实服务
 
 ![HoloLens 分解视图](images/HoloLens2_ExplodedView_8k.png)
 
-## <a name="what-are-the-capabilities-of-hololens"></a>HoloLens 有哪些功能？
+如果想了解各种混合现实硬件和服务的工作原理，请查看以下链接。 点击这些链接可导航到 Microsoft 文档的不同部分，但我们建议添加书签并返回此处，以便继续你的设计和开发之旅。
 
-### <a name="immersive-ergonomic-instinctual-and-untethered"></a>[沉浸式体验、人体工学细节、本能交互和无绳化](https://www.microsoft.com//hololens/hardware)
-
-HoloLens 2 提供最舒适的沉浸式混合现实体验，其行业领先的解决方案可以在数分钟内让你感受到其价值 — 这一切由 Microsoft 推出的云和 AI 服务所特有的可靠性、安全性和可伸缩性来增强。
-
-<br>
-
----
-
-<br>
-
-![核心体验](images/text_in_unity_viewingangle.jpg)
-
-## <a name="what-are-the-core-concepts-of-an-experience"></a>体验的核心概念有哪些？
-
-### <a name="keep-the-user-comfortable---comfort"></a>[使用户舒适 -（舒适）](../design/comfort.md)
-为了确保头戴式显示器的舒适度最佳，设计人员和开发人员务必需要以一种模拟这些提示如何在自然世界中运行的方式来创建和展示内容。
-
-<br>
-
-### <a name="how-the-user-sees-the-world---holographic-frame"></a>[用户如何看到世界 -（全息框）](../design/holographic-frame.md)
-用户通过其头戴显示设备支持的矩形视区来看混合现实的世界。 在 HoloLens 上，此矩形区域称为全息框，它可让用户看到覆盖在他们周围现实世界上的数字内容。
-
-<br>
-
-### <a name="making-holographic-objects-feel-real---spatial-mapping"></a>[使全息对象感觉真实 -（空间映射）](../design/spatial-mapping.md)
-利用空间映射，可以将对象放置在真实的图面上。 这有助于在用户的世界中锚定对象，并利用真实世界的深度提示。
-
-<br>
-
-### <a name="suggesting-the-scale-of-an-object---scale"></a>[建议对象的比例 -（比例）](../design/scale.md)
-如果要显示看起来十分逼真的全息形式的内容，其关键是尽可能真实地模拟现实世界的视觉统计数据。 这意味着将尽可能多的、可以帮助我们（在现实世界中）了解对象的位置、大小及其组成部分的视觉提示整合在一起。
-
-
-<br>
-
----
+|  概念  |  业务成效  |
+| --- | --- |
+| [HoloLens 硬件](https://www.microsoft.com//hololens/hardware) | HoloLens 2 提供最舒适的沉浸式混合现实体验，其行业领先的解决方案可以在数分钟内让你感受到其价值 — 这一切由 Microsoft 推出的云和 AI 服务所特有的可靠性、安全性和可伸缩性来增强 |
+| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | 了解可通过 Dynamics 365 为员工助力并优化运营的一系列产品，包括[远程协助](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview)、[布局](https://docs.microsoft.com/dynamics365/mixed-reality/layout/)和[指南](https://docs.microsoft.com/dynamics365/mixed-reality/guides/)。 有意义的见解源于从事实际工作、使用实际设备，以及对话真实用户 |
+| [Azure 云服务](../develop/mixed-reality-cloud-services.md) | 通过添加空间感知、空间锚点和复杂的 3D 模型渲染，在各种平台上生成具有吸引力的沉浸式体验 |
 
 ## <a name="what-would-you-like-to-do-next"></a>接下来，你想做什么？
 
-
 :::row:::
-    :::column:::
-       [![试用](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
-        **[试用混合现实](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        在本地 Microsoft Store 中获取混合现实和 HoloLens 的演示版。
-    :::column-end:::
     :::column:::
         [![成为创建者](images/icon-design.png)](../design/design.md)<br>
         **[成为创建者](../design/design.md)**<br>
         了解开始设计和原型制作所需的基本概念。
     :::column-end:::
+        :::column:::
+        [![开始开发](images/icon-developer.png)](../develop/development.md)<br>
+        **[开始开发](../develop/development.md)**<br>
+        根据技能水平、工作风格或平台兴趣选择开发路径。
+    :::column-end:::
     :::column:::
         [![参加活动](images/icon-calendar.jpg)](../whats-new/sf-academy-events.md)<br>
         **[参加活动](../whats-new/sf-academy-events.md)**<br>
         查看硬件并获取动手教程，以便创建第一个 HoloLens 2 应用程序。
-    :::column-end:::
-    :::column:::
-        [![开始开发](images/icon-developer.png)](../develop/development.md)<br>
-        **[开始开发](../develop/development.md)**<br>
-        根据技能水平、工作风格或平台兴趣选择开发路径。
     :::column-end:::
 :::row-end:::
 
@@ -208,6 +144,10 @@ HoloLens 2 提供最舒适的沉浸式混合现实体验，其行业领先的解
 <br>
 
 
-
 >[!IMPORTANT]
 >本站点提供的所有混合现实开发材料仅供参考。 你作为应用程序开发人员，必须全权负责你的应用程序、应用程序使用情况以及应用程序对最终用户的影响，包括确保应用不会为最终用户带来不适、伤害或任何其他方式的损害，并提供适当的警告和免责声明。 在开发和发布应用程序的过程中，你需要时刻采取适当的措施，确保应用程序安全并履行 [Microsoft 应用开发人员协议](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)中规定的所有义务。
+
+## <a name="see-also"></a>另请参阅
+* [沉浸式头戴显示设备硬件详细信息](immersive-headset-hardware-details.md)
+* [社区资源](community.md)
+* [VR 发烧友指南](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/)

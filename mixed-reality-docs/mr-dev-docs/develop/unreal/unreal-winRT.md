@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 07/08/2020
 ms.topic: article
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发
-ms.openlocfilehash: d7c94ebb7fc6cc16916f1f577b8e54e374b9db1f
-ms.sourcegitcommit: e1de7caa7bd46afe9766186802fa4254d33d1ca6
+ms.openlocfilehash: 09d90af95d9433772563fdc292f31d118b3dd846
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92240760"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573291"
 ---
 # <a name="winrt-in-unreal"></a>Unreal 中的 WinRT
 
@@ -24,14 +24,14 @@ ms.locfileid: "92240760"
 - 将该 DLL 链接到 Unreal 游戏项目
 - 使用新 DLL 从 Unreal 蓝图将文件保存在 HoloLens 上
 
-## <a name="getting-started"></a>入门
+## <a name="getting-started"></a>开始使用
 1. 检查是否已安装所有[必需的工具](tutorials/unreal-uxt-ch1.md)
 2. [创建新的 Unreal 项目](tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) 并将其命名为 **Consumewinrt**
 3. 为 HoloLens 开发启用[所需插件](tutorials/unreal-uxt-ch2.md#enabling-required-plugins)
 4. 部署到设备或仿真程序[的设置](tutorials/unreal-uxt-ch6.md)
 
 ## <a name="creating-a-winrt-dll"></a>创建 WinRT DLL 
-1. 打开新的 Visual Studio 项目，并在 Unreal 游戏的**uproject**文件所在的同一目录中** (通用 Windows) **项目创建一个 DLL。 
+1. 打开新的 Visual Studio 项目，并在 Unreal 游戏的 **uproject** 文件所在的同一目录中 **(通用 Windows)** 项目创建一个 DLL。 
 
 ![创建 DLL](images/unreal-winrt-img-01.png)
 
@@ -44,11 +44,11 @@ ms.locfileid: "92240760"
 > 新项目编译完成后，您需要分别特别注意名为 **HoloLensWinrtDLL** 和 **HoloLensWinrtDLL** 的空白 cpp 和头文件。 标头是在 Unreal 中使用 DLL 的包含文件，而 cpp 包含所导出的任何函数的主体，并且包含 Unreal 不能编译的任何 WinRT 代码。 
 
 3. 添加任何代码之前，需要更新项目属性，以确保所需的 WinRT 代码可以编译： 
-    * 右键单击 "HoloLensWinrtDLL" 项目，然后选择 "**属性**"  
+    * 右键单击 "HoloLensWinrtDLL" 项目，然后选择 " **属性** "  
     * 将 " **配置** " 下拉列表中的 " **所有配置** " 和 " **平台** " 下拉列表更改为 **所有平台**  
-    * 在 " **配置属性" 下> C/c + +> 所有选项**：
+    * 在 " **配置属性" 下> C/c + +> 所有选项** ：
         * 将 **await** 添加到 **其他选项** ，以确保我们可以等待异步任务  
-        * 将 **c + + 语言标准** 更改为 **ISO c + + 17 standard (/std： c + + 17) ** 以包括任何 WinRT 代码
+        * 将 **c + + 语言标准** 更改为 **ISO c + + 17 standard (/std： c + + 17)** 以包括任何 WinRT 代码
 
 ![升级项目属性](images/unreal-winrt-img-03.png)
 
@@ -87,7 +87,7 @@ public:
 > [!NOTE]
 > 所有 WinRT 代码都存储在 **HoloLensWinrtDLL** 中，因此 Unreal 不会在引用标头时尝试包含任何 WinRT 代码。 
 
-3. 仍在 **HoloLensWinrtDLL**中，为 OpenFileDialogue ( # A1 和所有支持的代码添加函数体： 
+3. 仍在 **HoloLensWinrtDLL** 中，为 OpenFileDialogue ( # A1 和所有支持的代码添加函数体： 
 
 ```cpp
 // sgm is declared outside of OpenFileDialogue so it doesn't
@@ -180,12 +180,12 @@ private:
 > [!NOTE]
 > 现在，已在与 uproject 文件相同的目录中创建了一个解决方案，同时还创建了一个名为 Source/ConsumeWinRT/ConsumeWinRT 的新生成脚本。
 
-2. 打开解决方案，浏览到 **游戏/ConsumeWinRT/源/ConsumeWinRT** 文件夹，然后打开 **ConsumeWinRT.build.cs**：
+2. 打开解决方案，浏览到 **游戏/ConsumeWinRT/源/ConsumeWinRT** 文件夹，然后打开 **ConsumeWinRT.build.cs** ：
 
 ![打开 ConsumeWinRT.build.cs 文件](images/unreal-winrt-img-05.png)
 
 ### <a name="linking-the-dll"></a>链接 DLL
-1. 在 **ConsumeWinRT.build.cs**中，添加一个属性来查找 DLL (包含 HoloLensWinrtDLL) 的目录的包含路径。 DLL 位于包含路径的子目录中，因此此属性将用作二进制根目录：
+1. 在 **ConsumeWinRT.build.cs** 中，添加一个属性来查找 DLL (包含 HoloLensWinrtDLL) 的目录的包含路径。 DLL 位于包含路径的子目录中，因此此属性将用作二进制根目录：
 
 ```cs
 using System.IO;
@@ -240,17 +240,32 @@ public ConsumeWinRT(ReadOnlyTargetRules target) : base(Target)
 }
 ```
 
-3. 打开 **WinrtActor** ，并添加两个函数定义，一个是蓝图可以使用的，另一个是使用 DLL 代码的函数定义： 
+3. 打开 **WinrtActor** 并添加一个由蓝图调用的函数定义： 
+
 ```cpp
 public:
     UFUNCTION(BlueprintCallable)
-    static void OpenFileDialogue;
+    static void OpenFileDialogue();
 ```
 
-4. 打开 **WinrtActor** ，并在 BeginPlay 中加载 DLL： 
+4. 打开 **WinrtActor** 并更新 BeginPlay 以加载 DLL： 
 
 ```cpp
-void AWinfrtActor::BeginPlay()
+void AWinrtActor::BeginPlay()
+{
+    Super::BeginPlay();
+
+    // Gets path to DLL location
+    const FString BinDir = FPaths::ProjectDir() / 
+        "ThirdParty" / "HoloLensWinrtDLL" / 
+        "arm64" / "Release" / "HoloLensWinrtDLL";
+
+    // Loads DLL into application
+    void * dllHandle = FPlatformProcess::GetDllHandle(
+        *(BinDir / "HoloLensWinrtDLL.dll"));
+}
+
+void AWinrtActor::OpenFileDialogue()
 {
 #if PLATFORM_HOLOLENS
     HoloLensWinrtDLL::OpenFileDialogue();
@@ -264,15 +279,15 @@ void AWinfrtActor::BeginPlay()
 ### <a name="building-the-game"></a>构建游戏
 1. 构建游戏解决方案，启动为游戏项目打开的 Unreal 编辑器： 
     * 在 " **设置参与者** " 选项卡中，搜索新 **WinrtActor** 并将其拖动到场景中 
-    * 打开级别蓝图，以在**WinrtActor**中执行蓝图可调用函数 
+    * 打开级别蓝图，以在 **WinrtActor** 中执行蓝图可调用函数 
 
 ![将 WinrtActor 放在场景中](images/unreal-winrt-img-06.png)
 
-2. 在 **World Outliner**中，找到以前拖放到场景中的 **WindrtActor** ，并将其拖动到级别蓝图： 
+2. 在 **World Outliner** 中，找到以前拖放到场景中的 **WindrtActor** ，并将其拖动到级别蓝图： 
 
 ![将 WinrtActor 拖动到级别蓝图](images/unreal-winrt-img-07.png)
 
-3. 在级别蓝图中，从 WinrtActor 中拖动输出节点，搜索 " **打开文件" 对话框**，然后从任何用户输入路由节点。  在这种情况下，从语音事件调用 "打开文件" 对话框： 
+3. 在级别蓝图中，从 WinrtActor 中拖动输出节点，搜索 " **打开文件" 对话框** ，然后从任何用户输入路由节点。  在这种情况下，从语音事件调用 "打开文件" 对话框： 
 
 ![在级别蓝图中配置节点](images/unreal-winrt-img-08.png)
 
@@ -291,7 +306,7 @@ void AWinfrtActor::BeginPlay()
 > [!div class="nextstepaction"]
 > [部署到设备](unreal-deploying.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 * [C + +/WinRT Api](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
 * [FileSavePicker 类](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
 * [Unreal 第三方库](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 

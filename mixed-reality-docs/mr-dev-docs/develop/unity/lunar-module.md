@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，示例应用，设计，HoloLens
-ms.openlocfilehash: 4ab408d23ca932e73c0939f8a5cdc48184666f78
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: d4014e1300b60d61dfba38ee5c5b0c8a530fbe08
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677298"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573251"
 ---
 # <a name="lunar-module"></a>登月舱
 
@@ -19,6 +19,11 @@ ms.locfileid: "91677298"
 >本文讨论了我们在 [混合现实设计实验室](https://github.com/Microsoft/MRDesignLabs_Unity)中创建的探索示例，这是我们与混合现实应用开发的知识和建议。 我们设计相关的文章和代码将随着我们的新发现而发展。
 
 [阴历模块](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule) 是 Microsoft 混合现实设计实验室的开源示例应用。 在此项目中，你可以了解如何通过两个右手跟踪和 Xbox controller 输入来扩展 HoloLens 的基本手势，创建反应为 surface 贴图和飞机查找并实现简单菜单系统的对象。 所有项目组件都可以在自己的混合现实应用体验中使用。
+
+## <a name="demo-video"></a>演示视频 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IcIP]
+
+使用混合现实捕获记录了 HoloLens 2
 
 ## <a name="rethinking-classic-experiences-for-windows-mixed-reality"></a>Windows Mixed Reality 的反思经典体验
 
@@ -99,11 +104,12 @@ HoloLens 基本输入只包含两个笔势： " [Air" 和 "布隆](../../design/
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Addison Linville" width="60" height="60" src="images/addisonlinville-tile-60px.jpg"></td>
-<td style="border-style: none"><b>Addison Linville</b><br>UX 设计器 @Microsoft</td>
+<td style="border-style: none"><b>Addison Linville</b><br>用户体验设计师 @Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>请参阅
-* [运动控制器](../../design/motion-controllers.md)
-* [头部凝视并提交](../../design/gaze-and-commit.md)
-* [混合现实应用的类型](../../design/types-of-mixed-reality-apps.md)
+* [MRTK 示例中心](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
+* [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
+* [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [星系探索者 2.0](galaxy-explorer-update.md)

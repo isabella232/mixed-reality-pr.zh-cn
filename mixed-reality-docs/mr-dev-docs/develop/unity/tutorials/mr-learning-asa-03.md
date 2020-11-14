@@ -1,18 +1,18 @@
 ---
 title: Azure 空间定位点教程 - 3. 保存、检索和共享 Azure 空间定位点
-description: 完成本课程可以了解如何在混合现实应用程序中实现 Azure 空间定位点。
+description: 完成本课程可以了解如何在混合现实应用程序中保存、检索和共享 Azure 空间定位点。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: edbbfa6bb4027e6d0d0d37a46575eafdb1d6e631
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 2fbf9b849cec62c5281396fcb1e2f8e6e26b4621
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695948"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353295"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3.保存、检索和共享 Azure 空间定位点
 
@@ -27,11 +27,11 @@ ms.locfileid: "91695948"
 
 在“层次结构”窗口中，展开“ButtonParent”对象。 选择最后四个子按钮对象。 在“检查器”窗口中，选中“名称”字段旁的复选框以使所有对象处于活动状态。
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section1-step1-1.png)
+![选中并激活了先前处于非活动状态的按钮对象的 Unity](images/mr-learning-asa/asa-03-section1-step1-1.png)
 
 在“层次结构”窗口中，选择“ButtonParent”对象。 然后在“检查器”窗口中，找到 GridObjectCollection 组件并单击“更新集合”按钮，以更新所有 ButtonParent 对象的子对象的位置  。
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section1-step1-2.png)
+![更新了 GridObjectCollection 组件的 Unity](images/mr-learning-asa/asa-03-section1-step1-2.png)
 
 ## <a name="persisting-azure-spatial-anchors-between-app-sessions"></a>在应用会话之间保留 Azure 空间定位点
 
@@ -39,7 +39,7 @@ ms.locfileid: "91695948"
 
 在“层次结构”窗口中，展开“ButtonParent”对象并找到名为 SaveAzureAnchorIdToDisk 和 GetAzureAnchorIdFromDisk 的两个按钮  ：
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section2-step1-1.png)
+![选中了 SaveAzureAnchorIdToDisk 和 GetAzureAnchorIdFromDisk 按钮对象的 Unity](images/mr-learning-asa/asa-03-section2-step1-1.png)
 
 遵循上一篇教程的[配置按钮以操作场景](mr-learning-asa-02.md#configuring-the-buttons-to-operate-the-scene)说明中的相同步骤，在这两个按钮中的每个按钮上配置“可交互(脚本)”组件：
 
@@ -68,7 +68,7 @@ ms.locfileid: "91695948"
 
 在“层次结构”窗口中，展开“ButtonParent”对象。   找到名为 ShareAzureAnchorIdToNetwork 和 GetAzureAnchorIdFromNetwork 的两个按钮 ：
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section3-step1-1.png)
+![选中了 ShareAzureAnchorIdToNetwork 和 GetAzureAnchorIdFromNetwork 按钮对象的 Unity](images/mr-learning-asa/asa-03-section3-step1-1.png)
 
 遵循上一篇教程的[配置按钮以操作场景](mr-learning-asa-02.md#configuring-the-buttons-to-operate-the-scene)说明中的相同步骤，在这两个按钮中的每个按钮上配置“可交互(脚本)”组件：
 

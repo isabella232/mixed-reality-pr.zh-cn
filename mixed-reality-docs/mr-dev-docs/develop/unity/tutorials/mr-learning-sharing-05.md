@@ -1,18 +1,18 @@
 ---
 title: 多用户功能教程 - 5. 将 Azure 空间定位点集成到共享体验中
-description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现多用户共享体验。
+description: 完成本课程可以了解如何使用 Azure 空间定位点来锚定共享的多用户 HoloLens 2 应用程序中的对象。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: fc8e20a9ddaa595db0a3d59975e7c785d01c0a6d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 65672bad9a967e11e7feb7efc45759608e9c9e76
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697019"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353425"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5.将 Azure 空间定位点集成到共享体验中
 
@@ -27,11 +27,11 @@ ms.locfileid: "91697019"
 
 在“层次结构”窗口中，展开“SharedPlayground”对象，然后展开“TableAnchor”对象以公开其子对象：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section1-step1-1.png)
+![展开了 SharedPlayground 和 TableAnchor 对象的 Unity](images/mr-learning-sharing/sharing-05-section1-step1-1.png)
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.MultiUserCapabilities” > “预制件”文件夹，然后将“Buttons”预制件拖动到“TableAnchor”子对象上，以将其作为 TableAnchor 对象的子项添加到场景    ：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section1-step1-2.png)
+![选中了新增的 Buttons 预制件的 Unity](images/mr-learning-sharing/sharing-05-section1-step1-2.png)
 
 ## <a name="configuring-the-buttons-to-operate-the-scene"></a>配置按钮以操作场景
 
@@ -39,14 +39,14 @@ ms.locfileid: "91697019"
 
 在“层次结构”窗口中展开“Button”对象，然后选择名为“StartAzureSession”的第一个子按钮对象： 
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-1.png)
+![选中了 StartAzureSession 按钮对象的 Unity](images/mr-learning-sharing/sharing-05-section2-step1-1.png)
 
 在“检查器”窗口中，找到“可交互(脚本)”组件，并按如下所示配置 OnClick () 事件：
 
 * 向“无(对象)”字段中分配“TableAnchor”对象 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “StartAzureSession ()”函数  
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-2.png)
+![配置了 StartAzureSession 按钮 OnClick 事件的 Unity](images/mr-learning-sharing/sharing-05-section2-step1-2.png)
 
 在“层次结构”窗口中，选择名为“CreateAzureAnchor”的第二个子按钮对象，然后在“检查器”窗口中，找到“可交互(脚本)”组件，并按如下所示配置 OnClick () 事件：
 
@@ -54,21 +54,21 @@ ms.locfileid: "91697019"
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “CreateAzureAnchor ()”函数  
 * 向出现的新“无(游戏对象)”字段中分配“TableAnchor”对象
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-3.png)
+![配置了 CreateAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-sharing/sharing-05-section2-step1-3.png)
 
 在“层次结构”窗口中，选择名为“ShareAzureAnchor”的第三个子按钮对象，然后在“检查器”窗口中，找到“可交互(脚本)”组件，并按如下所示配置 OnClick () 事件：
 
 * 向“无(对象)”字段中分配“TableAnchor”对象 
 * 从“无函数”下拉列表中，选择“SharingModuleScript” > “ShareAzureAnchor ()”函数  
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-4.png)
+![配置了 ShareAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-sharing/sharing-05-section2-step1-4.png)
 
 在“层次结构”窗口中，选择名为“GetAzureAnchor”的第四个子按钮对象，然后在“检查器”窗口中，找到“可交互(脚本)”组件，并按如下所示配置 OnClick () 事件  ：
 
 * 向“无(对象)”字段中分配“TableAnchor”对象 
 * 从“无函数”下拉列表中，选择“SharingModuleScript” > “GetAzureAnchor ()”函数  
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-5.png)
+![配置了 GetAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-sharing/sharing-05-section2-step1-5.png)
 
 ## <a name="connecting-the-scene-to-the-azure-resource"></a>将场景连接到 Azure 资源
 
@@ -79,7 +79,7 @@ ms.locfileid: "91697019"
 * 在“空间定位点帐户 ID”字段中，粘贴来自你的 Azure 空间定位点帐户的“帐户 ID”
 * 在“空间定位点帐户密钥”字段中，粘贴来自你的 Azure 空间定位点帐户的主“访问密钥”或辅助“访问密钥”
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section3-step1-1.png)
+![配置了空间定位点管理器的 Unity](images/mr-learning-sharing/sharing-05-section3-step1-1.png)
 
 > [!TIP]
 > 不要在场景中设置空间定位点帐户 ID 和密钥，而是针对整个项目设置它，这在有多个使用 ASA 的场景时会非常有利。 为此，请在“项目”窗口中导航到“资产”>“AzureSpatialAnchors.SDK”>“资源”>“SpatialAnchorConfig”资产，然后在“检查器”窗口中设置这些值。
@@ -88,7 +88,7 @@ ms.locfileid: "91697019"
 
 * 在“公共共享 Pin”字段中，更改几个数字，使 Pin 成为项目的唯一 Pin
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section3-step1-2.png)
+![配置了定位点模块脚本的 Unity](images/mr-learning-sharing/sharing-05-section3-step1-2.png)
 
 在仍选中“TableAnchor”对象的情况下，在“检查器”窗口中，确保已启用所有脚本组件 ：
 
@@ -96,7 +96,7 @@ ms.locfileid: "91697019"
 * 选中“空间模块脚本(脚本)”组件旁边的复选框以启用该组件
 * 选中“共享模块脚本(脚本)”组件旁边的复选框以启用该组件
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section3-step1-3.png)
+![启用了所有 TableAnchor 脚本组件的 Unity](images/mr-learning-sharing/sharing-05-section3-step1-3.png)
 
 ## <a name="trying-the-experience-with-spatial-alignment"></a>尝试带有空间配准的体验
 

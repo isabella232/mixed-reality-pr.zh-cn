@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，示例应用，控件
-ms.openlocfilehash: 2f7120aaf92a6e3d7b6ace301aae7392b67fa00b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 82ffa19b27c1d2687b67df659cb3bb50544748fc
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678672"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573261"
 ---
 # <a name="periodic-table-of-the-elements"></a>元素周期表
 
@@ -21,6 +21,11 @@ ms.locfileid: "91678672"
 [定期表](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) 是 Microsoft 混合现实设计实验室中的一个开源示例应用。 使用此项目，您可以了解如何使用 **[对象集合](../../design/object-collection.md)** 在三维空间中使用不同的表面类型来布置对象数组。 还将了解如何创建响应 HoloLens 标准输入的种不可交互对象。 您可以使用此项目的组件来创建自己的混合现实应用程序体验。
 
 ![元素应用的 Period 表](images/640px-periodictable-hero.jpg)
+
+## <a name="demo-video"></a>演示视频 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IkCF]
+
+使用混合现实捕获记录了 HoloLens 2
 
 ## <a name="about-the-app"></a>关于应用
 
@@ -60,52 +65,31 @@ ms.locfileid: "91678672"
 
 ![对象集合](images/640px-periodictable-collections.jpg)
 
-### <a name="fitbox"></a>Fitbox
-
-默认情况下，将在启动应用程序时，将全息影像置于用户正在 gazing 的位置。 这有时会导致不需要的结果，如全息影像位于墙壁后面或表中间。 Fitbox 允许用户使用 "注视" 来确定要放置全息影像的位置。 使用简单的 PNG 图像纹理进行创建，可以使用自己的图像或三维对象轻松自定义该纹理。
-
-![Fitbox](../../design/images/450px-periodictable-fitbox.jpg)
-
 ## <a name="technical-details"></a>技术详细信息
 
 可在 [混合现实设计实验室 GitHub](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable)上查找元素应用的定期表的脚本和 prototyping。
 
-## <a name="application-examples"></a>应用程序示例
+## <a name="porting-story-for-hololens-2"></a>针对 HoloLens 2 的移植故事
 
-下面是利用此项目中的组件可以创建的一些建议。
+阅读有关如何用 HoloLens 2 的 instinctual 交互更新元素应用的定期表的文章。
 
-### <a name="stock-data-visualization-app"></a>股票数据可视化应用
+[元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 
-使用与 "元素" 示例的 "定期" 表相同的控件和交互模型，可以构建一个直观显示股票市场数据的应用。 此示例使用对象集合控件来布局球面形状中的股票数据。 您可以想象一个详细信息视图，其中每个股票的其他信息可能以一种有趣的方式显示。
 
-![应用程序示例：财务 (1 （共3个）) ](images/640px-periodictable-applicationexamples-finance1.jpg)
 
-![应用程序示例：财务 (2 （共3个）) ](images/640px-periodictable-applicationexamples-finance2.jpg)
-
-![应用程序示例：财务 (3 （共3个）) ](images/640px-periodictable-applicationexamples-finance3.jpg)<br>
-*有关如何在 "元素示例" 应用的 "定期" 表中使用的对象集合的示例，可在金融应用中使用*
-
-### <a name="sports-app"></a>体育应用
-
-这是使用对象集合和元素示例应用的定期表中的其他组件来可视化运动数据的一个示例。
-
-![应用程序示例：体育 (1 （共3个）) ](images/640px-periodictable-applicationexamples-sports0.jpg)
-
-![应用程序示例：体育 (2 （共3个）) ](images/640px-periodictable-applicationexamples-sports1.jpg)
-
-![应用程序示例：体育 (3 （共3个）) ](images/640px-periodictable-applicationexamples-sports3.jpg)<br>
-*有关如何在体育应用中使用在元素的周期性表中使用的对象集合的示例 appcould*
 
 ## <a name="about-the-author"></a>关于作者
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>盾 Yoon 停车场</b><br>UX 设计器 @Microsoft</td>
+<td style="border-style: none"><b>Dong Yoon Park</b><br>用户体验设计师 @Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>请参阅
 
-* [可交互对象](../../design/interactable-object.md)
-* [对象集合](../../design/object-collection.md)
+* [MRTK 示例中心](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
+* [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
+* [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [星系探索者 2.0](galaxy-explorer-update.md)

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, 实用工具, 教程, hololens, hololens 2, azure 自定义视觉, azure 认知服务
 ms.localizationpriority: high
-ms.openlocfilehash: baf5ddb805e6bff6fd41d2fb7cc8ea64b55944e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 9a6cccf9c1a7d2547ed5ddacfc4841d2f4d1609b
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695917"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353265"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3.集成 Azure 自定义视觉
 
@@ -43,11 +43,11 @@ Azure 自定义视觉属于认知服务系列，可用于训练图像分类器 �
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.AzureCloudServices” > “预制件” > “管理器”文件夹   。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-1.png)
+![“项目”窗口显示了指向 ObjectDetectionManager 预制件的路径的 Unity](images/mr-learning-azure/tutorial3-section4-step1-1.png)
 
 从此处将预制件 ObjectDetectionManager 拖到场景层次结构中。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-2.png)
+![检查器中显示了 ObjectDetectionManager 脚本组件配置字段的 Unity](images/mr-learning-azure/tutorial3-section4-step1-2.png)
 
 在“层次结构”窗口中，找到并选中 ObjectDetectionManager 对象。
 ObjectDetectionManager 预制件包含“ObjectDetectionManager(脚本)”组件，你可从“检查器”窗口中看到，它取决于多项设置 。
@@ -66,11 +66,11 @@ ObjectDetectionManager 预制件包含“ObjectDetectionManager(脚本)”组件
 
 现在，通过“ObjectDetectionManager(脚本)”安装程序，找到并选中场景层次结构中的 SceneController 对象 。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-3.png)
+![检查器中显示了 SceneController 脚本组件配置字段的 Unity](images/mr-learning-azure/tutorial3-section4-step1-3.png)
 
 你将看到 SceneController 组件中“对象检测管理器”字段为空，将 ObjectDetectionManager 从层次结构拖到该字段中并保存场景 。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-4.png)
+![配置了 SceneController 脚本组件的 Unity](images/mr-learning-azure/tutorial3-section4-step1-4.png)
 
 ## <a name="take-and-upload-images"></a>拍摄和上传图像
 

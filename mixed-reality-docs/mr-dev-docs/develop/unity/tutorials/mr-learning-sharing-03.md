@@ -1,18 +1,18 @@
 ---
 title: 多用户功能教程 - 3. 连接多个用户
-description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现多用户共享体验。
+description: 完成本课程可以了解如何在 HoloLens 2 应用程序中连接多个用户。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cffcc326fadcc9cdbf406adde093e055aef83706
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 5ebb3ffd66422a5e38bc62ada0f040e00f52671d
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697052"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353465"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 
@@ -31,13 +31,13 @@ ms.locfileid: "91697052"
 * NetworkLobby 预制件
 * SharedPlayground 预制件
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section1-step1-1.png)
+![选中了新增的 NetworkLobby 和 SharedPlayground 预制件的 Unity](images/mr-learning-sharing/sharing-03-section1-step1-1.png)
 
 在“项目”窗口中导航到“资产” > “MRTK.Tutorials.AzureSpatialAnchors” > “预制件”文件夹，然后单击以下预制件并将其拖动到“层次结构”窗口中，从而将其添加到场景中  ：
 
 * DebugWindow 预制件
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section1-step1-2.png)
+![选中了新增的 DebugWindow 预制件的 Unity](images/mr-learning-sharing/sharing-03-section1-step1-2.png)
 
 ## <a name="creating-the-user-prefab"></a>创建用户预制件
 
@@ -49,23 +49,23 @@ ms.locfileid: "91697052"
 
 * 请确保将变换位置设置为 X = 0，Y = 0，Z = 0：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step1-1.png)
+![选中了新创建的 PhotonUser 对象的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-1.png)
 
 在“层次结构”窗口中，选择“PhotonUser”对象，然后在检查器窗口中，使用“添加组件”按钮将“Photon 用户(脚本)”组件添加到 PhotonUser 对象：  
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step1-2.png)
+![添加了 PhotonUser 组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-2.png)
 
 在检查器窗口中，使用“添加组件”按钮将“通用网络同步(脚本)”组件添加到 PhotonUser 对象，并按如下所示对其进行配置：
 
 * 选中“是用户”复选框
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step1-3.png)
+![添加并配置了“通用网络同步”组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-3.png)
 
 在检查器窗口中，使用“添加组件”按钮将“Photon 视图(脚本)”组件添加到 PhotonUser 对象，并按如下所示对其进行配置：
 
 * 向“观察到的组件”字段分配“通用网络同步(脚本)”组件 
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step1-4.png)
+![添加并配置了 Photon 视图组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-4.png)
 
 ### <a name="2-create-the-avatar"></a>2.创建头像
 
@@ -77,21 +77,21 @@ ms.locfileid: "91697052"
 * 将变换标度更改为适当的大小，例如 X = 0.15，Y = 0.15，Z = 0.15
 * 在“MeshRenderer”>“材料”>“元素 0”字段中，指定 MRTK_Standard_White 材料 
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step2-1.png)
+![具有新创建和新配置的头像球体的 Unity](images/mr-learning-sharing/sharing-03-section2-step2-1.png)
 
 ### <a name="3-create-the-prefab"></a>3.创建预制件
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.MultiUserCapabilities” > “资源”文件夹：  
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step3-1.png)
+![选中了“资源”文件夹的 Unity 项目窗口](images/mr-learning-sharing/sharing-03-section2-step3-1.png)
 
 在“资源”文件夹仍处于选定状态的情况下，单击“层次结构”窗口中的“PhotonUser”对象并将其拖动到“资源”文件夹，以使 PhotonUser 对象成为预制件：  
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step3-2.png)
+![选中了新创建的 PhotonUser 预制件的 Unity](images/mr-learning-sharing/sharing-03-section2-step3-2.png)
 
 在“层次结构”窗口中，右键单击“PhotonUser”对象，然后选择“删除”将其从场景中删除：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section2-step3-3.png)
+![从场景中删除了新创建的 PhotonUser 预制件的 Unity](images/mr-learning-sharing/sharing-03-section2-step3-3.png)
 
 ## <a name="configuring-pun-to-instantiate-the-user-prefab"></a>配置 PUN 以将用户预制件实例化
 
@@ -103,13 +103,13 @@ ms.locfileid: "91697052"
 
 * 向“Photon 用户预制件”字段中分配来自“资源”文件夹的“PhotonUser”预制件
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section3-step1-1.png)
+![配置了部分 Photon 房间组件的 Unity](images/mr-learning-sharing/sharing-03-section3-step1-1.png)
 
 ## <a name="trying-the-experience-with-multiple-users"></a>尝试包含多个用户的体验
 
 如果现在生成 Unity 项目并将其部署到 HoloLens，然后回到 Unity，并在应用运行于 HoloLens 上时进入“游戏”模式，那么当你来回晃动头部 (HoloLens) 时，你将看到 HoloLens 用户头像移动：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-03-section4-step1-1.gif)
+![动画显示了具有联网用户的 Unity](images/mr-learning-sharing/sharing-03-section4-step1-1.gif)
 
 > [!TIP]
 > 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。

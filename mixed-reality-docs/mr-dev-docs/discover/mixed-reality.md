@@ -7,12 +7,12 @@ ms.date: 08/26/2020
 ms.topic: article
 keywords: 混合现实, 全息, AR, VR, MR, XR, 增强现实, 虚拟现实, 说明
 ms.localizationpriority: high
-ms.openlocfilehash: 44ef30925f8429628ebeb2c5f367d379a8ab102f
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: a55b05f8edfeedfff3313844428b9af4cf7a2fc0
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696696"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340705"
 ---
 # <a name="what-is-mixed-reality"></a>什么是混合现实？
 
@@ -97,7 +97,8 @@ ms.locfileid: "91696696"
 </table> 
 
 
-> [请注意] 设备是与单独的电脑保持连接或拴定状态（通过 USB 数据线或 Wi-Fi）还是保持独立状态（断开连接），并不能反映设备是全息设备还是沉浸式设备。 可改善运动性的功能会改善体验，而全息设备和沉浸式设备都可以保持连接或断开连接状态。
+> [!NOTE]
+> 设备是与单独的电脑保持连接或拴定状态（通过 USB 数据线或 Wi-Fi）还是保持独立状态（断开连接），并不能反映设备是全息设备还是沉浸式设备。 可改善运动性的功能会改善体验，而全息设备和沉浸式设备都可以保持连接或断开连接状态。
 
 技术的进步是实现混合现实体验的基础。 当今没有任何设备可以运行整个范围内的体验。 Windows 10 为设备制造商和开发人员提供了一个通用的混合现实平台。 当今的设备可以支持混合现实范围内的某个特定范围，而新设备扩展了该范围。 未来，全息设备将变得更有沉浸感，而沉浸式设备也将变得更有全息感。
 
@@ -111,6 +112,12 @@ ms.locfileid: "91696696"
 * 中间（完全混合现实）。 这些体验融合了真实世界和数字世界。 电影[勇敢者的游戏](https://en.wikipedia.org/wiki/Jumanji)的观众能够适应故事发生地的房子与丛林环境融合后的物理结构。
 * **向右（接近数字现实）。** 用户将体验到一个数字环境，并且不会意识到其周围物理环境中发生的情况。
 
+## <a name="next-discovery-checkpoint"></a>下一个发现检查点
+
+如果你按安排的[发现之旅](get-started-with-mr.md)操作，则你正在了解混合现实的基本知识。 从这里，你可以进入下一基本主题： 
+
+> [!div class="nextstepaction"]
+> [什么是全息图？](hologram.md)
 
 ## <a name="see-also"></a>请参阅
 

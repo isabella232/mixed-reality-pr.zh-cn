@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 存储
 ms.localizationpriority: high
-ms.openlocfilehash: d405ecc9f863e77271d4c16f820fc6ee00e55b1b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: e01796dd99982bb749d59108bcc972e5bc361770
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695923"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353325"
 ---
 # <a name="2-integrating-azure-storage"></a>2.集成 Azure 存储
 
@@ -57,7 +57,6 @@ Azure 存储是云中的 Microsoft 存储解决方案，可适应多种场景和
 
 > [!TIP]
 > 若要在 Unity 编辑器中进行测试，可以使用本地模拟器：
-
 > * 在 Windows 10 中，可以使用 [Azure 存储模拟器](https://docs.microsoft.com/azure/storage/common/storage-use-emulator)
 > * 在 MacOS/Linux 中，可以使用适用于 Docker 的 [Azurite Docker 映像](https://hub.docker.com/_/microsoft-azure-storage-azurite)
 
@@ -65,7 +64,7 @@ Azure 存储是云中的 Microsoft 存储解决方案，可适应多种场景和
 
 在“层次结构”窗口中，找到“DataManager”对象并选择它。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial2-section4-step1-1.png)
+![检查器中显示了 DataManager 脚本组件配置字段的 Unity](images/mr-learning-azure/tutorial2-section4-step1-1.png)
 
 在“检查器”窗口中，你将看到“DataManager(脚本)”组件是存储所有 Azure 存储相关设置的位置 。 所有相关设置均已设置，只需将“连接字符串”字段替换为从 Azure 门户检索的连接字符串即可。 如果使用本地 Azure 存储模拟器解决方案，则可以保留已提供的连接字符串。
 

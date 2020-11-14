@@ -7,12 +7,12 @@ ms.date: 07/29/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 3385197f0df8cfb58ec3c9ba60aee0480cda8533
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: d88d3e17e26ddd361f2cbe1a32f22025255303f0
+ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293246"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93416993"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1.电脑全息远程处理入门
 
@@ -36,12 +36,12 @@ ms.locfileid: "92293246"
 * 一台 Windows 10 电脑，其中已[安装](../../install-the-tools.md)并配置正确的工具
 * 基本 C# 编程知识
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已装载 Unity 2019.3.X 且已添加通用 Windows 平台生成支持模块
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已装载 Unity 2019 LTS 且已添加通用 Windows 平台生成支持模块
 
 继续学习之前，强烈建议完成[入门](mr-learning-base-01.md)教程系列，或者具备一些使用 Unity 和 MRTK 的基本经验。
 
 > [!IMPORTANT]
-> * 建议对本系列教程使用 Unity 2019.3.X。 这将取代上述链接的先决条件中所述的所有 Unity 版本要求或建议。
+> * 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的所有 Unity 版本要求或建议。
 > * 只能在旧版 XR 中将全息远程用于 MRTK 项目。 目前不支持 XR SDK。
 
 ## <a name="creating-and-preparing-the-unity-project"></a>创建和准备 Unity 项目
@@ -73,7 +73,7 @@ ms.locfileid: "92293246"
 
 导入教程资产后，项目窗口应如下所示：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section2-Step1-1.png)
+![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mrlearning-pc-holographic-remoting/Tutorial1-Section2-Step1-1.png)
 
 ## <a name="configuring-and-preparing-the-scene"></a>配置和准备场景
 
@@ -88,15 +88,15 @@ ms.locfileid: "92293246"
 * ModelParent
 * 平台
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section3-Step1-1.png)
+![显示了要添加到所选场景的预制件的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section3-Step1-1.png)
 
 将这些模型从预制件文件夹拖放到“层次结构”窗口。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section3-Step1-2.png)
+![新增的预制件仍处于选中状态的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section3-Step1-2.png)
 
 若要将焦点置于场景中的对象上，可双击 ModelParent 对象，然后再次放大一些：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section3-Step1-3.png)
+![ModelParent 对象处于对焦状态的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section3-Step1-3.png)
 
 > [!TIP]
 > 如果在场景中看到大图标（例如带边框的“T”图标会分散注意力），可<a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">将调节器 (Gizmos) 切换</a>到关闭位置来隐藏这些图标。
@@ -109,15 +109,15 @@ ms.locfileid: "92293246"
 
 在“层次结构”窗口中，展开 ButtonParent 对象并选择“NextButton” 。 在检查器窗口中，找到“可交互(脚本)”组件，然后单击 OnClick () 事件下的 + 图标  。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step1-1.png)
+![添加了 Nextbutton OnClick 事件的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step1-1.png)
 
 在“层次结构”窗口中仍选中 NextButton 对象的情况下，单击“层次结构”窗口中的 ButtonParent 对象并将其拖放到刚刚添加的事件的空“无(对象)”字段中，使 ButtonParent 对象侦听此按钮的按钮单击事件  ：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step1-2.png)
+![配置了 NextButton OnClick 事件侦听器的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step1-2.png)
 
 单击同一事件的“无函数”下拉列表。 然后选择“ViewButtonControl” >  NextModel ()，将 NextModel () 函数设置为从该按钮触发按钮按下事件时触发的操作  ：
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step1-3.png)
+![具有 NextButton OnClick 事件操作选择路径的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step1-3.png)
 
 ### <a name="2-configuring-the-remaining-buttons"></a>2.配置其余的按钮
 
@@ -133,21 +133,21 @@ ms.locfileid: "92293246"
 
 我们提供了 6 种不同的 3D 模型用于演示，展开 ModelParentobject 可公开这些 3D 模型。
 
-在“层次结构”窗口中仍选中 ButtonParent 对象的情况下，在检查器窗口中找到“视图按钮控件(脚本)”组件并展开“模型”变量 。
+在“层次结构”窗口中仍选中 ButtonParent 对象的情况下，在检查器窗口中找到“视图按钮控件(脚本)”组件并展开“模型”变量。
 
 在“大小”字段中，输入要在场景中拥有的 3D 模型的数量。 在本例中，为 6 个模型。 它将创建用于添加新 3D 模型的字段。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-1.png)
+![具有 ViewButtonControl 脚本组件字段的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-1.png)
 
 将 ModelParent 对象的每个子对象拖放到这些字段中。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-2.png)
+![配置了 ViewButtonControl 脚本组件字段的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-2.png)
 
 将 ClippingObjects 对象从“层次结构”窗口拖放到“切换按钮(脚本)”组件的“剪辑对象”字段  。
 >[!NOTE]
 >仅保留按钮父对象。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-3.png)
+![配置了 ToggleButton 脚本组件字段的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-3.png)
 
 在“层次结构”窗口中，选择 ClippingObjects 预制件，并在检查器窗口中启用它来打开剪辑对象。
 
@@ -159,7 +159,7 @@ ms.locfileid: "92293246"
 
 若要配置 ClippingSphere 对象，请单击它，然后在检查器窗口中找到“剪辑球体(脚本)”组件 。 在“大小”字段中输入需要为 3D 模型添加的渲染器数量。 在本例中，为 MarsCuriosityRover 子对象添加 10 个渲染器。 它将创建用于添加渲染器的字段，并将 MarsCuriosityRover 对象的子模型对象拖放到这些字段中。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section5-Step1-1.png)
+![配置了 ClippingSphere 脚本组件字段的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section5-Step1-1.png)
 
 按照相同的过程，将 MarsCuriosityRover 的子对象渲染器添加到 ClippingBox 和 ClippingPlane 对象 。
 
@@ -171,25 +171,25 @@ ms.locfileid: "92293246"
 
 ### <a name="1-identify-target-objects-and-associated-tooltips"></a>1.确定目标对象及关联的工具提示
 
-在“层次结构”窗口中，选择 ModelParent 对象。 展开“MarsCuriosity”->“Rover”，查找 MarsCuriosityRover 的 5 个主要部分：POI-Camera、POI-Wheels、POI-Antena、POI-Spectrometer、POI-RUHF Antenna    。
+在“层次结构”窗口中，选择 ModelParent 对象。 展开“MarsCuriosity”->“探测器”，找到 MarsCuriosityRover 的五个主要部分：POI-Camera、POI-Wheels、POI-Antena、POI-Spectrometer、POI-RUHF Antenna    。
 
 * 在“层次结构”窗口中观察与 MarsCuriosityRover 各部分关联的 5 个对应的工具提示对象。
 * 你将配置这些对象，以便在查看 MarsCuriosityRover 各部分时突出显示体验。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step1-1.png)
+![选中并展开了“探测器”对象的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step1-1.png)
 
 ### <a name="2-implement-while-looking-at-target-----on-look-away--events"></a>2.实现 While Looking At Target () 和 On Look Away () 事件
 
-在“层次结构”窗口中，选择 POI-Camera 对象。 在检查器窗口中，找到“眼动跟踪目标(脚本)”组件，并配置“While Looking At Target ()” & “On Look Away ()”事件，如下所示  ：
+在“层次结构”窗口中，选择 POI-Camera 对象。 在检查器窗口中，找到“眼动跟踪目标(脚本)”组件，并配置“While Looking At Target ()” & “On Look Away ()”事件，如下所示 ：
 
 * 对于“无(对象)”字段，指定“POI Camera 工具提示”对象 
 * 从“While Looking At Target ()”事件的“无函数”下拉列表中，选择“GameObject” > “SetActive (bool)”   。 选中它下面的“复选框”，将突出显示工具提示作为在查看目标对象时触发的操作。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step2-1.png)
+![Unity 正在配置 EyeTrackingTarget WhileLookingAtTarget 事件](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step2-1.png)
 
 * 按照相同的过程，单击“On Look Away ()”事件侦听器上的“无函数”下拉列表 。 然后选择“GameObject” > “SetActive (bool)”，并将复选框留空，将隐藏工具提示作为在不看目标对象时触发的操作  。
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step2-2.png)
+![配置了 EyeTrackingTarget OnLookAway 事件的 Unity](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step2-2.png)
 
 按照相同的过程，将各自的工具提示对象分配给对应的 MarsCuriosityRover 部分的“While Looking At Target ()”和“On Look Away ()”事件  。
 

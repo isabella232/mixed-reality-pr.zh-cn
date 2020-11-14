@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 2c10d7458fc956cb8974319cd5355260179f10b4
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f8271fe3b3b9549d6c95707466db9af3d312fab7
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695888"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353245"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4.集成 Azure 空间定位点
 
@@ -41,17 +41,17 @@ ms.locfileid: "91695888"
 
 在“项目”窗口中，依次导航至“资产”>“MRTK.Tutorials.AzureCloudServices”>“预制件”>“管理器”
 
-![mr-learning-azure](images/mr-learning-azure/tutorial4-section1-step1-1.png)
+![选择了 AnchorManager 预制件的 Unity](images/mr-learning-azure/tutorial4-section1-step1-1.png)
 
 在“管理器”文件夹中，将预制件“定位点管理器”拖放到场景层次结构中 。
 
 在层次结构中选择“空间定位点管理器”GameObject，然后在“检查器”部分找到“空间定位点管理器”（脚本） 。 查找“帐户 ID”和“密钥”字段，并添加在前一阶段的先决条件部分创建的凭据。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial4-section1-step2-1.png)
+![新增的 AnchorManager 预制件仍处于选中状态的 Unity](images/mr-learning-azure/tutorial4-section1-step2-1.png)
 
 现在，在场景层次结构中找到 Scene Controller 对象并选择它。 此时将显示“场景控制器”检查器。
 
-![mr-learning-azure](images/mr-learning-azure/tutorial4-section1-step3-1.png)
+![配置了 SceneController 脚本组件的 Unity](images/mr-learning-azure/tutorial4-section1-step3-1.png)
 
 你将注意到“场景控制器”组件的“定位点管理器”字段为空，此时将“定位点管理器”从场景的层次结构拖放到该字段中，并保存场景  。
 

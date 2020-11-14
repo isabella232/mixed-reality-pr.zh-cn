@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，
-ms.openlocfilehash: def16b5bff13fec13ce0ebb503ec88dfca22e0b8
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: c2a00b88992fde3e599020d930ef950222e87099
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293067"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573211"
 ---
 # <a name="start-your-vr-journey"></a>开始你的 VR 旅程
 
@@ -41,7 +41,7 @@ ms.locfileid: "92293067"
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [设置 Windows Mixed Reality](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) | 熟悉新的 VR 设备上的控制器、空间边界、语音输入和 Microsoft Edge |
+| [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md) | 熟悉新的 VR 设备上的控制器、空间边界、语音输入和 Microsoft Edge |
 | [Windows Mixed Reality 安装程序常见问题解答](wmr-setup-faq.md) | 获取有关设置 Windows Mixed Reality 时的已知问题的解答和故障排除帮助 |
 | [健康、安全和舒适指导原则](wmr-health-safety-comfort.md) | 在使用耳机之前，使用 Windows Mixed Reality 时保持安全的建议  |
 
@@ -63,7 +63,7 @@ ms.locfileid: "92293067"
 | [使用 WebVR](webvr.md) | 在浏览器环境中设置体验 VR |
 
 > [!NOTE]
-> 如果使用以上任何功能时遇到问题，请参阅 **[使用 Windows Mixed REALITY 常见问题解答](using-wmr-faq.md)**。
+> 如果使用以上任何功能时遇到问题，请参阅 **[使用 Windows Mixed REALITY 常见问题解答](using-wmr-faq.md)** 。
 
 ### <a name="4-troubleshooting-tips--resources"></a>4. 故障排除、提示 & 资源
 

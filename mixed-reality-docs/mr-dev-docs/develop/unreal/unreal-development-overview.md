@@ -7,12 +7,12 @@ ms.date: 08/04/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发
-ms.openlocfilehash: 25842fb8083b7757e73e7dbe7551b6bde9d8d95e
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+ms.openlocfilehash: a8e345831167362745a45a8fa81ddae858083ca7
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638584"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340685"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 
@@ -45,7 +45,7 @@ ms.locfileid: "92638584"
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [安装最新工具](../install-the-tools.md) | 下载并安装最新 Unity 包，并为混合现实设置你的项目 |
+| [安装最新工具](../install-the-tools.md) | 下载并安装最新版 Unreal Engine，并为你的项目设置混合现实 |
 | [HoloLens 2 教程系列](tutorials/unreal-uxt-ch1.md) | 深入研究 HoloLens 2 硬件的初学者级别 MRTK 教程 |
 
 ### <a name="2-core-building-blocks"></a>2.核心构建基块

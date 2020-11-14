@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: Windows Mixed Reality，HoloLens，mrtk，设计，示例应用，控件
-ms.openlocfilehash: ee410e16a578efa53a38da2fb6b6477e109ac101
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1c6cb4579bbd3d6124cf36b21226ffa803f39f00
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678761"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573181"
 ---
 # <a name="surfaces"></a>表面
 
@@ -21,6 +21,11 @@ ms.locfileid: "91678761"
 [表面](https://github.com/microsoft/MRDL_Unity_Surfaces)  是 Microsoft 混合现实设计实验室的开源示例应用。 本文探讨了如何使用视觉、音频和完全清晰的手写跟踪来创建 tactile 成名。
 
 ![表面](images/MRDL_Surfaces_1.jpg)
+
+## <a name="demo-video"></a>演示视频 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IhWQ]
+
+使用混合现实捕获记录了 HoloLens 2
 
 ## <a name="about-the-app"></a>关于应用
 图面演示了如何使用混合现实工具包 (MRTK) 的输入系统和构建基块，为 HoloLens 2 创建应用体验。 在此项目中，可以找到以下示例：
@@ -47,11 +52,13 @@ https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0#activetab=pivot:overview
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>盾 Yoon 停车场</b><br>UX 设计器 @Microsoft</td>
+<td style="border-style: none"><b>Dong Yoon Park</b><br>用户体验设计师 @Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>请参阅
 
-* [可交互对象](../../design/interactable-object.md)
-* [对象集合](../../design/object-collection.md)
+* [MRTK 示例中心](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
+* [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
+* [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [星系探索者 2.0](galaxy-explorer-update.md)

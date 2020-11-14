@@ -1,18 +1,18 @@
 ---
 title: 多用户功能教程 - 2. 设置 Photon Unity Networking
-description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现多用户共享体验。
+description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现 Photon Unity Network。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 23498938815bd5bb2e200639ae89c62699a01774
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: aeda463610f1fb1205eade556a2c2b9bc07a4fde
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697164"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353475"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2.设置 Photon Unity Networking
 
@@ -48,7 +48,7 @@ ms.locfileid: "91697164"
 
 在 Unity 菜单中，选择“编辑” > “项目设置...”打开“播放器设置”窗口，然后找到“播放器” >  “发布设置”部分：   
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
+![Unity 播放器设置](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
 
 在“发布设置”中，向下滚动到“功能”部分，仔细检查你在上面的[配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)步骤中启用的“InternetClient”、“Microphone”、“SpatialPerception”和“GazeInput”都已启用     。
 
@@ -57,13 +57,13 @@ ms.locfileid: "91697164"
 * “InternetClientServer”功能
 * “PrivateNetworkClientServer”功能
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section2-step1-2.png)
+![Unity 功能设置](images/mr-learning-sharing/sharing-02-section2-step1-2.png)
 
 ## <a name="installing-inbuilt-unity-packages"></a>安装内置 Unity 包
 
 在 Unity 菜单中，选择“窗口” > “包管理器”打开“包管理器”窗口，然后选择“AR Foundation”并单击“安装”按钮以安装包   ：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section3-step1-1.png)
+![选中了“AR Foundation”的 Unity 包管理器](images/mr-learning-sharing/sharing-02-section3-step1-1.png)
 
 > [!NOTE]
 > 你要安装 AR Foundation 包，因为将在下一部分中导入 Azure Spatial Anchors SDK 必须使用它。
@@ -79,7 +79,7 @@ ms.locfileid: "91697164"
 
 导入教程资产后，“项目”窗口应如下所示：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section4-step1-1.png)
+![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-sharing/sharing-02-section4-step1-1.png)
 
 > [!TIP]
 > 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)说明。
@@ -93,15 +93,15 @@ ms.locfileid: "91697164"
 
 下载完成后，单击“导入”按钮以打开“导入 Unity 包”窗口：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section5-step1-1.png)
+![具有“PUN 2 - 免费”的 Unity 资产存储](images/mr-learning-sharing/sharing-02-section5-step1-1.png)
 
 在“导入 Unity 包”窗口中单击“全部”按钮，确保选择所有资产，然后单击“导入”按钮以导入资产：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section5-step1-2.png)
+![具有 PUN 2 导入窗口的 Unity](images/mr-learning-sharing/sharing-02-section5-step1-2.png)
 
 当 Unity 完成导入过程后，将显示“PUN 向导”窗口，其中加载了“PUN 设置”菜单，此时你可以忽略或关闭此窗口：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section5-step1-3.png)
+![具有 PUN 设置窗口的 Unity](images/mr-learning-sharing/sharing-02-section5-step1-3.png)
 
 ## <a name="creating-the-pun-application"></a>创建 PUN 应用程序
 
@@ -109,11 +109,11 @@ ms.locfileid: "91697164"
 
 导航到 Photon <a href="https://dashboard.photonengine.com/account/signin" target="_blank">仪表板</a>，如果你已有想要使用的帐户，请登录；否则，请单击“创建一个”链接并按照说明注册新帐户：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-1.png)
+![Photon 登录页](images/mr-learning-sharing/sharing-02-section6-step1-1.png)
 
 登录后，单击“创建新应用”按钮：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-2.png)
+![Photon 仪表板欢迎页](images/mr-learning-sharing/sharing-02-section6-step1-2.png)
 
 在“创建新应用程序”页上，输入以下值：
 
@@ -124,11 +124,11 @@ ms.locfileid: "91697164"
 
 然后，单击“创建”按钮来创建新的应用：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-3.png)
+![Photon 创建应用程序页](images/mr-learning-sharing/sharing-02-section6-step1-3.png)
 
 Photon 完成创建过程后，仪表板上将显示新的 PUN 应用：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-4.png)
+![Photon 应用程序页](images/mr-learning-sharing/sharing-02-section6-step1-4.png)
 
 ## <a name="connecting-the-unity-project-to-the-pun-application"></a>将 Unity 项目连接到 PUN 应用程序
 
@@ -136,7 +136,7 @@ Photon 完成创建过程后，仪表板上将显示新的 PUN 应用：
 
 在 Photon 仪表板上，单击“应用 ID”字段以显示应用 ID，然后将其复制到剪贴板：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section7-step1-1.png)
+![选中了应用 ID 的 Photon 应用程序页](images/mr-learning-sharing/sharing-02-section7-step1-1.png)
 
 在 Unity 菜单中，选择“窗口” > “Photon Unity Networking” > “PUN 向导”以打开 PUN 向导窗口，然后单击“设置项目”按钮以打开“PUN 设置”菜单，并按如下所示对其进行配置：
 
@@ -144,11 +144,11 @@ Photon 完成创建过程后，仪表板上将显示新的 PUN 应用：
 
 然后单击“设置项目”按钮，以应用该应用 ID：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section7-step1-2.png)
+![填写了应用 ID 的 Unity PUN 设置窗口](images/mr-learning-sharing/sharing-02-section7-step1-2.png)
 
 当 Unity 完成 PUN 设置过程后，“PUN 设置”菜单将显示消息“已完成!” 并在“项目”窗口中自动选择“PhotonServerSettings”资产，使其属性显示在检查器窗口中：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section7-step1-3.png)
+![应用了“设置项目”的 Unity PUN 设置窗口](images/mr-learning-sharing/sharing-02-section7-step1-3.png)
 
 ## <a name="congratulations"></a>祝贺
 

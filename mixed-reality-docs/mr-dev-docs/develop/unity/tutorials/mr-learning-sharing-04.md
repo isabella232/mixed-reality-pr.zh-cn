@@ -1,18 +1,18 @@
 ---
 title: 多用户功能教程 - 4. 与多个用户共享对象运动
-description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现多用户共享体验。
+description: 完成本课程可以了解如何在 HoloLens 2 应用程序中与多个用户共享对象运动。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: b080522e25d933aeb979c3d9a851beaaac4da57f
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 4a8d98bbabd3061e8fb9f4262e202dac680d584b
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697047"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353415"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4.与多个用户共享对象运动
 
@@ -29,7 +29,7 @@ ms.locfileid: "91697047"
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.MultiUserCapabilities” > “预制件”文件夹，然后将“TableAnchor”预制件拖动到“层次结构”窗口中“SharedPlayground”对象上，以将其作为 SharedPlayground 对象的子项添加到场景    ：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-04-section1-step1-1.png)
+![选中新增的 TableAnchor 预制件的 Unity](images/mr-learning-sharing/sharing-04-section1-step1-1.png)
 
 ## <a name="configuring-pun-to-instantiate-the-objects"></a>配置 PUN 以将对象实例化
 
@@ -41,19 +41,19 @@ ms.locfileid: "91697047"
 
 * 向“探测车浏览器预制件”字段分配来自“资源”文件夹的“RoverExplorer_Complete_Variant”预制件 
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-04-section2-step1-1.png)
+![配置了部分 Photon 房间组件的 Unity](images/mr-learning-sharing/sharing-04-section2-step1-1.png)
 
 在“NetworkRoom”子对象仍处于选中状态的情况下，在“层次结构”窗口中展开“TableAnchor”对象，然后在“检查器”窗口中，找到“Photon 房间(脚本)”组件，并按如下所示对其进行配置：  
 
 * 向“探测车浏览器位置”字段中分配来自“层次结构”窗口的“TableAnchor”>“Table”子对象 
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-04-section2-step1-2.png)
+![配置了 Photon 房间组件的 Unity](images/mr-learning-sharing/sharing-04-section2-step1-2.png)
 
 ## <a name="trying-the-experience-with-shared-object-movement"></a>尝试带有共享对象移动的体验
 
 如果现在生成了 Unity 项目并将其部署到 HoloLens，然后返回到 Unity，并且在应用运行于 HoloLens 上时按“玩游戏”按钮以进入“游戏”模式，那么，当你在 HoloLens 中移动对象时，你将看到对象在 Unity 中移动：
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-04-section3-step1-1.gif)
+![动画显示了具有联网对象的 Unity](images/mr-learning-sharing/sharing-04-section3-step1-1.gif)
 
 ## <a name="congratulations"></a>祝贺
 

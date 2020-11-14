@@ -1,18 +1,18 @@
 ---
 title: 入门教程 - 8. 使用眼动跟踪
-description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建混合现实应用程序。
+description: 本课程介绍如何结合使用眼动跟踪和混合现实工具包 (MRTK)。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: a87b613ca47eb0ed6695a55c8e5afe0f24de5937
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 490a131bb196941d2ae581b97d88a104c0c212e2
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696771"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353495"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
 
@@ -32,7 +32,7 @@ ms.locfileid: "91696771"
 
 在 Unity 菜单中，选择“混合现实工具包”>“实用工具”>“配置 Unity 项目”，打开“MRTK 项目配置器”窗口，然后在“UWP 功能”部分中，验证“启用眼睛凝视输入功能”是否灰显   ：
 
-![mr-learning-base](images/mr-learning-base/base-08-section1-step1-1.png)
+![Unity“MRTK 项目配置器”窗口](images/mr-learning-base/base-08-section1-step1-1.png)
 
 > [!NOTE]
 > 当你在本系列教程开头配置 Unity 项目时，[应用 MRTK 项目配置器设置](mr-learning-base-02.md#1-apply-the-mrtk-project-configurator-settings)指令期间应该已经启用了眼睛凝视输入功能。 但如果未启用此功能，请确保立即启用。
@@ -46,7 +46,7 @@ ms.locfileid: "91696771"
 * 克隆 DefaultMixedRealityPointerProfile 并为其指定合适的名称，例如 GettingStarted_MixedRealityPointerProfile
 * 找到“凝视设置”部分，并选中“是否启用了眼动跟踪”复选框 
 
-![mr-learning-base](images/mr-learning-base/base-08-section2-step1-1.png)
+![应用了新创建的配置文件并启用了眼动跟踪的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-08-section2-step1-1.png)
 
 > [!TIP]
 > 有关如何克隆 MRTK 配置文件的提示，可参阅[配置 MRTK 配置文件](mr-learning-base-03.md)中的说明。
@@ -59,20 +59,20 @@ ms.locfileid: "91696771"
 * 克隆 DefaultMixedRealityInputSimulationProfile 并为其指定合适的名称，例如 GettingStarted_MixedRealityInputSimulationProfile
 * 找到“眼动模拟”部分，然后选中“模拟眼睛位置”复选框 
 
-![mr-learning-base](images/mr-learning-base/base-08-section3-step1-1.png)
+![应用了新创建的配置文件并启用了眼动模拟的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-08-section3-step1-1.png)
 
 ## <a name="adding-eye-tracking-to-objects"></a>将眼动跟踪添加到对象
 
 在“层次结构”窗口中，展开“RoverExplorer”>“按钮”对象，然后为三个子按钮对象中的每一个对象展开并选择“SeeItSayItLabel”>“TextMeshPro”对象 ：
 
-![mr-learning-base](images/mr-learning-base/base-08-section4-step1-1.png)
+![选中了 TextMeshPro 对象的 Unity](images/mr-learning-base/base-08-section4-step1-1.png)
 
 当“检查器”窗口中的三个“TextMeshPro”对象仍处于选中状态时，请使用“添加组件”按钮将以下组件添加到所有选定对象：
 
 * 盒碰撞体组件
 * EyeTrackingTarget 组件
 
-![mr-learning-base](images/mr-learning-base/base-08-section4-step1-2.png)
+![选中了 TextMeshPro 对象并添加了组件的 Unity](images/mr-learning-base/base-08-section4-step1-2.png)
 
 在“层次结构”窗口中，选择“提示”>“SeeItSayItLabel”>“TextMeshPro”对象，然后按以下方式配置“EyeTrackingTarget”组件  ：
 
@@ -87,13 +87,13 @@ ms.locfileid: "91696771"
   * 在“无函数”下拉列表中选择“TextMeshPro” > “float fontSize”，以便在触发事件时更新此属性  
   * 将参数设置为 0.04 以将字号重置为 0.04
 
-![mr-learning-base](images/mr-learning-base/base-08-section4-step1-3.png)
+![选中了“提示 TextMeshPro 对象”并配置了 EyeTrackingTarget 组件的 Unity](images/mr-learning-base/base-08-section4-step1-3.png)
 
 对“分解”>“SeeItSayItLabel”>“TextMeshPro”对象和“重置”>“SeeItSayItLabel”>“TextMeshPro”对象重复此步骤    。
 
 如果你现在进入游戏模式，然后按住鼠标右键，同时移动鼠标，直到凝视命中的某个标签出现，你将看到字号增加了 50%，而鼠标移走时字号将重置回其原始大小：
 
-![mr-learning-base](images/mr-learning-base/base-08-section4-step1-4.png)
+![视线对准眼动跟踪目标“分解”按钮标签的 Unity“播放”模式分屏视图](images/mr-learning-base/base-08-section4-step1-4.png)
 
 ## <a name="congratulations"></a>祝贺
 

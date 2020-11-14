@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 4664adc6fa5bf5211fd495c8cc68dabf80fdc2e2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 07130f7d8f10464219458be4ddd5c420a0512b51
+ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695762"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93416983"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1.集成并使用语音识别和听录
 
@@ -35,10 +35,10 @@ ms.locfileid: "91695762"
 * Windows 10 SDK 10.0.18362.0 或更高版本
 * 一些基本的 C# 编程功能
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity 中心</a>，其中已安装 Unity 2019.2.X 并添加了通用 Windows 平台生成支持模块
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块
 
 > [!IMPORTANT]
-> 建议用于本系列教程的 Unity 版本是 Unity 2019.2.X。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求或建议。
+> 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求或建议。
 
 ## <a name="creating-and-preparing-the-unity-project"></a>创建和准备 Unity 项目
 
