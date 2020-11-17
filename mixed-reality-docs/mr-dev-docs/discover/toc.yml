@@ -6,6 +6,8 @@
   href: hologram.md
 - name: 扩展设计过程
   href: case-study-expanding-the-design-process-for-mixed-reality.md
+- name: 案例研究概述
+  href: case-studies-overview.md
 - name: HoloLens 硬件
   items:
     - name: HoloLens 2 硬件详细信息

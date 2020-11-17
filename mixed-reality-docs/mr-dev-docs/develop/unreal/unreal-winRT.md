@@ -5,57 +5,57 @@ author: fieldsJacksonG
 ms.author: jacksonf
 ms.date: 07/08/2020
 ms.topic: article
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发
-ms.openlocfilehash: 09d90af95d9433772563fdc292f31d118b3dd846
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，流式处理，远程处理，混合现实，开发，入门，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，WinRT，DLL
+ms.openlocfilehash: fd50e5ecd3186fc8852936affbfedc3d5fd4de75
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573291"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679806"
 ---
-# <a name="winrt-in-unreal"></a><span data-ttu-id="07a5a-104">Unreal 中的 WinRT</span><span class="sxs-lookup"><span data-stu-id="07a5a-104">WinRT in Unreal</span></span>
+# <a name="winrt-in-unreal"></a><span data-ttu-id="e13b0-104">Unreal 中的 WinRT</span><span class="sxs-lookup"><span data-stu-id="e13b0-104">WinRT in Unreal</span></span>
 
-## <a name="overview"></a><span data-ttu-id="07a5a-105">概述</span><span class="sxs-lookup"><span data-stu-id="07a5a-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="e13b0-105">概述</span><span class="sxs-lookup"><span data-stu-id="e13b0-105">Overview</span></span>
 
-<span data-ttu-id="07a5a-106">在 HoloLens 开发过程中，可能需要使用 WinRT 编写功能。</span><span class="sxs-lookup"><span data-stu-id="07a5a-106">Over the course of your HoloLens development you may need to write a feature using WinRT.</span></span> <span data-ttu-id="07a5a-107">例如，在 HoloLens 应用程序中打开文件对话时，需要 winrt/FileSavePicker 头文件中的。</span><span class="sxs-lookup"><span data-stu-id="07a5a-107">For example, opening a file dialogue in a HoloLens application would need the FileSavePicker in winrt/Windows.Storage.Pickers.h header file.</span></span>  <span data-ttu-id="07a5a-108">由于 Unreal 不会以本机方式编译 WinRT 代码，因此您的工作就是生成一个单独的二进制文件，并可由 Unreal 的生成系统使用。</span><span class="sxs-lookup"><span data-stu-id="07a5a-108">Since Unreal doesn't natively compile WinRT code, it's your job to build a separate binary and that can be consumed by Unreal’s build system.</span></span> <span data-ttu-id="07a5a-109">本教程将引导你完成此类方案。</span><span class="sxs-lookup"><span data-stu-id="07a5a-109">This tutorial will walk you through just such a scenario.</span></span>
+<span data-ttu-id="e13b0-106">在 HoloLens 开发过程中，可能需要使用 WinRT 编写功能。</span><span class="sxs-lookup"><span data-stu-id="e13b0-106">Over the course of your HoloLens development you may need to write a feature using WinRT.</span></span> <span data-ttu-id="e13b0-107">例如，在 HoloLens 应用程序中打开文件对话时，需要 winrt/FileSavePicker 头文件中的。</span><span class="sxs-lookup"><span data-stu-id="e13b0-107">For example, opening a file dialogue in a HoloLens application would need the FileSavePicker in winrt/Windows.Storage.Pickers.h header file.</span></span>  <span data-ttu-id="e13b0-108">由于 Unreal 不会以本机方式编译 WinRT 代码，因此您的工作就是生成一个单独的二进制文件，并可由 Unreal 的生成系统使用。</span><span class="sxs-lookup"><span data-stu-id="e13b0-108">Since Unreal doesn't natively compile WinRT code, it's your job to build a separate binary and that can be consumed by Unreal’s build system.</span></span> <span data-ttu-id="e13b0-109">本教程将引导你完成此类方案。</span><span class="sxs-lookup"><span data-stu-id="e13b0-109">This tutorial will walk you through just such a scenario.</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="07a5a-110">目标</span><span class="sxs-lookup"><span data-stu-id="07a5a-110">Objectives</span></span>
-- <span data-ttu-id="07a5a-111">创建用于打开 FileSaveDialogue 的通用 Windows DLL</span><span class="sxs-lookup"><span data-stu-id="07a5a-111">Create a Universal Windows DLL that opens a FileSaveDialogue</span></span>
-- <span data-ttu-id="07a5a-112">将该 DLL 链接到 Unreal 游戏项目</span><span class="sxs-lookup"><span data-stu-id="07a5a-112">Link that DLL to an Unreal game project</span></span>
-- <span data-ttu-id="07a5a-113">使用新 DLL 从 Unreal 蓝图将文件保存在 HoloLens 上</span><span class="sxs-lookup"><span data-stu-id="07a5a-113">Save a file on the HoloLens from an Unreal blueprint using the new DLL</span></span>
+## <a name="objectives"></a><span data-ttu-id="e13b0-110">目标</span><span class="sxs-lookup"><span data-stu-id="e13b0-110">Objectives</span></span>
+- <span data-ttu-id="e13b0-111">创建用于打开 FileSaveDialogue 的通用 Windows DLL</span><span class="sxs-lookup"><span data-stu-id="e13b0-111">Create a Universal Windows DLL that opens a FileSaveDialogue</span></span>
+- <span data-ttu-id="e13b0-112">将该 DLL 链接到 Unreal 游戏项目</span><span class="sxs-lookup"><span data-stu-id="e13b0-112">Link that DLL to an Unreal game project</span></span>
+- <span data-ttu-id="e13b0-113">使用新 DLL 从 Unreal 蓝图将文件保存在 HoloLens 上</span><span class="sxs-lookup"><span data-stu-id="e13b0-113">Save a file on the HoloLens from an Unreal blueprint using the new DLL</span></span>
 
-## <a name="getting-started"></a><span data-ttu-id="07a5a-114">开始使用</span><span class="sxs-lookup"><span data-stu-id="07a5a-114">Getting started</span></span>
-1. <span data-ttu-id="07a5a-115">检查是否已安装所有[必需的工具](tutorials/unreal-uxt-ch1.md)</span><span class="sxs-lookup"><span data-stu-id="07a5a-115">Check that you have all [required tools](tutorials/unreal-uxt-ch1.md) installed</span></span>
-2. <span data-ttu-id="07a5a-116">[创建新的 Unreal 项目](tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) 并将其命名为 **Consumewinrt**</span><span class="sxs-lookup"><span data-stu-id="07a5a-116">[Create a new Unreal project](tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) and name it **Consumewinrt**</span></span>
-3. <span data-ttu-id="07a5a-117">为 HoloLens 开发启用[所需插件](tutorials/unreal-uxt-ch2.md#enabling-required-plugins)</span><span class="sxs-lookup"><span data-stu-id="07a5a-117">Enable the [required plugins](tutorials/unreal-uxt-ch2.md#enabling-required-plugins) for HoloLens development</span></span>
-4. <span data-ttu-id="07a5a-118">部署到设备或仿真程序[的设置](tutorials/unreal-uxt-ch6.md)</span><span class="sxs-lookup"><span data-stu-id="07a5a-118">[Setup for deployment](tutorials/unreal-uxt-ch6.md) to a device or emulator</span></span>
+## <a name="getting-started"></a><span data-ttu-id="e13b0-114">入门</span><span class="sxs-lookup"><span data-stu-id="e13b0-114">Getting started</span></span>
+1. <span data-ttu-id="e13b0-115">检查是否已安装所有[必需的工具](tutorials/unreal-uxt-ch1.md)</span><span class="sxs-lookup"><span data-stu-id="e13b0-115">Check that you have all [required tools](tutorials/unreal-uxt-ch1.md) installed</span></span>
+2. <span data-ttu-id="e13b0-116">[创建新的 Unreal 项目](tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) 并将其命名为 **Consumewinrt**</span><span class="sxs-lookup"><span data-stu-id="e13b0-116">[Create a new Unreal project](tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) and name it **Consumewinrt**</span></span>
+3. <span data-ttu-id="e13b0-117">为 HoloLens 开发启用[所需插件](tutorials/unreal-uxt-ch2.md#enabling-required-plugins)</span><span class="sxs-lookup"><span data-stu-id="e13b0-117">Enable the [required plugins](tutorials/unreal-uxt-ch2.md#enabling-required-plugins) for HoloLens development</span></span>
+4. <span data-ttu-id="e13b0-118">部署到设备或仿真程序[的设置](tutorials/unreal-uxt-ch6.md)</span><span class="sxs-lookup"><span data-stu-id="e13b0-118">[Setup for deployment](tutorials/unreal-uxt-ch6.md) to a device or emulator</span></span>
 
-## <a name="creating-a-winrt-dll"></a><span data-ttu-id="07a5a-119">创建 WinRT DLL</span><span class="sxs-lookup"><span data-stu-id="07a5a-119">Creating a WinRT DLL</span></span> 
-1. <span data-ttu-id="07a5a-120">打开新的 Visual Studio 项目，并在 Unreal 游戏的 **uproject** 文件所在的同一目录中 **(通用 Windows)** 项目创建一个 DLL。</span><span class="sxs-lookup"><span data-stu-id="07a5a-120">Open a new Visual Studio project and create a **DLL (Universal Windows)** project in the same directory to the Unreal game’s **uproject** file.</span></span> 
+## <a name="creating-a-winrt-dll"></a><span data-ttu-id="e13b0-119">创建 WinRT DLL</span><span class="sxs-lookup"><span data-stu-id="e13b0-119">Creating a WinRT DLL</span></span> 
+1. <span data-ttu-id="e13b0-120">打开新的 Visual Studio 项目，并在 Unreal 游戏的 **uproject** 文件所在的同一目录中 **(通用 Windows)** 项目创建一个 DLL。</span><span class="sxs-lookup"><span data-stu-id="e13b0-120">Open a new Visual Studio project and create a **DLL (Universal Windows)** project in the same directory to the Unreal game’s **uproject** file.</span></span> 
 
 ![创建 DLL](images/unreal-winrt-img-01.png)
 
-2. <span data-ttu-id="07a5a-122">将该项目命名为 **HoloLensWinrtDLL** ，并将该位置设置为 Unreal 游戏 uproject 文件的 **ThirdParty** 子目录。</span><span class="sxs-lookup"><span data-stu-id="07a5a-122">Name the project **HoloLensWinrtDLL** and set the location as a **ThirdParty** subdirectory to the Unreal game’s uproject file.</span></span> 
-    * <span data-ttu-id="07a5a-123">选择 **"将解决方案和项目放置在相同的目录中"** ，以简化以后查找路径的情况。</span><span class="sxs-lookup"><span data-stu-id="07a5a-123">Select **Place solution and project in the same directory** to simplify looking for paths later.</span></span> 
+2. <span data-ttu-id="e13b0-122">将该项目命名为 **HoloLensWinrtDLL** ，并将该位置设置为 Unreal 游戏 uproject 文件的 **ThirdParty** 子目录。</span><span class="sxs-lookup"><span data-stu-id="e13b0-122">Name the project **HoloLensWinrtDLL** and set the location as a **ThirdParty** subdirectory to the Unreal game’s uproject file.</span></span> 
+    * <span data-ttu-id="e13b0-123">选择 **"将解决方案和项目放置在相同的目录中"** ，以简化以后查找路径的情况。</span><span class="sxs-lookup"><span data-stu-id="e13b0-123">Select **Place solution and project in the same directory** to simplify looking for paths later.</span></span> 
 
 ![配置 DLL](images/unreal-winrt-img-02.png)
 
 > [!IMPORTANT]
-> <span data-ttu-id="07a5a-125">新项目编译完成后，您需要分别特别注意名为 **HoloLensWinrtDLL** 和 **HoloLensWinrtDLL** 的空白 cpp 和头文件。</span><span class="sxs-lookup"><span data-stu-id="07a5a-125">After the new project compiles, you want to pay special attention to the blank cpp and header files, named **HoloLensWinrtDLL.cpp** and **HoloLensWinrtDLL.h** respectively.</span></span> <span data-ttu-id="07a5a-126">标头是在 Unreal 中使用 DLL 的包含文件，而 cpp 包含所导出的任何函数的主体，并且包含 Unreal 不能编译的任何 WinRT 代码。</span><span class="sxs-lookup"><span data-stu-id="07a5a-126">The header is the include file that uses the DLL in Unreal, while the cpp holds the body of any functions you export and includes any WinRT code that Unreal wouldn't otherwise be able to compile.</span></span> 
+> <span data-ttu-id="e13b0-125">新项目编译完成后，您需要分别特别注意名为 **HoloLensWinrtDLL** 和 **HoloLensWinrtDLL** 的空白 cpp 和头文件。</span><span class="sxs-lookup"><span data-stu-id="e13b0-125">After the new project compiles, you want to pay special attention to the blank cpp and header files, named **HoloLensWinrtDLL.cpp** and **HoloLensWinrtDLL.h** respectively.</span></span> <span data-ttu-id="e13b0-126">标头是在 Unreal 中使用 DLL 的包含文件，而 cpp 包含所导出的任何函数的主体，并且包含 Unreal 不能编译的任何 WinRT 代码。</span><span class="sxs-lookup"><span data-stu-id="e13b0-126">The header is the include file that uses the DLL in Unreal, while the cpp holds the body of any functions you export and includes any WinRT code that Unreal wouldn't otherwise be able to compile.</span></span> 
 
-3. <span data-ttu-id="07a5a-127">添加任何代码之前，需要更新项目属性，以确保所需的 WinRT 代码可以编译：</span><span class="sxs-lookup"><span data-stu-id="07a5a-127">Before you add any code, you need to update the project properties to ensure the WinRT code you need can compile:</span></span> 
-    * <span data-ttu-id="07a5a-128">右键单击 "HoloLensWinrtDLL" 项目，然后选择 " **属性** "</span><span class="sxs-lookup"><span data-stu-id="07a5a-128">Right click on the HoloLensWinrtDLL project and select **properties**</span></span>  
-    * <span data-ttu-id="07a5a-129">将 " **配置** " 下拉列表中的 " **所有配置** " 和 " **平台** " 下拉列表更改为 **所有平台**</span><span class="sxs-lookup"><span data-stu-id="07a5a-129">Change the **Configuration** dropdown to **All Configurations** and the **Platform** dropdown to **All Platforms**</span></span>  
-    * <span data-ttu-id="07a5a-130">在 " **配置属性" 下> C/c + +> 所有选项** ：</span><span class="sxs-lookup"><span data-stu-id="07a5a-130">Under **Configuration Properties> C/C++> All Options** :</span></span>
-        * <span data-ttu-id="07a5a-131">将 **await** 添加到 **其他选项** ，以确保我们可以等待异步任务</span><span class="sxs-lookup"><span data-stu-id="07a5a-131">Add **await** to **Additional Options** to ensure we can wait on async tasks</span></span>  
-        * <span data-ttu-id="07a5a-132">将 **c + + 语言标准** 更改为 **ISO c + + 17 standard (/std： c + + 17)** 以包括任何 WinRT 代码</span><span class="sxs-lookup"><span data-stu-id="07a5a-132">Change **C++ Language Standard** to **ISO C++17 Standard (/std:c++17)** to include any WinRT code</span></span>
+3. <span data-ttu-id="e13b0-127">添加任何代码之前，需要更新项目属性，以确保所需的 WinRT 代码可以编译：</span><span class="sxs-lookup"><span data-stu-id="e13b0-127">Before you add any code, you need to update the project properties to ensure the WinRT code you need can compile:</span></span> 
+    * <span data-ttu-id="e13b0-128">右键单击 "HoloLensWinrtDLL" 项目，然后选择 "**属性**"</span><span class="sxs-lookup"><span data-stu-id="e13b0-128">Right click on the HoloLensWinrtDLL project and select **properties**</span></span>  
+    * <span data-ttu-id="e13b0-129">将 " **配置** " 下拉列表中的 " **所有配置** " 和 " **平台** " 下拉列表更改为 **所有平台**</span><span class="sxs-lookup"><span data-stu-id="e13b0-129">Change the **Configuration** dropdown to **All Configurations** and the **Platform** dropdown to **All Platforms**</span></span>  
+    * <span data-ttu-id="e13b0-130">在 " **配置属性" 下> C/c + +> 所有选项**：</span><span class="sxs-lookup"><span data-stu-id="e13b0-130">Under **Configuration Properties> C/C++> All Options**:</span></span>
+        * <span data-ttu-id="e13b0-131">将 **await** 添加到 **其他选项** ，以确保我们可以等待异步任务</span><span class="sxs-lookup"><span data-stu-id="e13b0-131">Add **await** to **Additional Options** to ensure we can wait on async tasks</span></span>  
+        * <span data-ttu-id="e13b0-132">将 **c + + 语言标准** 更改为 **ISO c + + 17 standard (/std： c + + 17)** 以包括任何 WinRT 代码</span><span class="sxs-lookup"><span data-stu-id="e13b0-132">Change **C++ Language Standard** to **ISO C++17 Standard (/std:c++17)** to include any WinRT code</span></span>
 
 ![升级项目属性](images/unreal-winrt-img-03.png)
 
-<span data-ttu-id="07a5a-134">你的项目已准备好使用 WinRT 代码更新 DLL 的源，该代码打开文件对话框，并将文件保存到 HoloLens 磁盘。</span><span class="sxs-lookup"><span data-stu-id="07a5a-134">Your project is ready to update the DLL’s source with WinRT code that opens a file dialogue and saves a file to the HoloLens disk.</span></span>  
+<span data-ttu-id="e13b0-134">你的项目已准备好使用 WinRT 代码更新 DLL 的源，该代码打开文件对话框，并将文件保存到 HoloLens 磁盘。</span><span class="sxs-lookup"><span data-stu-id="e13b0-134">Your project is ready to update the DLL’s source with WinRT code that opens a file dialogue and saves a file to the HoloLens disk.</span></span>  
 
-## <a name="adding-the-dll-code"></a><span data-ttu-id="07a5a-135">添加 DLL 代码</span><span class="sxs-lookup"><span data-stu-id="07a5a-135">Adding the DLL code</span></span>
-1. <span data-ttu-id="07a5a-136">打开 **HoloLensWinrtDLL** ，并添加要使用的 Unreal 的 dll 导出函数：</span><span class="sxs-lookup"><span data-stu-id="07a5a-136">Open **HoloLensWinrtDLL.h** and add a dll exported function for Unreal to consume:</span></span> 
+## <a name="adding-the-dll-code"></a><span data-ttu-id="e13b0-135">添加 DLL 代码</span><span class="sxs-lookup"><span data-stu-id="e13b0-135">Adding the DLL code</span></span>
+1. <span data-ttu-id="e13b0-136">打开 **HoloLensWinrtDLL** ，并添加要使用的 Unreal 的 dll 导出函数：</span><span class="sxs-lookup"><span data-stu-id="e13b0-136">Open **HoloLensWinrtDLL.h** and add a dll exported function for Unreal to consume:</span></span> 
 
 ```cpp
 #pragma once
@@ -67,7 +67,7 @@ public:
 };
 ```
 
-2. <span data-ttu-id="07a5a-137">打开 **HoloLensWinrtDLL** 并添加类将使用的所有标头：</span><span class="sxs-lookup"><span data-stu-id="07a5a-137">Open **HoloLensWinrtDLL.cpp** and add all headers the class will use:</span></span>  
+2. <span data-ttu-id="e13b0-137">打开 **HoloLensWinrtDLL** 并添加类将使用的所有标头：</span><span class="sxs-lookup"><span data-stu-id="e13b0-137">Open **HoloLensWinrtDLL.cpp** and add all headers the class will use:</span></span>  
 
 ```cpp
 #include "pch.h"
@@ -85,9 +85,9 @@ public:
 ```
 
 > [!NOTE]
-> <span data-ttu-id="07a5a-138">所有 WinRT 代码都存储在 **HoloLensWinrtDLL** 中，因此 Unreal 不会在引用标头时尝试包含任何 WinRT 代码。</span><span class="sxs-lookup"><span data-stu-id="07a5a-138">All WinRT code is stored in **HoloLensWinrtDLL.cpp** so Unreal doesn't try to include any WinRT code when referencing the header.</span></span> 
+> <span data-ttu-id="e13b0-138">所有 WinRT 代码都存储在 **HoloLensWinrtDLL** 中，因此 Unreal 不会在引用标头时尝试包含任何 WinRT 代码。</span><span class="sxs-lookup"><span data-stu-id="e13b0-138">All WinRT code is stored in **HoloLensWinrtDLL.cpp** so Unreal doesn't try to include any WinRT code when referencing the header.</span></span> 
 
-3. <span data-ttu-id="07a5a-139">仍在 **HoloLensWinrtDLL** 中，为 OpenFileDialogue ( # A1 和所有支持的代码添加函数体：</span><span class="sxs-lookup"><span data-stu-id="07a5a-139">Still in **HoloLensWinrtDLL.cpp** , add a function body for OpenFileDialogue() and all supported code:</span></span> 
+3. <span data-ttu-id="e13b0-139">仍在 **HoloLensWinrtDLL** 中，为 OpenFileDialogue ( # A1 和所有支持的代码添加函数体：</span><span class="sxs-lookup"><span data-stu-id="e13b0-139">Still in **HoloLensWinrtDLL.cpp**, add a function body for OpenFileDialogue() and all supported code:</span></span> 
 
 ```cpp
 // sgm is declared outside of OpenFileDialogue so it doesn't
@@ -100,7 +100,7 @@ void HoloLensWinrtDLL::OpenFileDialogue()
 }
 ```
 
-4. <span data-ttu-id="07a5a-140">将 SaveGameManager 类添加到 **HoloLensWinrtDLL** 以处理文件对话框并保存文件：</span><span class="sxs-lookup"><span data-stu-id="07a5a-140">Add a SaveGameManager class to **HoloLensWinrtDLL.cpp** to handle the file dialogue and saving the file:</span></span> 
+4. <span data-ttu-id="e13b0-140">将 SaveGameManager 类添加到 **HoloLensWinrtDLL** 以处理文件对话框并保存文件：</span><span class="sxs-lookup"><span data-stu-id="e13b0-140">Add a SaveGameManager class to **HoloLensWinrtDLL.cpp** to handle the file dialogue and saving the file:</span></span> 
 
 ```cpp
 class SaveGameManager
@@ -168,24 +168,24 @@ private:
 };
 ```
 
-5. <span data-ttu-id="07a5a-141">生成用于 **Release > ARM64** 的解决方案，以便将 DLL 从 dll 解决方案生成到子目录 ARM64/Release/HoloLensWinrtDLL。</span><span class="sxs-lookup"><span data-stu-id="07a5a-141">Build the solution for **Release > ARM64** to build the DLL to the child directory ARM64/Release/HoloLensWinrtDLL from the DLL solution.</span></span> 
+5. <span data-ttu-id="e13b0-141">生成用于 **Release > ARM64** 的解决方案，以便将 DLL 从 dll 解决方案生成到子目录 ARM64/Release/HoloLensWinrtDLL。</span><span class="sxs-lookup"><span data-stu-id="e13b0-141">Build the solution for **Release > ARM64** to build the DLL to the child directory ARM64/Release/HoloLensWinrtDLL from the DLL solution.</span></span> 
 
-## <a name="adding-the-winrt-binary-to-unreal"></a><span data-ttu-id="07a5a-142">向 Unreal 添加 WinRT 二进制文件</span><span class="sxs-lookup"><span data-stu-id="07a5a-142">Adding the WinRT binary to Unreal</span></span> 
-<span data-ttu-id="07a5a-143">在 Unreal 中链接和使用 DLL 需要一个 c + + 项目。</span><span class="sxs-lookup"><span data-stu-id="07a5a-143">Linking and using a DLL in Unreal requires a C++ project.</span></span> <span data-ttu-id="07a5a-144">如果使用的是蓝图项目，可以通过添加 c + + 类轻松地将其转换为 c + + 项目：</span><span class="sxs-lookup"><span data-stu-id="07a5a-144">If you're using a Blueprint project, it can be easily converted to a C++ project by adding a C++ class:</span></span>  
+## <a name="adding-the-winrt-binary-to-unreal"></a><span data-ttu-id="e13b0-142">向 Unreal 添加 WinRT 二进制文件</span><span class="sxs-lookup"><span data-stu-id="e13b0-142">Adding the WinRT binary to Unreal</span></span> 
+<span data-ttu-id="e13b0-143">在 Unreal 中链接和使用 DLL 需要一个 c + + 项目。</span><span class="sxs-lookup"><span data-stu-id="e13b0-143">Linking and using a DLL in Unreal requires a C++ project.</span></span> <span data-ttu-id="e13b0-144">如果使用的是蓝图项目，可以通过添加 c + + 类轻松地将其转换为 c + + 项目：</span><span class="sxs-lookup"><span data-stu-id="e13b0-144">If you're using a Blueprint project, it can be easily converted to a C++ project by adding a C++ class:</span></span>  
 
-1. <span data-ttu-id="07a5a-145">在 Unreal 编辑器中，打开 " **> 新建 c + + 类的文件 ...** "</span><span class="sxs-lookup"><span data-stu-id="07a5a-145">In the Unreal editor, open **File > New C++ Class…**</span></span> <span data-ttu-id="07a5a-146">并在 DLL 中 **创建名为** **WinrtActor** 的新执行组件：</span><span class="sxs-lookup"><span data-stu-id="07a5a-146">and create a new **Actor** named **WinrtActor** to run the code in the DLL:</span></span> 
+1. <span data-ttu-id="e13b0-145">在 Unreal 编辑器中，打开 " **> 新建 c + + 类的文件 ...** "</span><span class="sxs-lookup"><span data-stu-id="e13b0-145">In the Unreal editor, open **File > New C++ Class…**</span></span> <span data-ttu-id="e13b0-146">并在 DLL 中 **创建名为** **WinrtActor** 的新执行组件：</span><span class="sxs-lookup"><span data-stu-id="e13b0-146">and create a new **Actor** named **WinrtActor** to run the code in the DLL:</span></span> 
 
 ![创建新的执行组件](images/unreal-winrt-img-04.png)
 
 > [!NOTE]
-> <span data-ttu-id="07a5a-148">现在，已在与 uproject 文件相同的目录中创建了一个解决方案，同时还创建了一个名为 Source/ConsumeWinRT/ConsumeWinRT 的新生成脚本。</span><span class="sxs-lookup"><span data-stu-id="07a5a-148">A solution has now been created in the same directory as the uproject file along with a new build script named Source/ConsumeWinRT/ConsumeWinRT.Build.cs.</span></span>
+> <span data-ttu-id="e13b0-148">现在，已在与 uproject 文件相同的目录中创建了一个解决方案，同时还创建了一个名为 Source/ConsumeWinRT/ConsumeWinRT 的新生成脚本。</span><span class="sxs-lookup"><span data-stu-id="e13b0-148">A solution has now been created in the same directory as the uproject file along with a new build script named Source/ConsumeWinRT/ConsumeWinRT.Build.cs.</span></span>
 
-2. <span data-ttu-id="07a5a-149">打开解决方案，浏览到 **游戏/ConsumeWinRT/源/ConsumeWinRT** 文件夹，然后打开 **ConsumeWinRT.build.cs** ：</span><span class="sxs-lookup"><span data-stu-id="07a5a-149">Open the solution, browse for the **Games/ConsumeWinRT/Source/ConsumeWinRT** folder, and open **ConsumeWinRT.build.cs** :</span></span>
+2. <span data-ttu-id="e13b0-149">打开解决方案，浏览到 **游戏/ConsumeWinRT/源/ConsumeWinRT** 文件夹，然后打开 **ConsumeWinRT.build.cs**：</span><span class="sxs-lookup"><span data-stu-id="e13b0-149">Open the solution, browse for the **Games/ConsumeWinRT/Source/ConsumeWinRT** folder, and open **ConsumeWinRT.build.cs**:</span></span>
 
 ![打开 ConsumeWinRT.build.cs 文件](images/unreal-winrt-img-05.png)
 
-### <a name="linking-the-dll"></a><span data-ttu-id="07a5a-151">链接 DLL</span><span class="sxs-lookup"><span data-stu-id="07a5a-151">Linking the DLL</span></span>
-1. <span data-ttu-id="07a5a-152">在 **ConsumeWinRT.build.cs** 中，添加一个属性来查找 DLL (包含 HoloLensWinrtDLL) 的目录的包含路径。</span><span class="sxs-lookup"><span data-stu-id="07a5a-152">In **ConsumeWinRT.build.cs** , add a property to find the include path for the DLL (the directory containing HoloLensWinrtDLL.h).</span></span> <span data-ttu-id="07a5a-153">DLL 位于包含路径的子目录中，因此此属性将用作二进制根目录：</span><span class="sxs-lookup"><span data-stu-id="07a5a-153">The DLL is in a child directory to the include path, so this property will be used as the binary root dir:</span></span>
+### <a name="linking-the-dll"></a><span data-ttu-id="e13b0-151">链接 DLL</span><span class="sxs-lookup"><span data-stu-id="e13b0-151">Linking the DLL</span></span>
+1. <span data-ttu-id="e13b0-152">在 **ConsumeWinRT.build.cs** 中，添加一个属性来查找 DLL (包含 HoloLensWinrtDLL) 的目录的包含路径。</span><span class="sxs-lookup"><span data-stu-id="e13b0-152">In **ConsumeWinRT.build.cs**, add a property to find the include path for the DLL (the directory containing HoloLensWinrtDLL.h).</span></span> <span data-ttu-id="e13b0-153">DLL 位于包含路径的子目录中，因此此属性将用作二进制根目录：</span><span class="sxs-lookup"><span data-stu-id="e13b0-153">The DLL is in a child directory to the include path, so this property will be used as the binary root dir:</span></span>
 
 ```cs
 using System.IO;
@@ -209,7 +209,7 @@ public class ConsumeWinRT : ModuleRules
 }
 ```
 
-2. <span data-ttu-id="07a5a-154">在类构造函数中，添加以下代码以更新包含路径、链接新的 lib 并延迟加载，并将 DLL 复制到打包的 appx 位置：</span><span class="sxs-lookup"><span data-stu-id="07a5a-154">In the class constructor, add the following code to update the include path, link the new lib, and delay-load and copy the DLL to the packaged appx location:</span></span>
+2. <span data-ttu-id="e13b0-154">在类构造函数中，添加以下代码以更新包含路径、链接新的 lib 并延迟加载，并将 DLL 复制到打包的 appx 位置：</span><span class="sxs-lookup"><span data-stu-id="e13b0-154">In the class constructor, add the following code to update the include path, link the new lib, and delay-load and copy the DLL to the packaged appx location:</span></span>
 
 ```cs
 public ConsumeWinRT(ReadOnlyTargetRules target) : base(Target)
@@ -240,7 +240,7 @@ public ConsumeWinRT(ReadOnlyTargetRules target) : base(Target)
 }
 ```
 
-3. <span data-ttu-id="07a5a-155">打开 **WinrtActor** 并添加一个由蓝图调用的函数定义：</span><span class="sxs-lookup"><span data-stu-id="07a5a-155">Open **WinrtActor.h** and add one function definition, one that a blueprint will call:</span></span> 
+3. <span data-ttu-id="e13b0-155">打开 **WinrtActor** 并添加一个由蓝图调用的函数定义：</span><span class="sxs-lookup"><span data-stu-id="e13b0-155">Open **WinrtActor.h** and add one function definition, one that a blueprint will call:</span></span> 
 
 ```cpp
 public:
@@ -248,7 +248,7 @@ public:
     static void OpenFileDialogue();
 ```
 
-4. <span data-ttu-id="07a5a-156">打开 **WinrtActor** 并更新 BeginPlay 以加载 DLL：</span><span class="sxs-lookup"><span data-stu-id="07a5a-156">Open **WinrtActor.cpp** and update BeginPlay to load the DLL:</span></span> 
+4. <span data-ttu-id="e13b0-156">打开 **WinrtActor** 并更新 BeginPlay 以加载 DLL：</span><span class="sxs-lookup"><span data-stu-id="e13b0-156">Open **WinrtActor.cpp** and update BeginPlay to load the DLL:</span></span> 
 
 ```cpp
 void AWinrtActor::BeginPlay()
@@ -274,39 +274,39 @@ void AWinrtActor::OpenFileDialogue()
 ``` 
 
 >[!CAUTION]
-> <span data-ttu-id="07a5a-157">必须先加载 DLL，然后才能调用它的任何函数。</span><span class="sxs-lookup"><span data-stu-id="07a5a-157">The DLL must be loaded before calling any of its functions.</span></span>
+> <span data-ttu-id="e13b0-157">必须先加载 DLL，然后才能调用它的任何函数。</span><span class="sxs-lookup"><span data-stu-id="e13b0-157">The DLL must be loaded before calling any of its functions.</span></span>
 
-### <a name="building-the-game"></a><span data-ttu-id="07a5a-158">构建游戏</span><span class="sxs-lookup"><span data-stu-id="07a5a-158">Building the game</span></span>
-1. <span data-ttu-id="07a5a-159">构建游戏解决方案，启动为游戏项目打开的 Unreal 编辑器：</span><span class="sxs-lookup"><span data-stu-id="07a5a-159">Build the game solution to launch the Unreal editor opened to the game project:</span></span> 
-    * <span data-ttu-id="07a5a-160">在 " **设置参与者** " 选项卡中，搜索新 **WinrtActor** 并将其拖动到场景中</span><span class="sxs-lookup"><span data-stu-id="07a5a-160">In the **Place Actors** tab, search for the new **WinrtActor** and drag it into the scene</span></span> 
-    * <span data-ttu-id="07a5a-161">打开级别蓝图，以在 **WinrtActor** 中执行蓝图可调用函数</span><span class="sxs-lookup"><span data-stu-id="07a5a-161">Open the level blueprint to execute the blueprint callable function in the **WinrtActor**</span></span> 
+### <a name="building-the-game"></a><span data-ttu-id="e13b0-158">构建游戏</span><span class="sxs-lookup"><span data-stu-id="e13b0-158">Building the game</span></span>
+1. <span data-ttu-id="e13b0-159">构建游戏解决方案，启动为游戏项目打开的 Unreal 编辑器：</span><span class="sxs-lookup"><span data-stu-id="e13b0-159">Build the game solution to launch the Unreal editor opened to the game project:</span></span> 
+    * <span data-ttu-id="e13b0-160">在 " **设置参与者** " 选项卡中，搜索新 **WinrtActor** 并将其拖动到场景中</span><span class="sxs-lookup"><span data-stu-id="e13b0-160">In the **Place Actors** tab, search for the new **WinrtActor** and drag it into the scene</span></span> 
+    * <span data-ttu-id="e13b0-161">打开级别蓝图，以在 **WinrtActor** 中执行蓝图可调用函数</span><span class="sxs-lookup"><span data-stu-id="e13b0-161">Open the level blueprint to execute the blueprint callable function in the **WinrtActor**</span></span> 
 
 ![将 WinrtActor 放在场景中](images/unreal-winrt-img-06.png)
 
-2. <span data-ttu-id="07a5a-163">在 **World Outliner** 中，找到以前拖放到场景中的 **WindrtActor** ，并将其拖动到级别蓝图：</span><span class="sxs-lookup"><span data-stu-id="07a5a-163">In the **World Outliner** , find the **WindrtActor** previously dropped into the scene and drag it into the level blueprint:</span></span> 
+2. <span data-ttu-id="e13b0-163">在 **World Outliner** 中，找到以前拖放到场景中的 **WindrtActor** ，并将其拖动到级别蓝图：</span><span class="sxs-lookup"><span data-stu-id="e13b0-163">In the **World Outliner**, find the **WindrtActor** previously dropped into the scene and drag it into the level blueprint:</span></span> 
 
 ![将 WinrtActor 拖动到级别蓝图](images/unreal-winrt-img-07.png)
 
-3. <span data-ttu-id="07a5a-165">在级别蓝图中，从 WinrtActor 中拖动输出节点，搜索 " **打开文件" 对话框** ，然后从任何用户输入路由节点。</span><span class="sxs-lookup"><span data-stu-id="07a5a-165">In the level blueprint, drag the output node from WinrtActor, search for **Open File Dialogue** , then route the node from any user input.</span></span>  <span data-ttu-id="07a5a-166">在这种情况下，从语音事件调用 "打开文件" 对话框：</span><span class="sxs-lookup"><span data-stu-id="07a5a-166">In this case, Open File Dialogue is being called from a speech event:</span></span> 
+3. <span data-ttu-id="e13b0-165">在级别蓝图中，从 WinrtActor 中拖动输出节点，搜索 " **打开文件" 对话框**，然后从任何用户输入路由节点。</span><span class="sxs-lookup"><span data-stu-id="e13b0-165">In the level blueprint, drag the output node from WinrtActor, search for **Open File Dialogue**, then route the node from any user input.</span></span>  <span data-ttu-id="e13b0-166">在这种情况下，从语音事件调用 "打开文件" 对话框：</span><span class="sxs-lookup"><span data-stu-id="e13b0-166">In this case, Open File Dialogue is being called from a speech event:</span></span> 
 
 ![在级别蓝图中配置节点](images/unreal-winrt-img-08.png)
 
-4. <span data-ttu-id="07a5a-168">[为 HoloLens 打包这一游戏](tutorials/unreal-uxt-ch6.md)，部署它，然后运行。</span><span class="sxs-lookup"><span data-stu-id="07a5a-168">[Package this game for HoloLens](tutorials/unreal-uxt-ch6.md), deploy it, and run.</span></span>  
+4. <span data-ttu-id="e13b0-168">[为 HoloLens 打包这一游戏](tutorials/unreal-uxt-ch6.md)，部署它，然后运行。</span><span class="sxs-lookup"><span data-stu-id="e13b0-168">[Package this game for HoloLens](tutorials/unreal-uxt-ch6.md), deploy it, and run.</span></span>  
 
-<span data-ttu-id="07a5a-169">当 Unreal 调用 OpenFileDialogue 时，将在 HoloLens 提示符下打开一个文件对话框，提示输入 .txt 文件名。</span><span class="sxs-lookup"><span data-stu-id="07a5a-169">When Unreal calls OpenFileDialogue, a File Dialogue opens on the HoloLens prompting for a .txt file name.</span></span>  <span data-ttu-id="07a5a-170">保存该文件后，请在设备门户中转到 " **文件资源管理器** " 选项卡，查看内容 "Hello WinRT"。</span><span class="sxs-lookup"><span data-stu-id="07a5a-170">After the file is saved, go to the **File explorer** tab in the device portal to see the contents “Hello WinRT”.</span></span> 
+<span data-ttu-id="e13b0-169">当 Unreal 调用 OpenFileDialogue 时，将在 HoloLens 提示符下打开一个文件对话框，提示输入 .txt 文件名。</span><span class="sxs-lookup"><span data-stu-id="e13b0-169">When Unreal calls OpenFileDialogue, a File Dialogue opens on the HoloLens prompting for a .txt file name.</span></span>  <span data-ttu-id="e13b0-170">保存该文件后，请在设备门户中转到 " **文件资源管理器** " 选项卡，查看内容 "Hello WinRT"。</span><span class="sxs-lookup"><span data-stu-id="e13b0-170">After the file is saved, go to the **File explorer** tab in the device portal to see the contents “Hello WinRT”.</span></span> 
 
-## <a name="summary"></a><span data-ttu-id="07a5a-171">总结</span><span class="sxs-lookup"><span data-stu-id="07a5a-171">Summary</span></span> 
+## <a name="summary"></a><span data-ttu-id="e13b0-171">总结</span><span class="sxs-lookup"><span data-stu-id="e13b0-171">Summary</span></span> 
 
-<span data-ttu-id="07a5a-172">我们鼓励您在本教程中使用代码，作为在 Unreal 中使用 WinRT 代码的起点。</span><span class="sxs-lookup"><span data-stu-id="07a5a-172">We encourage you to use the code in this tutorial as a starting point for consuming WinRT code in Unreal.</span></span>  <span data-ttu-id="07a5a-173">它允许用户使用与 Windows 相同的文件对话框将文件保存到 HoloLens 磁盘。</span><span class="sxs-lookup"><span data-stu-id="07a5a-173">It allows users to save files to the HoloLens disk using the same file dialogue as Windows.</span></span>  <span data-ttu-id="07a5a-174">按照相同的过程从 HoloLensWinrtDLL 标头中导出任何其他函数并在 Unreal 中使用。</span><span class="sxs-lookup"><span data-stu-id="07a5a-174">Follow the same process to export any additional functions from the HoloLensWinrtDLL header and used in Unreal.</span></span>  <span data-ttu-id="07a5a-175">请注意，在后台 MTA 线程中等待任何异步 WinRT 代码的 DLL 代码，这可避免死锁 Unreal 游戏线程。</span><span class="sxs-lookup"><span data-stu-id="07a5a-175">Note the DLL code that waits on any async WinRT code in a background MTA thread, which avoids deadlocking the Unreal game thread.</span></span> 
+<span data-ttu-id="e13b0-172">我们鼓励您在本教程中使用代码，作为在 Unreal 中使用 WinRT 代码的起点。</span><span class="sxs-lookup"><span data-stu-id="e13b0-172">We encourage you to use the code in this tutorial as a starting point for consuming WinRT code in Unreal.</span></span>  <span data-ttu-id="e13b0-173">它允许用户使用与 Windows 相同的文件对话框将文件保存到 HoloLens 磁盘。</span><span class="sxs-lookup"><span data-stu-id="e13b0-173">It allows users to save files to the HoloLens disk using the same file dialogue as Windows.</span></span>  <span data-ttu-id="e13b0-174">按照相同的过程从 HoloLensWinrtDLL 标头中导出任何其他函数并在 Unreal 中使用。</span><span class="sxs-lookup"><span data-stu-id="e13b0-174">Follow the same process to export any additional functions from the HoloLensWinrtDLL header and used in Unreal.</span></span>  <span data-ttu-id="e13b0-175">请注意，在后台 MTA 线程中等待任何异步 WinRT 代码的 DLL 代码，这可避免死锁 Unreal 游戏线程。</span><span class="sxs-lookup"><span data-stu-id="e13b0-175">Note the DLL code that waits on any async WinRT code in a background MTA thread, which avoids deadlocking the Unreal game thread.</span></span> 
 
-## <a name="next-development-checkpoint"></a><span data-ttu-id="07a5a-176">下一个开发检查点</span><span class="sxs-lookup"><span data-stu-id="07a5a-176">Next Development Checkpoint</span></span>
+## <a name="next-development-checkpoint"></a><span data-ttu-id="e13b0-176">下一个开发检查点</span><span class="sxs-lookup"><span data-stu-id="e13b0-176">Next Development Checkpoint</span></span>
 
-<span data-ttu-id="07a5a-177">如果你遵循我们规划的 Unreal 开发检查点历程，则你处于探索混合现实平台功能和 API 的过程之中。</span><span class="sxs-lookup"><span data-stu-id="07a5a-177">If you're following the Unreal development checkpoint journey we've laid out, you're in the midst of exploring the Mixed Reality platform capabilities and APIs.</span></span> <span data-ttu-id="07a5a-178">从这里，你可以转到任何 [主题](unreal-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="07a5a-178">From here, you can proceed to any [topic](unreal-development-overview.md#3-platform-capabilities-and-apis) or jump directly to deploying your app on a device or emulator.</span></span>
+<span data-ttu-id="e13b0-177">如果你遵循我们规划的 Unreal 开发检查点历程，则你处于探索混合现实平台功能和 API 的过程之中。</span><span class="sxs-lookup"><span data-stu-id="e13b0-177">If you're following the Unreal development checkpoint journey we've laid out, you're in the midst of exploring the Mixed Reality platform capabilities and APIs.</span></span> <span data-ttu-id="e13b0-178">从这里，你可以转到任何 [主题](unreal-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e13b0-178">From here, you can proceed to any [topic](unreal-development-overview.md#3-platform-capabilities-and-apis) or jump directly to deploying your app on a device or emulator.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="07a5a-179">部署到设备</span><span class="sxs-lookup"><span data-stu-id="07a5a-179">Deploying to device</span></span>](unreal-deploying.md)
+> [<span data-ttu-id="e13b0-179">部署到设备</span><span class="sxs-lookup"><span data-stu-id="e13b0-179">Deploying to device</span></span>](unreal-deploying.md)
 
-## <a name="see-also"></a><span data-ttu-id="07a5a-180">请参阅</span><span class="sxs-lookup"><span data-stu-id="07a5a-180">See also</span></span>
-* [<span data-ttu-id="07a5a-181">C + +/WinRT Api</span><span class="sxs-lookup"><span data-stu-id="07a5a-181">C++/WinRT APIs</span></span>](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
-* [<span data-ttu-id="07a5a-182">FileSavePicker 类</span><span class="sxs-lookup"><span data-stu-id="07a5a-182">FileSavePicker class</span></span>](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
-* [<span data-ttu-id="07a5a-183">Unreal 第三方库</span><span class="sxs-lookup"><span data-stu-id="07a5a-183">Unreal Third-Party Libraries</span></span>](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 
+## <a name="see-also"></a><span data-ttu-id="e13b0-180">请参阅</span><span class="sxs-lookup"><span data-stu-id="e13b0-180">See also</span></span>
+* [<span data-ttu-id="e13b0-181">C + +/WinRT Api</span><span class="sxs-lookup"><span data-stu-id="e13b0-181">C++/WinRT APIs</span></span>](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
+* [<span data-ttu-id="e13b0-182">FileSavePicker 类</span><span class="sxs-lookup"><span data-stu-id="e13b0-182">FileSavePicker class</span></span>](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
+* [<span data-ttu-id="e13b0-183">Unreal 第三方库</span><span class="sxs-lookup"><span data-stu-id="e13b0-183">Unreal Third-Party Libraries</span></span>](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 
