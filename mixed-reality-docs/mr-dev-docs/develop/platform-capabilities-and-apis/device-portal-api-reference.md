@@ -5,13 +5,13 @@ author: hamalawi
 ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
-keywords: HoloLens、Windows 设备门户、API
-ms.openlocfilehash: 6b8f99fbc6f1965639ceef218f5c516d2e6ba467
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens，Windows 设备门户，API，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 1085f6c948ab7fe0ff8cb3801ebb0b883570acbc
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677073"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677966"
 ---
 # <a name="device-portal-api-reference"></a>设备门户 API 参考
 
@@ -33,7 +33,7 @@ ms.locfileid: "91677073"
 参数
 * package：要安装的包的文件名。
 
-Payload
+有效负载
 * 多部分相容的 http 正文
 
 **/api/app/packagemanager/packages (获取)**
@@ -159,7 +159,7 @@ Payload
 
 获取设备的热阶段 (0 正常，1温，2严重) 
 
-## <a name="map-manager"></a>映射管理器
+## <a name="map-manager"></a>地图管理器
 
 **/api/holographic/mapmanager/mapFiles (获取)**
 
@@ -185,7 +185,7 @@ Payload
 参数
 * FileName：要下载的文件的名称。
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/download?FileName=" + spaceID)
 ```
@@ -197,7 +197,7 @@ $.post("/api/holographic/mapmanager/download?FileName=" + spaceID)
 参数
 * file：要上传的文件的名称。
 
-示例：
+例如：
 ```
 var form_data = new FormData();
 form_data.append("file", file_data);
@@ -220,7 +220,7 @@ $.ajax({
 参数
 * FileName：要删除的文件的名称。
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/delete?FileName=" + spaceID)
 ```
@@ -231,21 +231,21 @@ $.post("/api/holographic/mapmanager/delete?FileName=" + spaceID)
 
 导出系统当前使用的映射。 导出后，可以下载它。 
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/export")
 ```
 
 **/api/holographic/mapmanager/exportanchors (POST)**
 
-导出系统当前使用的映射。 导出后，可以下载它。 示例： 
+导出系统当前使用的映射。 导出后，可以下载它。 例如： 
 ```
 $.post("/api/holographic/mapmanager/exportanchors")
 ```
 
 **/api/holographic/mapmanager/exportmapandanchors (POST)**
 
-导出系统当前使用的映射和定位点。 导出后，可以下载。 示例： 
+导出系统当前使用的映射和定位点。 导出后，可以下载。 例如： 
 ```
 $.post("/api/holographic/mapmanager/exportmapandanchors")
 ```
@@ -254,7 +254,7 @@ $.post("/api/holographic/mapmanager/exportmapandanchors")
 
 导出系统当前使用的映射和空间重建数据库。 导出后，可以下载它们。 
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/exportmapandspatialmappingdb")
 ```
@@ -268,7 +268,7 @@ $.post("/api/holographic/mapmanager/exportmapandspatialmappingdb")
 参数
 * FileName：要使用的映射的名称。 
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { alert("Import was successful!"); })
 ```
@@ -280,7 +280,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 参数
 * FileName：要使用的定位点的名称。 
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { alert("Import was successful!"); })
 ```
@@ -292,7 +292,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 参数
 * FileName：要使用的空间映射 db 的名称。 
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { alert("Import was successful!"); })
 ```
@@ -303,7 +303,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 
 重置系统地图、锚定和空间重建数据库。
 
-示例： 
+例如： 
 ```
 $.post("/api/holographic/mapmanager/resetmapandanchorsandsrdb")
 ```
@@ -355,7 +355,7 @@ $.post("/api/holographic/mapmanager/resetmapandanchorsandsrdb")
 
 获取 Windows 设备门户内混合现实捕获的状态。
 
-***响应***
+**_响应_* _
 
 响应包含一个 JSON 属性，用于指示 Windows 设备门户是否正在录制视频。
 
@@ -363,7 +363,7 @@ $.post("/api/holographic/mapmanager/resetmapandanchorsandsrdb")
 {"IsRecording" : boolean}
 ```
 
-**/api/holographic/mrc/thumbnail (获取)**
+_ */api/holographic/mrc/thumbnail (获取)**
 
 获取指定文件的缩略图图像。
 
@@ -581,7 +581,7 @@ HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作�
 返回数据
 * 包含系统信息的 JSON： CPU、GPU、内存、网络、IO
 
-## <a name="power"></a>电源
+## <a name="power"></a>强力
 
 **/api/power/battery (获取)**
 
@@ -663,7 +663,7 @@ HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作�
 
 上传 "配置文件，并使用上传的配置文件开始跟踪。
 
-Payload
+有效负载
 * 多部分相容的 http 正文
 
 返回数据

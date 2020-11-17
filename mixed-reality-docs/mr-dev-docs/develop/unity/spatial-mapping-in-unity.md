@@ -5,13 +5,13 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件
-ms.openlocfilehash: 15948870d3150614aefa071ce07cf51c29d284fc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
+ms.openlocfilehash: 60196a85689ce6c4c190acdfe305fc12982ace4c
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678647"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677396"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
@@ -58,7 +58,7 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 请注意，如果已将 Unity 项目导出到 Visual Studio 解决方案，则需要导出到新文件夹或 [在 Visual studio 的 appxmanifest.xml 中手动设置此功能](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)。
 
 空间映射还需要至少10.0.10586.0 的 MaxVersionTested：
-1. 在 Visual Studio 中，右键单击 "解决方案资源管理器中的 **appxmanifest.xml** ，然后选择" **查看代码** "
+1. 在 Visual Studio 中，右键单击 "解决方案资源管理器中的 **appxmanifest.xml** ，然后选择"**查看代码**"
 2. 查找指定 **y** 的行，并将 **MaxVersionTested = "10.0.10240.0"** 更改为 **MaxVersionTested = "10.0.10586.0"**
 3. **保存** appxmanifest.xml。
 
@@ -84,13 +84,13 @@ Unity 提供了2个组件，可轻松地将空间映射添加到应用、 **空�
 
 在 Unity 应用中使用这两个组件：
 1. 在要检测空间图面网格的区域的中心选择一个 GameObject。
-2. 在检查器窗口中， **添加组件**  >  **XR**  >  **空间映射碰撞** 器   或 **空间映射呈现** 器。
+2. 在检查器窗口中，**添加组件**  >  **XR**  >  **空间映射碰撞** 器或 **空间映射呈现** 器。
 
 有关如何在 <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">Unity 文档网站</a>上使用这些组件的详细信息，请参阅。
 
 ### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>超越内置的空间映射组件
 
-利用这些组件，您可以轻松地开始进行空间映射。 若要进一步了解，需要了解两个主要的路径：
+利用这些组件，您可以轻松地开始进行空间映射。  若要进一步了解，需要了解两个主要的路径：
 * 若要执行自己的低级网格处理，请参阅下面有关低级别空间映射脚本 API 的部分。
 * 若要执行更高级别的网格分析，请参阅以下部分，了解 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>中的 SpatialUnderstanding 库。
 
@@ -99,7 +99,7 @@ Unity 提供了2个组件，可轻松地将空间映射添加到应用、 **空�
 如果需要更多的控制，而不是从空间映射呈现器和空间映射碰撞器组件获取，则可以使用低级空间映射脚本 Api。
 
 **命名空间：** *UnityEngine. XR*<br>
-**类型** ： *SurfaceObserver* 、 *SurfaceChange* 、 *SurfaceData* 、 *SurfaceId*
+**类型**： *SurfaceObserver*、 *SurfaceChange*、 *SurfaceData*、 *SurfaceId*
 
 下面是使用空间映射 Api 的应用程序的建议流概述。
 
@@ -226,7 +226,7 @@ void Start () {
 
 ### <a name="understanding-modules"></a>了解模块
 
-模块公开了三个主要接口：用于简单图面和空间查询的拓扑、用于对象检测的形状，以及用于基于约束的对象集放置的对象放置规划求解。 下面介绍了其中的每个。 除了三个主要模块接口外，ray 强制转换接口还可用于检索标记的表面类型，并可将自定义 watertight playspace 网格复制出来。
+模块公开了三个主要接口：用于简单图面和空间查询的拓扑、用于对象检测的形状，以及用于基于约束的对象集放置的对象放置规划求解。 下面介绍上述每种方式。 除了三个主要模块接口外，ray 强制转换接口还可用于检索标记的表面类型，并可将自定义 watertight playspace 网格复制出来。
 
 ### <a name="ray-casting"></a>Ray 转换
 
@@ -479,17 +479,17 @@ Import_UnderstandingMesh –
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是在浏览 MRTK 核心构建基块。 在这里，你可以继续执行下一个构建基块： 
+如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块： 
 
 > [!div class="nextstepaction"]
 > [Text](text-in-unity.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>请参阅
 * [坐标系统](../../design/coordinate-systems.md)

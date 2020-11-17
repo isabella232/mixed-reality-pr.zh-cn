@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
-keywords: Windows Mixed Reality，Unreal，Unreal 引擎4，UE4，HoloLens 2，语音，语音输入，语音识别，混合现实，开发，功能，文档，指南，全息影像，游戏开发
-ms.openlocfilehash: 88ab39de5f219691a6c3fe5b4ad3008d9614668e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，Unreal，Unreal 引擎4，UE4，HoloLens 2，语音，语音输入，语音识别，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 79a6043511cc4658ae2451dd8aa6350d8e8037fe
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678541"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678776"
 ---
 # <a name="voice-input-in-unreal"></a>Unreal 中的语音输入
 
@@ -21,8 +21,8 @@ ms.locfileid: "91678541"
 ## <a name="enabling-speech-recognition"></a>启用语音识别
 
 在 HoloLens 上启用语音识别：
-1. 选择 " **项目设置" > 平台 > HoloLens > 功能** 并启用 **麦克风** 。 
-2. 已在 " **设置" > 隐私 > 语音** "中启用语音识别，然后选择" **英语** "。
+1. 选择 " **项目设置" > 平台 > HoloLens > 功能** 并启用 **麦克风**。 
+2. 已在 " **设置" > 隐私 > 语音** "中启用语音识别，然后选择" **英语**"。
 
 > [!NOTE]
 > 语音识别始终在 " **设置** " 应用程序中配置的 Windows 显示语言中工作。 建议你同时启用 **在线语音识别** ，以获得最佳的服务质量。
@@ -35,7 +35,7 @@ ms.locfileid: "91678541"
 
 ## <a name="adding-speech-mappings"></a>添加语音映射
 使用语音输入时，将语音连接到操作非常重要。 这些映射会监视用户可能会说出的语音关键字应用，然后发出链接的操作。 可以通过以下方式找到语音映射：
-1. 选择 " **编辑 > 项目设置** "，滚动到 " **引擎** " 部分，然后单击 " **输入** "。
+1. 选择 " **编辑 > 项目设置**"，滚动到 " **引擎** " 部分，然后单击 " **输入**"。
 
 添加跳转命令的新语音映射：
 1. 单击 " **+** **数组元素** " 旁边的图标，然后填写以下值：
@@ -50,7 +50,7 @@ ms.locfileid: "91678541"
 语音映射可用作操作或轴映射等输入组件或事件图中的蓝图节点。 例如，可以链接 "跳转" 命令，根据字词的讲述时间打印出两个不同的日志：
 
 1. 双击蓝图以在 **事件图** 中打开它。
-2. **右键单击** 并搜索语音映射的 **操作名称** (在本例中为 **JumpWord** ) ，然后按 **Enter** 。 这会将 " **输入操作** " 节点添加到关系图中。
+2. **右键单击** 并搜索语音映射的 **操作名称** (在本例中为 **JumpWord**) ，然后按 **Enter**。 这会将 " **输入操作** " 节点添加到关系图中。
 3. 将 **按下** 的 pin 拖放到 " **打印字符串** " 节点，如下图所示。 你可以保留已 **释放** 的 pin，而不会对语音映射执行任何操作。
  
 ![简单的语音操作](images/unreal/voice-input-img-03.png)
@@ -66,9 +66,9 @@ ms.locfileid: "91678541"
 > [!div class="nextstepaction"]
 > [HoloLens 摄像头](unreal-hololens-camera.md)
 
-随时可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#2-core-building-blocks)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [语音输入](../../design/voice-input.md)
 * [凝视和提交](../../design/gaze-and-commit.md)
 * [本能交互](../../design/interaction-fundamentals.md)

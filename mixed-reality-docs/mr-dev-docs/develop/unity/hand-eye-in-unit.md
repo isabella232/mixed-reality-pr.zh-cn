@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 手势，运动控制器，unity，注视，输入
-ms.openlocfilehash: b184cf1d9e6f35e3750015b51374058df79ed19d
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: 手势，运动控制器，unity，注视，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
+ms.openlocfilehash: 244d1ef27d9aa68d971fa8372bda301fccab0704
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683233"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677586"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Unity 中的明确表述和眼睛跟踪
 
@@ -42,7 +42,7 @@ MRTK v2 提供一组 UI 控件和构建基块，有助于加快开发速度。
 
 在 [此示例场景](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandInteractionExamples.html)中，探索 MRTK 的各种交互类型和 UI 控件。
 
-可以在 " **资产/MixedRealityToolkit** " 下的 [混合现实工具包 GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity)中找到其他示例场景。
+可以在 "**资产/MixedRealityToolkit**" 下的 [混合现实工具包 GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity)中找到其他示例场景。
 
 [![示例场景](images/MRTK_Examples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandInteractionExamples.html)
 
@@ -60,7 +60,7 @@ MRTK v2 提供一组 UI 控件和构建基块，有助于加快开发速度。
 
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [基于眼睛的交互](../../design/eye-gaze-interaction.md)
 * [HoloLens 2 中的眼动跟踪](../../design/eye-tracking.md)

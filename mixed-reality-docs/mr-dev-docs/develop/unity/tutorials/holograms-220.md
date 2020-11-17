@@ -1,17 +1,17 @@
 ---
-title: MR 空间 220-空间音效
+title: MR 空间 220 - 空间音效
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解空间音效概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间音效
-ms.openlocfilehash: 1da57024fbc069fcfc7d522175cf6d542304414a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间音效，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: 043443c0c197e3b606c4845966e0cf60102d0b85
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678377"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678366"
 ---
 # <a name="mr-spatial-220-spatial-sound"></a>MR 空间 220：空间音效
 
@@ -58,7 +58,7 @@ ms.locfileid: "91678377"
 
 ### <a name="errata-and-notes"></a>勘误表和说明
 
-* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" ( *取消选中* ) ，以便在代码中命中断点。
+* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" (*取消选中*) ，以便在代码中命中断点。
 
 ## <a name="chapter-1---unity-setup"></a>第1章-Unity 设置
 
@@ -70,52 +70,52 @@ ms.locfileid: "91678377"
 ### <a name="instructions"></a>Instructions
 
 * 启动 Unity。
-* 选择“打开”。
+* 选择“打开”  。
 * 导航到桌面并找到以前未存档的文件夹。
 * 单击 " **Starting\Decibel** " 文件夹，然后按 " **选择文件夹** " 按钮。
 * 等待项目在 Unity 中加载。
-* 在 " **项目** " 面板中，打开 **Scenes\Decibel.unity** 。
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY** "。
+* 在 " **项目** " 面板中，打开 **Scenes\Decibel.unity**。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY**"。
 * 在检查器中，展开 " **AudioSource** "，注意没有 " **Spatialize** " 复选框。
 
 默认情况下，Unity 不会加载 spatializer 插件。 以下步骤将在项目中启用空间音质。
 
-* 在 Unity 的顶部菜单中，参阅 **编辑 > 音频 > 项目设置** 。
-* 找到 **Spatializer 插件** 下拉列表，并选择 " **MS HRTF Spatializer** "。
-* 在 " **层次结构** " 面板中，选择 " **HologramCollection > P0LY** "。
+* 在 Unity 的顶部菜单中，参阅 **编辑 > 音频 > 项目设置**。
+* 找到 **Spatializer 插件** 下拉列表，并选择 " **MS HRTF Spatializer**"。
+* 在 " **层次结构** " 面板中，选择 " **HologramCollection > P0LY**"。
 * 在 " **检查器** " 面板中，找到 " **音频源** " 组件。
 * 选中 " **Spatialize** " 复选框。
 * 将 **空间混合** 滑块一直拖到 **3d** 上，或在编辑框中输入 **1** 。
 
 现在，我们将在 Unity 中生成项目，并在 Visual Studio 中配置该解决方案。
 
-1. 在 Unity 中，选择 " **文件 > 生成设置** "。
+1. 在 Unity 中，选择 " **文件 > 生成设置**"。
 2. 单击 " **添加打开的场景** " 添加场景。
-3. 选择 " **平台** " 列表中的 " **通用 Windows 平台** "，然后单击 " **切换平台** "。
-4. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens** "。 否则，请将其留在 **任何设备** 上。
+3. 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。
+4. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
 5. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
-6. 单击“生成”  。
+6. 单击“生成”。
 7. 创建名为 "App" 的 **新文件夹** 。
 8. 单击 **应用** 文件夹。
-9. 按 " **选择文件夹** "。
+9. 按 " **选择文件夹**"。
 
 当 Unity 完成后，将显示文件资源管理器窗口。
 
 1. 打开 **应用程序** 文件夹。
-2. 打开 " **分贝 Visual Studio 解决方案** "。
+2. 打开 " **分贝 Visual Studio 解决方案**"。
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86** "。
-2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机** "。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)** 。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** "。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
+3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64** "。
-2. 确保将部署目标设置为 " **本地计算机** "。
-3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+2. 确保将部署目标设置为 " **本地计算机**"。
+3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 
 ## <a name="chapter-2---spatial-sound-and-interaction"></a>第2章-空间音效和交互
 
@@ -127,7 +127,7 @@ ms.locfileid: "91678377"
 
 ### <a name="part-1---enhancing-realism"></a>第1部分-增强真实性
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * Spatialize 全息影像声音。
 * 应将声音源置于全息图上的适当位置。
@@ -138,20 +138,20 @@ ms.locfileid: "91678377"
 
 以下说明将 spatialized 声音附加到全息图。
 
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY** "。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY**"。
 * 在 " **检查器** " 面板的 **AudioSource** 中，单击 " **AudioClip** " 旁边的圆圈，并从弹出窗口中选择 " **PolyHover** "。
 * 单击 " **输出** " 旁边的圆圈，并从弹出窗口中选择 " **SoundEffects** "。
 
 项目分贝使用 Unity **AudioMixer** 组件来启用调整声音组的音量级别。 通过以这种方式对声音进行分组，可以在保持每个声音的相对音量的同时调整总体音量。
 
-* 在 **AudioSource** 中，展开 " **三维声音设置** "。
-* 将 **Doppler 级别** 设置为 **0** 。
+* 在 **AudioSource** 中，展开 " **三维声音设置**"。
+* 将 **Doppler 级别** 设置为 **0**。
 
 如果将 Doppler 级别设置为零，则将禁用由 (全息图或用户) 中的运动引起的螺距更改。 Doppler 的典型示例是一种快速移动的汽车。 当汽车接近固定的侦听器时，引擎的跨度会上升。 当它通过侦听程序时，间距会降低距离。
 
 ### <a name="part-2---directing-the-users-gaze"></a>第2部分-定向用户的注视
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * 使用声音吸引重要的全息影像。
 * 此耳有助于指导眼睛的外观。
@@ -163,16 +163,16 @@ ms.locfileid: "91678377"
 
 以下说明允许 P0LY 隐藏在您后面，以便您可以使用声音查找全息图。
 
-* 在 " **层次结构** " 面板中，选择 " **管理器** "。
-* 在 **检查器** 面板中，找到 " **语音输入处理程序** "。
-* 在 **语音输入处理程序** 中，展开 " **转到隐藏** "。
-* 将 **No 函数** 更改为 **PolyActions. GoHide** 。
+* 在 " **层次结构** " 面板中，选择 " **管理器**"。
+* 在 **检查器** 面板中，找到 " **语音输入处理程序**"。
+* 在 **语音输入处理程序** 中，展开 " **转到隐藏**"。
+* 将 **No 函数** 更改为 **PolyActions. GoHide**。
 
 ![关键字：中转隐藏](images/gohide.png)
 
 ### <a name="part-3---gesture-feedback"></a>第3部分-手势反馈
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * 使用声音为用户提供积极的手势确认
 * 不要严重影响用户的声音，
@@ -180,24 +180,24 @@ ms.locfileid: "91678377"
 
 #### <a name="instructions"></a>Instructions
 
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** "。
-* 展开 " **EnergyHub** "，然后选择 " **基本** "。
-* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **手势声音处理程序** 。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection**"。
+* 展开 " **EnergyHub** "，然后选择 " **基本**"。
+* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **手势声音处理程序**。
 * 在 **手势声音处理程序** 中，单击 " **导航已启动的剪辑** 和 **导航已更新的剪辑** " 旁边的圆圈，并从弹出窗口中选择 " **RotateClick** "。
 * 双击 "GestureSoundHandler" 以在 Visual Studio 中加载。
 
 手势声音处理程序执行以下任务：
 
-* 创建和配置 **AudioSource** 。
+* 创建和配置 **AudioSource**。
 * 将 **AudioSource** 放在适当 **GameObject** 的位置。
 * 播放与该笔势关联的 **AudioClip** 。
 
 #### <a name="build-and-deploy"></a>生成和部署
 
-1. 在 Unity 中，选择 " **文件 > 生成设置** "。
-2. 单击“生成”  。
+1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+2. 单击“生成”。
 3. 单击 **应用** 文件夹。
-4. 按 " **选择文件夹** "。
+4. 按 " **选择文件夹**"。
 
 检查工具栏是否显示 "发布"、"x86" 或 "x64"，以及 "远程设备"。 如果不是，则这是 Visual Studio 的代码实例。 可能需要从应用程序文件夹重新打开解决方案。
 
@@ -221,7 +221,7 @@ ms.locfileid: "91678377"
 
 ### <a name="part-1---physical-world-interaction"></a>第1部分-物理世界交互
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * 当遇到图面或其他对象时，物理对象通常会发出声音。
 * 声音应在体验中是适当的上下文。
@@ -230,22 +230,22 @@ ms.locfileid: "91678377"
 
 #### <a name="instructions"></a>Instructions
 
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** "。
-* 展开 " **EnergyHub** "，选择 " **基本** "。
-* 在 " **检查器** " 面板中，单击 " **添加组件** "，然后单击 "添加 **声音和操作** "。
-* 在中， **单击以放置声音和操作** ：
-  * **在点击时选中 "父项"** 。
-  * 设置要 **放置** 的 **放置声音** 。
-  * 将 **拾取声音** 设置为 **装货** 。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection**"。
+* 展开 " **EnergyHub**"，选择 " **基本**"。
+* 在 " **检查器** " 面板中，单击 " **添加组件** "，然后单击 "添加 **声音和操作**"。
+* 在中， **单击以放置声音和操作**：
+  * **在点击时选中 "父项"**。
+  * 设置要 **放置** 的 **放置声音**。
+  * 将 **拾取声音** 设置为 **装货**。
   * 在 " **分拣" 操作** 和 **"放置" 操作** 中，按右下方的 "+"。 将 EnergyHub 从场景拖入 **None (对象)** 字段。
-    * 在 **"分拣操作** " 下，单击 " **无函数**  ->  **EnergyHubBase**  ->  **ResetAnimation** "。
-    * 在 **"放置时" 操作** 下，单击 " **无函数**  ->  **EnergyHubBase**  ->  **OnSelect** "。
+    * 在 **"分拣操作**" 下，单击 "**无函数**  ->  **EnergyHubBase**  ->  **ResetAnimation**"。
+    * 在 **"放置时" 操作** 下，单击 "**无函数**  ->  **EnergyHubBase**  ->  **OnSelect**"。
 
 ![点击以放入声音和操作](images/holograms220-taptoplace.png)
 
 ### <a name="part-2---sound-occlusion"></a>第2部分-声音封闭
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * 声音，如光源，可以是封闭像素。
 
@@ -253,8 +253,8 @@ ms.locfileid: "91678377"
 
 #### <a name="instructions"></a>Instructions
 
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY** "。
-* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频发射器** 。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY**"。
+* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频发射器**。
 
 音频发射器类提供以下功能：
 
@@ -268,14 +268,14 @@ RaycastNonAlloc 方法用作性能优化，以限制分配和返回的结果数�
 
 请注意，AudioEmitter 对人为时间刻度的更新，而不是每个框架的更新。 这样做是因为，人们通常不能以足够快的速度移动，因此，需要比每个季度或半秒钟的频率更频繁地进行更新。 从一个位置到另一个位置快速传送的全息影像可能会突破错觉。
 
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** "。
-* 展开 " **EnergyHub** " 并选择 " **BlobOutside** "。
-* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频 Occluder** 。
-* 在 **音频 Occluder** 中，将 " **截止频率** " 设置为 **1500** 。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection**"。
+* 展开 " **EnergyHub** " 并选择 " **BlobOutside**"。
+* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频 Occluder**。
+* 在 **音频 Occluder** 中，将 " **截止频率** " 设置为 **1500**。
 
 此设置将 AudioSource 频率限制为 1500 Hz 和更低。
 
-* 将 **Volume Pass** 设置为 **0.9** 。
+* 将 **Volume Pass** 设置为 **0.9**。
 
 此设置将 AudioSource 的量降低到其当前级别的90%。
 
@@ -287,25 +287,25 @@ RaycastNonAlloc 方法用作性能优化，以限制分配和返回的结果数�
 
 用于中性的频率为 22 kHz (22000 Hz) 。 选择此频率的原因是，它的最大频率为人体耳可以听到的最大公称，这不会影响声音。
 
-* 在 " **层次结构** " 面板中，选择 " **SpatialMapping** "。
-* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频 Occluder** 。
-* 在 **音频 Occluder** 中，将 " **截止频率** " 设置为 **750** 。
+* 在 " **层次结构** " 面板中，选择 " **SpatialMapping**"。
+* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频 Occluder**。
+* 在 **音频 Occluder** 中，将 " **截止频率** " 设置为 **750**。
 
 如果多个 occluders 位于用户与 **AudioEmitter** 之间的路径中，则会将最低频率应用于筛选器。
 
-* 将 **Volume Pass** 设置为 **0.75** 。
+* 将 **Volume Pass** 设置为 **0.75**。
 
 如果多个 occluders 位于用户与 **AudioEmitter** 之间的路径中，则会应用添加性地。
 
-* 在 " **层次结构** " 面板中，选择 " **管理器** "。
-* 在 " **检查器** " 面板中，展开 " **语音输入处理程序** "。
-* 在 **语音输入处理程序** 中，展开 " **转到** "。
-* 将 **No 函数** 更改为 **PolyActions. GoCharge** 。
+* 在 " **层次结构** " 面板中，选择 " **管理器**"。
+* 在 " **检查器** " 面板中，展开 " **语音输入处理程序**"。
+* 在 **语音输入处理程序** 中，展开 " **转到**"。
+* 将 **No 函数** 更改为 **PolyActions. GoCharge**。
 
 ![关键字：中转](images/gocharge.png)
 
 * **在此处** 展开。
-* 将 **No 函数** 更改为 **PolyActions. 卷土重来** 。
+* 将 **No 函数** 更改为 **PolyActions. 卷土重来**。
 
 ![关键字：此处提供](images/comehere.png)
 
@@ -325,7 +325,7 @@ RaycastNonAlloc 方法用作性能优化，以限制分配和返回的结果数�
 
 ### <a name="part-3---room-models"></a>第3部分-房间模型
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * 空间大小提供了 subliminal 的队列，它们有助于进行合理的本地化。
 * 房间模型是按 **AudioSource** 设置的。
@@ -430,64 +430,64 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 
 ### <a name="magic-windows"></a>魔术窗口
 
-#### <a name="key-concepts"></a>主要概念
+#### <a name="key-concepts"></a>关键概念
 
 * 将视图创建到隐藏世界中，这在视觉上非常引人注目。
 * 当全息图或用户处于隐藏世界附近时，通过添加音频效果来增强真实性。
 
 #### <a name="instructions"></a>Instructions
 
-* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **Underworld** "。
-* 展开 " **Underworld** " 并选择 " **VoiceSource** "。
-* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 " **用户语音效果** "。
+* 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **Underworld**"。
+* 展开 " **Underworld** " 并选择 " **VoiceSource**"。
+* 在 **检查器** 面板中，单击 " **添加组件** " 并添加 " **用户语音效果**"。
 
 **AudioSource** 组件将添加到 **VoiceSource** 中。
 
-* 在 **AudioSource** 中，将 " **输出** " 设置为 **UserVoice (混音器)** 。
+* 在 **AudioSource** 中，将 " **输出** " 设置为 **UserVoice (混音器)**。
 * 选中 " **Spatialize** " 复选框。
 * 将 **空间混合** 滑块一直拖到 **3d** 上，或在编辑框中输入 **1** 。
-* 展开 " **三维声音设置** "。
-* 将 **Doppler 级别** 设置为 **0** 。
-* 在 " **用户语音效果** " 中，将 **父对象** 从场景中设置为 **Underworld** 。
-* 将 **最大距离** 设置为 **1** 。
+* 展开 " **三维声音设置**"。
+* 将 **Doppler 级别** 设置为 **0**。
+* 在 " **用户语音效果**" 中，将 **父对象** 从场景中设置为 **Underworld** 。
+* 将 **最大距离** 设置为 **1**。
 
 设置 **最大距离** 会告诉 **用户语音效果** 在启用此效果之前，用户必须先到父对象。
 
-* 在 " **用户语音效果** " 中，展开 " **Chorus 参数** "。
-* 将 **深度** 设置为 **0.1** 。
-* 依次点击 " **1** "、" **2 卷** " 和 " **3 卷** 到 **0.8** "。
-* 将 **原始** 音量设置为 **0.5** 。
+* 在 " **用户语音效果**" 中，展开 " **Chorus 参数**"。
+* 将 **深度** 设置为 **0.1**。
+* 依次点击 " **1**"、" **2 卷** " 和 " **3 卷** 到 **0.8**"。
+* 将 **原始** 音量设置为 **0.5**。
 
 以前的设置配置用于向用户语音添加丰富的 Unity **AudioChorusFilter** 的参数。
 
-* 在 " **用户语音效果** " 中，展开 " **Echo Parameters** "。
+* 在 " **用户语音效果**" 中，展开 " **Echo Parameters**"。
 * 将 **延迟** 设置为 **300**
-* 将 **衰减比率** 设置为 **0.2** 。
-* 将 **原始** 音量设置为 **0** 。
+* 将 **衰减比率** 设置为 **0.2**。
+* 将 **原始** 音量设置为 **0**。
 
 以前的设置配置用于使用户的语音回显的 Unity **AudioEchoFilter** 的参数。
 
 用户语音效果脚本负责：
 
 * 测量用户与脚本附加到的 **GameObject** 之间的距离。
-* 确定用户是否面向 **GameObject** 。
+* 确定用户是否面向 **GameObject**。
 
 对于启用的效果，用户必须面向 GameObject，而不考虑距离。
 
-* 将 **AudioChorusFilter** 和 **AudioEchoFilter** 应用和配置到 **AudioSource** 。
+* 将 **AudioChorusFilter** 和 **AudioEchoFilter** 应用和配置到 **AudioSource**。
 * 禁用筛选器以禁用该效果。
 
 用户语音效果使用 [MixedRealityToolkit For Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)中的 Mic Stream 选择器组件选择高质量的语音流并将其路由到 Unity 的音频系统。
 
-* 在 " **层次结构** " 面板中，选择 " **管理器** "。
-* 在 " **检查器** " 面板中，展开 " **语音输入处理程序** "。
-* 在 **语音输入处理程序** 中，展开 **Show Underworld** 。
-* 将 **No 函数** 更改为 **UnderworldBase. OnEnable** 。
+* 在 " **层次结构** " 面板中，选择 " **管理器**"。
+* 在 " **检查器** " 面板中，展开 " **语音输入处理程序**"。
+* 在 **语音输入处理程序** 中，展开 **Show Underworld**。
+* 将 **No 函数** 更改为 **UnderworldBase. OnEnable**。
 
 ![关键字： Show Underworld](images/showunderworld.png)
 
-* 展开 " **隐藏 Underworld** "。
-* 将 **No 函数** 更改为 **UnderworldBase. OnDisable** 。
+* 展开 " **隐藏 Underworld**"。
+* 将 **No 函数** 更改为 **UnderworldBase. OnDisable**。
 
 ![关键字：隐藏 Underworld](images/hideunderworld.png)
 
@@ -497,7 +497,7 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 
 部署应用程序后：
 
-* 面部 (墙壁、楼层、桌子) 并说 *"显示 Underworld"* 。
+* 面部 (墙壁、楼层、桌子) 并说 *"显示 Underworld"*。
 
 将显示 underworld，所有其他全息影像都将隐藏。 如果看不到 underworld，请确保您面对的是实际的表面。
 
@@ -512,6 +512,6 @@ Underworld 将隐藏，并且以前隐藏的全息影像会重新出现。
 
 ## <a name="the-end"></a>结束
 
-恭喜！ 你现在已经完成了 **MR 空间220：空间音质** 。
+恭喜！ 你现在已经完成了 **MR 空间220：空间音质**。
 
 听世界，让你的体验生活生动！

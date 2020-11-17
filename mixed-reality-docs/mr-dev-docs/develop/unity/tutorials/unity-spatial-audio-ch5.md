@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 12/01/2019
 ms.topic: article
-keywords: 混合现实、unity、教程、hololens2、空间音频
-ms.openlocfilehash: abe78417dc231e6228d1942e03418ba699bc0938
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，音频混合器，SFX 回音
+ms.openlocfilehash: d688955910d667edbdb79e63dab16587e66064a4
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678549"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679696"
 ---
 # <a name="using-reverb-to-add-distance-to-spatial-audio"></a>使用混响为空间音频添加距离感
 
@@ -21,23 +21,23 @@ ms.locfileid: "91678549"
 * 使用侦听器与全息图的距离控制声音的已知距离
 
 ## <a name="add-a-mixer-group-and-a-reverb-effect"></a>添加混音器组和回音效果
-在 [第2章](unity-spatial-audio-ch2.md)，我们添加了一个混音器。 混音器默认包含一个名为 **Master** 的 **组** 。 因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个 **组** 。 若要添加 **组** ，请在 **音频混合器** 中右键单击 **主控** 组，然后选择 " **添加子组** "：
+在 [第2章](unity-spatial-audio-ch2.md)，我们添加了一个混音器。 混音器默认包含一个名为 **Master** 的 **组**。 因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个 **组** 。 若要添加 **组**，请在 **音频混合器** 中右键单击 **主控** 组，然后选择 "**添加子组**"：
 
 ![添加子组](images/spatial-audio/add-child-group.png)
 
 在此示例中，我们已将新组命名为 "房间效果"。
 
-每个 **组** 都有自己的效果集。 通过在新组中单击 " **添加 ...** " 并选择 " **SFX 回音** "，向新组添加回音效果：
+每个 **组** 都有自己的效果集。 通过在新组中单击 " **添加 ...** " 并选择 " **SFX 回音**"，向新组添加回音效果：
 
 ![添加 SFX 回音](images/spatial-audio/add-sfx-reverb.png)
 
-在音频术语中，原始、unreverberated 的音频称为 _晾干路径_ ，筛选后的音频被称为 _湿路径_ 。 这两个路径都发送到音频输出，在此组合中，其相对强度称为 _湿/干燥混合_ 。 湿/干燥混合会对距离的理解产生很大影响。
+在音频术语中，原始、unreverberated 的音频称为 _晾干路径_，筛选后的音频被称为 _湿路径_。 这两个路径都发送到音频输出，在此组合中，其相对强度称为 _湿/干燥混合_。 湿/干燥混合会对距离的理解产生很大影响。
 
-**SFX 回音** 包含用于在效果内调整湿/干燥混合的控件。 由于 **Microsoft Spatializer** 插件处理晾干路径，因此，我们只为湿路径使用 **SFX 回音** 。 在 **SFX 回音** 的 " **检查器** " 窗格上：
+**SFX 回音** 包含用于在效果内调整湿/干燥混合的控件。 由于 **Microsoft Spatializer** 插件处理晾干路径，因此，我们只为湿路径使用 **SFX 回音** 。 在 **SFX 回音** 的 "**检查器**" 窗格上：
 * 将 "晾干级别" 属性设置为最低 (-10000 mB) 
 * 将 "房间" 属性设置为最高 (0 mB) 
 
-进行这些更改后， **SFX 回音** 的 " **检查器** " 窗格将如下所示：
+进行这些更改后， **SFX 回音** 的 "**检查器**" 窗格将如下所示：
 
 ![SFX 回音属性](images/spatial-audio/sfx-reverb-properties.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "91678549"
 
 在以下步骤中，我们将调整脚本以控制音频路由，并附加 **Microsoft Spatializer** 插件提供的控制脚本，将数据送入回音。
 
-在 " **四核****检查器** " 窗格中，单击 " **添加组件** " 并添加 " **房间效果发送级别** 脚本"：
+在 "**四核****检查器**" 窗格中，单击 "**添加组件**" 并添加 "**房间效果发送级别** 脚本"：
 
 ![添加发送级别脚本](images/spatial-audio/add-send-level-script.png)
 
@@ -117,7 +117,7 @@ public class SpatializeOnOff : MonoBehaviour
 }
 ```
 
-取消注释这些行将两个属性添加到脚本的 " **检查器** " 窗格中。 若要设置这些设置，请在 Spatialize 的 " **关闭** 组件" 组件的 " **检查器** " 窗格 **中：**
+取消注释这些行将两个属性添加到脚本的 " **检查器** " 窗格中。 若要设置这些设置，请在 Spatialize 的 "**关闭** 组件" 组件的 "**检查器**" 窗格 **中：**
 * 将 " **房间效果组** " 属性设置为新的 "房间效果" 混音器组
 * 将 " **主组** " 属性设置为 "主混音器" 组
 

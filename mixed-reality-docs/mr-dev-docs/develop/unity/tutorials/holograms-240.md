@@ -5,13 +5,13 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，共享，网络，学院，教程
-ms.openlocfilehash: 886b8b3ef449dc2872358fffd67b6af4c661de0e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，共享，网络，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: f57629e37463c9a05219ebae92bff8870728d688
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678822"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678256"
 ---
 # <a name="mr-sharing-240-multiple-hololens-devices"></a>MR 共享 240：多个 HoloLens 设备
 
@@ -50,7 +50,7 @@ ms.locfileid: "91678822"
   * 如果仍需要 Unity 5.6 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-240.zip)。
   * 如果仍需要 Unity 5.5 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-240.zip)。
   * 如果仍需要 Unity 5.4 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-240.zip)。
-* 取消将文件存档到桌面或其他易于访问的位置。 将文件夹名称保留为 **SharedHolograms** 。
+* 取消将文件存档到桌面或其他易于访问的位置。 将文件夹名称保留为 **SharedHolograms**。
 
 >[!NOTE]
 >如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-240-SharedHolograms)找到。
@@ -69,45 +69,45 @@ ms.locfileid: "91678822"
 ### <a name="instructions"></a>Instructions
 
 * 启动 Unity。
-* 选择“打开”。
+* 选择“打开”  。
 * 输入位置作为之前 unarchived 的 **SharedHolograms** 文件夹。
-* 选择 " **项目名称** "，然后单击 " **选择文件夹** "。
-* 在 **层次结构** 中，右键单击 **主相机** ，然后选择 " **删除** "。
+* 选择 " **项目名称** "，然后单击 " **选择文件夹**"。
+* 在 **层次结构** 中，右键单击 **主相机** ，然后选择 " **删除**"。
 * 在 **HoloToolkit/prototyping/相机** 文件夹中，找到 **摄像机的主** prefab。
 * 将 **主相机** 拖放到 **层次结构** 中。
-* 在 **层次结构** 中，单击 " **创建** " 并 **创建空** 。
-* 右键单击新的 " **GameObject** "，然后选择 " **重命名** "。
-* 将 GameObject 重命名为 **HologramCollection** 。
+* 在 **层次结构** 中，单击 " **创建** " 并 **创建空**。
+* 右键单击新的 " **GameObject** "，然后选择 " **重命名**"。
+* 将 GameObject 重命名为 **HologramCollection**。
 * 选择 **层次结构** 中的 **HologramCollection** 对象。
-* **检查器** 中，将 **转换位置** 设置为： **X：0，Y：-0.25，Z： 2** 。
-* 在 " **项目" 面板** 的 " **全息影像** " 文件夹中，找到 " **EnergyHub** 资产"。
-* 将 **EnergyHub** 对象从 " **项目" 面板** 中拖放到 **层次结构** 中，将其作为 **HologramCollection 的子项** 。
+* **检查器** 中，将 **转换位置** 设置为： **X：0，Y：-0.25，Z： 2**。
+* 在 "**项目" 面板** 的 "**全息影像**" 文件夹中，找到 " **EnergyHub** 资产"。
+* 将 **EnergyHub** 对象从 " **项目" 面板** 中拖放到 **层次结构** 中，将其作为 **HologramCollection 的子项**。
 * 选择 **文件 > 将场景另存为 ...**
-* 将场景命名为 **SharedHolograms** ，然后单击 " **保存** "。
+* 将场景命名为 **SharedHolograms** ，然后单击 " **保存**"。
 * 按下 Unity 中的 " **播放** " 按钮，预览全息影像。
 * 按第二次 **播放** 以停止预览模式。
 
 **将项目从 Unity 导出到 Visual Studio**
 
-* 在 Unity 中，选择 " **文件 > 生成设置** "。
+* 在 Unity 中，选择 " **文件 > 生成设置**"。
 * 单击 " **添加打开的场景** " 添加场景。
-* 选择 " **平台** " 列表中的 " **通用 Windows 平台** "，然后单击 " **切换平台** "。
-* 将 **SDK** 设置为 **通用 10** 。
-* 将 **目标设备** 设置为 **HoloLens** ，将 " **UWP" 生成类型** 设置为 " **D3D** "。
-* 检查 **Unity c # 项目** 。
-* 单击“生成”  。
+* 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。
+* 将 **SDK** 设置为 **通用 10**。
+* 将 **目标设备** 设置为 **HoloLens** ，将 " **UWP" 生成类型** 设置为 " **D3D**"。
+* 检查 **Unity c # 项目**。
+* 单击“生成”。
 * 在出现的 "文件资源管理器" 窗口中，创建一个名为 "App" 的 **新文件夹** 。
 * 单击 **应用** 文件夹。
-* 按 " **选择文件夹** "。
+* 按 " **选择文件夹**"。
 * 当 Unity 完成后，将显示文件资源管理器窗口。
 * 打开 **应用程序** 文件夹。
 * 打开 **SharedHolograms** 以启动 Visual Studio。
-* 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **X86** "。
-* 单击 "本地计算机" 旁边的下拉箭头，然后选择 " **远程设备** "。
+* 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **X86**"。
+* 单击 "本地计算机" 旁边的下拉箭头，然后选择 " **远程设备**"。
     * 将 **地址** 设置为 HoloLens 的名称或 IP 地址。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** **" 或 "我的 IP 地址是什么？"。**
-    * 将 **身份验证模式** 设置为 " **通用** "。
-    * 单击 " **选择** "
-* 单击 " **调试" > "开始但不调试** " 或按 **Ctrl + F5** 。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+    * 将 **身份验证模式** 设置为 " **通用**"。
+    * 单击 "**选择**"
+* 单击 " **调试" > "开始但不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 * 放在你的 HoloLens 上，找到 EnergyHub 全息图。
 
 ## <a name="chapter-2---interaction"></a>第2章-交互
@@ -127,7 +127,7 @@ ms.locfileid: "91678822"
 
 * 在 " **层次结构" 面板** 中，选择 " **HologramCollection** " 对象。
 * 在 **检查器面板** 中，单击 " **添加组件** " 按钮。
-* 在菜单中，在 "搜索" 框中键入 " **注视经理** "。 选择搜索结果。
+* 在菜单中，在 "搜索" 框中键入 " **注视经理**"。 选择搜索结果。
 * 在 **HoloToolkit-Sharing-240\Prefabs\Input** 文件夹中，找到 **光标** 资产。
 * 将 **光标** 资产拖放到 **层次结构** 中。
 
@@ -135,10 +135,10 @@ ms.locfileid: "91678822"
 
 * 在 " **层次结构" 面板** 中，选择 " **HologramCollection** " 对象。
 * 单击 " **添加组件** "，并在搜索字段中键入 **笔势管理器** 。 选择搜索结果。
-* 在 " **层次结构" 面板** 中，展开 " **HologramCollection** "。
+* 在 " **层次结构" 面板** 中，展开 " **HologramCollection**"。
 * 选择 "子 **EnergyHub** " 对象。
 * 在 **检查器面板** 中，单击 " **添加组件** " 按钮。
-* 在 "搜索 **" 框中** ，键入 "搜索" 对话框。 选择搜索结果。
+* 在 "搜索 **" 框中**，键入 "搜索" 对话框。 选择搜索结果。
 * 通过选择 "文件" **> 保存** 场景来保存场景。
 
 **部署和体验**
@@ -171,11 +171,11 @@ ms.locfileid: "91678822"
 ### <a name="instructions"></a>Instructions
 
 * 在 " **项目" 面板** 中，导航到 **HoloToolkit-Sharing-240\Prefabs\Sharing** 文件夹。
-* 将 **共享** prefab 拖放到 **层次结构面板** 。
+* 将 **共享** prefab 拖放到 **层次结构面板**。
 
 接下来，我们需要启动共享服务。 共享体验中只有 **一台 PC** 需要执行此步骤。
 
-* 在 Unity 中-在顶部菜单中，选择 " **HoloToolkit-240" 菜单** 。
+* 在 Unity 中-在顶部菜单中，选择 " **HoloToolkit-240" 菜单**。
 * 在下拉栏中选择 " **启动共享服务** " 项。
 * 选中 " **专用网络** " 选项，并在出现防火墙提示时单击 " **允许访问** "。
 * 记下 "共享服务控制台" 窗口中显示的 IPv4 地址。 此 IP 与运行服务的计算机的 IP 相同。
@@ -186,7 +186,7 @@ ms.locfileid: "91678822"
 * 在 **检查器** 的 **共享阶段** 组件上，将 **服务器地址** 从 "localhost" 更改为运行 SharingService.exe 的计算机的 IPv4 地址。
 * 在 **层次结构** 中，选择 " **HologramCollection** " 对象。
 * 在 **检查器** 中，单击 " **添加组件** " 按钮。
-* 在搜索框中，键入 " **导入导出定位点管理器** "。 选择搜索结果。
+* 在搜索框中，键入 " **导入导出定位点管理器**"。 选择搜索结果。
 * 在 " **项目" 面板** 中，导航到 **Scripts** 文件夹。
 * 双击 **HologramPlacement** 脚本，在 Visual Studio 中将其打开。
 * 将内容替换为以下代码。
@@ -295,9 +295,9 @@ public class HologramPlacement : Singleton<HologramPlacement>
 }
 ```
 
-* 返回 Unity，在 " **层次结构" 面板** 中选择 " **HologramCollection** "。
+* 返回 Unity，在 "**层次结构" 面板** 中选择 " **HologramCollection** "。
 * 在 **检查器面板** 中，单击 " **添加组件** " 按钮。
-* 在菜单中，在 "搜索" 框中键入 " **应用状态管理器** "。 选择搜索结果。
+* 在菜单中，在 "搜索" 框中键入 " **应用状态管理器**"。 选择搜索结果。
 
 **部署和体验**
 
@@ -368,11 +368,11 @@ public class AvatarSelector : MonoBehaviour
 ```
 
 * 在 **层次结构** 中，选择 " **HologramCollection** " 对象。
-* 在 **检查器** 中单击 " **添加组件** "。
-* 在搜索框中，键入 " **本地播放机管理器** "。 选择搜索结果。
+* 在 **检查器** 中单击 " **添加组件**"。
+* 在搜索框中，键入 " **本地播放机管理器**"。 选择搜索结果。
 * 在 **层次结构** 中，选择 " **HologramCollection** " 对象。
-* 在 **检查器** 中单击 " **添加组件** "。
-* 在搜索框中，键入 " **远程播放机管理器** "。 选择搜索结果。
+* 在 **检查器** 中单击 " **添加组件**"。
+* 在搜索框中，键入 " **远程播放机管理器**"。 选择搜索结果。
 * 在 Visual Studio 中打开 **HologramPlacement** 脚本。
 * 将内容替换为以下代码。
 
@@ -986,7 +986,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * 点击以放置 EnergyHub。
 * 尝试使用语音命令 "重置目标" 来选择 EnergyHub 备份，并以组的形式协同工作，以便将全息图移动到新位置。
 
-## <a name="chapter-6---real-world-physics"></a>第6章-真实物理
+## <a name="chapter-6---real-world-physics"></a>第6章-Real-World 物理学
 
 >[!VIDEO https://www.youtube.com/embed/XNpQVSyXwMo]
 
@@ -1000,7 +1000,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 ### <a name="instructions"></a>Instructions
 
 * 在 **层次结构** 中，选择 " **HologramCollection** " 对象。
-* 在 **检查器** 中单击 " **添加组件** "。
+* 在 **检查器** 中单击 " **添加组件**"。
 * 在搜索框中，键入 " **Projectile 启动** 程序"。 选择搜索结果。
 
 **部署和体验**
@@ -1022,11 +1022,11 @@ public class HologramPlacement : Singleton<HologramPlacement>
 ### <a name="instructions"></a>Instructions
 
 * 在 " **项目" 面板** 中，导航到 " **全息影像** " 文件夹。
-* 将 **Underworld** 资产拖放为 HologramCollection 的 **子项** 。
-* 选择 **HologramCollection** 后，在 **检查器** 中单击 " **添加组件** " 按钮。
-* 在菜单中，在 "搜索" 框中键入 **ExplodeTarget** 。 选择搜索结果。
-* 选择 **HologramCollection** 后，从 **层次结构** 中， **将 EnergyHub** 对象拖到 **检查器** 中的 **目标** 字段。
-* 选择 **HologramCollection** 后，从 **层次结构** 中， **将 Underworld** 对象拖到 **检查器** 中的 **Underworld** 字段。
+* 将 **Underworld** 资产拖放为 HologramCollection 的 **子项**。
+* 选择 **HologramCollection** 后，在 **检查器** 中单击 "**添加组件**" 按钮。
+* 在菜单中，在 "搜索" 框中键入 **ExplodeTarget**。 选择搜索结果。
+* 选择 **HologramCollection** 后，从 **层次结构** 中，**将 EnergyHub** 对象拖到 **检查器** 中的 **目标** 字段。
+* 选择 **HologramCollection** 后，从 **层次结构** 中，**将 Underworld** 对象拖到 **检查器** 中的 **Underworld** 字段。
 
 **部署和体验**
 

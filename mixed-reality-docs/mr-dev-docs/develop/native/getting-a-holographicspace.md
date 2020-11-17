@@ -5,18 +5,18 @@ author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
-keywords: Windows Mixed Reality，HolographicSpace，CoreWindow，空间输入，呈现，交换链，全息帧，更新循环，游戏循环，引用框架，locatability，示例代码，演练
-ms.openlocfilehash: d96362e7d5795449b608196e52bce55d0f16625b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，HolographicSpace，CoreWindow，空间输入，呈现，交换链，全息帧，更新循环，游戏循环，引用框架，locatability，示例代码，演练，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: fa2c64901a7c4a09710a472509441d54a9e3a383
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677611"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679636"
 ---
 # <a name="getting-a-holographicspace"></a>获取 HolographicSpace
 
 > [!NOTE]
-> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)** 。
+> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>类是您在全息环境中的门户。 它控制沉浸式渲染、提供相机数据，并提供对空间推理 Api 的访问。 你将为 UWP 应用的 <a href="https://docs.microsoft.com/api/windows.ui.core.corewindow" target="_blank">CoreWindow</a> 或 Win32 应用的 HWND 创建一个。
 
@@ -24,13 +24,13 @@ ms.locfileid: "91677611"
 
 创建全息空间对象是创建 Windows Mixed Reality 应用程序的第一步。 传统的 Windows 应用会呈现给为其应用程序视图的核心窗口创建的 Direct3D 交换链。 此交换链在全息 UI 中显示为一个石板。 若要使应用程序视图为全息而不是2D 石板，请为其核心窗口而不是交换链创建一个全息空间。 提供此全息空间创建的全息帧会使您的应用程序进入全屏呈现模式。
 
-对于 [从 *全息版 DirectX 11 应用 (通用 Windows) 模板* 开始](creating-a-holographic-directx-project.md)的 **UWP 应用** ，请在 AppView 中的 **SetWindow** 方法中查找此代码：
+对于 [从 *全息版 DirectX 11 应用 (通用 Windows) 模板* 开始](creating-a-holographic-directx-project.md)的 **UWP 应用**，请在 AppView 中的 **SetWindow** 方法中查找此代码：
 
 ```cpp
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-对于 [从 *BasicHologram* win32 示例开始](creating-a-holographic-directx-project.md#creating-a-win32-project)的 **Win32 应用** ，请查看 **app：： CreateWindowAndHolographicSpace** ，了解如何创建 HWND，然后通过创建关联的 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>将其转换为沉浸式 HWND：
+对于 [从 *BasicHologram* win32 示例开始](creating-a-holographic-directx-project.md#creating-a-win32-project)的 **Win32 应用**，请查看 **app：： CreateWindowAndHolographicSpace** ，了解如何创建 HWND，然后通过创建关联的 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>将其转换为沉浸式 HWND：
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
@@ -114,7 +114,7 @@ m_cameraAddedToken = m_holographicSpace.CameraAdded(
 
 您的应用程序还需要通过释放为该照相机创建的资源来响应 **CameraRemoved** 事件。
 
-From **DeviceResources：： SetHolographicSpace** ：
+From **DeviceResources：： SetHolographicSpace**：
 
 ```cpp
 m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
@@ -142,7 +142,7 @@ Windows 全息版中有两种参考帧：附加到设备的参考框架，以及
 
 空间定位符代表 Windows Mixed Reality 设备，并跟踪设备的运动，并提供可以相对于其位置所理解的坐标系统。
 
-From **AppMain：： OnHolographicDisplayIsAvailableChanged** ：
+From **AppMain：： OnHolographicDisplayIsAvailableChanged**：
 
 ```cpp
 spatialLocator = SpatialLocator::GetDefault();
@@ -150,7 +150,7 @@ spatialLocator = SpatialLocator::GetDefault();
 
 当应用程序启动时，创建静止引用框架。 这类似于定义一个世界坐标系统，并在应用程序启动时将原点置于设备位置。 此参考框架不会随设备一起移动。
 
-From **AppMain：： SetHolographicSpace** ：
+From **AppMain：： SetHolographicSpace**：
 
 ```cpp
 m_stationaryReferenceFrame =

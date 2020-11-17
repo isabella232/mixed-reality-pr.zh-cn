@@ -1,17 +1,17 @@
 ---
-title: MR 空间 230-空间映射
+title: MR 空间 230 - 空间映射
 description: 遵循以下编码演练，使用 Unity、Visual Studio 和 HoloLens 来了解空间映射概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间映射，表面重建，网格
-ms.openlocfilehash: 312ae8f36904fe902852018ab0f76052a17fe398
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间映射，表面重建，网格，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: dc96fbff43c21216e3b860f1dbbbaae330e1f176
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677950"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677186"
 ---
 # <a name="mr-spatial-230-spatial-mapping"></a>MR 空间 230：空间映射
 
@@ -60,48 +60,48 @@ ms.locfileid: "91677950"
 
 ### <a name="notes"></a>备注
 
-* 需要禁用 Visual Studio 中的 "Enable 仅我的代码" ("工具" > "> 选项" 下的 " *未选中* ) " 调试，以便在代码中命中断点。
+* 需要禁用 Visual Studio 中的 "Enable 仅我的代码" ("工具" > "> 选项" 下的 " *未选中*) " 调试，以便在代码中命中断点。
 
 ## <a name="unity-setup"></a>Unity 设置
 
 >[!VIDEO https://www.youtube.com/embed/y2Y4LhK6TEM]
 
-* 启动 **Unity** 。
+* 启动 **Unity**。
 * 选择 " **新建** " 以创建新项目。
-* 将项目命名为 **Planetarium** 。
+* 将项目命名为 **Planetarium**。
 * 验证是否选择了 **3d** 设置。
-* 单击 " **创建项目** "。
-* Unity 启动后，请参阅 " **编辑 > 项目设置" > Player** "。
+* 单击 " **创建项目**"。
+* Unity 启动后，请参阅 " **编辑 > 项目设置" > Player**"。
 * 在 " **检查器** " 面板中，找到并选择绿色的 **Windows 应用商店** 图标。
-* 展开 " **其他设置** "。
+* 展开 " **其他设置**"。
 * 在 " **呈现** " 部分中，查看 " **支持虚拟现实** " 选项。
-* 验证 **虚拟现实 sdk** 列表中是否出现 **Windows 全息** 。 如果没有，请选择 **+** 列表底部的 "" 按钮，然后选择 " **Windows 全息** "。
-* 展开 " **发布设置** "。
+* 验证 **虚拟现实 sdk** 列表中是否出现 **Windows 全息**。 如果没有，请选择 **+** 列表底部的 "" 按钮，然后选择 " **Windows 全息**"。
+* 展开 " **发布设置**"。
 * 在 " **功能** " 部分中，检查以下设置：
     * InternetClientServer
     * PrivateNetworkClientServer
     * 麦克风
     * SpatialPerception
 * 开始 **编辑 > 项目设置 > 质量**
-* 在 " **检查器** " 面板中的 "Windows 应用商店" 图标下，选择 "默认" 行下的黑色下拉箭头并将默认设置更改为 " **非常低** "。
-* 请参阅 **资产 > 导入包 > 自定义包** 。
+* 在 " **检查器** " 面板中的 "Windows 应用商店" 图标下，选择 "默认" 行下的黑色下拉箭头并将默认设置更改为 " **非常低**"。
+* 请参阅 **资产 > 导入包 > 自定义包**。
 * 导航到 **..\holographicacademy-holograms-230-SpatialMapping\Starting** 文件夹。
-* 单击 " **Planetarium. unitypackage** "。
+* 单击 " **Planetarium. unitypackage**"。
 * 单击“打开”。
 * 随即出现 " **导入 Unity 包** " 窗口，单击 " **导入** " 按钮。
 * 等待 Unity 导入完成此项目所需的所有资产。
-* 在 " **层次结构** " 面板中，删除 **主摄像机** 。
+* 在 " **层次结构** " 面板中，删除 **主摄像机**。
 * 在 " **项目** " 面板中，找到 " **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** " 文件夹，查找 " **照相机** " 对象。
 * 将 **主相机** prefab 拖放到 " **层次结构** " 面板中。
 * 在 " **层次结构** " 面板中，删除 **方向轻型** 对象。
 * 在 " **项目** " 面板的 " **全息影像** " 文件夹中，找到 **Cursor** 对象。
 * 拖动 & 将 **游标** prefab 拖放到 **层次结构** 中。
 * 在 " **层次结构** " 面板中，选择 **Cursor** 对象。
-* 在 **检查器** 面板中，单击 " **层** " 下拉箭头，然后选择 " **编辑层 ...** "。
-* 将 **用户层 31** 命名为 " **SpatialMapping** "。
+* 在 **检查器** 面板中，单击 " **层** " 下拉箭头，然后选择 " **编辑层 ...**"。
+* 将 **用户层 31** 命名为 "**SpatialMapping**"。
 * 保存新场景： **File > 将场景另存为 ...**
-* 单击 " **新建文件夹** "，然后将文件夹命名为 " **场景** "。
-* 将该文件命名为 " **Planetarium** " 并将其保存在 **幕后** 文件夹中。
+* 单击 " **新建文件夹** "，然后将文件夹命名为 " **场景**"。
+* 将该文件命名为 "**Planetarium**" 并将其保存在 **幕后** 文件夹中。
 
 ## <a name="chapter-1---scanning"></a>第1章-扫描
 
@@ -119,23 +119,23 @@ ms.locfileid: "91677950"
 
 **生成并部署 (第1部分)**
 
-* 在 Unity 中，选择 " **文件 > 生成设置** "。
+* 在 Unity 中，选择 " **文件 > 生成设置**"。
 * 单击 " **添加打开的场景** "，将 " **Planetarium** " 场景添加到生成中。
-* 选择 " **平台** " 列表中的 " **通用 Windows 平台** "，然后单击 " **切换平台** "。
-* 将 **SDK** 设置为 **通用 10** ，将 **UWP 版本** 设置为 **D3D** 。
-* 检查 **Unity c # 项目** 。
-* 单击“生成”  。
+* 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。
+* 将 **SDK** 设置为 **通用 10** ，将 **UWP 版本** 设置为 **D3D**。
+* 检查 **Unity c # 项目**。
+* 单击“生成”。
 * 创建名为 "App" 的 **新文件夹** 。
 * 单击 **应用** 文件夹。
 * 按 " **选择文件夹** " 按钮。
 * 当 Unity 完成生成后，将显示文件资源管理器窗口。
 * 双击 **应用** 文件夹以将其打开。
 * 双击 **Planetarium** 以在 Visual Studio 中加载项目。
-* 在 Visual Studio 中，使用顶部工具栏将配置更改为 " **发布** "。
-* 将平台更改为 **x86** 。
-* 单击 "本地计算机" 右侧的下拉箭头，然后选择 " **远程计算机** "。
-* 在 "地址" 字段中输入 [设备的 IP 地址](../../../connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) ，并将身份验证模式更改为 **通用 (未加密协议)** 。
-* 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5** 。
+* 在 Visual Studio 中，使用顶部工具栏将配置更改为 " **发布**"。
+* 将平台更改为 **x86**。
+* 单击 "本地计算机" 右侧的下拉箭头，然后选择 " **远程计算机**"。
+* 在 "地址" 字段中输入 [设备的 IP 地址](../../../connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) ，并将身份验证模式更改为 **通用 (未加密协议)**。
+* 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。
 * 在 Visual Studio 中查看 " **输出** " 面板以了解 "生成和部署" 状态。
 * 在应用程序部署完成后，请四处浏览聊天室。 你将看到由黑色和白色线框网格覆盖的周围面。
 * 扫描您的环境。 务必查看墙壁、上限和楼层。
@@ -144,16 +144,16 @@ ms.locfileid: "91677950"
 
 现在，让我们了解空间映射如何影响性能。
 
-* 在 Unity 中，选择 " **Window > Profiler** "。
-* 单击 " **添加探查器 > GPU** "。
-* 单击 " **活动探查 <Enter IP> 器 >** 。
+* 在 Unity 中，选择 " **Window > Profiler**"。
+* 单击 " **添加探查器 > GPU**"。
+* 单击 "**活动探查 <Enter IP> 器 >**。
 * 输入 HoloLens 的 **IP 地址** 。
 * 单击“连接”。
 * 观察 GPU 呈现帧所花的时间（以毫秒为单位）。
 * 阻止应用程序在设备上运行。
-* 返回到 Visual Studio 并打开 **SpatialMappingObserver.cs** 。 你将在程序集-CSharp (通用 Windows) 项目的 HoloToolkit\SpatialMapping 文件夹中找到它。
+* 返回到 Visual Studio 并打开 **SpatialMappingObserver.cs**。 你会在 Assembly-CSharp (通用 Windows) 项目的 HoloToolkit\SpatialMapping 文件夹中找到它。
 * 找到 **唤醒 ( # B1** 函数并添加以下代码行： **TrianglesPerCubicMeter = 1200;**
-* 将项目重新部署到你的设备，然后 **重新连接探查器** 。 观察帧的呈现时间（毫秒）。
+* 将项目重新部署到你的设备，然后 **重新连接探查器**。 观察帧的呈现时间（毫秒）。
 * 阻止应用程序在设备上运行。
 
 **在 Unity 中保存和加载**
@@ -162,18 +162,18 @@ ms.locfileid: "91677950"
 
 * 返回到 Visual Studio，并删除在上一节中在 **唤醒 ( # B1** 函数中添加的 **TrianglesPerCubicMeter** 行。
 * 将项目重新部署到你的设备。 现在，我们应该运行每个立方米的 **500** 三角形。
-* 打开浏览器并输入你的 HoloLens IPAddress 以导航到 **Windows 设备门户** 。
+* 打开浏览器并输入你的 HoloLens IPAddress 以导航到 **Windows 设备门户**。
 * 在左侧面板中选择 " **3D 视图** " 选项。
 * 在 " **表面重建** " 下，选择 " **更新** " 按钮。
 * 观看您在 HoloLens 上扫描的区域显示在 "显示" 窗口中。
 * 若要保存房间扫描，请按 " **保存** " 按钮。
-* 打开 " **下载** " 文件夹，查找保存的会议室模型 **SRMesh** 。
+* 打开 " **下载** " 文件夹，查找保存的会议室模型 **SRMesh**。
 * 将 **SRMesh** 复制到 Unity 项目的 " **资产** " 文件夹。
-* 在 Unity 中，在 " **层次结构** " 面板中选择 " **SpatialMapping** " 对象。
+* 在 Unity 中，在 "**层次结构**" 面板中选择 " **SpatialMapping** " 对象。
 * **(脚本) 组件定位对象图面观察** 程序。
 * 单击 " **房间模型** " 属性右侧的圆圈。
 * 找到并选择 " **SRMesh** " 对象，然后关闭窗口。
-* 验证 **检查器** 面板中的 " **房间模型** " 属性现在是否设置为 " **SRMesh** "。
+* 验证 **检查器** 面板中的 "**房间模型**" 属性现在是否设置为 " **SRMesh**"。
 * 按 " **播放** " 按钮进入 Unity 的预览模式。
 * SpatialMapping 组件将从保存的房间模型加载网格，以便可以在 Unity 中使用它们。
 * 切换到 **场景** 视图，查看以线框着色器显示的所有房间模型。
@@ -469,7 +469,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 * 在 Unity 的 " **层次结构** " 面板中，选择 " **SpatialProcessing** " 对象。
 * 在 " **检查器** " 面板中，找到 **要平面 (脚本) 组件的表面网格** 。
 * 将 " **绘图平面** " 属性更改为 " **无** " 以清除选定内容。
-* 将 " **绘图平面** " 属性更改为 " **墙壁** "，以便仅呈现墙壁平面。
+* 将 " **绘图平面** " 属性更改为 " **墙壁**"，以便仅呈现墙壁平面。
 * 在 " **项目** " 面板的 " **脚本** " 文件夹中，双击 **Placeable.cs** 以在 Visual Studio 中将其打开。
 
 可 **放置** 脚本已附加到在完成平面查找之后创建的 "海报和投影" 框。 我们需要做的就是取消注释某些代码，此脚本将实现以下内容：
@@ -1094,9 +1094,9 @@ public class Placeable : MonoBehaviour
 接下来，我们将向地球添加特殊行为，使其在封闭像素（如 sun) 或空间映射网格） (时，它会有一个蓝色突出显示：
 
 * 在 " **项目** " 面板的 " **全息影像** " 文件夹中，展开 " **SolarSystem** " 对象。
-* 单击 **地球** 。
+* 单击 **地球**。
 * 在 " **检查器** " 面板中，找到地球材料 (底部组件) 。
-* 在 " **着色器" 下拉** > OcclusionRim 中，将着色器更改为 " **自定义** "。 当另一对象封闭像素时，这会在地球周围呈现蓝色突出显示。
+* 在 " **着色器" 下拉**> OcclusionRim 中，将着色器更改为 " **自定义**"。 当另一对象封闭像素时，这会在地球周围呈现蓝色突出显示。
 
 最后，我们将为太阳系中的行星启用 x 光视觉效果。 需要编辑 Scripts\SolarSystem 文件夹) 中找到的 **PlanetOcclusion.cs** (，以实现以下目的：
 
@@ -1208,7 +1208,7 @@ public class PlanetOcclusion : MonoBehaviour
 
 ## <a name="the-end"></a>结束
 
-恭喜！ 你现在已经完成了 **MR 空间230：空间映射** 。
+恭喜！ 你现在已经完成了 **MR 空间230：空间映射**。
 
 * 你知道如何扫描环境并将空间映射数据加载到 Unity。
 * 你了解着色器的基本知识，以及如何使用材料来重新可视化世界。

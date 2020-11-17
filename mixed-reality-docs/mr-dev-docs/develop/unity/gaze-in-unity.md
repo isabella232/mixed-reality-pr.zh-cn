@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 眼睛、头盔、unity、全息图、混合现实
-ms.openlocfilehash: 8c1a6cb0847cd0e6e776c6d4e1f7c1efdc126279
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 眼睛，眼睛，头盔，unity，全息影像，混合现实，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
+ms.openlocfilehash: 0c62de9cb1b7ea892831ea2cedbeb23be5ea7b37
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677307"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677506"
 ---
 # <a name="head-gaze-in-unity"></a>头-注视 Unity
 
@@ -58,17 +58,17 @@ void Update()
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是在浏览 MRTK 核心构建基块。 在这里，你可以继续执行下一个构建基块：
+如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [手势和运动控制器](gestures-and-motion-controllers-in-unity.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>请参阅
 * [摄像头](camera-in-unity.md)

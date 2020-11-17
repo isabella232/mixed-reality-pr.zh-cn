@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
-keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发
-ms.openlocfilehash: 5bc120f802c2160282befd1ce6cb8025be21cbaa
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 0a16a0291261277cb09e736e60b25f8ba71382e3
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91675877"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679206"
 ---
 # <a name="hand-tracking-in-unreal"></a>Unreal 中的手部跟踪
 
@@ -111,7 +111,7 @@ static bool UWindowsMixedRealityHandTrackingFunctionLibrary::GetHandJointTransfo
 
 ![实时链接源](images/unreal/live-link-source.png)
  
-启用源并打开动画资产后，展开 " **预览场景** " 选项卡中的 " **动画** " 部分会显示其他选项 (详细信息显示在 Unreal 的实时链接文档中-由于插件已在 beta 中，因此该过程稍后可能会更改) 。
+启用源并打开动画资产后，展开 "**预览场景**" 选项卡中的 "**动画**" 部分会显示其他选项 (详细信息显示在 Unreal 的实时链接文档中-由于插件已在 beta 中，因此该过程稍后可能会更改) 。
 
 ![实时链接动画](images/unreal/live-link-animation.png)
  
@@ -128,7 +128,7 @@ static bool UWindowsMixedRealityHandTrackingFunctionLibrary::GetHandJointTransfo
 ![手写网格](images/unreal/hand-mesh.png)
 
 在可以访问手写网格数据之前，你需要：
-- 选择 **ARSessionConfig** 资产，展开 " **AR 设置->** " "世界" 映射设置，然后选中 " **根据跟踪的几何生成网格数据** "。 
+- 选择 **ARSessionConfig** 资产，展开 " **AR 设置->** " "世界" 映射设置，然后选中 " **根据跟踪的几何生成网格数据**"。 
 
 下面是默认的网格参数：
 
@@ -278,7 +278,7 @@ C++：
 static FPointerPoseInfo UWindowsMixedRealityFunctionLibrary::GetPointerPoseInfo(EControllerHand hand);
 ```
 
-2. 如果指针在当前帧中 Grasped， **则为 Grasped** 返回 true。
+2. 如果指针在当前帧中 Grasped，**则为 Grasped** 返回 true。
 
 建立
 
@@ -289,7 +289,7 @@ C++：
 static bool UWindowsMixedRealityFunctionLibrary::IsGrasped(EControllerHand hand);
 ```
  
-3. 如果用户在当前帧中触发了 Select， **则选择 "按下" 将** 返回 true。
+3. 如果用户在当前帧中触发了 Select，**则选择 "按下" 将** 返回 true。
 
 建立
 
@@ -300,7 +300,7 @@ C++：
 static bool UWindowsMixedRealityFunctionLibrary::IsSelectPressed(EControllerHand hand);
 ```
 
-4. 如果在当前帧中触发事件或按钮， **则单击 "是" 按钮** 返回 true。
+4. 如果在当前帧中触发事件或按钮，**则单击 "是" 按钮** 返回 true。
 
 建立
 
@@ -326,7 +326,7 @@ static EHMDTrackingStatus UWindowsMixedRealityFunctionLibrary::GetControllerTrac
 
 Hololens 2 可以跟踪空间手势，这意味着您可以将这些手势捕获为输入。 可以在 [HoloLens 2 基本使用](https://docs.microsoft.com/hololens/hololens2-basic-usage) 文档中找到有关手势的更多详细信息。
 
-您可以在 " **Windows Mixed Reality 空间输入** " 下查找蓝图函数，并通过 `WindowsMixedRealitySpatialInputFunctionLibrary.h` 在调用代码文件中添加来查找 c + + 函数。
+您可以在 " **Windows Mixed Reality 空间输入**" 下查找蓝图函数，并通过 `WindowsMixedRealitySpatialInputFunctionLibrary.h` 在调用代码文件中添加来查找 c + + 函数。
 
 ![捕获手势](images/unreal/capture-gestures.png)
 
@@ -407,14 +407,14 @@ const FKey FSpatialInputKeys::RightNavigationZGesture(RightNavigationZGestureNam
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所 Unreal 的开发检查点旅程，就是在探索 MRTK 核心构建基块。 在这里，你可以继续执行下一个构建基块： 
+如果你遵循我们规划的 Unreal 开发检查点历程，则你处于探索 MRTK 核心构建基块的过程之中。 从这里，你可以进入下一个构建基块： 
 
 > [!div class="nextstepaction"]
 > [本地空间定位点](unreal-spatial-anchors.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [HoloLens 摄像头](unreal-hololens-camera.md)
 
-随时可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#2-core-building-blocks)。

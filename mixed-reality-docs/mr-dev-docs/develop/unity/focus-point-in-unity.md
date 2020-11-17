@@ -5,18 +5,18 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity，焦点，焦点平面，稳定平面，稳定点，reprojection，LSR，深度缓冲区
-ms.openlocfilehash: 4d8c8a232d12a8d6f0a7694fbc0ed8f66395163a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unity，焦点，焦点平面，稳定平面，稳定点，reprojection，LSR，深度缓冲区，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 48c0d26e89124b9dbfc1d108354fb6e751e51783
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676915"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678686"
 ---
 # <a name="focus-point-in-unity"></a>Unity 中的焦点
 
 **命名空间：** *UnityEngine. XR*<br>
-**类型** ： *HolographicSettings*
+**类型**： *HolographicSettings*
 
 可以将 [焦点](../platform-capabilities-and-apis/hologram-stability.md#reprojection) 设置为提供有关如何在当前显示的全息影像上最好地执行稳定的提示。
 
@@ -52,7 +52,7 @@ void Update()
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 在这里，你可以继续学习下一主题：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 从这里，你可以进入下一主题：
 
 > [!div class="nextstepaction"]
 > [失跟](tracking-loss-in-unity.md)
@@ -62,7 +62,7 @@ void Update()
 > [!div class="nextstepaction"]
 > [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../platform-capabilities-and-apis/using-visual-studio.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#3-platform-capabilities-and-apis) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#3-platform-capabilities-and-apis)。
 
 ### <a name="see-also"></a>请参阅
 * [稳定平面](../platform-capabilities-and-apis/hologram-stability.md#reprojection)

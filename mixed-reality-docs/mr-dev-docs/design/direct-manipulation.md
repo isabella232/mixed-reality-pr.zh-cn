@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 视线, 视线定位, 交互, 设计, 手动近距, HoloLens
-ms.openlocfilehash: 18e2a6128a5fa07fe2ddcd3c0eab192ccdedb4b4
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 8141bc588247be15174d4a85992b74911ffc002e
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696615"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631535"
 ---
 # <a name="direct-manipulation-with-hands"></a>用手直接操作
 
@@ -34,7 +34,7 @@ ms.locfileid: "91696615"
 <tr>
      <td><strong>输入模型</strong></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
-     <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+     <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
      <td><a href="https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>
 <tr>
@@ -259,7 +259,7 @@ HoloLens 2 可让用户将边界框应用到每个 3D 对象，以便用手引�
 
 非基于视觉元素的操作不会将任何视觉元素附加到边界框。 用户只能显示边界框，然后直接与它交互。 如果用一只手抓取边界框，则对象的平移和旋转将与手的动作和方向相关联。 用两只手抓取对象时，用户可以根据两只手的相对运动来平移、缩放和旋转该对象。
 
-具体的操作需要精确。 我们建议使用 **基于视觉元素的操作** ，因为它提供较高的粒度级。 若要灵活操作，我们建议使用 **非基于视觉元素的操作** ，因为它可以实现充满乐趣的即时体验。
+具体的操作需要精确。 我们建议使用 **基于视觉元素的操作**，因为它提供较高的粒度级。 若要灵活操作，我们建议使用 **非基于视觉元素的操作**，因为它可以实现充满乐趣的即时体验。
 
 <br>
 
@@ -307,18 +307,18 @@ HoloLens 2 可让用户将边界框应用到每个 3D 对象，以便用手引�
 
 如果直接操作按预期方式运行，则用户可能会觉得它充满魔力。 但是，如果只能在无意触发全息影像的情况下才能四处移动手部，则直接操作可能会带来困扰。 眼动追踪可能有助于更好地识别用户的意图。
 
-* **何时** ：减少无意中触发操作响应的情况。 眼动追踪可以更好地识别用户当前正在与哪个对象互动。
+* **何时**：减少无意中触发操作响应的情况。 眼动追踪可以更好地识别用户当前正在与哪个对象互动。
 例如，假设你在伸手抓取一个现实的工具时正在阅读某段全息图（说明）文本。
 
 此外，你的手会意外地移过某些以前未曾注意到的交互式全息图按钮（例如，也许这些按钮在用户的视场 (FoV) 以外）。
 
   长话短说：如果用户有一段时间未注视某张全息影像，但检测到了该全息图的触摸或抓取事件，则有可能该用户并不真正想要与该全息影像交互。
 
-* **哪一个** ：除了解决误报激活以外，另一个示例反映了眼动跟踪可以更好地识别要抓取或点击的全息影像，因为从你的立场来看，精确的交点可能并不明确，尤其是多个全息影像相互靠近时。
+* **哪一个**：除了解决误报激活以外，另一个示例反映了眼动跟踪可以更好地识别要抓取或点击的全息影像，因为从你的立场来看，精确的交点可能并不明确，尤其是多个全息影像相互靠近时。
 
   尽管 HoloLens 2 上的眼动跟踪在如何准确确定视线方面存在限制，但对于近距交互，它仍可以发挥很大的作用，因为使用手动输入交互时，存在深度差异。 举例而言，这意味着有时难以确定手是全息影像的前面还是后面，因此无法精确抓取某个操作小组件。
 
-* **何处** ：使用有关用户正在使用快速投射手势观看的内容的信息。 抓取一幅全息影像，然后大致将它投射到预期目标。  
+* **何处**：使用有关用户正在使用快速投射手势观看的内容的信息。 抓取一幅全息影像，然后大致将它投射到预期目标。  
 
     尽管有时可以正常进行此操作，但快速执行手势可能会导致目标极不准确。 但是，眼动跟踪可以提高手势的准确度。
 

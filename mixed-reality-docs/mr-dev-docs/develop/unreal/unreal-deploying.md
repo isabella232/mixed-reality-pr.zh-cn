@@ -5,15 +5,15 @@ author: sw5813
 ms.author: suwu
 ms.date: 7/10/2020
 ms.topic: article
-keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档
+keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: abd5e5c28ec5e66c4f73df8edf5e0ac0212d170a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 9d32dff121899d40175af813fac4f7be1acc66c3
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677328"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679116"
 ---
 # <a name="deploy-to-device-in-unreal"></a>在 Unreal 中部署到设备
 
@@ -30,11 +30,11 @@ ms.locfileid: "91677328"
 
 ![启动下拉选项](images/unreal/launch-dropdown.png)
 
-2. 打开 **设备管理器** 。 请注意，HoloLens 不会自动显示在设备列表中。
+2. 打开 **设备管理器**。 请注意，HoloLens 不会自动显示在设备列表中。
 
 3. 展开 " **添加未列出的设备** " 部分。
 
-4. 选择 " **HoloLens** " 作为 **平台** 。
+4. 选择 " **HoloLens** " 作为 **平台**。
 
 5. 输入设备的 IP 地址和端口信息，用冒号分隔作为设备标识符。 例如，当通过 USB) 连接时 ("127.0.0.1： 10080"。 使用设备门户的用户名和密码凭据。
 
@@ -59,4 +59,4 @@ ms.locfileid: "91677328"
 > [!div class="nextstepaction"]
 > [高级服务](unreal-development-overview.md#5-adding-services)
 
-随时可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#4-deploying-to-a-device) 。
+你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#4-deploying-to-a-device)。

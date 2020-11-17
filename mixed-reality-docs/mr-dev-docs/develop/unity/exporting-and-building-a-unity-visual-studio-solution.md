@@ -5,44 +5,44 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: unity，visual studio，导出，生成，部署
-ms.openlocfilehash: cfaf812020020e614ef59dbfc15de7bd0d9bc7e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: unity，visual studio，导出，生成，部署，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，UWP，部署
+ms.openlocfilehash: 29415fa7d561cab1aec5f0c2c9344fa24b0e8293
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677604"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677556"
 ---
 # <a name="exporting-and-building-a-unity-visual-studio-solution"></a>导出和构建 Unity Visual Studio 解决方案
 
-如果你不打算在应用程序中使用系统键盘，我们建议使用 *D3D* ，因为你的应用程序将使用略微少的内存，并且启动时间更快。 如果在项目中使用 TouchScreenKeyboard API 来使用系统键盘，则需要导出为 *XAML* 。
+如果你不打算在应用程序中使用系统键盘，我们建议使用 *D3D* ，因为你的应用程序将使用略微少的内存，并且启动时间更快。 如果在项目中使用 TouchScreenKeyboard API 来使用系统键盘，则需要导出为 *XAML*。
 
 ## <a name="how-to-export-from-unity"></a>如何从 Unity 导出
 
 ![Unity 生成设置](images/unitybuildsettings-300px.png)<br>
 *Unity 生成设置*
 
-1. 如果已准备好从 Unity 导出项目，请打开 " **文件** " 菜单，然后选择 " **生成设置 ...** "
+1. 如果已准备好从 Unity 导出项目，请打开 "**文件**" 菜单，然后选择 "**生成设置 ...** "
 2. 单击 " **添加打开的场景** "，将场景添加到生成中。
 3. 在 " **生成设置** " 对话框中，选择以下要为 HoloLens 导出的选项：
    * **平台：** *通用 Windows 平台* ，并确保选择 " **切换平台** " 以使选择生效。
-   * **SDK：** *通用 10* 。
-   * **UWP 生成类型：** *D3D* 。
-4. **可选** ： **Unity c # 项目：** 已选中。
+   * **SDK：** *通用 10*。
+   * **UWP 生成类型：** *D3D*。
+4. **可选**： **Unity c # 项目：** 已选中。
 
 >[!NOTE]
 >选中此框后，您可以：
 >* 在 Visual Studio 远程调试器中调试你的应用程序。
 >* 使用 IntelliSense for WinRT Api 时在 Unity c # 项目中编辑脚本。
 
-5. 从 " **生成设置 ...** " 窗口中，打开 " **播放机设置 ...** "
+5. 从 "**生成设置 ...** " 窗口中，打开 "**播放机设置 ...** "
 6. 选择通用 Windows 平台 "选项卡的" **设置** "。
 7. 展开“XR 设置”组。
 8. 在 " **XR 设置** " 部分中，选中 " **受支持的虚拟现实** " 复选框，以添加新的 **虚拟现实设备** 列表，并确认 **"Windows Mixed Reality"** 列为受支持的设备。
 9. 返回到 " **生成设置** " 对话框。
 10. 选择“生成”  。
 11. 在出现的 "Windows 资源管理器" 对话框中，创建一个新文件夹来保存 Unity 的生成输出。 通常，将文件夹命名为 "App"。
-12. 选择新创建的文件夹，然后单击 " **选择文件夹** "。
+12. 选择新创建的文件夹，然后单击 " **选择文件夹**"。
 13. Unity 完成生成后，将打开项目根目录的 Windows 资源管理器窗口。 导航到新创建的文件夹。
 14. 打开位于此文件夹中的生成的 Visual Studio 解决方案文件。
 
@@ -58,7 +58,7 @@ ms.locfileid: "91677604"
 
 在 [Visual Studio](../platform-capabilities-and-apis/using-visual-studio.md)中生成和部署应用程序的其余部分。 你将需要指定 Unity 生成配置。 Unity 的命名约定可能不同于 Visual Studio 中通常使用的内容：
 
-|  Configuration  |  说明 | 
+|  配置  |  说明 | 
 |----------|----------|
 |  调试  |  禁用所有优化，并启用探查器。 用于调试脚本。 | 
 |  Master  |  启用所有优化并禁用探查器。 用于将应用提交到应用商店。 | 

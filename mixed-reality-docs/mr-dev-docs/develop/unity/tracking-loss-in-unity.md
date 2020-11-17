@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity，跟踪丢失，跟踪丢失图像
-ms.openlocfilehash: 5aa17def844735088bcee6137a7b76a586107e44
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unity，跟踪丢失，跟踪丢失图像，轮询，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 52b81069e6b9f94a2a6a4fb552be4234cf43d1f0
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676919"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678416"
 ---
 # <a name="tracking-loss-in-unity"></a>Unity 中的失跟
 
@@ -25,12 +25,12 @@ ms.locfileid: "91676919"
 
 ## <a name="manual-handling"></a>手动处理
 
-若要手动处理跟踪丢失情况，需要执行 " **编辑**  >  **项目设置**  >  **播放器**  >  " **通用 Windows 平台 "设置" 选项卡** ，  >  **Splash Image**  >  **Windows Holographic** 然后选择 "跟踪丢失时暂停和显示图像"。 此后，需要处理跟踪更改和下面指定的 Api。
+若要手动处理跟踪丢失情况，需要执行 "**编辑**  >  **项目设置**  >  **播放器**  >  "**通用 Windows 平台 "设置" 选项卡**，  >  **Splash Image**  >  **Windows Holographic** 然后选择 "跟踪丢失时暂停和显示图像"。 此后，需要处理跟踪更改和下面指定的 Api。
 
 **命名空间：** *UnityEngine. XR*<br>
 **类型：** *WorldManager*
 
-* 全局管理器公开一个事件，以检测 ( *OnPositionalLocatorStateChanged* ) 的跟踪丢失/获得的情况，并使用属性来查询当前状态 ( *WorldManager* ) 
+* 全局管理器公开一个事件，以检测 (*OnPositionalLocatorStateChanged*) 的跟踪丢失/获得的情况，并使用属性来查询当前状态 (*WorldManager*) 
 * 如果跟踪状态为非活动状态，即使用户翻译，照相机也不会在虚拟世界中进行转换。 这意味着对象将不再与任何物理位置相对应，并且所有对象都将显示为正文锁定状态。
 
 处理自己的跟踪更改时，需要轮询每个帧的状态属性，或处理 *OnPositionalLocatorStateChanged* 事件。

@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
-keywords: Windows Mixed Reality，设计，控件，字体，版式，ui，ux
-ms.openlocfilehash: 21409115ed1e9aa9103e1e77ea4aacc0881e1262
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，设计，控件，字体，版式，ui，ux，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
+ms.openlocfilehash: 9778b1b11db7ac1c330b0ede4f6153deff45a95a
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678638"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677356"
 ---
 # <a name="text-in-unity"></a>Unity 中的文本
 
@@ -100,17 +100,17 @@ Unity 的默认字体材料不支持封闭。 因此，默认情况下，你会�
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是在浏览 MRTK 核心构建基块。 在这里，你可以继续执行下一个构建基块：
+如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [语音输入](voice-input-in-unity.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 
 ## <a name="see-also"></a>请参阅

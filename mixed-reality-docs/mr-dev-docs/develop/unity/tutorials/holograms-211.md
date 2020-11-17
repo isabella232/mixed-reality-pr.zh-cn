@@ -1,17 +1,17 @@
 ---
-title: MR 输入 211-手势
+title: MR 输入 211 - 手势
 description: 按照以下编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解手势概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，手势
-ms.openlocfilehash: 0d3057cb1751a3bc429ed1ccf520b451110f64b4
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，手势，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: 9f83e2f3b02cf8d83b2fb58a3a0d05dc8576b0e8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677738"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678286"
 ---
 # <a name="mr-input-211-gesture"></a>MR 输入 211：手势
 
@@ -64,27 +64,27 @@ ms.locfileid: "91677738"
 
 ### <a name="errata-and-notes"></a>勘误表和说明
 
-* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" ( *取消选中* ) ，以便在代码中命中断点。
+* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" (*取消选中*) ，以便在代码中命中断点。
 
 ## <a name="chapter-0---unity-setup"></a>第0章-Unity 设置
 
 ### <a name="instructions"></a>Instructions
 
 1. 启动 Unity。
-2. 选择“打开”。
+2. 选择“打开”  。
 3. 导航到之前未存档的 **手势** 文件夹。
-4. 查找并选择 " **启动** / **模型资源管理器** " 文件夹。
+4. 查找并选择 "**启动** / **模型资源管理器**" 文件夹。
 5. 单击 " **选择文件夹** " 按钮。
 6. 在 " **项目** " 面板中，展开 " **场景** " 文件夹。
 7. 双击 " **ModelExplorer** 场景" 将其加载到 Unity。
 
 ### <a name="building"></a>生成
 
-1. 在 Unity 中，选择 " **文件 > 生成设置** "。
-2. 如果场景 **/ModelExplorer** 未列在 " **生成** " 中，请单击 " **添加打开的场景** " 添加场景。
-3. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens** "。 否则，请将其留在 **任何设备** 上。
+1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+2. 如果场景 **/ModelExplorer** 未列在 " **生成**" 中，请单击 " **添加打开的场景** " 添加场景。
+3. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
 4. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
-5. 单击“生成”  。
+5. 单击“生成”。
 6. 创建名为 "App" 的 **新文件夹** 。
 7. 单击 **应用** 文件夹。
 8. 按 **选择文件夹** ，Unity 将开始为 Visual Studio 生成项目。
@@ -92,21 +92,21 @@ ms.locfileid: "91677738"
 当 Unity 完成后，将显示文件资源管理器窗口。
 
 1. 打开 **应用程序** 文件夹。
-2. 打开 **ModelExplorer Visual Studio 解决方案** 。
+2. 打开 **ModelExplorer Visual Studio 解决方案**。
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86** "。
-2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机** "。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)** 。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** "。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
+3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 5. 当应用程序已部署后，使用 **选择手势** 关闭 **Fitbox** 。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64** "。
-2. 确保将部署目标设置为 " **本地计算机** "。
-3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+2. 确保将部署目标设置为 " **本地计算机**"。
+3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 4. 当应用程序已部署后，通过将触发器拖到运动控制器上来关闭 **Fitbox** 。
 
 >[!NOTE]
@@ -139,9 +139,9 @@ ms.locfileid: "91677738"
 
 1. 在 " **层次结构** " 面板中，选择 **光标** 对象并将其删除。
 2. 在 " **项目** " 面板中，搜索 " **CursorWithFeedback** " 并将其拖到 " **层次结构** " 面板中。
-3. 在 " **层次结构** " 面板中单击 " **InputManager** "，然后将 **CursorWithFeedback** 对象从 **层次结构** 中拖放到 **检查器** 底部的 InputManager **SimpleSinglePointerSelector** 的 " **游标** " 字段。
+3. 在 "**层次结构**" 面板中单击 " **InputManager** "，然后将 **CursorWithFeedback** 对象从 **层次结构** 中拖放到 **检查器** 底部的 InputManager **SimpleSinglePointerSelector** 的 "**游标**" 字段。
 4. 在 **层次结构** 中单击 " **CursorWithFeedback** "。
-5. 在 " **检查器** " 面板中，展开 **对象游标** 脚本上的 " **游标状态数据** "。
+5. 在 "**检查器**" 面板中，展开 **对象游标** 脚本上的 "**游标状态数据**"。
 
 **游标状态数据** 的工作方式如下所示：
 
@@ -153,9 +153,9 @@ ms.locfileid: "91677738"
 
 * 在 Unity 中，使用 **File > 生成设置** 重新生成应用程序。
 * 打开 **应用程序** 文件夹。
-* 如果它尚未打开，请打开 **ModelExplorer Visual Studio 解决方案** 。
+* 如果它尚未打开，请打开 **ModelExplorer Visual Studio 解决方案**。
   *  (如果在安装过程中已经在 Visual Studio 中生成了/部署了此项目，则可以打开 VS 的实例，并在出现) 提示时单击 "全部重新加载"。
-* 在 Visual Studio 中，单击 " **调试"-> "无调试开始** " 或按 **Ctrl + F5** 。
+* 在 Visual Studio 中，单击 " **调试"-> "无调试开始** " 或按 **Ctrl + F5**。
 * 在应用程序部署到 HoloLens 后，请使用 "轻攻攻" 手势关闭 fitbox。
 * 将您的手转到视图，并将您的索引手指指向天空，开始进行手动跟踪。
 * 向左、向右、向下和向下移动。
@@ -174,22 +174,22 @@ ms.locfileid: "91677738"
 
 若要在应用中使用导航笔势，我们将在导航手势发生时编辑 **GestureAction.cs** 来旋转对象。 此外，我们还会将反馈添加到要在导航可用时显示的光标。
 
-1. 在 " **层次结构** " 面板中，展开 " **CursorWithFeedback** "。
+1. 在 " **层次结构** " 面板中，展开 " **CursorWithFeedback**"。
 2. 在 **全息影像** 文件夹中，找到 " **ScrollFeedback** 资产"。
 3. 将 **ScrollFeedback** prefab 拖放到 **层次结构** 中的 **CursorWithFeedback** GameObject。
-4. 单击 **CursorWithFeedback** 。
+4. 单击 **CursorWithFeedback**。
 5. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-6. 在菜单中，在 "搜索" 框中键入 **CursorFeedback** 。 选择搜索结果。
-7. 将 **ScrollFeedback** 对象从 **层次结构** 中拖放到 **检查器** 的 **光标反馈** 组件中的 " **滚动检测到的游戏对象** " 属性上。
+6. 在菜单中，在 "搜索" 框中键入 **CursorFeedback**。 选择搜索结果。
+7. 将 **ScrollFeedback** 对象从 **层次结构** 中拖放到 **检查器** 的 **光标反馈** 组件中的 "**滚动检测到的游戏对象**" 属性上。
 8. 在 " **层次结构** " 面板中，选择 " **AstroMan** " 对象。
 9. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-10. 在菜单中，键入 "搜索框 **手势" 操作** 。 选择搜索结果。
+10. 在菜单中，键入 "搜索框 **手势" 操作**。 选择搜索结果。
 
 接下来，在 Visual Studio 中打开 **GestureAction.cs** 。 在编码练习 2. c 中，编辑脚本以执行以下操作：
 
 1. 只要执行导航手势，就会 **旋转 AstroMan** 对象。
 2. 计算 **rotationFactor** 以控制应用于对象的旋转量。
-3. 当用户向左或向右移动对象时，绕 y 轴 **旋转对象** 。
+3. 当用户向左或向右移动对象时，绕 y 轴 **旋转对象**。
 
 在脚本中完成编码演练 2. c，或将代码替换为以下已完成的解决方案：
 
@@ -318,9 +318,9 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 1. 在 " **层次结构** " 面板中，选择 " **CursorWithFeedback** " 对象。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-3. 在菜单中，键入搜索框的 **指导** 。 选择搜索结果。
+3. 在菜单中，键入搜索框的 **指导**。 选择搜索结果。
 4. 在 " **项目** " **面板中** ，找到 " **HandGuidanceFeedback** 资产"。
-5. 将 **HandGuidanceFeedback** 资产拖放到 " **检查器** " 面板中的 " **手写指南" 指示符** 属性上。
+5. 将 **HandGuidanceFeedback** 资产拖放到 "**检查器**" 面板中的 "**手写指南" 指示符** 属性上。
 
 ### <a name="build-and-deploy"></a>生成和部署
 
@@ -343,24 +343,24 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 GestureManager.cs 和 AstronautManager.cs 将允许我们执行以下操作：
 
-1. 使用 speech 关键字 " **Move Astronaut** " 启用 **操作** 手势，并使用 " **旋转 Astronaut** " 来禁用它们。
-2. 切换到响应 **操作笔势识别器** 。
+1. 使用 speech 关键字 "**Move Astronaut**" 启用 **操作** 手势，并使用 "**旋转 Astronaut**" 来禁用它们。
+2. 切换到响应 **操作笔势识别器**。
 
-让我们开始吧。
+现在就开始吧。
 
-1. 在 " **层次结构** " 面板中，创建一个新的空 GameObject。 将其命名为 " **AstronautManager** "。
+1. 在 " **层次结构** " 面板中，创建一个新的空 GameObject。 将其命名为 "**AstronautManager**"。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-3. 在菜单中，在 "搜索" 框中键入 " **Astronaut Manager** "。 选择搜索结果。
+3. 在菜单中，在 "搜索" 框中键入 " **Astronaut Manager**"。 选择搜索结果。
 4. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-5. 在菜单中，在 "搜索" 框中键入 " **语音输入源** "。 选择搜索结果。
+5. 在菜单中，在 "搜索" 框中键入 " **语音输入源**"。 选择搜索结果。
 
 现在，我们将添加控制 astronaut 交互状态所需的语音命令。
 
-1. 展开 **检查器** 中的 " **关键字** " 部分。
+1. 展开 **检查器** 中的 "**关键字**" 部分。
 2. 单击右侧的， **+** 添加一个新关键字。
-3. 将关键字键入为 **Move Astronaut** 。 如果需要，可以随意添加密钥快捷方式。
+3. 将关键字键入为 **Move Astronaut**。 如果需要，可以随意添加密钥快捷方式。
 4. 单击右侧的， **+** 添加一个新关键字。
-5. 将关键字键入为 **轮换 Astronaut** 。 如果需要，可以随意添加密钥快捷方式。
+5. 将关键字键入为 **轮换 Astronaut**。 如果需要，可以随意添加密钥快捷方式。
 6. 可在 **GestureAction.cs** 中的 **ISpeechHandler. OnSpeechKeywordRecognized** 处理程序中找到相应的处理程序代码。
 
 ![如何设置第4章的语音输入源](images/holograms211-speech.png)
@@ -369,8 +369,8 @@ GestureManager.cs 和 AstronautManager.cs 将允许我们执行以下操作：
 
 1. 在 " **项目** " **面板中** ，找到 " **PathingFeedback** 资产"。
 2. 将 **PathingFeedback** prefab 拖放到 **层次结构** 中的 **CursorWithFeedback** 对象上。
-3. 在 " **层次结构** " 面板中，单击 " **CursorWithFeedback** "。
-4. 将 **PathingFeedback** 对象从 **层次结构** 中拖放到 **检查器** 的 " **游标反馈** " 组件中的 " **检测到路径" 游戏对象** 属性上。
+3. 在 " **层次结构** " 面板中，单击 " **CursorWithFeedback**"。
+4. 将 **PathingFeedback** 对象从 **层次结构** 中拖放到 **检查器** 的 "**游标反馈**" 组件中的 "**检测到路径" 游戏对象** 属性上。
 
 现在，我们需要将代码添加到 **GestureAction.cs** ，以启用以下内容：
 
@@ -510,25 +510,25 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 在本部分中，我们将完成下列任务：
 
-1. 添加新的关键字 " **展开模型** "，展开 astronaut 模型。
-2. 添加新的关键字 " **重置模型** "，以将模型返回到其原始形式。
+1. 添加新的关键字 "**展开模型**"，展开 astronaut 模型。
+2. 添加新的关键字 "**重置模型**"，以将模型返回到其原始形式。
 
 为此，我们将向上一章的语音输入源添加另外两个关键字。 我们还将演示另一种处理识别事件的方法。
 
-1. 在 **检查器** 中单击 " **AstronautManager** "，然后展开 **检查器** 中的 " **关键字** " 部分。
+1. 在 **检查器** 中单击 " **AstronautManager** "，然后展开 **检查器** 中的 "**关键字**" 部分。
 2. 单击右侧的， **+** 添加一个新关键字。
-3. 将关键字键入为 **展开 "模型** "。 如果需要，可以随意添加密钥快捷方式。
+3. 将关键字键入为 **展开 "模型**"。 如果需要，可以随意添加密钥快捷方式。
 4. 单击右侧的， **+** 添加一个新关键字。
-5. 将关键字键入为 " **重置模型** "。 如果需要，可以随意添加密钥快捷方式。
+5. 将关键字键入为 " **重置模型**"。 如果需要，可以随意添加密钥快捷方式。
 6. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-7. 在菜单中，在 "搜索" 框中键入 **语音输入处理程序** 。 选择搜索结果。
-8. 勾选 **是全局侦听器** ，因为我们希望这些命令可以正常运行，而不考虑我们的 GameObject。
+7. 在菜单中，在 "搜索" 框中键入 **语音输入处理程序**。 选择搜索结果。
+8. 勾选 **是全局侦听器**，因为我们希望这些命令可以正常运行，而不考虑我们的 GameObject。
 9. 单击 "" **+** 按钮，然后从 "关键字" 下拉列表中选择 " **展开模型** "。
-10. 单击 " **+** 响应" 下的 "AstronautManager"，并将 " **AstronautManager** " 从 **层次结构** 拖到 " **无 (" 对象)** "字段。
-11. 现在，单击 " **无函数** " 下拉列表，选择 " **AstronautManager** "，然后选择 " **ExpandModelCommand** "。
+10. 单击 " **+** 响应" 下的 "AstronautManager"，并将 " **AstronautManager** " 从 **层次结构** 拖到 "**无 (" 对象)** "字段。
+11. 现在，单击 " **无函数** " 下拉列表，选择 " **AstronautManager**"，然后选择 " **ExpandModelCommand**"。
 12. 单击 "语音输入处理程序" **+** 按钮，然后从 "关键字" 下拉列表中选择 " **重置模型** "。
-13. 单击 " **+** 响应" 下的 "AstronautManager"，并将 " **AstronautManager** " 从 **层次结构** 拖到 " **无 (" 对象)** "字段。
-14. 现在，单击 " **无函数** " 下拉列表，选择 " **AstronautManager** "，然后选择 " **ResetModelCommand** "。
+13. 单击 " **+** 响应" 下的 "AstronautManager"，并将 " **AstronautManager** " 从 **层次结构** 拖到 "**无 (" 对象)** "字段。
+14. 现在，单击 " **无函数** " 下拉列表，选择 " **AstronautManager**"，然后选择 " **ResetModelCommand**"。
 
 ![如何设置第5章的语音输入源和处理程序](images/holograms211-speechhandler.png)
 
@@ -543,7 +543,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 ## <a name="the-end"></a>结束
 
-恭喜！ 你现在已经完成了 **MR 输入211：手势** 。
+恭喜！ 你现在已经完成了 **MR 输入211：手势**。
 
 * 你知道如何检测和响应手动跟踪、导航和操作事件。
 * 了解导航和操作笔势之间的差异。

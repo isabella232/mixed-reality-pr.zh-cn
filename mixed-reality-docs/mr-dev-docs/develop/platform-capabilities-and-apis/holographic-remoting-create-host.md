@@ -5,13 +5,13 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
-keywords: HoloLens、远程处理、全息远程处理
-ms.openlocfilehash: 7b2a0166fd7d239222f9742e0f5f2f6dfd3a7ffb
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，NuGet
+ms.openlocfilehash: 8494387b99352866632b46a98a449d173395b85d
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683183"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677936"
 ---
 # <a name="writing-a-holographic-remoting-remote-app"></a>编写全息远程处理远程应用
 
@@ -24,7 +24,7 @@ ms.locfileid: "92683183"
 
 典型的远程处理连接的延迟最低为50毫秒。 播放机应用可以实时报告滞后时间。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 很好的起点是基于 DirectX 的基于 DirectX 的桌面或 UWP 应用，以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 [C + + 全息版项目模板](../native/creating-a-holographic-directx-project.md)是一个很好的起点。
 
@@ -37,10 +37,10 @@ ms.locfileid: "92683183"
 
 将 NuGet 包添加到 Visual Studio 中的项目时需要执行以下步骤。
 1. 在 Visual Studio 中打开项目。
-2. 右键单击项目节点，然后选择 " **管理 NuGet 包 ...** "
+2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
 3. 在出现的面板中，单击 " **浏览** "，然后搜索 "全息远程处理"。
-4. 选择 ""，然后选择 " **Microsoft** "，并单击 " **安装** **"。**
-5. 如果 **预览** 对话框出现，请单击 **"确定"** 。
+4. 选择 ""，然后选择 " **Microsoft**"，并单击 "**安装** **"。**
+5. 如果 **预览** 对话框出现，请单击 **"确定"**。
 6. 显示的下一个对话框是许可协议。 单击 " **我接受** " 接受许可协议。
 
 >[!NOTE]
@@ -89,7 +89,7 @@ m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::Cr
 1) 远程应用连接到设备上运行的播放机。
 2) 设备上运行的播放机连接到远程应用。
 
-若要建立从远程应用到 HoloLens 2 的连接，请 ```Connect``` 在指定主机名和端口的远程上下文上调用方法。 全息远程处理播放器使用的端口为 **8265** 。
+若要建立从远程应用到 HoloLens 2 的连接，请 ```Connect``` 在指定主机名和端口的远程上下文上调用方法。 全息远程处理播放器使用的端口为 **8265**。
 
 ```cpp
 try

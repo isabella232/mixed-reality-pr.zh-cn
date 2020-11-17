@@ -5,13 +5,13 @@ author: cjdgit
 ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 应用质量标准，混合现实，混合现实应用
-ms.openlocfilehash: 96d446e1f6f5649f842d674ea4692d619894cc32
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 应用质量标准，混合现实，混合现实应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: c18f4e8470f7f183fdf250472fd3a977f925dfbf
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677080"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677986"
 ---
 # <a name="app-quality-criteria"></a>应用质量标准
 
@@ -176,7 +176,7 @@ ms.locfileid: "91677080"
 
 |  最佳  |  适合 |  失败 |
 --- | --- | ---
-| 全息图通常以厘米到英寸的范围对齐。 如果需要更高的准确性，应用应在所需的应用规范内提供高效的协作方式。 | NA | 通过断开 surface 平面或远离表面，全息影像将与物理目标对象显示不对齐。 如果需要准确性，全息影像应满足方案的邻近规范。 | 
+| 全息图通常以厘米到英寸的范围对齐。 如果需要更高的准确性，应用应在所需的应用规范内提供高效的协作方式。 | 不可用 | 通过断开 surface 平面或远离表面，全息影像将与物理目标对象显示不对齐。 如果需要准确性，全息影像应满足方案的邻近规范。 | 
 
 ### <a name="how-to-measure"></a>如何度量
 

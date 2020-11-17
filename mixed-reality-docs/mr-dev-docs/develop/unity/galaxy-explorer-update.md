@@ -5,13 +5,13 @@ author: l-garrett
 ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
-keywords: galaxy 资源管理器，案例研究，项目，示例
-ms.openlocfilehash: 1e04b27ff0382d87f8e6a15ae2b7b2284fa020e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 00bf30224a820bd85394c4b97136f81b52fe4128
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677806"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677626"
 ---
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>针对 HoloLens 2 的 Galaxy 资源管理器创建
 
@@ -96,7 +96,7 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 ![行星上的视觉对象实用](images/ge-update-planet-affordances.png)
 
 ### <a name="adding-affordances-for-force-grab"></a>添加实用以进行强制获取
- 
+ 
 随着音频和视觉对象实用的基本强制获取机制，我们介绍了如何使选择的行星更易于用户识别。 要解决的主要问题是：由于太阳系是一个三维移动界面，因此用户可以更加复杂地了解如何以一致的方式为对象提供目标。 这是一种复杂的情况，那就是，在选择对象时，手型的速度非常快，使行星以极快的速度向用户移动。
 
 我们使用三个方面的解决方案来做到这一点。 第一种方法非常直观：降低选择过程的速度，使行星更自然地处理用户。 调整速度后，我们必须重新访问音频和视觉对象实用，并将其他音频反馈添加为用户跟踪的行星。
@@ -151,7 +151,7 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 单独旋转的流提供了良好的视觉印象，但当观察到关闭范围时，会详细说明。
 
 最引人注目的部分是木星的好红点，因此我们创建了一组专门用于展示它的网格和纹理。
- 
+ 
 我们使用了类似于木星带区的一种机制：一组旋转部分彼此组合在一起，同时在其 "主要层" 下进行分组，以确保无论 rest 移动的速度如何，它们都保持不变。
 
 当网格设置好后，应用了激烈 vortex 的不同层，并且每个光盘随后进行了动画处理，中心部分的移动速度最快，并且随着它向外移动时，rest 会逐渐下降。
@@ -202,4 +202,4 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 ### <a name="mixed-reality-studios"></a>混合现实工作室
 
-Microsoft 混合现实工作室团队-位于美洲、欧洲和亚太地区，是用户体验设计、全息计算、AR/VR 技术和三维开发方面的专家;包括3D 资产创建、DirectX、Unity 和 Unreal。 我们帮助构想预期的先期备货、设计、构建和交付解决方案，同时使客户能够在其组织中创造实实在在的影响。 录音室与超过22000个 Microsoft 服务专业人员密切合作，以实现企业应用程序集成、采用、操作和支持。
+Microsoft 混合现实工作室团队-位于美洲、欧洲和 Asia-Pacific，是用户体验设计、全息计算、AR/VR 技术和三维开发方面的专家;包括3D 资产创建、DirectX、Unity 和 Unreal。 我们帮助构想预期的先期备货、设计、构建和交付解决方案，同时使客户能够在其组织中创造实实在在的影响。 录音室与超过22000个 Microsoft 服务专业人员密切合作，以实现企业应用程序集成、采用、操作和支持。

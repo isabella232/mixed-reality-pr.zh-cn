@@ -5,13 +5,13 @@ author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
-keywords: 端口，移植，unity，中间件，引擎，UWP，Win32
-ms.openlocfilehash: 9822976ab7dac9ae7567e5f38ca44ceee646d098
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+keywords: 端口，unity，unreal，中间件，引擎，UWP，Win32，移植，HoloLens 第一代，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10，输入映射，
+ms.openlocfilehash: 18129151b1e3d11f9e9c7bb3c3420c23b5fd1dd0
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638536"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677726"
 ---
 # <a name="porting-guides"></a>移植指南
 
@@ -23,7 +23,7 @@ Windows 10 包括对沉浸式和全息耳机的直接支持。 如果已为其�
 1. **请确保你的电脑正在运行 Windows 10 秋季创意者更新 (16299) 。** 我们不再建议从有问必答向后跳环接收预览版，因为这些版本对于混合现实开发不是最稳定的。
 2. **升级到最新版本的图形或游戏引擎。** 游戏引擎需要支持 Windows 10 SDK 版本 10.0.15063.0 (于2017年4月) 或更高版本发布。
 3. **升级任何中间件、插件或组件。** 如果你的应用程序包含任何组件，则最好升级到最新版本。
-4. **删除重复的 sdk 依赖项** 。 根据你的内容面向哪个设备，你将需要删除或有条件地编译该 SDK (例如 SteamVR) 以便可以改为面向 Windows Api。
+4. **删除重复的 sdk 依赖项**。 根据你的内容面向哪个设备，你将需要删除或有条件地编译该 SDK (例如 SteamVR) 以便可以改为面向 Windows Api。
 5. **处理生成问题。** 此时，迁移练习特定于您的应用程序、您的引擎和您拥有的组件依赖项。
 
 ## <a name="common-porting-steps"></a>常见的移植步骤
@@ -38,7 +38,7 @@ Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Window
 1. 安装 [Windows 10 创意者更新](https://www.microsoft.com/software-download/windows10)
 2. [加入](https://insider.windows.com/) Windows 预览体验计划。
 3. 启用 [开发人员模式](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
-4. 通过 " **设置" > 更新 & 安全 "部分** ，切换到 [Windows 预览体验快速航班](https://blogs.technet.microsoft.com/uktechnet/2016/07/01/joining-insider-preview)
+4. 通过 "**设置" > 更新 & 安全 "部分**，切换到 [Windows 预览体验快速航班](https://blogs.technet.microsoft.com/uktechnet/2016/07/01/joining-insider-preview)
 
 ### <a name="3-upgrade-to-the-most-recent-build-of-visual-studio"></a>3. 升级到最新版本的 Visual Studio
 * 如果使用的是 Visual Studio，请升级到最新版本
@@ -56,7 +56,7 @@ Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Window
 > [!IMPORTANT]
 > 如果你使用的是 HP 回音 G2 控制器，请参阅 [此文](../unreal/unreal-reverb-g2-controllers.md) ，了解更多输入映射说明。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 * [Windows Mixed Reality 最小电脑硬件兼容性指南](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [了解混合现实的性能](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Unity 性能建议](../unity/performance-recommendations-for-unity.md)

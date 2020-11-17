@@ -7,12 +7,12 @@ ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目
-ms.openlocfilehash: 34c78c277e0b184c0421c2bdd56ef13411a5bf29
-ms.sourcegitcommit: bd359c269add7ac76f0c2c26ca7caedba14749b1
+ms.openlocfilehash: 7c8fc83fd2b5542909fd2ea6ab4dca288175c56c
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94417832"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631515"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 
@@ -143,11 +143,6 @@ ms.locfileid: "94417832"
 
 <br>
 
-
 >[!IMPORTANT]
 >本站点提供的所有混合现实开发材料仅供参考。 你作为应用程序开发人员，必须全权负责你的应用程序、应用程序使用情况以及应用程序对最终用户的影响，包括确保应用不会为最终用户带来不适、伤害或任何其他方式的损害，并提供适当的警告和免责声明。 在开发和发布应用程序的过程中，你需要时刻采取适当的措施，确保应用程序安全并履行 [Microsoft 应用开发人员协议](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)中规定的所有义务。
 
-## <a name="see-also"></a>另请参阅
-* [沉浸式头戴显示设备硬件详细信息](immersive-headset-hardware-details.md)
-* [社区资源](community.md)
-* [VR 发烧友指南](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/)

@@ -1,17 +1,17 @@
 ---
-title: MR 输入 212-语音
+title: MR 输入 212 - 语音
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解语音概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，语音
-ms.openlocfilehash: ed37ef6e0c26c3d2a0cd2d51e18d01a258b2fc78
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，语音，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: b9d9002180da7a59c62b77b83872e77499da4c09
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677735"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677236"
 ---
 # <a name="mr-input-212-voice"></a>MR 输入 212：语音
 
@@ -72,27 +72,27 @@ ms.locfileid: "91677735"
 
 ### <a name="errata-and-notes"></a>勘误表和说明
 
-* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" ( *取消选中* ) ，以便在代码中命中断点。
+* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" (*取消选中*) ，以便在代码中命中断点。
 
 ## <a name="unity-setup"></a>Unity 设置
 
 ### <a name="instructions"></a>Instructions
 
 1. 启动 Unity。
-2. 选择“打开”。
+2. 选择“打开”  。
 3. 导航到之前未存档的 **HolographicAcademy-212** 文件夹。
-4. 查找并选择 " **启动** / **模型资源管理器** " 文件夹。
+4. 查找并选择 "**启动** / **模型资源管理器**" 文件夹。
 5. 单击 " **选择文件夹** " 按钮。
 6. 在 " **项目** " 面板中，展开 " **场景** " 文件夹。
 7. 双击 " **ModelExplorer** 场景" 将其加载到 Unity。
 
 ### <a name="building"></a>生成
 
-1. 在 Unity 中，选择 " **文件 > 生成设置** "。
-2. 如果场景 **/ModelExplorer** 未列在 " **生成** " 中，请单击 " **添加打开的场景** " 添加场景。
-3. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens** "。 否则，请将其留在 **任何设备** 上。
+1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+2. 如果场景 **/ModelExplorer** 未列在 " **生成**" 中，请单击 " **添加打开的场景** " 添加场景。
+3. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
 4. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
-5. 单击“生成”  。
+5. 单击“生成”。
 6. 创建名为 "App" 的 **新文件夹** 。
 7. 单击 **应用** 文件夹。
 8. 按 **选择文件夹** ，Unity 将开始为 Visual Studio 生成项目。
@@ -100,21 +100,21 @@ ms.locfileid: "91677735"
 当 Unity 完成后，将显示文件资源管理器窗口。
 
 1. 打开 **应用程序** 文件夹。
-2. 打开 **ModelExplorer Visual Studio 解决方案** 。
+2. 打开 **ModelExplorer Visual Studio 解决方案**。
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86** "。
-2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机** "。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)** 。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** "。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
+3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 5. 当应用程序已部署后，使用 **选择手势** 关闭 **Fitbox** 。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64** "。
-2. 确保将部署目标设置为 " **本地计算机** "。
-3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+2. 确保将部署目标设置为 " **本地计算机**"。
+3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 4. 当应用程序已部署后，通过将触发器拖到运动控制器上来关闭 **Fitbox** 。
 
 >[!NOTE]
@@ -136,14 +136,14 @@ ms.locfileid: "91677735"
 
 #### <a name="do"></a>DO
 
-* 创建简洁的命令。 您不想使用 *"播放当前选定的视频"* ，因为该命令不是很简洁，用户将很容易忘记。 相反，您应该使用： *"播放视频"* ，因为它很简洁并且具有多个音节。
-* 使用简单词汇。 始终尝试使用便于用户发现和记忆的常见字词和短语。 例如，如果您的应用程序具有可在视图中显示或隐藏的便笺对象，则不会使用命令 *"Show Placard"* ，因为 "Placard" 是很少使用的术语。 相反，你将使用命令 *"显示便笺"* 来显示应用程序中的注释。
-* 保持一致。 语音命令应在应用程序中保持一致。 假设应用程序中有两个场景，并且两个场景都包含一个用于关闭应用程序的按钮。 如果第一场景使用命令 *"Exit"* 来触发按钮，但第二个场景使用命令 *"关闭应用"* ，则用户会感到困惑。 如果相同的功能在多个场景中保持不变，则应使用相同的语音命令来触发它。
+* 创建简洁的命令。 您不想使用 *"播放当前选定的视频"*，因为该命令不是很简洁，用户将很容易忘记。 相反，您应该使用： *"播放视频"*，因为它很简洁并且具有多个音节。
+* 使用简单词汇。 始终尝试使用便于用户发现和记忆的常见字词和短语。 例如，如果您的应用程序具有可在视图中显示或隐藏的便笺对象，则不会使用命令 *"Show Placard"*，因为 "Placard" 是很少使用的术语。 相反，你将使用命令 *"显示便笺"* 来显示应用程序中的注释。
+* 保持一致。 语音命令应在应用程序中保持一致。 假设应用程序中有两个场景，并且两个场景都包含一个用于关闭应用程序的按钮。 如果第一场景使用命令 *"Exit"* 来触发按钮，但第二个场景使用命令 *"关闭应用"*，则用户会感到困惑。 如果相同的功能在多个场景中保持不变，则应使用相同的语音命令来触发它。
 
 #### <a name="dont"></a>不要
 
-* 使用单个音节命令。 例如，如果你创建了一个声音命令来播放视频，则应避免使用简单的命令 *"播放"* ，因为它只是一个音节，系统可以轻松地将其丢失。 相反，您应该使用： *"播放视频"* ，因为它很简洁并且具有多个音节。
-* 使用系统命令。 系统保留了 *"Select"* 命令，以触发当前聚焦对象的点击事件。 不要在关键字或短语中重复使用 *"Select"* 命令，因为它可能不会像预期那样工作。 例如，如果在应用程序中选择某个多维数据集的语音命令是 *"Select cube"* ，但用户在失措命令时却查看了该球，则会改为选择球体。 类似的应用程序栏命令启用了语音。 请勿在 CoreWindow 视图中使用以下语音命令：
+* 使用单个音节命令。 例如，如果你创建了一个声音命令来播放视频，则应避免使用简单的命令 *"播放"*，因为它只是一个音节，系统可以轻松地将其丢失。 相反，您应该使用： *"播放视频"*，因为它很简洁并且具有多个音节。
+* 使用系统命令。 系统保留了 *"Select"* 命令，以触发当前聚焦对象的点击事件。 不要在关键字或短语中重复使用 *"Select"* 命令，因为它可能不会像预期那样工作。 例如，如果在应用程序中选择某个多维数据集的语音命令是 *"Select cube"*，但用户在失措命令时却查看了该球，则会改为选择球体。 类似的应用程序栏命令启用了语音。 请勿在 CoreWindow 视图中使用以下语音命令：
     1. 后退
     2. 滚动工具
     3. “缩放工具”
@@ -157,19 +157,19 @@ ms.locfileid: "91677735"
 * 在 Unity 的 " **层次结构** " 面板中，使用 "搜索" 工具查找 **holoComm_screen_mesh** 的对象。
 * 双击 **holoComm_screen_mesh** 对象以在 **场景** 中查看它。 这是 astronaut 的手表，它将响应我们的语音命令。
 * 在 " **检查器** " 面板中，找到 **(脚本) 组件的语音输入源** 。
-* 展开 **关键字** 部分，查看支持的语音命令： **打开 Communicator** 。
-* 单击右侧的 "齿轮"，然后选择 " **编辑脚本** "。
+* 展开 **关键字** 部分，查看支持的语音命令： **打开 Communicator**。
+* 单击右侧的 "齿轮"，然后选择 " **编辑脚本**"。
 * 探索 **SpeechInputSource.cs** ，了解它如何使用 **KeywordRecognizer** 添加语音命令。
 
 ### <a name="build-and-deploy"></a>生成和部署
 
 * 在 Unity 中，使用 **File > 生成设置** 重新生成应用程序。
 * 打开 **应用程序** 文件夹。
-* 打开 **ModelExplorer Visual Studio 解决方案** 。
+* 打开 **ModelExplorer Visual Studio 解决方案**。
 
  (如果在安装过程中已经在 Visual Studio 中生成了/部署了此项目，则可以打开 VS 的实例，并在出现) 提示时单击 "全部重新加载"。
 
-* 在 Visual Studio 中，单击 " **调试"-> "无调试开始** " 或按 **Ctrl + F5** 。
+* 在 Visual Studio 中，单击 " **调试"-> "无调试开始** " 或按 **Ctrl + F5**。
 * 在应用程序部署到 HoloLens 后，请使用 [轻攻敲击](../../../design/gaze-and-commit.md#composite-gestures) 手势关闭 "拟合" 框。
 * 观看 astronaut 的观看。
 * 当监视有焦点时，验证光标是否更改为麦克风。 这会提供应用程序侦听语音命令的反馈。
@@ -198,8 +198,8 @@ ms.locfileid: "91677735"
 * 在 " **检查器** " 面板中，找到 **Astronaut Watch (脚本)** 组件。
 * 单击设置为 " **Communicator Prefab** " 属性值的小型蓝色多维数据集。
 * 在 " **项目** " 面板中， **Communicator** prefab 现在应具有焦点。
-* 单击 " **项目** " 面板中的 **Communicator** Prefab，在 **检查器** 中查看其组件。
-* **(脚本) 组件中查看麦克风管理器** ，这样我们就可以记录用户的声音。
+* 单击 "**项目**" 面板中的 **Communicator** Prefab，在 **检查器** 中查看其组件。
+* **(脚本) 组件中查看麦克风管理器**，这样我们就可以记录用户的声音。
 * 请注意， **Communicator** 对象有一个 **语音输入处理程序 (脚本)** 组件来响应 " **发送消息** " 命令。
 * 查看 **Communicator (脚本)** 组件，然后双击脚本，在 Visual Studio 中将其打开。
 
@@ -252,14 +252,14 @@ MessageUIRenderer.gameObject.SetActive(false);
 
 我们将编辑 **MicrophoneManager.cs** 以使用听写识别器。 这就是我们要添加的内容：
 
-1. 按下 " **记录" 按钮** 后，将 **启动 DictationRecognizer** 。
+1. 按下 " **记录" 按钮** 后，将 **启动 DictationRecognizer**。
 2. 显示 DictationRecognizer 理解的 **假设** 。
 3. 锁定 DictationRecognizer 理解的 **结果** 。
 4. 检查 DictationRecognizer 中的超时。
-5. 按下 " **停止" 按钮** ，或 mic 会话超时时， **停止 DictationRecognizer** 。
-6. 重新启动 **KeywordRecognizer** ，这将侦听 " **发送消息** " 命令。
+5. 按下 " **停止" 按钮** ，或 mic 会话超时时， **停止 DictationRecognizer**。
+6. 重新启动 **KeywordRecognizer**，这将侦听 " **发送消息** " 命令。
 
-让我们开始吧。 在 **MicrophoneManager.cs** 中完成 3. a 的所有编码练习，或复制并粘贴下面的已完成代码：
+现在就开始吧。 在 **MicrophoneManager.cs** 中完成 3. a 的所有编码练习，或复制并粘贴下面的已完成代码：
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
@@ -451,10 +451,10 @@ namespace Academy
 
 * 在 Visual Studio 中重新生成并部署到设备。
 * 使用 "气攻入点" 消除 "拟合" 框。
-* 看看 astronaut 的手表，说 *"打开 Communicator"* 。
+* 看看 astronaut 的手表，说 *"打开 Communicator"*。
 * 选择 " **录制** " 按钮 (麦克风) 录制消息。
 * 开始说话。 **听写识别器** 将解释您的语音，并显示 communicator 中的假设文本。
-* 录制消息时，尝试口述 *"发送消息"* 。 请注意，由于 **听写识别器** 仍处于活动状态， **关键字识别器** 没有响应。
+* 录制消息时，尝试口述 *"发送消息"* 。 请注意，由于 **听写识别器** 仍处于活动状态，**关键字识别器** 没有响应。
 * 停止说几秒钟。 注意听写识别器完成其假设并显示最终结果。
 * 开始讲话，并暂停20秒。 这将导致 **听写识别器** 超时。
 * 请注意，在上述超时后，将重新启用 **关键字识别器** 。 Communicator 现在会响应语音命令。
@@ -478,7 +478,7 @@ namespace Academy
 ### <a name="instructions"></a>Instructions
 
 1. 在 " **层次结构** " 面板中，搜索 **Jetpack_Center** 并将其选中。
-2. 在 " **检查器** " 面板中查找 **Tagalong 操作** 脚本。
+2. 在 "**检查器**" 面板中查找 **Tagalong 操作** 脚本。
 3. 单击要 **沿字段标记的对象** 右侧的小圆圈。
 4. 在弹出的窗口中，搜索 **SRGSToolbox** 并从列表中选择它。
 5. 查看 **StreamingAssets** 文件夹中的 **SRGSColor.xml** 文件。
@@ -500,7 +500,7 @@ namespace Academy
 
 ## <a name="the-end"></a>结束
 
-恭喜！ 你现在已经完成了 **MR 输入212： Voice** 。
+恭喜！ 你现在已经完成了 **MR 输入212： Voice**。
 
 * 您知道语音命令的 Dos 和不确定。
 * 你了解了如何利用工具提示来使用户了解语音命令。

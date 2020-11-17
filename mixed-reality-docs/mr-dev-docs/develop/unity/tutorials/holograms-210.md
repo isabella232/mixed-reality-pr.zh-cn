@@ -1,17 +1,17 @@
 ---
-title: MR 输入 210-注视
+title: MR 输入 210 - 凝视
 description: 遵循以下编码演练，使用 Unity、Visual Studio 和 HoloLens 来了解注视概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，注视
-ms.openlocfilehash: b513d304e78d51b447f0bbba4990fb7df0556707
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，院校，教程，注视，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: 2cbbdba0a74ab94c6a291cbe6af1cd1ae9020fe4
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677743"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677246"
 ---
 # <a name="mr-input-210-gaze"></a>MR 输入 210：凝视
 
@@ -77,95 +77,95 @@ ms.locfileid: "91677743"
 ### <a name="instructions"></a>Instructions
 
 1. 启动 Unity。
-2. 选择 **“新建项目”** 。
-3. 将项目命名为 **ModelExplorer** 。
+2. 选择 **“新建项目”**。
+3. 将项目命名为 **ModelExplorer**。
 4. 输入 "位置" 作为先前未存档的 " **注视** " 文件夹。
-5. 请确保将项目设置为“3D”  。
-6. 单击 " **创建项目** "。
+5. 请确保将项目设置为“3D”。
+6. 单击 " **创建项目**"。
 
 ### <a name="unity-settings-for-hololens"></a>HoloLens 的 Unity 设置
 
 我们需要让 Unity 知道我们要导出的应用程序应创建 [沉浸式视图](../../../design/app-views.md) 而不是2d 视图。 为此，我们添加了 HoloLens 作为虚拟现实设备。
 
-1. 请参阅 " **编辑 > 项目设置" > Player** "。
+1. 请参阅 " **编辑 > 项目设置" > Player**"。
 2. 在 "播放器设置" 的 **检查器面板** 中，选择 " **Windows 应用商店** " 图标。
 3. 展开“XR 设置”组。
 4. 在“呈现”部分，选中“支持虚拟现实”复选框，添加新“虚拟现实 SDK 的”列表  。
-5. 验证列表中是否显示“Windows 混合现实”。 如果没有，请选择 **+** 列表底部的 "" 按钮，然后选择 " **Windows 全息** "。
+5. 验证列表中是否显示“Windows 混合现实”。 如果没有，请选择 **+** 列表底部的 "" 按钮，然后选择 " **Windows 全息**"。
 
 接下来，我们需要将脚本后端设置为 .NET。
 
 1. 请参阅 " **编辑 > 项目设置" > Player** " (你仍可以从上一步) 执行此操作。
 2. 在 "播放器设置" 的 **检查器面板** 中，选择 " **Windows 应用商店** " 图标。
-3. 在 " **其他设置** " "配置" 部分中，确保 " **脚本后端** " 设置为 " **.net** "
+3. 在 "**其他设置**" "配置" 部分中，确保 "**脚本后端**" 设置为 " **.net** "
 
 最后，我们将更新质量设置，以便在 HoloLens 上实现更快的性能。
 
-1. 请参阅 **编辑 > 项目设置 > 质量** 。
+1. 请参阅 **编辑 > 项目设置 > 质量**。
 2. 在 Windows 应用商店图标下，单击 **默认** 行中的向下箭头。
-3. 对于 **Windows 应用商店应用** ，请选择 " **非常低** "。
+3. 对于 **Windows 应用商店应用**，请选择 "**非常低**"。
 
 ### <a name="import-project-assets"></a>导入项目资产
 
-1. 右键单击 " **项目** " 面板中的 " **资产** " 文件夹。
-2. 单击 " **导入包 > 自定义包** "。
-3. 导航到下载的项目文件，然后单击 " **ModelExplorer. unitypackage** "。
+1. 右键单击 "**项目**" 面板中的 "**资产**" 文件夹。
+2. 单击 " **导入包 > 自定义包**"。
+3. 导航到下载的项目文件，然后单击 " **ModelExplorer. unitypackage**"。
 4. 单击“打开”。
 5. 加载包后，单击 " **导入** " 按钮。
 
 ### <a name="setup-the-scene"></a>设置场景
 
-1. 在层次结构中，删除 **主摄像机** 。
+1. 在层次结构中，删除 **主摄像机**。
 2. 在 **HoloToolkit** 文件夹中，打开 " **输入** " 文件夹，然后打开 " **prototyping** " 文件夹。
 3. 将 **MixedRealityCameraParent** Prefab 从 **prototyping** 文件夹拖放到 **层次结构** 中。
-4. 右键单击层次结构中的 **定向光** ，然后选择 " **删除** "。
+4. 右键单击层次结构中的 **定向光** ，然后选择 " **删除**"。
 5. 在 **全息影像** 文件夹中，将以下资产拖放到 **层次结构** 的根中：
     * **AstroMan**
     * **光线**
     * **SpaceAudioSource**
     * **SpaceBackground**
 6. 启动 **播放模式** ▶查看 astronaut。
-7. 再次单击 **播放模式** ▶ **停止** 。
+7. 再次单击 **播放模式** ▶ **停止**。
 8. 在 **全息影像** 文件夹中，找到 **Fitbox** 资产，并将其拖到 **层次结构** 的根。
-9. 在 " **层次结构** " 面板中选择 " **Fitbox** "。
-10. 在 " **检查器** " 面板中，将 **AstroMan** 集合从 **层次结构** 中拖到 Fitbox 的 **全息图集合** 属性中。
+9. 在 "**层次结构**" 面板中选择 " **Fitbox** "。
+10. 在 "**检查器**" 面板中，将 **AstroMan** 集合从 **层次结构** 中拖到 Fitbox 的 **全息图集合** 属性中。
 
 ### <a name="save-the-project"></a>保存项目
 
-1. 保存新场景： **File > 将场景另存为** 。
-2. 单击 " **新建文件夹** "，然后将文件夹命名为 " **场景** "。
-3. 将该文件命名为 " **ModelExplorer** " 并将其保存在 **幕后** 文件夹中。
+1. 保存新场景： **File > 将场景另存为**。
+2. 单击 " **新建文件夹** "，然后将文件夹命名为 " **场景**"。
+3. 将该文件命名为 "**ModelExplorer**" 并将其保存在 **幕后** 文件夹中。
 
 ### <a name="build-the-project"></a>生成项目
 
-1. 在 Unity 中，选择 " **文件 > 生成设置** "。
+1. 在 Unity 中，选择 " **文件 > 生成设置**"。
 2. 单击 " **添加打开的场景** " 添加场景。
-3. 选择 " **平台** " 列表中的 " **通用 Windows 平台** "，然后单击 " **切换平台** "。
-4. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens** "。 否则，请将其留在 **任何设备** 上。
+3. 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。
+4. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
 5. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
-6. 单击“生成”  。
+6. 单击“生成”。
 7. 创建名为 "App" 的 **新文件夹** 。
 8. 单击 **应用** 文件夹。
-9. 按 " **选择文件夹** "。
+9. 按 " **选择文件夹**"。
 
 当 Unity 完成后，将显示文件资源管理器窗口。
 
 1. 打开 **应用程序** 文件夹。
-2. 打开 **ModelExplorer Visual Studio 解决方案** 。
+2. 打开 **ModelExplorer Visual Studio 解决方案**。
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86** "。
-2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机** "。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)** 。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** "。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
+3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 5. 当应用程序已部署后，使用 **选择手势** 关闭 **Fitbox** 。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64** "。
-2. 确保将部署目标设置为 " **本地计算机** "。
-3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5** 。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+2. 确保将部署目标设置为 " **本地计算机**"。
+3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 4. 当应用程序已部署后，通过将触发器拖到运动控制器上来关闭 **Fitbox** 。
 
 ## <a name="chapter-2---cursor-and-target-feedback"></a>第2章-游标和目标反馈
@@ -198,14 +198,14 @@ ms.locfileid: "91677743"
 ### <a name="build-and-deploy"></a>生成和部署
 
 1. 从 **文件 > 生成设置** 重新生成应用。
-2. 打开 **应用程序文件夹** 。
-3. 打开 **ModelExplorer Visual Studio 解决方案** 。
-4. 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5** 。
+2. 打开 **应用程序文件夹**。
+3. 打开 **ModelExplorer Visual Studio 解决方案**。
+4. 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。
 5. 观察如何绘制光标，以及如何在触摸全息图时更改其外观。
 
 ### <a name="instructions"></a>Instructions
 
-1. 在 " **层次结构** " 面板中，展开 " **AstroMan** -> **GEO_G** -> **Back_Center** " 对象。
+1. 在 "**层次结构**" 面板中，展开 " **AstroMan** -> **GEO_G** -> **Back_Center** " 对象。
 2. 双击 " **Interactible.cs** " 在 Visual Studio 中打开它。
 3. 取消注释 **IFocusable. OnFocusEnter 中的行 ( # B1** 和 **IFocusable ( # B3** in **Interactible.cs** 中的回调。 当焦点 (通过注视或控制器) 进入并退出特定 GameObject 的碰撞器时，混合现实工具包的 InputManager 将调用这些方法。
 
@@ -271,14 +271,14 @@ void IFocusable.OnFocusExit()
 2. 如果用户在全息影像上 gazing，则隐藏方向指示器。
 3. 更新方向指示器以指向全息影像。
 
-让我们开始吧。
+现在就开始吧。
 
-1. 单击 " **层次结构** " 面板中的 **AstroMan** 对象，然后 **单击箭头** 将其展开。
-2. 在 " **层次结构** " 面板中，选择 " **AstroMan** " 下的 **DirectionalIndicator** 对象。
+1. 单击 "**层次结构**" 面板中的 **AstroMan** 对象，然后 **单击箭头** 将其展开。
+2. 在 "**层次结构**" 面板中，选择 " **AstroMan**" 下的 **DirectionalIndicator** 对象。
 3. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-4. 在菜单中，键入 "搜索框 **方向" 指示器** 。 选择搜索结果。
-5. 在 " **层次结构** " 面板中，将 **cursor** 对象拖放到 **检查器** 的 **cursor** 属性上。
-6. 在 " **项目** " 面板中，将 " **DirectionalIndicator** **" 资产** 拖放到 **检查器** 的 " **方向指示器** " 属性中。
+4. 在菜单中，键入 "搜索框 **方向" 指示器**。 选择搜索结果。
+5. 在 "**层次结构**" 面板中，将 **cursor** 对象拖放到 **检查器** 的 **cursor** 属性上。
+6. 在 "**项目**" 面板中，将 " **DirectionalIndicator** **" 资产** 拖放到 **检查器** 的 "**方向指示器**" 属性中。
 7. 生成并部署应用。
 8. 观看方向指示器对象如何帮助您找到 astronaut。
 
@@ -294,19 +294,19 @@ void IFocusable.OnFocusExit()
 
 1. 在 " **层次结构** " 面板中，选择 " **AstroMan** " 对象。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-3. 在菜单中，在 "搜索" 框中键入 " **布告栏** "。 选择搜索结果。
-4. 在 **检查器** 中，将 **透视轴** 设置为 **Y** 。
+3. 在菜单中，在 "搜索" 框中键入 " **布告栏**"。 选择搜索结果。
+4. 在 **检查器** 中，将 **透视轴** 设置为 **Y**。
 5. 试试看！ 像以前一样构建并部署应用程序。
 6. 了解布告栏对象如何面对您如何更改视点。
 7. 立即从 **AstroMan** 中删除脚本。
 
-## <a name="chapter-6---tag-along"></a>第6章-标记-沿着
+## <a name="chapter-6---tag-along"></a>第6章-Tag-Along
 
 >[!VIDEO https://www.youtube.com/embed/Ct8ORZAX5JU]
 
 ### <a name="objectives"></a>目标
 
-* 使用 "标记"，让我们的全息影像围绕空间。
+* 使用 Tag-Along 让我们的全息影像围绕空间。
 
 当我们处理此问题时，我们将通过以下设计约束指导：
 
@@ -320,11 +320,11 @@ void IFocusable.OnFocusExit()
 
 我们将使用 **SimpleTagalong.cs** 文件，该文件将：
 
-1. 确定标记靠上的对象是否处于相机边界内。
-2. 如果视图不在视图中，则将标记一起放置在视图 "截锥" 中部分。
-3. 否则，将标记与用户的默认距离相同。
+1. 确定 Tag-Along 对象是否处于相机边界内。
+2. 如果不在视图的 "被" Tag-Along 截
+3. 否则，将 Tag-Along 定位到用户的默认距离。
 
-为此，我们必须先更改 **Interactible.cs** 脚本，以便调用 **TagalongAction** 。
+为此，我们必须先更改 **Interactible.cs** 脚本，以便调用 **TagalongAction**。
 
 1. 完成编码练习6，编辑 **Interactible.cs** 。 (取消注释行84到 87) 。
 
@@ -343,10 +343,10 @@ if (interactibleAction != null)
 * 完成编码练习，或将其更改为：
   * 在 **层次结构** 的顶部，在搜索栏中键入 " **ChestButton_Center** "，然后选择结果。
   * 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
-  * 在菜单中，在 "搜索" 框中键入 " **Tagalong" 操作** 。 选择搜索结果。
+  * 在菜单中，在 "搜索" 框中键入 " **Tagalong" 操作**。 选择搜索结果。
   * 在 **全息影像** 文件夹中查找 **Tagalong** 资产。
   * 选择 **层次结构** 中的 **ChestButton_Center** 对象。 将 **TagAlong** 对象从 " **项目** " 面板中拖放到 **"** **要 TagAlong 的对象** " 属性中。
-  * 将 **Tagalong 操作** 对象从 **检查器** 拖到 **Interactible** 脚本的 " **Interactible 操作** " 字段。
+  * 将 **Tagalong 操作** 对象从 **检查器** 拖到 **Interactible** 脚本的 " **Interactible 操作**" 字段。
 * 双击 **TagalongAction** 脚本，在 Visual Studio 中将其打开。
 
 ![Interactible 设置](images/holograms210-interactible.png)
@@ -355,7 +355,7 @@ if (interactibleAction != null)
 
 * 将功能添加到 TagalongAction 脚本中的 PerformAction 函数 (从 InteractibleAction) 继承。
 * 将 billboarding 添加到 gazed 对象，并将透视轴设置为 XY。
-* 然后将简单标记添加到对象。
+* 然后，将简单的 Tag-Along 添加到对象。
 
 下面是 **TagalongAction.cs** 的解决方案：
 

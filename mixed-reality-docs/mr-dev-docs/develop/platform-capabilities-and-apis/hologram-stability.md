@@ -5,15 +5,15 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 07/08/2020
 ms.topic: article
-keywords: 全息影像，稳定性，hololens
+keywords: 全息影像，稳定性，hololens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，帧速率，渲染，reprojection，颜色分离
 appliesto:
 - HoloLens
-ms.openlocfilehash: 21a9f7cff655ff35d32e3ca701219d4a1e41a0e2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 081a080c73a1c78eb762b94291027cf7ebcbed45
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677070"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679596"
 ---
 # <a name="hologram-stability"></a>全息影像稳定性
 
@@ -32,7 +32,7 @@ ms.locfileid: "91677070"
 * **光标.** 用户在出现全息图后会看到偏移，使其远离其最初放置位置。 在离 [空间锚](../../design/spatial-anchors.md)，而不是完全映射的环境部分中时，会发生偏移。 创建与空间锚接近的全息影像会降低偏移的可能性。
 * **Jumpiness.** 如果不是，则不会偶尔从其位置 "弹出" 或 "跳转"。 当跟踪调整全息影像以匹配更新的环境时，会发生 Jumpiness。
 * **泳道.** 当 sway 与用户的头运动相对应时，会出现一个全息图。 当应用程序未完全实现 [reprojection](hologram-stability.md#reprojection)，并且没有为当前用户 [校准](../../calibration.md) HoloLens 时，会发生泳道。 用户可以重新运行 [校准](../../calibration.md) 应用程序以解决此问题。 开发人员可以更新稳定平面，以进一步增强稳定性。
-* **颜色分离。** HoloLens 中的显示是彩色顺序显示的，它们在 60 Hz (各个颜色字段以 240 Hz) 显示以绿色为绿色的红色通道。 无论用户何时使用其眼睛跟踪移动的全息图，都将在其构成颜色中分离出全息图的前导和尾随边缘，从而产生彩虹效果。 分离程度取决于全息图的速度。 在某些罕见情况下，在查看固定全息图的同时迅速移动打印头也会导致彩虹效果，这称为 *[颜色分离](hologram-stability.md#color-separation)* 。
+* **颜色分离。** HoloLens 中的显示是彩色顺序显示的，它们在 60 Hz (各个颜色字段以 240 Hz) 显示以绿色为绿色的红色通道。 无论用户何时使用其眼睛跟踪移动的全息图，都将在其构成颜色中分离出全息图的前导和尾随边缘，从而产生彩虹效果。 分离程度取决于全息图的速度。 在某些罕见情况下，在查看固定全息图的同时迅速移动打印头也会导致彩虹效果，这称为 *[颜色分离](hologram-stability.md#color-separation)*。
 
 ## <a name="frame-rate"></a>帧速率
 
@@ -91,7 +91,7 @@ HoloLens 会执行一种复杂的硬件辅助全息稳定技术（称为 reproje
 * **无：** 如果应用程序不执行任何操作，则会在用户的打印头注视方向上，将平面 Reprojection 与以2米固定的稳定平面一起使用，通常会生成未达标准的结果。
 
 应用程序需要执行特定操作才能启用不同类型的 reprojection
-* **深度 Reprojection：** 应用程序将每个呈现的帧的深度缓冲区提交给系统。  在 Unity 上，在 " **XR 插件管理** " 下的 " **Windows Mixed Reality 设置** " 窗格中，通过 " **共享深度缓冲区** " 选项完成深度 Reprojection。  DirectX 应用调用 CommitDirect3D11DepthBuffer。  应用程序不应调用 SetFocusPoint。
+* **深度 Reprojection：** 应用程序将每个呈现的帧的深度缓冲区提交给系统。  在 Unity 上，在 " **XR 插件管理**" 下的 " **Windows Mixed Reality 设置**" 窗格中，通过 "**共享深度缓冲区**" 选项完成深度 Reprojection。  DirectX 应用调用 CommitDirect3D11DepthBuffer。  应用程序不应调用 SetFocusPoint。
 * **平面 Reprojection：** 在每个帧上，应用程序会告诉系统要稳定的平面位置。  Unity 应用程序调用 SetFocusPointForFrame，并应禁用 **共享深度缓冲** 。  DirectX 应用调用 SetFocusPoint，不应调用 CommitDirect3D11DepthBuffer。
 * **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。  在 HoloLens 2 上，应用程序需要在每个帧上 SetFocusPoint 一个点，0，0。  对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
 
@@ -99,15 +99,15 @@ HoloLens 会执行一种复杂的硬件辅助全息稳定技术（称为 reproje
 
 稳定类型 |    沉浸式耳机 |    HoloLens 第1代 | HoloLens 2
 --- | --- | --- | ---
-深度 Reprojection |    建议 |   不可用 |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
-自动平面 Reprojection | 不可用 |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
+深度 Reprojection |    建议 |   N/A |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
+自动平面 Reprojection | N/A |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
 平面 Reprojection |   不建议 |   如果自动平面未提供最佳结果，建议使用 | 如果两个深度选项都不能获得所需的结果，请使用    
 
 ### <a name="verifying-depth-is-set-correctly"></a>验证深度设置正确
             
 当 reprojection 方法使用深度缓冲区时，验证深度缓冲区的内容是否表示应用程序的呈现场景很重要。  许多因素可能导致问题。 例如，如果有另一个相机用于渲染用户界面覆盖，则可能会覆盖实际视图中的所有深度信息。  透明对象通常不会设置深度。  某些文本呈现默认情况下不设置深度。  当深度与呈现的全息影像不匹配时，呈现会出现明显的难题。
             
-HoloLens 2 有一个可视化工具，用于显示深度的位置和未设置，可从设备门户启用。  在 " **查看**  >  **全息图稳定性** " 选项卡上，选择 " **在耳机中显示深度可视化** " 复选框。  深度设置正确的区域将为蓝色。  没有深度集的呈现项将标记为红色，需要修复。  
+HoloLens 2 有一个可视化工具，用于显示深度的位置和未设置，可从设备门户启用。  在 "**查看**  >  **全息图稳定性**" 选项卡上，选择 "**在耳机中显示深度可视化**" 复选框。  深度设置正确的区域将为蓝色。  没有深度集的呈现项将标记为红色，需要修复。  
 
 > [!NOTE]
 > 视觉对象的视觉对象将不会在混合现实捕获中显示。  它仅在设备上可见。

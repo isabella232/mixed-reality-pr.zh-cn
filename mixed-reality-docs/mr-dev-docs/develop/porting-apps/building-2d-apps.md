@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 2D 应用，UWP，平面应用，HoloLens，沉浸式耳机，应用模型，后退按钮，应用栏，dpi，分辨率，缩放
-ms.openlocfilehash: af262527c957dda57f0c8a3252a2f63207d6ca39
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 2D 应用，UWP，平面应用，HoloLens，沉浸式头戴式耳机，应用型号，后退按钮，应用程序栏，dpi，分辨率，缩放，移植，HoloLens 第一代，HoloLens 2，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10
+ms.openlocfilehash: 4103ee1e5a7169759dfd823b41b5e3fd18011956
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676990"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677796"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>更新混合现实的 2D UWP 应用
 
@@ -59,7 +59,7 @@ Windows Mixed Reality 使用户能够在您的物理或数字世界中查看全�
 
 现在，让我们跳转到 AppX 清单，确保 Windows 10 UWP 应用可在 HoloLens 上运行：
 * 用 **Visual Studio** 打开应用的解决方案文件，并导航到应用程序包清单
-* 右键单击解决方案中的 **appxmanifest.xml** 文件，然后单击 " **查看代码** "<br>
+* 右键单击解决方案中的 **appxmanifest.xml** 文件，然后单击 "**查看代码**"<br>
   ![解决方案资源管理器中的 appxmanifest.xml](images/openappxmanifest-500px.png)<br>
 * 确保目标平台在 "依赖关系" 部分中为 "Windows 通用"。
   ```
@@ -69,16 +69,16 @@ Windows Mixed Reality 使用户能够在您的物理或数字世界中查看全�
   ```
 * 把!
 
-如果不使用 Visual Studio 作为开发环境，则可以在所选的文本编辑器中打开 **AppXManifest.xml** ，以确保面向 **Windows 通用** *y* 。
+如果不使用 Visual Studio 作为开发环境，则可以在所选的文本编辑器中打开 **AppXManifest.xml** ，以确保面向 **Windows 通用** *y*。
 
 ### <a name="run-in-the-hololens-emulator"></a>在 HoloLens 模拟器中运行
 
 现在，UWP 应用面向 "Windows 通用"，接下来让我们构建你的应用，并在 [HoloLens 模拟器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)中运行它。
-* 请确保已[安装 HoloLens 仿真器](../install-the-tools.md)。
+* 请确保已 [安装 HoloLens 仿真器](../install-the-tools.md) 。
 * 在 Visual Studio 中，选择应用的 **x86** 生成配置
 
   ![Visual Studio 中的 x86 生成配置](../platform-capabilities-and-apis/images/x86setting.png)<br>
-* 在 "部署目标" 下拉菜单中选择 " **HoloLens 模拟器** "
+* 在部署目标下拉菜单中选择“HoloLens 仿真器” 
 
   ![部署目标列表中的 HoloLens 模拟器](images/deployemulator-500px.png)<br>
 * 选择 " **调试" > "开始调试** " 以部署应用并启动调试。
@@ -98,7 +98,7 @@ Windows Mixed Reality 使用户能够在您的物理或数字世界中查看全�
 ### <a name="running-your-uwp-app-in-the-debugger"></a>在调试器中运行 UWP 应用
 
 这些步骤将指导你使用 Visual Studio 调试器调试 UWP 应用。
-* 如果尚未执行此操作，请在 Visual Studio 中打开解决方案。 将目标更改为 **HoloLens 模拟器** ，将生成配置更改为 **x86** 。
+* 如果尚未执行此操作，请在 Visual Studio 中打开解决方案。 将目标更改为 **HoloLens 模拟器** ，将生成配置更改为 **x86**。
 * 选择 " **调试" > "开始调试** " 以部署应用并启动调试。
 * 在世界上，用鼠标、键盘或 Xbox 控制器放置应用程序。
 * Visual Studio 现在应在应用代码中的某个位置中断。
@@ -116,7 +116,7 @@ Windows Mixed Reality 使用户能够在您的物理或数字世界中查看全�
 
 ![从响应式设计](images/scale-500px.png)
 
-Windows 10 将所有视觉对象设计从真实屏幕像素变为 **有效像素** 。 这意味着，开发人员会按照 Windows 10 人体学接口指导原则为有效像素设计用户界面，并确保这些有效像素的大小适用于跨设备、分辨率、DPI 等的可用性。有关详细信息，请参阅[MSDN 上的这篇精彩阅读](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx)[版本](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx)。
+Windows 10 将所有视觉对象设计从真实屏幕像素变为 **有效像素**。 这意味着，开发人员会按照 Windows 10 人体学接口指导原则为有效像素设计用户界面，并确保这些有效像素的大小适用于跨设备、分辨率、DPI 等的可用性。有关详细信息，请参阅[MSDN 上的这篇精彩阅读](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx)[版本](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx)。
 
 即使有独特的功能可以将应用放在世界上的距离范围内，也建议使用类似于电视的观看距离，以获得最佳的可读性，并与注视/手势交互。 因此，混合现实中的虚拟石板会在以下位置显示平面 UWP 视图：
 

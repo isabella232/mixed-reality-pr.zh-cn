@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音
-ms.openlocfilehash: b6930b35046e32beb1a4ca9f9ca29996487fcf4d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
+ms.openlocfilehash: 20e2b8d4b8a18f38e72db7889a5d00cf15bfc0eb
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677943"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679886"
 ---
 # <a name="voice-input-in-unity"></a>Unity 中的语音输入
 
@@ -41,7 +41,7 @@ Unity 公开了三种将 [语音输入](../../design/voice-input.md) 添加到 U
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
 **命名空间：** *UnityEngine*<br>
-**类型：** *KeywordRecognizer* 、 *PhraseRecognizedEventArgs* 、 *SpeechError* 、 *SpeechSystemStatus*
+**类型：** *KeywordRecognizer*、 *PhraseRecognizedEventArgs*、 *SpeechError*、 *SpeechSystemStatus*
 
 我们需要使用几个语句来保存一些击键：
 
@@ -103,7 +103,7 @@ keywordRecognizer.Start();
 ### <a name="grammarrecognizer"></a>GrammarRecognizer
 
 **命名空间：** *UnityEngine*<br>
-**类型** ： *GrammarRecognizer* 、 *PhraseRecognizedEventArgs* 、 *SpeechError* 、 *SpeechSystemStatus*
+**类型**： *GrammarRecognizer*、 *PhraseRecognizedEventArgs*、 *SpeechError*、 *SpeechSystemStatus*
 
 如果要使用 SRGS 指定识别语法，则使用 GrammarRecognizer。 如果你的应用程序包含多个关键字（如果你想要识别更复杂的短语），或者如果你想要轻松打开和关闭命令集，这会很有用。 请参阅： [使用 SRGS XML 创建语法](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) 以获取文件格式信息。
 
@@ -145,7 +145,7 @@ grammarRecognizer.Start();
 ## <a name="dictation"></a>听写
 
 **命名空间：** *UnityEngine*<br>
-**类型** ： *DictationRecognizer* 、 *SpeechError* 、 *SpeechSystemStatus*
+**类型**： *DictationRecognizer*、 *SpeechError*、 *SpeechSystemStatus*
 
 使用 DictationRecognizer 将用户的语音转换为文本。 DictationRecognizer 公开 [听写](../../design/voice-input.md#dictation) 功能，并支持注册和侦听假设和短语完成的事件，因此，你可以在用户讲话和之后向用户提供反馈。 开始 ( # A1，并分别停止 ( # A3 方法启用和禁用听写识别。 使用识别器完成后，应使用 Dispose ( # A1 方法来释放它所使用的资源。 如果未在此之前释放这些资源，它将在垃圾回收期间自动释放这些资源。
 
@@ -308,4 +308,4 @@ PhraseRecognitionSystem.Restart();
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。

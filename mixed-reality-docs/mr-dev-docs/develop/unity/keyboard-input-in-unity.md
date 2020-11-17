@@ -5,18 +5,18 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 键盘、input、unity、touchscreenkeyboard
-ms.openlocfilehash: 806051a4ea429a058b271a55d7f5fc41503e346b
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+keywords: 键盘，输入，unity，touchscreenkeyboard，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: aa9bb3059a8d0cc5b829bf14d92928511259b7f9
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293148"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677416"
 ---
 # <a name="keyboard-input-in-unity"></a>Unity 中的键盘输入
 
 **命名空间：** *UnityEngine*<br>
- **类型**： * [TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
+ **类型**： *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
 
 虽然 HoloLens 支持多种形式的输入，包括蓝牙键盘，但大多数应用程序都无法假定所有用户都有可用的物理键盘。 如果你的应用程序需要文本输入，则应该提供某种形式的屏幕键盘。
 
@@ -25,14 +25,14 @@ Unity 提供了 *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/
 ## <a name="hololens-system-keyboard-behavior-in-unity"></a>Unity 中的 HoloLens 系统键盘行为
 
 在 HoloLens 上， *TouchScreenKeyboard* 利用系统的屏幕键盘。 系统的屏幕键盘无法叠加到容量耗尽视图之上，因此 Unity 必须创建辅助二维 XAML 视图，以显示键盘，然后在提交输入后返回到容量耗尽视图。 用户流如下所示：
-1. 用户执行导致应用程序代码调用*TouchScreenKeyboard*的操作
-    * 在调用*TouchScreenKeyboard*之前，应用负责暂停应用状态
+1. 用户执行导致应用程序代码调用 *TouchScreenKeyboard* 的操作
+    * 在调用 *TouchScreenKeyboard* 之前，应用负责暂停应用状态
     * 应用可能会终止，然后再切换回容量耗尽视图
 2. Unity 切换到在世界上自动放置的 2D XAML 视图
 3. 用户使用系统键盘输入文本并提交或取消
 4. Unity 切换回容量耗尽视图
     * 应用负责在 *TouchScreenKeyboard* 完成后恢复应用程序状态
-5. 提交的文本在*TouchScreenKeyboard*中提供
+5. 提交的文本在 *TouchScreenKeyboard* 中提供
 
 ### <a name="available-keyboard-views"></a>可用的键盘视图
 

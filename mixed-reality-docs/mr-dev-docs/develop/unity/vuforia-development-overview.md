@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 12/20/2019
 ms.topic: article
-keywords: Vuforia，标记，坐标，引用框架，跟踪
-ms.openlocfilehash: 270588bb317b0c083500dfaaca80c075a35410b9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Vuforia，标记，坐标，引用框架，跟踪，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity，HoloLens，设备跟踪，性能模式，Vuforia 开发人员门户
+ms.openlocfilehash: 930f23d5bbc4115476c337dcb99f40096039d78f
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677722"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679666"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>将 Vuforia 引擎与 Unity 一起使用
 
@@ -46,7 +46,7 @@ Vuforia 引擎为 HoloLens 提供一项重要功能–将 AR 体验连接到环�
 1.  从 Unity 资产存储区下载[适用于 HoloLens 的 Vuforia 引擎示例](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553)
 2.  [为电源和性能应用建议的 Unity 引擎选项](performance-recommendations-for-unity.md)
 3.  在生成中将示例场景添加到 **场景** 中 **。**
-4.  在 " **生成设置** " 中，通过单击 " **添加打开的场景** " 按钮将生成平台切换到 **UWP** 。
+4.  在 "**生成设置**" 中，通过单击 "**添加打开的场景**" 按钮将生成平台切换到 **UWP** 。
 ![图像](https://user-images.githubusercontent.com/45470042/89573103-173daa80-d7f8-11ea-9284-931a7b6c913d.png)
 5.  单击 " **播放机设置** " 按钮。  
    * 选择 **UWP** 图标，然后展开 " **XR 设置** " 部分。
@@ -58,7 +58,7 @@ Vuforia 引擎为 HoloLens 提供一项重要功能–将 AR 体验连接到环�
 6.  展开 " **发布设置** " 部分。
    * 在 " **功能** " 下，确保选择 **Internet 客户端、网络摄像机、麦克风** 和 **SpatialPerception** 。
    * **注意：** 仅当打算使用 Surface 观察器 API 时，才应选择 SpatialPerception。
-   * 在 " **受支持的设备系列** " 下，确保已选中 " **全息** "。 
+   * 在 " **受支持的设备系列**" 下，确保已选中 " **全息** "。 
 7.  展开 " **分辨率和演示** " 部分。
    * 禁用 **后台运行** ，以便在将应用放入后台时暂停 Vuforia 引擎，并在应用恢复后再次访问相机。 
    * 在 " **默认方向** " 下拉列表中，确保选中 " **横向打印** "。

@@ -5,13 +5,13 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，全息呈现，全息，沉浸式，聚焦点，深度缓冲区，仅限方向，位置，不透明，透明，剪辑
-ms.openlocfilehash: 7e606232f626c64407ced75481deb3055326f760
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，全息呈现，全息，沉浸式，聚焦点，深度缓冲，仅限方向，定位，不透明，透明，剪辑，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: c3c470634e2c5c9445ae8c0a29621971de22a92b
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676939"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677616"
 ---
 # <a name="camera-in-unity"></a>Unity 中的相机
 
@@ -76,12 +76,12 @@ HoloLens 和沉浸式耳机都将 reproject 你的应用程序呈现的每个帧
 
 将应用的深度缓冲区共享到 Windows 每个框架都将根据要呈现的耳机类型为应用程序提供以下两个增强功能之一：
 
-* 当提供了深度缓冲区时， **沉浸式耳机** 可以执行位置 reprojection，同时调整 misprediction 在位置和方向上的影像。
+* 当提供了深度缓冲区时，**沉浸式耳机** 可以执行位置 reprojection，同时调整 misprediction 在位置和方向上的影像。
 * **全息耳机** 具有几种不同的方法。 当提供了深度缓冲区时，HoloLens 1 将自动选择 [焦点](focus-point-in-unity.md) ，同时优化与最大内容相交的平面上的全息图稳定性。 HoloLens 2 将使用深度 LSR 来稳定内容 [ (请参阅备注) ](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint)。
 
 设置 Unity 应用是否将向 Windows 提供深度缓冲区：
 
-1. 请参阅 **编辑**  >  **项目设置**  >  **播放器**  >  **通用 Windows 平台选项卡**  >  **XR 设置** 。
+1. 请参阅 **编辑**  >  **项目设置**  >  **播放器**  >  **通用 Windows 平台选项卡**  >  **XR 设置**。
 2. 展开 " **Windows Mixed REALITY SDK** " 项。
 3. 选中或取消选中 " **启用深度缓冲共享** " 复选框。  默认情况下，在新创建的项目中将选中此功能，因为此功能已添加到 Unity，并且默认情况下将为升级的旧项目取消选中。
 
@@ -93,17 +93,17 @@ HoloLens 和沉浸式耳机都将 reproject 你的应用程序呈现的每个帧
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是在浏览 MRTK 核心构建基块。 在这里，你可以继续执行下一个构建基块：
+如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [凝视](gaze-in-unity.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>请参阅
 

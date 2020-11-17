@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 09/18/2020
 ms.topic: article
-keywords: Unreal，Unreal Engine 4，UE4，HoloLens，HoloLens 2，开发，材料，文档，指南，功能，全息影像，游戏开发
-ms.openlocfilehash: bfce6e6bf8acd58821dba1213e1f1ab571d85a0c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，开发，材料，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: d57689e9427ab5877e3afb49b0d19f35df6c47d2
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677267"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678936"
 ---
 # <a name="material-recommendations-in-unreal"></a>Unreal 中的材料建议
 
@@ -71,9 +71,9 @@ ms.locfileid: "91677267"
 
 ![材料设置最佳方案](images/unreal-materials-img-07.jpg)
 
-创建材料实例时，应将首选项指定为在 "材料实例动态" 上的 " **材料实例常量** "。 " **材料实例常量** " 是一种在运行时之前只计算一次的实例材料。
+创建材料实例时，应将首选项指定为在 "材料实例动态" 上的 " **材料实例常量** "。 "**材料实例常量**" 是一种在运行时之前只计算一次的实例材料。
 
-通过 "内容浏览器" 创建的材料实例 ( **右键单击 > 创建材料实例** ，) 是一个材料实例常量。 通过代码创建 "材料实例动态"。 有关详细信息，请 [参阅 Unreal 引擎文档](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html)。
+通过 "内容浏览器" 创建的材料实例 (**右键单击 > 创建材料实例** ，) 是一个材料实例常量。 通过代码创建 "材料实例动态"。 有关详细信息，请 [参阅 Unreal 引擎文档](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html)。
 
 ![在 Unreal 中创建材料实例](images/unreal-materials-img-08.png)
 

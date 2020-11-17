@@ -5,18 +5,18 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
-keywords: 混合现实，空间定位器，空间参考框架，空间坐标系统，空间阶段，示例代码，图像稳定，空间锚，空间锚定存储，跟踪丢失，演练
-ms.openlocfilehash: 5ae60d5696d40a07ad350d0de097eb2f82f1dde1
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 混合现实，空间定位器，空间参考框架，空间坐标系统，空间贴图，示例代码，图像稳定，空间锚，空间锚定存储，跟踪丢失，演练，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 4ab97df0d0ce87f86b3b561edb544d503e479e96
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677110"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679656"
 ---
 # <a name="coordinate-systems-in-directx"></a>DirectX 中的坐标系统
 
 > [!NOTE]
-> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)** 。
+> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
 [坐标系统](../../design/coordinate-systems.md) 构成 Windows Mixed Reality api 提供的空间理解的基础。
 
@@ -593,14 +593,14 @@ SpatialLocatorAttachedFrameOfReference 类定义相对于设备而不是实际�
 
 首先，我们将模板更改为存储 SpatialLocatorAttachedFrameOfReference 而不是 SpatialStationaryFrameOfReference：
 
-从 **HolographicTagAlongSampleMain** ：
+从 **HolographicTagAlongSampleMain**：
 
 ```
    // A reference frame attached to the holographic camera.
    Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference^   m_referenceFrame;
 ```
 
-从 **HolographicTagAlongSampleMain** ：
+从 **HolographicTagAlongSampleMain**：
 
 ```
    // In this example, we create a reference frame attached to the device.
@@ -629,7 +629,7 @@ SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordina
 
 出于用户舒适的原因，我们使用线性内插 ( "lerp" ) ，以使更改在某个时间段内的位置平滑。 这比将全息图锁定到其注视的用户更适合。 Lerping 的影像位置，还可以通过抑制移动来使全息影像稳定;如果未执行此抑制，用户将看到全息影像抖动，因为通常会将其视为让移动用户。
 
-From **StationaryQuadRenderer：:P ositionhologram** ：
+From **StationaryQuadRenderer：:P ositionhologram**：
 
 ```
    const float& dtime = static_cast<float>(timer.GetElapsedSeconds());
@@ -656,7 +656,7 @@ From **StationaryQuadRenderer：:P ositionhologram** ：
 >[!NOTE]
 >对于调试面板，您可以选择将全息图从一边重定位到一边，使其不会妨碍您的视图。 下面是有关如何执行此操作的示例。
 
-对于 **StationaryQuadRenderer：:P ositionhologram** ：
+对于 **StationaryQuadRenderer：:P ositionhologram**：
 
 ```
        // If you're making a debug view, you might not want the tag-along to be directly in the
@@ -673,7 +673,7 @@ From **StationaryQuadRenderer：:P ositionhologram** ：
 
 只需定位全息图（在本例中为四个部分）是不够的;还必须旋转对象，使其面向用户。 请注意，此旋转发生在世界空间中，因为这种类型的 billboarding 允许全息图保留在用户的环境中。 由于全息图锁定为显示方向，因此视图空间 billboarding 并不舒适：在这种情况下，还必须在左视图和右视图矩阵之间进行插值，才能获得不会干扰立体声呈现的视图空间布告栏转换。 在这里，我们将旋转 X 和 Z 轴以面对用户。
 
-From **StationaryQuadRenderer：： Update** ：
+From **StationaryQuadRenderer：： Update**：
 
 ```
    // Seconds elapsed since previous frame.
@@ -720,7 +720,7 @@ From **StationaryQuadRenderer：： Update** ：
 
 在此示例中，我们还会选择在 SpatialLocatorAttachedReferenceFrame 的坐标系统中呈现全息影像，这是我们放置全息图的位置。  (如果我们决定使用另一个坐标系统进行呈现，则需要从设备附加的参考框架的坐标系统到该坐标系统获取转换。 ) 
 
-From **HolographicTagAlongSampleMain：： Render** ：
+From **HolographicTagAlongSampleMain：： Render**：
 
 ```
    // The view and projection matrices for each holographic camera will change

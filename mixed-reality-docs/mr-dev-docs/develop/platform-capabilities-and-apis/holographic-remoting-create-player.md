@@ -5,13 +5,13 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
-keywords: HoloLens、远程处理、全息远程处理
-ms.openlocfilehash: 51e9125ab5baee63ca193c6a75701b6dda9a16cb
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: HoloLens，远程处理，全息远程处理，NuGet，应用清单，播放机上下文，远程应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: f55973e74abc60f62599375aebf278224865a5c1
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683193"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677916"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>编写自定义全息远程处理播放器应用
 
@@ -22,7 +22,7 @@ ms.locfileid: "92683193"
 
 全息远程处理播放机允许应用显示桌面 PC 或 UWP 设备（如 Xbox 设备）上 [呈现](rendering.md) 的全息内容，允许访问更多系统资源。 全息远程处理播放机应用将输入数据流式传输到全息远程处理远程应用程序，并将沉浸式视图作为视频和音频流接收回来。 使用标准 Wi-fi 建立连接。 若要创建播放器应用，需要使用 NuGet 包将全息远程处理添加到 UWP 应用，并编写代码来处理连接并显示沉浸式视图。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息版项目模板](../native/creating-a-holographic-directx-project.md) 是一个很好的起点。
 
@@ -33,10 +33,10 @@ ms.locfileid: "92683193"
 
 将 NuGet 包添加到 Visual Studio 中的项目时需要执行以下步骤。
 1. 在 Visual Studio 中打开项目。
-2. 右键单击项目节点，然后选择 " **管理 NuGet 包 ...** "
+2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
 3. 在出现的面板中，单击 " **浏览** "，然后搜索 "全息远程处理"。
-4. 选择 ""，然后选择 " **Microsoft** "，并单击 " **安装** **"。**
-5. 如果 **预览** 对话框出现，请单击 **"确定"** 。
+4. 选择 ""，然后选择 " **Microsoft**"，并单击 "**安装** **"。**
+5. 如果 **预览** 对话框出现，请单击 **"确定"**。
 6. 显示的下一个对话框是许可协议。 单击 " **我接受** " 接受许可协议。
 
 >[!IMPORTANT]
@@ -46,7 +46,7 @@ ms.locfileid: "92683193"
 
 若要使应用程序了解 NuGet 包添加的 Microsoft.Holographic.AppRemoting.dll，需要对项目执行以下步骤：
 
-1. 在解决方案资源管理器右键单击 **appxmanifest.xml** 文件并选择 " **打开方式 ...** "
+1. 在解决方案资源管理器右键单击 **appxmanifest.xml** 文件并选择 "**打开方式 ...** "
 2. 选择 " **XML (文本) 编辑器** "，然后单击 "确定"
 3. 将以下行添加到文件中并保存
 ```xml
@@ -108,7 +108,7 @@ m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::Cr
 1) 在 HoloLens 2 上运行的播放机应用会连接到远程应用。
 2) 远程应用连接到在 HoloLens 2 上运行的播放机应用。
 
-若要从播放机应用连接到远程应用，请 ```Connect``` 在指定主机名和端口的播放机上下文上调用方法。 默认端口为 **8265** 。
+若要从播放机应用连接到远程应用，请 ```Connect``` 在指定主机名和端口的播放机上下文上调用方法。 默认端口为 **8265**。
 
 ```cpp
 try

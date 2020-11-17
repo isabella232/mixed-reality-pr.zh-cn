@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 12/01/2019
 ms.topic: article
-keywords: 混合现实、unity、教程、hololens2、空间音频
-ms.openlocfilehash: 25386819826efc6f25182e0780ff148206248a06
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，prototyping，音量曲线
+ms.openlocfilehash: eb550c3127e13926d73428b337abfd7cf9872eb7
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678584"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678186"
 ---
 # <a name="spatializing-button-interaction-sounds"></a>将按钮交互声音空间化
 
@@ -32,9 +32,9 @@ ms.locfileid: "91678584"
 ## <a name="spatialize-button-feedback"></a>Spatialize 按钮反馈
 在此步骤中，你将 spatialize 按钮的音频反馈。 有关相关设计的建议，请参阅 [空间音效设计](../../../design/spatial-sound-design.md)。 
 
-" **音频混音** 器" 窗格用于定义从 **音频源** 组件播放音频的目标（称为 **混音器组** ）。 
-* 使用 **> 音频 > 音频混合器** 从菜单栏打开 " **音频混音** 器" 窗格
-* 通过单击 **Mixers** 旁边的 "+" 来创建 **混音** 器。 新混音器将包含一个名为 **Master** 的默认 **组** 。
+"**音频混音** 器" 窗格用于定义从 **音频源** 组件播放音频的目标（称为 **混音器组**）。 
+* 使用 **> 音频 > 音频混合器** 从菜单栏打开 "**音频混音** 器" 窗格
+* 通过单击 **Mixers** 旁边的 "+" 来创建 **混音** 器。 新混音器将包含一个名为 **Master** 的默认 **组**。
 
 **混音** 器窗格现在如下所示：
 
@@ -43,7 +43,7 @@ ms.locfileid: "91678584"
 > [!NOTE]
 > 在 [第5章](unity-spatial-audio-ch5.md)中启用回响后，混音器的音量指示器不会显示通过 Microsoft Spatializer 播放的声音的活动
 
-单击 " **层次结构** " 窗格中的 **PressableButtonHoloLens2** 。 在 " **检查器** " 窗格中：
+单击 "**层次结构**" 窗格中的 **PressableButtonHoloLens2** 。 在 " **检查器** " 窗格中：
 1. 查找 **音频源** 组件
 2. 对于 " **输出** " 属性，单击选择器并选择混音器
 3. 选中 " **Spatialize** " 复选框
@@ -62,14 +62,23 @@ ms.locfileid: "91678584"
 ## <a name="adjust-the-volume-curve"></a>调整音量曲线
 默认情况下，在从侦听器获得更远的距离时，Unity 将衰减 spatialized 声音。 如果此衰减应用于交互反馈声音，则接口可能会变得更难以使用。
 
-若要禁用此衰减，请调整 **音量** 曲线。 在 **PressableButtonHoloLens2** 的 " **检查器** " 窗格的 " **音频源** " 组件中，有一个名为 " **三维声音设置** " 的部分。 在该部分中：
+若要禁用此衰减，请调整 **音量** 曲线。 在 **PressableButtonHoloLens2** 的 "**检查器**" 窗格的 "**音频源**" 组件中，有一个名为 "**三维声音设置**" 的部分。 在该部分中：
 1. 将 **Volume Rolloff** 属性设置为线性
 2. 将 **卷** 曲线上的终结点从 y 轴上的 "0")  (红色曲线上，直到 "1"
 3. 若要将 **音量** 曲线的形状调整为平面，请拖动 "白色曲线" 形状控件，使其平行于 X 轴
 
-进行这些更改后， **PressableButtonHoloLens2** 的 " **音频源** " 属性的 " **3d 声音设置** " 部分将如下所示：
+进行这些更改后， **PressableButtonHoloLens2** 的 "**音频源**" 属性的 " **3d 声音设置**" 部分将如下所示：
 
 ![按钮三维声音设置](images/spatial-audio/button-3d-sound-settings.png)
+
+## <a name="testing-the-spatialize-audio"></a>测试 spatialize 音频
+
+可随意测试新的 spatialized 按钮交互声音：
+
+* 在 Unity 编辑器中进入游戏模式，理想情况下，使用场景中的循环音频示例
+* 将对象从左到右移动到音频源，并与未启用空间音频的和进行比较。 可以通过以下方式更改用于测试的音频源设置：
+    * 将空间 Blend 属性移动到 0-1 (2D 非 spatialized 和 3D spatialized 声音) 
+    * 选中和取消选中 Spatialize 属性
 
 ## <a name="next-steps"></a>后续步骤
 

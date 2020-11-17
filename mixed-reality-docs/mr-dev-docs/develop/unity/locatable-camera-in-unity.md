@@ -5,13 +5,13 @@ author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 照片、视频、hololens、照相机、unity、定位
-ms.openlocfilehash: dfbbcc21db1247a7250e5049bfd1c4f89976ac15
-ms.sourcegitcommit: 8e91ff47ef70e80a41137f80aa1093e711d27bf7
+keywords: 照片，视频，hololens，照相机，unity，定位，PVC，照片视频摄像机，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，网络摄像机，照片捕获，视频捕获
+ms.openlocfilehash: c41ff88650da4aa6dc0d98c05b1b881362123a4f
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957797"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678596"
 ---
 # <a name="locatable-camera-in-unity"></a>Unity 中的可定位相机
 
@@ -167,7 +167,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 若要与内存中帧的原始字节交互，请按照上述设置步骤进行操作，并在将照片捕获到 Texture2D 时 *OnPhotoModeStarted* 。 不同之处在于，可在 *OnCapturedPhotoToMemory* 中获取原始字节并与其进行交互。
 
-在此示例中，你将创建 *一个 <Color> 列表* ，该列表可以通过 SetPixels 进一步处理或应用于纹理 *( # B1*
+在此示例中，你将创建 *一个 <Color> 列表*，该列表可以通过 SetPixels 进一步处理或应用于纹理 *( # B1*
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -303,7 +303,7 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 * 无可用解决方案
     * 确保在项目中指定了 **网络摄像机** 功能。
 

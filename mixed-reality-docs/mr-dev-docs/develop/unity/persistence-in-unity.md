@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: HoloLens、暂留、Unity
-ms.openlocfilehash: bb1a9b0544f9325a60c86c7424b7b451b6b4335b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens，持久性，Unity，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: cff7f05a5a5695ae8e379ed681c3b7320622968c
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678650"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678526"
 ---
 # <a name="persistence-in-unity"></a>Unity 中的持久性
 
@@ -109,17 +109,17 @@ for (int index = 0; index < ids.Length; index++)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 在这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以进入下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [空间映射](spatial-mapping-in-unity.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>另请参阅
 * [空间锚点持久性](../../design/coordinate-systems.md#spatial-anchor-persistence)

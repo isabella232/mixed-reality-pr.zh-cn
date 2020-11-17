@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: 坐标系统，空间坐标系统，仅限方向，固定规模，房间，房间-缩放，世界规模，360度，固定的，房间，人体，世界，，比例，，位置，方向，Unity，锚定，空间锚，世界锚，世界锁定，世界锁定，locatability，边界，recenter
-ms.openlocfilehash: 59fae57f3ca5048f4027ed96fca03255683c1fe3
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 坐标系统，空间坐标系统，仅限方向，固定比例大规模，房间规模，世界规模，360度，固定的，房间，房间，世界，，规模，位置，方向，Unity，定位，空间锚，世界锚，世界锁定，世界锁定，身体锚，世界锁定，，跟踪丢失，locatability，界限，recenter，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 92b132bb75e88711fb4bf9fda3dee5b778a0be6e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676927"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678676"
 ---
 # <a name="coordinate-systems-in-unity"></a>Unity 中的坐标系统
 
@@ -24,7 +24,7 @@ Windows Mixed Reality 在各种 [经验](../../design/coordinate-systems.md)范�
 **命名空间：** *UnityEngine. XR*<br>
 **类型：** *XRDevice*
 
-若要生成 **仅限方向** 或 **固定规模的体验** ，必须将 Unity 设置为静止跟踪空间类型。 这将设置 Unity 的世界坐标系统以跟踪 [固定的引用框架](../../design/coordinate-systems.md#spatial-coordinate-systems)。 在静止跟踪模式下，显示在面板默认位置之前的编辑器中的内容 (向前) 在应用启动时将显示在用户的前面。
+若要生成 **仅限方向** 或 **固定规模的体验**，必须将 Unity 设置为静止跟踪空间类型。 这将设置 Unity 的世界坐标系统以跟踪 [固定的引用框架](../../design/coordinate-systems.md#spatial-coordinate-systems)。 在静止跟踪模式下，显示在面板默认位置之前的编辑器中的内容 (向前) 在应用启动时将显示在用户的前面。
 
 ```cs
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
@@ -39,7 +39,7 @@ XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 InputTracking.disablePositionalTracking = true;
 ```
 
-对于 **大规模体验** ，若要让用户在以后 recenter 原位置，可以调用 [XR。InputTracking. Recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) 方法：
+对于 **大规模体验**，若要让用户在以后 recenter 原位置，可以调用 [XR。InputTracking. Recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) 方法：
 
 ```cs
 InputTracking.Recenter();
@@ -50,7 +50,7 @@ InputTracking.Recenter();
 **命名空间：** *UnityEngine. XR*<br>
 **类型：** *XRDevice*
 
-对于 **大规模** 或 **房间规模的体验** ，需要相对于楼层放置内容。 使用 **[空间阶段](../../design/coordinate-systems.md#spatial-coordinate-systems)** （表示用户在首次运行期间设置的已定义的层级来源和可选房间边界）的原因。
+对于 **大规模** 或 **房间规模的体验**，需要相对于楼层放置内容。 使用 **[空间阶段](../../design/coordinate-systems.md#spatial-coordinate-systems)**（表示用户在首次运行期间设置的已定义的层级来源和可选房间边界）的原因。
 
 若要确保 Unity 在底层的世界坐标系统中运行，可以将 Unity 设置为 RoomScale 跟踪空间类型，并确保设置成功：
 
@@ -170,17 +170,17 @@ Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 在这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以进入下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [凝视](gaze-in-unity.md)
 
-或跳转到混合现实平台功能和 Api：
+或跳转到混合现实平台功能和 API：
 
 > [!div class="nextstepaction"]
 > [共享体验](shared-experiences-in-unity.md)
 
-随时可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks) 。
+你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>另请参阅
 * [体验规模](../../design/coordinate-systems.md#mixed-reality-experience-scales)

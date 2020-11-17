@@ -5,13 +5,13 @@ author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
-keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程全息影像
-ms.openlocfilehash: 0a6cdf34a797a7113c780dee0049125861dd7c32
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程全息影像，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: ec03a349959f9bde71a2c8a600d513fb21c533a8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677606"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679626"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>添加全息远程处理 (HoloLens (第一代) # A3
 
@@ -41,10 +41,10 @@ ms.locfileid: "91677606"
 
 按照以下步骤获取用于全息远程处理的 NuGet 包，并从项目中添加引用：
 1. 在 Visual Studio 中中转到你的项目。
-2. 右键单击项目节点，然后选择 " **管理 NuGet 包 ...** "
+2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
 3. 在出现的面板中，单击 " **浏览** "，然后搜索 "全息远程处理"。
-4. 选择 **"** "，然后单击 " **安装** "。
-5. 如果 **预览** 对话框出现，请单击 **"确定"** 。
+4. 选择 **"** "，然后单击 " **安装**"。
+5. 如果 **预览** 对话框出现，请单击 **"确定"**。
 6. 显示的下一个对话框是许可协议。 单击 " **我接受** " 接受许可协议。
 
 ### <a name="create-the-holographicstreamerhelpers"></a>创建 HolographicStreamerHelpers

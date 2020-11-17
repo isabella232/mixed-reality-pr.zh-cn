@@ -7,12 +7,12 @@ ms.date: 09/07/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, Unity, Visual Studio, 工具包
-ms.openlocfilehash: fe949d7a61eb49098351d49f9fe9f7c1fd5699c8
-ms.sourcegitcommit: 5bf2121490b7b76135f52d41216330023745f54c
+ms.openlocfilehash: 8e123ec9de117b3c1c5959f2719481ae8094a9e6
+ms.sourcegitcommit: f459c7deb254409fd5db3967bcc875bcbc367e77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92001467"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94482406"
 ---
 # <a name="install-the-tools"></a>安装工具
 
@@ -42,3 +42,4 @@ ms.locfileid: "92001467"
 你现在已将 Windows 10、Visual Studio 和 Windows 10 SDK 准备好了，接下来选择一个引擎用于构建。
 
 [!INCLUDE[](includes/tools-overview.md)]
+

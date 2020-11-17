@@ -5,18 +5,18 @@ author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
-keywords: 眼睛，头盔，打印头跟踪，眼睛跟踪，directx，输入，全息影像
-ms.openlocfilehash: 06f725f3560d2c05e15c2e1362e820262986a192
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 眼睛，眼睛，打印头，打印头跟踪，眼睛跟踪，directx，输入，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 9ec54f5db33346c499582b54a0b3e36c129bf7ab
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677098"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678076"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>DirectX 中的头盔和眼睛眼睛输入
 
 > [!NOTE]
-> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)** 。
+> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
 在 Windows Mixed Reality 中，眼睛和头盔输入用于确定用户正在查看的内容。 这可以用来驱动主要的输入模型，如 [注视和提交](../../design/gaze-and-commit.md)，还可以为交互类型提供上下文。 通过 API 可以使用两种类型的目视矢量：打印头-注视和眼睛。  两者都作为具有原点和方向的三维射线提供。 然后，应用程序可以 raycast 到其幕后或现实世界，确定用户的目标。
 
@@ -177,11 +177,11 @@ if (pointerPose)
 如我们的 [眼睛跟踪设计文档](../../design/eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available)中所述，设计人员和开发人员都应注意到，可能存在一些可能无法用于应用程序的目视跟踪数据的实例。
 这种情况的原因有很多，因为用户未进行校准，用户拒绝了应用程序访问其眼睛跟踪数据或临时的 interferences (例如，在 HoloLens 面板上出现污迹，或 occluding 用户的眼睛) 。 虽然本文档中已提到了某些 Api，但在下面的部分中，我们提供了有关如何检测目视跟踪是否可用作快速参考的摘要： 
 
-* 检查系统是否完全支持目视跟踪。 调用以下 *方法* ： [EyesPose. IsSupported ( # B1](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
+* 检查系统是否完全支持目视跟踪。 调用以下 *方法*： [EyesPose. IsSupported ( # B1](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
 
-* 检查是否校准了用户。 调用以下 *属性* ： [EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid) 
+* 检查是否校准了用户。 调用以下 *属性*： [EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid) 
 
-* 检查用户是否已授予你的应用程序权限以使用其目视跟踪数据：检索当前的 _"GazeInputAccessStatus"_ 。 有关如何执行此操作的示例，请参阅 [请求访问注视输入](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input)。   
+* 检查用户是否已授予你的应用程序权限以使用其目视跟踪数据：检索当前的 _"GazeInputAccessStatus"_。 有关如何执行此操作的示例，请参阅 [请求访问注视输入](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input)。   
 
 此外，你可能需要通过在收到的目视跟踪数据更新之间添加超时，并以其他方式回退到下面所述的打印头来检查眼睛跟踪数据是否过时。  
 有关详细信息，请访问我们的 [回退设计注意事项](../../design/eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available) 。

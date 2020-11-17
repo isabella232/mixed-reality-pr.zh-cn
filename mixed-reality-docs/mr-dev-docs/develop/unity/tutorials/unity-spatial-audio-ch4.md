@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 12/01/2019
 ms.topic: article
-keywords: 混合现实、unity、教程、hololens2、空间音频
-ms.openlocfilehash: cb9bfb03da864c78784c288f4d7c4190461cd838
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
+ms.openlocfilehash: c752f79f53b5167d674b9e778637357d97fb914a
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293162"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678202"
 ---
 # <a name="enabling-and-disabling-spatialization-at-run-time"></a>在运行时启用和禁用 spatialization
 
@@ -21,7 +21,7 @@ ms.locfileid: "92293162"
 * 从按钮操作驱动 spatialization 控件脚本
 
 ## <a name="add-spatialization-control-script"></a>添加 spatialization 控件脚本
-右键单击 " **项目** " 窗格，然后通过选择 " **> c # 脚本**创建新的 c # 脚本"。 将脚本命名为 "SpatializeOnOff"。
+右键单击 " **项目** " 窗格，然后通过选择 " **> c # 脚本** 创建新的 c # 脚本"。 将脚本命名为 "SpatializeOnOff"。
 
 ![创建脚本](images/spatial-audio/create-script.png)
 
@@ -87,26 +87,26 @@ public class SpatializeOnOff : MonoBehaviour
 
 > [!NOTE]
 > 若要启用或禁用 spatialization，此脚本只会调整 **spatialBlend** 属性，使 **spatialization** 属性保持启用状态。 在此模式下，Unity 仍会应用 **卷** 曲线。 否则，如果用户在远距离源时禁用了 spatialization，则会听到音量突然增加。 <br> <br>
-> 如果希望完全禁用 spatialization，请修改脚本，同时调整**SourceObject**变量的**spatialization**布尔值属性。
+> 如果希望完全禁用 spatialization，请修改脚本，同时调整 **SourceObject** 变量的 **spatialization** 布尔值属性。
 
 ## <a name="attach-your-script-and-drive-it-from-the-button"></a>附加脚本，然后从按钮中进行驱动器
-在**四**个 "**检查器**" 窗格中，单击 "**添加组件**" 并添加**Spatialize On** script：
+在 **四** 个 "**检查器**" 窗格中，单击 "**添加组件**" 并添加 **Spatialize On** script：
 
 ![将脚本添加到四个](images/spatial-audio/add-script-to-quad.png)
 
-在四个 **Spatialize** 的 **故障**组件上：
-1. 在**层次结构**中查找**PressableButtonHoloLens2-> IconAndText-> TextMeshPro**使用者：
+在四个 **Spatialize** 的 **故障** 组件上：
+1. 在 **层次结构** 中查找 **PressableButtonHoloLens2-> IconAndText-> TextMeshPro** 使用者：
 
 ![在层次结构中查找 PressableButtonHoloLens2 对象](images/spatial-audio/pressable-button-object.png)
 
-2. 将**TextMeshPro** subject 拖到**Spatialize On Off**组件的**ButtonTextObject**字段上
+2. 将 **TextMeshPro** subject 拖到 **Spatialize On Off** 组件的 **ButtonTextObject** 字段上
 
 进行这些更改后，四个 **Spatialize** 组件的 **故障** 组件如下所示：
 
 ![Spatialize on basic](images/spatial-audio/spatialize-on-off-basic.png)
 
-若要将按钮设置为在释放按钮时调用**Spatialize On On**脚本，请打开**PressableButtonHoloLens2**对象的**检查器**窗格，查找**种不可交互**组件，并执行以下操作：
-1. 查找 "**事件**" 子节** ( # B1**区域的 OnClick
+若要将按钮设置为在释放按钮时调用 **Spatialize On On** 脚本，请打开 **PressableButtonHoloLens2** 对象的 **检查器** 窗格，查找 **种不可交互** 组件，并执行以下操作：
+1. 查找 "**事件**" 子节 **( # B1** 区域的 OnClick
 2. 将 **四** 个部分从 **层次结构** 拖至目标对象槽。
 3. 从 "操作" 下拉框中选择 " **SpatializeOnOff"。**
 
