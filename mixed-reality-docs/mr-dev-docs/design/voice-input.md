@@ -5,13 +5,13 @@ author: hak0n
 ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
-keywords: ggv、语音、cortana、语音、输入
-ms.openlocfilehash: 206fd1b304d1b0f376ec1d45a6d5ba852b0bc4f2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: ggv，语音，cortana，语音，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，注视
+ms.openlocfilehash: f4f81383f942961857b088b05c4e8cac07ab7dfe
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677618"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703203"
 ---
 # <a name="voice-input"></a>语音输入
 
@@ -25,7 +25,7 @@ ms.locfileid: "91677618"
 
 ## <a name="voice-and-gaze"></a>语音和注视
 
-使用语音命令时， (head 或眼睛) 看起来通常用作目标机制，无论光标是否 ( "select" ) ，或者是否将命令隐式地通道到要查看的应用程序。 为此，可能甚至不需要显示任何看起来光标 _( "查看它" )_ 。 当然，一些语音命令根本不需要目标，如 "开始" 或 "你好 Cortana"。
+使用语音命令时， (head 或眼睛) 看起来通常用作目标机制，无论光标是否 ( "select" ) ，或者是否将命令隐式地通道到要查看的应用程序。 为此，可能甚至不需要显示任何看起来光标 _( "查看它" )_。 当然，一些语音命令根本不需要目标，如 "开始" 或 "你好 Cortana"。
 
 <br>
 
@@ -159,7 +159,7 @@ ms.locfileid: "91677618"
 * 更大 |完善
 * 超过
 
-在 HoloLens 2 上，你还可以结合眼睛创建更自然的交互，从而隐式地提供有关所引用内容的上下文信息。 例如，您可以简单地查看全息图，说 "放置 _此_ 内容"，然后浏览到要放置它的位置，然后说 "移到 _此处_ "。
+在 HoloLens 2 上，你还可以结合眼睛创建更自然的交互，从而隐式地提供有关所引用内容的上下文信息。 例如，您可以简单地查看全息图，说 "放置 _此_ 内容"，然后浏览到要放置它的位置，然后说 "移到 _此处_"。
 您也可以在复杂的计算机上查看全息部分，并说： "向我介绍有关 _此_ 的详细信息"。
 
 
@@ -202,7 +202,7 @@ ms.locfileid: "91677618"
 
 ### <a name="advantages-of-voice-input"></a>语音输入的优点
 
-语音输入是传达我们意图的自然方式。 语音在接口 **遍历** 上特别有用，因为它可以帮助 (用户在查看网页时显示 "返回"，而不是在应用程序) 中，而是使用 "返回" 按钮。 这一小段节省时间对用户的体验感到 **非常强大，** 并为他们提供少量实现超级。 当我们忙得不可开交或同时处理多项任务时，使用语音也是一种方便的输入方法  。 对于在键盘上键入很困难的设备， **语音听写** 可能是输入文本的一种有效的替代方法。 最后，在某些情况下，看看注视和手势的 **准确性范围** 会受到限制，语音有助于消除用户的意图。 
+语音输入是传达我们意图的自然方式。 语音在接口 **遍历** 上特别有用，因为它可以帮助 (用户在查看网页时显示 "返回"，而不是在应用程序) 中，而是使用 "返回" 按钮。 这一小段节省时间对用户的体验感到 **非常强大，** 并为他们提供少量实现超级。 当我们忙得不可开交或同时处理多项任务时，使用语音也是一种方便的输入方法。 对于在键盘上键入很困难的设备， **语音听写** 可能是输入文本的一种有效的替代方法。 最后，在某些情况下，看看注视和手势的 **准确性范围** 会受到限制，语音有助于消除用户的意图。 
 
 **语音的使用如何让用户受益**
 * 省时 - 它应该使最终目标更高效。
@@ -237,7 +237,7 @@ ms.locfileid: "91677618"
 
 ### <a name="voice-feedback-states"></a>语音反馈状态
 
-当语音应用正确时，用户了解他们能说什么，并得到清晰的反馈 - 系统正确地听到了用户说的话  。 这两个信号使用户在使用语音作为主要输入方法时充满自信。 下面的图表显示了识别语音输入时光标发生的情况以及它是如何将信息传达给用户的。
+当语音应用正确时，用户了解他们能说什么，并得到清晰的反馈 - 系统正确地听到了用户说的话。 这两个信号使用户在使用语音作为主要输入方法时充满自信。 下面的图表显示了识别语音输入时光标发生的情况以及它是如何将信息传达给用户的。
 
 
 :::row:::
@@ -262,9 +262,9 @@ ms.locfileid: "91677618"
 <br>
 
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>在混合现实中，用户应该知道的关于“语音”的重要事项
-* 在将一个按钮设置为目标时，说“选择”（可以在任何位置使用这种方法来单击按钮）  。
-* 可以在某些应用中通过说出应用栏按钮的标签名称来执行操作  。 例如，在查看应用时，用户可以说“移除”命令以从现实中移除应用（这样可以节省用手单击按钮的时间）。
-* 说“你好小娜”可以启动 Cortana 侦听  。 你可以向她提问（“你好小娜，埃菲尔铁塔有多高”），告诉她打开应用（“你好小娜，打开 Netflix”），或告诉她调出“开始”菜单（“你好小娜，带我回家”）等等。
+* 在将一个按钮设置为目标时，说“选择”（可以在任何位置使用这种方法来单击按钮）。
+* 可以在某些应用中通过说出应用栏按钮的标签名称来执行操作。 例如，在查看应用时，用户可以说“移除”命令以从现实中移除应用（这样可以节省用手单击按钮的时间）。
+* 说“你好小娜”可以启动 Cortana 侦听。 你可以向她提问（“你好小娜，埃菲尔铁塔有多高”），告诉她打开应用（“你好小娜，打开 Netflix”），或告诉她调出“开始”菜单（“你好小娜，带我回家”）等等。
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>用户对语音的常见问题和关注点
 * 我可以说什么？
@@ -284,7 +284,7 @@ ms.locfileid: "91677618"
 
 所有这种音频处理都是硬件加速，这意味着功能消耗的电能要比在 HoloLens CPU 上执行相同处理要少得多。 避免在 CPU 上运行其他音频输入处理，以最大程度地提高系统电池寿命，并利用内置的卸载音频输入处理。
 
-## <a name="languages"></a>语言
+## <a name="languages"></a>Languages
 
 HoloLens 2 [支持多种语言](https://docs.microsoft.com/hololens/hololens2-language-support)。 请记住，即使安装了多个键盘或应用尝试使用其他语言创建语音识别器，语音命令也始终会在系统的显示语言中运行。
 
@@ -299,14 +299,14 @@ HoloLens 2 [支持多种语言](https://docs.microsoft.com/hololens/hololens2-la
 ---
 
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的语音输入 (混合现实工具包) 适用于 Unity
-借助 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** ，你可以轻松地为任何对象分配语音命令。 使用 MRTK 的 **语音输入配置文件** 定义关键字。 通过分配 **SpeechInputHandler** 脚本，你可以使任何对象响应语音输入配置文件中定义的关键字。 SpeechInputHandler 还提供了语音确认标签以提高用户信心。
+借助 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**，你可以轻松地为任何对象分配语音命令。 使用 MRTK 的 **语音输入配置文件** 定义关键字。 通过分配 **SpeechInputHandler** 脚本，你可以使任何对象响应语音输入配置文件中定义的关键字。 SpeechInputHandler 还提供了语音确认标签以提高用户信心。
 
 * [MRTK-语音命令](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
 
 
 ---
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [凝视和提交](gaze-and-commit.md)
 * [本能交互](interaction-fundamentals.md)
 * [DirectX 中的语音输入](../develop/native/voice-input-in-directx.md)

@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
-keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，活动立方体，win32
-ms.openlocfilehash: 4b22c78e651687c293a1e47ff8e4e9106de631bf
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，动态立方体，win32，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，清单
+ms.openlocfilehash: 9a8680232bf1d8d333c26ca4e39075ee553782fb
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677253"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703423"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>实现 3D 应用启动器（Win32 应用）
 
@@ -165,7 +165,7 @@ IconFile=C:\Program Files (x86)\MyLauncher\apps\app-identifier\game.exe
 IconIndex=0
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * 包含三维应用程序启动器的[混合现实模型示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel)。
 * [3D 应用启动器设计指南](3d-app-launcher-design-guidance.md)

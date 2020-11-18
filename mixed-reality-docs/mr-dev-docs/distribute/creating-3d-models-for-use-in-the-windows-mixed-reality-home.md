@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 3D，建模，建模指南，资产要求，创作准则，启动器，3D 启动器，纹理，材料，复杂性，三角形，网格，多边形，polycount，限制
-ms.openlocfilehash: 606726b9c205ccdf3eacafca96b2bd9ccae43e82
-ms.sourcegitcommit: 838bebf6bacac4047feff493c0847d4e6371976f
+keywords: 3D，建模，建模指南，资产需求，创作准则，启动器，3D 启动器，纹理，材料，复杂性，三角形，网格，多边形，polycount，限制，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: fb2f2718497781a2d38a0a061016e146ff077488
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781552"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703463"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>创建在主页中使用的 3D 模型
 
@@ -237,7 +237,7 @@ Windows Mixed Reality 主页支持以下动画触发语义。
 
 |功能|最大值|
 |-----|-----|
-|Duration|20 分钟|
+|持续时间|20 分钟|
 |关键帧|36,000| 
 |变形目标顶点|8192|
 
@@ -277,7 +277,7 @@ Windows MR 不支持基元模式行和点。
 * [HoloLens 混合现实纹理封装扩展规范](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Microsoft DDS 纹理 glTF 扩展规范](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [实现 3D 应用启动器（UWP 应用）](implementing-3d-app-launchers.md)
 * [实现 3D 应用启动器（Win32 应用）](implementing-3d-app-launchers-win32.md)

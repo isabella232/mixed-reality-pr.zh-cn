@@ -1,19 +1,19 @@
 ---
-title: 注视和停留
+title: 凝视和停留
 description: " (眼/head) 注视和停留输入模型的一般概述"
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: 混合现实，注视，停留，交互，设计，眼睛跟踪，头跟踪
-ms.openlocfilehash: ee8b6487079a071fe84606949314f2dd315df45f
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality，注视，停留，交互，设计，眼睛跟踪，头跟踪，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: d47401b65f7d62e1fe59655c42efe72ac68acfc6
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677875"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702193"
 ---
-# <a name="gaze-and-dwell"></a>注视和停留
+# <a name="gaze-and-dwell"></a>凝视和停留
 
 手拿工具和零件，手势可能是没有意义或无法实现。
 在某些上下文中，语音命令也可能不可靠，例如在过大的情况下。
@@ -63,7 +63,7 @@ ms.locfileid: "91677875"
 
 ---
 
- ## <a name="see-also"></a>请参阅
+ ## <a name="see-also"></a>另请参阅
 * [基于眼睛的交互](eye-gaze-interaction.md)
 * [HoloLens 2 中的眼动跟踪](eye-tracking.md)
 * [凝视和提交](gaze-and-commit.md)

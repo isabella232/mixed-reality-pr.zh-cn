@@ -5,13 +5,13 @@ author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，设计，颜色，细，材料
-ms.openlocfilehash: 76237b1b08df98850a4989987ed608dae29b6b5c
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: Windows Mixed Reality，设计，颜色，浅色，材料，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: 9333be5316f5b3ba317aac3ef8591c0dd65370d4
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683213"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702783"
 ---
 # <a name="color-light-and-materials"></a>颜色、光线和材料
 ![颜色、光线和材料](images/RemoteRendering.jpg)
@@ -50,7 +50,7 @@ ms.locfileid: "92683213"
 * **颜色分离** -也称为 "color 细分情况" 或 "color fringing"，当用户跟踪对象的眼睛时，最常发生颜色分离 (包括光标) 。
 
 ## <a name="technical-considerations"></a>技术注意事项
-* " **别名** "-深思熟虑后得出的，它是锯齿、锯齿或 "楼梯段" 的边缘与现实世界之间的边缘。 如果使用具有高细节的纹理，则会加剧此效果。 应映射和筛选已启用纹理。 请考虑在对象周围创建黑色边缘边框，以淡化全息影像边缘或添加纹理。 尽可能避免精简几何。
+* "**别名**"-深思熟虑后得出的，它是锯齿、锯齿或 "楼梯段" 的边缘与现实世界之间的边缘。 如果使用具有高细节的纹理，则会加剧此效果。 应映射和筛选已启用纹理。 请考虑在对象周围创建黑色边缘边框，以淡化全息影像边缘或添加纹理。 尽可能避免精简几何。
 
 * **Alpha 通道** -对于没有渲染全息图的任何部分，必须清除 alpha 通道，使其完全透明。 在从设备或通过 Spectator 视图拍摄图像/视频时，使 alpha 不确定会导致视觉对象。
 

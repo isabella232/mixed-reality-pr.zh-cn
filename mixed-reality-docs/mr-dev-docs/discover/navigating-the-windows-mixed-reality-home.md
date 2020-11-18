@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: shell，os，平台，cliff 房子，房子，home，环境，开始，开始菜单，主页菜单，pin，应用，启动应用，放置应用，传送，移动，导航
-ms.openlocfilehash: 1f2ec91edca100e9253a6c8e65f4b3f9d2b2feeb
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: shell，os，平台，cliff 房子，房子，home，环境，开始，开始菜单，主页菜单，pin，应用，启动应用，放置应用，传送，移动，导航，混合现实耳机，虚拟现实耳机，什么是虚拟现实
+ms.openlocfilehash: 590e52de7caacc515e703da19e9efdc0a2b9c535
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678026"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703443"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>导航 Windows Mixed Reality 主页
 
@@ -48,11 +48,11 @@ ms.locfileid: "91678026"
 
 ## <a name="moving-and-adjusting-apps"></a>移动和调整应用
 
-选择应用栏上的 " **调整** " 以显示移动、缩放和旋转混合现实内容的控件。 完成后，请选择 " **完成** "。
+选择应用栏上的 " **调整** " 以显示移动、缩放和旋转混合现实内容的控件。 完成后，请选择 " **完成**"。
 
 ![调整模式下的商店石板 (蓝帧) 。 请注意，应用栏 (顶部) 已更改为包含 "完成" 和 "删除" 按钮。](images/adjust-500px.png)
 
-不同的应用可能在应用栏上有其他选项。 例如，Microsoft Edge 具有 *滚动* 、 *拖动* 和 *缩放* 选项。 
+不同的应用可能在应用栏上有其他选项。 例如，Microsoft Edge 具有 *滚动*、 *拖动* 和 *缩放* 选项。 
 
 ![在 HoloLens 上运行的2D 应用的应用栏](images/holobar-500px.png)
 
@@ -60,9 +60,9 @@ ms.locfileid: "91678026"
 
 ## <a name="getting-around-your-home"></a>围绕你的家庭
 
-使用 **HoloLens** ，可以在物理空间间移动，在家里移动。
+使用 **HoloLens**，可以在物理空间间移动，在家里移动。
 
-使用 **沉浸式耳机** ，你可以类似地在 playspace 中进行浏览，在虚拟世界中的类似区域内移动。 若要在更远的距离间移动，可以使用控制器上的操纵杆来几乎 "走到"，也可以使用 *teleportation* 立即跳转到更长的距离。
+使用 **沉浸式耳机**，你可以类似地在 playspace 中进行浏览，在虚拟世界中的类似区域内移动。 若要在更远的距离间移动，可以使用控制器上的操纵杆来几乎 "走到"，也可以使用 *teleportation* 立即跳转到更长的距离。
 
 ![Windows Mixed Reality 主页中的 Teleportation](images/teleportation-500px.png)
 
@@ -122,7 +122,7 @@ ms.locfileid: "91678026"
 Windows Mixed Reality 包含许多内置应用，例如：
 * **Microsoft Store** 获取应用和游戏
 * 提交有关系统和系统应用的反馈的 **反馈中心**
-* 用于配置系统设置的 **设置** ( [包括网络](../connecting-to-wi-fi-on-hololens.md)和系统更新) 
+* 用于配置系统设置的 **设置** ([包括网络](../connecting-to-wi-fi-on-hololens.md)和系统更新) 
 * **Microsoft Edge** 浏览网站
 * 查看并共享照片和视频的 **照片**
 * **校准** (仅限 hololens) 用于调整当前用户的 hololens 体验
@@ -134,7 +134,7 @@ Windows Mixed Reality 包含许多内置应用，例如：
 * **桌面** (沉浸式耳机) 用于在沉浸式耳机中查看桌面监视器
 * **文件资源管理器** 访问设备上的文件和文件夹
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [应用视图](../design/app-views.md)
 * [运动控制器](../design/motion-controllers.md)
 * [硬件配件](hardware-accessories.md)

@@ -5,13 +5,13 @@ author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，样式，设计
-ms.openlocfilehash: 7d35da2d86d8d3b7f444974d87e5aa10e58ed2c8
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: Windows Mixed Reality，样式，设计，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，规模，全息影像
+ms.openlocfilehash: e82211b0bee2214df7542d3129f95ea207f4b0e3
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340655"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703373"
 ---
 # <a name="scale"></a>缩放
 
@@ -80,19 +80,7 @@ ms.locfileid: "94340655"
 
 ---
 
-## <a name="next-discovery-checkpoint"></a>下一个发现检查点
-
-如果您关注的是我们所做的 [发现旅程](../discover/get-started-with-mr.md) ，就是您的初始体验到混合现实基础。 您可以在现实世界中查看行业合作伙伴在混合现实中的作用： 
-
-> [!div class="nextstepaction"]
-> [了解行业合作伙伴如何使用混合现实](../discover/get-started-with-mr.md#see-how-industry-partners-are-using-mixed-reality)
-
-或继续学习设计旅程：
-
-> [!div class="nextstepaction"]
-> [开始设计旅程](../design/design.md)
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [颜色、光线和材料](../color,-light-and-materials.md)
 * [版式](typography.md)
 * [空间音效设计](spatial-sound-design.md)

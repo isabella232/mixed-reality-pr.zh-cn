@@ -5,13 +5,13 @@ author: hferrone
 ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
-keywords: Microsoft Store，HoloLens，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售情况
-ms.openlocfilehash: f5dae379deee54056595c291363b5b1e3e83f25e
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+keywords: Microsoft Store，HoloLens，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: b5d25817afeb2d8d970d329c802b7eaabcdf7f35
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678786"
+ms.locfileid: "94703113"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>将应用提交到 Microsoft Store
 
@@ -38,9 +38,9 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 | 所需资产 | 建议的缩放 | 图像格式 | 资产显示在哪个位置？ | 
 |----------|----------|----------|------------------|
-| 方块字71x71 徽标 | 任意 |  PNG | N/A | 
+| 方块字71x71 徽标 | 任意 |  PNG | 空值 | 
 | 方块字150x150 徽标 | 150x150 (100% 规模) 或 225x225 (150% 规模)  | PNG | 如果未提供310x310，则启动 pin 和所有应用 () ，存储搜索建议，商店列表页，商店浏览，存储搜索 | 
-|  宽310x150 徽标 |  任意  |  PNG  |  N/A | 
+|  宽310x150 徽标 |  任意  |  PNG  |  空值 | 
 |  应用商店徽标 |  75x75 (150% 规模)   |  PNG  |  合作伙伴中心，报表应用，编写评审，我的媒体库 | 
 |  初始屏幕 |  930x450 (150% 规模)   |  PNG  |  2D 应用启动器 (盖板)  | 
 
@@ -263,7 +263,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 在许多情况下，使用者在购买 Windows Mixed Reality 沉浸式耳机之前，将不会受到虚拟现实的经验限制。 他们可能不知道从重要游戏中获得的内容，或者在沉浸式体验中熟悉自己的舒适阈值。 许多客户还可能会尝试在未徽章为 [Windows Mixed Reality pc](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的电脑上使用 Windows mixed reality 沉浸式耳机。 出于上述考虑，强烈建议您考虑为付费混合现实应用或游戏提供 [免费试用版](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [什么是混合现实？](../discover/mixed-reality.md)
 * [开发概述](../develop/development.md)
 * [应用视图](../design/app-views.md)

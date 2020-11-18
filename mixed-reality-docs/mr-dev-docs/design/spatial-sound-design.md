@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
-keywords: Windows Mixed Reality，空间音质，设计，样式
-ms.openlocfilehash: 8bb48aad2d4582696241bc5444beabc88ca5a7d9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，空间音质，设计，样式，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，手势，交互，衰减
+ms.openlocfilehash: 503a59eb6a71aea0e1ec043ca6e3196f821f211a
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677652"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703275"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>如何在混合现实应用程序中使用声音
 
@@ -67,7 +67,7 @@ ms.locfileid: "91677652"
 语音交互通常具有微妙的视觉元素。 使用声音来强化交互阶段。 您可能想要使用更多的声音，将它们与手势和直接操作声音区分开来。
 
 * 语音命令 *确认* 使用有正负音。 升高的声音和主要的音乐间隔都是有效的。
-* 对于语音命令 *失败* ，请使用较短的、不太积极的音调。 避免出现负面声音。 相反，请使用更 percussive 的中性声音来传达应用程序正在交互的活动。
+* 对于语音命令 *失败*，请使用较短的、不太积极的音调。 避免出现负面声音。 相反，请使用更 percussive 的中性声音来传达应用程序正在交互的活动。
 * 如果你的应用程序具有唤醒字词，则在设备 *开始侦听* 时，请使用短暂的短暂音。 在 *应用程序侦听时使用* 细小循环声音。
 
 ### <a name="notifications"></a>通知
@@ -99,7 +99,7 @@ Spatialization 有一定的 CPU 开销。 许多应用程序最多可以同时�
 ### <a name="when-and-how-to-apply-distance-based-attenuation"></a>何时以及如何应用基于距离的衰减
 在现实生活中，远离远处的声音会更安静。 音频引擎可以根据源距离对此衰减建模。 在传达相关信息时，请使用基于距离的衰减。
 
-与 *视觉对象指示器* 、 *动画影像* 和其他信息性声音的距离通常与用户相关。 使用基于距离的衰减直观地提供提示。
+与 *视觉对象指示器*、 *动画影像* 和其他信息性声音的距离通常与用户相关。 使用基于距离的衰减直观地提供提示。
 
 调整每个源的衰减曲线，使其适应混合现实世界的空间大小。 音频引擎的默认曲线通常适用于超大型 (多达半 kilometer) 空间。
 

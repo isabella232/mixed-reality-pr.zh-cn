@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: vr，硬件，规格，规范，技术，传感器，光纤，显示器
-ms.openlocfilehash: 0e700ca95cb62b0909cf0ac434712b9690ec9571
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+keywords: vr，硬件，规格，规范，技术，传感器，光学，显示器，混合现实耳机，虚拟现实耳机，什么是虚拟现实，沉浸式耳机
+ms.openlocfilehash: 6f4be5954c8a8fe8ca0497d1a1c5d9ed09edb0c7
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631455"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703433"
 ---
 # <a name="immersive-headset-hardware-details"></a>沉浸式头戴显示设备硬件详细信息
 

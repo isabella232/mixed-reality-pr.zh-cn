@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: 坐标系、空间坐标系、世界规模、世界、规模、位置、方向、定位点、空间定位点、世界锁定、持久性、共享
-ms.openlocfilehash: a1108aceb91ec80d20b4cac043477ee92527035b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 坐标系统，空间坐标系统，世界规模，世界，缩放，位置，方向，锚，空间锚，世界锁定，世界锁定，暂留，共享，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens
+ms.openlocfilehash: 92694023a3c7c7266b0f5d927180df20692b9d45
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677121"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703303"
 ---
 # <a name="spatial-anchors"></a>空间定位点
 
@@ -71,7 +71,7 @@ ms.locfileid: "91677121"
 
 对于云空间定位点，存储可以根据场景需要进行扩展。 你可以根据需要存储任意数量的云定位点，仅当你知道用户不需要在该定位点上再次查找全息影像时才会将其释放。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [坐标系统](coordinate-systems.md)
 * [混合现实中的共享体验](../develop/platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>

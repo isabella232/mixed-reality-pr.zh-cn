@@ -5,13 +5,13 @@ author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
-keywords: 眼睛跟踪，混合现实，输入，眼睛
-ms.openlocfilehash: 57b90142fc47b72030f9b767370fd84a5c7d5b14
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 目视跟踪，混合现实，输入，眼睛，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，交互
+ms.openlocfilehash: 59dded6ca23b9adc075dc02d642ce7761f93bcfb
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677403"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702543"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>HoloLens 2 上基于目视的目视交互
 
@@ -70,7 +70,7 @@ HoloLens 2 上令人兴奋的新功能之一是目视跟踪。
 虽然眼睛可用于创建符合用户体验的用户体验，使你感觉像是 superhero，但了解这一点也很重要。 下面讨论了一些需要考虑的问题以及如何解决这些 *问题* ： 
 
 - **眼睛为 "始终打开"** 打开眼睛护盖后，眼睛开始 fixating 环境中的东西。 对每个外观作出反应并意外发出操作，因为您查看的内容太长，会导致 unsatisfying 的体验。
-因此，建议将眼睛与 *声音命令* 、 *笔势* 、 *按钮单击* 或扩展停留结合起来，以触发选择目标 (有关详细信息，请参阅 [眼睛和提交](gaze-and-commit-eyes.md)) 。
+因此，建议将眼睛与 *声音命令*、 *笔势*、 *按钮单击* 或扩展停留结合起来，以触发选择目标 (有关详细信息，请参阅 [眼睛和提交](gaze-and-commit-eyes.md)) 。
 此解决方案还允许使用一种模式，在该模式下，用户可以自由地查找，而不会因触发某些事情而 involuntarily。 当查看目标时设计视觉对象和听觉反馈时，还应考虑此问题。
 尝试不要使用户塞满即时弹出效果或悬停声音。 个很微妙为 key。 讨论 [设计建议](eye-gaze-interaction.md#design-recommendations)时，我们将在下面讨论一些最佳实践。
 
@@ -117,7 +117,7 @@ HoloLens 2 上令人兴奋的新功能之一是目视跟踪。
 此页面提供了一个很好的概述，使你开始了解红眼，作为混合现实中的输入。 若要开始开发，请查看我们关于 [Unity 中眼睛](https://aka.ms/mrtk-eyes) 的信息并观看 [DirectX 中的眼睛](../develop/native/gaze-in-directx.md)。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [舒适](comfort.md)
 * [目视观察 DirectX](../develop/native/gaze-in-directx.md)
 * [眼睛 (混合现实工具包) ](https://aka.ms/mrtk-eyes)

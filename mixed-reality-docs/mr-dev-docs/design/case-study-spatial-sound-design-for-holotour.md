@@ -5,13 +5,13 @@ author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，HoloLens，HoloTour，空间音效，案例研究
-ms.openlocfilehash: 6cf2d18661924276f1ea75efb88e29acd4709f37
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，HoloLens，HoloTour，空间音质，案例研究，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，音频
+ms.openlocfilehash: 31e38f6f5ce309bba11515ab09303593af0a328b
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677419"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702833"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>案例研究： HoloTour 的空间音效设计
 
@@ -65,7 +65,7 @@ ms.locfileid: "91677419"
 * **样条发射器：** 这些发射器相对于它们所附加到的对象的视觉位置，在3D 空间中移动。 一个例子就是 Machu Picchu 的一种训练，其中使用样条发射器给出了不同的方向性和运动。
 * **音乐和 SFX：** HoloTour 的某些方面表示更风格或迷人的方法，它使用音乐和声音效果来提高激动人心的影响力。 例如，在罗马教程末尾的 gladiator 中，whooshes 和 stingers 等特殊效果有助于增强出现在场景中的标签的效果。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [空间音效](spatial-sound.md)
 * [空间音效设计](spatial-sound-design.md)
 * [Unity 中的空间音效](../develop/unity/spatial-sound-in-unity.md)

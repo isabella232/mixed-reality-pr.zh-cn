@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
-keywords: Windows Mixed Reality，设计，样式，字体，版式，ui，ux
-ms.openlocfilehash: 59c7796998ac01fcbb5c9dc418da6454c8c74d12
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，设计，样式，字体，版式，ui，ux，文本，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens
+ms.openlocfilehash: c0e3b23c52925b6fe64dccc7087613e8cd49e851
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677621"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703243"
 ---
 # <a name="typography"></a>版式
 
@@ -129,6 +129,6 @@ Segoe UI (Windows) 默认字体在大多数情况下都适用。 不过，请避
 ---
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [Unity 中的文本](../develop/unity/text-in-unity.md)
 * [颜色、光线和材料](../color,-light-and-materials.md)

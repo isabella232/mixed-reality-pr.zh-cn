@@ -5,13 +5,13 @@ author: grbury
 ms.author: grbury
 ms.date: 08/24/2019
 ms.topic: overview
-keywords: Windows Mixed Reality，HoloLens，案例研究，构想，方案
-ms.openlocfilehash: 78ece9c010ed402c6281ee2f9cd5638db9af4f3d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，HoloLens，案例研究，构想，方案，案例研究，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: b30cc49759867b4f11f3f88195c8d9bec87ba297
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677711"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703483"
 ---
 # <a name="case-study-gallery"></a>案例研究库
 
@@ -75,7 +75,7 @@ ms.locfileid: "91677711"
     :::column:::
        在混合 [ ![ 现实中创建 galaxy](images/full-galaxy-500px.png)](../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md) **[在混合现实中创建 galaxy](../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)**<br>
         在发布 Microsoft HoloLens 之前，我们会询问开发人员社区要为新设备查看有经验的内部团队构建的应用类型。 共享了5000多个想法，在24小时的 Twitter 投票后，入选方是一个称为 Galaxy 资源管理器的概念。<br>
-         *2016年2月*
+         *2016 年 2 月*
     :::column-end:::
     :::column:::
        [ ![ 针对 hololens 2 的 galaxy 资源管理器](../develop/unity/images/ge-update-interactions-concept-force-grab.png)](../develop/unity/galaxy-explorer-update.md) **[的创建，适用于 hololens 2 的 galaxy 资源管理器](../develop/unity/galaxy-explorer-update.md)**<br>
@@ -120,12 +120,12 @@ HoloTour for Microsoft HoloLens 为世界各地的图标位置提供了沉浸式
     :::column:::
        在 RoboRaid 中使用空间声音 [ ![ 在 RoboRaid 中使用空间音效](../design/images/successful-dodge-roboraid-500px.jpg)](../design/case-study-using-spatial-sound-in-roboraid.md) **[Using spatial sound in RoboRaid](../design/case-study-using-spatial-sound-in-roboraid.md)**<br>
         空间音效是 Microsoft HoloLens 最令人兴奋的一项功能，它为用户提供了一种方法，让用户了解当对象不见视线时，会发生什么情况。<br>
-         *2016年2月*
+         *2016 年 2 月*
     :::column-end:::
     :::column:::
        [ ![ 通过](../develop/unity/images/roboraid-640px.png)](../out-of-scope/case-study-looking-through-holes-in-your-reality.md)现实中的洞来寻找 **[Looking through holes in your reality](../out-of-scope/case-study-looking-through-holes-in-your-reality.md)现实中的洞**<br>
         此案例研究介绍了如何在 HoloLens 上实现 "神奇窗口" 效果，使用户能够在其实际环境中的墙壁后面、在地面下和虚拟空缺之间进行观看。<br>
-        *2016年2月*
+        *2016 年 2 月*
     :::column-end:::
     :::column:::
     :::column-end:::

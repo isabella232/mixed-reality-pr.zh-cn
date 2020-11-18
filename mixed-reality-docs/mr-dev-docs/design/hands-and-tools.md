@@ -5,13 +5,13 @@ author: shengkait
 ms.author: shentan
 ms.date: 04/26/2019
 ms.topic: article
-keywords: 混合现实、动手、运动控制器、交互、设计
-ms.openlocfilehash: 8b2ed6127708204d0c4a537c56b2225ff26e0d0f
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 混合现实，动手，运动控制器，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: e931e5ec11548d9aab0d1dd7f8921dbc7554abab
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677853"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702153"
 ---
 # <a name="hands-and-motion-controllers"></a>手部和运动控制器
 ## <a name="scenarios"></a>方案
@@ -37,7 +37,7 @@ ms.locfileid: "91677853"
        这是一种使用手的强大功能的模态，用户可以直接接触和操作全息影像。 通过利用日常经验并提供适当的视觉实用，用户可以使用相同的方法来操作现实世界对象，以便与虚拟对象进行交互。
     :::column-end:::
     :::column:::
-       [![用手指向并提交](images/hands-and-controllers-point-and-commit.jpg)](point-and-commit.md)<br>
+       [![使用手指向和提交](images/hands-and-controllers-point-and-commit.jpg)](point-and-commit.md)<br>
         ### <a name="point-and-commit-with-handsbr"></a>[使用手指向和提交](point-and-commit.md)<br>
         这种模态使用户能够在远处与全息影像交互。 它使用户能够充分利用环境。 用户可以在任何位置放置全息影像，同时仍然可以从任意距离访问。 用于控制和操作2D 和3D 全息影像的心理模型和手势与直接操作的情况有关。
     :::column-end:::

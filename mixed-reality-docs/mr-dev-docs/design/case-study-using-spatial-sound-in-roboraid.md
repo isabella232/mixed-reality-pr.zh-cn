@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，HoloLens，RoboRaid，空间音效
-ms.openlocfilehash: 1482c914d261cae698a1460873b217b0683cd16b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，HoloLens，RoboRaid，空间音质，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，cpu
+ms.openlocfilehash: ceb914c613d1b9558336c3775aa0f90e9bcffa65
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677417"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702803"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>案例研究-在 RoboRaid 中使用空间音效
 
@@ -85,6 +85,6 @@ HoloLens 扬声器很小，并且非常适合于设备的需求，因此您无�
 
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [空间音效](spatial-sound.md)
 * [RoboRaid for Microsoft HoloLens](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)

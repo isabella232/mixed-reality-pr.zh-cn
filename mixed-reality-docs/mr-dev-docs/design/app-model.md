@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: UWP，应用模型，生命周期，暂停，恢复，磁贴，视图，协定
-ms.openlocfilehash: 67b883517ae17422bf7c27227c33882cf8a9f7ef
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: UWP，应用模型，生命周期，暂停，恢复，磁贴，视图，合同，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: 332556a5118f0c69a83654d345119995e4262cb5
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677441"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703103"
 ---
 # <a name="app-model"></a>应用模型
 
@@ -68,7 +68,7 @@ Windows Mixed Reality 使用 [通用 Windows 平台](https://docs.microsoft.com/
 
 ## <a name="app-views"></a>应用视图
 
-当应用程序激活时，可以选择想要显示的视图类型。 对于应用的 **CoreApplication** ，始终有一个主要 [应用视图](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) 和你想要创建的任意数量的其他应用视图。 在桌面上，可以将应用视图视为窗口。 混合现实应用模板会创建一个 Unity 项目，其中主要应用视图是 [沉浸式](app-views.md)的。 
+当应用程序激活时，可以选择想要显示的视图类型。 对于应用的 **CoreApplication**，始终有一个主要 [应用视图](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) 和你想要创建的任意数量的其他应用视图。 在桌面上，可以将应用视图视为窗口。 混合现实应用模板会创建一个 Unity 项目，其中主要应用视图是 [沉浸式](app-views.md)的。 
 
 您的应用程序可以使用 XAML 之类的技术创建附加的2D 应用程序视图，以使用 Windows 10 功能，如应用内购买。 如果你的应用程序是作为其他 Windows 10 设备的 UWP 应用启动的，则你的主视图是2D 视图，但你可以通过添加一个沉浸式的附加应用视图来显示 volumetrically 体验，从而使你处于混合现实状态。 想象一下，在 XAML 中生成照片查看器应用程序，其中的 "幻灯片" 按钮切换到了一个沉浸式应用视图，可在世界各地的应用程序中星城照片。
 
@@ -176,7 +176,7 @@ HoloLens 同时支持 [FileOpenPicker](https://docs.microsoft.com/uwp/api/Window
 
 应用协定和扩展点允许注册应用，以利用更深入的操作系统功能，例如处理文件扩展名或使用后台任务。 此列表列出了支持的和不支持的合同以及在 HoloLens 上的扩展点。
 
-|  协定或扩展  |  支持？ | 
+|  协定或扩展  |  是否支持？ | 
 |----------|----------|
 | [帐户图片提供程序 (扩展) ](https://msdn.microsoft.com/library/windows/desktop/hh464906.aspx#account_picture_provider) | 不支持 | 
 | [警报](https://msdn.microsoft.com/library/windows/desktop/hh464906.aspx#alarm) | 不支持 | 
@@ -256,7 +256,7 @@ HoloLens 同时支持 [FileOpenPicker](https://docs.microsoft.com/uwp/api/Window
 * 若要仅面向台式机耳机，请将应用定向到 **Windows desktop** 设备系列。
 * 若要仅面向 HoloLens，请将应用定位到 **Windows 全息** 设备系列。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [应用视图](app-views.md)
 * [更新混合现实的 2D UWP 应用](../develop/porting-apps/building-2d-apps.md)

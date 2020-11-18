@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
-keywords: mixed reality，vr，lbe，location
-ms.openlocfilehash: 6ee013a576041a71d92307523dbfbaefa6c7d24a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: mixed reality，vr，lbe，位置，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，硬件，HoloLens，多玩家，云服务，azure
+ms.openlocfilehash: b082153d3d32b2ecee1eb4430cab008819d50ba3
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678713"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702093"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>具有 Windows Mixed Reality 的基于位置的娱乐
 
@@ -49,7 +49,7 @@ Azure Kinect： [详细信息](https://azure.microsoft.com//services/kinect-dk/)
 
 HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC –为自由漫游体验进行了优化，现在，在内部使用 RTX 2080 GPU 可提高30% 的电量。 [详细信息](https://www8.hp.com/us/en/vr/vr-backpack.html)
 
-### <a name="setup"></a>设置
+### <a name="setup"></a>安装
 
 **问：如何更轻松地配置安装并为 LBE 自定义混合现实门户？**
 

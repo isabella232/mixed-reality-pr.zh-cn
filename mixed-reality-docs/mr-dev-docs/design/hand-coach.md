@@ -5,13 +5,13 @@ author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
-keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助
-ms.openlocfilehash: 10e5f3b025e4346d7c4075c2de7252c9ab217c93
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助双手，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: d925f28b1d34b5a157e89fc0ea56a7b28fffbe8f
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683243"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702343"
 ---
 # <a name="hand-coach"></a>手部指导
 ![示例：手型指导](images/HandCoach/MRTK_handCoach.jpg)<br>
@@ -145,7 +145,7 @@ ms.locfileid: "92683243"
 
 ## <a name="implementing-hands-into-your-unity-project"></a>实现对 Unity 项目的动手
 
-### <a name="best-practices"></a>最佳做法
+### <a name="best-practices"></a>最佳实践
 *    建议将 unity 向下扩展到0。6
 *   应播放两次，如果未完成，则连续循环，直到手势完成。 应循环访问两次，以确保用户有时间注册并查看手势。 指针应在循环之间淡入和淡出。 
  *  如果用户的手在 HL2 摄像头中可见，但用户并未执行所需的交互操作，则会在10秒后出现。

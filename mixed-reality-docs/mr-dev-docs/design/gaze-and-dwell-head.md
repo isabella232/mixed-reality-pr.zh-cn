@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
-keywords: 混合现实, 凝视, 停留, 交互, 设计
-ms.openlocfilehash: 825623b00107eec400b4df926c8980c92b065902
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality，注视，停留，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，ux，指导原则，列表视图
+ms.openlocfilehash: abedff5a273816f49419c7823b96eda1d474e336
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677883"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702313"
 ---
 # <a name="head-gaze-and-dwell"></a>头部凝视和停留
 
@@ -179,7 +179,7 @@ ms.locfileid: "91677883"
 
 ---
  
- ## <a name="see-also"></a>请参阅
+ ## <a name="see-also"></a>另请参阅
 * [凝视和提交](gaze-and-commit.md)
 * [手 - 直接操作](direct-manipulation.md)
 * [手 - 手势](gaze-and-commit.md#composite-gestures)

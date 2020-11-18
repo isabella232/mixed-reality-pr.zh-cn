@@ -5,13 +5,13 @@ author: nbarragan23
 ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
-keywords: 手型、菜单、按钮、快速访问、布局
-ms.openlocfilehash: f7bf8ab2fb54e6a939bd538a0a0ba756c5efb916
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 手型，菜单，按钮，快速访问，布局，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: 8f9adbdbebb826a79db037f48b233e3bc5e049de
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677862"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702293"
 ---
 # <a name="hand-menu"></a>手动菜单
 
@@ -183,7 +183,7 @@ ms.locfileid: "91677862"
 ---
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [光标](cursors.md)
 * [手部射线](point-and-commit.md)

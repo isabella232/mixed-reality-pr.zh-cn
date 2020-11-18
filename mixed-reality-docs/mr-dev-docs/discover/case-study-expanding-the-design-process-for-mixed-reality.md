@@ -5,13 +5,13 @@ author: danielescudero
 ms.author: daescu
 ms.date: 04/08/2018
 ms.topic: article
-keywords: Windows Mixed Reality，设计，处理，案例研究
-ms.openlocfilehash: 4cde36c8b5c3914c63e0c588e76dc4b782dcdcb9
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+keywords: Windows Mixed Reality，设计，处理，案例研究，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，什么是虚拟现实，增加的现实情况、bodystorming、演示图板、反馈
+ms.openlocfilehash: 5f1cc6efd7d1fa8dda043575562bfaf94ea812a9
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631505"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702203"
 ---
 # <a name="thinking-differently-for-mixed-reality"></a>以不同的方式考虑混合现实
 当 Microsoft 启动了 HoloLens (第一代开发人员在2016中为预先开发的开发人员) 时，该团队已经与 Microsoft 内部和外部的工作室合作来构建设备的启动体验。 这些团队边做边学，在混合现实设计的新领域中寻找机会和挑战。

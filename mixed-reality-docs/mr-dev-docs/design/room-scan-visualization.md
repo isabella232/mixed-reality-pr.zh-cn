@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，应用模式，设计，HoloLens，房间扫描，空间映射，网格
-ms.openlocfilehash: 25de181bbb2dedaba9e4917f51cc80bac77cc5f1
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，应用模式，设计，HoloLens，房间扫描，空间映射，网格，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens
+ms.openlocfilehash: f912ddcff5ef1d14468cec1e63c8153ae6460476
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677138"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703353"
 ---
 # <a name="room-scan-visualization"></a>房间扫描可视化
 
@@ -66,7 +66,7 @@ ms.locfileid: "91677138"
 
 对于缓存空间映射，应用程序通常会拍摄空间映射数据的快照，并在体验期间使用此快照。
 
-**优点**
+**权益**
 * 降低了系统的系统开销，同时体验运行，从而提高了性能、散热和 cpu 性能。
 * 由于空间数据中的更改不会中断，因此更简单的主要体验实现。
 * 对于物理学、图形和其他用途的任何 post 处理空间数据，一次只需一次。
@@ -81,7 +81,7 @@ ms.locfileid: "91677138"
 
 某些应用程序可能依赖于继续扫描以刷新空间映射数据。
 
-**优点**
+**权益**
 * 无需在应用程序中提前构建单独的扫描或浏览体验。
 * 尽管有一些延迟，但现实世界对象的移动可能会反映出来。
 

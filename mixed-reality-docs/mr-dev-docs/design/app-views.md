@@ -5,17 +5,17 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 沉浸式视图，2D 视图，石板，应用
-ms.openlocfilehash: e625eca3adb7cd4a9dcd1f971917f008d5daa7d2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 沉浸式视图，2D 视图，石板，应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: 1380c32dc89e472428c86be30b2fce82a946f3cc
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677423"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702914"
 ---
 # <a name="app-views"></a>应用视图
 
-Windows 应用可以包含两种类型的视图： **沉浸式视图** 和 **2d 视图** 。 应用可以在其各种沉浸式视图与2D 视图之间进行切换，并将其2D 视图显示在监视器上作为一个窗口，或显示为一个石板。 至少具有一个沉浸式视图的应用会分类为 **混合现实应用** 。 永不具有沉浸式视图的应用为 **2d 应用** 。
+Windows 应用可以包含两种类型的视图： **沉浸式视图** 和 **2d 视图**。 应用可以在其各种沉浸式视图与2D 视图之间进行切换，并将其2D 视图显示在监视器上作为一个窗口，或显示为一个石板。 至少具有一个沉浸式视图的应用会分类为 **混合现实应用**。 永不具有沉浸式视图的应用为 **2d 应用**。
 
 ## <a name="immersive-views"></a>沉浸式视图
 
@@ -43,7 +43,7 @@ Windows 应用可以包含两种类型的视图： **沉浸式视图** 和 **2d 
 
 请注意，在台式计算机上，应用可以在桌面监视器和连接的耳机上都有2D 视图。 例如，你可以使用其主2D 视图在桌面监视器上浏览边缘，以查找360度视频。 播放视频后，边缘将在耳机内启动辅助沉浸式视图以显示沉浸式视频内容。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [应用模型](app-model.md)
 * [更新混合现实的 2D UWP 应用](../develop/porting-apps/building-2d-apps.md)

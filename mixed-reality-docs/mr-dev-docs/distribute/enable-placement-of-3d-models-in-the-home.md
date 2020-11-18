@@ -5,15 +5,15 @@ author: thmignon
 ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
-keywords: 3D，模型，在家中放置，地点，世界，建模，混合现实主页，web，应用
-ms.openlocfilehash: 4ea720fd9fc404d4730733b6b65df13acdf1a51a
-ms.sourcegitcommit: 838bebf6bacac4047feff493c0847d4e6371976f
+keywords: 3D，模型，在家中放置，地方，世界，建模，混合现实主页，web，应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 192c403ce50c3a47fb19f644af78d1150bb9aa3f
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781566"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703183"
 ---
-# <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>在混合现实主页中启用3D 模型的放置
+# <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>允许在混合现实主页中放置 3D 模型
 
 > [!NOTE]
 > 此功能已作为 [Windows 10 2018 年4月更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。 Windows 的较早版本与此功能不兼容。
@@ -91,7 +91,7 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 * 对于沉浸式 (VR) 耳机，在调用 *添加模型协议* 之前，混合现实门户无需运行。 在这种情况下，" *添加模型" 协议* 将启动混合现实门户，并将对象直接放置在头戴显示在混合现实中的位置。 
 * 当在已运行混合现实门户的情况下从桌面调用 " *添加模型" 协议* 时，请确保头戴式耳机处于 "唤醒" 状态。 否则，放置将不会成功。 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [创建用于 Windows Mixed Reality 主页的3D 模型](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 * [导航 Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)

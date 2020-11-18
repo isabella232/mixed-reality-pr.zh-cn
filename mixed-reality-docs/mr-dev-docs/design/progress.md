@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，设计，控件，ui，ux
-ms.openlocfilehash: 751a8fe9a196f894ac0ef9e3dcca64dec1c97498
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，设计，控件，ui，ux，进度指示器，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: 93cdd7054c05af9f8621e091fa3d4b59d9e65ee3
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677146"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703383"
 ---
 # <a name="progress-indicator"></a>进度指示器
 
@@ -27,7 +27,7 @@ ms.locfileid: "91677146"
 
 ## <a name="types-of-progress"></a>进度类型
 
-向用户提供有关发生的情况的信息非常重要。 在混合现实中，如果你的应用程序没有提供良好的视觉反馈，则可以轻松地在物理环境或对象上对其进行工作。 对于需要几秒钟时间的情况，例如，当加载数据或场景正在更新时，最好是显示可视指示器。 有两个选项可用于向用户显示操作正在进行– **进度栏** 或 **进度环** 。
+向用户提供有关发生的情况的信息非常重要。 在混合现实中，如果你的应用程序没有提供良好的视觉反馈，则可以轻松地在物理环境或对象上对其进行工作。 对于需要几秒钟时间的情况，例如，当加载数据或场景正在更新时，最好是显示可视指示器。 有两个选项可用于向用户显示操作正在进行– **进度栏** 或 **进度环**。
 
 :::row:::
     :::column:::
@@ -98,7 +98,7 @@ ms.locfileid: "91677146"
 
 ---
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [光标](cursors.md)
 * [手部射线](point-and-commit.md)

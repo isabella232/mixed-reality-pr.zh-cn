@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，设计，3D 应用程序启动器，沉浸式耳机，活动立方体
-ms.openlocfilehash: 884d05b8b8ef7e15f5c65a411cf500b0d4dc598c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，设计，3D 应用程序启动器，沉浸式耳机，动态立方体，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，UWP，Win32，照明，颜色
+ms.openlocfilehash: a501b4bdc86df17f6d005c2f7ccf4fe6a94a4b43
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677769"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703473"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>3D 应用启动器设计指南
 
@@ -118,7 +118,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
         ![带有内置背景的类型可以正常工作 ](images/flattypeandbkg-640px.png) *，且内置背景可以正常工作*
     :::column-end:::
     :::column:::
-        ![如果 ](images/20171016-160221-mixedreality-640px.jpg) *对边进行着色* ，则拉伸类型可以很好地工作
+        ![如果 ](images/20171016-160221-mixedreality-640px.jpg) *对边进行着色*，则拉伸类型可以很好地工作
     :::column-end:::
 :::row-end:::
 
@@ -176,7 +176,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
   * 避免纹理中的融入光照
   * 使用其中一个 .PBR 材料创作包获取为着色器生成的正确地图
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [创建用于混合现实主页的3D 模型](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 * [实现 3D 应用启动器（UWP 应用）](implementing-3d-app-launchers.md)

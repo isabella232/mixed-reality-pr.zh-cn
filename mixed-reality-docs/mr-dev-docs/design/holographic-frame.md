@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/25/2020
 ms.topic: article
-keywords: HoloLens，Windows Mixed Reality，全息帧，视图字段
-ms.openlocfilehash: 649cacfaf40f226a84f1b9b928cb47e468f3f146
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: HoloLens，Windows Mixed Reality，全息帧，视图，FOV，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，交互，导航，菜单
+ms.openlocfilehash: c1786af43bacc414b5ffcf6f59753d7f8fa92fef
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340635"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702213"
 ---
 # <a name="holographic-frame"></a>全息帧
 
@@ -21,7 +21,7 @@ ms.locfileid: "94340635"
 
 通常，设计人员认为需要将他们的体验范围限制为用户可以立即看到的内容，从而牺牲现实世界规模，以确保用户能够完全查看对象。 与复杂应用程序类似的设计器通常会重载全息帧（包含内容），具有难以交互和混乱的接口的用户。 创建混合现实内容的设计器不需要将其体验限制为直接在用户面前，并在其即时视图中。 如果已映射用户的物理世界，则所有这些曲面都应被视为数字内容和交互的潜在画布。 在体验中正确设计交互和内容应鼓励用户在其空间中移动、将注意力引向重要内容并帮助查看混合现实的全部潜能。
 
-在应用程序中鼓励移动和浏览的最重要技术可能是 **让用户调整体验** 。 使用设备为用户提供短时间的 "任务免费"。 这可以很简单，只是将一个对象置于空间中，并让用户四处移动或 narrating 体验。 这段时间应该没有任何关键任务或特定的手势 (例如，点击) ，目的是让用户在需要交互性或在应用程序的各个阶段进行操作之前，通过设备查看内容。 如果这是用户首次使用设备，则这一点特别重要，因为它们可以通过全息帧和全息影像的性质轻松查看内容。
+在应用程序中鼓励移动和浏览的最重要技术可能是 **让用户调整体验**。 使用设备为用户提供短时间的 "任务免费"。 这可以很简单，只是将一个对象置于空间中，并让用户四处移动或 narrating 体验。 这段时间应该没有任何关键任务或特定的手势 (例如，点击) ，目的是让用户在需要交互性或在应用程序的各个阶段进行操作之前，通过设备查看内容。 如果这是用户首次使用设备，则这一点特别重要，因为它们可以通过全息帧和全息影像的性质轻松查看内容。
 
 ### <a name="large-objects"></a>大型对象
 
@@ -139,14 +139,7 @@ Volvo 的经验还利用了视觉对象总监，创建从表的小规模汽车�
 
 演讲的现实表现形式提供了一个功能强大的焦点，提供了一种很好的技巧，使用户能够像他一样，通过这种方式向用户表达自己的观点。 当用户移动了经验时，如果用户移动到了太远的绕，就会在返回到非特定状态之前向您返回阈值。 如果用户看起来完全 (的方式，例如，若要查看场景中其他地方的内容) 然后返回到 "反馈"，讲述人的方向位置将再次专注于用户。 这样的方法可提供强大的浸入式功能，并在全息帧内创建一个焦点，减少过多的头运动并提升 [用户舒适](comfort.md)。
 
-## <a name="next-discovery-checkpoint"></a>下一个发现检查点
-
-如果您关注的是我们所做的 [发现旅程](../discover/get-started-with-mr.md) ，就是在探讨混合现实的基本知识。 在这里，你可以继续学习下一基础主题： 
-
-> [!div class="nextstepaction"]
-> [使全息对象感觉真实 -（空间映射）](../design/spatial-mapping.md)
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [本能交互](interaction-fundamentals.md)
 * [舒适](comfort.md)
 * [缩放](scale.md)

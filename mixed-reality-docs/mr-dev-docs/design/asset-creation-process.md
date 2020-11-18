@@ -5,13 +5,13 @@ author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 资产，创建，处理，预算，多边形，纹理，着色器，性能
-ms.openlocfilehash: 56be236086a6947549af6199dc3d01ba7c555375
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 资产，创建，处理，预算，多边形，纹理，着色器，性能，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，资产
+ms.openlocfilehash: 0c6f592dd813c06613801510ad8c8a936ad0de65
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677424"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702873"
 ---
 # <a name="asset-creation-process"></a>资产创建过程
 
@@ -77,7 +77,7 @@ Windows Mixed Reality 构建于 Microsoft 投入了 DirectX 的数十年中。 �
 ### <a name="creating-assets"></a>创建资产
 
 **创作工具**<br>
-首先，您可以使用多种不同的方法创建自己的资产。 三维音乐家使用多种应用程序和工具来创建由 **网格** 、 **纹理** 和 **材料** 组成的模型。 然后以文件格式保存该文件，应用程序使用的图形引擎可以导入或使用该格式，如 **。FBX** 或 **。OBJ** 。 生成所选图形引擎支持的模型的任何工具将在 **HoloLens** 上运行。 在三维音乐家之间，很多选择使用 [Autodesk 的 Maya，它本身能够使用 HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) 来转换资产的创建方式。 如果你想要快速获取内容，还可以使用随 Windows 一起导出的 [3D 生成器](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) 。要在应用程序中使用的 OBJ。
+首先，您可以使用多种不同的方法创建自己的资产。 三维音乐家使用多种应用程序和工具来创建由 **网格**、 **纹理** 和 **材料** 组成的模型。 然后以文件格式保存该文件，应用程序使用的图形引擎可以导入或使用该格式，如 **。FBX** 或 **。OBJ**。 生成所选图形引擎支持的模型的任何工具将在 **HoloLens** 上运行。 在三维音乐家之间，很多选择使用 [Autodesk 的 Maya，它本身能够使用 HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) 来转换资产的创建方式。 如果你想要快速获取内容，还可以使用随 Windows 一起导出的 [3D 生成器](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) 。要在应用程序中使用的 OBJ。
 
 **对象捕获**<br>
 还可以选择在三维中捕获对象。 在三维中捕获 inanimate 对象并通过数字内容创建软件对其进行编辑时，三维打印增加了。 使用 **Kinect 2** 传感器和 [3d 生成器](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) ，可以使用捕获功能从真实世界对象创建资产。 这也是一 [套工具](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) ，用于通过处理多个要装订在一起以及网格和纹理的图像来对 **photogrammetry** 执行相同的操作。

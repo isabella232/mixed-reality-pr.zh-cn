@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
-keywords: 空间音效，环绕声，3d 音频，3d 声音，空间音频
-ms.openlocfilehash: fb3517307dccd7e41c39c012c69f1e1d141fa218
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 空间音效，环绕声，3d 音频，3d 声音，空间音频，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，案例研究，噪音
+ms.openlocfilehash: 50a5b4a634eec5a326158975f70fa385ce7af6a8
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677644"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703253"
 ---
 # <a name="audio-in-mixed-reality"></a>混合现实中的音频
 音频是混合现实中设计和生产力的必不可少部分。 声音可以：
@@ -91,8 +91,8 @@ Windows 通过 [ISPATIALAUDIOCLIENT API](https://docs.microsoft.com/windows/win3
 * [Unity 音频引擎插件](../develop/unity/spatial-sound-in-unity.md)
 * [Wwise 音频引擎插件](https://www.audiokinetic.com/products/plug-ins/msspatial/)
 
-## <a name="acoustics"></a>噪声
-空间音频约为方向。 其他维度包括封闭、障碍、回音、portalling 和源建模。 这些维度统称为 " *噪声* "。 如果没有噪声，spatialized 声音就会缺少距离。
+## <a name="acoustics"></a>声音
+空间音频约为方向。 其他维度包括封闭、障碍、回音、portalling 和源建模。 这些维度统称为 " *噪声*"。 如果没有噪声，spatialized 声音就会缺少距离。
 
 噪声治疗范围从简单到非常复杂。 可以使用任何音频引擎支持的简单回音，将 spatialized 的声音推送到侦听器的环境中。 诸如 [项目噪声](https://aka.ms/acoustics)  等噪声系统提供更丰富且更具吸引力的噪声处理。 项目噪声可以为声音上的墙壁、门和其他场景几何的效果建模。 这是一个有效的选项，适用于在开发时了解相关场景几何图形的情况。
 

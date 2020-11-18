@@ -5,20 +5,20 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，HoloLens，全息影像，设计，交互
-ms.openlocfilehash: f902639e66246c9184750ebc58dbad1c04b2bb5a
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+keywords: Windows Mixed Reality，HoloLens，全息影像，设计，交互，混合现实耳机，windows Mixed reality 耳机，增加的现实情况
+ms.openlocfilehash: 6407770a818bc294cf615201a837218173b963d0
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631465"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702243"
 ---
 # <a name="what-is-a-hologram"></a>什么是全息图？
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/MVXH5V8MVQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-通过 HoloLens，你可以创建 **全息影像** ，这些对象是在世界各地显示的光线和声音，就像它们是真实的对象一样。 全息影像会响应你的 [注视](../design/gaze-and-commit.md)、 [手势](../design/gaze-and-commit.md#composite-gestures) 和 [语音命令](../design/voice-input.md)，并可与你周围的 [实际表面](../design/spatial-mapping.md) 交互。 利用全息影像，可以创建属于你的世界的数字对象。
+通过 HoloLens，你可以创建 **全息影像**，这些对象是在世界各地显示的光线和声音，就像它们是真实的对象一样。 全息影像会响应你的 [注视](../design/gaze-and-commit.md)、 [手势](../design/gaze-and-commit.md#composite-gestures) 和 [语音命令](../design/voice-input.md)，并可与你周围的 [实际表面](../design/spatial-mapping.md) 交互。 利用全息影像，可以创建属于你的世界的数字对象。
 
 <br>
 
@@ -73,7 +73,7 @@ HoloLens [呈现](../develop/platform-capabilities-and-apis/rendering.md) 的全
 某些全息影像会按用户进行操作。 这些基于标记的影像的位置本身相对于用户，而不管它们在何处。 你甚至可以选择将一段时间带到一段时间，然后将其放在墙上的另一个房间。
 
 **最佳做法**
-* 在某些情况下，可能需要在整个体验中轻松发现和查看全息影像。 此类定位有两个高级方法。 让我们将它们称为 **"显示-锁定"** 和 **"正文锁定"** 。
+* 在某些情况下，可能需要在整个体验中轻松发现和查看全息影像。 此类定位有两个高级方法。 让我们将它们称为 **"显示-锁定"** 和 **"正文锁定"**。
    * 显示锁定的内容按位置 "锁定" 到设备显示。 这是一种很难的原因，其中包括 "clingyness" 的非自然感觉，这使得许多用户感到沮丧并希望 "晃动它"。 通常，许多设计人员发现，更好的做法是避免显示锁定内容。
    * 主体锁定的方法远远 forgivable。 正文锁定是指受限用户的主体或注视，而将其置于3d 空间中以环绕用户的情况。 许多经验都采用了一种正文锁定行为，其中全息图 "跟随" 用户看，这使用户可以旋转其身体，而不会丢失全息影像。 合并延迟有助于使全息图移动更加自然。 例如，Windows 全息版 OS 的某些核心 UI 使用的是正文锁定，这种情况下，用户将看起来像是一种灵活的、弹性的延迟，同时用户会将其标头。
 * 将全息图放置在舒适的观看距离上，通常会远离1-2 米。

@@ -1,19 +1,19 @@
 ---
-title: 设计全息显示器内容
+title: 设计适用于全息显示器的内容
 description: 全息显示器的设计准则和最佳实践
 author: yoonpark
 ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
-keywords: UI 设计，全息显示，内容设计，深色主题，浅色主题
-ms.openlocfilehash: 627ffdd0a413ad3140c29e9b1c7bb69c9dc249cf
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: UI 设计，全息显示，内容设计，深色主题，浅色主题，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，像素
+ms.openlocfilehash: ea3fbda7aff80f0878521deb433c88b16abeab19
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677658"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702633"
 ---
-# <a name="designing-content-for-holographic-display"></a>设计全息显示器内容
+# <a name="designing-content-for-holographic-display"></a>设计适用于全息显示器的内容
 
 ![Ulnar 端位置](images/UX_Hero_DarkTheme.jpg)
 
@@ -109,7 +109,7 @@ MRTK 中的解决方案-Unity： https://microsoft.github.io/MixedRealityToolkit
 ---
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [颜色、光线和材料](color-light-and-materials.md)
 * [光标](cursors.md)
 * [手部射线](point-and-commit.md)

@@ -1,27 +1,27 @@
 ---
-title: 光标
+title: 游标
 description: 对于目标向量，光标或指示器可为用户提供持续的反馈，以了解 HoloLens 对其意图的了解情况。
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: HoloLens (第一代) ，HoloLens 2，混合现实，光标，定位，注视，手势
-ms.openlocfilehash: 6fb5f335e192ce7664eab0099dc5d6aa6ed2420d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens (第一代) ，HoloLens 2，Mixed Reality，光标，目标，注视，手势，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，射线，输入
+ms.openlocfilehash: db895c7aad177d7ddd2eb371392812b1d7e4d039
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677659"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702643"
 ---
-# <a name="cursors"></a>光标
+# <a name="cursors"></a>游标
 
-![光标](images/UX_Hero_Cursor.jpg)
+![游标](images/UX_Hero_Cursor.jpg)
 
 当前目标向量的光标或指示器可为用户提供持续的反馈，以了解头戴显示在该时间的位置。 光标允许用户了解其当前目标点，并作为反馈来指示哪个区域、全息图或点将响应输入。 它是设备理解用户关注 (的数字表示形式，但这可能不同于确定其意图) 的任何内容。
 
 游标提供的反馈为用户提供预测系统响应方式的能力，使用该信号作为反馈来更好地传达设备对设备的意图，并最终更有把握其交互。
 
-有三种类型的游标： **手指、光线** 和 **打印头** 。 这些指针在 HoloLens、HoloLens 2 和沉浸式耳机上使用不同的输入情态。 下面是针对每种类型的耳机和交互模型使用哪种类型的游标的指导。 在混合现实工具包中 (MRTK) ，我们已创建了拖放游标模块，以帮助你生成正确的指针体验。
+有三种类型的游标： **手指、光线** 和 **打印头**。 这些指针在 HoloLens、HoloLens 2 和沉浸式耳机上使用不同的输入情态。 下面是针对每种类型的耳机和交互模型使用哪种类型的游标的指导。 在混合现实工具包中 (MRTK) ，我们已创建了拖放游标模块，以帮助你生成正确的指针体验。
 
 
 ## <a name="device-support"></a>设备支持
@@ -166,6 +166,6 @@ Ray 光标连接到最靠近的光线的末尾，以允许对不是手接触的�
 
 ---
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [笔势](gaze-and-commit.md#composite-gestures)
 * [头部凝视并提交](gaze-and-commit.md)

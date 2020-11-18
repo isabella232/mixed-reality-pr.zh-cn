@@ -5,16 +5,16 @@ author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
-keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计
-ms.openlocfilehash: 76223dd375e76d943183bc745792e2cb9d3d0601
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality，注视，注视目标，交互，设计，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，目标，焦点，平滑
+ms.openlocfilehash: d913ac81e20962d38178223a050fdccfb51d8632
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677399"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702383"
 ---
 # <a name="head-gaze-and-commit"></a>头部凝视和提交
-" [注视](gaze-and-commit.md)" 和 "提交" 输入 _模型是一_ 种特殊情况，它涉及到对象的方向为 "向前" (head 方向) ，然后使用辅助输入（例如，手势分流或语音命令 "Select"）来定位对象。 
+"[注视](gaze-and-commit.md)" 和 "提交" 输入 _模型是一_ 种特殊情况，它涉及到对象的方向为 "向前" (head 方向) ，然后使用辅助输入（例如，手势分流或语音命令 "Select"）来定位对象。 
 
 ## <a name="device-support"></a>设备支持
 
@@ -80,7 +80,7 @@ ms.locfileid: "91677399"
 在确定要将焦点放到哪些附近的交互式元素时，焦点将为当前聚焦的元素提供偏移。 当在两个元素之间的中间点处浮动时，这有助于减少不稳定的焦点切换行为。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [基于眼睛的交互](eye-gaze-interaction.md)
 * [凝视和停留](gaze-and-dwell.md)
 * [手 - 直接操作](direct-manipulation.md)

@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 空间映射，HoloLens，混合现实，表面重建，网格
-ms.openlocfilehash: 6ca545327e412eaba5ee79959dfa9d01380b18c6
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: 空间映射，HoloLens，混合现实，表面重建，网格，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，场景理解，世界网格，封闭，物理学，导航，表面观察器，渲染，网格处理
+ms.openlocfilehash: 448c64a6c19ee96d58be9a14f7ea4c34a755695e
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340665"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703313"
 ---
 # <a name="spatial-mapping"></a>空间映射
 
@@ -230,7 +230,7 @@ ms.locfileid: "94340665"
 
 ## <a name="mesh-processing"></a>网格处理
 
-应用程序可能希望对空间 surface 网格执行 [各种操作](spatial-mapping.md#mesh-processing) 以满足其需求。 每个空间 surface 网格提供的索引和顶点数据与用于在所有新式渲染 Api 中呈现三角形网格的 [顶点和索引缓冲区](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) 使用的布局相同。 不过，有一个关键事实需要注意的是，空间映射三角形具有 **前后的缠绕顺序** 。 每个三角形都用网格的索引缓冲区中的三个顶点索引表示，当从 **正面** 查看三角形时，这些索引会按 **顺时针** 顺序标识三角形的顶点。 空间 surface 网格的正面 (或外部) 与您预期在实际表面的正面 () 可见。
+应用程序可能希望对空间 surface 网格执行 [各种操作](spatial-mapping.md#mesh-processing) 以满足其需求。 每个空间 surface 网格提供的索引和顶点数据与用于在所有新式渲染 Api 中呈现三角形网格的 [顶点和索引缓冲区](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) 使用的布局相同。 不过，有一个关键事实需要注意的是，空间映射三角形具有 **前后的缠绕顺序**。 每个三角形都用网格的索引缓冲区中的三个顶点索引表示，当从 **正面** 查看三角形时，这些索引会按 **顺时针** 顺序标识三角形的顶点。 空间 surface 网格的正面 (或外部) 与您预期在实际表面的正面 () 可见。
 
 如果表面观察器提供的益处三角形密度仍不足较粗，则应用程序应仅执行网格简化，这种工作的计算成本高昂，并且已经由运行时执行以生成各种提供的详细信息级别。
 
@@ -258,7 +258,7 @@ ms.locfileid: "94340665"
 
 首先， **清除与用户的通信是主要关注** 点。 用户应始终知道是否满足应用程序的要求。 如果不满足这些要求，则应该立即清楚地说明这种情况的原因，并且应迅速采取适当的措施。
 
-其次， **应用程序应尝试在效率和可靠性之间取得平衡** 。 如果可以 **可靠地** 执行此操作，则应用程序应自动分析空间映射数据以节省用户时间。 如果无法可靠地执行此操作，则应用程序应改为允许用户使用其所需的其他信息快速提供应用程序。
+其次， **应用程序应尝试在效率和可靠性之间取得平衡**。 如果可以 **可靠地** 执行此操作，则应用程序应自动分析空间映射数据以节省用户时间。 如果无法可靠地执行此操作，则应用程序应改为允许用户使用其所需的其他信息快速提供应用程序。
 
 若要帮助设计正确的扫描体验，请考虑以下哪些可能适用于你的应用程序：
 
@@ -369,14 +369,7 @@ ms.locfileid: "94340665"
 * 为了使 surface 网格正确面向，每个 GameObject 都需要处于活动状态，然后才能将其发送到 SurfaceObserver 来构造其网格。 否则，网格将显示在您的空间中，但会旋转为古怪度。
 * 需要将运行与 SurfaceObserver 通信的脚本的 GameObject 设置为源。 否则，你创建并发送到 SurfaceObserver 的所有 Gameobject 都具有与父游戏对象的偏移量相等的偏移量。 这会使你的网格显示多个计量仪，这使得调试正在进行的操作非常困难。
 
-## <a name="next-discovery-checkpoint"></a>下一个发现检查点
-
-如果您关注的是我们所做的 [发现旅程](../discover/get-started-with-mr.md) ，就是在探讨混合现实的基本知识。 在这里，你可以继续学习下一基础主题： 
-
-> [!div class="nextstepaction"]
-> [建议对象的比例 -（比例）](../design/scale.md)
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [坐标系统](coordinate-systems.md)
 * [DirectX 中的空间映射](../develop/native/spatial-mapping-in-directx.md)
 * [Unity 中的空间映射](../develop/unity/spatial-mapping-in-unity.md)

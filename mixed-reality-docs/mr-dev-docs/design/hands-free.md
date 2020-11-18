@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 04/20/2019
 ms.topic: article
-keywords: 混合现实，无人参与，注视，注视目标，交互，设计
-ms.openlocfilehash: 47e2bd8fef52a36601d58f321def9c066db259e5
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 混合现实，无人参与，注视，注视目标，交互，设计，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，语音输入，可用性
+ms.openlocfilehash: 7f4d3a0ec8d2e7435f54164006a8bd122b1ebcba
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677851"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702133"
 ---
 # <a name="hands-free"></a>免手动
 
@@ -93,7 +93,7 @@ ms.locfileid: "91677851"
 * 示例：对于需要打开的标题，语音交互更好
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [HoloLens 2 中的眼动跟踪](eye-tracking.md)
 * [凝视和提交](gaze-and-commit.md)
 * [凝视和停留](gaze-and-dwell.md)

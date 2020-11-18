@@ -5,17 +5,17 @@ author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: 混合现实，注视，注视目标，交互，设计，眼睛跟踪，头跟踪
-ms.openlocfilehash: 887d1a30a974bdd643889959a1fee55e96d7b16a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality，注视，注视目标，交互，设计，眼睛跟踪，打印头跟踪，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: a901e505d8e282e52078f5635627fbc2018a27b5
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677890"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702403"
 ---
 # <a name="gaze-and-commit"></a>凝视并提交
 
-" _注视" 和 "提交_ " 是一种基本的输入模型，它与使用鼠标的计算机进行交互的方式密切相关： _点 & 单击_ 。
+"_注视" 和 "提交_" 是一种基本的输入模型，它与使用鼠标的计算机进行交互的方式密切相关：_点 & 单击_。
 在此页上，我们将介绍两种类型的目视输入 (打印头和眼睛眼睛) 以及不同类型的提交操作。 
 _注视和提交_ 被视为具有间接操作的最大输入模型。
 这意味着它最适用于与不在一起的全息内容交互。
@@ -133,7 +133,7 @@ _注视和提交_ 被视为具有间接操作的最大输入模型。
 ---
 
 ## <a name="commit"></a>Commit
-_在谈论看一看目标_ 的不同方法之后，让我们更深入地谈谈 "注视" 和 " _提交_ " 中的 _提交_ 部分。
+_在谈论看一看目标_ 的不同方法之后，让我们更深入地谈谈 "注视" 和 "_提交_" 中的 _提交_ 部分。
 以对象或 UI 元素为目标后，用户可以使用辅助输入交互或单击此元素。 这被称为输入模型的提交步骤。 
 
 支持以下提交方法：
@@ -290,7 +290,7 @@ HoloLens 通过跟踪设备可识别的一只手或双手的位置来识别手�
 
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [基于眼睛的交互](eye-gaze-interaction.md)
 * [HoloLens 2 中的眼动跟踪](eye-tracking.md)
 * [凝视和停留](gaze-and-dwell.md)

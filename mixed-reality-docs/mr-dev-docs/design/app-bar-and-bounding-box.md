@@ -5,13 +5,13 @@ author: radicalad
 ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
-keywords: Windows Mixed Reality，应用栏，边界框
-ms.openlocfilehash: 381efae8c831fda2152eb96cf762bf4f94c34c57
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality，应用程序栏，边界箱，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: f718babfa07c69b6579fbd78f306a10f0ed6aad5
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677467"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703053"
 ---
 # <a name="bounding-box-and-app-bar"></a>边界框和应用栏
 !["边界" 是用于在混合现实中进行对象操作的标准接口。](images/UX_Hero_BoundingBox.jpg)<br>
@@ -103,7 +103,7 @@ ms.locfileid: "91677467"
 ---
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [光标](cursors.md)
 * [手部射线](point-and-commit.md)

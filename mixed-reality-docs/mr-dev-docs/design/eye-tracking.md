@@ -5,13 +5,13 @@ author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
-keywords: 眼睛跟踪，混合现实，输入，眼睛，校准
-ms.openlocfilehash: 20e76188c6b64776d818f340f6aca0a725454dd8
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 眼睛跟踪，混合现实，输入，眼睛，校准，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，意向，操作
+ms.openlocfilehash: c6167fc48a98de8f400400475c2057a2b4773b29
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677402"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702583"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>HoloLens 2 中的眼动跟踪
 
@@ -81,7 +81,7 @@ HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，
 ### <a name="user-intent"></a>用户意图    
 有关用户所在位置和内容的信息 **为其他输入** 提供了强大的上下文，例如语音、动手和控制器。
 可在各种任务中使用此信息。
-例如，这种情况的范围包括：只需查看一个全息影像并口述 *"select"* (也可以在场景中快速轻松地 **定位** ，然后查看 " [注视" 和 "提交](gaze-and-commit.md)") 或 *"put ..."* ，然后查找用户要放置全息影像的位置，并显示 *".。。出现 "* 。 在[混合现实工具包 - 视线支持的目标选择](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html)和[混合现实工具包 - 视线支持的目标定位](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html)中可以找到相关示例。
+例如，这种情况的范围包括：只需查看一个全息影像并口述 *"select"* (也可以在场景中快速轻松地 **定位**，然后查看 "[注视" 和 "提交](gaze-and-commit.md)") 或 *"put ..."*，然后查找用户要放置全息影像的位置，并显示 *".。。出现 "*。 在[混合现实工具包 - 视线支持的目标选择](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html)和[混合现实工具包 - 视线支持的目标定位](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html)中可以找到相关示例。
 
 此外，用户意向的示例可能包括使用用户查看的信息来增强使用所介绍的虚拟代理和交互式全息影像。 例如，根据当前查看的内容，虚拟代理可能会调整可用选项及其行为。 
 
@@ -92,7 +92,7 @@ HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，
 另一个例子就是 **受支持的目视缩放和平移** ，用户可以感觉到他或她所关注的内容完全接近。 触发和控制缩放速度可以通过语音或手写输入来控制，这对于向用户提供控制感受，同时避免被淹没非常重要。 下面将更详细地讨论这些设计注意事项。 放大后，用户可以顺利地执行操作，例如，街道的学习过程只需使用其眼睛来浏览其邻居即可。
 [混合现实工具包 - 视线支持的导航](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html)示例中可以找到此类交互的演示。
 
-隐式操作的其他用例包括： 
+隐式操作的其他用例包括：
 - **智能通知：** 如果在你要查找的位置，通知弹出的厌恶， 考虑到用户正在关注的内容，你可以通过从当前 gazing 用户的位置偏移通知来更好地进行此体验。 这会限制干扰，并在用户完成读取后自动将其关闭。 
 - **留心全息影像：** 在 gazed 时，会对影像进行细微反应。 这可能包括稍微光亮的 UI 元素，这是一种对虚拟狗的缓慢百花齐放花，开始回顾用户并 wagging 其尾部。 这种交互可能会在应用程序中提供更有趣的连接和满意度。
 
@@ -155,7 +155,7 @@ Microsoft 致力于推动创新，同时确保用户对其眼睛跟踪信息的�
 在此页面中，你可以获得一个良好的概述，使你开始了解 HoloLens 2 的眼睛跟踪和目视眼睛输入的角色。 若要开始开发，请查看我们的信息，了解如何 [与全息影像交互](eye-gaze-interaction.md)、 [在 Unity 中目视](https://aka.ms/mrtk-eyes) 看，以及如何 [在 DirectX 中观看眼](../develop/native/gaze-in-directx.md)。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [校准](../calibration.md)
 * [舒适](comfort.md)
 * [基于眼睛凝视的交互](eye-gaze-interaction.md)

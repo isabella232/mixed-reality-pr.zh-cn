@@ -4,13 +4,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
-keywords: 混合现实，HoloLens，UI 控件，交互，UI，ux，UX 设计，空间 UI，空间交互，3D UI，三维 UX
-ms.openlocfilehash: 2c811edc14fbcc7c917fe9fa724f1cab23179a96
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: 混合现实，HoloLens，UI 控制，交互，UI，ux，UX 设计，空间 UI，空间交互，三维 UI，三维 UX，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
+ms.openlocfilehash: ec887f73b8561e0a91740d612227411683707364
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677653"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703293"
 ---
 # <a name="spatial-mesh"></a>空间网格
 
@@ -39,7 +39,7 @@ MRTK 提供了多个材料来实现空间网格可视化。
 
 ---
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [光标](cursors.md)
 * [手部射线](point-and-commit.md)
