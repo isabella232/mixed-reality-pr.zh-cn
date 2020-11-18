@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 30ef793511285fe2fe52810912f6c5c06c8550dc
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: ded881290de0167b7ffe26fc86b573d9b9ebb0b6
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353455"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631495"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2.创建全息远程处理电脑应用程序
 
@@ -39,6 +39,11 @@ ms.locfileid: "93353455"
 ### <a name="1-set-the-player-settings"></a>1.设置播放器设置
 
 在 Unity 菜单中选择“编辑”>“项目设置”，打开“播放器设置”窗口。
+
+在“项目设置”窗口中，展开“发布设置”，向下滚动到“功能”部分，然后选择下面除现有功能外显示的功能复选框 。
+
+* Internet 客户端服务器
+* 专用网络客户端服务器
 
 在“XR 设置”部分，选中“支持的 WSA 全息远程处理”复选框，启用全息远程处理 。
 

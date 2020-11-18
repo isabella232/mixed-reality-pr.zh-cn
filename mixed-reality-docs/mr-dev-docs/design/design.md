@@ -7,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互
-ms.openlocfilehash: 2ee127b05a8ad88e49eda6d088f84e895aeaf511
-ms.sourcegitcommit: 4e618948e1e2e0baf4bb3e8b67513fa7716aa815
+ms.openlocfilehash: 19a83a132cca08573f1066a2f7b87bd383ca79f4
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94361685"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573271"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
@@ -35,7 +35,7 @@ ms.locfileid: "94361685"
 | [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 亲眼见证从 Microsoft 内外的设计师处收集的混合现实设计过程 |
 | [混合现实应用的类型](types-of-mixed-reality-apps.md) | 确定你的应用体验在混合现实范围内的位置 |
 | [“设计全息影像”应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | 了解混合现实 UX 设计的基础知识，只需深入了解混合现实行为以及与创建出色 HoloLens 应用相关的提示和建议即可（可在 HoloLens 2 中从 Microsoft Store 下载） |
-
+| [MRTK 中心示例](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4) | 体验混合现实的常见空间交互和 UX 构建基块（可从 HoloLens 2 中的 Microsoft Store 下载） |
 ### <a name="2-core-concepts"></a>2.核心概念
 
 无论是针对 VR 还是 AR 进行开发，都有几个核心概念适用于设计流畅的沉浸式体验。 了解用户的观点、定位对象并确保每个人都舒适安全是你在历程的这一阶段的头等大事。 本部分结束时，你将有一个坚实的基础来进行交互设计。

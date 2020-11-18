@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 存储
 ms.localizationpriority: high
-ms.openlocfilehash: e01796dd99982bb749d59108bcc972e5bc361770
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 64e4aaadf13c03272a4fc9c552a7e4b31e82fdbb
+ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353325"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549100"
 ---
 # <a name="2-integrating-azure-storage"></a>2.集成 Azure 存储
 
@@ -53,11 +53,11 @@ Azure 存储是云中的 Microsoft 存储解决方案，可适应多种场景和
 
 ### <a name="optional-azure-storage-explorer"></a>可选 Azure 存储资源管理器
 
-虽然可以从应用程序内的 UI 查看并验证所有数据更改，但建议安装 [Azure 存储资源管理器](https://azure.microsoft.com/features/storage-explorer/)。 此工具可用于直观地查看 Azure 存储中的数据，在调试和学习时很有帮助。
+虽然可从应用程序内的 UI 查看并验证所有数据更改，但建议安装 [Azure 存储资源管理器](https://azure.microsoft.com/features/storage-explorer/)。 此工具可用于直观地查看 Azure 存储中的数据，在调试和学习时很有帮助。
 
 > [!TIP]
 > 若要在 Unity 编辑器中进行测试，可以使用本地模拟器：
-> * 在 Windows 10 中，可以使用 [Azure 存储模拟器](https://docs.microsoft.com/azure/storage/common/storage-use-emulator)
+> * 在 Windows 10 中，可使用 [Azure 存储模拟器](https://docs.microsoft.com/azure/storage/common/storage-use-emulator)
 > * 在 MacOS/Linux 中，可以使用适用于 Docker 的 [Azurite Docker 映像](https://hub.docker.com/_/microsoft-azure-storage-azurite)
 
 ## <a name="preparing-the-scene"></a>准备场景

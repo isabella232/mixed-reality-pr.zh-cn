@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 摄像头, PV 摄像头, MRC
-ms.openlocfilehash: e66583d46d64361621303e36a5fbcc209300f5d8
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6302a64fcde2a16b6ae1cb570215629a3e6ea9e5
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695683"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573231"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Unreal 中的 HoloLens 照片/视频摄像头
 
 ## <a name="overview"></a>概述
 
-HoloLens 具有照片/视频 (PV) 摄像头，可用于混合现实捕获 (MRC)，应用还可以使用它来访问真实的视觉对象。
+HoloLens 具有照片/视频 (PV) 摄像头，可用于混合现实捕获 (MRC)，应用还可以使用它来访问真实的视觉对象。 
+
+> [!IMPORTANT]
+> 全息远程不支持 PV 摄像头，但可使用电脑上附带的网络摄像头来模拟 HoloLens PV 摄像头功能。
 
 ## <a name="render-from-the-pv-camera-for-mrc"></a>从 MRC 的 PV 摄像头渲染
 

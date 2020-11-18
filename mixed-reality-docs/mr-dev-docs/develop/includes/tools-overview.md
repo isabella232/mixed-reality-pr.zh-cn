@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad8f4a5ea9bda7915731f879da96cf7e007c58fb
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+ms.openlocfilehash: cd6541dd651573f31ddc2e2a388be53394059c5f
+ms.sourcegitcommit: f459c7deb254409fd5db3967bcc875bcbc367e77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92755503"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94482407"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -48,11 +48,31 @@ Windows 10 SDK 在 Windows 10 操作系统上效果最佳。 Windows 8.1、Windo
 
 #### <a name="for-hololens-development"></a>对于 HoloLens 开发
 
-在为进行 HoloLens 开发设置开发电脑时，请确保该电脑满足 <a href="https://unity3d.com/unity/system-requirements" target="_blank">Unity</a> 和 <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a> 的系统要求。 如果打算使用 [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)，还需要确保电脑满足 [HoloLens 仿真器系统要求](../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-emulator-system-requirements)。
+在为进行 HoloLens 开发设置开发电脑时，请确保该电脑满足 <a href="https://unity3d.com/unity/system-requirements" target="_blank">Unity</a> 和 <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a> 的系统要求。 如果想要在 HoloLens 设备上运行应用，需要按照 [Windows 设备门户设置说明](../platform-capabilities-and-apis/using-the-windows-device-portal.md#setting-up-hololens-to-use-windows-device-portal)进行操作。 如果打算使用 [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)，还需要确保电脑满足 [HoloLens 仿真器系统要求](../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-emulator-system-requirements)。
 
 若要开始使用 HoloLens 仿真器，请参阅[使用 HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)。
 
 如果你打算针对 HoloLens 和 Windows Mixed Reality 沉浸式 (VR) 头戴显示设备进行开发，请使用以下部分中的系统建议和要求。
+
+#### <a name="hololens-troubleshooting"></a>HoloLens 故障排除
+
+##### <a name="setting-developer-mode-is-grayed-out"></a>“开发人员模式”设置呈灰显
+
+如果你在设备上启用开发人员模式时遇到问题，则你可能不是[设备所有者](https://docs.microsoft.com/hololens/security-adminless-os)。 在多用户模式下，最先使用设备的用户就是设备所有者，后续的任何用户都没有必需的权限来启用开发人员模式或其他配置更改。 但存在一个例外，在 Autopilot 环境中，第一个用户可能不是设备所有者；有关详细信息，可参阅 [HoloLens 安全文档](https://docs.microsoft.com/hololens/security-adminless-os#device-owner)。
+
+可能的解决方案包括：
+
+* 要求设备所有者在将设备递给其他用户或开发人员之前启用开发人员模式
+* 建议你的 IT/MDM 管理员为特定设备或开发人员设备组启用 [ApplicationManagement/AllowDeveloperUnlock 策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)。 
+    * 此策略可通过[预配包](https://docs.microsoft.com/hololens/hololens-provisioning)或[适合 HoloLens 设备的 MDM](https://docs.microsoft.com/hololens/hololens-mdm-configure)来进行设置
+* 使用[高级恢复助理 (ARC)](https://docs.microsoft.com/hololens/hololens-recovery)
+
+> [!NOTE]
+> 有关设备管理的详细信息，可参阅 [HoloLens 设备管理](https://docs.microsoft.com/hololens/hololens-csp-policy-overview)概述。
+
+##### <a name="i-cant-deploy-over-usb"></a>我无法通过 USB 进行部署
+
+如果你没法通过 USB 直接部署应用程序，请确保你满足了上述所有安全要求，并按照我们的[分步教程](../unity/tutorials/mr-learning-base-02.md#building-your-application-to-your-hololens-2)操作。
 
 #### <a name="immersive-vr-headset-requirements"></a>沉浸式 (VR) 头戴显示设备要求
 
@@ -145,9 +165,29 @@ Windows 10 SDK 在 Windows 10 操作系统上效果最佳。 Windows 8.1、Windo
 
 #### <a name="for-hololens-development"></a>对于 HoloLens 开发
 
-如果要设置开发电脑来进行 HoloLens 开发，请确保满足 [Unreal](https://docs.unrealengine.com/GettingStarted/RecommendedSpecifications/index.html) 和 <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a> 的系统要求。 如果打算使用 [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)，还需要确保电脑满足 [HoloLens 仿真器系统要求](../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-emulator-system-requirements)。
+如果要设置开发电脑来进行 HoloLens 开发，请确保满足 [Unreal](https://docs.unrealengine.com/GettingStarted/RecommendedSpecifications/index.html) 和 <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a> 的系统要求。 如果想要在 HoloLens 设备上运行应用，需要按照 [Windows 设备门户设置说明](../platform-capabilities-and-apis/using-the-windows-device-portal.md#setting-up-hololens-to-use-windows-device-portal)进行操作。 如果打算使用 [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)，还需要确保电脑满足 [HoloLens 仿真器系统要求](../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-emulator-system-requirements)。
 
 如果你打算针对 HoloLens 和 Windows Mixed Reality 沉浸式 (VR) 头戴显示设备进行开发，请使用以下部分中的系统建议和要求。
+
+#### <a name="hololens-troubleshooting"></a>HoloLens 故障排除
+
+##### <a name="setting-developer-mode-is-grayed-out"></a>“开发人员模式”设置呈灰显
+
+如果你在设备上启用开发人员模式时遇到问题，则你可能不是[设备所有者](https://docs.microsoft.com/hololens/security-adminless-os)。 在多用户模式下，最先使用设备的用户就是设备所有者，后续的任何用户都没有必需的权限来启用开发人员模式或其他配置更改。 但存在一个例外，在 Autopilot 环境中，第一个用户可能不是设备所有者；有关详细信息，可参阅 [HoloLens 安全文档](https://docs.microsoft.com/hololens/security-adminless-os#device-owner)。
+
+可能的解决方案包括：
+
+* 要求设备所有者在将设备递给其他用户或开发人员之前启用开发人员模式
+* 建议你的 IT/MDM 管理员为特定设备或开发人员设备组启用 [ApplicationManagement/AllowDeveloperUnlock 策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)。 
+    * 此策略可通过[预配包](https://docs.microsoft.com/hololens/hololens-provisioning)或[适合 HoloLens 设备的 MDM](https://docs.microsoft.com/hololens/hololens-mdm-configure)来进行设置
+* 使用[高级恢复助理 (ARC)](https://docs.microsoft.com/hololens/hololens-recovery)
+
+> [!NOTE]
+> 有关设备管理的详细信息，可参阅 [HoloLens 设备管理](https://docs.microsoft.com/hololens/hololens-csp-policy-overview)概述。
+
+##### <a name="i-cant-deploy-over-usb"></a>我无法通过 USB 进行部署
+
+如果你没法通过 USB 直接部署应用程序，请确保你满足了上述所有安全要求，并按照我们的[分步教程](../unreal/tutorials/unreal-uxt-ch6.md)操作。
 
 #### <a name="immersive-vr-headset-requirements"></a>沉浸式 (VR) 头戴显示设备要求
 
@@ -215,12 +255,28 @@ Windows 10 SDK 在 Windows 10 操作系统上效果最佳。 Windows 8.1、Windo
 
 #### <a name="for-hololens-development"></a>对于 HoloLens 开发
 
-如果要设置开发电脑来进行 HoloLens 开发，请确保满足 <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a> 的系统要求。 如果打算使用 [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)，还需要确保电脑满足 [HoloLens 仿真器系统要求](../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-emulator-system-requirements)。
+如果要设置开发电脑来进行 HoloLens 开发，请确保满足 <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a> 的系统要求。 如果想要在 HoloLens 设备上运行应用，需要按照 [Windows 设备门户设置说明](../platform-capabilities-and-apis/using-the-windows-device-portal.md#setting-up-hololens-to-use-windows-device-portal)进行操作。 如果打算使用 [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)，还需要确保电脑满足 [HoloLens 仿真器系统要求](../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-emulator-system-requirements)。
 
 如果你打算针对 HoloLens 和 Windows Mixed Reality 沉浸式 (VR) 头戴显示设备进行开发，请使用以下部分中的系统建议和要求。
 
 > [!NOTE]
 > 你可针对 HoloLens 和/或 VR 沉浸式头戴显示设备开发和部署应用。 确保满足以下要求（具体由你的需求而定）。
+
+#### <a name="hololens-troubleshooting"></a>HoloLens 故障排除
+
+##### <a name="setting-developer-mode-is-grayed-out"></a>“开发人员模式”设置呈灰显
+
+如果你在设备上启用开发人员模式时遇到问题，则你可能不是[设备所有者](https://docs.microsoft.com/hololens/security-adminless-os)。 在多用户模式下，最先使用设备的用户就是设备所有者，后续的任何用户都没有必需的权限来启用开发人员模式或其他配置更改。 但存在一个例外，在 Autopilot 环境中，第一个用户可能不是设备所有者；有关详细信息，可参阅 [HoloLens 安全文档](https://docs.microsoft.com/hololens/security-adminless-os#device-owner)。
+
+可能的解决方案包括：
+
+* 要求设备所有者在将设备递给其他用户或开发人员之前启用开发人员模式
+* 建议你的 IT/MDM 管理员为特定设备或开发人员设备组启用 [ApplicationManagement/AllowDeveloperUnlock 策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)。 
+    * 此策略可通过[预配包](https://docs.microsoft.com/hololens/hololens-provisioning)或[适合 HoloLens 设备的 MDM](https://docs.microsoft.com/hololens/hololens-mdm-configure)来进行设置
+* 使用[高级恢复助理 (ARC)](https://docs.microsoft.com/hololens/hololens-recovery)
+
+> [!NOTE]
+> 有关设备管理的详细信息，可参阅 [HoloLens 设备管理](https://docs.microsoft.com/hololens/hololens-csp-policy-overview)概述。
 
 #### <a name="immersive-vr-headset-requirements"></a>沉浸式 (VR) 头戴显示设备要求
 

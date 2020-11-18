@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2d3a826ba3bf8fdf1299038a7964278f0d57dbb7
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: f4530cb6519434f8eb74e5335fecbe82ac2cd2c2
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353535"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631525"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
 
@@ -32,9 +32,9 @@ ms.locfileid: "93353535"
 
 在“层次结构”窗口中，右键单击“RoverExplorer”对象，然后选择“创建空白项”添加一个空对象作为 RoverExplorer 的子对象，将该对象命名为“Buttons”，并按如下所述配置“转换”组件   ：
 
-* **位置** ：X = -0.6，Y = 0.036，Z = -0.5
-* **旋转** ：X = 90, Y = 0, Z = 0
-* **缩放** ：X = 1，Y = 1，Z = 1
+* **位置**：X = -0.6，Y = 0.036，Z = -0.5
+* **旋转**：X = 90, Y = 0, Z = 0
+* **缩放**：X = 1，Y = 1，Z = 1
 
 ![选中并定位了新创建的 Buttons 对象的 Unity](images/mr-learning-base/base-06-section1-step1-1.png)
 
@@ -44,10 +44,10 @@ ms.locfileid: "93353535"
 
 在“层次结构”窗口中选择“Buttons”对象，然后在“检查器”窗口中，使用“添加组件”按钮添加“GridObjectCollection”组件，并按如下所述配置该组件  ：
 
-* **排序类型** ：子顺序
-* **布局** ：水平
-* **单元格宽度** ：0.2
-* **定位点** ：中部左对齐
+* **排序类型**：子顺序
+* **布局**：水平
+* **单元格宽度**：0.2
+* **定位点**：中部左对齐
 
 然后单击“更新集合”按钮以更新 Buttons 对象的子对象的位置：
 
@@ -61,14 +61,17 @@ ms.locfileid: "93353535"
 
 完成后，折叠按钮对象的子对象。
 
-在“层次结构”窗口中，选择“提示”按钮对象，然后在“检查器”窗口中配置可交互“OnClick ()”事件，如下所示 ：
+在“层次结构”窗口中，选择“提示”按钮对象，然后在“检查器”窗口中配置 Interactable.OnClick () 事件，如下所示 ：
 
 * 向“无(对象)”字段分配“RoverAssembly”对象 
 * 从“无函数”下拉列表中，选择“PlacementHintsController” > “TogglePlacementHints ()”将此函数设置为触发事件时要执行的操作  
 
 ![配置了“提示”按钮对象 OnClick 事件的 Unity](images/mr-learning-base/base-06-section1-step1-5.png)
 
-在“层次结构”窗口中，选择“分解”按钮对象，然后在“检查器”窗口中配置可交互“OnClick ()”事件，如下所示 ：
+> [!TIP]
+> 可交互组件是一体式的容器，它使所有对象都能轻松交互并响应输入。 “可交互”用作各种类型的输入的一个笼统术语，包括触摸、手射线和语音等等，它将这些交互传送到事件和视觉主题响应中。 若要了解如何为不同的输入类型配置它，以及如何自定义它的视觉主题，可参阅 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[可交互](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)指南。
+
+在“层次结构”窗口中，选择“分解”按钮对象，然后在“检查器”窗口中配置 Interactable.OnClick () 事件，如下所示 ：
 
 * 向“无(对象)”字段分配“RoverAssembly”对象 
 * 从“无函数”下拉列表中，选择“ExplodedViewController” > “ToggleExplodedView ()”将此函数设置为触发事件时要执行的操作  
