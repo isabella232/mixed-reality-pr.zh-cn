@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: 746b6257e6a3ab28424d7b74e43a1b6541d6fad0
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
-ms.translationtype: HT
+ms.openlocfilehash: 170c0ebfeee2b6305c5d52c8aba143badaffa5e2
+ms.sourcegitcommit: 53c6d27781ed12e2899c72087d317a62b2fad8cb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573281"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94897352"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>混合现实开发天数日本
 
@@ -27,9 +27,13 @@ ms.locfileid: "94573281"
 
 **无注册**
 
+**主要语言-日语**
+
 ## <a name="registration"></a>注册
 
-即将推出
+[注册-现已打开](https://mixedrealityprod.microsoftcrmportals.com/event/sessions?id=MR_Dev_Days_Japan864059683)
+
+我们非常高兴地为混合现实开发日日本提供注册。  此事件是免费的，并且在 Microsoft 团队实时事件中处于联机状态。  我们请求与会者注册，以便在事件更近时发送电子邮件更新，以便您可以参与事件的交互式元素。
 
 ## <a name="schedule---subject-to-change"></a>计划-更改者
 
@@ -40,7 +44,7 @@ ms.locfileid: "94573281"
 ### <a name="december-16th"></a>12月16日
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
-|10： 00 (：50am|打开主题|TBD|JA/EN|不可用|
+|10： 00 (：50am|打开主题|TBD|JA/EN|空值|
 |10： 50am-11： 00 (|**分**||||
 |11： 00 (-11：25am|*会话 1* 什么是混合现实？您可以对 HL2 做些什么？MR 技术人员|Atsushi Suzuki|JA|100|
 |11：上午 9:30-11：55am|*会话 2* 与客户和合作伙伴案例研究的日本商业市场动力更新|Tetsu Muranaka|JA|200|
@@ -49,7 +53,7 @@ ms.locfileid: "94573281"
 |1： 00 (：25pm|*会话 3* HoloLens 2 开发概述|Madoka Chiyoda|JA|200|
 |1：下午6:30：55pm|*会话 4* HoloLens 2 & MRTK (MRTK-Unity) |Yoon 寄存|JA|300|
 |2： 00 (：25pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
-|2：下午6:30：55pm|*会话 6* MR 应用程序设计 (为 HL2 应用程序创建 UI/UX 的最佳实践) |Daniel Escudero|CN|300|
+|2：下午6:30：55pm|*会话 6* 创建 "设计全息影像" 应用。 我们将深入探讨在创建这个新的 HoloLens 2 应用程序时发现的功能、挑战和其他有趣的知识。|Daniel Escudero|CN|300|
 |2：55pm：10pm|**分**||||
 |3：10pm：35pm|*会话 7* Azure 对象锚|TBD|CN|300|
 |3：40pm： 1:05 (|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
@@ -68,7 +72,7 @@ Futo Horio ([@Futo_Horio](https://twitter.com/Futo_Horio)) ，Takahiro Miyaura (
 **问：** 谁应参加混合现实开发日 **A** -此事件包含在混合现实空间中工作或播放的所有人。 尽管大部分内容都是以开发人员为中心的，但我们也知道，开发人员以外的各种角色都有兴趣的内容。 请记得查看更新计划，以查看我们将提供的内容种类。  
   
 **问：** 我在团队实时事件中找不到事件  
-要参与 **的** ，请单击在注册事件后收到的电子邮件中的链接。 建议在团队 PC 应用上观看，还可以参与团队移动应用或桌面浏览器。
+要参与 **的**，请单击在注册事件后收到的电子邮件中的链接。 建议在团队 PC 应用上观看，还可以参与团队移动应用或桌面浏览器。
 
 如果由于某种原因无法登录到团队，请检查将在其中同时广播事件的 YouTube 频道。 但是，你将无法通过扬声器参加问答。
 
