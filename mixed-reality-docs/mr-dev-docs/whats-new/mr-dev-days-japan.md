@@ -1,19 +1,19 @@
 ---
-title: 混合现实开发天数日本
+title: 日本混合现实开发人员日
 description: 混合现实开发日的事件页日本
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: 170c0ebfeee2b6305c5d52c8aba143badaffa5e2
-ms.sourcegitcommit: 53c6d27781ed12e2899c72087d317a62b2fad8cb
+ms.openlocfilehash: e120582e6184b9b105221aeddb5bcb42629ccb0c
+ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/19/2020
-ms.locfileid: "94897352"
+ms.locfileid: "94933262"
 ---
-# <a name="mixed-reality-dev-days-japan"></a>混合现实开发天数日本
+# <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
 ![混合现实开发人员日](images/MRDD/MRDevDaysJapanBanner.png)
 
@@ -55,10 +55,10 @@ ms.locfileid: "94897352"
 |2： 00 (：25pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
 |2：下午6:30：55pm|*会话 6* 创建 "设计全息影像" 应用。 我们将深入探讨在创建这个新的 HoloLens 2 应用程序时发现的功能、挑战和其他有趣的知识。|Daniel Escudero|CN|300|
 |2：55pm：10pm|**分**||||
-|3：10pm：35pm|*会话 7* Azure 对象锚|TBD|CN|300|
+|3：10pm：35pm|*会话 7* Azure 对象锚|Jesse McCulloch|CN|300|
 |3：40pm： 1:05 (|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
-|4：10pm：35pm|*会话 9* Azure 空间锚|TBD|CN|300|
-|4：40pm： 1:05 (|*会话 10* TBD|TBD|JA|200|
+|4：10pm：35pm|*会话 9* Azure 空间锚|TBD|JA|300|
+|4：40pm： 1:05 (|*会话 10* Unity + PiXYZ|Shinobu Takahashi (Unity) |JA|200|
 |5：10pm：35pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
 |5：35pm：50pm|关闭|Madoka Chiyoda|JA|NA|
 
