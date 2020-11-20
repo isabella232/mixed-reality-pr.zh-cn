@@ -8,56 +8,56 @@ ms.topic: article
 keywords: 在购买前，Windows Mixed Reality，混合现实，虚拟现实，VR，先生，预销售，调查，购买
 appliesto:
 - Windows 10
-ms.openlocfilehash: a38b6ed8625fbb419ad24f2e27acec881d7b85a7
-ms.sourcegitcommit: ea7d806c9aa88d1295493a25f47e58bb72a4000a
+ms.openlocfilehash: 20a585088c9bea9d01754f78e9934a4022c0e34c
+ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907439"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95002971"
 ---
-# <a name="frequently-asked-questions"></a>常见问题
+# <a name="before-you-buy-frequently-asked-questions"></a>在购买常见问题之前
 
 ## <a name="general-questions"></a>一般问题
 
-### <a name="where-can-i-buy-a-windows-mixed-reality-ready-pc-or-headset"></a>在哪里可以购买 Windows Mixed Reality ready PC 或耳机？
+### <a name="where-can-i-buy-a-windows-mixed-reality-ready-pc-or-headset"></a>在哪里可以购买 Windows Mixed Reality ready PC 或耳机
 
 **快速解答：** 你可以在批准的本地零售商处购买 Windows Mixed Reality ready PC 或耳机，也可以从包含 Microsoft Store 在内的各种零售商处在线购买。 查找 Windows Mixed Reality ready PC 或在线耳机： <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
 
-### <a name="where-can-i-try-windows-mixed-reality"></a>在哪里可以尝试 Windows Mixed Reality？
+### <a name="where-can-i-try-windows-mixed-reality"></a>在哪里可以尝试 Windows Mixed Reality
 
 **快速解答：** 你可以在你附近的 [Microsoft 反应器](https://developer.microsoft.com/reactor/?WT.mc_id=docs-faq-ayyonet) 上尝试 Windows Mixed Reality。
 
 * 在 Meetup.com 上查找 Microsoft 反应器事件： <https://www.meetup.com/pro/microsoft-reactor>
 
-### <a name="which-manufacturers-are-selling-windows-mixed-reality-devices"></a>哪些制造商正在出售 Windows Mixed Reality 设备？
+### <a name="which-manufacturers-are-selling-windows-mixed-reality-devices"></a>哪些制造商正在出售 Windows Mixed Reality 设备
 
 **快速解答：** 现在 HP 提供耳机和运动控制器。 请参见<https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
 
-### <a name="where-can-i-buy-standalone-motion-controllers"></a>在哪里可以购买独立的运动控制器？
+### <a name="where-can-i-buy-standalone-motion-controllers"></a>在哪里可以购买独立的运动控制器
 
 **快速解答：** 遗憾的是，我们目前并不知道销售独立运动控制器的任何零售商。
 
-### <a name="what-is-the-difference-between-a-windows-mixed-reality-pc-and-a-windows-mixed-reality-ultra-pc"></a>Windows Mixed Reality PC 与 Windows Mixed Reality 超 PC 之间的区别是什么？
+### <a name="what-is-the-difference-between-a-windows-mixed-reality-pc-and-a-windows-mixed-reality-ultra-pc"></a>Windows Mixed Reality PC 与 Windows Mixed Reality 超 PC 之间的区别是什么
 
 **快速解答：** 有关 Windows Mixed Reality Pc 和超 Pc 的详细信息，请参阅： <https://aka.ms/mrcompat>
 
-### <a name="why-is-this-called-windows-mixed-reality-when-the-devices-look-like-they-provide-a-virtual-reality-experience"></a>为什么当设备看上去提供 "虚拟现实" 体验时，这称为 Windows "Mixed Reality" 呢？
+### <a name="why-is-this-called-windows-mixed-reality-when-the-devices-look-like-they-provide-a-virtual-reality-experience"></a>为什么当设备看上去提供 "虚拟现实" 体验时，这称为 Windows "混合现实"
 
 **快速解答：** 混合现实指的是完整的空间计算能力，从扩充的现实和全息到虚拟现实。 Windows Mixed Reality 平台跨虚拟现实 (VR) 和增强的现实 (AR) 支持设备。 目前，我们支持两种设备类型，具有相同技术： HoloLens (AR) 和 Windows Mixed Reality (VR) 带有运动控制器的耳机。
 
 在此处了解有关混合现实的详细信息： <https://docs.microsoft.com/windows/mixed-reality/mixed-reality>
 
-### <a name="what-is-the-difference-between-windows-mixed-reality-and-other-vr-headsets"></a>Windows Mixed Reality 与其他 VR 耳机之间有何区别？
+### <a name="what-is-the-difference-between-windows-mixed-reality-and-other-vr-headsets"></a>Windows Mixed Reality 与其他 VR 耳机之间的区别是什么
 
 **快速解答：** Windows Mixed Reality 耳机功能 (跟踪相机位于耳机) 以及 Windows 10 的即插即用设置。
 
-**更多详细信息** ： Windows Mixed Reality 提供多种功能，包括轻松安装 (无需外部传感器跟踪你和控制器) ，你选择的耳机用于满足你的舒适和价格点，具有竞争性解决方案的耳机，最后提供了一个独特的用户体验，可让你从 Microsoft Store 使用成千上万的应用程序。
+**更多详细信息**： Windows Mixed Reality 提供多种功能，包括轻松安装 (无需外部传感器跟踪你和控制器) ，你选择的耳机用于满足你的舒适和价格点，具有竞争性解决方案的耳机，最后提供了一个独特的用户体验，可让你从 Microsoft Store 使用成千上万的应用程序。
 
-### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>混合现实是否意味着可以通过 "内部" 相机？ 除虚拟现实外，是否还会遇到更进一步的现实？
+### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>混合现实是否意味着可以通过 "内部" 相机？ 除了虚拟现实以外，你还可以体验更进一步的现实
 
-**快速解答：** 不能，Windows Mixed Reality 耳机上的内联网相机仅用于位置跟踪。 Windows Mixed Reality 耳机是封闭像素的，这意味着它们适用于虚拟现实，而且不提供现实世界的视图或增加的现实。 
+**快速解答：** 不能，Windows Mixed Reality 耳机上的内联网相机仅用于位置跟踪。 Windows Mixed Reality 耳机是封闭像素的，这意味着它们适用于虚拟现实，而且不提供现实世界的视图或增加的现实。
 
-### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>什么是内部跟踪？ 它与外部跟踪或 lighthouse 跟踪有何不同？
+### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>什么是内部跟踪？ 它与外部跟踪或 lighthouse 跟踪有何不同
 
 * **内部跟踪** Windows Mixed Reality 使用内部跟踪。 带外跟踪相机内置于耳机并跟踪环境中的更改，以便在移动时确定耳机位置与环境相关。
 
@@ -65,11 +65,11 @@ ms.locfileid: "92907439"
 
 若要详细了解内部输出跟踪，可访问： <https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system>
 
-### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>由于相机 FOV，运动控制器的跟踪是否会影响游戏播放？
+### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>由于相机 FOV，移动控制器的跟踪是否会影响游戏播放
 
  与耳机一样，Windows Mixed Reality 运动控制器不需要外部跟踪传感器的设置。 相反，控制器由耳机本身中的传感器跟踪。 如果用户将控制器移出耳机的视图，则在大多数情况下，Windows 将继续推断控制器位置，并将其提供给应用。 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。 此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器来指向和激活 UI 元素的应用程序可以正常运行，而无需用户进行注意。 为此，最好的方法是亲自尝试一下。
 
-### <a name="how-is-windows-mixed-reality-different-from-samsung-gear-vr"></a>Windows Mixed Reality 与 Samsung 齿轮 VR 有何不同？
+### <a name="how-is-windows-mixed-reality-different-from-samsung-gear-vr"></a>Windows Mixed Reality 与 Samsung 齿轮 VR 的不同之处
 
 **快速解答：** 所有基于 smartphone 的 VR 产品（包括 Samsung 齿轮 VR 和 Google Daydream）均使用3度自由 (3DOF) 头位置跟踪系统。 基于3DOF 的系统使你可以 **仅** 从虚拟世界中的颈部移动你的头部。 另一方面，Windows 尊敬地使用6度自由 (6DOF) 头和控制器位置跟踪系统。 基于6DOF 的系统允许您在虚拟世界中移动整个主体;这样您就可以浏览对象，并从不同的角度进行查看，就像您在现实世界中一样。 Rift 和 Naopak 也是基于6DOF 的系统。
 
@@ -368,7 +368,7 @@ ms.locfileid: "92907439"
 
 **快速解答：** 是的，即使您没有太多空间，Windows Mixed Reality 也能正常工作。 可以在安装过程中通过选择 "桌面规模" 体验来设置此项。
 
-## <a name="content"></a>Content
+## <a name="content"></a>内容
 
 ### <a name="what-games-and-apps-run-on-windows-mixed-reality"></a>哪些游戏和应用在 Windows Mixed Reality 上运行？
 

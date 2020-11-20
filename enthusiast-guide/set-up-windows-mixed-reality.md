@@ -3,12 +3,12 @@ title: 设置 Windows Mixed Reality
 description: 如何设置 Windows Mixed Reality 运动控制器、语音和音频，并为安全播放空间定义房间边界。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，运动控制器，控制器，语音，音频，固定，下，边界，图形驱动程序，Microsoft Edge，chromium
-ms.openlocfilehash: 95ca5b8d86e26061e565a74efa36e49cc3d1b92b
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 16fa0fbf1574a61a5c7401de8a1e0431e183ec11
+ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132141"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95002992"
 ---
 # <a name="set-up-windows-mixed-reality"></a>设置 Windows Mixed Reality
 
@@ -24,7 +24,11 @@ ms.locfileid: "93132141"
 
 ## <a name="get-set"></a>获取集
 
-准备空间 (包括) 的开销空间。 请确保要使用的区域中没有障碍物、危险或脆弱的项目。 请勿在楼梯的顶部或在超低天花板风扇下进行设置。 从区域中删除 breakables 和障碍，并确保你和使用你的耳机的任何人都阅读并了解 [安全指导原则](https://support.microsoft.com/help/4039969)。
+准备空间 (包括) 的开销空间。 请确保要使用的区域中没有障碍物、危险或脆弱的项目。 请勿在楼梯的顶部或在超低天花板风扇下进行设置。 从区域中删除 breakables 和障碍，并确保你和使用你的耳机的任何人都阅读并了解安全指导原则。
+
+空间准备就绪后，请插入耳机，但不要将其放置在一起，首先我们需要在你的电脑上进行一些设置。 我们将运行电脑检查、下载某些软件、连接控制器，并创建 [边界](boundary-questions.md) 来帮助避免障碍。
+
+然后，将其放在您的耳机上，并进入 mixed world。 Cortana 将等待为你演示。 玩得愉快！
 
 ## <a name="go"></a>开始！
 
@@ -40,7 +44,7 @@ ms.locfileid: "93132141"
 
 如果只计划使用 Xbox 游戏板或键盘和鼠标，则无需配对控制器。  如果你计划使用控制器，你应该将它们配对。
 
-**注意** ： Windows Mixed Reality 运动控制器需要蓝牙4.0。 如果你的电脑没有内置蓝牙，你将需要插入支持蓝牙4.0 的 USB 蓝牙适配器，才能启用运动控制器。 如果你使用的是耳机中的内置广播，则不需要蓝牙适配器。
+**注意**： Windows Mixed Reality 运动控制器需要蓝牙4.0。 如果你的电脑没有内置蓝牙，你将需要插入支持蓝牙4.0 的 USB 蓝牙适配器，才能启用运动控制器。 如果你使用的是耳机中的内置广播，则不需要蓝牙适配器。
 
 ![熟悉运动控制器](images/get_to_know_controllers.png)
 
@@ -100,7 +104,7 @@ Windows Mixed Reality 中当前支持的最大边界大小为 18x18ft (5.7 x 5.7
 
 ## <a name="adjusting-your-headsets-display-settings"></a>调整头戴显示设备的显示设置
 
-Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平衡质量和性能的显示设置。 若要调整这些设置，请参阅 " **设置" > 混合现实 > 耳机显示** 。
+Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平衡质量和性能的显示设置。 若要调整这些设置，请参阅 " **设置" > 混合现实 > 耳机显示**。
 
 ### <a name="visuals"></a>视觉对象
 
@@ -126,7 +130,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 
 此高级设置将覆盖默认的耳机显示刷新频率体验。
 
-* **自动 (默认)** ：根据电脑的硬件配置，自动选择60Hz 或90Hz 体验。
+* **自动 (默认)**：根据电脑的硬件配置，自动选择60Hz 或90Hz 体验。
 * **60Hz**
 * **90Hz**
 
@@ -138,7 +142,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 此设置控制 Windows Mixed Reality 为响应头戴显示传感器的行为：
 
 * **使用耳机状态传感器自动切换** (默认) ：在戴上耳机时，windows 将自动将输入 (键盘、鼠标 ... ) 到 Windows Mixed Reality。 可以通过 Win + Y 随时替代此情况。
-* **使用 Windows 徽标键 + Y 手动切换** ： windows 不会使用耳机状态传感器来检测戴戴显示设备。 需要使用 Win + Y 在 PC 桌面和 Windows Mixed Reality 之间切换输入。
+* **使用 Windows 徽标键 + Y 手动切换**： windows 不会使用耳机状态传感器来检测戴戴显示设备。 需要使用 Win + Y 在 PC 桌面和 Windows Mixed Reality 之间切换输入。
 
 此设置在 Windows 10 版本1903或更高版本上可用。
 

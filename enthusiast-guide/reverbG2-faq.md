@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 7d6d5a1eeabffdd7ad6d4ddd070a14c6dcf0d5ee
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+ms.openlocfilehash: 241fb95d92c771af727cc50287e4d1b2526123a5
+ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573201"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95002962"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -75,7 +75,7 @@ HP 建议：
 ## <a name="my-steamvr-games-dont-appear-to-work-correctly-with-my-hp-motion-controllers"></a>我的 SteamVR 游戏似乎无法与我的 HP 运动控制器一起正常工作
 
 虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 对于 "SteamVR 的 Windows Mixed Reality" 已完全更新到版本1.2.444，当游戏运行时，应自动选取这些绑定。 但是，如果你目前没有注册操作，你可以使用 "SteamVR 设置" 菜单手动搜索自定义绑定配置文件。
-任务
+要执行此操作
 
 - 按下右运动控制器的菜单按钮打开 SteamVR 菜单
 - 选择 SteamVR 菜单右下角的 "设置" 图标
