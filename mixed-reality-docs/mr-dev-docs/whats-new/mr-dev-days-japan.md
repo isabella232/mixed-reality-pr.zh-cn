@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: e120582e6184b9b105221aeddb5bcb42629ccb0c
-ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+ms.openlocfilehash: 6f673c78004f94692fcb09d304d6d40d2f97f1c3
+ms.sourcegitcommit: 893d7df2df66316e881dfba578a2810c203d9aa3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933262"
+ms.locfileid: "94941853"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -51,7 +51,7 @@ ms.locfileid: "94933262"
 |12： 00 (：50pm|*就餐会话* 面板：交互式免费讨论、问答、MRTK + Oculus|Madoka Chiyoda + Microsoft Mvp|JA|200|
 |12：50pm： 00 (|**分**||||
 |1： 00 (：25pm|*会话 3* HoloLens 2 开发概述|Madoka Chiyoda|JA|200|
-|1：下午6:30：55pm|*会话 4* HoloLens 2 & MRTK (MRTK-Unity) |Yoon 寄存|JA|300|
+|1：下午6:30：55pm|*会话 4* MRTK 的 UX 构建基块 (v 2.5.0) |Yoon 寄存|JA|300|
 |2： 00 (：25pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
 |2：下午6:30：55pm|*会话 6* 创建 "设计全息影像" 应用。 我们将深入探讨在创建这个新的 HoloLens 2 应用程序时发现的功能、挑战和其他有趣的知识。|Daniel Escudero|CN|300|
 |2：55pm：10pm|**分**||||
