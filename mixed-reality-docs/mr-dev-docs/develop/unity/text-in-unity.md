@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，控件，字体，版式，ui，ux，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 9778b1b11db7ac1c330b0ede4f6153deff45a95a
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 04b62cd0989042856dbd15d467d042f67df69931
+ms.sourcegitcommit: 5d6dbbb94e60cf10786d0fbbaf4239a1541e9e29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677356"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95008130"
 ---
 # <a name="text-in-unity"></a>Unity 中的文本
 
@@ -93,7 +93,7 @@ Segoe UI (Windows) 默认字体在大多数情况下都适用。 不过，请避
 
 ### <a name="shader-with-occlusion-support"></a>具有封闭支持的着色器
 
-Unity 的默认字体材料不支持封闭。 因此，默认情况下，你会看到对象后面的文本。 我们包含了一个 [支持封闭的简单着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader)。 下图显示了默认字体材料 (左) 的文本，以及具有适当封闭 (右) 的文本。
+Unity 的默认字体材料不支持封闭。 因此，默认情况下，你会看到对象后面的文本。 我们包含了一个 [支持封闭的简单着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/StandardAssets/Shaders/Text3DShader.shader)。 下图显示了默认字体材料 (左) 的文本，以及具有适当封闭 (右) 的文本。
 
 ![具有封闭支持的着色器](images/hug-text-07-1000px.png)<br>
 *具有封闭支持的着色器*
@@ -113,6 +113,6 @@ Unity 的默认字体材料不支持封闭。 因此，默认情况下，你会�
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [MRTK 中的文本 Prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [版式](../../design/typography.md)
