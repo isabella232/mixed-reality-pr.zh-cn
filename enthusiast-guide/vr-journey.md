@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，
-ms.openlocfilehash: 429a1130d628f54f12eb8ff6eed3f48d4712143a
-ms.sourcegitcommit: 893d7df2df66316e881dfba578a2810c203d9aa3
+ms.openlocfilehash: 9426a85611cf53a349ca5bc8f3727ee8a784940e
+ms.sourcegitcommit: a129039d8ed228ed0305aa312006cadf403f0831
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94941863"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95417201"
 ---
 # <a name="start-your-vr-journey"></a>开始你的 VR 旅程
 
@@ -29,7 +29,7 @@ ms.locfileid: "94941863"
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [开始之前](before-you-start.md) |  |
+| [开始之前](before-you-start.md) | 请确保拥有启动 VR 旅程所需的一切 |
 | [电脑硬件最低要求指南](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) | 你需要了解的有关运行 Windows Mixed Reality、Windows Mixed Reality 和 Windows Mixed Reality 门户应用程序的所有信息 |
 | [获取有关电脑兼容性的帮助](get-help-with-pc-compatibility.md) | 了解 Windows Mixed Reality PC 检查中生成的报告 |
 | [购买常见问题解答](before-you-buy-faqs.md) | 获取有关技术规格、设备和控制器的所有购买问题的解答 |
@@ -52,7 +52,7 @@ ms.locfileid: "94941863"
 
 <br>
 
-|  Checkpoint  |  Feature  |
+|  检查点  |  功能  |
 | --- | --- |
 | [了解 Mixed Reality](learn-mixed-reality.md) | 了解如何使用注视、语音、控制器和键盘/鼠标输入 |
 | [导航 Windows Mixed Reality 主页](your-mixed-reality-home.md) | 探索 Windows Mixed Reality 主页的虚拟环境  |
@@ -64,11 +64,16 @@ ms.locfileid: "94941863"
 
 ## <a name="4-discover-apps-and-content"></a>4. 发现应用和内容
 
-查找沉浸式游戏、桌面应用程序和 VR 内容，并使用以下资源中的 Microsoft Edge 浏览器。 
+在下面的资源中查找沉浸式游戏、桌面应用程序和 VR 内容。 
 
 <br>
 
-| [游戏、360视频和应用](using-games-and-apps-in-windows-mixed-reality.md) |开始处理第一个沉浸式游戏、2D 商店清单、桌面应用程序和 WebVR 体验 | | [使用 SteamVR](using-steamvr-with-windows-mixed-reality.md) |连接你的设备并播放 SteamVR 游戏并了解 Windows 预览体验计划 | | [使用 Microsoft Edge](using-microsoft-edge.md) |在沉浸式设备上安装最新版本的 Microsoft Edge | | [使用 WebVR](webvr.md) |在浏览器环境中获取用于体验 VR 的设置 |
+|  检查点  |  功能  |
+| --- | --- |
+| [游戏、360视频和应用](using-games-and-apps-in-windows-mixed-reality.md) | 开始处理第一个沉浸式游戏、2D 商店清单、桌面应用程序和 WebVR 体验 |
+| [使用 SteamVR](using-steamvr-with-windows-mixed-reality.md) | 连接设备并播放 SteamVR 游戏并了解 Windows 预览体验计划 |
+| [使用 Microsoft Edge](using-microsoft-edge.md) | 在沉浸式设备上安装最新版本的 Microsoft Edge |
+| [使用 WebVR](webvr.md) | 在浏览器环境中设置体验 VR |
 
 ## <a name="troubleshooting-tips--resources"></a>故障排除、提示 & 资源
 
