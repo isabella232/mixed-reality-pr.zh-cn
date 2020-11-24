@@ -1,0 +1,24 @@
+### YamlMime:Landing
+title: 欢迎使用 Maquette
+summary: 摘要
+metadata:
+  title: 欢迎使用 Maquette
+  description: description
+  ms.prod: mixed-reality
+  ms.topic: landing-page
+  author: hferrone
+  ms.author: v-hferrone
+  ms.date: 10/26/2020
+  ms.openlocfilehash: 8993c77e1fce0948f7dd5ea05085089851f0f6c6
+  ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 11/19/2020
+  ms.locfileid: "94935253"
+landingContent:
+- title: 关于 Maquette
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什么是 Maquette？
+      url: overview/about.md

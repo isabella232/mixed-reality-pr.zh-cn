@@ -1,2 +1,10 @@
-- name: 索引
-  href: index.md
+- name: 欢迎使用 Maquette
+  href: index.yml
+- name: 概述
+  href: overview/toc.yml
+- name: 快速入门
+  href: quickstarts/toc.yml
+- name: 示例
+  href: samples/toc.yml
+- name: 资源
+  href: resources/toc.yml
