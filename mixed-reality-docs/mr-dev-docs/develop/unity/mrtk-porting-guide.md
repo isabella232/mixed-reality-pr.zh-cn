@@ -6,13 +6,13 @@ ms.author: grbury
 ms.date: 07/29/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, 测试, MRTK, MRTK 版本 2, HoloLens 2
-ms.openlocfilehash: 88bee12196099837f46164552c690a6b326f9ba7
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+keywords: Windows Mixed Reality, 测试, MRTK, MRTK 版本 2, HoloLens 2, unity, 移植, HoloLens 第一代, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 迁移, 最佳做法, ARM
+ms.openlocfilehash: 84edf3b029140884443c23d685fe03a12161d1b8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386223"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677386"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>让现有应用准备好使用 HoloLens 2
 
@@ -89,7 +89,7 @@ HoloLens（第 1 代）在 x86 处理器上执行应用程序，而 HoloLens 2 �
 
 ### <a name="prepare-for-the-migration"></a>准备迁移
 
-在引入新的 [适用于 MRTK v2 的 *.unitypackage 文件](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)之前，建议清点： **1) 与 MRTK v1 集成的任何自定义生成代码** ； **2) 用于输入交互或 UX 组件的任何自定义生成代码** 。 混合现实开发人员在引入 MRTK v2 时最常出现的冲突与输入和交互相关。 我们建议阅读并理解 [MRTK v2 输入模型](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)。
+在引入新的 [适用于 MRTK v2 的 *.unitypackage 文件](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)之前，建议清点：**1) 与 MRTK v1 集成的任何自定义生成代码**；**2) 用于输入交互或 UX 组件的任何自定义生成代码**。 混合现实开发人员在引入 MRTK v2 时最常出现的冲突与输入和交互相关。 我们建议阅读并理解 [MRTK v2 输入模型](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)。
 
 最后，新的 [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity) 已从脚本和场景内管理器对象模型过渡到配置与服务提供程序体系结构。 这可以建立一种更简洁的场景层次结构和体系结构模型，但需要通过学习来了解新的配置文件。 因此，请阅读[混合现实工具包配置指南](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html)，以开始熟悉重要的设置和配置文件，并根据应用程序的需求进行调整。
 
@@ -107,7 +107,7 @@ HoloLens（第 1 代）在 x86 处理器上执行应用程序，而 HoloLens 2 �
 - 尽可能地使用默认 MRTK UX（按钮、盖板等）。
 - 避免直接修改 MRTK 文件，改为创建围绕 MRTK 组件的包装器。
     - 此操作方便将来的 MRTK 引入和更新。
-- 查看并探索 MRTK 中提供的示例场景，尤其是 *HandInteractionExamples.scene* 。
+- 查看并探索 MRTK 中提供的示例场景，尤其是 *HandInteractionExamples.scene*。
 - 使用四面体、碰撞体和 TextMeshPro 文本重新生成基于画布的 UI。
 - 启用[深度缓冲区共享](camera-in-unity.md#sharing-your-depth-buffers-with-windows)或[设置焦点](focus-point-in-unity.md)；首选使用 16 位深度缓冲区以提高性能。 确保在渲染颜色的同时渲染深度。 Unity 通常不会写入透明和文本游戏对象的深度。 
 - 设置单通道实例化渲染路径。

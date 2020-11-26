@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 08/04/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发
-ms.openlocfilehash: a8e345831167362745a45a8fa81ddae858083ca7
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
+ms.openlocfilehash: b810ad7500f8bb2a70ef18ad29fb32df8801a2de
+ms.sourcegitcommit: 2759aba06e643d70004023b105ed26b33ce3dbfa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340685"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810443"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 
@@ -29,7 +29,7 @@ ms.locfileid: "94340685"
 如果你不熟悉 Unreal 开发，请勿直接跳转。 探索 Unreal <a href="https://docs.unrealengine.com/GettingStarted/index.html" target="_blank">教程系列</a>，以快速了解和查找 Unreal <a href="https://www.unrealengine.com/marketplace/store" target="_blank">市场</a>和混合现实<a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">论坛</a>中的资产和支持。 这些资源是指向当今混合现实市场中的构建者和问题解决者的社区的链接。
 
 > [!IMPORTANT]
-> 如果你有一个现成的 Unreal 项目想要引入到 HoloLens 2 或沉浸式头戴显示设备（例如 Reverb G2）中，请查看我们的[移植指南](../porting-apps/porting-overview.md)。
+> 如果你有一个现成的 Unreal 项目想要引入到沉浸式头戴显示设备（例如 Reverb G2）中，请查看我们的[移植指南](unreal-reverb-g2-controllers.md)。
 
 ## <a name="development-checkpoints"></a>开发检查点
 

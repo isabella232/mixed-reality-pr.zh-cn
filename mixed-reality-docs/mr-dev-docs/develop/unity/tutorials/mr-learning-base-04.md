@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器, 网格对象集合
 ms.localizationpriority: high
-ms.openlocfilehash: 849de7c50adc8ff1da5262ad46fae50cce48e953
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: b49d1b93b98a68e253239647262edc737fdbeb58
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353215"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679306"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4.定位场景中的对象
 
@@ -53,9 +53,9 @@ ms.locfileid: "93353215"
 
 在仍选中 RoverExplorer 对象的情况下，在“检查器”窗口中，按如下所示配置“转换”组件：
 
-* **位置** ：X = 0, Y = -0.6, Z = 2
-* **旋转** ：X = 0, Y = 0, Z = 0
-* **缩放** ：X = 1，Y = 1，Z = 1
+* **位置**：X = 0, Y = -0.6, Z = 2
+* **旋转**：X = 0, Y = 0, Z = 0
+* **缩放**：X = 1，Y = 1，Z = 1
 
 ![选中并定位了 RoverExplorer 对象的 Unity](images/mr-learning-base/base-04-section2-step1-3.png)
 
@@ -73,9 +73,9 @@ ms.locfileid: "93353215"
 
 在“项目”窗口中，单击“Table”预制件并将其拖动到 RoverExplorer 对象上，使其成为 RoverExplorer 对象的子对象，然后在“检查器”窗口中，按如下所示配置“转换”组件  ：
 
-* **位置** ：X = 0, Y = -0.005, Z = 0
-* **旋转** ：X = 0, Y = 0, Z = 0
-* **缩放** ：X = 1.2，Y = 0.01，Z = 1.2
+* **位置**：X = 0, Y = -0.005, Z = 0
+* **旋转**：X = 0, Y = 0, Z = 0
+* **缩放**：X = 1.2，Y = 0.01，Z = 1.2
 
 ![选中并定位了新增的“表”预制件的 Unity](images/mr-learning-base/base-04-section3-step1-2.png)
 
@@ -84,9 +84,9 @@ ms.locfileid: "93353215"
 
 在“项目”窗口中，单击“RoverAssembly”预制件并将其拖动到 RoverExplorer 对象上，使其成为 RoverExplorer 对象的子对象，然后在“检查器”窗口中，按如下所示配置“转换”组件  ：
 
-* **位置** ：X = -0.1, Y = 0, Z = 0
-* **旋转** ：X = 0, Y = -135, Z = 0
-* **缩放** ：X = 1，Y = 1，Z = 1
+* **位置**：X = -0.1, Y = 0, Z = 0
+* **旋转**：X = 0, Y = -135, Z = 0
+* **缩放**：X = 1，Y = 1，Z = 1
 
 ![选中并定位了新增的 RoverAssembly 预制件的 Unity](images/mr-learning-base/base-04-section3-step1-3.png)
 
@@ -94,9 +94,9 @@ ms.locfileid: "93353215"
 
 在“层次结构”窗口中，右键单击“RoverExplorer”对象，然后选择“创建空白项”添加一个空对象作为 RoverExplorer 的子对象，将该对象命名为“RoverParts”，并按如下所示配置“转换”组件   ：
 
-* **位置** ：X = 0, Y = 0.06, Z = 0
-* **旋转** ：X = 0, Y = 90, Z = 0
-* **缩放** ：X = 1，Y = 1，Z = 1
+* **位置**：X = 0, Y = 0.06, Z = 0
+* **旋转**：X = 0, Y = 90, Z = 0
+* **缩放**：X = 1，Y = 1，Z = 1
 
 ![选中并定位了新创建的 RoverParts 对象的 Unity](images/mr-learning-base/base-04-section4-step1-1.png)
 
@@ -128,10 +128,10 @@ ms.locfileid: "93353215"
 
 按如下所示配置“GridObjectCollection”组件值：
 
-* **排序类型** ：按字母顺序
-* **布局** ：水平
-* **单元格宽度** ：0.25
-* **到父项的距离** ：0.38
+* **排序类型**：按字母顺序
+* **布局**：水平
+* **单元格宽度**：0.25
+* **到父项的距离**：0.38
 
 ![配置了 GridObjectCollection 组件的 Unity](images/mr-learning-base/base-04-section4-step1-7.png)
 

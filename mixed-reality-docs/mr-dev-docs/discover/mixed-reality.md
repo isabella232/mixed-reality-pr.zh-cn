@@ -5,14 +5,14 @@ author: brandonbray
 ms.author: branbray
 ms.date: 08/26/2020
 ms.topic: article
-keywords: 混合现实, 全息, AR, VR, MR, XR, 增强现实, 虚拟现实, 说明
+keywords: 混合现实, 全息, AR, VR, MR, XR, 增强现实, 虚拟现实, 说明, 案例研究, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实
 ms.localizationpriority: high
-ms.openlocfilehash: 44914decd9530a11d11127b43af527d995f6c252
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+ms.openlocfilehash: 5f4e41c04206eb5ca1a0d2e0dac914a1b3b1052d
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631485"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703123"
 ---
 # <a name="what-is-mixed-reality"></a>什么是混合现实？
 

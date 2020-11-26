@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens, hololens 2, Azure 空间定位点
+keywords: 混合现实, unity, 教程, hololens, hololens 2, Azure 空间定位点, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: f8271fe3b3b9549d6c95707466db9af3d312fab7
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 5245f3522e7822c16ebc0d0113634f152f223086
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353245"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679336"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4.集成 Azure 空间定位点
 

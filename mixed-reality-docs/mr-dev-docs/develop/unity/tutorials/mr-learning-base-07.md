@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界框
 ms.localizationpriority: high
-ms.openlocfilehash: 1e91cc97f68a4d4b5bcb015184e96582533d1f96
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 5e2857a7baf85187902bd98de6271e53dcc3539e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353515"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679266"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 
@@ -34,12 +34,12 @@ ms.locfileid: "93353515"
 3. 配置“对象操控器(脚本)”组件
 
 > [!NOTE]
-> 若要 **操作某个对象** ，该对象必须具有以下组件：
+> 若要 **操作某个对象**，该对象必须具有以下组件：
 >
 > * “碰撞体”组件，例如盒碰撞体
 > * “对象操控器(脚本)”组件
 >
-> 若要使用跟踪手 **操作** 和 **抓取某个对象** ，该对象必须具有以下组件：
+> 若要使用跟踪手 **操作** 和 **抓取某个对象**，该对象必须具有以下组件：
 >
 > * “碰撞体”组件，例如盒碰撞体
 > * “对象操控器(脚本)”组件

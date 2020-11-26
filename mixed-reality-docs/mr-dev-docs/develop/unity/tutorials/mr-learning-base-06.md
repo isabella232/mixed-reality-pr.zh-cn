@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 预制件, 全息影像, 工具提示
 ms.localizationpriority: high
-ms.openlocfilehash: f4530cb6519434f8eb74e5335fecbe82ac2cd2c2
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+ms.openlocfilehash: 9ef3f17f8ec5508ace0c5d05cccf7a8383e54353
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631525"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679286"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
 

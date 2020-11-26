@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: 64b5c3c719ce72260a10226d22c178d4016e403b
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: fb86cdfe82e8d89c65e8513b52e2de49f52a2f04
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353525"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679296"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -111,9 +111,9 @@ ms.locfileid: "93353525"
 
 在“层次结构”窗口中，右键单击空白区域，然后选择“3D 对象” > “Cube”，创建代表地面的临时对象，并按如下所示配置“转换”组件  ：
 
-* **位置** ：X = 0, Y = -1.65, Z = 6
-* **旋转** ：X = 0, Y = 0, Z = 0
-* **缩放** ：X = 10, Y = 0.2, Z = 10
+* **位置**：X = 0, Y = -1.65, Z = 6
+* **旋转**：X = 0, Y = 0, Z = 0
+* **缩放**：X = 10, Y = 0.2, Z = 10
 
 ![添加并定位了临时地面多维数据集对象的 Unity](images/mr-learning-base/base-05-section3-step1-4.png)
 

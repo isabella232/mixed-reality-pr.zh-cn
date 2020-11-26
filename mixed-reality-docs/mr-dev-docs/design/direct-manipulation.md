@@ -6,13 +6,13 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: 混合现实, 视线, 视线定位, 交互, 设计, 手动近距, HoloLens
-ms.openlocfilehash: 8141bc588247be15174d4a85992b74911ffc002e
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计, 手动近距, HoloLens, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, MRTK, 混合现实工具包, 按钮, 碰撞体, 边界框, 2D, 本能手势
+ms.openlocfilehash: a882aa4bace0d911d328ad82d881b5c0d8cd0c96
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631535"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702843"
 ---
 # <a name="direct-manipulation-with-hands"></a>用手直接操作
 

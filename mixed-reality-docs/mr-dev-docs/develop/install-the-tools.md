@@ -6,13 +6,13 @@ ms.author: alexturn
 ms.date: 09/07/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: 最新, 工具, 入门, 基础, Unity, Visual Studio, 工具包
-ms.openlocfilehash: 8e123ec9de117b3c1c5959f2719481ae8094a9e6
-ms.sourcegitcommit: f459c7deb254409fd5db3967bcc875bcbc367e77
+keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
+ms.openlocfilehash: 54d74f51473bda99e4f9ffea8157ee44696ab9f4
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94482406"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678226"
 ---
 # <a name="install-the-tools"></a>安装工具
 

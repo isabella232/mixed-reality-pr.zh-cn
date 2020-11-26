@@ -6,16 +6,16 @@ ms.author: suwu
 ms.date: 7/10/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 流式传输, 电脑, 全息应用远程处理, 全息远程处理播放器, 文档
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 流式传输, 电脑, 全息应用远程处理, 全息远程处理播放器, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 9c60168b409a10a815313b1254a979244763b9e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 5a001088208106176ae771c2bc684674e6ce37a8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697107"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679776"
 ---
 # <a name="streaming-in-unreal"></a>Unreal 中的流式传输
 

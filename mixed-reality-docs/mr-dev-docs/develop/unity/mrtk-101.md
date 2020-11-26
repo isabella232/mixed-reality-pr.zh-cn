@@ -5,14 +5,14 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
-keywords: HoloLens, MRTK, 混合现实工具包, Windows Mixed Reality, 设计, 示例应用, 控件
+keywords: HoloLens, MRTK, 混合现实工具包, Windows Mixed Reality, 设计, 示例应用, 控件, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
 ms.localizationpriority: high
-ms.openlocfilehash: d10de5c9f16e0caa289d5110647b4c45a8a8fcf9
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+ms.openlocfilehash: 95d8f8c52b226eda7ea1601feffc1464c2ea91c5
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386261"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677527"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-common-spatial-interactions"></a>MRTK 101：如何使用混合现实工具包 Unity 进行常见的空间交互
 ![MRTK](images/MRTK101/MRTK101Cover.png)

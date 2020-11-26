@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档
-ms.openlocfilehash: 5af888fe57afce21e9ff0ccfe8144533e7368acf
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
+ms.openlocfilehash: 82e210aff35f1c41547f022b91114cbca1419830
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696999"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679876"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3.设置混合现实项目
 
@@ -71,6 +71,9 @@ Unreal 中的 AR 会话无法自行发生。 要使用会话，需要借助 ARSe
 ![调整 Pawn 的碰撞预设](images/unreal-uxt/3-nocollision.PNG)
 
 3. 从“组件”面板中单击“添加组件”>“相机”，然后将其命名为“相机”  。 这样，玩家相机就能随 HoloLens 2 设备一起移动。
+
+> [!NOTE]
+> 确保“相机”组件是根 (CollisionComponent) 的直接子级 。
 
 4. 编译并保存蓝图 。
 

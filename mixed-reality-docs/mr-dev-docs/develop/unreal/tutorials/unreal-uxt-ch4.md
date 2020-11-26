@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 08/18/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档
-ms.openlocfilehash: a4ad1879e73c85e25e5de675a4180f57361691a9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
+ms.openlocfilehash: dc17b878255a3d6a8e0efc3a4c5bd7aa7d57373d
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697201"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679846"
 ---
 # <a name="4-making-your-scene-interactive"></a>4.使场景具有交互性
 

@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, TextMeshPro
 ms.localizationpriority: high
-ms.openlocfilehash: 2fb742f71baef50881a4a3279e7b0a1b969f0306
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 62f79e1a50f8a2f0d2c8829b968e2c3bf5ee7403
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353435"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679376"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2.初始化项目并部署第一个应用程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "93353435"
 
 ## <a name="creating-the-unity-project"></a>创建 Unity 项目
 
-启动“Unity 中心”，选择“项目”选项卡，然后单击“新建”按钮旁边的 **向下箭头** ：
+启动“Unity 中心”，选择“项目”选项卡，然后单击“新建”按钮旁边的 **向下箭头**：
 
 ![突出显示了“新建”按钮的 Unity 中心](images/mr-learning-base/base-02-section1-step1-1.png)
 
@@ -197,7 +197,7 @@ Unity 导入完 Windows Mixed Reality SDK 后，应再次显示“MRTK 项目配
 
 ![选中了 UWP 的 Unity“生成设置”窗口](images/mr-learning-base/base-02-section7-step1-1.png)
 
-在“生成通用 Windows 平台”窗口中，选择用于存储生成的适当位置（例如 _D:\MixedRealityLearning\Builds_ ），创建一个新文件夹并为其指定适当的名称（例如 _GettingStarted_ ），然后单击“选择文件夹”按钮，启动生成过程：
+在“生成通用 Windows 平台”窗口中，选择用于存储生成的适当位置（例如 _D:\MixedRealityLearning\Builds_），创建一个新文件夹并为其指定适当的名称（例如 _GettingStarted_），然后单击“选择文件夹”按钮，启动生成过程：
 
 ![具有“选择文件夹”提示窗口的 Unity“生成设置”窗口](images/mr-learning-base/base-02-section7-step1-2.png)
 

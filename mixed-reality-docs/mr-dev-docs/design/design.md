@@ -6,13 +6,13 @@ ms.author: grbury
 ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互
-ms.openlocfilehash: 19a83a132cca08573f1066a2f7b87bd383ca79f4
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包
+ms.openlocfilehash: 3c28991fa35052a8b5cf5a071899ec14f2fec226
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573271"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702713"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 

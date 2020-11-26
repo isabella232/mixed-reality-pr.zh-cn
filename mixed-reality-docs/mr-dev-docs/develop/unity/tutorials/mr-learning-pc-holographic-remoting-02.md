@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, Visual Studio
 ms.localizationpriority: high
-ms.openlocfilehash: ded881290de0167b7ffe26fc86b573d9b9ebb0b6
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+ms.openlocfilehash: 258fd80c812fca246190e98b3fa371b2f4c1b51f
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631495"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679236"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2.创建全息远程处理电脑应用程序
 
