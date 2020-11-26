@@ -5,53 +5,53 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, 求解器, 眼动跟踪, 语音命令
 ms.localizationpriority: high
-ms.openlocfilehash: 992d864d7e016c3d0906366d10993ff0559afc06
-ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
+ms.openlocfilehash: 14feba57c7a8995648d108ffa5e4af95c4fa2827
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93416895"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679326"
 ---
-# <a name="1-introduction-to-the-getting-started-tutorials"></a><span data-ttu-id="8dd7c-105">1.入门教程系列简介</span><span class="sxs-lookup"><span data-stu-id="8dd7c-105">1. Introduction to the Getting started tutorials</span></span>
+# <a name="1-introduction-to-the-getting-started-tutorials"></a><span data-ttu-id="905e1-105">1.入门教程系列简介</span><span class="sxs-lookup"><span data-stu-id="905e1-105">1. Introduction to the Getting started tutorials</span></span>
 
-## <a name="overview"></a><span data-ttu-id="8dd7c-106">概述</span><span class="sxs-lookup"><span data-stu-id="8dd7c-106">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="905e1-106">概述</span><span class="sxs-lookup"><span data-stu-id="905e1-106">Overview</span></span>
 
-<span data-ttu-id="8dd7c-107">欢迎使用入门教程系列！</span><span class="sxs-lookup"><span data-stu-id="8dd7c-107">Welcome to the Getting Started tutorial series!</span></span> <span data-ttu-id="8dd7c-108">这些教程将介绍混合现实工具包 (MRTK) 及其提供的一些功能。</span><span class="sxs-lookup"><span data-stu-id="8dd7c-108">Over the course of these tutorials, you'll learn about the Mixed Reality Toolkit (MRTK) and some of the features it has to offer.</span></span> <span data-ttu-id="8dd7c-109">此外，还将构建一个混合现实体验，让用户可在其中浏览按 NASA 的“好奇号”火星探测车建模的全息图。</span><span class="sxs-lookup"><span data-stu-id="8dd7c-109">You'll also build a mixed reality experience where the user can explore a hologram modeled after NASA's Mars Curiosity Rover.</span></span> <span data-ttu-id="8dd7c-110">本系列结束后，你将牢牢把握 MRTK 及其如何加速开发过程。</span><span class="sxs-lookup"><span data-stu-id="8dd7c-110">By the end of this series, you'll have a firm grasp of MRTK and how it can speed up your development process.</span></span>
+<span data-ttu-id="905e1-107">欢迎使用入门教程系列！</span><span class="sxs-lookup"><span data-stu-id="905e1-107">Welcome to the Getting Started tutorial series!</span></span> <span data-ttu-id="905e1-108">这些教程将介绍混合现实工具包 (MRTK) 及其提供的一些功能。</span><span class="sxs-lookup"><span data-stu-id="905e1-108">Over the course of these tutorials, you'll learn about the Mixed Reality Toolkit (MRTK) and some of the features it has to offer.</span></span> <span data-ttu-id="905e1-109">此外，还将构建一个混合现实体验，让用户可在其中浏览按 NASA 的“好奇号”火星探测车建模的全息图。</span><span class="sxs-lookup"><span data-stu-id="905e1-109">You'll also build a mixed reality experience where the user can explore a hologram modeled after NASA's Mars Curiosity Rover.</span></span> <span data-ttu-id="905e1-110">本系列结束后，你将牢牢把握 MRTK 及其如何加速开发过程。</span><span class="sxs-lookup"><span data-stu-id="905e1-110">By the end of this series, you'll have a firm grasp of MRTK and how it can speed up your development process.</span></span>
 
-<span data-ttu-id="8dd7c-111">本系列教程的设计遵循一定的顺序，因此请按正确的顺序学习：</span><span class="sxs-lookup"><span data-stu-id="8dd7c-111">Tutorials in this series are meant to be sequential, so please go through them in the correct order:</span></span>
+<span data-ttu-id="905e1-111">本系列教程的设计遵循一定的顺序，因此请按正确的顺序学习：</span><span class="sxs-lookup"><span data-stu-id="905e1-111">Tutorials in this series are meant to be sequential, so please go through them in the correct order:</span></span>
 
-1. <span data-ttu-id="8dd7c-112">[简介](mr-learning-base-01.md)（你已经位于这里）</span><span class="sxs-lookup"><span data-stu-id="8dd7c-112">[Introduction](mr-learning-base-01.md) (You're already here)</span></span>
-2. [<span data-ttu-id="8dd7c-113">初始化项目并部署第一个应用程序</span><span class="sxs-lookup"><span data-stu-id="8dd7c-113">Initializing your project and deploying your first application</span></span>](mr-learning-base-02.md)
-3. [<span data-ttu-id="8dd7c-114">配置 MRTK 配置文件</span><span class="sxs-lookup"><span data-stu-id="8dd7c-114">Configuring the MRTK profiles</span></span>](mr-learning-base-03.md)
-4. [<span data-ttu-id="8dd7c-115">定位场景中的对象</span><span class="sxs-lookup"><span data-stu-id="8dd7c-115">Positioning objects in the scene</span></span>](mr-learning-base-04.md)
-5. [<span data-ttu-id="8dd7c-116">使用求解器创建动态内容</span><span class="sxs-lookup"><span data-stu-id="8dd7c-116">Creating dynamic content using Solvers</span></span>](mr-learning-base-05.md)
-6. [<span data-ttu-id="8dd7c-117">创建用户界面</span><span class="sxs-lookup"><span data-stu-id="8dd7c-117">Creating user interfaces</span></span>](mr-learning-base-06.md)
-7. [<span data-ttu-id="8dd7c-118">与 3D 对象交互</span><span class="sxs-lookup"><span data-stu-id="8dd7c-118">Interacting with 3D objects</span></span>](mr-learning-base-07.md)
-8. [<span data-ttu-id="8dd7c-119">使用眼动跟踪</span><span class="sxs-lookup"><span data-stu-id="8dd7c-119">Using eye-tracking</span></span>](mr-learning-base-08.md)
-9. [<span data-ttu-id="8dd7c-120">使用语音命令</span><span class="sxs-lookup"><span data-stu-id="8dd7c-120">Using voice commands</span></span>](mr-learning-base-09.md)
+1. <span data-ttu-id="905e1-112">[简介](mr-learning-base-01.md)（你已经位于这里）</span><span class="sxs-lookup"><span data-stu-id="905e1-112">[Introduction](mr-learning-base-01.md) (You're already here)</span></span>
+2. [<span data-ttu-id="905e1-113">初始化项目并部署第一个应用程序</span><span class="sxs-lookup"><span data-stu-id="905e1-113">Initializing your project and deploying your first application</span></span>](mr-learning-base-02.md)
+3. [<span data-ttu-id="905e1-114">配置 MRTK 配置文件</span><span class="sxs-lookup"><span data-stu-id="905e1-114">Configuring the MRTK profiles</span></span>](mr-learning-base-03.md)
+4. [<span data-ttu-id="905e1-115">定位场景中的对象</span><span class="sxs-lookup"><span data-stu-id="905e1-115">Positioning objects in the scene</span></span>](mr-learning-base-04.md)
+5. [<span data-ttu-id="905e1-116">使用求解器创建动态内容</span><span class="sxs-lookup"><span data-stu-id="905e1-116">Creating dynamic content using Solvers</span></span>](mr-learning-base-05.md)
+6. [<span data-ttu-id="905e1-117">创建用户界面</span><span class="sxs-lookup"><span data-stu-id="905e1-117">Creating user interfaces</span></span>](mr-learning-base-06.md)
+7. [<span data-ttu-id="905e1-118">与 3D 对象交互</span><span class="sxs-lookup"><span data-stu-id="905e1-118">Interacting with 3D objects</span></span>](mr-learning-base-07.md)
+8. [<span data-ttu-id="905e1-119">使用眼动跟踪</span><span class="sxs-lookup"><span data-stu-id="905e1-119">Using eye-tracking</span></span>](mr-learning-base-08.md)
+9. [<span data-ttu-id="905e1-120">使用语音命令</span><span class="sxs-lookup"><span data-stu-id="905e1-120">Using voice commands</span></span>](mr-learning-base-09.md)
 
-## <a name="objectives"></a><span data-ttu-id="8dd7c-121">目标</span><span class="sxs-lookup"><span data-stu-id="8dd7c-121">Objectives</span></span>
+## <a name="objectives"></a><span data-ttu-id="905e1-121">目标</span><span class="sxs-lookup"><span data-stu-id="905e1-121">Objectives</span></span>
 
-* <span data-ttu-id="8dd7c-122">了解如何针对 MRTK 配置 Unity</span><span class="sxs-lookup"><span data-stu-id="8dd7c-122">Learn how to configure Unity for MRTK</span></span>
-* <span data-ttu-id="8dd7c-123">了解如何生成和部署到设备</span><span class="sxs-lookup"><span data-stu-id="8dd7c-123">Learn how to build and deploy to your device</span></span>
-* <span data-ttu-id="8dd7c-124">了解如何使用 MRTK 的一些主要功能</span><span class="sxs-lookup"><span data-stu-id="8dd7c-124">Learn how to use some of MRTK's key features</span></span>
-* <span data-ttu-id="8dd7c-125">创建完整的混合现实体验</span><span class="sxs-lookup"><span data-stu-id="8dd7c-125">Create a complete mixed reality experience</span></span>
+* <span data-ttu-id="905e1-122">了解如何针对 MRTK 配置 Unity</span><span class="sxs-lookup"><span data-stu-id="905e1-122">Learn how to configure Unity for MRTK</span></span>
+* <span data-ttu-id="905e1-123">了解如何生成和部署到设备</span><span class="sxs-lookup"><span data-stu-id="905e1-123">Learn how to build and deploy to your device</span></span>
+* <span data-ttu-id="905e1-124">了解如何使用 MRTK 的一些主要功能</span><span class="sxs-lookup"><span data-stu-id="905e1-124">Learn how to use some of MRTK's key features</span></span>
+* <span data-ttu-id="905e1-125">创建完整的混合现实体验</span><span class="sxs-lookup"><span data-stu-id="905e1-125">Create a complete mixed reality experience</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="8dd7c-126">必备条件</span><span class="sxs-lookup"><span data-stu-id="8dd7c-126">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="905e1-126">必备条件</span><span class="sxs-lookup"><span data-stu-id="905e1-126">Prerequisites</span></span>
 
-* <span data-ttu-id="8dd7c-127">一台 Windows 10 电脑，其中已[安装](../../install-the-tools.md)并配置正确的工具</span><span class="sxs-lookup"><span data-stu-id="8dd7c-127">A Windows 10 PC configured with the correct [tools installed](../../install-the-tools.md)</span></span>
-* <span data-ttu-id="8dd7c-128">[Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) 10.0.18362.0 或更高版本</span><span class="sxs-lookup"><span data-stu-id="8dd7c-128">[Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) 10.0.18362.0 or later</span></span>
-* <span data-ttu-id="8dd7c-129">一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备</span><span class="sxs-lookup"><span data-stu-id="8dd7c-129">A HoloLens 2 device [configured for development](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)</span></span>
-* <span data-ttu-id="8dd7c-130"><a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块</span><span class="sxs-lookup"><span data-stu-id="8dd7c-130"><a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> with Unity 2019 LTS installed and the Universal Windows Platform Build Support module added</span></span>
-
-> [!CAUTION]
-> <span data-ttu-id="8dd7c-131">建议用于本系列教程的 MRTK 版本是 MRTK 2.4.0。</span><span class="sxs-lookup"><span data-stu-id="8dd7c-131">The recommended MRTK version for this tutorial series is MRTK 2.4.0.</span></span>
+* <span data-ttu-id="905e1-127">一台 Windows 10 电脑，其中已[安装](../../install-the-tools.md)并配置正确的工具</span><span class="sxs-lookup"><span data-stu-id="905e1-127">A Windows 10 PC configured with the correct [tools installed](../../install-the-tools.md)</span></span>
+* <span data-ttu-id="905e1-128">[Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) 10.0.18362.0 或更高版本</span><span class="sxs-lookup"><span data-stu-id="905e1-128">[Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) 10.0.18362.0 or later</span></span>
+* <span data-ttu-id="905e1-129">一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备</span><span class="sxs-lookup"><span data-stu-id="905e1-129">A HoloLens 2 device [configured for development](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)</span></span>
+* <span data-ttu-id="905e1-130"><a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块</span><span class="sxs-lookup"><span data-stu-id="905e1-130"><a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> with Unity 2019 LTS installed and the Universal Windows Platform Build Support module added</span></span>
 
 > [!CAUTION]
-> <span data-ttu-id="8dd7c-132">建议对本系列教程使用 Unity 2019 LTS。</span><span class="sxs-lookup"><span data-stu-id="8dd7c-132">The recommended Unity version for this tutorial series is Unity 2019 LTS.</span></span> <span data-ttu-id="8dd7c-133">这将取代上述链接的先决条件中所述的任何 Unity 版本要求。</span><span class="sxs-lookup"><span data-stu-id="8dd7c-133">This supersedes any Unity version requirements stated in the prerequisites linked above.</span></span>
+> <span data-ttu-id="905e1-131">建议用于本系列教程的 MRTK 版本是 MRTK 2.4.0。</span><span class="sxs-lookup"><span data-stu-id="905e1-131">The recommended MRTK version for this tutorial series is MRTK 2.4.0.</span></span>
+
+> [!CAUTION]
+> <span data-ttu-id="905e1-132">建议对本系列教程使用 Unity 2019 LTS。</span><span class="sxs-lookup"><span data-stu-id="905e1-132">The recommended Unity version for this tutorial series is Unity 2019 LTS.</span></span> <span data-ttu-id="905e1-133">这将取代上述链接的先决条件中所述的任何 Unity 版本要求。</span><span class="sxs-lookup"><span data-stu-id="905e1-133">This supersedes any Unity version requirements stated in the prerequisites linked above.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8dd7c-134">下一教程：2.初始化项目并部署第一个应用程序</span><span class="sxs-lookup"><span data-stu-id="8dd7c-134">Next Tutorial: 2. Initializing your project and deploying your first application</span></span>](mr-learning-base-02.md)
+> [<span data-ttu-id="905e1-134">下一教程：2.初始化项目并部署第一个应用程序</span><span class="sxs-lookup"><span data-stu-id="905e1-134">Next Tutorial: 2. Initializing your project and deploying your first application</span></span>](mr-learning-base-02.md)
 

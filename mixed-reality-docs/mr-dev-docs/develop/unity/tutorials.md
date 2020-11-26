@@ -7,13 +7,13 @@ ms.author: kurtie
 ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 学院, 教程
-ms.openlocfilehash: 35a9d28b588099e691341c3bb81d377671064e58
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 学院, 教程, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, unity, unreal, HoloLens, Azure 空间定位点, Azure 语音服务
+ms.openlocfilehash: 0e3b1749790e3c372570bdd1d8e68fe3fd593dd8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696723"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677276"
 ---
 # <a name="tutorials"></a>教程 
 
