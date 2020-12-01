@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D，建模，建模指南，资产需求，创作准则，启动器，3D 启动器，纹理，材料，复杂性，三角形，网格，多边形，polycount，限制，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: fb2f2718497781a2d38a0a061016e146ff077488
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 6baf8bd4faf6bb9994806e846602c91b83a1530b
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703463"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443659"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>创建在主页中使用的 3D 模型
 
@@ -97,6 +97,9 @@ Windows Mixed Reality home 不支持每个 LOD 具有超过64个节点或 32 sub
 ## <a name="optimizations"></a>优化
 
 Windows Mixed Reality 主页在使用自定义扩展定义的核心 glTF 规范之上提供一系列优化。 Windows 版本 <为1709，并且建议在更高版本的 Windows 上执行这些优化。 可以使用 [GitHub 上提供的 Windows Mixed Reality 资产转换器](https://github.com/Microsoft/glTF-Toolkit/releases)轻松优化任何 glTF 2.0 模型。 此工具将执行下面指定的正确纹理打包和优化。 对于常规用法，我们建议使用 WindowsMRAssetConverter，但如果您需要更好地控制体验并想要生成自己的优化管道，则可以参阅下面的详细规范。  
+
+> [!NOTE]
+> 有关准确的模型限制的可能的确切列表，请参阅 [3d 模型优化](https://docs.microsoft.com/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) 一文，了解如何在 Dynamics 365 应用程序中使用。
 
 ### <a name="materials"></a>材料
 
@@ -277,7 +280,7 @@ Windows MR 不支持基元模式行和点。
 * [HoloLens 混合现实纹理封装扩展规范](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Microsoft DDS 纹理 glTF 扩展规范](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [实现 3D 应用启动器（UWP 应用）](implementing-3d-app-launchers.md)
 * [实现 3D 应用启动器（Win32 应用）](implementing-3d-app-launchers-win32.md)

@@ -3,15 +3,15 @@ title: 全息远程处理故障排除和限制
 description: HoloLens 2 上的全息远程处理的故障排除步骤。
 author: florianbagarmicrosoft
 ms.author: flbagar
-ms.date: 03/11/2020
+ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程影像，故障排除，帮助，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 9577f9f028987be71fdb9cd839f86980db350f02
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: ca0e4b3a43eae5be09f2c0bfbee9056cd847787c
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679576"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443597"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>全息远程处理疑难解答
 
@@ -105,7 +105,8 @@ ms.locfileid: "94679576"
 
 ## <a name="see-also"></a>另请参阅
 * [全息远程处理版本历史记录](holographic-remoting-version-history.md)
-* [编写全息远程处理远程应用](holographic-remoting-create-host.md)
+* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理软件许可条款](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

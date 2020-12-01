@@ -1,17 +1,17 @@
 ---
 title: 添加全息远程处理
 description: 介绍如何使用全息远程处理通过网络将全息影像呈现到 HoloLens。
-author: mikeriches
-ms.author: mriches
-ms.date: 05/24/2019
+author: florianbagarmicrosoft
+ms.author: flbagar
+ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程全息影像，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: ec03a349959f9bde71a2c8a600d513fb21c533a8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7aafb7a764a062efcca2c5a3cd9f77d4395516a2
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679626"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443649"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>添加全息远程处理 (HoloLens (第一代) # A3
 
@@ -23,7 +23,7 @@ ms.locfileid: "94679626"
 使用全息远程处理的 HoloLens 开发人员需要更新其应用程序，使其与 HoloLens 2 兼容。 这需要全新版本的全息远程处理 NuGet 包。 如果使用全息远程处理 NuGet 包的应用程序的版本号小于2.0.0.0，尝试连接到 HoloLens 2 上的全息远程处理播放机，则连接将失败。
 
 >[!NOTE]
->可在 [此处](holographic-remoting-create-host.md)找到特定于 HoloLens 2 的指南。
+>可在 [此处](holographic-remoting-create-remote-wmr.md)找到特定于 HoloLens 2 的指南。
 
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>将全息远程处理添加到桌面或 UWP 应用

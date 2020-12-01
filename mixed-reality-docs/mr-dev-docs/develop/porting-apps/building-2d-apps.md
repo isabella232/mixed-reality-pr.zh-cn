@@ -1,19 +1,19 @@
 ---
-title: 更新混合现实的 2D UWP 应用
+title: 更新适用于 Windows Mixed Reality 的 2D UWP 应用
 description: 本文概述了如何更新现有的2D 通用 Windows 平台应用，以便在 HoloLens 和 Windows Mixed Reality 沉浸式耳机上运行。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 2D 应用，UWP，平面应用，HoloLens，沉浸式头戴式耳机，应用型号，后退按钮，应用程序栏，dpi，分辨率，缩放，移植，HoloLens 第一代，HoloLens 2，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10
-ms.openlocfilehash: 4103ee1e5a7169759dfd823b41b5e3fd18011956
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: f4dcc022fced0b3e22eb42751dc596e1b334a01a
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677796"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443629"
 ---
-# <a name="updating-2d-uwp-apps-for-mixed-reality"></a>更新混合现实的 2D UWP 应用
+# <a name="updating-2d-uwp-apps-for-windows-mixed-reality"></a>更新适用于 Windows Mixed Reality 的 2D UWP 应用
 
 Windows Mixed Reality 使用户能够在您的物理或数字世界中查看全息影像。 就核心而言，HoloLens 和桌面 Pc 都将沉浸式耳机配件附加到 Windows 10 设备;这意味着，你可以在应用商店中几乎所有通用 Windows 平台 (UWP) 应用作为2D 应用运行。
 
@@ -51,7 +51,7 @@ Windows Mixed Reality 使用户能够在您的物理或数字世界中查看全�
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>面向沉浸式耳机和 HoloLens
 
-恭喜！ 应用现在正在使用 Windows 10 通用 Windows 平台 (UWP) 。
+祝贺你！ 应用现在正在使用 Windows 10 通用 Windows 平台 (UWP) 。
 
 现在，你的应用程序能够在当前的 Windows 设备（如桌面、移动、Xbox、Windows Mixed Reality 沉浸式耳机和 HoloLens）上运行，以及将来的 Windows 设备。 但是，若要实际将所有这些设备作为目标，需要确保应用面向 Windows 通用设备系列。
 

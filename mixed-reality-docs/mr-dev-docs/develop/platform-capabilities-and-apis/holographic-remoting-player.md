@@ -3,20 +3,20 @@ title: 全息远程播放器
 description: 全息远程处理播放器是一种附属应用，用于连接到支持全息远程处理的 PC 应用和游戏。 全息远程处理使用 Wi-Fi 连接实时将 PC 中的全息内容传输到 Microsoft HoloLens。
 author: florianbagarmicrosoft
 ms.author: flbagar
-ms.date: 03/11/2020
+ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，诊断，性能
-ms.openlocfilehash: c65b10079ffbc40602ebbd25b1e493c19b2a6078
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 990143a6d0c51f5f817ca0636573c3479a7e1682
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677926"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443622"
 ---
 # <a name="holographic-remoting-player"></a>全息远程播放器
 
 >[!IMPORTANT]
->HoloLens 2 的全息远程处理是一种主要版本更改。 [用于 **hololens (第一代)** 的远程应用程序](add-holographic-remoting.md)**必须使用 NuGet****包版本 1.x** 和 [ **HoloLens 2** 的远程应用程序](holographic-remoting-create-host.md)必须使用1.x。 这意味着，为 HoloLens 2 编写的远程应用程序与 HoloLens (第一代) 不兼容，反之亦然。
+>HoloLens 2 的全息远程处理是一种主要版本更改。 [用于 **hololens (第一代)** 的远程应用程序](add-holographic-remoting.md)**必须使用 NuGet****包版本 1.x** 和 [ **HoloLens 2** 的远程应用程序](holographic-remoting-create-remote-wmr.md)必须使用1.x。 这意味着，为 HoloLens 2 编写的远程应用程序与 HoloLens (第一代) 不兼容，反之亦然。
 
 [全息远程处理播放器](https://www.microsoft.com/p/holographic-remoting-player/9nblggh4sv40)是一种附属应用，用于连接到支持全息远程处理的 PC 应用和游戏。 全息远程处理使用 Wi-Fi 连接实时将 PC 中的全息内容传输到 Microsoft HoloLens。
 
@@ -26,6 +26,9 @@ ms.locfileid: "94677926"
 
 >[!TIP]
 >从版本 [2.2.0](holographic-remoting-version-history.md#v2.2.0) 开始，还可在运行 [windows Mixed Reality](../../discover/navigating-the-windows-mixed-reality-home.md)的 Windows 电脑上使用全息远程处理播放器。
+
+>[!TIP]
+>从版本 [2.4.0](holographic-remoting-version-history.md#v2.4.0) 开始，可以创建使用 [OpenXR API](../native/openxr.md) 的远程应用。 若要开始，请参阅 [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)。
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>连接到全息远程处理播放器
 
@@ -78,6 +81,7 @@ ms.locfileid: "94677926"
 
 ## <a name="see-also"></a>另请参阅
 * [HoloLens (第一代) ：添加全息远程处理](add-holographic-remoting.md)
-* [HoloLens 2：编写全息远程处理远程应用](holographic-remoting-create-host.md)
+* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [全息远程处理软件许可条款](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

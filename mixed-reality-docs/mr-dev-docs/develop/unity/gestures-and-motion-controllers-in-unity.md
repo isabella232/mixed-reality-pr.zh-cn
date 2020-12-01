@@ -1,23 +1,29 @@
 ---
 title: Unity 中的手势和运动控制器
 description: 了解如何使用手型手势和运动控制器在 Unity 上执行操作。
-author: thetuvix
+author: hferrone
 ms.author: alexturn
-ms.date: 03/21/2018
+ms.date: 12/1/2020
 ms.topic: article
 keywords: 手势，运动控制器，unity，注视，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: e1a2ae10638bb8dbd35eed7e9a0a1d2a05181f0c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 122642bb7fc561e505098bca00b8bf65bfd4552e
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678646"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443581"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Unity 中的手势和运动控制器
 
 您可以通过两种主要方式在您的 [HMD 中进行](gaze-in-unity.md)操作，在 HoloLens 和沉浸式的中的 [手势](../../design/gaze-and-commit.md#composite-gestures) 和 [运动控制器](../../design/motion-controllers.md) 。 可以通过 Unity 中的相同 Api 访问空间输入的两个源的数据。
 
 Unity 提供了两种主要方法来访问 Windows Mixed Reality 的空间输入数据，这是常见的 *GetButton/GetAxis* api，可跨多个 Unity XR sdk 使用，后者是特定于 Windows mixed Reality 的 *InteractionManager/GestureRecognizer* api，它公开了可用的空间输入数据的完整集。
+
+## <a name="unity-xr-input-apis"></a>Unity XR 输入 Api
+
+对于新项目，建议从头开始使用新的 XR 输入 Api。 
+
+可在此处找到有关 [XR api](https://docs.unity3d.com/Manual/xr_input.html)的详细信息。
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Unity 按钮/轴映射表
 
@@ -146,11 +152,11 @@ Windows Mixed Reality 支持各种外形规格的运动控制器，其中每个�
 <tr>
 <th> 跟踪状态 </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>高准确度</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>高准确度</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>高准确度 (丢失) 的风险 </b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>高准确度 (丢失) 的风险 </b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>近似准确度</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>近似准确度</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>无位置</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
 </tr>
@@ -213,6 +219,9 @@ Quaternion leftRotation = InputTracking.GetLocalRotation(XRNode.LeftHand);
 请注意，此控制手柄之间的关系导致，指针会导致控制器的刀尖)  (在控制器之间可能会有所不同。 目前，仅通过 MR 专用输入 API （在以下各节中介绍）才能访问控制器的指针姿势。
 
 ## <a name="windows-specific-apis-xrwsainput"></a> (XR 的特定于 Windows 的 Api。WSA.输入) 
+
+> [!CAUTION]
+> 如果你的项目使用的是任何 XR。WSA Api 在未来的 Unity 版本中，这些 Api 将在 XR SDK 的后面逐步推出。 对于新项目，建议从头开始使用 XR SDK。 可在此处找到有关 [XR 输入系统和 api](https://docs.unity3d.com/Manual/xr_input.html)的详细信息。
 
 **命名空间：** *UnityEngine. XR*<br>
 **类型**： *InteractionManager*、 *InteractionSourceState*、 *InteractionSource*、 *InteractionSourceProperties*、 *InteractionSourceKind*、 *InteractionSourceLocation*

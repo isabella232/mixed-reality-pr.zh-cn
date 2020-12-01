@@ -1,17 +1,17 @@
 ---
 title: 为全息远程处理启用连接安全性
 description: 本页介绍如何将全息远程处理配置为使用播放机与远程应用之间经过加密和经过身份验证的连接。
-author: markkeinz
-ms.author: makei
-ms.date: 10/29/2020
+author: florianbagarmicrosoft
+ms.author: flbagar
+ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，安全性，身份验证，服务器到客户端
-ms.openlocfilehash: 4004c7534092c73fe478130b9d957461bb34bcfa
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: b2c054d19044b89b487331806b8256de1379fd53
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679586"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443455"
 ---
 # <a name="enabling-connection-security-for-holographic-remoting"></a>为全息远程处理启用连接安全性
 
@@ -38,8 +38,11 @@ Windows 应用商店中的示例应用程序和全息远程处理播放机处于
 * **机密性：** 任何第三方都无法读取播放机与远程应用之间交换的信息
 * **完整性：** 播放机和远程可检测任何正在传输的通信更改
 
->[!TIP]
->若要能够使用安全功能，你将需要实现 [自定义播放器](holographic-remoting-create-player.md) 和 [自定义远程应用](holographic-remoting-create-host.md)。
+>[!IMPORTANT]
+>若要能够使用安全功能，需要使用[Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)或[OpenXR](holographic-remoting-create-remote-openxr.md) api 来实现[自定义播放器](holographic-remoting-create-player.md)和自定义远程应用。
+
+>[!NOTE]
+> 从版本 [2.4.0](holographic-remoting-version-history.md#v2.4.0) 开始，可以创建使用 [OpenXR API](../native/openxr.md) 的远程应用。 [下面](#secure-connection-using-the-openxr-api)是有关如何在 OpenXR 环境中建立安全连接的概述。
 
 ## <a name="planning-the-security-implementation"></a>规划安全实现
 
@@ -168,8 +171,26 @@ Windows 应用商店中的示例应用程序和全息远程处理播放机处于
 >[!NOTE]
 >如果用例需要不同形式的验证 (参阅) 上方的证书用例 #1，请完全绕过系统验证。 相反，请使用任何可处理 DER 编码的 x.509 证书的 API 或库来解码证书链，并执行用例所需的检查。
 
+## <a name="secure-connection-using-the-openxr-api"></a>使用 OpenXR API 的安全连接
+
+使用 [OPENXR API](../native/openxr.md) 时，所有与安全连接相关的 api 都作为 OpenXR 扩展的一部分提供 `XR_MSFT_holographic_remoting` 。
+
+>[!IMPORTANT]
+>若要了解全息远程处理 OpenXR 扩展 API，请查看可在[全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)中找到的[规范](https://htmlpreview.github.io/?https://github.com/microsoft/MixedReality-HolographicRemoting-Samples/blob/master/remote_openxr/specification.html)。
+
+使用 OpenXR 扩展进行安全连接的关键元素 `XR_MSFT_holographic_remoting` 是以下回调。
+- `xrRemotingRequestAuthenticationTokenCallbackMSFT`、生成或检索要发送的身份验证令牌。
+- `xrRemotingValidateServerCertificateCallbackMSFT`，验证证书链。
+- `xrRemotingValidateAuthenticationTokenCallbackMSFT`验证客户端身份验证令牌。
+- `xrRemotingRequestServerCertificateCallbackMSFT`，为服务器应用程序提供要使用的证书。
+
+可以通过和向远程处理 OpenXR 运行时提供这些 `xrRemotingSetSecureConnectionClientCallbacksMSFT` 回调 `xrRemotingSetSecureConnectionServerCallbacksMSFT` 。 此外，需要通过结构或结构上的 secureConnection 参数启用安全连接， `XrRemotingConnectInfoMSFT` `XrRemotingListenInfoMSFT` 具体取决于你使用的是 `xrRemotingConnectMSFT` 还是 `xrRemotingListenMSFT` 。
+
+此 API 非常类似于 [实现全息远程处理安全](#implementing-holographic-remoting-security) 中所述的基于 IDL 的 api，而不是实现应提供回调实现的接口。 你可以在 [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)中找到作为 OpenXR 示例应用的一部分的详细示例。
+
 ## <a name="see-also"></a>另请参阅
-* [编写全息远程处理远程应用](holographic-remoting-create-host.md)
+* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
 * [全息远程处理软件许可条款](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

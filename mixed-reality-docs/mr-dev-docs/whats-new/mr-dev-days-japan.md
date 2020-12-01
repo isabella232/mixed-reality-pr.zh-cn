@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: 6f673c78004f94692fcb09d304d6d40d2f97f1c3
-ms.sourcegitcommit: 893d7df2df66316e881dfba578a2810c203d9aa3
+ms.openlocfilehash: c0111c03d2350627106a53af7c1e04d448a08fe6
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94941853"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443492"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -66,7 +66,7 @@ ms.locfileid: "94941853"
 
 Futo Horio ([@Futo_Horio](https://twitter.com/Futo_Horio)) ，Takahiro Miyaura ([@takabrz1](https://twitter.com/takabrz1)) ，Akihiro Ueyama ([@akihiro01051](https://twitter.com/akihiro01051)) ，Kaoru Nakamura ([@kaorun55](https://twitter.com/kaorun55)) ，Shinya Tachihara ([@deco_c_](https://twitter.com/deco_c_)) 
 
-## <a name="frequently-asked-questions"></a>常见问题
+## <a name="frequently-asked-questions"></a>常见问题解答
 此部分将会频繁更新，因为我们会收到你的更多问题！
 
 **问：** 谁应参加混合现实开发日 **A** -此事件包含在混合现实空间中工作或播放的所有人。 尽管大部分内容都是以开发人员为中心的，但我们也知道，开发人员以外的各种角色都有兴趣的内容。 请记得查看更新计划，以查看我们将提供的内容种类。  
@@ -95,13 +95,13 @@ Futo Horio ([@Futo_Horio](https://twitter.com/Futo_Horio)) ，Takahiro Miyaura (
 
 ### <a name="code-of-conduct"></a>行为准则 
 
-**_Microsoft 的任务是使每个人和地球上的每个组织都能实现更多的工作。这包括所有 Microsoft 活动和聚会，包括在数字平台上，我们在其中寻找为所有参与者创建过于、友好、有趣和非独占体验。_* _  
+Microsoft 的使命是让全球每个人和每个组织取得更大的成就。 这包括所有 Microsoft 活动和聚会，包括在数字平台上，我们在其中寻找为所有参与者创建过于、友好、有趣和非独占体验。
 
-_*_我们期望所有数字事件参与者都坚持此行为准则的原则，其中涵盖了主要数字事件和所有相关活动。无论位置如何，我们都不允许任何形式的任何参与方参与者以任何形式在任何形式的失礼行为、消息、图像或交互。Microsoft 不允许根据年龄、体系、颜色、性别标识或表达式、国家/地区、实物或精神伤残、宗教、色情方向或适用当地法律、法规和 ordinances 所保护的任何其他特征，来避免骚扰或歧视。_*_  
+我们期望所有数字事件参与者都坚持此行为准则的原则，其中涵盖了主要数字事件和所有相关活动。 无论位置如何，我们都不允许任何形式的任何参与方参与者以任何形式在任何形式的失礼行为、消息、图像或交互。 Microsoft 不允许根据年龄、体系、颜色、性别标识或表达式、国家/地区、实物或精神伤残、宗教、色情方向或适用当地法律、法规和 ordinances 所保护的任何其他特征，来避免骚扰或歧视。  
 
-_*_禁止在社交渠道中共享的任何格式的会话内容或演示文稿的照片、视频或记录。我们鼓励每个人都协助创建欢迎和安全环境。请向业务执行热线 (1-877-320-MSFT 或) 报告任何问题、骚扰行为、可疑或中断性活动 [buscond@microsoft.com](mailto:buscond@microsoft.com) 。Microsoft 保留自行决定拒绝入场券或从混合现实开发天数中删除任何人的权利。_*_  
+禁止在社交渠道中共享的任何格式的会话内容或演示文稿的照片、视频或记录。 我们鼓励每个人都协助创建欢迎和安全环境。 请向业务执行热线 (1-877-320-MSFT 或) 报告任何问题、骚扰行为、可疑或中断性活动 [buscond@microsoft.com](mailto:buscond@microsoft.com) 。 Microsoft 保留自行决定拒绝入场券或从混合现实开发天数中删除任何人的权利。 
 
-_ *_我们鼓励每个人在 AltspaceVR 沉浸式环境内按你在任何人为的活动中进行工作。请考虑其他用户空间，并不要在参加该活动时阻止其他与会者的其他与会者。 请注意，与任何人为人员活动一样，其他用户可能会听到你所说的任何内容，如果你需要进行专用对话，则我们建议你将其用于 AltspaceVR 中的另一个空间，例如 AltspaceVR 主页_**
+我们鼓励每个人都在 AltspaceVR 的沉浸式环境中进行的工作，就像在任何人为活动时。 请考虑其他用户空间，并不要在参加该活动时阻止其他与会者的其他与会者。  请注意，与任何人为人员活动一样，其他用户可能会听到你所说的任何内容，如果你需要进行专用对话，则我们建议你将其用于 AltspaceVR 中的另一个空间，例如 AltspaceVR 主页。
 
 
 
