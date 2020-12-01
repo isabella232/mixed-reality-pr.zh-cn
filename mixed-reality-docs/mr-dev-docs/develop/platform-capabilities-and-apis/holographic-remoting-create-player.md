@@ -3,15 +3,15 @@ title: 编写自定义全息远程处理播放器
 description: 通过创建自定义的全息远程处理播放器应用，你可以创建一个自定义应用程序，该应用程序能够将远程计算机上呈现的内容显示到 HoloLens 2 上。 本文介绍如何实现此目的。
 author: florianbagarmicrosoft
 ms.author: flbagar
-ms.date: 03/11/2020
+ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，NuGet，应用清单，播放机上下文，远程应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: f55973e74abc60f62599375aebf278224865a5c1
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 69dc382873eb4fe0dc50f6f55e074c3491b02c02
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677916"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443644"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>编写自定义全息远程处理播放器应用
 
@@ -22,7 +22,7 @@ ms.locfileid: "94677916"
 
 全息远程处理播放机允许应用显示桌面 PC 或 UWP 设备（如 Xbox 设备）上 [呈现](rendering.md) 的全息内容，允许访问更多系统资源。 全息远程处理播放机应用将输入数据流式传输到全息远程处理远程应用程序，并将沉浸式视图作为视频和音频流接收回来。 使用标准 Wi-fi 建立连接。 若要创建播放器应用，需要使用 NuGet 包将全息远程处理添加到 UWP 应用，并编写代码来处理连接并显示沉浸式视图。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息版项目模板](../native/creating-a-holographic-directx-project.md) 是一个很好的起点。
 
@@ -251,7 +251,8 @@ winrt::Microsoft::Holographic::AppRemoting::PlayerFrameStatistics statistics = m
 自定义数据信道可用于通过已建立的远程处理连接发送用户数据。 有关详细信息，请参阅 [自定义数据通道](holographic-remoting-custom-data-channels.md) 。
 
 ## <a name="see-also"></a>另请参阅
-* [编写全息远程处理远程应用](holographic-remoting-create-host.md)
+* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [自定义全息远程处理数据通道](holographic-remoting-custom-data-channels.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)

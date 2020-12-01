@@ -3,20 +3,24 @@ title: 全息远程处理版本历史记录
 description: HoloLens 2 上的全息远程处理的版本历史记录。
 author: florianbagarmicrosoft
 ms.author: flbagar
-ms.date: 03/11/2020
+ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，版本历史记录，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: d9b1a9e7aa519084c05f658b2bc1864dc26e7ffa
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 5ac15c9af7f6cb2d0263b1ee20e0d2c490d353a0
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677846"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443472"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
 > [!IMPORTANT]
 > 本指南特定于 HoloLens 2 上的全息远程处理。
+
+## <a name="version-240-december-1-2020"></a>版本 2.4.0 (2020 年12月1日) <a name="v2.4.0"></a>
+* 全息远程处理现在支持使用 [OPENXR API](../native/openxr.md)写入远程应用。 若要开始，请参阅 [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)。
+* Bug 修复和稳定性改进。
 
 ## <a name="version-231-october-10-2020"></a>版本 2.3.1 (2020 年10月10日) <a name="v2.3.1"></a>
 * 通过远程姿势预测固定回归，导致视觉抖动。
@@ -102,8 +106,9 @@ ms.locfileid: "94677846"
 * 适用于 HoloLens 2 的全息远程处理的第一个公共版本。
 
 ## <a name="see-also"></a>另请参阅
+* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
-* [编写全息远程处理主机应用](holographic-remoting-create-host.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
 * [全息远程处理软件许可条款](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)
