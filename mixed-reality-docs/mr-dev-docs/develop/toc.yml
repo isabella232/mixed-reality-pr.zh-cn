@@ -290,6 +290,8 @@
           href: unreal/unreal-hololens-camera.md
         - name: Unreal 中的 QR 码
           href: unreal/unreal-qr-codes.md
+        - name: Unreal 中的 UMG 和键盘
+          href: unreal/unreal-umg-keyboard.md
         - name: Unreal 中的 WinRT
           href: unreal/unreal-winrt.md
     - name: 沉浸式 VR
@@ -306,6 +308,8 @@
       items:
         - name: 在 Unreal 中部署到设备
           href: unreal/unreal-deploying.md
+        - name: 在 Unreal 中升级项目
+          href: unreal/unreal-porting.md
         - name: 针对 Unreal 的性能建议
           href: unreal/performance-recommendations-for-unreal.md
         - name: Unreal 中的材料建议
