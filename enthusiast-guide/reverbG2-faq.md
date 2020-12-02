@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 241fb95d92c771af727cc50287e4d1b2526123a5
-ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
+ms.openlocfilehash: 7712641bad36b8759b9237abf14593f8c121e81b
+ms.sourcegitcommit: 3eb4c1a79e9173a5c9b6d2284f34c0bceced402c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "95002962"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96501705"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -53,6 +53,10 @@ HP 建议：
 ## <a name="i-am-getting-a-13-14-something-went-wrong-error-when-my-pc-resumes-from-hibernate-s4"></a>我的电脑从休眠状态 () S4 恢复时出现 13-14 "出现错误" 错误
 
 有时，在恢复过程中，视频卡不能建立连接，因此，从电脑中拔出 USB 类型 C 并重新插入，可能有助于建立连接。
+
+## <a name="my-hp-motion-controller-joystick-will-sometimes-stick-to-one-side"></a>我的 HP 运动控制器操纵杆有时会坚持一侧
+
+此问题的解决方法是，通过在游戏杆单击之前完全按下，它会自由移动。
 
 ## <a name="the-mixed-reality-portal-says-cant-run-mixed-reality-on-this-headset-but-this-worked-fine-with-my-previous-wmr-headset"></a>混合现实门户显示 "无法在此耳机上运行 Mixed Reality"，但这对于我以前的 WMR 耳机工作正常
 
