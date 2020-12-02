@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bf6b98eca850d2b280e7a016799c4287955159a6
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 487118403c2a8af1a6b54bc9aa9245fbe9d0568a
+ms.sourcegitcommit: bec6029b2780c54cc04a45ef7ae5df3f5b4727c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443670"
+ms.locfileid: "96477534"
 ---
 # <a name="project-settings"></a>[项目设置](#tab/project)
 
@@ -94,7 +94,8 @@ else
 ### <a name="8-work-through-your-input-model"></a>8. 通过输入模型工作
 
 每个面向现有 HMD 的游戏或应用程序都将具有一组可处理的输入，其所需的输入类型和体验所需的特定 Api 以及用于获取这些输入的特定 Api。 我们已经投入了大量努力，尽可能简单直接地利用 Windows Mixed Reality 中提供的输入。
-1. 有关 Windows Mixed Reality 如何公开输入的详细信息以及如何映射到你的应用程序可以执行的操作的详细信息，请参阅相邻选项卡中的 **Unity 的输入移植指南** 。
+
+有关 Windows Mixed Reality 如何公开输入的详细信息以及如何映射到你的应用程序可以执行的操作的详细信息，请参阅相邻选项卡中的 [Unity 的输入移植指南](https://docs.microsoft.com/windows/mixed-reality/develop/porting-apps/porting-guides?tabs=input) 。
 
 ### <a name="9-performance-testing-and-tuning"></a>9. 性能测试和优化
 
