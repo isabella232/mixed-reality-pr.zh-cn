@@ -8,13 +8,15 @@
   href: install-the-tools.md
 - name: 移植应用
   items:
-    - name: 让现有应用准备好使用 HoloLens 2
-      href: unity/mrtk-porting-guide.md
-    - name: 沉浸式应用移植指南
+    - name: 移植概述
+      href: porting-apps/porting-overview.md
+    - name: 将 HoloLens（第 1 代）应用移植到 HoloLens 2
+      href: porting-apps/porting-hl1-hl2.md
+    - name: 将 VR 应用移植到 Windows Mixed Reality
       href: porting-apps/porting-guides.md
-    - name: SteamVR 更新
+    - name: 更新适用于 Windows Mixed Reality 的 SteamVR 应用
       href: porting-apps/updating-your-steamvr-application-for-windows-mixed-reality.md
-    - name: 更新 Mixed Reality 的 2D UWP 应用
+    - name: 更新适用于 Windows Mixed Reality 的 2D UWP 应用
       href: porting-apps/building-2d-apps.md
 - name: Unity
   items:
@@ -26,8 +28,6 @@
           href: unity/mrtk-getting-started.md
         - name: 配置用于 Windows Mixed Reality 的 Unity 项目
           href: unity/configure-unity-project.md
-        - name: 让现有应用准备好使用 HoloLens 2
-          href: unity/mrtk-porting-guide.md
     - name: 教程
       items:
         - name: 概述
@@ -399,7 +399,11 @@
         - name: 全息远程播放器
           href: platform-capabilities-and-apis/holographic-remoting-player.md
         - name: 编写全息远程处理远程应用
-          href: platform-capabilities-and-apis/holographic-remoting-create-host.md
+          items:
+            - name: HolographicSpace API
+              href: platform-capabilities-and-apis/holographic-remoting-create-remote-wmr.md
+            - name: OpenXR API
+              href: platform-capabilities-and-apis/holographic-remoting-create-remote-openxr.md
         - name: 编写自定义全息远程处理播放器应用
           href: platform-capabilities-and-apis/holographic-remoting-create-player.md
         - name: 自定义全息远程处理数据通道
