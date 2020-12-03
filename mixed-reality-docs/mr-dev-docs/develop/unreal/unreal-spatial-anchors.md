@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 空间定位点, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 3ce83160f745fc48f082776caa3cfa87d23a1844
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8be1521d44a9dda521c1570d3ac55955e475bc30
+ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678826"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96354466"
 ---
 # <a name="local-spatial-anchors-in-unreal"></a>Unreal 中的本地空间定位点
 
 ## <a name="overview"></a>概述
 
 空间定位点用于在应用程序会话之间保存真实世界空间中的全息影像。 这些是通过 Unreal 以 ARPin 的形式出现的，并保存在 HoloLens 定位点存储中以便在未来会话中加载。 当没有 Internet 连接时，本地定位点是理想的备用方案。
+
+> [!NOTE]
+> UE 4.25 中的定位点函数在 4.26 版中已过时，应替换为更新的函数。 
 
 > [!IMPORTANT]
 > 本地定位点存储在设备上，而 Azure 空间定位点存储在云中。 如果你想要使用 Azure 云服务来存储定位点，我们有一个文档可指导你如何集成 [Azure 空间定位点](unreal-azure-spatial-anchors.md)。 请注意，你可在同一项目中使用本地定位点和 Azure 定位点，不会发生冲突。
@@ -27,13 +30,13 @@ ms.locfileid: "94678826"
 
 在保存或加载定位点之前，需要检查定位点存储是否已准备就绪。  在定位点存储准备就绪之前，调用任何 HoloLens 定位点函数都不会成功。  
 
-![空间定位点存储准备就绪](images/unreal-spatialanchors-store-ready.PNG)
+[!INCLUDE[](includes/tabs-sa-1.md)]
 
 ## <a name="saving-anchors"></a>保存定位点
 
 一旦应用程序的一个组件需要固定到世界，它可以按照以下顺序保存到定位点存储： 
 
-![空间定位点保存](images/unreal-spatialanchors-save.PNG)
+[!INCLUDE[](includes/tabs-sa-2.md)]
 
 细分如下：
 1. 在已知位置生成 Actor。
@@ -47,7 +50,7 @@ ms.locfileid: "94678826"
 
 当应用程序启动时，可以使用以下蓝图将组件还原到其定位点位置：
 
-![空间定位点加载](images/unreal-spatialanchors-load.PNG)
+[!INCLUDE[](includes/tabs-sa-3.md)]
 
 细分如下：
 1. 循环访问定位点存储中的所有定位点。 
@@ -62,7 +65,7 @@ ms.locfileid: "94678826"
 
 完成定位点后，可以使用“从 WMRAnchor 存储中删除 ARPin”和“从 WMRAnchor 存储中删除所有 ARPin”组件来清除单个定位点或整个定位点存储 。
 
-![空间定位点删除](images/unreal-spatialanchors-remove.PNG)
+[!INCLUDE[](includes/tabs-sa-4.md)]
 
 > [!NOTE]
 > 请记住，空间定位点仍处于测试阶段，因此，请务必查看是否有更新的信息和功能。

@@ -7,18 +7,21 @@ ms.date: 07/01/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure 开发, 空间定位点, 混合现实, 开发, 功能, 新项目, 仿真器, 文档, 指南, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 05a4b221961fa9b3a150eb8ef9f8bd2f77f5b955
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: b464292b606f6c375fe84a50867cac770cd8f001
+ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679866"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96354545"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Unreal 中的 Azure 空间定位点
 
 ## <a name="overview"></a>概述
 
 Azure 空间定位点是一项 Microsoft Mixed Reality 服务，增强现实设备可用它来发现、共享和保存现实世界中的定位点。 下列文档介绍了如何将 Azure 空间定位点服务集成到 Unreal 项目中。 若要了解详细信息，请查看 [Azure 空间定位点服务](https://azure.microsoft.com/services/spatial-anchors/)。
+
+> [!NOTE]
+> Unreal Engine 4.26 现具有适合 ARKit 和 ARCore 支持的插件，供你在面向 iOS 或 Android 时使用。
 
 > [!IMPORTANT]
 > 本地定位点存储在设备上，而 Azure 空间定位点存储在云中。 如果你想要在设备上本地存储定位点，我们有一个[本地空间定位点](unreal-spatial-anchors.md)文档可指导你完成整个过程。 请注意，你可在同一项目中使用本地定位点和 Azure 定位点，不会发生冲突。

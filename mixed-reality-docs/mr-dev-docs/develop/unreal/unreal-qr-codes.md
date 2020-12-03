@@ -7,16 +7,14 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, qr 码, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 68edfdd0dd77b1d00ceeb9c50202abd5d94b95f3
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: f2f06e9aa8d458d58dc8551ab6cd726622c30d4c
+ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678886"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96354398"
 ---
 # <a name="qr-codes-in-unreal"></a>Unreal 中的 QR 码
-
-## <a name="overview"></a>概述
 
 HoloLens 2 可以使用网络摄像头查看世界空间中的 QR 码，这会在每个代码的实际位置使用坐标系统将其呈现为全息影像。  除了单个 QR 码，HoloLens 2 还可以在多个设备上的同一位置呈现全息影像，以创建共享体验。 请确保遵循将 QR 码添加到应用程序的最佳做法：
 
@@ -26,23 +24,25 @@ HoloLens 2 可以使用网络摄像头查看世界空间中的 QR 码，这会�
 
 将 QR 码置于应用中时，请特别注意[环境注意事项](../../environment-considerations-for-hololens.md)。 有关每个主题的详细信息以及下载所需 NuGet 包的说明，请参阅主 [QR 码跟踪](../platform-capabilities-and-apis/qr-code-tracking.md)文档。
 
+> [!CAUTION]
+> HoloLens 当前只能跟踪 QR 码这种图像类型，HoloLens 上尚不支持 Unreal 的 UARTrackedImage 模块。 如需跟踪自定义图像，可访问设备的[网络摄像头](unreal-hololens-camera.md)，并使用第三方图像识别库来处理图像。 
+
 ## <a name="enabling-qr-detection"></a>启用 QR 检测
 由于 HoloLens 2 需要使用网络摄像头来查看 QR 码，因此需要在项目设置中将其启用：
 - 打开“编辑”>“项目设置”，滚动到“平台”部分，然后单击“HoloLens”。
     + 展开“功能”部分，选中“网络摄像头”。  
+- 还需要通过[添加 ARSessionConfig 资产](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset)来选择使用 QR 码跟踪。
 
-还需要通过[添加 ARSessionConfig 资产](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset)来选择使用 QR 码跟踪。
+[!INCLUDE[](includes/tabs-qr-codes.md)]
 
-使用之前，应调用 `UHoloLensARFunctionLibrary::StartCameraCapture()` 来手动启用跟踪。 结束 QR 码跟踪后，应通过 `UHoloLensARFunctionLibrary::StopCameraCapture()` 禁用它以节省设备资源。
-
-## <a name="setting-up-a-tracked-image"></a>设置跟踪图像
+## <a name="setting-up-a-tracked-qr-code"></a>设置已跟踪的 QR 码
 
 QR 码通过 Unreal 的 AR 跟踪几何系统显示为跟踪图像。 若要实现此操作，需执行以下操作：
-1. 创建蓝图，并添加“ARTrackableNotify”组件。
+1. 创建 Actor 蓝图，并添加 ARTrackableNotify 组件：
 
 ![QR AR 可跟踪通知](images/unreal-spatialmapping-artrackablenotify.PNG)
 
-2. 选择“ARTrackableNotify”，然后在“详细信息”面板中展开“事件”部分。
+2. 选择“ARTrackableNotify”，然后在“详细信息”面板中展开“事件”部分  ：
 
 ![QR 事件](images/unreal-spatialmapping-events.PNG)
 
@@ -51,7 +51,7 @@ QR 码通过 Unreal 的 AR 跟踪几何系统显示为跟踪图像。 若要实�
 
 ![向“关于添加跟踪几何”添加节点](images/unreal-qr-codes-tracked-geometry.png)
 
-## <a name="using-a-tracked-image"></a>使用跟踪图像
+## <a name="using-a-tracked-qr-code"></a>使用已跟踪的 QR 码
 下图中的事件图显示了 OnUpdateTrackedImage 事件，该事件用于呈现 QR 码中心的一个点并输出其数据。
 
 ![QR 呈现示例](images/unreal-qr-render.PNG)

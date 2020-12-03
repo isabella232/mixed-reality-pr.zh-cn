@@ -7,16 +7,15 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 空间映射, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: cd7e99230809c9d98f732e0dfa1f0b86d05c4365
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 878eae5f5fd0b7a1630511faa23c1477455ed988
+ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678806"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96354367"
 ---
 # <a name="spatial-mapping-in-unreal"></a>Unreal 中的空间映射
 
-## <a name="overview"></a>概述
 使用空间映射可以通过向全球展示 HoloLens 来将对象放置在现实生活中的表面上，这使全息影像看起来更真实。 空间映射还可以利用真实的深度提示，在用户世界定位对象。这有助于说服用户这些全息影像实际位于其空间中；在空间中浮动或随用户移动的全息影像并不真实。 你希望尽可能轻松地放置各个项。
 
 可以在[空间映射](../../design/spatial-mapping.md)文档中找到有关空间映射质量、位置、封闭、呈现等内容的详细信息。
@@ -26,6 +25,8 @@ ms.locfileid: "94678806"
 若要在 HoloLens 上启用空间映射，请执行以下操作：
 - 打开“编辑”>“项目设置”，并向下滚动到“平台”部分。    
     + 选择“HoloLens”并检查“空间感知”。
+
+![HoloLens 项目设置功能的屏幕截图，其中突出显示了空间感知](images/unreal-spatial-mapping-img-01.png)
 
 若要选择在 HoloLens 游戏中使用空间映射并调试“MRMesh”，请执行以下操作：
 1. 打开“ARSessionConfig”并展开“ARSettings”>“世界映射”部分。 
@@ -48,6 +49,13 @@ ms.locfileid: "94678806"
     + 如果预期的应用程序运行时环境很大，那么这个值可能需要很大才能匹配实际空间。  另一方面，如果应用程序只需要将全息影像直接放置在用户周围的表面上，那么这个值可能会较小。 当用户在世界内走动时，空间映射卷将随之移动。 
 
 ## <a name="working-with-mrmesh"></a>使用 MRMesh
+
+首先，你需要启动“空间映射”：
+
+![ToggleARCapture 函数的蓝图，其中突出显示了空间映射捕获类型](images/unreal-spatial-mapping-img-02.png)
+
+为空间捕获空间映射后，建议关闭空间映射。  可在一定时间后完成空间映射，也可当各方向的光线投射均对 MRMesh 返回碰撞时完成。
+
 若要在运行时访问 MRMesh，请执行以下操作：
 1. 将“ARTrackableNotify”组件添加到蓝图 Actor。 
 
@@ -64,21 +72,53 @@ ms.locfileid: "94678806"
 
 ![空间定位点示例](images/unreal-spatialmapping-example.PNG)
 
-在 C++ 中，可以订阅 `OnTrackableAdded` 委托，以便在 `ARTrackedGeometry` 可用时立即获取它，如以下代码所示。 
+## <a name="spatial-mapping-in-c"></a>使用 C++ 的空间映射
 
-> [!IMPORTANT]
-> 项目的 build.cs 文件必须具有 PublicDependencyModuleNames 列表中的 AugmentedReality  。
-> - 其中包括 ARBlueprintLibrary.h 和 MRMeshComponent.h，这使你可以检查 UARTrackedGeometry 的 MRMesh组件   。 
+在游戏的 build.cs 文件中，向 PublicDependencyModuleNames 列表添加 AugmentedReality 和 MRMesh ：
 
-![空间定位点示例 C++ 代码](images/unreal-spatialmapping-examplecode.PNG)
+```cpp
+PublicDependencyModuleNames.AddRange(
+    new string[] {
+        "Core",
+        "CoreUObject",
+        "Engine",
+        "InputCore",    
+        "EyeTracker",
+        "AugmentedReality",
+        "MRMesh"
+});
+```
 
-空间映射不是通过 ARTrackedGeometries 呈现的唯一数据类型。 可以检查 `EARObjectClassification` 是否为 `World`，这意味着这是空间映射几何。 
+若要访问 MRMesh，请订阅 OnTrackableAdded 委托：
 
-已更新和已删除事件具有类似委托： 
-- `AddOnTrackableUpdatedDelegate_Handle` 
-- `AddOnTrackableRemovedDelegate_Handle`”。 
+```cpp
+#include "ARBlueprintLibrary.h"
+#include "MRMeshComponent.h"
 
-可以在 [UARTrackedGeometry](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackedGeometry/index.html) API 中找到事件的完整列表。
+void AARTrackableMonitor::BeginPlay()
+{
+    Super::BeginPlay();
+
+    // Subscribe to Tracked Geometry delegates
+    UARBlueprintLibrary::AddOnTrackableAddedDelegate_Handle(
+        FOnTrackableAddedDelegate::CreateUObject(this, &AARTrackableMonitor::OnTrackableAdded)
+    );
+}
+
+void AARTrackableMonitor::OnTrackableAdded(UARTrackedGeometry* Added)
+{
+    // When tracked geometry is received, check that it's from spatial mapping
+    if(Added->GetObjectClassification() == EARObjectClassification::World)
+    {
+        UMRMeshComponent* MRMesh = Added->GetUnderlyingMesh();
+    }
+}
+```
+
+> [!NOTE]
+> 对于已更新和已删除的事件，存在类似的委托，分别为 AddOnTrackableUpdatedDelegate_Handle 和 AddOnTrackableRemovedDelegate_Handle 。
+>
+> 可以在 [UARTrackedGeometry](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackedGeometry/index.html) API 中找到事件的完整列表。
 
 ## <a name="see-also"></a>另请参阅
 * [空间映射](../../design/spatial-mapping.md)
