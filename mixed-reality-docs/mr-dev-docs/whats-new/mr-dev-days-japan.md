@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: c0111c03d2350627106a53af7c1e04d448a08fe6
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 01447b6122dae1c449e85b9bc7a9ad2cfc678f24
+ms.sourcegitcommit: 59c23d1ea5009e1929660a9a97c6131c353cd57e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443492"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538714"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -44,7 +44,7 @@ ms.locfileid: "96443492"
 ### <a name="december-16th"></a>12月16日
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
-|10： 00 (：50am|打开主题|TBD|JA/EN|空值|
+|10： 00 (：50am|打开主题|TBD|JA/EN|不适用|
 |10： 50am-11： 00 (|**分**||||
 |11： 00 (-11：25am|*会话 1* 什么是混合现实？您可以对 HL2 做些什么？MR 技术人员|Atsushi Suzuki|JA|100|
 |11：上午 9:30-11：55am|*会话 2* 与客户和合作伙伴案例研究的日本商业市场动力更新|Tetsu Muranaka|JA|200|
@@ -57,7 +57,7 @@ ms.locfileid: "96443492"
 |2：55pm：10pm|**分**||||
 |3：10pm：35pm|*会话 7* Azure 对象锚|Jesse McCulloch|CN|300|
 |3：40pm： 1:05 (|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
-|4：10pm：35pm|*会话 9* Azure 空间锚|TBD|JA|300|
+|4：10pm：35pm|*会话 9* 通过 Azure 空间锚点对齐全息图和现实世界|Yingguang Mei|CN|300|
 |4：40pm： 1:05 (|*会话 10* Unity + PiXYZ|Shinobu Takahashi (Unity) |JA|200|
 |5：10pm：35pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
 |5：35pm：50pm|关闭|Madoka Chiyoda|JA|NA|
