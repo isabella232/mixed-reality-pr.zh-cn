@@ -1,6 +1,6 @@
 - name: 混合现实开发简介
   href: development.md
-- name: Azure 云服务
+- name: Azure 混合现实云服务概述
   href: mixed-reality-cloud-services.md
 - name: 混合现实学习概述
   href: mr-learning-overview.md
