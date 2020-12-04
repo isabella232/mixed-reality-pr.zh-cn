@@ -308,6 +308,8 @@
       items:
         - name: 在 Unreal 中部署到设备
           href: unreal/unreal-deploying.md
+        - name: 发布到 Microsoft Store
+          href: unreal/unreal-publishing-to-store.md
         - name: 在 Unreal 中升级项目
           href: unreal/unreal-porting.md
         - name: 针对 Unreal 的性能建议
