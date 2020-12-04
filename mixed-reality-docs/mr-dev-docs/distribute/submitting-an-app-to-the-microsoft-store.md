@@ -6,14 +6,17 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store，HoloLens，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: b5d25817afeb2d8d970d329c802b7eaabcdf7f35
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 1d37337279e46e5f0f9d5cea82813af8de9d0f76
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703113"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578896"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>将应用提交到 Microsoft Store
+
+> [!IMPORTANT]
+> 如果你正在提交 Unreal 应用程序，请确保在此处按照 **[发布说明](../develop/unreal/unreal-publishing-to-store.md)** 操作，然后再继续。
 
 [HoloLens](../hololens-hardware-details.md)和 WINDOWS 10 PC 均支持[沉浸式耳机](../discover/immersive-headset-hardware-details.md)运行通用 Windows 平台应用。 无论是提交支持 HoloLens、PC 还是同时提交这两种应用，都可以通过 [合作伙伴中心](https://partner.microsoft.com/dashboard)进行应用提交。
 
@@ -38,9 +41,9 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 | 所需资产 | 建议的缩放 | 图像格式 | 资产显示在哪个位置？ | 
 |----------|----------|----------|------------------|
-| 方块字71x71 徽标 | 任意 |  PNG | 空值 | 
+| 方块字71x71 徽标 | 任意 |  PNG | 不可用 | 
 | 方块字150x150 徽标 | 150x150 (100% 规模) 或 225x225 (150% 规模)  | PNG | 如果未提供310x310，则启动 pin 和所有应用 () ，存储搜索建议，商店列表页，商店浏览，存储搜索 | 
-|  宽310x150 徽标 |  任意  |  PNG  |  空值 | 
+|  宽310x150 徽标 |  任意  |  PNG  |  不可用 | 
 |  应用商店徽标 |  75x75 (150% 规模)   |  PNG  |  合作伙伴中心，报表应用，编写评审，我的媒体库 | 
 |  初始屏幕 |  930x450 (150% 规模)   |  PNG  |  2D 应用启动器 (盖板)  | 
 

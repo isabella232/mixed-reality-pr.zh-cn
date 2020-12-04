@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/02/2020
 ms.topic: article
 keywords: HoloLens，混合现实，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售情况
-ms.openlocfilehash: f52109792e174a0b0fbdd9738539b5fc88f190a1
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 4ea60d2111f99924eaa417d4ff6fa8830934588c
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443509"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578876"
 ---
 # <a name="distributing-your-apps"></a>分发应用程序
 
@@ -81,7 +81,7 @@ ms.locfileid: "96443509"
     <td>✔️</td>
 </tr>
 <tr>
-    <td><a href="#additional-scenarios"><strong>自定义 Win32 部署</strong></a> (仅限 Windows Mixed Reality-请参阅下面的) </td>
+    <td><a href="#additional-scenarios"><strong>自定义 Win32 部署</strong></a> (不适用于 HoloLens 设备-请参阅下面的) </td>
     <td>✔️</td>
     <td>✔️</td>
     <td>❌</td>
@@ -99,7 +99,7 @@ ms.locfileid: "96443509"
 
 * 你还可以将生成部署到设备，并将其与通过 [使用 Visual Studio 部署和调试](../develop/platform-capabilities-and-apis/using-visual-studio.md) 或 [使用设备门户安装应用程序包](https://docs.microsoft.com/hololens/holographic-custom-apps#installing-an-application-package-with-the-device-portal)来启用开发人员模式的其他开发人员共享。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [从 Microsoft Store 查找、安装和卸载应用程序](https://docs.microsoft.com/hololens/holographic-store-apps)
 
 <!-- ## Submitting to the Microsoft Store

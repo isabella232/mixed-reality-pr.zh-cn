@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 7712641bad36b8759b9237abf14593f8c121e81b
-ms.sourcegitcommit: 3eb4c1a79e9173a5c9b6d2284f34c0bceced402c
+ms.openlocfilehash: 0c0bc508772fe32af9edc21ca62ba5e46125fe88
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96501705"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578612"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -57,6 +57,10 @@ HP 建议：
 ## <a name="my-hp-motion-controller-joystick-will-sometimes-stick-to-one-side"></a>我的 HP 运动控制器操纵杆有时会坚持一侧
 
 此问题的解决方法是，通过在游戏杆单击之前完全按下，它会自由移动。
+
+## <a name="others-state-i-am-very-loud-or-that-my-audio-is-clipping-while-i-am-using-the-microphone-with-some-applications"></a>其他状态我非常大或我的音频正在剪辑，而我将麦克风用于某些应用程序
+
+Windows 电脑首次识别 HP 回音 G2 麦克风时，输入音量级别会自动设置为100%。 由于回音 G2's 高质量麦克风，因此输入敏感度比默认的 Windows 10 设置要高得多。 我们建议将 "回音： G2" 麦克风输入级别设置为从50% 开始，并从该处向上缩放。 最佳设置是特定于用户的设置，尤其是在使用没有 "自动获取" 麦克风设置的应用程序时。 "自动获取" 的应用程序的示例包括 Skype、Zoom、团队和 Cisco WebEx，但并非所有的 VR 社交或广播应用程序都具有此功能。
 
 ## <a name="the-mixed-reality-portal-says-cant-run-mixed-reality-on-this-headset-but-this-worked-fine-with-my-previous-wmr-headset"></a>混合现实门户显示 "无法在此耳机上运行 Mixed Reality"，但这对于我以前的 WMR 耳机工作正常
 

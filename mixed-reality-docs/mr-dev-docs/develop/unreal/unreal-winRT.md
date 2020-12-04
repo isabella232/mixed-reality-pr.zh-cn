@@ -1,17 +1,17 @@
 ---
 title: Unreal 中的 WinRT
 description: Unreal 引擎的空间音频插件概述。
-author: fieldsJacksonG
+author: hferrone
 ms.author: jacksonf
 ms.date: 07/08/2020
 ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，流式处理，远程处理，混合现实，开发，入门，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，WinRT，DLL
-ms.openlocfilehash: 722add1601013d206ffface84d3a53cf3a9d89f9
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: ff0b235a45bf0e04b82e610384a290e8fc3a7525
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354437"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578592"
 ---
 # <a name="winrt-in-unreal"></a>Unreal 中的 WinRT
 
@@ -26,7 +26,7 @@ ms.locfileid: "96354437"
 > [!div class="nextstepaction"]
 > [部署到设备](unreal-deploying.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [C + +/WinRT Api](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
 * [FileSavePicker 类](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
 * [Unreal 第三方库](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 

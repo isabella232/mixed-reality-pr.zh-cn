@@ -2,16 +2,16 @@
 title: 在 Unreal 中注视输入
 description: 针对 HoloLens 和 Unreal 引擎设置注视输入的教程
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，HoloLens 2，眼睛跟踪，眼睛输入，head 装显示，Unreal 引擎，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: f89638cef6b90e004f097c701c3df13edaf74fac
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: d0470c5abbefce797254aa9f2030519d3347aaab
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354310"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578886"
 ---
 # <a name="gaze-input"></a>注视输入
 
