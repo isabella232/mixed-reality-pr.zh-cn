@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9d32dff121899d40175af813fac4f7be1acc66c3
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: ef33e037d6ab6a69059c1452b71a428fe51836b9
+ms.sourcegitcommit: d56e7dd6c917ddc4ead0792ebff21891921174b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679116"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564017"
 ---
 # <a name="deploy-to-device-in-unreal"></a>在 Unreal 中部署到设备
 
@@ -59,4 +59,4 @@ ms.locfileid: "94679116"
 > [!div class="nextstepaction"]
 > [高级服务](unreal-development-overview.md#5-adding-services)
 
-你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#4-deploying-to-a-device)。
+你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#4-streaming-and-deploying-to-a-device)。
