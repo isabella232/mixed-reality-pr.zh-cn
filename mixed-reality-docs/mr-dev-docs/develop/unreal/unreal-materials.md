@@ -6,24 +6,24 @@ ms.author: v-hferrone
 ms.date: 09/18/2020
 ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，开发，材料，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: d57689e9427ab5877e3afb49b0d19f35df6c47d2
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 11c10577bd3946facb96fd77b09265ab5ca26f24
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678936"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609568"
 ---
 # <a name="material-recommendations-in-unreal"></a>Unreal 中的材料建议
 
-材料可能会在 Unreal 引擎中产生或中断性能。 此页将作为你应使用的基本设置的快速入门，以便获得最佳性能。
+你使用的材料可以直接影响你的项目在 Unreal 引擎中的运行情况。 此页面作为基本设置的快速入门，你应该使用这些设置来获得混合现实应用程序的最佳性能。
 
 ## <a name="using-customizeduvs"></a>使用 CustomizedUVs
 
-如果需要对材料提供 Uv-11 的平铺，则应使用 CustomizedUVs，而不是直接修改纹理节点的 UV。 CustomizedUVs 允许在顶点着色器而不是像素着色器中发生 UV 操作。 
+如果需要对材料提供 UV 拼贴，请使用 CustomizedUVs，而不是直接修改纹理节点的 UV。 CustomizedUVs 使你可以在顶点着色器而不是像素着色器中操作 Uv-11。
 
 ![Unreal 中的材料设置](images/unreal-materials-img-01c.png)
 
-有关详细信息，请参阅 [Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html) 和以下屏幕截图中的最佳方案示例：
+可以在以下屏幕截图中的 [Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html) 和最佳做法示例中找到材料详细信息：
 
 建议[ ![ 在 Unreal ](images/unreal-materials-img-01.png) 中设置的材料设置](images/unreal-materials-img-01.png#lightbox) 
  *Recommended material setup*
@@ -33,7 +33,7 @@ ms.locfileid: "94678936"
 
 ## <a name="changing-blend-mode"></a>更改混合模式
 
-除非有很强的理由，否则应将 blend 模式设置为不透明。 屏蔽和半透明的材料速度缓慢。 有关详细信息，请 [参阅 Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)。
+除非有很强的理由，否则我们建议将混合模式设置为不透明。 屏蔽和半透明的材料速度缓慢。 有关详细信息，请 [参阅 Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)。
 
 ![更改混合模式](images/unreal-materials-img-02.jpg)
 
@@ -57,17 +57,17 @@ ms.locfileid: "94678936"
 
 ## <a name="optional-settings"></a>可选设置
 
-以下设置可能会提高性能，但请注意，它们会禁用某些功能。 仅在您确定不需要相关功能时才使用这些设置。
+以下设置可能会提高性能，但请注意，它们会禁用某些功能。 仅当你确定不需要使用这些功能时才使用这些设置。
 
 ![Unreal 中的可选材料设置](images/unreal-materials-img-06.jpg)
 
 如果材料不需要反射或闪光，则设置此选项可显著提高性能。 在内部测试中，它的速度与 "unlit" 的速度一样快，同时提供照明信息。
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳做法
 
-以下内容不是 "设置"，它们是与材料相关的最佳实践。
+下面的 "设置" 不是与材料相关的最佳实践。
 
-创建参数时，最好尽可能使用 "静态参数"。 静态开关可用于删除内容的整个分支，而不会产生运行时开销。 实例可以具有不同的值，从而使模板化着色器设置成为可能，而不会造成性能损失。 不过，缺点在于，这会产生许多重新编译着色器的情况。 尝试最大程度地减少材料中的静态参数数目，以及实际使用的这些静态参数的排列数。 在 [Unreal 引擎文档](https://docs.unrealengine.com/Engine/Rendering/Materials/ExpressionReference/Parameters/index.html#staticswitchparameter)中，可以找到有关呈现材料参数的更多详细信息。
+创建参数时，最好尽可能使用 "静态参数"。 静态开关可用于删除内容的整个分支，而不会产生运行时开销。 实例可以具有不同的值，从而使模板化着色器设置为无性能损失。 缺点是创建了多个将导致重新编译着色器的排列。 尝试最大程度地减少材料中的静态参数数量以及这些静态参数的排列数。 在 [Unreal 引擎文档](https://docs.unrealengine.com/Engine/Rendering/Materials/ExpressionReference/Parameters/index.html#staticswitchparameter)中，可以找到有关呈现材料参数的更多详细信息。
 
 ![材料设置最佳方案](images/unreal-materials-img-07.jpg)
 

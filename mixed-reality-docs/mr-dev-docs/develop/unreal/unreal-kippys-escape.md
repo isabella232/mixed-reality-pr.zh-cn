@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f5abfca4d5f85fd65aee77857d94a989122df310
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: eaba6ea1ee77ffffb74008402eafd1f09fd822e5
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678946"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609678"
 ---
 # <a name="the-making-of-kippys-escape"></a>Kippy 的转义
 
@@ -24,7 +24,7 @@ ms.locfileid: "94678946"
 
 ## <a name="overview"></a>概述
 
-Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（适用于 Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)）生成的开源[HoloLens 2](https://docs.microsoft.com/hololens/hololens2-hardware)示例应用。 在此文章中，我们将指导你完成将 Kippy 的转义带入生活的过程，从第一个原则和视觉设计到实现和优化体验。 在 [Unreal 开发概述](unreal-development-overview.md)中，可以找到有关通过 MRTK UX 工具开发混合现实应用程序的详细信息。
+Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（适用于 Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)）生成的开源[HoloLens 2](https://docs.microsoft.com/hololens/hololens2-hardware)示例应用。 在此文章中，我们将指导你完成从第一个原则和视觉设计到实现和优化体验的过程。 在 [Unreal 开发概述](unreal-development-overview.md)中，可以找到有关通过 MRTK UX 工具开发混合现实应用程序的详细信息。
 
 ## <a name="first-principles"></a>首要原则 
 
@@ -36,7 +36,7 @@ Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（适用于 Un
 
 HoloLens 2 可访问目前在游戏中的其他地方。 对象可以使用您的手直接推送或操作，也可以使用目视跟踪来进行操作。 这些关键功能在 Kippy 的转义中构建了一些有趣的时刻。  
 
-使用唯一的 HoloLens 2 功能作为游戏设计的指导，我们的作用域只是几个小环境方案。 由于可以根据不同的播放机高度调整孤岛，并提供一些有趣的 bridge 创意。 从这里，我们着陆了古文明的主题与科幻技术的结合，这种想法表明有人通过刻录构建了一种奇怪的能源。 每个孤岛都具有自己的外观，这是一项有助于创建视觉对象的详细信息。 建模和纹理间的一个良好平衡是为了使绘图调用对呈现性能的处理速度较低，因此，设计风格的外观是在设计时考虑的。 
+使用唯一的 HoloLens 2 功能作为游戏设计的指导，我们的作用域只是几个小环境方案。 孤岛非常有用，因为它们可以针对不同的播放机高度进行调整，并提供一些有趣的 bridge 创意。 我们着陆主题古文明与科幻技术相结合，这种想法表明有人通过刻录构建了一种奇怪的能源。 每个孤岛都具有自己的外观，这是一项有助于创建视觉对象的详细信息。 建模和纹理间的良好平衡会使绘图调用对呈现性能的消耗降低，因此，设计风格的外观就是用这一理念设计的。 
 
 ![早期游戏设计 ](images/kippys-escape/kippys-escape-img-01.png)
  *将一些更早的草图作为经验*
@@ -54,7 +54,7 @@ HoloLens 2 可访问目前在游戏中的其他地方。 对象可以使用您�
 
 *如果用户需要花费很长时间来解决测验题，Kippy 会向用户提示*
 
-除了字符和环境设计外，我们还进行了 concerted 的工作，让游戏变得有趣。 目视跟踪允许我们激发材料和声音属性，其中突出显示了游戏的关键部分。 空间音频有助于使这些级别在播放机的周围处于家里。 能够抓住对象、推送按钮和操作滑块推动创新的播放器活动，因此确保这些连接点感觉很重要。 
+除了字符和环境设计外，我们还进行了 concerted 的工作，让游戏变得有趣。 目视跟踪允许我们激发材料和声音属性，其中突出显示了游戏的关键部分。 空间音频有助于使这些级别在播放机的周围处于家里。 能够抓住对象、推送按钮和操作滑杆推动创新的播放器的合作。 务必要确保这些连接点感觉自然。 
 
 ![桥接电缆结束时，用户将对其进行接近](images/kippys-escape/kippys-escape-img-05.gif)
 
@@ -117,4 +117,4 @@ Kippy 的转义很大程度上依赖于混合现实 UX 工具组件，以使游�
 </tr>
 </table>
 
-特别感谢我们 [Framestore](https://www.framestore.com/) 的朋友，帮助我们将 Kippy 的转义转到下一级别。 从字符开发到资产设计，再到游戏编程，对此项目的协作是 pivotal 的。  
+特别感谢我们在 [Framestore](https://www.framestore.com/) 中的朋友，帮助我们将 Kippy 带入生活。 从字符开发到资产设计，再到游戏编程，对此项目的协作是 pivotal 的。  

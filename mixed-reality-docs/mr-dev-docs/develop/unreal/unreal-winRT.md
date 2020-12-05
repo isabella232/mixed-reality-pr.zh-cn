@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 07/08/2020
 ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，流式处理，远程处理，混合现实，开发，入门，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，WinRT，DLL
-ms.openlocfilehash: ff0b235a45bf0e04b82e610384a290e8fc3a7525
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: f9001f3a9e36eb5d8553545f38cf10411bafd64b
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578592"
+ms.locfileid: "96609400"
 ---
 # <a name="winrt-in-unreal"></a>Unreal 中的 WinRT
 
@@ -21,12 +21,12 @@ ms.locfileid: "96578592"
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果你遵循我们规划的 Unreal 开发检查点历程，则你处于探索混合现实平台功能和 API 的过程之中。 从这里，你可以转到任何 [主题](unreal-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。
+如果遵循我们所述的 Unreal 开发旅程，就是探索混合现实平台功能和 Api。 在这里，你可以继续阅读任何 [主题](unreal-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。
 
 > [!div class="nextstepaction"]
 > [部署到设备](unreal-deploying.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 * [C + +/WinRT Api](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
 * [FileSavePicker 类](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
 * [Unreal 第三方库](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 

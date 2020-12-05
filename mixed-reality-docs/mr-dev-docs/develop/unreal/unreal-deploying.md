@@ -8,16 +8,15 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ef33e037d6ab6a69059c1452b71a428fe51836b9
-ms.sourcegitcommit: d56e7dd6c917ddc4ead0792ebff21891921174b9
+ms.openlocfilehash: e811bc1b82aa40e658f9c855b65446483dd8bef2
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96564017"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609428"
 ---
 # <a name="deploy-to-device-in-unreal"></a>在 Unreal 中部署到设备
 
-## <a name="overview"></a>概述
 可通过两种方法将 Unreal 应用程序部署到 HoloLens 2：
 * 直接从 Unreal 编辑器
 * 作为通过设备门户上传的包
@@ -26,11 +25,11 @@ ms.locfileid: "96564017"
 
 ## <a name="deploying-to-device-from-the-unreal-editor"></a>从 Unreal 编辑器部署到设备
 
-1. 单击 " **启动** " 按钮旁的下拉箭头。 最初，HoloLens 设备选项将显示为灰色。
+1. 选择 " **启动** " 按钮旁边的下拉箭头。 最初，HoloLens 设备选项将显示为灰色。
 
 ![启动下拉选项](images/unreal/launch-dropdown.png)
 
-2. 打开 **设备管理器**。 请注意，HoloLens 不会自动显示在设备列表中。
+2. 打开 **设备管理器** ，请注意，你的 HoloLens 不会自动显示在设备列表中。
 
 3. 展开 " **添加未列出的设备** " 部分。
 
@@ -39,22 +38,22 @@ ms.locfileid: "96564017"
 5. 输入设备的 IP 地址和端口信息，用冒号分隔作为设备标识符。 例如，当通过 USB) 连接时 ("127.0.0.1： 10080"。 使用设备门户的用户名和密码凭据。
 
 6. 点击 " **添加** " 并关闭 "设备管理器"。
-    * 如果错误 (例如错误的地址、用户名或密码) ，则会在输出日志中打印一条消息。
+    * 如果出现错误，如地址或用户凭据错误，则会在输出日志中打印一条消息。
 
 ![添加未列出的设备](images/unreal/add-unlisted-device.png)
 
-7. 再次单击 " **启动** " 按钮旁的下拉箭头，此时应会看到刚刚添加的 HoloLens 设备。 选择要生成并部署到 HoloLens 的 HoloLens 设备。
+7. 再次选择 " **启动** " 按钮旁的下拉箭头，此时应会看到刚刚添加的 HoloLens 设备。 选择要生成并部署到 HoloLens 的 HoloLens 设备。
 
 >[!NOTE]
 >构建设备可能需要重新编译着色器 (尤其是在第一次运行) 上，这可能需要一些时间。 不要让设备进入睡眠状态，直到应用程序运行 (可能需要) 。 否则，着色器编译将失败！
 
 ## <a name="deploying-to-device-via-device-portal"></a>通过设备门户部署到设备
 
-可以在使用 Unreal 教程系列的入门的最后一部分中找到有关 [打包和部署应用](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal) 的详细说明。
+可在 [Unreal 教程系列](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal)中找到有关打包和部署应用的详细说明。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们已 Unreal 的开发检查点旅程，就是在部署阶段。 在这里，你可以继续添加高级服务：
+如果遵循我们的 Unreal 开发旅程，就是在部署阶段。 在此处，你可以继续添加高级服务：
 
 > [!div class="nextstepaction"]
 > [高级服务](unreal-development-overview.md#5-adding-services)

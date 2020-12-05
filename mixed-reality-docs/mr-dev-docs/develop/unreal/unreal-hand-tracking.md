@@ -6,22 +6,20 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 0a16a0291261277cb09e736e60b25f8ba71382e3
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 4c66e2353c1e881c05541fd0fe9eafa553ea5c23
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679206"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609708"
 ---
 # <a name="hand-tracking-in-unreal"></a>Unreal 中的手部跟踪
 
-## <a name="overview"></a>概述
-
-手写跟踪系统使用用户的不要和手指作为输入。 您可以获取每个手指的位置和旋转、整个手掌甚至是在代码中使用的手势。 
+手写跟踪系统使用用户的不要和手指作为输入。 每个手指的位置和旋转数据都可用。 
 
 ## <a name="hand-pose"></a>举手
 
-使用举手功能，你可以跟踪活动用户的手和手指，并将其用作输入，你可以通过蓝图和 c + + 进行访问。 可以在 Unreal 的 [HandPose](https://docs.microsoft.com/uwp/api/windows.perception.people.handpose) API 中找到更多技术详细信息。 Unreal API 以坐标系统的形式发送数据，并使用 Unreal 引擎同步刻度。
+使用举手功能，你可以跟踪和使用用户的手和手指作为输入。 可以访问蓝图和 c + + 中的跟踪数据。 可以在 Unreal 的 [HandPose](https://docs.microsoft.com/uwp/api/windows.perception.people.handpose) API 中找到更多技术详细信息。 Unreal API 以坐标系统的形式发送数据，并使用 Unreal 引擎同步刻度。
 
 ### <a name="understanding-the-bone-hierarchy"></a>了解骨骼层次结构
 
@@ -72,7 +70,7 @@ enum class EWMRHandKeypoint : uint8
 
 ![手动跟踪最佳实践](images/unreal/hand-tracking-bp.png)
 
-`true`如果设备上是否支持手动跟踪，则此函数返回， `false` 如果未提供手动跟踪，则返回。
+`true`如果设备上是否支持手动跟踪，则此函数返回， `false` 如果手动跟踪不可用，则返回。
 
 ![支持手动跟踪最佳实践](images/unreal/supports-hand-tracking-bp.png)
 
@@ -85,6 +83,7 @@ static bool UWindowsMixedRealityHandTrackingFunctionLibrary::SupportsHandTrackin
 ```
 
 ### <a name="getting-hand-tracking"></a>正在获取手动跟踪
+
 您可以使用 **GetHandJointTransform** 从手返回空间数据。 数据将每帧更新一次，但如果在框架中，则会缓存返回值。 出于性能方面的考虑，不建议在此函数中使用繁重的逻辑。 
 
 ![获取手动联合转换](images/unreal/get-hand-joint-transform.png)
@@ -94,24 +93,25 @@ C++：
 static bool UWindowsMixedRealityHandTrackingFunctionLibrary::GetHandJointTransform(EControllerHand Hand, EWMRHandKeypoint Keypoint, FTransform& OutTransform, float& OutRadius)
 ```
 
-函数参数细目：
+下面是 GetHandJointTransform 函数参数的细目：
 
-* **手型** –是用户的左侧或右侧
+* **手型** –用户可以是向左或向右。
 * **Keypoint** –手型的骨骼。 
 * **转换** –骨骼基的坐标和方向。 你可以请求下一个骨骼的基，以获取骨骼末尾的转换数据。 特殊的 Tip 骨骼提供 distal 的结尾。 
 * **半径** -骨骼基的半径。
-* **返回值** -如果在此帧中跟踪了骨骼，则为 true; 如果未跟踪骨骼，则为 false。
+* **返回值** -如果在此帧中跟踪了骨骼，则为 true; 如果不跟踪骨骼，则为 false。
 
 ## <a name="hand-live-link-animation"></a>手动实时链接动画
+
 使用 [实时链接插件](https://docs.unrealengine.com/Engine/Animation/LiveLinkPlugin/index.html)向动画显示手姿势。
 
 如果启用了 Windows Mixed Reality 和 Live Link 插件： 
 1. 选择 " **窗口 >" 实时链接** "，打开" 实时链接编辑器 "窗口。 
-2. 单击 " **源** " 并启用 **Windows Mixed Reality 手动跟踪源**
+2. 选择 **源** 并启用 **Windows Mixed Reality 手动跟踪源**
 
 ![实时链接源](images/unreal/live-link-source.png)
  
-启用源并打开动画资产后，展开 "**预览场景**" 选项卡中的 "**动画**" 部分会显示其他选项 (详细信息显示在 Unreal 的实时链接文档中-由于插件已在 beta 中，因此该过程稍后可能会更改) 。
+启用源并打开动画资产后，展开 "**预览场景**" 选项卡中的 "**动画**" 部分也会显示其他选项。
 
 ![实时链接动画](images/unreal/live-link-animation.png)
  
@@ -194,7 +194,8 @@ UMRMeshComponent* UARTrackedGeometry::GetUnderlyingMesh()
 
 您可以在 c + + 和蓝图中使用一种手写作为指针设备，这会公开 [SpatialPointerInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose) API。
 
-必须指出的是，由于所有函数的结果都更改每个帧，因此它们都是可调用的。 有关纯函数和非纯函数或可调用函数的详细信息，请参阅蓝图用户 guid on [函数](https://docs.unrealengine.com/en-US/Engine/Blueprints/UserGuide/Functions/index.html#purevs.impure)
+> [!IMPORTANT]
+> 由于所有函数结果都会更改每个帧，因此它们都是可调用的。 有关纯函数和非纯函数或可调用函数的详细信息，请参阅蓝图用户 guid on [函数](https://docs.unrealengine.com/en-US/Engine/Blueprints/UserGuide/Functions/index.html#purevs.impure)。
 
 若要在蓝图中使用现货，请在 **Windows Mixed REALITY HMD** 下搜索任何操作：
 
@@ -203,6 +204,7 @@ UMRMeshComponent* UARTrackedGeometry::GetUnderlyingMesh()
 若要在 c + + 中访问它们，请将添加 `WindowsMixedRealityFunctionLibrary.h` 到调用代码文件的顶部。
 
 ### <a name="enum"></a>枚举
+
 你还可以访问 **EHMDInputControllerButtons** 下的输入事例，它们可在蓝图中使用：
 
 ![输入控制器按钮](images/unreal/input-controller-buttons.png)
@@ -218,10 +220,11 @@ enum class EHMDInputControllerButtons : uint8
 ```
 
 下面是两个适用的枚举事例的细目：
+
 * **选择** -用户触发的 Select 事件。 
-    * 通过使用 "选择" 并启用 [语音输入](unreal-voice-input.md) ，可以在 HoloLens 2 中触发事件。 
+    * 通过使用 "选择" （启用 [语音输入](unreal-voice-input.md) ）在 HoloLens 2 中触发。 
 * **抓住** 用户触发的抓住事件。 
-    * 可以通过将用户的手指置于全息图上，在 HoloLens 2 中触发此事件。 
+    * 在 HoloLens 2 中通过将用户的手指关闭到全息图上触发。 
 
 可以通过下面所示的枚举来访问 c + + 中手写网格的跟踪状态 `EHMDTrackingStatus` ：
 
@@ -235,18 +238,21 @@ enum class EHMDTrackingStatus : uint8
 ```
 
 下面是两个适用的枚举事例的细目：
+
 * **NotTracked** –手写不可见
 * **跟踪** –完全跟踪
 
 ### <a name="struct"></a>结构
+
 PointerPoseInfo 结构可为你带来以下手数据信息：
+
 * **源** –现有的原点
 * **方向** –手型方向
 * **向上** –向上向量
 * **方向** -方向四元数 
 * **跟踪状态** -当前跟踪状态
 
-可以通过蓝图访问此内容，如下所示：
+可以通过蓝图访问 PointerPoseInfo 结构，如下所示：
 
 ![指针姿势信息最佳实践](images/unreal/pointer-pose-info-bp.png)
 
@@ -324,7 +330,7 @@ static EHMDTrackingStatus UWindowsMixedRealityFunctionLibrary::GetControllerTrac
 
 ## <a name="gestures"></a>笔势
 
-Hololens 2 可以跟踪空间手势，这意味着您可以将这些手势捕获为输入。 可以在 [HoloLens 2 基本使用](https://docs.microsoft.com/hololens/hololens2-basic-usage) 文档中找到有关手势的更多详细信息。
+HoloLens 2 跟踪空间手势，这意味着您可以将这些手势捕获为输入。 可以在 [HoloLens 2 基本使用](https://docs.microsoft.com/hololens/hololens2-basic-usage) 文档中找到有关手势的更多详细信息。
 
 您可以在 " **Windows Mixed Reality 空间输入**" 下查找蓝图函数，并通过 `WindowsMixedRealitySpatialInputFunctionLibrary.h` 在调用代码文件中添加来查找 c + + 函数。
 
@@ -407,7 +413,7 @@ const FKey FSpatialInputKeys::RightNavigationZGesture(RightNavigationZGestureNam
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果你遵循我们规划的 Unreal 开发检查点历程，则你处于探索 MRTK 核心构建基块的过程之中。 从这里，你可以进入下一个构建基块： 
+如果遵循我们的 Unreal 开发旅程，就是在探索 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块： 
 
 > [!div class="nextstepaction"]
 > [本地空间定位点](unreal-spatial-anchors.md)

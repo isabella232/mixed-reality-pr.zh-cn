@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 10/9/2020
 ms.topic: article
 keywords: Unreal，Unreal Engine 4，UE4，回音，回音 G2，HP 回音 G2，mixed reality，开发，运动控制器，用户输入，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 6a56b11e6738dd6359508d0cdfc1560bddfaff2e
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 419f5b803a6abb2b19080807ef9f403b96758683
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678926"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609588"
 ---
 # <a name="hp-reverb-g2-controllers-in-unreal"></a>Unreal 中的 HP 回音 G2 控制器 
 
@@ -44,7 +44,7 @@ HP 回音 G2 控制器还具有模拟手柄，可在使用 "挤压轴" 绑定的
 
 ## <a name="adding-input-events"></a>添加输入事件
 
-右键单击蓝图，并搜索输入系统中的新操作名称，为这些操作添加事件。  这里，蓝图使用输出当前按钮和轴状态的打印字符串来响应事件。
+右键单击蓝图，并搜索输入系统的新操作名称，为这些操作添加事件。  这里，蓝图使用输出当前按钮和轴状态的打印字符串来响应事件。
 
 ![蓝图响应事件并输出当前按钮和轴状态](images/reverb-g2-img-06.png)
 
