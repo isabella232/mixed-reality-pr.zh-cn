@@ -1,11 +1,15 @@
 - name: 混合现实开发简介
   href: development.md
-- name: Azure 混合现实云服务概述
-  href: mixed-reality-cloud-services.md
-- name: 混合现实学习概述
-  href: mr-learning-overview.md
 - name: 安装工具
   href: install-the-tools.md
+- name: 入门
+  items:
+    - name: Azure 混合现实云服务概述
+      href: mixed-reality-cloud-services.md
+    - name: 混合现实学习概述
+      href: mr-learning-overview.md
+    - name: 示例和功能应用
+      href: features-and-samples.md
 - name: 移植应用
   items:
     - name: 移植概述
@@ -216,8 +220,6 @@
           href: unity/unity-reverb-g2-controllers.md
     - name: 示例应用
       items:
-        - name: 概述
-          href: unity/samples.md
         - name: HoloLens 2
           items:
             - name: 表面
@@ -300,8 +302,6 @@
           href: unreal/unreal-reverb-g2-controllers.md
     - name: 示例应用
       items:
-        - name: 概述
-          href: unreal/unreal-samples.md
         - name: Kippy 的转义
           href: unreal/unreal-kippys-escape.md
     - name: 部署和性能
@@ -396,6 +396,8 @@
           href: platform-capabilities-and-apis/mixed-reality-capture-for-developers.md
         - name: 工作原理 - 混合现实捕获工作室
           href: platform-capabilities-and-apis/how-it-works-mixed-reality-capture-studios.md
+        - name: 安装适用于 HoloLens 2 的 PIX
+          href: platform-capabilities-and-apis/installing-pix-hololens.md
     - name: 全息远程处理
       items:
         - name: 全息远程播放器
