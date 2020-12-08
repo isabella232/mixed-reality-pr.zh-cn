@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity
-ms.openlocfilehash: 7541ab38cd8c90e774614af5ea457e5636ee66fe
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 731a4dfd0b714f22f25c0818de82680d4c576a27
+ms.sourcegitcommit: d11275796a1f65c31dd56b44a8a1bbaae4d7ec76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677368"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761759"
 ---
 # <a name="scene-understanding-sdk-overview"></a>场景理解 SDK 概述
 
@@ -47,7 +47,7 @@ SceneUnderstanding 需要 Windows SDK 版本18362或更高版本。
 
 由于每个场景会将其数据存储在应用程序的内存空间中，因此，你可以假定场景对象的所有功能或它的内部数据始终在应用程序的进程中执行。
 
-### <a name="layout"></a>Layout
+### <a name="layout"></a>布局
 
 若要使用场景理解，了解并了解运行时如何以逻辑方式和物理方式表示组件可能会很有价值。 场景表示具有特定布局的数据，其中选择了简单的布局，同时保持基础结构 pliable，而无需进行重大修改。 场景将通过以下方式实现此目标：将所有组件存储在简单列表中) 的所有场景对象 (构建基块，并通过引用（其中特定组件引用其他组件）定义层次结构和组合。
 
@@ -117,7 +117,7 @@ SceneObjects 可以包含以下任一项：
 
 <table>
 <tr>
-<th>SceneObjectKind</th> <th>说明</th>
+<th>SceneObjectKind</th> <th>描述</th>
 </tr>
 <tr><td>背景</td><td>已知 SceneObject <b>不</b> 是其他已识别的场景对象类型之一。 此类不应与 Unknown 混淆，其中背景已知不是墙壁/楼层/天花板，等等 .。。虽然未知还未分类。</b></td></tr>
 <tr><td>壁</td><td>物理墙。 墙壁被认为是可移动的环境结构。</td></tr>
@@ -125,7 +125,7 @@ SceneObjects 可以包含以下任一项：
 <tr><td>Ceiling</td><td>房间的上部面。</td></tr>
 <tr><td>平台</td><td>一个大平面，可以在其上放置全息影像。 它们倾向于表示表、countertops 和其他大型水平曲面。</td></tr>
 <tr><td>World</td><td>标记不可知的几何数据的保留标签。 通过设置 EnableWorldMesh 更新标志生成的网格将归为 "世界"。</td></tr>
-<tr><td>Unknown</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
+<tr><td>未知</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
 </tr>
 </table>
 
@@ -135,9 +135,9 @@ SceneMesh 是一种 SceneComponent，它使用三角形列表来模拟任意几�
 
 #### <a name="winding-order-and-coordinate-systems"></a>缠绕顺序和坐标系统
 
-场景理解生成的所有网格都应该使用顺时针缠绕顺序在右手坐标系内返回网格。 
+场景理解生成的所有网格都应该使用顺时针缠绕顺序返回 Right-Handed 坐标系中的网格。 
 
-注意：版本之前的操作系统版本。191105可能有一个已知 bug，其中 "World" 网格以逆时针缠绕顺序返回，后者随后已修复。
+注意：版本之前的操作系统版本。191105可能会有一个已知 bug，其中 "World" 网格以 Counter-Clockwise 缠绕顺序返回，后者随后已修复。
 
 ### <a name="scenequad"></a>SceneQuad
 
@@ -222,7 +222,7 @@ foreach (var sceneObject in myScene.SceneObjects)
 
 ### <a name="component-update-and-re-finding-components"></a>组件更新和重新查找组件
 
-还有另一个函数，可检索场景（称为 ***FindComponent*** ）中的组件。 当更新跟踪对象并在后续场景中查找它们时，此函数很有用。 下面的代码将计算一个相对于以前场景的新场景，然后在新场景中查找楼层。
+还有另一个函数可检索场景中名为 **_FindComponent_* _ 的组件。 当更新跟踪对象并在后续场景中查找它们时，此函数很有用。 下面的代码将计算一个相对于以前场景的新场景，然后在新场景中查找楼层。
 
 ```cs
 // Compute a new scene, and tell the system that we want to compute relative to the previous scene
@@ -239,7 +239,7 @@ if (firstFloor != null)
 
 ## <a name="accessing-meshes-and-quads-from-scene-objects"></a>从场景对象访问网格和四边形
 
-找到 SceneObjects 后，你的应用程序很可能想要访问包含在其中的四边形/网格中的数据。 可以通过 ***四边形*** 和 ***网格*** 属性访问此数据。 下面的代码将枚举地面对象的所有四边形和网格。
+找到 SceneObjects 后，你的应用程序很可能想要访问包含在其中的四边形/网格中的数据。 可以通过 _*_四边形_*_ 和 _*_网格_*_ 属性访问此数据。 下面的代码将枚举地面对象的所有四边形和网格。
 
 ```cs
 
@@ -263,53 +263,95 @@ foreach (var mesh in firstFloor.Meshes)
 
 ### <a name="dealing-with-transforms"></a>处理转换
 
-在处理转换时，场景理解已精心尝试与传统的三维场景表示。 因此，每个场景都局限于一个坐标系统，这与大多数常见的3D 环境表示形式非常类似。 每个 SceneObjects 都提供它们在该坐标系中的位置和方向。 如果你的应用程序正在处理的场景会延伸到单个源所提供的限制，则可以将 SceneObjects 定位到 SpatialAnchors，或生成多个场景并将它们合并在一起，但为了简单起见，我们假定 watertight 场景位于其自身的源中，而该已由由场景 OriginSpatialGraphNodeId 定义的一个本地化。
+在处理转换时，场景理解已精心尝试与传统的三维场景表示。 因此，每个场景都局限于一个坐标系统，这与大多数常见的3D 环境表示形式非常类似。 每个 SceneObjects 都提供它们相对于该坐标系统的位置。 如果你的应用程序正在处理的场景会延伸到单个源所提供的限制，则可以将 SceneObjects 定位到 SpatialAnchors，或生成多个场景并将它们合并在一起，但为了简单起见，我们假定 watertight 场景位于其自身的源中，而该已由由场景 OriginSpatialGraphNodeId 定义的一个本地化。
 
-例如，以下 Unity 代码演示了如何使用 Windows 感知和 Unity Api 来协调坐标系。 若要[详细了解如何](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced)获取与 unity 世界原点对应的 SpatialCoordinateSystem，以及用于在和之间进行转换的扩展方法的详细信息，请参阅[SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem)和[SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 。 `.ToUnity()` `System.Numerics.Matrix4x4` `UnityEngine.Matrix4x4`
+例如，以下 Unity 代码演示了如何使用 Windows 感知和 Unity Api 来协调坐标系。 有关获取与 Unity 世界原点相对应的 SpatialCoordinateSystem 的详细信息，请参阅 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 和 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) ，了解有关 Windows 感知 api 的详细信息，以及 [Unity 中混合现实本机对象](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 的详细信息。
 
 ```cs
-public class SceneRootComponent : MonoBehavior
+private System.Numerics.Matrix4x4? GetSceneToUnityTransformAsMatrix4x4(SceneUnderstanding.Scene scene)
 {
-    public SpatialCoordinateSystem worldOrigin;
-    public Scene scene;
-    SpatialCoordinateSystem sceneOrigin;
-    
-    void Start()
-    {
-        // Initialize a SpatialCoordinateSystem for the scene's node in the system's Spatial Graph.
-        scene.origin = SpatialGraphInteropPreview.CreateCoordinateSystemForNode(scene.OriginSpatialGraphNodeId);
-    }
-    
-    void Update()
-    {
-        // Try to get the current transform of the scene's spatial graph node.
-        // This may not be available, e.g. when tracking has been lost.
-        var sceneToWorld = sceneOrigin.TryGetTransformTo(worldOrigin);
-        if (sceneToWorld.HasValue)
-        {
-            // Convert the transform to Unity numerics and update the game object.
-            var sceneToWorldUnity = sceneToWorld.Value.ToUnity();
-            this.gameObject.transform.SetPositionAndRotation(sceneToWorldUnity.GetColumn(3), sceneToWorldUnity.rotation);
-        }
-    }
+
+      System.Numerics.Matrix4x4? sceneToUnityTransform = System.Numerics.Matrix4x4.Identity;
+
+      Windows.Perception.Spatial.SpatialCoordinateSystem sceneCoordinateSystem = Microsoft.Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateCoordinateSystemForNode(scene.OriginSpatialGraphNodeId);
+      HolograhicFrameData holoFrameData =  Marshal.PtrToStructure<HolograhicFrameData>(UnityEngine.XR.XRDevice.GetNativePtr());
+      Windows.Perception.Spatial.SpatialCoordinateSystem unityCoordinateSystem = Microsoft.Windows.Perception.Spatial.SpatialCoordinateSystem.FromNativePtr(holoFrameData.ISpatialCoordinateSystemPtr);
+
+      sceneToUnityTransform = sceneCoordinateSystem.TryGetTransformTo(unityCoordinateSystem);
+
+      if(sceneToUnityTransform != null)
+      {
+          sceneToUnityTransform = ConvertRightHandedMatrix4x4ToLeftHanded(sceneToUnityTransform.Value);
+      }
+      else
+      {
+          return null;
+      }
+
+    return sceneToUnityTransform;
 }
 ```
 
-每个 `SceneObject` 都有一个 `Position` 和 `Orientation` 属性，该属性可用于相对于包含的源定位相应的内容 `Scene` 。 例如，下面的示例假定游戏是场景根的子元素，并分配其本地位置和旋转，使其与给定的对齐 `SceneObject` ：
+每个 `SceneObject` 都有一个转换，然后将其应用于该对象。 在 Unity 中，我们转换为右手坐标坐标，并按如下所示分配本地转换：
 
 ```cs
-void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
+private System.Numerics.Matrix4x4 ConvertRightHandedMatrix4x4ToLeftHanded(System.Numerics.Matrix4x4 matrix)
 {
-    gameObject.transform.localPosition = sceneObject.Position.ToUnity();
-    gameObject.transform.localRotation = sceneObject.Orientation.ToUnity());
+    matrix.M13 = -matrix.M13;
+    matrix.M23 = -matrix.M23;
+    matrix.M43 = -matrix.M43;
+
+    matrix.M31 = -matrix.M31;
+    matrix.M32 = -matrix.M32;
+    matrix.M34 = -matrix.M34;
+
+    return matrix;
 }
+
+ private void SetUnityTransformFromMatrix4x4(Transform targetTransform, System.Numerics.Matrix4x4 matrix, bool updateLocalTransformOnly = false)
+ {
+    if(targetTransform == null)
+    {
+        return;
+    }
+
+    Vector3 unityTranslation;
+    Quaternion unityQuat;
+    Vector3 unityScale;
+
+    System.Numerics.Vector3 vector3;
+    System.Numerics.Quaternion quaternion;
+    System.Numerics.Vector3 scale;
+
+    System.Numerics.Matrix4x4.Decompose(matrix, out scale, out quaternion, out vector3);
+
+    unityTranslation = new Vector3(vector3.X, vector3.Y, vector3.Z);
+    unityQuat        = new Quaternion(quaternion.X, quaternion.Y, quaternion.Z, quaternion.W);
+    unityScale       = new Vector3(scale.X, scale.Y, scale.Z);
+
+    if(updateLocalTransformOnly)
+    {
+        targetTransform.localPosition = unityTranslation;
+        targetTransform.localRotation = unityQuat;
+    }
+    else
+    {
+        targetTransform.SetPositionAndRotation(unityTranslation, unityQuat);
+    }
+}
+
+// Assume we have an SU object called suObject and a unity equivalent unityObject
+
+System.Numerics.Matrix4x4 converted4x4LocationMatrix = ConvertRightHandedMatrix4x4ToLeftHanded(suObject.GetLocationAsMatrix());
+SetUnityTransformFromMatrix4x4(unityObject.transform, converted4x4LocationMatrix, true);
+        
 ```
 
 ### <a name="quad"></a>十字
 
 四边形旨在简化2D 布局方案，并应被视为2D 画布 UX 元素的扩展。 尽管四边形是 SceneObjects 的组件并且可以在3D 中呈现，但四个 Api 本身假设四边形是2D 结构。 它们提供了信息（如区、形状），并提供了用于放置的 Api。
 
-四边形具有矩形区，但它们表示任意形状的2D 图面。 若要在与3D 环境四边形的图面上实现放置，使此交互成为可能。 当前场景理解提供了两个此类函数： **FindCentermostPlacement** 和 **GetOcclusionMask** 。 FindCentermostPlacement 是一种高级的 API，用于定位四个位置上的一个对象，并尝试查找您的对象的最佳位置，以确保您提供的边界框位于底层图面上。
+四边形具有矩形区，但它们表示任意形状的2D 图面。 若要在与3D 环境四边形的图面上实现放置，使此交互成为可能。 当前场景理解提供了两个此类函数： _ *FindCentermostPlacement** 和 **GetSurfaceMask**。 FindCentermostPlacement 是一种高级的 API，用于定位四个位置上的一个对象，并尝试查找您的对象的最佳位置，以确保您提供的边界框位于底层图面上。
 
 > [!NOTE]
 > 输出的坐标是相对于 "四个空间" 中的四个部分的，其中左上角是 (x = 0，y = 0) ，就像对其他 windows Rect 类型一样。 在使用自己的对象的源时，请务必考虑这一点。 
@@ -372,7 +414,11 @@ mesh.GetVertexPositions(positions);
 
 索引/顶点缓冲区必须是 >= 索引/顶点计数，但也可以任意调整大小以允许有效的内存重复使用。
 
-## <a name="developing-with-scene-understandings"></a>用场景理解进行开发
+### <a name="collidermesh"></a>ColliderMesh
+
+场景对象通过 "网格" 和 "ColliderMeshes" 属性提供对网格和碰撞器网格数据的访问。 这些网格将始终匹配，这意味着网格属性的 i'th 索引表示与 ColliderMeshes 属性的 i'th 索引相同的 geometryh。 如果运行时/对象支持碰撞器网格，你将 guarateed 获得最小多边形、最高订单近似和在应用程序使用 colliders 的任何地方使用 ColliderMeshes。 如果系统不支持 colliders，则在 ColliderMeshes 中返回的网格对象将与网格减少内存约束的对象相同。
+
+## <a name="developing-with-scene-understanding"></a>通过场景理解进行开发
 
 此时，你应该了解场景的核心构建基块了解运行时和 SDK。 大容量和复杂性在于访问模式、与3D 框架的交互，以及可以在这些 Api 之上编写的工具，以执行更高级的任务，例如空间规划、房间分析、导航、物理学等。我们想要在示例中捕获这些示例，这些示例应指导您正确地指导您的场景。 如果有我们未解决的示例/方案，请告知我们，我们将尝试记录/原型所需的内容。
 
