@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-title: Azure 云服务
+title: Azure 混合现实云服务概述
 description: 混合现实云服务资源。
 author: hferrone
 ms.author: v-haferr
@@ -8,14 +8,14 @@ ms.date: 06/5/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: 640e99637f9cfa1786e1e78ed5cec396748b2f47
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 338574ac5a06841a6a2a9920fc0dfbdfdbfd0bbf
+ms.sourcegitcommit: eba192e1cfaef35bc55161d4e9a0adea36ff1a18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679686"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96526054"
 ---
-# <a name="azure-cloud-services"></a>Azure 云服务
+# <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
 ![ Azure 空间定位点图像](../design/images/AzureSpatialAnchors.jpg)
 
