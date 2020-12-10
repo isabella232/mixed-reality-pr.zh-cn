@@ -1,24 +1,24 @@
 ---
 title: Unity 中的持久性
-description: 通过使用持久性，你的用户可以根据需要在任何位置固定单个全息影像或工作区，然后在以后发现应用的许多用途时找到它。
+description: 通过使用持久性，你的用户可以根据需要将各个全息影像固定在何处，然后在应用的许多用途中查找它。
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens，持久性，Unity，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: cff7f05a5a5695ae8e379ed681c3b7320622968c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: d74f9c0a118c1886037c564073742ebedc7d0146
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678526"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010438"
 ---
 # <a name="persistence-in-unity"></a>Unity 中的持久性
 
 **命名空间：** *UnityEngine. XR*<br>
 **类：** *WorldAnchorStore*
 
-WorldAnchorStore 是创建全息体验的关键，其中全息在应用程序的实例上保持特定的实际位置。 这样，用户就可以在任何需要的位置固定各个全息影像或工作区，然后在以后发现应用的许多用途时找到它。
+WorldAnchorStore 是创建全息体验的关键，其中全息在应用程序的实例上保持特定的实际位置。 然后，用户可以在所需位置固定各个全息影像，稍后在对应用程序的许多应用程序的同一位置进行查找。
 
 ## <a name="how-to-persist-holograms-across-sessions"></a>如何跨会话保留全息影像
 
@@ -26,17 +26,17 @@ WorldAnchorStore 可让你在不同的会话中持久保存 WorldAnchor 的位�
 
 从以前的会话加载全息影像：
 1. 获取 WorldAnchorStore
-2. 加载与世界定位点相关的应用数据，提供世界锚的 id
-3. 从其 id 加载世界定位点
+2. 加载与世界定位点相关的应用数据，它提供世界锚的 ID
+3. 从其 ID 加载世界定位点
 
 为将来的会话保存全息影像：
 1. 获取 WorldAnchorStore
-2. 保存指定 id 的世界定位点
-3. 保存与世界锚点相关的应用数据以及 id
+2. 保存指定 ID 的世界定位点
+3. 保存与世界锚点相关的应用数据以及 ID
 
 ### <a name="getting-the-worldanchorstore"></a>获取 WorldAnchorStore
 
-我们想要保存对 WorldAnchorStore 的引用，以便我们知道我们在要执行某个操作时准备好了。 由于这是一个异步调用，可能很快就会启动，我们想要调用
+您需要保留对 WorldAnchorStore 的引用，以便您知道何时可以执行某个操作。 由于这是一个异步调用，可能很快就会启动，因此需要调用：
 
 ```
 WorldAnchorStore.GetAsync(StoreLoaded);
@@ -51,11 +51,11 @@ private void StoreLoaded(WorldAnchorStore store)
 }
 ```
 
-现在，我们对 WorldAnchorStore 的引用，我们将使用它来保存和加载特定世界锚。
+现在，我们有了一个对 WorldAnchorStore 的引用，我们将使用它来保存和加载特定世界锚。
 
 ### <a name="saving-a-worldanchor"></a>保存 WorldAnchor
 
-若要保存，只需命名要保存的内容，并将其传递到 WorldAnchor 我们要保存的时间。 注意：尝试将两个定位点保存到相同的字符串将 (存储中失败。Save 将返回 false) 。 保存新的保存之前，需要先删除以前的保存：
+若要保存，只需命名要保存的内容，并将其传递到 WorldAnchor 我们要保存的时间。 注意：尝试将两个定位点保存到相同的字符串将 (存储中失败。Save 将返回 false) 。 保存新的 save 之前，请先将其删除：
 
 ```
 private void SaveGame()
@@ -109,7 +109,7 @@ for (int index = 0; index < ids.Length; index++)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以进入下一个构建基块：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续执行下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [空间映射](spatial-mapping-in-unity.md)

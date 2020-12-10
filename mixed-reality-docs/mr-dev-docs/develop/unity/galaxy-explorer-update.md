@@ -1,31 +1,31 @@
 ---
 title: 针对 HoloLens 2 的 Galaxy 资源管理器创建
-description: 欢迎使用更新 HoloLens 2 的 Galaxy 资源管理器的方法。 正如原始 Galaxy 资源管理器，我们的团队将在 GitHub 上提供项目，以确保社区具有完全访问权限。
+description: 欢迎使用我们更新 HoloLens 2 的 Galaxy 资源管理器的旅程。 正如原始 Galaxy 资源管理器一样，我们的团队将在 GitHub 上打开项目，以确保社区具有完全访问权限。
 author: l-garrett
 ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
 keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 00bf30224a820bd85394c4b97136f81b52fe4128
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 00bf589d738cf74cbfdb489bc43aadf931dda285
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677626"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010468"
 ---
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>针对 HoloLens 2 的 Galaxy 资源管理器创建
 
-欢迎使用更新 HoloLens 2 的 Galaxy 资源管理器的方法。 [Galaxy 资源管理器](https://docs.microsoft.com/windows/mixed-reality/galaxy-explorer "星系探索者") 最初是作为 (第一代) 的开源应用程序开发的，该应用程序通过分享你的想法计划，是许多人的第一种混合现实体验之一。 现在我们正在更新它，以获得 [HoloLens 2 的全新功能](https://www.microsoft.com/hololens/hardware)。
+欢迎使用适用于 HoloLens 2 应用程序的已更新 Galaxy 资源管理器！ [Galaxy 资源管理器](https://docs.microsoft.com/windows/mixed-reality/galaxy-explorer "星系探索者") 最初是作为一种开源应用程序开发的， (第一代) 通过共享你的想法计划，这是许多人的第一种混合现实体验之一。 现在我们正在更新它，以获得 [HoloLens 2 的全新功能](https://www.microsoft.com/hololens/hardware)。
 
-作为 [Microsoft 混合现实工作室](galaxy-explorer-update.md#mixed-reality-studios)之一，我们通常会开发商业级解决方案，并在整个创意和开发过程中在目标平台上开发 & 测试。 现在，我们有了一种独特的情况，即目前尚不具有对 HoloLens 2 设备的访问权限，但很高兴能够开始更新到 Galaxy 资源管理器。 我们将使用着手等框架和工具 (例如 [MRTK v2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)) ，因为我们和社区都提供了这些框架和工具，我们希望将你带入一项工作。
+作为 [Microsoft 混合现实工作室](galaxy-explorer-update.md#mixed-reality-studios)之一，我们通常会开发商业级解决方案，并在整个创意和开发过程中在目标平台上开发 & 测试。 我们将使用 (的框架和工具（例如) [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) ）来着手此项目，并将其提供给我们和社区，我们想要将你带入。
 
-正如原始 Galaxy 资源管理器， [我们的团队](galaxy-explorer-update.md#meet-the-team) 将在 [GitHub 上提供项目](https://github.com/Microsoft/GalaxyExplorer) ，以确保社区具有完全访问权限。 我们还将在这里记录我们的旅程，其中介绍了我们 undertook 从 MRTK v1 迁移到 MRTK v2 的方法，我们如何根据 HoloLens 2 中提供的新功能来增强体验，以及我们如何确保 Galaxy 资源管理器保持为多平台体验。 因此，无论你是在 HoloLens (第一代) 、HoloLens 2、Windows Mixed Reality 耳机还是 Windows 10 桌面上查看 Galaxy 资源管理器，我们都需要确保你有沉浸式体验，并尽可能地欣赏旅程！
+正如原始 Galaxy 资源管理器， [我们的团队](galaxy-explorer-update.md#meet-the-team) 将在 [GitHub 上提供项目](https://github.com/Microsoft/GalaxyExplorer) ，以确保社区具有完全访问权限。 我们还将在这里记录我们的旅程，以全面了解我们如何从 MRTK v1 迁移到 MRTK v2，使用 HoloLens 2 中提供的新功能增强了体验，并确保了 Galaxy 资源管理器保持了多平台体验。 无论你是在 HoloLens (第一代) 、HoloLens 2、Windows Mixed Reality 耳机还是 Windows 10 桌面上查看 Galaxy 资源管理器，我们都需要确保你充分利用我们的旅程！
 
-此页面将在我们完成项目的过程中展开，并链接到更详细的文章、代码、设计项目、附加的 MRTK v2 文档等，为你提供内幕的项目。
+此页将随着我们在项目中的进展而扩展，并提供指向更详细的文章、代码、设计项目和其他 MRTK 文档的链接，为你提供内幕的项目。
 
 ## <a name="unveiling-the-new-logo"></a>揭示新徽标
 
-我们很高兴开始使用新的 Galaxy 资源管理器徽标的预览！ 通过采用银河的方式将献给支付给原始徽标，我们设计出了真实的可视化效果，并更新了版式，以提供更加时尚的新式外观。 徽标中包含的抢先了解可查看其中一个新图标。
+我们很高兴开始使用新的 Galaxy 资源管理器徽标的预览！ 通过采用银河的方式将献给支付给原始徽标，我们设计出了真实的可视化效果，并更新了版式以提供更新式的外观。 徽标中包含的抢先了解可查看其中一个新图标。
 
 ![新建 Galaxy 资源管理器徽标](images/ge-update-app-icon.png)
 
@@ -33,17 +33,17 @@ ms.locfileid: "94677626"
 
 ## <a name="thinking-about-interactions"></a>考虑交互
 
-作为一录音室，我们兴奋了将 Galaxy 资源管理器移植到 HoloLens 2 的权限。 我们知道，我们希望体验成为新设备的庆祝，并说明混合现实能力仅限制为想象。
+作为一录音室，我们兴奋了将 Galaxy 资源管理器移植到 HoloLens 2 的权限。 我们知道，我们希望体验成为新设备的庆祝，并说明混合现实能力仅受想像的限制。
 
 HoloLens 2 使用户能够以自然的方式触摸、抓住和移动全息影像–它们的响应方式非常类似于真实的对象。 完全表述的手模型非常惊人，因为这样可以让用户看起来自然。 例如，每个人都以略有不同的方式挑选一个杯，而不是实施一种特殊的方式来实现此目的。
 
 >[!VIDEO https://www.youtube.com/embed/wogJv5v9x-s]
 
-这是第一代 HoloLens 设备上基于空中分流的接口的重大变化。 用户现在可以 "关闭" 和 "个人"，而不是从距离交互。 将现有体验移植到 HoloLens 2 或规划新的体验时，务必要使自己熟悉全息影像的直接操作。
+这是第一代 HoloLens 设备上基于 Air 的接口的重大更改。 用户现在可以 "关闭" 和 "个人"，而不是从距离交互。 将现有的体验移植到 HoloLens 2 或规划新的体验时，请务必熟悉全息影像的直接操作。
 
 ### <a name="direct-manipulation-vs-the-vast-distances-in-space"></a>直接操作与空间中的远距离
 
-这是一种神奇的体验，能够实现并抓住地球并抓住。 这种方法的挑战在于太阳系的大小–非常巨大！ 用户需要浏览其空间，使每个行星都能够与之进行交互。
+这是一种神奇的体验，可以抓住并抓住行星。 这种方法的挑战在于太阳系的大小–非常巨大！ 用户需要浏览其空间，使每个行星都能与其交互。
 
 为了使用户能够与远离远处的对象进行交互，MRTK 提供了从用户掌上走出的手的光线，作为手型的延伸。 环形光标连接到射线的末尾，以指示该射线与目标对象相交的位置。 然后光标所指向的对象可以接收来自手的手势命令。 
 
@@ -59,7 +59,7 @@ HoloLens 2 使用户能够以自然的方式触摸、抓住和移动全息影像
 
 ![强制抓取交互的概念](images/ge-update-interactions-concept-force-grab.png)
 
-用户会将手型点指向地球，这将提供目标反馈。 随着用户的张开，世界将通过神奇的强制向用户拉取，直到它接近于获取它。 因此，我们要实现交互：强制获取的名称。 由于用户会将地球向外推，它会再次返回到其轨道。
+用户会将手型点指向地球，这将提供目标反馈。 随着用户的张开，世界将通过神奇强制向用户拉取，直到其接近，才能获取它。 因此，我们要实现交互：强制获取的名称。 由于用户会将地球向外推，它会再次返回到其轨道。
 
 ### <a name="force-grab-prototyping"></a>强制获取抽取原型
 
@@ -79,7 +79,7 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 ### <a name="implementing-force-grab-into-the-application"></a>在应用程序中实现强制抓取
 
-当我们在行星上尝试抓住强制时，我们意识到我们不得不改变阳历系统的刻度。 事实证明，阳历系统的准确、中等大小的表示形式对于用户来说很难理解和导航，他们不知道在何处进行查找。 不过，精确、小尺寸的表示形式使得某些行星太小，无法轻松选择。 因此，行星的大小和阳历之间的间距设计为在中等大小的房间内自如，同时保持相对准确性。
+当我们在行星上尝试抓住强制时，我们意识到我们不得不改变阳历系统的刻度。 事实证明，阳历系统的准确、中等大小的表示形式对于用户来说很难理解和导航，他们不知道要查找的位置。 但是，小型表示形式使得某些行星太小，无法轻松选择。 因此，行星的大小和阳历之间的间距设计为在中等大小的房间内自如，同时保持相对准确性。
 
 在开发冲刺（sprint）的更高阶段，我们已有足够的高手，足以让 MSFT 混合现实专家参与，因此我们努力将其输入作为专家测试人员并在强制抓取交互中快速迭代。
 
@@ -97,11 +97,11 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 ### <a name="adding-affordances-for-force-grab"></a>添加实用以进行强制获取
  
-随着音频和视觉对象实用的基本强制获取机制，我们介绍了如何使选择的行星更易于用户识别。 要解决的主要问题是：由于太阳系是一个三维移动界面，因此用户可以更加复杂地了解如何以一致的方式为对象提供目标。 这是一种复杂的情况，那就是，在选择对象时，手型的速度非常快，使行星以极快的速度向用户移动。
+随着音频和视觉对象实用的基本强制获取机制，我们了解了如何使选择的行星更易于用户理解。 要解决的主要问题是：由于太阳系是一个三维移动界面，因此用户可以更灵活地了解如何以一致的方式为对象提供目标。 这是一种复杂的情况，那就是，在选择对象时，手型的速度很快，使行星迅速进入用户。
 
-我们使用三个方面的解决方案来做到这一点。 第一种方法非常直观：降低选择过程的速度，使行星更自然地处理用户。 调整速度后，我们必须重新访问音频和视觉对象实用，并将其他音频反馈添加为用户跟踪的行星。
+我们使用三个方面的解决方案来做到这一点。 第一种方法非常直观：降低选择过程的速度，使行星更自然地处理用户。 调整速度后，我们必须重新访问音频和视觉对象实用，添加音频反馈作为向用户跟踪的行星。
 
-解决方案的第二部分是使整个强制抓取交互的可视化成为极有形的。 我们直观地显示了一条粗线条，它在与目标对象连接后，将其移至目标对象，然后将该对象移回用户喜欢的套索。 
+解决方案的第二部分是使整个强制抓取交互成为有形的视觉对象。 我们直观地显示了一条粗线条，它在与目标对象连接后，将其移至目标对象，然后将该对象移回用户喜欢的套索。 
 
 ![用于强制抓取的视觉 "套索" 实用](images/ge-update-lasso-affordances.png)
 
@@ -111,7 +111,7 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 ## <a name="spotlight-on-jupiter"></a>在木星上聚焦
 
-以银河的方式创建日光体是一种 humbling 体验。 具体而言，木星的独特特性使其对瞧可见。 它是气体巨量的最大和最丰富的质量，并且比所有其他行星组合的质量大。 Turbulence 和 cloud dynamics 的非常大的大小和 mesmerizing 带区 prefect，以实现特别的艺术。
+以银河的方式创建日光体是一种 humbling 体验。 具体而言，木星的独特特性使其对瞧可见。 它是气体巨量的最大和最大的质量，比所有其他行星组合的质量大。 Turbulence 和 cloud dynamics 的非常大的大小和 mesmerizing 带区 prefect，以实现特别的艺术。
 
 ### <a name="geometry-and-meshes"></a>几何图形和网格
 
@@ -123,7 +123,7 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 接下来的一种方法是 "冒烟和镜像" 解决方案，其中包括覆盖透明的纹理层，每个层都有一个用于处理旋转网格的组合的特定方面。
 
-在下图中，可以在左侧看到内部外壳。 此 matt 层为组合提供了背景，以防止构成云的多个层之间的任何小间隔。 由于层的缓慢旋转，它还在更快速的移动带之间提供直观的缓冲，有助于在各个层上构建视觉对象。
+在下图中，可以在左侧看到内部外壳。 此材料层为组合提供了背景，以防止在构成云的多层之间出现任何小的间隙。 由于层的缓慢旋转，它还在更快速的移动带之间提供可视缓冲区，以帮助在各个层上构建视觉对象。
 
 将此定位点设置到模型后，移动云层随后会投影到下面所示的中间和右侧网格上。
 
@@ -135,13 +135,13 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 特征很棒的红点还分成了不同的移动部件，并将其插入到其他不可见的纹理区域中。 可以在下图的中间部分中将这些组件看作 toned speckles。
 
-由于每个带区都有特定的方向和速度，因此纹理分别应用于每个网格。 然后，这些网格具有一个公共中心点和一个透视点，能够 concentrically 对整个表面进行动画处理。
+由于每个带区都有特定的方向和速度，因此纹理分别应用于每个网格。 然后，这些网格具有一个公共中心点和一个透视点，这使得 concentrically 可以对整个表面进行动画处理。
 
 ![木星纹理概述](images/ge-update-jupiter-planet-cloud-texture.png)
 
 ### <a name="rotation-and-texture-behavior"></a>旋转和纹理行为
 
-现在，已设置了木星的视觉组合，接下来需要确保正确计算和应用旋转和轨道速度。 木星大约需要9小时才能完成完整的旋转。 由于其差异旋转，这是一个定义。 因此，赤道几内亚流已设置为 "主流"，采用3600帧进行完全旋转。 每个其他层都需要将旋转速度提高为3600，以匹配其初始位置，如600、900、1200、1800等。
+设置好木星的视觉组合后，需要确保正确计算和应用旋转和轨道速度。 木星大约需要9小时才能完成完整的旋转。 由于其差异旋转，这是一个定义。 因此，赤道几内亚流已设置为 "主流"，采用3600帧进行完全旋转。 每个其他层都需要将旋转速度提高为3600，以匹配其初始位置，例如，600、900、1200、1800等。
 
 ![木星 shell 纹理](images/ge-update-shell-texture.jpg)
 
@@ -176,9 +176,9 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 首次设置带纹理的木星层，证明该层不足以实现实现。
 
-原来的行星标准着色器 (及其所有变体) 通过 SunLightReceiver （MRTK 标准着色器不支持的脚本）接收其照明信息。
+原来的行星标准着色器及其所有变体通过脚本（SunLightReceiver，MRTK 标准着色器不支持）接收其照明信息。
 
-只需交换着色器并不是一种解决方案，因为行星标准着色器不支持带有透明胶片的纹理地图。 编辑此着色器是为了使木星构建工作按预期方式工作。
+只需交换着色器并不是一种解决方案，因为行星标准着色器不支持带有透明胶片的纹理地图。 我们编辑了此着色器，使木星生成按预期方式工作。
 
 最后，需要设置 Alpha 混合，方法是将源 Blend 设置为10，将目标混合设置为5。
 
@@ -188,18 +188,18 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 ## <a name="meet-the-team"></a>认识团队 
 
-混合现实工作室团队由设计人员、三维音乐家、UX 专家、开发人员、项目经理和工作室主管组成。 我们遍布世界各地的 hail：华南、加拿大、德国、以色列、日本、英国和美国。 我们是一位丰富的团队，来自于不同的背景：游戏-传统和独立、数字营销、卫生保健和科学。
+混合现实工作室团队由设计人员、三维音乐家、用户专家、开发人员、项目经理和工作室主管组成。 我们遍布世界各地的 hail：华南、加拿大、德国、以色列、日本、英国和美国。 我们是一位丰富的团队，来自于不同的背景：游戏-传统和独立、数字营销、卫生保健和科学。
 
 我们很高兴为 HoloLens 2 创建 Galaxy 资源管理器，并更新 HoloLens (第一代) 、VR 和桌面版本。 
 
 ![Galaxy 资源管理器团队](images/ge-update-team-image.png)
 
 从左到右： Artemis Tsouflidou (开发人员) 、Angie Teickner (可视化设计器) 、David Janer (UX 设计器) 、刘娜 Garrett (交付 & 生产主管) 、Yasushi Zonno (创造性潜在客户) 、Eline Ledent (开发人员) 和 Ben Turner (Sr-1a) 。
-从左到右： Amit Rojtblat (技术艺术家) ，圣马丁 Wettig (3D 艺术家) 和 Dirk Songuer (Studio Head) 。
+从左到右： Amit Rojtblat (技术艺术家) ，圣马丁 Wettig (3D 艺术家) ，Dirk Songuer (Studio Head) 。
 不重要： Tim Gerken (技术组长) 和 Oscar Salandin (可视化设计器) 。
 
 ## <a name="additional-information"></a>其他信息
 
 ### <a name="mixed-reality-studios"></a>混合现实工作室
 
-Microsoft 混合现实工作室团队-位于美洲、欧洲和 Asia-Pacific，是用户体验设计、全息计算、AR/VR 技术和三维开发方面的专家;包括3D 资产创建、DirectX、Unity 和 Unreal。 我们帮助构想预期的先期备货、设计、构建和交付解决方案，同时使客户能够在其组织中创造实实在在的影响。 录音室与超过22000个 Microsoft 服务专业人员密切合作，以实现企业应用程序集成、采用、操作和支持。
+Microsoft 混合现实工作室团队-位于美洲、欧洲和 Asia-Pacific 中，是用户体验设计、全息计算、AR/VR 技术和三维开发方面的专家;包括3D 资产创建、DirectX、Unity 和 Unreal。 我们帮助构想预期的先期备货、设计、构建和交付解决方案，同时使客户能够在其组织中创造实实在在的影响。 录音室与超过22000个 Microsoft 服务专业人员密切合作，以实现企业应用程序集成、采用、操作和支持。

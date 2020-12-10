@@ -1,24 +1,24 @@
 ---
 title: 元素周期表
-description: 定期表是 Microsoft 的混合现实设计实验室中的一个开源示例应用，你可以在其中了解如何使用对象集合在三维空间中使用不同的表面类型布置对象数组。
+description: 定期表是 Microsoft 混合现实设计实验室的开源示例应用。 了解如何使用对象集合在 3D 空间中布置一系列表面类型各异的对象。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，示例应用，控件，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 4b85631fb044ee0b24c003f7808fd0455b87deec
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a4099c889fee886e63d3a8b773398a250621f26e
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677676"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010178"
 ---
 # <a name="periodic-table-of-the-elements"></a>元素周期表
 
 >[!NOTE]
 >本文讨论了我们在 [混合现实设计实验室](https://github.com/Microsoft/MRDesignLabs_Unity)中创建的探索示例，这是我们与混合现实应用开发的知识和建议。 我们设计相关的文章和代码将随着我们的新发现而发展。
 
-[定期表](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) 是 Microsoft 混合现实设计实验室中的一个开源示例应用。 使用此项目，您可以了解如何使用 **[对象集合](../../design/object-collection.md)** 在三维空间中使用不同的表面类型来布置对象数组。 还将了解如何创建响应 HoloLens 标准输入的种不可交互对象。 您可以使用此项目的组件来创建自己的混合现实应用程序体验。
+[定期表](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) 是 Microsoft 混合现实设计实验室的开源示例应用。 了解如何使用 **[对象集合](../../design/object-collection.md)** 在三维空间中布局对象的数组。 还将了解如何创建响应 HoloLens 标准输入的种不可交互对象。 您可以使用此项目的组件来创建自己的混合现实应用程序体验。
 
 ![元素应用的 Period 表](images/640px-periodictable-hero.jpg)
 
@@ -33,7 +33,7 @@ ms.locfileid: "94677676"
 
 ## <a name="background"></a>背景
 
-在我首次体验 HoloLens 后，我知道我想在混合现实中尝试使用定期表应用程序。 由于每个元素都有多个与文本一起显示的数据点，因此，我认为这对于浏览三维空间中的排版组合非常重要。 在此项目中，可以可视化元素的 electron 模型是另一个有趣的部分。
+在我首次体验 HoloLens 后，我知道我想在混合现实中试用定期表应用程序。 由于每个元素都有多个与文本一起显示的数据点，因此，我认为这对于浏览三维空间中的排版组合非常重要。 使用户有机会直观显示元素的 electron 模型是此项目的另一个有趣的部分。
 
 ## <a name="design"></a>设计
 
@@ -55,13 +55,13 @@ ms.locfileid: "94677676"
 
 ### <a name="interactable-object-button"></a>种不可交互对象 (按钮) 
 
-[种不可交互对象](../../design/interactable-object.md) 是可响应基本的 HoloLens 输入的对象。 它以 prefab/脚本形式提供，你可以轻松地将其应用于任何对象。 例如，可以在场景种不可交互中发出咖啡杯，并对输入（如注视、分流、导航和操作手势）做出响应。 [了解详细信息](../../design/interactable-object.md)
+[种不可交互对象](../../design/interactable-object.md) 是一个对象，它可以响应基本的 HoloLens 输入。 它作为 prefab/script 提供，你可以轻松地将其应用于任何对象。 例如，你可以在场景种不可交互中发出咖啡杯，并对输入（如注视、分流、导航和操作手势）做出响应。 [了解更多信息](../../design/interactable-object.md)
 
 ![nteractable 对象](images/640px-periodictable-interactableobject.jpg)
 
 ### <a name="object-collection"></a>对象集合
 
-[对象集合](../../design/object-collection.md) 是一个对象，可帮助您在不同的形状中布局多个对象。 它支持平面、圆柱、球面和散点图。 可以配置其他属性，如 radius、行数和间距。 [了解详细信息](../../design/object-collection.md)
+[对象集合](../../design/object-collection.md) 是一个对象，可帮助您在不同的形状中布局多个对象。 它支持平面、圆柱、球面和散点图。 可以配置其他属性，如 radius、行数和间距。 [了解更多信息](../../design/object-collection.md)
 
 ![对象集合](images/640px-periodictable-collections.jpg)
 
@@ -87,7 +87,7 @@ ms.locfileid: "94677676"
 </tr>
 </table>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [MRTK 示例中心](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
 * [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)

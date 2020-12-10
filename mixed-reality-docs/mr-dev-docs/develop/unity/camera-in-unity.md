@@ -6,18 +6,22 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，全息呈现，全息，沉浸式，聚焦点，深度缓冲，仅限方向，定位，不透明，透明，剪辑，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c3c470634e2c5c9445ae8c0a29621971de22a92b
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 26eb8966004c958c6063d09de891ef835d973a82
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677616"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010428"
 ---
 # <a name="camera-in-unity"></a>Unity 中的相机
 
-当你磨损混合现实耳机时，它将成为你的全息世界的中心。 当你的项目具有 "Windows Mixed Reality" 所选的 "受支持的虚拟现实" 时，Unity [相机](https://docs.unity3d.com/Manual/class-Camera.html) 组件会自动处理 stereoscopic 渲染，并遵循你的头运动和旋转，因为设备 (会出现在 Windows 应用商店播放机设置) 的 "其他设置" 部分中。 在较旧版本的 Unity 中，这可能作为 "Windows 全息" 列出。
+当你磨损混合现实耳机时，它将成为你的全息世界的中心。 Unity [相机](https://docs.unity3d.com/Manual/class-Camera.html) 组件会自动处理 stereoscopic 渲染，并遵循打印头运动和旋转。 但是，若要完全优化视觉质量和 [全息图稳定性](../platform-capabilities-and-apis/hologram-stability.md)，应设置以下描述的相机设置。
 
-但是，若要完全优化视觉质量和 [全息图稳定性](../platform-capabilities-and-apis/hologram-stability.md)，应设置以下描述的相机设置。
+## <a name="setup"></a>设置
+
+1. 请参阅 **Windows 应用商店播放机设置** 中的 "**其他设置**" 部分
+2. 选择 **Windows Mixed Reality** 作为设备，在较旧版本的 Unity 中，它可能作为 **Windows 全息** 列出
+3. 选择 **支持的虚拟现实**
 
 >[!NOTE]
 >需要在应用的每个场景中将这些设置应用到相机。
@@ -26,10 +30,10 @@ ms.locfileid: "94677616"
 
 ## <a name="holographic-vs-immersive-headsets"></a>全息和沉浸式耳机
 
-Unity 相机组件上的默认设置适用于需要 skybox 的背景的传统3D 应用程序，因为这些应用程序不是真实的。
+Unity 相机组件上的默认设置适用于传统的3D 应用程序，这种应用程序需要 skybox 的背景，因为它们不是真实的。
 
 * 在 **[沉浸式头戴式耳机](../../discover/immersive-headset-hardware-details.md)** 上运行时，会呈现用户看到的所有内容，因此你可能需要保留 skybox。
-* 但是，当在 **全息耳机** （如 [HoloLens](../../hololens-hardware-details.md)）上运行时，真实环境应显示在照相机呈现的所有内容之后。 为此，请将相机背景设置为在 HoloLens (透明，黑色呈现为透明) 而不是 Skybox 纹理：
+* 但是，当在 **全息耳机** （如 [HoloLens](../../hololens-hardware-details.md)）上运行时，真实环境应显示在照相机呈现的所有内容之后。 将相机背景设置为在 HoloLens (透明，黑色呈现为透明) 而不是 Skybox 纹理：
     1. 选择 "层次结构" 面板中的主相机
     2. 在 "检查器" 面板中，找到照相机组件，并将 "清除标志" 下拉列表从 "Skybox" 更改为纯色
     3. 选择背景色选取器并将 RGBA 值更改为 (0，0，0，0) 
@@ -51,11 +55,11 @@ Unity 相机组件上的默认设置适用于需要 skybox 的背景的传统3D 
 在混合现实中，向用户呈现的内容太接近。 可以在相机组件上调整 [近和远的剪辑平面](../platform-capabilities-and-apis/hologram-stability.md#hologram-render-distances) 。
 
 1. 选择 "层次结构" 面板中的主相机
-2. 在 "检查器" 面板中，找到 "照相机" 组件剪辑平面，并将 "Near" 文本框从0.3 更改为85。 呈现更近的内容可能导致用户 discomfort，应根据 [渲染距离准则](../platform-capabilities-and-apis/hologram-stability.md#hologram-render-distances)加以避免。
+2. 在 "检查器" 面板中，找到 "照相机" 组件修剪平面，并将 "Near" 文本框从0.3 更改为0.85。 呈现更近的内容可能导致用户 discomfort，应根据 [渲染距离准则](../platform-capabilities-and-apis/hologram-stability.md#hologram-render-distances)加以避免。
 
 ## <a name="multiple-cameras"></a>多个照相机
 
-如果场景中有多个照相机组件，则通过检查哪些 GameObject 具有 MainCamera 标记，Unity 知道哪个照相机要用于 stereoscopic 渲染和打印头跟踪。
+当场景中有多个照相机组件时，Unity 知道哪个照相机要用于 stereoscopic 渲染，并根据 GameObject 具有 MainCamera 标记的标题进行跟踪。
 
 ## <a name="recentering-a-seated-experience"></a>Recentering 体验
 
@@ -67,33 +71,33 @@ HoloLens 和沉浸式耳机都将 reproject 你的应用程序呈现的每个帧
 
 默认情况下：
 
-* **沉浸式耳机** 将执行位置 reprojection，如果应用为给定帧提供深度缓冲区，则在位置和方向调整你的全息影像。  如果未提供深度缓冲区，则系统只会方向上的 mispredictions。
-* 如果应用程序提供了深度缓冲区，就像 HoloLens 这样的 **全息耳机** 会执行位置 reprojection。  在不使用 HoloLens 上的深度缓冲区的情况下，可能会出现位置 reprojection，因为呈现通常是由真实世界提供的稳定背景稀疏的。
+* 如果应用为给定帧提供深度缓冲区，则 **沉浸式耳机** 将负责定位 reprojection。 沉浸式耳机还会在位置和方向上调整 misprediction 的全息影像。 如果未提供深度缓冲区，则系统只会方向上的 mispredictions。
+* 如果应用程序提供了深度缓冲区，就像 HoloLens 这样的 **全息耳机** 将负责确定位置 reprojection。  在不使用 HoloLens 上的深度缓冲区的情况下，可能会出现位置 reprojection，因为呈现通常是由真实世界提供的稳定背景稀疏的。
 
-如果你知道要使用严格的正文锁定内容构建 [仅限方向的体验](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) (例如360度的视频内容) ，则只能通过将 [HolographicSettings](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) 设置为 [HolographicReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html)，将 reprojection 模式显式设置为 "方向"。
+如果你知道要使用严格的正文锁定内容构建 [仅限方向的体验](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) (例如，360度视频内容) ，则只能通过将 [HolographicSettings](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) 设置为 [HolographicReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html)，将 reprojection 模式显式设置为 "方向"。
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>与 Windows 共享你的深度缓冲区
 
 将应用的深度缓冲区共享到 Windows 每个框架都将根据要呈现的耳机类型为应用程序提供以下两个增强功能之一：
 
-* 当提供了深度缓冲区时，**沉浸式耳机** 可以执行位置 reprojection，同时调整 misprediction 在位置和方向上的影像。
+* 当提供了深度缓冲区时，**沉浸式耳机** 可以处理位置 reprojection，同时调整您在位置和方向上的 misprediction 影像。
 * **全息耳机** 具有几种不同的方法。 当提供了深度缓冲区时，HoloLens 1 将自动选择 [焦点](focus-point-in-unity.md) ，同时优化与最大内容相交的平面上的全息图稳定性。 HoloLens 2 将使用深度 LSR 来稳定内容 [ (请参阅备注) ](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint)。
 
 设置 Unity 应用是否将向 Windows 提供深度缓冲区：
 
 1. 请参阅 **编辑**  >  **项目设置**  >  **播放器**  >  **通用 Windows 平台选项卡**  >  **XR 设置**。
 2. 展开 " **Windows Mixed REALITY SDK** " 项。
-3. 选中或取消选中 " **启用深度缓冲共享** " 复选框。  默认情况下，在新创建的项目中将选中此功能，因为此功能已添加到 Unity，并且默认情况下将为升级的旧项目取消选中。
+3. 选中或取消选中 " **启用深度缓冲共享** " 复选框。  默认情况下，在新项目中选中 "启用深度缓冲区共享"，因为此功能已添加到 Unity，并且默认情况下将为升级的旧项目取消选中。
 
-向 Windows 提供深度缓冲区可以提高视觉质量，只要 Windows 可以使用在主摄像机上的 Unity 中已设置的近和远的平面，将深度缓冲区中的规范化的每像素深度值准确地映射回米的距离。  如果您的呈现器通过使用典型的方式来处理深度值，则通常情况下，您应该非常好，但是，在显示到现有颜色像素时，写入深度缓冲区的半透明渲染传递可能会混淆 reprojection。  如果你知道，你的 render pass 会使很多最终深度像素具有不准确的深度值，则你可能会通过取消选中 "启用深度缓冲区共享" 获得更好的视觉质量。 # # 下一个开发检查点
+深度缓冲区可以提高视觉质量，只要 Windows 可以使用在主摄像机上的 Unity 中设置的近和远的平面，将深度缓冲区中的规范化每像素深度值准确地映射回以米为单位的距离。  如果您的呈现器通过使用典型的方式来处理深度值，则通常情况下，您应该非常好，但是，在显示到现有颜色像素时，写入深度缓冲区的半透明渲染传递可能会混淆 reprojection。  如果你知道，你的 render pass 会使很多最终深度像素具有不准确的深度值，则你可能会通过取消选中 "启用深度缓冲区共享" 获得更好的视觉质量。
 
-## <a name="automatic-scene-and-camera-setup-with-mixed-reality-toolkit-v2"></a>带有混合现实工具包 v2 的自动场景和照相机设置
+## <a name="automatic-scene-and-camera-setup-with-mixed-reality-toolkit"></a>带有混合现实工具包的自动场景和照相机设置 
 
-按照将混合现实工具包 v2 添加到 Unity [项目中的分步指南操作](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) ，它将自动配置你的项目。 你还可以通过以下部分中的指南手动配置项目，而无需 MRTK。
+按照将混合现实工具包添加到 Unity [项目中的分步指南操作](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) ，它将自动配置你的项目。 你还可以通过以下部分中的指南手动配置项目，而无需 MRTK。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块：
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块：
 
 > [!div class="nextstepaction"]
 > [凝视](gaze-in-unity.md)
@@ -105,7 +109,7 @@ HoloLens 和沉浸式耳机都将 reproject 你的应用程序呈现的每个帧
 
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [全息影像稳定性](../platform-capabilities-and-apis/hologram-stability.md)
 * [MixedRealityToolkit prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

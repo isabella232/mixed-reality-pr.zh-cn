@@ -6,16 +6,16 @@ ms.author: vladkol
 ms.date: 05/20/2018
 ms.topic: article
 keywords: unity，mixed reality，native，xrdevice，spatialcoordinatesystem，holographicframe，holographiccamera，ispatialcoordinatesystem，iholographicframe，iholographiccamera，getnativeptr，mixed reality 耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: a64deb46db82e6d0401a803e45dcbbd854476745
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8dda1152da9705147ca3a057faadb9edd8428df6
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679926"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010588"
 ---
 # <a name="mixed-reality-native-objects-in-unity"></a>Unity 中的混合现实原生对象
 
-[获取 HolographicSpace](../native/getting-a-holographicspace.md) 是每个混合现实应用在开始接收相机数据和渲染帧之前所做的工作。 在 Unity 中，引擎负责处理这些步骤，并在内部处理全息对象和更新作为其呈现循环的一部分。
+每个混合现实应用都在开始接收相机数据和渲染帧之前 [获得 HolographicSpace](../native/getting-a-holographicspace.md) 。 在 Unity 中，引擎负责处理这些步骤，处理全息对象和内部更新作为其呈现循环的一部分。
 
 但是，在高级方案中，可能需要访问基础本机对象，例如 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> 和 current <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>。 <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">UnityEngine. XR. XRDevice</a> 提供对这些本机对象的访问权限。
 
@@ -49,7 +49,7 @@ HolographicFrameNativeData hfd = Marshal.PtrToStructure<HolographicFrameNativeDa
 
 ### <a name="unmarshaling-native-pointers"></a>取消封送本机指针
 
-如果你使用的是 [MixedReality](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT) ，则可以使用方法从本机指针构造托管对象 `FromNativePtr()` ：
+如果你使用的是 [MixedReality](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT)，则可以使用方法从本机指针构造托管对象 `FromNativePtr()` ：
 
 ```cs
 var worldOrigin = Microsoft.Windows.Perception.Spatial.SpatialCoordinateSystem.FromNativePtr(hfd.ISpatialCoordinateSystemPtr);
@@ -96,9 +96,10 @@ namespace NumericsConversion
 > [!NOTE]
 > 更改通过 HolographicFrameNativeData 接收的本机对象的状态可能会导致不可预知的行为和呈现项目，特别是当 Unity 也导致相同状态时。  例如，您不应调用 HolographicFrame. UpdateCurrentPrediction，否则 Unity 呈现与该框架的姿势预测将与 Windows 所需的姿势不同步，这将减少全息图的 [稳定性](../platform-capabilities-and-apis/hologram-stability.md)。
 
-在本机插件或 c # 代码中，如果要进行呈现或调试，则可以使用 HolographicFrameNativeData 中的数据。 
+如果需要访问本机接口以进行呈现或调试，请在本机插件或 c # 代码中使用 HolographicFrameNativeData 中的数据。 
 
-下面是如何使用 HolographicFrameNativeData 获取当前帧预测的 photon 时间的示例。 
+下面的示例演示如何使用 HolographicFrameNativeData 获取当前帧预测的 photon 时间。 
+
 ```cs
 using System;
 using System.Runtime.InteropServices;

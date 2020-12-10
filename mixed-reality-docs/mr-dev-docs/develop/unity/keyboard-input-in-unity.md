@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 键盘，输入，unity，touchscreenkeyboard，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: aa9bb3059a8d0cc5b829bf14d92928511259b7f9
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 613c9327b517205c340555b6423a3809906f9b9f
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677416"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010508"
 ---
 # <a name="keyboard-input-in-unity"></a>Unity 中的键盘输入
 
@@ -24,11 +24,11 @@ Unity 提供了 *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/
 
 ## <a name="hololens-system-keyboard-behavior-in-unity"></a>Unity 中的 HoloLens 系统键盘行为
 
-在 HoloLens 上， *TouchScreenKeyboard* 利用系统的屏幕键盘。 系统的屏幕键盘无法叠加到容量耗尽视图之上，因此 Unity 必须创建辅助二维 XAML 视图，以显示键盘，然后在提交输入后返回到容量耗尽视图。 用户流如下所示：
+在 HoloLens 上， *TouchScreenKeyboard* 利用系统的屏幕键盘。 系统的屏幕键盘不能叠加在容量耗尽视图的顶部。 Unity 必须创建辅助 2D XAML 视图，以显示键盘，然后在提交输入后返回到容量耗尽视图。 用户流如下所示：
 1. 用户执行导致应用程序代码调用 *TouchScreenKeyboard* 的操作
     * 在调用 *TouchScreenKeyboard* 之前，应用负责暂停应用状态
     * 应用可能会终止，然后再切换回容量耗尽视图
-2. Unity 切换到在世界上自动放置的 2D XAML 视图
+2. Unity 切换到了世界上 autoplaced 的 2D XAML 视图
 3. 用户使用系统键盘输入文本并提交或取消
 4. Unity 切换回容量耗尽视图
     * 应用负责在 *TouchScreenKeyboard* 完成后恢复应用程序状态
@@ -49,7 +49,7 @@ Unity 提供了 *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/
 HoloLens 系统键盘仅适用于使用 "UWP 版本类型" 设置为 "XAML" 导出的 Unity 应用程序。 选择 "XAML" 作为 "UWP 生成类型" over "D3D" 时，会产生一些折衷。 如果你不熟悉这些折衷方案，你可能希望浏览到系统键盘的 [备用输入解决方案](#alternative-keyboard-options) 。
 1. 打开 "**文件**" 菜单，然后选择 "**生成设置 ...** "
 2. 确保将 **平台** 设置为 **Windows 应用商店**，将 **SDK** 设置为 **通用 10**，并将 **UWP 生成类型** 设置为 **XAML**。
-3. 在 " **生成设置** " 对话框中，单击 " **播放机设置 ...** " 按钮
+3. 在 " **生成设置** " 对话框中，选择 " **播放机设置 ...** " 按钮
 4. 选择 " **Windows 应用商店设置** " 选项卡
 5. 展开 " **其他设置** " 组
 6. 在 " **呈现** " 部分中，选中 " **支持虚拟现实** " 复选框，以添加新的 **虚拟现实设备** 列表
@@ -71,7 +71,7 @@ public static string keyboardText = "";
 
 ### <a name="invoke-the-keyboard"></a>调用键盘
 
-当请求键盘输入时发生事件时，请根据所需的输入类型调用其中一个函数。 请注意，在 textPlaceholder 参数中指定标题。
+当请求键盘输入时发生事件时，请根据所需的输入类型，使用 textPlaceholder 参数中的标题调用这些函数之一。
 
 ```cs
 // Single-line textbox
@@ -113,12 +113,12 @@ if (TouchScreenKeyboard.visible == false && keyboard != null)
 我们了解，从容量耗尽视图切换到2D 视图并不是获取用户文本输入的理想方法。
 
 通过 Unity 使用系统键盘的当前替代方法包括：
-* 使用语音听写输入 (<b>注意：</b> 这通常容易出错，因为字典中找不到单词，因此不适合密码条目) 
+* 使用语音听写输入 (<b>注意：</b> 这通常容易出错，无法用于字典中找不到的词，也不适合密码条目) 
 * 在应用程序独占视图中创建工作键盘
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 从这里，你可以转到任何 [主题](unity-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。
+如果遵循我们所说的 Unity 开发旅程，就是探索混合现实平台功能和 Api。 在这里，你可以继续阅读任何 [主题](unity-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。
 
 > [!div class="nextstepaction"]
 > [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../platform-capabilities-and-apis/using-visual-studio.md)

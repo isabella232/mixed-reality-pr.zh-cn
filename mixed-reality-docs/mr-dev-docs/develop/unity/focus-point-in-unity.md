@@ -6,21 +6,21 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，焦点，焦点平面，稳定平面，稳定点，reprojection，LSR，深度缓冲区，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 48c0d26e89124b9dbfc1d108354fb6e751e51783
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: d2708dcf39f1d2c67ab1abf69f8330f9dd536ab0
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678686"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010268"
 ---
 # <a name="focus-point-in-unity"></a>Unity 中的焦点
 
 **命名空间：** *UnityEngine. XR*<br>
 **类型**： *HolographicSettings*
 
-可以将 [焦点](../platform-capabilities-and-apis/hologram-stability.md#reprojection) 设置为提供有关如何在当前显示的全息影像上最好地执行稳定的提示。
+使用 [焦点](../platform-capabilities-and-apis/hologram-stability.md#reprojection) 向 HoloLens 提供有关如何最好地使当前正在显示的全息影像稳定的提示。
 
-如果要在 Unity 中设置焦点，则需要使用 *HolographicSettings. SetFocusPointForFrame ( # B1* 来设置每个框架。 如果未为帧设置焦点，则将使用默认的稳定平面。
+如果要在 Unity 中设置焦点，则需要使用 *HolographicSettings. SetFocusPointForFrame ( # B1* 来设置每个框架。 如果未为帧设置焦点，则使用默认的稳定平面。
 
 > [!NOTE]
 > 默认情况下，新的 Unity 项目设置了 "启用深度缓冲共享" 选项。  使用此选项时，在沉浸式桌面耳机上运行的 Unity 应用或运行 Windows 10 4 月2018更新 (RS4) 或更高版本的应用程序将向 Windows 提交深度缓冲区以自动优化全息影像稳定性，无需应用指定焦点：
@@ -48,11 +48,12 @@ void Update()
 }
 ```
 
-请注意，如果焦点对象最终出现在用户后面，则上述简单代码可能最终会降低全息体稳定性。  这就是通常应设置 "启用深度缓冲区共享" 而不是手动指定焦点的原因。
+> [!NOTE]
+> 如果焦点对象最终出现在用户后面，则上述简单代码可以减少全息图的稳定性。 我们通常建议设置 " **[启用深度缓冲区共享"，](camera-in-unity.md#sharing-your-depth-buffers-with-windows)** 而不是手动指定焦点。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 从这里，你可以进入下一主题：
+如果遵循我们所说的 Unity 开发旅程，就是探索混合现实平台功能和 Api。 从这里，你可以继续学习下一主题：
 
 > [!div class="nextstepaction"]
 > [失跟](tracking-loss-in-unity.md)
@@ -64,5 +65,5 @@ void Update()
 
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#3-platform-capabilities-and-apis)。
 
-### <a name="see-also"></a>请参阅
+### <a name="see-also"></a>另请参阅
 * [稳定平面](../platform-capabilities-and-apis/hologram-stability.md#reprojection)

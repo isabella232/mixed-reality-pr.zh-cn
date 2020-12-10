@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，WinRT，windows mixed reality，API，演练，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，混合现实 Api
-ms.openlocfilehash: fb8d63a44a05f639becd96fc9198c57dd10aaafd
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: ff12df7eb41350fe1f842b3450f3532e4ab8ffa1
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679676"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010578"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>用于 HoloLens 的适用于 Unity 的 WinRT Api
 
@@ -19,7 +19,7 @@ ms.locfileid: "94679676"
 
 ## <a name="mixed-reality-apis"></a>混合现实 Api
 
-已在 .NET Standard 2.0 兼容的投影中提供 Windows SDK 的混合现实重点，你可以在不带预处理器指令的项目中使用。 这包括 Windows 中的大多数 Api 和 Windows UI 命名空间，并且可能会在将来扩展以包含其他 Api。 在编辑器中运行时，可以使用投影的 Api，这允许使用 [播放模式](https://docs.microsoft.com//windows/mixed-reality/unity-play-mode)。 若要使用此投影，请对项目进行以下修改：
+已在 .NET Standard 2.0 兼容的投影中提供 Windows SDK 的混合现实重点，你可以在不带预处理器指令的项目中使用。 Windows 中的大多数 Api。 感知和 Windows UI. Input 命名空间包括在内，并且可能会在将来扩展以包含其他 Api。 在编辑器中运行时，可以使用投影的 Api，这允许使用 [播放模式](https://docs.microsoft.com//windows/mixed-reality/unity-play-mode)。 若要使用此投影，请对项目进行以下修改：
 
 1) 使用[NuGet For Unity](https://github.com/GlitchEnzo/NuGetForUnity)添加对[MixedReality](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT) nuget 包的引用。
 2) 命名空间的前缀引用 `Windows` 包含 `Microsoft.` ：
@@ -33,7 +33,7 @@ var worldOrigin = SpatialCoordinateSystem.FromNativePtr(unityWorldOriginPtr);
 
 ## <a name="conditionally-include-winrt-api-calls"></a>有条件地包含 WinRT API 调用
 
-或者，通过使用预处理器指令，可将 WinRT Api 用于通用 Windows 平台和 Xbox One 平台构建的 Unity 项目;在 Unity 脚本中编写的面向 WinRT Api 的任何代码必须仅有条件地包含在这些内部版本中。 
+还可以通过使用预处理器指令，在为通用 Windows 平台和 Xbox one 平台构建的 Unity 项目中使用 WinRT Api。 在 Unity 脚本中编写的面向 WinRT Api 的任何代码必须仅有条件地包含在这些内部版本中。 
 
 这可以通过 Unity 中的两个步骤完成：
 1) API 兼容级别必须设置为 " **.net 4.6** " 或 "播放机设置" 中 **.NET Standard 2.0**
@@ -62,8 +62,8 @@ public class WinRTAPI : MonoBehaviour {
 
 ## <a name="edit-your-scripts-in-a-unity-c-project"></a>在 Unity c # 项目中编辑脚本
 
-双击 Unity 编辑器中的脚本时，默认情况下，该脚本将在编辑器项目中启动。 WinRT Api 将显示为 "未知"，因为 Visual Studio 项目未引用 Windows 运行时。 此外， **ENABLE_WINMD_SUPPORT** 指令将是未定义的，并且在你将项目生成到 UWP Visual Studio 解决方案之前，将忽略任何 *#if* 包装的代码。
+双击 Unity 编辑器中的脚本时，默认情况下，该脚本将在编辑器项目中启动。 WinRT Api 将显示为 "未知"，因为 Visual Studio 项目不引用 Windows 运行时。 在将项目生成到 UWP Visual Studio 解决方案之前，将忽略 **ENABLE_WINMD_SUPPORT** 指令，并忽略任何 *#if* 包装的代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [导出和构建 Unity Visual Studio 解决方案](exporting-and-building-a-unity-visual-studio-solution.md)
 * [Windows 运行时支持 Unity](https://docs.unity3d.com/Manual/IL2CPP-WindowsRuntimeSupport.html)

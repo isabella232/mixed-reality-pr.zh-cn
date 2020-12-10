@@ -1,23 +1,23 @@
 ---
 title: 将 Vuforia 与 Unity 配合使用
-description: 利用 Vuforia 在 Unity 中构建 Windows Mixed Reality 应用程序。
+description: 使用 Vuforia 在 Unity 中生成 Windows Mixed Reality 应用程序。
 author: thetuvix
 ms.author: alexturn
 ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia，标记，坐标，引用框架，跟踪，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity，HoloLens，设备跟踪，性能模式，Vuforia 开发人员门户
-ms.openlocfilehash: 930f23d5bbc4115476c337dcb99f40096039d78f
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: ecacf4036bfab38eb90782a194c445a83ca623ba
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679666"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010558"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>将 Vuforia 引擎与 Unity 一起使用
 
 Vuforia 引擎为 HoloLens 提供一项重要功能–将 AR 体验连接到环境中的特定映像和对象的能力。 你可以使用此功能来覆盖工业企业的机械上的引导式分步说明，或者向物理产品或游戏添加数字功能和体验。
 
-为了在开发 AR 体验时获得更大的灵活性，Vuforia 引擎提供了范围广泛的功能和目标。 我们最新的功能 Vuforia 模型目标之一是用于商业和工业用途的一项重要功能。 模型目标允许应用程序识别诸如计算机、汽车或玩具等物理对象，并根据 CAD 或数字3D 模型对其进行跟踪。 对于工业用途，此功能可以为程序集工作者和服务技术人员提供 AR 工作说明和过程指南，同时在现场或现场推出。
+Vuforia 引擎提供范围广泛的功能和目标，使 AR 开发过程更加灵活。 我们最新的功能 Vuforia 模型目标之一是用于商业和工业用途的一项重要功能。 模型目标允许应用程序识别诸如计算机、汽车或玩具等物理对象，并根据 CAD 或数字3D 模型对其进行跟踪。 对于工业用途，此功能可以为程序集工作者和服务技术人员提供 AR 工作说明和过程指南，同时在现场或现场推出。
 
 在 Unity 中，可以轻松地在 Unity 中配置为手机和平板电脑构建的现有 Vuforia 引擎应用。 甚至可以使用 Vuforia 引擎将新的 HoloLens 应用程序带到 Windows 10 平板电脑，如 Surface Pro 和 Surface Book。
 
@@ -32,9 +32,9 @@ Vuforia 引擎为 HoloLens 提供一项重要功能–将 AR 体验连接到环�
 
 ## <a name="getting-started-with-vuforia-engine"></a>Vuforia 引擎入门
 
-了解将 Vuforia Engine 与 HoloLens 配合使用的最佳开始点是在 "Unity 资产存储库") 中提供了 [Vuforia Engine HoloLens 示例](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) (。 该示例提供了一个完整的 HoloLens 项目，其中包括可以部署到 HoloLens 的预配置的场景。
+了解 Vuforia 引擎和 HoloLens 的最佳起点是) 的 "Unity 资产存储库" 中提供的 [Vuforia Engine HoloLens 示例](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) (。 该示例提供了一个完整的 HoloLens 项目，其中包括可以部署到 HoloLens 的预配置的场景。
 
-幕后介绍了如何使用 Vuforia 图像目标识别映像，并在 HoloLens 体验中使用数字内容对其进行扩充。 Vuforia 引擎 Hololens 示例还包含一个场景，其中显示了在 HoloLens 上使用模型目标和 VuMarks 的情况。 你可以轻松地在幕后替换你自己的内容，以尝试创建使用 Vuforia 引擎的 HoloLens 应用。
+幕后介绍了如何使用 Vuforia 图像目标识别映像，并在 HoloLens 体验中使用数字内容对其进行扩充。 Vuforia 引擎 HoloLens 示例还包含一个场景，其中显示了在 HoloLens 上使用模型目标和 VuMarks 的情况。 你可以轻松地在幕后替换你自己的内容，以尝试创建使用 Vuforia 引擎的 HoloLens 应用。
 
 
 
@@ -48,7 +48,7 @@ Vuforia 引擎为 HoloLens 提供一项重要功能–将 AR 体验连接到环�
 3.  在生成中将示例场景添加到 **场景** 中 **。**
 4.  在 "**生成设置**" 中，通过单击 "**添加打开的场景**" 按钮将生成平台切换到 **UWP** 。
 ![图像](https://user-images.githubusercontent.com/45470042/89573103-173daa80-d7f8-11ea-9284-931a7b6c913d.png)
-5.  单击 " **播放机设置** " 按钮。  
+5.  选择 " **播放器设置** " 按钮。  
    * 选择 **UWP** 图标，然后展开 " **XR 设置** " 部分。
    * 确保启用 **虚拟现实** 。    
    * 在 **虚拟现实 sdk** 下，请确保：
@@ -75,7 +75,7 @@ Vuforia 引擎为 HoloLens 提供一项重要功能–将 AR 体验连接到环�
 
 Vuforia 引擎自动融合来自相机跟踪和 HoloLens 空间跟踪的姿势，以提供稳定的目标，而不考虑是否由照相机来查看目标。
 
-由于过程是自动处理的，因此不需要开发人员进行任何编程。
+因为该过程是自动处理的，所以开发人员无需任何编程。
 
 
 **下面是此过程的概要说明：**
@@ -86,7 +86,6 @@ Vuforia 引擎自动融合来自相机跟踪和 HoloLens 空间跟踪的姿势�
 5. 如果目标不再处于视图中，则 HoloLens 会接管跟踪。 再次查看目标时，Vuforia 将继续准确地跟踪图像和对象。
 
 检测到但不再在视图中的目标将报告为 EXTENDED_TRACKED。 在这些情况下，用于所有目标的 DefaultTrackableEventHandler 脚本将继续呈现增加内容。 开发人员可以通过实现自定义的以可跟踪事件处理程序脚本来控制此行为。
-
 
 ## <a name="performance-mode-with-vuforia-engine"></a>带有 Vuforia 引擎的性能模式 
 
@@ -112,4 +111,4 @@ Vuforia 引擎自动融合来自相机跟踪和 HoloLens 空间跟踪的姿势�
 * [Vuforia 文档：如何安装 Vuforia Unity 扩展](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
 * [Vuforia 文档：在 Unity 中使用 HoloLens 示例](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
 * [Vuforia 文档： Vuforia 中的设备跟踪](https://library.vuforia.com/features/environments/device-tracker-overview.html)
-* [Vuforia 文档：帧速率和性能 Optomization](https://library.vuforia.com/content/vuforia-library/en/articles/Solution/Framerate-Optimization-for-Mixed-Reality-Apps.html)
+* [Vuforia 文档：帧速率和性能优化](https://library.vuforia.com/content/vuforia-library/en/articles/Solution/Framerate-Optimization-for-Mixed-Reality-Apps.html)

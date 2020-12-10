@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 20e2b8d4b8a18f38e72db7889a5d00cf15bfc0eb
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 66aba92c14eca4183739687934e12db289cd2302
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679886"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010568"
 ---
 # <a name="voice-input-in-unity"></a>Unity 中的语音输入
 
@@ -27,9 +27,9 @@ Unity 公开了三种将 [语音输入](../../design/voice-input.md) 添加到 U
 
 ## <a name="enabling-the-capability-for-voice"></a>启用语音功能
 
-必须为应用声明 **麦克风** 功能才能利用语音输入。
+必须为应用声明 **麦克风** 功能才能使用语音输入。
 1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player"，转到 "播放机" 设置
-2. 单击 "Windows 应用商店" 选项卡
+2. 选择 "Windows 应用商店" 选项卡
 3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
 ## <a name="phrase-recognition"></a>短语识别
@@ -58,7 +58,7 @@ KeywordRecognizer keywordRecognizer;
 Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 ```
 
-现在，请将关键字添加到字典中 (例如，在开始 ( # A2 方法) 。 在此示例中，我们要添加 "activate" 关键字：
+现在，请将关键字添加到字典中，例如，在开始 ( # A1 方法中。 在此示例中，我们要添加 "activate" 关键字：
 
 ```
 //Create keywords for keyword recognizer
@@ -126,7 +126,7 @@ grammarRecognizer = new GrammarRecognizer(Application.streamingDataPath + "/SRGS
 grammarRecognizer.OnPhraseRecognized += grammarRecognizer_OnPhraseRecognized;
 ```
 
-你将获得一个回拨，其中包含你可以相应处理的 SRGS 语法中指定的信息。 最重要的信息将在 semanticMeanings 数组中提供。
+你将获得一个回调，其中包含你可以进行相应处理的 SRGS 语法中指定的信息。 最重要的信息将在 semanticMeanings 数组中提供。
 
 ```
 private void Grammar_OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -156,9 +156,9 @@ grammarRecognizer.Start();
 
 ### <a name="enabling-the-capability-for-dictation"></a>启用听写功能
 
-除了上面提到的 "麦克风" 功能以外，还必须为应用声明 "Internet 客户端" 功能才能利用听写。
+必须为应用声明 "Internet 客户端" 功能以及上面提到的 "麦克风" 功能，才能利用听写。
 1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player" 页，转到 "播放机" 设置
-2. 单击 "Windows 应用商店" 选项卡
+2. 选择 "Windows 应用商店" 选项卡
 3. 在 "发布设置 > 功能" 部分中，查看 **InternetClient** 功能
 
 ### <a name="dictationrecognizer"></a>DictationRecognizer
@@ -251,7 +251,7 @@ private void DictationRecognizer_DictationError(string error, int hresult)
 }
 ```
 
-订阅并处理了所关注的听写事件后，启动听写识别器以开始接收事件。
+一旦你订阅并处理了所关注的听写事件，开始听写识别器即可开始接收事件。
 
 ```
 dictationRecognizer.Start();
@@ -272,7 +272,7 @@ dictationRecognizer.Dispose();
 * 完成识别器后，必须使用 Dispose ( # A1 方法释放它所使用的资源。 如果未在此之前释放这些资源，它将在垃圾回收期间自动释放这些资源。
 * 超时发生在设定的时间段之后。 可以在 DictationComplete 事件中检查这些超时。 需要注意两个超时：
    1. 如果识别器在前五秒内开始播放并且不听到任何音频，则会超时。
-   2. 如果识别器给定了结果，但随后听到了20秒，则会超时。
+   2. 如果识别器给出了结果，但随后听到了20秒，则会超时。
 
 ## <a name="using-both-phrase-recognition-and-dictation"></a>使用短语识别和听写
 

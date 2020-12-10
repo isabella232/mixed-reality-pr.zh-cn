@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 照片，视频，hololens，照相机，unity，定位，PVC，照片视频摄像机，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，网络摄像机，照片捕获，视频捕获
-ms.openlocfilehash: c41ff88650da4aa6dc0d98c05b1b881362123a4f
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 125521206421acbcc4c9ad6e5fb371314ddb48f2
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678596"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010098"
 ---
 # <a name="locatable-camera-in-unity"></a>Unity 中的可定位相机
 
@@ -19,10 +19,10 @@ ms.locfileid: "94678596"
 
 必须为应用声明 "网络摄像机" 功能，才能使用 [相机](../platform-capabilities-and-apis/locatable-camera.md)。
 1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player" 页，转到 "播放机" 设置。
-2. 单击 "Windows 应用商店" 选项卡
+2. 选择 "Windows 应用商店" 选项卡
 3. 在 "发布设置 > 功能" 部分中，检查 **网络摄像机** 和 **麦克风** 功能
 
-照相机一次只能出现一次操作。 若要确定照相机当前在哪个模式 (的照片、视频或无) ，可以检查 UnityEngine. XR。
+照相机一次只能出现一次操作。 你可以检查相机目前处于的模式中是否包含 UnityEngine。 可用模式有照片、视频或无。
 
 ## <a name="photo-capture"></a>照片捕获
 
@@ -39,7 +39,7 @@ ms.locfileid: "94678596"
 
 ### <a name="common-set-up-for-photocapture"></a>通用设置 PhotoCapture
 
-对于所有三个用途，请从上述前3个步骤开始
+对于所有这三个用途，请从上述前三个步骤开始
 
 首先创建 *PhotoCapture* 对象
 
@@ -124,9 +124,9 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
 
 ### <a name="capture-a-photo-to-a-texture2d"></a>将照片捕获到 Texture2D
 
-将数据捕获到 Texture2D 时，该过程与捕获到磁盘非常类似。
+将数据捕获到 Texture2D 时，该过程类似于捕获到磁盘。
 
-遵循上面的设置过程。
+按照上面的设置过程进行操作。
 
 在 *OnPhotoModeStarted* 中，将帧捕获到内存。
 
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-然后，将结果应用到纹理，并使用上面的常见清除代码。
+然后，将结果应用到纹理，并使用上面的常见清理代码。
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -165,9 +165,9 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>捕获照片并与原始字节交互
 
-若要与内存中帧的原始字节交互，请按照上述设置步骤进行操作，并在将照片捕获到 Texture2D 时 *OnPhotoModeStarted* 。 不同之处在于，可在 *OnCapturedPhotoToMemory* 中获取原始字节并与其进行交互。
+若要与内存中帧的原始字节交互，请按照与在 Texture2D 中捕获 *照片时相同* 的设置步骤进行操作。 不同之处在于，可在 *OnCapturedPhotoToMemory* 中获取原始字节并与其进行交互。
 
-在此示例中，你将创建 *一个 <Color> 列表*，该列表可以通过 SetPixels 进一步处理或应用于纹理 *( # B1*
+在此示例中，你将创建 *一个 <Color> 列表*，通过 SetPixels 将其进一步处理或应用于纹理 *( # B1*
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -205,7 +205,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 **命名空间：** *UnityEngine. XR*<br>
 **类型：** *VideoCapture*
 
-*VideoCapture* 函数与 *PhotoCapture* 非常类似。 唯一的两个不同之处在于，每秒必须指定帧数 (FPS) 值，并且只能将磁盘直接保存为..。 使用 *VideoCapture* 的步骤如下所示：
+*VideoCapture* 函数类似于 *PhotoCapture*。 唯一的两个不同之处在于，每秒必须指定帧数 (FPS) 值，并且只能将磁盘直接保存为..。 使用 *VideoCapture* 的步骤如下所示：
 1. 创建 *VideoCapture* 对象
 2. 使用所需的设置创建 *CameraParameters* 对象
 3. 通过 *StartVideoModeAsync* 启动视频模式
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-稍后，你将需要停止记录。 例如，这种情况可能发生在计时器或用户输入中。
+稍后，你将需要使用计时器或用户输入来停止记录，例如。
 
 ```cs
 // The user has indicated to stop recording
@@ -309,7 +309,7 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 从这里，你可以进入下一主题：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 从这里，你可以继续学习下一主题：
 
 > [!div class="nextstepaction"]
 > [焦点](focus-point-in-unity.md)

@@ -6,18 +6,19 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: a58d07cd50679154fe68d3b8b7d424ea6cfbf39e
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7ab439a1248895975c5ebff676862515ee79ecf0
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678616"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010298"
 ---
 # <a name="galaxy-explorer"></a>星系探索者
 
 **你分享了创意。我们正在共享代码。**
 
-星系探索者项目已准备就绪。 你已经将想法分享给了社区，选择了一个应用，观看了团队如何构建，现在可以获得源代码。 如果你有一个设备，则也可以从适用于 Microsoft HoloLens 的 Windows 应用商店下载 Galaxy 资源管理器项目。
+星系探索者项目已准备就绪。 你已与社区分享你的想法，选择一个应用，对团队进行跟踪，然后你就可以获取源代码了。 如果你有一个设备，则可以从适用于 Microsoft HoloLens 的 Windows 应用商店下载 Galaxy 资源管理器项目。
+
 >[!TIP]
 >[获取 GitHub 上的代码](https://github.com/Microsoft/GalaxyExplorer)
 
@@ -92,7 +93,7 @@ Galaxy 资源管理器旅程以 "分享你的想法" 市场活动为起点。
 ![Galaxy 资源管理器开发团队](images/syiteampic.jpg)<br>
 *Galaxy 资源管理器开发团队*
 
-我们了解到，生成正确的团队是我们可以做出的最重要投资之一。 我们决定将类似于你熟悉该开发模型的游戏工作室进行组织。 我们选择拥有11个核心团队成员来控制作用域，因为我们有一个固定时间范围 (在2016年3月30日（) 之前）创建一些很酷的内容。
+我们了解到，构建正确的团队是我们可以做出的最重要的投资之一，并决定与您熟悉该开发模型的游戏工作室进行组织。 我们选择拥有11个核心团队成员来控制作用域，因为我们有一个固定时间范围 (在2016年3月30日（) 之前）创建一些很酷的内容。
 
 对于此项目，我们从一个制造者开始，Jessica 负责规划、查看进度，并使每日运行时间保持不上。 她是带有粉色头发的人。 我们有一个设计总监 (吴建) ，一个高级设计人员 (Peter) 。 它们保持了 Galaxy 资源管理器的创造性愿景。 吴建是前面一行中眼镜的，Peter 是后面的第二个。
 
@@ -100,10 +101,10 @@ Galaxy 资源管理器旅程以 "分享你的想法" 市场活动为起点。
 
 我们已开始使用四个艺术家，这是一项概念 (Jedd，从后) 中的第二个开始，建模者 (在后) 中的第三方、技术艺术家 (Alex (最右人员) # A7 和 animator (Steve () 。 其中的每个功能也不是这样，而是它们的主要职责。
 
-我们将有一个全职测试人员– Lena –每天测试一次生成，设置我们的生成审查，并在联机时查看这些功能。 不过，每个人都在不断进行测试，因为我们一直在寻找我们的版本。 Lena 是 leather jacket 的滚轮。
+我们有一个全职测试人员– Lena –每天测试一次生成，设置我们的内部版本审查，并在其联机时查看这些功能。 不过，每个人都在不断进行测试，因为我们一直在寻找我们的版本。 Lena 是 leather jacket 的滚轮。
 
-我们是 Microsoft (认为团队在非游戏开发) 中的一个大型工作室的组成部分。 还有很多人还会参与到其中：我们在整个项目中经常会人才我们的艺术总监、音频工程师和工作室领导地位，但这些人与更广大团队合作的其他项目共享资源。
+我们是 Microsoft (认为团队在非游戏开发) 中的一个大型工作室的组成部分。 还有很多其他人在人才，我们在整个项目中都经常称之为我们的艺术总监、音频工程师和工作室领导，但这些人与更广泛的团队的其他项目共享资源。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [案例研究-在混合现实中创建 galaxy](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
 * [Galaxy 资源管理器 GitHub 存储库](https://github.com/Microsoft/GalaxyExplorer)
