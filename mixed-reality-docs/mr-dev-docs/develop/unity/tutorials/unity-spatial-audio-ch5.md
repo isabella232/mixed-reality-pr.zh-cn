@@ -2,16 +2,16 @@
 title: 空间音频教程-5。 使用混响为空间音频添加距离感
 description: 添加回音效果，提高对空间音频的距离变体的意义。
 author: kegodin
-ms.author: kegodin
+ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，音频混合器，SFX 回音
-ms.openlocfilehash: d688955910d667edbdb79e63dab16587e66064a4
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: c63e5a239806c133e814eee8b44cbfb30f55aa5d
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679696"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002612"
 ---
 # <a name="using-reverb-to-add-distance-to-spatial-audio"></a>使用混响为空间音频添加距离感
 
@@ -129,6 +129,6 @@ public class SpatializeOnOff : MonoBehaviour
 
 在 HoloLens 2 上或在 Unity 编辑器中试用你的应用程序。 现在，在接触应用中的按钮以激活 spatialization 时，该脚本会将视频的音频路由到房间效果组以添加回音。 切换到立体声时，它会将音频路由到主组，并避免添加回音。
 
-已完成适用于 Unity 的 HoloLens 2 空间音频教程。 恭喜！
+已完成适用于 Unity 的 HoloLens 2 空间音频教程。 祝贺！
 
 

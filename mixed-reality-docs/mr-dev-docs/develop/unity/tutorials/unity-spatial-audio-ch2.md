@@ -2,16 +2,16 @@
 title: 空间音频教程-2。 将按钮交互声音空间化
 description: 向项目添加一个按钮，并 spatialize 按钮交互声音。
 author: kegodin
-ms.author: kegodin
+ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，prototyping，音量曲线
-ms.openlocfilehash: eb550c3127e13926d73428b337abfd7cf9872eb7
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 62825ed8922cd904212160748018446cbc76b839
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678186"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002592"
 ---
 # <a name="spatializing-button-interaction-sounds"></a>将按钮交互声音空间化
 

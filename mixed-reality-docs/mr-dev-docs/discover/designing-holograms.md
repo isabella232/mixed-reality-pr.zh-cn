@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 11/24/2020
 ms.topic: article
 keywords: MRTK，混合现实工具包，全息影像，设计全息影像，学习，示例应用，混合现实耳机，虚拟现实耳机，什么是虚拟现实
-ms.openlocfilehash: 243b6f28da7b074b3ff6d48794d525ac08281fa7
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: bf904b319ed5b452f254b659315d9b531832a4d5
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96355292"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002534"
 ---
 # <a name="the-making-of-designing-holograms"></a>设计全息影像的过程
 
@@ -122,6 +122,32 @@ Microsoft 的 San 中有混合现实的捕获工作室。 Microsoft 还向其他
 显然，与简单文本相比，图标的工作方式要好得多，因此为了提供更为强大的指导，我开始创建一组动画对象和头像，其中每个对象都说明了在各自的方案中所执行的操作及其使用方式的一小部分。
 
 ![交互式全息菜单系统的动画 GIF](images/designing-holograms/creative-process.gif)
+
+## <a name="core-concepts"></a>核心概念
+
+**全息帧**
+
+![用户的动画 GIF，其中突出显示了全息框架的 dollhouse](images/designing-holograms/FOVandFOI.gif)
+
+**坐标系统**
+
+![用户使用突出显示的坐标系统围绕 dollhouse 的动画 GIF](images/designing-holograms/CoordinateSystems.gif)
+
+**眼动跟踪**
+
+![用户的动画 GIF，其中突出显示了眼睛为眼睛的静止全息影像](images/designing-holograms/EyeTracking.gif)
+
+**房间扫描可视化和空间映射**
+
+![要映射的 dollhouse 中的所有表面的动画 GIF](images/designing-holograms/SpatialMapping.gif)
+
+**场景理解**
+
+![正在识别的 dollhouse 中的对象的动画 GIF](images/designing-holograms/SceneUnderstanding.gif)
+
+**手动射线的点和提交**
+
+![用户的动画 GIF，其中突出显示了手 ray](images/designing-holograms/HandRays.gif)
 
 ## <a name="try-it-out-moments"></a>"试用"
 

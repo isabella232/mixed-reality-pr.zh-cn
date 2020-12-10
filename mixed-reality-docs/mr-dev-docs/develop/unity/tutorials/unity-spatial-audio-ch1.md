@@ -2,16 +2,16 @@
 title: 空间音频教程-1。 向项目添加空间音频
 description: 将 Microsoft Spatializer 插件添加到 Unity 项目以访问 HoloLens 2 HRTF 硬件卸载。
 author: kegodin
-ms.author: kegodin
+ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
-ms.openlocfilehash: fc657eb22034c1c3fd31aadedfe7b8ea7bb8447d
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8790c4c62ab4c1b2b9e9f9c5c6fe0583b9e36545
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679706"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002502"
 ---
 # <a name="adding-spatial-audio-to-your-unity-project"></a>将空间音频添加到 Unity 项目
 

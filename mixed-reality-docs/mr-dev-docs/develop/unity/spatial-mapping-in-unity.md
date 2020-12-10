@@ -6,16 +6,16 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 60196a85689ce6c4c190acdfe305fc12982ace4c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 2e5518b1a54f967762143bb8602141b4199a2d54
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677396"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002512"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
-本主题介绍如何在 Unity 项目中使用 [空间映射](../../design/spatial-mapping.md) ，以及如何在 HoloLens 设备上检索表示世界上的表面的三角形网格，以便进行放置、封闭、房间分析等。
+[空间映射](../../design/spatial-mapping.md) 使你可以检索表示 HoloLens 设备周围的表面的三角形网格。 你可以使用 "位置"、"封闭" 和 "房间" 分析的 surface data，为 Unity 项目提供浸入式的额外剂量。
 
 Unity 包含对空间映射的完全支持，可通过以下方式向开发人员公开：
 1. MixedRealityToolkit 中提供了空间映射组件，可为空间映射入门提供方便快捷的路径
@@ -34,7 +34,7 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens (第一代) </strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -52,19 +52,20 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 
 如何启用 SpatialPerception 功能：
 1. 在 Unity 编辑器中，打开 **"播放机设置"** 窗格， (> 播放机编辑 > 项目设置) 
-2. 单击 **"Windows 应用商店"** 选项卡
+2. 选择 **"Windows 应用商店"** 选项卡
 3. 展开 **"发布设置"** ，然后在 **"功能"** 列表中检查 **"SpatialPerception"** 功能
 
-请注意，如果已将 Unity 项目导出到 Visual Studio 解决方案，则需要导出到新文件夹或 [在 Visual studio 的 appxmanifest.xml 中手动设置此功能](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)。
+> [!NOTE]
+> 如果已将 Unity 项目导出到 Visual Studio 解决方案，则需要导出到新文件夹或 [在 Visual studio 的 appxmanifest.xml 中手动设置此功能](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)。
 
 空间映射还需要至少10.0.10586.0 的 MaxVersionTested：
-1. 在 Visual Studio 中，右键单击 "解决方案资源管理器中的 **appxmanifest.xml** ，然后选择"**查看代码**"
+1. 在 Visual Studio 中，右键单击解决方案资源管理器中的 **appxmanifest.xml** ，然后选择 "**查看代码**"
 2. 查找指定 **y** 的行，并将 **MaxVersionTested = "10.0.10240.0"** 更改为 **MaxVersionTested = "10.0.10586.0"**
 3. **保存** appxmanifest.xml。
 
 ## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Unity 内置空间映射组件入门
 
-Unity 提供了2个组件，可轻松地将空间映射添加到应用、 **空间映射呈现** 器和 **空间映射碰撞** 器。
+Unity 提供了两个组件，可以轻松地将空间映射添加到应用、 **空间映射呈现** 器和 **空间映射碰撞** 器。
 
 ### <a name="spatial-mapping-renderer"></a>空间映射呈现器
 
@@ -96,12 +97,12 @@ Unity 提供了2个组件，可轻松地将空间映射添加到应用、 **空�
 
 ## <a name="using-the-low-level-unity-spatial-mapping-api"></a>使用低级别 Unity 空间映射 API
 
-如果需要更多的控制，而不是从空间映射呈现器和空间映射碰撞器组件获取，则可以使用低级空间映射脚本 Api。
+如果需要更多的控制，而不是空间映射呈现器和空间映射碰撞器组件产品/服务，请使用低级别空间映射 Api。
 
 **命名空间：** *UnityEngine. XR*<br>
 **类型**： *SurfaceObserver*、 *SurfaceChange*、 *SurfaceData*、 *SurfaceId*
 
-下面是使用空间映射 Api 的应用程序的建议流概述。
+我们概括了使用以下部分中的空间映射 Api 的应用程序的建议流。
 
 ### <a name="set-up-the-surfaceobservers"></a>设置 SurfaceObserver (s) 
 
@@ -135,8 +136,8 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
 
 ### <a name="handling-surface-changes"></a>处理表面更改
 
-有几个用来处理的主要用例。 添加了 & 更新，可以使用相同的代码路径并将其删除。
-* 在示例中添加的 & 更新的事例中，我们从字典中添加或获取表示此网格的 GameObject，使用必要的组件创建 SurfaceData 结构，然后调用 RequestMeshDataAsync，用网格数据和位置在场景中填充 GameObject。
+有几个用来处理-添加和更新的主要案例，它们可以使用相同的代码路径，并将其删除。
+* 在添加和更新的情况下，我们将从字典中添加或获取表示此网格的 GameObject，使用必要的组件创建 SurfaceData 结构，然后调用 RequestMeshDataAsync，用网格数据和场景中的位置来填充 GameObject。
 * 在已删除的示例中，我们从字典中删除表示此网格的 GameObject 并销毁它。
 
 ```cs
@@ -189,7 +190,7 @@ System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects 
 
 ### <a name="handling-data-ready"></a>处理数据准备就绪
 
-OnDataReady 处理程序接收 SurfaceData 对象。 WorldAnchor、MeshFilter 和 () （可选）它所包含的 MeshCollider 对象将反映关联空间图面的最新状态。 还可以通过访问 MeshFilter 对象的网格成员来执行分析和/或 [处理](../../design/spatial-mapping.md#mesh-processing) 网格数据。 使用最新网格呈现空间图面，并 (（可选）) 将其用于物理学冲突和 raycasts。 务必确认 SurfaceData 的内容不为空。
+OnDataReady 处理程序接收 SurfaceData 对象。 "WorldAnchor"、"MeshFilter" 和 " (" （可选）) 其包含的 MeshCollider 对象反映关联空间图面的最新状态。 （可选）通过访问 MeshFilter 对象的网格成员来分析和/或 [处理](../../design/spatial-mapping.md#mesh-processing) 网格数据。 使用最新网格呈现空间图面，并 (（可选）) 将其用于物理学冲突和 raycasts。 务必确认 SurfaceData 的内容不为空。
 
 ### <a name="start-processing-on-updates"></a>开始处理更新
 
@@ -214,23 +215,23 @@ void Start () {
 
 ## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>更高级别的网格分析： SpatialUnderstanding
 
-<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>是一系列有用的实用工具代码，适用于基于全息 Unity api 构建的全息开发。
+<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>是一系列实用工具代码，适用于基于 Unity 的全息 api 构建的全息开发。
 
 ### <a name="spatial-understanding"></a>空间理解
 
-在物理环境中放置全息影像时，通常需要超越空间映射的网格和面平面。 过程放置完成后，需要更高级别的环境理解。 这通常需要作出有关楼层、天花板和墙壁的决策。 此外，还可以根据一组放置约束进行优化，以确定全息对象的最理想物理位置。
+在物理环境中放置全息影像时，通常需要超越空间映射的网格和面平面。 过程放置完成后，需要更高级别的环境理解。 这通常需要作出有关楼层、天花板和墙壁的决策。 您还可以根据一组放置约束进行优化，以确定最适合于全息对象的物理位置。
 
-在 Conker 和片段的开发过程中，Asobo 工作室面临着这一问题，开发一个房间规划求解来实现此目的。 其中每个游戏都具有游戏特定需求，但它们共享了核心空间理解技术。 HoloToolkit SpatialUnderstanding 库封装了这一技术，使你能够快速找到墙上的空白空间，将对象放置在天花板上，识别出要放置的字符，以及其他大量的空间理解查询。
+在 Conker 和片段的开发过程中，Asobo 工作室通过开发房间规划求解来面对此问题。 其中每个游戏都有特定于游戏的需求，但它们共享了核心空间理解技术。 HoloToolkit SpatialUnderstanding 库封装了这一技术，使你能够快速找到墙上的空白空间，将对象放置在天花板上，识别出要放置的字符，以及其他大量的空间理解查询。
 
 所有源代码都包含在内，使你可以根据需要对其进行自定义，并与社区分享你的改进。 C + + 求解器的代码已包装到 UWP dll 中，并通过包含在 MixedRealityToolkit 中的 prefab 向 Unity 公开。
 
 ### <a name="understanding-modules"></a>了解模块
 
-模块公开了三个主要接口：用于简单图面和空间查询的拓扑、用于对象检测的形状，以及用于基于约束的对象集放置的对象放置规划求解。 下面介绍上述每种方式。 除了三个主要模块接口外，ray 强制转换接口还可用于检索标记的表面类型，并可将自定义 watertight playspace 网格复制出来。
+模块公开了三个主要接口：用于简单的图面和空间查询的拓扑、用于对象检测的形状，以及用于基于约束的对象集放置的对象放置规划求解。 下面介绍上述每种方式。 除了三个主要模块接口外，ray 强制转换接口还可用于检索标记的表面类型，并可将自定义 watertight playspace 网格复制出来。
 
 ### <a name="ray-casting"></a>Ray 转换
 
-在房间经过扫描并完成后，会在内部生成标签，如地面、天花板和墙。 "PlayspaceRaycast" 函数采用 ray，如果该射线与已知表面冲突，则返回，如果是，则返回 "RaycastResult" 形式的有关该曲面的信息。
+完成房间扫描后，会在内部生成标签，如地面、天花板和墙。 "PlayspaceRaycast" 函数采用 ray，如果该射线与已知表面冲突，则返回，如果是，则返回 "RaycastResult" 形式的有关该曲面的信息。
 
 ```cpp
 struct RaycastResult
@@ -258,7 +259,7 @@ struct RaycastResult
 };
 ```
 
-在内部，raycast 是针对 playspace 的计算8cm 立方 voxel 表示法计算的。 每个 voxel 都包含一组具有已处理拓扑数据的 surface 元素 (亦即 surfels) 。 将比较交叉 voxel 单元中包含的 surfels 和用于查找拓扑信息的最佳匹配项。 此拓扑数据包含以 "SurfaceTypes" 枚举形式返回的标签，以及相交表面的外围应用。
+在内部，raycast 是根据 playspace 的计算出的 8 cm 立方 voxel 表示形式计算出来的。 每个 voxel 都包含一组具有已处理拓扑数据的 surface 元素 (亦即 surfels) 。 将比较交叉 voxel 单元中包含的 surfels 和用于查找拓扑信息的最佳匹配项。 此拓扑数据包含以 "SurfaceTypes" 枚举形式返回的标签，以及相交表面的外围应用。
 
 在 Unity 示例中，游标将每个帧都转换为射线。 首先，针对 Unity 的 colliders。 其次，针对 "了解模块" 的世界表示。 最后又是一个 UI 元素。 在此应用程序中，UI 获得优先级，接下来是理解结果，最后是 Unity colliders。 SurfaceType 将报告为光标旁边的文本。
 
@@ -267,7 +268,10 @@ struct RaycastResult
 
 ### <a name="topology-queries"></a>拓扑查询
 
-在 DLL 中，拓扑管理器处理环境的标记。 如上所述，很多数据存储在 surfels 中，包含在 voxel 卷中。 此外，"PlaySpaceInfos" 结构用于存储有关 playspace 的信息，其中包括世界对齐 (下面) 、楼层和天花板高度的详细信息。 试探法用于确定地面、天花板和墙。 例如，具有大于1个 m2 面区的最大和最低水平曲面被视为楼层。 请注意，在此过程中也使用了扫描过程中的照相机路径。
+在 DLL 中，拓扑管理器处理环境的标记。 如上所述，很多数据存储在 surfels 中，包含在 voxel 卷中。 此外，"PlaySpaceInfos" 结构用于存储有关 playspace 的信息，其中包括世界对齐 (下面) 、楼层和天花板高度的详细信息。 试探法用于确定地面、天花板和墙。 例如，具有大于 1-m2 的图面区域的最大和最低水平曲面被视为楼层。 
+
+> [!NOTE]
+> 在此过程中也使用了扫描过程中的照相机路径。
 
 拓扑管理器公开的查询子集通过 dll 公开。 公开的拓扑查询如下所示。
 
@@ -306,13 +310,14 @@ struct TopologyResult
 };
 ```
 
-请注意，在 Unity 示例中，其中每个查询都链接到 "虚拟 UI" 面板中的某个按钮。 示例将每个查询的参数硬编码为合理的值。 有关更多示例，请参阅示例代码中的 SpaceVisualizer.cs。
+> [!NOTE]
+> 在 Unity 示例中，其中每个查询都链接到 "虚拟 UI" 面板中的某个按钮。 示例将每个查询的参数硬编码为合理的值。 有关更多示例，请参阅示例代码中的 SpaceVisualizer.cs。
 
 ### <a name="shape-queries"></a>形状查询
 
-在 dll 内部，形状分析器 ( "ShapeAnalyzer_W" ) 使用拓扑分析器与用户定义的自定义形状相匹配。 Unity 示例定义一组形状，并通过 "应用内查询" 菜单在 "形状" 选项卡中公开结果。其目的在于，用户可以根据应用程序的需要定义自己的对象形状查询并使用这些查询。
+在 dll 中，形状分析器 ( "ShapeAnalyzer_W" ) 使用拓扑分析器与用户定义的自定义形状相匹配。 Unity 示例定义一组形状，并通过 "应用内查询" 菜单在 "形状" 选项卡中公开结果。其目的在于，用户可以根据应用程序的需要定义自己的对象形状查询并使用这些查询。
 
-请注意，形状分析仅适用于水平曲面。 例如，沙发由平面座位表面和沙发顶部的扁平顶部定义。 形状查询查找特定大小、高度和方位范围的两个图面，两个图面对齐并连接起来。 使用 Api 术语，沙发座位和后端是形状组件，对齐要求是形状组件约束。
+形状分析仅适用于水平曲面。 例如，沙发由平面座位表面和沙发顶部的扁平顶部定义。 形状查询查找特定大小、高度和方位范围的两个图面，两个图面对齐并连接起来。 使用 Api 术语，沙发座位和后端是形状组件，对齐要求是形状组件约束。
 
 "Sittable" 对象的 Unity 示例 (ShapeDefinition.cs) 中定义的示例查询如下所示。
 
@@ -333,7 +338,7 @@ AddShape("Sittable", shapeComponents);
 
 每个形状查询都由一组形状组件定义，每个形状组件都具有一组组件约束和一组形状约束，它们列出组件之间的依赖关系。 此示例在单个组件定义中包含三个约束，组件之间没有任何形状约束 (因为只有一个组件) 。
 
-与此相反，沙发形状具有两个形状组件和四个形状约束。 请注意，在此示例中，组件在用户组件列表中的索引 (0 和1之间进行标识) 。
+与此相反，沙发形状具有两个形状组件和四个形状约束。 组件由其在用户的组件列表中的索引标识，在此示例中 (0 和 1) 。
 
 ```cs
 shapeConstraints = new List<ShapeConstraint>()
@@ -436,7 +441,7 @@ One-time scan process –
     Query functions will not function until after the scan has been finalized.
 ```
 
-用户驱动的 playspace "painting" –在扫描阶段，用户会四处移动并四处四处旋转，从而有效地绘制应包括的区域。 在此阶段，生成的网格非常重要，可提供用户反馈。 室内家庭或办公设置–查询函数围绕平整表面和墙壁围绕直角设计。 这是一个软限制。 但是，在扫描阶段，将完成主轴分析以按主要轴和次要轴优化网格分割。 包含的 SpatialUnderstanding.cs 文件管理扫描阶段过程。 它调用以下函数。
+用户驱动的 playspace "painting" –在扫描阶段，用户移动并浏览重头戏，并有效地绘制应包括的区域。 在此阶段，生成的网格非常重要，可提供用户反馈。 室内家庭或办公设置–查询函数围绕平整表面和墙壁围绕直角设计。 这是一个软限制。 但是，在扫描阶段，将完成主轴分析以按主要轴和次要轴优化网格分割。 包含的 SpatialUnderstanding.cs 文件管理扫描阶段过程。 它调用以下函数。
 
 ```
 SpatialUnderstanding_Init – Called once at the start.
@@ -461,11 +466,11 @@ Import_UnderstandingMesh –
     after scanning has been finalized.
 ```
 
-由 "SpatialUnderstanding" 行为驱动的扫描流将调用 InitScan，然后 UpdateScan 每个帧。 当统计信息查询报告合理的范围时，允许用户 airtap 调用 RequestFinish 以指示扫描阶段结束。 继续调用 UpdateScan，直到返回值指示 dll 已完成处理。
+由 "SpatialUnderstanding" 行为驱动的扫描流将调用 InitScan，然后 UpdateScan 每个帧。 当统计信息查询报告合理的范围时，允许用户 airtap 调用 RequestFinish 以指示扫描阶段结束。 继续调用 UpdateScan，直到其返回值指示 dll 已完成处理。
 
 ### <a name="understanding-mesh"></a>了解网格
 
-理解 dll 在内部将 playspace 存储为8cm 大小 voxel 多维数据集的网格。 在扫描的初始部分中，将完成主要组件分析以确定房间的轴。 在内部，它存储其 voxel 空间与这些轴对齐。 大约每秒生成一次网格，方法是从 voxel 卷中提取等值面。 
+理解 dll 在内部将 playspace 存储为 8 cm 大小的 voxel 多维数据集的网格。 在扫描的初始部分中，将完成主要组件分析以确定房间的轴。 在内部，它存储其 voxel 空间与这些轴对齐。 大约每秒生成一次网格，方法是从 voxel 卷中提取等值面。 
 
 ![从 voxel 卷生成的生成的网格](images/su-custommesh.jpg)<br>
 *从 voxel 卷生成的生成的网格*
@@ -479,10 +484,10 @@ Import_UnderstandingMesh –
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块： 
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块： 
 
 > [!div class="nextstepaction"]
-> [Text](text-in-unity.md)
+> [文本](text-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 
@@ -491,7 +496,7 @@ Import_UnderstandingMesh –
 
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [坐标系统](../../design/coordinate-systems.md)
 * [Unity 中的坐标系统](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
