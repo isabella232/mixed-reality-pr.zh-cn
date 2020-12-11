@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 图形, cpu, gpu, 渲染, 垃圾回收, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2c5a459f673889dd4c52043f9b9df6a3fe43a93a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6fd12bec31bb721def8801a8f2bacb8c3cb75745
+ms.sourcegitcommit: d11275796a1f65c31dd56b44a8a1bbaae4d7ec76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695806"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761769"
 ---
 # <a name="performance-recommendations-for-unity"></a>针对 Unity 的性能建议
 
@@ -120,9 +120,9 @@ public class ExampleClass : MonoBehaviour
 
 3) **注意装箱**
 
-    [装箱](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing)是 C# 语言和运行时的核心概念。 它是将值类型化变量（例如 char、int、bool 等）包装到引用类型化变量中的过程。 将值类型化变量“装箱”后，该变量将包装在 System.Object 内，后者存储在托管堆上。 因此，需要分配内存，并在最终释放内存后，由垃圾回收器处理内存。 这种分配和解除分配会损害性能，且在许多情况下是不必要的，或者可以由开销更低的替代做法轻松取代。
+    [装箱](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing)是 C# 语言和运行时的核心概念。 它是将值类型化变量（例如 `char`、`int` 和 `bool` 等）包装到引用类型化变量中的过程。 将值类型化变量“装箱”后，该变量将包装在 `System.Object` 内，后者存储在托管堆上。 因此，需要分配内存，并在最终释放内存后，由垃圾回收器处理内存。 这种分配和解除分配会损害性能，且在许多情况下是不必要的，或者可以由开销更低的替代做法轻松取代。
 
-    开发中最常见的装箱形式之一是使用[可为 null 值类型](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/)。 开发人员经常希望能够在函数中为值类型返回 null，尤其是操作在尝试获取该值可能失败的情况下。 此方法的潜在问题是，现在分配在堆上发生，因此以后需要进行垃圾回收。
+    若要避免装箱，请务必将用于存储数值类型和结构（包括 `Nullable<T>`）的变量、字段和属性强类型化为特定类型（例如 `int`、`float?` 或 `MyStruct`），而不是使用对象。  如果将这些对象放入列表中，请确保使用强类型列表（例如 `List<int>`），而不是 `List<object>` 或 `ArrayList`。
 
     **C# 中的装箱示例**
 
@@ -130,21 +130,6 @@ public class ExampleClass : MonoBehaviour
     // boolean value type is boxed into object boxedMyVar on the heap
     bool myVar = true;
     object boxedMyVar = myVar;
-    ```
-
-    **通过可为 null 值类型进行装箱出现问题的示例**
-
-    此代码演示一个可在 Unity 项目中创建的虚构粒子类。 对 `TryGetSpeed()` 的调用将导致在堆上分配对象，因此需要在以后的某个时间点进行垃圾回收。 在此示例中之所以会出现特定的问题，是因为场景中可能有 1000 个甚至更多的粒子，而函数需要查询每个粒子的当前速度。 这样，就要分配数千个对象，因而要解除分配每个帧，这会极大地降低性能。 重新编写函数以返回一个负值（例如 -1）来指示失败可以避免此问题，并在堆栈上保留内存。
-
-    ```csharp
-        public class MyParticle
-        {
-            // Example of function returning nullable value type
-            public int? TryGetSpeed()
-            {
-                // Returns current speed int value or null if fails
-            }
-        }
     ```
 
 #### <a name="repeating-code-paths"></a>重复代码路径
@@ -243,13 +228,13 @@ Unity 中的单通道实例化渲染使针对每只眼睛的绘制调用缩减�
 
 #### <a name="static-batching"></a>静态批处理
 
-Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 静态批处理适用于 Unity 中具有以下特征的大多数 [渲染器](https://docs.unity3d.com/ScriptReference/Renderer.html)： **1) 共享相同的材料** ； **2) 全部标记为 *Static*** （在 Unity 中选择一个对象，然后单击检查器右上角的复选框）。 标记为 *Static* 的 GameObject 无法在应用程序的整个运行时中移动。 因此，在几乎每个对象都需要进行定位、移动、缩放等操作的 HoloLens 上，可能很难利用静态批处理。对于沉浸式头戴显示设备，静态批处理可以大幅减少绘制调用，从而改善性能。
+Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 静态批处理适用于 Unity 中具有以下特征的大多数 [渲染器](https://docs.unity3d.com/ScriptReference/Renderer.html)：**1) 共享相同的材料**；**2) 全部标记为 *Static***（在 Unity 中选择一个对象，然后单击检查器右上角的复选框）。 标记为 *Static* 的 GameObject 无法在应用程序的整个运行时中移动。 因此，在几乎每个对象都需要进行定位、移动、缩放等操作的 HoloLens 上，可能很难利用静态批处理。对于沉浸式头戴显示设备，静态批处理可以大幅减少绘制调用，从而改善性能。
 
 有关更多详细信息，请阅读 [Unity 中的绘制调用批处理](https://docs.unity3d.com/Manual/DrawCallBatching.html)下的“静态批处理”。
 
 #### <a name="dynamic-batching"></a>动态批处理
 
-由于在 HoloLens 开发中将对象标记为 *Static* 会造成问题，动态批处理可能是弥补这项短缺功能的极佳手段。 当然，它也可用于沉浸式头戴显示设备。 不过，Unity 中的动态批处理可能很难启用，原因是 GameObject 必须 **a) 共享相同的材料** ； **b) 符合其他很多条件** 。
+由于在 HoloLens 开发中将对象标记为 *Static* 会造成问题，动态批处理可能是弥补这项短缺功能的极佳手段。 当然，它也可用于沉浸式头戴显示设备。 不过，Unity 中的动态批处理可能很难启用，原因是 GameObject 必须 **a) 共享相同的材料**；**b) 符合其他很多条件**。
 
 有关条件的完整列表，请阅读[Unity 中的绘制调用批处理](https://docs.unity3d.com/Manual/DrawCallBatching.html)下的“动态批处理”。 最常见的情况是，由于关联的网格数据不能超过 300 个顶点，因此 GameObject 无效，无法对其进行动态批处理。
 
@@ -268,7 +253,7 @@ Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 �
 
 ### <a name="optimize-depth-buffer-sharing"></a>优化深度缓冲区共享
 
-通常建议在“播放器 XR 设置”下启用“深度缓冲区共享”，以优化[全息影像稳定性](../platform-capabilities-and-apis/Hologram-stability.md)。  但是，在使用此设置的情况下启用基于深度的后期阶段重新投影时，建议选择 **16 位深度格式** 而不是 **24 位深度格式** 。 16 位深度缓冲区可以大幅减少与深度缓冲区流量相关的带宽（以及电量消耗）。 这可能会给节能和性能提升带来很大的好处。 但是，使用 *16 位深度格式* 可能会造成两种负面影响。
+通常建议在“播放器 XR 设置”下启用“深度缓冲区共享”，以优化[全息影像稳定性](../platform-capabilities-and-apis/Hologram-stability.md)。  但是，在使用此设置的情况下启用基于深度的后期阶段重新投影时，建议选择 **16 位深度格式** 而不是 **24 位深度格式**。 16 位深度缓冲区可以大幅减少与深度缓冲区流量相关的带宽（以及电量消耗）。 这可能会给节能和性能提升带来很大的好处。 但是，使用 *16 位深度格式* 可能会造成两种负面影响。
 
 **Z 冲突**
 

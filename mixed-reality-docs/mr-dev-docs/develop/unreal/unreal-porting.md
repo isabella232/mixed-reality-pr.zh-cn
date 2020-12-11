@@ -2,25 +2,25 @@
 title: 在 Unreal 中升级项目
 description: 简要介绍 Unreal 项目中的版本升级步骤和已弃用的 API。
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 移植, 升级
-ms.openlocfilehash: efad783ee199ed42c7355917a180855b3ec4f11b
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: 0ba10b8ee1067da4494f147d43f8834010e1250f
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96355638"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609658"
 ---
 # <a name="upgrading-projects-in-unreal"></a>在 Unreal 中升级项目
 
-更新到新版本的 Unreal 后，在编译蓝图或打包项目时，已弃用的函数将显示为“警告”。  如果已添加新函数，且应改为使用此函数，那么这些函数会被弃用。 
+更新到新版本的 Unreal 后，在编译蓝图或打包项目时，已弃用的函数会显示为“警告”。  如果已添加新函数，且应改为使用此函数，那么这些函数会被弃用。 
 
 ## <a name="426-upgrades"></a>4.26 版升级
  
-在 4.26 版本中，所有 AR 和 VR 平台都已经过重构，添加了常见接口，且仍然与应用程序代码平台无关。  由于此重构，更新到 4.26 版的 HoloLens 项目看到的警告可能比平时的多。  建议更新到新的 API，使项目能够更轻松地移植到其他平台。
+在 4.26 版本中，所有 AR 和 VR 平台都已经过重构，添加了常见接口，且仍然与应用程序代码平台无关，因此可能会出现比平常更多的警告。  建议更新到新的 API，使项目能够更轻松地移植到其他平台。
 
 警报消息将显示哪个函数已被弃用，并指出该改用哪个函数。  所有已弃用的函数都将继续适用于此版本，但可能在未来版本中失效。  在蓝图中搜索函数时，也将不再列出已弃用的函数。
 
@@ -49,4 +49,4 @@ ms.locfileid: "96355638"
 | GetVersionString | ![Get Version String 函数的蓝图](images/unreal-porting-img-16.png) |
 | IsTrackingAvailable | ![IsTrackingAvailable 属性的蓝图](images/unreal-porting-img-17.png) |
 | IsButtonClicked、IsButtonDown、IsGrasped、IsSelectPressed | 使用 Unreal 的输入操作系统。 |
-| SetFocusPointForFrame | 已在 4.26 版中删除。  之前，它用于在远程时重新投影，而现在支持深度重新投影。 |
+| SetFocusPointForFrame | 已在 4.26 版中删除。  之前用于在远程处理时重新投影，而现在支持深度重新投影。 |

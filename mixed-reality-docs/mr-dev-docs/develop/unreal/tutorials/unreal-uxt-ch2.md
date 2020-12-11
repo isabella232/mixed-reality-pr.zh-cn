@@ -1,34 +1,35 @@
 ---
 title: 2. 初始化你的项目和第一个应用程序
-description: 教程系列第 2 部分（共 6 部分）- 使用 Unreal Engine 4 和混合现实工具包 UX Tools 插件构建一款简单的象棋应用
+description: 教程系列第 2 部分（共 6 部分）- 使用 Unreal Engine 4 和混合现实工具包 UX Tools 插件构建一款象棋应用
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 869b947d23c3fbd1e561cef2c3ec41322fefd6a2
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 464df846d0fc6e1bd22ee3862adcdf110c377728
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679906"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609648"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2.初始化你的项目和第一个应用程序
 
-## <a name="overview"></a>概述
+在第一个教程中，你将开始从一个新 Unreal 项目着手，需启用 HoloLens 插件、创建和点亮关卡，以及添加棋子。 你可将我们预制的资产用于所有 3D 对象和材质，因此不必担心需自行建模的问题。 本教程结束时，你会有一个可用于混合现实的空白画布。
 
-在第一个教程中，你将开始使用适用于 HoloLens 2 的新 Unreal 应用程序。 这包括添加 HoloLens 插件、创建和点亮关卡，并使用游戏板和棋子来填充它。 你会将预制的资产用于 3D 棋子和对象材质，因此不必担心要从头开始建模。 本教程结束时，有一个可用于混合现实的空白画布。
-
-在继续之前，请确保满足[入门](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1)页面中的所有先决条件。
+> [!IMPORTANT]
+> 请确保满足[入门](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1)页面中的所有先决条件。
 
 ## <a name="objectives"></a>目标
+
 * 为 HoloLens 开发配置 Unreal 项目
 * 导入资产和设置场景
 * 使用蓝图创建 Actor 和脚本级别事件
 
 ## <a name="creating-a-new-unreal-project"></a>创建新的 Unreal 项目
-首先需要一个待处理的项目。 如果这是你第一次为 HoloLens 创建 Unreal 应用，则需要从 Epic Launcher [下载支持文件](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/tutorials/unreal-uxt-ch6#packaging-and-deploying-the-app-via-device-portal)。
+
+首先需要一个待处理的项目。 如果你是刚接触的 Unreal 开发人员，则需要从 Epic Launcher [下载支持文件](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/tutorials/unreal-uxt-ch6#packaging-and-deploying-the-app-via-device-portal)。
 
 1. 启动 Unreal Engine
 
@@ -50,7 +51,8 @@ ms.locfileid: "94679906"
 项目应在 Unreal 编辑器中自动打开，这意味着你已准备好进入下一部分。
 
 ## <a name="enabling-required-plugins"></a>启用所需插件
-在开始向场景添加对象之前，你需要启用两个插件。
+
+你需要启用两个插件，然后才能开始向场景添加对象。
 
 1. 打开“编辑”>“插件”，并从内置选项列表中选择“增强现实”。 
     * 向下滚动到“HoloLens”并选中“已启用”。 
@@ -65,20 +67,20 @@ ms.locfileid: "94679906"
 > [!NOTE]
 > 这两个插件都是 HoloLens 2 开发所必需的。
 
-完成此操作后，公司即可使用空关卡。
+启用这些插件后，公司即可使用空关卡。
 
 ## <a name="creating-a-level"></a>创建关卡
-下一个任务是创建具有可供参考和缩放的起点和立方体的简单玩家设置。
+下一个任务是创建具有可供参考和缩放的起点和立方体的玩家设置。
 
 1. 选择“文件”>“新关卡”>“空关卡”。 视口中的默认场景现在应为空。
 
 2. 从“模式”选项卡中选择“基本”，并将“PlayerStart”拖到场景中  。 
-    * 在“详细信息”选项卡中，将“位置”设置为“X = 0”、“Y = 0”和“Z = 0”    。这会在应用启动时将用户设置到场景的中心。
+    * 在“详细信息”选项卡中，将“位置”设置为“X = 0”、“Y = 0”和“Z = 0”，以便在应用启动时将用户设置到场景的中心    。
 
 ![具有 PlayerStart 的视口](images/unreal-uxt/2-playerstart.PNG)
 
 3. 将“立方体”从“基本”选项卡拖到场景中 。 
-    * 将“位置”设置为“X = 50”、“Y = 0”和“Z = 0”   。 这会在启动时将立方体放在距离玩家 50 厘米的位置。 
+    * 将“位置”设置为“X = 50”、“Y = 0”和“Z = 0”   。 在启动时将立方体放在距离玩家 50 厘米的位置。 
     * 将“比例”更改为“X = 0.2”、“Y = 0.2”和“Z = 0.2”以缩小立方体   。 
 
 除非向场景添加光源（这是测试场景前的最后一个任务），否则看不到立方体。
@@ -87,7 +89,7 @@ ms.locfileid: "94679906"
 
 ![添加了光源的视口](images/unreal-uxt/2-light.PNG)
 
-5. 转到“文件”>“保存当前”，将关卡命名为“主”，然后单击“保存”  。 
+5. 转到“文件”>“保存当前”，将关卡命名为“主”，然后选择“保存”  。 
 
 设置场景后，按工具栏中的“开始”，以查看正在运行的立方体！ 完成工作后，按 Esc 停止应用程序。
 
@@ -100,16 +102,16 @@ ms.locfileid: "94679906"
 
 1. 使用 [7-zip](https://www.7-zip.org/) 下载并解压缩 [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/blob/master/ChessApp/ChessAssets.7z) 资产文件夹。
 
-2. 从“内容浏览器”中单击“新增”>“新建文件夹”，然后将其命名为“ChessAssets”  。 
-    * 双击新文件夹 - 这是导入 3D 资产的位置。
+2. 从“内容浏览器”中选择“新增”>“新建文件夹”，然后将其命名为“ChessAssets”  。 
+    * 双击新文件夹，这是导入 3D 资产的位置。
 
 ![显示或隐藏源面板](images/unreal-uxt/2-showhidesources.PNG)
 
-3. 从“内容浏览器”中单击“导入”，选择解压缩的资产文件夹中的所有项目，然后单击“打开”  。 
-    * 此文件夹包含棋盘和棋子的 3D 对象网格（采用 FBX 格式）和用于材质的纹理映射（采用 TGA 格式）。  
+3. 从“内容浏览器”中选择“导入”，选择解压缩的资产文件夹中的所有项目，然后单击“打开”  。 
+    * 资产包括棋盘和棋子的 3D 对象网格（采用 FBX 格式）和用于材质的纹理映射（采用 TGA 格式）。  
 
 4. 弹出“FBX 导入选项”窗口后，展开“材质”部分，并将“材质导入方法”更改为“不创建材质”  。
-    * 单击“全部导入”。
+    * 选择“全部导入”。
 
 ![导入 FBX 选项](images/unreal-uxt/2-nocreatemat.PNG)
 
@@ -117,7 +119,7 @@ ms.locfileid: "94679906"
 
 ## <a name="adding-blueprints"></a>添加蓝图
 
-1. 在“内容浏览器”中单击“新增”>“新建文件夹”，然后将其命名为“蓝图”  。 
+1. 在“内容浏览器”中选择“新增”>“新建文件夹”，然后将其命名为“蓝图”  。 
 
 > [!NOTE]
 > 如果你不熟悉[蓝图](https://docs.unrealengine.com/en-US/Engine/Blueprints/index.html)，这些蓝图为特殊资产，它们提供基于节点的接口来创建新类型的 Actor 和脚本级别事件。 
@@ -138,7 +140,7 @@ ms.locfileid: "94679906"
 
 1. 双击“棋盘”以打开蓝图编辑器。 
 
-2. 从“组件”面板中单击“添加组件”>“场景”，并将其命名为“Root”  。 请注意，“Root”在下面的屏幕截图中显示为 DefaultSceneRoot 的子项 ：
+2. 从“组件”面板中选择“添加组件”>“场景”，并将其命名为“Root”  。 请注意，“Root”在下面的屏幕截图中显示为 DefaultSceneRoot 的子项 ：
 
 ![替换蓝图中的 root](images/unreal-uxt/2-root-blueprint.PNG)
 
@@ -148,15 +150,15 @@ ms.locfileid: "94679906"
 ![替换 Root](images/unreal-uxt/2-root.PNG)
 
 
-4. 从“组件”面板中单击“添加组件”>“静态网格”，并将其命名为“SM_Board”  。 它将在“Root”下显示为子对象。
+4. 从“组件”面板中选择“添加组件”>“静态网格”，并将其命名为“SM_Board”  。 它将在“Root”下显示为子对象。
 
 ![添加静态网格](images/unreal-uxt/2-sm-board.PNG)
 
-4. 单击“SM_Board”，向下滚动到“详细信息”面板的“静态网格”部分，并从下拉列表中选择“棋盘”   。 
+4. 选择“SM_Board”，向下滚动到“详细信息”面板的“静态网格”部分，并从下拉列表中选择“棋盘”   。 
 
 ![视口中的棋盘网格](images/unreal-uxt/2-sm-board-view.PNG)
 
-5.  继续在“详细信息”面板中，展开“材质”部分，然后从下拉列表中单击“新建资产”>“材质”  。 
+5.  继续在“详细信息”面板中，展开“材质”部分，然后从下拉列表中选择“新建资产”>“材质”  。 
     * 将材质命名为“M_ChessBoard”，并将其保存到“ChessAssets”文件夹中。 
 
 ![创建新材质](images/unreal-uxt/2-newmat.PNG)
@@ -171,7 +173,7 @@ ms.locfileid: "94679906"
 
 ![设置基准颜色](images/unreal-uxt/2-boardalbedomat.PNG)
 
-8.  重复上述步骤四次以再创建四个具有以下设置的“纹理示例”节点：
+8.  再重复上述步骤 4 次以再创建四个具有以下设置的“纹理示例”节点：
     * 将“纹理”设置为“ChessBoard_AO”，将“RGB”链接到“环境遮蔽”引脚   。
     * 将“纹理”设置为“ChessBoard_Metal”，将“RGB”链接到“金属”引脚   。 
     * 将“纹理”设置为“ChessBoard_Normal”，将“RGB”链接到“正常”引脚   。
@@ -192,13 +194,13 @@ ms.locfileid: "94679906"
 2.  右键单击“立方体”>“编辑”>“删除”并将“棋盘”从“内容浏览器”拖至视口中  。 
     * 将“位置”设置为“X = 80”、“Y = 0”和“Z = -20”   。 
 
-3.  单击“开始”按钮，查看你所处关卡中的新棋盘。 按 Esc 返回到编辑器。 
+3.  选择“开始”按钮，查看你所处关卡中的新棋盘。 按 Esc 返回到编辑器。 
 
 现在，你将按照与棋盘相同的步骤创建棋子：
 
 1. 转到“蓝图”文件夹，右键单击并选择“蓝图类”，然后选择“Actor”  。 将 Actor 命名为“WhiteKing”。
 
-2. 双击“WhiteKing”以在蓝图编辑器中将其打开，单击“添加组件”>“场景”，并将其命名为“Root”  。 
+2. 双击“WhiteKing”以在蓝图编辑器中将其打开，选择“添加组件”>“场景”，并将其命名为“Root”  。 
     * 将“Root”拖放到 DefaultSceneRoot 中来替换它 。 
 
 3. 单击“添加组件”>“静态网格”，并将其命名为“SM_King” 。 
@@ -227,6 +229,6 @@ ms.locfileid: "94679906"
 
 3.  在“详细信息”面板中的“变形”下，将 WhiteKing 的“位置”设置为“X = -26”、“Y = 4”、“Z = 0”      。
 
-完成！ 单击“开始”以查看正在运行中的已填充关卡，并在准备好退出时按 Esc。 本教程介绍了很多创建简单项目的背景，但你的项目已准备好继续进行本系列的下一部分：设置混合现实。 
+完成！ 选择“开始”以查看正在运行中的已填充关卡，并在准备好退出时按 Esc。 只是创建一个简单项目就涉及了很多内容，你现在可以进入本系列的下一部分：设置混合现实。 
 
 [下一节：3.设置混合现实项目](unreal-uxt-ch3.md)

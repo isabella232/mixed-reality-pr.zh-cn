@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5952cf94ba07a6d92903050a2a813cc911d4d70f
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: a8258f1ba99fdd1607014624c4ad4d6ec0a8e330
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354579"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609600"
 ---
 # <a name="425"></a>[4.25](#tab/425)
 
@@ -13,11 +13,11 @@ ms.locfileid: "96354579"
 > [!NOTE]
 > 这需要 Unreal Engine 4.25 或更高版本。
 
-系统和自定义 MRC 记录器通过将 PV 摄像头与沉浸式应用渲染的全息影像结合在一起，创建混合现实捕获。
+系统和自定义 MRC 记录器通过将 PV 摄像头与应用渲染的全息影像结合在一起，创建混合现实捕获。
 
-默认情况下，混合现实捕获使用右眼的全息影像输出。 如果沉浸式应用选择[从 PV 摄像头进行渲染](../../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)，则会改用它。 这改进了真实世界与 MRC 视频中全息影像之间的映射。
+默认情况下，混合现实捕获使用右眼的全息影像输出。 如果沉浸式应用选择[从 PV 摄像头进行渲染](../../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)，则会改用它。 从 PV 摄像头进行渲染改进了真实世界与 MRC 视频中全息影像之间的映射。
 
-若要选择从 PV 摄像机进行渲染：
+若要选择从 PV 摄像头进行渲染：
 
 1. 调用 SetEnabledMixedRealityCamera 和 ResizeMixedRealityCamera 
     * 使用“尺寸 X”和“尺寸 Y”值设置视频尺寸。 
@@ -51,7 +51,7 @@ ms.locfileid: "96354579"
 
 ![来自网络摄像头的摄像头纹理](../images/unreal-camera-texture.PNG)
 
-5. 请确保材料的参数与绑定到颜色条目的 SetTextureParameterValue 中的名称匹配， 否则将无法正确显示摄像头图像。
+5. 请确保材料的参数与绑定到颜色条目的 SetTextureParameterValue 中的名称匹配。 若没有该参数，便无法正确显示摄像头图像。
 
 ![摄像头纹理](../images/unreal-camera-material.PNG)
 
@@ -91,13 +91,13 @@ ms.locfileid: "96354579"
 
 ## <a name="find-camera-positions-in-world-space"></a>在世界空间中查找摄像头位置
 
-HoloLens 2 上的摄像头在垂直方向上与设备的头部跟踪存在偏移。  为此，有几个函数可用于在世界空间中定位摄像头。
+HoloLens 2 上的摄像头在垂直方向上与设备的头部跟踪存在偏移。  有几个函数可用于在世界空间中定位摄像头，以解决偏移问题。
 
-GetPVCameraToWorldTransform 会在 PVCamera 的世界空间中获得转换。  这将定位到摄像头上：
+GetPVCameraToWorldTransform 可获取 PV 摄像头的世界空间中的变形，并将其定位在相机镜头上：
 
 ![Get PVCamera to World Transform 函数的蓝图](../images/unreal-pvc-img-08.png)
 
-GetWorldSpaceRayFromCameraPoint 将摄像头中的射线投射到 Unreal 世界空间中的场景，以查找相机帧中特定像素上的内容：
+GetWorldSpaceRayFromCameraPoint 将摄像头中的射线投射到 Unreal 世界空间中的场景，以查找相机帧中像素的内容：
 
 ![“从摄像头点获取世界空间射线”的蓝图](../images/unreal-pvc-img-09.png)
 
@@ -105,7 +105,7 @@ GetPVCameraIntrinsics 会返回摄像头固有值，在相机帧上执行计算�
 
 ![Get PVCamera Intrinsics 函数的蓝图](../images/unreal-pvc-img-10.png)
 
-若要在世界空间中查找特定像素坐标处的内容，可将线条跟踪与世界空间射线一起使用：
+若要在世界空间中查找特定像素坐标处的内容，请将线条跟踪与世界空间射线一起使用：
 
 ![用于在世界空间中查找特定坐标处的内容的世界空间射线的蓝图](../images/unreal-pvc-img-11.png)
 

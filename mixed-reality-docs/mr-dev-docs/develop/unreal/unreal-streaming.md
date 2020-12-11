@@ -10,26 +10,25 @@ keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 流�
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 5a001088208106176ae771c2bc684674e6ce37a8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 9cbde33ce7238d704d4b24b4afbed9d8306d4e4d
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679776"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609328"
 ---
 # <a name="streaming-in-unreal"></a>Unreal 中的流式传输
 
-## <a name="overview"></a>概述
 从电脑流式传输到 HoloLens 提供了两大优势： 
 * 它使混合现实应用可以利用电脑的计算能力。 
 * 它有助于加快开发迭代的时间。 
 
-首先，需要将[全息远程处理播放器](../platform-capabilities-and-apis/holographic-remoting-player.md)下载到 HoloLens 设备。 这使你的应用能够从以下来源直接流式传输到 HoloLens 上的远程处理播放器：
+首先，需要将[全息远程处理播放器](../platform-capabilities-and-apis/holographic-remoting-player.md)下载到 HoloLens 设备。 通过全息远程处理播放器，应用可以从以下来源直接流式传输到 HoloLens 上的远程处理播放器：
 
 * Unreal Engine 编辑器
 * 打包的 Windows 可执行文件 
 
-进行流式传输时，你可以访问几乎所有相同的 HoloLens 功能，就像你在设备上运行应用程序时一样。 这包括[手关节跟踪](unreal-hand-tracking.md)（如果使用的是 HoloLens 2）、[空间映射](unreal-spatial-mapping.md)和[空间定位点](unreal-spatial-anchors.md)，但此[限制列表](../platform-capabilities-and-apis/holographic-remoting-troubleshooting.md)上的功能除外。 
+进行流式传输时，你可以访问几乎所有相同的 HoloLens 功能，就像你在设备上运行应用程序时一样。 这包括[手关节跟踪](unreal-hand-tracking.md)（如果使用的是 HoloLens 2）、[空间映射](unreal-spatial-mapping.md)和[空间定位点](unreal-spatial-anchors.md)，但此[列表](../platform-capabilities-and-apis/holographic-remoting-troubleshooting.md)上的功能除外。 
 
 > [!NOTE]
 > * 流式传输的质量严重依赖于 wifi 网络的强度。
@@ -45,7 +44,7 @@ ms.locfileid: "94679776"
     </colgroup>
     <tr>
         <td><strong>源</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens 第 1 代</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens 第一代</strong></a></td>
         <td><a href="https://www.microsoft.com/hololens/hardware"><strong>HoloLens 2</strong></a></td>
         <td><strong>沉浸式头戴显示设备</strong></td>
     </tr>
@@ -66,16 +65,16 @@ ms.locfileid: "94679776"
 
 ## <a name="streaming-from-the-unreal-editor"></a>从 Unreal 编辑器进行流式传输
 
-作为开发人员，你会发现从 Unreal 编辑器流式传输到 HoloLens 设备在测试时会提供很大的好处，也就是说，你无需再等待你的应用生成和部署完成后才尝试更新。
+作为开发人员，你会发现从 Unreal 编辑器流式传输到 HoloLens 设备在测试时会提供很大的好处，也就是说，你无需再等待应用生成和部署完成后才尝试更新。
 
-可以在“Unreal 入门”教程系列的最后一部分中找到有关[从 Unreal 编辑器进行流式传输](tutorials/unreal-uxt-ch6.md#device-only-streaming)的详细说明。
+教程系列中提供了[从 Unreal 编辑器流式传输](tutorials/unreal-uxt-ch6.md#device-only-streaming)的详细说明。
 
 ## <a name="streaming-from-a-packaged-windows-executable"></a>从打包的 Windows 可执行文件进行流式传输
 
-从 Unreal 4.25.1 开始，可以通过执行以下步骤将应用从打包的 Windows 可执行文件流式传输到 HoloLens 2 设备： 
+在 Unreal 4.25.1 及更高版本中，可以将应用从打包的 Windows 可执行文件流式传输到 HoloLens 2 设备： 
 
 1. 转到编辑器菜单中的“文件”>“包项目”>“Windows”。 
-    * 选择要保存包的位置，然后单击“选择文件夹”。
+    * 选择要保存包的位置，然后选择“选择文件夹”。
 
 2. 包生成完成后，请打开 HoloLens 2 上的“全息远程处理播放器”，并记下 IP 地址。 
 3. 使“全息远程处理播放器”保持打开状态，然后使用命令行提示符执行以下操作： 
@@ -88,6 +87,7 @@ ms.locfileid: "94679776"
 按 Enter 键，随即将看到应用程序开始进行流式传输了！
 
 ## <a name="see-also"></a>另请参阅
+
 * [全息远程处理版本历史记录](../platform-capabilities-and-apis/holographic-remoting-version-history.md)
 * [编写自定义全息远程处理播放器应用](../platform-capabilities-and-apis/holographic-remoting-create-player.md)
 * [使用全息远程处理建立安全连接](../platform-capabilities-and-apis/holographic-remoting-secure-connection.md)

@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: cdd2b613535080b371807020670a2785274c29f5
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f4f9a04a2de5e2c10bc43770bb1bfe9d00f3a4b6
+ms.sourcegitcommit: d56e7dd6c917ddc4ead0792ebff21891921174b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695756"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564060"
 ---
 # <a name="available-in-mrtk"></a>[在 MRTK 中提供](#tab/mrtk)
 
 |  功能  |  功能  |
 | --- | --- |
-| [输入模拟](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/InputSimulation.md) | 在编辑器中使用鼠标和键盘输入来模拟头盔式显示器 (HMD) 和手部跟踪功能 |
-| [手动交互](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/HandInteraction.md) | 使用铰接式手部输入与 UX 组件进行交互 |
-| [可按按钮组件](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/PressableButton.md) | 通过低级别组件驱动按钮蓝图的状态 |
-| [操控器组件](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/Manipulator.md) | 使用单手或双手操作输入移动和旋转 Actor |
-| [跟踪行为组件](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/FollowComponent.md) | 保持 Actor 或组件在另一个组件的视线范围内 |
+| [输入模拟](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/InputSimulation.html) | 在编辑器中使用鼠标和键盘输入来模拟头盔式显示器 (HMD) 和手部跟踪功能 |
+| [手动交互](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/HandInteraction.html) | 使用铰接式手部输入与 UX 组件进行交互 |
+| [可按按钮](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PressableButton.html) | 通过低级别组件驱动按钮蓝图的状态 |
+| [操控器](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/Manipulator.html) | 使用单手或双手操作输入移动和旋转 Actor |
+| [跟踪行为](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/FollowComponent.html) | 保持 Actor 或组件在另一个组件的视线范围内 |
 
 # <a name="standalone-features"></a>[独立功能](#tab/standalone)
 

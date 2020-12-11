@@ -7,16 +7,16 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, qr 码, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: f2f06e9aa8d458d58dc8551ab6cd726622c30d4c
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: 7e39e1d822f0aa623a83678beef24f2c98a18944
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354398"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609638"
 ---
 # <a name="qr-codes-in-unreal"></a>Unreal 中的 QR 码
 
-HoloLens 2 可以使用网络摄像头查看世界空间中的 QR 码，这会在每个代码的实际位置使用坐标系统将其呈现为全息影像。  除了单个 QR 码，HoloLens 2 还可以在多个设备上的同一位置呈现全息影像，以创建共享体验。 请确保遵循将 QR 码添加到应用程序的最佳做法：
+HoloLens 2 可以使用网络摄像头查看世界空间中的 QR 码，这会在每个代码的实际位置将其呈现为全息影像。 HoloLens 2 还可以在多个设备上的同一位置呈现全息影像，以打造共享体验。 请确保遵循将 QR 码添加到应用程序的最佳做法：
 
 - 安静区域
 - 照明和背景
@@ -29,11 +29,11 @@ HoloLens 2 可以使用网络摄像头查看世界空间中的 QR 码，这会�
 
 ## <a name="enabling-qr-detection"></a>启用 QR 检测
 由于 HoloLens 2 需要使用网络摄像头来查看 QR 码，因此需要在项目设置中将其启用：
-- 打开“编辑”>“项目设置”，滚动到“平台”部分，然后单击“HoloLens”。
+- 打开“编辑”>“项目设置”，滚动到“平台”部分，然后选择“HoloLens”。
     + 展开“功能”部分，选中“网络摄像头”。  
 - 还需要通过[添加 ARSessionConfig 资产](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset)来选择使用 QR 码跟踪。
 
-[!INCLUDE[](includes/tabs-qr-codes.md)]
+[!INCLUDE[](includes/tabs-qr-codes-1.md)]
 
 ## <a name="setting-up-a-tracked-qr-code"></a>设置已跟踪的 QR 码
 
@@ -54,7 +54,7 @@ QR 码通过 Unreal 的 AR 跟踪几何系统显示为跟踪图像。 若要实�
 ## <a name="using-a-tracked-qr-code"></a>使用已跟踪的 QR 码
 下图中的事件图显示了 OnUpdateTrackedImage 事件，该事件用于呈现 QR 码中心的一个点并输出其数据。
 
-![QR 呈现示例](images/unreal-qr-render.PNG)
+[!INCLUDE[](includes/tabs-qr-codes-2.md)]
 
 以下是具体过程：
 1. 首先，将跟踪图像转换为 ARTrackedQRCode，以检查当前更新的图像是否为 QR 码。  

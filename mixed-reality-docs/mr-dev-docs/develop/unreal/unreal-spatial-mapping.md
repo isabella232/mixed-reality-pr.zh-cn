@@ -2,21 +2,21 @@
 title: Unreal 中的空间映射
 description: Unreal 中空间映射使用指南
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 空间映射, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 878eae5f5fd0b7a1630511faa23c1477455ed988
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: bde5a1b53f6ad90bc84f54bd3e4f1237b78f2abe
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354367"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609418"
 ---
 # <a name="spatial-mapping-in-unreal"></a>Unreal 中的空间映射
 
-使用空间映射可以通过向全球展示 HoloLens 来将对象放置在现实生活中的表面上，这使全息影像看起来更真实。 空间映射还可以利用真实的深度提示，在用户世界定位对象。这有助于说服用户这些全息影像实际位于其空间中；在空间中浮动或随用户移动的全息影像并不真实。 你希望尽可能轻松地放置各个项。
+利用空间映射，你可以将对象放置在现实世界的物理表面上。 对 HoloLens 周围的世界进行映射时，全息影像看起来会让用户感觉更加真实。 空间映射还利用深度提示，在用户的世界中为对象定位，这有助于说服用户这些全息影像实际位于其空间中。 在空间中浮动或随用户移动的全息影像并不会让人感觉真实，因此建议尽可能始终放置一些项目，让人保持舒适感。
 
 可以在[空间映射](../../design/spatial-mapping.md)文档中找到有关空间映射质量、位置、封闭、呈现等内容的详细信息。
 
@@ -46,7 +46,7 @@ ms.locfileid: "96354367"
 
 - “每立方米最大三角形”将更新空间映射网格中三角形的密度。  
 - “空间网格体积大小”是在玩家周围渲染和更新空间映射数据的立方体的大小。  
-    + 如果预期的应用程序运行时环境很大，那么这个值可能需要很大才能匹配实际空间。  另一方面，如果应用程序只需要将全息影像直接放置在用户周围的表面上，那么这个值可能会较小。 当用户在世界内走动时，空间映射卷将随之移动。 
+    + 如果预期的应用程序运行时环境很大，那么这个值可能需要很大才能匹配实际空间。 如果应用程序只需要将全息影像直接放置在用户周围的表面上，那么这个值可能会较小。 当用户在世界内走动时，空间映射卷将随之移动。 
 
 ## <a name="working-with-mrmesh"></a>使用 MRMesh
 
@@ -62,7 +62,7 @@ ms.locfileid: "96354367"
 ![空间定位点 AR 可跟踪通知](images/unreal-spatialmapping-artrackablenotify.PNG)
 
 2. 选择“ARTrackableNotify”组件，然后在“详细信息”面板中展开“事件”部分  。 
-    - 在要监视的事件上，单击 + 按钮。 
+    - 在要监视的事件上，选择 + 按钮。 
 
 ![空间定位点事件](images/unreal-spatialmapping-events.PNG)
 

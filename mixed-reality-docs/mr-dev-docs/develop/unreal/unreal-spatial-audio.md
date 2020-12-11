@@ -7,20 +7,18 @@ ms.date: 06/15/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 空间音频
-ms.openlocfilehash: 25fa60b4e55ec0f3bd0875ad88834981d198f7f5
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: fa87862f6a6af456ea344b67e22f1640c9cfafb4
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679796"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609538"
 ---
 # <a name="spatial-audio-in-unreal"></a>Unreal 中的空间音频
 
-## <a name="overview"></a>概述
-
 与视觉不同，人类能听到 360 度环绕声。 空间音效模拟人类听觉的工作方式，从而提供识别世界空间中的声音位置所需的提示。 通过在你的混合现实应用程序中添加空间音效，可以提高用户所体验的沉浸感程度。  
 
-高质量的空间音效处理比较复杂，因此，HoloLens 2 附带了用于处理这些声音对象的专用硬件。  在使用此硬件处理支持之前，需要在 Unreal 项目中安装 MicrosoftSpatialSound 插件。 本文将逐步指导你完成该插件的安装和配置，并且将提供在 Unreal 引擎中使用空间音效的更多相关深度资源。
+高质量的空间音效处理比较复杂，因此，HoloLens 2 附带了用于处理这些声音对象的专用硬件。  在使用此硬件处理支持之前，需要在 Unreal 项目中安装 MicrosoftSpatialSound 插件。 本文将逐步指导你完成该插件的安装和配置，并且将提供更多相关深度资源。
 
 ## <a name="installing-the-microsoft-spatial-sound-plugin"></a>安装 Microsoft 空间音效插件
 
@@ -39,8 +37,9 @@ ms.locfileid: "94679796"
 
 
 ## <a name="setting-the-spatialization-plugin-for-hololens-2-platform"></a>设置 HoloLens 2 平台的空间化插件
+
 配置空间化插件是以每个平台为基础进行的。  可以通过以下方式为 HoloLens 2 启用 Microsoft 空间音效插件：
-1. 选择“编辑”>“项目设置”，滚动到“平台”，然后单击“HoloLens”  。
+1. 选择“编辑”>“项目设置”，滚动到“平台”，然后单击“HoloLens” 。
 2. 展开“音频”属性，并将“空间化插件”字段设置为“Microsoft 空间音效”  。
 
 ![HoloLens 平台的空间化插件](images/unreal-spatial-audio-img-02.png)
@@ -50,6 +49,7 @@ ms.locfileid: "94679796"
 ![Windows 平台的空间化插件](images/unreal-spatial-audio-img-05.png)
 
 ## <a name="enabling-spatial-audio-on-your-workstation"></a>在工作站上启用空间音频
+
 空间音频在 Windows 桌面版上默认处于禁用状态。 可以通过以下方式启用它：
 * 右键单击任务栏中的“音量”图标。
     + 选择“空间音效”->“用于耳机的 Windows Sonic”以获得在 HoloLens 2 上所听到的声音的最佳呈现效果。
@@ -60,6 +60,7 @@ ms.locfileid: "94679796"
 >仅当你计划在 Unreal 编辑器中测试项目时才需要此设置。
 
 ## <a name="creating-attenuation-objects"></a>创建衰减对象
+
 安装并配置了必要插件后：
 1. 在“放置参与者”窗口中搜索“环境声”参与者，并将它拖到“场景”窗口中  。
 
@@ -82,7 +83,8 @@ ms.locfileid: "94679796"
 
 ![设置衰减设置](images/unreal-spatial-audio-img-08.png)
 
-6. 通过以下方法设置要附加到“环境声”参与者的声音资产：更新环境声参与者的“声音”属性来指定要使用的 SoundAsset 文件 。
+6. 设置要附加到环境声参与者的“声音资产”：
+    * 更新环境声参与者的“声音”属性，以指定要使用的 SoundAsset 文件。
 
 ![设置声音资产](images/unreal-spatial-audio-img-09.png)
 
@@ -91,9 +93,10 @@ ms.locfileid: "94679796"
 
 ![新的声音衰减资产](images/unreal-spatial-audio-img-10.png)
 
-在完成以上所有配置后，即可使用 HoloLens 2 上的专用硬件卸载支持对环境声进行空间化处理。
+完成声音资产配置后，即可使用 HoloLens 2 上的专用硬件卸载支持对环境声进行空间化处理。
 
 ## <a name="configuring-objects-for-spatialization"></a>配置空间化对象
+
 使用空间音频意味着你需要管理声音在虚拟环境中的行为方式。 你的主要目标是创建声音对象，这些对象的特征是当用户靠近时声音会更大，而当用户远离时声音会更小。 这称为声音衰减，使声音听起来就像是被放在一个固定地点一样。
 
 所有衰减对象都有针对以下各项的可修改设置：
@@ -108,7 +111,7 @@ ms.locfileid: "94679796"
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果你遵循我们规划的 Unreal 开发检查点历程，则你处于探索 MRTK 核心构建基块的过程之中。 从这里，你可以进入下一个构建基块：
+如果你遵循我们规划的 Unreal 开发历程，则你处于探索 MRTK 核心基础知识的过程之中。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [语音输入](unreal-voice-input.md)

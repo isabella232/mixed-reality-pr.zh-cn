@@ -1,18 +1,18 @@
 ---
 title: 1. 入门
-description: 教程系列第 1 部分（共 6 部分）- 使用 Unreal Engine 4 和混合现实工具包 UX Tools 插件构建一款简单的象棋应用
+description: 教程系列第 1 部分（共 6 部分）- 使用 Unreal Engine 4 和混合现实工具包 UX Tools 插件构建一款象棋应用
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: aa6d90bebbbfc10b108b97d05931a9926118ba7c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 465215efd953c0acb9f2d80a2905ee06963c5f8c
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679856"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609718"
 ---
 # <a name="1-getting-started"></a>1.入门
 
@@ -20,15 +20,15 @@ ms.locfileid: "94679856"
 
 ![在视口中结束场景](images/unreal-uxt/5-endscene.PNG)
 
-在本系列文章结束时，你将拥有以下方面的实操经验：
+在本系列文章结束时，你将拥有以下方面的经验：
 * 开始新项目
 * 设置混合现实
 * 使用用户输入
 * 添加按钮
 * 在模拟器或设备上播放
 
-
 ## <a name="prerequisites"></a>必备知识
+
 在开始之前，请确保已安装以下项：
 * Windows 10 1809 或更高版本
 * Windows 10 SDK 10.0.18362.0 或更高版本
@@ -37,7 +37,8 @@ ms.locfileid: "94679856"
 * 具有以下工作负载的 Visual Studio 2019
 
 ### <a name="installing-visual-studio-2019"></a>安装 Visual Studio 2019
-有几个步骤可以确保具有所有必需的 Visual Studio 包：
+
+首先，确保使用所有必需的 Visual Studio 包进行设置：
 1. 安装最新版本的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
 2. 安装以下[工作负载](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-workloads)：
     * 使用 C++ 的桌面开发
