@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: df7b6837653b309189e44d36853430b89b8b56a9
-ms.sourcegitcommit: 2eeee7bb1589148f5c9fe7f76ade58d3e08b5817
+ms.openlocfilehash: 94f38ff122826dfaea6282403c5958b127c81739
+ms.sourcegitcommit: ee87915132cf2874d4642ce2fe383f5eba6c49c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/11/2020
-ms.locfileid: "97104201"
+ms.locfileid: "97111879"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -44,7 +44,7 @@ ms.locfileid: "97104201"
 ### <a name="december-16th"></a>12月16日
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
-|10： 00 (：50am|打开主题|Madoka Chiyoda、Alex Kipman、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|空值|
+|10： 00 (：50am|打开主题|Madoka Chiyoda、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|空值|
 |10： 50am-11： 00 (|**中断 (10min)**||||
 |11： 00 (-11：25am|*会话 1* 混合现实简介|Atsushi Suzuki|JA|100|
 |11：上午 9:30-11：55am|*会话 2* 混合现实业务动力|Tetsu Muranaka|JA|200|
