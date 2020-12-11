@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，数据通道
-ms.openlocfilehash: 119a08a7f0e41aca694184879e33aaf54160220c
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 6fd2bbd8ce2dedc3b13674576a23a0484ebe1419
+ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97102902"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>自定义全息远程处理数据通道
 
@@ -38,15 +38,15 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-成功建立连接后，可以从远程端和/或播放机端开始创建新的数据通道。 RemoteContext 和 PlayerContext 都提供一个 ```CreateDataChannel()``` 方法来执行此操作。 第一个参数是用于在后续操作中标识数据通道的通道 ID。 第二个参数是优先级，它指定此通道的数据被传输到另一方的优先级。 对于远程端，通道 Id 的有效范围为0，包括远程端的63和64（最高为，包括播放机端的127）。 有效优先级为 ```Low``` ， ```Medium``` 或 ```High``` 在两侧)  (。
+成功建立连接后，你可以从远程端和/或播放机创建新的数据通道。 RemoteContext 和 PlayerContext 都提供 ```CreateDataChannel()``` 创建数据通道的方法。 第一个参数是用于在后续操作中标识数据通道的通道 ID。 第二个参数是优先级，它指定此通道的数据被传输到另一方的优先级。 远程端的有效通道 Id 是从0到，包括63和64，最127高可达。 有效优先级为 ```Low``` ```Medium``` (两侧的、或 ```High```) 。
 
-若要在 **远程** 端启动数据通道的创建，请执行以下操作：
+在 **远程** 端开始创建数据通道：
 ```cpp
 // Valid channel ids for channels created on the remote side are 0 up to and including 63
 m_remoteContext.CreateDataChannel(0, DataChannelPriority::Low);
 ```
 
-若要在 **播放机** 端启动数据通道的创建，请执行以下操作：
+若要开始在 **播放机** 端创建数据通道：
 ```cpp
 // Valid channel ids for channels created on the player side are 64 up to and including 127
 m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
@@ -114,7 +114,7 @@ m_customDataChannel.Close();
 ```
 
 ## <a name="see-also"></a>另请参阅
-* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 Windows Mixed Reality Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)

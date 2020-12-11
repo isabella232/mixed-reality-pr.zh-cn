@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，软件组件，发布历史记录，发行说明，版本历史记录
 appliesto:
 - Windows 10
-ms.openlocfilehash: 76a913ae5890c908dda4e25d5b5c21554fdae7f0
-ms.sourcegitcommit: 9c88703a832fb8ca8476e808499d06239ea5d2cd
+ms.openlocfilehash: 0dd2ef30252189d006bfaf5702c47dce72f2798d
+ms.sourcegitcommit: d8db38647cf45f05b9445ceaf057d4cd01721ee6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011428"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97091301"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Mixed Reality 软件概述和版本历史记录
 
@@ -25,8 +25,8 @@ Windows Mixed Reality 包含以下主要软件组件：
     * 在 Windows 10 中，版本1709和1803，混合现实门户是 Windows 10 操作系统的关键组件，并通过 Windows 更新更新。
     * 在 Windows 10 中，1809和更高版本的混合现实门户都通过 Microsoft Store 应用进行更新。
 2. **混合现实功能点播包** (FOD) ，在混合现实门户首次运行期间自动下载和安装。 可在[此处](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality)找到有关 FOD 包的详细信息
-3. **混合现实耳机和运动控制器驱动**程序（也称为 HoloLens 传感器驱动程序）是允许 Windows mixed reality 耳机使用 Windows mixed reality 的关键驱动程序包。 这会在首次连接混合现实耳机时通过 Windows 更新自动下载和安装，并通过 Windows 更新定期更新
-4. **混合现实运动控制器型号驱动程序**包含混合现实运动控制器的3d 模型，以及第三方混合现实体验所需的模型。 这会在你首次将混合现实运动控制器配对到电脑时通过 Windows 更新自动下载和安装，并通过 Windows 更新进行更新。
+3. **混合现实耳机和运动控制器驱动** 程序（也称为 HoloLens 传感器驱动程序）是允许 Windows mixed reality 耳机使用 Windows mixed reality 的关键驱动程序包。 这会在首次连接混合现实耳机时通过 Windows 更新自动下载和安装，并通过 Windows 更新定期更新
+4. **混合现实运动控制器型号驱动程序** 包含混合现实运动控制器的3d 模型，以及第三方混合现实体验所需的模型。 这会在你首次将混合现实运动控制器配对到电脑时通过 Windows 更新自动下载和安装，并通过 Windows 更新进行更新。
 5. **Windows 10 版本 1709 (秋季创建者的更新) 或更新版本** 包含支持 Windows Mixed Reality 的关键操作系统组件和技术
 
 此外，在 SteamVR 中使用 Windows Mixed Reality 需要以下软件：
@@ -36,13 +36,13 @@ Windows Mixed Reality 包含以下主要软件组件：
 
 管理 Windows Mixed Reality 耳机：
 
-8. 每个耳机制造商开发和维护的 **设备附属应用程序**提供了 Windows Mixed Reality 耳机简介。 在带有内置蓝牙功能的耳机上，设备辅助应用允许将运动控制器还原到工厂的蓝牙配对。 某些耳机 (例如 Samsung 太空和 Samsung 太空 +) 还使用设备配套应用从耳机制造商提供耳机固件更新。 首次连接耳机时，会自动下载此应用，并且可在 Windows "开始" 菜单中找到。
+8. 每个耳机制造商开发和维护的 **设备附属应用程序** 提供了 Windows Mixed Reality 耳机简介。 在带有内置蓝牙功能的耳机上，设备辅助应用允许将运动控制器还原到工厂的蓝牙配对。 某些耳机 (例如 Samsung 太空和 Samsung 太空 +) 还使用设备配套应用从耳机制造商提供耳机固件更新。 首次连接耳机时，会自动下载此应用，并且可在 Windows "开始" 菜单中找到。
 
 ## <a name="windows-10-release-notes---may-2020"></a>Windows 10 发行说明-5 月2020
 
-**Windows 10 可能2020更新 (v2004) **包含 Windows mixed REALITY (VR) 耳机的新功能，例如在混合现实总部启动 Win32 应用程序的功能。 HoloLens (第一代) 提供 (LTS) 的长期服务，每月发布服务更新。
+**Windows 10 可能2020更新 (v2004)** 包含 Windows mixed REALITY (VR) 耳机的新功能，例如在混合现实总部启动 Win32 应用程序的功能。 HoloLens (第一代) 提供 (LTS) 的长期服务，每月发布服务更新。
 
-若要更新到适用于 Windows Mixed Reality 的 PC 上的最新版本沉浸式 (VR) 耳机，请打开 " **设置** " 应用，中转到 " **更新 & 安全性**"，然后选择 " **检查更新** " 按钮。 在 Windows 10 电脑上，你还可以使用[windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装**Windows 10 2020 更新**。
+若要更新到适用于 Windows Mixed Reality 的 PC 上的最新版本沉浸式 (VR) 耳机，请打开 " **设置** " 应用，中转到 " **更新 & 安全性**"，然后选择 " **检查更新** " 按钮。 在 Windows 10 电脑上，你还可以使用 [windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装 **Windows 10 2020 更新**。
 
 **最新版本的桌面**： Windows 10 v2004 (10.0.19041.264) 
 
@@ -54,7 +54,7 @@ Windows Mixed Reality 包含以下主要软件组件：
 #### <a name="improved-settings-for-wmr"></a>改进的 WMR 设置
 感谢你的反馈，我们已添加并阐明了耳机显示页面上的设置：
 
-* 更改这些设置的**视觉质量**只会影响 (Cliff 房子和 Skyloft) 的混合现实家用环境：
+* 更改这些设置的 **视觉质量** 只会影响 (Cliff 房子和 Skyloft) 的混合现实家用环境：
 
 * **调整混合现实中的详细程度和质量质量** -这将更改我们在本主页中使用的一些渲染影响。 特别是，当你将此设置从 "低" 更改为 "高" 时，不同材料 (木材、具体 ) 的视觉质量将会缩放。
 
@@ -100,6 +100,7 @@ Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程
 
    | 版本          | 发布日期          | 重大更改                                                 |
    |------------------|-----------------------|---------------------------------------------------------------|
+   | [10.0.19041.2037](https://www.microsoft.com/en-us/download/details.aspx?id=102527)  | 2020年12月10日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>用于 HP 控制器的新控制器固件用于解决某些控制器具有非正常运行的触发器的问题。</li>|
    | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 2020年10月8日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>HP 回音 G2、HP Omnicept 和新 HP 控制器的官方支持。</li><li>HP 回音和 Samsung 太空 + 耳机的轻微显示更正。  (要求 [Os 版本 19041.546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) 或更高版本 [，或者操作系统版本18362.1110 和 18363.1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) 或更高版本) 。</li><li>改善计算机电源状态从睡眠转换到减少 SWW 1-4 错误。</li><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。|
    | [10.0.19041.1009](https://www.microsoft.com/en-us/download/details.aspx?id=101260)  | 5月7日，2020      | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。</li></ul>  |
 
@@ -162,7 +163,7 @@ Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程
    | 版本            | 发布日期          | 重大更改                                                 |
    |--------------------|-----------------------|---------------------------------------------------------------|
    | 2000.20071.1133.0  | 2020 年 8 月 5 日        | <ul><li>支持 [OpenXR](https://docs.microsoft.com/windows/mixed-reality/openxr) 以暂停预览窗口。</li></ul>  | 
-   | 2000.20041.1212.0  | 2020 年 5 月 11 日          | <ul><li>解决导致15-5 错误的计时问题。</li><li>改进了对运行 Windows Mixed Reality 而无 internet 连接的支持。</li><li>通过 **设置控制器**改进了对配对运动控制器的支持。</li></ul>  | 
+   | 2000.20041.1212.0  | 2020 年 5 月 11 日          | <ul><li>解决导致15-5 错误的计时问题。</li><li>改进了对运行 Windows Mixed Reality 而无 internet 连接的支持。</li><li>通过 **设置控制器** 改进了对配对运动控制器的支持。</li></ul>  | 
    | 2000.20031.1202.0  | 2020 年 4 月 14 日        | <ul><li>支持注册有关 Windows Mixed Reality 的信息、提示和产品。</li></ul>  | 
    | 2000.20011.1312.0  | 2020 年 2 月 11 日     | <ul><li>改进了对使用 [OpenXR](https://docs.microsoft.com/windows/mixed-reality/openxr) 在设备上使用的应用程序的支持，可能为2019更新。</li><li>解决辅助功能和键盘焦点问题</li></ul>  | 
    | 2000.19101.1211.0  | 2019 年 11 月 11 日     | <ul><li>解决了阻止你切换空间边界视觉对象的问题。</li><li>解决了在设置空间边界期间阻止你中心戴显示的问题。</li></ul>  | 

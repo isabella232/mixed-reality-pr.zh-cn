@@ -1,30 +1,30 @@
 ---
 title: 编写自定义全息远程处理播放器
-description: 通过创建自定义的全息远程处理播放器应用，你可以创建一个自定义应用程序，该应用程序能够将远程计算机上呈现的内容显示到 HoloLens 2 上。 本文介绍如何实现此目的。
+description: 通过创建自定义的全息远程处理播放器应用程序，你可以创建一个自定义应用程序，该应用程序能够将远程计算机上呈现的内容显示到 HoloLens 2 上。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，NuGet，应用清单，播放机上下文，远程应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 69dc382873eb4fe0dc50f6f55e074c3491b02c02
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: ac3ee68cf3cff3e024ce40acceac61a2fe123399
+ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97102892"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>编写自定义全息远程处理播放器应用
 
 >[!IMPORTANT]
 >本文档介绍了如何为 HoloLens 2 创建自定义播放器应用程序。 为 HoloLens 2 编写的自定义播放器与为 HoloLens 1 编写的远程应用程序不兼容。 这意味着两个应用程序必须使用 NuGet 包 **版本2.x。**
 
-通过创建自定义的全息远程处理播放器应用，你可以创建一个自定义应用程序，该应用程序能够在你的 HoloLens 2 上的远程计算机上显示 [沉浸式视图](../../design/app-views.md) 。 本文介绍如何实现此目的。 此页面上的所有代码和工作项目都可以在 " [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)" 中找到。
+通过创建自定义的全息远程处理播放器应用程序，你可以创建一个自定义应用程序，该应用程序能够在你的 HoloLens 2 上的远程计算机上显示 [沉浸式视图](../../design/app-views.md) 。 此页面上的所有代码和工作项目都可以在 " [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)" 中找到。
 
-全息远程处理播放机允许应用显示桌面 PC 或 UWP 设备（如 Xbox 设备）上 [呈现](rendering.md) 的全息内容，允许访问更多系统资源。 全息远程处理播放机应用将输入数据流式传输到全息远程处理远程应用程序，并将沉浸式视图作为视频和音频流接收回来。 使用标准 Wi-fi 建立连接。 若要创建播放器应用，需要使用 NuGet 包将全息远程处理添加到 UWP 应用，并编写代码来处理连接并显示沉浸式视图。 
+使用全息远程处理播放机，你的应用可以显示桌面 PC 或 UWP 设备上 [呈现](rendering.md) 的全息内容，如 Xbox one，可以访问更多系统资源。 全息远程处理播放机应用将输入数据流式传输到全息远程处理远程应用程序，并将沉浸式视图作为视频和音频流接收回来。 使用标准 Wi-fi 建立连接。 若要创建播放机应用，请使用 NuGet 包将全息远程处理添加到 UWP 应用。 然后编写代码来处理连接并显示沉浸式视图。 
 
 ## <a name="prerequisites"></a>先决条件
 
-很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息版项目模板](../native/creating-a-holographic-directx-project.md) 是一个很好的起点。
+很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息项目模板](../native/creating-a-holographic-directx-project.md) 是一个不错的开端。
 
 >[!IMPORTANT]
 >使用全息远程处理的任何应用都应该编写为使用 [多线程单元](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
@@ -34,10 +34,10 @@ ms.locfileid: "96443644"
 将 NuGet 包添加到 Visual Studio 中的项目时需要执行以下步骤。
 1. 在 Visual Studio 中打开项目。
 2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
-3. 在出现的面板中，单击 " **浏览** "，然后搜索 "全息远程处理"。
-4. 选择 ""，然后选择 " **Microsoft**"，并单击 "**安装** **"。**
-5. 如果 **预览** 对话框出现，请单击 **"确定"**。
-6. 显示的下一个对话框是许可协议。 单击 " **我接受** " 接受许可协议。
+3. 在出现的面板中，选择 " **浏览** "，然后搜索 "全息远程处理"。
+4. 选择 " **Microsoft**"，并选择 "安装"，并选择 "**安装** **"。**
+5. 如果显示 " **预览** " 对话框，请选择 **"确定"**。
+6. 当 "许可协议" 对话框出现时，选择 " **我接受** "。
 
 >[!IMPORTANT]
 ><a name="idl"></a>```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl```NuGet 包内部包含由全息远程处理公开的 API 的详细文档。
@@ -47,7 +47,7 @@ ms.locfileid: "96443644"
 若要使应用程序了解 NuGet 包添加的 Microsoft.Holographic.AppRemoting.dll，需要对项目执行以下步骤：
 
 1. 在解决方案资源管理器右键单击 **appxmanifest.xml** 文件并选择 "**打开方式 ...** "
-2. 选择 " **XML (文本) 编辑器** "，然后单击 "确定"
+2. 选择 " **XML (文本) 编辑器** "，然后选择 **"确定"**
 3. 将以下行添加到文件中并保存
 ```xml
   </Capabilities>
@@ -210,11 +210,11 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 
 ### <a name="projection-transform-mode"></a>投影转换模式
 
-通过全息远程处理使用深度 reprojection 的一个问题是，可以使用不同于自定义播放器应用直接呈现的本地内容的投影转换来呈现远程内容。 常见的用例是在播放机端和远程端 (通过 [HolographicCamera：： SetNearPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setnearplanedistance) 和 [HolographicCamera：： SetFarPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setfarplanedistance)) 为近和远平面指定不同的值。 在这种情况下，如果播放机端上的投影转换应反映远程的接近/远平面距离或局部，则不清楚。
+一个问题是，在通过全息远程处理使用深度 reprojection 的情况下，可以使用与自定义播放器应用直接呈现的本地内容不同的投影转换来呈现远程内容。 常见的用例是在播放机端和远程端 (通过 [HolographicCamera：： SetNearPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setnearplanedistance) 和 [HolographicCamera：： SetFarPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setfarplanedistance)) 为近和远平面指定不同的值。 在这种情况下，如果播放机端上的投影转换应反映远程的接近/远平面距离或局部，则不清楚。
 
 从版本 [2.1.0](holographic-remoting-version-history.md#v2.1.0) 开始，可以通过来控制投影转换模式 ```PlayerContext::ProjectionTransformConfig``` 。 支持的值是：
 
-- ```Local``` - [HolographicCameraPose：:P rojectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.projectiontransform) 返回投影转换，该转换反映了由 HolographicCamera 上的自定义播放器应用设置的近/远平面距离。
+- ```Local``` - [HolographicCameraPose：:P rojectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.projectiontransform) 返回投影转换，该转换反映了 HolographicCamera 上的自定义播放器应用设置的近/远平面距离。
 - ```Remote``` -投影转换反映远程应用指定的近/远平面距离。
 - ```Merged``` -与你的远程应用和自定义播放器应用的接近/远平面距离合并。 默认情况下，这是通过使用接近平面距离和最大平面距离的最小值来完成的。 如果远程或本地侧反转，说远 < 接近，则会翻转远程近/远平面距离。
 
@@ -226,7 +226,7 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 
 常见的用例是，如果在一段时间内没有收到新帧，BlitRemoteFrame 超时将显示空白屏幕。 启用时，方法的返回类型 ```BlitRemoteFrame``` 还可用于切换到本地呈现的回退内容。 
 
-若要启用超时，请将属性值设置为等于或大于100ms 的持续时间。 若要禁用超时，请将属性设置为零。 如果在设置的持续时间内启用了超时并且未收到任何远程帧，则 BlitRemoteFrame 将失败并返回， ```Failed_RemoteFrameTooOld``` 直到接收到新的远程帧。
+若要启用超时，请将属性值设置为等于或大于 100 ms 的持续时间。 若要禁用超时，请将属性设置为零。 如果在设置的持续时间内启用了超时并且未收到任何远程帧，则 BlitRemoteFrame 将失败并返回， ```Failed_RemoteFrameTooOld``` 直到接收到新的远程帧。
 
 ```cpp
 using namespace std::chrono_literals;
@@ -244,14 +244,14 @@ m_playerContext.BlitRemoteFrameTimeout(500ms);
 winrt::Microsoft::Holographic::AppRemoting::PlayerFrameStatistics statistics = m_playerContext.LastFrameStatistics();
 ```
 
-有关更多详细信息，请参阅 ```PlayerFrameStatistics``` 文件中的文档 ```Microsoft.Holographic.AppRemoting.idl``` [file](#idl)。
+有关详细信息，请参阅 ```PlayerFrameStatistics``` 文件中的文档 ```Microsoft.Holographic.AppRemoting.idl``` [](#idl)。
 
 ## <a name="optional-custom-data-channels"></a>可选：自定义数据通道
 
 自定义数据信道可用于通过已建立的远程处理连接发送用户数据。 有关详细信息，请参阅 [自定义数据通道](holographic-remoting-custom-data-channels.md) 。
 
 ## <a name="see-also"></a>另请参阅
-* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 Windows Mixed Reality Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [自定义全息远程处理数据通道](holographic-remoting-custom-data-channels.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
