@@ -1,103 +1,99 @@
 ---
 title: 5. 添加按钮并重置棋子位置
-description: 教程系列第 5 部分（共 6 部分）- 使用 Unreal Engine 4 和混合现实工具包 UX Tools 插件构建一款简单的象棋应用
+description: 教程系列第 5 部分（共 6 部分）- 使用 Unreal Engine 4 和混合现实工具包 UX Tools 插件构建一款象棋应用
 author: hferrone
 ms.author: v-hferrone
-ms.date: 08/14/2020
+ms.date: 11/18/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: f903848b8d5c9c1dccfc00cd7bd6d16d2e491a5e
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8e16865e89c06c37f2932f1828bf8ca5551e6fce
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679836"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609688"
 ---
-# <a name="5-adding-a-button--resetting-piece-locations"></a><span data-ttu-id="b7c86-104">5.添加按钮并重置棋子位置</span><span class="sxs-lookup"><span data-stu-id="b7c86-104">5. Adding a button & resetting piece locations</span></span>
+# <a name="5-adding-a-button--resetting-piece-locations"></a><span data-ttu-id="2aef8-104">5.添加按钮并重置棋子位置</span><span class="sxs-lookup"><span data-stu-id="2aef8-104">5. Adding a button & resetting piece locations</span></span>
 
+<span data-ttu-id="2aef8-105">在上一个教程中，向棋盘的 Pawn 和操控器组件添加了手势交互 Actor，使它们具有交互性。</span><span class="sxs-lookup"><span data-stu-id="2aef8-105">In the previous tutorial, you added Hand Interaction Actors to the Pawn and Manipulator components to the chess board to make them both interactive.</span></span> <span data-ttu-id="2aef8-106">在本部分中，你将继续使用混合现实工具包 UX Tools 插件，使用蓝图中的新函数和 Actor 引用构建象棋应用。</span><span class="sxs-lookup"><span data-stu-id="2aef8-106">In this section, you'll continue to use the Mixed Reality Toolkit UX Tools plugin to build out your chess app with new functions and Actor references in Blueprints.</span></span> <span data-ttu-id="2aef8-107">本部分结束时，你就可以打包混合现实应用，并将其部署到设备或仿真器中。</span><span class="sxs-lookup"><span data-stu-id="2aef8-107">By the end of this section, you'll be ready to package and deploy the mixed reality app on a device or emulator.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="b7c86-105">概述</span><span class="sxs-lookup"><span data-stu-id="b7c86-105">Overview</span></span>
+## <a name="objectives"></a><span data-ttu-id="2aef8-108">目标</span><span class="sxs-lookup"><span data-stu-id="2aef8-108">Objectives</span></span>
 
-<span data-ttu-id="b7c86-106">在上一个教程中，向棋盘的 Pawn 和操控器组件添加了手势交互 Actor，使它们具有交互性。</span><span class="sxs-lookup"><span data-stu-id="b7c86-106">In the previous tutorial, you added Hand Interaction Actors to the Pawn and Manipulator components to the chess board to make them both interactive.</span></span> <span data-ttu-id="b7c86-107">本部分将继续使用混合现实工具包 UX Tools 插件来构建象棋应用的功能。</span><span class="sxs-lookup"><span data-stu-id="b7c86-107">In this section, you'll continue working with the Mixed Reality Toolkit UX Tools plugin by building out the features of your chess app.</span></span> <span data-ttu-id="b7c86-108">其中包括创建新函数，以及了解如何在蓝图中获取对 Actor 的引用。</span><span class="sxs-lookup"><span data-stu-id="b7c86-108">This includes creating a new function and learning how to get references to Actors in a Blueprint.</span></span> <span data-ttu-id="b7c86-109">本部分结束时，你就可以打包混合现实应用，并将其部署到设备或仿真器中。</span><span class="sxs-lookup"><span data-stu-id="b7c86-109">By the end of this section, you'll be ready to package and deploy the mixed reality app on a device or emulator.</span></span>
+* <span data-ttu-id="2aef8-109">添加交互式按钮</span><span class="sxs-lookup"><span data-stu-id="2aef8-109">Adding an interactive button</span></span>
+* <span data-ttu-id="2aef8-110">创建用于重置棋子位置的函数</span><span class="sxs-lookup"><span data-stu-id="2aef8-110">Creating a function to reset a pieces' location</span></span>
+* <span data-ttu-id="2aef8-111">连接按钮，以在按下时触发此函数</span><span class="sxs-lookup"><span data-stu-id="2aef8-111">Hooking the button up to trigger the function when pressed</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="b7c86-110">目标</span><span class="sxs-lookup"><span data-stu-id="b7c86-110">Objectives</span></span>
+## <a name="creating-a-reset-function"></a><span data-ttu-id="2aef8-112">创建重置函数</span><span class="sxs-lookup"><span data-stu-id="2aef8-112">Creating a reset function</span></span>
 
-* <span data-ttu-id="b7c86-111">添加交互式按钮</span><span class="sxs-lookup"><span data-stu-id="b7c86-111">Adding an interactive button</span></span>
-* <span data-ttu-id="b7c86-112">创建用于重置棋子位置的函数</span><span class="sxs-lookup"><span data-stu-id="b7c86-112">Creating a function to reset a pieces' location</span></span>
-* <span data-ttu-id="b7c86-113">连接按钮，以在按下时触发此函数</span><span class="sxs-lookup"><span data-stu-id="b7c86-113">Hooking the button up to trigger the function when pressed</span></span>
+<span data-ttu-id="2aef8-113">第一个任务是创建一个函数蓝图，来将象棋棋子重置到场景中的原始位置。</span><span class="sxs-lookup"><span data-stu-id="2aef8-113">Your first task is to create a function blueprint that resets a chess piece to its original position in the scene.</span></span>
 
-## <a name="creating-a-reset-function"></a><span data-ttu-id="b7c86-114">创建重置函数</span><span class="sxs-lookup"><span data-stu-id="b7c86-114">Creating a reset function</span></span>
-<span data-ttu-id="b7c86-115">第一个任务是创建一个函数蓝图，来将象棋棋子重置到场景中的原始位置。</span><span class="sxs-lookup"><span data-stu-id="b7c86-115">Your first task is to create a function blueprint that resets a chess piece to its original position in the scene.</span></span> 
+1.  <span data-ttu-id="2aef8-114">打开“WhiteKing”，选择“我的蓝图”中“函数”部分旁的“+”图标，将其命名为“重置位置”。    </span><span class="sxs-lookup"><span data-stu-id="2aef8-114">Open **WhiteKing**, select the **+** icon next to the **Functions** section in the **My Blueprint** and name it **Reset Location**.</span></span>
 
-1.  <span data-ttu-id="b7c86-116">打开“WhiteKing”，单击“我的蓝图”中“函数”部分旁的“+”图标，将其命名为“重置位置”。    </span><span class="sxs-lookup"><span data-stu-id="b7c86-116">Open **WhiteKing**, click the **+** icon next to the **Functions** section in the **My Blueprint** and name it **Reset Location**.</span></span> 
+2.  <span data-ttu-id="2aef8-115">从蓝图网格拖动并释放“重置位置”的执行，以创建“SetActorRelativeTransform”节点。 </span><span class="sxs-lookup"><span data-stu-id="2aef8-115">Drag and release the execution from **Reset Location** on the Blueprint grid to create a **SetActorRelativeTransform** node.</span></span>
+    * <span data-ttu-id="2aef8-116">此函数可设置 Actor 相对于其父级的变形（位置、旋转和缩放）。</span><span class="sxs-lookup"><span data-stu-id="2aef8-116">This function sets the transform (location, rotation, and scale) of an actor relative to its parent.</span></span> <span data-ttu-id="2aef8-117">将使用此函数来重置棋盘上国王的位置，即使棋盘已从其原始位置移动也无妨。</span><span class="sxs-lookup"><span data-stu-id="2aef8-117">You’ll use this function to reset the king’s position on the board, even if the board has been moved from its original position.</span></span>
 
-2.  <span data-ttu-id="b7c86-117">从蓝图网格拖动并释放“重置位置”的执行，以创建“SetActorRelativeTransform”节点。 </span><span class="sxs-lookup"><span data-stu-id="b7c86-117">Drag and release the execution from **Reset Location** on the Blueprint grid to create a **SetActorRelativeTransform** node.</span></span> 
-    * <span data-ttu-id="b7c86-118">此函数可设置 Actor 相对于其父级的变形（位置、旋转和缩放）。</span><span class="sxs-lookup"><span data-stu-id="b7c86-118">This function sets the transform (location, rotation, and scale) of an actor relative to its parent.</span></span> <span data-ttu-id="b7c86-119">将使用此函数来重置棋盘上国王的位置，即使棋盘已从其原始位置移动也无妨。</span><span class="sxs-lookup"><span data-stu-id="b7c86-119">You’ll use this function to reset the king’s position on the board, even if the board has been moved from its original position.</span></span> 
-    
-3. <span data-ttu-id="b7c86-120">在事件图表中右击，选择“进行变形”，然后将其“位置”更改为“X = -26”、“Y = 4”和“Z = 0”。    </span><span class="sxs-lookup"><span data-stu-id="b7c86-120">Right-click inside the Event Graph, select **Make Transform**, and change its **Location** to **X = -26**, **Y = 4**, **Z = 0**.</span></span>
-    * <span data-ttu-id="b7c86-121">将其“返回值”连接到“SetActorRelativeTransform”中的“新相对变形”引脚。  </span><span class="sxs-lookup"><span data-stu-id="b7c86-121">Connect its **Return Value** to the **New Relative Transform** pin in **SetActorRelativeTransform**.</span></span> 
+3. <span data-ttu-id="2aef8-118">在事件图表中右击，选择“进行变形”，然后将其“位置”更改为“X = -26”、“Y = 4”和“Z = 0”。    </span><span class="sxs-lookup"><span data-stu-id="2aef8-118">Right-click inside the Event Graph, select **Make Transform**, and change its **Location** to **X = -26**, **Y = 4**, **Z = 0**.</span></span>
+    * <span data-ttu-id="2aef8-119">将其“返回值”连接到“SetActorRelativeTransform”中的“新相对变形”引脚。  </span><span class="sxs-lookup"><span data-stu-id="2aef8-119">Connect its **Return Value** to the **New Relative Transform** pin in **SetActorRelativeTransform**.</span></span>
 
 ![Reset Location 函数](images/unreal-uxt/5-function.PNG)
 
-<span data-ttu-id="b7c86-123">编译并保存项目，然后返回到主窗口。 </span><span class="sxs-lookup"><span data-stu-id="b7c86-123">**Compile** and **Save** the project before returning to the Main window.</span></span> 
+<span data-ttu-id="2aef8-121">编译并保存项目，然后返回到主窗口。 </span><span class="sxs-lookup"><span data-stu-id="2aef8-121">**Compile** and **Save** the project before returning to the Main window.</span></span>
 
 
-## <a name="adding-a-button"></a><span data-ttu-id="b7c86-124">添加按钮</span><span class="sxs-lookup"><span data-stu-id="b7c86-124">Adding a button</span></span>
-<span data-ttu-id="b7c86-125">正确设置此函数后，接下来的任务是创建一个按钮，以在按它时触发函数。</span><span class="sxs-lookup"><span data-stu-id="b7c86-125">Now that the function is setup correctly, your next task is to create a button that fires it off when touched.</span></span> 
+## <a name="adding-a-button"></a><span data-ttu-id="2aef8-122">添加按钮</span><span class="sxs-lookup"><span data-stu-id="2aef8-122">Adding a button</span></span>
 
+<span data-ttu-id="2aef8-123">正确设置此函数后，接下来的任务是创建一个按钮，以在按它时触发函数。</span><span class="sxs-lookup"><span data-stu-id="2aef8-123">Now that the function is set up correctly, your next task is to create a button that fires it off when touched.</span></span>
 
-1.  <span data-ttu-id="b7c86-126">单击“添加新项”>“蓝图类”，展开“所有类”部分，然后搜索“BP_ButtonHoloLens2”。  。</span><span class="sxs-lookup"><span data-stu-id="b7c86-126">Click **Add New > Blueprint Class**, expand the **All Classes** section, and search for **BP_ButtonHoloLens2**.</span></span> 
-    * <span data-ttu-id="b7c86-127">将其命名为“ResetButton”，然后双击以打开蓝图</span><span class="sxs-lookup"><span data-stu-id="b7c86-127">Name it **ResetButton** and double click to open the Blueprint</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="b7c86-128">BP_ButtonHoloLens2 是一个 3D 按钮蓝图 Actor，它是 UX Tools 插件的一部分。</span><span class="sxs-lookup"><span data-stu-id="b7c86-128">**BP_ButtonHoloLens2** is a 3D button Blueprint Actor that's part of the UX Tools plugin.</span></span>
+1.  <span data-ttu-id="2aef8-124">单击“添加新项”>“蓝图类”，展开“所有类”部分，然后搜索“UxtPressableButtonActor”  。</span><span class="sxs-lookup"><span data-stu-id="2aef8-124">Click **Add New > Blueprint Class**, expand the **All Classes** section, and search for **UxtPressableButtonActor**.</span></span>
+    * <span data-ttu-id="2aef8-125">将其命名为“ResetButton”，然后双击以打开蓝图</span><span class="sxs-lookup"><span data-stu-id="2aef8-125">Name it **ResetButton** and double click to open the Blueprint</span></span>
 
 ![从 HoloLens 2 样式按钮为新蓝图建立子类](images/unreal-uxt/5-subclass.PNG)
 
-2. <span data-ttu-id="b7c86-130">确保在“组件”面板中选择了“ResetButton(自身)” 。</span><span class="sxs-lookup"><span data-stu-id="b7c86-130">Ensure **ResetButton(self)** is selected in the **Components** panel.</span></span> <span data-ttu-id="b7c86-131">在“详细信息”面板中，导航到“按钮”部分 。</span><span class="sxs-lookup"><span data-stu-id="b7c86-131">In the **Details** panel, navigate to the **Button** section.</span></span> <span data-ttu-id="b7c86-132">将默认的“按钮标签”更改为“重置”。</span><span class="sxs-lookup"><span data-stu-id="b7c86-132">Change the default **Button Label** to "Reset".</span></span> <span data-ttu-id="b7c86-133">展开“按钮图标画笔”部分，然后按“打开图标画笔编辑器”按钮 。</span><span class="sxs-lookup"><span data-stu-id="b7c86-133">Expand the **Button Icon Brush** section and press the **Open Icon Brush Editor** button.</span></span> 
+2. <span data-ttu-id="2aef8-127">确保在“组件”面板中选择了“ResetButton(自身)” 。</span><span class="sxs-lookup"><span data-stu-id="2aef8-127">Ensure **ResetButton(self)** is selected in the **Components** panel.</span></span> <span data-ttu-id="2aef8-128">在“详细信息”面板中，导航到“按钮”部分 。</span><span class="sxs-lookup"><span data-stu-id="2aef8-128">In the **Details** panel, navigate to the **Button** section.</span></span> <span data-ttu-id="2aef8-129">将默认“按钮标签”更改为“重置”，展开“按钮图标画笔”部分，然后按“打开图标画笔编辑器”按钮  。</span><span class="sxs-lookup"><span data-stu-id="2aef8-129">Change the default **Button Label** to "Reset", expand the **Button Icon Brush** section, and press the **Open Icon Brush Editor** button.</span></span>
 
 ![设置按钮上的标签和图标](images/unreal-uxt/5-buttonconfig.PNG)
 
-<span data-ttu-id="b7c86-135">这将打开“图标画笔编辑器”，它是一种由 UX Tools 插件提供的实用工具，可用于为按钮选择新图标。</span><span class="sxs-lookup"><span data-stu-id="b7c86-135">This will open up the Icon Brush Editor, which is a utility provided by the UX Tools plugin which you can use to select a new icon for your button.</span></span> 
+<span data-ttu-id="2aef8-131">图标画笔编辑器随即打开，你可以使用该编辑器为按钮选择新图标。</span><span class="sxs-lookup"><span data-stu-id="2aef8-131">The Icon Brush Editor will open, which you can use to select a new icon for your button.</span></span>
 
 ![为按钮选择图标](images/unreal-uxt/5-iconbrusheditor.PNG)
 
-<span data-ttu-id="b7c86-137">为配置按钮，还有很多其他的设置可以进行调整。</span><span class="sxs-lookup"><span data-stu-id="b7c86-137">There are plenty of other settings you can adjust to configure your button.</span></span> <span data-ttu-id="b7c86-138">若要了解有关 UXT 可按按钮组件的详细信息，请参阅[文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PressableButton.html)。</span><span class="sxs-lookup"><span data-stu-id="b7c86-138">To learn more about the UXT Pressable Button component, check out the [documentation](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PressableButton.html).</span></span>
+<span data-ttu-id="2aef8-133">为配置按钮，还有很多其他的设置可以进行调整。</span><span class="sxs-lookup"><span data-stu-id="2aef8-133">There are plenty of other settings you can adjust to configure your button.</span></span> <span data-ttu-id="2aef8-134">若要了解有关 UXT 可按按钮组件的详细信息，请参阅[文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PressableButton.html)。</span><span class="sxs-lookup"><span data-stu-id="2aef8-134">To learn more about the UXT Pressable Button component, check out the [documentation](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PressableButton.html).</span></span>
 
-3. <span data-ttu-id="b7c86-139">单击“组件”面板中的“UxtPressableButton(继承)”，将“详细信息”面板向下滚动到“事件”部分   。</span><span class="sxs-lookup"><span data-stu-id="b7c86-139">Click **UxtPressableButton (Inherited)** in the **Components** panel and scroll down the **Details** panel to the **Events** section.</span></span> 
-    * <span data-ttu-id="b7c86-140">单击“按钮按下时”旁的绿色 + 按钮，向事件图表添加事件，按下按钮时将调用该事件。</span><span class="sxs-lookup"><span data-stu-id="b7c86-140">Click the green **+** button next to **On Button Pressed** to add an event to the Event Graph, which will be called when the button is pressed.</span></span> 
-    
-<span data-ttu-id="b7c86-141">此时，需要调用“WhiteKing”的“重置位置”函数，这需要在关卡中引用“WhiteKing”Actor。  </span><span class="sxs-lookup"><span data-stu-id="b7c86-141">From here, you’ll want to call **WhiteKing**’s **Reset Location** function, which needs a reference to the **WhiteKing** Actor in the Level.</span></span> 
+3. <span data-ttu-id="2aef8-135">单击“组件”面板中的“ButtonComponent (继承)”，将“详细信息”面板向下滚动到“事件”部分   。</span><span class="sxs-lookup"><span data-stu-id="2aef8-135">Click **ButtonComponent (Inherited)** in the **Components** panel and scroll down the **Details** panel to the **Events** section.</span></span>
+    * <span data-ttu-id="2aef8-136">单击“按钮按下时”旁的绿色 + 按钮，向事件图表添加事件，按下按钮时将调用该事件。</span><span class="sxs-lookup"><span data-stu-id="2aef8-136">Click the green **+** button next to **On Button Pressed** to add an event to the Event Graph, which will be called when the button is pressed.</span></span>
 
-4.  <span data-ttu-id="b7c86-142">在“我的蓝图”面板中，导航到“变量”部分，然后单击 + 按钮，将变量命名为“WhiteKing”   。</span><span class="sxs-lookup"><span data-stu-id="b7c86-142">In the **My Blueprint** panel, navigate to the **Variables** section , click the **+** button and name the variable **WhiteKing**.</span></span> 
-    * <span data-ttu-id="b7c86-143">在“详细信息”面板中，选择“变量类型”旁的下拉列表，搜索“WhiteKing”，然后选择“对象引用”   。</span><span class="sxs-lookup"><span data-stu-id="b7c86-143">In the **Details** panel, select the dropdown next to **Variable Type**, search for **WhiteKing**, and select the **Object Reference**.</span></span> 
-    * <span data-ttu-id="b7c86-144">选中“实例可编辑”旁的复选框。</span><span class="sxs-lookup"><span data-stu-id="b7c86-144">Check the box next to **Instance Editable**.</span></span> <span data-ttu-id="b7c86-145">这将允许从主关卡设置变量。</span><span class="sxs-lookup"><span data-stu-id="b7c86-145">This will allow the variable to be set from the Main Level.</span></span> 
+<span data-ttu-id="2aef8-137">此时，需要调用“WhiteKing”的“重置位置”函数，这需要在关卡中引用“WhiteKing”Actor。  </span><span class="sxs-lookup"><span data-stu-id="2aef8-137">From here, you’ll want to call **WhiteKing**’s **Reset Location** function, which needs a reference to the **WhiteKing** Actor in the Level.</span></span>
+
+4.  <span data-ttu-id="2aef8-138">在“我的蓝图”面板中，导航到“变量”部分，然后单击 + 按钮，将变量命名为“WhiteKing”   。</span><span class="sxs-lookup"><span data-stu-id="2aef8-138">In the **My Blueprint** panel, navigate to the **Variables** section, click the **+** button, and name the variable **WhiteKing**.</span></span>
+    * <span data-ttu-id="2aef8-139">在“详细信息”面板中，选择“变量类型”旁的下拉列表，搜索“WhiteKing”，然后选择“对象引用”   。</span><span class="sxs-lookup"><span data-stu-id="2aef8-139">In the **Details** panel, select the dropdown next to **Variable Type**, search for **WhiteKing**, and select the **Object Reference**.</span></span>
+    * <span data-ttu-id="2aef8-140">选中“实例可编辑”旁的框，这使得可从主关卡设置变量。</span><span class="sxs-lookup"><span data-stu-id="2aef8-140">Check the box next to **Instance Editable**, which allows the variable to be set from the Main Level.</span></span>
 
 ![创建变量](images/unreal-uxt/5-var.PNG)
 
-5.  <span data-ttu-id="b7c86-147">将 WhiteKing 变量从“我的蓝图 > 变量”拖放到“‘重置’按钮事件图表”中，然后选择“获取 WhiteKing”。</span><span class="sxs-lookup"><span data-stu-id="b7c86-147">Drag the WhiteKing variable from **My Blueprint > Variables** onto the Reset Button Event Graph and choose **Get WhiteKing**.</span></span> 
+5.  <span data-ttu-id="2aef8-142">将 WhiteKing 变量从“我的蓝图 > 变量”拖放到“‘重置’按钮事件图表”中，然后选择“获取 WhiteKing”。</span><span class="sxs-lookup"><span data-stu-id="2aef8-142">Drag the WhiteKing variable from **My Blueprint > Variables** onto the Reset Button Event Graph and choose **Get WhiteKing**.</span></span>
 
-## <a name="firing-the-function"></a><span data-ttu-id="b7c86-148">触发函数</span><span class="sxs-lookup"><span data-stu-id="b7c86-148">Firing the function</span></span>
-<span data-ttu-id="b7c86-149">剩下的就是，在按下按钮时，正式触发重置函数。</span><span class="sxs-lookup"><span data-stu-id="b7c86-149">All that's left is to officially fire off the reset function when the button is pressed.</span></span>
+## <a name="firing-the-function"></a><span data-ttu-id="2aef8-143">触发函数</span><span class="sxs-lookup"><span data-stu-id="2aef8-143">Firing the function</span></span>
 
-1.  <span data-ttu-id="b7c86-150">拖动“WhiteKing”输出引脚并释放以放置新节点。</span><span class="sxs-lookup"><span data-stu-id="b7c86-150">Drag the WhiteKing output pin and release to place a new node.</span></span> <span data-ttu-id="b7c86-151">选择“Reset Location”函数。</span><span class="sxs-lookup"><span data-stu-id="b7c86-151">Select the **Reset Location** function.</span></span> <span data-ttu-id="b7c86-152">最后，将传出执行引脚从“按钮按下时”拖放到“重置位置”上的传入执行引脚。</span><span class="sxs-lookup"><span data-stu-id="b7c86-152">Finally, drag the outgoing execution pin from **On Button Pressed** to the incoming execution pin on **Reset Location**.</span></span> <span data-ttu-id="b7c86-153">编译和保存 ResetButton 蓝图，然后返回到主窗口。</span><span class="sxs-lookup"><span data-stu-id="b7c86-153">**Compile** and **Save** the ResetButton Blueprint, then return to the Main window.</span></span> 
+<span data-ttu-id="2aef8-144">剩下的就是，在按下按钮时，正式触发重置函数。</span><span class="sxs-lookup"><span data-stu-id="2aef8-144">All that's left is to officially fire off the reset function when the button is pressed.</span></span>
+
+1.  <span data-ttu-id="2aef8-145">拖动“WhiteKing”输出引脚并释放以放置新节点。</span><span class="sxs-lookup"><span data-stu-id="2aef8-145">Drag the WhiteKing output pin and release to place a new node.</span></span> <span data-ttu-id="2aef8-146">选择“Reset Location”函数。</span><span class="sxs-lookup"><span data-stu-id="2aef8-146">Select the **Reset Location** function.</span></span> <span data-ttu-id="2aef8-147">最后，将传出执行引脚从“按钮按下时”拖放到“重置位置”上的传入执行引脚。</span><span class="sxs-lookup"><span data-stu-id="2aef8-147">Finally, drag the outgoing execution pin from **On Button Pressed** to the incoming execution pin on **Reset Location**.</span></span> <span data-ttu-id="2aef8-148">编译和保存 ResetButton 蓝图，然后返回到主窗口。</span><span class="sxs-lookup"><span data-stu-id="2aef8-148">**Compile** and **Save** the ResetButton Blueprint, then return to the Main window.</span></span>
 
 ![从“按下按钮时”调用“Reset Location”函数](images/unreal-uxt/5-callresetloc.PNG)
 
-2.  <span data-ttu-id="b7c86-155">将“ResetButton”拖到视口中，并将其位置设置为“X = 50”、“Y = -25”和“Z = 10”。  </span><span class="sxs-lookup"><span data-stu-id="b7c86-155">Drag **ResetButton** into the viewport and set its location to **X = 50**, **Y = -25**, and **Z = 10**.</span></span> <span data-ttu-id="b7c86-156">将其旋转设置为“Z = 180”。</span><span class="sxs-lookup"><span data-stu-id="b7c86-156">Set its rotation to **Z = 180**.</span></span> <span data-ttu-id="b7c86-157">在“默认值”下，将 WhiteKing 变量的值设置为“WhiteKing”。  </span><span class="sxs-lookup"><span data-stu-id="b7c86-157">Under **Default**, set the value of the **WhiteKing** variable to **WhiteKing**.</span></span>
+2.  <span data-ttu-id="2aef8-150">将“ResetButton”拖到视口中，并将其位置设置为“X = 50”、“Y = -25”和“Z = 10”。  </span><span class="sxs-lookup"><span data-stu-id="2aef8-150">Drag **ResetButton** into the viewport and set its location to **X = 50**, **Y = -25**, and **Z = 10**.</span></span> <span data-ttu-id="2aef8-151">将其旋转设置为“Z = 180”。</span><span class="sxs-lookup"><span data-stu-id="2aef8-151">Set its rotation to **Z = 180**.</span></span> <span data-ttu-id="2aef8-152">在“默认值”下，将 WhiteKing 变量的值设置为“WhiteKing”。  </span><span class="sxs-lookup"><span data-stu-id="2aef8-152">Under **Default**, set the value of the **WhiteKing** variable to **WhiteKing**.</span></span>
 
 ![设置变量](images/unreal-uxt/5-buttonlevel.PNG)
 
-<span data-ttu-id="b7c86-159">运行应用，将象棋棋子移动到新位置，然后按 HoloLens 2 样式按钮来查看重置逻辑正在运行！</span><span class="sxs-lookup"><span data-stu-id="b7c86-159">Run the app, move the chess piece to a new location, and press your HoloLens 2-style button to see the reset logic in action!</span></span>
+<span data-ttu-id="2aef8-154">运行应用，将象棋棋子移动到新位置，然后按 HoloLens 2 样式按钮来查看重置逻辑正在运行！</span><span class="sxs-lookup"><span data-stu-id="2aef8-154">Run the app, move the chess piece to a new location, and press your HoloLens 2-style button to see the reset logic in action!</span></span>
 
-<span data-ttu-id="b7c86-160">现在，你有了一个混合现实应用，其中包含可与之交互的棋子和棋盘，以及一个功能齐全的按钮，该按钮将重置棋子的位置。</span><span class="sxs-lookup"><span data-stu-id="b7c86-160">You now have a mixed reality app with a chess piece and board that you can interact with, as well as a fully functioning button that will reset the piece’s location.</span></span> <span data-ttu-id="b7c86-161">可以在 [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp) 存储库中找到目前完成的该应用程序。</span><span class="sxs-lookup"><span data-stu-id="b7c86-161">You can find the completed app up to this point in its [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp) repo.</span></span> <span data-ttu-id="b7c86-162">请随意阅读本教程以外的内容并设置其余的棋子，以便在按下按钮时重置整个棋盘。</span><span class="sxs-lookup"><span data-stu-id="b7c86-162">Feel free to go beyond this tutorial and set up the remainder of the chess pieces so that the entire board is reset when the button is pressed.</span></span>
+<span data-ttu-id="2aef8-155">现在，你有了一个混合现实应用，其中包含可交互的棋子和棋盘，以及一个功能齐全的按钮，该按钮可重置棋子的位置。</span><span class="sxs-lookup"><span data-stu-id="2aef8-155">You now have a mixed reality app with an interactable chess piece and board, and a fully functioning button that resets the piece’s location.</span></span> <span data-ttu-id="2aef8-156">可以在 [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp) 存储库中找到目前完成的该应用程序。</span><span class="sxs-lookup"><span data-stu-id="2aef8-156">You can find the completed app up to this point in its [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp) repo.</span></span> <span data-ttu-id="2aef8-157">请随意阅读本教程以外的内容并设置其余的棋子，以便按下“重置”按钮时重置整个棋盘。</span><span class="sxs-lookup"><span data-stu-id="2aef8-157">Feel free to go beyond this tutorial and set up the rest of the chess pieces so that the entire board is reset when you press the reset button.</span></span>
 
 ![在视口中结束场景](images/unreal-uxt/5-endscene.PNG)
 
-<span data-ttu-id="b7c86-164">你可以继续学习本教程的最后一部分，你将了解如何将应用正确打包并部署到设备或仿真器。</span><span class="sxs-lookup"><span data-stu-id="b7c86-164">You're ready to move on to the final section of this tutorial where you'll learn how to correctly package and deploy the app to a device or emulator.</span></span>
+<span data-ttu-id="2aef8-159">你可以继续学习本教程的最后一部分，你将了解如何将应用打包并部署到设备或仿真器。</span><span class="sxs-lookup"><span data-stu-id="2aef8-159">You're ready to move on to the final section of this tutorial where you'll learn how to package and deploy the app to a device or emulator.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="b7c86-165">此时，在将应用程序部署到设备或仿真器之前，应使用建议的 [Unreal 性能设置](../performance-recommendations-for-unreal.md)来更新项目。</span><span class="sxs-lookup"><span data-stu-id="b7c86-165">At this point, you should update your project with the recommended **[Unreal performance settings](../performance-recommendations-for-unreal.md)** before deploying your application to a device or emulator.</span></span>
+> <span data-ttu-id="2aef8-160">此时，在将应用程序部署到设备或仿真器之前，应使用建议的 [Unreal 性能设置](../performance-recommendations-for-unreal.md)来更新项目。</span><span class="sxs-lookup"><span data-stu-id="2aef8-160">At this point, you should update your project with the recommended **[Unreal performance settings](../performance-recommendations-for-unreal.md)** before deploying your application to a device or emulator.</span></span>
 
-[<span data-ttu-id="b7c86-166">下一节：6.打包并部署到设备或仿真器</span><span class="sxs-lookup"><span data-stu-id="b7c86-166">Next Section: 6. Packaging & deploying to device or emulator</span></span>](unreal-uxt-ch6.md)
+[<span data-ttu-id="2aef8-161">下一节：6.打包并部署到设备或仿真器</span><span class="sxs-lookup"><span data-stu-id="2aef8-161">Next Section: 6. Packaging & deploying to device or emulator</span></span>](unreal-uxt-ch6.md)
