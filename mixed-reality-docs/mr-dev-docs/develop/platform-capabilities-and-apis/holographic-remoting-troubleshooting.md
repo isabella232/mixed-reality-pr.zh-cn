@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程影像，故障排除，帮助，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: ca0e4b3a43eae5be09f2c0bfbee9056cd847787c
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 9b900238abc79b0f2f93691d4b4a67cce67a201a
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443597"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530187"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>全息远程处理疑难解答
 
@@ -22,15 +22,15 @@ ms.locfileid: "96443597"
 
 全息远程处理示例应用在发布配置中启用了 Spectre 缓解 (/Qspectre) 。
 
-如果收到一条错误链接器错误，指出无法打开 "vccorlib.h"，请确保你的 Visual Studio 工作负荷包括 Spectre 缓解库。 有关更多信息，请参见https://aka.ms/Ofhn4c。
+如果你的 *vccorlib.h 无法打开* 错误，请确保你的 Visual Studio 工作负荷包含 [Spectre 缓解的库](https://aka.ms/Ofhn4c)
 
 ## <a name="speech"></a>语音
 
-全息远程处理播放器支持诊断覆盖，可以通过口述和禁用来启用此覆盖 ```Enable Diagnostics``` ```Disable Diagnostics``` 。 如果使用这些语音命令时遇到问题，也可以通过 web 浏览器使用作为 URL 来启动全息远程处理播放器 ```ms-holographic-remoting:?stats``` 。
+全息远程处理播放机支持诊断覆盖，可以通过口述 ```Enable Diagnostics``` 和禁用来启用 ```Disable Diagnostics``` 。 如果使用这些声音命令时遇到问题，也可以通过 web 浏览器使用作为 URL 来启动全息远程处理播放器 ```ms-holographic-remoting:?stats``` 。
 
 ## <a name="h265-video-codec-not-available"></a>H265 视频编解码器不可用
 
-在远程应用中使用 H265 视频编解码器时，需要安装 [HEVC 视频扩展](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) 。 如果遇到安装了编解码器但无法使用的问题，请查看 [故障排除](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) 指南。
+在远程应用中使用 H265 视频编解码器时，安装 [HEVC 视频扩展](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) 。 如果遇到安装了编解码器但无法使用的问题，请查看 [故障排除](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) 指南。
 
 ## <a name="limitations"></a>限制
 
@@ -50,7 +50,7 @@ ms.locfileid: "96443597"
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
   - 支持从版本[2.2.0](holographic-remoting-version-history.md#v2.2.0)开始
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
-  - 不会失败，但深度缓冲区将不会进行远程处理。
+  - Doe.
   - 支持从版本[2.1.0](holographic-remoting-version-history.md#v2.1.0)开始
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
   - 查询 HolographicViewConfigurationKind PhotoVideoCamera 将始终返回 ```nullptr``` 。
@@ -105,7 +105,7 @@ ms.locfileid: "96443597"
 
 ## <a name="see-also"></a>另请参阅
 * [全息远程处理版本历史记录](holographic-remoting-version-history.md)
-* [使用 Windows Mixed Realiy Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
+* [使用 Windows Mixed Reality Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理软件许可条款](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
