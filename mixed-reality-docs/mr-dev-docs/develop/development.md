@@ -4,16 +4,16 @@ title: 了解工具和体系结构
 description: 适用于 HoloLens 和沉浸式头戴显示设备的混合现实开发人员文档。
 author: grbury
 ms.author: grbury
-ms.date: 07/31/2020
+ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, HoloLens, unity, unreal, directx, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, 虚拟现实开发, 增强现实开发
-ms.openlocfilehash: e269523b7ddd369d65e9a33dbeb32b13a17428a4
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 75501e299b0bccbc35056ebb2da6657bd5d1e335
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677856"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925965"
 ---
 # <a name="introduction-to-mixed-reality-development"></a>混合现实开发简介
 

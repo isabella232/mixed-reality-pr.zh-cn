@@ -3,78 +3,78 @@ title: Unreal 中的空间映射
 description: Unreal 中空间映射使用指南
 author: hferrone
 ms.author: jacksonf
-ms.date: 06/10/2020
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 空间映射, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: bde5a1b53f6ad90bc84f54bd3e4f1237b78f2abe
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 6d70e7f2d32fbf39bc51534661b8224547c36acc
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609418"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926045"
 ---
-# <a name="spatial-mapping-in-unreal"></a><span data-ttu-id="ffc45-104">Unreal 中的空间映射</span><span class="sxs-lookup"><span data-stu-id="ffc45-104">Spatial Mapping in Unreal</span></span>
+# <a name="spatial-mapping-in-unreal"></a><span data-ttu-id="a0e67-104">Unreal 中的空间映射</span><span class="sxs-lookup"><span data-stu-id="a0e67-104">Spatial Mapping in Unreal</span></span>
 
-<span data-ttu-id="ffc45-105">利用空间映射，你可以将对象放置在现实世界的物理表面上。</span><span class="sxs-lookup"><span data-stu-id="ffc45-105">Spatial mapping lets you place objects on physical surfaces in the real-world.</span></span> <span data-ttu-id="ffc45-106">对 HoloLens 周围的世界进行映射时，全息影像看起来会让用户感觉更加真实。</span><span class="sxs-lookup"><span data-stu-id="ffc45-106">When the world around the HoloLens is mapped, holograms seem more real to the user.</span></span> <span data-ttu-id="ffc45-107">空间映射还利用深度提示，在用户的世界中为对象定位，这有助于说服用户这些全息影像实际位于其空间中。</span><span class="sxs-lookup"><span data-stu-id="ffc45-107">Spatial mapping also anchors objects in the user's world by taking advantage of depth cues, helping convince them that these holograms are actually in their space.</span></span> <span data-ttu-id="ffc45-108">在空间中浮动或随用户移动的全息影像并不会让人感觉真实，因此建议尽可能始终放置一些项目，让人保持舒适感。</span><span class="sxs-lookup"><span data-stu-id="ffc45-108">Holograms floating in space or moving with the user won't feel as real, so you always want to place items for comfort whenever possible.</span></span>
+<span data-ttu-id="a0e67-105">利用空间映射，你可以将对象放置在现实世界的物理表面上。</span><span class="sxs-lookup"><span data-stu-id="a0e67-105">Spatial mapping lets you place objects on physical surfaces in the real-world.</span></span> <span data-ttu-id="a0e67-106">对 HoloLens 周围的世界进行映射时，全息影像看起来会让用户感觉更加真实。</span><span class="sxs-lookup"><span data-stu-id="a0e67-106">When the world around the HoloLens is mapped, holograms seem more real to the user.</span></span> <span data-ttu-id="a0e67-107">空间映射还利用深度提示，在用户的世界中为对象定位，这有助于说服用户这些全息影像实际位于其空间中。</span><span class="sxs-lookup"><span data-stu-id="a0e67-107">Spatial mapping also anchors objects in the user's world by taking advantage of depth cues, helping convince them that these holograms are actually in their space.</span></span> <span data-ttu-id="a0e67-108">在空间中浮动或随用户移动的全息影像并不会让人感觉真实，因此建议尽可能始终放置一些项目，让人保持舒适感。</span><span class="sxs-lookup"><span data-stu-id="a0e67-108">Holograms floating in space or moving with the user won't feel as real, so you always want to place items for comfort whenever possible.</span></span>
 
-<span data-ttu-id="ffc45-109">可以在[空间映射](../../design/spatial-mapping.md)文档中找到有关空间映射质量、位置、封闭、呈现等内容的详细信息。</span><span class="sxs-lookup"><span data-stu-id="ffc45-109">You can find more information on spatial mapping quality, placement, occlusion, rendering, and more, in the [Spatial mapping](../../design/spatial-mapping.md) document.</span></span>
+<span data-ttu-id="a0e67-109">可以在[空间映射](../../design/spatial-mapping.md)文档中找到有关空间映射质量、位置、封闭、呈现等内容的详细信息。</span><span class="sxs-lookup"><span data-stu-id="a0e67-109">You can find more information on spatial mapping quality, placement, occlusion, rendering, and more, in the [Spatial mapping](../../design/spatial-mapping.md) document.</span></span>
 
-## <a name="enabling-spatial-mapping"></a><span data-ttu-id="ffc45-110">启用空间映射</span><span class="sxs-lookup"><span data-stu-id="ffc45-110">Enabling Spatial Mapping</span></span>
+## <a name="enabling-spatial-mapping"></a><span data-ttu-id="a0e67-110">启用空间映射</span><span class="sxs-lookup"><span data-stu-id="a0e67-110">Enabling Spatial Mapping</span></span>
 
-<span data-ttu-id="ffc45-111">若要在 HoloLens 上启用空间映射，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="ffc45-111">To enable spatial mapping on HoloLens:</span></span>
-- <span data-ttu-id="ffc45-112">打开“编辑”>“项目设置”，并向下滚动到“平台”部分。</span><span class="sxs-lookup"><span data-stu-id="ffc45-112">Open **Edit > Project Settings** and scroll down to the **Platforms** section.</span></span>    
-    + <span data-ttu-id="ffc45-113">选择“HoloLens”并检查“空间感知”。</span><span class="sxs-lookup"><span data-stu-id="ffc45-113">Select **HoloLens** and check **Spatial Perception**.</span></span>
+<span data-ttu-id="a0e67-111">若要在 HoloLens 上启用空间映射，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="a0e67-111">To enable spatial mapping on HoloLens:</span></span>
+- <span data-ttu-id="a0e67-112">打开“编辑”>“项目设置”，并向下滚动到“平台”部分。</span><span class="sxs-lookup"><span data-stu-id="a0e67-112">Open **Edit > Project Settings** and scroll down to the **Platforms** section.</span></span>    
+    + <span data-ttu-id="a0e67-113">选择“HoloLens”并检查“空间感知”。</span><span class="sxs-lookup"><span data-stu-id="a0e67-113">Select **HoloLens** and check **Spatial Perception**.</span></span>
 
 ![HoloLens 项目设置功能的屏幕截图，其中突出显示了空间感知](images/unreal-spatial-mapping-img-01.png)
 
-<span data-ttu-id="ffc45-115">若要选择在 HoloLens 游戏中使用空间映射并调试“MRMesh”，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="ffc45-115">To opt into spatial mapping and debug the **MRMesh** in a HoloLens game:</span></span>
-1. <span data-ttu-id="ffc45-116">打开“ARSessionConfig”并展开“ARSettings”>“世界映射”部分。</span><span class="sxs-lookup"><span data-stu-id="ffc45-116">Open the **ARSessionConfig** and expand the **ARSettings > World Mapping** section.</span></span> 
+<span data-ttu-id="a0e67-115">若要选择在 HoloLens 游戏中使用空间映射并调试“MRMesh”，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="a0e67-115">To opt into spatial mapping and debug the **MRMesh** in a HoloLens game:</span></span>
+1. <span data-ttu-id="a0e67-116">打开“ARSessionConfig”并展开“ARSettings”>“世界映射”部分。</span><span class="sxs-lookup"><span data-stu-id="a0e67-116">Open the **ARSessionConfig** and expand the **ARSettings > World Mapping** section.</span></span> 
 
-2. <span data-ttu-id="ffc45-117">选中“从跟踪几何生成网格数据”，可指示 HoloLens 插件开始异步获取空间映射数据，并通过 MRMesh 将其呈现给 Unreal。</span><span class="sxs-lookup"><span data-stu-id="ffc45-117">Check **Generate Mesh Data from Tracked Geometry**, which tells the HoloLens plugin to start asynchronously getting spatial mapping data and surface it to Unreal through the **MRMesh**.</span></span> 
-3. <span data-ttu-id="ffc45-118">选中“在线框中呈现网格数据”，以显示 MRMesh 中每个三角形的白色线框轮廓。</span><span class="sxs-lookup"><span data-stu-id="ffc45-118">Check **Render Mesh Data in Wireframe** to show a white wireframe outline of every triangle in the **MRMesh**.</span></span> 
+2. <span data-ttu-id="a0e67-117">选中“从跟踪几何生成网格数据”，可指示 HoloLens 插件开始异步获取空间映射数据，并通过 MRMesh 将其呈现给 Unreal。</span><span class="sxs-lookup"><span data-stu-id="a0e67-117">Check **Generate Mesh Data from Tracked Geometry**, which tells the HoloLens plugin to start asynchronously getting spatial mapping data and surface it to Unreal through the **MRMesh**.</span></span> 
+3. <span data-ttu-id="a0e67-118">选中“在线框中呈现网格数据”，以显示 MRMesh 中每个三角形的白色线框轮廓。</span><span class="sxs-lookup"><span data-stu-id="a0e67-118">Check **Render Mesh Data in Wireframe** to show a white wireframe outline of every triangle in the **MRMesh**.</span></span> 
 
 ![空间定位点存储准备就绪](images/unreal-spatialmapping-arsettings.PNG)
 
 
-## <a name="spatial-mapping-at-runtime"></a><span data-ttu-id="ffc45-120">运行时的空间映射</span><span class="sxs-lookup"><span data-stu-id="ffc45-120">Spatial Mapping at runtime</span></span>
-<span data-ttu-id="ffc45-121">可以修改以下参数以更新空间映射运行时行为：</span><span class="sxs-lookup"><span data-stu-id="ffc45-121">You can modify the following parameters to update the spatial mapping runtime behavior:</span></span>
+## <a name="spatial-mapping-at-runtime"></a><span data-ttu-id="a0e67-120">运行时的空间映射</span><span class="sxs-lookup"><span data-stu-id="a0e67-120">Spatial Mapping at runtime</span></span>
+<span data-ttu-id="a0e67-121">可以修改以下参数以更新空间映射运行时行为：</span><span class="sxs-lookup"><span data-stu-id="a0e67-121">You can modify the following parameters to update the spatial mapping runtime behavior:</span></span>
 
-- <span data-ttu-id="ffc45-122">打开“编辑”>“项目设置”，向下滚动到“平台”部分，并选择“HoloLens”>“空间映射”  ：</span><span class="sxs-lookup"><span data-stu-id="ffc45-122">Open **Edit > Project Settings**, scroll down to the **Platforms** section, and select **HoloLens > Spatial Mapping**:</span></span> 
+- <span data-ttu-id="a0e67-122">打开“编辑”>“项目设置”，向下滚动到“平台”部分，并选择“HoloLens”>“空间映射”  ：</span><span class="sxs-lookup"><span data-stu-id="a0e67-122">Open **Edit > Project Settings**, scroll down to the **Platforms** section, and select **HoloLens > Spatial Mapping**:</span></span> 
 
 ![空间定位点项目设置](images/unreal-spatialmapping-projectsettings.PNG)
 
-- <span data-ttu-id="ffc45-124">“每立方米最大三角形”将更新空间映射网格中三角形的密度。</span><span class="sxs-lookup"><span data-stu-id="ffc45-124">**Max Triangles Per Cubic Meter** updates the density of the triangles in the spatial mapping mesh.</span></span>  
-- <span data-ttu-id="ffc45-125">“空间网格体积大小”是在玩家周围渲染和更新空间映射数据的立方体的大小。</span><span class="sxs-lookup"><span data-stu-id="ffc45-125">**Spatial Meshing Volume Size** is the size of the cube around the player to render and update spatial mapping data.</span></span>  
-    + <span data-ttu-id="ffc45-126">如果预期的应用程序运行时环境很大，那么这个值可能需要很大才能匹配实际空间。</span><span class="sxs-lookup"><span data-stu-id="ffc45-126">If the expected application runtime environment is expected to be large, this value may need to be large to match the real-world space.</span></span> <span data-ttu-id="ffc45-127">如果应用程序只需要将全息影像直接放置在用户周围的表面上，那么这个值可能会较小。</span><span class="sxs-lookup"><span data-stu-id="ffc45-127">The value can be smaller if the application only needs to place holograms on surfaces immediately around the user.</span></span> <span data-ttu-id="ffc45-128">当用户在世界内走动时，空间映射卷将随之移动。</span><span class="sxs-lookup"><span data-stu-id="ffc45-128">As the user walks around the world, the spatial mapping volume will move with them.</span></span> 
+- <span data-ttu-id="a0e67-124">“每立方米最大三角形”将更新空间映射网格中三角形的密度。</span><span class="sxs-lookup"><span data-stu-id="a0e67-124">**Max Triangles Per Cubic Meter** updates the density of the triangles in the spatial mapping mesh.</span></span>  
+- <span data-ttu-id="a0e67-125">“空间网格体积大小”是在玩家周围渲染和更新空间映射数据的立方体的大小。</span><span class="sxs-lookup"><span data-stu-id="a0e67-125">**Spatial Meshing Volume Size** is the size of the cube around the player to render and update spatial mapping data.</span></span>  
+    + <span data-ttu-id="a0e67-126">如果预期的应用程序运行时环境很大，那么这个值可能需要很大才能匹配实际空间。</span><span class="sxs-lookup"><span data-stu-id="a0e67-126">If the expected application runtime environment is expected to be large, this value may need to be large to match the real-world space.</span></span> <span data-ttu-id="a0e67-127">如果应用程序只需要将全息影像直接放置在用户周围的表面上，那么这个值可能会较小。</span><span class="sxs-lookup"><span data-stu-id="a0e67-127">The value can be smaller if the application only needs to place holograms on surfaces immediately around the user.</span></span> <span data-ttu-id="a0e67-128">当用户在世界内走动时，空间映射卷将随之移动。</span><span class="sxs-lookup"><span data-stu-id="a0e67-128">As the user walks around the world, the spatial mapping volume will move with them.</span></span> 
 
-## <a name="working-with-mrmesh"></a><span data-ttu-id="ffc45-129">使用 MRMesh</span><span class="sxs-lookup"><span data-stu-id="ffc45-129">Working with MRMesh</span></span>
+## <a name="working-with-mrmesh"></a><span data-ttu-id="a0e67-129">使用 MRMesh</span><span class="sxs-lookup"><span data-stu-id="a0e67-129">Working with MRMesh</span></span>
 
-<span data-ttu-id="ffc45-130">首先，你需要启动“空间映射”：</span><span class="sxs-lookup"><span data-stu-id="ffc45-130">First, you need to start Spatial Mapping:</span></span>
+<span data-ttu-id="a0e67-130">首先，你需要启动“空间映射”：</span><span class="sxs-lookup"><span data-stu-id="a0e67-130">First, you need to start Spatial Mapping:</span></span>
 
 ![ToggleARCapture 函数的蓝图，其中突出显示了空间映射捕获类型](images/unreal-spatial-mapping-img-02.png)
 
-<span data-ttu-id="ffc45-132">为空间捕获空间映射后，建议关闭空间映射。</span><span class="sxs-lookup"><span data-stu-id="ffc45-132">Once spatial mapping has been captured for the space, we recommend toggling off spatial mapping.</span></span>  <span data-ttu-id="ffc45-133">可在一定时间后完成空间映射，也可当各方向的光线投射均对 MRMesh 返回碰撞时完成。</span><span class="sxs-lookup"><span data-stu-id="ffc45-133">The spatial mapping may be completed either after a certain amount of time, or when raycasts in each direction return collisions against the MRMesh.</span></span>
+<span data-ttu-id="a0e67-132">为空间捕获空间映射后，建议关闭空间映射。</span><span class="sxs-lookup"><span data-stu-id="a0e67-132">Once spatial mapping has been captured for the space, we recommend toggling off spatial mapping.</span></span>  <span data-ttu-id="a0e67-133">可在一定时间后完成空间映射，也可当各方向的光线投射均对 MRMesh 返回碰撞时完成。</span><span class="sxs-lookup"><span data-stu-id="a0e67-133">The spatial mapping may be completed either after a certain amount of time, or when raycasts in each direction return collisions against the MRMesh.</span></span>
 
-<span data-ttu-id="ffc45-134">若要在运行时访问 MRMesh，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="ffc45-134">To get access to the **MRMesh** at runtime:</span></span>
-1. <span data-ttu-id="ffc45-135">将“ARTrackableNotify”组件添加到蓝图 Actor。</span><span class="sxs-lookup"><span data-stu-id="ffc45-135">Add an **ARTrackableNotify** Component to a Blueprint actor.</span></span> 
+<span data-ttu-id="a0e67-134">若要在运行时访问 MRMesh，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="a0e67-134">To get access to the **MRMesh** at runtime:</span></span>
+1. <span data-ttu-id="a0e67-135">将“ARTrackableNotify”组件添加到蓝图 Actor。</span><span class="sxs-lookup"><span data-stu-id="a0e67-135">Add an **ARTrackableNotify** Component to a Blueprint actor.</span></span> 
 
 ![空间定位点 AR 可跟踪通知](images/unreal-spatialmapping-artrackablenotify.PNG)
 
-2. <span data-ttu-id="ffc45-137">选择“ARTrackableNotify”组件，然后在“详细信息”面板中展开“事件”部分  。</span><span class="sxs-lookup"><span data-stu-id="ffc45-137">Select the **ARTrackableNotify** component and expand the **Events** section in the **Details** panel.</span></span> 
-    - <span data-ttu-id="ffc45-138">在要监视的事件上，选择 + 按钮。</span><span class="sxs-lookup"><span data-stu-id="ffc45-138">Select the **+** button on the events you want to monitor.</span></span> 
+2. <span data-ttu-id="a0e67-137">选择“ARTrackableNotify”组件，然后在“详细信息”面板中展开“事件”部分  。</span><span class="sxs-lookup"><span data-stu-id="a0e67-137">Select the **ARTrackableNotify** component and expand the **Events** section in the **Details** panel.</span></span> 
+    - <span data-ttu-id="a0e67-138">在要监视的事件上，选择 + 按钮。</span><span class="sxs-lookup"><span data-stu-id="a0e67-138">Select the **+** button on the events you want to monitor.</span></span> 
 
 ![空间定位点事件](images/unreal-spatialmapping-events.PNG)
 
-<span data-ttu-id="ffc45-140">在这种情况下，会监视“添加时跟踪几何”事件，这将查找与空间映射数据匹配的有效世界网格。</span><span class="sxs-lookup"><span data-stu-id="ffc45-140">In this case, the **On Add Tracked Geometry** event is being monitored, which looks for valid world meshes matching to spatial mapping data.</span></span> <span data-ttu-id="ffc45-141">可以在 [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html) 组件 API 中找到事件的完整列表。</span><span class="sxs-lookup"><span data-stu-id="ffc45-141">You can find the full list of events in the [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html) component API.</span></span> 
+<span data-ttu-id="a0e67-140">在这种情况下，会监视“添加时跟踪几何”事件，这将查找与空间映射数据匹配的有效世界网格。</span><span class="sxs-lookup"><span data-stu-id="a0e67-140">In this case, the **On Add Tracked Geometry** event is being monitored, which looks for valid world meshes matching to spatial mapping data.</span></span> <span data-ttu-id="a0e67-141">可以在 [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html) 组件 API 中找到事件的完整列表。</span><span class="sxs-lookup"><span data-stu-id="a0e67-141">You can find the full list of events in the [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html) component API.</span></span> 
 
-<span data-ttu-id="ffc45-142">可以在蓝图事件图或 C++ 中更改网格的材料。</span><span class="sxs-lookup"><span data-stu-id="ffc45-142">You can change the mesh’s material in the Blueprint Event Graph or in C++.</span></span> <span data-ttu-id="ffc45-143">下面的屏幕截图显示蓝图路由：</span><span class="sxs-lookup"><span data-stu-id="ffc45-143">The screenshot below shows the Blueprint route:</span></span> 
+<span data-ttu-id="a0e67-142">可以在蓝图事件图或 C++ 中更改网格的材料。</span><span class="sxs-lookup"><span data-stu-id="a0e67-142">You can change the mesh’s material in the Blueprint Event Graph or in C++.</span></span> <span data-ttu-id="a0e67-143">下面的屏幕截图显示蓝图路由：</span><span class="sxs-lookup"><span data-stu-id="a0e67-143">The screenshot below shows the Blueprint route:</span></span> 
 
 ![空间定位点示例](images/unreal-spatialmapping-example.PNG)
 
-## <a name="spatial-mapping-in-c"></a><span data-ttu-id="ffc45-145">使用 C++ 的空间映射</span><span class="sxs-lookup"><span data-stu-id="ffc45-145">Spatial Mapping in C++</span></span>
+## <a name="spatial-mapping-in-c"></a><span data-ttu-id="a0e67-145">使用 C++ 的空间映射</span><span class="sxs-lookup"><span data-stu-id="a0e67-145">Spatial Mapping in C++</span></span>
 
-<span data-ttu-id="ffc45-146">在游戏的 build.cs 文件中，向 PublicDependencyModuleNames 列表添加 AugmentedReality 和 MRMesh ：</span><span class="sxs-lookup"><span data-stu-id="ffc45-146">In your game's build.cs file, add **AugmentedReality** and **MRMesh** to the PublicDependencyModuleNames list:</span></span>
+<span data-ttu-id="a0e67-146">在游戏的 build.cs 文件中，向 PublicDependencyModuleNames 列表添加 AugmentedReality 和 MRMesh ：</span><span class="sxs-lookup"><span data-stu-id="a0e67-146">In your game's build.cs file, add **AugmentedReality** and **MRMesh** to the PublicDependencyModuleNames list:</span></span>
 
 ```cpp
 PublicDependencyModuleNames.AddRange(
@@ -89,7 +89,7 @@ PublicDependencyModuleNames.AddRange(
 });
 ```
 
-<span data-ttu-id="ffc45-147">若要访问 MRMesh，请订阅 OnTrackableAdded 委托：</span><span class="sxs-lookup"><span data-stu-id="ffc45-147">To access the MRMesh, subscribe to the **OnTrackableAdded** delegates:</span></span>
+<span data-ttu-id="a0e67-147">若要访问 MRMesh，请订阅 OnTrackableAdded 委托：</span><span class="sxs-lookup"><span data-stu-id="a0e67-147">To access the MRMesh, subscribe to the **OnTrackableAdded** delegates:</span></span>
 
 ```cpp
 #include "ARBlueprintLibrary.h"
@@ -116,9 +116,9 @@ void AARTrackableMonitor::OnTrackableAdded(UARTrackedGeometry* Added)
 ```
 
 > [!NOTE]
-> <span data-ttu-id="ffc45-148">对于已更新和已删除的事件，存在类似的委托，分别为 AddOnTrackableUpdatedDelegate_Handle 和 AddOnTrackableRemovedDelegate_Handle 。</span><span class="sxs-lookup"><span data-stu-id="ffc45-148">There are similar delegates for updated and removed events, **AddOnTrackableUpdatedDelegate_Handle** and **AddOnTrackableRemovedDelegate_Handle** respectively.</span></span>
+> <span data-ttu-id="a0e67-148">对于已更新和已删除的事件，存在类似的委托，分别为 AddOnTrackableUpdatedDelegate_Handle 和 AddOnTrackableRemovedDelegate_Handle 。</span><span class="sxs-lookup"><span data-stu-id="a0e67-148">There are similar delegates for updated and removed events, **AddOnTrackableUpdatedDelegate_Handle** and **AddOnTrackableRemovedDelegate_Handle** respectively.</span></span>
 >
-> <span data-ttu-id="ffc45-149">可以在 [UARTrackedGeometry](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackedGeometry/index.html) API 中找到事件的完整列表。</span><span class="sxs-lookup"><span data-stu-id="ffc45-149">You can find the full list of events in the [UARTrackedGeometry](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackedGeometry/index.html) API.</span></span>
+> <span data-ttu-id="a0e67-149">可以在 [UARTrackedGeometry](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackedGeometry/index.html) API 中找到事件的完整列表。</span><span class="sxs-lookup"><span data-stu-id="a0e67-149">You can find the full list of events in the [UARTrackedGeometry](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackedGeometry/index.html) API.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ffc45-150">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ffc45-150">See also</span></span>
-* [<span data-ttu-id="ffc45-151">空间映射</span><span class="sxs-lookup"><span data-stu-id="ffc45-151">Spatial mapping</span></span>](../../design/spatial-mapping.md)
+## <a name="see-also"></a><span data-ttu-id="a0e67-150">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a0e67-150">See also</span></span>
+* [<span data-ttu-id="a0e67-151">空间映射</span><span class="sxs-lookup"><span data-stu-id="a0e67-151">Spatial mapping</span></span>](../../design/spatial-mapping.md)
