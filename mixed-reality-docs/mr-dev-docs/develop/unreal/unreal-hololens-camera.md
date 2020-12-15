@@ -3,16 +3,16 @@ title: Unreal 中的 HoloLens 照片/视频摄像头
 description: Unreal 中 HoloLens 照片/视频摄像头使用指南
 author: hferrone
 ms.author: jacksonf
-ms.date: 06/10/2020
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 摄像头, PV 摄像头, MRC, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: c0c6e06e66e03934912906dbff5a93f9271a68b6
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: fb7bbf5a0f41c15d73e59226dad32cda8764e6cc
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609599"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926097"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Unreal 中的 HoloLens 照片/视频摄像头
 

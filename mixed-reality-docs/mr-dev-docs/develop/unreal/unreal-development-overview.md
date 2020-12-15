@@ -3,16 +3,16 @@ title: Unreal 开发概述
 description: 使用 Unreal Engine 4 进行混合现实开发概述
 author: hferrone
 ms.author: v-hferrone
-ms.date: 12/7/2020
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式处理, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, OpenXR
-ms.openlocfilehash: 1dcc5d6b00e1fdd51126e334cd28a10319b77af3
-ms.sourcegitcommit: f31f3a54c7c46e21884d62b4a696acf122a3c2b9
+ms.openlocfilehash: af5883ad71acf919133c330b1da8eb846d3a039f
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96781959"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926013"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 

@@ -3,16 +3,16 @@ title: 将 HoloLens（第 1 代）应用移植到 HoloLens 2
 description: 本文面向目前已在 HoloLens（第 1 代）和/或早期 MRTK 上拥有应用，且希望移植到 MRTK 版本 2 和 HoloLens 2 的开发人员。
 author: hferrone
 ms.author: grbury
-ms.date: 07/29/2020
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, 测试, MRTK, MRTK 版本 2, HoloLens 2, unity, 移植, HoloLens 第一代, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 迁移, 最佳做法, ARM
-ms.openlocfilehash: 9d76dcdb6fedb3297a781b9bf905b9d74521ad58
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 7a4c05ce4918ff3868265c40096bd37016d4546a
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96469718"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925958"
 ---
 # <a name="porting-hololens-1st-gen-apps-to-hololens-2"></a>将 HoloLens（第 1 代）应用移植到 HoloLens 2
 
