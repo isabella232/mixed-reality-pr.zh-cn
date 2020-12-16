@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: 7ca5357c9d7f3536fc165d0663813ae98f45004f
-ms.sourcegitcommit: 1b5a5ce89f2edc86985a73e4f3828bb761e7543a
+ms.openlocfilehash: 925e94931adab767fbca2544d781c9ba1c095216
+ms.sourcegitcommit: cecb76c6a9b4b2c4e9769a5829a7146c99086e85
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/16/2020
-ms.locfileid: "97564252"
+ms.locfileid: "97580543"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -39,28 +39,29 @@ ms.locfileid: "97564252"
 
 **所有时间都是日本标准时间 (UTC + 9)** 
 
-
-
 ### <a name="december-16th"></a>12月16日
+
+**我们从原始计划延迟了一小时。**
+
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
-|10： 00 (：50am|打开主题|Madoka Chiyoda、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|不适用|
-|10： 50am-11： 00 (|**中断 (10min)**||||
-|11： 00 (-11：25am|*会话 1* 混合现实简介|Atsushi Suzuki|JA|100|
-|11：上午 9:30-11：55am|*会话 2* 混合现实业务动力|Tetsu Muranaka|JA|200|
-|12： 00 (：50pm|*就餐会话* 面板：交互式免费讨论、问答、MRTK + Oculus|Madoka Chiyoda + Microsoft Mvp|JA|200|
-|12：50pm： 00 (|**中断 (10min)**||||
-|1： 00 (：25pm|*会话 3* HoloLens 2 开发概述|Madoka Chiyoda|JA|200|
-|1：下午6:30：55pm|*会话 4* MRTK UX 组件 v 2.5。0|Yoon 寄存|JA|300|
-|2： 00 (：25pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
-|2：下午6:30：55pm|*会话 6* 设计全息影像|Daniel Escudero|CN|300|
-|2：55pm：15pm|**中断 (20min)**||||
-|3：15pm：40pm|*会话 7* Azure 对象锚|Jesse McCulloch|CN|300|
-|3：45pm：10pm|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
-|4：15pm：40pm|*会话 9* 通过 Azure 空间锚点对齐全息图和现实世界|Yingguang Mei|CN|300|
-|4：45pm：10pm|*会话 10* Unity + PiXYZ|Shinobu Takahashi (Unity 技术日本) |JA|200|
-|5：15pm：40pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
-|5：45pm： 00 (|关闭|Madoka Chiyoda|JA|不适用|
+|11： 00 (-11：50am|打开主题|Madoka Chiyoda、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|不适用|
+|11：50am： 00 (|**中断 (10min)**||||
+|12： 00 (：25pm|*会话 1* 混合现实简介|Atsushi Suzuki|JA|100|
+|12：下午6:30：55pm|*会话 2* 混合现实业务动力|Tetsu Muranaka|JA|200|
+|1： 00 (：50pm|*就餐会话* 面板：交互式免费讨论、问答、MRTK + Oculus|Madoka Chiyoda + Microsoft Mvp|JA|200|
+|1：50pm： 00 (|**中断 (10min)**||||
+|2： 00 (：25pm|*会话 3* HoloLens 2 开发概述|Madoka Chiyoda|JA|200|
+|2：下午6:30：55pm|*会话 4* MRTK UX 组件 v 2.5。0|Yoon 寄存|JA|300|
+|3： 00 (：25pm|*会话 5* HoloLens 2 和 Unreal 引擎入门 (MRTK-Unreal) |Cameron Micka|CN|300|
+|3：下午6:30：55pm|*会话 6* 设计全息影像|Daniel Escudero|CN|300|
+|3：55pm：15pm|**中断 (20min)**||||
+|4：15pm：40pm|*会话 7* Azure 对象锚|Jesse McCulloch|CN|300|
+|4：45pm：10pm|*会话 8* Azure 远程呈现|Atsushi Suzuki|JA|300|
+|5：15pm：40pm|*会话 9* 通过 Azure 空间锚点对齐全息图和现实世界|Yingguang Mei|CN|300|
+|5：45pm：10pm|*会话 10* Unity + PiXYZ|Shinobu Takahashi (Unity 技术日本) |JA|200|
+|6：15pm：40pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
+|6：45pm： 00 (|关闭|Madoka Chiyoda|JA|不适用|
 
 #### <a name="contributors-technical-reviewers-for-the-subtitles"></a>撰稿人 (技术审阅者) 
 
