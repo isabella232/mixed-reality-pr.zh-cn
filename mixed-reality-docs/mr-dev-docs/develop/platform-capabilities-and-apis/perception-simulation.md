@@ -6,20 +6,20 @@ ms.author: pbarnett
 ms.date: 05/12/2020
 ms.topic: article
 keywords: HoloLens，模拟，测试
-ms.openlocfilehash: d4cd9497f9adcea03ece222f09124ce593ea73cf
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 64028c3a1ad58cecfebc93aee325b73c3a6a649a
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677384"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530394"
 ---
 # <a name="perception-simulation"></a>感知模拟
 
-是否要为应用生成自动测试？ 是否希望你的测试超出组件级别的单元测试，并真正运用端到端应用？ 感知模拟是你要查找的内容。 感知模拟库将人类和世界输入数据发送到你的应用，因此你可以自动执行测试。 例如，可以模拟查找特定的可重复位置，然后执行笔势或使用运动控制器的人工输入。
+是否要为应用生成自动测试？ 是否希望你的测试超出组件级别的单元测试，并真正运用端到端应用？ 感知模拟是你要查找的内容。 感知模拟库将人类和世界输入数据发送到你的应用，因此你可以自动执行测试。 例如，可以模拟查找特定的可重复位置的人工输入，然后使用笔势或运动控制器。
 
-感知模拟可以将此类模拟输入发送到物理 HoloLens，HoloLens 模拟器 (第一代) 、HoloLens 2 模拟器或安装有混合现实门户的 PC。 感知模拟会绕过混合现实设备上的实时传感器，并将模拟输入发送到设备上运行的应用程序。 应用程序通过它们始终使用的相同 Api 来接收这些输入事件，不能判断使用实际传感器运行与通过感知模拟运行的情况之间的区别。 认知模拟是将模拟输入发送到 HoloLens 虚拟机所使用的一种技术。
+感知模拟可以将此类模拟输入发送到物理 HoloLens，HoloLens 模拟器 (第一代) 、HoloLens 2 模拟器或安装有混合现实门户的 PC。 感知模拟会绕过混合现实设备上的实时传感器，并将模拟输入发送到设备上运行的应用程序。 应用程序通过它们始终使用的相同 Api 来接收这些输入事件，无法判断运行与感知模拟之间的差异。 认知模拟是将模拟输入发送到 HoloLens 虚拟机所使用的一种技术。
 
-若要开始在代码中使用模拟，请首先创建 IPerceptionSimulationManager 对象。 在该对象中，可以发出命令来控制模拟 "人体" 的属性，包括头位置、手形位置和手势，还可以启用和操作运动控制器。
+若要开始在代码中使用模拟，请首先创建 IPerceptionSimulationManager 对象。 在该对象中，可以发出命令来控制模拟 "人体" 的属性，包括头位置、手形位置和手势。 还可以启用和操作运动控制器。
 
 ## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>设置用于感知模拟的 Visual Studio 项目
 1. 在开发电脑上[安装 HoloLens 模拟器](../install-the-tools.md)。 模拟器包含用于感知模拟的库。
@@ -34,15 +34,15 @@ ms.locfileid: "91677384"
 
 若要控制模拟，你将对从 IPerceptionSimulationManager 对象检索到的对象进行更新。 第一步是获取该对象，并将其连接到目标设备或仿真程序。 可以通过单击[工具栏](using-the-hololens-emulator.md)中的 "设备门户" 按钮来获取仿真程序的 IP 地址。
 
-![打开设备门户图标 ](images/emulator-deviceportal.png) **打开设备门户** ：在模拟器中打开用于 HoloLens OS 的 Windows 设备门户。  对于 Windows Mixed Reality，可以在 "设置" 应用程序中的 "更新 & 安全性" 下检索此项，然后在 "启用设备门户" 下的 "连接使用：" 部分中的 "开发人员"。  请务必记下 IP 地址和端口。
+![打开设备门户图标 ](images/emulator-deviceportal.png) **打开设备门户**：在模拟器中打开用于 HoloLens OS 的 Windows 设备门户。  对于 Windows Mixed Reality，可以在 "设置" 应用程序中的 "更新 & 安全性" 下检索此项，然后在 "启用设备门户" 下的 "连接使用：" 部分中的 "开发人员"。  请务必记下 IP 地址和端口。
 
 首先，调用 RestSimulationStreamSink 来获取 RestSimulationStreamSink 对象。 这是你将通过 http 连接控制的目标设备或仿真程序。 命令将传递到设备或模拟器上运行的 [Windows 设备门户](using-the-windows-device-portal.md) 并进行处理。 创建对象需要四个参数：
 * Uri uri-目标设备的 IP 地址 (例如，" https://123.123.123.123 " 或 " https://123.123.123.123:50080 " ) 
-* 系统 NetworkCredential 凭据-用于在目标设备或模拟器上连接到 [Windows 设备门户](using-the-windows-device-portal.md) 的用户名/密码。 如果通过其本地地址连接到模拟器 (例如，168。 *.* .* ) 在同一台计算机上，将接受任何凭据。
-* 布尔标准-对于普通优先级为 True，低优先级为 false。 通常，你需要将此值设置为 *true* ，以便测试方案允许你的测试进行控制。  仿真程序和 Windows Mixed Reality 模拟使用低优先级连接。  如果你的测试也使用低优先级连接，则最近建立的连接将处于控制中。
+* 系统 NetworkCredential 凭据-用于在目标设备或模拟器上连接到 [Windows 设备门户](using-the-windows-device-portal.md) 的用户名/密码。 如果是通过其本地地址连接到模拟器 (例如，168。*.*.* ) 在同一台计算机上，将接受任何凭据。
+* 布尔标准-对于普通优先级为 True，低优先级为 false。 通常，你需要将此值设置为 *true* ，以便测试方案允许你的测试进行控制。  仿真程序和 Windows Mixed Reality 模拟使用低优先级连接。  如果你的测试也使用低优先级连接，则最新建立的连接将处于控制之下。
 * CancellationToken 标记-用于取消异步操作的标记。
 
-然后，将创建 IPerceptionSimulationManager。 这是用于控制模拟的对象。 请注意，也必须在异步方法中完成此操作。
+其次，你将创建 IPerceptionSimulationManager。 这是用于控制模拟的对象。 还必须在异步方法中完成此操作。
 
 ## <a name="control-the-simulated-human"></a>控制模拟的人工
 
@@ -241,11 +241,11 @@ namespace ConsoleApplication1
 * 1 = 左 6-DOF 控制器
 * 2 = 右 6-DOF 控制器
 
-该进程的退出代码将指示成功 (零返回值) 或 (非零返回值) 。  当使用 "q" 操作来查询控制器是否已安装时，如果尚未安装控制器，则返回值将为零 (0) 如果控制器已安装，则返回 (1) 。
+该进程的退出代码将指示成功 (零返回值) 或 (非零返回值) 。  当使用 "q" 操作来查询控制器是否已安装时，如果未安装控制器，则返回值将为零 (0) 如果控制器已安装，则返回 (1) 。
 
 在 Windows 10 2018 10 月更新版或更早版本上删除控制器时，请先通过 API 将其状态设置为 Off，然后调用 PerceptionSimulationDevice 工具。
 
-请注意，必须以管理员身份运行此工具。
+必须以管理员身份运行此工具。
 
 
 
@@ -453,7 +453,7 @@ public enum SimulatedHandJointTrackingAccuracy
 
 **PerceptionSimulation. SimulatedHandJointTrackingAccuracy. 不可用**
 
-不跟踪联合。
+不会跟踪接头。
 
 **PerceptionSimulation. SimulatedHandJointTrackingAccuracy**
 
@@ -531,7 +531,7 @@ public enum PlaybackState
 
 ### <a name="microsoftperceptionsimulationvector3"></a>PerceptionSimulation. System.numerics.vector2
 
-介绍3个分量向量，它可能会在三维空间中描述点或向量。
+介绍三个组件向量，它可能在三维空间中描述点或向量。
 
 ```
 public struct Vector3
@@ -566,7 +566,7 @@ public struct Vector3
 
 ### <a name="microsoftperceptionsimulationrotation3"></a>PerceptionSimulation. Rotation3
 
-介绍3个组件旋转。
+介绍三个组件旋转。
 
 ```
 public struct Rotation3
@@ -694,11 +694,11 @@ public struct SimulatedDisplayConfiguration
 
 **PerceptionSimulation. SimulatedDisplayConfiguration. ApplyEyeTransforms**
 
-是否应将为左和右眼转换提供的值视为有效并应用于正在运行的系统。
+为左和右眼转换提供的值是否应视为有效且应用于正在运行的系统。
 
 **PerceptionSimulation. SimulatedDisplayConfiguration. ApplyIpd**
 
-是否应将为 Ipd 提供的值视为有效，并将其应用于正在运行的系统。
+为 Ipd 提供的值是否应视为有效，并将其应用于正在运行的系统。
 
 
 ### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>PerceptionSimulation. IPerceptionSimulationManager
@@ -728,7 +728,7 @@ public interface IPerceptionSimulationManager
 
 ### <a name="microsoftperceptionsimulationisimulateddevice"></a>PerceptionSimulation. ISimulatedDevice
 
-描述用于解释模拟世界和模拟人类的设备的接口
+描述设备的接口，该设备解释模拟世界和模拟人类
 
 ```
 public interface ISimulatedDevice
@@ -837,7 +837,7 @@ public interface ISimulatedHuman
     float Height { get; set; }
     ISimulatedHand LeftHand { get; }
     ISimulatedHand RightHand { get; }
-    ISimulatedHead Head { get; }
+    ISimulatedHead Head { get; }s
     void Move(Vector3 translation);
     void Rotate(float radians);
 }
@@ -934,7 +934,7 @@ public interface ISimulatedHand
 
 **PerceptionSimulation. ISimulatedHand。**
 
-检索当前是否对 SimulatedDevice (ie 显示该手型，无论其是否位于 HandTracker) 检测到的位置。
+检索当前是否对 SimulatedDevice (可见，即，该手形是否位于 HandTracker) 检测到的位置。
 
 **PerceptionSimulation. ISimulatedHand. Ensurevisible\**
 
@@ -1069,7 +1069,7 @@ public interface ISimulatedSixDofController
 
 **PerceptionSimulation. ISimulatedSixDofController**
 
-检索或设置控制器的当前状态。  在任何调用移动、旋转或按下按钮之前，控制器状态必须设置为 Off 以外的值。
+检索或设置控制器的当前状态。  在移动、旋转或按下按钮的任何调用都将成功之前，控制器状态必须设置为 Off 以外的值。
 
 **PerceptionSimulation. ISimulatedSixDofController. 位置**
 
@@ -1219,7 +1219,7 @@ public interface ISimulationRecording
 
 **PerceptionSimulation () 中的 ISimulationRecording**
 
-按100毫微秒间隔从开始) 到指定时间查找记录，并在该位置暂停 (。 如果该时间超出了记录的结束时间，则会在最后一帧暂停该时间。
+将记录查找到指定时间 (以 100-纳秒为间隔，从开始) 到该位置暂停。 如果该时间超出了记录的结束时间，则会在最后一帧暂停该时间。
 
 参数
 * 计时周期-要查找的时间。
@@ -1272,7 +1272,7 @@ public static class PerceptionSimulationManager
 
 **PerceptionSimulation. PerceptionSimulationManager. CreatePerceptionSimulationRecording ()**
 
-创建一个接收器，将所有接收的数据包存储在文件中的指定路径。
+创建接收器，将所有接收的数据包存储在文件中的指定路径。
 
 参数
 * path-要创建的文件的路径。
@@ -1300,7 +1300,7 @@ public static class PerceptionSimulationManager
 参数
 * path-要加载的文件的路径。
 * 工厂-记录用于在需要时创建 ISimulationStreamSink 的工厂。
-* 回叫-在记录状态 regrading 接收更新的回调。
+* callback-回调，用于接收 regrading 记录状态的更新。
 
 返回值
 
@@ -1332,35 +1332,35 @@ public enum StreamDataTypes
 
 **PerceptionSimulation. StreamDataTypes**
 
-与头部位置和方向相关的数据流。
+数据流的位置和方向。
 
 **PerceptionSimulation. StreamDataTypes**
 
-有关指针位置和手势的数据流。
+用于指针位置和手势的数据流。
 
 **PerceptionSimulation. StreamDataTypes. SpatialMapping**
 
-有关环境的空间映射的数据流。
+环境的空间映射的数据流。
 
 **PerceptionSimulation. StreamDataTypes**
 
-与设备的校准相关的数据流。 只有远程模式下的系统才会接受校准数据包。
+用于校准设备的数据流。 只有远程模式下的系统才会接受校准数据包。
 
 **PerceptionSimulation. StreamDataTypes**
 
-有关设备环境的数据流。
+设备环境的数据流。
 
 **PerceptionSimulation. StreamDataTypes. SixDofControllers**
 
-有关运动控制器的数据流。
+运动控制器的数据流。
 
 **PerceptionSimulation. StreamDataTypes**
 
-与模拟人类的眼睛相关的数据流。
+具有模拟人力的眼睛的数据流。
 
 **PerceptionSimulation. StreamDataTypes. DisplayConfiguration**
 
-有关设备显示配置的数据流。
+具有设备显示配置的数据流。
 
 **PerceptionSimulation. StreamDataTypes。**
 

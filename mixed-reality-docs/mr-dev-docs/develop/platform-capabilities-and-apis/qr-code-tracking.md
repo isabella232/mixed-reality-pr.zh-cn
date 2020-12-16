@@ -6,22 +6,22 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: vr，lbe，基于位置的娱乐，vr 拱廊类，拱廊类，沉浸，qr，qr 码，hololens2
-ms.openlocfilehash: e7b1f04b51cb1011cd0d66c27fe6a8bff3aafb79
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 023da7a98d1559d9dd0387a7efbaf26ad577df50
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677375"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530003"
 ---
 # <a name="qr-code-tracking"></a>QR 码跟踪
 
-HoloLens 2 可以检测头戴显示在环境中的 QR 码，在每个代码的实际位置建立一个坐标系统。
+HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在每个代码的真实位置建立坐标系统。
 
 ## <a name="device-support"></a>设备支持
 
 <table>
 <tr>
-<th>功能</th><th style="width:150px"> <a href="../../hololens-hardware-details.md">HoloLens（第一代）</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>功能</th><th style="width:150px"> <a href="../../hololens-hardware-details.md">HoloLens (第一代) </a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> QR 码检测</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️</td>
 </tr>
@@ -31,11 +31,13 @@ HoloLens 2 可以检测头戴显示在环境中的 QR 码，在每个代码的�
 >Windows 10 版本2004及更高版本支持在台式计算机上通过沉浸式 Windows Mixed Reality 耳机进行 QR 代码跟踪。 使用 IsSupported ( # A1 API 来确定当前设备上是否支持此功能。
 
 ## <a name="getting-the-qr-package"></a>获取 QR 包
+
 可在 [此处](https://nuget.org/Packages/Microsoft.MixedReality.QR)下载用于 QR 码检测的 NuGet 包。
 
 ## <a name="detecting-qr-codes"></a>检测 QR 码
 
 ### <a name="adding-the-webcam-capability"></a>添加网络摄像机功能
+
 需要将功能添加 `webcam` 到清单以检测 QR 码。 此功能是必需的，因为用户环境中检测到的代码中的数据可能包含敏感信息。
 
 可以通过调用来请求权限 `QRCodeWatcher.RequestAccessAsync()` ：
@@ -56,9 +58,7 @@ co_await QRCodeWatcher.RequestAccessAsync();
 
 ### <a name="detecting-qr-codes-in-unity"></a>检测 Unity 中的 QR 码
 
-你可以使用 Unity 中的 QR 代码检测 API，而无需依赖于 MRTK。 为此，必须使用 [nuget For Unity](https://github.com/GlitchEnzo/NuGetForUnity)安装 nuget 包。
-
-这里有一个示例 Unity 应用，其中显示了一个全息的 "QR 码" 代码，以及关联的数据，如 GUID、物理大小、时间戳和解码的数据。 此应用可以位于 https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes 。
+你可以使用 Unity 中的 QR 代码检测 API，而无需导入 MRTK，方法是使用 [nuget For Unity](https://github.com/GlitchEnzo/NuGetForUnity)安装 nuget 包。 如果要了解其工作原理，请下载 [示例 Unity 应用](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes)。 该示例应用包含的示例演示了如何使用 QR 代码和关联数据（如 GUID、物理大小、时间戳和解码的数据）显示全息方形。
 
 ### <a name="detecting-qr-codes-in-c"></a>在 c + + 中检测 QR 码
 
@@ -122,13 +122,15 @@ private:
 
 ## <a name="getting-the-coordinate-system-for-a-qr-code"></a>获取 QR 码的坐标系统
 
-每个检测到的 QR 码都公开一个 [空间坐标系统](../../design/coordinate-systems.md) ，该系统与左上角快速检测方块左上角的 QR 码对齐，如下所示。  当直接使用 QR SDK 时，Z 轴指向纸张 (不显示) -在转换为 Unity 坐标时，Z 轴将从纸上指向并向左传递。
-
-QR 码的 SpatialCoordinateSystem 对齐方式如下所示。 可以通过调用 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview：： CreateCoordinateSystemForNode</a> 并传入代码的 SpatialGraphNodeId，从平台中获取此坐标系统。
+每个检测到的 QR 码都公开一个 [空间坐标系统](../../design/coordinate-systems.md) ，该系统与左上角快速检测方的左上角中的 QR 代码对齐：  
 
 ![QR 码坐标系统](images/Qr-coordinatesystem.png) 
 
-对于 QRCode 对象，以下 c + + 代码演示了如何创建矩形并使用 QR 码的坐标系统来放置它：
+当直接使用 QR SDK 时，Z 轴指向纸张 (不显示) -在转换为 Unity 坐标时，Z 轴将从纸上指向并向左传递。
+
+QR 码的 SpatialCoordinateSystem 对齐方式如下所示。 可以通过调用 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview：： CreateCoordinateSystemForNode</a> 并传入代码的 SpatialGraphNodeId，从平台中获取坐标系。
+
+下面的 c + + 代码演示如何创建一个矩形，并使用 QR 码的坐标系统来放置它：
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
@@ -193,23 +195,23 @@ void MyApplication::OnAddedQRCode(const QRCodeAddedEventArgs& args)
 ### <a name="lighting-and-backdrop"></a>照明和背景
 QR 码检测质量容易产生不同的照明和背景。 
 
-在具有特别明亮的光线的场景中，打印灰色背景上的黑色代码。 否则，在白色背景上打印黑色 QR 码。
+在具有明亮光照的场景中，打印灰色背景上的黑色代码。 否则，在白色背景上打印黑色 QR 码。
 
-如果代码的背景非常暗，请尝试使用黑色的灰色代码（如果检测频率较低）。 如果背景相对较轻，则常规代码应正常工作。
+如果代码的背景较暗，则尝试使用黑色的灰色代码（如果检测频率较低）。 如果背景相对较轻，则常规代码应正常工作。
 
 ### <a name="size-of-qr-codes"></a>QR 码的大小
 Windows Mixed Reality 设备不适用于每个边小于 5 cm 的 QR 码。
 
-对于5到 10 cm 长度之间的 QR 码，必须非常接近检测代码。 它还需要更长的时间来检测此大小的代码。 
+对于介于 5 cm 到 10 cm 长度之间的 QR 码，必须非常接近检测代码。 它还需要更长的时间来检测此大小的代码。 
 
 检测代码的确切时间不仅取决于 QR 码的大小，还取决于代码的距离。 接近代码会有助于偏移大小问题。
 
 ### <a name="distance-and-angular-position-from-the-qr-code"></a>QR 代码的距离和角度位置
-跟踪相机只能检测到特定级别的详细信息。 对于真正的小 < 代码，10cm，您必须非常接近。 对于版本 1 QR 码，从10到 25 cm 的范围内，最小检测距离范围为0.15 米到0.5 米。 
+跟踪相机只能检测到特定级别的详细信息。 对于小代码-沿两侧 < 10 厘米-必须非常接近。 对于版本 1 QR 码，从10厘米到 25 cm，最小检测距离范围为0.15 米到0.5 米。 
 
 大小的检测距离线性增加。 
 
-QR 检测适用于一系列角度 + = 45deg。 这是为了确保我们有合适的分辨率来检测代码。
+QR 检测适用于一系列角度 + = 45 度，以确保我们有合适的分辨率来检测代码。
 
 ### <a name="qr-codes-with-logos"></a>带有徽标的 QR 码
 带有徽标的 QR 码尚未经过测试，当前不受支持。
@@ -217,7 +219,7 @@ QR 检测适用于一系列角度 + = 45deg。 这是为了确保我们有合适
 ### <a name="managing-qr-code-data"></a>管理 QR 码数据
 Windows Mixed Reality 设备检测驱动程序的系统级别的 QR 码。 设备重新启动后，检测到的 QR 码已消失，并将在下次重新检测为新对象。
 
-建议将应用程序配置为忽略特定时间戳之前的 QR 码。 目前，API 不支持清除 QR 码历史记录。
+建议将应用配置为忽略特定时间戳之前的 QR 码。 目前，API 不支持清除 QR 码历史记录。
 
 ### <a name="qr-code-placement-in-a-space"></a>空格中的 QR 码位置
 有关在何处以及如何放置 QR 码的建议，请参阅 [HoloLens 环境注意事项](../../environment-considerations-for-hololens.md)。
@@ -456,6 +458,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [坐标系统](../../design/coordinate-systems.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间定位点</a>

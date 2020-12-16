@@ -8,16 +8,14 @@ ms.topic: article
 keywords: 全息影像，稳定性，hololens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，帧速率，渲染，reprojection，颜色分离
 appliesto:
 - HoloLens
-ms.openlocfilehash: 081a080c73a1c78eb762b94291027cf7ebcbed45
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 345ba3608b77ed4d7b493985903295f5ee3f4863
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679596"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530431"
 ---
 # <a name="hologram-stability"></a>全息影像稳定性
-
-## <a name="overview"></a>概述
 
 为实现稳定的全息影像，HoloLens 提供内置的图像稳定性管道。 稳定管道在后台自动运行，因此不需要执行任何额外的步骤来启用它。 但是，您应运用改善全息影像稳定性的技术，避免降低稳定性的方案。
 
@@ -29,7 +27,7 @@ ms.locfileid: "94679596"
 * **准确性.** 在全局锁定全息图并将其放置在现实世界中后，它应保留相对于周围环境的位置，并独立于用户运动或小型和稀疏环境更改。 如果在意外的位置出现全息图，则这是一个 *准确性* 问题。 如果两个不同的房间看起来相同，则可能会发生这种情况。
 * **抖动.** 用户将抖动视为全息图的高频握手，这在跟踪环境时可能会发生这种情况。 对于用户，解决方案正在运行 [传感器调整](../../sensor-tuning.md)。
 * **Judder.** 低渲染频率会导致动画的不均匀运动和双图像。 Judder 在动态影像中尤其明显。 开发人员需要维护 [常量 60 FPS](hologram-stability.md#frame-rate)。
-* **光标.** 用户在出现全息图后会看到偏移，使其远离其最初放置位置。 在离 [空间锚](../../design/spatial-anchors.md)，而不是完全映射的环境部分中时，会发生偏移。 创建与空间锚接近的全息影像会降低偏移的可能性。
+* **光标.** 用户在出现全息图后会看到偏移，使其远离其最初放置位置。 当你从 [空间锚](../../design/spatial-anchors.md)，而不是在环境的未映射部分中时，会发生偏移。 创建与空间锚接近的全息影像会降低偏移的可能性。
 * **Jumpiness.** 如果不是，则不会偶尔从其位置 "弹出" 或 "跳转"。 当跟踪调整全息影像以匹配更新的环境时，会发生 Jumpiness。
 * **泳道.** 当 sway 与用户的头运动相对应时，会出现一个全息图。 当应用程序未完全实现 [reprojection](hologram-stability.md#reprojection)，并且没有为当前用户 [校准](../../calibration.md) HoloLens 时，会发生泳道。 用户可以重新运行 [校准](../../calibration.md) 应用程序以解决此问题。 开发人员可以更新稳定平面，以进一步增强稳定性。
 * **颜色分离。** HoloLens 中的显示是彩色顺序显示的，它们在 60 Hz (各个颜色字段以 240 Hz) 显示以绿色为绿色的红色通道。 无论用户何时使用其眼睛跟踪移动的全息图，都将在其构成颜色中分离出全息图的前导和尾随边缘，从而产生彩虹效果。 分离程度取决于全息图的速度。 在某些罕见情况下，在查看固定全息图的同时迅速移动打印头也会导致彩虹效果，这称为 *[颜色分离](hologram-stability.md#color-separation)*。
@@ -70,7 +68,7 @@ ms.locfileid: "94679596"
 
 Discomfort 可以通过将混合内容保持在最接近 2.0 m 的位置来避免或最大程度 (地降低 vergence，这就是在具有很多深度的场景中，尽可能多地将感2.0 兴趣的区域) 。 当内容不能放在 2.0 m 附近时，当用户在不同距离之间来回注视时，discomfort 会出现 vergence 冲突。 换句话说，查看远离50厘米的静止全息图比查看在一段时间内走走或远离您的全息图 50 cm 更为熟悉。
 
-将内容放置在 2.0 m 也是有益的，因为这两个显示器的设计目的是完全重叠。 对于放置在此平面之外的图像，当它们移出全息帧的一侧时，它们将显示在一个显示器上，同时仍然可见。 此望远镜 rivalry 可能会对 holorgam 的深度认知造成中断。
+将内容放置在 2.0 m 也是有益的，因为这两个显示器的设计目的是完全重叠。 对于放置在此平面之外的图像，当它们移出全息帧的一侧时，它们将显示在一个显示器上，同时仍然可见。 此望远镜 rivalry 可能会对全息图的深度认知造成中断。
 
 **全息影像与用户之间的最佳距离**
 
@@ -81,7 +79,7 @@ Discomfort 可以通过将混合内容保持在最接近 2.0 m 的位置来避�
 **最佳做法** 如果无法将全息影像置于 2 m 个位置，并且无法避免聚合和便利设施之间发生冲突，则全息图位置的最佳区域为 1.25 m 和 5 m。 在每种情况下，设计器都应该构建内容来鼓励用户与 (进行交互，例如调整内容大小和默认位置参数) 。
 
 ## <a name="reprojection"></a>Reprojection
-HoloLens 会执行一种复杂的硬件辅助全息稳定技术（称为 reprojection）。 Reprojection 在场景进行动画处理时，会考虑运动和变化的观点 (CameraPose) ，并使用户移动其头。  应用程序需要执行特定操作才能充分利用 reprojection。
+HoloLens 提供先进的硬件辅助全息稳定技术（称为 reprojection）。 Reprojection 在场景进行动画处理时，会考虑运动和变化的观点 (CameraPose) ，并使用户移动其头。  应用程序需要执行特定操作才能充分利用 reprojection。
 
 
 有四种主要类型的 reprojection
@@ -97,15 +95,15 @@ HoloLens 会执行一种复杂的硬件辅助全息稳定技术（称为 reproje
 
 ### <a name="choosing-reprojection-technique"></a>选择 Reprojection 技术
 
-稳定类型 |    沉浸式耳机 |    HoloLens 第1代 | HoloLens 2
+稳定类型 |    沉浸式头戴显示设备 |    HoloLens 第1代 | HoloLens 2
 --- | --- | --- | ---
-深度 Reprojection |    建议 |   N/A |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
-自动平面 Reprojection | N/A |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
+深度 Reprojection |    建议 |   不适用 |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
+自动平面 Reprojection | 不适用 |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
 平面 Reprojection |   不建议 |   如果自动平面未提供最佳结果，建议使用 | 如果两个深度选项都不能获得所需的结果，请使用    
 
 ### <a name="verifying-depth-is-set-correctly"></a>验证深度设置正确
             
-当 reprojection 方法使用深度缓冲区时，验证深度缓冲区的内容是否表示应用程序的呈现场景很重要。  许多因素可能导致问题。 例如，如果有另一个相机用于渲染用户界面覆盖，则可能会覆盖实际视图中的所有深度信息。  透明对象通常不会设置深度。  某些文本呈现默认情况下不设置深度。  当深度与呈现的全息影像不匹配时，呈现会出现明显的难题。
+当 reprojection 方法使用深度缓冲区时，验证深度缓冲区的内容是否表示应用程序的呈现场景很重要。  许多因素可能导致问题。 例如，如果有另一个相机用于渲染用户界面覆盖，则可能会覆盖实际视图中的所有深度信息。  透明对象通常不会设置深度。  某些文本呈现默认情况下不设置深度。  当深度与呈现的全息影像不匹配时，呈现会出现明显的问题。
             
 HoloLens 2 有一个可视化工具，用于显示深度的位置和未设置，可从设备门户启用。  在 "**查看**  >  **全息图稳定性**" 选项卡上，选择 "**在耳机中显示深度可视化**" 复选框。  深度设置正确的区域将为蓝色。  没有深度集的呈现项将标记为红色，需要修复。  
 
@@ -183,7 +181,7 @@ renderingParameters.SetFocusPoint(
 
 与之前一样，在 60 FPS 和设置 "稳定" 平面的情况下，最重要的技术是全息图稳定性。 如果有明显的颜色分离，请首先确保帧速率符合预期。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [了解混合现实的性能](understanding-performance-for-mixed-reality.md)
 * [颜色、光线和材料](../../color,-light-and-materials.md)
 * [本能交互](../../design/interaction-fundamentals.md)
