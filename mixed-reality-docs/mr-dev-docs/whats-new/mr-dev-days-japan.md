@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: 94f38ff122826dfaea6282403c5958b127c81739
-ms.sourcegitcommit: ee87915132cf2874d4642ce2fe383f5eba6c49c2
+ms.openlocfilehash: 7ca5357c9d7f3536fc165d0663813ae98f45004f
+ms.sourcegitcommit: 1b5a5ce89f2edc86985a73e4f3828bb761e7543a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97111879"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97564252"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -31,9 +31,9 @@ ms.locfileid: "97111879"
 
 ## <a name="registration"></a>注册
 
-[注册-现已打开](https://mixedrealityprod.microsoftcrmportals.com/event/sessions?id=MR_Dev_Days_Japan864059683)
+[立即观看-Microsoft 团队现场活动](https://aka.ms/MRDDJPLive)
 
-我们非常高兴地为混合现实开发日日本提供注册。  此事件是免费的，并且在 Microsoft 团队实时事件中处于联机状态。  我们请求与会者注册，以便在事件更近时发送电子邮件更新，以便您可以参与事件的交互式元素。
+建议在团队 PC 应用上观看，还可以参与团队移动应用或桌面浏览器。 如果由于某种原因无法登录到团队，请检查 [YouTube](https://youtu.be/zxZu1uHjyo4)。 但是，你将无法通过扬声器参加问答。
 
 ## <a name="schedule---subject-to-change"></a>计划-更改者
 
@@ -44,7 +44,7 @@ ms.locfileid: "97111879"
 ### <a name="december-16th"></a>12月16日
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
-|10： 00 (：50am|打开主题|Madoka Chiyoda、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|空值|
+|10： 00 (：50am|打开主题|Madoka Chiyoda、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|不适用|
 |10： 50am-11： 00 (|**中断 (10min)**||||
 |11： 00 (-11：25am|*会话 1* 混合现实简介|Atsushi Suzuki|JA|100|
 |11：上午 9:30-11：55am|*会话 2* 混合现实业务动力|Tetsu Muranaka|JA|200|
@@ -60,7 +60,7 @@ ms.locfileid: "97111879"
 |4：15pm：40pm|*会话 9* 通过 Azure 空间锚点对齐全息图和现实世界|Yingguang Mei|CN|300|
 |4：45pm：10pm|*会话 10* Unity + PiXYZ|Shinobu Takahashi (Unity 技术日本) |JA|200|
 |5：15pm：40pm|*会话 11* Azure Kinect 深色深入探讨，案例研究|Shinji Chiba|JA|400|
-|5：45pm： 00 (|关闭|Madoka Chiyoda|JA|空值|
+|5：45pm： 00 (|关闭|Madoka Chiyoda|JA|不适用|
 
 #### <a name="contributors-technical-reviewers-for-the-subtitles"></a>撰稿人 (技术审阅者) 
 
