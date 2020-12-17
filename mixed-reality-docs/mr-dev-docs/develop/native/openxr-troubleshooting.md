@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件，故障排除
-ms.openlocfilehash: 174c115b86e62d5c52051a7363a59e383e503a95
-ms.sourcegitcommit: c199872c11adae7de24929ed043ea90dea087b3e
+ms.openlocfilehash: ddfe548d689d84576ad0ac06bda46d7c2757859c
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903092"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97612931"
 ---
 # <a name="openxr-troubleshooting"></a>OpenXR 故障排除
 
@@ -22,6 +22,6 @@ ms.locfileid: "92903092"
 
 ### <a name="openxr-app-not-starting-windows-mixed-reality"></a>OpenXR 应用未启动 Windows Mixed Reality
 
-如果 OpenXR 应用在运行时未启动 Windows Mixed Reality，则 Windows Mixed Reality OpenXR 运行时可能不会设置为活动运行时。  请务必按照 [OpenXR For Windows Mixed Reality 耳机](openxr-getting-started.md#getting-started-with-openxr-for-windows-mixed-reality-headsets) 入门中的说明操作，使运行时处于活动状态。
+如果 OpenXR 应用在运行时未启动 Windows Mixed Reality，则 Windows Mixed Reality OpenXR 运行时可能不会设置为活动运行时。 请按照 [OpenXR For Windows Mixed Reality 耳机](openxr-getting-started.md#getting-started-with-openxr-for-windows-mixed-reality-headsets) 入门中的说明解决此问题。
 
-还可以运行 [Windows Mixed reality 的 OpenXR 开发人员工具](openxr-getting-started.md#getting-the-openxr-developer-tools-for-windows-mixed-reality) ，以便在系统上绕过 Windows Mixed Reality OpenXR 运行时的状态的其他故障排除帮助。
+你还可以运行 [Windows Mixed reality 的 OpenXR 开发人员工具](openxr-getting-started.md#getting-the-openxr-developer-tools-for-windows-mixed-reality) ，以获取有关系统 Windows Mixed Reality OpenXR 运行时状态的故障排除帮助。

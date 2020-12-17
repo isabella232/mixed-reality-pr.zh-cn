@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 端口，unity，unreal，中间件，引擎，UWP，Win32，移植，HoloLens 第一代，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10，输入映射，
-ms.openlocfilehash: 9f3e064c4462fc3d12a23bd94885476bcd2f9466
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 4137ff4dcc9f72dd66b9078b0d86c2d06f01f2bc
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925951"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613221"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>将 VR 应用移植到 Windows Mixed Reality
 
-Windows 10 包括对沉浸式和全息耳机的直接支持。 如果已为其他设备（如 Oculus Rift 或 HTC Naopak）生成内容，这些内容将依赖于操作系统的平台 API 之上的库。 将现有的 Win32 Unity VR 应用引入 Windows Mixed Reality 涉及到重定目标使用特定于供应商的 VR Sdk 到 Unity 的跨供应商 VR Api。
+Windows 10 支持沉浸式和全息耳机。 如果为其他设备（如 Oculus Rift 或 HTC Naopak）生成了内容，则它们依赖于操作系统的平台 API 之上的库。 将现有的 Win32 Unity VR 应用引入 Windows Mixed Reality 涉及到重定目标使用特定于供应商的 VR Sdk 到 Unity 的跨供应商 VR Api。
 
 ## <a name="porting-requirements"></a>移植要求
 
@@ -23,7 +23,7 @@ Windows 10 包括对沉浸式和全息耳机的直接支持。 如果已为其�
 1. **请确保你的电脑正在运行 Windows 10 秋季创意者更新 (16299) 。** 我们不再建议从有问必答向后跳环接收预览版，因为这些版本对于混合现实开发不是最稳定的。
 2. **升级到最新版本的图形或游戏引擎。** 游戏引擎需要支持 Windows 10 SDK 版本 10.0.15063.0 (于2017年4月) 或更高版本发布。
 3. **升级任何中间件、插件或组件。** 如果你的应用程序包含任何组件，则最好升级到最新版本。
-4. **删除重复的 sdk 依赖项**。 根据你的内容面向哪个设备，你将需要删除或有条件地编译该 SDK (例如 SteamVR) 以便可以改为面向 Windows Api。
+4. **删除重复的 sdk 依赖项**。 根据你的内容面向哪个设备，你将需要删除或有条件地编译该 SDK，以便可以改为面向 Windows Api。 这种情况的一个示例是 SteamVR。
 5. **处理生成问题。** 此时，迁移练习特定于您的应用程序、您的引擎和您拥有的组件依赖项。
 
 ## <a name="common-porting-steps"></a>常见的移植步骤

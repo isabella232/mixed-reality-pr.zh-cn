@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: DirectX，全息呈现，本机，本机应用，WinRT，WinRT 应用，平台 Api，自定义引擎，中间件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 0d5e364fdb4faac73f28649f5c009823a74ac595
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 493715660ff8df79df25e09c82fe48b863053ed3
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679646"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613071"
 ---
 # <a name="native-development-overview"></a>原生开发概述
 
 ![本机横幅徽标](../images/native_logo_banner.png)
 
-3D 引擎（如 [Unity](../unity/unity-development-overview.md) 或 [Unreal](../unreal/unreal-development-overview.md) ）并不是唯一的混合现实开发途径。 还可以通过使用 DirectX 11 或 DirectX 12 的 Windows 混合现实 Api 直接编写代码来创建混合现实应用。 通过直接利用该平台，你实质上是构建自己的中间件或框架。 
+3D 引擎（如 [Unity](../unity/unity-development-overview.md) 或 [Unreal](../unreal/unreal-development-overview.md) ）并不是唯一的混合现实开发途径。 你还可以使用 Windows Mixed Reality Api 和 DirectX 11 或 DirectX 12 来创建混合现实应用。 转到平台源实质上是构建自己的中间件或框架。 
 
 > [!IMPORTANT]
 > 如果你有想要维护的现有 WinRT 项目，请转到我们的主 [winrt 文档](creating-a-holographic-directx-project.md)。 
@@ -29,10 +29,10 @@ ms.locfileid: "94679646"
 ### <a name="1-getting-started"></a>1.入门
 
 Windows Mixed Reality 支持 [两种类型的应用](../../design/app-views.md)：
-* **混合现实应用程序** (UWP 或 Win32) ，这些应用程序使用 [HolographicSpace API](getting-a-holographicspace.md) 或 [OpenXR api](openxr.md) 将 [沉浸式视图](../../design/app-views.md) 呈现给填充耳机显示的用户
+* 使用 [HOLOGRAPHICSPACE api](getting-a-holographicspace.md)或 [OpenXR api](openxr.md)呈现可填充耳机显示的 [沉浸式视图](../../design/app-views.md)的 UWP 或 Win32 **混合现实应用程序**
 *  (UWP) 的 **2d 应用**，使用 DIRECTX、XAML 或其他框架在 Windows Mixed Reality 主页上呈现清单的 [2d 视图](../../design/app-views.md#2d-views)
 
-[2d 视图和沉浸式视图](../../design/app-views.md)的 DirectX 开发之间的差异主要涉及全息呈现和空间输入。 UWP 应用程序的 [IFrameworkView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.iframeworkview.aspx) 或 Win32 应用程序的 HWND 是必需的，并且保持基本相同。 适用于应用程序的 WinRT Api 也是如此。 但您必须使用这些 Api 的不同子集才能利用全息功能。 例如，存在和帧的存在由系统为全息应用程序管理，以便启用姿势预测帧循环。
+[2d 视图和沉浸式视图](../../design/app-views.md)的 DirectX 开发之间的差异主要涉及全息呈现和空间输入。 UWP 应用程序的 [IFrameworkView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.iframeworkview.aspx) 或 Win32 应用程序的 HWND 是必需的，并且保持基本相同。 适用于应用程序的 WinRT Api 也是如此。 但您必须使用这些 Api 的不同子集才能利用全息功能。 例如，适用于全息应用程序的系统管理存在和帧，以启用姿势预测帧循环。
 
 [!INCLUDE[](../includes/native-getting-started.md)]
 
@@ -54,11 +54,11 @@ Windows Mixed Reality 应用程序使用以下 Api 为 HoloLens 和其他沉浸�
 
 ### <a name="3-deploying-and-testing"></a>3. 部署和测试
 
-你可在桌面上的 HoloLens 2 或 Windows Mixed Reality 沉浸式头戴显示设备上使用 OpenXR 进行开发。  如果你无权访问耳机，则可以改用 [HoloLens 2 模拟器](../platform-capabilities-and-apis/using-the-hololens-emulator.md) 或 [Windows Mixed Reality 模拟器](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md) 。
+可以使用 OpenXR 在 HoloLens 2 或 Windows Mixed Reality 沉浸式耳机上进行开发。  如果你无权访问耳机，则可以改用 [HoloLens 2 模拟器](../platform-capabilities-and-apis/using-the-hololens-emulator.md) 或 [Windows Mixed Reality 模拟器](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md) 。
 
 ## <a name="whats-next"></a>下一步操作
 
-开发人员的工作一直在更新，特别是在学习新工具或 SDK 时。 以下部分将带你进入你已完成的初学者级别资料之外的其他领域，并在你遇到问题时提供有用的资源。 请注意，这些主题和资源不按任何顺序排列，因此请随意查看并探索！
+开发人员的工作一直在更新，特别是在学习新工具或 SDK 时。 以下部分可能会将你带到已完成的初级级别资料之外的区域。 这些主题和资源不按任何顺序排列，因此可随时跳转并浏览！
 
 ### <a name="additional-resources"></a>其他资源
 
@@ -68,6 +68,6 @@ Windows Mixed Reality 应用程序使用以下 Api 为 HoloLens 和其他沉浸�
 * [OpenXR 性能](openxr-performance.md)
 * [OpenXR 故障排除](openxr-troubleshooting.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [应用模型](../../design/app-model.md)
 * [应用视图](../../design/app-views.md)

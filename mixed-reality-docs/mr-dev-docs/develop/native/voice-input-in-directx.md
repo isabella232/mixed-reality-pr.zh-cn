@@ -6,17 +6,17 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 演练，语音命令，短语，识别，语音，directx，平台，cortana，windows mixed reality
-ms.openlocfilehash: bdd92f79b3dd9677ac5c2c64e532978477ac5bca
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c917fbc4215442bc66f52dc2c527e01b2c446594
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677083"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613101"
 ---
 # <a name="voice-input-in-directx"></a>DirectX 中的语音输入
 
 > [!NOTE]
-> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)** 。
+> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
 本文介绍如何在适用于 Windows Mixed Reality 的 DirectX 应用程序中实现 [语音命令](../../design/voice-input.md) 和短语识别。
 
@@ -29,7 +29,7 @@ ms.locfileid: "91677083"
 
 首先，创建一个新的 *Windows：： Media：： SpeechRecognition：： SpeechRecognizer* 实例。
 
-From *HolographicVoiceInputSampleMain：： CreateSpeechConstraintsForCurrentState* ：
+From *HolographicVoiceInputSampleMain：： CreateSpeechConstraintsForCurrentState*：
 
 ```
 m_speechRecognizer = ref new SpeechRecognizer();
@@ -95,9 +95,9 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
            );
 ```
 
-*OnResultGenerated* 事件处理程序接收 [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx)实例中的事件数据。 如果置信度大于你定义的阈值，应用应注意到事件发生。 保存事件数据，以便可以在后续的更新循环中使用它。
+*OnResultGenerated* 事件处理程序接收 [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx)实例中的事件数据。 如果置信度大于你定义的阈值，应用应注意到事件发生。 保存事件数据，以便您可以在以后的更新循环中使用它。
 
-从 *HolographicVoiceInputSampleMain* ：
+从 *HolographicVoiceInputSampleMain*：
 
 ```
 // Change the cube color, if we get a valid result.
@@ -112,7 +112,7 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
 
 在我们的示例代码中，我们将根据用户的命令更改旋转全息图多维数据集的颜色。
 
-From *HolographicVoiceInputSampleMain：： Update* ：
+From *HolographicVoiceInputSampleMain：： Update*：
 
 ```
 // Check for new speech input since the last frame.
@@ -367,7 +367,7 @@ Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizer
 
 全息语音示例使用语音合成向用户提供可听见的指令。 本部分介绍如何创建合成语音样本，并通过 HRTF 音频 Api 将其播放回来。
 
-请求短语输入时应提供自己的语音提示。 提示还可以帮助指示何时可以为连续识别方案口述语音命令。 下面的示例演示如何使用语音合成器执行此操作。 你还可以使用预先录制的语音剪辑、视觉对象 UI 或另一个指示符，例如在提示不是动态的情况下。
+建议在请求短语输入时提供自己的语音提示。 提示还可以帮助指示何时可以为连续识别方案口述语音命令。 下面的示例演示如何使用语音合成器执行此操作。 你还可以使用预先录制的语音剪辑、视觉对象 UI 或另一个指示符，例如在提示不是动态的情况下。
 
 首先，创建 SpeechSynthesizer 对象。
 
@@ -430,6 +430,6 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [语音应用设计](https://msdn.microsoft.com/library/dn596121.aspx)
 * [SpeechRecognitionAndSynthesis 示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

@@ -1,30 +1,30 @@
 ---
 title: DirectX 中的头部和眼部凝视
-description: 在本机 DirectX 应用中使用打印头和眼睛跟踪的开发人员指南。
+description: 了解如何在本机 DirectX 应用中使用打印头和眼睛跟踪。
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 眼睛，眼睛，打印头，打印头跟踪，眼睛跟踪，directx，输入，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 9ec54f5db33346c499582b54a0b3e36c129bf7ab
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 4e8c638d91125a30cb4121b09a699f9ff6db5892
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678076"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613041"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>DirectX 中的头盔和眼睛眼睛输入
 
 > [!NOTE]
 > 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
-在 Windows Mixed Reality 中，眼睛和头盔输入用于确定用户正在查看的内容。 这可以用来驱动主要的输入模型，如 [注视和提交](../../design/gaze-and-commit.md)，还可以为交互类型提供上下文。 通过 API 可以使用两种类型的目视矢量：打印头-注视和眼睛。  两者都作为具有原点和方向的三维射线提供。 然后，应用程序可以 raycast 到其幕后或现实世界，确定用户的目标。
+在 Windows Mixed Reality 中，眼睛和头盔输入用于确定用户正在查看的内容。 您可以使用这些数据来驱动主要的输入模型，如 [头看和提交](../../design/gaze-and-commit.md)，并为不同的交互类型提供上下文。 通过 API 可以使用两种类型的目视矢量：打印头-注视和眼睛。  两者都作为具有原点和方向的三维射线提供。 然后，应用程序可以 raycast 到其幕后或现实世界，确定用户的目标。
 
-**打印头** 表示用户的头指向的方向。 将此视为设备本身的位置和正向方向，其位置表示两个显示器之间的中心点。 打印头在所有混合现实设备上都可用。
+**打印头** 表示用户的头指向的方向。 将头看看作设备本身的位置和前进方向，并将其位置作为两个显示器之间的中心点。 打印头在所有混合现实设备上都可用。
 
 **眼睛** 表示用户眼睛正在寻找的方向。 原点位于用户的眼睛之间。  它在包含目视跟踪系统的混合现实设备上可用。
 
-打印头和眼睛都可通过  [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API 进行访问。 只需调用 [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 即可在指定的时间戳和 [坐标系统](coordinate-systems-in-directx.md)接收新的 SpatialPointerPose 对象。 此 SpatialPointerPose 包含一个头部和方向。 它还包含目视的原点和方向（如果眼睛跟踪可用）。
+打印头和眼睛都可通过  [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API 进行访问。 调用 [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 以在指定的时间戳和 [坐标系统](coordinate-systems-in-directx.md)接收新的 SpatialPointerPose 对象。 此 SpatialPointerPose 包含一个头部和方向。 它还包含目视的原点和方向（如果眼睛跟踪可用）。
 
 ### <a name="device-support"></a>设备支持
 <table>
@@ -56,8 +56,8 @@ ms.locfileid: "94678076"
 
 ## <a name="using-head-gaze"></a>使用打印头
 
-若要访问 head，请首先调用  [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 以接收新的 SpatialPointerPose 对象。 需要传递以下参数。
- - 表示 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 的所需坐标系统的表示。 这由以下代码中的 *坐标系* 变量表示。 有关详细信息，请访问我们的 [坐标系统](coordinate-systems-in-directx.md) 开发人员指南。
+若要访问 head，请首先调用  [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 以接收新的 SpatialPointerPose 对象。 传递以下参数。
+ - 一个 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) ，它表示要用于打印头的坐标系。 这由以下代码中的 *坐标系* 变量表示。 有关详细信息，请访问我们的 [坐标系统](coordinate-systems-in-directx.md) 开发人员指南。
  - 表示请求的头姿势的确切时间的 [时间戳](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframeprediction.timestamp#Windows_Graphics_Holographic_HolographicFramePrediction_Timestamp) 。  通常，您将使用与当前帧的显示时间对应的时间戳。 可以从  [HolographicFramePrediction](https://docs.microsoft.com//uwp/api/Windows.Graphics.Holographic.HolographicFramePrediction) 对象获取此预测的显示时间戳，该对象可通过当前 [HolographicFrame](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe)访问。  此 HolographicFramePrediction 对象由下面代码中的 *预测* 变量表示。
 
  获得有效的 SpatialPointerPose 后，头位置和正向方向可作为属性进行访问。  下面的代码演示如何访问它们。
@@ -78,8 +78,8 @@ if (pointerPose)
 
 ## <a name="using-eye-gaze"></a>使用红眼
 
-请注意，为了让用户使用目视输入，每个用户首次使用设备时必须进行 [跟踪跟踪用户校准](../../calibration.md) 。 眼睛良好的 API 非常类似于打印头。
-它使用相同的 [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API，该 API 提供了一个射线原点和方向，你可以根据场景进行 raycast。  唯一的区别是，在使用之前，需要显式启用目视跟踪。 为此，需要执行两个步骤：
+要使用户使用目视输入，每个用户首次使用设备时，必须通过 [目视跟踪用户校准](../../calibration.md) 。 眼睛良好的 API 类似于打印头。
+它使用相同的 [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API，该 API 提供了一个射线原点和方向，你可以根据场景进行 raycast。  唯一的区别是，在使用之前，需要显式启用目视跟踪：
 1. 请求用户在应用中使用目视跟踪的权限。
 2. 启用包清单中的 "注视输入" 功能。
 
@@ -103,7 +103,7 @@ std::thread requestAccessThread([this]()
 requestAccessThread.detach();
 
 ```
-启动分离的线程只是一种用于处理异步调用的选项。 或者，你可以使用 c + +/WinRT. 支持的新 [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) 功能
+启动分离的线程只是一种用于处理异步调用的选项。 你还可以使用 c + +/WinRT. 支持的新 [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) 功能
 下面是要求用户提供权限的另一个示例：
 -   EyesPose：： IsSupported ( # A1 允许应用程序仅在有目视跟踪器时才触发权限对话框。
 -   GazeInputAccessStatus m_gazeInputAccessStatus;这是为了防止反复弹出权限提示。
@@ -146,8 +146,8 @@ if (Windows::Perception::People::EyesPose::IsSupported() &&
 ```
 
 ### <a name="getting-the-eye-gaze-ray"></a>获取眼睛眼睛
-接收到 ET 的访问权限后，即可自由地抓住每个帧的眼睛。
-正如在打印头上一样，通过使用所需的时间戳和坐标系统调用[SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp)来获取[SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) 。 SpatialPointerPose 包含通过[眼睛](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes)属性的[EyesPose](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose)对象。 只有启用了目视跟踪，此值才为非 null。 在该处，可以通过调用 [EyesPose：： IsCalibrationValid](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)检查设备中的用户是否具有目视跟踪校准。  接下来，使用 " [注视](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) " 属性获取包含眼睛位置和方向的 [SpatialRay](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialray) 。 "注视" 属性有时可以为 null，因此请务必检查此值。 如果校准的用户暂时关闭了眼睛，就会发生这种情况。
+一旦您收到了 ET 的访问权限，就可以自由地抓住每个帧的眼睛。
+与 head 一样，通过使用所需的时间戳和坐标系统调用[SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp)获取[SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) 。 SpatialPointerPose 包含通过[眼睛](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes)属性的[EyesPose](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose)对象。 只有启用了目视跟踪，此值才为非 null。 在该处，可以通过调用 [EyesPose：： IsCalibrationValid](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)检查设备中的用户是否具有目视跟踪校准。  接下来，使用 " [注视](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) " 属性获取包含眼睛位置和方向的 [SpatialRay](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialray) 。 "注视" 属性有时可以为 null，因此请务必检查此值。 如果校准的用户暂时关闭了眼睛，就会发生这种情况。
 
 下面的代码演示如何访问眼睛眼睛。
 
@@ -173,9 +173,15 @@ if (pointerPose)
 
 ```
 
-## <a name="fallback-when-eye-tracking-is-not-available"></a>当目视跟踪不可用时回退
-如我们的 [眼睛跟踪设计文档](../../design/eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available)中所述，设计人员和开发人员都应注意到，可能存在一些可能无法用于应用程序的目视跟踪数据的实例。
-这种情况的原因有很多，因为用户未进行校准，用户拒绝了应用程序访问其眼睛跟踪数据或临时的 interferences (例如，在 HoloLens 面板上出现污迹，或 occluding 用户的眼睛) 。 虽然本文档中已提到了某些 Api，但在下面的部分中，我们提供了有关如何检测目视跟踪是否可用作快速参考的摘要： 
+## <a name="fallback-when-eye-tracking-isnt-available"></a>当目视跟踪不可用时回退
+如我们的 [目视跟踪设计文档](../../design/eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available)中所述，设计人员和开发人员都应该知道目视跟踪数据可能不可用的情况。
+
+数据不可用的原因有多种：
+* 用户未校准
+* 用户已拒绝应用访问其目视跟踪数据
+* 临时 interferences，例如在 HoloLens 面板上涂抹，或 occluding 用户眼睛。 
+
+虽然本文档中已提到了某些 Api，但在下面的部分中，我们提供了有关如何检测目视跟踪是否可用作快速参考的摘要： 
 
 * 检查系统是否完全支持目视跟踪。 调用以下 *方法*： [EyesPose. IsSupported ( # B1](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
 
@@ -183,15 +189,15 @@ if (pointerPose)
 
 * 检查用户是否已授予你的应用程序权限以使用其目视跟踪数据：检索当前的 _"GazeInputAccessStatus"_。 有关如何执行此操作的示例，请参阅 [请求访问注视输入](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input)。   
 
-此外，你可能需要通过在收到的目视跟踪数据更新之间添加超时，并以其他方式回退到下面所述的打印头来检查眼睛跟踪数据是否过时。  
+还可能想要检查眼睛跟踪数据是否过时，方法是在接收到的眼睛跟踪数据更新之间添加超时，否则回退到下面所述的打印头。   
 有关详细信息，请访问我们的 [回退设计注意事项](../../design/eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available) 。
 
 <br>
 
 ## <a name="correlating-gaze-with-other-inputs"></a>将注视与其他输入关联
-有时，你可能会发现需要与过去的事件对应的 [SpatialPointerPose](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose) 。 例如，如果用户执行点击，你的应用可能需要知道他们正在查看的内容。 出于此目的，只需将 [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 与预测帧时间结合使用，因为系统输入处理和显示时间之间存在延迟。 此外，如果使用目视目视定位，则即使在完成提交操作之前，我们也可能会继续。 这不是简单地点击的问题，而是将长的语音命令与快速的目视运动组合在一起，这一点更重要。 处理这种情况的一种方法是，使用对应于输入事件的历史时间戳对  [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp)进行其他调用。  
+有时，你可能会发现需要与过去的事件对应的 [SpatialPointerPose](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose) 。 例如，如果用户进行一次点击，你的应用可能想要知道他们正在查看的内容。 出于此目的，只需将 [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 与预测帧时间结合使用，因为系统输入处理和显示时间之间存在延迟。 此外，如果使用目视看来确定目标，则在完成提交操作之前，我们的眼睛往往会继续。 这不是简单地点击的问题，而是将长的语音命令与快速的目视运动组合在一起，这一点更重要。 处理这种情况的一种方法是，使用对应于输入事件的历史时间戳对  [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp)进行其他调用。  
 
-但对于通过 SpatialInteractionManager 进行路由的输入，有一种更简单的方法。 [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)具有其自己的[TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)函数。 调用将提供完全相关的 [SpatialPointerPose](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose) ，而无需猜测。 有关使用 SpatialInteractionSourceStates 的详细信息，请参阅 DirectX 文档中的 [双手和运动控制器](hands-and-motion-controllers-in-directx.md) 。
+但对于通过 SpatialInteractionManager 进行路由的输入，有一种更简单的方法。 [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)有其自己的[TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)函数。 调用将提供完全相关的 [SpatialPointerPose](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose) ，而无需猜测。 有关使用 SpatialInteractionSourceStates 的详细信息，请参阅 DirectX 文档中的 [双手和运动控制器](hands-and-motion-controllers-in-directx.md) 。
 
 <br>
 
@@ -199,13 +205,13 @@ if (pointerPose)
 为了使目视跟踪能准确地工作，每个用户都需要经历 [跟踪用户校准](../../calibration.md)。 这允许设备调整系统，以便为用户提供更舒适和更高的质量查看体验，并确保同时进行准确的目视跟踪。 开发人员无需执行任何操作即可管理用户校准。 系统将确保在以下情况下提示用户校准设备：
 * 用户第一次使用设备
 * 用户以前选择退出校准过程
-* 上次用户使用该设备时，校准过程未成功
+* 上次用户使用设备时，校准过程未成功
 
-开发人员应确保为可能无法提供目视跟踪数据的用户提供足够的支持。 详细了解 [Hololens 2 上的目视跟踪](../../design/eye-tracking.md)中的备用解决方案注意事项。
+开发人员应确保为用户提供对目视跟踪数据可能不可用的足够支持。 详细了解 [HoloLens 2 上的目视跟踪](../../design/eye-tracking.md)中的备用解决方案注意事项。
 
 <br>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [校准](../../calibration.md)
 * [DirectX 中的坐标系统](coordinate-systems-in-directx.md)
 * [目视-注视 HoloLens 2](../../design/eye-tracking.md)

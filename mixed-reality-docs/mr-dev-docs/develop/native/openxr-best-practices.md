@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件，最佳做法，性能，质量，稳定性
-ms.openlocfilehash: dad4622e4186ecc8b090e2abe2e33d3d39ac7525
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: ee600cfc22ab1fb7ee43c5727d8e19cf3a1b1463
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677101"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97612981"
 ---
 # <a name="openxr-app-best-practices"></a>OpenXR 应用最佳实践
 
@@ -25,38 +25,37 @@ ms.locfileid: "91677101"
 
 ### <a name="gamma-correct-rendering"></a>伽玛正确的呈现
 
-必须小心，以确保您的渲染管道为伽玛正确。 在呈现到存在时，呈现目标视图格式应匹配存在格式 (例如， `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` 对于存在格式和呈现目标视图) 。
-这种情况的例外是，应用程序的呈现管道在着色器代码中执行手动 sRGB 转换，在这种情况下，应用程序应请求 sRGB 存在格式，但使用线性格式作为呈现目标视图 (例如，请求 `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` 为存在格式，但使用 `DXGI_FORMAT_B8G8R8A8_UNORM` 作为呈现目标视图) 来防止内容被更正为双精度型。
+必须小心，以确保您的渲染管道为伽玛正确。 呈现到存在时，呈现目标视图格式应与存在格式匹配。 例如， `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` 对于存在格式和呈现目标视图。
+如果应用的呈现管道在着色器代码中执行手动 sRGB 转换，则会出现异常。 应用应请求 sRGB 存在格式，但使用线性格式作为呈现目标视图。 例如，请求 `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` 为存在格式，但使用 `DXGI_FORMAT_B8G8R8A8_UNORM` 作为呈现目标视图来防止内容被更正为双精度。
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>提交用于投影层的深度缓冲区
 
 在将 `XR_KHR_composition_layer_depth` 帧提交到时，始终使用扩展并将深度缓冲区与投影层一起提交 `xrEndFrame` 。
-这可以通过在 HoloLens 2 上启用硬件深度 reprojection 来改善全息影像的稳定性。
+在 HoloLens 2 上启用硬件深度 reprojection 可以提高全息影像的稳定性。
 
 ### <a name="choose-a-reasonable-depth-range"></a>选择合理的深度范围
 
 首选较窄的深度范围来确定虚拟内容的作用域，以帮助在 HoloLens 上对虚拟目录进行稳定性。
-例如，OpenXrProgram 示例使用0.1 到20米。
+例如，OpenXrProgram 示例使用0.1 米到20米。
 使用 [反向-Z](https://developer.nvidia.com/content/depth-precision-visualized) 以获得更统一的深度解析。
-请注意，在 HoloLens 2 上，使用首选的 `DXGI_FORMAT_D16_UNORM` 深度格式有助于获得更好的帧速率和性能，不过，16位深度缓冲区提供的分辨率低于24位深度缓冲区。
-因此，遵循这些最佳做法，充分利用深度解析变得更加重要。
+在 HoloLens 2 上，使用首选的 `DXGI_FORMAT_D16_UNORM` 深度格式有助于获得更好的帧速率和性能，不过，16位深度缓冲区提供的分辨率低于24位深度缓冲区。
+遵循这些最佳做法，充分利用深度解析变得更加重要。
 
 ### <a name="prepare-for-different-environment-blend-modes"></a>针对不同的环境混合模式做好准备
 
-如果你的应用程序也会在完全堵塞世界的沉浸式耳机上运行，请务必使用 API 枚举支持的环境混合模式 `xrEnumerateEnvironmentBlendModes` ，并相应地准备好呈现内容。
+如果你的应用程序也会在完全堵塞世界的沉浸式耳机上运行，请务必使用 API 枚举支持的环境混合模式 `xrEnumerateEnvironmentBlendModes` ，并正确准备好呈现内容。
 例如，对于使用的系统 `XR_ENVIRONMENT_BLEND_MODE_ADDITIVE` （如 HoloLens），应用应使用透明的颜色作为清晰的颜色，而对于系统 `XR_ENVIRONMENT_BLEND_MODE_OPAQUE` ，应用应在后台呈现一些不透明颜色或某些虚拟空间。
 
 ### <a name="choose-unbounded-reference-space-as-applications-root-space"></a>选择未绑定的引用空间作为应用程序的根空间
 
 应用程序通常会建立一些根世界坐标空间，以便将视图、操作和全息连接在一起。
-`XR_REFERENCE_SPACE_TYPE_UNBOUNDED_MSFT`当支持扩展以建立[世界规模的坐标系统](../../design/coordinate-systems.md#building-a-world-scale-experience)时，可使用该扩展来避免在用户 (移动时出现意外的全息影像偏移，例如从应用启动位置) 的5米。
+`XR_REFERENCE_SPACE_TYPE_UNBOUNDED_MSFT`当扩展支持建立[世界规模的坐标系统](../../design/coordinate-systems.md#building-a-world-scale-experience)时，可使用该扩展来避免在用户上移 (时出现意外的全息影像偏移，例如，从应用启动位置) 的5米离开。
 `XR_REFERENCE_SPACE_TYPE_LOCAL`当未绑定的空间扩展不存在时，将用作回退。
 
 ### <a name="associate-hologram-with-spatial-anchor"></a>将全息图与空间定位关联
 
 使用未绑定的引用空间时，在该引用空间中直接放置的全息影像 [可能会在用户进入远处房间后进入远处，并返回](../../design/coordinate-systems.md#building-a-world-scale-experience)。
-对于全息图用户在世界各地的不同位置，请使用 extension 函数 [创建空间锚](../../design/spatial-anchors.md#best-practices) ， `xrCreateSpatialAnchorSpaceMSFT` 并将全息影像置于其原点。
-这会使全息图在一段时间内独立稳定。
+对于全息图用户在世界各地的不同位置，请使用 extension 函数 [创建空间锚](../../design/spatial-anchors.md#best-practices) ， `xrCreateSpatialAnchorSpaceMSFT` 并将全息影像置于其原点。 这会使全息图在一段时间内独立稳定。
 
 ### <a name="support-mixed-reality-capture"></a>支持混合现实捕获
 
@@ -65,7 +64,7 @@ ms.locfileid: "91677101"
 
 ## <a name="best-practices-for-performance-on-hololens-2"></a>HoloLens 2 上性能最佳方案
 
-作为提供硬件 reprojection 支持的移动设备，HoloLens 2 对获得最佳性能的要求更严格。  有多种方法可提交组合数据 `xrEndFrame` ，从而导致后期处理，这将导致性能显著下降。
+作为具有硬件 reprojection 支持的移动设备，HoloLens 2 对最佳性能的要求更严格。  可以通过多种方法来提交组合数据，这会导致在处理过程中出现明显的性能损失。
 
 ### <a name="select-a-swapchain-format"></a>选择存在格式
 
@@ -75,13 +74,13 @@ ms.locfileid: "91677101"
 
 ### <a name="render-with-recommended-rendering-parameters-and-frame-timing"></a>使用建议的呈现参数和帧计时进行呈现
 
-始终使用推荐的视图配置宽度/高度 (`recommendedImageRectWidth` 和 `recommendedImageRectHeight` `XrViewConfigurationView`) ，并始终使用 `xrLocateViews` API 来查询建议的视图姿势、fov 和其他呈现参数，然后再呈现。
+始终使用推荐的视图配置宽度/高度 (`recommendedImageRectWidth` 和 `recommendedImageRectHeight` `XrViewConfigurationView`) ，并始终使用 `xrLocateViews` API 来查询建议的视图姿势、FOV 和其他呈现参数，然后再呈现。
 `XrFrameEndInfo.predictedDisplayTime` `xrWaitFrame` 查询姿势和视图时，请始终使用最新调用中的。
 这允许 HoloLens 为正在戴上的 HoloLens 的人员调整呈现和优化视觉质量。
 
 ### <a name="use-a-single-projection-layer"></a>使用单个投影层
 
-HoloLens 2 为应用程序提供了有限的 GPU 能力，可让应用程序呈现内容和针对单个投影层优化的硬件组合器。
+HoloLens 2 对于呈现内容和针对单一投影层优化的硬件组合器的 GPU 能力有限。
 始终使用单个投影层可帮助应用程序的帧速率、全息图稳定性和视觉质量。  
   
 **性能警告：** 提交任何内容，但只有一个保护层会导致运行时后处理，这会产生严重的性能损失。
@@ -98,4 +97,4 @@ HoloLens 2 为应用程序提供了有限的 GPU 能力，可让应用程序呈�
 
 不是将四个层作为组合层提交，而是将 `XrCompositionLayerQuad` 四个内容直接呈现在投影存在中。
 
-**性能警告：** 除了多个层以外，提供其他层（如四层）将导致运行时后处理，这会产生严重的性能损失。
+**性能警告：** 除了单个投影层以外，提供其他层（如四层），将导致运行时后处理，这会产生严重的性能损失。

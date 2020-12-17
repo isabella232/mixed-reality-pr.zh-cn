@@ -6,12 +6,12 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 容量耗尽映像，卷渲染，性能，混合现实
-ms.openlocfilehash: 6dbb49c31761d4b7b9da5060d15763c3925be754
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c0b68a2368823e5699e24d66bfafe1e4e05bdce8
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91676987"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97612941"
 ---
 # <a name="volume-rendering"></a>立体渲染
 
@@ -23,11 +23,11 @@ ms.locfileid: "91676987"
 3. 好：削减子卷：仅显示卷的几个层
 4. 好：降低了卷渲染的分辨率 (参阅 "混合分辨率场景渲染" ) 
 
-只有一定数量的信息可从应用程序传输到屏幕上的任何特定帧（这是总内存带宽）。 此外，转换该数据以进行演示需要的任何处理 (或 "底纹" ) 需要时间。 执行卷渲染时的主要注意事项如下：
-* 屏幕宽度 * 屏幕高度 * 屏幕上的屏幕计数 * 每帧的总容量-每帧样本数
+只有一定数量的信息可从应用程序传输到屏幕上的任何特定帧，这是总内存带宽。 此外，转换该数据以进行演示需要的任何处理 (或 "底纹" ) 需要时间。 执行卷渲染时的主要注意事项如下：
+* Screen-Width * Screen-Height * Screen-Count * 卷-每帧大小的总容量-每帧样本数
 * 1028 * 720 * 2 * 256 = 378961920 (100% )  (全速卷：样本太多) 
 * 1028 * 720 * 2 * 1 = 1480320 (完全) 的 0.3% (瘦切片：1个像素采样，能顺利运行) 
-* 1028 * 720 * 2 * 10 = 14803200 (完整) 的 3.9% (子卷切片：每个像素10个样本，以相当平滑的形式运行，以三维形式显示) 
+* 1028 * 720 * 2 * 10 = 14803200 (完整) 的 3.9% (subvolume 切片：每个像素10个样本，以相当平稳的速度运行，看上去 3d) 
 * 200 * 200 * 2 * 256 = 20480000 (完全) 的 5% (减小分辨率量：更少的像素，整卷，看上去是三维但有点模糊) 
 
 ## <a name="representing-3d-textures"></a>表示三维纹理
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-在许多应用程序中，我们都将原始强度值和 "分段索引" (用于细分外观和骨骼等不同部分;这些段通常由专家在) 专用工具中创建。 这可以与上述方法结合使用，为每个段索引放置不同的颜色，甚至不同的颜色斜坡：
+在许多应用程序中，我们都将原始强度值和 "分段索引" (用于细分外观和骨骼等不同部分;这些段由专家在) 专用工具中创建。 这可以与上述方法结合使用，为每个段索引放置不同的颜色，甚至不同的颜色斜坡：
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -122,7 +122,7 @@ float4 ShadeVol( float intensity ) {
 
 ## <a name="volume-tracing-in-shaders"></a>着色中的卷跟踪
 
-如何使用 GPU 执行子卷跟踪 (会经历几个 voxels 深度，然后将数据从后到前一层) ：
+如何使用 GPU 执行 subvolume 跟踪 (会遍历几个 voxels，然后将数据从后到前一层) ：
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -166,7 +166,7 @@ float4 AlphaBlend(float4 dst, float4 src) {
 
 ## <a name="whole-volume-rendering"></a>整个卷渲染
 
-修改上述子卷代码后，我们将获得：
+修改上述 subvolume 代码后，我们将获得：
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -181,11 +181,11 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 如何以低分辨率渲染场景的一部分并将其放回原位：
 1. 设置两个离线相机，每个屏幕上都有一个用于更新每个帧的
-2. 设置两个低分辨率呈现目标 (例如200x200 大小每个照相机所呈现到的) 
-3. 设置在用户前移动的四个
+2. 设置两个低分辨率呈现目标 (也就是说，200x200 大小每个照相机呈现的) 
+3. 设置在用户前移动的四个四个
 
 每个帧：
-1. 在低分辨率 (卷数据、昂贵着色器等）中绘制每个眼睛的渲染目标 ) 
-2. 通常将场景绘制为 (网格、UI 等的完整分辨率 ) 
+1. 在低分辨率 (卷数据、昂贵着色器等) 上绘制每个眼睛的渲染目标
+2. 通常在 (网格、UI 等) 上绘制场景
 3. 在用户前、场景上绘制四核，并将低分辨率呈现到
 4. 结果：包含低分辨率但高密度卷数据的完整分辨率元素的直观组合

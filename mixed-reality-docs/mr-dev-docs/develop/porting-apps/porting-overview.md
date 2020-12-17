@@ -6,16 +6,16 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 移植，unity，中间件，引擎，UWP，Win32
-ms.openlocfilehash: 1ec03610dd26e9f75162795cbdded77a8e0189ce
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: d8cbb62500a81a29a00f4d32eaed0c2df3f5149d
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925832"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97612831"
 ---
 # <a name="porting-overview"></a>移植概述
 
-当涉及到迁移或升级现有项目以满足混合现实的需要时，可以根据应用是使用 Unity 还是 Unreal 引擎、HoloLens (第一代) 还是 HoloLens 2 或 SteamVR 来进行。 此概述页面包含我们针对每个平台和设备的当前建议-请务必检查，因为这些过程始终会更改。
+当涉及到迁移或升级现有项目以满足混合现实的需要时，移植旅程取决于你的应用程序是通过 Unity 还是 Unreal 引擎生成的，并面向 HoloLens (第一代) 或 HoloLens 2 或 SteamVR。 此概述页面包含我们针对每个平台和设备的当前建议-请务必检查，因为这些过程始终会更改。
 
 首先，根据我们的 [Unity](#unity) 和 [Unreal](#unreal) 建议设置项目目标，然后执行一个或多个移植方案：
 
@@ -26,7 +26,7 @@ ms.locfileid: "96925832"
 
 ## <a name="recommended-project-targets"></a>推荐的项目目标
 
-无论你是否将应用程序移植到另一台目标设备，都要使你的项目保持最新状态，这一点很重要。 有关我们当前的建议，请参阅下面列出的基于引擎的资源。
+无论你将应用程序移植到另一台目标设备，都要使你的项目保持最新状态，这一点很重要。 有关我们当前的建议，请参阅下面列出的基于引擎的资源。
 
 ### <a name="unity"></a>Unity
 
@@ -52,7 +52,7 @@ ms.locfileid: "96925832"
 
 ### <a name="windows-mixed-reality-headsets"></a>Windows Mixed Reality 头戴显示设备
 
-如果为其他设备（如 Oculus Rift 或 HP 回音 G2）生成了内容，则需要重新定位特定于供应商的 VR Sdk 和可能的输入映射 Api。 可以在我们的 [沉浸式应用移植指南](porting-guides.md)中查找 Unity 和 Unreal 移植方案的相关信息。
+如果为其他设备（如 Oculus Rift 或 HP 回音 G2）生成了内容，则需要重定特定于供应商的 VR Sdk 和可能的输入映射 Api。 可以在我们的 [沉浸式应用移植指南](porting-guides.md)中查找 Unity 和 Unreal 移植方案的相关信息。
 
 ### <a name="steamvr-applications"></a>SteamVR 应用程序
 
@@ -60,5 +60,5 @@ ms.locfileid: "96925832"
 
 ### <a name="2d-universal-windows-applications"></a>2D 通用 Windows 应用程序
 
-如果你想要将现有的 2D UWP 应用程序移植到 Windows Mixed Reality 沉浸式耳机或 HoloLens，请遵循我们的 [移植 2D uwp apps For Windows Mixed reality](building-2d-apps.md) 一文中的说明。
+如果你想要将现有的 2D UWP 应用程序移植到 Windows Mixed Reality 沉浸式耳机或 HoloLens，请遵循我们 [的移植 2D uwp apps For Windows Mixed reality](building-2d-apps.md) 说明。
 
