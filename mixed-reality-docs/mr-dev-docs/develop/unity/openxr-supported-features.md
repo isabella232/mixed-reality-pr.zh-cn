@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/15/2020
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: dc908762d6e44e04f56b8ff82b90394106ca42e5
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 5db08dee6b26de6fa3f44d92709e4903bb90a44c
+ms.sourcegitcommit: 7595db7438398b5c78cec41a6f8ab625711bf8ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/17/2020
-ms.locfileid: "97622897"
+ms.locfileid: "97664415"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>混合现实 OpenXR 支持 Unity 中的功能
 
@@ -25,12 +25,12 @@ ms.locfileid: "97622897"
 * 为 HoloLens 2 应用程序优化 UWP 包和 CoreWindow 交互。
 * 使用定位点和无限空间进行世界规模跟踪。
 * 用于将定位点保存到 HoloLens 2 本地存储的定位存储 API。
-* 运动控制器和手动交互，包括新的 HP 回音 G2 控制器。
+* [运动控制器和手动交互](#motion-controller-and-hand-interactions)，包括新的 HP 回音 G2 控制器。
 * 使用26个接合和接点输入的有向右跟踪。
 * HoloLens 2 上的目视注视交互。
 * 在 HoloLens 2 上查找 (PV) 相机的照片/视频。
 * 混合现实通过 PV 相机使用第三种目视渲染来捕获。
-* 支持使用全息远程处理应用 "播放" 到 HoloLens 2，使开发人员无需生成并部署到设备即可调试脚本。
+* 支持 [通过全息远程处理应用 "播放" 到 HoloLens 2](#holographic-remoting-in-unity-editor-play-mode)，使开发人员无需生成并部署到设备即可调试脚本。
 * 与 MRTK Unity 2.5.2 通过 MRTK OpenXR 适配器包兼容。 <missing link>
 * 与 Unity [ARFoundation 4.0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) 或更高版本兼容
 

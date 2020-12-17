@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: adb678d168d86dc2376ac46caa690e5db036099c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 05adee2d88bc90dcfb5cf8b780212c7622aff786
+ms.sourcegitcommit: ce4975f584bb62075bcb66349237b77081fb982b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/17/2020
-ms.locfileid: "97622907"
+ms.locfileid: "97644914"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
@@ -29,7 +29,7 @@ ms.locfileid: "97622907"
 
 ## <a name="installing-the-mixed-reality-openxr-plugin"></a>安装混合现实 OpenXR 插件
 
-使用 Mixed Reality OpenXR 插件之前，需要安装 Unity 的 **OpenXR 插件** 和 **XR 插件管理** 包：
+你的项目需要在使用混合现实 OpenXR 插件之前安装 **OpenXR 插件** 和 **XR 插件管理** 包。 如果已安装了这些文件，很好！ 否则，安装混合现实 OpenXR 插件会自动将它们作为依赖项进行安装：
 
 1. 在 Unity 编辑器中，导航到 "**编辑" > 项目设置 > 包管理器**"
 2. 展开 " **限定作用域** " 部分，输入以下信息，然后选择 " **保存**"：   
