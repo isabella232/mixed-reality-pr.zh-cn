@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/15/2020
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: 5db08dee6b26de6fa3f44d92709e4903bb90a44c
-ms.sourcegitcommit: 7595db7438398b5c78cec41a6f8ab625711bf8ec
+ms.openlocfilehash: 1cbe9dd1ffb493bcc9da76e70dec9720f2d10340
+ms.sourcegitcommit: 4bbf2f802117a9a3788b2b0e3b0a2f58e187f6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97664415"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665349"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>混合现实 OpenXR 支持 Unity 中的功能
 
@@ -24,7 +24,7 @@ ms.locfileid: "97664415"
 * 支持适用于 Windows Mixed Reality 耳机的适用于 HoloLens 2 和 Win32 VR 应用程序的 UWP 应用程序。
 * 为 HoloLens 2 应用程序优化 UWP 包和 CoreWindow 交互。
 * 使用定位点和无限空间进行世界规模跟踪。
-* 用于将定位点保存到 HoloLens 2 本地存储的定位存储 API。
+* [用于将定位点保存](#anchors-and-anchor-persistence) 到 HoloLens 2 本地存储的定位存储 API。
 * [运动控制器和手动交互](#motion-controller-and-hand-interactions)，包括新的 HP 回音 G2 控制器。
 * 使用26个接合和接点输入的有向右跟踪。
 * HoloLens 2 上的目视注视交互。
@@ -58,12 +58,67 @@ ms.locfileid: "97664415"
 > [!NOTE]
 > 0.1.0 的版本不支持全息远程处理，运行时不支持定位点功能，ARAnchorManager 功能将无法通过远程处理。  此功能即将推出。
 
+## <a name="anchors-and-anchor-persistence"></a>定位点和定位点持久性
+
+Mixed Reality OpenXR 插件通过实现 Unity 的 ARFoundation **ARAnchorManager** 提供基本的定位点功能。 若要了解有关 ARFoundation 中 **ARAnchor** 的基础知识，请访问 [AR 定位管理器的 ARFoundation 手册](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/anchor-manager.html)。 从版本0.1.0，此插件支持除创建附加到某一平面的定位点之外的所有 ARAnchorManager 功能，后者将在将来的版本中推出。
+
+### <a name="anchor-persistence-and-the-xranchorstore"></a>定位点持久性和 XRAnchorStore
+
+另外一个名为 **XRAnchorStore** 的 API 允许在会话之间保留定位点。 XRAnchorStore 是设备上保存的定位点的表示形式。 定位点可以从 Unity 场景中的 **ARAnchors** 保存、从存储加载到新 **ARAnchors** 或从存储中删除。
+
+> [!NOTE]
+> 这些定位点将保存并加载到同一设备上。 未来版本中将通过 Azure 空间锚点支持跨设备锚定存储。
+
+``` cs
+public class Microsoft.MixedReality.ARSubsystems.XRAnchorStore
+{
+    // A list of all persisted anchors, which can be loaded.
+    public IReadOnlyList<string> PersistedAnchorNames { get; }
+
+    // Clear all persisted anchors
+    public void Clear();
+
+    // Load a single persisted anchor by name. The ARAnchorManager will create this new anchor and report it in
+    // the ARAnchorManager.anchorsChanged event. The TrackableId returned here is the same TrackableId the 
+    // ARAnchor will have when it is instantiated.
+    public TrackableId LoadAnchor(string name);
+
+    // Attempts to persist an existing ARAnchor with the given TrackableId to the local store. Returns true if 
+    // the storage is successful, false otherwise.
+    public bool TryPersistAnchor(string name, TrackableId trackableId);
+
+    // Removes a single persisted anchor from the anchor store. This will not affect any ARAnchors in the Unity
+    // scene, only the anchors in storage.
+    public void UnpersistAnchor(string name);
+}
+```
+
+若要加载 XRAnchorStore，该插件会在 XRAnchorSubsystem （ARAnchorManager 的子系统）上提供扩展方法：
+
+``` cs
+public static Task<XRAnchorStore> LoadAnchorStoreAsync(this XRAnchorSubsystem anchorSubsystem)
+```
+
+若要使用此扩展方法，请按如下所示从 ARAnchorManager 的子系统访问它：
+ 
+``` cs
+ARAnchorManager arAnchorManager = GetComponent<ARAnchorManager>(); 
+XRAnchorStore anchorStore = await arAnchorManager.subsystem.LoadAnchorStoreAsync(); 
+```
+
+若要查看保留/unpersisting 定位点的完整示例，请查看 [Mixed Reality OpenXR 插件示例场景](openxr-getting-started.md#hololens-2-samples)中的定位点 > 锚样品 GameObject 和 AnchorsSample.cs 脚本：
+
+![在 Unity 编辑器中打开的 "层次结构" 面板的屏幕截图，其中突出显示了定位点示例](images/openxr-features-img-04.png)
+
+![在 Unity 编辑器中打开的检查器面板屏幕截图，其中突出显示了定位点示例脚本](images/openxr-features-img-05.png)
+
 ## <a name="motion-controller-and-hand-interactions"></a>运动控制器和手动交互
-若要了解有关 Unity 中混合现实交互的基础知识，请访问 unity [手动 For UNITY XR Input](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html)。 此 Unity 文档介绍了如何将特定于控制器的输入映射到更具可归纳的 `InputFeatureUsage` ，如何识别和分类可用的 XR 输入，如何从这些输入中读取数据等。 
+
+若要了解有关 Unity 中混合现实交互的基础知识，请访问 unity [手动 For UNITY XR Input](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html)。 此 Unity 文档介绍了从特定于控制器的输入到更可归纳的 **InputFeatureUsage** 的映射，如何识别和分类可用的 XR 输入，如何从这些输入中读取数据等。 
  
-Mixed Reality OpenXR 插件提供附加的输入交互配置文件，这些配置文件映射到标准， `InputFeatureUsage` 如下所述： 
+Mixed Reality OpenXR 插件提供附加的输入交互配置文件，这些配置文件映射到标准 **InputFeatureUsage**，如下所述： 
  
-| `InputFeatureUsage` | HP 回音 G2 控制器 (OpenXR)  | HoloLens 手型 (OpenXR)  |
+| InputFeatureUsage | HP 回音 G2 控制器 (OpenXR)  | HoloLens 手型 (OpenXR)  |
 | ---- | ---- | ---- |
 | primary2DAxis | 操纵杆 | |
 | primary2DAxisClick | 游戏杆-单击 | |
@@ -75,9 +130,25 @@ Mixed Reality OpenXR 插件提供附加的输入交互配置文件，这些配�
 | triggerButton | 触发器-按 | |
 | menuButton | 菜单 | |
 
-#### <a name="haptics"></a>Haptics
-有关在 Unity 的 XR 输入系统中使用 haptics 的信息，请参阅 unity [XR 输入-haptics 的 Unity 手册](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html#Haptics)中的文档。 
+### <a name="aim-and-grip-poses"></a>瞄准并抓住姿势
 
+通过 OpenXR 输入交互可以访问两组姿势： 
+* 用于呈现对象的手柄姿势
+* 目标是指进入世界。 
+
+有关此设计的详细信息以及这两个姿势之间的差异，请参阅 [OpenXR 规范输入子路径](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#semantic-path-input)。
+
+InputFeatureUsages **DevicePosition**、 **DeviceRotation**、 **DeviceVelocity** 和 **DeviceAngularVelocity** 提供的姿势都代表了 OpenXR **手柄** 的姿势。 与手柄姿势相关的 InputFeatureUsages 在 Unity 的 [CommonUsages](https://docs.unity3d.com/2020.2/Documentation/ScriptReference/XR.CommonUsages.html)中定义。
+
+InputFeatureUsages **PointerPosition**、 **PointerRotation**、 **PointerVelocity** 和 **PointerAngularVelocity** 提供的姿势均代表 OpenXR **aim** 姿势。 这些 InputFeatureUsages 未在包含的任何 c # 文件中定义，因此你需要定义自己的 InputFeatureUsages，如下所示：
+
+``` cs
+public static readonly InputFeatureUsage<Vector3> PointerPosition = new InputFeatureUsage<Vector3>("PointerPosition");
+```
+
+### <a name="haptics"></a>Haptics
+
+有关在 Unity 的 XR 输入系统中使用 haptics 的信息，请参阅 unity [XR 输入-haptics 的 Unity 手册](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html#Haptics)中的文档。 
 
 ## <a name="whats-coming-soon"></a>即将推出的内容
 
