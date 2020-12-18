@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 无
-ms.openlocfilehash: 748685f89e44221ff50b90b57d871867b83f581c
-ms.sourcegitcommit: d4b96e5b51b64ff618dbf667e8b8eb069e1a2fe2
+ms.openlocfilehash: 1fc560d170c4e17f4d70b7068474a1aabda472a2
+ms.sourcegitcommit: 3762d207d3b5f4a1d932197aae7a4fae4baec960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91717430"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97676130"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>标题 (尽可能具体，请使用人力条款)  
 
@@ -52,11 +52,11 @@ ms.locfileid: "91717430"
 
 节可以包含以下任何或所有内容：  
 
-*   方便
+*   说明
 *   注意事项
 *   经验法则 
 *   使用方法 
-*   优点
+*   优势
 *   Do and don't's
 
 编辑约定：
@@ -65,7 +65,7 @@ ms.locfileid: "91717430"
 *   不要尝试有趣。
 *   使用 en-us (美国英语) 拼写和约定编写。
 *   **将句子大小写用于标题、节标题和 .。。一切。** 在句子中，唯一应该大写的单词是正确的名词 (就像你在语法学) 中学习的一样。 品牌名称 (例如，Microsoft HoloLens) 是正确的名词。 功能名称 (例如，空间映射) 不是正确的名词，除非它们是商标字的。
-*   请勿写入 "有关详细信息， [请参阅"](../whats-new/contributing.md)窗体的链接。 而是将链接 [根据上下文](../whats-new/contributing.md) ，而不是将读者定向到其他地方。
+*   请勿写入 "有关详细信息， [请参阅"](../contributing.md)窗体的链接。 而是将链接 [根据上下文](../contributing.md) ，而不是将读者定向到其他地方。
 *   此文档是事实的来源。 信息必须准确且最新。
 
 <br>
@@ -233,7 +233,7 @@ Neo-geo humanism structuralism impressionism 骰子 brücke existentialism super
 
 ---
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [相关文章1名称](../design/design.md)
 * [相关文章2名称](../design/design.md)
