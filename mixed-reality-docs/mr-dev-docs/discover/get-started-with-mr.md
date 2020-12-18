@@ -3,16 +3,16 @@ title: 混合现实入门
 description: 让不熟悉混合现实的用户知道它是什么并了解它的功能。
 author: grbury
 ms.author: grbury
-ms.date: 07/29/2020
+ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: c085a60f78ef68e2139b8cc3dd2fdae24bce2a52
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: ef39848fea512df9fa61ca4d538354e11fb8e042
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702263"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926057"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 
@@ -60,6 +60,7 @@ ms.locfileid: "94702263"
 | --- | --- |
 | [混合现实是一个范围](../discover/mixed-reality.md) | 混合现实融合了物理与数字，是人类、计算机和环境交互下的新一代产物 |
 | [什么是全息图？](../discover/hologram.md) | 通过 HoloLens 可以创建全息影像，它们是由出现在你周围的光线和声音组成的对象，就像真实对象一样。 全息影像会响应你的注视、手势和语音命令，并可与你周围的实际表面交互 |
+| [混合现实学习概述](mr-learning-overview.md#general-modules) | 通过 Microsoft Learn 试用特选混合现实模块 |
 | [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 创建沉浸式体验时，可以通过空间思考、身体风暴和实时操作来开阔设计思维  |
 
 <br>

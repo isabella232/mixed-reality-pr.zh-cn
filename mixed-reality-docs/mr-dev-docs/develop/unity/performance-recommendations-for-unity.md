@@ -7,16 +7,16 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 图形, cpu, gpu, 渲染, 垃圾回收, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 6fd12bec31bb721def8801a8f2bacb8c3cb75745
-ms.sourcegitcommit: d11275796a1f65c31dd56b44a8a1bbaae4d7ec76
+ms.openlocfilehash: 1a0509e656b7a6bf0d8d1f0b5d381b2fbdb39c2d
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761769"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010478"
 ---
 # <a name="performance-recommendations-for-unity"></a>针对 Unity 的性能建议
 
-本文是在[针对混合现实的性能建议](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)中所述内容的基础上编写的，但重点介绍特定于 Unity 引擎环境的知识。
+本文基于[针对混合现实的性能建议](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)，但重点介绍特定于 Unity 的改进。
 
 ## <a name="use-recommended-unity-project-settings"></a>使用建议的 Unity 项目设置
 
@@ -24,7 +24,7 @@ ms.locfileid: "96761769"
 
 ## <a name="how-to-profile-with-unity"></a>如何使用 Unity 进行探查
 
-Unity 提供内置的 **[Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)** ，它是一个极佳的资源，可以收集特定应用的重要性能见解。 尽管用户可以在编辑器中运行该探查器，但这些指标并不代表真正的运行时环境，因此应该慎用其结果。 建议在设备上运行应用程序时远程对其进行探查，以获得最准确且可对其采取措施的见解。 此外，Unity 的 [Frame Debugger](https://docs.unity3d.com/Manual/FrameDebugger.html) 也是一个非常强大的见解工具。
+Unity 提供内置的 **[Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)** ，它是一个极佳的资源，可以收集特定应用的重要性能见解。 尽管你可以在编辑器中运行该探查器，但这些指标并不代表真正的运行时环境，因此应该慎用其结果。 建议在设备上运行应用程序时远程对其进行探查，以获得最准确且可对其采取措施的见解。 此外，Unity 的 [Frame Debugger](https://docs.unity3d.com/Manual/FrameDebugger.html) 也是一个可供使用的强大见解工具。
 
 Unity 提供了以下方面的详尽文档：
 1) 如何[将 Unity Profiler 远程连接到 UWP 应用程序](https://docs.unity3d.com/Manual/windowsstore-profiler.html)
@@ -41,7 +41,7 @@ Unity 提供了以下方面的详尽文档：
 
 #### <a name="cache-references"></a>缓存引用
 
-最佳做法是在初始化时缓存对所有相关组件和 GameObject 的引用。 这是因为与存储指针所产生的内存开销相比，重复调用 [GetComponent\<T>()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html) 之类的函数所造成的开销要高得多。 这同样适用于极度频繁使用的 [Camera.main](https://docs.unity3d.com/ScriptReference/Camera-main.html)。 *Camera.main* 实际上在幕后只是使用 *[FindGameObjectsWithTag()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* ，但却以很高的开销在场景图中搜索具有 *“MainCamera”* 标记的相机对象。
+建议在初始化时缓存对所有相关组件和 GameObject 的引用，因为重复函数调用（如 [GetComponent\<T>()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html) 和 [Camera.main](https://docs.unity3d.com/ScriptReference/Camera-main.html)）相对于存储指针的内存成本更昂贵。 . *Camera.main* 仅在后台使用 *[FindGameObjectsWithTag()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* ，但而它会以很高的开销在场景图中搜索具有“MainCamera”标记的 camera 对象。
 
 ```CS
 using UnityEngine;
@@ -86,7 +86,7 @@ public class ExampleClass : MonoBehaviour
 
 1) **避免使用 [LINQ](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/getting-started-with-linq)**
 
-    尽管 LINQ 非常简洁且易于读写，但与手动写出算法相比，它所需的计算资源要多得多，尤其是内存分配。
+    尽管 LINQ 很容易读写，但与比手动编写算法相比，使用 LINQ 通常需要更多的计算和内存。
 
     ```CS
     // Example Code
@@ -102,7 +102,7 @@ public class ExampleClass : MonoBehaviour
 
 2) **通用 Unity API**
 
-    某些 Unity API 虽然很有用，但其执行开销可能极高。 其中的大部分 API 都涉及到在整个场景图中搜索 GameObject 的匹配列表。 一般情况下，若要避免这些操作，可以缓存引用，或者实现相关 GameObject 的管理器组件，以在运行时跟踪引用。
+    某些 Unity API 虽然很有用，但其执行开销可能很高。 其中的大部分 API 都涉及到在整个场景图中搜索 GameObject 的匹配列表。 一般情况下，若要避免这些操作，可以缓存引用，或者实现 GameObject 的管理器组件，以在运行时跟踪引用。
 
     ```csharp
         GameObject.SendMessage()
@@ -120,7 +120,7 @@ public class ExampleClass : MonoBehaviour
 
 3) **注意装箱**
 
-    [装箱](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing)是 C# 语言和运行时的核心概念。 它是将值类型化变量（例如 `char`、`int` 和 `bool` 等）包装到引用类型化变量中的过程。 将值类型化变量“装箱”后，该变量将包装在 `System.Object` 内，后者存储在托管堆上。 因此，需要分配内存，并在最终释放内存后，由垃圾回收器处理内存。 这种分配和解除分配会损害性能，且在许多情况下是不必要的，或者可以由开销更低的替代做法轻松取代。
+    [装箱](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing)是 C# 语言和运行时的核心概念。 它是将值类型化变量（例如 `char`、`int` 和 `bool` 等）包装到引用类型化变量中的过程。 将值类型化变量“装箱”后，该变量将包装在 `System.Object` 内，后者存储在托管堆上。 需要分配内存，并在最终释放内存后，由垃圾回收器处理内存。 这种分配和解除分配会损害性能，且在许多情况下是不必要的，或者可以由开销更低的替代做法轻松取代。
 
     若要避免装箱，请务必将用于存储数值类型和结构（包括 `Nullable<T>`）的变量、字段和属性强类型化为特定类型（例如 `int`、`float?` 或 `MyStruct`），而不是使用对象。  如果将这些对象放入列表中，请确保使用强类型列表（例如 `List<int>`），而不是 `List<object>` 或 `ArrayList`。
 
@@ -138,7 +138,7 @@ public class ExampleClass : MonoBehaviour
 
 1) **空回调函数**
 
-    在应用程序中保留以下代码看似没有妨碍，尤其是因为每个 Unity 脚本都要通过此代码块自动初始化，但这些空回调的实际开销可能非常高。 Unity 在 UnityEngine 代码与应用程序代码之间的非托管/托管代码边界范围内来回操作。 通过此桥梁进行上下文切换会产生相当高的开销，即使没有要执行的操作。 如果应用具有数百个 GameObject 以及包含空重复性 Unity 回调的组件，则此操作特别容易造成问题。
+    在应用程序中保留以下代码看似没有妨碍，尤其是因为每个 Unity 脚本都要通过此 Update 方法自动初始化，但这些空回调的开销可能非常高。 Unity 在 UnityEngine 代码与应用程序代码之间的非托管和托管代码边界之间来回操作。 通过此桥梁进行上下文切换会产生相当高的开销，即使没有要执行的操作。 如果应用具有数百个 GameObject 以及包含空重复性 Unity 回调的组件，则此操作特别容易造成问题。
 
     ```CS
     void Update()
@@ -153,7 +153,7 @@ public class ExampleClass : MonoBehaviour
 
     以下 Unity API 是许多全息应用的常用操作。 尽管并非总是可行，但这些函数的结果往往只计算一次，然后在整个应用程序中对给定的帧重新利用结果。
 
-    a) 一般情况下，最好是通过一个专用的单一实例类或服务来处理投影到场景中的视线，然后在所有其他场景组件中重复使用此结果，而无需由每个组件执行重复性的，但本质上相同的光投影操作。 当然，某些应用程序可能要求从不同的原点投射光线，或者针对不同的[图层遮罩](https://docs.unity3d.com/ScriptReference/LayerMask.html)投射光线。
+    a) 最好是通过一个专用的单一实例类或服务来处理投影到场景中的视线，然后在所有其他场景组件中重复使用此结果，而无需由每个组件执行重复性的、相同的光投影操作。 某些应用程序可能要求从不同的原点投射光线，或者针对不同的[图层遮罩](https://docs.unity3d.com/ScriptReference/LayerMask.html)投射光线。
     
     ```csharp
         UnityEngine.Physics.Raycast()
@@ -166,7 +166,7 @@ public class ExampleClass : MonoBehaviour
         UnityEngine.Object.GetComponent()
     ```
 
-    c) 如果可能，最好是在初始化时实例化所有对象，并使用[对象池](#object-pooling)在应用程序的整个运行时中回收并重复使用 GameObject。
+    c) 如果可能，最好是在初始化时实例化所有对象，并使用[对象池](#object-pooling)在应用程序的整个运行时中回收并重复使用 GameObject
 
     ```csharp
         UnityEngine.Object.Instantiate()
@@ -174,21 +174,21 @@ public class ExampleClass : MonoBehaviour
 
 3) **避免接口和虚拟构造**
 
-    与利用直接构造或直接函数调用相比，通过接口与直接对象调用函数或调用虚拟函数往往会造成高得多的开销。 如果不需要虚拟函数或接口，应将其删除。 但是，如果利用它们能够简化开发协作、改善代码的易读性和代码可维护性，则这些做法造成的性能下降一般是值得的。
+    与利用直接构造或直接函数调用相比，通过接口与直接对象调用函数或调用虚拟函数往往会造成高得多的开销。 如果不需要虚拟函数或接口，应将其删除。 但是，如果利用它们能够简化开发协作、改善代码的易读性和代码可维护性，则这些做法造成的性能下降是值得的。
 
     一般情况下，不建议将字段和函数标记为虚拟，除非明确要求覆盖此成员。 应特别注意要对每个帧调用多次（甚至对每个帧调用一次，例如 `UpdateUI()` 方法）的高频代码路径。
 
 4) **避免按值传递结构**
 
-    与类不同，结构是值类型，将其直接传递给函数时，其内容将复制到新建的实例。 这种复制增加了 CPU 开销以及堆栈上的附加内存。 对于小型结构，这种影响通常可以忽略不计，因此是可接受的。 但是，对于要对每个帧重复调用的函数，以及采用大型结构的函数，如果可能，请修改函数定义以按引用传递。 [在此处了解详细信息](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
+    与类不同，结构是值类型，将其直接传递给函数时，其内容将复制到新建的实例。 这种复制增加了 CPU 开销以及堆栈上的附加内存。 对于小型结构，这种影响可以忽略不计，因此是可接受的。 但是，对于要对每个帧重复调用的函数，以及采用大型结构的函数，如果可能，请修改函数定义以按引用传递。 [在此处了解详细信息](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
 
 #### <a name="miscellaneous"></a>杂项
 
 1) **物理学**
 
-    a) 一般情况下，改善物理学的最简单方法是限制花费在物理学上的时间或每秒迭代次数。 当然，这会降低模拟准确度。 参阅 Unity 中的 [TimeManager](https://docs.unity3d.com/Manual/class-TimeManager.html)
+    a) 一般情况下，改善物理学的最简单方法是限制花费在物理学上的时间或每秒迭代次数。 这会降低模拟准确度。 参阅 Unity 中的 [TimeManager](https://docs.unity3d.com/Manual/class-TimeManager.html)
 
-    b) Unity 中的碰撞体类型具有广泛不同的性能特征。 下面从左到右按顺序列出了性能最高到性能最低的碰撞体。 最重要的是避免网格碰撞体，其开销要比基元碰撞体高出太多。
+    b) Unity 中的碰撞体类型具有广泛不同的性能特征。 下面从左到右按顺序列出了性能最高到性能最低的碰撞体。 重要的是避免网格碰撞体，其开销要比基元碰撞体高出太多。
 
     球体 < 胶囊 < 箱体 <<< 网格（凸） < 网格（非凸）
 
@@ -228,13 +228,13 @@ Unity 中的单通道实例化渲染使针对每只眼睛的绘制调用缩减�
 
 #### <a name="static-batching"></a>静态批处理
 
-Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 静态批处理适用于 Unity 中具有以下特征的大多数 [渲染器](https://docs.unity3d.com/ScriptReference/Renderer.html)：**1) 共享相同的材料**；**2) 全部标记为 *Static***（在 Unity 中选择一个对象，然后单击检查器右上角的复选框）。 标记为 *Static* 的 GameObject 无法在应用程序的整个运行时中移动。 因此，在几乎每个对象都需要进行定位、移动、缩放等操作的 HoloLens 上，可能很难利用静态批处理。对于沉浸式头戴显示设备，静态批处理可以大幅减少绘制调用，从而改善性能。
+Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 静态批处理适用于 Unity 中具有以下特征的大多数[渲染器](https://docs.unity3d.com/ScriptReference/Renderer.html)：1) 共享相同的材料；2) 全部标记为 Static（在 Unity 中选择一个对象，然后选择检查器右上角的复选框） 。 标记为 *Static* 的 GameObject 无法在应用程序的整个运行时中移动。 因此，在几乎每个对象都需要进行定位、移动、缩放等操作的 HoloLens 上，可能很难利用静态批处理。对于沉浸式头戴显示设备，静态批处理可以大幅减少绘制调用，从而改善性能。
 
 有关更多详细信息，请阅读 [Unity 中的绘制调用批处理](https://docs.unity3d.com/Manual/DrawCallBatching.html)下的“静态批处理”。
 
 #### <a name="dynamic-batching"></a>动态批处理
 
-由于在 HoloLens 开发中将对象标记为 *Static* 会造成问题，动态批处理可能是弥补这项短缺功能的极佳手段。 当然，它也可用于沉浸式头戴显示设备。 不过，Unity 中的动态批处理可能很难启用，原因是 GameObject 必须 **a) 共享相同的材料**；**b) 符合其他很多条件**。
+由于在 HoloLens 开发中将对象标记为 Static 会造成问题，动态批处理可能是弥补这项短缺功能的极佳手段。 它也可用于沉浸式头戴显示设备。 不过，Unity 中的动态批处理可能很难启用，原因是 GameObject 必须 **a) 共享相同的材料**；**b) 符合其他很多条件**。
 
 有关条件的完整列表，请阅读[Unity 中的绘制调用批处理](https://docs.unity3d.com/Manual/DrawCallBatching.html)下的“动态批处理”。 最常见的情况是，由于关联的网格数据不能超过 300 个顶点，因此 GameObject 无效，无法对其进行动态批处理。
 
@@ -253,7 +253,7 @@ Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 �
 
 ### <a name="optimize-depth-buffer-sharing"></a>优化深度缓冲区共享
 
-通常建议在“播放器 XR 设置”下启用“深度缓冲区共享”，以优化[全息影像稳定性](../platform-capabilities-and-apis/Hologram-stability.md)。  但是，在使用此设置的情况下启用基于深度的后期阶段重新投影时，建议选择 **16 位深度格式** 而不是 **24 位深度格式**。 16 位深度缓冲区可以大幅减少与深度缓冲区流量相关的带宽（以及电量消耗）。 这可能会给节能和性能提升带来很大的好处。 但是，使用 *16 位深度格式* 可能会造成两种负面影响。
+建议在“播放器 XR 设置”下启用“深度缓冲区共享”，以优化[全息影像稳定性](../platform-capabilities-and-apis/Hologram-stability.md)。  但是，在使用此设置的情况下启用基于深度的后期阶段重新投影时，建议选择“16 位深度格式”而不是“24 位深度格式” 。 16 位深度缓冲区可以大幅减少与深度缓冲区流量相关的带宽（以及电量消耗）。 这可能会给节能和性能提升带来很大的好处。 但是，使用 *16 位深度格式* 可能会造成两种负面影响。
 
 **Z 冲突**
 
@@ -265,11 +265,11 @@ Unity 能够批处理许多静态对象，以减少对 GPU 的绘制调用。 �
 
 ### <a name="avoid-full-screen-effects"></a>避免全屏效果
 
-全屏运行的技术可能会产生相当高的开销，因为它们的数量级是每帧数百万次操作。 因此，建议避免抗锯齿、开花等[后处理](https://docs.unity3d.com/Manual/PostProcessingOverview.html)效果。
+全屏运行的技术可能会产生相当高的开销，因为它们的数量级是每帧数百万次操作。 建议避免抗锯齿、开花等[后处理](https://docs.unity3d.com/Manual/PostProcessingOverview.html)效果。
 
 ### <a name="optimal-lighting-settings"></a>最佳照明设置
 
-Unity 中的[实时全局照明](https://docs.unity3d.com/Manual/GIIntro.html)可以提供杰出的视觉效果，但涉及到开销很高的照明计算。 建议通过“窗口” > “渲染” > “照明设置”> 取消选中“实时全局照明”，为每个 Unity 场景文件禁用“实时全局照明”。   
+Unity 中的[实时全局照明](https://docs.unity3d.com/Manual/GIIntro.html)可以提供杰出的视觉效果，但涉及到开销很高的照明计算。 建议通过“窗口” > “渲染” > “照明设置”> 取消选中“实时全局照明”，为每个 Unity 场景文件禁用“实时全局照明”   。
 
 此外，建议禁用所有阴影投射，因为这也会将高开销的 GPU 通道添加到 Unity 场景中。 可以按光源禁用阴影，但也可以通过“质量”设置对其进行整体控制。
 
@@ -279,7 +279,7 @@ Unity 中的[实时全局照明](https://docs.unity3d.com/Manual/GIIntro.html)�
 
 ### <a name="reduce-poly-count"></a>减少多边形计数
 
-通常可通过以下方式减少多边形计数
+可通过以下方式减少多边形计数
 1) 从场景中删除对象
 2) 抽离资产，以减少给定网格的多边形数目
 3) 在应用程序中实施[详细级别 (LOD) 系统](https://docs.unity3d.com/Manual/LevelOfDetail.html)，以通过同一几何结构的较小多边形版本渲染远距离对象
@@ -291,7 +291,7 @@ Unity 中的[实时全局照明](https://docs.unity3d.com/Manual/GIIntro.html)�
 1) 选择着色器资产或选择材料，然后在检查器窗口的右上角选择齿轮图标，然后选择“选择着色器”
 
     ![在 Unity 中选择着色器](images/Select-shader-unity.png)
-2) 选择着色器资产后，单击检查器窗口下的“编译并显示代码”按钮
+2) 选择着色器资产后，选择检查器窗口下的“编译并显示代码”按钮
 
     ![在 Unity 中编译着色器代码](images/compile-shader-code-unity.PNG)
 
@@ -343,13 +343,13 @@ Unity 在一个很好的网页中详细说明了垃圾回收器的工作原理�
 
 #### <a name="object-pooling"></a>对象池
 
-对象池是一种热门技术，可以降低对象连续分配和解除分配所造成的开销。 此技术是通过以下方式实现的：分配一个由相同对象构成的较大池并重复使用此池中非活动的可用实例，而不是在各个时间内不断生成和销毁对象。 对象池非常适合应用中生存期可变的可重用组件。
+对象池是一种热门技术，可以降低连续对象分配和解除分配所造成的开销。 此技术是通过以下方式实现的：分配一个由相同对象构成的较大池并重复使用此池中非活动的可用实例，而不是在各个时间内不断生成和销毁对象。 对象池非常适合应用中生存期可变的可重用组件。
 
 - [Unity 中的对象池教程](https://unity3d.com/learn/tutorials/topics/scripting/object-pooling) 
 
 ## <a name="startup-performance"></a>启动性能
 
-应考虑使用较小的场景启动应用，然后使用 *[SceneManager.LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* 加载场景的剩余部分。 这样，应用就可以尽快进入交互状态。 请注意，在激活新场景时，可能会出现较大的 CPU 峰值，并且渲染的任何内容可能会出现断连或聚结。 解决此问题的方法之一是，在所要加载的场景中将 AsyncOperation.allowSceneActivation 属性设置为“false”，等待场景加载完成，将屏幕清理为黑屏，然后将此属性重新设置为“true”以完成场景激活。
+请考虑使用较小的场景启动应用，然后使用 *[SceneManager.LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* 加载场景的剩余部分。 这样，应用就可以尽快进入交互状态。 在激活新场景时，可能会出现较大的 CPU 峰值，并且渲染的任何内容可能会出现断连或聚结。 解决此问题的方法之一是，在所要加载的场景中将 AsyncOperation.allowSceneActivation 属性设置为“false”，等待场景加载完成，将屏幕清理为黑屏，然后将此属性重新设置为“true”以完成场景激活。
 
 请记住，在加载启动场景时，会向用户显示全息初始屏幕。
 

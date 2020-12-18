@@ -3,19 +3,19 @@ title: Unreal 中的流式传输
 description: 从 Unreal 中流式传输到 HoloLens 2 的指南
 author: sw5813
 ms.author: suwu
-ms.date: 7/10/2020
+ms.date: 12/7/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 流式传输, 电脑, 全息应用远程处理, 全息远程处理播放器, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 9cbde33ce7238d704d4b24b4afbed9d8306d4e4d
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 3638f07753355061f251bb2d6fa47233872d5b90
+ms.sourcegitcommit: 0509cf6c57067cffd75a0189106e3369e9ecc5c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609328"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96855876"
 ---
 # <a name="streaming-in-unreal"></a>Unreal 中的流式传输
 
@@ -33,6 +33,14 @@ ms.locfileid: "96609328"
 > [!NOTE]
 > * 流式传输的质量严重依赖于 wifi 网络的强度。
 > * 自动为全息远程处理播放器启用所有功能。 如果你发现有一项功能需要用户授权（例如眼动跟踪）才能用于流媒体，但在设备上运行时确不需要它，请检查确保已在项目设置下启用适当的功能。
+
+### <a name="streaming-limitations"></a>流式传输限制
+
+不能通过流式传输使用手部网格、HoloLens 摄像头和系统键盘。 请注意，可通过要作为流式传输源的电脑的麦克风获取流应用的语音输入。
+
+#### <a name="openxr"></a>OpenXR
+
+在 OpenXR 上运行的 Unreal 4.26 支持流式传输到全息远程播放器版本 2.4.0+。 2\.4.0 中的 OpenXR 流式传输缺少对空间映射和空间定位点的支持。 
 
 ## <a name="device-support"></a>设备支持
 
@@ -79,12 +87,18 @@ ms.locfileid: "96609328"
 2. 包生成完成后，请打开 HoloLens 2 上的“全息远程处理播放器”，并记下 IP 地址。 
 3. 使“全息远程处理播放器”保持打开状态，然后使用命令行提示符执行以下操作： 
     * 将 cd 插入到保存包的本地目录。
-    * 输入以下命令：```<App Name>.exe -vr -HoloLensRemoting=<IP Address>```
+    * 输入以下命令：`<App Name>.exe -vr -HoloLensRemoting=<IP Address>`
 
 > [!NOTE]
 > 项目设置中的应用程序名称应自动用于创建 Windows 包。 如果名称因某些原因而有所不同，请在命令提示符下使用 Windows 可执行文件名称。
 
 按 Enter 键，随即将看到应用程序开始进行流式传输了！
+
+### <a name="command-line-options"></a>命令行选项
+
+可在下表中找到 Unreal 引擎 4.26+ 中用于从每个平台进行流式传输的其他命令行选项。 
+
+[!INCLUDE[](includes/tabs-streaming-args.md)]
 
 ## <a name="see-also"></a>另请参阅
 

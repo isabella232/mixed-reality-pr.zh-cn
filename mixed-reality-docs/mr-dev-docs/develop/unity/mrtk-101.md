@@ -7,14 +7,15 @@ ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, 混合现实工具包, Windows Mixed Reality, 设计, 示例应用, 控件, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
 ms.localizationpriority: high
-ms.openlocfilehash: 95d8f8c52b226eda7ea1601feffc1464c2ea91c5
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 16087b69a45def0f496d2ded434458725474bd25
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677527"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010598"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-common-spatial-interactions"></a>MRTK 101：如何使用混合现实工具包 Unity 进行常见的空间交互
+
 ![MRTK](images/MRTK101/MRTK101Cover.png)
 
 了解如何使用 MRTK 在混合现实中实现最常用的交互模式。
@@ -36,16 +37,19 @@ ms.locfileid: "94677527"
 本页中的所有内容都可在 Unity 中使用 MRTK 的输入模拟进行测试。 如果你还没有，可按照 [MRTK 安装指南 (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html) 安装最新版本的 MRTK。
 
 ## <a name="how-to-simulate-input-interactions-in-unity-editor"></a>如何在 Unity 编辑器中模拟输入交互？
-MRTK 支持编辑器中的输入模拟。 只需单击 Unity 的播放按钮即可运行场景。 请使用这些键来模拟输入。
-按 W、A、S、D 键可移动相机。
-在按住鼠标右键的同时移动鼠标可以四处浏览。
-若要显示模拟手形图标，请按空格键（右手）或左 Shift 键（左手）。若要在视图中保留模拟手形图标，请按 T 或 Y 键。若要旋转模拟手形图标，请按 Q 或 E（水平旋转）/R 或 F（垂直旋转）
 
-- [在 MRTK 文档中详细了解输入模拟](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html)
+MRTK 支持编辑器中的输入模拟。 单击 Unity 的播放按钮以运行场景，然后使用以下按键来模拟输入：
+- 按 W、A、S、D 键可移动相机。
+- 在按住鼠标右键的同时移动鼠标可以四处浏览。
+- 按空格键（右手）或左 Shift 键（左手）以显示模拟双手
+- 按 T 或 Y 键以将模拟双手保持在视野中
+- 按 Q 或 E（水平）/R 或 F（垂直）来旋转模拟双手
 
+可以在 [MRTK 文档](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html)中详细了解输入模拟。
 
 ## <a name="how-to-grab-and-move-an-object"></a>如何抓取和移动对象？
-若要使对象可抓取，请分配以下两个脚本：ObjectManipulator.cs 和 NearInteractionGrabbable.cs （根据精确手动跟踪输入直接抓取）ObjectManipulator 支持近距交互和远距交互 。 可以使用 HoloLens 2 的精确手动跟踪输入（近距）、手部射线（远距）、运动控制器光束（远距）、HoloLens 凝视光标和隔空敲击（远距）来抓取和移动对象。
+
+附加 ObjectManipulator.cs 和 NearInteractionGrabbable.cs 脚本，使对象可抓取 。 ObjectManipulator 支持近距离和远距离交互。 可以使用 HoloLens 2 的精确手动跟踪输入（近距）、手部射线（远距）、运动控制器光束（远距）、HoloLens 凝视光标和隔空敲击（远距）来抓取和移动对象。
 
 <br/><img alt="NearInteractionGrabbable and ObjectManipulator.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.png">
 
@@ -53,7 +57,7 @@ MRTK 支持编辑器中的输入模拟。 只需单击 Unity 的播放按钮即�
 
 
 ## <a name="how-to-resize-an-object"></a>如何调整对象的大小？
-ObjectManipulator.cs 支持双手缩放/旋转。 此功能适用于各种输入类型，例如 HoloLens 2 的精确手动输入、HoloLens 1 的凝视 + 手势输入，以及 Windows Mixed Reality 沉浸式头戴显示设备的运动控制器输入。
+ObjectManipulator.cs 支持双手缩放/旋转。 此脚本适用于各种输入类型，例如 HoloLens 2 的精确手动输入、HoloLens 1 的凝视 + 手势输入，以及 Windows Mixed Reality 沉浸式头戴显示设备的运动控制器输入。
 
 - [在 MRTK 文档中详细了解对象处理程序](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
 
@@ -88,7 +92,7 @@ Interactable 提供各种类型的主题，包括着色器主题，该主题可�
 
 - [在 MRTK 文档中详细了解 Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 
-视觉反馈的另一个重要构建基块是 MRTK 标准着色器。 使用 MRTK 标准着色器可以轻松添加视觉反馈效果，例如悬停光线和邻近光线。 由于 MRTK 标准着色器占用的计算资源要比 Unity 标准着色器少得多，因此你可以创建高性能的体验。
+视觉反馈的另一个重要构建基块是 MRTK 标准着色器。 使用 MRTK 标准着色器可以轻松添加视觉反馈效果，例如悬停光线和邻近光线。 由于 MRTK 标准着色器占用的计算资源要比 Unity 标准着色器少，因此你可以创建高性能的体验。
 
 创建新材料，然后选择着色器的“混合现实工具包”>“标准”。 或者，可以选择某个使用 MRTK 标准着色器的现有材料。
 
@@ -107,11 +111,11 @@ Interactable 提供各种类型的主题，包括着色器主题，该主题可�
 <br/><img alt="Audio Source assigned to an object. AudioSource.PlayOneShot configured in the Interactable's OnPress() and OnRelease() events." width="800" src="images/MRTK101/MRTK_Audio.png">
 
 ## <a name="how-to-use-hololens-2-style-button-prefabs"></a>如何使用 HoloLens 2 样式按钮预制件？
-MRTK 提供各种类型的 HoloLens 2 shell (OS) 样式按钮。 它可在按钮表面上提供复杂的视觉反馈，例如邻近光线、压缩框和波纹效果 - 这些反馈可提高用户的置信度。
+MRTK 提供了各种类型的 HoloLens 2 shell (OS) 样式按钮，包括邻近感应光、压缩框和按钮表面的波纹效果等视觉反馈，可增强用户的信心。
 
 <br/><img alt="Interactable button" width="800" src="images/MRTK101/MRTK_Button.gif">
 
-只需将某个 HoloLens 2 样式的可按按钮预制件拖放到场景中即可。 该预制件将使用前面介绍的 Interactable.cs。 可以使用 Interactable 中公开的事件（例如 OnClick()）来触发操作。
+将某个 HoloLens 2 样式的可按按钮预制件拖放到场景中即可。 该预制件将使用前面介绍的 Interactable.cs。 可以使用 Interactable 中公开的事件（例如 OnClick()）来触发操作。
 
 <br/><img alt="HoloLens 2 Button Prefab" width="800" src="images/MRTK101/MRTK_Button.png">
 
@@ -148,7 +152,7 @@ MRTK 提供各种类型的 HoloLens 2 shell (OS) 样式按钮。 它可在按钮
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以进入下一个构建基块： 
+如果遵循我们规划的 Unity 的开发检查点旅程，则你在探索 MRTK 核心构建基块的过程中。 从这里，你可以继续了解下一部分基础知识： 
 
 > [!div class="nextstepaction"]
 > [摄像头](camera-in-unity.md)

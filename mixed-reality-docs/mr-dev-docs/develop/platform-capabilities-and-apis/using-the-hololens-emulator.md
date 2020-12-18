@@ -1,18 +1,18 @@
 ---
 title: 使用 HoloLens 仿真器
 description: 使用 HoloLens 仿真器在未配备物理 HoloLens 的电脑上测试混合现实应用。
-author: pbarnettms
-ms.author: pbarnett
+author: hamalawi
+ms.author: moelhama
 ms.date: 10/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 仿真器
-ms.openlocfilehash: 702fb18d22808cb23fa5b31ac19b50645f86efe6
-ms.sourcegitcommit: 5bf2121490b7b76135f52d41216330023745f54c
+ms.openlocfilehash: e6dc8a7d38d5c7c9575723446350ee087a69dc18
+ms.sourcegitcommit: 0509cf6c57067cffd75a0189106e3369e9ecc5c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92001478"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96855904"
 ---
 # <a name="using-the-hololens-emulator"></a>使用 HoloLens 仿真器
 
@@ -28,7 +28,7 @@ ms.locfileid: "92001478"
 下载 HoloLens 仿真器。
 
 版本：
-* [HoloLens 2 仿真器（Windows Holographic 版本 2004，2020 年 10 月更新）](https://go.microsoft.com/fwlink/?linkid=2145829)。
+* [HoloLens 2 仿真器（Windows Holographic 版本 20H2，2020 年 12 月更新）](https://go.microsoft.com/fwlink/?linkid=2151523)。
 * [HoloLens 仿真器（第 1 代）和全息项目模板](https://go.microsoft.com/fwlink/?linkid=2065980)。
 
 可以在 [HoloLens 仿真器存档](hololens-emulator-archive.md)页上找到 HoloLens 仿真器的发行说明和旧版本。
@@ -53,7 +53,7 @@ HoloLens 仿真器结合使用 Hyper-V 和 RemoteFx（第 1 代仿真器）或 G
    * WDDM 2.5 图形驱动程序（HoloLens 2 仿真器）
    * 仿真器可与不受支持的 GPU 配合工作，但速度会明显变慢
 
-如果你的系统满足上述要求，请**确保系统上已启用“Hyper-V”功能**，方法是在控制面板中选择“程序”->“程序和功能”->“启用或关闭 Windows 功能”，确保已选择“Hyper-V”，使仿真器能够成功安装。
+如果你的系统满足上述要求，请 **确保系统上已启用“Hyper-V”功能**，方法是在控制面板中选择“程序”->“程序和功能”->“启用或关闭 Windows 功能”，确保已选择“Hyper-V”，使仿真器能够成功安装。
 
 ## <a name="deploying-apps-to-the-hololens-emulator"></a>将应用部署到 HoloLens 仿真器
 
@@ -61,7 +61,7 @@ HoloLens 仿真器结合使用 Hyper-V 和 RemoteFx（第 1 代仿真器）或 G
     >[!NOTE]
     >使用 Unity 时，请从 Unity 生成项目，然后像往常一样将生成的解决方案载入 Visual Studio。
 2. 对于 HoloLens 仿真器（第 1 代），请确保将“平台”设置为“x86”。 对于 HoloLens 2 仿真器，请确保将“平台”设置为“x86”或“x64”。 
-3. 选择所需的 **HoloLens 仿真器**版本作为目标调试设备。
+3. 选择所需的 **HoloLens 仿真器** 版本作为目标调试设备。
 4. 转到“调试”>“开始调试”或按 **F5** 启动仿真器，然后部署要调试的应用程序。
 
 仿真器在首次启动时，可能需要花费一分钟或更长的时间来完成引导。 建议在调试会话期间让仿真器保持打开状态，以便将应用程序快速部署到仿真器。
@@ -92,7 +92,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 在主窗口的右侧，可以看到仿真器工具栏。 工具栏包含以下按钮：
 * ![“关闭”图标](images/emulator-close.png) **关闭**：关闭仿真器。
 * ![“最小化”图标](images/emulator-minimize.png) **最小化**：最小化仿真器窗口。
-* ![“模拟”图标](images/emulator-simulation-panel.png) **模拟控制面板**：显示或隐藏[模拟控制面板](#simulation-control-panel)，以便配置和控制[仿真器的输入](#basic-emulator-input)。
+* ![“模拟”图标](images/emulator-simulation-panel.png) **模拟控制面板**：显示或隐藏 [模拟控制面板](#simulation-control-panel)，以便配置和控制 [仿真器的输入](#basic-emulator-input)。
 * ![“适合屏幕大小”图标](images/emulator-fit.png) **适合屏幕大小**：使仿真器适合屏幕大小。
 * ![“缩放”图标](images/emulator-zoom.png) **缩放**：放大和缩小仿真器。
 * ![“帮助”图标](images/emulator-help.png) **帮助**：打开仿真器帮助。
@@ -208,7 +208,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 在主窗口的右侧，可以看到仿真器工具栏。 工具栏包含以下按钮：
 * ![“关闭”图标](images/emulator-close.png) **关闭**：关闭仿真器。
 * ![“最小化”图标](images/emulator-minimize.png) **最小化**：最小化仿真器窗口。
-* ![“人类输入”图标](images/emulator-control.png) **人类输入**：使用鼠标和键盘来模拟[仿真器的人类输入](#basic-emulator-input)。
+* ![“人类输入”图标](images/emulator-control.png) **人类输入**：使用鼠标和键盘来模拟 [仿真器的人类输入](#basic-emulator-input)。
 * ![“键盘和鼠标输入”图标](images/emulator-input.png) **键盘和鼠标输入**：键盘和鼠标输入将作为键盘和鼠标事件直接传递给 HoloLens OS，就如同已连接蓝牙键盘和鼠标一样。
 * ![“适合屏幕大小”图标](images/emulator-fit.png) **适合屏幕大小**：使仿真器适合屏幕大小。
 * ![“缩放”图标](images/emulator-zoom.png) **缩放**：放大和缩小仿真器。

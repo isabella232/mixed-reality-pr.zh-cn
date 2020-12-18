@@ -7,12 +7,12 @@ ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 移植, 升级
-ms.openlocfilehash: 0ba10b8ee1067da4494f147d43f8834010e1250f
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 5460ab55c887c44029e956545cf6a549f55716f7
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609658"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010618"
 ---
 # <a name="upgrading-projects-in-unreal"></a>在 Unreal 中升级项目
 
@@ -50,3 +50,7 @@ ms.locfileid: "96609658"
 | IsTrackingAvailable | ![IsTrackingAvailable 属性的蓝图](images/unreal-porting-img-17.png) |
 | IsButtonClicked、IsButtonDown、IsGrasped、IsSelectPressed | 使用 Unreal 的输入操作系统。 |
 | SetFocusPointForFrame | 已在 4.26 版中删除。  之前用于在远程处理时重新投影，而现在支持深度重新投影。 |
+
+## <a name="426-changes"></a>4.26 更改
+
+重大更改在于，必须从“编辑”>“项目设置”>“项目”>“说明”>“设置”选择“在 VR 中启动”，才能启动 Windows Mixed Reality 插件 。 如果没有该参数，则你不会在设备上看到全息影像。

@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 4319b1171090b8ca7a320e98867bfb3635bab005
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 7f6f501a5e2cde9fdb6aa3ba1aa973a4ab697fd8
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609488"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010539"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6.打包并部署到设备或仿真器
 
@@ -49,6 +49,7 @@ ms.locfileid: "96609488"
 1.  转到“编辑”>“项目设置”。
     * 在“项目 > 描述 > 关于 > 项目名称”下，添加项目名称。
     * 在“项目”>“描述”>“发布者”>“公司可分辨名称”下，添加“CN=YourCompanyName” 。
+    * 在“项目”>“说明”>“设置”下，选择“在 VR 中启动” 。
 
 > [!IMPORTANT]
 > 如果将这些字段中的任一字段留空，那么当你在步骤 3 中尝试生成新证书时将遇到错误。
@@ -56,7 +57,10 @@ ms.locfileid: "96609488"
 > [!IMPORTANT]
 > 发布者的名称必须采用 [LADPv3 可分辨名称格式](https://www.ietf.org/rfc/rfc2253.txt)。 格式不正确的发布者名称会导致在打包时出现“找不到签名密钥。 无法对应用进行数字签名。” 错误。
 
-![项目设置 - 描述](images/unreal-uxt/6-cn.PNG)
+> [!IMPORTANT]
+> 不选择“在 VR 中启动”将导致应用程序尝试在平板中启动
+
+![项目设置 - 描述](images/unreal-uxt/6-cn-new.PNG)
 
 2.  在“平台 > HoloLens”下，启用“为 HoloLens 仿真生成”和/或“为 HoloLens 设备生成”。  
 

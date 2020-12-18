@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 465215efd953c0acb9f2d80a2905ee06963c5f8c
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 71a3edbc00c315ca68ac56985c54faee2492d74d
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609718"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010520"
 ---
 # <a name="1-getting-started"></a>1.入门
 
@@ -33,20 +33,27 @@ ms.locfileid: "96609718"
 * Windows 10 1809 或更高版本
 * Windows 10 SDK 10.0.18362.0 或更高版本
 * [Unreal Engine](https://www.unrealengine.com/en-US/get-now) 4.25 或更高版本
-* [针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 Microsoft HoloLens 2 设备，或仿真器
+* [针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 Microsoft HoloLens 2 设备，或[仿真器](../../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-2-emulator-overview)
 * 具有以下工作负载的 Visual Studio 2019
 
 ### <a name="installing-visual-studio-2019"></a>安装 Visual Studio 2019
 
 首先，确保使用所有必需的 Visual Studio 包进行设置：
 1. 安装最新版本的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-2. 安装以下[工作负载](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-workloads)：
+1. 安装以下[工作负载](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-workloads)：
     * 使用 C++ 的桌面开发
     * .NET 桌面开发
     * 通用 Windows 平台开发
+1. 展开“通用 Windows 平台开发”并选择： 
+    * USB 设备连接性
+    * C++ (v142) 通用 Windows 平台工具
 
-3. 安装以下[组件](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-individual-components)：
+1. 安装以下[组件](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-individual-components)：
     * 编译器、生成工具和运行时 > MSVC v142 - VS 2019 C++ ARM64 生成工具（最新版本）
+
+可使用以下图片确认安装
+
+![VS 安装程序中的重要时钟周期](images/unreal-uxt/1-install-the-tools.png)
 
 就这么简单！ 一切准备就绪，现在可以开始象棋项目了。
 

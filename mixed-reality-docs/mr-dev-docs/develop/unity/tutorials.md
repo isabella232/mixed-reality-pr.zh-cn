@@ -8,22 +8,22 @@ ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 学院, 教程, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, unity, unreal, HoloLens, Azure 空间定位点, Azure 语音服务
-ms.openlocfilehash: 0e3b1749790e3c372570bdd1d8e68fe3fd593dd8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a85792ba082450fb01f3c6f7bb008d3c7b17560b
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677276"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010458"
 ---
-# <a name="tutorials"></a>教程 
+# <a name="tutorials"></a>教程
 
 ![HoloLens 2 用户](images/08_Tutorials.png)
 
-目前，我们所有的教程和示例应用均基于 Unity 或 Unreal。 在我们制作适用于其他引擎和平台的内容的过程中，“目录”中会列出相关的标题。
+目前，我们所有的教程和示例应用均基于 Unity 或 Unreal。 在我们为其他引擎和平台制作内容时，“目录”中的相关标题下会列出这些内容。
 
 ## <a name="hololens-2"></a>HoloLens 2 
 
-HoloLens 2 教程旨在帮助开发人员了解用于开发混合现实应用程序的技术和最佳实践。 Unity 教程基于 [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)，Unreal 教程基于[适用于 Unreal Engine 0.8 的 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)。
+HoloLens 2 教程旨在传授用于开发混合现实应用程序的技术和最佳做法。 Unity 教程基于 [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)，Unreal 教程基于[适用于 Unreal Engine 0.8 的 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)。
 
 * 入门教程
     * Unity - [简介第 1 部分（共 9 部分）](tutorials/mr-learning-base-01.md)

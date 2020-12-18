@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 98030e55736d423d1fb84d2b965f6ed40246d8f4
-ms.sourcegitcommit: 9c88703a832fb8ca8476e808499d06239ea5d2cd
+ms.openlocfilehash: 4d945a6fbc61e56707d1e36e110a1108283b5add
+ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97102918"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
@@ -34,7 +34,7 @@ ms.locfileid: "92011485"
 2. 针对 HoloLens2 执行[开始手势](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture)，或者在 HoloLens（第一代）上执行[开花手势](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom)，以启动主菜单。 
 3. 凝视“设置”磁贴，然后在 HoloLens（第一代）上执行[隔空敲击](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap)手势，或者在 HoloLens 2 上通过[触摸或手部射线](https://docs.microsoft.com/hololens/hololens2-basic-usage)选择该磁贴。 
 4. 选择“更新”菜单项。
-5. 选择“面向开发人员”菜单项。
+5. 选择“面向开发人员”  菜单项。
 6. 启用“开发人员模式”。
 
 > [!IMPORTANT]
@@ -117,6 +117,38 @@ ms.locfileid: "92011485"
 >[!NOTE]
 > 此证书仅在该设备上受信任，如果刷写了设备，用户必须再次执行此过程。
 
+## <a name="sideloading-applications"></a>旁加载应用程序
+
+### <a name="installing-a-certificate"></a>安装证书
+
+1. 在 Windows 设备门户中，导航到“应用管理器”页
+2. 在“部署应用”部分中，选择“安装证书”
+3. 在“选择用于对应用包进行签名的证书文件(.cer)”中，选择“选择文件”，并浏览到与要旁加载的应用包关联的证书
+4. 选择“安装”以开始安装
+
+![在 Windows 设备门户中打开的“应用管理器”页的屏幕截图](images/sideloading-1.png)
+
+### <a name="installing-an-app"></a>安装应用
+
+> [!NOTE]
+> 为了使应用能够通过设备门户成功安装，必须使用证书对其进行签名，此证书必须在尝试安装该应用前安装到设备上。 有关说明，请参阅[上一节](#installing-a-certificate)。
+
+1. 已从[ Visual Studio 中创建应用包](using-visual-studio.md)时，可以从生成的文件中将其远程安装到设备上：
+
+![应用包文件内容的屏幕截图](images/sideloading-2.png)
+
+2. 在 Windows 设备门户中，导航到“应用管理器”页
+3. 在“部署应用”部分中，选择“本地存储” 
+4. 在“选择应用程序包”下，选择“选择文件”，并浏览到要旁加载的应用包
+5. 如果要与应用安装一起安装可选包或框架包，请选中相应的框，然后选择“下一步”：
+
+![突出显示“本地存储”选项卡的 Windows 设备门户中打开的“应用管理器”页的屏幕截图](images/sideloading-3.png)
+
+6. 选择“安装”启动安装
+ 
+![已成功完成安装的 Windows 设备门户中打开的“应用管理器”页的屏幕截图](images/sideloading-4.png) 
+
+安装完成后，在 HoloLens 上返回“所有应用”页，并启动新安装的应用程序！
 
 ## <a name="device-portal-pages"></a>Device Portal 页面
 
@@ -139,7 +171,7 @@ Device Portal 会话从主页开始。 可从主页的左侧导航栏访问其�
 主页将显示以下信息：
 * **设备状态：** 监视设备的运行状况并报告严重错误。
 * **Windows 信息：** 显示 HoloLens 的名称，以及当前安装的 Windows 版本。
-* **首选项**部分包含以下设置：
+* **首选项** 部分包含以下设置：
    * **IPD**：设置瞳孔间距 (IPD)，它是在用户直视前方时两个瞳孔中心之间的距离，以毫米为单位。 该设置将立即生效。 在设置你的设备时，会自动计算该默认值。
    * **设备名称**：为 HoloLens 指定一个名称。 更改此值后，必须重新启动设备才能使该值生效。 单击“保存”后，对话框将询问是要立即重新启动还是稍后重新启动设备。
    * **睡眠设置**：设置当设备已接上电源并使用电池时进入睡眠状态之前要等待的时长。
@@ -175,7 +207,7 @@ Device Portal 会话从主页开始。 可从主页的左侧导航栏访问其�
 若要访问地图管理器，请登录设备门户并选择“混合现实”->“地图管理器”： 
 
 ![Windows 设备门户中的“地图管理器”页](images/using-windows-portal-img-06.png)
-Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页**
+Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 
 #### <a name="exporting-and-importing-maps"></a>导出和导入地图
 
@@ -198,7 +230,7 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页**
   * **PV 相机**：捕获照片/视频相机中的视频流。
   * **麦克风音频**：捕获麦克风阵列中的音频。
   * **应用音频**：捕获当前正在运行的应用中的音频。
-  * **从相机渲染**：从照片/视频相机的角度对齐捕获内容，前提是[正在运行的应用支持此功能](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)（仅限 HoloLens 2）。
+  * **从相机渲染**：从照片/视频相机的角度对齐捕获内容，前提是 [正在运行的应用支持此功能](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)（仅限 HoloLens 2）。
   * **实时预览质量**：选择用于实时预览的屏幕分辨率、帧速率和流处理速率。
 * **音频设置**（仅限 HoloLens 2）：
   * **音频媒介类别**：选择在处理麦克风时使用的类别。 “默认值”将包括某些环境，这些环境中的“通信”会应用背景噪音消除。 
@@ -369,7 +401,7 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页**
 
 将键盘输入从远程计算机发送到 HoloLens。
 
-单击或敲击**虚拟键盘**下的区域可将键击发送到 HoloLens。 在“输入文本”文本框中键入内容，然后单击或敲击“发送”可将键击发送到活动应用。 
+单击或敲击 **虚拟键盘** 下的区域可将键击发送到 HoloLens。 在“输入文本”文本框中键入内容，然后单击或敲击“发送”可将键击发送到活动应用。 
 
 ## <a name="device-portal-rest-apis"></a>设备门户 REST API
 
