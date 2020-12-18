@@ -17,7 +17,5 @@
   href: release-notes-may-2020.md
 - name: 社区资源
   href: ../discover/community.md
-- name: 参与撰写本文档
-  href: contributing.md
 - name: 大规模部署 HoloLens
   href: 'https://docs.microsoft.com/hololens/'
