@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: dd84ba86af0b86b29510c4c317ad0a14fabc296b
-ms.sourcegitcommit: 3762d207d3b5f4a1d932197aae7a4fae4baec960
+ms.openlocfilehash: 0a71072a27befc4295b82e1235cbc75655743056
+ms.sourcegitcommit: 0b406ccbc7ce619e42809ba8dfdc47d83f4917ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/18/2020
-ms.locfileid: "97676196"
+ms.locfileid: "97691316"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>对混合现实开发人员文档进行贡献
 
@@ -48,12 +48,12 @@ ms.locfileid: "97676196"
    ![编辑项目。](images/editpage.png)
 3. 根据 ["Markdown 基础知识"](#markdown-basics)编辑项目内容。
 4. 更新每个项目顶部的元数据：
-   * 标题：查看项目时浏览器选项卡中显示的页面标题。 页面标题用于 SEO 和编制索引，因此，除非必要，否则请不要更改标题，因为这在文档公开) 之前不太重要 (。
-   * 说明：编写文章内容的简短描述，这会提高 SEO 和发现。
-   * 作者：如果你是页面的主要所有者，请在此处添加你的 GitHub 别名。
-   * 女士：如果你是页面的主要所有者，请在此处添加你的 Microsoft 别名 (你不需要 @microsoft.com ，只是别名) 。
-   * "ms"：如果向页面中添加主要内容，则更新日期，但不将其用于修补，如说明、格式、语法或拼写。
-   * 关键字： SEO 中的关键字帮助 (搜索引擎优化) 。 添加特定于您的项目的关键字，并用逗号和空格分隔，但列表中最后一个关键字之后没有标点。 无需添加适用于所有项目的全局关键字，因为在其他位置托管这些项目。 
+   * **标题**：查看项目时浏览器选项卡中显示的页面标题。 页面标题用于 SEO 和编制索引，因此，除非必要，否则请不要更改标题，因为这在文档公开) 之前不太重要 (。
+   * **说明**：编写文章内容的简短描述，这会提高 SEO 和发现。
+   * **作者**：如果你是页面的主要所有者，请在此处添加你的 GitHub 别名。
+   * **女士**：如果你是页面的主要所有者，请在此处添加你的 Microsoft 别名 (你不需要 @microsoft.com ，只是别名) 。
+   * " **ms**"：如果向页面中添加主要内容，则更新日期，但不将其用于修补，如说明、格式、语法或拼写。
+   * **关键字**： SEO 中的关键字帮助 (搜索引擎优化) 。 添加特定于您的项目的关键字，并用逗号和空格分隔，但列表中最后一个关键字之后没有标点。 无需添加适用于所有项目的全局关键字，因为在其他位置托管这些项目。 
 5. 完成文章编辑后，向下滚动并选择 " **建议文件更改**"。
 6. 在下一页上，选择 " **创建拉取请求** " 将自动创建的分支合并到 "master"。
 7. 对于要编辑的下一篇文章，请重复上述步骤。
