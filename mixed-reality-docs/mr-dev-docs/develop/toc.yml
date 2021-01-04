@@ -1,13 +1,11 @@
 - name: 混合现实开发简介
   href: development.md
+- name: Azure 混合现实云服务概述
+  href: mixed-reality-cloud-services.md
+- name: 示例和功能应用
+  href: features-and-samples.md
 - name: 安装工具
   href: install-the-tools.md
-- name: 入门
-  items:
-    - name: Azure 混合现实云服务概述
-      href: mixed-reality-cloud-services.md
-    - name: 示例和功能应用
-      href: features-and-samples.md
 - name: 移植应用
   items:
     - name: 移植概述
@@ -24,19 +22,23 @@
   items:
     - name: Unity 开发概述
       href: unity/unity-development-overview.md
-    - name: 入门
+    - name: 项目配置
       items:
-        - name: MRTK 入门
+        - name: MRTK 简介
           href: unity/mrtk-getting-started.md
-        - name: 配置用于 Windows Mixed Reality 的 Unity 项目
+        - name: 配置项目时不使用 MRTK
           href: unity/configure-unity-project.md
+        - name: 使用混合现实 OpenXR 插件
+          href: unity/openxr-getting-started.md
+        - name: OpenXR 插件支持的功能
+          href: unity/openxr-supported-features.md
     - name: 教程
       items:
         - name: 概述
           href: unity/tutorials.md
         - name: HoloLens 2 教程
           items:
-            - name: 入门教程
+            - name: MRTK 教程
               items:
                 - name: 1. 简介
                   href: unity/tutorials/mr-learning-base-01.md
@@ -312,6 +314,10 @@
           href: unreal/unreal-publishing-to-store.md
         - name: 针对 Unreal 的性能建议
           href: unreal/performance-recommendations-for-unreal.md
+        - name: Unreal 中的材料建议
+          href: unreal/unreal-materials.md
+        - name: 使用 Unreal Insights 进行分析
+          href: unreal/unreal-insights.md
         - name: Unreal 中的材料建议
           href: unreal/unreal-materials.md
         - name: Unreal 中的流式传输
