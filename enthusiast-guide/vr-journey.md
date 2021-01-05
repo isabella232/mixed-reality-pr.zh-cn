@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，
-ms.openlocfilehash: 9426a85611cf53a349ca5bc8f3727ee8a784940e
-ms.sourcegitcommit: a129039d8ed228ed0305aa312006cadf403f0831
+ms.openlocfilehash: 9a82ab12b9cf91bd1fefcf84a2f6b4e62c8df24a
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95417201"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725704"
 ---
 # <a name="start-your-vr-journey"></a>开始你的 VR 旅程
 
@@ -19,11 +19,15 @@ ms.locfileid: "95417201"
 
 ## <a name="setup--usability-checkpoints"></a>安装程序 & 可用性检查点
 
-使用以下检查点来安装、配置和使用沉浸式 VR 设备，使应用程序和游戏生活生动。
+使用以下检查点设置、配置和使用沉浸式 VR 设备，使你的应用程序和游戏成为现实。
 
 ### <a name="1-before-you-buy"></a>1. 购买之前
 
-你的电脑可以处理你购买的 VR 硬件，以便获得最佳的设置和使用体验，这一点很重要。 在某些情况下，可能需要订购额外的 [适配器或硬件](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。本部分将指导你完成与虚拟现实硬件相关的最小电脑要求、兼容性检查和常见问题。
+你的电脑需要处理你购买的 VR 硬件，以获得最佳的设置和使用体验。 在某些情况下，可能需要对额外的 [适配器或硬件](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)进行排序。 本部分将引导你完成以下操作：
+
+* 最小电脑要求
+* 兼容性检查
+* 与虚拟现实硬件相关的常见问题
 
 <br>
 
@@ -48,7 +52,11 @@ ms.locfileid: "95417201"
 
 ### <a name="3-using-windows-mixed-reality"></a>3. 使用 Windows Mixed Reality
 
-可以通过 Windows Mixed Reality 和沉浸式 VR 耳机提供多种功能和服务。 本部分结束时，你将会熟悉如何在虚拟 home 环境中导航，使用控制器和语音作为输入，并集成服务和应用程序（例如 SteamVR 和 WebVR）。
+通过 Windows Mixed Reality 和沉浸式 VR 耳机提供不同的功能和服务。 本部分结束时，你将非常熟悉：
+
+* 导航虚拟 home 环境
+* 使用控制器和语音作为输入
+* 集成 SteamVR 和 WebVR 之类的服务和应用程序。
 
 <br>
 
@@ -57,7 +65,7 @@ ms.locfileid: "95417201"
 | [了解 Mixed Reality](learn-mixed-reality.md) | 了解如何使用注视、语音、控制器和键盘/鼠标输入 |
 | [导航 Windows Mixed Reality 主页](your-mixed-reality-home.md) | 探索 Windows Mixed Reality 主页的虚拟环境  |
 | [使用控制器](controllers-in-wmr.md) | 设置、了解和使用运动控制器 |
-| [使用语音输入](using-speech-in-wmr.md) | 熟悉可与3D 对象、应用栏、开始菜单和 Cortana 交互的各种语音命令 |
+| [使用语音输入](using-speech-in-wmr.md) | 熟悉可与3D 对象、应用栏、"开始" 菜单和 Cortana 交互的不同语音命令 |
 
 > [!NOTE]
 > 如果使用以上任何功能时遇到问题，请参阅 **[使用 Windows Mixed REALITY 常见问题解答](using-wmr-faq.md)**。
@@ -81,9 +89,9 @@ ms.locfileid: "95417201"
  
 * [常见问题解答](troubleshooting-windows-mixed-reality.md) 
 
-如果你找不到要查找的内容，则在 **故障排除 faq** 部分会提供特定于主题的常见问题文档的详尽列表，其中涵盖了从安装和错误代码到性能和耳机显示的所有内容。 如果要了解有关特定功能在 VR 中的工作方式的详细信息，请查看有关 [运动控制器](controllers-in-wmr.md) 和 [内部跟踪](tracking-system.md) 的工作原理的文章。
+如果你找不到要查找的内容，则我们会在 **故障排除常见问题** 部分中提供特定于主题的常见问题文档的详尽列表，其中涵盖了从安装和错误代码到性能和耳机显示的所有内容。 可以在文章中了解有关如何使用 [运动控制器](controllers-in-wmr.md) 和 [内部跟踪](tracking-system.md) 的工作原理的详细信息。
 
-我们始终在 lookout 遇到新问题和 bug，因此如果你遇到任何未记录的问题，请在此处向我们发送 [反馈](filing-feedback.md)。
+我们始终在 lookout 遇到新问题和 bug，因此如果你遇到任何未记录的问题，请向我们发送 [反馈](filing-feedback.md)。
 
 > [!NOTE]
 > [此处](mixed-reality-software.md)提供了完整的 Windows Mixed Reality 发行历史记录。

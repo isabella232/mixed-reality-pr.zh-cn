@@ -6,19 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，键盘，MRTK，混合现实工具包
-ms.openlocfilehash: 52555dec04b42b7865e8d358d57cbc9112a7a326
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: b258ad7934cae76c581723d681cce32c68458b72
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703143"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847280"
 ---
 # <a name="keyboard"></a>键盘
 
 ![键盘](images/UX_Hero_Keyboard.jpg)
 
-混合现实应用程序可以随时调用系统键盘。 请注意，系统键盘的行为取决于目标平台的功能，例如，HoloLens 2 上的键盘支持直接交互，而 HoloLens 上的键盘 (第一代) 支持 "注视" 和 "空中点击" 笔势输入。
-
+混合现实应用程序可以随时调用系统键盘，这将根据目标平台的功能进行。 例如，HoloLens 2 上的键盘支持直接交互，而 HoloLens (第一代) 键盘支持注视和分流。
 
 <br>
 
@@ -34,7 +33,7 @@ ms.locfileid: "94703143"
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，下一个任务就是将应用程序部署到设备或仿真程序。 
+如果遵循我们所说的 Unity 开发旅程，下一个任务就是将应用程序部署到设备或仿真程序。 
 
 > [!div class="nextstepaction"]
 > [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../develop/platform-capabilities-and-apis/using-visual-studio.md)

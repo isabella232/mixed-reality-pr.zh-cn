@@ -1,11 +1,23 @@
 ---
-ms.openlocfilehash: 9fdcbdfe115fa859081c28b768f9c213ac241d13
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: c5a13798ca6a73f1a6410abe310c2166b67f4626
+ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002648"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97717931"
 ---
+# <a name="426"></a>[4.26](#tab/426)
+
+该层次结构由 `EHandKeypoint` enum 描述：
+
+![Keypoint 蓝图选项的图像](../images/hand-keypoint-bp.png)
+
+您可以使用 **获取运动控制器数据** 函数从用户的手获取所有这些数据。 该函数返回 **XRMotionControllerData** 结构。 下面是一个示例蓝图脚本，它分析 XRMotionControllerData 结构以获取现有的接点位置，并在每个接合位置绘制一个调试坐标系。
+
+![通过信道函数连接到行跟踪的 "获取注视" 数据函数蓝图](../images/unreal-hand-tracking-img-03.png)
+
+务必要检查该结构是否有效以及它是否为手形。 否则，在访问位置、旋转和半径数组时，可能会获得未定义的行为。
+
 # <a name="425"></a>[4.25](#tab/425)
 
 `EWMRHandKeypoint`枚举描述手形的骨骼层次结构。 可以在蓝图中找到每个 keypoint：
@@ -84,15 +96,3 @@ static bool UWindowsMixedRealityHandTrackingFunctionLibrary::GetHandJointTransfo
 * * * 半径-骨骼基的半径。
 * * * 返回值-如果该骨骼跟踪此帧，则为 true; 如果未跟踪该骨骼，则为 false。
 
-
-# <a name="426"></a>[4.26](#tab/426)
-
-该层次结构由 `EHandKeypoint` enum 描述：
-
-![Keypoint 蓝图选项的图像](../images/hand-keypoint-bp.png)
-
-您可以使用 **获取运动控制器数据** 函数从用户的手获取所有这些数据。 该函数返回 **XRMotionControllerData** 结构。 下面是一个示例蓝图脚本，它分析 XRMotionControllerData 结构以获取现有的接点位置，并在每个接合位置绘制一个调试坐标系。
-
-![通过信道函数连接到行跟踪的 "获取注视" 数据函数蓝图](../images/unreal-hand-tracking-img-03.png)
-
-务必要检查该结构是否有效以及它是否为手形。 否则，在访问位置、旋转和半径数组时，可能会获得未定义的行为。

@@ -1,11 +1,19 @@
 ---
-ms.openlocfilehash: 23bba22801f61f6b4814991c8b3bde68d2c5f6b7
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: 18ccbf3e28eaa2f61157bd9585d633c987e9af48
+ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002653"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97717404"
 ---
+# <a name="426"></a>[4.26](#tab/426)
+
+若要获取手写片的数据，应使用上一节中的 Get 运动控制器数据函数。 返回的结构包含两个参数，您可以使用这些参数创建一个手型， **瞄准位置** 和 **aim 旋转**。 这些参数构成弯头线。 您应该获取它们并查找指向的全息影像。
+
+下面是一个示例，该示例确定手 ray 是否击中小组件并设置自定义命中结果：
+
+![获取运动控制器数据函数的蓝图](../images/unreal-hand-tracking-img-04.png) 
+
 # <a name="425"></a>[4.25](#tab/425)
 
 若要在蓝图中使用现货，请在 **Windows Mixed REALITY HMD** 下搜索任何操作：
@@ -138,10 +146,3 @@ C++：
 ```cpp
 static EHMDTrackingStatus UWindowsMixedRealityFunctionLibrary::GetControllerTrackingStatus(EControllerHand hand);
 ```
-# <a name="426"></a>[4.26](#tab/426)
-
-若要获取手写片的数据，应使用上一节中的 Get 运动控制器数据函数。 返回的结构包含两个参数，您可以使用这些参数创建一个手型， **瞄准位置** 和 **aim 旋转**。 这些参数构成弯头线。 您应该获取它们并查找指向的全息影像。
-
-下面是一个示例，该示例确定手 ray 是否击中小组件并设置自定义命中结果：
-
-![获取运动控制器数据函数的蓝图](../images/unreal-hand-tracking-img-04.png) 

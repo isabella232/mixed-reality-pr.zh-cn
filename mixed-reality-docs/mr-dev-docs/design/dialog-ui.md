@@ -1,22 +1,23 @@
 ---
 title: 对话框
+description: 了解对话覆盖，以及如何在混合现实应用程序中使用它们。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: 混合现实，HoloLens，UI 控制，交互，UI，ux，UX 设计，空间 UI，空间交互，三维 UI，三维 UX，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 354581b5f0c2b63e5fdb7077c0d8cdba4c96c3d3
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 752c4cc03c90e498664c61fa3c53b303a2a83a2f
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702597"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847449"
 ---
 # <a name="dialog"></a>对话框
 
-![对话框](images/MRTK_UX_Dialog.jpg)
+![HoloLens 上显示 "是" 和 "否" 按钮的对话框覆盖屏幕截图](images/MRTK_UX_Dialog.jpg)
 
-对话框控件是提供上下文应用信息的 UI 覆盖。 它们通常会请求用户进行某种类型的操作。 使用对话框通知用户重要信息或在可以完成某个操作之前请求确认或其他信息。
+对话框控件是提供上下文应用信息的 UI 覆盖，通常请求用户操作。 在完成操作之前，请使用对话向用户授予重要信息并请求确认或附加信息。
 
 <br>
 
@@ -29,10 +30,10 @@ MRTK 提供了三种大小的对话框控件，其中包含一个或两个按钮
 - DialogMedium_192x128： prefab：192x128mm
 - DialogLarge_192x192： prefab：192x192mm
 
-![对话框](images/MRTK_UX_Dialog_Types.jpg)
+![在 HoloLens 上运行的不同大小对话框覆盖的屏幕截图](images/MRTK_UX_Dialog_Types.jpg)
 
 
-* 有关更多详细信息，请参阅 [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html) 。
+* 有关详细信息，请参阅 [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html)。
 
 <br>
 

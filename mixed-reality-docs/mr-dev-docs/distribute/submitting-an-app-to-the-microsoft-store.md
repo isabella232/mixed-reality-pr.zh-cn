@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store，HoloLens，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 1d37337279e46e5f0f9d5cea82813af8de9d0f76
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: 92de6072300ed94873cc68dfa78531da4685d274
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578896"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757835"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>将应用提交到 Microsoft Store
 
@@ -41,13 +41,13 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 | 所需资产 | 建议的缩放 | 图像格式 | 资产显示在哪个位置？ | 
 |----------|----------|----------|------------------|
-| 方块字71x71 徽标 | 任意 |  PNG | 不可用 | 
+| 方块字71x71 徽标 | 任意 |  PNG | 空值 | 
 | 方块字150x150 徽标 | 150x150 (100% 规模) 或 225x225 (150% 规模)  | PNG | 如果未提供310x310，则启动 pin 和所有应用 () ，存储搜索建议，商店列表页，商店浏览，存储搜索 | 
-|  宽310x150 徽标 |  任意  |  PNG  |  不可用 | 
+|  宽310x150 徽标 |  任意  |  PNG  |  空值 | 
 |  应用商店徽标 |  75x75 (150% 规模)   |  PNG  |  合作伙伴中心，报表应用，编写评审，我的媒体库 | 
 |  初始屏幕 |  930x450 (150% 规模)   |  PNG  |  2D 应用启动器 (盖板)  | 
 
-如果正在开发 HoloLens，还可以利用其他建议资产：
+如果正在开发 HoloLens，还可以利用其他建议的资产：
 
 | 推荐的资产 | 建议的缩放 | 资产显示在哪个位置？ | 
 |----------|----------|----------|
@@ -70,7 +70,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ### <a name="specifying-target-device-families"></a>指定目标设备系列
 
-适用于 [hololens](../hololens-hardware-details.md)和 [沉浸式耳机](../discover/immersive-headset-hardware-details.md)) 的 Windows Mixed Reality 应用程序 (是通用 Windows 平台的一部分，因此具有 **Windows 通用**[目标设备系列](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx)的任何应用包都可以通过沉浸式耳机在 HoloLens 或 windows 10 电脑上运行。 如果未在应用程序清单中指定目标设备系列，可能会无意中打开应用程序，使其不会出现意外的 Windows 10 设备。 按照以下步骤指定所需的 Windows 10 设备系列，然后在 ["合作伙伴 Microsoft Store 中心" 中上传应用程序包时，请仔细检查是否设置了正确的设备系列。](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
+适用于 [hololens](../hololens-hardware-details.md)和 [沉浸式耳机](../discover/immersive-headset-hardware-details.md)) 的 Windows Mixed Reality 应用程序 (是通用 Windows 平台的一部分，因此具有 **Windows 通用**[目标设备系列](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx)的任何应用包都可以通过沉浸式耳机在 HoloLens 或 windows 10 电脑上运行。 如果未在应用程序清单中指定目标设备系列，可能会无意中打开应用程序，使其不会出现意外的 Windows 10 设备。 按照以下步骤指定所需的 Windows 10 设备系列，然后在 [将应用包上传到 Microsoft Store 提交时，请仔细检查是否设置了正确的设备系列。](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
 
 * 若要在 Visual Studio 中设置此字段，请右键单击 **appxmanifest.xml** 并选择 " **查看代码**"，然后找到 " **y 名称** " 字段。 默认情况下，它应类似于以下条目：
 
@@ -172,7 +172,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 如果要提交基于 Unity 项目的混合现实应用，请先参阅此 [视频](https://channel9.msdn.com/Blogs/One-Dev-Minute/How-to-publish-your-Unity-game-as-a-UWP-app) 。
 
-通常，提交在 HoloLens 和/或沉浸式耳机上运行的 Windows Mixed Reality 应用就像将任何 UWP 应用提交到 Microsoft Store。 [通过保留应用名称创建应用](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)后，请遵循[UWP 提交清单](https://docs.microsoft.com/windows/uwp/publish/app-submissions)。
+通常，提交在 HoloLens 或沉浸式耳机上运行的 Windows Mixed Reality 应用就像将任何 UWP 应用提交到 Microsoft Store。 [通过保留应用名称创建应用](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)后，请遵循[UWP 提交清单](https://docs.microsoft.com/windows/uwp/publish/app-submissions)。
 
 你要做的第一项工作就是为混合现实体验 [选择一个类别和子](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) 类别。 **请务必为应用选择最准确的类别**。 类别可帮助将应用程序商品置于正确的存储类别中，并确保它使用相关搜索查询显示。 将 **您的 VR 标题列为游戏不会导致您的应用程序的曝光更好，** 可能会阻止其显示在更具可容纳性和更少的类别中。
 
@@ -192,7 +192,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 首先，需要确定应用为其提供混合现实体验的设备类型。 标识设备类型可确保应用包含在应用商店中的 Windows Mixed Reality 集合中。
 
 "这一体验是针对 Windows Mixed Reality 设计的："
-* 如果你的应用程序在沉浸式耳机连接到用户的 PC 时提供了 VR 体验，请选中 " **电脑** " 框。 建议选中此框，无论你的应用程序设置为在沉浸式耳机上以独占方式运行，还是在连接了耳机时提供混合现实模式和/或附赠内容。
+* 如果你的应用程序在沉浸式耳机连接到用户的 PC 时提供了 VR 体验，请选中 " **电脑** " 框。 建议选中此框，无论你的应用程序设置为在沉浸式耳机上以独占方式运行，还是在连接耳机时提供混合现实模式或附赠内容。
 * 仅当你的应用程序在 HoloLens 上运行时提供了全息体验时，才检查 **hololens** 框。
 * 如果你的应用在这两个设备类型上都提供混合现实体验，请选中 **这两个** 框。
 
@@ -211,7 +211,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 **输入硬件：**
 
-如果应用支持 [语音输入](../design/voice-input.md)) 、 **[Xbox 控制器或游戏板](../discover/hardware-accessories.md#bluetooth-gamepads)** 和/或 **[Windows Mixed Reality 运动控制器](../design/motion-controllers.md)** 的 **麦克风**，请使用复选框来告知潜在客户。 此信息将显示在应用商店中的应用的 "产品详细信息" 页上，可帮助你的应用包含在适当的应用/游戏集合中。 例如，对于支持运动控制器的所有游戏，都可能存在一个集合。
+如果应用支持 [语音输入](../design/voice-input.md)) 、 **[Xbox 控制器或游戏板](../discover/hardware-accessories.md#bluetooth-gamepads)** 或 **[Windows Mixed Reality 运动控制器](../design/motion-controllers.md)** 的 **麦克风**，请使用复选框来告知潜在客户。 此信息将显示在应用商店中的应用的 "产品详细信息" 页上，可帮助你的应用包含在适当的应用/游戏集合中。 例如，对于支持运动控制器的所有游戏，都可能存在一个集合。
 
 为输入类型选择 "最低硬件" 或 "推荐的硬件" 复选框。 
 

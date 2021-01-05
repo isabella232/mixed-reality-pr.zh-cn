@@ -3,41 +3,41 @@ title: 跟踪常见问题解答
 description: 跟踪 Windows Mixed Reality 故障排除，这超出了标准使用者支持文档的范围。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，跟踪
-ms.openlocfilehash: 7a7e6add79af5917749ba241347d6cf719f6ed90
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 2634b95cf876a5b540710f80d3dd7f9d48b3bad9
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132091"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725828"
 ---
 # <a name="tracking-faqs"></a>跟踪常见问题解答
 
 ## <a name="my-headset-has-stopped-tracking"></a>我的耳机已停止跟踪
 
-请确保指示灯亮起，并且没有任何内容阻碍耳机前面的内部跟踪相机。 如果跟踪丢失，可能需要几秒钟才能恢复。 如果它没有恢复，请重新启动 Windows Mixed Reality 门户。
+请确保指示灯亮起，并且没有任何内容阻碍耳机前面的内部跟踪相机。 如果跟踪丢失，可能需要几秒钟才能恢复。 重新启动 Windows Mixed Reality 门户将不会重新启动。
 
 ## <a name="i-can-look-around-but-i-cant-translate-im-stuck-in-3dof"></a>我可以找出，但无法转换 (我在3DOF 中停滞) 
 
-这意味着跟踪系统无法生成姿势，或应用程序已停止使用新的姿势数据来呈现。 检查下列项目：
+这意味着跟踪系统无法生成姿势，或应用程序已停止使用新的姿势数据来呈现。 若要解决这一问题，请执行以下操作：
 
 * 请确保空间充足。
 * 请确保会议室有足够的详细信息可供跟踪。
 * 拔出设备，关闭 Windows Mixed Reality，并再次插入设备。
 * 如果消息仍然存在，请联系 [客户支持部门](https://support.microsoft.com/)
 
-## <a name="the-view-in-the-hmd-is-completely-frozen"></a>HMD 中的视图被完全冻结
+## <a name="the-view-in-the-hmd-is-frozen"></a>HMD 中的视图已冻结
 
 这通常意味着应用程序或系统级组件发生了故障。 尝试执行以下操作：
 
 1. 按 "home" 按钮退出应用程序。
-2. 拔出设备，关闭 MRP 并重新插回设备。
+2. 拔出设备，关闭 MRP，并重新插入设备。
 3. 重启电脑。
 
-## <a name="the-world-briefly-froze-and-perhaps-tilted-or-flipped-upside-down-before-returning-to-normal"></a>世界上的冻结，可能在返回到普通
+## <a name="the-world-briefly-froze-and-tilted-or-flipped-upside-down-before-returning-to-normal"></a>在返回到正常状态之前，世界短暂冻结、倾斜或翻转
 
-这可能是由于应用程序或系统级别组件出现严重错误，或者暂时缺乏内存或 CPU 资源。 若要检查：
+这可能是由于应用程序或系统级别组件遇到致命错误或暂时缺少内存或 CPU 资源而导致的。 若要检查：
 
-1. 打开任务管理器，确保至少20% 的 CPU 处于空闲状态，400MB 的内存可用，磁盘 IO 应该低于80%。
+1. 打开任务管理器，确保至少20% 的 CPU 空闲，400 MB 可用内存，磁盘 IO 应该低于80%。
 2. 请参阅 **事件查看器 > Windows 日志 > 应用程序** ，以查看冻结时间周围的任何错误。 查找所有引用 HoloLens 传感器、混合现实或在此时间段内运行的应用程序的内容。 这些日志可能解释导致失败的原因。
 3. 如果问题仍然存在，请重启电脑。
 

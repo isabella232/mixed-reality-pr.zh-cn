@@ -6,18 +6,18 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: HoloLens，混合现实，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售情况
-ms.openlocfilehash: b4b82557ba274852ebb3f97058017fa2e5db1c02
-ms.sourcegitcommit: 9e9d58de4513655c7daa71ff4b5b2c2b115ab959
+ms.openlocfilehash: 632bb9c0c5bdb93041f71a4382802b02f6817f0e
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97034578"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757625"
 ---
 # <a name="distributing-your-apps"></a>分发应用程序
 
 ![WMR 主页中的 Floaty 鸟3D 应用 lancher](images/distribute-hero-image.png)
 
-将你的应用程序交给你的用户或在世界中，这是一项开发工作的最重要的 painstaking。 我们简化了下面列出的一组资源的过程，所有这些资源都依赖于最适合你或你的团队的分发和部署方案。
+将你的应用程序交给你的用户或在世界中，这是一项开发工作的最重要的 painstaking。 我们已将该过程简化为一组资源，这些资源依赖于最适合你或你的团队的分发和部署方案。
 
 [!INCLUDE[](includes/before-submission.md)]
 
@@ -81,7 +81,7 @@ ms.locfileid: "97034578"
     <td>✔️</td>
 </tr>
 <tr>
-    <td><a href="#additional-scenarios"><strong>自定义 Win32 部署</strong></a> (不适用于 HoloLens 设备-请参阅下面的) </td>
+    <td><a href="#other-scenarios"><strong>自定义 Win32 部署</strong></a> (不适用于 HoloLens 设备-请参阅下面的) </td>
     <td>✔️</td>
     <td>✔️</td>
     <td>❌</td>
@@ -91,9 +91,9 @@ ms.locfileid: "97034578"
 > [!IMPORTANT]
 > 应用安装程序当前不可用于托管设备或 HoloLens (第一代) 设备。
 
-## <a name="additional-scenarios"></a>其他方案
+## <a name="other-scenarios"></a>其他方案
 
-* 对于 Win32 应用程序部署，包括流和游戏通过，您可以生成一个 Win32。EXE 文件，使用 Unity 中的 PC 独立生成目标并将应用程序正常提交到所选平台。 
+* 您可以生成一个 Win32。用于 Win32 应用程序部署的基于 Unity 的 PC 独立生成目标的 EXE 文件，包括流和游戏通过。 获得。EXE，你可以将应用程序正常提交到所选平台。 
 
 * 如果你需要在离线时安装 HoloLens 2 应用程序，请参阅 [脱机安全 HoloLens 2](https://docs.microsoft.com/hololens/hololens-common-scenarios-offline-secure) 说明或通过预配包安装应用，而无需启用开发人员模式。
 

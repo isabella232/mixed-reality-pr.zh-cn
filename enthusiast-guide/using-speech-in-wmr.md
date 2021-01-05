@@ -8,16 +8,16 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: b65be6082967b49ee9d3c8b97cb0a18f9149a3ca
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 6a32b96fd932e3b7d47e29749fb47c70b64e32c3
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93131951"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725768"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中使用语音
 
-使用你的语音更快地绕过 Windows Mixed Reality，拍摄快速照片、打开应用，甚至无需控制器即可。 为了便于键入，请在混合现实键盘上尝试使用听写模式。 
+你可以使用你的语音更快地绕过 Windows Mixed Reality。 拍摄快速照片、打开应用，甚至在没有控制器的情况下都是 teleporting 的。 若要快速键入，请在混合现实键盘上尝试使用听写模式。 
 
 语音出现问题了吗？ [获取帮助](using-wmr-faq.md#speech-commands-arent-working)
 
@@ -25,18 +25,18 @@ ms.locfileid: "93131951"
 
 > [!NOTE]
 > * 打开语音时，Windows Mixed Reality 始终处于侦听状态。 当你连接到 Internet 时，我们会将你说的一切发送到云，以便 Microsoft speech services 可以识别更多命令。
-> * 并非所有语言都支持语音命令。 了解更多
+> * 并非所有语言都支持语音命令。 了解详细信息
 > * Windows Mixed Reality 不支持蓝牙耳机和扬声器。
 
 ## <a name="see-it-say-it"></a>看到它，说出来
 
-在 Windows Mixed Reality 主页中，如果看到一个词，通常可以将其用作语音命令。 例如，只需说一个按钮的名称即可。 如果看不到名称，请将运动控制器指向按钮 (或者，如果使用的是 Xbox 游戏板，请将您的 "注视") 上，以找出所说的内容。 
+在 Windows Mixed Reality 主页中，如果看到一个词，通常可以将其用作语音命令。 例如，只需说一个按钮的名称即可。 如果看不到名称，请将运动控制器指向按钮，以找出所说的内容。 对于 Xbox gamepads，请将其停留在按钮上。
 
 ## <a name="general-speech-commands"></a>一般语音命令
 
-在整个 Windows Mixed Reality 中使用这些方法，以加快速度。 某些命令使用注视光标，并显示 "select"。
+在整个 Windows Mixed Reality 中使用以下语音命令，以加快速度。 某些命令使用注视光标，并显示 "select"。
 
-| 任务 | 说出的内容 |
+| 要执行此操作 | 说出的内容 |
 | --- | --- |
 | Select | 说 "选择" 以显示注视光标。 然后，将光标放在要选择的内容上，并再次说 "选择"。 |
 | 打开“开始”菜单 | 转到“开始”菜单 |
@@ -54,7 +54,7 @@ ms.locfileid: "93131951"
 
 注视3D 对象、全息图或应用窗口以使用以下命令：
 
-| 任务 | 说出的内容 |
+| 要执行此操作 | 说出的内容 |
 | --- | --- |
 | 使其变大 | 更 |
 | 使其变小 | 超过 |
@@ -66,7 +66,7 @@ ms.locfileid: "93131951"
 
 在应用程序窗口或3D 对象上注视以下命令：
 
-| 任务 | 说出的内容 |
+| 要执行此操作 | 说出的内容 |
 | --- | --- |
 | 关闭应用或三维对象 | 关闭 |
 | 调整大小或移动)  ( | Adjust |
@@ -81,7 +81,7 @@ ms.locfileid: "93131951"
 
 请在 "开始" 菜单中，使用以下命令：
 
-| 任务 | 说出的内容 |
+| 要执行此操作 | 说出的内容 |
 | --- | --- |
 | 中转到 "所有应用" 列表 | 所有应用 |
 | 开始或所有应用时向上或向下移动 | 向上/向下翻页 |
@@ -98,7 +98,7 @@ ms.locfileid: "93131951"
 
 说 "你好 Cortana"，然后使用以下命令之一：
 
-| 任务 | 说出的内容 |
+| 要执行此操作 | 说出的内容 |
 | --- | --- |
 | 了解你对 Cortana 的看法 | 我可以说什么？ |
 | 增大/减小音量 | 打开或关闭音量 |
@@ -127,17 +127,17 @@ ms.locfileid: "93131951"
 
 ### <a name="keyboard-dictation-commands"></a>键盘听写命令
 
-| 任务 | 说出的内容 |
+| 要执行此操作 | 说出的内容 |
 | --- | --- |
 | 关闭键盘 | 关闭 |
 | 开始听写 | 开始口述 |
 | 停止听写 | 停止听写 |
-| 删除刚刚口述的内容 | 删除这个 |
+| 删除你决定的内容 | 删除这个 |
 | 选择听写框中的所有内容 | 全选 |
 
 ### <a name="punctuation"></a>标点
 
-你需要指出要使用的标点的名称。 例如，你可能会说 "你好 **逗号** ，你是什么？ **"。**
+你需要指出要使用的标点的名称。 例如，你可能会说 "你好 **逗号**，你是什么？ **"。**
 
 下面是可以使用的标点关键字：
 
@@ -150,7 +150,7 @@ ms.locfileid: "93131951"
 
 有时会对诸如电子邮件地址之类的东西进行拼写检查。 例如，若要口述 example@outlook.com ，你应说 "E X A M P L e at outlook .com"。
 
-若要停止口述，请选择 " **完成** "。
+若要停止口述，请选择 " **完成**"。
 
 ## <a name="see-also"></a>另请参阅
 

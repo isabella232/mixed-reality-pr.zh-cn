@@ -8,23 +8,23 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
 appliesto:
 - Windows 10
-ms.openlocfilehash: df91b6d131a8c2ce0faeecc659842418ef03c7c1
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 6bcd6db30bf3a8a6e69d45c10be523d45ee4f82a
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132081"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725408"
 ---
 # <a name="headset-display-faqs"></a>耳机显示 Faq
 
 ## <a name="my-headset-displays-are-black"></a>我的耳机显示为黑色
 
 * 检查您的 PC 性能和稳定性：
-    * 使用任务管理器查看是否有任何进程支持您的 PC 的 CPU、GPU 和/或磁盘驱动器。
-    * 检查 **事件查看器 > Windows 日志** 中的 "应用程序" 和 "系统" 日志，以查看是否有经常崩溃并生成 WINDOWS 错误报告 (WER) 报告的应用。
+    * 使用任务管理器查看是否有任何进程支持您的 PC 的 CPU、GPU 或磁盘驱动器。
+    * 查看 **事件查看器 > Windows 日志** 中的 "应用程序" 和 "系统" 日志，以查看应用程序是否崩溃，并 WINDOWS 错误报告 (WER) 报表生成。
     * 检查 Windows 更新，确保你的 Windows 版本是最新版本。 可能需要多次选择 "检查更新"。
 * 检查应用和游戏稳定性：
-    * 确保你的计算机满足最低系统要求，以运行任何不能正常运行的应用程序或游戏。
+    * 确保你的电脑满足任何未正常运行的应用程序或游戏的最低系统要求。
     * 确保你的 GPU 驱动程序版本是最新版本，并检查新驱动程序是否存在任何新的性能和兼容性问题和回归。
     * 如果你使用的是 SteamVR 应用和游戏，请确保 SteamVR 和 SteamVR 组件的 Windows Mixed Reality 是最新的。
 * 检查 HDMI 适配器的兼容性：
@@ -34,11 +34,11 @@ ms.locfileid: "93132081"
     * 如果正在使用，请尝试删除扩展电缆。
 * 检查图形卡和驱动程序兼容性：
     * 使用 PC 监视器尝试您的 PC 的 HDMI 端口。 某些 Pc 可能有多个 HDMI 端口，而且并非所有计算机都处于活动状态。
-    * 如果你的电脑同时 (iGPU) 和离散图形处理单位 (dGPU) ，则请确保已将其插入 dGPU 的 HDMI 端口。
+    * 如果你的电脑具有集成的图形处理单元 (iGPU) 和离散图形处理单元 (dGPU) ，请确保已插入 dGPU 的 HDMI 端口。
     * 仔细检查 GPU 驱动程序版本。 请确保它是最新的，还应注意任何新的性能和兼容性问题以及新驱动程序的回归。
     * 如果在笔记本电脑上使用混合现实，并且已从图形卡制造商的网站安装了更新的图形驱动程序，请尝试降级到电脑制造商网站上提供的最新图形卡驱动程序，或 Windows 更新上。
-    * 如果有多台电脑监视器连接到您的 PC，请尝试暂时断开除一台 PC 监视器以外的所有连接。
-    * 如果已为电脑监视器设置自定义刷新速率，请尝试暂时还原为标准刷新率，如60Hz。
+    * 如果你有多台电脑监视器连接到电脑，请尝试暂时断开连接，而不是一台 PC 监视器。
+    * 如果已为电脑监视器设置自定义刷新速率，请尝试暂时还原为标准刷新率，如 60 Hz。
     * 如果最近更改了图形卡而不重新安装 Windows，请检查耳机式监视器是否仍然安装了正确的驱动程序。 接通耳机后，确认 "Mixed Reality 耳机" 列在设备管理器的 "监视器" 节点下。
     * 如果你的电脑具有 Nvidia 图形卡，请确保已禁用 Nvidia 的3D 远景软件。
     * 对于某些显卡 (特别) 的卡，HDMI 端口可能不支持 HDMI 2.0，或可能不与 Windows Mixed Reality 完全兼容。 尝试使用 [DisplayPort 1.2 到 HDMI 2.0 适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)的图形卡的 DisplayPort。
@@ -47,12 +47,12 @@ ms.locfileid: "93132081"
     * 如果使用的是 Surface Book 2，请确保使用的是从 [USB 到 HDMI 适配器的接口](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。
 * 检查混合现实耳机硬件问题：
     * 若要针对耳机确认或排除硬件问题，请将混合现实耳机连接到另一台 PC。
-    * 首先检查计算机兼容性和安装问题，因为症状非常类似。
+    * 首先检查计算机兼容性和安装问题，因为症状类似。
 * 请确保已将 USB 电缆插入 USB 3.0 或更快的端口。 USB 3.0 端口具有 SS () 旁边的超级速度，并且通常彩色为蓝色。
 
 ## <a name="my-headset-display-occasionally-turns-black-after-some-use"></a>某些使用后，耳机显示偶尔变为黑色
 
-* 尝试禁用计算机上的所有 USB 挂起或节能功能。 例如，在 " **设置" 中 > 系统 > Power & 睡眠 > [USB 选择性挂起](https://docs.microsoft.com/windows-hardware/drivers/usbcon/usb-selective-suspend)** 、设备管理器中的 "允许计算机关闭此设备以节省电源" 设置以及 PC 固件中的任何 USB 节能设置。
+* 尝试在电脑上禁用任何 USB 挂起或节能功能。 例如，在 " **设置" 中 > 系统 > Power & 睡眠 > [USB 选择性挂起](https://docs.microsoft.com/windows-hardware/drivers/usbcon/usb-selective-suspend)**、设备管理器中的 "允许计算机关闭此设备以节省电源" 设置以及 PC 固件中的任何 USB 节能设置。
 * 暂时断开连接到电脑的任何其他 USB 设备和外围设备。
 * 检查你的 GPU 驱动程序版本是否为最新版本，并检查新驱动程序是否存在任何新的性能和兼容性问题和回归。
 
@@ -63,22 +63,22 @@ ms.locfileid: "93132081"
 * 请确保图形驱动程序是最新的。
 * 尝试将混合现实耳机置于另一台电脑上。
 
-## <a name="my-headset-displays-turn-blue-and-then-mixed-reality-portal-re-initializes"></a>我的耳机显示为蓝色，然后混合现实门户重新初始化
+## <a name="my-headset-displays-turn-blue-and-then-mixed-reality-portal-reinitializes"></a>我的耳机显示为蓝色，然后混合现实门户重新初始化
 
 这通常表示你的电脑上偶尔出现 USB 控制器可靠性问题：
 
 * 请尝试其他 USB 端口。 你的电脑可能有多个 USB 3.0 控制器。
 * 如果适用) ，请 (删除任何扩展电缆。
 * 拔下 PC 中的所有其他 USB 设备。
-* 将外部驱动的 USB 3.0 集线器连接到电脑，并将耳机连接到中心。
+* 将外部接通电源的 USB 3.0 集线器连接到电脑，并将耳机连接到中心。
 * 如果使用的是台式计算机，请考虑购买 USB 3.0 PCIe 卡，将另一个 USB 控制器添加到您的 PC。
 
 ## <a name="my-headset-causes-my-pc-to-hang-or-show-a-black-screen-while-starting-up"></a>我的耳机使我的 PC 挂起或在启动时显示黑屏
 
-在某些电脑上，在打开或重启电脑时，让你的耳机保持接通电源可能会影响其启动过程。 你的电脑可以选择耳机显示为 "主监视器" 以显示 PC 启动进度、不能正常启动或 "挂起" 和/或产生报警音错误代码。 此行为取决于计算机制造商和型号以及图形卡的品牌和型号。 解决方法：
+在某些电脑上，在打开或重启电脑时，让你的耳机保持接通电源可能会影响其启动过程。 你的电脑可以选择耳机显示为 "主监视器" 以显示 PC 启动进度、不能正常启动或 "挂起" 或产生报警音错误代码。 此行为取决于计算机制造商和型号，或者图形卡的品牌和型号。 解决方法：
 
 * 将耳机连接到图形卡上的其他端口 (可能需要使用适配器) 使用其他端口。
-* 请确保您的 PC 的 BIOS/UEFI 固件是最新的 (，但如果您喜欢这样做) ，只需更新您的 PC BIOS/UEFI 固件。
+* 请确保您的 PC 的 BIOS/UEFI 固件是最新的 (但仅更新您的 PC 的 BIOS/UEFI 固件) 。
 
 ## <a name="my-pc-or-headset-displays-flicker-flash-or-remain-black-when-using-a-surface-pc"></a>使用 Surface PC 时，电脑或耳机显示闪烁、闪烁或保持黑屏
 
@@ -90,14 +90,14 @@ ms.locfileid: "93132081"
 
 从耳机拔下 HDMI 电缆和 USB 电缆，然后将其重新插回。
 
-## <a name="my-headset-displays-are-very-choppy-but-mixed-reality-portals-preview-window-appears-fine"></a>我的耳机显示显得非常断断续续，但混合现实门户的预览窗口显示良好
+## <a name="my-headset-displays-are-choppy-but-mixed-reality-portals-preview-window-appears-fine"></a>我的耳机显示断断续续，但混合现实门户的预览窗口显示良好
 
 * 请确保您的 PC 的系统资源 (CPU、内存和硬盘驱动器) 可用，而不会被其他应用程序或进程使用。
 * 更新图形驱动程序。
 
 ## <a name="im-getting-a-the-install-class-is-not-present-or-is-invalid-error-in-device-manager"></a>在设备管理器中收到 "安装类不存在或无效" 错误
 
-如果在设备管理器中看到带有黄色感叹号的 "HoloLens 传感器"，请选择该设备了解更多详细信息。 如果看到一条消息，指出 "未安装此设备的驱动程序。  (代码 28) -安装类不存在或无效 "，这通常是因为你的电脑正在运行 [Windows 10 N](https://support.microsoft.com/en-us/help/4039813/media-feature-pack-for-windows-10-n-october-2017)。请注意，N 个版本的 Windows 10 不支持 Windows Mixed Reality，你将需要安装非 N 版本的 Windows 10。
+如果在设备管理器中看到带有黄色感叹号的 "HoloLens 传感器"，请选择该设备了解更多详细信息。 如果看到一条消息，指出 "未安装此设备的驱动程序。  (代码 28) -安装类不存在或无效，这通常是因为你的电脑运行的是 [Windows 10 N](https://support.microsoft.com/en-us/help/4039813/media-feature-pack-for-windows-10-n-october-2017)。N 版本的 Windows 10 不支持 Windows Mixed Reality，你将需要安装非 N 版本的 Windows 10。
 
 ## <a name="my-wmr-environment-is-jittery-or-stutters-when-i-move-my-head-and-displays-double-vision"></a>我的 WMR 环境在移动头时出现抖动或 stutters，并显示双重视觉
 
@@ -115,17 +115,17 @@ ms.locfileid: "93132081"
 
 ## <a name="i-frequently-see-a-black-border-around-the-view-in-the-headset-sometimes-its-like-im-looking-down-a-tunnel"></a>我经常会看到头戴显示在视图周围的黑色边框。 有时，这就像是向下一个隧道
 
-这意味着应用程序不能在电脑上击中帧速率，系统使用旧帧在耳机中呈现视图。 由于应用程序仅呈现您正在查看的世界部分，因此，如果这些应用程序不一直达到帧速率，系统就会尝试从以前的观点来呈现世界，并使用黑色填充缺少的详细信息。 如果经常发生这种情况：
+这意味着应用程序不能在电脑上击中帧速率，系统使用旧帧在耳机中呈现视图。 由于应用程序仅呈现您要查看的世界部分，因此，如果这些应用程序不一直达到帧速率，系统就会尝试从以前的观点来渲染世界，并使用黑色填充缺少的详细信息。 如果经常发生这种情况：
 
-1. 关闭或终止所有不需要的程序以释放内存和 CPU。
+1. 关闭或停止所有不需要的程序以释放内存和 CPU。
 2. 减少应用程序中的详细信息设置。
 3. 请参阅 " **设置" > 混合现实 > 耳机显示** ，以减少 Windows Mixed Reality 主页中显示的详细信息量。
 
 ## <a name="the-view-in-the-headset-is-jittering-and-stuttering-a-lot"></a>耳机中的视图 jittering，断断续续
 
-系统可能无法将内容呈现给耳机，或者跟踪系统可能遇到问题。 检查下列项目：
+系统可能无法将内容呈现给耳机，或者跟踪系统可能遇到问题：
 
-1. 打开任务管理器，确保您的 PC 具有足够的计算资源。 应有80% 的 CPU 可用空间，400MB RAM，磁盘 IO 应该低于80%。
+1. 打开任务管理器，确保您的 PC 具有足够的计算资源。 你应具有80% 的 CPU 可用空间，400 MB RAM，磁盘 IO 应该低于80%。
 2. 请确保你具有适用于你的硬件的最新图形驱动程序。 请参阅 [图形驱动程序部分](before-you-start.md#make-sure-you-have-a-compatible-graphics-driver)。
 3. 请确保空间充足。
 4. 拔出设备，关闭 Windows Mixed Reality，并再次将其插入。

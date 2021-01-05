@@ -1,11 +1,28 @@
 ---
-ms.openlocfilehash: 50b56f6f081f682c3f3655e81aa492d84d254314
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: 6b9223481ed909961dbb88d03e4b55ef68448525
+ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002643"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97717737"
 ---
+# <a name="426"></a>[4.26](#tab/426)
+
+### <a name="windows-mixed-reality"></a>Windows Mixed Reality
+
+![已连接到 "配置笔势" 功能的事件开始播放蓝图](../images/unreal-hand-tracking-img-09.png)
+
+然后，你应该添加代码以订阅以下事件：
+
+![Windows 空间输入保留、点击和左操作笔势的蓝图 ](../images/unreal/key-events.png)
+ ![ "详细信息" 面板中的 windows 空间输入点击手势选项的屏幕截图](../images/unreal/key-events2.png)
+
+### <a name="openxr"></a>OpenXR
+
+在 OpenXR 中，通过输入管道跟踪笔势事件。 使用手动交互，设备可以自动识别分流和保持手势，而不能识别其他手势。 它们被命名为 OpenXRMsftHandInteraction Select 并抓住映射。 不需要启用订阅，你应该在项目设置/引擎/输入中声明事件，就像下面这样：
+
+![OpenXR 操作映射的屏幕截图](../images/unreal-hand-tracking-img-12.png)
+
 # <a name="425"></a>[4.25](#tab/425)
 
 您可以在 " **Windows Mixed Reality 空间输入**" 下查找蓝图函数，并通过 `WindowsMixedRealitySpatialInputFunctionLibrary.h` 在调用代码文件中添加来查找 c + + 函数。
@@ -87,19 +104,3 @@ const FKey FSpatialInputKeys::RightNavigationYGesture(RightNavigationYGestureNam
 const FKey FSpatialInputKeys::RightNavigationZGesture(RightNavigationZGestureName);
 ```
 
-# <a name="426"></a>[4.26](#tab/426)
-
-### <a name="windows-mixed-reality"></a>Windows Mixed Reality
-
-![已连接到 "配置笔势" 功能的事件开始播放蓝图](../images/unreal-hand-tracking-img-09.png)
-
-然后，你应该添加代码以订阅以下事件：
-
-![Windows 空间输入保留、点击和左操作笔势的蓝图 ](../images/unreal/key-events.png)
- ![ "详细信息" 面板中的 windows 空间输入点击手势选项的屏幕截图](../images/unreal/key-events2.png)
-
-### <a name="openxr"></a>OpenXR
-
-在 OpenXR 中，通过输入管道跟踪笔势事件。 使用手动交互，设备可以自动识别分流和保持手势，而不能识别其他手势。 它们被命名为 OpenXRMsftHandInteraction Select 并抓住映射。 不需要启用订阅，你应该在项目设置/引擎/输入中声明事件，就像下面这样：
-
-![OpenXR 操作映射的屏幕截图](../images/unreal-hand-tracking-img-12.png)

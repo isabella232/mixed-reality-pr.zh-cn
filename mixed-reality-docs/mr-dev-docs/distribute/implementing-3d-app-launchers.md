@@ -6,19 +6,19 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，动态立方体，深层链接，secondarytile，辅助磁贴，UWP，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，XML，边界框，unity
-ms.openlocfilehash: 926d0b3bb337517b65986f85f6977b3dd1975735
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 38f0932f20e3660c91b87de7bcb9d66799d9a51a
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703193"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757490"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>实现 3D 应用启动器（UWP 应用）
 
 > [!NOTE]
 > 此功能已作为2017秋季创意者更新的一部分添加 (了沉浸式头中的 RS3) ，并支持通过 Windows 10 4 月2018更新进行更新。 请确保应用程序面向的是10.0.16299 的版本，Windows SDK 该版本大于或等于沉浸式耳机上的和10.0.17125 上的。 可在 [此处](https://developer.microsoft.com/windows/downloads/windows-10-sdk)找到最新的 Windows SDK。
 
-[Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)是用户在启动应用程序之前居住的起点。 为 Windows Mixed Reality 创建 UWP 应用程序时，默认情况下，应用程序将以2D 清单启动，其应用的徽标。 当开发 Windows Mixed Reality 体验时，可以根据需要定义3D 启动程序来覆盖应用程序的默认2D 启动器。 通常情况下，建议使用三维启动器来启动将用户从 Windows Mixed Reality 主页移出的沉浸式应用程序，而在就地激活应用程序时首选默认的2D 启动器。 你还可以创建一个 [3d 深层链接， (secondaryTile) ](#3d-deep-links-secondarytiles) 为 2d UWP 应用内的内容的三维启动器。
+[Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)是用户在启动应用程序之前居住的起点。 为 Windows Mixed Reality 创建 UWP 应用程序时，默认情况下，应用程序将以2D 清单启动，其应用的徽标。 当开发 Windows Mixed Reality 体验时，可以根据需要定义3D 启动程序来覆盖应用程序的默认2D 启动器。 一般情况下，建议使用三维启动器来启动使用户离开 Windows Mixed Reality 主页的沉浸式应用程序。 就地激活应用时，首选的是默认的2D 启动器。 你还可以创建一个 [3d 深层链接， (secondaryTile) ](#3d-deep-links-secondarytiles) 为 2d UWP 应用内的内容的三维启动器。
 
 >[!VIDEO https://www.youtube.com/embed/TxIslHsEXno]
 
@@ -80,7 +80,7 @@ MixedRealityModel 元素接受指向存储在应用包中的3D 资产的文件�
 
 ### <a name="bounding-box"></a>边界框
 
-边界框可用于根据需要在对象周围添加其他缓冲区区域。 边界框是使用中心点和范围指定的，这些范围指示从边界框的中心到沿每个轴的边缘之间的距离。 边界框的单位可以映射到1个 unit = 1 个计量器。 如果未提供边界框，则会自动将一个边界调整到对象的网格。 如果提供的边界框小于模型，则将调整其大小以适合网格。
+边界框可用于根据需要在对象周围添加额外的缓冲区区域。 边界框是使用中心点和范围指定的，它们表示从边界框的中心到沿每个轴的边缘之间的距离。 边界框的单位可以映射到1个 unit = 1 个计量器。 如果未提供边界框，则会自动将一个边界框拟合到对象的网格中。 如果提供的边界框小于模型，则将调整其大小以适合网格。
 
 对范围框属性的支持将作为 MixedRealityModel 元素上的属性提供给 Windows RS4 更新。 若要首先在应用程序清单顶部定义边界框，请添加 uap6 架构，并将其包含为可忽略的命名空间：
 
@@ -157,7 +157,7 @@ await tile.RequestCreateAsync();
 
 ### <a name="bounding-box"></a>边界框
 
-边界框可用于在对象周围添加其他缓冲区区域。 边界框是使用中心点和范围指定的，这些范围指示从边界框的中心到沿每个轴的边缘之间的距离。 边界框的单位可以映射到1个 unit = 1 个计量器。 如果未提供边界框，则会自动将一个边界调整到对象的网格。 如果提供的边界框小于模型，则将调整其大小以适合网格。
+边界框可用于在对象周围添加额外的缓冲区区域。 边界框是使用中心点和范围指定的，它们表示从边界框的中心到沿每个轴的边缘之间的距离。 边界框的单位可以映射到1个 unit = 1 个计量器。 如果未提供边界框，则会自动将一个边界框拟合到对象的网格中。 如果提供的边界框小于模型，则将调整其大小以适应网格。
 
 ### <a name="activation-behavior"></a>激活行为
 
@@ -166,7 +166,7 @@ await tile.RequestCreateAsync();
 
 您可以定义三维 secondaryTile 的激活行为，以控制用户选择它时其反应方式。 这可用于将三维对象置于纯信息性或装饰性的混合现实主页中。 支持以下激活行为类型：
 1. 默认值：用户选择 3D secondaryTile 时，会激活应用
-2. 无：当用户选择 3D secondaryTile 时，不会执行任何操作，也不会激活应用。
+2. 无：当用户选择三维 secondaryTile 时，不会执行任何操作，并且不会激活应用程序。
 
 ### <a name="obtaining-and-updating-an-existing-secondarytile"></a>获取和更新现有 "secondaryTile"
 
@@ -196,6 +196,7 @@ if (!tile.VisualElements.MixedRealityModel.Uri.Equals(updatedUri))
 ## <a name="tile-notifications"></a>磁贴通知
 
 磁贴通知当前不支持使用三维资产发送更新。 这意味着开发人员不能执行以下操作：
+
 * 推送通知
 * 定期轮询
 * 计划的通知

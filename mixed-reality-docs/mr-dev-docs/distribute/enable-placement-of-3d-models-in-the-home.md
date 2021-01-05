@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D，模型，在家中放置，地方，世界，建模，混合现实主页，web，应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 192c403ce50c3a47fb19f644af78d1150bb9aa3f
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: ad35e1d010e32c4729b0d0dd58943dabdee86e09
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703183"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757805"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>允许在混合现实主页中放置 3D 模型
 
@@ -20,7 +20,7 @@ ms.locfileid: "94703183"
 
 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)是用户在启动应用程序之前居住的起点。 在某些情况下，二维应用 (如全息影像应用) 会将3D 模型直接置于混合现实主页中作为装饰，或以完整的3D 形式进行进一步检查。 使用 " *添加模型" 协议* ，可以将三维模型从你的网站或应用程序直接发送到 Windows Mixed Reality 主页，它将在其中持久保存，如 [3d 应用程序启动器](3d-app-launcher-design-guidance.md)、二维应用和全息影像。 
 
-例如，如果您正在开发一个应用程序，该应用程序显示了用于设计空间的3D 家具的目录，则可以使用 " *添加模型" 协议* 允许用户将这些3d 家具模型从目录中放置。 一旦进入世界，用户就可以移动、调整大小和删除这些3D 模型，就像在家中的其他全息影像一样。 本文概述了如何实现 *添加模型协议* ，以便您可以开始使用户能够通过您的应用或 web 中的3d 对象来装饰他们的世界。
+例如，如果您正在开发一个应用程序，该应用程序显示了用于设计空间的3D 家具目录，则使用 " *添加模型" 协议* 允许用户将这些3d 家具模型从目录中放置。 一旦进入世界，用户就可以移动、调整大小和删除这些3D 模型，就像在家中的其他全息影像一样。 本文概述了如何实现 *添加模型协议* ，使用户能够使用应用或 web 中的3d 对象装饰其世界。
 
 ## <a name="device-support"></a>设备支持
 
@@ -89,7 +89,7 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 ## <a name="considerations-for-immersive-vr-headsets"></a>沉浸式 (VR) 耳机注意事项
 
 * 对于沉浸式 (VR) 耳机，在调用 *添加模型协议* 之前，混合现实门户无需运行。 在这种情况下，" *添加模型" 协议* 将启动混合现实门户，并将对象直接放置在头戴显示在混合现实中的位置。 
-* 当在已运行混合现实门户的情况下从桌面调用 " *添加模型" 协议* 时，请确保头戴式耳机处于 "唤醒" 状态。 否则，放置将不会成功。 
+* 当在已运行混合现实门户的情况下从桌面调用 " *添加模型" 协议* 时，请确保头戴式耳机处于 "唤醒" 状态。 否则，放置不会成功。 
 
 ## <a name="see-also"></a>另请参阅
 

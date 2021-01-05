@@ -8,14 +8,14 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，兼容，兼容性，入门，安装，PC，系统要求
 appliesto:
 - Windows 10
-ms.openlocfilehash: 84001a46826ada06e315f1707ee9516c3da063bd
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: f4743b6548def227675944fcd742b1596963cb3c
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434569"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725488"
 ---
-# <a name="before-you-start"></a>开始之前
+# <a name="before-you-start"></a>准备工作
 
 ## <a name="what-youll-need-to-run-windows-mixed-reality"></a>运行 Windows Mixed Reality 需要执行的操作
 
@@ -29,9 +29,9 @@ ms.locfileid: "92434569"
 
 ## <a name="make-sure-your-pc-is-compatible-with-windows-mixed-reality"></a>确保你的电脑与 Windows Mixed Reality 兼容
 
-若要查看你的电脑是否兼容 Windows Mixed Reality，请检查 [Windows Mixed reality 最小电脑硬件要求](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) ，或在你的电脑上运行 [Windows mixed reality 门户](install-windows-mixed-reality.md#launch-mixed-reality-portal) 。
+检查 [Windows Mixed reality 的最小 pc 硬件要求](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) ，或在你的电脑上运行 [Windows mixed reality 门户](install-windows-mixed-reality.md#launch-mixed-reality-portal) 来检查 windows mixed reality 兼容性。
 
-有关 PC 兼容性问题的详细信息，请参阅 [此处](https://support.microsoft.com/en-us/help/4045777/windows-10-get-help-with-pc-compatibility-in-windows-mixed-reality)。
+有关更多详细信息，请参阅 [电脑兼容性问题](https://support.microsoft.com/help/4045777/windows-10-get-help-with-pc-compatibility-in-windows-mixed-reality) 。
 
 ## <a name="make-sure-you-have-the-windows-10-version-1709-or-newer-installed"></a>请确保已安装 Windows 10 版本1709或更高版本
 
@@ -46,15 +46,15 @@ ms.locfileid: "92434569"
 
 若要确保 Windows 10 在你的电脑上保持最新状态，请选择 " **开始** " 按钮，然后选择 " **设置" > 更新 & 安全 > Windows 更新**。  选择“检查更新”。 如果有可用的更新，请安装。
 
-有关如何使你的电脑保持最新状态的详细信息，请参阅 [此处](https://support.microsoft.com/en-us/help/12373/windows-update-faq)
+请查看 [使你的电脑保持最](https://support.microsoft.com/help/12373/windows-update-faq) 新状态，以获取详细信息。
 
 ## <a name="make-sure-your-pc-is-connected-to-the-internet"></a>确保你的电脑已连接到 internet
 
-检查你的电脑是否已连接到 Internet。 需要下载驱动程序和其他一些软件，使 Windows Mixed Reality 启动并运行。
+检查你的电脑是否已连接到 Internet，并下载驱动程序和任何其他软件以使 Windows Mixed Reality 启动并运行。
 
 ## <a name="make-sure-you-have-a-compatible-graphics-driver"></a>请确保您有兼容的图形驱动程序
 
-你的 PC 必须具有 WDDM 2.2 或更高版本的图形驱动程序才能完成 Windows Mixed Reality 设置。 如果它尚不具有兼容的图形驱动程序，请尝试以下源：
+你的电脑需要 WDDM 2.2 或更高版本的图形驱动程序才能完成 Windows Mixed Reality 设置。 如果它还没有兼容的图形驱动程序，请尝试以下源：
 
 * 使用 Windows 更新检查是否有最新的关键驱动程序更新 (**启动 > Windows 设置 > 更新和安全检查更新** >
 * 检查是否有最新的可选驱动程序更新：
@@ -66,7 +66,7 @@ ms.locfileid: "92434569"
 
 ## <a name="make-sure-that-you-have-any-required-adapters"></a>请确保具有任何所需的适配器
 
-您的 Windows Mixed Reality 兼容 PC 可能没有连接沉浸式耳机所需的全尺寸 HDMI 和 USB 3.0 端口。 或者，你可能需要一个蓝牙适配器来满足 Windows Mixed Reality 门户要求。  如果是这种情况，则需要用于连接耳机和运动控制器的适配器。 请确保查看 [可能需要的适配器类型列表，以及有关特定适配器型号的一些建议](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。
+您的 Windows Mixed Reality 兼容 PC 可能没有连接沉浸式耳机所需的全尺寸 HDMI 和 USB 3.0 端口。 你可能还需要一个蓝牙适配器来满足 Windows Mixed Reality 门户要求。  如果是这种情况，则需要用于连接耳机和运动控制器的适配器。 请确保查看 [适配器类型列表和有关特定适配器型号的建议](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。
 
 ## <a name="make-sure-that-you-have-input-devices"></a>请确保具有输入设备
 
@@ -78,11 +78,11 @@ Windows Mixed Reality 旨在最适用于 Windows Mixed Reality 运动控制器�
 
 ### <a name="seated-and-standing-no-boundary"></a>固定和不 (边界) 
 
-如果选择 "固定"，则将使用头戴式耳机而不使用边界。 这意味着，在使用耳机时，您需要停留在一个位置，这样就可以避免出现物理障碍和危害。 您可以坐在下，但不应四处移动。 某些应用程序可能会设计为使用边界，因此，如果你在没有边界的情况下使用它们，则可能无法使用这些应用，也不能具有相同的体验。
+如果选择 "固定"，则将使用头戴式耳机而不使用边界。 这意味着，在使用耳机时，您需要保持在一个位置，以避免出现物理障碍和危害。 您可以坐在下，但不应四处移动。 某些应用程序可能会设计为使用边界，因此它们可能无法正常工作，或者如果使用时不使用任何应用，则可以提供相同的体验。
 
 ### <a name="all-experiences-boundary"></a>所有体验 (边界) 
 
-如果你选择 "所有体验"，你将设置一个边界，你将能够四处移动并使用与边界以及不需要的应用程序和体验。 你需要准备好空间，以确保你将使用的区域中没有任何障碍、危险或脆弱的项目 (包括你的 head) 的上方。 请勿在楼梯的顶部或在超低天花板风扇下进行设置。 从区域中删除 breakables 和障碍，并确保你和使用你的耳机的任何人都阅读并了解 [安全指导原则](https://support.microsoft.com/en-us/help/4039969/windows-10-mixed-reality-immersive-headset-health-safety-comfort)。
+如果你选择 "所有体验"，你将设置一个边界，并能够四处移动使用边界的应用程序体验和不需要的应用体验。 通过确保你将使用的区域（包括你的头部）上没有障碍物、危险或脆弱项来准备你的空间。 请勿在楼梯的顶部或在超低天花板风扇下进行设置。 从区域中删除 breakables 和障碍，并确保使用耳机的所有人都能阅读和理解 [安全指导原则](https://support.microsoft.com/en-us/help/4039969/windows-10-mixed-reality-immersive-headset-health-safety-comfort)。
 
 ## <a name="see-also"></a>另请参阅
 

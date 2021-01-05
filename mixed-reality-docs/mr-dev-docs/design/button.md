@@ -1,63 +1,62 @@
 ---
 title: Button
-description: 按钮为用户提供了触发即时操作的方法。 这是混合现实中最基本的组件之一。
+description: 了解如何使用按钮触发立即操作，这是一个混合现实的基础组件。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，按钮
-ms.openlocfilehash: c5e52bef8604ba4874b7f4b055107ec0db6b3683
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: b4e8388c4e3ea855c191cbdfc06621018274ff86
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702853"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847587"
 ---
 # <a name="button"></a>Button
 
 ![Button](images/UX_Hero_Button.jpg)
 
-按钮为用户提供了触发即时操作的方法。 这是混合现实中最基本的组件之一。 在 HoloLens 2 中，按钮有很多视觉提示和实用，以提高用户的交互置信度。 
-
+利用按钮，用户可以在混合现实体验中触发即时操作。 HoloLens 2 中的按钮具有视觉提示和实用，可帮助用户提高交互置信度。 
 
 :::row:::
     :::column:::
-       ![移动](images/UX_Button_Affordance_ProximityLight.jpg)<br>
+       ![显示了接近光效果的按钮](images/UX_Button_Affordance_ProximityLight.jpg)<br>
        **邻近感应**<br>
     :::column-end:::
     :::column:::
-       ![旋转](images/UX_Button_Affordance_FocusHighlight.jpg)<br>
+       ![所选的具有焦点突出显示效果的按钮](images/UX_Button_Affordance_FocusHighlight.jpg)<br>
         **焦点突出显示**<br>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       ![移动](images/UX_Button_Affordance_Compression.jpg)<br>
+       ![所显示的压缩箱效果按下的按钮](images/UX_Button_Affordance_Compression.jpg)<br>
        **压缩箱**<br>
     :::column-end:::
     :::column:::
-       ![旋转](images/UX_Button_Affordance_Pulse.jpg)<br>
+       ![所示的触发脉冲效果按下的按钮](images/UX_Button_Affordance_Pulse.jpg)<br>
         **触发暂停**<br>
     :::column-end:::
 :::row-end:::
 
 <br>
 
-
 ---
 
 ## <a name="button-in-mrtkmixed-reality-toolkit-for-unity"></a>MRTK (混合现实工具包) 适用于 Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供各种类型的按钮 prototyping。 您可以查找 HoloLens 2 和 HoloLens (第一代) 的 shell 样式按钮，以及自定义示例。 HoloLens 2 按钮 prefab 包含很多有助于提高用户信心的详细实用。 它包括基于邻近的突出显示、压缩前端固定架和对触发器的脉冲影响。
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供各种类型的按钮 prototyping，包括 hololens 2 和 hololens (第一代) 的 shell 样式按钮。 HoloLens 2 按钮 prefab 包含多个详细实用，有助于提高用户置信度：
 
-* [MRTK-按钮](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* 基于邻近性的突出显示
+* 压缩前端固定架
+* 对触发器的脉冲效果。
 
-
+* 有关更多说明和自定义示例，请查看 [MRTK-按钮](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) 。
 
 <br>
 
 ---
-
 
 ## <a name="see-also"></a>另请参阅
 

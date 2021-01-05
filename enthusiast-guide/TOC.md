@@ -46,3 +46,5 @@
 ### [由内而外跟踪的工作原理](tracking-system.md)
 ### [Unity 中的 HP Reverb G2 手柄](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
 ### [Unreal 中的 HP Reverb G2 手柄](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+
+## [贡献指南](contributing.md)

@@ -6,12 +6,12 @@ ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
 keywords: HoloLens，Windows 设备门户，API，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 1085f6c948ab7fe0ff8cb3801ebb0b883570acbc
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: c705ce65971042ab41befed9c6813dc797b61fc0
+ms.sourcegitcommit: 084b1da9d7b435394b38d6152a2f9aee7a74aa2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677966"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804425"
 ---
 # <a name="device-portal-api-reference"></a>设备门户 API 参考
 
@@ -185,7 +185,7 @@ ms.locfileid: "94677966"
 参数
 * FileName：要下载的文件的名称。
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/download?FileName=" + spaceID)
 ```
@@ -197,7 +197,7 @@ $.post("/api/holographic/mapmanager/download?FileName=" + spaceID)
 参数
 * file：要上传的文件的名称。
 
-例如：
+示例：
 ```
 var form_data = new FormData();
 form_data.append("file", file_data);
@@ -220,7 +220,7 @@ $.ajax({
 参数
 * FileName：要删除的文件的名称。
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/delete?FileName=" + spaceID)
 ```
@@ -231,21 +231,21 @@ $.post("/api/holographic/mapmanager/delete?FileName=" + spaceID)
 
 导出系统当前使用的映射。 导出后，可以下载它。 
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/export")
 ```
 
 **/api/holographic/mapmanager/exportanchors (POST)**
 
-导出系统当前使用的映射。 导出后，可以下载它。 例如： 
+导出系统当前使用的映射。 导出后，可以下载它。 示例： 
 ```
 $.post("/api/holographic/mapmanager/exportanchors")
 ```
 
 **/api/holographic/mapmanager/exportmapandanchors (POST)**
 
-导出系统当前使用的映射和定位点。 导出后，可以下载。 例如： 
+导出系统当前使用的映射和定位点。 导出后，可以下载。 示例： 
 ```
 $.post("/api/holographic/mapmanager/exportmapandanchors")
 ```
@@ -254,7 +254,7 @@ $.post("/api/holographic/mapmanager/exportmapandanchors")
 
 导出系统当前使用的映射和空间重建数据库。 导出后，可以下载它们。 
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/exportmapandspatialmappingdb")
 ```
@@ -268,7 +268,7 @@ $.post("/api/holographic/mapmanager/exportmapandspatialmappingdb")
 参数
 * FileName：要使用的映射的名称。 
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { alert("Import was successful!"); })
 ```
@@ -280,7 +280,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 参数
 * FileName：要使用的定位点的名称。 
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { alert("Import was successful!"); })
 ```
@@ -292,7 +292,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 参数
 * FileName：要使用的空间映射 db 的名称。 
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { alert("Import was successful!"); })
 ```
@@ -303,7 +303,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 
 重置系统地图、锚定和空间重建数据库。
 
-例如： 
+示例： 
 ```
 $.post("/api/holographic/mapmanager/resetmapandanchorsandsrdb")
 ```
@@ -388,6 +388,9 @@ _ */api/holographic/mrc/thumbnail (获取)**
 停止当前混合现实记录
 
 ## <a name="mixed-reality-streaming"></a>混合现实流式处理
+
+> [!CAUTION]
+> 由于环回隔离，无法从设备上的应用内部连接到混合现实流式处理。
 
 HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作方式。
 
@@ -693,6 +696,6 @@ HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作�
 返回数据
 * 在 "开始" 中，返回 "会话状态。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [使用 Windows 设备门户](using-the-windows-device-portal.md)
 * [ (UWP) 的设备门户核心 API 参考 ](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

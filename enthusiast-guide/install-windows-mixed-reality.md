@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，混合现实门户
 appliesto:
 - Windows 10
-ms.openlocfilehash: a9333e9f4d80ea73724e2530f2e94c3d0e32d0d4
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 72782d14218e0a95b5a88297310f791c977fe094
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132101"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726068"
 ---
 # <a name="install-windows-mixed-reality-software"></a>安装 Windows Mixed Reality 软件
 
@@ -22,23 +22,23 @@ ms.locfileid: "93132101"
 
 ## <a name="launch-mixed-reality-portal"></a>启动混合现实门户
 
-插入 Windows Mixed Reality 耳机并成功安装驱动程序后，会在你的桌面上自动启动混合现实门户 (MRP) 。 如果此操作未自动发生，你始终可以从 "开始" 菜单启动 "混合现实门户" ( **> 混合现实门户) 启动** 。 启动门户后，单击 " **入门** "
+插入 Windows Mixed Reality 耳机并成功安装驱动程序后，会在你的桌面上自动启动混合现实门户 (MRP) 。 如果门户没有启动，你始终可以从 " **开始 > 混合现实门户** 中打开混合现实门户。 启动门户后，选择 "**入门**"
 
 ![欢迎使用混合现实](images/1050px-mixedrealityportal.png)
 
 在混合现实门户中，你可以：
 
-* 在耳机中显示 livestream 的视图， (仅限超小型) 的 Windows Mixed Reality。 若要打开和关闭此功能，请选择 "停止预览" 或 "开始预览"。  (你还可以从 "混合现实开始" 菜单打开和关闭预览版。 ) 
+* 通过选择 "停止预览" 或 "开始预览"，在头戴 (Windows Mixed Reality 中显示) 的视图的 livestream。 你还可以从 "混合现实开始" 菜单打开和关闭 "预览"。
 * 查看耳机和控制器的状态。 选择 "菜单" 以查看所有信息。
-* 设置新控制器。 选择 **菜单 > 设置控制器** 。
-* 打开或关闭边界。 选择 **菜单 > "边界开/关"** 。  (如果将其关闭，则需要在一个位置保持安全。 ) 
-* 创建新边界。 选择 **菜单 > 运行安装程序** 。
-* 转到混合现实照片。 选择 **菜单 > 查看混合现实照片** 。
-* 获取混合现实应用和游戏。 选择 **菜单 > 获取混合现实应用** 。
+* 设置新控制器。 选择 **菜单 > 设置控制器**。
+* 打开或关闭边界。 选择 **菜单 > "边界开/关"**。  (如果将其关闭，则需要在一个位置保持安全。 ) 
+* 创建新边界。 选择 **菜单 > 运行安装程序**。
+* 转到混合现实照片。 选择 **菜单 > 查看混合现实照片**。
+* 获取混合现实应用和游戏。 选择 **菜单 > 获取混合现实应用**。
 
 ## <a name="download-windows-mixed-reality"></a>下载 Windows Mixed Reality
 
-Windows Mixed Reality 大小约为1GB，下载时间取决于你的 internet 连接。 如果遇到 "我们无法下载混合现实软件" 的消息，请查看 [故障排除步骤](installation_errors.md#we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading)。
+Windows Mixed Reality 的大小为 1 GB，下载时间因 internet 连接而异。 如果遇到 "我们无法下载混合现实软件" 的消息，请查看这些 [故障排除步骤](installation_errors.md#we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading)。
 
 ## <a name="general-troubleshooting"></a>常规故障排除
 
@@ -59,8 +59,8 @@ Windows Mixed Reality 大小约为1GB，下载时间取决于你的 internet 连
 * 查看 [Windows 更新](https://support.microsoft.com/help/12373)中的最新软件更新。
 * 卸载并重新安装 Windows Mixed Reality：
     1. 断开耳机与电脑的连接 (两个电缆) 。
-    2. 选择 " **设置" > 混合现实 > 卸载** "。
-    3. 取消配对运动控制器：选择 " **设置" > 设备 > 蓝牙 & 其他设备** 。 选择每个控制器，然后选择 " **删除设备** "。
+    2. 选择 " **设置" > 混合现实 > 卸载**"。
+    3. 取消配对运动控制器：选择 " **设置" > 设备 > 蓝牙 & 其他设备**。 选择每个控制器，然后选择 " **删除设备**"。
     4. 若要重新安装 Windows Mixed Reality，请将你的耳机插回你的电脑。
 
 ## <a name="common-error-messages"></a>常见错误消息
@@ -70,24 +70,24 @@ Windows Mixed Reality 大小约为1GB，下载时间取决于你的 internet 连
 | 如果看到此消息 | 尝试此操作 |
 | --- | --- |
 | 检查 USB 电缆 | 将耳机连接到不同的 USB 端口 (，并确保它是 SuperSpeed USB 3.0) 。 同时，尝试删除耳机与计算机之间的所有扩展器或集线器。 |
-| 检查显示电缆 | 请尝试以下内容： <ul><li>将耳机连接到 DisplayPort 1.2 或更高版本，1.4 或者连接到或更高版本。 确保端口与电脑上最先进的图形卡相对应。</li><li>如果使用的是适配器，请确保它支持4K</li><li>尝试使用不同的 HDMI 端口</li><li>如果将外部监视器连接到 HDMI 端口，请尝试将其插入 DisplayPort，并将 HDMI 端口用于耳机</li></ul> |
+| 检查显示电缆 | 请尝试以下步骤： <ul><li>将耳机连接到 DisplayPort 1.2 或更高版本，1.4 或者连接到或更高版本。 确保端口与电脑上最先进的图形卡相对应。</li><li>如果使用的是适配器，请确保支持4K</li><li>尝试使用不同的 HDMI 端口</li><li>如果将外部监视器连接到 HDMI 端口，请尝试将其插入 DisplayPort，并将 HDMI 端口用于耳机</li></ul> |
 | 出现问题 | 遵循上述一般故障排除步骤。 |
 
 ## <a name="review-and-accept-terms-and-conditions"></a>查看并接受条款和条件
 
-若要继续安装，你的电脑上必须有2GB 可用空间。 查看并按 **我同意** 条款和条件继续操作
+若要继续安装，你的电脑上必须有 2 GB 可用空间。 查看并按 **我同意** 条款和条件继续操作
 
 ![接受条款和条件](images/1050px-mixedrealityportalpage2.png)
 
 ## <a name="compatibility-check"></a>兼容性检查
 
-下一步是兼容的检查。 混合现实门户将进行检查，以确认你的电脑是否与混合现实兼容。 **绿色** 检查表示您的 PC 已通过所需的项目！ **橙色** 三角形表示你的计算机可能存在给定要求的问题。 如果遇到问题，可能需要对 PC 进行故障排除或升级。 **红色** X 表示您的 PC 不满足指定项目的要求。
+下一步是兼容的检查。 混合现实门户将进行检查，确认你的电脑是否与混合现实兼容。 **绿色** 检查表示您的 PC 已通过所需的项目！ **橙色** 三角形表示你的计算机可能存在给定要求的问题。 如果发现任何问题，可能需要对计算机进行故障排除或升级。 **红色** Xs 表示您的 PC 不满足指定项目的要求。
 
 ![兼容检查](images/1050px-compatcheck.png)
 
 ## <a name="getting-ready"></a>做好准备
 
-你将在屏幕上看到 "已准备好设置你" 的消息，并提供旋转图标。 这只需几分钟的时间：
+你将在屏幕上看到 "已准备好设置你" 消息，其中包含旋转图标，只需几分钟即可完成：
 
 ![准备好设置](images/1050px-gettingsetup.png)
 

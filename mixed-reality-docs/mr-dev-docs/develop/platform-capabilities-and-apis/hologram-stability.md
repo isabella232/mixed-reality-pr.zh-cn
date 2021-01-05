@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 全息影像，稳定性，hololens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，帧速率，渲染，reprojection，颜色分离
 appliesto:
 - HoloLens
-ms.openlocfilehash: 345ba3608b77ed4d7b493985903295f5ee3f4863
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 4405cd0fa7cfca5205d312d1ccc54efc06db7bd7
+ms.sourcegitcommit: 13fe1e7f7f268730a0be720933d7414e9c63ac9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530431"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97808828"
 ---
 # <a name="hologram-stability"></a>全息影像稳定性
 
@@ -91,14 +91,14 @@ HoloLens 提供先进的硬件辅助全息稳定技术（称为 reprojection）�
 应用程序需要执行特定操作才能启用不同类型的 reprojection
 * **深度 Reprojection：** 应用程序将每个呈现的帧的深度缓冲区提交给系统。  在 Unity 上，在 " **XR 插件管理**" 下的 " **Windows Mixed Reality 设置**" 窗格中，通过 "**共享深度缓冲区**" 选项完成深度 Reprojection。  DirectX 应用调用 CommitDirect3D11DepthBuffer。  应用程序不应调用 SetFocusPoint。
 * **平面 Reprojection：** 在每个帧上，应用程序会告诉系统要稳定的平面位置。  Unity 应用程序调用 SetFocusPointForFrame，并应禁用 **共享深度缓冲** 。  DirectX 应用调用 SetFocusPoint，不应调用 CommitDirect3D11DepthBuffer。
-* **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。  在 HoloLens 2 上，应用程序需要在每个帧上 SetFocusPoint 一个点，0，0。  对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
+* **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。 使用混合现实工具包 (MRTK) 的应用可以将 [照相机设置提供程序](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) 配置为使用 AutoPlanar Reprojection。 本机应用应将 `DepthReprojectionMode` [HolographicCameraRenderingParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) 中的设置为 `AutoPlanar` 每个框架。 对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
 
 ### <a name="choosing-reprojection-technique"></a>选择 Reprojection 技术
 
 稳定类型 |    沉浸式头戴显示设备 |    HoloLens 第1代 | HoloLens 2
 --- | --- | --- | ---
-深度 Reprojection |    建议 |   不适用 |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
-自动平面 Reprojection | 不适用 |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
+深度 Reprojection |    建议 |   空值 |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
+自动平面 Reprojection | 空值 |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
 平面 Reprojection |   不建议 |   如果自动平面未提供最佳结果，建议使用 | 如果两个深度选项都不能获得所需的结果，请使用    
 
 ### <a name="verifying-depth-is-set-correctly"></a>验证深度设置正确

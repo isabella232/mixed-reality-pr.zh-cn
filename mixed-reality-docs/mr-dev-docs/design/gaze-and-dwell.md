@@ -1,24 +1,24 @@
 ---
 title: 凝视和停留
-description: " (眼/head) 注视和停留输入模型的一般概述"
+description: " (眼/head) 注视和停留输入模型的一般概述。"
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Mixed Reality，注视，停留，交互，设计，眼睛跟踪，头跟踪，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: d47401b65f7d62e1fe59655c42efe72ac68acfc6
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: e8005551e08248a73098bd0f9c198b0919e2471a
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702193"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847345"
 ---
 # <a name="gaze-and-dwell"></a>凝视和停留
 
 手拿工具和零件，手势可能是没有意义或无法实现。
 在某些上下文中，语音命令也可能不可靠，例如在过大的情况下。
 注视和停留提供了一种熟悉且易于掌握的机制，用于在 HoloLens 上完成工作和无人参与。
-此外，注视和停留在操作环境中与干扰干扰或静默约束无关。
+此外，注视和停留是一个很好的回退，这与操作环境中的干扰干扰或静默约束无关。
 我们区分 _注视和停留_ 区的两个变体： [打印头和](gaze-and-dwell-head.md) 停留区， [注视眼睛和停留](gaze-and-dwell-eyes.md)区。
 
 ## <a name="scenarios"></a>方案
@@ -64,6 +64,7 @@ ms.locfileid: "94702193"
 ---
 
  ## <a name="see-also"></a>另请参阅
+
 * [基于眼睛的交互](eye-gaze-interaction.md)
 * [HoloLens 2 中的眼动跟踪](eye-tracking.md)
 * [凝视和提交](gaze-and-commit.md)

@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 0c0bc508772fe32af9edc21ca62ba5e46125fe88
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: 55baf3f076b8cf0f815f899658b3bbe61292e267
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578612"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725898"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -28,15 +28,15 @@ HP 建议：
 
 如果你认为你的显示看起来有点模糊，可以尝试以下几项：
 
-- 请确保您的耳机正确地位于您的头上，以便您的眼睛与重用功能区有关。
-- 尝试调整 IPD (interpupillary 距离) 。 请注意，回音 G2 使用硬件 IPD。 若要进行更改，请在耳机上查找 IPD 调整。
-- 如果需要眼镜或联系方式，它们仍是必需的。
-- 如果需要清洁重用功能区，请检查你的（如果需要清洁） (仅 microfiber 抹布–无流体) 。
-- 由于头戴式耳机的高级设计，在启动设备时，可能会在一段很短的时间内启动设备，直到 Lcd 有机会预热。
+- 确保你的耳机正确地与你的眼睛中心在重用功能区上。
+- 尝试调整 IPD (interpupillary 距离) 。 回音 G2 使用硬件 IPD。 若要进行更改，请在耳机上查找 IPD 调整。
+- 如果需要眼镜或联系人，则在使用该设备时需要戴上这些人。
+- 检查您的重用功能区是否 (仅 microfiber 抹布，无流体) 。
+- 由于使用的是高级耳机设计，因此在启动设备时，可能会在一段很短的时间内启动设备，直到 Lcd 有机会预热。
 
 ## <a name="i-am-getting-a-7-14-something-went-wrong-error-when-i-plug-in-my-headset"></a>我接到耳机时出现 7-14 "出现错误" 错误
 
-7-14 出现错误的代码意味着某些必需的 USB2 组件找不到。  由于 HP 回音 G2 的额外电缆较长，因此 USB 信号的一些容差会更紧密。  这意味着计算机上的一个端口的工作方式可能比另一个端口更可靠。
+7-14 出现错误的代码意味着某些必需的 USB2 组件找不到。  由于 HP 回音 G2 需要额外的长电缆，因此 USB 信号的一些容差会更紧密。  这意味着计算机上的一个端口的工作方式可能比另一个端口更可靠。
 
 如果看到 7-14 "出现错误" 错误，请尝试执行以下步骤：
 
@@ -52,13 +52,13 @@ HP 建议：
 
 ## <a name="i-am-getting-a-13-14-something-went-wrong-error-when-my-pc-resumes-from-hibernate-s4"></a>我的电脑从休眠状态 () S4 恢复时出现 13-14 "出现错误" 错误
 
-有时，在恢复过程中，视频卡不能建立连接，因此，从电脑中拔出 USB 类型 C 并重新插入，可能有助于建立连接。
+有时，在恢复过程中，视频卡不能建立连接，因此，从电脑中拔出 USB 类型 C 并将其重新插入可帮助建立连接。
 
 ## <a name="my-hp-motion-controller-joystick-will-sometimes-stick-to-one-side"></a>我的 HP 运动控制器操纵杆有时会坚持一侧
 
 此问题的解决方法是，通过在游戏杆单击之前完全按下，它会自由移动。
 
-## <a name="others-state-i-am-very-loud-or-that-my-audio-is-clipping-while-i-am-using-the-microphone-with-some-applications"></a>其他状态我非常大或我的音频正在剪辑，而我将麦克风用于某些应用程序
+## <a name="others-state-i-am-loud-or-that-my-audio-is-clipping-while-i-am-using-the-microphone-with-some-applications"></a>其他一些状态我很大或我的音频正在剪辑，而我将麦克风用于某些应用程序
 
 Windows 电脑首次识别 HP 回音 G2 麦克风时，输入音量级别会自动设置为100%。 由于回音 G2's 高质量麦克风，因此输入敏感度比默认的 Windows 10 设置要高得多。 我们建议将 "回音： G2" 麦克风输入级别设置为从50% 开始，并从该处向上缩放。 最佳设置是特定于用户的设置，尤其是在使用没有 "自动获取" 麦克风设置的应用程序时。 "自动获取" 的应用程序的示例包括 Skype、Zoom、团队和 Cisco WebEx，但并非所有的 VR 社交或广播应用程序都具有此功能。
 
@@ -68,21 +68,21 @@ Windows 电脑首次识别 HP 回音 G2 麦克风时，输入音量级别会自�
 
 ## <a name="it-looks-like-my-left-display-is-stretched-and-the-right-display-is-off-centered-and-half-black"></a>它看起来像是我的左显示内容，右侧显示的是离线和半黑
 
-如果头戴显示设备未运行，则可能会发生这种情况。 由于 HP 回音 G2 HMD 中的高分辨率显示性质，并非所有系统都能呈现本机分辨率。 将来的 Windows 更新会出现一个修补程序，当耳机不是本机分辨率时，将解决呈现问题。
+如果头戴式耳机未以本机分辨率运行，则可能会发生这种情况。 由于 HP 回音 G2 HMD 中的高分辨率显示性质，并非所有系统都可以呈现本机分辨率。 将来的 Windows 更新会出现一个修补程序，它将解决当耳机不是本机分辨率时的呈现问题。
 
 系统无法以本机分辨率呈现的原因有以下几个：
 
-- 系统上的 DisplayPort 可能不兼容1.3，或它可能不支持所有4个车道。
-- 如果你使用的是适配器，则它可能不支持 HBR3 兼容，或它可能不支持所有4个车道。
+- 系统上的 DisplayPort 可能不兼容1.3，或它可能不支持所有四个车道。
+- 如果你使用的是适配器，则它可能不支持 HBR3 兼容，或它可能不支持所有四个车道。
 - 如果系统具有混合 GPU，则可能会限制可用于 DisplayPort 的带宽。
 
 ## <a name="why-are-my-hp-motion-controller-models-not-showing-up-correctly-in-a-game"></a>为什么 HP 运动控制器型号在游戏中显示不正确
 
-虽然大多数游戏不显示控制器或使用驱动程序安装的模型，但某些游戏使用其自己的控制器模型版本来对它们进行自定义或显示有关可用输入的上下文帮助。 通常，这不会阻止游戏的任何功能，但可能会导致混乱甚至视觉对象。 这只能在游戏本身的更新中修复。
+虽然大多数游戏不显示控制器或使用驱动程序安装的模型，但某些游戏使用其自己的控制器型号版本来对它们进行自定义或显示有关可用输入的上下文帮助。 通常情况下，这不会阻止游戏的任何功能，但可能会导致混乱甚至视觉对象。 这只能在游戏本身的更新中修复。
 
 ## <a name="my-steamvr-games-dont-appear-to-work-correctly-with-my-hp-motion-controllers"></a>我的 SteamVR 游戏似乎无法与我的 HP 运动控制器一起正常工作
 
-虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 对于 "SteamVR 的 Windows Mixed Reality" 已完全更新到版本1.2.444，当游戏运行时，应自动选取这些绑定。 但是，如果你目前没有注册操作，你可以使用 "SteamVR 设置" 菜单手动搜索自定义绑定配置文件。
+虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 对于 "SteamVR 的 Windows Mixed Reality" 已完全更新到版本1.2.444，当游戏运行时，应自动选取这些绑定。 但是，如果你目前的游戏并未注册操作，你可以使用 "SteamVR 设置" 菜单手动搜索自定义绑定配置文件。
 要执行此操作
 
 - 按下右运动控制器的菜单按钮打开 SteamVR 菜单
@@ -91,4 +91,4 @@ Windows 电脑首次识别 HP 回音 G2 麦克风时，输入音量级别会自�
 - 选择 "管理控制器绑定" 选项
 
 在此处，你可以将活动控制器绑定更改为 "自定义"，这将打开用于尝试社区共享游戏绑定的选项。
-如果尚未为此游戏共享自定义游戏绑定 (或者你对) 尝试过的内容不完全满意，则还可以创建你自己的自定义游戏绑定，甚至还可以通过在几个游戏会话后共享他们来帮助其他人。
+如果尚未为此游戏共享自定义游戏绑定 (或者你对已尝试) 的内容不完全满意，则还可以创建你自己的自定义游戏绑定，甚至还可以通过在几个游戏会话后共享他们来帮助其他人。

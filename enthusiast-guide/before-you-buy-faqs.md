@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 在购买前，Windows Mixed Reality，混合现实，虚拟现实，VR，先生，预销售，调查，购买
 appliesto:
 - Windows 10
-ms.openlocfilehash: 20a585088c9bea9d01754f78e9934a4022c0e34c
-ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
+ms.openlocfilehash: e9b9254166b3ac4c188531d3651407ecfd853460
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "95002971"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725508"
 ---
 # <a name="before-you-buy-frequently-asked-questions"></a>在购买常见问题之前
 
@@ -21,7 +21,7 @@ ms.locfileid: "95002971"
 
 ### <a name="where-can-i-buy-a-windows-mixed-reality-ready-pc-or-headset"></a>在哪里可以购买 Windows Mixed Reality ready PC 或耳机
 
-**快速解答：** 你可以在批准的本地零售商处购买 Windows Mixed Reality ready PC 或耳机，也可以从包含 Microsoft Store 在内的各种零售商处在线购买。 查找 Windows Mixed Reality ready PC 或在线耳机： <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
+**快速解答：** 你可以在批准的本地零售商处购买 Windows Mixed Reality ready PC 或耳机，还可以从不同的零售商处购买，包括 Microsoft Store。 查找 Windows Mixed Reality ready PC 或在线耳机： <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
 
 ### <a name="where-can-i-try-windows-mixed-reality"></a>在哪里可以尝试 Windows Mixed Reality
 
@@ -51,19 +51,19 @@ ms.locfileid: "95002971"
 
 **快速解答：** Windows Mixed Reality 耳机功能 (跟踪相机位于耳机) 以及 Windows 10 的即插即用设置。
 
-**更多详细信息**： Windows Mixed Reality 提供多种功能，包括轻松安装 (无需外部传感器跟踪你和控制器) ，你选择的耳机用于满足你的舒适和价格点，具有竞争性解决方案的耳机，最后提供了一个独特的用户体验，可让你从 Microsoft Store 使用成千上万的应用程序。
+**更多详细信息**： Windows Mixed Reality 提供多种功能，其中包括轻松安装 (无需外部传感器跟踪和控制器) ，你选择的耳机可满足你的舒适和价格、具有竞争性解决方案的耳机，最后提供了一个独特的用户体验，可让你从 Microsoft Store 使用数千个应用。
 
 ### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>混合现实是否意味着可以通过 "内部" 相机？ 除了虚拟现实以外，你还可以体验更进一步的现实
 
-**快速解答：** 不能，Windows Mixed Reality 耳机上的内联网相机仅用于位置跟踪。 Windows Mixed Reality 耳机是封闭像素的，这意味着它们适用于虚拟现实，而且不提供现实世界的视图或增加的现实。
+**快速解答：** 不能，Windows Mixed Reality 耳机上的内联网相机仅用于位置跟踪。 Windows Mixed Reality 耳机是封闭像素的，这意味着它们适用于虚拟现实，不提供现实世界的视图或增加的现实。
 
 ### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>什么是内部跟踪？ 它与外部跟踪或 lighthouse 跟踪有何不同
 
-* **内部跟踪** Windows Mixed Reality 使用内部跟踪。 带外跟踪相机内置于耳机并跟踪环境中的更改，以便在移动时确定耳机位置与环境相关。
+* **内部跟踪** Windows Mixed Reality 使用内部跟踪。 带外跟踪相机内置于耳机，并跟踪环境中的更改，以根据移动时的环境来确定耳机位置。
 
-* **外部跟踪** Oculus、Naopak 和其他在跟踪外使用。  通过外部跟踪，耳机由一个或多个外部设备跟踪。 照相机 () 内置于环境周围的外部设备，并用于确定耳机相对于环境的位置。
+* **外部跟踪** Oculus、Naopak 和其他在跟踪外使用。  通过外部跟踪，耳机由一个或多个外部设备跟踪。 照相机 () 内置于环境周围的外部设备，并用于根据环境确定头戴式耳机位置。
 
-若要详细了解内部输出跟踪，可访问： <https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system>
+了解有关 [内部跟踪的](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)详细信息。
 
 ### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>由于相机 FOV，移动控制器的跟踪是否会影响游戏播放
 
@@ -71,7 +71,7 @@ ms.locfileid: "95002971"
 
 ### <a name="how-is-windows-mixed-reality-different-from-samsung-gear-vr"></a>Windows Mixed Reality 与 Samsung 齿轮 VR 的不同之处
 
-**快速解答：** 所有基于 smartphone 的 VR 产品（包括 Samsung 齿轮 VR 和 Google Daydream）均使用3度自由 (3DOF) 头位置跟踪系统。 基于3DOF 的系统使你可以 **仅** 从虚拟世界中的颈部移动你的头部。 另一方面，Windows 尊敬地使用6度自由 (6DOF) 头和控制器位置跟踪系统。 基于6DOF 的系统允许您在虚拟世界中移动整个主体;这样您就可以浏览对象，并从不同的角度进行查看，就像您在现实世界中一样。 Rift 和 Naopak 也是基于6DOF 的系统。
+**快速解答：** 所有基于智能手机的 VR 产品（包括 Samsung 齿轮 VR 和 Google Daydream）都使用三度自由 (3DOF) 头位置跟踪系统。 基于3DOF 的系统使你可以 **仅** 从虚拟世界中的颈部移动你的头部。 另一方面，Windows 尊敬地使用六度自由 (6DOF) 头和控制器位置跟踪系统。 基于6DOF 的系统允许您在虚拟世界中移动整个主体;这样您就可以浏览对象，并从不同的角度进行查看，就像您在现实世界中一样。 Rift 和 Naopak 也是基于6DOF 的系统。
 
 * 有关3DOF 和6DOF 的详细信息，请参阅： <https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system#what-is-the-difference-between-3dof-and-6dof> 
 * 有关位置跟踪的详细信息，请参阅此处的 DOF)  (： <https://www.roadtovr.com/introduction-positional-tracking-degrees-freedom-dof/>
@@ -96,9 +96,9 @@ ms.locfileid: "95002971"
 <td> Acer AH101 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 100° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -109,9 +109,9 @@ ms.locfileid: "95002971"
 <td> Acer OJO 500 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 100° </td>
-<td> 集成 + 3.5 mm 插座 </td>
+<td> 集成 + 3.5-mm 插座 </td>
 <td> 内置 </td>
 <td style="text-align: center;">物理规格</td>
 <td> 秋季2018 </td>
@@ -122,9 +122,9 @@ ms.locfileid: "95002971"
 <td> ASUS HC102 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 95° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -135,9 +135,9 @@ ms.locfileid: "95002971"
 <td> Dell Visor </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 105° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -148,9 +148,9 @@ ms.locfileid: "95002971"
 <td> Fujitsu FMV 耳机 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 105° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -161,9 +161,9 @@ ms.locfileid: "95002971"
 <td> HP 回音 </td>
 <td> 4320x2160 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 114° </td>
-<td> 集成 + 3.5 mm 插座 </td>
+<td> 集成 + 3.5-mm 插座 </td>
 <td> 内置 </td>
 <td style="text-align: center;">软件</td>
 <td> 春季2019 </td>
@@ -174,9 +174,9 @@ ms.locfileid: "95002971"
 <td> HP VR1000 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 105° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -187,9 +187,9 @@ ms.locfileid: "95002971"
 <td> Lenovo Explorer </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 105° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -200,9 +200,9 @@ ms.locfileid: "95002971"
 <td> Medion ERAZER MR X1000 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 105° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -213,7 +213,7 @@ ms.locfileid: "95002971"
 <td> Samsung HMD 太空</td>
 <td> 2880x1600 </td>
 <td> AMOLED </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 110° </td>
 <td> 集成 </td>
 <td> 无 </td>
@@ -226,7 +226,7 @@ ms.locfileid: "95002971"
 <td> Samsung HMD Odyssey+</td>
 <td> 2880x1600 </td>
 <td> AMOLED </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 110° </td>
 <td> 集成 </td>
 <td> 内置 </td>
@@ -239,9 +239,9 @@ ms.locfileid: "95002971"
 <td> 3Glasses Blubur S2</td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> 最多90Hz </td>
+<td> 最高 90 Hz </td>
 <td> 105° </td>
-<td> 3.5 mm 插孔 </td>
+<td> 3.5-mm 插座 </td>
 <td> 无 </td>
 <td style="text-align: center;">软件</td>
 <td> 秋季2017 </td>
@@ -265,7 +265,7 @@ ms.locfileid: "95002971"
 
 ### <a name="will-there-be-issues-with-motion-controller-tracking-if-multiple-windows-mixed-reality-headsets-are-in-close-proximity"></a>如果有多个 Windows Mixed Reality 耳机处于接近邻近性，是否会出现运动控制器跟踪问题？
 
-**快速解答：** 我们发现，对于运动控制器没有干扰，但你应为用户提供足够的空间，以满足混合现实中的最佳体验-即10英尺 x 10 英尺。
+**快速解答：** 我们发现，对于运动控制器没有干扰，但你应为用户提供足够的空间来满足混合现实中的最佳体验-例如，10英尺 x 10 英尺。
 
 ### <a name="is-there-boundary-chaperone-or-guardian-system-in-windows-mixed-reality"></a>Windows Mixed Reality 中是否有边界、chaperone 或监护人系统？
 
@@ -273,13 +273,13 @@ ms.locfileid: "95002971"
 
 ### <a name="do-windows-mixed-reality-headsets-work-in-the-dark"></a>Windows Mixed Reality 耳机是否在黑暗中工作？
 
-**快速解答：** 一个很好的一般规则是，如果您无法放心地四处移动，因为它太暗，则跟踪系统还会在该环境中正常工作。
+**快速解答：** 一个很好的一般规则是，如果您无法放心地四处移动，因为它太暗，所以跟踪系统还会在该环境中正常工作。
 
 ### <a name="what-is-the-cable-length-of-the-windows-mixed-reality-headset"></a>Windows Mixed Reality 耳机的电缆长度是多少？
 
 **快速解答：** 通常，Windows Mixed Reality 耳机的电缆长度为4米，但它依赖于耳机。 有关更多详细信息，请参阅： <https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets>
 
-### <a name="can-i-use-an-usb--hdmi-extension-cables-with-windows-mixed-reality-headsets"></a>能否在 Windows Mixed Reality 耳机上使用 USB/HDMI 扩展电缆？
+### <a name="can-i-use-a-usb--hdmi-extension-cable-with-windows-mixed-reality-headsets"></a>能否在 Windows Mixed Reality 耳机上使用 USB/HDMI 扩展电缆？
 
 **快速解答：** 我们已经设计好 Windows Mixed Reality，无需扩展电缆即可正常运行。 混合现实耳机使用扩展电缆不受支持，并且使用可能会影响你的体验。
 
@@ -322,7 +322,7 @@ ms.locfileid: "95002971"
 
 **快速解答：** 如果你的电脑没有内置的蓝牙支持，则需要插入支持蓝牙4.0 的 USB 蓝牙适配器，才能启用运动控制器。
 
-### <a name="will-the-controllers-work-with-bluetooth-31-or-do-i-need-bluetooth-40"></a>控制器是适用于蓝牙3.1 还是需要蓝牙4.0？
+### <a name="will-the-controllers-work-with-bluetooth-31-or-do-i-need-bluetooth-40"></a>控制器使用的是蓝牙3.1 还是需要蓝牙4.0？
 
 **快速解答：** Windows Mixed Reality 支持的最低规范为蓝牙4.0。 如果你的电脑装有蓝牙3.1，你将不会被阻止使用这些控制器，但最好的体验是在 BT 4.0 上。 下载并运行 [混合现实门户](https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m?activetab=pivot:overviewtab) ，查看你的电脑是否 WMR 准备就绪。
 
@@ -354,7 +354,7 @@ ms.locfileid: "95002971"
 
 ### <a name="can-i-see-my-keyboard-from-inside-a-windows-mixed-reality-headset"></a>能否在 Windows Mixed Reality 耳机内看到键盘？
 
-**快速解答：** 你无法从耳机内看到你的物理键盘，但你可以使用我们的软件键盘。 此外，许多 Windows Mixed Reality 耳机都具有前端 hinged，因此你可以在工作时将耳机向上翻转。 更多详细信息： <https://www.microsoft.com/en-us/windows/windows-mixed-reality#specs>
+**快速解答：** 你无法从耳机看到你的物理键盘，但你可以使用我们的软件键盘。 此外，许多 Windows Mixed Reality 耳机都具有前端 hinged，因此你可以在工作时将耳机向上翻转。 更多详细信息： <https://www.microsoft.com/en-us/windows/windows-mixed-reality#specs>
 
 ### <a name="what-games-require-a-gamepad-as-opposed-to-motion-controllers"></a>什么游戏需要游戏板，而不是运动控制器？
 

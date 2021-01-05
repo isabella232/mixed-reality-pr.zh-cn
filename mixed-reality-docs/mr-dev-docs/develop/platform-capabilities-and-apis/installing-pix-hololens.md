@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/02/2020
 ms.topic: article
 keywords: HoloLens，HoloLens 2，PIX，捕获，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 5dfc16f97790b47af3c24ca44c060a9a2495a320
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 598a6b891798be7059eae2eff578c6bbbae442f6
+ms.sourcegitcommit: 9d79aaa313f003dd42d5610d458031890776ee8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530448"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97822921"
 ---
 # <a name="installing-pix-for-hololens-2"></a>安装适用于 HoloLens 2 的 PIX
 
@@ -25,7 +25,7 @@ ms.locfileid: "97530448"
 
 3. 启用 **开发人员模式** 和 **设备门户**：
 
-* 从 Shell 打开 **设置** ：
+* 从混合现实主页打开 **设置** ：
 
 ![突出显示 "设置" 按钮的 HoloLens 菜单的屏幕截图](images/pix-img-01.jpg)
 

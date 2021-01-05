@@ -1,6 +1,6 @@
 ---
 title: 了解 Mixed Reality
-description: 介绍如何运行 "了解混合现实" 应用，该应用会教你如何使用和导航 Windows Mixed Reality。
+description: 介绍如何运行 "了解混合现实" 应用和如何浏览 Windows Mixed Reality。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,22 +8,22 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，教程，入门
 appliesto:
 - Windows 10
-ms.openlocfilehash: be85b88f356532df736d69f8319ca6a7337ae824
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 2cbfb171065b0f2cf616348194b286e37159d425
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132061"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726048"
 ---
 # <a name="learn-mixed-reality"></a>了解 Mixed Reality
 
 ## <a name="running-the-learning-experience-for-the-first-time"></a>首次运行学习体验
 
-完成设置后，混合现实门户应用应在 HMD 中启动一项沉浸式体验 **，其中介绍** 了如何使用 Windows mixed reality。 在加载屏幕上注视宝物即可开始。 你应在耳机中听到 Cortana 的声音，为你提供有关接下来要执行的操作的说明。
+完成安装后，混合现实门户应用应在你的 HMD 中启动一项沉浸式体验，其中称为 **了解混合现实**。 这一沉浸式体验会教你如何使用 Windows Mixed Reality。 在加载屏幕上注视宝物即可开始。 你应在耳机中听到 Cortana 的声音，为你提供有关接下来要执行的操作的说明。
 
 ![了解 Mixed Reality](images/file-learnmixedrealitystart.png)
 
-## <a name="re-run-the-learning-experience"></a>重新运行学习体验
+## <a name="rerun-the-learning-experience"></a>重新运行学习体验
 
 了解混合现实是一个应用。 随时可以从 [混合现实主页](your-mixed-reality-home.md) 的 "开始" 菜单启动该应用。 使用运动控制器或键盘：
 

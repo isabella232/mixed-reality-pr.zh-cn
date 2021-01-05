@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed Reality，会议，峰会，开发人员，HoloLens，HoloLens 2，Kinect
-ms.openlocfilehash: bd51220e030af1e9c60a66eb43ea6985b95cd43f
-ms.sourcegitcommit: 16524778ece416e002f52c9ceae354e1122bcc74
+ms.openlocfilehash: 93bafae605640a0576fd273f761eaec0a8994d86
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97582411"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757595"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>日本混合现实开发人员日
 
@@ -39,23 +39,23 @@ ms.locfileid: "97582411"
 
 **所有时间都是日本标准时间 (UTC + 9)** 
 
-### <a name="december-16th"></a>12月16日
+### <a name="december-16"></a>12 月 16 日
 
 **我们从原始计划延迟了一小时。**
 
 |**时间**|**会话标题**|**主讲人**|**语言**|**级别**|
 |---------|---------|---------|---------|---------|
 |11： 00 (-11：50am|[使用 Alex Kipman 的特殊欢迎打开主题](https://youtu.be/MamMO11TnzY)|Madoka Chiyoda、Jesse McCulloch、Kaoru Nakamura、Tetsu Muranaka|JA/EN|空值|
-|11：50am： 00 (|**中断 (10min)**||||
+|11：50am： 00 (|**中断 (10 分钟)**||||
 |12： 00 (：25pm|*会话 1* [混合现实简介](https://youtu.be/HqJy91y8Of0)|Atsushi Suzuki|JA|100|
 |12：下午6:30：55pm|*会话 2* [混合现实业务动力](https://youtu.be/fJJ9I8UGbio)|Tetsu Muranaka|JA|200|
 |1： 00 (：50pm|*就餐会话* 面板：交互式免费讨论、问答、MRTK + Oculus|Madoka Chiyoda + Microsoft Mvp|JA|200|
-|1：50pm： 00 (|**中断 (10min)**||||
+|1：50pm： 00 (|**中断 (10 分钟)**||||
 |2： 00 (：25pm|*Session* [2 开发概述](https://youtu.be/_z0CwAVkbiQ)|Madoka Chiyoda|JA|200|
 |2：下午6:30：55pm|*会话 4* [MRTK UX 组件 v 2.5.0](https://youtu.be/If5R9diyF50)|Yoon 寄存|JA|300|
 |3： 00 (：25pm|*会话 5* [预启动了 HoloLens 2 和 UNREAL 引擎 (MRTK-Unreal)](https://youtu.be/AsAuPx0iz3o)|Cameron Micka|CN|300|
 |3：下午6:30：55pm|*会话 6* [设计全息影像](https://youtu.be/jHn9yydiRTw)|Daniel Escudero|CN|300|
-|3：55pm：15pm|**中断 (20min)**||||
+|3：55pm：15pm|**中断 (20 分钟)**||||
 |4：15pm：40pm|*会话 7* [Azure 对象锚](https://youtu.be/dZCb6VJlaaU)|Jesse McCulloch|CN|300|
 |4：45pm：10pm|*会话 8* [Azure 远程呈现](https://youtu.be/MEhL12WGOW0)|Atsushi Suzuki|JA|300|
 |5：15pm：40pm|*会话 9* [通过 Azure 空间锚点对齐全息图和现实世界](https://youtu.be/ApBd_jSHg9Q)|Yingguang Mei|CN|300|
@@ -72,17 +72,17 @@ Futo Horio ([@Futo_Horio](https://twitter.com/Futo_Horio)) ，Takahiro Miyaura (
 
 **问：** 谁应参加混合现实开发日
 
-**答** -此事件包含在混合现实空间中工作或播放的所有人。 尽管大部分内容都是以开发人员为中心的，但我们也知道，开发人员以外的各种角色都有兴趣的内容。 请记得查看更新计划，以查看我们将提供的内容种类。  
+**答** -此事件包含在混合现实空间中工作或播放的所有人。 尽管大部分内容是以开发人员为中心的，但我们也知道，许多角色都有兴趣的内容。 请记住检查计划以了解是否有要提供的内容类型。  
 
 **问：** 我在团队实时事件中找不到事件
 
-要参与 **的**，请单击在注册事件后收到的电子邮件中的链接。 建议在团队 PC 应用上观看，还可以参与团队移动应用或桌面浏览器。
+若要参与，请选择在注册事件后接收的电子邮件中的链接。 建议在团队 PC 应用上观看，还可以参与团队移动应用或桌面浏览器。
 
-如果由于某种原因无法登录到团队，请检查将在其中同时广播事件的 YouTube 频道。 但是，你将无法通过扬声器参加问答。
+如果由于某种原因无法登录到团队，请检查将在其中同时广播事件的 YouTube 频道。 但是，您不能通过扬声器参加问答。
 
 **问：** 在事件之后，演示材料和会话视频是否可用？
 
-**答** -我们将发布每个视频会话，但由于所涉及的时间，如果你可以，请考虑实时加入我们！
+**答** -我们将发布每个视频会话，但由于所涉及的时间，请考虑加入我们的活动（如果可以）！
 
 <!--  
 **Q** -  
@@ -101,6 +101,6 @@ Futo Horio ([@Futo_Horio](https://twitter.com/Futo_Horio)) ，Takahiro Miyaura (
 
 Microsoft 的使命是让全球每个人和每个组织取得更大的成就。 这包括所有 Microsoft 活动和聚会，包括在数字平台上，我们在其中寻找为所有参与者创建过于、友好、有趣和非独占体验。
 
-我们期望所有数字事件参与者都坚持此行为准则的原则，其中涵盖了主要数字事件和所有相关活动。 无论位置如何，我们都不允许任何形式的任何参与方参与者以任何形式在任何形式的失礼行为、消息、图像或交互。 Microsoft 不允许根据年龄、体系、颜色、性别标识或表达式、国家/地区、实物或精神伤残、宗教、色情方向或适用当地法律、法规和 ordinances 所保护的任何其他特征，来避免骚扰或歧视。  
+我们期望所有数字事件参与者都坚持此行为准则的原则，其中涵盖了主要数字事件和所有相关活动。 无论在什么位置，我们都不允许任何形式的任何参与方参与者在任何形式的任何方面（包括业务和社交活动）的干扰或失礼行为、消息、图像或交互。 Microsoft 不允许根据年龄、体系、颜色、性别标识或表达式、国家/地区、实物或精神伤残、宗教、色情方向或适用于当地法律、法规和 ordinances 所保护的任何其他特征来骚扰或歧视。  
 
-禁止在社交渠道中共享的任何格式的会话内容或演示文稿的照片、视频或记录。 我们鼓励每个人都协助创建欢迎和安全环境。 请向业务执行热线 (1-877-320-MSFT 或) 报告任何问题、骚扰行为、可疑或中断性活动 [buscond@microsoft.com](mailto:buscond@microsoft.com) 。 Microsoft 保留自行决定拒绝入场券或从混合现实开发天数中删除任何人的权利。 
+禁止以社交渠道中共享的任何格式为会话内容或演示文稿记录照片、视频或记录。 我们鼓励每个人都协助创建欢迎和安全环境。 请向业务执行热线 (1-877-320-MSFT 或) 报告任何问题、骚扰行为、可疑或中断性活动 [buscond@microsoft.com](mailto:buscond@microsoft.com) 。 Microsoft 保留自行决定拒绝入场券或从混合现实开发天数中删除任何人的权利。 

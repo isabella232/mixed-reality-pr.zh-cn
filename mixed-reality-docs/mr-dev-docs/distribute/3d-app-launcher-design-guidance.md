@@ -6,16 +6,16 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，3D 应用程序启动器，沉浸式耳机，动态立方体，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，UWP，Win32，照明，颜色
-ms.openlocfilehash: a501b4bdc86df17f6d005c2f7ccf4fe6a94a4b43
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 2edb09e47da5bcbae34a37f004853002f3f65cf3
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703473"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757725"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>3D 应用启动器设计指南
 
-当你在 Windows Mixed Reality 沉浸式 (VR) 耳机上，你可以输入 Windows Mixed Reality 主页，在山上和水 (周围的 cliff 上以房子显示，但你可以 [选择其他环境，甚至创建自己的](../design/add-custom-home-environments.md)) 。 在此家中，用户可以自由地按所需的方式排列和组织3D 对象和应用。 **3d 应用启动器** 是用户混合现实房子中的 "物理" 对象，他们可以选择启动应用。
+置于 Windows Mixed Reality 沉浸式 (VR) 耳机时，请输入 Windows Mixed Reality home。 本主页在山上和水周围的 cliff 上进行可视化，但你可以 [选择其他环境，甚至创建自己](../design/add-custom-home-environments.md) 的) 。 在家里的空间内，用户可以自由地按所需的方式排列和组织3D 对象和应用。 **3d 应用启动器** 是用户混合现实房子中的 "物理" 对象，他们可以选择启动应用。
 
 ![示例： Floaty 鸟3D 应用启动器](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
 *Floaty 鸟3D 应用启动器示例 (虚构应用)*
@@ -56,7 +56,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
 
 ### <a name="recognizable"></a>识别
 
-你的3D 应用程序启动器应立即将 "你的应用程序" 的品牌表达为看到它的人。 如果应用中有星形或特别可识别的对象，我们建议将其作为设计的一个很大的组成部分。 在混合现实世界中，对象对用户的兴趣比单独的徽标要多。 可识别对象快速、清晰地传达品牌。
+你的3D 应用程序启动器应立即将 "你的应用程序" 的品牌表达为看到它的人。 如果应用中有星形或特别可识别的对象，我们建议将其用作设计的重要组成部分。 在混合现实世界中，对象对用户的兴趣比单独的徽标要多。 可识别对象快速、清晰地传达品牌。
 
 ### <a name="volumetric"></a>容量耗尽
 
@@ -67,7 +67,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
         ![仅徽标 ](images/20171016-140436-mixedreality-640px.jpg) *徽标*
     :::column-end:::
     :::column:::
-        ![更能识别字符更可识别的字符 ](images/20171016-140557-mixedreality-640px.jpg) *More recognizable with a character*
+        ![更能识别字符更可识别的字符 ](images/20171016-140557-mixedreality-640px.jpg) 
     :::column-end:::
 :::row-end:::
 
@@ -82,7 +82,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
 
 ## <a name="tips-for-good-3d-models"></a>适用于三维模型的提示
 
-* 规划应用程序启动器的维度时，会针对大致的30cm 多维数据集。 因此，1:1:1 大小的比率。
+* 规划应用程序启动器的维度时，会获得大约一个 30 cm 的多维数据集。 因此，1:1:1 大小的比率。
 * 模型必须在10000多边形下。 [详细了解 (LODs 的三角形计数和详细级别) ](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
 * 在沉浸式耳机上测试。
 * 在可能的情况下，将详细信息生成到模型的几何图形–不要依赖于纹理获取详细信息。
@@ -105,9 +105,9 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
 
 ## <a name="how-to-handle-type"></a>如何处理类型
 
-* 建议你的类型包含大约1/3 的应用启动器 (或多个) 。 类型主要是使用户了解你的启动程序，事实上，启动程序很好，因为它非常重要。
+* 建议你的类型需要大约1/3 个应用启动器 (或更多) 。 类型主要是使用户了解你的启动程序，事实上，启动程序非常有用，因为这很重要。
 * 避免使类型成为超级类型-尝试将其放在应用程序启动器核心维度的范围内 (更多或更少) 。
-* 平面类型可正常运行，但请注意，在某些角度和某些环境下，可能难以查看。 您可以考虑将它放在一个实体对象或背景上，以帮助解决此情况。
+* 平面类型可以正常工作，但在某些环境中可能难以查看。 您可以考虑将它放在一个实体对象或背景上，以帮助解决此情况。
 * 将维度添加到您的类型非常适合3D。 将类型的两侧的底纹着色为不同、更暗的颜色可帮助提高可读性。
 
 :::row:::
@@ -124,7 +124,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
 
 **键入工作的颜色**
 
-* 白色
+* White
 * 黑色
 * 亮半饱和颜色
 
@@ -144,7 +144,7 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
 
 ## <a name="lighting"></a>照明
 
-应用启动器的照明来自 Cliff 房子环境。 请确保在整个房子内的多个位置测试启动器，使其看起来很好。 好消息是，如果您按照本文档中的其他设计指南进行了，则您的启动器应该非常适合 Cliff 房子中的大多数照明。
+应用启动器的照明来自 Cliff 房子环境。 请确保在整个房子内的多个位置测试启动器，使其看起来很好。 好消息是，如果您按照本文档中的其他设计指南进行了说明，则您的启动程序应该非常适合 Cliff 房子中的大多数照明。
 
 很好的地方就是测试启动器在环境中的各种灯光上的外观，就是工作室、Media 房间、后 Patio (具体区域以及草地) 。 另一种好的测试是将它放在半轻和半阴影上，并查看其外观。
 
@@ -166,11 +166,11 @@ Cliff 房子中的三维应用启动器及其默认大小对于空间中的其�
 
 如果你更熟悉其中的一个，则 (交替使用 [三维 Coat](https://3dcoat.com/home/)、 [Quixel Suite 2](https://quixel.se/suite2/)或 [Marmoset Toolbag](https://www.marmoset.co/toolbag/) 。 ) 
 
-### <a name="best-practices"></a>最佳实践
+### <a name="best-practices"></a>最佳做法
 
 * 如果你的应用启动器对象是为 .PBR 编写的，则为 Cliff 房子环境转换该对象应该非常简单。
 * 着色器应为金属/粗糙度工作流– Unreal .PBR 着色器是一个关闭的传真。
-* 导出纹理时，请牢记 [建议的纹理大小](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) 。
+* 导出纹理时，请记住 [建议的纹理大小](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) 。
 * 请确保为实时照明生成对象，这意味着：
   * 避免融入阴影-或绘制阴影
   * 避免纹理中的融入光照
