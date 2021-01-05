@@ -1,26 +1,26 @@
 ---
 title: 着色器
-description: MRTK 标准着色器提供各种类型的视觉效果，可与全息影像一起使用。
+description: 混合现实工具包标准着色器提供各种类型的视觉效果，可与全息影像一起使用。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，着色器，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，视觉效果
-ms.openlocfilehash: ced2d62f9304a8e6238febb8c485449f2e10b135
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 08701fb48d633f7de75b74b5e44655c3a01fade8
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703343"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848245"
 ---
 # <a name="shader"></a>着色器
 
 ![着色器](images/UX_Hero_StandardShader.jpg)
 
-由于全息对象与真实环境中的物理对象混合在一起，因此向用户提供视觉提示非常重要。 MRTK 标准着色器提供各种类型的视觉效果，可与全息影像一起使用。 MRTK 标准着色系统利用可实现类似于 Unity 标准着色器的视觉对象，实现 [流畅的设计系统原则](https://www.microsoft.com/design/fluent/#/)，并使混合现实设备保持高性能。
+由于全息对象与真实环境中的物理对象混合在一起，因此向用户提供视觉提示非常重要。 混合现实工具包标准着色器提供各种类型的视觉效果，可与全息影像一起使用。 着色系统使用单个灵活的着色器来实现类似于 Unity 的标准着色器的视觉对象。 着色器实现了 [熟知的设计系统原则](https://www.microsoft.com/design/fluent/#/) ，并在混合现实设备上保持高性能。
 <br>
 
-## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>使用 MRTK 标准着色器的视觉效果示例 
+## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>使用 MRTK (混合现实工具包的视觉效果示例) 标准着色器 
 :::row:::
     :::column:::
        ![移动](images/UX_Button_Affordance_ProximityLight.jpg)<br>
@@ -36,10 +36,9 @@ ms.locfileid: "94703343"
 
 ---
 
-## <a name="mrtk-standard-shader-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的 MRTK 标准着色器 (Unity 的混合现实工具包) 
+## <a name="standard-shader-in-mrtk-for-unity"></a>MRTK for Unity 中的标准着色器
 
 * [MRTK-标准着色器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)
-
 
 <br>
 

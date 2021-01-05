@@ -6,14 +6,15 @@ ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: overview
 keywords: UX 设计，混合现实 UX，UX，应用模式，控件，样式，HoloLens，交互，空间交互，空间 UI，UX 元素，行为，构建基块，版式，颜色，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: c75856362f0e68eba2736105c028bff736c5932c
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 47f7877e9a5f8a71bcae9a16011210d9fc897040
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703133"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847779"
 ---
 # <a name="ux-elements-overview"></a>UX 元素概述
+
 ## <a name="foundational-elements"></a>基础元素
 了解设计良好混合现实体验所需的基础元素。
 
@@ -31,7 +32,7 @@ ms.locfileid: "94703133"
        [ ![ 版式](images/typography-cover.png)](typography.md) **[版式](typography.md)**
     :::column-end:::
     :::column:::
-       [ ![ 声音](images/spatialaudio.png)](spatial-sound-design.md) **[Sound](spatial-sound-design.md)**
+       [ ![ 声音](images/spatialaudio.png)](spatial-sound-design.md) **[](spatial-sound-design.md)**
     :::column-end:::
 :::row-end:::
 
@@ -45,7 +46,7 @@ ms.locfileid: "94703133"
        [ ![ 游标](images/UX_Hero_Cursor.jpg)](cursors.md) **[游标](cursors.md)**
     :::column-end:::
     :::column:::
-       [ ![ 手动](images/UX_Hero_HandRay.jpg)](point-and-commit.md) **[Hand ray](point-and-commit.md) ray**
+       [ ![ 手动](images/UX_Hero_HandRay.jpg)](point-and-commit.md) **[](point-and-commit.md) ray**
     :::column-end:::
     :::column:::
        [ ![ 按钮](images/UX_Hero_Button.jpg)](button.md) **[按钮](button.md)**
@@ -69,7 +70,7 @@ ms.locfileid: "94703133"
        " [ ![ 手形菜单](images/UX_Hero_HandMenu.jpg)](hand-menu.md)" **[菜单](hand-menu.md)**
     :::column-end:::
     :::column:::
-       菜单附近 [ ![ 附近的菜单](images/UX_Hero_NearMenu.jpg)](near-menu.md) **[Near menu](near-menu.md)**
+       菜单附近 [ ![ 附近的菜单](images/UX_Hero_NearMenu.jpg)](near-menu.md) **[](near-menu.md)**
     :::column-end:::
     :::column:::
        [ ![ 对象集合](images/UX_Hero_ObjectCollection.jpg)](object-collection.md) **[对象集合](object-collection.md)**

@@ -5,20 +5,28 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: 0a71072a27befc4295b82e1235cbc75655743056
-ms.sourcegitcommit: 0b406ccbc7ce619e42809ba8dfdc47d83f4917ff
+ms.openlocfilehash: 47689a53557e6ce9b97d0e9d834a70fb0a7786d0
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97691316"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865412"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>对混合现实开发人员文档进行贡献
 
 欢迎使用 [适用于混合现实开发人员文档的公共](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs)存储库！ 在此存储库中创建或编辑的任何项目 **都将对公共可见。** 
 
-混合现实文档现在位于 docs.microsoft.com 平台上，后者使用 GitHub 风格 Markdown 和 Markdig 功能。 在此存储库中编辑的内容将格式化为显示在中的样式页面 https://docs.microsoft.com/windows/mixed-reality 。 若要参与 HoloLens 或 VR 发烧文档，请访问其各自的 [hololens](https://github.com/MicrosoftDocs/Hololens) 和 [vr](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) 存储库。
+混合现实文档现在位于 docs.microsoft.com 平台上，后者使用 GitHub 风格 Markdown 和 Markdig 功能。 在此存储库中编辑的内容将格式化为显示在中的样式页面 https://docs.microsoft.com/windows/mixed-reality 。 
 
 此页介绍了用于贡献和链接到 Markdown 基础知识的基本步骤和指导原则。 感谢你的发布内容！
+
+## <a name="available-repos"></a>可用存储库
+
+| 存储库名称 | URL |
+| --- | --- |
+| 混合现实 | [MicrosoftDocs/mixed-现实](https://docs.microsoft.com/windows/mixed-reality) |
+| VR 爱好者指南 | [MicrosoftDocs/混合-现实/发烧-指南](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
+| HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
 
 ## <a name="before-you-start"></a>准备工作
 

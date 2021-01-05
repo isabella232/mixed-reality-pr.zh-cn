@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，石板，MRTK，混合现实工具包
-ms.openlocfilehash: 85aa91793da9022080c95775bbfd1e4775ea05d8
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 53bcc9d8ac3b222e9b5a3dfcf47b327c212552d2
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703324"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848217"
 ---
 # <a name="slate"></a>平板
 
 ![平板](images/UX_Hero_Slate.jpg)
 
-石板是用于显示2D 内容的精简窗口样式控件。 例如，您可以使用它来显示纯文本、图像或文档。 它提供 grabbable 标题栏，其中包含 "关注我 (标记-沿) " 和 "关闭" 功能的按钮。 可以通过 [直接操作](direct-manipulation.md#2d-slate-interaction) 滚动盖板中的内容，就像物理触摸屏幕一样。 您也可以使用 "注视"、"轻点击" 和 "拖动手势" 或运动控制器的指针。
+石板是用于显示2D 内容（如纯文本、图像或文档）的精简窗口样式控件。 石板提供一个 grabbable 标题栏，其中包含 "关注我 (标记-沿) " 和 "关闭" 功能的按钮。 可以通过 [直接操作](direct-manipulation.md#2d-slate-interaction) 滚动盖板中的内容，就像物理触摸屏幕一样。 您也可以使用 "注视"、"空中点击" 和 "拖动手势" 或运动控制器的指针。
 
 <br>
 

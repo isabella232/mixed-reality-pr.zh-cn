@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: 05adee2d88bc90dcfb5cf8b780212c7622aff786
-ms.sourcegitcommit: ce4975f584bb62075bcb66349237b77081fb982b
+ms.openlocfilehash: 9e7f59c57d409d61df73e6d07659bf6c7242202c
+ms.sourcegitcommit: 5784336a780486d05db6a627839efe47f08fac36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644914"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97880593"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
@@ -19,10 +19,10 @@ ms.locfileid: "97644914"
 
 ## <a name="prerequisites"></a>先决条件
 
-*   Unity 2020.2 或更高版本
-*   Unity OpenXR 插件0.1.1 或更高版本
-*   Visual Studio 2019 或更高版本
-*   在适用于 HoloLens 2 应用的 Unity 中安装 **UWP** 平台支持
+* Unity 2020.2 或更高版本
+* Unity OpenXR 插件0.1.1 或更高版本
+* Visual Studio 2019 或更高版本
+* 在适用于 HoloLens 2 应用的 Unity 中安装 **UWP** 平台支持
 
 > [!NOTE]
 > 如果要在 Windows 电脑上构建 VR 应用程序，则不一定需要混合现实 OpenXR 插件。 但是，如果要自定义 HP 回音 G2 控制器的控制器映射，或生成在 HoloLens 2 和 VR 耳机上都适用的应用，则需要安装该插件。
@@ -32,7 +32,7 @@ ms.locfileid: "97644914"
 你的项目需要在使用混合现实 OpenXR 插件之前安装 **OpenXR 插件** 和 **XR 插件管理** 包。 如果已安装了这些文件，很好！ 否则，安装混合现实 OpenXR 插件会自动将它们作为依赖项进行安装：
 
 1. 在 Unity 编辑器中，导航到 "**编辑" > 项目设置 > 包管理器**"
-2. 展开 " **限定作用域** " 部分，输入以下信息，然后选择 " **保存**"：   
+2. 展开 " **限定作用域** " 部分，输入以下信息，然后选择 " **保存**"：
     * 将 **名称** 设置为 **Microsoft Mixed Reality**
     * 将 **URL** 设置为 **https://pkgs.dev.azure.com/aipmr/MixedReality-Unity-Packages/_packaging/Unity-packages/npm/registry/**
     * 将 **范围 (s)** 设置为 **mixedreality**
@@ -52,28 +52,30 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 
 添加 OpenXR 包：
 
-1. 在文本编辑器中打开 **<projectRoot> /Packages/manifest.js** ，如 Visual Studio Code
-2. 按如下所示修改文件 *中包/manifest.js* 的依赖项部分：
+1. 在文本编辑器中打开 **[projectRoot]/Packages/manifest.js** ，如 Visual Studio Code
+    1. 为此，请在项目窗口的左面板中右键单击 " **包** "。 然后单击 " **在资源管理器中显示**"。
+    ![项目窗口中列出的包的屏幕截图](images/packages.png)
+1. 按如下所示修改文件 *中包/manifest.js* 的依赖项部分：
 
-> [!IMPORTANT]
-> 清单文件中的依赖关系可能比此处显示的更多。 请勿删除任何文件，只需将 "OpenXR" 依赖项添加到列表。
+    > [!IMPORTANT]
+    > 清单文件中的依赖关系可能比此处显示的更多。 请勿删除任何文件，只需将 "OpenXR" 依赖项添加到列表。
 
-```
-  "dependencies": {
-    "com.microsoft.mixedreality.openxr": "0.1.0",
-  }
-```
+    ``` json
+      "dependencies": {
+        "com.microsoft.mixedreality.openxr": "0.1.1",
+      }
+    ```
 
-3. 保存该文件，切换回 Unity 编辑器，打开 **包管理器** 以确认已安装插件： 
+1. 保存该文件，切换回 Unity 编辑器，打开 **包管理器** 以确认已安装插件：
 
-![在 Unity 编辑器中打开的 Unity 包管理器的屏幕截图，其中突出显示了混合现实 OpenXR 插件](images/openxr-img-03.png)
+    ![在 Unity 编辑器中打开的 Unity 包管理器的屏幕截图，其中突出显示了混合现实 OpenXR 插件](images/openxr-img-03.png)
 
-> [!Note] 
-> 如果使用 Unity 包管理器删除 OpenXR 包，则必须使用前面介绍的步骤重新添加它。
+    > [!Note]
+    > 如果使用 Unity 包管理器删除 OpenXR 包，则必须使用前面介绍的步骤重新添加它。
 
 ## <a name="configuring-xr-plugin-management-for-openxr"></a>为 OpenXR 配置 XR 插件管理
 
-若要将 OpenXR 设置为 Unity 中的运行时： 
+若要将 OpenXR 设置为 Unity 中的运行时：
 
 1. 在 Unity 编辑器中，导航到 "**编辑 > 项目设置**"
 2. 在设置列表中，选择 " **XR 插件管理**"
@@ -97,7 +99,7 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 
 ## <a name="try-out-the-unity-sample-scenes"></a>试用 Unity 示例场景
 
-若要利用一个或多个示例，请从 **程序包 Manager** 安装 [ARFoundation 4.0 +](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html#installing-ar-foundation) ：
+若要利用一个或多个示例，请从 **包管理器** 安装 [ARFoundation 4.0 +](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html#installing-ar-foundation) ：
 
 ![在 Unity 编辑器中打开的 Unity 包管理器的屏幕截图，其中突出显示了 AR Foundation](images/openxr-img-09.png)
 
@@ -118,13 +120,14 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 ![Screenshot of Unity Package Manager open in Unity editor with OpenXR Plugin selected and samples import button highlighted](images/openxr-img-10.png) -->
 
 > [!NOTE]
->  更新包时，Unity 提供更新导入的示例的选项。  更新导入的示例将覆盖对示例和关联的资产所做的任何更改。
+> 更新包时，Unity 提供更新导入的示例的选项。  更新导入的示例将覆盖对示例和关联的资产所做的任何更改。
 
-## <a name="next-steps"></a>后续步骤 
+## <a name="next-steps"></a>后续步骤
 
 现在，你已为 OpenXR 配置了项目并有权访问示例，请查看我们的 OpenXR 插件当前支持的 [功能](openxr-supported-features.md) 。
 
 ## <a name="see-also"></a>另请参阅
-* [不 MRTK 配置你的项目](configure-unity-project.md)
+
+* [配置项目时不使用 MRTK](configure-unity-project.md)
 * [建议用于 Unity 的设置](recommended-settings-for-unity.md)
 * [针对 Unity 的性能建议](performance-recommendations-for-unity.md#how-to-profile-with-unity)

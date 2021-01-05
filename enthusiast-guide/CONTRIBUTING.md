@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: d8b4e23603a09d39fef076b600364a55410d12c3
-ms.sourcegitcommit: 0b406ccbc7ce619e42809ba8dfdc47d83f4917ff
+ms.openlocfilehash: afb559937c2bde06d3c74c1c572aefec50502884
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97691374"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865432"
 ---
 # <a name="contributing-to-the-mixed-reality-enthusiast-guide"></a>对混合现实发烧指南进行贡献
 
@@ -167,7 +167,7 @@ ms.locfileid: "97691374"
 >[!NOTE]
 >review.docs.microsoft.com 上预览所做的更改仅适用于 Microsoft 员工
 
-Microsoft 员工：将你的贡献合并到 "master" 分支后，你可以在内容公开之前查看内容 https://review.docs.microsoft.com/windows/mixed-reality?branch=master 。 使用左栏中的目录查找文章。
+Microsoft 员工：将你的贡献合并到 "master" 分支后，你可以在内容公开之前查看内容 https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide?branch=master 。 使用左栏中的目录查找文章。
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>在浏览器中编辑与使用桌面客户端进行编辑
 

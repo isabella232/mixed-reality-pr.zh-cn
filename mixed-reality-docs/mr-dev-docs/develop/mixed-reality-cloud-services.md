@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: f69ec9672898caf01092d805e5c83df48a14a65e
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: e660556810cdea86321b7826217268e6c8d0850a
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925925"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865402"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
@@ -28,7 +28,7 @@ ms.locfileid: "96925925"
 ### <a name="azure-remote-rendering"></a>Azure 远程渲染
 Azure 远程渲染（也称为 ARR）是一项服务，可用于实时渲染高度复杂的 3D 模型并将其流式传输到设备。 ARR 目前为公共预览版，可将其添加到面向 HoloLens 2 或 Windows 桌面电脑的 Unity 或 Native C++ 项目中。
 
-![ 远程渲染图像](../design/images/RemoteRendering.jpg)
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Intro-to-Azure-Mixed-Reality-Services-Azure-Remote-Rendering/player]
 
 ARR 是在不受限制的设备上运行的任何混合现实应用程序的重要组成部分，因为它们的计算渲染能力较小。 以下面的并排引擎模型比较为例：左侧的高保真模型具有超过 1800 万个三角形，而右侧的简化模型仅具有大约 20 万个三角形。 在每个细节都很重要的场景中（工业工厂管理、卡车发动机等资产的设计审查、术前手术规划等），3D 可视化将这些细节变为现实。 这有助于设计人员、工程师、医生和学生更好地理解复杂信息并做出正确的选择。 但是，这种简化可能会导致关键业务和设计决策所需的重要细节丢失。
 
