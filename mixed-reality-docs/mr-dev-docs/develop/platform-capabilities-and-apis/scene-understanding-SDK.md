@@ -1,17 +1,17 @@
 ---
 title: 场景理解 SDK
-description: 场景理解 SDK 的编程指南
+description: 了解如何在混合现实应用中安装和使用场景理解 SDK （包括组件、网格和对象）。
 author: szymons
 ms.author: szymons
 ms.date: 12/14/2020
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity
-ms.openlocfilehash: 1ec29d09ab52abae9a9111a6441523c8aa7720f7
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 9520ad604125705c60624254b097de5fc93021ec
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530344"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009377"
 ---
 # <a name="scene-understanding-sdk-overview"></a>场景理解 SDK 概述
 
@@ -123,9 +123,9 @@ SceneObjects 可以包含以下任一项：
 <tr><td>壁</td><td>物理墙。 墙壁被认为是可移动的环境结构。</td></tr>
 <tr><td>Floor</td><td>楼层是可以进行审核的任何表面。 注意：楼梯不是楼层。 另请注意，该楼层假设有任何不可表面，因此没有明确的假设。 多层结构，斜坡等 .。。应将所有分类为楼层。</td></tr>
 <tr><td>Ceiling</td><td>房间的上部面。</td></tr>
-<tr><td>平台</td><td>一个大平面，可以在其上放置全息影像。 它们倾向于表示表、countertops 和其他大型水平曲面。</td></tr>
+<tr><td>Platform</td><td>一个大平面，可以在其上放置全息影像。 它们倾向于表示表、countertops 和其他大型水平曲面。</td></tr>
 <tr><td>World</td><td>标记不可知的几何数据的保留标签。 通过设置 EnableWorldMesh 更新标志生成的网格将归为 "世界"。</td></tr>
-<tr><td>Unknown</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
+<tr><td>未知</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
 </tr>
 </table>
 

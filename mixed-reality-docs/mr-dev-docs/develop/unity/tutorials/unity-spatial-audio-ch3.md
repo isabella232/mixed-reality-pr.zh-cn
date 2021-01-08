@@ -1,19 +1,20 @@
 ---
-title: 空间音频教程-3。 将视频中的音频空间化
-description: 将视频资产导入到 Unity 项目，并 spatialize 视频中的音频。
+title: 将视频中的音频空间化
+description: 了解如何将视频资产导入到 Unity 混合现实项目，并从视频 spatialize 音频。
 author: kegodin
 ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，视频导入，视频播放器
-ms.openlocfilehash: 46f2f88be6613096a835f04e826b776c32c1b8c2
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: 211d1e32a8137444d0f33d442a60067dcd77ca36
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002622"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007408"
 ---
 # <a name="spatializing-audio-from-a-video"></a>将视频中的音频空间化
+
 在 HoloLens 2 Unity 教程的 "空间音频" 模块的第三章中，你将：
 * 导入视频并添加视频播放器
 * 播放视频到 quadrangle
@@ -40,6 +41,7 @@ ms.locfileid: "97002622"
 ![层次结构中的视频播放器](images/spatial-audio/video-player-in-hierarchy.png)
 
 ## <a name="play-video-onto-a-quadrangle"></a>播放视频到 quadrangle
+
 **视频播放器** 对象需要一个纹理游戏对象用于呈现视频。 首先 **，通过** 右键单击 "**层次结构**" 窗格并选择 " **3d 对象-> 四个**：
 
 ![向层次结构添加四个](images/spatial-audio/add-quad-to-hierarchy.png)
@@ -74,6 +76,7 @@ ms.locfileid: "97002622"
 ![视频播放器属性](images/spatial-audio/video-player-properties.png)
 
 ## <a name="spatialize-the-audio-from-the-video"></a>Spatialize 视频中的音频
+
 在 **四** 个 "**检查器**" 窗格中，创建要将音频从视频路由到的 **音频源**：
 * 单击窗格底部的 " **添加组件** "
 * 添加 **音频源**
@@ -96,6 +99,7 @@ ms.locfileid: "97002622"
 ![视频播放器设置音频源](images/spatial-audio/video-player-set-audio-source.png)
 
 ## <a name="next-steps"></a>后续步骤
+
 在 HoloLens 2 上或在 Unity 编辑器中试用你的应用程序。 你将看到并听到视频，视频中的音频将为 spatialized。
 
 > [!div class="nextstepaction"]

@@ -1,17 +1,17 @@
 ---
 title: 立体渲染
-description: 容量耗尽映像包含丰富的信息，这些信息具有不透明度和颜色在整个卷中，无法轻松地表示为表面。 了解如何在 Windows Mixed Reality 内有效呈现容量耗尽映像。
+description: 了解如何在 Windows Mixed Reality 中以不透明度和颜色有效呈现丰富的容量耗尽图像。
 author: kevinkennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 容量耗尽映像，卷渲染，性能，混合现实
-ms.openlocfilehash: c0b68a2368823e5699e24d66bfafe1e4e05bdce8
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 2a76be80d786aea0c8bc1bd364155fa37d37e151
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612941"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008777"
 ---
 # <a name="volume-rendering"></a>立体渲染
 

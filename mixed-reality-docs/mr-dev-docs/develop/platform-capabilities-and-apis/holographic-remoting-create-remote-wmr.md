@@ -1,17 +1,17 @@
 ---
 title: '编写全息远程处理远程应用 (WMR) '
-description: 通过创建在远程计算机上呈现的全息远程处理远程应用远程内容，可将其流式传输到 HoloLens 2。
+description: 了解如何使用 HolographicSpace 将远程计算机上呈现的远程内容流式传输到 HoloLens 2，并将其与全息远程应用进行流式处理。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，NuGet
-ms.openlocfilehash: 5eddcc117008ebc54eac11965592099601880d3e
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: b78d1c93c8b2890ba8d904c289c8d61a14380824
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530221"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006497"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-holographicspace-api"></a>使用 HolographicSpace API 编写全息远程处理远程应用
 

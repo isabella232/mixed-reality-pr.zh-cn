@@ -1,17 +1,17 @@
 ---
 title: 开始你的 VR 旅程
-description: 通过设置和使用沉浸式 VR 设备指导新的 VR 设备用户的检查点。
+description: 浏览我们的特选检查点，通过设置和使用沉浸式 VR 设备指导新的设备用户。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，
-ms.openlocfilehash: 9a82ab12b9cf91bd1fefcf84a2f6b4e62c8df24a
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 711c1b74b79ba510d29c17de0ec21270946ceb61
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725704"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007057"
 ---
 # <a name="start-your-vr-journey"></a>开始你的 VR 旅程
 

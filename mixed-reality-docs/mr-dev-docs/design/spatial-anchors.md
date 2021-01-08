@@ -1,17 +1,17 @@
 ---
 title: 空间定位点
-description: 使用空间定位点呈现稳定全息影像的最佳做法。
+description: 了解使用空间定位点在混合现实应用程序中呈现稳定全息影像的最佳实践。
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 坐标系统，空间坐标系统，世界规模，世界，缩放，位置，方向，锚，空间锚，世界锁定，世界锁定，暂留，共享，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens
-ms.openlocfilehash: 7f6997e491f76e66845b88ea0897dbb037495ba6
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 2db88f9bc5d128f4a9eb42cfb5211d0597b43cfa
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848212"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009107"
 ---
 # <a name="spatial-anchors"></a>空间定位点
 

@@ -1,17 +1,17 @@
 ---
 title: 发行说明-5 月2019
-description: Windows 10 2019 更新的 windows Mixed Reality 发行说明 (也称为 19H1) 。
+description: 随时了解 windows 10 年5月/19H1 更新的 Windows Mixed Reality 发行说明。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: 发行说明，版本，windows 10，build，19h1，os，可能2019
-ms.openlocfilehash: 19444732884a87de3f28e90d656deef6e51eb191
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: fd5688b7c68e0a16873ff153f3c158a3575e02e9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725918"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007117"
 ---
 # <a name="release-notes---may-2019"></a>发行说明-5 月2019
 

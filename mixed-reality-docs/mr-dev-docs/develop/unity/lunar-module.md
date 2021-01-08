@@ -1,17 +1,17 @@
 ---
 title: 登月舱
-description: 了解如何通过两个右手跟踪和 Xbox controller 输入来扩展 HoloLens 的基本手势，创建被动于 surface 贴图和飞机查找并实现简单菜单系统的对象。
+description: 了解如何通过两个右手跟踪和 Xbox 控制器输入来扩展 HoloLens 的基本手势，创建反应对象并实现菜单系统。
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，示例应用，设计，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 2861cb85ac2f4a51a80e586b2be42ddb1d395e8a
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: b0630df49fd8ad154017000893a08560793fb39e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010498"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008817"
 ---
 # <a name="lunar-module"></a>登月舱
 

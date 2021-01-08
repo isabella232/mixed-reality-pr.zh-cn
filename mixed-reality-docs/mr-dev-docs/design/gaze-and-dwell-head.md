@@ -1,17 +1,17 @@
 ---
 title: 头部凝视和停留
-description: 头部凝视和停留输入模型概述
+description: 开始大致了解头盔和停留输入模型，包括常见方案和设计原则。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
 keywords: Mixed Reality，注视，停留，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，ux，指导原则，列表视图
-ms.openlocfilehash: 060d78ec629905ac9f2134851998ec131d85f0cd
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 2bfd984a466c1ccd3913e889ca57663800f46380
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847374"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007077"
 ---
 # <a name="head-gaze-and-dwell"></a>头部凝视和停留
 

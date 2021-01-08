@@ -1,17 +1,17 @@
 ---
 title: 发行说明 - 2016 年 3 月
-description: Hololens 和 Windows 全息版的 HoloLens 发行说明。
+description: 了解 hololens 和 Windows 全息版的 HoloLens 发行说明。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 发行说明，HoloLens，os，平台，功能，生成，启动
-ms.openlocfilehash: 9129bb220d2a580235494a94ecbd3227e7d4c7c7
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: a7797483b5ba60203f0f0b3c2c4ce79b924d81dc
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725928"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009197"
 ---
 # <a name="release-notes---march-2016"></a>发行说明 - 2016 年 3 月
 

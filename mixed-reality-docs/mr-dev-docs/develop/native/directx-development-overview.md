@@ -1,17 +1,17 @@
 ---
 title: 原生开发概述
-description: 直接使用 Windows Mixed Reality Api 构建基于 DirectX 的混合现实引擎。
+description: 了解如何直接使用 Windows Mixed Reality Api 构建基于 DirectX 的混合现实引擎。
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: DirectX，全息呈现，本机，本机应用，WinRT，WinRT 应用，平台 Api，自定义引擎，中间件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 493715660ff8df79df25e09c82fe48b863053ed3
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 764cbe0a37501cc176e9bb05a9a7771b03666f0c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613071"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006847"
 ---
 # <a name="native-development-overview"></a>原生开发概述
 

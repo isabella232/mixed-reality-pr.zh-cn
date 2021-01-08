@@ -1,17 +1,17 @@
 ---
 title: 平板
-description: 石板是用于显示2D 内容的精简窗口样式控件。
+description: 清单，它是一种使用混合现实工具包显示2D 内容的精简窗口样式控件。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，石板，MRTK，混合现实工具包
-ms.openlocfilehash: 53bcc9d8ac3b222e9b5a3dfcf47b327c212552d2
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: cbb4a741f4f78dcad603670bc282a25bc0e70fd2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848217"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008807"
 ---
 # <a name="slate"></a>平板
 

@@ -1,17 +1,17 @@
 ---
 title: Unity 中的焦点
-description: 通过设置焦点在 Unity 中手动优化全息影像稳定性
+description: 了解如何通过设置 HoloLens 和 Windows Mixed Reality 沉浸式耳机，手动优化 Unity 中的全息影像稳定性。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，焦点，焦点平面，稳定平面，稳定点，reprojection，LSR，深度缓冲区，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: d2708dcf39f1d2c67ab1abf69f8330f9dd536ab0
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: bd662a079f23ed590708d961e924859675a44917
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010268"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009337"
 ---
 # <a name="focus-point-in-unity"></a>Unity 中的焦点
 
@@ -53,7 +53,7 @@ void Update()
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是探索混合现实平台功能和 Api。 从这里，你可以继续学习下一主题：
+如果遵循我们所说的 Unity 开发旅程，就是探索混合现实平台功能和 Api。 从这里，你可以继续了解下一个主题：
 
 > [!div class="nextstepaction"]
 > [失跟](tracking-loss-in-unity.md)
@@ -66,4 +66,5 @@ void Update()
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#3-platform-capabilities-and-apis)。
 
 ### <a name="see-also"></a>另请参阅
+
 * [稳定平面](../platform-capabilities-and-apis/hologram-stability.md#reprojection)

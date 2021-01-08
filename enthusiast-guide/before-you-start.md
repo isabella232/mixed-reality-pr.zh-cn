@@ -1,6 +1,6 @@
 ---
 title: 开始之前
-description: 如何确保你的 PC 与 Windows Mixed Reality 兼容并为其做好准备。
+description: 了解如何确保你的电脑兼容，并可用于各种 Windows Mixed Reality 应用程序体验。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，兼容，兼容性，入门，安装，PC，系统要求
 appliesto:
 - Windows 10
-ms.openlocfilehash: f4743b6548def227675944fcd742b1596963cb3c
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: b7e90477ed16170a5661f34798a5af822ad8e945
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725488"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006877"
 ---
 # <a name="before-you-start"></a>准备工作
 

@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，安全性，身份验证，服务器到客户端
-ms.openlocfilehash: 64eb54d9401f3fbc8b73ebb97b19de5a68cdc5c4
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 0881238bfca199958802598a3e1829a9de0d8e5b
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530411"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006477"
 ---
 # <a name="enabling-connection-security-for-holographic-remoting"></a>为全息远程处理启用连接安全性
 
@@ -24,7 +24,7 @@ ms.locfileid: "97530411"
 * 基于不同用例的建议度量值
 * 实现全息远程处理解决方案中的安全性
 
-## <a name="overview"></a>概述
+## <a name="holographic-remoting-security"></a>全息远程处理安全
 
 全息远程处理通过网络交换信息。 如果没有合适的安全措施，则相同网络上的攻击者可能会危及通信的完整性或访问机密信息。
 

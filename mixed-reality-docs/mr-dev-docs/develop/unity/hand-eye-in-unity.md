@@ -1,17 +1,17 @@
 ---
 title: Unity 中的明确表述和眼睛跟踪
-description: 您可以通过两种主要方式在 Unity、手型手势和运动控制器中执行操作。
+description: 了解在你在 Unity、手型手势和运动控制器中进行操作的两个关键方法。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 手势，运动控制器，unity，注视，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: de8ea7968c36722f3690c5515e4f69e576898524
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 4c704677a78fee02b9da9d0db9bc2966ab6b3724
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97011548"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008948"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Unity 中的明确表述和眼睛跟踪
 
@@ -48,7 +48,7 @@ MRTK v2 提供一组 UI 控件和构建基块，有助于加快开发速度。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [空间映射](spatial-mapping-in-unity.md)

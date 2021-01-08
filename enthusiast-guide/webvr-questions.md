@@ -1,14 +1,14 @@
 ---
 title: WebVR 常见问题
-description: Web 混合现实故障排除，超过了标准使用者支持文档。
+description: 对于超出了标准使用者支持文档的 web 应用程序，请保持最新的混合现实故障排除。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，WebVR
-ms.openlocfilehash: fd9906ca36c71b1bf959466d90c57e07be0eca5e
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: dc7a0b28e19f4f1fc029489aae2ea375e43b8d3b
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725628"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008657"
 ---
 # <a name="webvr-faqs"></a>WebVR 常见问题
 

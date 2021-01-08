@@ -1,17 +1,17 @@
 ---
 title: 版式
-description: 文本是在应用程序体验中提供信息的重要元素。
+description: 了解如何设计文本，并将其实现为重要元素，以便在混合现实应用体验中提供信息。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，样式，字体，版式，ui，ux，文本，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens
-ms.openlocfilehash: 09e0e6029011fdd7fda793f6b6645cb3744baa3b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 38acc8c0d2c7dbd7bcb192f82bb1bb52838323ac
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848145"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007647"
 ---
 # <a name="typography"></a>版式
 

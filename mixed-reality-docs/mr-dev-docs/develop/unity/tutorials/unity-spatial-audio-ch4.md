@@ -1,26 +1,28 @@
 ---
-title: 空间音频教程-4。 在运行时启用和禁用空间音频
-description: 使用按钮来启用和禁用运行时音频的 spatialization。
+title: 在运行时启用和禁用空间音频
+description: '了解如何编写在运行时使用按钮来启用和禁用音频 spatialization 的 c # 脚本。'
 author: kegodin
 ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
-ms.openlocfilehash: c9e510e544962c5d1a4c462d20dafa222c6a5289
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: eaaf8a05088b5bab674ca11b15b0c63383faa479
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002602"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007337"
 ---
 # <a name="enabling-and-disabling-spatialization-at-run-time"></a>在运行时启用和禁用 spatialization
 
 ## <a name="objectives"></a>目标
+
 在此第4章中，你将：
 * 添加新脚本以控制游戏对象上的 spatialization
 * 从按钮操作驱动 spatialization 控件脚本
 
 ## <a name="add-spatialization-control-script"></a>添加 spatialization 控件脚本
+
 右键单击 " **项目** " 窗格，然后通过选择 " **> c # 脚本** 创建新的 c # 脚本"。 将脚本命名为 "SpatializeOnOff"。
 
 ![创建脚本](images/spatial-audio/create-script.png)
@@ -90,6 +92,7 @@ public class SpatializeOnOff : MonoBehaviour
 > 如果希望完全禁用 spatialization，请修改脚本，同时调整 **SourceObject** 变量的 **spatialization** 布尔值属性。
 
 ## <a name="attach-your-script-and-drive-it-from-the-button"></a>附加脚本，然后从按钮中进行驱动器
+
 在 **四** 个 "**检查器**" 窗格中，单击 "**添加组件**" 并添加 **Spatialize On** script：
 
 ![将脚本添加到四个](images/spatial-audio/add-script-to-quad.png)
@@ -115,6 +118,7 @@ public class SpatializeOnOff : MonoBehaviour
 ![按钮操作设置](images/spatial-audio/button-action-settings.png)
 
 ## <a name="next-steps"></a>后续步骤
+
 在 HoloLens 2 上或在 Unity 编辑器中试用你的应用程序。 在应用程序中，你现在可以触摸按钮以激活和停用视频上的 spatialization。 在 Unity 编辑器中测试时，按空格键并滚动鼠标滚轮以激活手动模拟。 
 
 > [!div class="nextstepaction"]

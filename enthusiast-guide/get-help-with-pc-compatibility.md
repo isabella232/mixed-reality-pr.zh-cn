@@ -1,6 +1,6 @@
 ---
-title: 在 Windows Mixed Reality 中获取有关 PC 兼容性的帮助
-description: 使用 Windows Mixed Reality 时，帮助资源应对电脑兼容性问题。
+title: 获取有关电脑兼容性的帮助
+description: 使用 Windows Mixed Reality 应用程序和设备时，请及时了解解决计算机兼容性问题的资源。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 01/07/2021
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: a3d8c21a6f9f94cbecca81915145603588e468ff
-ms.sourcegitcommit: e944f24d2deb4433865cc8f6fd9305d6d9676f48
+ms.openlocfilehash: e3d150544c3bce99d1aa808229d282b3d2fe1dd0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97971896"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007477"
 ---
 # <a name="get-help-with-pc-compatibility-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中获取有关 PC 兼容性的帮助
 

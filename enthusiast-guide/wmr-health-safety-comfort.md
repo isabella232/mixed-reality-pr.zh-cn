@@ -1,5 +1,5 @@
 ---
-title: Windows Mixed Reality 沉浸式耳机运行状况、安全和舒适
+title: Windows Mixed Reality 耳机运行状况和安全性
 description: 了解如何在使用 Windows Mixed Reality 应用时使自己和用户的健康、安全、舒适。
 author: hferrone
 ms.author: v-hferrone
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: a8b78cd637b3f3b68ef793aa76031e3151f1f0fe
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 32b29d11585bae4e803e516ae3733e1165f45587
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725568"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008997"
 ---
 # <a name="windows-mixed-reality-immersive-headset-health-safety-and-comfort"></a>Windows Mixed Reality 沉浸式耳机运行状况、安全和舒适
 

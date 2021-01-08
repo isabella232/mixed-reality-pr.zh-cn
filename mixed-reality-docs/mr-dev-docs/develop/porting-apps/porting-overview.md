@@ -1,17 +1,17 @@
 ---
 title: 移植概述
-description: 概述使现有应用程序成为混合现实的各种移植选项。
+description: 概述用于使现有应用程序混合现实和 VR 的各种移植选项。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 移植，unity，中间件，引擎，UWP，Win32
-ms.openlocfilehash: d8cbb62500a81a29a00f4d32eaed0c2df3f5149d
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 5a57c73481e80e5ab6fac1bd02b83c5d3dfaabb6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612831"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007487"
 ---
 # <a name="porting-overview"></a>移植概述
 

@@ -1,6 +1,6 @@
 ---
-title: Windows Mixed Reality 最小电脑硬件兼容性指南
-description: 显示与 Windows Mixed Reality 兼容的最小 PC 系统要求的图表。
+title: Windows Mixed Reality PC 兼容性指南
+description: 概述图表，其中概述了与 Windows Mixed Reality 兼容的最小 PC 系统要求。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/16/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Ultra，兼容，兼容性，系统要求，PC
 appliesto:
 - Windows 10
-ms.openlocfilehash: bd287e2089056be56330c2c2e8e9af2c079009ac
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: ed53c388797cb57a7f2a53ed40b18923a23c8b74
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725658"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009117"
 ---
 # <a name="windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines"></a>Windows Mixed Reality 最小电脑硬件兼容性指南
 
@@ -69,6 +69,7 @@ Windows 10 同时为 Windows Mixed Reality 和 Windows Mixed Reality 供电。 �
  [获取混合现实门户结果的帮助](https://support.microsoft.com/en-us/help/4045777/windows-10-get-help-with-pc-compatibility-in-windows-mixed-reality)
 
 ## <a name="compatibility-guidelines"></a>兼容性指南
+
 > [!IMPORTANT]
 > 我们将更新，并将其添加到中，并可能会修改这些 Windows Mixed Reality PC 兼容性指南。 请定期查看以了解最新的指导原则和要求。
 
@@ -177,28 +178,28 @@ Windows 10 同时为 Windows Mixed Reality 和 Windows Mixed Reality 供电。 �
 
 <table>
     <tr>
-        <th> Surface 设备 </th><th> Windows Mixed Reality 功能支持？ </th><th> 建议配置 </th><th> 说明</th>
+        <th> Surface 设备 </th><th> Windows Mixed Reality 功能支持？ </th><th> 建议配置 </th><th> 备注</th>
     </tr>
     <tr>
-        <td style="vertical-align: middle"> Surface Pro (原始) /Surface Pro 2 </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> Surface Pro (原始) /Surface Pro 2 </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
     <tr>
-        <td style="vertical-align: middle"> Surface Pro 3 </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> Surface Pro 3 </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
  (安装了 Windows 10 专业版)  <tr>
-        <td style="vertical-align: middle"> Surface Pro 4 </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> Surface Pro 4 </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
     <tr>
-        <td style="vertical-align: middle"> Surface 3 </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> Surface 3 </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
     <tr>
-        <td style="vertical-align: middle"> Surface Book </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> Surface Book </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
     <tr>
-        <td style="vertical-align: middle"> 具有性能基准的 Surface Book </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> 具有性能基准的 Surface Book </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
     <tr>
-        <td style="vertical-align: middle"> Surface Go </td><td style="vertical-align: middle"> 无 </td><td> </td><td></td>
+        <td style="vertical-align: middle"> Surface Go </td><td style="vertical-align: middle"> None </td><td> </td><td></td>
     </tr>
 <tr>
         <td style="vertical-align: middle"> Surface Book 2 (15 &quot;)  </td><td style="vertical-align: middle"> 完全 </td><td style="vertical-align: middle"> Intel Core i7/NVIDIA GTX 1060/16 GB 内存 </td>
@@ -261,6 +262,7 @@ Windows 10 同时为 Windows Mixed Reality 和 Windows Mixed Reality 供电。 �
 </table>
 
 ## <a name="see-also"></a>另请参阅
+
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
 * [适用于 Windows Mixed Reality 的电脑的推荐适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)

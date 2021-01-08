@@ -1,17 +1,17 @@
 ---
 title: 添加全息远程处理
-description: 介绍如何使用全息远程处理通过网络将全息影像呈现到 HoloLens。
+description: 了解如何安装、配置和使用全息远程处理通过网络将全息影像呈现到 HoloLens 设备。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程全息影像，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 809258d3387b5e45885c0eb207544c176f891a1d
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 68c1dd43dac4830da061d4900ce768692057e781
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530303"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006667"
 ---
 # <a name="add-holographic-remoting-hololens-first-gen"></a>添加全息远程处理 (HoloLens (第一代) # A3
 

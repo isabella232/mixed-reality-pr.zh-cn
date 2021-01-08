@@ -1,17 +1,17 @@
 ---
 title: OpenXR 故障排除
-description: 解决 OpenXR 应用程序中的问题。
+description: 查找 Windows Mixed Reality OpenXR 应用程序中常见的故障排除问题的资源和解答。
 author: thetuvix
 ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件，故障排除
-ms.openlocfilehash: ddfe548d689d84576ad0ac06bda46d7c2757859c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 6e1696bca4f31f70af10c32087400ed56efa3c11
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612931"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006726"
 ---
 # <a name="openxr-troubleshooting"></a>OpenXR 故障排除
 

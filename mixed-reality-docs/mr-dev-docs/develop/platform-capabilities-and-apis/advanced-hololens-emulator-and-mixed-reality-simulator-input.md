@@ -1,17 +1,17 @@
 ---
-title: 高级 HoloLens 仿真器和混合现实模拟器输入
+title: 高级 HoloLens 模拟器和混合现实模拟器
 description: 有关使用键盘、鼠标和 Xbox 控制器模拟 HoloLens 模拟器和 Windows Mixed Reality 模拟器输入的详细说明。
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens，模拟器，模拟，Windows Mixed Reality，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: f5076e65ba1c5d95c1bb106d2d3181665177b43a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: ff8a2830630b73266fe7348eee5459bcad98e2e0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530457"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006677"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>高级 HoloLens 仿真器和混合现实模拟器输入
 
@@ -50,7 +50,7 @@ ms.locfileid: "97530457"
 
 下表显示了每种类型的输入如何映射到键盘、鼠标和 Xbox 控制器。 每种类型都有不同的映射，具体取决于输入控件的模式。 您可以在本文档的后面部分找到有关输入控制模式的详细信息。
 
-| 输入 |  Keyboard |  鼠标 |  Xbox 控制器 | 
+| 输入 |  键盘 |  鼠标 |  Xbox 控制器 | 
 |----------|----------|----------|----------|
 |  Yaw |  左/右箭头 |  向左/向右拖动 |  向右控制杆左/右 | 
 |  音调 |  向上/向下箭头 |  向上/向下拖动 |  右操纵杆向上/向下 | 
@@ -137,7 +137,7 @@ ms.locfileid: "97530457"
 > [!NOTE]
 > 使用耳机时，会自动忽略标准键盘、鼠标和游戏板控件。
 
-|  Operation |  操作 |  说明 | 
+|  Operation |  操作 |  备注 | 
 |----------|----------|----------|
 |  正文 X |  向左/向右操纵杆 |   | 
 |  正文 Z |  操纵杆前进/后退 |   | 

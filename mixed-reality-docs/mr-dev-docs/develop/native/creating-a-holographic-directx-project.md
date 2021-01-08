@@ -1,17 +1,17 @@
 ---
 title: 创建全息 DirectX 项目
-description: 介绍如何基于 Windows Mixed Reality 应用模板创建新的全息应用。
+description: 了解如何创建新的基于 Windows Mixed Reality 应用模板的全息版 DirectX 应用。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息应用，新应用，UWP 应用，模板应用，全息影像，新建项目，演练，下载，示例代码，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: f377ca5b8af08beb53c878e1ebf665b8074853f6
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 9259a85512555342877de0a5a8bae697fdd03b8d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613081"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006867"
 ---
 # <a name="creating-a-holographic-directx-project"></a>创建全息 DirectX 项目
 
@@ -47,7 +47,7 @@ DirectX 11 全息 UWP 应用模板非常类似于 DirectX 11 UWP 应用模板。
    *Visual Studio 2019 中的全息 DirectX 11 c + +/WinRT UWP 应用项目模板*
    >[!IMPORTANT]
    >请确保项目模板的名称包含 " (c + +/WinRT) "。  如果没有，则已安装全息版项目模板。  若要获取最新的项目模板，请将 [其安装](../install-the-tools.md) 为 Visual Studio 2019 的扩展。
-5. 选择“**下一页**”。
+5. 选择“下一步”  。
 5. 填写 " **项目名称** " 和 " **位置** " 文本框，然后选择或点击 " **创建**"。 创建全息应用项目。
 6. 对于仅面向 HoloLens 2 的开发，请确保将 **目标版本** 和 **最低版本** 设置为 **Windows 10，版本 1903**。  如果你还面向 HoloLens (第一代) 或桌面 Windows Mixed Reality 耳机，则可以将 **最低版本** 设置为 **Windows 10，版本 1809**。 使用 HoloLens 2 的新功能时，这将要求在代码中进行某种 <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">版本自适应检查</a> 。
    ![将 Windows 10 （版本1903）设置为目标和最小版本的屏幕截图](images/new-uwp-project.png)<br>
@@ -177,7 +177,7 @@ int APIENTRY wWinMain(
 
 中的 **Render** 方法 `AppMain.cpp` 采用 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> ，并根据当前应用和空间定位状态将当前帧呈现到每个全息相机。
 
-## <a name="notes"></a>说明
+## <a name="notes"></a>备注
 
 现在，Windows Mixed Reality 应用模板支持 (/Qspectre) 启用了 Spectre 缓解标志的编译。 在编译使用 Spectre 缓解功能的配置之前，请确保安装 Spectre (MSVC) 运行时库的 Microsoft Visual C++ 版本。 若要安装 Spectre 缓解的 c + + 库，请启动 Visual Studio 安装程序并选择 " **修改**"。 导航到 **各个组件** 并搜索 "spectre"。 选择与要为其编译 Spectre 的代码所需的目标平台和 MSVC 版本对应的框，然后单击 " **修改** " 开始安装。
 

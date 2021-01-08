@@ -1,17 +1,17 @@
 ---
 title: 案例研究-HoloTour
-description: HoloTour for Microsoft HoloLens 为世界各地的图标位置提供了沉浸式三维个人教程。 此案例研究将指导您捕获和创建用于 HoloTour 的内容。
+description: 探索 HoloTour 应用程序案例研究，并演练捕获和创建内容的过程。
 author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour、HoloLens、Windows Mixed Reality
-ms.openlocfilehash: 9908327a1b8e70eef73d3f98adb7c75615e8e098
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 3e285988b6027b8c043dea7a4594c21d0bf3370d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677319"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009317"
 ---
 # <a name="case-study---holotour"></a>案例研究-HoloTour
 
@@ -152,5 +152,5 @@ Pantheon 的右半部分，处理视频播放。
 
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [视频： Microsoft HoloLens： HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

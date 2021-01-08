@@ -1,17 +1,17 @@
 ---
 title: 凝视和停留
-description: " (眼/head) 注视和停留输入模型的一般概述。"
+description: 大致概述混合现实应用程序的眼睛和头盔输入模型。
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Mixed Reality，注视，停留，交互，设计，眼睛跟踪，头跟踪，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: e8005551e08248a73098bd0f9c198b0919e2471a
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 2daeea996251b1220ee4753567b42117fbb2126c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847345"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007637"
 ---
 # <a name="gaze-and-dwell"></a>凝视和停留
 

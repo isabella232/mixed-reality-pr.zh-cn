@@ -1,17 +1,17 @@
 ---
 title: 了解混合现实的性能
-description: 用于优化 Windows Mixed Reality 应用性能的高级信息和详细信息。
+description: 了解用于分析和优化 Windows Mixed Reality 应用性能的高级信息和详细信息。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，性能，优化，CPU，GPU
-ms.openlocfilehash: fc7b6385acda9079a649131b9e6eccf5ac067819
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: ff3db5d49ddab13a20c4c32de8e5640fff4f0d81
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530070"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008467"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>了解混合现实的性能
 
@@ -19,7 +19,7 @@ ms.locfileid: "97530070"
 
 下面列出了每个目标平台的高性能帧速率值。
 
-| 平台 | 目标帧速率 |
+| Platform | 目标帧速率 |
 |----------|-------------------|
 | [HoloLens](../../hololens-hardware-details.md) | 60 FPS |
 | [Windows Mixed Reality 超 Pc](../../discover/immersive-headset-hardware-details.md) | 90 FPS |
@@ -134,7 +134,7 @@ ms.locfileid: "97530070"
 
 #### <a name="object-pooling"></a>对象池
 
-对象池是一种常用技术，可降低对象的连续分配和释放的成本。 这是通过以下方式实现的：分配大量相同的对象并重复使用此池中的非活动的可用实例，而不是随着时间推移不断地生成和销毁对象。 对象池非常适合在应用过程中具有可变生存期的 reuseable 组件。
+对象池是一种常用技术，可降低对象的连续分配和释放的成本。 此技术是通过以下方式实现的：分配一个由相同对象构成的较大池并重复使用此池中非活动的可用实例，而不是在各个时间内不断生成和销毁对象。 对象池非常适合应用中生存期可变的可重用组件。
 
 ## <a name="see-also"></a>另请参阅
 - [针对 Unity 的性能建议](../unity/performance-recommendations-for-unity.md)

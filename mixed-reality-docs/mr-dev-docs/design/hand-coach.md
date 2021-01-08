@@ -1,17 +1,17 @@
 ---
 title: 手部指导
-description: 当系统未检测到用户的手以帮助提供帮助时，将触发3D 指针。
+description: 了解当系统未检测到要帮助帮助的用户时，如何使用手型指导触发3D 手势。
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助双手，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: e46704a1cd2e93fc1764528c408c01d117444c34
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 07b42482d9258b4189ef43683370bd951f5c88e8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847963"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009157"
 ---
 # <a name="hand-coach"></a>手部指导
 

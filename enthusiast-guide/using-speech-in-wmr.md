@@ -1,6 +1,6 @@
 ---
 title: 在 Windows Mixed Reality 中使用语音
-description: 了解如何在 Windows Mixed Reality 应用中使用语音输入。
+description: 了解如何使用语音输入来控制 Windows Mixed Reality 应用中的命令、3D 对象和听写。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/16/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 6a32b96fd932e3b7d47e29749fb47c70b64e32c3
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 9c1863a3fb0c7d8681f82aa6e0d93400bef578c9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725768"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007667"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中使用语音
 
@@ -38,7 +38,7 @@ ms.locfileid: "97725768"
 
 | 要执行此操作 | 说出的内容 |
 | --- | --- |
-| Select | 说 "选择" 以显示注视光标。 然后，将光标放在要选择的内容上，并再次说 "选择"。 |
+| 选择 | 说 "选择" 以显示注视光标。 然后，将光标放在要选择的内容上，并再次说 "选择"。 |
 | 打开“开始”菜单 | 转到“开始”菜单 |
 | 离开沉浸式应用 | 说 "转到开始" 以打开 "快速操作" 菜单，然后说 "混合现实主页"。 |
 | 打开/关闭闪光灯 | 说 "转到开始" 以打开 "快速操作" 菜单，然后说 "混合现实主页"。 |

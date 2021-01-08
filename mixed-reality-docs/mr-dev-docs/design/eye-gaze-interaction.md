@@ -1,17 +1,17 @@
 ---
 title: 基于眼睛凝视的交互
-description: HoloLens 2 为开发人员提供了使用用户所注视对象的相关信息的功能，将全息体验中的环境和人类理解能力提高到了一个新境界。 本页介绍适用于想要使用红眼作为输入的开发人员的设计建议。
+description: 了解 HoloLens 2 上的眼睛和目视交互，以及新级别的上下文和人工理解（如果在全息体验中获得）。
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: 目视跟踪，混合现实，输入，眼睛，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，交互
-ms.openlocfilehash: e21d591d2843f67f3a0b0eed42a27c74942e8999
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: b5091b92fd048f72184212401d54ad0b7353875c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847327"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008577"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>HoloLens 2 上基于目视的目视交互
 

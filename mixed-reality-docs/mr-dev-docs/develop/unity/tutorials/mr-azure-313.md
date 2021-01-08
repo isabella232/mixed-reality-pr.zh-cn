@@ -1,17 +1,17 @@
 ---
 title: MR 和 Azure 313 - IoT 中心服务
-description: 完成本课程，了解如何在运行 Ubuntu 16.4 的虚拟机上实现 Azure IoT 中心服务，然后使用 Microsoft HoloLens 或沉浸式 (VR) 耳机直观显示消息数据。
+description: 了解如何在运行 Ubuntu 16.4 的虚拟机上实现 Azure IoT 中心服务，以及如何使用 Microsoft HoloLens 或 VR 耳机直观显示邮件数据。
 author: drneil
 ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure，混合现实，学院，边缘，iot edge，教程，api，通知，函数，表，hololens，沉浸，vr，iot，虚拟机，ubuntu，python，Windows 10，Visual Studio
-ms.openlocfilehash: 2a642bad363d86e37ca2d6c00ebf1ebb73908dec
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 3c01c7351ee284b72a15fd7d5bdd3205fec91e49
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679506"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009297"
 ---
 # <a name="mr-and-azure-313-iot-hub-service"></a>MR 和 Azure 313：IoT 中心服务
 
@@ -55,7 +55,7 @@ ms.locfileid: "94679506"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 有关利用混合现实进行开发的最新先决条件，包括 Microsoft HoloLens，请访问 [安装工具](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) 一文。
 
@@ -79,7 +79,7 @@ ms.locfileid: "94679506"
 
 
 
-### <a name="before-you-start"></a>开始之前
+### <a name="before-you-start"></a>准备工作
 
 1. 设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。
 2. 在开始开发新的 HoloLens 应用程序时，最好执行 **校准** 和 **传感器调整** (有时，它可以帮助为每个用户) 执行这些任务。

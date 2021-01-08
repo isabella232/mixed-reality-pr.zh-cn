@@ -1,17 +1,17 @@
 ---
 title: 在 DirectX 中渲染
-description: 介绍适用于 Windows Mixed Reality 的全息着色。
+description: 了解如何在适用于 Windows Mixed Reality 的 DirectX 应用程序中更新和呈现内容。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，呈现，3D 图形，HolographicFrame，render 循环，更新循环，演练，示例代码，Direct3D
-ms.openlocfilehash: 90d665e8054a185969a95e6ff6415979e728e9ab
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: aafead61b45550f499405ae63bda7d7f8e79d224
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613181"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006717"
 ---
 # <a name="rendering-in-directx"></a>在 DirectX 中渲染
 

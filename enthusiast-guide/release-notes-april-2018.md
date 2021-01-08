@@ -1,17 +1,17 @@
 ---
 title: 发行说明-2018 年4月
-description: 适用于 Windows 10 2018 年4月更新的 HoloLens 和 Windows Mixed Reality 发行说明 (也称为 RS4) 。
+description: 对于 Windows 10 4 月 2018/RS4 更新，请随时了解 HoloLens 和 Windows Mixed Reality 发行说明。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 05/21/2018
 ms.topic: article
 keywords: 发行说明、版本、windows 10、build、rs4、os
-ms.openlocfilehash: 42d22feb582716be5ab0bd24ade4a8566dddb5cf
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 8590cf8f813f22fb4f91fef0862b1e2e4ad43b1a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725968"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009237"
 ---
 # <a name="release-notes---april-2018"></a>发行说明-2018 年4月
 

@@ -1,17 +1,17 @@
 ---
 title: 设备门户 API 参考
-description: HoloLens 上 Windows 设备门户的 API 参考
+description: 随时了解用于 HoloLens 开发的 Windows 设备门户 API。
 author: hamalawi
 ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
 keywords: HoloLens，Windows 设备门户，API，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c705ce65971042ab41befed9c6813dc797b61fc0
-ms.sourcegitcommit: 084b1da9d7b435394b38d6152a2f9aee7a74aa2a
+ms.openlocfilehash: 13845a5a5668ee8c86178196326425f46be9b321
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97804425"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006647"
 ---
 # <a name="device-portal-api-reference"></a>设备门户 API 参考
 

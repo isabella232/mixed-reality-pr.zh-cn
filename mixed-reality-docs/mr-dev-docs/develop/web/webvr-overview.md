@@ -1,17 +1,17 @@
 ---
 title: WebVR 概述
-description: 使用和开发 Windows Mixed Reality 中的 WebVR 概述
+description: 了解有关使用和开发 Windows Mixed Reality 沉浸式耳机上运行的 WebVR 应用程序的基础知识。
 author: yonet
 ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebVR，WebXR，WinMR，WebAR，web vr，web xr，web mr，web ar，360，360视频，360视频，360照片，360照片，360内容，沉浸式 web，immersiveweb，IW
-ms.openlocfilehash: fdff2acf7816f36129d867650b16d9760a92e375
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: bf0335c0fa7fd42f60a20690d22b2ef9a4f6859a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678929"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006957"
 ---
 # <a name="webvr-overview"></a>WebVR 概述
 

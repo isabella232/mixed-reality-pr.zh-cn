@@ -1,17 +1,17 @@
 ---
 title: DirectX 中的共享空间定位点
-description: 说明如何通过共享空间锚点来同步两个 HoloLens 设备。
+description: 了解如何通过在 DirectX 应用程序中共享本地和 Azure 空间锚点来同步两个 HoloLens 设备。
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: HoloLens，同步，空间定位，传输，多人，查看，方案，演练，示例代码，Azure，Azure 空间锚，ASA
-ms.openlocfilehash: 4e41975a18c28cb2228b20ebb5d3a445774cca44
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 46fe6be5d81a8fc68502500e318eb8e63d223089
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530331"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008527"
 ---
 # <a name="shared-experiences-in-directx"></a>DirectX 中的共享体验
 
@@ -35,6 +35,7 @@ ms.locfileid: "97530331"
 在不能使用 Azure 空间锚点的情况下， [本地定位点传输](../../out-of-scope/local-anchor-transfers-in-directx.md) 允许一台 hololens 设备导出要由第二个 hololens 设备导入的定位点。  此方法提供的定位回调不如 Azure 空间锚，而且不支持 iOS 和 Android 设备。
 
 ## <a name="see-also"></a>另请参阅
+
 * [混合现实中的共享体验](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
 * <a href="https://docs.microsoft.com/cpp/api/spatial-anchors/winrt/" target="_blank">用于 HoloLens 的 Azure 空间锚点 SDK</a>

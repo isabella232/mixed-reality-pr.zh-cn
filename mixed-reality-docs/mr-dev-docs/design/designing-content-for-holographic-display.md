@@ -1,17 +1,17 @@
 ---
 title: 设计适用于全息显示器的内容
-description: 了解全息显示器的设计准则和最佳实践。
+description: 了解有关在 HoloLens 设备上进行全息显示的设计准则和最佳实践。
 author: yoonpark
 ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: UI 设计，全息显示，内容设计，深色主题，浅色主题，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，像素
-ms.openlocfilehash: 4a95f5df50a600035d9127c73f86a5d8be5e7131
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 371d9aac610a765e7ecc6dd1f17401e5d7855672
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847993"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009087"
 ---
 # <a name="designing-content-for-holographic-display"></a>设计适用于全息显示器的内容
 
@@ -22,6 +22,7 @@ ms.locfileid: "97847993"
 <br>
 
 ## <a name="challenges-with-bright-color-on-a-large-surface"></a>大型表面上明亮的颜色挑战 
+
 根据我们的 HoloLens 体验研究和测试，我们发现，在大范围的显示中使用明亮的颜色可能会导致几个问题： 
 
 **眼睛疲劳** 

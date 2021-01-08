@@ -1,17 +1,17 @@
 ---
 title: Unity 中的共享体验
-description: 在 Unity 应用程序的多个用户之间共享相同的全息影像。
+description: 了解如何使用 Azure 空间锚点在 Unity 应用程序的多个用户之间共享相同的全息影像。
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 共享、定位、WorldAnchor、MR 共享250、WorldAnchorTransferBatch、SpatialPerception、Azure、Azure 空间锚，ASA，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 46588f84c39a48e22147d0fc246ceb8d5ee7c47d
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 26ff56c2f9d3feff33bcb7eb103b41a8dfcba971
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010087"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009277"
 ---
 # <a name="shared-experiences-in-unity"></a>Unity 中的共享体验
 

@@ -1,23 +1,23 @@
 ---
 title: 将 WebXR 与 Windows Mixed Reality 一起使用
-description: 使用和开发 Windows Mixed Reality 中的 WebXR 概述
+description: 了解有关使用和开发 Windows Mixed Reality 沉浸式耳机上运行的 WebXR 应用程序的基础知识。
 author: yonet
 ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR，WinMR，WebAR，WebVR，WindowsMixedReality，HoloLens，windows mixed reality，web vr，web xr，web mr，web ar，360，360视频，360视频，360照片，360照片，360内容，沉浸式 web，immersiveweb，IW
-ms.openlocfilehash: b72d4968e59e3e631138b1ecfd17ca9bbdd95c84
-ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
+ms.openlocfilehash: e49f5f2422c9802f94b63943f8a38949a2969f83
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93416868"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006937"
 ---
 # <a name="webxr-overview"></a>WebXR 概述
 
 ## <a name="what-is-webxr"></a>什么是 WebXR
 
-**WebXR 设备 API** 用于访问 **虚拟现实 (VR)** 并增加了 **(AR) 设备的现实 AR** ，包括 **传感器** 和在 **Web** 上 **装入的打印头** 。 WebXR 设备 API 目前在 Microsoft Edge 中提供，Chrome 版本79及更高版本支持 WebXR 作为默认值。 可以在 [caniuse.com](https://caniuse.com/#search=webxr)上检查 WebXR 的最新浏览器支持状态。
+**WebXR 设备 API** 用于访问 **虚拟现实 (VR)** 并增加了 **(AR) 设备的现实 AR** ，包括 **传感器** 和在 **Web** 上 **装入的打印头**。 WebXR 设备 API 目前在 Microsoft Edge 中提供，Chrome 版本79及更高版本支持 WebXR 作为默认值。 可以在 [caniuse.com](https://caniuse.com/#search=webxr)上检查 WebXR 的最新浏览器支持状态。
 
 详细了解 [Windows Mixed Reality 和新的 Microsoft Edge](https://docs.microsoft.com/windows/mixed-reality/new-microsoft-edge#introducing-the-new-microsoft-edge)新增 [功能](https://docs.microsoft.com/windows/mixed-reality/mrtk-porting-guide) 部分。
 

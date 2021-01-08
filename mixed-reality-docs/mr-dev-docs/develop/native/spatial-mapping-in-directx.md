@@ -1,17 +1,17 @@
 ---
 title: DirectX 中的空间映射
-description: 了解如何在 DirectX 应用中实现空间映射，包括通用 Windows 平台 SDK 随附的空间映射示例应用程序。
+description: 了解如何在 DirectX 应用中实现空间映射，以及如何在通用 Windows 平台 SDK 中使用空间映射示例应用程序。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows mixed reality，空间映射，环境，交互，directx，winrt，api，示例代码，UWP，SDK，演练
-ms.openlocfilehash: fa372473939222ef4be7ca36076a17241173c441
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: bcd78487e96aaf09707aa4bf58917223cc2e8583
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612911"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006707"
 ---
 # <a name="spatial-mapping-in-directx"></a>DirectX 中的空间映射
 
@@ -88,7 +88,7 @@ ms.locfileid: "97612911"
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>设置应用程序以使用 spatialPerception 功能
 
-应用可使用空间映射功能。 这是必需的，因为空间网格是用户环境的表示形式，该环境可能被视为私有数据。 在应用程序的 appxmanifest.xml 文件中声明此功能。 下面是一个示例：
+应用可使用空间映射功能。 这是必需的，因为空间网格是用户环境的表示形式，该环境可能被视为私有数据。 在应用程序的 appxmanifest.xml 文件中声明此功能。 下面的示例说明：
 
 ```xml
 <Capabilities>
@@ -96,7 +96,7 @@ ms.locfileid: "97612911"
 </Capabilities>
 ```
 
-此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面是一个示例：
+此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面的示例说明：
 
 ```xml
 <Package

@@ -1,26 +1,26 @@
 ---
 title: 发行说明 - 2018 年 10 月
-description: 适用于 Windows 10 十月2018更新的 HoloLens 和 Windows Mixed Reality 发行说明 (也称为 RS5) 。
+description: 随时了解 Windows 10 十月 2018/RS5 更新的 HoloLens 和 Windows Mixed Reality 发行说明。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 10/02/2018
 ms.topic: article
 keywords: 发行说明、版本、windows 10、build、rs5、os
-ms.openlocfilehash: 88d7393fdcf499b1fabd36668364ffb31b0e793d
-ms.sourcegitcommit: 838bebf6bacac4047feff493c0847d4e6371976f
+ms.openlocfilehash: f7d95481d166f2c8795701c516946346101a21d0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91783910"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007107"
 ---
 # <a name="release-notes---october-2018"></a>发行说明 - 2018 年 10 月
 
 **[Windows 10 十月2018更新](https://blogs.windows.com/windowsexperience/2018/10/02/find-out-whats-new-in-windows-and-office-in-october/)** (也称为 RS5) ，其中包括适用于 HoloLens 和 Windows Mixed Reality 的新功能（连接到电脑）。 
 
-若要更新到最新版本的 HoloLens 或 PC (上的 Windows Mixed Reality 沉浸式 (VR) 耳机) ，请打开 " **设置** " 应用，中转到 " **更新 & 安全性** "，然后选择 " **检查更新** " 按钮。 在 Windows 10 电脑上，还可以使用 [windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装 Windows 10 十月2018更新。
+若要更新到最新版本的 HoloLens 或 PC (上的 Windows Mixed Reality 沉浸式 (VR) 耳机) ，请打开 " **设置** " 应用，中转到 " **更新 & 安全性**"，然后选择 " **检查更新** " 按钮。 在 Windows 10 电脑上，还可以使用 [windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装 Windows 10 十月2018更新。
 
-**最新版本的桌面：** Windows 10 十月2018更新 ( **10.0.17763.107** ) <br>
-**最新版本的 HoloLens：** Windows 10 十月2018更新 ( **10.0.17763.134** ) <br>
+**最新版本的桌面：** Windows 10 十月2018更新 (**10.0.17763.107**) <br>
+**最新版本的 HoloLens：** Windows 10 十月2018更新 (**10.0.17763.134**) <br>
 
 ## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>适用于 Windows Mixed Reality 沉浸式耳机的新功能
 
@@ -41,7 +41,7 @@ Windows 10 2018 10 月版更新提供了许多对使用 Windows Mixed Reality �
     * 新的 *WebVR 展示* 应用，用于发现特选的 WebVR 体验的定期选择。
     * 首次 Windows Mixed Reality 客户将进入 Cliff 房子，并通过3D 应用程序启动器进行预填充，以实现我们最喜欢的沉浸式应用和游戏 Microsoft Store。
     * Microsoft Edge windows 现在包含一个 *共享* 按钮。
-* " **快速操作" 菜单** -从沉浸式的现实应用程序中，可以按 "Windows" 按钮访问新的 "快速操作" 菜单，并轻松访问 *SteamVR 菜单* 、 *照片/视频捕获* 、 *闪光灯* 和 *home* 。
+* "**快速操作" 菜单**-从沉浸式的现实应用程序中，可以按 "Windows" 按钮访问新的 "快速操作" 菜单，并轻松访问 *SteamVR 菜单*、*照片/视频捕获*、*闪光灯* 和 *home*。
 * **支持背包电脑** -Windows Mixed Reality 沉浸式 (VR) 耳机在背包电脑上运行，且安装完成后无需显示模拟器。
 * **新增音频功能** -现在可以将音频从 Windows Mixed Reality 体验镜像到耳机上的音频插孔 (或耳机) *，以及* 连接到电脑 (如外部扬声器) 的音频设备。 我们还在头戴显示设备中添加了音量级别的可视指示器。
 * **其他改进**
@@ -52,7 +52,7 @@ Windows 10 2018 10 月版更新提供了许多对使用 Windows Mixed Reality �
 
 * **[QR 代码跟踪](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking)** -启用混合现实应用中的 qr 代码跟踪，允许 Windows mixed reality 沉浸式 (VR) 耳机来扫描 QR 码，并将其报告回感兴趣的应用。
 * **对沉浸式应用的硬件 DRM 支持** -即使显示硬件支持，开发人员现在可以请求受硬件保护的后台缓冲区纹理，这允许应用程序使用来自 PlayReady 等源的硬件保护内容。
-* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)** -开发人员可以使用内置的 Windows [相机捕获 ui](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
+* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)**-开发人员可以使用内置的 Windows [相机捕获 ui](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
 
 ## <a name="new-features-for-hololens"></a>HoloLens 的新功能
 
@@ -60,7 +60,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 
 ### <a name="for-everyone"></a>适用于每个人
 
-* " **快速操作" 菜单** -从一个沉浸式的现实应用程序中，可以按 "Windows" 按钮访问新的 "快速操作" 菜单，通过轻松访问 *开始录制视频* ， *拍摄照片* ， *混合现实主页* ， *更改音量* 和 *连接* 。
+* "**快速操作" 菜单**-从一个沉浸式的现实应用程序中，可以按 "Windows" 按钮访问新的 "快速操作" 菜单，通过轻松访问 *开始录制视频*，*拍摄照片*，*混合现实主页*，*更改音量* 和 *连接*。
 * **从 "开始" 或 "快速操作" 菜单启动/停止视频捕获** -如果从 "开始" 菜单或 "快速操作" 菜单启动视频捕获，则可以从同一位置停止录制。  (别忘了，您也可以通过语音命令来执行此操作。 ) 
 * **投影到已启用 miracast 的设备** -如果使用启用了 miracast 的显示器或适配器，则将你的 HoloLens 内容投影到附近的 Surface 设备或电视/显示器。
 * **新通知** -在 HoloLens 上查看和响应通知，就像在电脑上操作一样。  
@@ -72,7 +72,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 
 ### <a name="for-developers"></a>面向开发人员
 
-* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)** -开发人员可以使用内置的 Windows [相机捕获 ui](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
+* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)**-开发人员可以使用内置的 Windows [相机捕获 ui](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
 
 ### <a name="for-commercial-customers"></a>面向商业客户
 
@@ -112,7 +112,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 * [发行说明 - 2016 年 5 月](release-notes-may-2016.md)
 * [发行说明 - 2016 年 3 月](release-notes-march-2016.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [沉浸式耳机支持 (外部链接) ](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [HoloLens 支持 (外部链接) ](https://support.microsoft.com/products/hololens)
 * [安装工具](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools)

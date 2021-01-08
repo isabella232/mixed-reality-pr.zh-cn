@@ -1,6 +1,6 @@
 ---
 title: Windows Mixed Reality 开发人员工具包常见问题解答
-description: 获取使用 Windows Mixed Reality 时常见安装问题的答案。
+description: 获取在使用 Windows Mixed Reality 应用程序和设备时的常见问题的解答。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: bde88890f596e19dd9b5f9e87ceabbf91039af67
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 2da2524ae09014b990ea4f0301a21d4aac963eb9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725438"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008627"
 ---
 # <a name="windows-mixed-reality-setup-faq"></a>Windows Mixed Reality 开发人员工具包常见问题解答
 

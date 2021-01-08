@@ -1,17 +1,17 @@
 ---
 title: 建议用于 Unity 的设置
-description: Unity 提供一些特定于混合现实的行为，这些行为可通过项目设置进行切换。
+description: 了解适用于混合现实应用的 Unity 的性能和发布行为，这些应用可通过项目设置进行切换。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 07/29/2020
 ms.topic: article
 keywords: unity，设置，混合现实，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，性能，质量设置，照明设置，深度缓冲区，xr，跟踪丢失
-ms.openlocfilehash: d32dd19e535d2681654014cc92f319dc564e059e
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: be85b592a6857c9dd40e2b3bb3f09dec0a6273be
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010108"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009327"
 ---
 # <a name="recommended-settings-for-unity"></a>建议用于 Unity 的设置
 
@@ -114,9 +114,9 @@ HoloLens 具有移动类 CPU 和 GPU，这意味着可能需要更长的时间�
 
 |  显示 Unity 初始屏幕  |  全息闪屏映像  |  行为 |
 |----------|----------|----------|
-|  开  |  无  |  显示5秒的默认 Unity 初始屏幕或在加载应用之前，以较长者为准。 |
+|  开  |  None  |  显示5秒的默认 Unity 初始屏幕或在加载应用之前，以较长者为准。 |
 |  开  |  自定义  |  显示自定义初始屏幕5秒或在加载应用之前，以较长者为准。 |
-|  关  |  无  |  显示透明的黑色 (没有) ，直到加载应用。 |
+|  关  |  None  |  显示透明的黑色 (没有) ，直到加载应用。 |
 |  关  |  自定义  |  显示自定义初始屏幕5秒或在加载应用之前，以较长者为准。 |
 
 有关详细信息，请阅读 [Unity 初始屏幕文档](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) 。

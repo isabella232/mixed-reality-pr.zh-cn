@@ -1,17 +1,17 @@
 ---
 title: 混合现实应用的类型
-description: 了解混合现实平台可支持的各种经验，从完全的沉浸式环境到用户当前环境的轻型信息分层。
+description: 了解混合现实平台支持的体验，从沉浸式环境到用户环境中的轻型信息分层。
 author: rwinj
 ms.author: willyang
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，应用模式，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens
-ms.openlocfilehash: 8c9a051ff0b80461fe590efa37593bddb01c0e63
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 795d8733b9f509a79d9429f75dff2f88a2a63c93
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848100"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007617"
 ---
 # <a name="types-of-mixed-reality-apps"></a>混合现实应用的类型
 

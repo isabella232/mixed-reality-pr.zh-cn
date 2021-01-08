@@ -1,17 +1,17 @@
 ---
 title: 应用内购买
-description: 混合现实应用支持应用内购买，但有一些工作需要对它们进行设置。
+description: 了解如何在混合现实应用中使用 2D XAML 视图和 stock Windows 操作系统弹出窗口进行应用内购买。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 应用内购买，hololens，XAML，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 905c1be72bf2a3d6fa167cab68a4cb71e6538acc
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: a87cc68f67def1d46a3a6ba352e723d356f51fa2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757776"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008667"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 

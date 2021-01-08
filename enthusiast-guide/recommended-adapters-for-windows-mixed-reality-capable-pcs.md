@@ -1,5 +1,5 @@
 ---
-title: 适用于 Windows Mixed Reality 的电脑的推荐适配器
+title: 适用于 Windows Mixed Reality Pc 的推荐适配器
 description: 适用于 Windows Mixed Reality 耳机的建议适配器列表（如果你的电脑没有全尺寸 USB 和 HDMI 端口）。
 author: hferrone
 ms.author: v-hferrone
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，适配器，转换器，HDMI，USB，DisplayPort
 appliesto:
 - Windows 10
-ms.openlocfilehash: 248a202ce57c0b6872ddefc9ec9c2f89e2aa87a4
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 86eaa8d462d97a740f15859d2ab631aafb8dd68e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725978"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009097"
 ---
 # <a name="recommended-adapters"></a>推荐的适配器
 > [!NOTE]
@@ -78,7 +78,7 @@ ms.locfileid: "97725978"
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black">✔️</td><td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td><td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black">✔️</td><td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td>
-    <td style="border: 1px solid black">无</td>
+    <td style="border: 1px solid black">None</td>
   </tr>
   <tr style="border: 1px solid black">
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black">✔️</td>
@@ -165,7 +165,7 @@ ms.locfileid: "97725978"
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black">✔️</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
-    <td style="border: 1px solid black;">无</td>
+    <td style="border: 1px solid black;">None</td>
 </tr>
   <tr style="border: 1px solid black;">
     <td style="text-align: center; vertical-align: middle; border: 1px solid black">✔️</td>
@@ -185,7 +185,7 @@ ms.locfileid: "97725978"
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black">✔️</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
-    <td style="border: 1px solid black;">无</td>
+    <td style="border: 1px solid black;">None</td>
   </tr>
   <tr style="border: 1px solid black;">
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>

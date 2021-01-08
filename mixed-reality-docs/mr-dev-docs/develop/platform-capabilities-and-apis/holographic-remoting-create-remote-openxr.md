@@ -1,17 +1,17 @@
 ---
 title: '编写全息远程处理远程应用 (OpenXR) '
-description: 通过创建全息远程处理远程应用，可将在远程计算机上呈现的远程内容流式传输到 HoloLens 2。
+description: 了解如何使用 OpenXR 将远程计算机上呈现的远程内容流式传输到 HoloLens 2，并将其与全息远程应用进行流式处理。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，NuGet
-ms.openlocfilehash: 202f2108ade9998d25d87dee20d4bd456da0a118
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 616765143309fe2a4883c1393713133fcbe2a9d5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530420"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006487"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-openxr-api"></a>使用 OpenXR API 编写全息远程处理远程应用
 

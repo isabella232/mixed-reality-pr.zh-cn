@@ -1,23 +1,24 @@
 ---
 title: Unity 中的空间音效
-description: 从 Unity 场景内的特定3D 点播放空间声音。
+description: 了解如何使用示例从 Unity 场景内的特定3D 点播放和衰减空间声音。
 author: kegodin
 ms.author: v-hferrone
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity，空间音效，HRTF，房间大小，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包，spatializer，回音
-ms.openlocfilehash: 1efe287855cc5b7738069c6d8183c2ecb5bd6d59
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: ec2703aa89925cb68860670f574a1e43f672e247
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010138"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009267"
 ---
 # <a name="spatial-sound-in-unity"></a>Unity 中的空间音效
 
 此页链接到 Unity 中的空间音效资源。
 
 ## <a name="spatializer-options"></a>Spatializer 选项
+
 混合现实应用程序的 Spatializer 选项包括：
 * Unity 将 *MS HRTF Spatializer* 作为 *Windows Mixed Reality* 可选包的一部分提供。
   * 在较高成本的 "单一源" 体系结构中的 CPU 上运行。
@@ -48,11 +49,13 @@ ms.locfileid: "97010138"
 * [Unity 的 spatializer 文档](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
 ## <a name="distance-based-attenuation"></a>基于距离的衰减
+
 Unity 的默认基于距离的衰减的最小距离为1米，最大距离为500米，对数 rolloff。 这些设置可能适用于你的方案，你可能会发现源衰减太快或太慢。 有关详细信息，请参阅：
 * [混合现实中的声音设计](../../design/spatial-sound-design.md) 建议的设置。
 * [Unity 的音频源文档](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) ，了解有关如何设置这些曲线的说明。
 
 ## <a name="reverb"></a>混响
+
 默认情况下， _Microsoft Spatializer_ 禁用了 Spatializer 效果。 若要为 spatialized 源启用回响和其他效果：
 * 将 " **房间效果发送级别** " 组件附加到每个源
 * 调整每个源的发送级别曲线，以控制发送回图形以进行效果处理的音频的增益
@@ -60,13 +63,14 @@ Unity 的默认基于距离的衰减的最小距离为1米，最大距离为500�
 有关详细信息，请参阅 [spatializer 教程的第5章](tutorials/unity-spatial-audio-ch5.md) 。
 
 ## <a name="unity-spatial-sound-examples"></a>Unity 空间声音示例
+
 有关 Unity 中空间音效的示例，请参阅：
 * [MRTK 演示](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio)
 * [Microsoft Spatializer 示例项目](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [文本](text-in-unity.md)
@@ -79,5 +83,6 @@ Unity 的默认基于距离的衰减的最小距离为1米，最大距离为500�
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>另请参阅
+
 * [混合现实中的声音设计](../../design/spatial-sound-design.md)
 * [Microsoft 的 spatializer 教程](tutorials/unity-spatial-audio-ch1.md)

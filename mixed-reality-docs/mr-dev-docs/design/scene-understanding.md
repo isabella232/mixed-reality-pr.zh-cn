@@ -1,17 +1,17 @@
 ---
 title: 场景理解
-description: 针对 HoloLens 的场景了解功能简介
+description: 了解如何使用适用于 HoloLens 的场景理解进行开发，其中包括 SDK、功能和常见使用方案。
 author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，封闭，SDK
-ms.openlocfilehash: f46245c668e7cc58258fa4e28c4af5aa7812ef5f
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: c4485c5501300d6ca629f4e587fde1f88eea7ea5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848265"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008867"
 ---
 # <a name="scene-understanding"></a>场景理解
 

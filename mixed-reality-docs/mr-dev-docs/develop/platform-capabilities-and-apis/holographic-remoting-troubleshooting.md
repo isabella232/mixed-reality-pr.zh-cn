@@ -1,17 +1,17 @@
 ---
 title: 全息远程处理故障排除和限制
-description: HoloLens 2 上的全息远程处理的故障排除步骤。
+description: 在 HoloLens 2 设备上查找全息远程处理功能的疑难解答资源和说明。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程影像，故障排除，帮助，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 9b900238abc79b0f2f93691d4b4a67cce67a201a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: ee1dce72af02374e930de4a1bdff94285c7a84ae
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530187"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006447"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>全息远程处理疑难解答
 

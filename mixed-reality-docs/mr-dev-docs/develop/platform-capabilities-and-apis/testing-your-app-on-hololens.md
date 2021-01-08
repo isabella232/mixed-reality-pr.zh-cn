@@ -1,17 +1,17 @@
 ---
 title: 在 HoloLens 上测试应用
-description: 测试 HoloLens 应用的指南和建议
+description: 了解有关测试和性能优化 HoloLens 混合现实应用程序的一般指南和建议。
 author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens，测试
-ms.openlocfilehash: e1a5a62cf52a3144f02b8acaa96b3c653246fd9c
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: d26a3717da2ee9943e92e3602b6029435815262b
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530340"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008537"
 ---
 # <a name="testing-your-app-on-hololens"></a>在 HoloLens 上测试应用
 
@@ -22,6 +22,7 @@ ms.locfileid: "97530340"
 全息应用需要在一组不同的环境中顺利运行。 它们还需要始终保持性能和用户舒适。 性能对用户使用全息版应用程序的体验非常重要，我们有一个专门的主题。 请确保阅读并遵循 [混合现实的了解性能](understanding-performance-for-mixed-reality.md)
 
 ## <a name="testing-3d-in-3d"></a>在三维中测试3D
+
 1. **在尽可能多的不同空间中测试您的应用程序。** 尝试大房间、小房间、bathrooms、kitchens、间卧室、办公室等。 还需要考虑使用非标准功能的房间，如非垂直壁、弯曲壁、非水平上限。 当在房间间过渡时，它是否能正常工作，并经历走廊或楼梯？
 2. **在不同的照明条件中测试您的应用程序。** 它是否能正确响应光源、黑色曲面等不同环境条件，以及镜像和玻璃壁等不同环境条件。
 3. **在不同的动作条件中测试您的应用程序。** 放在设备上，尝试各种运动状态的方案。 它是否响应了不同的移动或稳定状态？
@@ -37,11 +38,11 @@ ms.locfileid: "97530340"
 ![用于 HoloLens 应用开发的环境测试矩阵](images/environment-matrix-600px.png)
 
 ## <a name="comfort"></a>舒适感
+
 1. **剪辑平面。** 要留心到 [呈现全息影像](hologram-stability.md#hologram-render-distances)的位置。
 2. **避免与实际头运动不一致的虚拟移动。** 避免以不代表用户实际运动的方式移动相机。 如果你的应用程序要求通过场景移动用户，则可预测运动，尽量减少加速度，并让用户控制移动。
 3. **按照全息图质量指导原则进行操作。** 实现 [全息影像质量指导的高](hologram-stability.md) 性能应用程序不太可能导致用户 discomfort。
 4. **横向分布全息影像，而不是垂直分布。** 强制用户花很长时间查找或缩小可能会导致疲劳。
-
 
 ## <a name="input"></a>输入
 
@@ -113,4 +114,5 @@ ms.locfileid: "97530340"
 若要为你的应用程序提供在 [Windows 应用商店上发布](../../distribute/submitting-an-app-to-the-microsoft-store.md)的最大机会，请在提交该应用程序进行认证之前，在本地对其进行验证和测试。 如果你的应用面向 Windows 全息设备家族， [Windows 应用程序认证工具包](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) 将仅在你的电脑上运行本地静态分析测试。 不会在 HoloLens 上运行任何测试。
 
 ## <a name="see-also"></a>另请参阅
+
 * [向 Windows 应用商店提交应用程序](../../distribute/submitting-an-app-to-the-microsoft-store.md)

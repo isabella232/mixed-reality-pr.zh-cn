@@ -1,6 +1,6 @@
 ---
 title: 使用 Windows Mixed Reality 常见问题解答
-description: 获取使用 Windows Mixed Reality 时的常见问题的解答。
+description: 在使用 Windows Mixed Reality 应用程序和硬件时查找常见问题的相关资源。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 75ed2699cc34af5f526e0799b762d45ef36e99b9
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 31a27afa9c96ee8beb8b38f74534fc6f58c01f1d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725668"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007047"
 ---
 # <a name="using-windows-mixed-reality-faq"></a>使用 Windows Mixed Reality 常见问题解答
 
@@ -24,7 +24,6 @@ ms.locfileid: "97725668"
 ## <a name="i-see-a-message-that-says-lost-tracking-or-we-dont-have-a-boundary-for-this-space"></a>我看到一条消息，显示 "丢失跟踪" 或 "我们没有此空间的边界"。
 
 在桌面上选择 " **启动 > 混合现实门户** "。 选择 " **菜单**"，然后选择 " **运行安装程序** " 以创建新边界。 Windows Mixed Reality 支持多个位置，并将在启动时识别你处于启动状态的空间，前提是该空间尚未更改。  
-
 
 ## <a name="i-cant-hear-any-sound-or-the-sound-is-coming-from-my-computer-instead-of-my-headset"></a>听不到任何声音，或声音来自我的计算机而不是我的耳机
 
@@ -133,5 +132,6 @@ Windows Mixed Reality 旨在在您戴上声音时通过沉浸式耳机播放声�
 仍需帮助？ 若要进行高级故障排除，请参阅 [此文](troubleshooting-windows-mixed-reality.md)。
 
 ## <a name="see-also"></a>另请参阅
+
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)

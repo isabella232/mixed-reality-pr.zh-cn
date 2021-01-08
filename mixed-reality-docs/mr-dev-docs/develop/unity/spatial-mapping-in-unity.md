@@ -1,17 +1,17 @@
 ---
 title: Unity 中的空间映射
-description: 在 Unity 中呈现并与真实世界几何发生冲突。
+description: 了解如何在 Unity 混合现实应用中使用和管理与你的真实世界几何之间的渲染和冲突。
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 2e5518b1a54f967762143bb8602141b4199a2d54
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: b4c45ba91a3e864c8cd29f3ebc3396d0250948f4
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002512"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009287"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
@@ -484,7 +484,7 @@ Import_UnderstandingMesh –
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块： 
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识： 
 
 > [!div class="nextstepaction"]
 > [文本](text-in-unity.md)

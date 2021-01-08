@@ -1,17 +1,17 @@
 ---
 title: DirectX 中的坐标系统
-description: 了解如何在 DirectX 中协调系统，以及如何利用空间定位器、参考框架和空间锚点实现混合现实。 使用 SpatialStage 和处理跟踪丢失，保存和加载定位点，以及图像稳定性。
+description: 了解如何在 DirectX 中协调系统，以及如何利用空间定位器、参考框架和空间锚点实现混合现实。
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 混合现实，空间定位器，空间参考框架，空间坐标系统，空间贴图，示例代码，图像稳定，空间锚，空间锚定存储，跟踪丢失，演练，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 7bf2309f3fb6264d6b1a5232f7ead78b771c1649
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 055eff0bb04228cb0a19b9ea208bfc9c00ce2dbe
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613111"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006857"
 ---
 # <a name="coordinate-systems-in-directx"></a>DirectX 中的坐标系统
 

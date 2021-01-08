@@ -1,6 +1,6 @@
 ---
-title: Mixed Reality 软件概述和版本历史记录
-description: 概述 Windows Mixed Reality 的主要软件组件及其发行历史记录
+title: 软件概述和版本历史记录
+description: 概述 Windows Mixed Reality 的主要软件组件、沉浸式耳机以及其发行历史记录。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，软件组件，发布历史记录，发行说明，版本历史记录
 appliesto:
 - Windows 10
-ms.openlocfilehash: 31adf0572482cb9857ff94c2b7ef3aee4fe538d9
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: b06bd835f1e2562e01bfb7bf240747919f422e8c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726018"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009247"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Mixed Reality 软件概述和版本历史记录
 
@@ -49,9 +49,11 @@ Windows Mixed Reality 包含以下主要软件组件：
 ### <a name="updates-for-windows-mixed-reality-immersive-headsets"></a>Windows Mixed Reality 沉浸式耳机更新
 
 #### <a name="introducing-the-new-microsoft-edge"></a>推出新的 Microsoft Edge
+
 如前所述 [，我们](https://docs.microsoft.com/windows/mixed-reality/new-microsoft-edge)已在 Windows Mixed Reality 中使用新的 Microsoft Edge 浏览器进行了更好的支持。 新的 Microsoft Edge 采用 Chromium 开源项目为客户创建更好的 web 兼容性，并为所有 web 开发人员创建更少的 web 兼容性。 它还支持 WebXR，这是用于创建用于 VR 耳机的沉浸式 web 体验的新标准，而不是 WebVR。
 
 #### <a name="improved-settings-for-wmr"></a>改进的 WMR 设置
+
 感谢你的反馈，我们已添加并阐明了耳机显示页面上的设置：
 
 * 更改这些设置的 **视觉质量** 只会影响 (Cliff 房子和 Skyloft) 的混合现实家用环境：
@@ -71,15 +73,18 @@ Windows Mixed Reality 包含以下主要软件组件：
 * **输入切换** -切换输入焦点切换 (Win + Y) 行为自动 (基于状态传感器反馈) 还是手动。
 
 #### <a name="new-cortana-app"></a>新建 Cortana 应用
+
 Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程序目前仅提供英语版本，不再支持某些特定于混合现实的命令，例如 "拍摄照片" 和 "拍摄视频"。 你可以使用新的 Cortana 来启动应用程序，并且它还支持新的工作效率重点命令，如 "我的下一会议是什么时候？" 或 "发送一封电子邮件到 <name> 我的最晚运行。"
     
 #### <a name="additional-updates-in-available-in-19041546-released-october-2020"></a>19041.546 年 10 2020 月发布的 (中提供了其他更新) 
+
 此桌面每月服务更新包括适用于 Windows Mixed Reality 设备的下列更改： 
 * 在 Windows Mixed Reality (HMD) 中减少扭曲和 aberrations。 
 * 添加了对即将推出的 HP Windows Mixed Reality 运动控制器的支持。 
 * 在某些情况下，在无法实现 90 Hz 的情况下，将 Windows Mixed Reality 中的 90-Hz 刷新率设置的行为更改为不再自动切换回 60 Hz。 
 
 #### <a name="help-us-improve"></a>请帮助我们改进！
+
 我们会不断改进兼容性。  如果在 Windows Mixed Reality 中发现你最喜欢的经典 Win32 应用程序不能正常工作，请通过我们的 [反馈中心](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub)提交反馈。
 
 ### <a name="prior-release-notes"></a>以前的发行说明
