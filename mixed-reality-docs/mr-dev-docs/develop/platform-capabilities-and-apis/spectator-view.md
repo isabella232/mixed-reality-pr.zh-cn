@@ -1,18 +1,18 @@
 ---
 title: 旁观视图
-description: 在外部设备中将全息影像可视化，通过这种方式在外部显示器上演示混合现实体验，或者录制混合现实体验的视频。
+description: 从外部设备中将全息影像可视化，在外部显示器上显示或记录混合现实体验。
 author: chrisfromwork
 ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 旁观视图, iPhone, iOS, iPad, OpenCV, 相机, ARKit, HoloLens, 混合现实, MixedRealityToolkit, 演示, 录制
-ms.openlocfilehash: 7b48315753ada0ae7a94abca5377a083ac659a34
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c344edea9b499bdff15d1d93e400b8be626a63b6
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91696540"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530112"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 和 HoloLens 2 的旁观视图
 
@@ -20,8 +20,7 @@ ms.locfileid: "91696540"
 
 ## <a name="overview"></a>概述
 
-戴上 HoloLens 时，我们通常会忘记这样一件事：没有戴上它的人无法体验到我们所能体验到的神奇感受。 旁观视图可以让他人在 2D 屏幕上观看 HoloLens 用户在其世界中看到的东西。
-有了旁观视图，就可以通过快速且经济的方式在移动设备中录制高清全息影像。 有了它，还可以通过摄像机对全息影像进行专业质量的录制。
+当你戴上 HoloLens 时，很容易忘记没有戴上它的人无法体验到你所能体验到的神奇感受。 旁观视图可以让他人在 2D 屏幕上观看 HoloLens 用户看到的东西。 利用旁观视图，还可以通过快速且经济的方式在移动设备中录制高清全息影像，以及通过摄像机对全息影像进行高质量的录制。
 
 ## <a name="key-resources"></a>重要资源
 
@@ -30,7 +29,8 @@ ms.locfileid: "91696540"
 * [**旁观视图示例**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>用例
-* 可以使用 iPhone 或 Android 设备录制混合现实体验。 以全高清进行录制，对全息影像甚至阴影应用抗锯齿效果。 这样可以经济高效且快速地捕获全息影像的视频。
+
+* 可以使用 iPhone 或 Android 设备录制混合现实体验。 以全高清进行录制，对全息影像和阴影应用抗锯齿效果，可以经济高效且快速地捕获全息影像的视频。
 * 将实时混合现实体验直接从 iPhone 或 iPad 流式传输到 Apple TV，没有任何延迟！
 * 与来宾共享此体验：让非 HoloLens 用户直接在其手机或平板电脑上体验全息影像。
 

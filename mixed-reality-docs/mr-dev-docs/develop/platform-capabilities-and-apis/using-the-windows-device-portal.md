@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4d945a6fbc61e56707d1e36e110a1108283b5add
-ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
+ms.openlocfilehash: 168d4175a7e55d5116f19c51a802c9a8abdc1e19
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97102918"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530316"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
@@ -31,8 +31,8 @@ ms.locfileid: "97102918"
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>将 HoloLens 设置为使用 Windows 设备门户
 
 1. 打开 HoloLens 的电源，然后戴上设备。
-2. 针对 HoloLens2 执行[开始手势](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture)，或者在 HoloLens（第一代）上执行[开花手势](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom)，以启动主菜单。 
-3. 凝视“设置”磁贴，然后在 HoloLens（第一代）上执行[隔空敲击](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap)手势，或者在 HoloLens 2 上通过[触摸或手部射线](https://docs.microsoft.com/hololens/hololens2-basic-usage)选择该磁贴。 
+2. 针对 HoloLens2 使用[开始手势](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture)，或者在 HoloLens（第 1 代）上使用[开花手势](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom)，以启动主菜单。 
+3. 凝视“设置”磁贴，在 HoloLens（第 1 代）上，使用[隔空敲击](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap)手势。 在 HoloLens 2 上，还可以通过[触摸或使用手部射线](https://docs.microsoft.com/hololens/hololens2-basic-usage)选择该磁贴。 
 4. 选择“更新”菜单项。
 5. 选择“面向开发人员”  菜单项。
 6. 启用“开发人员模式”。
@@ -41,7 +41,7 @@ ms.locfileid: "97102918"
 > 如果你使用的是多用户而不是管理员，则进入开发人员模式的功能可能灰显。请确保你是[设备上的管理员](https://docs.microsoft.com/hololens/security-adminless-os)。
 
 7. [向下滚动](../../design/gaze-and-commit.md#composite-gestures)并启用“设备门户”。
-8. 如果要设置 Windows 设备门户以便可以通过 USB 或 Wi-Fi 将应用部署到此 HoloLens，请单击“配对”以[生成配对 PIN](using-visual-studio.md)。 在首次部署期间，请在“PIN”弹出窗口中保持打开“设置”应用，直到在 Visual Studio 中输入了 PIN 才将它关闭。
+8. 如果要设置 Windows 设备门户以便可以通过 USB 或 Wi-Fi 将应用部署到此 HoloLens，请选择“配对”以[生成配对 PIN](using-visual-studio.md)。 在首次部署期间，请在“PIN”弹出窗口中保持打开“设置”应用，直到在 Visual Studio 中输入了 PIN 才将它关闭。
 
 ![在 Windows Holographic 的“设置”应用中启用开发人员模式](images/using-windows-portal-img-01.jpg)
 
@@ -55,7 +55,7 @@ ms.locfileid: "97102918"
 ![HoloLens 2 设置](images/using-windows-portal-img-02.jpg)
 
 3. 在电脑上的 Web 浏览器中，转到 https://<HOLOLENS IP 地址>
-   * 浏览器中将显示以下消息：“此网站的安全证书有问题。” 由于颁发给 Device Portal 的证书是测试证书，因此会显示上述消息。 你可以暂时忽略此证书错误并继续。
+   * 浏览器中将显示以下消息：“此网站的安全证书有问题”，因为颁发给设备门户的证书是测试证书。 你可以暂时忽略此证书错误并继续。
 
 ## <a name="connecting-over-usb"></a>通过 USB 进行连接
 
@@ -79,18 +79,18 @@ ms.locfileid: "97102918"
 
 ## <a name="connecting-to-an-emulator"></a>连接到仿真器
 
-也可以将 Device Portal 与仿真器结合使用。 若要连接到设备门户，请使用[工具栏](using-the-hololens-emulator.md)。 单击此图标：![“打开设备门户”图标](images/emulator-deviceportal.png) **打开设备门户**：在仿真器中打开 HoloLens OS 的 Windows 设备门户。
+也可以将 Device Portal 与仿真器结合使用。 若要连接到设备门户，请使用[工具栏](using-the-hololens-emulator.md)。 选择此图标：![“打开设备门户”图标](images/emulator-deviceportal.png) **打开设备门户**：在仿真器中打开 HoloLens OS 的 Windows 设备门户。
 
 ## <a name="creating-a-username-and-password"></a>创建用户名和密码
 
 ![设置对 Windows 设备门户的访问](images/windows-device-portal-credentials-reset-page-1000px.png)<br>
 *设置对 Windows 设备门户的访问*
 
-首次连接到 HoloLens 上的 Device Portal 时，需要创建用户名和密码。
-1. 在电脑上的 Web 浏览器中，输入 HoloLens 的 IP 地址。 将打开“设置访问”页面。
-2. 单击或敲击“请求 PIN”，然后查看 HoloLens 屏幕以获取生成的 PIN。
+首次连接到 HoloLens 上的设备门户时，需要创建用户名和密码。
+1. 在电脑上的 Web 浏览器中，输入 HoloLens 的 IP 地址。 “设置访问”页面随即打开。
+2. 选择或点击“请求 PIN”，然后查看 HoloLens 屏幕以获取生成的 PIN。
 3. 在“设备上显示的 PIN”文本框中输入该 PIN。
-4. 输入将用于连接到 Device Portal 的用户名。 无需使用 Microsoft 帐户 (MSA) 名称或域名作为用户名。
+4. 输入将用于连接到设备门户的用户名。 无需使用 Microsoft 帐户 (MSA) 名称或域名作为用户名。
 5. 输入密码并进行确认。 密码长度必须至少为七个字符。 无需使用 MSA 密码或域密码作为密码。
 6. 单击“配对”以连接到 HoloLens 上的 Windows 设备门户。
 
@@ -100,16 +100,16 @@ ms.locfileid: "97102918"
 
 如果在浏览器中看到“证书错误”，可以通过创建与该设备的信任关系来修复该错误。
 
-每个 HoloLens 会生成唯一的自签名证书以供其 SSL 连接使用。 默认情况下，此证书不受电脑的 Web 浏览器信任，因此你可能会看到“证书错误”。 通过从你的 HoloLens 下载此证书（借助 USB 或信任的 WLAN 网络）并在你的电脑上信任该证书，可以安全地连接到设备。
+每个 HoloLens 会生成自签名证书以供其 SSL 连接使用。 默认情况下，此证书不受电脑的 Web 浏览器信任，因此你可能会看到“证书错误”。 可以通过 USB 或信任的 Wi-Fi 网络从 HoloLens 下载此证书并在电脑上信任它，从而安全地连接到你的设备。
 1. **确保在安全网络（USB 或信任的 Wi-Fi 网络）中操作。**
 2. 从设备门户上的“安全性”页下载此设备的证书。
    * 导航到 https://<HOLOLENS IP 地址>/devicepair.htm
    * 打开“系统”>“首选项”对应的节点。 
-   * 向下滚动到“设备安全性”，然后单击“下载此设备的证书”按钮。
+   * 向下滚动到“设备安全性”，然后选择“下载此设备的证书”按钮。
 3. 在电脑上安装“受信任的根证书颁发机构”存储中的证书。
    * 在 Windows 菜单中键入：管理计算机证书并启动小程序。
    * 展开“受信任的根证书颁发机构”文件夹。
-   * 单击“证书”文件夹。
+   * 选择“证书”文件夹。
    * 在“操作”菜单中选择：“所有任务”>“导入...”
    * 使用从 Device Portal 下载的证书文件，完成“证书导入向导”。
 4. 重新启动浏览器。
@@ -144,7 +144,7 @@ ms.locfileid: "97102918"
 
 ![突出显示“本地存储”选项卡的 Windows 设备门户中打开的“应用管理器”页的屏幕截图](images/sideloading-3.png)
 
-6. 选择“安装”启动安装
+6. 选择“安装”以开始安装
  
 ![已成功完成安装的 Windows 设备门户中打开的“应用管理器”页的屏幕截图](images/sideloading-4.png) 
 
@@ -172,8 +172,8 @@ Device Portal 会话从主页开始。 可从主页的左侧导航栏访问其�
 * **设备状态：** 监视设备的运行状况并报告严重错误。
 * **Windows 信息：** 显示 HoloLens 的名称，以及当前安装的 Windows 版本。
 * **首选项** 部分包含以下设置：
-   * **IPD**：设置瞳孔间距 (IPD)，它是在用户直视前方时两个瞳孔中心之间的距离，以毫米为单位。 该设置将立即生效。 在设置你的设备时，会自动计算该默认值。
-   * **设备名称**：为 HoloLens 指定一个名称。 更改此值后，必须重新启动设备才能使该值生效。 单击“保存”后，对话框将询问是要立即重新启动还是稍后重新启动设备。
+   * **IPD**：设置瞳孔间距 (IPD) - 在用户直视前方时两个瞳孔中心之间的距离，以毫米为单位。 该设置将立即生效。 在设置你的设备时，会自动计算该默认值。
+   * **设备名称**：为 HoloLens 指定一个名称。 更改此值后，需重启设备才能使其生效。 单击“保存”后，对话框将询问是要立即重新启动还是稍后重新启动设备。
    * **睡眠设置**：设置当设备已接上电源并使用电池时进入睡眠状态之前要等待的时长。
 
 ### <a name="3d-view"></a>3D 视图
@@ -194,11 +194,11 @@ Device Portal 会话从主页开始。 可从主页的左侧导航栏访问其�
   * **显示锥体**：显示视锥。
   * **显示防抖动平面**：显示 HoloLens 用于稳定动作的平面。
   * **显示网格**：显示代表周围环境的空间映射网格。
-  * **显示空间定位点**：显示活动应用的空间定位点。 必须单击“更新”按钮才能获取和刷新定位点。
+  * **显示空间定位点**：显示活动应用的空间定位点。 选择“更新”按钮以获取和刷新定位点。
   * **显示细节**：显示手的位置、头部旋转四元数，以及设备原点矢量的实时变化。
   * **全屏按钮**：以全屏模式显示 3D 视图。 按 ESC 键可退出全屏视图。
-* **图面重构**：单击或敲击“更新”可显示设备的最新空间映射网格。 完成整个过程可能需要一些时间（但最多只需几秒钟）。 在 3D 视图中，网格不会自动更新，必须手动单击“更新”才能获取设备的最新网格。 单击“保存”可在电脑上将当前的空间映射网格保存为 obj 文件。
-* **空间定位点**：单击“更新”可显示或更新活动应用的空间定位点。
+* **图面重构**：选择或点击“更新”可显示设备的最新空间映射网格。 完成整个过程可能需要一些时间（但最多只需几秒钟）。 在 3D 视图中，网格不会自动更新，必须手动选择“更新”才能获取设备的最新网格。 选择“保存”可在电脑上将当前的空间映射网格保存为 obj 文件。
+* **空间定位点**：选择“更新”可显示或更新活动应用的空间定位点。
 
 ### <a name="map-manager"></a>地图管理器
 
@@ -211,9 +211,9 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 
 #### <a name="exporting-and-importing-maps"></a>导出和导入地图
 
-若要导出地图，请单击“导出系统地图和定位点”。 此操作可能需要一段时间，所以在导出地图时，请准备好等待 30-60 秒。 完成后，文件将下载到浏览器中。  
+要导出地图，请选择“导出系统地图和定位点”。 此操作可能需要一段时间，所以在导出地图时，请准备好等待 30-60 秒。 完成后，文件将下载到浏览器中。  
 
-若要导入地图和定位点，请分别单击“上传地图文件”和“上传定位点文件”，然后选择已经导出的地图或定位点文件 。 上传的地图或定位点文件可能来自你的设备或任何其他 HoloLens 设备。 
+要导入地图和定位点，请分别选择“上传地图文件”和“上传定位点文件”，然后选择已经导出的地图或定位点文件 。 上传的地图或定位点文件可能来自任何其他 HoloLens 设备。 
 
 > [!NOTE]
 > 在 HoloLens 上，还可以导入和导出空间映射数据库。 然而，这在非 HoloLens 设备上不起作用。  
@@ -233,7 +233,7 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
   * **从相机渲染**：从照片/视频相机的角度对齐捕获内容，前提是 [正在运行的应用支持此功能](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)（仅限 HoloLens 2）。
   * **实时预览质量**：选择用于实时预览的屏幕分辨率、帧速率和流处理速率。
 * **音频设置**（仅限 HoloLens 2）：
-  * **音频媒介类别**：选择在处理麦克风时使用的类别。 “默认值”将包括某些环境，这些环境中的“通信”会应用背景噪音消除。 
+  * **音频媒介类别**：选择在处理麦克风时使用的类别。 “默认值”将包括某些环境，而“通信”会应用背景噪音消除 。
   * **应用音频增益**：应用于应用音频音量的增益。
   * **麦克风音频增益**：应用于麦克风音频音量的增益。
 * **照片和视频设置**（HoloLens 2，版本 2004 或更高版本）：
@@ -241,13 +241,13 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
   * **照片分辨率**：拍摄照片时使用的分辨率。
   * **视频分辨率和帧速率**：拍摄视频时使用的分辨率和帧速率。
   * **视频稳定缓冲区**：拍摄视频时使用的缓冲区大小。 此值越大，弥补快速移动的效果越好。
-* 单击或敲击“实时预览”按钮可显示捕获流。 “停止实时预览”会停止捕获流。
-* 单击或敲击“录制”可使用指定的设置开始录制混合现实流。 “停止录制”会结束录制，并保存录制内容。
-* 单击或敲击“拍摄照片”可从捕获流中捕获静止图像。
-* 单击或点击“还原默认设置”，可还原音频、照片和视频设置的默认设置。
+* 选择或点击“实时预览”按钮可显示捕获流。 “停止实时预览”会停止捕获流。
+* 选择或点击“录制”可使用指定的设置开始录制混合现实流。 “停止录制”会结束录制，并保存录制内容。
+* 选择或点击“拍摄照片”可从捕获流中捕获静止图像。
+* 选择或点击“还原默认设置”，可还原音频、照片和视频设置的默认设置。
 * **视频和照片**：显示在设备上捕获的视频和照片列表。
 
-此页面上的所有设置都适用于使用 Windows 设备门户完成的捕获，但一些设置还适用于系统 MRC（“开始”菜单、硬件按钮、全局语音命令、Miracast）和自定义 MRC 记录器。
+此页面上的所有设置都适用于使用 Windows 设备门户完成的捕获。 一些设置还适用于系统 MRC（包括“开始”菜单、硬件按钮、全局语音命令、Miracast）和自定义 MRC 记录器。
 
 |  设置  |  适用于系统 MRC  |  适用于自定义 MRC 记录器 |
 |----------|----------|----------|
@@ -282,10 +282,10 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 *Microsoft HoloLens 上 Windows 设备门户中的“性能跟踪”页*
 
 从 HoloLens 中捕获 [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR) 跟踪。
-* **可用配置文件**：从下拉列表中选择 WPR 配置文件，然后单击或敲击“开始”以开始跟踪。
-* **自定义配置文件**：单击或敲击“浏览”以从电脑中选择 WPR 配置文件。 单击或敲击“上传并启动”以开始跟踪。
+* **可用配置文件**：从下拉列表中选择 WPR 配置文件，然后选择或点击“开始”以开始跟踪。
+* **自定义配置文件**：选择或点击“浏览”以从电脑中选择 WPR 配置文件。 选择或点击“上传并启动”以开始跟踪。
 
-若要停止跟踪，请单击“停止”链接。 请保持打开此页，直到跟踪文件完成下载。
+要停止跟踪，请选择“停止”链接。 请保持打开此页，直到跟踪文件完成下载。
 
 可以打开捕获的 ETL 文件以供在 [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx) 中进行分析。
 
@@ -362,7 +362,7 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
    3. 警告
    4. 非错误警告
 
-单击或敲击“启用”以开始跟踪。 提供程序将添加到“已启用的提供程序”下拉列表。
+选择或点击“启用”以开始跟踪。 提供程序将添加到“已启用的提供程序”下拉列表。
 * **自定义提供程序**：选择自定义 ETW 提供程序和跟踪级别。 根据其 GUDI 标识提供程序。 不要在 GUID 中包含括号。
 * **已启用的提供程序**：列出已启用的提供程序。 从下拉列表中选择一个提供程序，然后单击或敲击“禁用”可停止跟踪。 单击或敲击“全部停止”会暂停所有跟踪。
 * **提供程序历史记录**：显示已在当前会话期间启用的 ETW 提供程序。 单击或敲击“启用”可激活已禁用的提供程序。 单击或敲击“清除”可清除历史记录。
@@ -379,8 +379,8 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 *Microsoft HoloLens 上 Windows 设备门户中的“模拟”页*
 
 允许你记录和播放用于测试的输入数据。
-* **捕获房间**：用于下载模拟房间文件，该文件包含用户周围环境的空间映射网格。 为该房间命名，然后单击“捕获”以在电脑上将该数据保存为 .xef 文件。 此房间文件可以加载到 HoloLens 仿真器中。
-* **录制**：选中要录制的流、为录制内容命名，然后单击或敲击“录制”开始录制。 使用 HoloLens 执行操作，然后单击“停止”在电脑上将数据保存为 .xef 文件。 可以在 HoloLens 仿真器或设备上加载此文件。
+* **捕获房间**：用于下载模拟房间文件，该文件包含用户周围环境的空间映射网格。 命名该房间，然后单击“捕获”以在电脑上将该数据保存为 .xef 文件。 此房间文件可以加载到 HoloLens 仿真器中。
+* **录制**：选中要录制的流、为录制内容命名，然后单击或敲击“录制”开始录制。 使用你的 HoloLens 执行操作，然后单击“停止”以在电脑上将该数据保存为 .xef 文件。 可以在 HoloLens 仿真器或设备上加载此文件。
 * **播放**：单击或敲击“上传录制内容”可从电脑中选择 xef 文件，然后将数据发送到 HoloLens。
 * **控制模式**：在 HoloLens 上，从下拉列表中选择“默认”或“模拟”，然后单击或敲击“设置”按钮选中该模式。   相反，选择“模拟”会禁用 HoloLens 上的真实传感器，并使用已上载的模拟数据。 如果切换到“模拟”，HoloLens 将不会响应真实用户，除非切换回“默认”。
 

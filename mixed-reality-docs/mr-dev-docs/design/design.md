@@ -7,18 +7,18 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包
-ms.openlocfilehash: a11283ad4a7931c9e061cdbf25d4659fa4760822
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 5c0eefe6f4811feba6d1d52164652acbc44945c3
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926009"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847605"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
 ![混合现实设计摘要](images/design-hero-image.png)
 
-混合现实应用程序与当今世界上任何其他应用程序都不同，设计它们是一项很难的工作。 你不仅要考虑到正在创建的真实世界和虚拟世界的新组合，还必须考虑它们带来的新型用户体验。 由于混合现实很大，因此我们在其设计范围内选择了要点，并在下面将它们布置为一系列检查点。 这些检查点应该是连续的，但如果你已经有了一定的了解，则可以随时跳转到以下任何部分。
+混合现实应用程序与当今世界上任何其他应用程序都不同，设计它们是一项很难的工作。 你不仅要考虑到正在创建的真实世界和虚拟世界的新组合，还必须考虑它们提供的新型用户体验。 由于混合现实很大，因此我们在其设计范围内选择了要点，并在下面将它们布置为一系列检查点。 这些检查点应该是连续的，但如果你已经有了一定的了解，则可以随时跳转到以下任何部分。
 
 ## <a name="design-checkpoints"></a>设计检查点
 
@@ -34,8 +34,9 @@ ms.locfileid: "96926009"
 | --- | --- |
 | [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 亲眼见证从 Microsoft 内外的设计师处收集的混合现实设计过程 |
 | [混合现实应用的类型](types-of-mixed-reality-apps.md) | 确定你的应用体验在混合现实范围内的位置 |
-| [“设计全息影像”应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | 了解混合现实 UX 设计的基础知识，只需深入了解混合现实行为以及与创建出色 HoloLens 应用相关的提示和建议即可（可在 HoloLens 2 中从 Microsoft Store 下载） |
+| [“设计全息影像”应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | 了解混合现实 UX 设计的基础知识，只需体验创建出色 HoloLens 应用相关的行为、提示和建议即可（可在 HoloLens 2 中从 Microsoft Store 下载） |
 | [MRTK 中心示例](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4) | 体验混合现实的常见空间交互和 UX 构建基块（可从 HoloLens 2 中的 Microsoft Store 下载） |
+
 ### <a name="2-core-concepts"></a>2.核心概念
 
 无论是针对 VR 还是 AR 进行开发，都有几个核心概念适用于设计流畅的沉浸式体验。 了解用户的观点、定位对象并确保每个人都舒适安全是你在历程的这一阶段的头等大事。 本部分结束时，你将有一个坚实的基础来进行交互设计。
@@ -45,26 +46,26 @@ ms.locfileid: "96926009"
 |  概念  |  业务成效  |
 | --- | --- |
 | [全息帧](holographic-frame.md) | 了解用户佩戴着其头戴显示设备时如何看到覆盖到现实世界的内容 |
-| [坐标系统](coordinate-systems.md) | 了解如何将全息影像置于世界上对用户有意义的各个位置，该位置可能是用户的物理室，也可能是你创建的某个虚拟领域 |
+| [坐标系统](coordinate-systems.md) | 了解如何将全息影像置于世界上有意义的各个位置，该位置可能是实际空间，也可能是你创建的某个虚拟领域 |
 | [空间映射](spatial-mapping.md) | 在用户的世界中锚定对象，并利用真实世界的物理表面 |
 | [舒适感注意事项](comfort.md) | 通过以模仿自然世界的方式创建和呈现沉浸式内容，确保用户的舒适感和安全性 |
 
 ### <a name="3-interaction-design"></a>3.交互设计
 
-无论虚拟体验有多漂亮和拟真，如果不能进行交互，也都是没有用的。 本部分将向你介绍基本交互模型、手势和运动控制器、使用语音输入以及收集用户的眼部跟踪数据。 本部分结束后，你便已准备好处理设计历程中的最后一个大主题：用户体验。
+无论虚拟体验有多漂亮和拟真，如果不能进行交互，也都是没有用的。 本部分将向你介绍基本交互模型、手势和运动控制器、语音输入以及收集用户的眼部跟踪数据。 本部分结束后，你便已准备好处理设计历程中的最后一个大主题：用户体验。
 
 ![交互设计因素](images/UX_Hero_Manipulation.jpg)
 
 |  概念  |  业务成效  |
 | --- | --- |
 | [交互模型](interaction-fundamentals.md) | 通过手部、眼部和语音输入向用户提供本能交互 |
-| [手和运动控制器](hands-and-tools.md) | 了解如何在靠近用户手的位置触摸和操纵全息影像，或者通过精确的交互在远距离触摸和操纵全息影像 |
+| [手和运动控制器](hands-and-tools.md) | 了解如何在靠近用户手的位置或者通过精确的交互在远距离与全息影像交互 |
 | [语音输入](voice-input.md) | 在沉浸式应用中使用语音命令作为输入来控制周围的全息影像和环境  |
 | [眼部跟踪](eye-tracking.md) | 使用有关用户正在查看的内容的信息，在全息体验中增加一个新层次的上下文和人工理解 |
 
 ### <a name="4-user-experience-elements"></a>4.用户体验元素
 
-现在你已经掌握了基本的交互，你可以专注于用户体验元素的更细微之处，以及如何使它们适应混合现实的独特环境。 你将了解常见的行为、资产设计、对象缩放和版式，所有这些都是为了使你的应用对用户尽可能地直观。 本部分标志着混合现实官方设计历程的结束，但在[后续步骤？](#whats-next)部分中还有更多资源供你继续了解。
+现在你已经掌握了基本的交互，你可以专注于用户体验元素的更细微之处，以及如何使它们适应混合现实的独特环境。 你将了解常见的行为、资产设计、对象缩放和版式，同时为用户提供直观的体验。 本部分标志着混合现实官方设计历程的结束，但在[后续步骤？](#whats-next)部分中还有更多资源供你继续了解。
 
 ![UX 元素](images/UX_Hero_BoundingBox.jpg)
 
@@ -108,7 +109,7 @@ ms.locfileid: "96926009"
 
 ---
 
-### <a name="additional-resources"></a>其他资源
+### <a name="other-resources"></a>其他资源
 
 :::row:::
     :::column:::

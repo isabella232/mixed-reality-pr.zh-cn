@@ -1,5 +1,5 @@
 ---
-title: 入门教程 - 6. 创建用户界面
+title: MRTK 教程 - 6. 创建用户界面
 description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建用户界面。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 预制件, 全息影像, 工具提示
 ms.localizationpriority: high
-ms.openlocfilehash: 9ef3f17f8ec5508ace0c5d05cccf7a8383e54353
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 90b794dc6e88b724d16c339e428c4d2ed9cdac07
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679286"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613511"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
 

@@ -1,24 +1,24 @@
 ---
-title: Unity 开发概述
-description: 在 Unity 中构建混合现实应用入门。
-author: thetuvix
+title: 针对 HoloLens 的 Unity 开发
+description: 在 Unity 和 HoloLens 中生成混合现实应用入门。
+author: hferrone
 ms.author: kurtie
 ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: 4eeec1544315ff2b9a43fc725d5bbd83c8cea89f
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 150d86d1522f3fa71dd9d9a1fe154baef89496e0
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926036"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613471"
 ---
-# <a name="unity-development-overview"></a>Unity 开发概述
+# <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发 
 
 ![Unity 横幅徽标](../images/unity_logo_banner.png)
 
-在 [Unity](https://unity.com) 中生成[混合现实应用](../../design/app-views.md)的最快途径是使用混合现实工具包。 如果你尚不熟悉 Unity，我们建议你先在 Unity Learn 平台上浏览初学者级别[教程](https://unity3d.com/learn/tutorials)，然后再继续操作。 访问综合性的 [Asset Store](https://www.assetstore.unity3d.com/) 和 [Unity 混合现实论坛](https://forum.unity3d.com/forums/hololens.102/)，与在线社区一起生成混合现实应用程序也是一个好主意。 你永远都不知道你可能会在未知领域发现什么样的绝佳资产或解决方案。 准备好开始使用 MRTK 时，请前往下面的开发检查点！
+在 [Unity](https://unity.com) 中生成 HoloLens [混合现实应用](../../design/app-views.md)的最快途径是使用混合现实工具包。 如果你尚不熟悉 Unity，我们建议你先在 Unity Learn 平台上浏览初学者级别[教程](https://unity3d.com/learn/tutorials)，然后再继续操作。 访问综合性的 [Asset Store](https://www.assetstore.unity3d.com/) 和 [Unity 混合现实论坛](https://forum.unity3d.com/forums/hololens.102/)，与在线社区一起生成混合现实应用程序也是一个好主意。 你永远都不知道你可能会在未知领域发现什么样的绝佳资产或解决方案。 准备好开始使用 MRTK 时，请前往下面的开发检查点！
 
 > [!IMPORTANT]
 > 如果你有一个想要引入到 HoloLens 2 的现有 Unity 项目，请查看 **[移植指南](../porting-apps/porting-overview.md)** 。 对于使用 HTK、MRTK v1、SteamVR 或针对沉浸式头戴显示设备开发的项目（例如 Reverb G2、Oculus Rift 和 HTC Vive），我们有一些指导。

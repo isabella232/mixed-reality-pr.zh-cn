@@ -7,16 +7,16 @@ ms.date: 10/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 仿真器
-ms.openlocfilehash: e6dc8a7d38d5c7c9575723446350ee087a69dc18
-ms.sourcegitcommit: 0509cf6c57067cffd75a0189106e3369e9ecc5c8
+ms.openlocfilehash: 891ca9516fbf0179d57995282a9dd0fc57f25c5e
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96855904"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530371"
 ---
 # <a name="using-the-hololens-emulator"></a>使用 HoloLens 仿真器
 
-使用 HoloLens 仿真器可以在未配备物理 HoloLens 的电脑上测试全息应用程序。 它还附带 HoloLens 开发工具集。 该仿真器使用 Hyper-V 虚拟机。 通常由 HoloLens 传感器读取的人类和环境输入通过键盘、鼠标或 Xbox 控制器进行模拟。 应用程序无需经过修改即可在仿真器上运行，并且不知道它们不是在 HoloLens 上运行。
+HoloLens 仿真器包括 HoloLens 开发工具集，可让你在未配备物理 HoloLens 的电脑上测试全息应用程序。 该仿真器使用 Hyper-V 虚拟机，这意味着 HoloLens 传感器读取的人类和环境输入通过键盘、鼠标或 Xbox 控制器模拟。 项目甚至无需经过修改即可在仿真器上运行，并且应用不知道其不是在真实的 HoloLens 上运行。
 
 如果想要开发适用于台式机的 Windows Mixed Reality 沉浸式 (VR) 头戴显示设备应用程序或游戏，请查看 [Windows Mixed Reality 模拟器](using-the-windows-mixed-reality-simulator.md)，该设备可用于模拟桌面头戴显示设备。
 
@@ -51,9 +51,9 @@ HoloLens 仿真器结合使用 Hyper-V 和 RemoteFx（第 1 代仿真器）或 G
    * DirectX 11.0 或更高版本
    * WDDM 1.2 图形驱动程序或更高版本（第 1 代）
    * WDDM 2.5 图形驱动程序（HoloLens 2 仿真器）
-   * 仿真器可与不受支持的 GPU 配合工作，但速度会明显变慢
+   * 仿真器可与不受支持的 GPU 配合工作，但速度会变慢
 
-如果你的系统满足上述要求，请 **确保系统上已启用“Hyper-V”功能**，方法是在控制面板中选择“程序”->“程序和功能”->“启用或关闭 Windows 功能”，确保已选择“Hyper-V”，使仿真器能够成功安装。
+如果你的系统满足上面列出的要求，请确保已在系统上启用“Hyper-V”功能。 转到“控制面板”->“程序”->“程序和功能”->“打开或关闭 Windows 功能”，并检查是否选中了“Hyper-V” 。
 
 ## <a name="deploying-apps-to-the-hololens-emulator"></a>将应用部署到 HoloLens 仿真器
 
@@ -61,23 +61,23 @@ HoloLens 仿真器结合使用 Hyper-V 和 RemoteFx（第 1 代仿真器）或 G
     >[!NOTE]
     >使用 Unity 时，请从 Unity 生成项目，然后像往常一样将生成的解决方案载入 Visual Studio。
 2. 对于 HoloLens 仿真器（第 1 代），请确保将“平台”设置为“x86”。 对于 HoloLens 2 仿真器，请确保将“平台”设置为“x86”或“x64”。 
-3. 选择所需的 **HoloLens 仿真器** 版本作为目标调试设备。
+3. 选择所需的 HoloLens 仿真器版本作为目标调试设备。
 4. 转到“调试”>“开始调试”或按 **F5** 启动仿真器，然后部署要调试的应用程序。
 
 仿真器在首次启动时，可能需要花费一分钟或更长的时间来完成引导。 建议在调试会话期间让仿真器保持打开状态，以便将应用程序快速部署到仿真器。
 
 ## <a name="basic-emulator-input"></a>基本的仿真器输入
 
-控制仿真器与许多常见的 3D 视频游戏非常相似。 可以通过输入选项来使用键盘、鼠标或 Xbox 控制器。 通过定向佩戴 HoloLens 的模拟用户执行的操作来控制仿真器。 你的操作可在环境中四处移动该模拟用户。 仿真器中运行的应用程序可以像在真实设备上一样做出响应。
+控制仿真器与控制许多常见的 3D 视频游戏相似。 可以通过输入选项来使用键盘、鼠标或 Xbox 控制器。 通过定向佩戴 HoloLens 的模拟用户执行的操作来控制仿真器。 你的操作可在环境中四处移动该模拟用户。 仿真器中运行的应用程序可以像在真实设备上一样做出响应。
 
 HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLens 2 仿真器中，光标跟踪手部运动和方向。
 
 * **前后左右走动** - 使用键盘上的 WASD 键，或 Xbox 控制器上的左摇杆。
-* **上下左右注视** - 单击并拖动鼠标、使用键盘上的箭头键，或使用 Xbox 控制器上的右摇杆。
+* **上下左右注视** - 选择并拖动鼠标、使用键盘上的箭头键，或使用 Xbox 控制器上的右摇杆。
 * **隔空敲击手势** - 单击鼠标右键、按键盘上的 Enter 键，或使用 Xbox 控制器上的 A 按钮。
 * **开花手势/系统手势** - 按键盘上的 Windows 键或 F2 键，或按 Xbox 控制器上的 B 按钮。
-* **滚动时的手部运动** - 按住 Alt 键和鼠标右键的同时向上或向下拖动鼠标，或者在 Xbox 控制器中按住右扳机键和 A 按钮的同时向上和向下移动右摇杆。
-* **手部运动和方向**（仅适用于 HoloLens 2 仿真器）- 按住 Alt 键的同时向上、向下、向左或向右拖动鼠标以移动手部，或使用箭头键和 Q 或 E 来旋转和倾斜手部。 在 Xbox 控制器中，请在按住左缓冲键或右缓冲键的同时，使用左拇指操纵杆向左、向右、向前和向后移动手部，使用右拇指操纵杆旋转手部，使用 Dpad 上的向上或向下键来抬高或降低手部。
+* **滚动时的手部运动** - 按住 Alt 键和鼠标右键的同时向上或向下拖动鼠标。 在 Xbox 控制器中按住右扳机键和 A 按钮的同时向上和向下移动右摇杆。
+* **手部运动和方向**（仅适用于 HoloLens 2 仿真器）- 按住 Alt 键的同时向上、向下、向左或向右拖动鼠标以移动手部。 也可以使用箭头键和 Q 或 E 来旋转和倾斜手部。 在 Xbox 控制器中，请在按住左缓冲键或右缓冲键的同时，使用左拇指操纵杆向左、向右、向前和向后移动手部，使用右拇指操纵杆旋转手部。 使用 Dpad 上的向上或向下键来抬高或降低手部。
 
 有 Windows Mixed Reality 沉浸式头戴显示设备？  从 HoloLens 2 仿真器（Windows 全息版 2004）开始，可以使用 Windows Mixed Reality 沉浸式头戴显示设备和运动控制器来控制 HoloLens 2 仿真器，并以立体方式观看它。  请参阅[将 Windows Mixed Reality 沉浸式头戴显示设备和运动控制器与 HoloLens 2 仿真器配合使用](#using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator)
 
@@ -105,17 +105,17 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 ![模拟控制面板](images/emulator-simulation-control-panel.png)
 
-* 若要隐藏或显示模拟面板，请单击工具栏按钮或按键盘上的 F7。
+* 要隐藏或显示模拟面板，请选择工具栏按钮或按键盘上的 F7。
 * 将鼠标悬停在控件或字段上可显示工具提示，其中包含键盘、鼠标和游戏手柄的控件。
 * 若要显示或隐藏手部，请切换左手或右手下方的相应开关。
 * 若要控制手部，请使用键盘上的左/右 Alt 键，或游戏手柄上的左/右缓冲键。
-* 若要将所有输入定向到一只或两只手，请单击切换开关下的图钉按钮。 这相当于针对手部按住 Alt 键。
-* 若要控制视线方向，请单击“眼睛”部分中的图钉。 这相当于按住键盘上的 Y 键。
-* 若要加载房间录制内容，请单击“录制”部分中的“加载”按钮。 有关详细信息，请参阅[模拟的房间](#simulated-rooms)。
-* 若要调整模拟人类或输入设备在响应键盘、鼠标或游戏手柄输入时移动或旋转的速度，请单击“输入设置”旁边的齿轮图标并调整滑块。
+* 要将所有输入指向一只手或两只手，请选择切换开关下的图钉按钮，这相当于针对手部按住 Alt 键。
+* 要控制视线方向，请选择“眼睛”部分中的图钉，这相当于按住键盘上的 Y 键。
+* 要加载房间录制内容，请选择“录制”部分中的“加载”按钮。 有关详细信息，请参阅[模拟的房间](#simulated-rooms)。
+* 要调整模拟人类或输入设备在响应键盘、鼠标或游戏手柄输入时移动或旋转的速度，请选择“输入设置”旁边的齿轮图标并调整滑块。
 * 默认情况下，键盘输入会控制模拟人类和模拟输入。 若要将电脑的键盘输入发送到 HoloLens，请取消选中“使用键盘进行模拟”。 F4 是此项设置的快捷键。
 * 如果模拟面板已显示，按 F8 会将键盘焦点转移到模拟面板。
-* 若要在仿真器窗口中取消停靠模拟面板，请单击面板底部的按钮，或按键盘上的 F9。  关闭窗口或再次按 F9 会恢复为仿真器窗口。
+* 要在仿真器窗口中取消停靠模拟面板，请选择面板底部的按钮，或按键盘上的 F9。  关闭窗口或再次按 F9 会恢复为仿真器窗口。
 * 可将模拟控制面板作为单独的应用程序启动，这样就可以通过运行 %ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\10.0.18362.0\ 中的 PerceptionSimulationInput.exe，来连接和控制 HoloLens 2 仿真器、HoloLens 2 设备或 Windows Mixed Reality 模拟。
 
 ### <a name="account-tab"></a>“帐户”选项卡
@@ -132,7 +132,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 ### <a name="network-tab"></a>“网络”选项卡
 
-“网络”选项卡显示仿真器的网络适配器详细信息，以及主机的网络适配器详细信息。 请注意，对于 HoloLens 2 仿真器，只有在 Windows 10 2019 年 5 月更新版或更高版本上运行此仿真器时，此选项卡才会显示。
+“网络”选项卡显示仿真器的网络适配器详细信息，以及主机的网络适配器详细信息。 对于 HoloLens 2 仿真器，只有在 Windows 10 2019 年 5 月更新版或更高版本上运行此仿真器时，此选项卡才会显示。
 
 ### <a name="nat-configuration-tab"></a>“NAT 配置”选项卡
 
@@ -146,9 +146,9 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 2. 选择任何可用的外部端口。  在此示例中，我们将使用端口 8080 作为外部端口。
 3. 选择协议。  默认协议为 TCP。  由于设备门户使用 TCP，我们会保留默认设置。
 4. 单击“应用更改”以启用映射。  “状态”会从“挂起”更改为“活动”。
-5. 在远程电脑上打开浏览器，导航到“(运行仿真器的电脑的 IP):8080”。  此时会显示设备门户界面。  请注意，在远程电脑上使用的 IP 地址必须是运行仿真器的电脑的 IP 地址，而不是仿真器本身的 IP 地址。  可以通过各种方式检索 IP，例如，在电脑上的“设置应用”的“网络和 Internet”类别中检索、在命令提示符中使用“ipconfig”进行检索，以及在仿真器的“工具”对话框的“网络”选项卡中通过查找“桌面适配器”条目进行检索。
+5. 在远程电脑上打开浏览器，导航到“(运行仿真器的电脑的 IP):8080”。  此时会显示设备门户界面。  在远程电脑上使用的 IP 地址必须是运行仿真器的电脑的 IP 地址，而不是仿真器本身的 IP 地址。  可以通过各种方式检索 IP，例如，在电脑上的“设置应用”的“网络和 Internet”类别中检索、在命令提示符中使用“ipconfig”进行检索，以及在仿真器的“工具”对话框的“网络”选项卡中通过查找“桌面适配器”条目进行检索。
 
-另请注意，如果为设备门户添加端口映射，则可以远程方式控制仿真器，方法是：使用包括在仿真器安装中的“感知模拟控制”工具，或者使用感知模拟 API，只需连接到主机电脑的 IP 地址和设备门户的外部端口（例如以上示例中的 8080）即可。  使用感知模拟控制连接到仿真器并对其进行远程控制时，请仅指定电脑的 IP 地址和配置的端口。  请勿包括“https://”。
+另请注意，如果为设备门户添加端口映射，则可以远程方式控制仿真器，方法是：使用包括在仿真器安装中的“感知模拟控制”工具，或者使用感知模拟 API，只需连接到主机电脑的 IP 地址和设备门户的外部端口（例如以上示例中的 8080）即可。  使用感知模拟控制连接到仿真器并对其进行远程控制时，请仅指定电脑的 IP 地址和配置的端口。  不要包含“https://”。
 
 默认情况下，没有端口映射。  多次启动 HoloLens 2 仿真器时，配置的任何映射都会保持不变，并且会在仿真器完全启动后自动启用。
 
@@ -168,7 +168,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 ### <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>将 Windows Mixed Reality 沉浸式头戴显示设备和运动控制器与 HoloLens 2 仿真器配合使用
 
-从 HoloLens 2 仿真器（Windows 全息版 2004）开始，可以使用 Windows Mixed Reality 沉浸式头戴显示设备和运动控制器，以立体方式观看 HoloLens 2 仿真器并与之交互。  这样，你便可以在没有 HoloLens 2 设备的情况下利用头部和手部进行更快、更自然的运动。  请注意，这并非用于完全替代 HoloLens 2 设备，而是旨在提供改善的体验，使用户不仅仅能够在 2D 桌面窗口中使用键盘、鼠标和手柄与仿真器进行交互。  若要启用此功能：
+从 HoloLens 2 仿真器（Windows 全息版 2004）开始，可以使用 Windows Mixed Reality 沉浸式头戴显示设备和运动控制器，以立体方式观看 HoloLens 2 仿真器并与之交互。  这样，你便可以在没有 HoloLens 2 设备的情况下利用头部和手部进行更快、更自然的运动。  这并非用于完全替代 HoloLens 2 设备，而是旨在提供改善的体验，使用户不仅仅能够在 2D 桌面窗口中使用键盘、鼠标和手柄与仿真器进行交互。  若要启用此功能：
 
 1. 请确保在电脑上配置了 Windows Mixed Reality，并且连接了 Windows Mixed Reality 沉浸式头戴显示设备。
 2. 启动 HoloLens 2 仿真器
@@ -193,9 +193,9 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 8. 如果要放弃所做的更改并恢复到以前的配置，请按“L”加载默认配置或以前的配置。
 9. 在注册表中将“EnableEyePoseControl”值更改为 0，然后禁用“使用 HMD 进行仿真”选项并再次启用该选项。
 
-请注意，如果已保存配置，并想要删除它，则可以在 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulation 下删除名为“DisplayConfiguration”的值。  如果当前正在将头戴显示设备与仿真器配合使用，则需要禁用“使用 HMD 进行仿真”并将其重新启用，才能看到此更改生效。
+如果已保存配置，并想要删除它，则可以在 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulation 下删除名为“DisplayConfiguration”的值。  如果当前正在将头戴显示设备与仿真器配合使用，则需要禁用“使用 HMD 进行仿真”并将其重新启用，才能看到此更改生效。
 
-## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>HoloLens（第 1 代）仿真器剖析
+## <a name="anatomy-of-the-hololens-first-gen-emulator"></a>HoloLens（第 1 代）仿真器剖析
 
 ### <a name="main-window"></a>主窗口
 
@@ -239,6 +239,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 ## <a name="simulated-rooms"></a>模拟的房间
 
 模拟的房间可用于在多个环境中测试应用程序。 仿真器随附了多个房间。 安装仿真器后，可以在 %ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\\(version)\Plugins\Rooms 中找到这些房间。 所有这些房间是使用 HoloLens 在真实环境中捕获的：
+
 * **DefaultRoom.xef** - 配有一台电视机、一个茶几和两套沙发的小客厅。 启动仿真器时，默认会加载该房间。
 * **Bedroom1.xef** - 配有一张桌子的小卧室。
 * **Bedroom2.xef** - 配有一张双人床、梳妆台、床头柜和步入式衣橱的卧室。
@@ -247,7 +248,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 也可以在 HoloLens（第 1 代）上使用 [Windows 设备门户](using-the-windows-device-portal.md)的“模拟”页录制你自己的房间，以便在仿真器中使用它们。
 
-在仿真器中，你只会看到自己渲染的全息影像。 但你看不到全息影像后面的模拟房间。 而在实际的 HoloLens 中，你会同时看到两者的混合形式。 若要在 HoloLens 仿真器中查看模拟的房间，需要更新应用程序，以便在场景中渲染空间映射网格。
+在仿真器中，你只会看到自己渲染的全息影像。 但你会看到全息影像后面的模拟房间。 而在实际的 HoloLens 中，你会同时看到两者的混合形式。 若要在 HoloLens 仿真器中查看模拟的房间，需要更新应用程序，以便在场景中渲染空间映射网格。
 
 ## <a name="known-issues"></a>已知问题
 
@@ -260,17 +261,17 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 安装仿真器时，可能会出现错误消息，指出需要“Visual Studio 2015 Update 1 和 UWP 工具版本 1.2”。 出现此错误的三个可能原因如下：
 * Visual Studio 的版本不够新（需要 Visual Studio 2019、Visual Studio 2017 或 Visual Studio 2015 Update 1 或更高版本）。 若要纠正此问题，请安装最新版本的 Visual Studio。
-* 已安装最新版本的 Visual Studio，但未安装通用 Windows 平台 (UWP) 工具。 这是 Visual Studio 的一项可选功能。 对于 HoloLens（第一代），你需要适用于 Visual Studio 2015 或 Visual Studio 2017 的 UWP 工具。
+* 已安装最新版本的 Visual Studio，但未安装通用 Windows 平台 (UWP) 工具。 这是 Visual Studio 的一项可选功能。 对于 HoloLens（第 1 代），你需要适用于 Visual Studio 2015 或 Visual Studio 2017 的 UWP 工具。
 
 此外，在 Windows 的非专业版/企业版/教育版 SKU 上安装仿真器，或者未启用 Hyper-V 功能时，也可能会看到错误。
 * 有关完整的要求，请阅读前面的[系统要求](#hololens-emulator-system-requirements)部分。
 * 另请确保已在系统上启用 Hyper-V 功能。
 
-如果安装成功完成，但未看到 HoloLens 仿真器作为一个部署和调试选项列出，请检查以下各项：
-* Visual Studio 项目配置已设置为 x86（HoloLens 第一代）或者 x86 或 x64（HoloLens 2 仿真器）。
+如果安装成功完成，但未看到 HoloLens 仿真器作为一个部署和调试选项列出：
+* Visual Studio 项目配置已设置为 x86（HoloLens 第 1 代）或者 x86 或 x64（HoloLens 2 仿真器）。
 * 如果使用 Visual Studio 2019，则项目配置中的平台工具集应设置为 v142。
 
-如果安装成功完成，但尝试启动 HoloLens 仿真器时 Visual Studio 显示错误，请尝试以下操作：
+如果安装成功完成，但尝试启动 HoloLens 仿真器时 Visual Studio 显示错误：
 * 以管理员身份运行 Visual Studio
 * 如果曾经只安装过 Visual Studio 2019，请检查 HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Kits\Installed Roots 中的“KitsRoot10”注册表值是否指向 32 位 Program Files 文件夹（例如“C:\Program Files (x86)\Windows Kits\10”）。  如果不是，请卸载 HoloLens 仿真器，将该注册表值更改为你的 32 位 Program Files 文件夹，然后重新安装 HoloLens 仿真器。  此问题在 Visual Studio 2019 16.0.3 中已得到解决。
 
@@ -285,7 +286,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果你遵循我们规划的 Unity 开发检查点历程，则你就处于部署阶段之中。 从这里，你可以进入下一主题：
+如果你遵循我们规划的 Unity 开发检查点历程，则你就处于部署阶段之中。 从这里，你可以继续了解下一个主题：
 
 > [!div class="nextstepaction"]
 > [部署到 HoloLens 模拟器](using-the-hololens-emulator.md)

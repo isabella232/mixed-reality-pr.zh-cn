@@ -1,5 +1,5 @@
 ---
-title: 入门教程 - 9. 使用语音命令
+title: MRTK 教程 - 9. 使用语音命令
 description: 本课程介绍如何将语音命令与混合现实工具包 (MRTK) 结合使用。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 语音命令, 语音输入
 ms.localizationpriority: high
-ms.openlocfilehash: e51f9e816acbc2f98415deaec2c0885c97e40442
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6e008f3e46bc4a22499691e284020321d29a2f23
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679246"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613461"
 ---
 # <a name="9-using-speech-commands"></a>9.使用语音命令
 

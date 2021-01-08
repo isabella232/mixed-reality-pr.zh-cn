@@ -1,5 +1,5 @@
 ---
-title: 入门教程 - 3. 配置 MRTK 配置文件
+title: MRTK 教程 - 3. 配置 MRTK 配置文件
 description: 本教程介绍如何配置混合现实工具包 (MRTK) 配置文件。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 空间感知
 ms.localizationpriority: high
-ms.openlocfilehash: 7ac81c21e1658798b7f512c4afa2eea9f509d827
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 48bb6aa8705c9d874e6af8867d1edbe2385cb853
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679316"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613241"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3.配置 MRTK 配置文件
 

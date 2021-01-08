@@ -1,5 +1,5 @@
 ---
-title: 入门教程 - 4. 定位场景中的对象
+title: MRTK 教程 - 4. 定位场景中的对象
 description: 本课程介绍如何定位场景中的对象，以及如何使用混合现实工具包 (MRTK) 来组织网格中的对象。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器, 网格对象集合
 ms.localizationpriority: high
-ms.openlocfilehash: b49d1b93b98a68e253239647262edc737fdbeb58
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: e09047e4f75697722f76301630c275f126b3cbda
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679306"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613251"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4.定位场景中的对象
 
