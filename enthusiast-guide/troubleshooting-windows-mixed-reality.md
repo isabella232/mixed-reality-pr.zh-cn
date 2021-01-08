@@ -1,14 +1,14 @@
 ---
 title: Windows Mixed Reality 疑难解答
-description: Windows Mixed Reality 故障排除，超出了标准使用者支持文档的范围。
+description: 使用最新的 Windows Mixed Reality 故障排除，这超出了标准使用者支持文档的范围。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
-ms.openlocfilehash: f98bc55062f2e159e6ac6fca5514cee899f50bc5
-ms.sourcegitcommit: 50d9afae479e418b885dc883ce88771292923f01
+ms.openlocfilehash: 6e685aac0919d920f47c2bd8954706da79dbc8c4
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97859486"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009477"
 ---
 # <a name="troubleshooting-windows-mixed-reality-faqs"></a>Windows Mixed Reality (常见问题的疑难解答) 
 

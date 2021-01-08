@@ -1,17 +1,17 @@
 ---
 title: 导航 Windows Mixed Reality 主页
-description: HoloLens 和 Windows Mixed Reality 耳机共享了用于在你的环境中启动、放置和操作应用和3D 模型的范例， (物理或数字) 。 了解如何在这两种设备类型上浏览 Windows Mixed Reality 主页。
+description: 了解如何在 HoloLens 和 Windows Mixed Reality 耳机上导航 Windows Mixed Reality 主页。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: shell，os，平台，cliff 房子，房子，home，环境，开始，开始菜单，主页菜单，pin，应用，启动应用，放置应用，传送，移动，导航，混合现实耳机，虚拟现实耳机，什么是虚拟现实
-ms.openlocfilehash: 4d8aa88fa1057c550601feb7ad85ace15fcada54
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 06e28c9c1f0f6244f7f502382d61d4740b5fb71f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757685"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009687"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>导航 Windows Mixed Reality 主页
 

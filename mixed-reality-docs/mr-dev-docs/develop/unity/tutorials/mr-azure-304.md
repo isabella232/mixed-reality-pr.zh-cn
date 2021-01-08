@@ -1,17 +1,17 @@
 ---
 title: MR 和 Azure 304 - 人脸识别
-description: 完成此课程以在混合现实应用程序内实现 Azure 人脸识别。
+description: 请完成本课程来了解如何在混合现实应用程序中实现 Azure 人脸识别。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，人脸识别，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 8e1420e5764e7330026731ffb4f0c180604c2789
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a6578950039a0a9267b7191f5b96775dca366c01
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679826"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010147"
 ---
 # <a name="mr-and-azure-304-face-recognition"></a>MR 和 Azure 304：人脸识别
 
@@ -52,7 +52,7 @@ ms.locfileid: "94679826"
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -68,7 +68,7 @@ ms.locfileid: "94679826"
 - 连接到电脑的相机 (沉浸式耳机开发) 
 - Azure 安装和人脸 API 检索的 Internet 访问
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
 2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。 
@@ -818,7 +818,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
 
 在 HoloLens 上部署：
 
-1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 具体方法为：
+1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 要执行此操作：
 
     1. 在戴上 HoloLens 的同时，请打开 **设置**。
     2. **Wi-Fi > 高级选项中转到网络 & Internet >**

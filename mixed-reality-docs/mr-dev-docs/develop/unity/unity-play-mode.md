@@ -1,17 +1,17 @@
 ---
 title: Unity 播放模式
-description: 在 Unity 编辑器中使用播放模式，无需部署应用即可在设备上预览所做的更改。
+description: 了解如何在 Unity 编辑器中使用播放模式在不部署应用的情况下预览设备上的应用程序更改。
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，远程处理，全息远程处理，全息远程处理播放器，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity 播放模式
-ms.openlocfilehash: 396e441903fe7b567c6329ca4d207ce893a07825
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 9f6c2cafd08fca8a5d60f3fcf5832ee74762e173
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010608"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009837"
 ---
 # <a name="unity-play-mode"></a>Unity 播放模式
 
@@ -25,7 +25,7 @@ ms.locfileid: "97010608"
 3. 在 Unity 中，单击 " **窗口** " 菜单，展开 " **XR** " 子菜单，然后选择 " **全息模拟**"。
 4. 将 **仿真模式** 设置为 **远程设备**。
 5. 对于 **远程计算机**，请输入 HOLOLENS 的 IP 地址。
-6. 选择“连接”  。 应会看到 **连接状态** 更改为 " **已连接** "，并且会在 HoloLens 中看到屏幕显示为空白。
+6. 选择“连接”。 应会看到 **连接状态** 更改为 " **已连接** "，并且会在 HoloLens 中看到屏幕显示为空白。
 7. 选择 " **播放** " 按钮，开始播放模式并在 HoloLens 上体验应用。
 
 全息远程处理需要快速的 PC 和 Wi-Fi 的连接。 可以在 [全息远程处理播放机](../platform-capabilities-and-apis/holographic-remoting-player.md) 文档中找到更多详细信息。

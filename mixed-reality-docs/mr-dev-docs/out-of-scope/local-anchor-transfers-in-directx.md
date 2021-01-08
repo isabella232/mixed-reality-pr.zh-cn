@@ -1,17 +1,17 @@
 ---
 title: DirectX 中的本地定位点传输
-description: 说明如何通过传输空间锚点来同步两个 HoloLens 设备。
+description: 了解如何通过传输、导出和序列化空间锚点来同步两个 HoloLens 设备。
 author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens，同步，空间定位，传输，多人，查看，方案，演练，示例代码，传输，本地定位点传输，定位点导出，定位点导入
-ms.openlocfilehash: 6d54b29a01617f9d78b7fdfec0ebc04a3cd48002
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 5007220f480a3093864502e624737e9707bd3952
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677249"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009647"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>DirectX 中的本地定位点传输
 
@@ -31,9 +31,9 @@ ms.locfileid: "91677249"
 
 ## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>设置应用程序以使用 spatialPerception 功能
 
-应用必须被授予使用 spatialPerception 功能的权限，然后才能使用 [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx)。 这是必需的，因为传输空间定位点涉及到共享在该定位点附近收集的传感器映像，其中可能包括敏感信息。
+应用必须被授予使用 SpatialPerception 功能的权限，然后才能使用 [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx)。 这是必需的，因为传输空间定位点涉及到共享在该定位点附近收集的传感器映像，其中可能包括敏感信息。
 
-在应用程序的 appxmanifest.xml 文件中声明此功能。 下面是一个示例：
+在应用程序的 appxmanifest.xml 文件中声明此功能。 下面的示例说明：
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ ms.locfileid: "91677249"
 </Capabilities>
 ```
 
-此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请 *xlmns* 将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面是一个示例：
+此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面的示例说明：
 
 ```
 <Package
@@ -674,7 +674,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 
 就这么简单！ 现在，您应该具有足够的信息来尝试查找通过网络接收的定位点。 同样，请注意，客户端必须具有足够的可视化跟踪数据，空间才能成功定位定位点;如果它不能正常工作，请尝试一段时间。 如果仍不起作用，请让服务器发送更多的定位点，并使用网络通信来与适用于客户端的网络通信达成一致。 你可以通过下载 HolographicSpatialAnchorTransferSample、配置客户端和服务器 Ip 以及将其部署到客户端和服务器 HoloLens 设备来尝试此方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [并行模式库 (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

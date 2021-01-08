@@ -1,17 +1,17 @@
 ---
 title: 针对 HoloLens 2 的 Galaxy 资源管理器创建
-description: 欢迎使用我们更新 HoloLens 2 的 Galaxy 资源管理器的旅程。 正如原始 Galaxy 资源管理器一样，我们的团队将在 GitHub 上打开项目，以确保社区具有完全访问权限。
+description: 了解我们的团队如何在 GitHub 上更新 HoloLens 2 的 Galaxy 资源管理器开源项目。
 author: l-garrett
 ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
 keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 00bf589d738cf74cbfdb489bc43aadf931dda285
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: d3a31204275b2d2a9f1f1ea1c283993d2e0285ed
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010468"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009577"
 ---
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>针对 HoloLens 2 的 Galaxy 资源管理器创建
 

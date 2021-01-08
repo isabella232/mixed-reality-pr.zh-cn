@@ -1,19 +1,19 @@
 ---
 title: Windows Mixed Reality 和新的 Microsoft Edge
-description: 在 Windows Mixed Reality 中准备好新的 Microsoft Edge。 包括对预期的更改、要查找的更新和已知问题。
+description: 了解用于混合现实的新 Microsoft 边缘，包括预期的内容、要查找的更新和已知问题。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 边缘，新，沉浸式 web，microsoft edge，浏览器，vr，360，360视频，360 viewer，webxr，webvr
-ms.openlocfilehash: 341c7e3d53bd7fb0c569a8acffcf56662c8d2c32
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: ef55ee564e0a7ea11aaaad62ebf259459454ab72
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757435"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010027"
 ---
-# <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality 和新的 Microsoft Edge
+# <a name="the-new-microsoft-edge-for-windows-mixed-reality"></a>新的 Microsoft Edge Windows Mixed Reality
 
 [新的 Microsoft Edge 现在可供下载](https://blogs.windows.com/windowsexperience/?p=173496)，但客户也可以[等待未来的更新使用 Windows 10 进行安装](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/)，并遵循下几个月的已测量的推出方法。 
 

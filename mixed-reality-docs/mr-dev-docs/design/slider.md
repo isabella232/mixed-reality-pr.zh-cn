@@ -1,17 +1,17 @@
 ---
 title: Slider
-description: 滚动条是一个 UI 组件，允许您通过移动轨上的旋钮或杠杆来设置值。
+description: 了解如何使用滑杆 UI 组件通过混合现实工具包移动轨道上的旋钮或杠杆来设置值。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，滑杆，MRTK，混合现实工具包
-ms.openlocfilehash: b2f338dd25bbcc50a68a3c5e9b8d980d15827755
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 15a536074f8f873456482a55c1c9dbe418602bb1
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848230"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009557"
 ---
 # <a name="slider"></a>Slider
 

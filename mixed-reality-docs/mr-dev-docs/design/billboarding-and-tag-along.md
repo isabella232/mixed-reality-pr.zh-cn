@@ -1,17 +1,17 @@
 ---
 title: 公告和尾随
-description: 具有 billboarding 的对象始终向用户提供正面的定向。
+description: 了解如何在 billboarding 中使用对象，这种对象始终在混合现实应用程序中对用户进行操作。
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，billboarding，标记和混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 44f2678fe2f8e4be071086f46037749d1df61ae4
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 92caa1bcd325cefecc6d3820b819cecfce6fc09c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848031"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009607"
 ---
 # <a name="billboarding-and-tag-along"></a>公告和尾随
 

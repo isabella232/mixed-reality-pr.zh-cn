@@ -1,17 +1,17 @@
 ---
 title: Unity 中的语音输入
-description: Unity 公开了三种向 Windows Mixed Reality 应用程序添加语音输入的方法。
+description: 了解 Unity 如何公开向 Windows Mixed Reality 应用程序添加语音输入、语音识别和听写的三种方法。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 66aba92c14eca4183739687934e12db289cd2302
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: d07909bbf05ff882eb0a4b6123c39eae9280e3e8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010568"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009797"
 ---
 # <a name="voice-input-in-unity"></a>Unity 中的语音输入
 

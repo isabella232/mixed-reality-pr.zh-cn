@@ -1,17 +1,17 @@
 ---
 title: 全息帧
-description: 用户通过全息帧查看混合现实的世界。
+description: 了解用户如何通过全息帧查看混合现实世界，以及如何最好地设计体验。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/25/2020
 ms.topic: article
 keywords: HoloLens，Windows Mixed Reality，全息帧，视图，FOV，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，交互，导航，菜单
-ms.openlocfilehash: 679f629d5190ad6e3df2d92d2adfcce998f7dea5
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 5898f98054afadb58fb059ff54be23f015232d55
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847380"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009587"
 ---
 # <a name="holographic-frame"></a>全息帧
 

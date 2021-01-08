@@ -1,17 +1,17 @@
 ---
 title: Unity 中的凝视
-description: 注视是用户在混合现实中以应用程序创建的方式为目标的主要方式。
+description: 了解如何使用 "注视输入" 作为主要方式，使用户能够面向混合现实中的应用创建的全息影像。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 眼睛，眼睛，头盔，unity，全息影像，混合现实，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: ca33fef5a5a761df83ed7991b366cf711a5db224
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 5dab8cb38aaa4b9a4547f4bf494afb093b6d8058
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010358"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009887"
 ---
 # <a name="head-gaze-in-unity"></a>头-注视 Unity
 
@@ -56,7 +56,7 @@ void Update()
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [手势和运动控制器](gestures-and-motion-controllers-in-unity.md)

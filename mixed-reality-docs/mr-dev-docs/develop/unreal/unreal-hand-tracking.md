@@ -1,17 +1,17 @@
 ---
 title: Unreal 中的手部跟踪
-description: 说明如何在 Unreal 中使用手动跟踪
+description: 了解如何在 Unreal mixed reality 应用中使用手跟踪输入、姿势、手写网格和实时链接动画。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 66ae1994f2bbee3ba4786a7c4eeebfe1cd57ca37
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: e482c93233348325736d2c224788e9174c1f3b67
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002644"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010157"
 ---
 # <a name="hand-tracking-in-unreal"></a>Unreal 中的手部跟踪
 
@@ -162,7 +162,7 @@ HoloLens 2 跟踪空间手势，这意味着您可以将这些手势捕获为输
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们的 Unreal 开发旅程，就是在探索 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块：
+如果你遵循我们规划的 Unreal 开发历程，则你处于探索 MRTK 核心基础知识的过程之中。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [本地空间定位点](unreal-spatial-anchors.md)

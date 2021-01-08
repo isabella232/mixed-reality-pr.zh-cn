@@ -1,17 +1,17 @@
 ---
 title: DirectX 中的头部和眼部凝视
-description: 了解如何在本机 DirectX 应用中使用打印头和眼睛跟踪。
+description: 了解如何在本机 DirectX 应用中使用打印头和眼睛跟踪来请求、使用和解包 raycasting 数据。
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 眼睛，眼睛，打印头，打印头跟踪，眼睛跟踪，directx，输入，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 4d7ed9b735b5f3cd7029e42ccc75bc539e3c4f4b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: a518e5e4153da9c58295abb257a8ed2d69145211
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848095"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009547"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>DirectX 中的头盔和眼睛眼睛输入
 
@@ -27,6 +27,7 @@ ms.locfileid: "97848095"
 打印头和眼睛都可通过  [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) API 进行访问。 调用 [SpatialPointerPose：： TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 以在指定的时间戳和 [坐标系统](coordinate-systems-in-directx.md)接收新的 SpatialPointerPose 对象。 此 SpatialPointerPose 包含一个头部和方向。 它还包含目视的原点和方向（如果眼睛跟踪可用）。
 
 ### <a name="device-support"></a>设备支持
+
 <table>
 <colgroup>
     <col width="25%" />

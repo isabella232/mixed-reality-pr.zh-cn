@@ -1,17 +1,17 @@
 ---
 title: 实现 3D 应用启动器（UWP 应用）
-description: 如何创建适用于 Windows Mixed Reality UWP 应用和游戏的3D 应用启动器和徽标 (通过 Microsoft Store) ，同时在 HoloLens 和沉浸式 (VR) 耳机。
+description: 了解如何在 HoloLens 和 VR 耳机上创建适用于 Windows Mixed Reality UWP 应用和游戏的3D 应用启动器和徽标。
 author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，动态立方体，深层链接，secondarytile，辅助磁贴，UWP，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，XML，边界框，unity
-ms.openlocfilehash: 38f0932f20e3660c91b87de7bcb9d66799d9a51a
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 40a68d0835ec8fb92d6417650700f41e8a31aab6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757490"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009677"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>实现 3D 应用启动器（UWP 应用）
 

@@ -1,17 +1,17 @@
 ---
 title: Unreal 中的 HP 回音 G2 控制器
-description: 在 OpenXR 和 SteamVR 中使用 HP 回音 G2 控制器的说明
+description: 了解如何使用 OpenXR 和 SteamVR 中的新 HP 回音 G2 控制器来 Unreal 混合现实应用程序。
 author: hferrone
 ms.author: jacksonf
 ms.date: 10/9/2020
 ms.topic: article
 keywords: Unreal，Unreal Engine 4，UE4，回音，回音 G2，HP 回音 G2，mixed reality，开发，运动控制器，用户输入，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 419f5b803a6abb2b19080807ef9f403b96758683
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 83ff19c0527ee2d10a4f00ccd84539ca16d05517
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609588"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009987"
 ---
 # <a name="hp-reverb-g2-controllers-in-unreal"></a>Unreal 中的 HP 回音 G2 控制器 
 
@@ -52,7 +52,7 @@ HP 回音 G2 控制器还具有模拟手柄，可在使用 "挤压轴" 绑定的
 
 [!INCLUDE[](includes/tabs-g2-controller-mapping-in-unreal.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [SteamVR 输入](https://docs.unrealengine.com/Platforms/VR/SteamVR/HowTo/SteamVRInput/index.html)
 * [将 SteamVR 与 Windows Mixed Reality 一起使用](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)
 * [Unreal Player 相机](https://docs.unrealengine.com/Programming/Tutorials/PlayerCamera/3/index.html)

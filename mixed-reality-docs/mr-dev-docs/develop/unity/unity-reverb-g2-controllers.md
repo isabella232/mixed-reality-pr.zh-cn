@@ -1,17 +1,17 @@
 ---
 title: Unity 中的 HP 回音 G2 控制器
-description: 有关在 SteamVR 和 Windows Mixed Reality 中使用 HP 回音 G2 控制器的说明。
+description: 了解如何在 SteamVR 和 Windows Mixed Reality Unity 应用程序中设置和使用新的 HP 回音 G2 控制器。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/14/2020
 ms.topic: article
 keywords: Unity，回音，回音 G2，HP 回音 G2，mixed reality，开发，运动控制器，用户输入，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发
-ms.openlocfilehash: 17f373a3d94740bf103821b85ee5d6fe4dbaa11f
-ms.sourcegitcommit: 8b16945d6a551f174a65fa3980ba392682ca45d4
+ms.openlocfilehash: 1c9d8f1279f81ea1d8020e2a3c689dae86496221
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92886250"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009827"
 ---
 # <a name="hp-reverb-g2-controllers-in-unity"></a>Unity 中的 HP 回音 G2 控制器
 
@@ -286,7 +286,7 @@ void Update()
 
 ### <a name="generating-events-from-the-new-inputs"></a>从新输入生成事件 
 
-您可以选择将所有状态变化作为事件来处理，而不是每个帧都轮询控制器的状态，这样您就可以更快地处理持久小于帧的操作。 为了使此方法生效，运动控制器的缓存需要处理控制器自最后一帧后发布的所有状态，可以通过存储从 MotionController 检索到的最后一个 MotionControllerReading 的时间戳并调用 *MotionController ( # B1* ： 
+您可以选择将所有状态变化作为事件来处理，而不是每个帧都轮询控制器的状态，这样您就可以更快地处理持久小于帧的操作。 为了使此方法生效，运动控制器的缓存需要处理控制器自最后一帧后发布的所有状态，可以通过存储从 MotionController 检索到的最后一个 MotionControllerReading 的时间戳并调用 *MotionController ( # B1*： 
 
 ```csharp
 private class MotionControllerState 

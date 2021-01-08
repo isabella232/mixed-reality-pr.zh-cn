@@ -1,17 +1,17 @@
 ---
 title: MR 和 Azure 310 - 对象检测
-description: 完成本课程，了解如何训练机器学习模型，然后使用训练的模型从混合现实应用程序内识别类似对象及其在现实中的位置。
+description: 完成本课程，了解如何定型和使用机器学习模型来识别相似对象及其在实际中的位置。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，自定义视觉，对象检测，混合现实，学院，unity，教程，api，hololens，Windows 10，Visual Studio
-ms.openlocfilehash: 10f3b2b8f8422a20c39a4d89568e42ca530683c2
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8f625ebc1e40edaa6364567686c345386ea37dbf
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679456"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010167"
 ---
 # <a name="mr-and-azure-310-object-detection"></a>Mr 和 Azure 310：对象检测
 
@@ -55,7 +55,7 @@ ms.locfileid: "94679456"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -71,7 +71,7 @@ ms.locfileid: "94679456"
 - Azure 安装和自定义影像服务检索的 Internet 访问
 -  对于希望自定义视觉识别的每个对象) ，需要一系列至少15个 (15) 的图像。 如果需要，可以使用本课程提供的映像， [一系列 cup](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)) 。
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
 2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。 
@@ -1288,7 +1288,7 @@ ms.locfileid: "94679456"
 
 6.  Unity 完成生成后 (可能需要一些时间) ，它将在你的生成的位置上打开 " **文件资源管理器** " 窗口 (检查任务栏，因为它可能不会始终出现在 windows 上，但会通知你添加了新的窗口) 。
 
-7.  若要部署到 Microsoft HoloLens，你将需要该设备的 IP 地址 (用于远程部署) ，并确保它还设置了 **开发人员模式** 。 具体方法为：
+7.  若要部署到 Microsoft HoloLens，你将需要该设备的 IP 地址 (用于远程部署) ，并确保它还设置了 **开发人员模式** 。 要执行此操作：
 
     1.  在戴上 HoloLens 的同时，请打开 **设置**。
 
@@ -1296,7 +1296,7 @@ ms.locfileid: "94679456"
 
     3.  记下 **IPv4** 地址。
 
-    4.  接下来，导航回 "**设置**"，然后为 **Update & Security**  >  **开发人员** 更新 & 安全性
+    4.  接下来，导航回 "**设置**"，然后为  >  **开发人员** 更新 & 安全性
 
     5.  设置 **开发人员模式** *。*
 

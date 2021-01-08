@@ -1,17 +1,17 @@
 ---
 title: Unity 中的混合现实原生对象
-description: 获取对 Unity 中的基础全息本机对象的访问权限。
+description: 了解如何使用 XR 命名空间访问 Unity 中的基础全息本机对象。
 author: vladkol
 ms.author: vladkol
 ms.date: 05/20/2018
 ms.topic: article
 keywords: unity，mixed reality，native，xrdevice，spatialcoordinatesystem，holographicframe，holographiccamera，ispatialcoordinatesystem，iholographicframe，iholographiccamera，getnativeptr，mixed reality 耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 8dda1152da9705147ca3a057faadb9edd8428df6
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 7aa69286942ce98909e23508d92fb88c59ce9175
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010588"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009807"
 ---
 # <a name="mixed-reality-native-objects-in-unity"></a>Unity 中的混合现实原生对象
 
@@ -130,6 +130,7 @@ public static bool GetCurrentFrameDateTime(out DateTime frameDateTime)
 ```
 
 ## <a name="see-also"></a>另请参阅
+
 * [将 Windows 命名空间与 Unity 应用配合用于 HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>

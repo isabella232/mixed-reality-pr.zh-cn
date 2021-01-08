@@ -1,14 +1,14 @@
 ---
 title: 将 WebVR 与 Windows Mixed Reality 一起使用
-description: 介绍 WebVR，以及如何在 Windows Mixed Reality 耳机上与 Microsoft Edge 结合使用。
+description: 了解 WebVR 的基础知识，如何在 Windows Mixed Reality 耳机上与 Microsoft Edge 一起使用，以及常见的故障排除问题。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，WebVR，Edge，Microsoft Edge，web 浏览
-ms.openlocfilehash: 92f1d00c7f635c88a727732fb743996a654ba775
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 0b0d07383b43feaa11fb9bfac2b071d8d4d80b19
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725598"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009437"
 ---
 # <a name="using-webvr-with-windows-mixed-reality"></a>将 WebVR 与 Windows Mixed Reality 一起使用
 
@@ -27,11 +27,11 @@ WebVR 是一种技术，允许网站作者将 VR 功能添加到页面。 页面
 
 ## <a name="do-all-websites-support-webvr"></a>所有网站支持 WebVR
 
-不是。 网站作者必须选择使用 WebVR，他们可能会为特定的浏览器、耳机和控制器创建优化的网站。 某些 WebVR 内容仅针对 mobile VR 设备进行了优化。 另外，请记住，网站需要显式创建和提供 WebVR 内容。 具有一些 WebVR 兼容内容的站点数每天都在增长。
+否。 网站作者必须选择使用 WebVR，他们可能会为特定的浏览器、耳机和控制器创建优化的网站。 某些 WebVR 内容仅针对 mobile VR 设备进行了优化。 另外，请记住，网站需要显式创建和提供 WebVR 内容。 具有一些 WebVR 兼容内容的站点数每天都在增长。
 
 ## <a name="can-i-use-my-viveoculus-etc-to-view-webvr-content-in-microsoft-edge"></a>我可以使用我的 Naopak/Oculus 等来查看 Microsoft Edge 中的 WebVR 内容
 
-不是。 需要 Windows Mixed Reality 耳机才能使用 WebVR。 但是，你可以在另一个浏览器中访问 WebVR 内容;请参阅位于以下位置的兼容设备和浏览器的完整列表： [WebVR. rocks](http://webvr.rocks/)。
+否。 需要 Windows Mixed Reality 耳机才能使用 WebVR。 但是，你可以在另一个浏览器中访问 WebVR 内容;请参阅位于以下位置的兼容设备和浏览器的完整列表： [WebVR. rocks](http://webvr.rocks/)。
 
 ## <a name="where-can-i-find-the-webvr-developer-documentation"></a>在哪里可以找到 WebVR 开发人员文档
 

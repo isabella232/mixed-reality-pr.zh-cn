@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 端口，unity，unreal，中间件，引擎，UWP，Win32，移植，HoloLens 第一代，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10，输入映射，
-ms.openlocfilehash: 4137ff4dcc9f72dd66b9078b0d86c2d06f01f2bc
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: f1cb7cd96ee1d6e32c9ef1f8d3e0e1b2654e0a79
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613221"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009867"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>将 VR 应用移植到 Windows Mixed Reality
 

@@ -1,17 +1,17 @@
 ---
 title: 开始手势
-description: 启动笔势以调用 "开始" 菜单。
+description: 了解如何使用开始手势调用 HoloLens 和 Windows Mixed Reality 沉浸式耳机上的 "开始" 菜单。
 author: shengkait
 ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，手势，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，布隆
-ms.openlocfilehash: 9df8d54dcf63c13dedabdbf55300b3516a2c9bf1
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 9e29d483375db103cebc30be9117e40899a9f81f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848158"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009427"
 ---
 # <a name="start-gesture"></a>开始手势
 

@@ -1,17 +1,17 @@
 ---
 title: 显示进度
-description: 进度控件将为用户提供关于正在处理运行时间较长的操作的反馈。
+description: 了解进度控件如何向用户提供在混合现实应用中运行长时间运行的操作的反馈。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，控件，ui，ux，进度指示器，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 3f24f7095147a0d220df8adc42b67a1b8e4053c9
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 489f4bd9fea31126f936673db7acafeab27d9cd9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848284"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009457"
 ---
 # <a name="progress-indicator"></a>进度指示器
 

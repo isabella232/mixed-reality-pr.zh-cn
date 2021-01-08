@@ -1,18 +1,18 @@
 ---
 title: HP 回音 G2 常见问题解答
-description: 有关使用 HP 回音 G2 耳机的常见问题
+description: 随时了解有关使用 HP 回音 G2 耳机和 Windows Mixed Reality 沉浸式耳机的最新问题。
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 55baf3f076b8cf0f815f899658b3bbe61292e267
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 00338e1354dc04acc76fa2525c721a5e2bd4afe2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725898"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009467"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 

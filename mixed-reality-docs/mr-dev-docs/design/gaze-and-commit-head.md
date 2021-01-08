@@ -1,17 +1,17 @@
 ---
 title: 头部凝视和提交
-description: 打印头和提交输入模型的概述。
+description: 开始处理打印头和提交输入模型，包括目标大小、位置和稳定。
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
 keywords: Mixed Reality，注视，注视目标，交互，设计，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，目标，焦点，平滑
-ms.openlocfilehash: cc12c349704a63c5b95c9eede91d0486f56787a2
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 13a040a8309d084fcfdbfa91cbd9d63b595b004a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847880"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009447"
 ---
 # <a name="head-gaze-and-commit"></a>头部凝视和提交
 

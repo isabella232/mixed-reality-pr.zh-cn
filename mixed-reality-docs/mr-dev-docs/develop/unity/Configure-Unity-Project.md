@@ -1,19 +1,19 @@
 ---
 title: 在不 MRTK 的情况下配置项目
-description: 有关为 Windows Mixed Reality 配置 Unity 项目的说明
+description: 了解如何在没有混合现实工具包的情况下为 Windows Mixed Reality 配置新的 Unity 项目。
 author: hferrone
 ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目，Windows Mixed Reality，UWP，XR，性能
-ms.openlocfilehash: 1337001e8cc5c280c5789acbc8f10f40bca9b763
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 1d4acb80a7ad0c5143a4408829759aab0a2c012b
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613361"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009897"
 ---
-# <a name="configuring-your-project-without-mrtk"></a>不 MRTK 配置你的项目
+# <a name="configuring-your-project-without-mrtk"></a>配置项目时不使用 MRTK
 
 Windows Mixed Reality (WMR) 是作为 Windows 10 操作系统的一部分引入的 Microsoft 平台。 WMR 平台使你能够生成在全息和 VR 显示设备上呈现数字内容的应用程序。
 

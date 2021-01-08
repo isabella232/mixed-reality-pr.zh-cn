@@ -1,17 +1,17 @@
 ---
 title: 案例研究-在混合现实中创建 galaxy
-description: 在发布 Microsoft HoloLens 之前，我们会询问开发人员社区要为新设备查看有经验的内部团队构建的应用类型。 共享了5000多个想法，在24小时的 Twitter 投票后，入选方是一个称为 "Galaxy 资源管理器" 的概念。
+description: 了解 "Galaxy 资源管理器" 应用程序，并了解它是如何为 Microsft HoloLens 构建的，以及如何通过社区开发人员进行的24小时 Twitter 轮询。
 author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy 资源管理器，HoloLens，Windows Mixed Reality，分享你的想法，案例研究
-ms.openlocfilehash: 91e1c356d69d2b58795a0a0003dd5ffaf0ef1bdc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 0226c38e9fa21407a7a6529693a2adb3c5da7659
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678011"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009777"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>案例研究-在混合现实中创建 galaxy
 
@@ -41,7 +41,7 @@ Zibits 是项目上的艺术线索，Karim Luccin，团队的图形工程师谈�
 
 ### <a name="creating-the-position-of-the-stars"></a>创建星形位置
 
-我们的一位团队成员已经编写了在其最初位置生成星形的 c # 代码。 星形位于一个椭圆上，并且其位置可通过 ( **curveOffset** ， **ellipseSize** ， **仰角** ) ，其中 **curveOffset** 是星形沿椭圆的角度， **ellipseSize** 是沿 X 和 Z 的椭圆的尺寸，在 galaxy 中提升星形的适当提升。 因此，我们可以创建一个缓冲区 ([Unity 的 ComputeBuffer](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) ，它将使用每个星型属性进行初始化，并将其发送到 GPU 上，以实现其他体验。 若要绘制此缓冲区，我们使用 [Unity 的 DrawProcedural](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) ，它允许在) GPU 上的任意一组点上运行着色器 (代码，而无需使用表示 galaxy 的实际网格：
+我们的一位团队成员已经编写了在其最初位置生成星形的 c # 代码。 星形位于一个椭圆上，并且其位置可通过 (**curveOffset**， **ellipseSize**， **仰角**) ，其中 **curveOffset** 是星形沿椭圆的角度， **ellipseSize** 是沿 X 和 Z 的椭圆的尺寸，在 galaxy 中提升星形的适当提升。 因此，我们可以创建一个缓冲区 ([Unity 的 ComputeBuffer](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) ，它将使用每个星型属性进行初始化，并将其发送到 GPU 上，以实现其他体验。 若要绘制此缓冲区，我们使用 [Unity 的 DrawProcedural](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) ，它允许在) GPU 上的任意一组点上运行着色器 (代码，而无需使用表示 galaxy 的实际网格：
 
 **CPU**
 
@@ -92,7 +92,7 @@ v2g vert (uint index : SV_VertexID)
 在较长的弧线上，星形移动速度更快，但边缘速度更慢。
 
 
-这样一来，就可以 ( **curveOffset** 、 **ellipseSize** 、 **仰角** 、 **age** ) 对每个星形进行完全描述，其中 **age** 是自场景加载以来经过的总时间的累积。
+这样一来，就可以 (**curveOffset**、 **ellipseSize**、 **仰角**、 **age**) 对每个星形进行完全描述，其中 **age** 是自场景加载以来经过的总时间的累积。
 
 
 
@@ -203,6 +203,6 @@ Left，其中 upscale 从 1/8 到完全解析;右，使用2的幂2进行 3 upsca
 </table>
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [GitHub 上的 Galaxy 资源管理器](https://github.com/Microsoft/GalaxyExplorer)
 * [YouTube 上的 Galaxy 资源管理器项目更新](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

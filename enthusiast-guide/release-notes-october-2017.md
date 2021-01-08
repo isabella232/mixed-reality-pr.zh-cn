@@ -1,17 +1,17 @@
 ---
 title: 发行说明 - 2017 年 10 月
-description: Windows 10 秋季创意者更新的 windows Mixed Reality 发行说明 (10 月 2017) 。
+description: 随时了解 Windows 10 秋季创意者更新的 Windows Mixed Reality 发行说明 (10 月 2017) 。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 发行说明、版本、windows 10、build、rs3、os
-ms.openlocfilehash: 7c5af3b8ead4aa4bee9e342e9c41b696a30e5e2c
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 83c16a40388960547cfcf7444e1ae630c2f5b7f2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725908"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009487"
 ---
 # <a name="release-notes---october-2017"></a>发行说明 - 2017 年 10 月
 

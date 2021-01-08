@@ -1,6 +1,6 @@
 ---
 title: 在 Unreal 中部署到设备
-description: 将 Unreal 中的设备部署到 HoloLens 2 的指南
+description: 了解使用编辑器或设备门户将混合现实 Unreal 应用部署到 HoloLens 2 需要了解的所有内容。
 author: sw5813
 ms.author: suwu
 ms.date: 12/9/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 390bd1a9f1bc643efb1a342421e8c96574e74334
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 24b2c013e1c9f25f54be9a6fefec8a86846c1746
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925906"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009747"
 ---
 # <a name="deploy-to-device-in-unreal"></a>在 Unreal 中部署到设备
 

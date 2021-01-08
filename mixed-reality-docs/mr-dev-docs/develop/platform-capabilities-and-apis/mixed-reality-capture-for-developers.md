@@ -1,17 +1,17 @@
 ---
 title: 面向开发人员的混合现实捕获
-description: 适用于开发人员的混合现实捕获的最佳实践。
+description: 了解为开发人员启用、使用和呈现混合现实捕获的最佳实践。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc、照片、视频、捕获、照相机
-ms.openlocfilehash: 13765686c3e86822efff17b25995a6eaa4008e6c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: e55100003859e3581bdd7f6e1da312e1fdd8cf57
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613341"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009937"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>面向开发人员的混合现实捕获
 
@@ -228,7 +228,7 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 |  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
 |  VideoStabilizationEnabled  |  boolean  |  FALSE  |  用于启用或禁用由 HoloLens 跟踪器支持的视频稳定的标志。 |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  设置视频抖动使用的历史帧数。 从电源和性能的角度来看，0从0到延迟，几乎是 "免费"。 15对于最高质量 (建议使用15帧延迟和内存) 。 |
-|  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
+|  GlobalOpacityCoefficient  |  浮动  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
 |  BlankOnProtectedContent  |  boolean  |  FALSE  |  用于启用或禁用在有显示受保护内容的 2d UWP 应用时返回空帧的标志。 如果此标志为 false，并且二维 UWP 应用显示受保护的内容，则在耳机和混合现实捕获中，二维 UWP 应用将替换为受保护的内容纹理。 |
 |  ShowHiddenMesh  |  boolean  |  FALSE  |  用于启用或禁用显示全息相机隐藏区域网格和相邻内容的标志。 |
 | OutputSize | 大小 | 0, 0 | 在裁剪视频稳定性后设置所需的输出大小。 如果指定了0或指定了无效的输出大小，则选择默认裁剪大小。 |
@@ -244,8 +244,8 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 | 属性名称 | 类型 | 默认值 | 说明 |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (麦克风和系统音频)  | 用于指示应使用的音频源的枚举： 0 (Mic 音频) ，1 (系统音频仅) ，2 (Mic 和系统音频)  |
-| LoopbackGain | float | Windows 设备门户中的 **应用音频增益** 设置 | 适用于系统音频音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
-| MicrophoneGain | float | Windows 设备门户中的 **Mic 音频增益** 设置 | 适用于麦克风音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
+| LoopbackGain | 浮动 | Windows 设备门户中的 **应用音频增益** 设置 | 适用于系统音频音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
+| MicrophoneGain | 浮动 | Windows 设备门户中的 **Mic 音频增益** 设置 | 适用于麦克风音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
 
 >[!NOTE]
 > 可以通过转到 [混合现实捕获页面](using-the-windows-device-portal.md#mixed-reality-capture)并调整其各自设置旁的滑块来更改 Windows 设备门户中 **LoopbackGain** 或 **MicrophoneGain** 的默认值。 这两个设置默认为 **1.0**，但可以设置为 **0.0** 和 **5.0** 之间的任何值。

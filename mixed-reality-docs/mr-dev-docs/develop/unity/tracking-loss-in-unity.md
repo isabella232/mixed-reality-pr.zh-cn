@@ -1,17 +1,17 @@
 ---
 title: Unity 中的失跟
-description: 在 Unity 应用中处理跟踪丢失。
+description: 了解如何在 Unity 混合现实应用中处理手动和默认跟踪丢失。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，跟踪丢失，跟踪丢失图像，轮询，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 1df9f579abf43576284d065afa091bb26c631482
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 39ce4e079886b27ed35c419a3b3913c6700e0d32
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010048"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009847"
 ---
 # <a name="tracking-loss-in-unity"></a>Unity 中的失跟
 
@@ -82,4 +82,5 @@ private void WorldManager_OnPositionalLocatorStateChanged(PositionalLocatorState
 ```
 
 ## <a name="see-also"></a>另请参阅
+
 * [在 DirectX 中处理跟踪丢失](../native/coordinate-systems-in-directx.md#handling-tracking-loss)

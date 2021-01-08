@@ -1,17 +1,17 @@
 ---
 title: 空间网格可视化
-description: 了解设备如何使用空间网格了解物理环境。
+description: 了解在 MRTK 中通过空间网格可视化的设计准则和物理环境理解。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: 混合现实，HoloLens，UI 控制，交互，UI，ux，UX 设计，空间 UI，空间交互，三维 UI，三维 UX，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: ffa13da6762b803ba2a3f370308ac2af65164ecf
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 0f9cdc218c6fe54b8892c39a6a76f023e203d334
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848194"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009917"
 ---
 # <a name="spatial-mesh"></a>空间网格
 

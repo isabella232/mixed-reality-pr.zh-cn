@@ -1,17 +1,17 @@
 ---
 title: 案例研究 - 看透现实中的洞
-description: 此案例研究介绍了如何在 HoloLens 上实现 "神奇窗口" 效果，使用户能够在其实际环境中的墙壁后面、在地面下和虚拟空缺之间进行观看。
+description: 此案例研究介绍了 HoloLens 上的 "幻窗口" 效果实现，使用户能够看到墙壁、地面下和虚拟空缺。
 author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality，HoloLens，幻窗口，视差
-ms.openlocfilehash: 84af124cc69e03b3502cee55c694b11ff5c9433b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 018e45a79d88cbc8e28204f023106fbe5dae39bc
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677987"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010107"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>案例研究 - 看透现实中的洞
 
@@ -108,7 +108,7 @@ ColorMask 0
 </tr>
 </table>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [MR 基础知识 101：使用设备完成项目](../develop/unity/tutorials/holograms-101.md)
 * [坐标系统](../design/coordinate-systems.md)
 * [空间定位点](../design/spatial-anchors.md)

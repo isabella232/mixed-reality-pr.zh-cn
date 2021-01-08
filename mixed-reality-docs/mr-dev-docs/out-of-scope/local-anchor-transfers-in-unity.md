@@ -1,17 +1,17 @@
 ---
 title: Unity 中的本地定位点传输
-description: 在 Unity 应用程序中的多个 HoloLens 设备之间传输定位点。
+description: 了解如何在 Unity 混合现实应用程序的多个 HoloLens 设备之间传输锚。
 author: fieldsjacksong
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 共享、定位、WorldAnchor、MR 共享250、WorldAnchorTransferBatch、SpatialPerception、传输、本地定位点传输、定位点导出和定位点导入
-ms.openlocfilehash: d6aebfb89d05926b1f773dea58ee65fead57988e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1048e6a3cfc41a04cd49e201e5d1841e805a4193
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678821"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009637"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Unity 中的本地定位点传输
 
@@ -35,7 +35,7 @@ ms.locfileid: "91678821"
 ### <a name="anchor-transfer"></a>定位点传输
 
 **命名空间：** *UnityEngine. XR*<br>
-**类型** ： *WorldAnchorTransferBatch*
+**类型**： *WorldAnchorTransferBatch*
 
 若要传输 [WorldAnchor](../develop/unity/coordinate-systems-in-unity.md)，必须建立要传输的定位点。 一个 HoloLens 的用户将扫描其环境，并手动或以编程方式选择空间中的一个点作为共享体验的定位点。 然后，可以对表示此点的数据进行序列化，并将其传输到在体验中共享的其他设备。 然后，每个设备会反序列化定位点数据，并尝试在空间中查找该点。 为了使定位点传输正常工作，每个设备都必须扫描足够多的环境，以便可以标识定位点表示的点。
 

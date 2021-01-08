@@ -1,17 +1,17 @@
 ---
 title: DirectX 中的手和运动控制器
-description: 在本机 DirectX 应用中使用手动跟踪和运动控制器的开发人员指南。
+description: 开始在本机 DirectX 应用中使用手动跟踪和运动控制器的开发人员指南。
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 双手，运动控制器，directx，输入，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 52fc8f054ee4a4a57374c90fc31703b749d498de
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 43673602b01a1937953d16fcca9b4c4f4d3fd33a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613051"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009537"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>DirectX 中的手和运动控制器
 
@@ -20,7 +20,7 @@ ms.locfileid: "97613051"
 
 在 Windows Mixed Reality 中，手动和 [运动控制器](../../design/motion-controllers.md) 输入都是通过空间输入 api 处理的，该空间输入 Api 位于 [Windows. input](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial) 命名空间中。 这使您能够轻松地处理常见的操作，例如在双手和运动控制器中 **选择** "按相同方式"。
 
-## <a name="getting-started"></a>开始使用
+## <a name="getting-started"></a>入门
 
 若要访问 Windows Mixed Reality 中的空间输入，请从 SpatialInteractionManager 接口开始。  可以通过调用  [SpatialInteractionManager：： GetForCurrentView](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getforcurrentview)访问此接口，通常在应用启动期间进行。
 
@@ -102,7 +102,7 @@ GetDetectedSourcesAtTimestamp 具有 timestamp 参数。 这使您可以请求�
 ## <a name="cross-device-input-properties"></a>跨设备输入属性
 SpatialInteractionSource API 支持使用各种功能的控制器和手动跟踪系统。 许多这些功能在设备类型之间是通用的。 例如，手动跟踪和运动控制器都提供 "选择" 操作和三维位置。 只要有可能，API 就会将这些常见功能映射到 SpatialInteractionSource 上的相同属性。  这使应用程序能够更轻松地支持各种输入类型。 下表介绍了支持的属性，以及它们如何跨输入类型进行比较。
 
-| properties | 说明 | HoloLens (第一代) 手势 | 运动控制器 | 明确表述|
+| 属性 | 说明 | HoloLens (第一代) 手势 | 运动控制器 | 明确表述|
 |--- |--- |--- |--- |--- |
 | [SpatialInteractionSource：：**左右手使用习惯**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Right 或 left 右手/controller。 | 不支持 | 支持 | 支持 |
 | [SpatialInteractionSourceState：：**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | 主要按钮的当前状态。 | Air | 触发器 | 宽松 (直立的喷)  |

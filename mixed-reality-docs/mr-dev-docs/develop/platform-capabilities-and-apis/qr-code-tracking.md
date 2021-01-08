@@ -1,17 +1,17 @@
 ---
 title: QR 码跟踪
-description: 了解如何在 HoloLens 2 上检测 QR 码。
+description: 了解如何在 HoloLens 2 上检测 QR 码，添加网络摄像机功能并管理混合现实应用中的坐标系统。
 author: dorreneb
 ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: vr，lbe，基于位置的娱乐，vr 拱廊类，拱廊类，沉浸，qr，qr 码，hololens2
-ms.openlocfilehash: 023da7a98d1559d9dd0387a7efbaf26ad577df50
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 7e5931e0d23ef6c905b8ec54d08e572a89e747e0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530003"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009397"
 ---
 # <a name="qr-code-tracking"></a>QR 码跟踪
 

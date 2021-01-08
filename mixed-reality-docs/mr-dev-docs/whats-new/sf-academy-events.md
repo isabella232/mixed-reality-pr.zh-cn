@@ -1,17 +1,17 @@
 ---
 title: 混合现实演讲系列活动
-description: 旧金山反应器的混合现实开发人员事件的日历。
+description: 在旧金山的反应器，与我们的混合现实开发人员事件日历保持最新。
 author: danielescudero
 ms.author: daescu
 ms.date: 10/12/2020
 ms.topic: article
 keywords: 事件，calendar，学院，计划，sf，旧金山，反应器
-ms.openlocfilehash: 169af00c61d1eeb5af6b0ea1249f5f4c3083a9f3
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: ce0fb818547af70252e7387a910207e333407363
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757425"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009997"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft 混合现实事件
 
@@ -19,7 +19,7 @@ ms.locfileid: "97757425"
 
 <br>
 
-|事件|Date|主题|
+|事件|日期|主题|
 |-------------|-------------|-----|
 | 混合现实演讲系列活动|2020 年 4 月 23 日|[扩充 web](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Augmenting-WebXR-Standards)|
 | 混合现实演讲系列活动|2020年6月22日|[用 MR 创建培训体验](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Educational-Experiences-in-MR)|
@@ -32,5 +32,3 @@ ms.locfileid: "97757425"
 | 混合现实演讲系列活动|2020年10月22日|[带有 BabylonJS 的 WebXR 简介](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Adding-Augmented-Reality-to-your-Typescript-Project)|
 | 混合现实演讲系列活动|2020 年 11 月 17 日|[构建未来： MRTK 中的新内容](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Building-the-Future-Whats-New-in-the-Mixed-Reality-Toolkit)|
 | 混合现实演讲系列活动|2020 年 12 月 1 日|[设计全息影像]()|
-
-

@@ -1,17 +1,17 @@
 ---
 title: 实现 3D 应用启动器（Win32 应用）
-description: 了解如何为 Windows Mixed Reality 开始菜单和 home 环境创建用于 Win32 VR 应用和游戏的3D 应用启动器和徽标。
+description: 了解如何为 "开始" 菜单和 home 环境创建 "Win32 VR 应用和游戏" 的3D 应用启动器和徽标。
 author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，动态立方体，win32，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，清单
-ms.openlocfilehash: 5a3e38de54aad1fceb4804003043c87dddab61c4
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 63b07664cb09f51e6d0588fdc50d141ad8985093
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757814"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009666"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>实现 3D 应用启动器（Win32 应用）
 

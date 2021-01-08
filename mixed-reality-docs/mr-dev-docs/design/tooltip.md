@@ -1,17 +1,17 @@
 ---
 title: 工具提示
-description: 工具提示是链接到另一个控件或对象的简短描述。
+description: 了解如何在混合现实应用程序中使用工具提示，这些应用程序是链接到其他控件或对象的简短说明。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，tooltip，MRTK，混合现实工具包
-ms.openlocfilehash: ceb88fd89ec9d7bde50e23f2ae3ac158a301eb02
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: bed9e83cac381fceddbf94cd4048d36427a27874
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848117"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009407"
 ---
 # <a name="tooltip"></a>工具提示
 

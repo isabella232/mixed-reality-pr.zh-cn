@@ -1,17 +1,17 @@
 ---
 title: 键盘
-description: 了解如何在 MRTK 中调用系统键盘。
+description: 了解如何使用混合现实工具包调用和使用系统键盘。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，键盘，MRTK，混合现实工具包
-ms.openlocfilehash: b258ad7934cae76c581723d681cce32c68458b72
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 8efb5446479e53569349eda302c7d4dcb844a137
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847280"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009727"
 ---
 # <a name="keyboard"></a>键盘
 

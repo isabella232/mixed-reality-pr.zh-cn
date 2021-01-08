@@ -1,17 +1,17 @@
 ---
 title: 资产创建过程
-description: 有关为混合现实体验创建资产的指导。
+description: 了解如何为混合现实体验创建、购买和端口资产。
 author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 资产，创建，处理，预算，多边形，纹理，着色器，性能，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，资产
-ms.openlocfilehash: 2089ac7a870d9b4b13d314774d6d6124b78bb15c
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: a5f4271de522111b0ef994869b9ecf4910582562
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847547"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009613"
 ---
 # <a name="asset-creation-process"></a>资产创建过程
 

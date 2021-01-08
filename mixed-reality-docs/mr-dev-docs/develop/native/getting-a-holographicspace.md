@@ -1,17 +1,17 @@
 ---
 title: 获取 HolographicSpace
-description: 介绍 HolographicSpace API，这是全息呈现和空间输入的核心概念。
+description: 了解如何在混合现实应用中使用 HolographicSpace API 进行全息呈现和空间输入。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality，HolographicSpace，CoreWindow，空间输入，呈现，交换链，全息帧，更新循环，游戏循环，引用框架，locatability，示例代码，演练，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 3b0e31b8d3bf0d7741e7976edd2069db68ea5121
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: c630905b4f7f3bf03d575201feb944c3b8f62f32
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613011"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009527"
 ---
 # <a name="getting-a-holographicspace"></a>获取 HolographicSpace
 

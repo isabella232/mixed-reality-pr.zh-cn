@@ -1,17 +1,17 @@
 ---
 title: 眼动跟踪
-description: HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，从而实现全新的上下文和人工理解。
+description: 了解 HoloLens 2 的目视跟踪和新的人工理解级别（如果在全息体验中提供）。
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: 眼睛跟踪，混合现实，输入，眼睛，校准，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，意向，操作
-ms.openlocfilehash: 5ee957db85c2eefc32b7bfd716268262b347867b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: ffc9fd172f3e9a1cfd648e3fb431274690c9f190
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847941"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009597"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>HoloLens 2 中的眼动跟踪
 
@@ -19,7 +19,7 @@ ms.locfileid: "97847941"
 
 HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，从而实现全新的上下文和人工理解。 本页介绍了开发人员如何从各种用例的目视跟踪中获益，并介绍了在设计基于目视的用户交互时应了解的内容。 
 
-目视跟踪 API 的设计目的在于用户的隐私，避免传递任何可识别信息，尤其是任何生物识别。 对于支持目视跟踪的应用程序，用户需要授予应用程序权限才能使用目视跟踪信息。 
+目视跟踪 API 的设计目的在于用户的隐私，避免传递任何可识别信息，尤其是任何生物识别。 对于支持目视跟踪的应用程序，用户需要授予应用程序权限才能使用目视跟踪信息。
 
 ### <a name="device-support"></a>设备支持
 

@@ -1,17 +1,17 @@
 ---
 title: 在 Unreal 中注视输入
-description: 针对 HoloLens 和 Unreal 引擎设置注视输入的教程
+description: 了解如何在 Unreal 中设置和使用适用于 HoloLens 的目视跟踪和打印头方向的目视输入。
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，HoloLens 2，眼睛跟踪，眼睛输入，head 装显示，Unreal 引擎，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: a11573d732e739068dca8c42dd8688c0705fc5bb
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: e546867fe02acd5e72ee76b4108a369ec25fd32f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925990"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010137"
 ---
 # <a name="gaze-input"></a>注视输入
 
@@ -104,7 +104,7 @@ void AEyeTracker::Tick(float DeltaTime)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们的 Unreal 开发旅程，就是在探索 MRTK 核心构建基块。 从这里，你可以继续执行下一个构建基块：
+如果你遵循我们规划的 Unreal 开发历程，则你处于探索 MRTK 核心基础知识的过程之中。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [手部跟踪](unreal-hand-tracking.md)

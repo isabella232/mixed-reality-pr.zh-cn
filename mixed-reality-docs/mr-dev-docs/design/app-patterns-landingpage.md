@@ -1,21 +1,22 @@
 ---
 title: 混合现实 UX 元素
-description: 本文档包含一组主题，这些主题说明如何为混合现实设备设计。
+description: 了解如何为混合现实设备设计应用，包括基础元素、公共控件和行为。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: overview
 keywords: UX 设计，混合现实 UX，UX，应用模式，控件，样式，HoloLens，交互，空间交互，空间 UI，UX 元素，行为，构建基块，版式，颜色，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 47f7877e9a5f8a71bcae9a16011210d9fc897040
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: a1b087230b5a744cb6194c5cb791e4085aa791c6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847779"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009697"
 ---
 # <a name="ux-elements-overview"></a>UX 元素概述
 
 ## <a name="foundational-elements"></a>基础元素
+
 了解设计良好混合现实体验所需的基础元素。
 
 :::row:::
@@ -39,6 +40,7 @@ ms.locfileid: "97847779"
 <br>
 
 ## <a name="common-controls-and-behaviors"></a>常用控件和行为
+
 了解适用于混合现实体验的频繁使用的常用空间交互和 UI 构建基块。
 
 :::row:::
