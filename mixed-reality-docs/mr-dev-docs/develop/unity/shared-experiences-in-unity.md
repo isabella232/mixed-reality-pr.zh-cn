@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 共享、定位、WorldAnchor、MR 共享250、WorldAnchorTransferBatch、SpatialPerception、Azure、Azure 空间锚，ASA，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 26ff56c2f9d3feff33bcb7eb103b41a8dfcba971
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: a82439d5676bf4bcb7898a33aafc29b43e91a49f
+ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009277"
+ms.locfileid: "98031953"
 ---
 # <a name="shared-experiences-in-unity"></a>Unity 中的共享体验
 
@@ -19,7 +19,7 @@ ms.locfileid: "98009277"
 
 ## <a name="azure-spatial-anchors"></a>Azure 空间定位点
 
-<a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a>创建支持云的持久空间锚，你的应用可以在多个 HoloLens、IOS 和 Android 设备上查找。  通过在多个设备之间共享公用空间定位点，每个用户都可以查看相对于同一物理位置中的定位点呈现的内容。 
+<a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 创建支持云的持久空间锚，你的应用可以在多个 HoloLens、IOS 和 Android 设备上查找。  通过在多个设备之间共享公用空间定位点，每个用户都可以查看相对于同一物理位置中的定位点呈现的内容。 
 
 你还可以将 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。  通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
 

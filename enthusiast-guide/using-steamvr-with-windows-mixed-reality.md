@@ -3,12 +3,12 @@ title: 将 SteamVR 与 Windows Mixed Reality 一起使用
 description: 了解如何在 Windows Mixed Reality 耳机和控制器上安装和播放 SteamVR 游戏以及兼容的电脑。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，游戏，SteamVR，流，系统要求
-ms.openlocfilehash: 9330d6026b74494c851aea6b4664c1ede787c1c5
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 01fac0f6ce88e473da8a8d9300a4169b37b74078
+ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006897"
+ms.locfileid: "98031963"
 ---
 # <a name="using-steamvr-with-windows-mixed-reality"></a>将 SteamVR 与 Windows Mixed Reality 一起使用
 
@@ -18,14 +18,18 @@ ms.locfileid: "98006897"
 
 * 请确保没有挂起的更新：选择 " **启动 > 设置" > Update & Security > Windows 更新**"。 如果有可用更新，请选择 " **立即安装**"。 如果没有可用的更新，请选择 " **检查更新**"，然后安装任何新更新。
 * 电脑要求对于流上的应用和内容有所不同。 请参阅每个标题的最低要求。 使用 GTX 1070 图形卡 (或等效) 并且 Intel®内核™ i7 处理器的电脑应为广泛的头衔提供良好的体验。
+* 设置 [Windows Mixed Reality](set-up-windows-mixed-reality.md) （如果尚未这样做）。 
 
 ## <a name="set-up-windows-mixed-reality-for-steamvr"></a>为 SteamVR 设置 Windows Mixed Reality
 
-1. 设置 [Windows Mixed Reality](set-up-windows-mixed-reality.md) （如果尚未安装）
-2. 安装 [流](http://store.steampowered.com/about/) 并 **登录** ，或 **创建新帐户。**
-3. 安装 [SteamVR](https://store.steampowered.com/app/250820/SteamVR/)。 戴上耳机后，启动流，你会看到一个对话框，提示你安装 SteamVR。 按照对话框中的提示安装该对话框。
+1. [下载并安装 SteamVR。](https://steamcdn-a.akamaihd.net/client/installer/SteamWindowsMRInstaller.exe)
+2. 准备就绪后，启动 SteamVR。 SteamVR 教程应该会自动启动。
+
+> **注意：** 若要对 SteamVR 设置进行高级故障排除，请确保已安装以下软件组件：
+> 1. 安装 [流](http://store.steampowered.com/about/) 并 **登录** ，或 **创建新帐户。**
+> 2. 安装 [SteamVR](https://store.steampowered.com/app/250820/SteamVR/)。 戴上耳机后，启动流，你会看到一个对话框，提示你安装 SteamVR。 按照对话框中的提示安装该对话框。
     * 如果看不到弹出窗口，请通过导航到 *库* 的 "*工具*" 部分来安装 SteamVR。 在列表中找到 "SteamVR"，然后右键单击并选择 " *安装游戏*"。
-4. 安装 [适用于 SteamVR 的 Windows Mixed Reality](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/)。
+> 3. 安装 [适用于 SteamVR 的 Windows Mixed Reality](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/)。
 
 ## <a name="play-steamvr-games"></a>玩 SteamVR 游戏
 
