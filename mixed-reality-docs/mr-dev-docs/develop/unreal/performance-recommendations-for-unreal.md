@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 性能, 优化, 设置, 文档
-ms.openlocfilehash: 295f5c3653d02e9ab7ab4cd51dba57cafb5b291f
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: a369a68f8ebf9b7084c22f0efa3bbf0bf5ecbebf
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609618"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865422"
 ---
 # <a name="performance-recommendations-for-unreal"></a>针对 Unreal 的性能建议
 
@@ -37,7 +37,7 @@ Unreal Engine 具有多项可提高应用性能的功能，所有这些功能均
 
 ![VR 渲染设置](images/unreal/performance-recommendations-img-03.png)
 
-4. 使用 OpenXR 时，请确保为“默认 RHI”选择了“默认值”或“D3D12”  。
+4. [仅 OpenXR] 请确保为“默认 RHI”选择了“默认值”或“D3D12”   。
     * 由于平台执行额外的渲染通道，因此选择 D3D11 将对性能产生负面影响。 D3D12 会改进渲染性能，同时避免额外的渲染通道。
 
 ![默认 RHI](images/unreal/performance-recommendations-img-09.png)

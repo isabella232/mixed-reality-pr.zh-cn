@@ -1,24 +1,24 @@
 ---
 title: 混合现实入门
-description: 让不熟悉混合现实的用户知道它是什么并了解它的功能。
+description: 了解混合现实理论、开发和常见用例的基本内容。
 author: grbury
 ms.author: grbury
 ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: ef39848fea512df9fa61ca4d538354e11fb8e042
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: f50457fedb0223317e522c4d86bd56cc02657c77
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926057"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757665"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 
 ![虚拟蜂鸟与人手](images/01_MixedReality.png)
 
-混合现实生态系统是物理与数字交互领域中的新兴事物，其发展潜力只受限于人类的想象力。 无论你是经验丰富的开发人员还是毫无经验的新手，我们都建议使用以下链接中列出的资源开启你的“混合现实”之旅。 接下来我们还将介绍许多新内容，让我们开始吧！ 
+混合现实生态系统是物理与数字交互领域中的新兴事物，其发展潜力只受限于人类的想象力。 无论你是经验丰富的开发人员还是毫无经验的新手，我们都建议使用下列资源开启你的“混合现实”之旅。 接下来我们还将介绍许多新内容，让我们开始吧！ 
 
 ## <a name="choose-your-track"></a>选择你的路径
 
@@ -54,12 +54,12 @@ ms.locfileid: "96926057"
 
 ![混合现实有哪些用途？](images/HLS19_remoteAssistHologram_001.jpg)
 
-深入了解应用程序设计或开发前，需要理解混合现实的含义。 本部分旨在从多个方面介绍混合现实，包括环境输入范围、感知变化、设计挑战以及相关设备。 
+深入了解应用程序设计或开发前，需要理解混合现实的含义。 本部分旨在从多个方面介绍混合现实，包括环境输入、感知变化、设计挑战以及相关设备。 
 
 |  概念  |  业务成效  |
 | --- | --- |
 | [混合现实是一个范围](../discover/mixed-reality.md) | 混合现实融合了物理与数字，是人类、计算机和环境交互下的新一代产物 |
-| [什么是全息图？](../discover/hologram.md) | 通过 HoloLens 可以创建全息影像，它们是由出现在你周围的光线和声音组成的对象，就像真实对象一样。 全息影像会响应你的注视、手势和语音命令，并可与你周围的实际表面交互 |
+| [什么是全息图？](../discover/hologram.md) | 通过 HoloLens 可以创建全息影像，它们是由出现在你周围的光线和声音组成的对象，看上去就像真实对象。 全息影像会响应你的注视、手势和语音命令，并可与你周围的实际表面交互 |
 | [混合现实学习概述](mr-learning-overview.md#general-modules) | 通过 Microsoft Learn 试用特选混合现实模块 |
 | [扩展设计过程](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | 创建沉浸式体验时，可以通过空间思考、身体风暴和实时操作来开阔设计思维  |
 
@@ -68,6 +68,42 @@ ms.locfileid: "96926057"
 ---
 
 ## <a name="see-how-industry-partners-are-using-mixed-reality"></a>了解行业合作伙伴如何使用混合现实
+
+:::row:::
+    :::column:::
+       [![梅赛德斯汽车 HoloLens](images/mercedes.png)](https://customers.microsoft.com/story/839709-mercedes-benz-automotive-holoLens-en-usa)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="mercedes-benz-is-transforming-the-service-workforce-with-hololens-2-and-dynamics-365-remote-assist"></a>[梅赛德斯-奔驰正在通过 HoloLens 2 和 Dynamics 365 远程协助实现服务劳动力转型](https://customers.microsoft.com/story/839709-mercedes-benz-automotive-holoLens-en-usa)
+        梅赛德斯-奔驰美国公司正在利用 HoloLens 2 和 Dynamics 365 远程协助提高服务技术人员效率、缩短问题解决时间并降低与服务相关的差旅成本和环境影响。
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+       [![BHP 能量 Dynamics 365 HoloLens](images/bhp.png)](https://customers.microsoft.com/story/850776-bhp-energy-dynamics-365-hololens)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="bhp-increases-the-pace-of-innovation-despite-lockdown-with-mixed-reality-and-iot"></a>[BHP 在封锁期间仍通过混合现实和 IoT 加速了创新步伐](https://customers.microsoft.com/story/850776-bhp-energy-dynamics-365-hololens)
+        尽管新冠肺炎造成了巨大影响和限制，BHP 仍通过 HoloLens 2 和 Dynamics 365 远程协助为远在数千英里以外的现场工作人员提供了支持和培训。
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+       [![MediView HoloLens 案例](images/mediview.jpeg)](https://customers.microsoft.com/story/848966-mediview-mcs-story)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="healthcare-startup-cuts-time-to-market-by-up-to-70-despite-pandemic"></a>[医疗保健初创企业在疫情期间将上市时间缩短了 70%](https://customers.microsoft.com/story/848966-mediview-mcs-story)
+        医疗保健初创企业 Mediview 开发了一种惊人的产品，该产品利用直接投影在患者解剖学组织上或悬在其上方的 3D 全息图，帮助外科医生看到病人内部组织结构，辅助他们完成整个手术过程。
+    :::column-end:::
+:::row-end:::
+
+---
 
 :::row:::
     :::column:::
@@ -98,8 +134,8 @@ ms.locfileid: "96926057"
        [![Philips-Azurion](images/Philips-Azurion1.jpg)](https://binged.it/31B1RiR)
     :::column-end:::
     :::column span="2":::
-        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedures"></a>[Philips 正在图像引导下的微创手术领域中试点 HoloLens](https://binged.it/31B1RiR)
-        Philips 正在图像引导下的微创手术领域中试点 HoloLens，在此期间，医生依赖于实时 X 光、超声和其他信息源来“查看”患者身体内部并引导其操作。
+        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-invasive-procedures"></a>[Philips 正在图像引导下的侵入性手术领域中试用 HoloLens](https://binged.it/31B1RiR)
+        Philips 正在图像引导下的侵入性手术领域中试用 HoloLens，在此期间，医生依赖于实时 X 光、超声和其他信息源来“观看”患者身体内部并引导其操作。
     :::column-end:::
 :::row-end:::
 
@@ -111,13 +147,13 @@ ms.locfileid: "96926057"
 
 ![HoloLens 分解视图](images/HoloLens2_ExplodedView_8k.png)
 
-如果想了解各种混合现实硬件和服务的工作原理，请查看以下链接。 点击这些链接可导航到 Microsoft 文档的不同部分，但我们建议添加书签并返回此处，以便继续你的设计和开发之旅。
+如果想了解各种混合现实硬件和服务的工作原理，请查看以下链接。 可通过这些链接导航到 Microsoft 文档的不同部分。 建议将此处设置书签并在需要时返回此处继续进行设计和开发。
 
 |  概念  |  业务成效  |
 | --- | --- |
 | [HoloLens 硬件](https://www.microsoft.com//hololens/hardware) | HoloLens 2 提供最舒适的沉浸式混合现实体验，其行业领先的解决方案可以在数分钟内让你感受到其价值 — 这一切由 Microsoft 推出的云和 AI 服务所特有的可靠性、安全性和可伸缩性来增强 |
-| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | 了解可通过 Dynamics 365 为员工助力并优化运营的一系列产品，包括[远程协助](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview)、[布局](https://docs.microsoft.com/dynamics365/mixed-reality/layout/)和[指南](https://docs.microsoft.com/dynamics365/mixed-reality/guides/)。 有意义的见解源于从事实际工作、使用实际设备，以及对话真实用户 |
-| [Azure 云服务](../develop/mixed-reality-cloud-services.md) | 通过添加空间感知、空间锚点和复杂的 3D 模型渲染，在各种平台上生成具有吸引力的沉浸式体验 |
+| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | 了解可通过 Dynamics 365 为员工助力并优化运营的一系列产品，包括[远程协助](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview)、[布局和[指南](https://docs.microsoft.com/dynamics365/mixed-reality/guides/)。 有意义的见解源于从事实际工作、使用实际设备，以及对话真实用户 |
+| [Azure 云服务](../develop/mixed-reality-cloud-services.md) | 通过添加空间感知、空间锚点和复杂的 3D 模型渲染，在不同平台上生成具有吸引力的沉浸式体验 |
 
 ## <a name="what-would-you-like-to-do-next"></a>接下来，你想做什么？
 

@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 7f6f501a5e2cde9fdb6aa3ba1aa973a4ab697fd8
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 83d8068ca8ce73f23edb85cf9044db5409105380
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010539"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865392"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6.打包并部署到设备或仿真器
 
@@ -30,6 +30,9 @@ ms.locfileid: "97010539"
 如果要将此方法用于该象棋应用，需要完成以下事项：
 
 1.  在 HoloLens 2 上从 Microsoft Store 安装并运行“全息远程处理播放器”。 请注意应用中显示的 IP 地址。
+    * 转到“编辑”>“项目设置”，确保 Windows“默认 RHI”设置为“默认值”或“D3D11”：
+
+![默认 RHI](../images/unreal/performance-recommendations-img-09.png)
 
 2.  返回到 Unreal 编辑器，转到“编辑”>“项目设置”，然后选中“全息远程处理”部分中的“启用远程处理”  。
 
