@@ -4,7 +4,7 @@ summary: 通过 Windows Mixed Reality、混合现实工具包 (MRTK)、Unity 和
 brand: windows
 metadata:
   title: 混合现实文档
-  description: 通过 Windows Mixed Reality、混合现实工具包 (MRTK)、Unity 以及 Unreal 等深入了解面向 HoloLens 和 Windows 沉浸式头戴显示设备的混合现实应用程序的广阔世界。
+  description: 深入了解用于 HoloLens 和 Windows 沉浸式头戴显示设备的混合现实应用程序的扩展世界。
   services: service
   ms.service: service
   ms.subservice: subservice
@@ -13,12 +13,12 @@ metadata:
   author: hferrone
   ms.author: v-haferr
   ms.date: 07/23/2020
-  ms.openlocfilehash: 0ddea2f7271e00cc4f845b6bfd6c53c919846632
-  ms.sourcegitcommit: 653ddcae6d7a1617c89da1153fa8e7b482ef6818
+  ms.openlocfilehash: 0ef4c230bb58d9be3c0d61822754c313ab8dab16
+  ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/06/2021
-  ms.locfileid: "97905279"
+  ms.lasthandoff: 01/08/2021
+  ms.locfileid: "98007549"
 highlightedContent:
   items:
   - title: 什么是混合现实？
