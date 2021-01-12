@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc、照片、视频、捕获、照相机
-ms.openlocfilehash: e55100003859e3581bdd7f6e1da312e1fdd8cf57
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 40d621133d8aa4c7a58488b80a04ca3b4b46638d
+ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009937"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98108860"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>面向开发人员的混合现实捕获
 
@@ -224,8 +224,8 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 |  属性名称  |  类型  |  默认值  |  说明 |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([mediastreamtype.video](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))   |  1 (VideoRecord)   |  描述此影响所使用的捕获流。 音频不可用。 |
-|  HologramCompositionEnabled  |  boolean  |  TRUE  |  用于在视频捕获中启用或禁用全息影像的标志。 |
-|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
+|  HologramCompositionEnabled  |  boolean  |  true  |  用于在视频捕获中启用或禁用全息影像的标志。 |
+|  RecordingIndicatorEnabled  |  boolean  |  true  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
 |  VideoStabilizationEnabled  |  boolean  |  FALSE  |  用于启用或禁用由 HoloLens 跟踪器支持的视频稳定的标志。 |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  设置视频抖动使用的历史帧数。 从电源和性能的角度来看，0从0到延迟，几乎是 "免费"。 15对于最高质量 (建议使用15帧延迟和内存) 。 |
 |  GlobalOpacityCoefficient  |  浮动  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
@@ -254,37 +254,55 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 
 ### <a name="simultaneous-mrc-limitations"></a>同时 MRC 限制
 
-同时访问 MRC 的多个应用有一定的限制。
+如果多个应用同时访问了 MRC，则需要了解某些限制。
 
 #### <a name="photovideo-camera-access"></a>照片/视频相机访问
 
-照片/视频摄像机限制为可同时访问的进程数。 当某个进程录制视频或拍摄照片时，任何其他进程都无法获取照片/视频相机。  (这适用于混合现实捕获和标准相片/视频捕获) 
+在 HoloLens 1 上，在某个进程录制视频或拍摄照片时，MRC 将无法捕获照片或捕获视频。 反之亦然：如果 MRC 正在运行，则应用程序将无法访问相机。 
 
-使用 HoloLens 2，应用程序可以使用 MediaCaptureInitializationSettings [SharingMode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) 属性来指示他们希望在不需要对 photo/视频摄像机进行独占控制的情况下运行 SharedReadOnly。 捕获的分辨率和帧速率将限制为其他应用已配置照相机提供的内容。
+使用 HoloLens 2，可以共享对相机的访问。 如果不需要直接控制分辨率或帧速率，则可以使用 [SharedMode 属性](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode?view=winrt-19041) 和 SharedReadOnly 初始化 MediaCapture。  
 
 ##### <a name="built-in-mrc-photovideo-camera-access"></a>内置的 MRC 照片/视频相机访问
 
 通过 Cortana、开始菜单、硬件快捷方式、Miracast、Windows 设备门户) 内置于 Windows 10 (的 MRC 功能：
+
 * 默认情况下，将使用 ExclusiveControl 运行
 
-但是，对每个要在共享模式下运行的子系统添加了支持：
-* 如果应用请求 ExclusiveControl 访问照片/视频摄像机，内置的 MRC 会自动停止使用照片/视频相机，因此应用的请求将会成功。
-* 如果在应用具有 ExclusiveControl 的情况下启动了内置的 MRC，内置的 MRC 将在 SharedReadOnly 模式下运行
+但是，已将支持添加到 MRC 子系统以在共享模式下运行： 
+
+* 如果应用请求 ExclusiveControl 访问照片/视频摄像机，内置的 MRC 会自动停止使用照片/视频相机，因此应用的请求将会成功。 
+* 如果在应用具有 ExclusiveControl 的情况下启动了内置的 MRC，内置的 MRC 将在 SharedReadOnly 模式下运行 
 
 此共享模式功能有一些限制：
+
 * 照片通过 Cortana、硬件快捷方式或 "开始" 菜单：需要 Windows 10 2018 年4月更新 (或更高版本) 
 * 视频 via Cortana、硬件快捷方式或 "开始" 菜单：需要 Windows 10 2018 年4月更新 (或更高版本) 
 * 通过 Miracast 流式处理 MRC：需要 Windows 10 10 月2018更新 (或更高版本) 
 * 通过 Windows 设备门户或 HoloLens 随附应用的流式处理 MRC：需要 HoloLens 2
 
 >[!NOTE]
-> 当另一个应用正在使用照片/视频摄像机时，内置 MRC 相机 UI 的分辨率和帧速率可能会从其正常值中减少。
+> 当另一个应用正在使用 photo/视频摄像机时，内置 MRC 相机 UI 的分辨率和帧速率可能会从其正常值中减少。
 
-#### <a name="mrc-access"></a>MRC 访问
+#### <a name="mrc-access-for-developers"></a>开发人员的 MRC 访问
 
-使用 Windows 10 4 2018 月版更新后，将不再限制多个应用程序访问 MRC 流 (但是，对 photo/视频摄像机的访问仍有) 的限制。
+建议你始终在使用 MRC 时请求对相机进行独占控制。 这将确保你的应用程序可以完全控制照相机的设置，前提是你知道上面列出的限制。 
 
-在 Windows 10 2018 年4月更新之前，应用程序的自定义 MRC 记录器与系统 MRC 互斥， (从 Windows 设备门户) 捕获照片、捕获视频或流式处理。
+* 使用[初始化设置](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings?view=winrt-19041)创建媒体捕获对象
+* 将 [SharingMode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode?view=winrt-19041#Windows_Media_Capture_MediaCaptureInitializationSettings_SharingMode) 属性设置为 **exclusive**
+
+> [!CAUTION]
+> 继续操作之前，请务必仔细阅读 [SharingMode 备注](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode?view=winrt-19041#remarks) 。
+
+* 按所需方式设置照相机
+* 启动应用，使用启动 API 捕获视频帧，然后启用 MRC
+
+> [!CAUTION]
+> 如果在启动应用之前启动了 MRC，我们无法保证功能将按预期工作。
+
+你可以在 [全息面跟踪示例](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/holographicfacetracking)中找到上述过程的完整示例。
+
+> [!NOTE]
+> 在 Windows 10 2018 年4月更新之前，应用程序的自定义 MRC 记录器与系统 MRC 互斥， (从 Windows 设备门户) 捕获照片、捕获视频或流式处理。
 
 ## <a name="see-also"></a>请参阅
 

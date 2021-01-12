@@ -3,15 +3,15 @@ title: 为 Unity 使用混合现实 OpenXR 插件
 description: 了解如何为 Unity 项目启用混合现实 OpenXR 插件。
 author: hferrone
 ms.author: alexturn
-ms.date: 12/1/2020
+ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: 7d28dd50e111da4b010bcae699b7451d967e8f35
-ms.sourcegitcommit: 653ddcae6d7a1617c89da1153fa8e7b482ef6818
+ms.openlocfilehash: c5d312161b7d0f4f832e8d09dbacf5af700ffd8d
+ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97905289"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98108872"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
@@ -20,7 +20,7 @@ ms.locfileid: "97905289"
 ## <a name="prerequisites"></a>先决条件
 
 * Unity 2020.2 或更高版本
-* Unity OpenXR 插件0.1.1 或更高版本
+* Unity OpenXR 插件0.1.2 或更高版本
 * Visual Studio 2019 或更高版本
 * 在适用于 HoloLens 2 应用的 Unity 中安装 **UWP** 平台支持
 
@@ -62,7 +62,7 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 
     ``` json
       "dependencies": {
-        "com.microsoft.mixedreality.openxr": "0.1.1",
+        "com.microsoft.mixedreality.openxr": "0.1.2",
       }
     ```
 
@@ -109,7 +109,7 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 2. 在包列表中，选择 " **混合现实 OpenXR" 插件**
 3. 在 **示例** 列表中找到示例，然后选择 "**导入**"
 
-![已在 Unity 编辑器中打开 Unity 包管理器的屏幕截图，并选中混合现实 OpenXR 插件，并突出显示示例导入按钮](images/openxr-img-10.png)
+![已在 Unity 编辑器中打开 Unity 包管理器的屏幕截图，并选中混合现实 OpenXR 插件，并突出显示示例导入按钮](images/openxr-img-03.png)
 
 <!-- ### For all other OpenXR samples
 
@@ -121,6 +121,33 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 
 > [!NOTE]
 > 更新包时，Unity 提供更新导入的示例的选项。  更新导入的示例将覆盖对示例和关联的资产所做的任何更改。
+
+## <a name="using-mrtk-with-openxr-support"></a>结合使用 MRTK 与 OpenXR 支持
+
+从2.5.3 版本开始，MRTK Unity 支持混合现实 OpenXR 插件。  安装 [混合现实 OpenXR 插件](#installing-the-mixed-reality-openxr-plugin)时，可以从与设置相同的作用域注册表中安装 MRTK 插件。 可在 [MRTK 文档](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/usingupm.html#registering-the-mixed-reality-component-server)中找到更多详细信息。
+
+1. 将以下包添加到文件中的 **[projectRoot]/Packages/manifest.js** ：
+
+```json
+"dependencies": {
+    "com.microsoft.mixedreality.toolkit.foundation": "2.5.3",
+    "com.microsoft.mixedreality.toolkit.tools": "2.5.3",
+    "com.microsoft.mixedreality.toolkit.examples": "2.5.3",
+    …
+}
+```
+
+2. 转到检查器中的 MixedReality 工具包组件脚本，并切换到 **DefaultOpenXRConfigurationProfile** 配置文件：
+
+![在检查器的混合现实工具包组件中切换 MRTK 配置的屏幕截图](images/openxr-img-11.png)
+
+### <a name="known-issues"></a>已知问题 
+
+使用手动跟踪功能时，请在 **资产/MixedRealityToolkit/link.xml** 文件中添加以下行：
+
+```
+<assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
+```
 
 ## <a name="next-steps"></a>后续步骤
 
