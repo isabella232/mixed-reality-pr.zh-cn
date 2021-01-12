@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 10/12/2020
 ms.topic: article
 keywords: 事件，calendar，学院，计划，sf，旧金山，反应器
-ms.openlocfilehash: ce0fb818547af70252e7387a910207e333407363
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: a7d592243f758415c0ca757f35567d80fbfc1f2f
+ms.sourcegitcommit: 44d0f2873c75003caf9d8d244ceaeb3faa89df63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009997"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98110435"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft 混合现实事件
 
@@ -19,7 +19,7 @@ ms.locfileid: "98009997"
 
 <br>
 
-|事件|日期|主题|
+|事件|Date|主题|
 |-------------|-------------|-----|
 | 混合现实演讲系列活动|2020 年 4 月 23 日|[扩充 web](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Augmenting-WebXR-Standards)|
 | 混合现实演讲系列活动|2020年6月22日|[用 MR 创建培训体验](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Educational-Experiences-in-MR)|
@@ -31,4 +31,4 @@ ms.locfileid: "98009997"
 | 混合现实演讲系列活动|2020 年 9 月 22 日|[Kippy 的转义： Unreal & MRTK 简介]()|
 | 混合现实演讲系列活动|2020年10月22日|[带有 BabylonJS 的 WebXR 简介](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Adding-Augmented-Reality-to-your-Typescript-Project)|
 | 混合现实演讲系列活动|2020 年 11 月 17 日|[构建未来： MRTK 中的新内容](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Building-the-Future-Whats-New-in-the-Mixed-Reality-Toolkit)|
-| 混合现实演讲系列活动|2020 年 12 月 1 日|[设计全息影像]()|
+| 混合现实演讲系列活动|2020 年 12 月 1 日|[设计全息影像](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Making-of-Designing-Holograms)|
