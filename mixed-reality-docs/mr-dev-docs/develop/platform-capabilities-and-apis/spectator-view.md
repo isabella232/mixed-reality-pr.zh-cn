@@ -7,18 +7,16 @@ ms.date: 02/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 旁观视图, iPhone, iOS, iPad, OpenCV, 相机, ARKit, HoloLens, 混合现实, MixedRealityToolkit, 演示, 录制
-ms.openlocfilehash: c344edea9b499bdff15d1d93e400b8be626a63b6
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 1f61d2094ec2762ab22576d2eac85ed6bf81d5c7
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530112"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008607"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 和 HoloLens 2 的旁观视图
 
 ![记号笔](images/SpecViewPhoneHero.jpg)
-
-## <a name="overview"></a>概述
 
 当你戴上 HoloLens 时，很容易忘记没有戴上它的人无法体验到你所能体验到的神奇感受。 旁观视图可以让他人在 2D 屏幕上观看 HoloLens 用户看到的东西。 利用旁观视图，还可以通过快速且经济的方式在移动设备中录制高清全息影像，以及通过摄像机对全息影像进行高质量的录制。
 

@@ -1,5 +1,5 @@
 ---
-title: Azure 空间定位点教程 - 1. Azure 空间定位点教程简介
+title: Azure 空间定位点教程简介
 description: 完成本课程可以了解如何在混合现实应用程序中实现 Azure 空间定位点。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, ios, android, Windows 10, ARCore, macOS, Android 生成支持, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 005bbf3f9ecb7ed7f15f78d4042b4090f00edca7
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6ac412913f8d475d213a26cb4f9f82e12d129b82
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679396"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008397"
 ---
 # <a name="1-introduction-to-the-azure-spatial-anchors-tutorials"></a>1.Azure 空间定位点教程简介
-
-## <a name="overview"></a>概述
 
 欢迎学习 Azure 空间定位点教程！ 通过本系列教程，你将了解 <a href="https://azure.microsoft.com/services/spatial-anchors" target="_blank">Azure 空间定位点</a>的基础知识，学习如何在真实世界中创建定位空间的混合现实体验。 你还将了解如何将项目部署到 Android 和 iOS。
 

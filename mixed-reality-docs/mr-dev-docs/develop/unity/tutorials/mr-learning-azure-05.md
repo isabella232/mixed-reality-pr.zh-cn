@@ -1,5 +1,5 @@
 ---
-title: Azure 云教程 - 5. 将 Azure 机器人服务与 LUIS 集成
+title: 将 Azure 机器人服务与 LUIS 集成
 description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现 Azure 机器人服务和自然语言理解。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 机器人服务, luis, 自然语言, 对话机器人, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: d9884fc135a38e610df9faceb8cf4b24c21f7982
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 70d136467bc677c028614429e6e197ce25b30327
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679356"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008247"
 ---
 # <a name="5-integrating-azure-bot-service"></a>5.集成 Azure 机器人服务
 

@@ -1,5 +1,5 @@
 ---
-title: 多用户功能教程 - 1. 多用户功能教程简介
+title: 多用户功能教程简介
 description: 请完成本课堂，了解如何在 HoloLens 2 应用程序中实现共享的多用户体验。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 9bcaed777b8b98d95065324fc1fb5b33a1923e63
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 1000b4d2637e3a0f3bbc79df9866577427674767
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679736"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007217"
 ---
 # <a name="1-introduction-to-the-multi-user-capabilities-tutorials"></a>1.多用户功能教程简介
-
-## <a name="overview"></a>概述
 
 欢迎学习多用户功能教程！ 通过本系列教程，你将学习有关使用 <a href="https://www.photonengine.com/PUN" target="_blank">Photon Unity Networking</a> (PUN) 生成多用户体验的基础知识。 混合现实开发人员可使用多个网络选项来创建共享体验，PUN 就是其中的一个。
 

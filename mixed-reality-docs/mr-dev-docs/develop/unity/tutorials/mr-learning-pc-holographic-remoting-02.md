@@ -1,5 +1,5 @@
 ---
-title: 电脑全息远程处理教程 - 2. 创建全息远程处理电脑应用程序
+title: 创建全息远程处理电脑应用程序
 description: 完成本课程可以了解如何创建电脑应用程序来远程处理从电脑到 HoloLens 2 的混合现实体验。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, Visual Studio
 ms.localizationpriority: high
-ms.openlocfilehash: 258fd80c812fca246190e98b3fa371b2f4c1b51f
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: fd357b0b487b948afb6ae15c9e84362e2bc1ef90
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679236"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007327"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2.创建全息远程处理电脑应用程序
 

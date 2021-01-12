@@ -1,5 +1,5 @@
 ---
-title: MRTK 教程 - 5. 使用求解器创建动态内容
+title: 使用求解器创建动态内容
 description: 本课程介绍如何使用混合现实工具包 (MRTK) 求解器创建动态内容。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: 533aa1c9f2b0b7620e23d611714552fb19a5357b
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 959ed164e566f5bee3db203437145fa08ce168d8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613501"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008017"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
-
-## <a name="overview"></a>概述
 
 本教程探讨如何使用 MRTK 提供的定位工具（求解器）动态放置全息影像，以解算复杂的空间定位场景。 在 MRTK 中，求解器是一个脚本和行为系统，可让对象跟随你、用户或场景中的其他游戏对象。 它们还可用于贴靠到某些位置，使应用更加直观。
 

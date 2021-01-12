@@ -1,5 +1,5 @@
 ---
-title: MRTK 教程 - 1. MRTK 教程简介
+title: MRTK 教程简介
 description: 本课程从零开始介绍如何使用混合现实工具包 (MRTK) 创建混合现实应用程序。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, 求解器, 眼动跟踪, 语音命令
 ms.localizationpriority: high
-ms.openlocfilehash: 25a19d24a027000c78d6bffe2c74eb9f9d91370c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 27a5f2cae4f08fbc142c8b872c22d23ab41cdc62
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613201"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008077"
 ---
 # <a name="1-introduction-to-the-mrtk-tutorials"></a>1.MRTK 教程简介
-
-## <a name="overview"></a>概述
 
 欢迎使用入门教程系列！ 这些教程将介绍混合现实工具包 (MRTK) 及其提供的一些功能。 此外，还将构建一个混合现实体验，让用户可在其中浏览按 NASA 的“好奇号”火星探测车建模的全息图。 本系列结束后，你将牢牢把握 MRTK 及其如何加速开发过程。
 
