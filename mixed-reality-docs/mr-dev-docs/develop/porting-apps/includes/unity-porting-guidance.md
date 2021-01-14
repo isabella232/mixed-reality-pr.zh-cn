@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 487118403c2a8af1a6b54bc9aa9245fbe9d0568a
-ms.sourcegitcommit: bec6029b2780c54cc04a45ef7ae5df3f5b4727c1
+ms.openlocfilehash: 0ef22142ac2efc3ef47ece2619d31dbeddcff8fe
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96477534"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192656"
 ---
 # <a name="project-settings"></a>[项目设置](#tab/project)
 
@@ -120,7 +120,7 @@ Windows Mixed Reality 将在各种设备上可用，范围从高端游戏电脑�
 
 Unity 目前使用其常规输入. GetButton/GetAxis Api 来公开 [OCULUS SDK](https://docs.unity3d.com/Manual/OculusControllers.html) 和 [OpenVR SDK](https://docs.unity3d.com/Manual/OpenVRControllers.html)的输入。 如果你的应用程序已在使用这些 Api 进行输入，则这是在 Windows Mixed Reality 中支持运动控制器的最简单途径：只需重新映射输入管理器中的按钮和轴即可。
 
-有关详细信息，请参阅 [Unity 按钮/轴映射表](../../unity/gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) 和 [常见 Unity api 的概述](../../unity/gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis)。
+有关详细信息，请参阅 [Unity 按钮/轴映射表](../../unity/motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) 和 [常见 Unity api 的概述](../../unity/motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis)。
 
 ## <a name="windows-specific-xrwsainput-apis"></a>Windows 特定的 XR。WSA.输入 Api
 
@@ -132,7 +132,7 @@ Unity 目前使用其常规输入. GetButton/GetAxis Api 来公开 [OCULUS SDK](
 > [!NOTE]
 > 如果你使用的是 HP 回音 G2 控制器，则除 **InteractionSource** 以外的所有输入 api 都将继续工作，这将返回 false，而不会返回任何触摸板数据。
 
-有关详细信息，请参阅 [UNITYENGINE XR api 概述](../../unity/gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput)。
+有关详细信息，请参阅 [UNITYENGINE XR api 概述](../../unity/motion-controllers-in-unity.md#windows-specific-apis-xrwsainput)。
 
 ## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指针姿势
 

@@ -5,13 +5,13 @@ author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 6dof 控制器，运动控制器，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，滚动，手柄，状态
-ms.openlocfilehash: 2dbe0ab0b83b371a88e419e7b223f30670bfeaea
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: 6dof 控制器，运动控制器，配对，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，滚动，手柄，状态
+ms.openlocfilehash: 94a9292b3a765131ae197fd9f91c27a52a463eef
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009707"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192615"
 ---
 # <a name="motion-controllers"></a>运动控制器
 
@@ -239,7 +239,7 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中�
 
 我们建议在控制器的 **手柄姿势** 上呈现所有呈现模型，因为模型的原点与物理世界中的这一点对齐。 如果要渲染控制器模型，则可能需要从 **指针姿势** raycast 到场景，这表示该控制器的物理设计需要点，这表示用户自然会想到的射线。
 
-有关如何在 Unity 中动态加载控制器模型的详细信息，请参阅在 [unity 中呈现运动控制器模型](../develop/unity/gestures-and-motion-controllers-in-unity.md#rendering-the-motion-controller-model-in-unity) 部分。
+有关如何在 Unity 中动态加载控制器模型的详细信息，请参阅在 [unity 中呈现运动控制器模型](../develop/unity/gestures-in-unity.md#rendering-the-motion-controller-model-in-unity) 部分。
 
 **2d 控制器线条** 图虽然我们建议将应用内控制器提示和命令附加到应用内控制器模型本身，但某些开发人员可能希望在平面 "教程" 或 "操作方法" UI 中使用运动控制器的2D 线条图表示形式。 对于这些开发人员，我们制作了。以下两种情况下均提供 png 运动控制器线条图形文件 (右键单击以保存) 。
 
@@ -249,7 +249,7 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中�
  
 ["" 中的整分辨率动作控制器线条图黑色 ""](images/motioncontrollers-black.png)
 
-## <a name="faq"></a>常见问题解答
+## <a name="faq"></a>FAQ
 
 ### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>是否可以将运动控制器配对到多台电脑？
 
@@ -277,7 +277,7 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中�
 
 ## <a name="see-also"></a>另请参阅
 
-* [Unity 中的手势和运动控制器](../develop/unity/gestures-and-motion-controllers-in-unity.md)
+* [Unity 中的运动控制器](../develop/unity/motion-controllers-in-unity.md)
 * [DirectX 中的手和运动控制器](../develop/native/hands-and-motion-controllers-in-directx.md)
 * [笔势](gaze-and-commit.md#composite-gestures)
 * [发烧本指南： Windows Mixed Reality 主页](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)

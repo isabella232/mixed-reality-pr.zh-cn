@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 眼睛，眼睛，头盔，unity，全息影像，混合现实，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 5dab8cb38aaa4b9a4547f4bf494afb093b6d8058
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7efc77eff90a164fdc0476a90912a0f52c9bb33d
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009887"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192635"
 ---
 # <a name="head-gaze-in-unity"></a>头-注视 Unity
 
@@ -43,7 +43,7 @@ void Update()
 }
 ```
 
-### <a name="best-practices"></a>最佳做法
+### <a name="best-practices"></a>最佳实践
 
 尽管上面的示例从更新循环中触发了单个 raycast 以查找用户头所在的目标，但我们建议使用单个对象来管理所有的头节点。 将您的头看起来的逻辑结合起来可节省您的应用程序的宝贵处理能力，并将 raycasting 限制为每帧一次。
 
@@ -59,7 +59,7 @@ void Update()
 如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
-> [手势和运动控制器](gestures-and-motion-controllers-in-unity.md)
+> [运动控制器](motion-controllers-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 

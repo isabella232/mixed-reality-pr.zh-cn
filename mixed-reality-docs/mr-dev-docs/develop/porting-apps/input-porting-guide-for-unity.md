@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 输入、unity、移植
-ms.openlocfilehash: 97280ff260729bfc2042f7760fa3950e949e27a4
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: d6bef0f10cf1fc20d5067ac77a126bb793385f59
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613261"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192645"
 ---
 # <a name="input-porting-guide-for-unity"></a>Unity 的输入移植指南
 
@@ -21,13 +21,13 @@ ms.locfileid: "97613261"
 
 Unity 目前使用其常规输入. GetButton/GetAxis Api 来公开 [OCULUS SDK](https://docs.unity3d.com/Manual/OculusControllers.html) 和 [OpenVR SDK](https://docs.unity3d.com/Manual/OpenVRControllers.html)的输入。 如果你的应用程序已在使用这些 Api 进行输入，则 GetButton/GetAxis Api 是支持 Windows Mixed Reality 中的运动控制器的最简单路径。 只需在输入管理器中重新映射按钮和轴。
 
-有关详细信息，请参阅 [Unity 按钮/轴映射表](../unity/gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) 和 [常见 Unity api 的概述](../unity/gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis)。
+有关详细信息，请参阅 [Unity 按钮/轴映射表](../unity/motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) 和 [常见 Unity api 的概述](../unity/motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis)。
 
 ## <a name="windows-specific-xrwsainput-apis"></a>Windows 特定的 XR。WSA.输入 Api
 
 如果你的应用程序已为每个平台构建自定义输入逻辑，则可以在 **UnityEngine** 命名空间中使用特定于 Windows 的空间输入 api。 在这里，你可以访问其他信息（如位置准确性或源类型），从而让你可以在 HoloLens 上区分双手和控制器。
 
-有关详细信息，请参阅 [UNITYENGINE XR api 概述](../unity/gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput)。
+有关详细信息，请参阅 [UNITYENGINE XR api 概述](../unity/motion-controllers-in-unity.md#windows-specific-apis-xrwsainput)。
 
 ## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指针姿势
 
@@ -50,7 +50,7 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器。 每个
 
 ## <a name="see-also"></a>另请参阅
 * [运动控制器]().。。/../design/motion-controllers.md) 
-* [Unity 中的手势和运动控制器](../unity/gestures-and-motion-controllers-in-unity.md)
+* [Unity 中的运动控制器](../unity/motion-controllers-in-unity.md)
 * [UnityEngine. XR](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
 * [UnityEngine. XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
 * [移植指南](porting-guides.md)

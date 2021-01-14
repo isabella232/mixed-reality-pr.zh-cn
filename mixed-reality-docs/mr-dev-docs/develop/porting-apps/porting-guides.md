@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 端口，unity，unreal，中间件，引擎，UWP，Win32，移植，HoloLens 第一代，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10，输入映射，
-ms.openlocfilehash: f1cb7cd96ee1d6e32c9ef1f8d3e0e1b2654e0a79
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b43b42567183ef77ef76b301212233eeeb7c04ca
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009867"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192657"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>将 VR 应用移植到 Windows Mixed Reality
 
@@ -61,7 +61,7 @@ Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Window
 * [了解混合现实的性能](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Unity 性能建议](../unity/performance-recommendations-for-unity.md)
 * [运动控制器](../../design/motion-controllers.md)
-* [Unity 中的手势和运动控制器](../unity/gestures-and-motion-controllers-in-unity.md)
+* [Unity 中的运动控制器](../unity/motion-controllers-in-unity.md)
 * [UnityEngine. XR](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
 * [UnityEngine. XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
 * [移植指南](porting-guides.md)
