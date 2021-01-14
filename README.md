@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ff8435ee09cf380bb4b055a50abcbe4e5e91dc03
-ms.sourcegitcommit: 13fe1e7f7f268730a0be720933d7414e9c63ac9b
+ms.openlocfilehash: d9b8bc79859ab74c799188326731b3c8722bc49a
+ms.sourcegitcommit: b9d0155ae0d37a9f55f2cf0bcd954a2b148a26e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97808808"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98181734"
 ---
 ![虚拟蜂鸟与人手](mixed-reality-docs/mr-dev-docs/discover/images/01_MixedReality.png)
 
@@ -55,7 +55,10 @@ ms.locfileid: "97808808"
 
 * [开始你的 VR 旅程](enthusiast-guide/vr-journey.md)
 
+## <a name="contributor-license-agreement-cla"></a>参与者许可协议 (CLA) 
+
+本项目欢迎贡献和建议。 大多数贡献要求你同意贡献者许可协议 (CLA)，并声明你有权（并且确实有权）授予我们使用你的贡献的权利。 有关详细信息，请访问 [https://cla.opensource.microsoft.com](https://cla.opensource.microsoft.com)。
+
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源代码行为准则
 
-此项目采用了 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。
-有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)，或如果有任何其他问题或意见，请与 [opencode@microsoft.com](mailto:opencode@microsoft.com) 联系。
+此项目采用了 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct)。 有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)，或如果有任何其他问题或意见，请与 [opencode@microsoft.com](mailto:opencode@microsoft.com) 联系。
