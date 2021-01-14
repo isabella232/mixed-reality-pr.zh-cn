@@ -1,18 +1,18 @@
 ---
 title: 眼睛凝视和停留
-description: 眼睛凝视和停留输入模型概述。
+description: 首先概要了解眼睛凝视和停留输入模型，包括交互模型、设计准则和独特挑战。
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 眼动跟踪, 混合现实, 输入, 眼睛凝视, 视线定位, HoloLens 2, 视线选择, 停留, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包, 设计
-ms.openlocfilehash: bf9ad97790093a08156660bfd6e33d16c06e6387
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 78f8dcec3c8368128ec5904df36ce1391aa8b879
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847812"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007707"
 ---
 # <a name="eye-gaze-and-dwell"></a>眼睛凝视和停留
 
@@ -43,6 +43,7 @@ ms.locfileid: "97847812"
 ![停留状态](images/eyes_dwellstate_recommendation.png)<br>
 
 ## <a name="see-also"></a>另请参阅
+
 * [眼动跟踪](eye-tracking.md)
 * [眼睛凝视和提交](gaze-and-commit-eyes.md)
 * [凝视和提交](gaze-and-commit.md)

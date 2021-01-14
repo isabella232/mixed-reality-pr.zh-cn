@@ -1,18 +1,18 @@
 ---
-title: 多用户功能教程 - 3. 连接多个用户
-description: 完成本课程可以了解如何在 HoloLens 2 应用程序中连接多个用户。
+title: 连接多个用户
+description: 完成本课程可以了解如何在 HoloLens 2 混合现实应用程序中连接多名用户。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: c16182fe2363b4682a25d70715f5ee8cb65d5886
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6cc77b32e9479bafeb53dcb99cba4f2f29865fd7
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679756"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007207"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 
@@ -112,7 +112,7 @@ ms.locfileid: "94679756"
 ![动画显示了具有联网用户的 Unity](images/mr-learning-sharing/sharing-03-section4-step1-1.gif)
 
 > [!TIP]
-> 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
+> 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)中的说明。
 
 > [!CAUTION]
 > 应用需要连接到 Photon，因此请确保计算机/设备已连接到 Internet。

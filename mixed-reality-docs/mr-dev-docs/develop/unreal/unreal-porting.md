@@ -1,18 +1,18 @@
 ---
 title: 在 Unreal 中升级项目
-description: 简要介绍 Unreal 项目中的版本升级步骤和已弃用的 API。
+description: 跟进了解适用于你的 Unreal 项目的版本升级步骤、API 更改和弃用内容。
 author: hferrone
 ms.author: jacksonf
 ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 移植, 升级
-ms.openlocfilehash: 5460ab55c887c44029e956545cf6a549f55716f7
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 27fb726bc0ca9c51b4e7b68ad28b76f89312262e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010618"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010047"
 ---
 # <a name="upgrading-projects-in-unreal"></a>在 Unreal 中升级项目
 

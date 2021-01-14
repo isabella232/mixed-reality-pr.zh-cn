@@ -1,22 +1,20 @@
 ---
-title: MRTK 教程 - 9. 使用语音命令
-description: 本课程介绍如何将语音命令与混合现实工具包 (MRTK) 结合使用。
+title: 使用语音命令
+description: 本课程介绍如何使用混合现实工具包 (MRTK) 在混合现实应用中设置、创建和使用语音命令。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 语音命令, 语音输入
 ms.localizationpriority: high
-ms.openlocfilehash: 6e008f3e46bc4a22499691e284020321d29a2f23
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 8aea8ead6416787f2979e0deff46ee5d6d45eb19
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613461"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007907"
 ---
 # <a name="9-using-speech-commands"></a>9.使用语音命令
-
-## <a name="overview"></a>概述
 
 本教程将介绍如何创建语音命令，以及如何在全局范围内对其进行控制。 还将介绍如何控制需要用户查看控制语音命令的对象的本地语音命令。
 
@@ -32,7 +30,7 @@ ms.locfileid: "97613461"
 ![启用麦克风功能](images/mr-learning-base/base-09-section1-step1-1.png)
 
 > [!NOTE]
-> 在本系列教程开头配置 Unity 项目时，在[应用 MRTK 项目配置器设置](mr-learning-base-02.md#1-apply-the-mrtk-project-configurator-settings)指令期间，应该已经启用了麦克风功能。 但如果未启用此功能，请确保立即启用。
+> 在本系列教程开头配置 Unity 项目时，在[应用 MRTK 项目配置器设置](mr-learning-base-02.md#selecting-mrtk-and-project-settings)指令期间，应该已经启用了麦克风功能。 但如果未启用此功能，请确保立即启用。
 
 ## <a name="creating-speech-commands"></a>创建语音命令
 

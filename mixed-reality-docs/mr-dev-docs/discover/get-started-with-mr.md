@@ -1,18 +1,18 @@
 ---
 title: 混合现实入门
-description: 了解混合现实理论、开发和常见用例的基本内容。
+description: 选择你的开发路径，了解混合现实理论、开发和常见用例的基本内容。
 author: grbury
 ms.author: grbury
 ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: f50457fedb0223317e522c4d86bd56cc02657c77
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 03db5f79a531d77bfd1cd6513c5bed9ad1202189
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757665"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009717"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 

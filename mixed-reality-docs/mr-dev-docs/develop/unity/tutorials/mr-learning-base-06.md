@@ -1,22 +1,20 @@
 ---
-title: MRTK 教程 - 6. 创建用户界面
-description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建用户界面。
+title: 创建用户界面
+description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建静态和动态用户界面。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 预制件, 全息影像, 工具提示
 ms.localizationpriority: high
-ms.openlocfilehash: 90b794dc6e88b724d16c339e428c4d2ed9cdac07
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 989de4871332608448619e75ffd760c616332533
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613511"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008057"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
-
-## <a name="overview"></a>概述
 
 本教程介绍如何使用 MRTK 的按钮和菜单预制件以及 Unity 的 TextMeshPro 组件来创建简单的用户界面。 还介绍如何配置这些按钮以触发事件，并添加动态工具提示 UI 元素以向用户提供其他信息。
 

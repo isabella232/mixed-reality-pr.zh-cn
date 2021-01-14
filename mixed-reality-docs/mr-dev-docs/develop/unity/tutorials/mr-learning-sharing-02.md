@@ -1,22 +1,20 @@
 ---
-title: 多用户功能教程 - 2. 设置 Photon Unity Networking
-description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现 Photon Unity Network。
+title: 设置 Photon Unity Networking
+description: 完成本课程可以了解如何在 HoloLens 2 混合现实应用程序中实现 Photon Unity Network。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: 062c39ab6973c7c71e305cfc7a695fb250c76596
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8bf8d440cb47d817514e34c98ac45f34f495c2bb
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679256"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007297"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2.设置 Photon Unity Networking
-
-## <a name="overview"></a>概述
 
 在本教程中，你将准备好使用 Photon Unity Networking (PUN) 来创建共享体验。 你将学习如何创建 PUN 应用，如何将 PUN 资产导入到 Unity 项目，以及如何将 Unity 项目连接到 PUN 应用。
 
@@ -30,14 +28,14 @@ ms.locfileid: "94679256"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-为此，请先执行[初始化项目和部署第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
+首先，请按照[初始化项目和部署第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)说明；其中操作包括以下步骤：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
-1. [切换生成平台](mr-learning-base-02.md#configuring-the-unity-project)
-1. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-1. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-1. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-1. [创建和配置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供适当的名称，例如 MultiUserCapabilities
+2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
+3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
+4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+6. [创建和配置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供适当的名称，例如 MultiUserCapabilities
 
 然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)中的说明执行以下操作：
 
@@ -50,7 +48,7 @@ ms.locfileid: "94679256"
 
 ![Unity 播放器设置](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
 
-在“发布设置”中，向下滚动到“功能”部分，仔细检查你在上面的[配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)步骤中启用的“InternetClient”、“Microphone”、“SpatialPerception”和“GazeInput”都已启用     。
+在“发布设置”中，向下滚动到“功能”部分，仔细检查你在上面的[配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)步骤中启用的“InternetClient”、“Microphone”、“SpatialPerception”和“GazeInput”都已启用     。
 
 然后，启用以下附加功能：
 

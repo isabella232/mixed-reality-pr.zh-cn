@@ -1,14 +1,17 @@
 ---
-ms.openlocfilehash: eb51caa4caf0d425b5e49c3abca2a523b08fc312
-ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
+ms.openlocfilehash: ad7d530de61864528ae80e4d0086687d282e6b18
+ms.sourcegitcommit: 8f9f98342aaf66645fd74dac3fad499f9d799ce7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97717471"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98109331"
 ---
 # <a name="426"></a>[4.26](#tab/426) 
 
 ## <a name="pv-camera-feed-setup"></a>PV 摄像头馈送设置
+
+> [!IMPORTANT]
+> PV 摄像头是在 Windows Mixed Reality 和 OpenXR 插件中实现的。 不过，OpenXR 要求安装 [Microsoft OpenXR 插件](https://github.com/microsoft/Microsoft-OpenXR-Unreal)。 此外，OpenXR 目前存在限制，摄像头只能用于 DirectX11 RHI。 这一限制将在后续的 Unreal 版本中得到修复。 
 
 - 在“项目设置”>“HoloLens”中，启用网络摄像头功能 ：
 

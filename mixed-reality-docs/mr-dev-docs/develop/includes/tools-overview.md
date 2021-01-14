@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 283bfffb2d59d92712e86e12c05be8974f04fae6
-ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
+ms.openlocfilehash: 4b9a1c20a8d885ea796c296f6a542d41e3ab58ef
+ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97717325"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98052996"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -21,7 +21,7 @@ ms.locfileid: "97717325"
 
 [混合现实工具包](../unity/mrtk-getting-started.md) (MRTK) 是一个用于混合现实应用程序的开源跨平台开发工具包。 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 该工具包旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序的开发。
 
-对于安装，我们建议完成策划的 [Unity 开发历程](../unity/unity-development-overview.md)的[入门部分](../unity/unity-development-overview.md#1-getting-started)。 如果你已遵循 Unity 开发历程，请完成下面列出的其余设置步骤，并继续学习 [HoloLens 2 入门教程](../unity/tutorials/mr-learning-base-01.md)。
+若要安装，建议完成我们策划的 [HoloLens](../unity/unity-development-overview.md#1-getting-started) 或 [VR](../unity/unity-development-wmr-overview.md#1-getting-started) 开发历程中的入门部分。 如果你已遵循针对 HoloLens 的 Unity 开发历程，请完成下面列出的其余设置步骤，并继续学习 [HoloLens 2 入门教程](../unity/tutorials/mr-learning-base-01.md)。
 
 > [!IMPORTANT]
 > 请注意，安装说明面向的是 MRTK 和 Unity 版本的最新稳定组合，即 MRTK 2.4.0 和 Unity 2019.3.15 。
@@ -72,7 +72,7 @@ Windows 10 SDK 在 Windows 10 操作系统上效果最佳。 Windows 8.1、Windo
 
 ##### <a name="i-cant-deploy-over-usb"></a>我无法通过 USB 进行部署
 
-如果你没法通过 USB 直接部署应用程序，请确保你满足了上述所有安全要求，并按照我们的[分步教程](../unity/tutorials/mr-learning-base-02.md#building-your-application-to-your-hololens-2)操作。
+如果你没法通过 USB 直接部署应用程序，请确保你满足了上述所有安全要求，并按照我们的[分步教程](../unity/tutorials/mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)操作。
 
 #### <a name="immersive-vr-headset-requirements"></a>沉浸式 (VR) 头戴显示设备要求
 
@@ -115,16 +115,24 @@ Windows 10 SDK 在 Windows 10 操作系统上效果最佳。 Windows 8.1、Windo
 如果你尚不熟悉使用 Unity 开发 MRTK，建议你遵循我们精心策划的 Unity 开发历程：
 
 > [!div class="nextstepaction"]
-> [开始你的 Unity 之旅](../unity/unity-development-overview.md)
+> [开始针对 HoloLens 的 Unity历程](../unity/unity-development-overview.md)
+
+> [!div class="nextstepaction"]
+> [开始针对 VR 的 Unity 历程](../unity/unity-development-wmr-overview.md)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果你遵循我们规划的 Unity 开发检查点历程，下一项任务就是完成我们的 HoloLens 2 教程系列。
+如果你遵循我们规划的针对 HoloLens 的 Unity 开发检查点历程，下一项任务就是完成我们的 HoloLens 2 教程系列。
 
 > [!div class="nextstepaction"]
 > [HoloLens 2 教程系列](../unity/tutorials/mr-learning-base-01.md)
 
-你可以随时返回到 [Unity 开发检查点](../unity/unity-development-overview.md#1-getting-started)。
+如果你遵循针对 VR 的 Unity 历程，那么接下来是设置项目。
+
+> [!div class="nextstepaction"]
+> [针对 WMR 配置项目](../unity/configure-unity-project.md)
+
+你可随时回到针对 [HoloLens](../unity/unity-development-overview.md#1-getting-started) 和 [VR](../unity/unity-development-wmr-overview.md#1-getting-started) 的 Unity 开发检查点。
 
 # <a name="unreal"></a>[Unreal](#tab/unreal)
 

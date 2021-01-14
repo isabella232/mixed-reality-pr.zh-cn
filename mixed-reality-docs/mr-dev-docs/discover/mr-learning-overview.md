@@ -1,18 +1,18 @@
 ---
 title: 混合现实学习模块概述
-description: 查看所提供的关于混合现实的 Learn 模块。
+description: 跟进了解托管在 Microsoft Learn 平台上的可用混合现实模块。
 author: hferrone
 ms.author: jemccull
 ms.date: 11/30/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, learn, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语言翻译, Azure, Azure 认知服务, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: 5d59f09b98b4228b52a87a7c91e64129060f754c
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 211d8e61a45a59df725f4c6c7d11c93f129d63b5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757795"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006907"
 ---
 # <a name="mixed-reality-learn-overview"></a>混合现实学习概述
 

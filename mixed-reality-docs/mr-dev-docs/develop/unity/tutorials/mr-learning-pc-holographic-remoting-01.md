@@ -1,28 +1,26 @@
 ---
-title: 电脑全息远程处理教程 - 1. 电脑全息远程处理入门
-description: 完成本课程可以了解如何远程处理从电脑到 HoloLens 2 的混合现实体验。
+title: 电脑全息远程处理入门
+description: 完成本课程可以了解如何将混合现实应用程序从电脑远程地流式传输到 HoloLens 2。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/29/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, 工具提示, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: eae7b57544b8a544d3df926296ad5f2a720d5529
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 551c6427d9659dd7f5bad8558c777e918456b4d7
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679766"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007917"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1.电脑全息远程处理入门
 
-## <a name="overview"></a>概述
+欢迎学习 HoloLens 2 教程。 该系列由两部分组成，其中你将学习如何创建混合现实体验演示，并了解如何创建用于全息远程处理的电脑应用。
 
-  欢迎学习 HoloLens 2 教程。 该系列由两部分组成，其中你将学习如何创建混合现实体验演示，并了解如何创建用于全息远程处理的电脑应用。
+本教程介绍如何创建混合现实体验。 它将演示 UI 元素、3D 模型操作、模型剪辑和眼动跟踪功能。
 
-   本教程介绍如何创建混合现实体验。 它将演示 UI 元素、3D 模型操作、模型剪辑和眼动跟踪功能。
-
-  在[创建全息远程处理应用程序](mr-learning-pc-holographic-remoting-02.md)（第二篇教程）中，你将学习如何创建用于全息远程处理的电脑应用。 你还可随时连接到 HoloLens 2，从而在混合现实中直观呈现 3D 内容。
+在[创建全息远程处理应用程序](mr-learning-pc-holographic-remoting-02.md)（第二篇教程）中，你将学习如何创建用于全息远程处理的电脑应用。 你还可随时连接到 HoloLens 2，从而在混合现实中直观呈现 3D 内容。
 
 ## <a name="objectives"></a>目标
 
@@ -48,19 +46,19 @@ ms.locfileid: "94679766"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
+为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)的说明：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
 
-1. [切换生成平台](mr-learning-base-02.md#configuring-the-unity-project)
+2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
 
-1. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
+3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 
-1. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
 
-1. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
+5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
 
-1. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如“电脑全息远程处理”
+6. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如“电脑全息远程处理”
 
 然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)的说明，将场景的 MRTK 配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”。 将空间感知网格的显示选项更改为“遮挡”。
 

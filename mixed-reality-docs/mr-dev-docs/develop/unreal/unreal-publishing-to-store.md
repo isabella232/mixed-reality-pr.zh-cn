@@ -1,18 +1,18 @@
 ---
 title: 发布到 Microsoft Store
-description: ''
+description: 了解如何打包、认证 Unreal 混合现实应用程序，以及如何将它们发布到 Microsoft Store。
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/3/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 发布, 分发, Microsoft Store
-ms.openlocfilehash: 37a17ba4a691ca8db6ce447abd485293454b8ae3
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: 41f081f11cdb9ac2fdf96a81bb761a1321d1776f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96583893"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010017"
 ---
 # <a name="publishing-to-the-microsoft-store"></a>发布到 Microsoft Store
 
@@ -108,6 +108,7 @@ if(Target.Platform == UnrealTargetPlatform.Win64)
 4. 关闭 Unreal，重新打开该项目，并重新针对 HoloLens 进行打包。  重新运行 WACK，错误将消失。 
 
 ## <a name="see-also"></a>另请参阅
+
 * [将应用提交到 Microsoft Store](../../distribute/submitting-an-app-to-the-microsoft-store.md)
 * [Windows 应用认证工具包](https://developer.microsoft.com/windows/downloads/app-certification-kit)
 * [手动创建应用安装程序文件](https://docs.microsoft.com/windows/msix/app-installer/how-to-create-appinstaller-file)

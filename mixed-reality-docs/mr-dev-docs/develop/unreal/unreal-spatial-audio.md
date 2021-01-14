@@ -1,18 +1,18 @@
 ---
 title: Unreal 中的空间音频
-description: 了解适用于 Unreal 引擎的空间音频插件的内容。
+description: 了解适合 HoloLens 设备的 Unreal 混合现实应用程序的空间音频插件的详细信息。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/15/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 空间音频
-ms.openlocfilehash: fa87862f6a6af456ea344b67e22f1640c9cfafb4
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 98c10e370cd4ca5e437a4677be6fce3d3aee53a9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609538"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009967"
 ---
 # <a name="spatial-audio-in-unreal"></a>Unreal 中的空间音频
 
@@ -34,7 +34,6 @@ ms.locfileid: "96609538"
 ![Unreal 空间音频插件](images/unreal-spatial-audio-img-01.png)
 
 待编辑器重启后，你的项目就已就绪了！
-
 
 ## <a name="setting-the-spatialization-plugin-for-hololens-2-platform"></a>设置 HoloLens 2 平台的空间化插件
 

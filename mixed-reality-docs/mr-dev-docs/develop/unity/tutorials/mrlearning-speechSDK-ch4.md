@@ -1,18 +1,18 @@
 ---
-title: Azure 语音服务教程 - 4. 设置意向和自然语言理解
-description: 请完成本课程来了解如何在混合现实应用程序中实施 Azure 语音 SDK。
+title: 设置意向和自然语言理解
+description: 完成本课程可以了解如何在混合现实应用程序中设置意向和自然语言理解。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10, LUIS, LUIS 门户, 意图, 实体, 言语, 自然语言理解
 ms.localizationpriority: high
-ms.openlocfilehash: b21637fc0630b6cb024dcdbc0a1985979914d3a0
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 07044d3dc38be12d5d601d34a23a241a71c5b06d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678506"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007767"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4.设置意向和自然语言理解
 

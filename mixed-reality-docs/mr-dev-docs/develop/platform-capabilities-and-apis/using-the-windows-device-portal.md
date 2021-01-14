@@ -1,18 +1,18 @@
 ---
 title: 使用 Windows 设备门户
-description: 使用适用于 HoloLens 的 Windows 设备门户可以通过 Wi-Fi 或 USB 远程配置和管理设备。 Device Portal 是 HoloLens 上的 Web 服务器，你可以从电脑上的 Web 浏览器连接到它。 设备门户包含许多工具，可帮助你管理 HoloLens 以及调试和优化应用。
+description: 了解如何使用 Windows 设备门户通过 Wi-Fi 或 USB 远程配置和管理设备。
 author: hamalawi
 ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 168d4175a7e55d5116f19c51a802c9a8abdc1e19
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 75eda2775486b1ace82b574816db34a2f895c80b
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530316"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007787"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 

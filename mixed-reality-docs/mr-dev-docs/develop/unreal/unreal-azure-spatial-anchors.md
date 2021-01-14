@@ -1,18 +1,18 @@
 ---
 title: Unreal 中的 Azure 空间定位点
-description: 概要讲解如何在 Unreal 引擎中创建 Azure 空间定位点。
+description: 了解如何在 Unreal 混合现实应用程序中创建、管理和定位现有的 Azure 空间定位点。
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure 开发, 空间定位点, 混合现实, 开发, 功能, 新项目, 仿真器, 文档, 指南, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 18ec9db03341ad4fc6a5c10ea6f8fdd38c61c537
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 95e8ad708dd44a05fb306b2ea49f167fd400c5d8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926024"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009767"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Unreal 中的 Azure 空间定位点
 

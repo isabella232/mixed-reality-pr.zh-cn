@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 11533175057217bddcc7e121a524da1f26d2764e
-ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
+ms.openlocfilehash: c74a6c0c22439376a84ecb8254b945295c8988a2
+ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92915534"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98052870"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -40,11 +40,11 @@ ms.locfileid: "92915534"
 
 有几种云服务可以集成到 Unity 中内置的混合现实项目中，具体来说，即“Azure 远程渲染”和“Azure 空间定位点” 。 这些服务可以为应用程序添加共享的全息内容和实时 3D 渲染，使它们对用户更具吸引力且使用户更具有身临其境的感觉。
 
-所有这些服务都涵盖在 [Unity 开发历程](../unity/unity-development-overview.md)的过程中，这是强烈推荐的学习 Unity 混合现实的路径。 你已走上了此路径，因此只要继续阅读并遵循文章底部的蓝色大按钮进行操作即可。 但是，如果你处于更高级的开发阶段，并且想加入进来，则请查看我们的[云服务概述](../mixed-reality-cloud-services.md)或直接转到[服务资源](../unity/unity-development-overview.md#5-adding-services)。
+所有这些服务都涵盖在[针对 HoloLens 的 Unity 开发历程](../unity/unity-development-overview.md)过程中，这是强烈推荐的学习 Unity 混合现实的路径。 你已走上了此路径，因此只要继续阅读并遵循文章底部的蓝色大按钮进行操作即可。 但是，如果你处于更高级的开发阶段，并且想加入进来，则请查看我们的[云服务概述](../mixed-reality-cloud-services.md)或直接转到[服务资源](../unity/unity-development-overview.md#5-adding-services)。
 
 ## <a name="dynamics-365-guides"></a>Dynamics 365 Guides
 
-可使用 Microsoft Dynamics 365 Guides 直观地将全息说明绑定到应用虚拟环境，从而在需要时随时随地为用户提供重要的信息。 Unity 开发历程中也涵盖了此功能，但是如果你想要更进一步了解，可以通过选择[此处](../unity/unity-development-overview.md#5-adding-services)的“Dynamics 365”选项卡来查看提供的功能。
+可使用 Microsoft Dynamics 365 Guides 直观地将全息说明绑定到应用虚拟环境，从而在需要时随时随地为用户提供重要的信息。 针对 HoloLens 的 Unity 开发历程中也涵盖了此功能，但是如果你想要更进一步了解，可选择[此处](../unity/unity-development-overview.md#5-adding-services)的“Dynamics 365”选项卡来查看提供的功能。
 
 ## <a name="examples"></a>示例
 

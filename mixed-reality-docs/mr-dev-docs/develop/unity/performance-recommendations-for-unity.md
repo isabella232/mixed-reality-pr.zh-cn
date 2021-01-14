@@ -1,18 +1,18 @@
 ---
 title: 针对 Unity 的性能建议
-description: 有关提高混合现实应用性能的 Unity 特定提示。
+description: 了解 Unity 特定的提示，利用混合现实应用中的项目设置、分析和内存管理来提高性能。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 图形, cpu, gpu, 渲染, 垃圾回收, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 1a0509e656b7a6bf0d8d1f0b5d381b2fbdb39c2d
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 3508edae9fa0e60e9d9b60000186dfd3e49ff134
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010478"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009347"
 ---
 # <a name="performance-recommendations-for-unity"></a>针对 Unity 的性能建议
 

@@ -1,20 +1,20 @@
 ---
-title: Azure 语音服务教程 - 2. 为本地语音到文本翻译添加脱机模式
-description: 完成本课程可以了解如何在混合现实应用程序中实施 Azure 语音 SDK。
+title: 为本地语音到文本翻译添加脱机模式
+description: 完成本课程可以了解如何在混合现实应用程序中为本地语音到文本翻译添加脱机模式。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: d5b0e5140c698996c051eab10064d99280482886
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: db495d6cdfa99721e68b4004535a5411bde9b17d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679726"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010077"
 ---
-# <a name="2-using-speech-recognition-to-execute-commands"></a>2.使用语音识别执行命令
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.为本地语音到文本翻译添加脱机模式
 
 在本教程中，你将添加使用 Azure 语音识别执行命令的功能，以便可以根据定义的单词或短语执行一些操作。
 
@@ -29,18 +29,18 @@ ms.locfileid: "94679726"
 * 在“唤醒字词”字段中输入适当的短语，例如“激活终端”。
 * 在“解除字词”字段中输入适当的短语，例如“解除终端”。
 
-![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
+![Unity 编辑器，其中 Lunarcom 唤醒字词识别器脚本组件突出显示](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
 > [!NOTE]
 > MRTK 中未包含“Lunarcom 唤醒字词识别器(脚本)”组件。 本教程的资产中随附了该组件。
 
 如果现在进入“游戏”模式，与在上一篇教程中一样，默认已启用终端面板，但你现在可以通过讲出解除字词“解除终端”来禁用它：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
+![播放模式中的 Unity 编辑器，其中语音识别器功能正在使用](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
 讲出唤醒字词“激活终端”以再次启用终端面板：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
+![播放模式中的 Unity 编辑器，带有活动终端](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
 > [!CAUTION]
 > 应用程序需要连接到 Azure，因此请确保计算机/设备已连接到 Internet。

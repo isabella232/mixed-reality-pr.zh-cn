@@ -1,5 +1,5 @@
 ---
-title: Azure 云教程 - 1. 适用于 HoloLens 2 的 Azure 云服务
+title: 适用于 HoloLens 2 的 Azure 云服务
 description: 完成本课程可以了解如何在 HoloLens 2 应用程序中实现各种 Azure 服务。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: azure, 混合现实, unity, 教程, hololens, hololens 2, azure blob 存储, azure 表存储, azure 空间定位点, azure bot framework, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 98ca849722feeaa307cb43e568570897b48ed850
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 24f44e7ecef3aeab45978787bf09d1f947bc2411
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679416"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008317"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1.适用于 HoloLens 2 的 Azure 云服务
-
-## <a name="overview"></a>概述
 
 欢迎使用这一系列教程，这些教程重点介绍如何将 Azure 云服务引入 HoloLens 2 应用程序 。 本系列教程包含五个部分，介绍了如何将多个 Azure 云服务集成到 HoloLens 2 的 Unity 项目中  。 在每个连续的章节中，都将添加新的 Azure 云服务，以扩展应用程序功能和用户体验，同时还将介绍每种 Azure 云服务的基础知识 。
 
@@ -84,13 +82,13 @@ ms.locfileid: "94679416"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
+首先，请按照[初始化项目和第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)说明；其中操作包括以下步骤：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如 Azure 云教程
-2. [切换生成平台](mr-learning-base-02.md#configuring-the-unity-project)
+2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
 3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
+5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
 6. [创建并设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如 AzureCloudServices
 
 然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明将场景的 MRTK 配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
@@ -199,7 +197,7 @@ SceneController (预制件)包含两个脚本：SceneController (脚本)和 Unit
 并非你将在本系列教程中使用的所有功能都可以在 Unity 编辑器中运行，这意味着你需要熟悉如何将应用程序部署到 HoloLens 2 设备上。
 
 > [!TIP]
-> 有关如何生成 Unity 项目并将其部署到 HoloLens 2 的提示，可参阅[入门教程 - 在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
+> 有关如何生成 Unity 项目并将其部署到 HoloLens 2 的提示，可参阅[入门教程 - 在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)中的说明。
 
 ### <a name="3-run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>3.在 HoloLens 2 上运行该应用，并按照应用中的说明进行操作
 

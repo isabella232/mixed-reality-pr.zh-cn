@@ -1,18 +1,18 @@
 ---
-title: 入门教程 - 1. 概述和目标
-description: 本课程介绍如何在混合现实应用程序中实现 Azure 人脸识别。
+title: 教程概述和目标
+description: 请完成本课程来了解如何在混合现实应用程序中实现 Azure 人脸识别。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 777203d0051c22b0f249db7d377ab08f92c089b7
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: d767cca4fbb88d0cfdd7c2fdea1a0621523ad236
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91697008"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010087"
 ---
 # <a name="1-overview-and-objectives"></a>1.概述和目标
 
@@ -39,7 +39,7 @@ ms.locfileid: "91697008"
     </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 

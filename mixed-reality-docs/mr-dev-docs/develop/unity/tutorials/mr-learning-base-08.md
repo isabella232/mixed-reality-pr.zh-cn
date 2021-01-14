@@ -1,22 +1,20 @@
 ---
-title: MRTK 教程 - 8. 使用眼动跟踪
-description: 本课程介绍如何结合使用眼动跟踪和混合现实工具包 (MRTK)。
+title: 使用眼动跟踪
+description: 本课程介绍如何将混合现实应用中的眼动跟踪与混合现实工具包 (MRTK) 结合使用。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: 538204513589b96bedb8b20c46eee5735b764a4c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: f464ba4e08f1446f1d50eda577aedf9d070630ee
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613481"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007887"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
-
-## <a name="overview"></a>概述
 
 在本教程中，你将了解如何为 HoloLens 2 启用眼动跟踪，以及在用户查看对象时如何将眼动跟踪添加到对象以触发操作。
 
@@ -35,7 +33,7 @@ ms.locfileid: "97613481"
 ![Unity“MRTK 项目配置器”窗口](images/mr-learning-base/base-08-section1-step1-1.png)
 
 > [!NOTE]
-> 当你在本系列教程开头配置 Unity 项目时，[应用 MRTK 项目配置器设置](mr-learning-base-02.md#1-apply-the-mrtk-project-configurator-settings)指令期间应该已经启用了眼睛凝视输入功能。 但如果未启用此功能，请确保立即启用。
+> 当你在本系列教程开头配置 Unity 项目时，[应用 MRTK 项目配置器设置](mr-learning-base-02.md#selecting-mrtk-and-project-settings)指令期间应该已经启用了眼睛凝视输入功能。 但如果未启用此功能，请确保立即启用。
 
 ## <a name="enabling-eye-based-gaze-in-the-gaze-provider"></a>在凝视提供者中启用基于眼睛的凝视
 

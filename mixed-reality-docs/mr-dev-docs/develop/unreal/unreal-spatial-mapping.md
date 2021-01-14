@@ -1,18 +1,18 @@
 ---
 title: Unreal 中的空间映射
-description: Unreal 中空间映射使用指南
+description: 了解如何在适合 HoloLens 设备的 Unreal 混合现实应用程序中使用空间映射和网格。
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 空间映射, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 6d70e7f2d32fbf39bc51534661b8224547c36acc
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 3f07acc5bb4ad85084f6eb178fd1c33d94224408
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926045"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009957"
 ---
 # <a name="spatial-mapping-in-unreal"></a>Unreal 中的空间映射
 

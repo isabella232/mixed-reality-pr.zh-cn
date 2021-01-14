@@ -1,18 +1,18 @@
 ---
 title: 使用手指向和提交
-description: 指向和提交输入模型概述
+description: 了解混合现实应用程序中针对手势支持的指向和提交输入模型的基础知识。
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 交互, 设计, HoloLens, 手, 远距, 指向和提交, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, 手部射线, 对象操作, MRTK, 混合现实工具包, DoF
-ms.openlocfilehash: 13b692dada134f856ac6eed446cca45702030f67
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 4ee1fabac763a22006b956e46a908ff4d11e395f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848289"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009737"
 ---
 # <a name="point-and-commit-with-hands"></a>使用手指向和提交
 

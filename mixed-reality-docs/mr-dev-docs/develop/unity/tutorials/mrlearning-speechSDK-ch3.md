@@ -1,18 +1,18 @@
 ---
-title: Azure 语音服务教程 - 3. 添加 Azure 认知服务语音翻译组件
-description: 本课程介绍如何在混合现实应用程序中实施 Azure 语音 SDK。
+title: 添加 Azure 认知服务语音翻译组件
+description: 在本课程中，你将学习如何在混合现实应用程序中添加 Azure 认知服务语音翻译。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10, 语音翻译
 ms.localizationpriority: high
-ms.openlocfilehash: 1139da69b27352b996d57184e21e9d6291d26fce
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 3c647ca841e51b707aae4171b31b0b045c79fb03
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679916"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009877"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3.添加 Azure 认知服务语音翻译组件
 

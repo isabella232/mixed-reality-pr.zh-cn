@@ -1,24 +1,25 @@
 ---
 title: 针对 Unreal 的性能建议
-description: Unreal 中混合现实应用获得最佳性能的建议
+description: 了解如何使用我们推荐的 Unreal 项目设置在混合现实应用中获得最佳性能。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 性能, 优化, 设置, 文档
-ms.openlocfilehash: a369a68f8ebf9b7084c22f0efa3bbf0bf5ecbebf
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: a1a8dacd0206882c7ebd67b2658fa2e6300aa66a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865422"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009817"
 ---
 # <a name="performance-recommendations-for-unreal"></a>针对 Unreal 的性能建议
 
 Unreal Engine 具有多项可提高应用性能的功能，所有这些功能均基于[混合现实性能建议](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)概述的讨论内容。 建议在继续操作之前，先了解应用程序瓶颈和一般性能修复，以及有关分析和剖析混合现实应用的信息。
 
 ## <a name="recommended-unreal-project-settings"></a>建议的 Unreal 项目设置
+
 可以在“编辑”>“项目设置”中找到以下每个设置。
 
 1. 使用移动 VR 呈现器：
@@ -78,4 +79,5 @@ Unreal Engine 具有多项可提高应用性能的功能，所有这些功能均
 ![移动着色器置换减少](images/unreal/performance-recommendations-img-08.png)
 
 ## <a name="see-also"></a>请参阅
+
 * [Unreal 引擎移动性能准则]( https://docs.unrealengine.com/Platforms/Mobile/Performance/index.html)

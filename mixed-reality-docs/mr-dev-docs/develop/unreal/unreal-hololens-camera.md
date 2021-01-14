@@ -1,18 +1,18 @@
 ---
 title: Unreal 中的 HoloLens 照片/视频摄像头
-description: Unreal 中 HoloLens 照片/视频摄像头使用指南
+description: 了解如何在 Unreal 中将 HoloLens 照片和视频摄像头用于混合现实捕获和对象定位。
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 摄像头, PV 摄像头, MRC, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: fb7bbf5a0f41c15d73e59226dad32cda8764e6cc
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 15eba0c992d6d3d8895314f1a6128ace18c02483
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926097"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010057"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Unreal 中的 HoloLens 照片/视频摄像头
 
@@ -38,5 +38,6 @@ HoloLens 的面板上有一个照片/视频 (PV) 摄像头，它既可用于混�
 你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#3-platform-capabilities-and-apis)。
 
 ## <a name="see-also"></a>另请参阅
+
 * [可定位相机](../platform-capabilities-and-apis/locatable-camera.md)
 * [面向开发人员的混合现实捕获](../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md)

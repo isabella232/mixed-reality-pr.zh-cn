@@ -7,18 +7,22 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包
-ms.openlocfilehash: 5c0eefe6f4811feba6d1d52164652acbc44945c3
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: f4a4ea50c45263f18079da76dd8dfd5f31e2af44
+ms.sourcegitcommit: 44d0f2873c75003caf9d8d244ceaeb3faa89df63
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847605"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98110445"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
 ![混合现实设计摘要](images/design-hero-image.png)
 
-混合现实应用程序与当今世界上任何其他应用程序都不同，设计它们是一项很难的工作。 你不仅要考虑到正在创建的真实世界和虚拟世界的新组合，还必须考虑它们提供的新型用户体验。 由于混合现实很大，因此我们在其设计范围内选择了要点，并在下面将它们布置为一系列检查点。 这些检查点应该是连续的，但如果你已经有了一定的了解，则可以随时跳转到以下任何部分。
+混合现实应用程序与当今世界上任何其他应用程序都不同，设计它们是一项很难的工作。 你不仅要考虑到正在创建的真实世界和虚拟世界的新组合，还必须考虑它们提供的新型用户体验。 由于混合现实很大，因此我们在其设计范围内选择了要点，并在下面将它们布置为一系列检查点。 这些检查点应该是连续的，但如果你已经有了一定的了解，则可以随时跳转到以下任何部分。 
+
+请查看我们的设备概述视频开始入门：
+
+>[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4LhlW]
 
 ## <a name="design-checkpoints"></a>设计检查点
 
