@@ -1,5 +1,5 @@
 ---
-title: Azure 空间定位点教程 - 2. Azure 空间定位点入门
+title: Azure 空间定位点入门
 description: 请完成本课程，了解如何在混合现实应用程序中使用 Azure 空间定位点来进行数据定位。
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: ae2726be302bf8ebf342ebd95233b28d7e534423
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a31d398621c581460e49ed81d23c446e60bc530f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679936"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008507"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2.Azure 空间定位点入门
-
-## <a name="overview"></a>概述
 
 本教程将介绍启动和停止 Azure 空间定位点会话，以及在单个设备上创建、上传和下载 Azure 空间定位点所需的各个步骤。
 
@@ -29,14 +27,14 @@ ms.locfileid: "94679936"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-为此，请先执行[初始化项目和部署第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
+首先，请按照[初始化项目和部署第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)说明；其中操作包括以下步骤：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
-1. [切换生成平台](mr-learning-base-02.md#configuring-the-unity-project)
-1. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-1. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-1. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-1. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如 AzureSpatialAnchors
+2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
+3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
+4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+6. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如 AzureSpatialAnchors
 
 然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)中的说明执行以下操作：
 
@@ -148,7 +146,7 @@ ms.locfileid: "94679936"
 Azure 空间定位点不能在 Unity 中运行，因此，若要测试 Azure 空间定位点功能，需生成项目并将应用部署到设备。
 
 > [!TIP]
-> 有关如何生成 Unity 项目并将其部署到 HoloLens 2 的提示，可参阅[在 HoloLens 2 上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
+> 有关如何生成 Unity 项目并将其部署到 HoloLens 2 的提示，可参阅[在 HoloLens 2 上生成应用程序]((mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
 
 当应用在设备上运行时，请按照“Azure 空间定位点教程说明”面板上显示的屏幕说明进行操作：
 
