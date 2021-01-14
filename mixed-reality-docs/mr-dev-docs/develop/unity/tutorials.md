@@ -1,19 +1,19 @@
 ---
 layout: LandingPage
 title: 教程
-description: 提供有关混合现实开发的教程。
+description: 跟进了解我们为 HoloLens 和 Azure 服务提供的混合现实开发教程。
 author: keveleigh
 ms.author: kurtie
 ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 学院, 教程, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, unity, unreal, HoloLens, Azure 空间定位点, Azure 语音服务
-ms.openlocfilehash: a85792ba082450fb01f3c6f7bb008d3c7b17560b
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 76c8cdcddd9617df8e823b4967593c37fa1e6bb9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010458"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006517"
 ---
 # <a name="tutorials"></a>教程
 

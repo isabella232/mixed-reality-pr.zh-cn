@@ -1,19 +1,19 @@
 ---
 layout: LandingPage
 title: Azure 混合现实云服务概述
-description: 混合现实云服务资源。
+description: 了解可集成到 Unity 或 Unreal 应用程序的各种 Azure 混合现实云服务。
 author: hferrone
 ms.author: v-haferr
 ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: e660556810cdea86321b7826217268e6c8d0850a
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 251fd68d2a3fea79c1db160b6aaf64aad05c686f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865402"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009567"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
