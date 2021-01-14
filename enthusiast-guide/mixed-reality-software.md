@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，软件组件，发布历史记录，发行说明，版本历史记录
 appliesto:
 - Windows 10
-ms.openlocfilehash: b06bd835f1e2562e01bfb7bf240747919f422e8c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 763814e7ab81feeb22c4cbe4f5daf02d62db38fa
+ms.sourcegitcommit: 4b6815605e2ea3830052baed38df21af354d2f9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009247"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98166752"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Mixed Reality 软件概述和版本历史记录
 
@@ -167,6 +167,7 @@ Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程
 
    | 版本            | 发布日期          | 重大更改                                                 |
    |--------------------|-----------------------|---------------------------------------------------------------|
+   | 2000.20111.1381.0  | 2020年12月10日        | <ul><li>更新混合现实门户的登录页。</li><li>减少固件更新过程中的耳机连接错误。 </li></ul>  |    | 2000.20071.1133.0  | 2020 年 8 月 5 日        | <ul><li>支持 [OpenXR](https://docs.microsoft.com/windows/mixed-reality/openxr) 以暂停预览窗口。</li></ul>  | 
    | 2000.20071.1133.0  | 2020 年 8 月 5 日        | <ul><li>支持 [OpenXR](https://docs.microsoft.com/windows/mixed-reality/openxr) 以暂停预览窗口。</li></ul>  | 
    | 2000.20041.1212.0  | 2020 年 5 月 11 日          | <ul><li>解决导致15-5 错误的计时问题。</li><li>改进了对运行 Windows Mixed Reality 而无 internet 连接的支持。</li><li>通过 **安装控制器** 改进了对配对运动控制器的支持。</li></ul>  | 
    | 2000.20031.1202.0  | 2020 年 4 月 14 日        | <ul><li>支持注册有关 Windows Mixed Reality 的信息、提示和产品。</li></ul>  | 
