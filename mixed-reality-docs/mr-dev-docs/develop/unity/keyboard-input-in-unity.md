@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 键盘，输入，unity，touchscreenkeyboard，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 613c9327b517205c340555b6423a3809906f9b9f
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 90416f91a7de369ff97a2254fed4b3773724408b
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010508"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226406"
 ---
 # <a name="keyboard-input-in-unity"></a>Unity 中的键盘输入
 
@@ -118,7 +118,7 @@ if (TouchScreenKeyboard.visible == false && keyboard != null)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是探索混合现实平台功能和 Api。 在这里，你可以继续阅读任何 [主题](unity-development-overview.md#3-platform-capabilities-and-apis) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。
+如果遵循我们所说的 Unity 开发旅程，就是探索混合现实平台功能和 Api。 在这里，你可以继续阅读任何 [主题](unity-development-overview.md#3-advanced-features) ，也可以直接跳转到在设备或模拟器上部署你的应用程序。
 
 > [!div class="nextstepaction"]
 > [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../platform-capabilities-and-apis/using-visual-studio.md)
