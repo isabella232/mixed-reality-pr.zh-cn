@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 00338e1354dc04acc76fa2525c721a5e2bd4afe2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 60854785d526c7abff6327ddbb8d39d4eef23ae4
+ms.sourcegitcommit: c904d47ab2ce03d433d5eff394ec4078f404a0f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009467"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242529"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -92,3 +92,13 @@ Windows 电脑首次识别 HP 回音 G2 麦克风时，输入音量级别会自�
 
 在此处，你可以将活动控制器绑定更改为 "自定义"，这将打开用于尝试社区共享游戏绑定的选项。
 如果尚未为此游戏共享自定义游戏绑定 (或者你对已尝试) 的内容不完全满意，则还可以创建你自己的自定义游戏绑定，甚至还可以通过在几个游戏会话后共享他们来帮助其他人。
+
+## <a name="i-have-all-cables-connected-to-the-headset-and-pc-but-it-wont-turn-on"></a>我已经将所有电缆连接到耳机和 PC，但它不会打开
+
+验证连接到耳机的电缆是否完全到位。 电缆顶部有一个小点，当耳机已完全插入时，会将其下边缘向下边缘对齐：
+
+![电缆顶部的小点](images/small-dot.jpg)
+
+## <a name="how-can-i-power-down-the-headset-while-still-using-my-pc"></a>如何在仍使用电脑的同时关闭耳机
+
+从耳机电缆上的 "链接" 框中拔出交流连接适配器，以断开耳机的电源。
