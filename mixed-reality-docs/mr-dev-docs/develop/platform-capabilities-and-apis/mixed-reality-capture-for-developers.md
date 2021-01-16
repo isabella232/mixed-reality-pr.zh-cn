@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc、照片、视频、捕获、照相机
-ms.openlocfilehash: 40d621133d8aa4c7a58488b80a04ca3b4b46638d
-ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
+ms.openlocfilehash: 88b31d139f01c6cbe0567203e39f7640270f7716
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98108860"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247720"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>面向开发人员的混合现实捕获
 
@@ -214,21 +214,21 @@ Unity 应用程序应看到属性 [Locatable_camera_in_Unity](../unity/locatable
 
 应用程序有两个选项可添加效果：
 * 旧的 API： [MediaCapture. AddEffectAsync ( # B1 ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* 新的 Microsoft 推荐 API (将返回一个对象，从而能够操作) ： MediaCapture # B5 [ ( # B3 ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)  /  [ ( # B5](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync)的动态属性，这需要应用程序创建自己的[IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition)和[IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition)实现。 请参阅 MRC [效果示例，例如，用法。
+* 新的 Microsoft 推荐 API (将返回一个对象，从而能够操作) ： MediaCapture # B5 [ ( # B3 ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)  /  [ ( # B5](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync)的动态属性，这需要应用程序创建自己的[IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition)和[IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition)实现。 有关示例，请参阅 [MRC 示例应用](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/HolographicMixedRealityCapture) 。
 
 >[!NOTE]
 > Visual Studio 将无法识别 MixedRealityCapture 命名空间，但字符串仍然有效。
 
 MRC 视频效果 (**MixedRealityCaptureVideoEffect**) 
 
-|  属性名称  |  类型  |  默认值  |  说明 |
+|  属性名  |  类型  |  默认值  |  说明 |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([mediastreamtype.video](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))   |  1 (VideoRecord)   |  描述此影响所使用的捕获流。 音频不可用。 |
 |  HologramCompositionEnabled  |  boolean  |  true  |  用于在视频捕获中启用或禁用全息影像的标志。 |
 |  RecordingIndicatorEnabled  |  boolean  |  true  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
 |  VideoStabilizationEnabled  |  boolean  |  FALSE  |  用于启用或禁用由 HoloLens 跟踪器支持的视频稳定的标志。 |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  设置视频抖动使用的历史帧数。 从电源和性能的角度来看，0从0到延迟，几乎是 "免费"。 15对于最高质量 (建议使用15帧延迟和内存) 。 |
-|  GlobalOpacityCoefficient  |  浮动  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
+|  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
 |  BlankOnProtectedContent  |  boolean  |  FALSE  |  用于启用或禁用在有显示受保护内容的 2d UWP 应用时返回空帧的标志。 如果此标志为 false，并且二维 UWP 应用显示受保护的内容，则在耳机和混合现实捕获中，二维 UWP 应用将替换为受保护的内容纹理。 |
 |  ShowHiddenMesh  |  boolean  |  FALSE  |  用于启用或禁用显示全息相机隐藏区域网格和相邻内容的标志。 |
 | OutputSize | 大小 | 0, 0 | 在裁剪视频稳定性后设置所需的输出大小。 如果指定了0或指定了无效的输出大小，则选择默认裁剪大小。 |
@@ -241,11 +241,11 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 
  (**MixedRealityCaptureAudioEffect) 的** MRC 音频效果
 
-| 属性名称 | 类型 | 默认值 | 说明 |
+| 属性名 | 类型 | 默认值 | 说明 |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (麦克风和系统音频)  | 用于指示应使用的音频源的枚举： 0 (Mic 音频) ，1 (系统音频仅) ，2 (Mic 和系统音频)  |
-| LoopbackGain | 浮动 | Windows 设备门户中的 **应用音频增益** 设置 | 适用于系统音频音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
-| MicrophoneGain | 浮动 | Windows 设备门户中的 **Mic 音频增益** 设置 | 适用于麦克风音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
+| LoopbackGain | float | Windows 设备门户中的 **应用音频增益** 设置 | 适用于系统音频音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
+| MicrophoneGain | float | Windows 设备门户中的 **Mic 音频增益** 设置 | 适用于麦克风音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
 
 >[!NOTE]
 > 可以通过转到 [混合现实捕获页面](using-the-windows-device-portal.md#mixed-reality-capture)并调整其各自设置旁的滑块来更改 Windows 设备门户中 **LoopbackGain** 或 **MicrophoneGain** 的默认值。 这两个设置默认为 **1.0**，但可以设置为 **0.0** 和 **5.0** 之间的任何值。
