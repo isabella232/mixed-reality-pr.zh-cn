@@ -176,8 +176,6 @@
           href: unity/openxr-supported-features.md
     - name: 基本构建基块
       items:
-        - name: MRTK 101 - 使用混合现实工具包 Unity 构建核心交互
-          href: unity/mrtk-101.md
         - name: 照相机
           href: unity/camera-in-unity.md
         - name: 坐标系统
