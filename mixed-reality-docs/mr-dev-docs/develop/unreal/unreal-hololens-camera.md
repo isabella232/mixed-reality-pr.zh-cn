@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, 摄像头, PV 摄像头, MRC, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 15eba0c992d6d3d8895314f1a6128ace18c02483
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6f1301e0daeb44521dfb4e93a915d49d9aea8443
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010057"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247760"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Unreal 中的 HoloLens 照片/视频摄像头
 
@@ -35,7 +35,7 @@ HoloLens 的面板上有一个照片/视频 (PV) 摄像头，它既可用于混�
 > [!div class="nextstepaction"]
 > [部署到设备](unreal-deploying.md)
 
-你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#3-platform-capabilities-and-apis)。
+你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#3-advanced-features)。
 
 ## <a name="see-also"></a>另请参阅
 

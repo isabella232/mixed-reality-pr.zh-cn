@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 功能, 文档, 指南, 全息影像, qr 码, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 1daa368ee9f98accec58c6621073bd7caefdfdcb
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: d896af683a86a1b27e5d100df744222085574a93
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010007"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247740"
 ---
 # <a name="qr-codes-in-unreal"></a>Unreal 中的 QR 码
 
@@ -85,7 +85,7 @@ QR 码幕后还有很多内容等待挖掘，因此体验之旅并没有就此�
 > [!div class="nextstepaction"]
 > [部署到设备](unreal-deploying.md)
 
-你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#3-platform-capabilities-and-apis)。
+你可以随时返回到 [Unreal 开发检查点](unreal-development-overview.md#3-advanced-features)。
 
 ## <a name="see-also"></a>另请参阅
 * [空间映射](../../design/spatial-mapping.md)
