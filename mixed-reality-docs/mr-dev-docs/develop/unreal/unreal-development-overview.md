@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式处理, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, OpenXR
-ms.openlocfilehash: 3d9a33ca98734d40a37e24805f28f7f70b6a4ba9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: eb9ec39d663dec2b5bf4c9177524449f31aaf554
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009757"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247730"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 
@@ -54,7 +54,7 @@ ms.locfileid: "98009757"
 > [!NOTE]
 > 有关更多详细信息，可以深入了解[适用于 Unreal 的 UX Tools GitHub](https://github.com/microsoft/MixedReality-UXTools-Unreal) 存储库。
 
-### <a name="3-platform-capabilities-and-apis"></a>3.平台功能和 API
+### <a name="3-advanced-features"></a>3.高级功能
 
 在混合现实应用程序中起作用的其他关键功能可用，无需任何额外的包或设置。 可以在安装或未安装 MRTK 的情况下将这些功能添加到 Unreal 项目中。 深入了解这些更高级功能后，你将可以生成更复杂的混合现实应用。
 

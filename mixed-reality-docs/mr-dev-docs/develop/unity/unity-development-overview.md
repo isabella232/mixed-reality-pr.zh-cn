@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: 28ddaeed4218dc3433e13122806a2032e335dd56
-ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
+ms.openlocfilehash: c5b7683574378565c71e95bc6205be3dbf92fcaf
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98031982"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226436"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
@@ -49,7 +49,7 @@ ms.locfileid: "98031982"
 
 [!INCLUDE[](../includes/unity-building-blocks.md)]
 
-### <a name="3-platform-capabilities-and-apis"></a>3.平台功能和 API
+### <a name="3-advanced-features"></a>3.高级功能
 
 在混合现实应用程序中起作用的其他关键功能可通过 Unity API 获得，而无需任何额外的包或设置。 可以在安装或未安装 MRTK 的情况下将这些功能添加到 Unity 项目中。 深入了解 Unity 提供的更高级功能后，你将能够生成更深层、更复杂的混合现实应用。
 

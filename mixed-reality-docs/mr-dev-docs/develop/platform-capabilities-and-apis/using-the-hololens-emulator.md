@@ -3,16 +3,16 @@ title: 使用 HoloLens 仿真器
 description: 了解如何使用 HoloLens 仿真器在未配备物理 HoloLens 的电脑上测试混合现实应用。
 author: hamalawi
 ms.author: moelhama
-ms.date: 10/13/2020
+ms.date: 01/13/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 仿真器
-ms.openlocfilehash: 105b358e53012ca30e0ced5000280f39fefb8983
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c26048db18c482312472210c133b20a42fdecae6
+ms.sourcegitcommit: 4b6815605e2ea3830052baed38df21af354d2f9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006657"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98166782"
 ---
 # <a name="using-the-hololens-emulator"></a>使用 HoloLens 仿真器
 
@@ -28,7 +28,7 @@ HoloLens 仿真器包括 HoloLens 开发工具集，可让你在未配备物理 
 下载 HoloLens 仿真器。
 
 版本：
-* [HoloLens 2 仿真器（Windows Holographic 版本 20H2，2020 年 12 月更新）](https://go.microsoft.com/fwlink/?linkid=2151523)。
+* [HoloLens 2 仿真器（Windows Holographic 版本 20H2，2021 年 1 月更新）](https://go.microsoft.com/fwlink/?linkid=2152389).
 * [HoloLens 仿真器（第 1 代）和全息项目模板](https://go.microsoft.com/fwlink/?linkid=2065980)。
 
 可以在 [HoloLens 仿真器存档](hololens-emulator-archive.md)页上找到 HoloLens 仿真器的发行说明和旧版本。

@@ -44,7 +44,7 @@
 ### [沉浸式头戴显示设备运行状况、安全和舒适](wmr-health-safety-comfort.md)
 ### [Mixed Reality 软件概述和版本历史记录](mixed-reality-software.md)
 ### [由内而外跟踪的工作原理](tracking-system.md)
-### [Unity 中的 HP Reverb G2 手柄](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
-### [Unreal 中的 HP Reverb G2 手柄](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+### [Unity 中的 HP Reverb G2 手柄](/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+### [Unreal 中的 HP Reverb G2 手柄](/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
 
 ## [贡献指南](contributing.md)
