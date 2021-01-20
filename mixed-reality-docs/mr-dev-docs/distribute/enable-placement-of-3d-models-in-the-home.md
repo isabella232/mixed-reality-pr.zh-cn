@@ -6,23 +6,23 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D，模型，在家中放置，地方，世界，建模，混合现实主页，web，应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c92ba7a3242b618b9ef9cef01ae400cf4dbf36b2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 58da61add35546331ff8199fa20885f9869a9f43
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010097"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583802"
 ---
-# <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a><span data-ttu-id="27fc2-104">允许在混合现实主页中放置 3D 模型</span><span class="sxs-lookup"><span data-stu-id="27fc2-104">Enable placement of 3D models in the mixed reality home</span></span>
+# <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a><span data-ttu-id="98fa5-104">允许在混合现实主页中放置 3D 模型</span><span class="sxs-lookup"><span data-stu-id="98fa5-104">Enable placement of 3D models in the mixed reality home</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="27fc2-105">此功能已作为 [Windows 10 2018 年4月更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。</span><span class="sxs-lookup"><span data-stu-id="27fc2-105">This feature was added as part of the [Windows 10 April 2018 Update](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018).</span></span> <span data-ttu-id="27fc2-106">Windows 的较早版本与此功能不兼容。</span><span class="sxs-lookup"><span data-stu-id="27fc2-106">Older versions of Windows are not compatible with this feature.</span></span>
+> <span data-ttu-id="98fa5-105">此功能已作为 [Windows 10 2018 年4月更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。</span><span class="sxs-lookup"><span data-stu-id="98fa5-105">This feature was added as part of the [Windows 10 April 2018 Update](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018).</span></span> <span data-ttu-id="98fa5-106">Windows 的较早版本与此功能不兼容。</span><span class="sxs-lookup"><span data-stu-id="98fa5-106">Older versions of Windows are not compatible with this feature.</span></span>
 
-<span data-ttu-id="27fc2-107">[Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)是用户在启动应用程序之前居住的起点。</span><span class="sxs-lookup"><span data-stu-id="27fc2-107">The [Windows Mixed Reality home](../discover/navigating-the-windows-mixed-reality-home.md) is the starting point where users land before launching applications.</span></span> <span data-ttu-id="27fc2-108">在某些情况下，二维应用 (如全息影像应用) 会将3D 模型直接置于混合现实主页中作为装饰，或以完整的3D 形式进行进一步检查。</span><span class="sxs-lookup"><span data-stu-id="27fc2-108">In some scenarios, 2D apps (like the Holograms app) enable placement of 3D models directly into the mixed reality home as decorations or for further inspection in full 3D.</span></span> <span data-ttu-id="27fc2-109">使用 " *添加模型" 协议* ，可以将三维模型从你的网站或应用程序直接发送到 Windows Mixed Reality 主页，它将在其中持久保存，如 [3d 应用程序启动器](3d-app-launcher-design-guidance.md)、二维应用和全息影像。</span><span class="sxs-lookup"><span data-stu-id="27fc2-109">The *add model protocol* allows you to send a 3D model from your website or application directly into the Windows Mixed Reality home, where it will persist like [3D app launchers](3d-app-launcher-design-guidance.md), 2D apps, and holograms.</span></span> 
+<span data-ttu-id="98fa5-107">[Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)是用户在启动应用程序之前居住的起点。</span><span class="sxs-lookup"><span data-stu-id="98fa5-107">The [Windows Mixed Reality home](../discover/navigating-the-windows-mixed-reality-home.md) is the starting point where users land before launching applications.</span></span> <span data-ttu-id="98fa5-108">在某些情况下，二维应用 (如全息影像应用) 会将3D 模型直接置于混合现实主页中作为装饰，或以完整的3D 形式进行进一步检查。</span><span class="sxs-lookup"><span data-stu-id="98fa5-108">In some scenarios, 2D apps (like the Holograms app) enable placement of 3D models directly into the mixed reality home as decorations or for further inspection in full 3D.</span></span> <span data-ttu-id="98fa5-109">使用 " *添加模型" 协议* ，可以将三维模型从你的网站或应用程序直接发送到 Windows Mixed Reality 主页，它将在其中持久保存，如 [3d 应用程序启动器](3d-app-launcher-design-guidance.md)、二维应用和全息影像。</span><span class="sxs-lookup"><span data-stu-id="98fa5-109">The *add model protocol* allows you to send a 3D model from your website or application directly into the Windows Mixed Reality home, where it will persist like [3D app launchers](3d-app-launcher-design-guidance.md), 2D apps, and holograms.</span></span> 
 
-<span data-ttu-id="27fc2-110">例如，如果您正在开发一个应用程序，该应用程序显示了用于设计空间的3D 家具目录，则使用 " *添加模型" 协议* 允许用户将这些3d 家具模型从目录中放置。</span><span class="sxs-lookup"><span data-stu-id="27fc2-110">For example, if you're developing an application that surfaces a catalog of 3D furniture for designing a space, use the *add model protocol* to allow users to place those 3D furniture models from the catalog.</span></span> <span data-ttu-id="27fc2-111">一旦进入世界，用户就可以移动、调整大小和删除这些3D 模型，就像在家中的其他全息影像一样。</span><span class="sxs-lookup"><span data-stu-id="27fc2-111">Once placed in the world, users can move, resize, and remove these 3D models just like other holograms in the home.</span></span> <span data-ttu-id="27fc2-112">本文概述了如何实现 *添加模型协议* ，使用户能够使用应用或 web 中的3d 对象装饰其世界。</span><span class="sxs-lookup"><span data-stu-id="27fc2-112">This article provides an overview of implementing the *add model protocol* for enabling users to decorate their world with 3D objects from your app or the web.</span></span>
+<span data-ttu-id="98fa5-110">例如，如果您正在开发一个应用程序，该应用程序显示了用于设计空间的3D 家具目录，则使用 " *添加模型" 协议* 允许用户将这些3d 家具模型从目录中放置。</span><span class="sxs-lookup"><span data-stu-id="98fa5-110">For example, if you're developing an application that surfaces a catalog of 3D furniture for designing a space, use the *add model protocol* to allow users to place those 3D furniture models from the catalog.</span></span> <span data-ttu-id="98fa5-111">一旦进入世界，用户就可以移动、调整大小和删除这些3D 模型，就像在家中的其他全息影像一样。</span><span class="sxs-lookup"><span data-stu-id="98fa5-111">Once placed in the world, users can move, resize, and remove these 3D models just like other holograms in the home.</span></span> <span data-ttu-id="98fa5-112">本文概述了如何实现 *添加模型协议* ，使用户能够使用应用或 web 中的3d 对象装饰其世界。</span><span class="sxs-lookup"><span data-stu-id="98fa5-112">This article provides an overview of implementing the *add model protocol* for enabling users to decorate their world with 3D objects from your app or the web.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="27fc2-113">设备支持</span><span class="sxs-lookup"><span data-stu-id="27fc2-113">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="98fa5-113">设备支持</span><span class="sxs-lookup"><span data-stu-id="98fa5-113">Device support</span></span>
 
 <table>
     <colgroup>
@@ -31,34 +31,34 @@ ms.locfileid: "98010097"
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><span data-ttu-id="27fc2-114"><strong>功能</strong></span><span class="sxs-lookup"><span data-stu-id="27fc2-114"><strong>Feature</strong></span></span></td>
-        <td><span data-ttu-id="27fc2-115"><a href="../hololens-hardware-details.md"><strong>HoloLens</strong></a></span><span class="sxs-lookup"><span data-stu-id="27fc2-115"><a href="../hololens-hardware-details.md"><strong>HoloLens</strong></a></span></span></td>
-        <td><span data-ttu-id="27fc2-116"><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></span><span class="sxs-lookup"><span data-stu-id="27fc2-116"><a href="../discover/immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></span></span></td>
+        <td><span data-ttu-id="98fa5-114"><strong>功能</strong></span><span class="sxs-lookup"><span data-stu-id="98fa5-114"><strong>Feature</strong></span></span></td>
+        <td><span data-ttu-id="98fa5-115"><a href="/hololens/hololens1-hardware"><strong>HoloLens</strong></a></span><span class="sxs-lookup"><span data-stu-id="98fa5-115"><a href="/hololens/hololens1-hardware"><strong>HoloLens</strong></a></span></span></td>
+        <td><span data-ttu-id="98fa5-116"><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></span><span class="sxs-lookup"><span data-stu-id="98fa5-116"><a href="../discover/immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></span></span></td>
     </tr>
      <tr>
-        <td><span data-ttu-id="27fc2-117">添加模型协议</span><span class="sxs-lookup"><span data-stu-id="27fc2-117">Add model protocol</span></span></td>
-        <td><span data-ttu-id="27fc2-118">✔️</span><span class="sxs-lookup"><span data-stu-id="27fc2-118">✔️</span></span></td>
-        <td><span data-ttu-id="27fc2-119">✔️</span><span class="sxs-lookup"><span data-stu-id="27fc2-119">✔️</span></span></td>
+        <td><span data-ttu-id="98fa5-117">添加模型协议</span><span class="sxs-lookup"><span data-stu-id="98fa5-117">Add model protocol</span></span></td>
+        <td><span data-ttu-id="98fa5-118">✔️</span><span class="sxs-lookup"><span data-stu-id="98fa5-118">✔️</span></span></td>
+        <td><span data-ttu-id="98fa5-119">✔️</span><span class="sxs-lookup"><span data-stu-id="98fa5-119">✔️</span></span></td>
     </tr>
 </table>
 
-## <a name="the-basics"></a><span data-ttu-id="27fc2-120">基础知识</span><span class="sxs-lookup"><span data-stu-id="27fc2-120">The basics</span></span>
+## <a name="the-basics"></a><span data-ttu-id="98fa5-120">基础知识</span><span class="sxs-lookup"><span data-stu-id="98fa5-120">The basics</span></span>
 
-<span data-ttu-id="27fc2-121">可以通过两个步骤在 Windows Mixed Reality 主页中启用3D 模型的放置：</span><span class="sxs-lookup"><span data-stu-id="27fc2-121">There are two steps to enabling the placement of 3D models in the Windows Mixed Reality home:</span></span>
-1. <span data-ttu-id="27fc2-122">[确保3d 模型与 Windows Mixed Reality 主页兼容](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)。</span><span class="sxs-lookup"><span data-stu-id="27fc2-122">[Ensure your 3D model is compatible with the Windows Mixed Reality home](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md).</span></span>
-2. <span data-ttu-id="27fc2-123">在应用程序或网页中实现 *添加模型协议* ， (本文) 。</span><span class="sxs-lookup"><span data-stu-id="27fc2-123">Implement the *add model protocol* in your application or webpage (this article).</span></span>
+<span data-ttu-id="98fa5-121">可以通过两个步骤在 Windows Mixed Reality 主页中启用3D 模型的放置：</span><span class="sxs-lookup"><span data-stu-id="98fa5-121">There are two steps to enabling the placement of 3D models in the Windows Mixed Reality home:</span></span>
+1. <span data-ttu-id="98fa5-122">[确保3d 模型与 Windows Mixed Reality 主页兼容](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)。</span><span class="sxs-lookup"><span data-stu-id="98fa5-122">[Ensure your 3D model is compatible with the Windows Mixed Reality home](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md).</span></span>
+2. <span data-ttu-id="98fa5-123">在应用程序或网页中实现 *添加模型协议* ， (本文) 。</span><span class="sxs-lookup"><span data-stu-id="98fa5-123">Implement the *add model protocol* in your application or webpage (this article).</span></span>
 
-## <a name="implementing-the-add-model-protocol"></a><span data-ttu-id="27fc2-124">实现 *添加模型协议*</span><span class="sxs-lookup"><span data-stu-id="27fc2-124">Implementing the *add model protocol*</span></span>
+## <a name="implementing-the-add-model-protocol"></a><span data-ttu-id="98fa5-124">实现 *添加模型协议*</span><span class="sxs-lookup"><span data-stu-id="98fa5-124">Implementing the *add model protocol*</span></span>
 
-<span data-ttu-id="27fc2-125">获得 [兼容的3d 模型](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)后，可以通过从任何网页或应用程序激活以下 URI 来实现 *添加模型协议* ：</span><span class="sxs-lookup"><span data-stu-id="27fc2-125">Once you have a [compatible 3D model](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md), you can implement the *add model protocol* by activating the following URI from any webpage or application:</span></span>
+<span data-ttu-id="98fa5-125">获得 [兼容的3d 模型](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)后，可以通过从任何网页或应用程序激活以下 URI 来实现 *添加模型协议* ：</span><span class="sxs-lookup"><span data-stu-id="98fa5-125">Once you have a [compatible 3D model](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md), you can implement the *add model protocol* by activating the following URI from any webpage or application:</span></span>
 
 ```
 ms-mixedreality:addmodel?uri=<Path to a .glb 3D model either local or remote>
 ```
 
-<span data-ttu-id="27fc2-126">如果 URI 指向远程资源，则它将自动下载并放置在主文件夹中。</span><span class="sxs-lookup"><span data-stu-id="27fc2-126">If the URI points to a remote resource, then it will automatically be downloaded and placed in the home.</span></span> <span data-ttu-id="27fc2-127">本地资源将被复制到混合现实主页的应用数据文件夹中，然后放入 home。</span><span class="sxs-lookup"><span data-stu-id="27fc2-127">Local resources will be copied to the mixed reality home's app data folder before being placed in the home.</span></span> <span data-ttu-id="27fc2-128">建议在以下情况下设计你的体验：用户可能正在运行不支持此功能的较早版本的 Windows （如有可能）。</span><span class="sxs-lookup"><span data-stu-id="27fc2-128">We recommend designing your experience to account for scenarios where the user might be running an older version of Windows that doesn't support this feature by hiding the button or disabling it if possible.</span></span> 
+<span data-ttu-id="98fa5-126">如果 URI 指向远程资源，则它将自动下载并放置在主文件夹中。</span><span class="sxs-lookup"><span data-stu-id="98fa5-126">If the URI points to a remote resource, then it will automatically be downloaded and placed in the home.</span></span> <span data-ttu-id="98fa5-127">本地资源将被复制到混合现实主页的应用数据文件夹中，然后放入 home。</span><span class="sxs-lookup"><span data-stu-id="98fa5-127">Local resources will be copied to the mixed reality home's app data folder before being placed in the home.</span></span> <span data-ttu-id="98fa5-128">建议在以下情况下设计你的体验：用户可能正在运行不支持此功能的较早版本的 Windows （如有可能）。</span><span class="sxs-lookup"><span data-stu-id="98fa5-128">We recommend designing your experience to account for scenarios where the user might be running an older version of Windows that doesn't support this feature by hiding the button or disabling it if possible.</span></span> 
 
-### <a name="invoking-the-add-model-protocol-from-a-universal-windows-platform-app"></a><span data-ttu-id="27fc2-129">从通用 Windows 平台应用调用 *添加模型协议* ：</span><span class="sxs-lookup"><span data-stu-id="27fc2-129">Invoking the *add model protocol* from a Universal Windows Platform app:</span></span>
+### <a name="invoking-the-add-model-protocol-from-a-universal-windows-platform-app"></a><span data-ttu-id="98fa5-129">从通用 Windows 平台应用调用 *添加模型协议* ：</span><span class="sxs-lookup"><span data-stu-id="98fa5-129">Invoking the *add model protocol* from a Universal Windows Platform app:</span></span>
 
 ```C#
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -80,18 +80,18 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### <a name="invoking-the-add-model-protocol-from-a-webpage"></a><span data-ttu-id="27fc2-130">从网页调用 *添加模型协议* ：</span><span class="sxs-lookup"><span data-stu-id="27fc2-130">Invoking the *add model protocol* from a webpage:</span></span>
+### <a name="invoking-the-add-model-protocol-from-a-webpage"></a><span data-ttu-id="98fa5-130">从网页调用 *添加模型协议* ：</span><span class="sxs-lookup"><span data-stu-id="98fa5-130">Invoking the *add model protocol* from a webpage:</span></span>
 
 ```html
 <a class="btn btn-default" href="ms-mixedreality:addModel?uri=sample.glb"> Place 3D Model </a>
 ```
 
-## <a name="considerations-for-immersive-vr-headsets"></a><span data-ttu-id="27fc2-131">沉浸式 (VR) 耳机注意事项</span><span class="sxs-lookup"><span data-stu-id="27fc2-131">Considerations for immersive (VR) headsets</span></span>
+## <a name="considerations-for-immersive-vr-headsets"></a><span data-ttu-id="98fa5-131">沉浸式 (VR) 耳机注意事项</span><span class="sxs-lookup"><span data-stu-id="98fa5-131">Considerations for immersive (VR) headsets</span></span>
 
-* <span data-ttu-id="27fc2-132">对于沉浸式 (VR) 耳机，在调用 *添加模型协议* 之前，混合现实门户无需运行。</span><span class="sxs-lookup"><span data-stu-id="27fc2-132">For immersive (VR) headsets, the Mixed Reality Portal doesn't have to be running before invoking the *add model protocol*.</span></span> <span data-ttu-id="27fc2-133">在这种情况下，" *添加模型" 协议* 将启动混合现实门户，并将对象直接放置在头戴显示在混合现实中的位置。</span><span class="sxs-lookup"><span data-stu-id="27fc2-133">In this case, the *add model protocol* will launch the Mixed Reality Portal and place the object directly where the headset is looking once you arrive in the mixed reality home.</span></span> 
-* <span data-ttu-id="27fc2-134">当在已运行混合现实门户的情况下从桌面调用 " *添加模型" 协议* 时，请确保头戴式耳机处于 "唤醒" 状态。</span><span class="sxs-lookup"><span data-stu-id="27fc2-134">When invoking the *add model protocol* from the desktop with the Mixed Reality Portal already running, ensure that the headset is "awake".</span></span> <span data-ttu-id="27fc2-135">否则，放置不会成功。</span><span class="sxs-lookup"><span data-stu-id="27fc2-135">If not, the placement won't succeed.</span></span> 
+* <span data-ttu-id="98fa5-132">对于沉浸式 (VR) 耳机，在调用 *添加模型协议* 之前，混合现实门户无需运行。</span><span class="sxs-lookup"><span data-stu-id="98fa5-132">For immersive (VR) headsets, the Mixed Reality Portal doesn't have to be running before invoking the *add model protocol*.</span></span> <span data-ttu-id="98fa5-133">在这种情况下，" *添加模型" 协议* 将启动混合现实门户，并将对象直接放置在头戴显示在混合现实中的位置。</span><span class="sxs-lookup"><span data-stu-id="98fa5-133">In this case, the *add model protocol* will launch the Mixed Reality Portal and place the object directly where the headset is looking once you arrive in the mixed reality home.</span></span> 
+* <span data-ttu-id="98fa5-134">当在已运行混合现实门户的情况下从桌面调用 " *添加模型" 协议* 时，请确保头戴式耳机处于 "唤醒" 状态。</span><span class="sxs-lookup"><span data-stu-id="98fa5-134">When invoking the *add model protocol* from the desktop with the Mixed Reality Portal already running, ensure that the headset is "awake".</span></span> <span data-ttu-id="98fa5-135">否则，放置不会成功。</span><span class="sxs-lookup"><span data-stu-id="98fa5-135">If not, the placement won't succeed.</span></span> 
 
-## <a name="see-also"></a><span data-ttu-id="27fc2-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="27fc2-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98fa5-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="98fa5-136">See also</span></span>
 
-* [<span data-ttu-id="27fc2-137">创建用于 Windows Mixed Reality 主页的3D 模型</span><span class="sxs-lookup"><span data-stu-id="27fc2-137">Creating 3D models for use in the Windows Mixed Reality home</span></span>](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [<span data-ttu-id="27fc2-138">导航 Windows Mixed Reality 主页</span><span class="sxs-lookup"><span data-stu-id="27fc2-138">Navigating the Windows Mixed Reality home</span></span>](../discover/navigating-the-windows-mixed-reality-home.md)
+* [<span data-ttu-id="98fa5-137">创建用于 Windows Mixed Reality 主页的3D 模型</span><span class="sxs-lookup"><span data-stu-id="98fa5-137">Creating 3D models for use in the Windows Mixed Reality home</span></span>](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+* [<span data-ttu-id="98fa5-138">导航 Windows Mixed Reality 主页</span><span class="sxs-lookup"><span data-stu-id="98fa5-138">Navigating the Windows Mixed Reality home</span></span>](../discover/navigating-the-windows-mixed-reality-home.md)
