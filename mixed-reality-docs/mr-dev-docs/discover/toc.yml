@@ -17,9 +17,9 @@
 - name: HoloLens 硬件
   items:
     - name: HoloLens 2 硬件详细信息
-      href: 'https://docs.microsoft.com/hololens/hololens2-hardware'
+      href: /hololens/hololens2-hardware
     - name: HoloLens（第 1 代）硬件详细信息
-      href: 'https://docs.microsoft.com/hololens/hololens1-hardware'
+      href: /hololens/hololens1-hardware
 - name: 沉浸式头戴显示设备
   items:
     - name: 沉浸式头戴显示设备硬件详细信息
@@ -27,7 +27,7 @@
     - name: 导航 Windows Mixed Reality 主页
       href: navigating-the-windows-mixed-reality-home.md
     - name: VR 发烧友指南
-      href: 'https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/'
+      href: /windows/mixed-reality/enthusiast-guide/
     - name: 基于位置的娱乐
       href: location-based-experiences.md
 - name: 社区资源
