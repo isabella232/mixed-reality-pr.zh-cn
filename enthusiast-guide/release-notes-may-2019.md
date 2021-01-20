@@ -6,68 +6,67 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: 发行说明，版本，windows 10，build，19h1，os，可能2019
-ms.openlocfilehash: fd5688b7c68e0a16873ff153f3c158a3575e02e9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b8df518b03544bd2473ff67030ed008e1a2bc26e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007117"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581502"
 ---
-# <a name="release-notes---may-2019"></a><span data-ttu-id="cbac2-104">发行说明-5 月2019</span><span class="sxs-lookup"><span data-stu-id="cbac2-104">Release notes - May 2019</span></span>
+# <a name="release-notes---may-2019"></a><span data-ttu-id="b7a36-104">发行说明-5 月2019</span><span class="sxs-lookup"><span data-stu-id="b7a36-104">Release notes - May 2019</span></span>
 
-<span data-ttu-id="cbac2-105">**Windows 10 可能2019更新** (也称为 19H1) 包含 Windows mixed REALITY (VR) 耳机的新功能，例如在混合现实中启动 Win32 应用程序的功能。</span><span class="sxs-lookup"><span data-stu-id="cbac2-105">The **Windows 10 May 2019 Update** (also known as 19H1) includes new features for Windows Mixed Reality (VR) headsets, such as the ability to launch Win32 applications in the mixed reality home.</span></span> <span data-ttu-id="cbac2-106">HoloLens (第一代) 提供 (LTS) 的长期服务，每月发布服务更新。</span><span class="sxs-lookup"><span data-stu-id="cbac2-106">HoloLens (1st gen) is in Long Term Servicing (LTS), with servicing updates released monthly.</span></span>
+<span data-ttu-id="b7a36-105">**Windows 10 可能2019更新** (也称为 19H1) 包含 Windows mixed REALITY (VR) 耳机的新功能，例如在混合现实中启动 Win32 应用程序的功能。</span><span class="sxs-lookup"><span data-stu-id="b7a36-105">The **Windows 10 May 2019 Update** (also known as 19H1) includes new features for Windows Mixed Reality (VR) headsets, such as the ability to launch Win32 applications in the mixed reality home.</span></span> <span data-ttu-id="b7a36-106">HoloLens (第一代) 提供 (LTS) 的长期服务，每月发布服务更新。</span><span class="sxs-lookup"><span data-stu-id="b7a36-106">HoloLens (1st gen) is in Long Term Servicing (LTS), with servicing updates released monthly.</span></span>
 
-<span data-ttu-id="cbac2-107">若要更新到适用于 Windows Mixed Reality 的 PC 上的最新版本沉浸式 (VR) 耳机，请打开 " **设置** " 应用，中转到 " **更新 & 安全性**"，然后选择 " **检查更新** " 按钮。</span><span class="sxs-lookup"><span data-stu-id="cbac2-107">To update to the latest release on PC for Windows Mixed Reality immersive (VR) headsets, open the **Settings** app, go to **Update & Security**, then select the **Check for updates** button.</span></span> <span data-ttu-id="cbac2-108">在 Windows 10 电脑上，你还可以使用 [windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装 windows 10 2019 更新。</span><span class="sxs-lookup"><span data-stu-id="cbac2-108">On a Windows 10 PC, you can also manually install the Windows 10 May 2019 Update using the [Windows media creation tool](https://www.microsoft.com/software-download/windows10).</span></span>
+<span data-ttu-id="b7a36-107">若要更新到适用于 Windows Mixed Reality 的 PC 上的最新版本沉浸式 (VR) 耳机，请打开 " **设置** " 应用，中转到 " **更新 & 安全性**"，然后选择 " **检查更新** " 按钮。</span><span class="sxs-lookup"><span data-stu-id="b7a36-107">To update to the latest release on PC for Windows Mixed Reality immersive (VR) headsets, open the **Settings** app, go to **Update & Security**, then select the **Check for updates** button.</span></span> <span data-ttu-id="b7a36-108">在 Windows 10 电脑上，你还可以使用 [windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装 windows 10 2019 更新。</span><span class="sxs-lookup"><span data-stu-id="b7a36-108">On a Windows 10 PC, you can also manually install the Windows 10 May 2019 Update using the [Windows media creation tool](https://www.microsoft.com/software-download/windows10).</span></span>
 
-<span data-ttu-id="cbac2-109">**最新版本的桌面：** Windows 10 可能2019更新 (**10.0.18362.116**) </span><span class="sxs-lookup"><span data-stu-id="cbac2-109">**Latest release for Desktop:** Windows 10 May 2019 Update (**10.0.18362.116**)</span></span><br>
+<span data-ttu-id="b7a36-109">**最新版本的桌面：** Windows 10 可能2019更新 (**10.0.18362.116**) </span><span class="sxs-lookup"><span data-stu-id="b7a36-109">**Latest release for Desktop:** Windows 10 May 2019 Update (**10.0.18362.116**)</span></span><br>
 
-## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a><span data-ttu-id="cbac2-110">适用于 Windows Mixed Reality 沉浸式耳机的新功能</span><span class="sxs-lookup"><span data-stu-id="cbac2-110">New features for Windows Mixed Reality immersive headsets</span></span>
+## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a><span data-ttu-id="b7a36-110">适用于 Windows Mixed Reality 沉浸式耳机的新功能</span><span class="sxs-lookup"><span data-stu-id="b7a36-110">New features for Windows Mixed Reality immersive headsets</span></span>
 
-### <a name="win32-slates"></a><span data-ttu-id="cbac2-111">Win32 清单</span><span class="sxs-lookup"><span data-stu-id="cbac2-111">Win32 Slates</span></span>
+### <a name="win32-slates"></a><span data-ttu-id="b7a36-111">Win32 清单</span><span class="sxs-lookup"><span data-stu-id="b7a36-111">Win32 Slates</span></span>
 
-#### <a name="what-does-it-do"></a><span data-ttu-id="cbac2-112">它有什么作用？</span><span class="sxs-lookup"><span data-stu-id="cbac2-112">What does it do?</span></span> 
-<span data-ttu-id="cbac2-113">随着 Windows 2019 10 的更新，我们引入了在 Windows Mixed Reality 内启动经典 Win32 应用程序（如 web 浏览器、通信应用程序和媒体流式处理应用程序）的功能。</span><span class="sxs-lookup"><span data-stu-id="cbac2-113">With the Windows 10 May 2019 update, we've introduced the ability to launch classic Win32 applications such as web browsers, communication applications and media streaming applications while inside Windows Mixed Reality.</span></span> 
+#### <a name="what-does-it-do"></a><span data-ttu-id="b7a36-112">它有什么作用？</span><span class="sxs-lookup"><span data-stu-id="b7a36-112">What does it do?</span></span> 
+<span data-ttu-id="b7a36-113">随着 Windows 2019 10 的更新，我们引入了在 Windows Mixed Reality 内启动经典 Win32 应用程序（如 web 浏览器、通信应用程序和媒体流式处理应用程序）的功能。</span><span class="sxs-lookup"><span data-stu-id="b7a36-113">With the Windows 10 May 2019 update, we've introduced the ability to launch classic Win32 applications such as web browsers, communication applications and media streaming applications while inside Windows Mixed Reality.</span></span> 
 
 ![Win32 窗口](images/mr-win32-slates-1.png)
 
 ![Win32 浏览器](images/mr-win32-slates-2.png)
 
-#### <a name="how-to-launch"></a><span data-ttu-id="cbac2-116">如何启动</span><span class="sxs-lookup"><span data-stu-id="cbac2-116">How to launch</span></span>
-<span data-ttu-id="cbac2-117">若要在 Windows Mixed Reality 中启动 Win32 应用程序，请在控制器上通过 Windows 按钮打开 Pin 面板，并选择面板右侧的 "所有应用程序"。</span><span class="sxs-lookup"><span data-stu-id="cbac2-117">To launch a Win32 application in Windows Mixed Reality, bring up the Pins Panel via the windows button on your controller and select “All Apps” on the right side of the panel.</span></span>  <span data-ttu-id="cbac2-118">你会看到一个名为 "经典应用" 的文件夹，导航到该文件夹，你可以选择并启动计算机上安装的大多数 Win32 应用程序。</span><span class="sxs-lookup"><span data-stu-id="cbac2-118">You'll find a folder called "Classic Apps", navigate into it and you can select and launch most of the Win32 applications installed on your computer.</span></span>
+#### <a name="how-to-launch"></a><span data-ttu-id="b7a36-116">如何启动</span><span class="sxs-lookup"><span data-stu-id="b7a36-116">How to launch</span></span>
+<span data-ttu-id="b7a36-117">若要在 Windows Mixed Reality 中启动 Win32 应用程序，请在控制器上通过 Windows 按钮打开 Pin 面板，并选择面板右侧的 "所有应用程序"。</span><span class="sxs-lookup"><span data-stu-id="b7a36-117">To launch a Win32 application in Windows Mixed Reality, bring up the Pins Panel via the windows button on your controller and select “All Apps” on the right side of the panel.</span></span>  <span data-ttu-id="b7a36-118">你会看到一个名为 "经典应用" 的文件夹，导航到该文件夹，你可以选择并启动计算机上安装的大多数 Win32 应用程序。</span><span class="sxs-lookup"><span data-stu-id="b7a36-118">You'll find a folder called "Classic Apps", navigate into it and you can select and launch most of the Win32 applications installed on your computer.</span></span>
 
 ![Win32 Pin_Panel](images/mr-win32-slates-pinspanel.png)
 
-#### <a name="help-us-improve"></a><span data-ttu-id="cbac2-120">请帮助我们改进！</span><span class="sxs-lookup"><span data-stu-id="cbac2-120">Help us improve!</span></span>
-<span data-ttu-id="cbac2-121">我们会不断改进兼容性。</span><span class="sxs-lookup"><span data-stu-id="cbac2-121">We continually look to improve compatibility.</span></span>  <span data-ttu-id="cbac2-122">如果在 Windows Mixed Reality 中发现你最喜欢的经典 Win32 应用程序不能正常工作，请通过我们的 [反馈中心](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub)提交反馈。</span><span class="sxs-lookup"><span data-stu-id="cbac2-122">If you find your favorite classic Win32 application not behaving correctly while in Windows Mixed Reality, submit feedback via our [Feedback Hub](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).</span></span>
+#### <a name="help-us-improve"></a><span data-ttu-id="b7a36-120">请帮助我们改进！</span><span class="sxs-lookup"><span data-stu-id="b7a36-120">Help us improve!</span></span>
+<span data-ttu-id="b7a36-121">我们会不断改进兼容性。</span><span class="sxs-lookup"><span data-stu-id="b7a36-121">We continually look to improve compatibility.</span></span>  <span data-ttu-id="b7a36-122">如果在 Windows Mixed Reality 中发现你最喜欢的经典 Win32 应用程序不能正常工作，请通过我们的 [反馈中心](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub)提交反馈。</span><span class="sxs-lookup"><span data-stu-id="b7a36-122">If you find your favorite classic Win32 application not behaving correctly while in Windows Mixed Reality, submit feedback via our [Feedback Hub](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).</span></span>
 
-## <a name="hololens-1st-gen-long-term-servicing"></a><span data-ttu-id="cbac2-123">HoloLens (第一代) Long-Term 服务</span><span class="sxs-lookup"><span data-stu-id="cbac2-123">HoloLens (1st gen) Long-Term Servicing</span></span>
+## <a name="hololens-1st-gen-long-term-servicing"></a><span data-ttu-id="b7a36-123">HoloLens (第一代) Long-Term 服务</span><span class="sxs-lookup"><span data-stu-id="b7a36-123">HoloLens (1st gen) Long-Term Servicing</span></span>
 
-<span data-ttu-id="cbac2-124">HoloLens (第一代) 正在进入长期维护 (LTS) 状态。</span><span class="sxs-lookup"><span data-stu-id="cbac2-124">HoloLens (1st gen) is entering Long Term Servicing (LTS) state.</span></span> <span data-ttu-id="cbac2-125">将来的更新将重点介绍问题和安全修补程序，同时在与用于 (HoloLens 的 [Windows 10 10 月2018版](release-notes-october-2018.md) （也称为 RS5) ）的情况下保持功能的奇偶校验。</span><span class="sxs-lookup"><span data-stu-id="cbac2-125">Future updates will focus on issue and security fixes, while maintaining feature parity with the [Windows 10 October 2018 release](release-notes-october-2018.md) for HoloLens (also known as RS5).</span></span> 
+<span data-ttu-id="b7a36-124">HoloLens (第一代) 正在进入长期维护 (LTS) 状态。</span><span class="sxs-lookup"><span data-stu-id="b7a36-124">HoloLens (1st gen) is entering Long Term Servicing (LTS) state.</span></span> <span data-ttu-id="b7a36-125">将来的更新将重点介绍问题和安全修补程序，同时在与用于 (HoloLens 的 [Windows 10 10 月2018版](release-notes-october-2018.md) （也称为 RS5) ）的情况下保持功能的奇偶校验。</span><span class="sxs-lookup"><span data-stu-id="b7a36-125">Future updates will focus on issue and security fixes, while maintaining feature parity with the [Windows 10 October 2018 release](release-notes-october-2018.md) for HoloLens (also known as RS5).</span></span> 
 
-## <a name="known-issues"></a><span data-ttu-id="cbac2-126">已知问题</span><span class="sxs-lookup"><span data-stu-id="cbac2-126">Known issues</span></span>
+## <a name="known-issues"></a><span data-ttu-id="b7a36-126">已知问题</span><span class="sxs-lookup"><span data-stu-id="b7a36-126">Known issues</span></span>
 
-<span data-ttu-id="cbac2-127">我们正在跟踪一个问题，需要将监视器连接到电脑才能使沉浸式头能正常工作。</span><span class="sxs-lookup"><span data-stu-id="cbac2-127">We're tracking an issue that requires a monitor to be connected to the PC in order for the immersive headset to work correctly.</span></span> <span data-ttu-id="cbac2-128">背包 PC 用户可能想要使用 (或 EDID 模拟器) 活动的显示适配器，以确保在未使用 PC 监视器时，其沉浸式耳机仍可继续呈现。</span><span class="sxs-lookup"><span data-stu-id="cbac2-128">Backpack PC users may want to use an active display adapter (or EDID emulator) to ensure their immersive headset continues to render when no PC monitor is in use.</span></span> 
+<span data-ttu-id="b7a36-127">我们正在跟踪一个问题，需要将监视器连接到电脑才能使沉浸式头能正常工作。</span><span class="sxs-lookup"><span data-stu-id="b7a36-127">We're tracking an issue that requires a monitor to be connected to the PC in order for the immersive headset to work correctly.</span></span> <span data-ttu-id="b7a36-128">背包 PC 用户可能想要使用 (或 EDID 模拟器) 活动的显示适配器，以确保在未使用 PC 监视器时，其沉浸式耳机仍可继续呈现。</span><span class="sxs-lookup"><span data-stu-id="b7a36-128">Backpack PC users may want to use an active display adapter (or EDID emulator) to ensure their immersive headset continues to render when no PC monitor is in use.</span></span> 
 
-## <a name="provide-feedback-and-report-issues"></a><span data-ttu-id="cbac2-129">提供反馈和报告问题</span><span class="sxs-lookup"><span data-stu-id="cbac2-129">Provide feedback and report issues</span></span>
+## <a name="provide-feedback-and-report-issues"></a><span data-ttu-id="b7a36-129">提供反馈和报告问题</span><span class="sxs-lookup"><span data-stu-id="b7a36-129">Provide feedback and report issues</span></span>
 
-<span data-ttu-id="cbac2-130">[在 Windows 10 电脑或 HoloLens 设备上使用反馈中心应用](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback)来提供反馈和报告问题。</span><span class="sxs-lookup"><span data-stu-id="cbac2-130">Use the [Feedback Hub app on your Windows 10 PC](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback) or your HoloLens device to provide feedback and report issues.</span></span> <span data-ttu-id="cbac2-131">使用反馈中心可确保包括所有必要的诊断信息，以帮助我们的工程师快速调试和解决问题。</span><span class="sxs-lookup"><span data-stu-id="cbac2-131">Using Feedback Hub ensures that all necessary diagnostics information is included to help our engineers quickly debug and resolve the problem.</span></span>
+<span data-ttu-id="b7a36-130">[在 Windows 10 电脑或 HoloLens 设备上使用反馈中心应用](/windows/mixed-reality/give-us-feedback)来提供反馈和报告问题。</span><span class="sxs-lookup"><span data-stu-id="b7a36-130">Use the [Feedback Hub app on your Windows 10 PC](/windows/mixed-reality/give-us-feedback) or your HoloLens device to provide feedback and report issues.</span></span> <span data-ttu-id="b7a36-131">使用反馈中心可确保包括所有必要的诊断信息，以帮助我们的工程师快速调试和解决问题。</span><span class="sxs-lookup"><span data-stu-id="b7a36-131">Using Feedback Hub ensures that all necessary diagnostics information is included to help our engineers quickly debug and resolve the problem.</span></span>
 
 >[!NOTE]
-><span data-ttu-id="cbac2-132">请确保接受提示，询问你是否想要反馈中心访问文档文件夹 (在出现) 提示时选择 **"是"** 。</span><span class="sxs-lookup"><span data-stu-id="cbac2-132">Be sure to accept the prompt that asks whether you’d like Feedback Hub to access your Documents folder (select **Yes** when prompted).</span></span>
+><span data-ttu-id="b7a36-132">请确保接受提示，询问你是否想要反馈中心访问文档文件夹 (在出现) 提示时选择 **"是"** 。</span><span class="sxs-lookup"><span data-stu-id="b7a36-132">Be sure to accept the prompt that asks whether you’d like Feedback Hub to access your Documents folder (select **Yes** when prompted).</span></span>
 
-## <a name="prior-release-notes"></a><span data-ttu-id="cbac2-133">以前的发行说明</span><span class="sxs-lookup"><span data-stu-id="cbac2-133">Prior release notes</span></span>
+## <a name="prior-release-notes"></a><span data-ttu-id="b7a36-133">以前的发行说明</span><span class="sxs-lookup"><span data-stu-id="b7a36-133">Prior release notes</span></span>
 
-* [<span data-ttu-id="cbac2-134">发行说明-5 月2019</span><span class="sxs-lookup"><span data-stu-id="cbac2-134">Release notes - May 2019</span></span>](release-notes-may-2019.md)
-* [<span data-ttu-id="cbac2-135">发行说明 - 2018 年 10 月</span><span class="sxs-lookup"><span data-stu-id="cbac2-135">Release notes - October 2018</span></span>](release-notes-october-2018.md)
-* [<span data-ttu-id="cbac2-136">发行说明-2018 年4月</span><span class="sxs-lookup"><span data-stu-id="cbac2-136">Release notes - April 2018</span></span>](release-notes-april-2018.md)
-* [<span data-ttu-id="cbac2-137">发行说明 - 2017 年 10 月</span><span class="sxs-lookup"><span data-stu-id="cbac2-137">Release notes - October 2017</span></span>](release-notes-october-2017.md)
-* [<span data-ttu-id="cbac2-138">发行说明 - 2016 年 8 月</span><span class="sxs-lookup"><span data-stu-id="cbac2-138">Release notes - August 2016</span></span>](release-notes-august-2016.md)
-* [<span data-ttu-id="cbac2-139">发行说明 - 2016 年 5 月</span><span class="sxs-lookup"><span data-stu-id="cbac2-139">Release notes - May 2016</span></span>](release-notes-may-2016.md)
-* [<span data-ttu-id="cbac2-140">发行说明 - 2016 年 3 月</span><span class="sxs-lookup"><span data-stu-id="cbac2-140">Release notes - March 2016</span></span>](release-notes-march-2016.md)
+* [<span data-ttu-id="b7a36-134">发行说明-5 月2019</span><span class="sxs-lookup"><span data-stu-id="b7a36-134">Release notes - May 2019</span></span>](release-notes-may-2019.md)
+* [<span data-ttu-id="b7a36-135">发行说明 - 2018 年 10 月</span><span class="sxs-lookup"><span data-stu-id="b7a36-135">Release notes - October 2018</span></span>](release-notes-october-2018.md)
+* [<span data-ttu-id="b7a36-136">发行说明-2018 年4月</span><span class="sxs-lookup"><span data-stu-id="b7a36-136">Release notes - April 2018</span></span>](release-notes-april-2018.md)
+* [<span data-ttu-id="b7a36-137">发行说明 - 2017 年 10 月</span><span class="sxs-lookup"><span data-stu-id="b7a36-137">Release notes - October 2017</span></span>](release-notes-october-2017.md)
+* [<span data-ttu-id="b7a36-138">发行说明 - 2016 年 8 月</span><span class="sxs-lookup"><span data-stu-id="b7a36-138">Release notes - August 2016</span></span>](release-notes-august-2016.md)
+* [<span data-ttu-id="b7a36-139">发行说明 - 2016 年 5 月</span><span class="sxs-lookup"><span data-stu-id="b7a36-139">Release notes - May 2016</span></span>](release-notes-may-2016.md)
+* [<span data-ttu-id="b7a36-140">发行说明 - 2016 年 3 月</span><span class="sxs-lookup"><span data-stu-id="b7a36-140">Release notes - March 2016</span></span>](release-notes-march-2016.md)
 
-## <a name="see-also"></a><span data-ttu-id="cbac2-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cbac2-141">See also</span></span>
-* [<span data-ttu-id="cbac2-142">沉浸式耳机支持 (外部链接) </span><span class="sxs-lookup"><span data-stu-id="cbac2-142">Immersive headset support (external link)</span></span>](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
-* [<span data-ttu-id="cbac2-143">HoloLens 支持 (外部链接) </span><span class="sxs-lookup"><span data-stu-id="cbac2-143">HoloLens support (external link)</span></span>](https://support.microsoft.com/products/hololens)
-* [<span data-ttu-id="cbac2-144">安装工具</span><span class="sxs-lookup"><span data-stu-id="cbac2-144">Install the tools</span></span>](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools)
-* <span data-ttu-id="cbac2-145">[向我们提供反馈] (https://docs.microsoft.com/windows/mixed-reality/give-us-feedback</span><span class="sxs-lookup"><span data-stu-id="cbac2-145">[Give us feedback](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="b7a36-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b7a36-141">See also</span></span>
+* [<span data-ttu-id="b7a36-142">沉浸式耳机支持 (外部链接) </span><span class="sxs-lookup"><span data-stu-id="b7a36-142">Immersive headset support (external link)</span></span>](./troubleshooting-windows-mixed-reality.md)
+* [<span data-ttu-id="b7a36-143">HoloLens 支持 (外部链接) </span><span class="sxs-lookup"><span data-stu-id="b7a36-143">HoloLens support (external link)</span></span>](https://support.microsoft.com/products/hololens)
+* [<span data-ttu-id="b7a36-144">安装工具</span><span class="sxs-lookup"><span data-stu-id="b7a36-144">Install the tools</span></span>](/windows/mixed-reality/develop/install-the-tools)
+* <span data-ttu-id="b7a36-145">[向我们提供反馈] (https://docs.microsoft.com/windows/mixed-reality/give-us-feedback</span><span class="sxs-lookup"><span data-stu-id="b7a36-145">[Give us feedback](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback</span></span>
