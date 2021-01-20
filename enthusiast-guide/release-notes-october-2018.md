@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 10/02/2018
 ms.topic: article
 keywords: 发行说明、版本、windows 10、build、rs5、os
-ms.openlocfilehash: f7d95481d166f2c8795701c516946346101a21d0
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f62bc5b1e172958a6aebf366852cfd921f7817a3
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007107"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581481"
 ---
 # <a name="release-notes---october-2018"></a>发行说明 - 2018 年 10 月
 
@@ -33,7 +33,7 @@ Windows 10 2018 10 月版更新提供了许多对使用 Windows Mixed Reality �
     ![混合现实闪光灯](images/mr-flashlight.png)
 
 * **在混合现实主页中启动内容的新应用和方法**
-    * 如果将 [Windows Mixed Reality 用于 SteamVR](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)，则 SteamVR 标题现在会显示在 "开始" 菜单中，每个标题的应用启动器可放置在混合现实主页中。
+    * 如果将 [Windows Mixed Reality 用于 SteamVR](./using-steamvr-with-windows-mixed-reality.md)，则 SteamVR 标题现在会显示在 "开始" 菜单中，每个标题的应用启动器可放置在混合现实主页中。
     
         ![SteamVR 应用启动器](images/steamvr-launchers.png)
         
@@ -50,9 +50,9 @@ Windows 10 2018 10 月版更新提供了许多对使用 Windows Mixed Reality �
     
 ### <a name="for-developers"></a>面向开发人员
 
-* **[QR 代码跟踪](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking)** -启用混合现实应用中的 qr 代码跟踪，允许 Windows mixed reality 沉浸式 (VR) 耳机来扫描 QR 码，并将其报告回感兴趣的应用。
+* **[QR 代码跟踪](/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking)** -启用混合现实应用中的 qr 代码跟踪，允许 Windows mixed reality 沉浸式 (VR) 耳机来扫描 QR 码，并将其报告回感兴趣的应用。
 * **对沉浸式应用的硬件 DRM 支持** -即使显示硬件支持，开发人员现在可以请求受硬件保护的后台缓冲区纹理，这允许应用程序使用来自 PlayReady 等源的硬件保护内容。
-* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)**-开发人员可以使用内置的 Windows [相机捕获 ui](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
+* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)**-开发人员可以使用内置的 Windows [相机捕获 ui](/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
 
 ## <a name="new-features-for-hololens"></a>HoloLens 的新功能
 
@@ -72,7 +72,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 
 ### <a name="for-developers"></a>面向开发人员
 
-* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)**-开发人员可以使用内置的 Windows [相机捕获 ui](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
+* 将 **[混合现实捕获 Ui 集成到沉浸式应用中](/windows/mixed-reality/develop/platform-capabilities-and-apis/mixed-reality-capture-for-developers#integrating-mrc-functionality-from-within-your-app)**-开发人员可以使用内置的 Windows [相机捕获 ui](/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) ，只需几行代码即可将混合现实捕获集成到其应用中。
 
 ### <a name="for-commercial-customers"></a>面向商业客户
 
@@ -88,7 +88,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 
 ## <a name="known-issues"></a>已知问题
 
-我们一直在努力提供强大的 Windows Mixed Reality 体验，但我们仍在跟踪一些已知问题。 如果发现其他人，请 [向我们提供反馈](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback)。
+我们一直在努力提供强大的 Windows Mixed Reality 体验，但我们仍在跟踪一些已知问题。 如果发现其他人，请 [向我们提供反馈](/windows/mixed-reality/give-us-feedback)。
 
 ### <a name="hololens"></a>HoloLens
  
@@ -99,7 +99,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 
 ## <a name="provide-feedback-and-report-issues"></a>提供反馈和报告问题
 
-请使用 [你的 HoloLens 或 Windows 10 电脑上的反馈中心应用](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback) 提供反馈和报告问题。 使用反馈中心可确保包括所有必要的诊断信息，以帮助我们的工程师快速调试和解决问题。
+请使用 [你的 HoloLens 或 Windows 10 电脑上的反馈中心应用](/windows/mixed-reality/give-us-feedback) 提供反馈和报告问题。 使用反馈中心可确保包括所有必要的诊断信息，以帮助我们的工程师快速调试和解决问题。
 
 >[!NOTE]
 >请确保接受提示，询问你是否想要反馈中心访问文档文件夹 (在出现) 提示时选择 **"是"** 。
@@ -113,8 +113,7 @@ Windows 10 2018 10 月版更新可供所有 HoloLens 客户公开使用，并提
 * [发行说明 - 2016 年 3 月](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>另请参阅
-* [沉浸式耳机支持 (外部链接) ](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [沉浸式耳机支持 (外部链接) ](./troubleshooting-windows-mixed-reality.md)
 * [HoloLens 支持 (外部链接) ](https://support.microsoft.com/products/hololens)
-* [安装工具](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools)
-* [给我们提供反馈](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback)
-
+* [安装工具](/windows/mixed-reality/develop/install-the-tools)
+* [给我们提供反馈](/windows/mixed-reality/give-us-feedback)

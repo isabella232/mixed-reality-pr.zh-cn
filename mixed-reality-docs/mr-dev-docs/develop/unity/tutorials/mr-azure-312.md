@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，计算机视觉，hololens，沉浸，vr，microsoft bot framework v4，web 应用机器人，bot framework，microsoft bot，Windows 10，Visual Studio
-ms.openlocfilehash: 6c172bbede50062064a654543362afe38b46be63
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6b8b4624615a3c3f62800b396803572b0b67ad1a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679446"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582461"
 ---
 # <a name="mr-and-azure-312-bot-integration"></a>MR 和 Azure 312：机器人集成
 
@@ -36,7 +36,7 @@ ms.locfileid: "94679446"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 312：机器人集成</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -45,7 +45,7 @@ ms.locfileid: "94679446"
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -57,18 +57,18 @@ ms.locfileid: "94679446"
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - Azure 和 Azure 机器人检索的 Internet 访问。 有关详细信息， [请访问此链接](https://dev.botframework.com/)。
 
 ### <a name="before-you-start"></a>开始之前
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。 
+2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。 
 3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](../../../calibration.md#hololens-2)。
+有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](../../../sensor-tuning.md)。
+有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
 
 ## <a name="chapter-1--create-the-bot-application"></a>第1章–创建机器人应用程序
 
@@ -98,7 +98,7 @@ ms.locfileid: "94679446"
 
 7.  重复上述步骤，以创建名为 **ConversationContext** 的另一个类。 
 
-8.  在 **解决方案资源管理器** 中右键单击 **wwwroot** ，并单击 "**添加** **|** **新项**"。 选择 "  **HTML 页** " (您将在 Web) 部分下找到它。 将该文件命名 **default.html**。 单击 **添加**。
+8.  在 **解决方案资源管理器** 中右键单击 **wwwroot** ，并单击 "**添加** **|** **新项**"。 选择 "  **HTML 页** " (您将在 Web) 部分下找到它。 将该文件命名 **default.html**。 单击“添加”。
 
     ![创建机器人应用程序](images/AzureLabs-Lab312-06.png)
 
@@ -273,7 +273,7 @@ ms.locfileid: "94679446"
     2. 选择一个“订阅”  。
     3. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
 
-        > 若要了解有关 Azure 资源组的详细信息， [请访问此链接](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)
+        > 若要了解有关 Azure 资源组的详细信息， [请访问此链接](/azure/azure-resource-manager/resource-group-portal)
 
     4. 如果要创建新的资源组) ，请确定资源组 (的位置。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
     5. 选择适合你的 **定价层** ，如果这是第一次创建 *Web 应用机器人* 服务，则 (名为 F0) 的免费层，你应该可以使用它
@@ -437,7 +437,7 @@ ms.locfileid: "94679446"
 
 若要将 Newtonsoft.json 库导入项目，请使用本课程附带的 Unity 包。
 
-1.  使用 " *.unitypackage* **资产**  >  **导入包**  >  **自定义包**" 菜单选项将 unitypackage 添加到 Unity。
+1.  使用 "  **资产**  >  **导入包**  >  **自定义包**" 菜单选项将 unitypackage 添加到 Unity。
 
     ![导入 Newtonsoft.json 库](images/AzureLabs-Lab312-34.png)
 
@@ -1251,7 +1251,7 @@ ms.locfileid: "94679446"
 
 在 HoloLens 上部署：
 
-1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 具体方法为：
+1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 要执行此操作：
 
     1. 在戴上 HoloLens 的同时，请打开 **设置**。
     2. **Wi-Fi > 高级选项中转到网络 & Internet >**

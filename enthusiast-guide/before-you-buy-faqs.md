@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 在购买前，Windows Mixed Reality，混合现实，虚拟现实，VR，先生，预销售，调查，购买
 appliesto:
 - Windows 10
-ms.openlocfilehash: e9b9254166b3ac4c188531d3651407ecfd853460
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 1f7eaa59a18598d1df2ecef611a9ea7d58e6a36a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725508"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580296"
 ---
 # <a name="before-you-buy-frequently-asked-questions"></a>在购买常见问题之前
 
@@ -63,7 +63,7 @@ ms.locfileid: "97725508"
 
 * **外部跟踪** Oculus、Naopak 和其他在跟踪外使用。  通过外部跟踪，耳机由一个或多个外部设备跟踪。 照相机 () 内置于环境周围的外部设备，并用于根据环境确定头戴式耳机位置。
 
-了解有关 [内部跟踪的](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)详细信息。
+了解有关 [内部跟踪的](./tracking-system.md)详细信息。
 
 ### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>由于相机 FOV，移动控制器的跟踪是否会影响游戏播放
 

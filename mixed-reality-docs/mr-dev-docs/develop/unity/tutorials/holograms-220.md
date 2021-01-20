@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间音效，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 043443c0c197e3b606c4845966e0cf60102d0b85
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: da130a5a93ec261d2e767874faa31dbc50d51b12
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678366"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582762"
 ---
 # <a name="mr-spatial-220-spatial-sound"></a>MR 空间 220：空间音效
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../../../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
 
 [空间音效](../../../design/spatial-sound.md) breathes 影像，并使其在世界中存在。 全息影像同时包含光和声音，如果你发生丢失全息影像的情况，空间音效可以帮助你找到它们。 空间音效并不像您在广播上听到的典型声音，而是位于3D 空间中的声音。 利用空间音效，你可以制作出全息影像，就像你，甚至是你自己的背景上！ 在本课程中，你将：
 
@@ -30,13 +30,13 @@ ms.locfileid: "94678366"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 空间 220：空间音效</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -67,7 +67,7 @@ ms.locfileid: "94678366"
 * 更改 Unity 的声音配置，以使用 Microsoft 空间音质。
 * 将三维声音添加到 Unity 中的对象。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 启动 Unity。
 * 选择“打开”  。
@@ -134,7 +134,7 @@ ms.locfileid: "94678366"
 
 声音的适当位置将取决于全息图。 例如，如果全息影像是人，则声音源应位于嘴附近，而不是英尺附近。
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>说明
 
 以下说明将 spatialized 声音附加到全息图。
 
@@ -159,7 +159,7 @@ ms.locfileid: "94678366"
 
 了解预期的一个示例就是，鸟瞰一般都是人的水平。 如果用户听到了鸟瞰声，其初始反应就是查找。 如果在用户下放置鸟，会使其面向正确的声音方向，但无法根据需要查找的预期来找到全息影像。
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>说明
 
 以下说明允许 P0LY 隐藏在您后面，以便您可以使用声音查找全息图。
 
@@ -178,7 +178,7 @@ ms.locfileid: "94678366"
 * 不要严重影响用户的声音，
 * 微妙的声音效果最好-不要会掩盖体验
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>说明
 
 * 在 " **层次结构** " 面板中，展开 " **HologramCollection**"。
 * 展开 " **EnergyHub** "，然后选择 " **基本**"。
@@ -228,7 +228,7 @@ ms.locfileid: "94678366"
 
 例如，对表设置杯会使声音更安静，而不是在金属片上放置 boulder。
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>说明
 
 * 在 " **层次结构** " 面板中，展开 " **HologramCollection**"。
 * 展开 " **EnergyHub**"，选择 " **基本**"。
@@ -251,7 +251,7 @@ ms.locfileid: "94678366"
 
 典型的示例是音乐会厅。 当某个侦听器在大厅外且门闭合时，音乐听起来 muffled。 通常还会减少容量。 打开门后，就会听到真实音量的所有声音。 高频声音通常会超出低频率。
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>说明
 
 * 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY**"。
 * 在 **检查器** 面板中，单击 " **添加组件** " 并添加 **音频发射器**。
@@ -435,7 +435,7 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 * 将视图创建到隐藏世界中，这在视觉上非常引人注目。
 * 当全息图或用户处于隐藏世界附近时，通过添加音频效果来增强真实性。
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>说明
 
 * 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **Underworld**"。
 * 展开 " **Underworld** " 并选择 " **VoiceSource**"。

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，安装
 appliesto:
 - Windows 10
-ms.openlocfilehash: 56ead28a5809eadef1797507168b68cbaf79953e
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 056caca0b7e562007178929d4a59c2faeaece450
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726058"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581663"
 ---
 # <a name="installation-errors"></a>安装错误
 
@@ -31,7 +31,7 @@ Windows Mixed Reality 需要至少支持 WDDM 2.2 的图形卡驱动程序。 �
 
 ## <a name="before-we-can-set-up-windows-mixed-reality-your-administrator-will-need-to-enable-it-for-your-organization-learn-more"></a>"在可以设置 Windows Mixed Reality 之前，管理员将需要为你的组织启用它。 了解更多 "
 
-你可能使用的是企业托管网络，而你的组织正在使用 Windows Server Update Services (WSUS) 。 这些策略以及可能会阻止下载的其他策略。 请联系组织的 IT 部门或系统管理员，以 [启用 Windows Mixed Reality](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality#enable)。
+你可能使用的是企业托管网络，而你的组织正在使用 Windows Server Update Services (WSUS) 。 这些策略以及可能会阻止下载的其他策略。 请联系组织的 IT 部门或系统管理员，以 [启用 Windows Mixed Reality](/windows/application-management/manage-windows-mixed-reality#enable)。
 
 ## <a name="we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading"></a>"我们无法下载混合现实软件" 或 "在我们进行一些下载时挂起"
 

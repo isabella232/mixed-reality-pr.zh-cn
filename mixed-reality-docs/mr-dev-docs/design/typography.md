@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，样式，字体，版式，ui，ux，文本，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens
-ms.openlocfilehash: 38acc8c0d2c7dbd7bcb192f82bb1bb52838323ac
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 015273c84462e48e145af77421da4131bb650d9e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007647"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580276"
 ---
 # <a name="typography"></a>版式
 
@@ -37,15 +37,15 @@ ms.locfileid: "98007647"
 
 ### <a name="limit-your-fonts"></a>限制字体
 
-避免在一个上下文中使用两个以上的不同字体系列。 字体过多会破坏体验的协调和一致性，并使其难以使用信息。 在 HoloLens 中，由于信息是在物理环境上重叠的，因此使用太多字体样式会降低体验。 Segoe UI 是所有 Microsoft 数字设计的字体。 它在 Windows Mixed Reality shell 中一致地使用。 您可以从 [Windows 设计工具包页](https://docs.microsoft.com/windows/uwp/design-downloads/)下载 Segoe UI 的字体文件。
+避免在一个上下文中使用两个以上的不同字体系列。 字体过多会破坏体验的协调和一致性，并使其难以使用信息。 在 HoloLens 中，由于信息是在物理环境上重叠的，因此使用太多字体样式会降低体验。 Segoe UI 是所有 Microsoft 数字设计的字体。 它在 Windows Mixed Reality shell 中一致地使用。 您可以从 [Windows 设计工具包页](/windows/uwp/design-downloads/)下载 Segoe UI 的字体文件。
 
-[有关 Segoe UI 字样的详细信息](https://docs.microsoft.com/windows/uwp/design/style/typography)
+[有关 Segoe UI 字样的详细信息](/windows/uwp/design/style/typography)
 
 ### <a name="avoid-thin-font-weights"></a>避免精简字体粗细
 
 避免在42磅下为类型大小使用光源或 semilight 字体粗细，因为精简垂直笔划将振动并降低清晰度。 具有足够笔划粗细的新式字体很好地运行。 例如，使用常规或粗体时，Arial 和 Arial 可以在 HoloLens 中清晰地显示。
 
-### <a name="color"></a>Color
+### <a name="color"></a>颜色
 
 在 HoloLens 中，由于全息影像是使用加法光源系统构建的，因此白色文本非常清晰。 你可以在 "开始" 菜单和应用栏上找到白色文本的示例。 即使在不使用 HoloLens 的背面的情况下白色文本也能正常工作，复杂的物理背景也可能使类型难以阅读。 建议在黑色或彩色背面使用白色文本，以改善用户的注意力，并尽量减少物理背景中的干扰。
 
@@ -132,4 +132,4 @@ Segoe UI (Windows) 默认字体在大多数情况下都适用。 避免使用较
 ## <a name="see-also"></a>另请参阅
 
 * [Unity 中的文本](../develop/unity/text-in-unity.md)
-* [颜色、光线和材料](../color,-light-and-materials.md)
+* [颜色、光线和材料](./color-light-and-materials.md)

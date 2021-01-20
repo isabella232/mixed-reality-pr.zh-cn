@@ -6,12 +6,12 @@ ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
 keywords: HoloLens，Windows 设备门户，API，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 13845a5a5668ee8c86178196326425f46be9b321
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: cdbe9635fc51a0d19c978b72fdc8d5db6b8e8e01
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006647"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581250"
 ---
 # <a name="device-portal-api-reference"></a>设备门户 API 参考
 
@@ -698,4 +698,4 @@ HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作�
 
 ## <a name="see-also"></a>另请参阅
 * [使用 Windows 设备门户](using-the-windows-device-portal.md)
-* [ (UWP) 的设备门户核心 API 参考 ](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [ (UWP) 的设备门户核心 API 参考 ](/windows/uwp/debug-test-perf/device-portal-api-core)

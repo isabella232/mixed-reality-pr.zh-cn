@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: afb559937c2bde06d3c74c1c572aefec50502884
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 28ca1653019252c749fe5977a06bff4503800c10
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865432"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580180"
 ---
 # <a name="contributing-to-the-mixed-reality-enthusiast-guide"></a>对混合现实发烧指南进行贡献
 
@@ -22,9 +22,9 @@ ms.locfileid: "97865432"
 > [!IMPORTANT]
 > 发布到 docs.microsoft.com 的所有存储库均遵循 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。 有关详细信息，请参阅[行为准则常见问题](https://opensource.microsoft.com/codeofconduct/faq/)；若有任何问题或意见，请联系 [opencode@microsoft.com](mailto:opencode@microsoft.com)。<br>
 >
-> [docs.microsoft.com 使用条款](https://docs.microsoft.com/legal/termsofuse)适用于对公共存储库中文档和代码示例所做的小修订和澄清。 如果你不是 Microsoft 的员工，那么新更改或重大更改会在拉取请求中发送一条注释，要求提交一份在线供稿许可协议 (CLA)。 在我们接受提取请求之前，需要你填写这份在线表单。
+> [docs.microsoft.com 使用条款](/legal/termsofuse)适用于对公共存储库中文档和代码示例所做的小修订和澄清。 如果你不是 Microsoft 的员工，那么新更改或重大更改会在拉取请求中发送一条注释，要求提交一份在线供稿许可协议 (CLA)。 在我们接受提取请求之前，需要你填写这份在线表单。
 
-## <a name="before-you-start"></a>准备工作
+## <a name="before-you-start"></a>开始之前
 
 如果还没有，则需要 [创建一个 GitHub 帐户](https://github.com/join)。
 
@@ -53,7 +53,7 @@ ms.locfileid: "97865432"
 | 5. 单击 "预览更改" 验证格式设置是否符合预期。 | ![预览更改](images/edit-in-github.png)|
 | 6. 完成后，滚动到页面底部，然后单击 "建议文件更改"，会显示 "比较更改" 页，使您能够验证所做的更改。 然后单击 "创建拉取请求" 按钮提交所做的更改。 至此，已完成提交！ | ![建议更改](images/propose.jpg)|
 
- (通过拉取请求提交更改后) ，文档团队成员将对这些更改进行检查。 如果接受了你的请求，则会将更新发布到 [https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide) 。
+ (通过拉取请求提交更改后) ，文档团队成员将对这些更改进行检查。 如果接受了你的请求，则会将更新发布到 [https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide](/windows/mixed-reality/enthusiast-guide) 。
 
 * 仅限内部检查，你可以在中看到你所做的更改 [https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide](https://review.docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/?branch=master) 。
 
@@ -85,7 +85,7 @@ ms.locfileid: "97865432"
 
 - `source_path`是要删除的旧项目的相对存储库路径。 请确保路径以开头 `mixed-reality-docs/enthusiast-guide` ，并以结尾 `.md` 。
 - `redirect_url`是从旧文章到新文章的相对公共 URL。 请确保此 URL **不** 包含 `mixed-reality-docs/enthusiast-guide` 或 `.md` ，因为它引用的是公共 URL，而不是存储库路径。 允许使用链接到新项目中的部分 `#section` 。 如果需要，还可以在此处使用其他站点的绝对路径。
-- `redirect_document_id` 指示是否要保留以前文件中的文档 ID。 默认值为 `false`。 `true`如果要保留 `ms.documentid` 重定向的项目中的属性值，请使用。 如果保留文档 ID，数据（如页面视图和分级）将传输到目标文章。 如果重定向主要用于重命名，而不是指向仅涵盖一些相同内容的不同项目的指针，则执行此操作。
+- `redirect_document_id` 指示是否要保留以前文件中的文档 ID。 默认为 `false`。 `true`如果要保留 `ms.documentid` 重定向的项目中的属性值，请使用。 如果保留文档 ID，数据（如页面视图和分级）将传输到目标文章。 如果重定向主要用于重命名，而不是指向仅涵盖一些相同内容的不同项目的指针，则执行此操作。
 
 如果添加重定向，请确保同时删除旧文件。
 
@@ -128,7 +128,7 @@ ms.locfileid: "97865432"
 
 ## <a name="working-with-branches"></a>使用分支
 
-[混合现实发烧友 GitHub 存储库](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide)利用了两个主要的父分支： [Master](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/master)，可在[暂存站点](https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide)上查看此内容[，并在实时](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/live)[站点](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)上查看内容。
+[混合现实发烧友 GitHub 存储库](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide)利用了两个主要的父分支： [Master](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/master)，可在[暂存站点](https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide)上查看此内容[，并在实时](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/live)[站点](/windows/mixed-reality/enthusiast-guide)上查看内容。
 
 进行发布时，请将拉取请求提交 (PR) 到 **主** 分支。 此分支可以在暂存站点上查看，应该只包含即将实时发布的稿件。 你还可以使用自己的唯一分支名称创建并提交分支，此分支名称可在暂存站点中选择和查看。  (仅允许内容管理员使用 **实时** 分支。 ) 
 
@@ -138,13 +138,13 @@ ms.locfileid: "97865432"
 
 - [Markdown 基本信息](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 - [一览式参考海报 Markdown](images/MarkdownPoster.pdf)
-- [用于编写 docs.microsoft.com 的 Markdown 的其他资源](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [用于编写 docs.microsoft.com 的 Markdown 的其他资源](/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>添加表
 
 由于 docs.microsoft.com 样式表的方式，它们没有边框或自定义样式，即使您尝试使用内联 CSS 也是如此。 它看起来可以正常工作，但最终平台会去除表的样式。 因此请提前规划并使表保持简单。 [下面是使 Markdown 表变得简单的站点](https://www.tablesgenerator.com/markdown_tables)。
 
-如果你使用[Visual Studio Code (请参阅) 下面](#using-visual-studio-code)的 "Markdown" 文档中的 "[文档" Visual Studio Code 扩展](https://docs.microsoft.com/teamblog/docs-extension)，以编辑该文档。
+如果你使用[Visual Studio Code (请参阅) 下面](#using-visual-studio-code)的 "Markdown" 文档中的 "[文档" Visual Studio Code 扩展](/teamblog/docs-extension)，以编辑该文档。
 
 ### <a name="adding-images"></a>添加图像
 

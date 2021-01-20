@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，颜色，浅色，材料，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 5d99941f068e808ba14d97084ef840a66aded2a9
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: bf64413793aa40d158fde9f9a416d9a9b66af236
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848065"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580063"
 ---
 # <a name="color-light-and-materials"></a>颜色、光线和材料
 
@@ -105,4 +105,4 @@ ms.locfileid: "97848065"
 * [颜色分离](../develop/platform-capabilities-and-apis/hologram-stability.md#color-separation)
 * [全息影像](../discover/hologram.md)
 * [Microsoft 设计语言-颜色](https://www.microsoft.com/design/color)
-* [通用 Windows 平台-颜色](https://docs.microsoft.com/windows/uwp/style/color)
+* [通用 Windows 平台-颜色](/windows/uwp/style/color)

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 5f2e02c85b443497f539d1bfcbf165214e3ac3c1
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 960b26d16e9edd387eb94c469d45b0c669fadc10
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007797"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580539"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Windows Mixed Reality 中的运动控制器
 
@@ -94,7 +94,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 |  要执行此操作  |  运动控制器  | 游戏板 | 鼠标 + 键盘 |
 | --- | --- | --- | --- |
 | 过去 | 向前按操纵杆，然后将控制器指向你要转到的位置。 释放操纵杆。 | 向前按左操纵杆，然后查看要转到的位置。 释放操纵杆。 | 选择并按住鼠标右键，然后将鼠标指向要移到的位置。 释放该按钮。 |
-| 选择 | 指向控制器，然后拉取触发器或使用触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
+| Select | 指向控制器，然后拉取触发器或使用触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
 | 打开“开始”菜单 | 按 **Windows** 按钮。 | 按 **Xbox** 按钮。 | 按 **Windows 徽标键**。 |
 | 离开沉浸式应用 | 按 **Windows** 按钮。 然后，在 "快速操作" 菜单中选择 " **混合现实主页** "。 | 按 **Xbox** 按钮。 然后选择 "快速操作" 菜单上的 " **混合现实主页** " 按钮。 | 按下 "Windows 徽标键"。 然后在显示的 "快速操作" 菜单上选择 " **混合现实" 主页** 按钮。 |
 | 旋转 | 向左或向右移动操纵杆。 | 向左或向右移动右摇杆。 | 不可用。 |
@@ -151,8 +151,8 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 
 ## <a name="see-also"></a>另请参阅
 
-- [Unity 中的 HP 控制器](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
-- [Unreal 中的 HP 控制器](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+- [Unity 中的 HP 控制器](/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+- [Unreal 中的 HP 控制器](/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
 - [询问社区](https://answers.microsoft.com)
 - [联系我们以获取支持](https://support.microsoft.com/contactus/)
 - [疑难解答](troubleshooting-windows-mixed-reality.md)

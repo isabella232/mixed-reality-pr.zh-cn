@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: df199b6a3215158e15fb1252dd75c58aea5bc2ab
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7302e6c8d5de866b652ec4741fbef128eca616e0
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010037"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580818"
 ---
 # <a name="the-making-of-kippys-escape"></a>Kippy 的转义
 
@@ -22,7 +22,7 @@ ms.locfileid: "98010037"
 > [!IMPORTANT]
 > 如果要从 GitHub 存储库构建 Kippy 的转义，请确保使用的是 **Unreal Engine 4.25 或更高版本** 。
 
-Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（适用于 Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)）生成的开源[HoloLens 2](https://docs.microsoft.com/hololens/hololens2-hardware)示例应用。 在此文章中，我们将指导你完成从第一个原则和视觉设计到实现和优化体验的过程。 在 [Unreal 开发概述](unreal-development-overview.md)中，可以找到有关通过 MRTK UX 工具开发混合现实应用程序的详细信息。
+Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（适用于 Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)）生成的开源[HoloLens 2](/hololens/hololens2-hardware)示例应用。 在此文章中，我们将指导你完成从第一个原则和视觉设计到实现和优化体验的过程。 在 [Unreal 开发概述](unreal-development-overview.md)中，可以找到有关通过 MRTK UX 工具开发混合现实应用程序的详细信息。
 
 ## <a name="first-principles"></a>首要原则 
 
@@ -115,4 +115,4 @@ Kippy 的转义很大程度上依赖于混合现实 UX 工具组件，以使游�
 </tr>
 </table>
 
-特别感谢我们在 [Framestore](https://www.framestore.com/) 中的朋友，帮助我们将 Kippy 带入生活。 从字符开发到资产设计，再到游戏编程，对此项目的协作是 pivotal 的。  
+特别感谢我们在 [Framestore](https://www.framestore.com/) 中的朋友，帮助我们将 Kippy 带入生活。 从字符开发到资产设计，再到游戏编程，对此项目的协作是 pivotal 的。

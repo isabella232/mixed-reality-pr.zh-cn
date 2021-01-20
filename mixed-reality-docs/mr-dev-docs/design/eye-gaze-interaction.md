@@ -6,18 +6,18 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: 目视跟踪，混合现实，输入，眼睛，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，交互
-ms.openlocfilehash: b5091b92fd048f72184212401d54ad0b7353875c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: db3cb774d72de13c2f1e51d446969ee7a4cdf2b7
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008577"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582384"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>HoloLens 2 上基于目视的目视交互
 
 ![MRTK 中的眼睛跟踪演示](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [HoloLens 2](eye-tracking.md) " 页面上，我们提到了对每个用户进行 [校准](https://docs.microsoft.com/hololens/hololens-calibration)的需求，提供了一些开发人员指南和突出跟踪的突出显示用例。 目视输入仍是一种新类型的用户输入，有很多东西需要学习。 
+HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [HoloLens 2](eye-tracking.md) " 页面上，我们提到了对每个用户进行 [校准](/hololens/hololens-calibration)的需求，提供了一些开发人员指南和突出跟踪的突出显示用例。 目视输入仍是一种新类型的用户输入，有很多东西需要学习。 
 
 尽管眼睛输入仅在板块的用户界面 (在您启动 HoloLens 2) 时看到的用户界面，但多个应用程序（例如 ["Hololens"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2)）的情况下显示了很好的示例，其中展示了目视输入如何添加到您的全息体验的神奇之处。
 在此页上，我们将讨论集成眼睛输入以与全息版应用程序进行交互的设计注意事项。
@@ -35,7 +35,7 @@ HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [H
 </colgroup>
 <tr>
      <td><strong>功能</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>

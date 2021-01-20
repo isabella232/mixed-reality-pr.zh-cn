@@ -3,12 +3,12 @@ title: 语音和音频常见问题解答
 description: 语音和音频 Windows Mixed Reality 故障排除，超出了标准使用者支持文档的范围。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，音频问题，语音问题
-ms.openlocfilehash: d685190248dd17792f941cf53e3a57499cd3e662
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: fff5d661dbe61d4c9364c83e3bd0c6ddb8ab5cc6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725888"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581416"
 ---
 # <a name="speech-and-audio-faqs"></a>语音和音频常见问题解答
 
@@ -35,7 +35,7 @@ ms.locfileid: "97725888"
 
 * 某些应用程序（如通过 SteamVR 启动的应用程序）可能会在音频设备随着你开始或停止混合现实门户而发生变化时丢失音频或挂起。 若要更正此错误，请重新打开混合现实门户并重新启动应用。
 * 如果另一台多媒体 USB 设备 (如 web cam) 与 Windows Mixed Reality 耳机共享同一内部或外部 USB 集线器，则耳机音频插孔或耳机可能偶尔会有蜂鸣音或根本没有音频。 将耳机插入使用不同集线器的 USB 端口，或断开连接/禁用其他 USB 多媒体设备。
-* 如果你注意到连接的耳机上噪音太大，则 PC 的 USB 集线器可能无法为 Windows Mixed Reality 耳机提供足够的电源。 如果出现这种情况，请提交 [反馈中心](https://docs.microsoft.com/hololens/hololens-feedback) 错误，然后重试：
+* 如果你注意到连接的耳机上噪音太大，则 PC 的 USB 集线器可能无法为 Windows Mixed Reality 耳机提供足够的电源。 如果出现这种情况，请提交 [反馈中心](/hololens/hololens-feedback) 错误，然后重试：
     * 删除扩展电缆
     * 使用专用的外部电源 USB 3.0 集线器
     * 计算机上的其他 USB 端口

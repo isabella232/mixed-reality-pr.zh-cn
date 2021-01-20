@@ -6,18 +6,18 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 发行说明、版本、windows 10、build、rs3、os
-ms.openlocfilehash: 83c16a40388960547cfcf7444e1ae630c2f5b7f2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: e3be8edab2aedd18013622c671283b71f95f98d8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009487"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581442"
 ---
 # <a name="release-notes---october-2017"></a>发行说明 - 2017 年 10 月
 
-欢迎使用 Windows Mixed Reality！ **[Windows 10 秋季创意者更新](https://blogs.windows.com/windowsexperience/2017/10/17/whats-new-windows-10-fall-creators-update/)** 版本引入了对新的 [Windows Mixed Reality 沉浸式耳机](https://docs.microsoft.com/windows/mixed-reality/discover/immersive-headset-hardware-details)和 [运动控制器](https://docs.microsoft.com/windows/mixed-reality/design/motion-controllers)的支持。 你现在可以在连接到 [支持 Windows Mixed Reality 的 PC](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)时，探索新世界、玩 VR 游戏和体验沉浸式娱乐活动。
+欢迎使用 Windows Mixed Reality！ **[Windows 10 秋季创意者更新](https://blogs.windows.com/windowsexperience/2017/10/17/whats-new-windows-10-fall-creators-update/)** 版本引入了对新的 [Windows Mixed Reality 沉浸式耳机](/windows/mixed-reality/discover/immersive-headset-hardware-details)和 [运动控制器](/windows/mixed-reality/design/motion-controllers)的支持。 你现在可以在连接到 [支持 Windows Mixed Reality 的 PC](./windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)时，探索新世界、玩 VR 游戏和体验沉浸式娱乐活动。
 
-Windows Mixed Reality 耳机和运动控制器版本是大量团队工作的结果，也是 [Windows Mixed Reality 平台](https://docs.microsoft.com/windows/mixed-reality/discover/mixed-reality)（包括 [Microsoft HoloLens](https://docs.microsoft.com/windows/mixed-reality/hololens-hardware-details)）的主要进步。 虽然 HoloLens 未收到包含 Windows 10 秋季创意者更新的更新，但在 HoloLens 上的工作尚未停止。 我们将提供很多知识和见解，适用于整个 Windows Mixed Reality 的最新工作。 事实上，Windows Mixed Reality 沉浸式耳机和运动控制器也是为 HoloLens 开发的一个很好的入门点，因为相同的 Api、工具和概念同样适用于这两种情况。
+Windows Mixed Reality 耳机和运动控制器版本是大量团队工作的结果，也是 [Windows Mixed Reality 平台](/windows/mixed-reality/discover/mixed-reality)（包括 [Microsoft HoloLens](/windows/mixed-reality/hololens-hardware-details)）的主要进步。 虽然 HoloLens 未收到包含 Windows 10 秋季创意者更新的更新，但在 HoloLens 上的工作尚未停止。 我们将提供很多知识和见解，适用于整个 Windows Mixed Reality 的最新工作。 事实上，Windows Mixed Reality 沉浸式耳机和运动控制器也是为 HoloLens 开发的一个很好的入门点，因为相同的 Api、工具和概念同样适用于这两种情况。
 
 若要更新到每个设备的最新版本，请打开 " **设置** " 应用，中转到 " **更新" & 安全**"，然后选择" **检查更新** "按钮。 在 Windows 10 电脑上，还可以使用 [windows media 创建工具](https://www.microsoft.com/software-download/windows10)手动安装 Windows 10 秋季创建者更新。
 
@@ -30,16 +30,16 @@ Windows Mixed Reality 耳机和运动控制器版本是大量团队工作的结�
 
 Windows 10 秋季创意者更新官方介绍了对 Windows Mixed Reality 耳机和运动控制器的支持，并使 Windows 10 成为了世界上第一个空间操作系统。 以下是一些亮点：
 * **[各种耳机](https://blogs.windows.com/windowsexperience/2017/10/03/how-to-pre-order-your-windows-mixed-reality-headset/)** -Windows Mixed Reality 使合作伙伴能够提供不同的耳机类型，起价为 $399 美元，并与运动控制器捆绑在一起。
-* **[运动控制器](https://docs.microsoft.com/windows/mixed-reality/design/motion-controllers)** -Windows Mixed Reality 运动控制器通过蓝牙与电脑进行无线配对，并具有六个自由度跟踪、大量输入方法和 IMUs。
-* **[简单的设置和可移植性](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/recommended-adapters-for-windows-mixed-reality-capable-pcs)** -设置并开始在10分钟内开始。 沉浸式耳机使用内自由跟踪来跟踪移动和运动控制器，其中包含六度。 不需要任何外部照相机或 lighthouse 标记！
-* **[支持更广泛的 pc](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)** -Windows Mixed Reality 允许比以往更多的用户体验桌面版，并支持从 $499 美元开始的选择集成图形卡和电脑。
-* **[Windows Mixed Reality 主页](https://docs.microsoft.com/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home)** -世界上第一个空间操作系统为多任务与2d 应用程序的多任务、启动 VR 游戏和应用程序以及放置装饰性全息影像提供熟悉的家庭环境。
+* **[运动控制器](/windows/mixed-reality/design/motion-controllers)** -Windows Mixed Reality 运动控制器通过蓝牙与电脑进行无线配对，并具有六个自由度跟踪、大量输入方法和 IMUs。
+* **[简单的设置和可移植性](./recommended-adapters-for-windows-mixed-reality-capable-pcs.md)** -设置并开始在10分钟内开始。 沉浸式耳机使用内自由跟踪来跟踪移动和运动控制器，其中包含六度。 不需要任何外部照相机或 lighthouse 标记！
+* **[支持更广泛的 pc](./windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)** -Windows Mixed Reality 允许比以往更多的用户体验桌面版，并支持从 $499 美元开始的选择集成图形卡和电脑。
+* **[Windows Mixed Reality 主页](/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home)** -世界上第一个空间操作系统为多任务与2d 应用程序的多任务、启动 VR 游戏和应用程序以及放置装饰性全息影像提供熟悉的家庭环境。
 * **[Microsoft Store 中的 Microsoft Store 精彩的 vr 游戏和应用](https://www.microsoft.com/store/collections/MR-All-ImmersiveContent/)** 程序（如 Hulu vr 和360视频等沉浸式娱乐）到长篇故事游戏（如 SUPERHOT
-* **[SteamVR 早期访问](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)** -Windows 10 秋季创意者更新支持使用 Windows mixed reality 耳机和控制器播放 SteamVR 标题，从而使 Windows mixed reality 用户可以使用最大的 VR 标题目录。
+* **[SteamVR 早期访问](./using-steamvr-with-windows-mixed-reality.md)** -Windows 10 秋季创意者更新支持使用 Windows mixed reality 耳机和控制器播放 SteamVR 标题，从而使 Windows mixed reality 用户可以使用最大的 VR 标题目录。
 
 ## <a name="known-issues"></a>已知问题
 
-我们一直在努力提供强大的 Windows Mixed Reality 体验，但我们仍在跟踪一些已知问题。 如果发现其他人，请 [向我们提供反馈](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback)。
+我们一直在努力提供强大的 Windows Mixed Reality 体验，但我们仍在跟踪一些已知问题。 如果发现其他人，请 [向我们提供反馈](/windows/mixed-reality/give-us-feedback)。
 
 ### <a name="desktop-app-in-the-windows-mixed-reality-home"></a>Windows Mixed Reality 主页中的桌面应用
 * 截图工具不适用于桌面应用。
@@ -95,7 +95,7 @@ Windows 10 秋季创意者更新官方介绍了对 Windows Mixed Reality 耳机�
 * [发行说明 - 2016 年 3 月](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>另请参阅
-* [沉浸式耳机支持 (外部链接) ](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
-* [HoloLens 已知问题](https://docs.microsoft.com/windows/mixed-reality/hololens-known-issues)
-* [安装工具](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools)
-* [给我们提供反馈](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback)
+* [沉浸式耳机支持 (外部链接) ](./troubleshooting-windows-mixed-reality.md)
+* [HoloLens 已知问题](/windows/mixed-reality/hololens-known-issues)
+* [安装工具](/windows/mixed-reality/develop/install-the-tools)
+* [给我们提供反馈](/windows/mixed-reality/give-us-feedback)

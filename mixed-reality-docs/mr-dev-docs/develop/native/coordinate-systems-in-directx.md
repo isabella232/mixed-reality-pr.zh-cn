@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 混合现实，空间定位器，空间参考框架，空间坐标系统，空间贴图，示例代码，图像稳定，空间锚，空间锚定存储，跟踪丢失，演练，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 055eff0bb04228cb0a19b9ea208bfc9c00ce2dbe
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7cf463e4c3bb9b2fe06c834376eb46e3ee20c1ee
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006857"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581073"
 ---
 # <a name="coordinate-systems-in-directx"></a>DirectX 中的坐标系统
 
@@ -27,27 +27,27 @@ ms.locfileid: "98006857"
 
 ## <a name="spatial-coordinate-systems-in-windows"></a>Windows 中的空间坐标系统
 
-用于 Windows 中的实际坐标系统原因的核心类型是 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>。 此类型的实例表示任意坐标系统，该方法提供了一种方法，用于获取可用于在两个坐标系之间进行转换的方法，而不了解每个坐标系统的详细信息。
+用于 Windows 中的实际坐标系统原因的核心类型是 <a href="/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>。 此类型的实例表示任意坐标系统，该方法提供了一种方法，用于获取可用于在两个坐标系之间进行转换的方法，而不了解每个坐标系统的详细信息。
 
 返回空间信息的方法将接受 SpatialCoordinateSystem 参数，以使你能够确定最适合要返回的坐标的坐标系统。 空间信息表示为用户的环境中的点、光或卷，这些坐标的单位将始终以米为单位。
 
 SpatialCoordinateSystem 与其他坐标系统（包括表示设备位置的系统）具有动态关系。 在任何时候，设备都可以定位某些坐标系统而不是其他坐标系。 对于大多数坐标系统，您的应用程序必须准备好处理无法找到的时间段。
 
 您的应用程序不应直接创建 SpatialCoordinateSystems，而应通过感知 Api 来使用。 感知 Api 中有三个主要的坐标系统源，其中每个源都映射到 " [坐标系统](../../design/coordinate-systems.md) " 页上所述的概念：
-* 若要获取固定的引用框架，请创建一个 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstationaryframeofreference" target="_blank">SpatialStationaryFrameOfReference</a> 或从当前的 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference" target="_blank">SpatialStageFrameOfReference</a>获取一个引用框架。
-* 若要获取空间定位点，请创建一个 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a>。
-* 若要获取附加的引用框架，请创建一个 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocatorattachedframeofreference" target="_blank">SpatialLocatorAttachedFrameOfReference</a>。
+* 若要获取固定的引用框架，请创建一个 <a href="/uwp/api/windows.perception.spatial.spatialstationaryframeofreference" target="_blank">SpatialStationaryFrameOfReference</a> 或从当前的 <a href="/uwp/api/windows.perception.spatial.spatialstageframeofreference" target="_blank">SpatialStageFrameOfReference</a>获取一个引用框架。
+* 若要获取空间定位点，请创建一个 <a href="/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a>。
+* 若要获取附加的引用框架，请创建一个 <a href="/uwp/api/windows.perception.spatial.spatiallocatorattachedframeofreference" target="_blank">SpatialLocatorAttachedFrameOfReference</a>。
 
 这些对象返回的所有坐标系统都是右手的，其中 + y 向上，+ x 向右，+ z 向后。 您可以通过在正 x 方向上向左或向右箭头，然后将它们运行为 y 方向，来记住哪个 z 轴的方向。 你的拇指指向的方向（无论指向你还是相反方向）就是正 z 轴为坐标系统所指的方向。 下面的图例显示了这两个坐标系统。
 
 ![左手和右手坐标系统](images/left-hand-right-hand.gif)<br>
 *左手和右手坐标系统*
 
-使用 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> 类创建一个附加或固定的引用框架，使其基于 HoloLens 位置在 SpatialCoordinateSystem 中启动。 转到下一节，了解有关此过程的详细信息。
+使用 <a href="/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> 类创建一个附加或固定的引用框架，使其基于 HoloLens 位置在 SpatialCoordinateSystem 中启动。 转到下一节，了解有关此过程的详细信息。
 
 ## <a name="place-holograms-in-the-world-using-a-spatial-stage"></a>使用空间暂存在世界中放置全息影像
 
-不透明的 Windows Mixed Reality 沉浸式耳机的坐标系统使用静态 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference：： Current</a> 属性进行访问。 此 API 提供：
+不透明的 Windows Mixed Reality 沉浸式耳机的坐标系统使用静态 <a href="/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference：： Current</a> 属性进行访问。 此 API 提供：
 
 * 坐标系统
 * 有关播放机是已安装还是移动设备的信息
@@ -289,9 +289,9 @@ std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<f
 
 ## <a name="place-holograms-in-the-world-using-a-stationary-frame-of-reference"></a>使用固定的参考框架在世界中放置全息影像
 
-[SpatialStationaryFrameOfReference](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialstationaryframeofreference.aspx)类表示一个引用框架，该框架在用户四处移动时相对于用户的环境[保持静止](../../design/coordinate-systems.md#stationary-frame-of-reference)。 这一帧参考用于使坐标在设备附近保持稳定。 SpatialStationaryFrameOfReference 的一项关键用途是在渲染全息影像时充当渲染引擎内的基础世界坐标系统。
+[SpatialStationaryFrameOfReference](/uwp/api/Windows.Perception.Spatial.SpatialStationaryFrameOfReference)类表示一个引用框架，该框架在用户四处移动时相对于用户的环境[保持静止](../../design/coordinate-systems.md#stationary-frame-of-reference)。 这一帧参考用于使坐标在设备附近保持稳定。 SpatialStationaryFrameOfReference 的一项关键用途是在渲染全息影像时充当渲染引擎内的基础世界坐标系统。
 
-若要获取 SpatialStationaryFrameOfReference，请使用 [SpatialLocator](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatiallocator.aspx) 类并调用 [CreateStationaryFrameOfReferenceAtCurrentLocation](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatiallocator.createstationaryframeofreferenceatcurrentlocation.aspx)。
+若要获取 SpatialStationaryFrameOfReference，请使用 [SpatialLocator](/uwp/api/Windows.Perception.Spatial.SpatialLocator) 类并调用 [CreateStationaryFrameOfReferenceAtCurrentLocation](/uwp/api/Windows.Perception.Spatial.SpatialLocator)。
 
 从 Windows 全息应用模板代码：
 
@@ -314,21 +314,21 @@ std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<f
 
 调整锚点的调整效果将随着锚点增加的距离而放大。 应避免相对于该定位点的源中超过3米的定位点呈现内容。
 
-[坐标系](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.coordinatesystem.aspx)属性获取一个坐标系统，该系统允许你相对于定位点放置内容，并在设备调整定位点的确切位置时应用缓动。
+[坐标系](/uwp/api/Windows.Perception.Spatial.SpatialAnchor)属性获取一个坐标系统，该系统允许你相对于定位点放置内容，并在设备调整定位点的确切位置时应用缓动。
 
-使用 [RawCoordinateSystem](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.rawcoordinatesystem.aspx) 属性和相应的 [RawCoordinateSystemAdjusted](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.rawcoordinatesystemadjusted.aspx) 事件自行管理这些调整。
+使用 [RawCoordinateSystem](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) 属性和相应的 [RawCoordinateSystemAdjusted](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) 事件自行管理这些调整。
 
 ### <a name="persist-and-share-spatial-anchors"></a>保留并共享空间锚
 
-你可以使用 [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx) 类在本地保留 SpatialAnchor，然后在同一 HoloLens 设备上的未来应用会话中恢复它。
+你可以使用 [SpatialAnchorStore](/uwp/api/Windows.Perception.Spatial.SpatialAnchorStore) 类在本地保留 SpatialAnchor，然后在同一 HoloLens 设备上的未来应用会话中恢复它。
 
-通过使用 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a>，你可以从本地 SpatialAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上找到它。  通过在多个设备之间共享公用空间定位点，每个用户都可以在同一物理位置实时查看相对于该锚点呈现的内容。 
+通过使用 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a>，你可以从本地 SpatialAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上找到它。  通过在多个设备之间共享公用空间定位点，每个用户都可以在同一物理位置实时查看相对于该锚点呈现的内容。 
 
-你还可以将 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。  通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
+你还可以将 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。  通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
 
-若要开始在 HoloLens 应用中构建共享体验，请尝试5分钟的 <a href="https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">Azure 空间锚快速入门</a>。
+若要开始在 HoloLens 应用中构建共享体验，请尝试5分钟的 <a href="/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">Azure 空间锚快速入门</a>。
 
-启动并运行 Azure 空间锚点后，可以 <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-cpp-winrt" target="_blank">在 HoloLens 上创建和查找锚</a>。  演练也适用于 <a href="https://docs.microsoft.com/azure/spatial-anchors/create-locate-anchors-overview" target="_blank">Android 和 iOS</a> ，使你能够在所有设备上共享相同的定位标记。
+启动并运行 Azure 空间锚点后，可以 <a href="/azure/spatial-anchors/concepts/create-locate-anchors-cpp-winrt" target="_blank">在 HoloLens 上创建和查找锚</a>。  演练也适用于 <a href="/azure/spatial-anchors/create-locate-anchors-overview" target="_blank">Android 和 iOS</a> ，使你能够在所有设备上共享相同的定位标记。
 
 ### <a name="create-spatialanchors-for-holographic-content"></a>为全息内容创建 SpatialAnchors
 
@@ -382,7 +382,7 @@ std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<f
 * 从系统的 SpatialAnchorStore 加载定位点，这与本地内存中集合保持分离。
 * 当应用选择执行此操作时，将本地内存中集合的定位点保存到 SpatialAnchorStore。
 
-下面介绍了如何将 [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) 对象保存在 [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx)中。
+下面介绍了如何将 [SpatialAnchor](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) 对象保存在 [SpatialAnchorStore](/uwp/api/Windows.Perception.Spatial.SpatialAnchorStore)中。
 
 类启动时，会异步请求 SpatialAnchorStore。 这涉及到 API 加载锚定存储时的系统 i/o，此 API 是异步的，因此 i/o 是非阻塞的。
 
@@ -539,7 +539,7 @@ std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<f
 
 ### <a name="clear-the-anchor-store-when-needed"></a>如果需要，请清除锚定存储
 
-有时，您需要清除应用状态并写入新数据。 下面是如何通过 [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx)执行此操作的方法。
+有时，您需要清除应用状态并写入新数据。 下面是如何通过 [SpatialAnchorStore](/uwp/api/Windows.Perception.Spatial.SpatialAnchorStore)执行此操作的方法。
 
 使用我们的帮助器类，几乎不需要包装 Clear 函数。 我们选择在示例实现中执行此操作，因为我们的帮助器类被赋予了拥有 SpatialAnchorStore 实例的责任。
 
@@ -561,7 +561,7 @@ std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<f
 
 ### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>示例：将定位坐标系与固定引用帧坐标系统相关联
 
-假设你有一个定位点，并且想要将定位点坐标系统中的某些内容关联到其他内容所使用的 SpatialStationaryReferenceFrame。 您可以使用 [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) 从定位点的坐标系统获取转换为固定参考帧的转换：
+假设你有一个定位点，并且想要将定位点坐标系统中的某些内容关联到其他内容所使用的 SpatialStationaryReferenceFrame。 您可以使用 [TryGetTransformTo](/uwp/api/Windows.Perception.Spatial.SpatialCoordinateSystem) 从定位点的坐标系统获取转换为固定参考帧的转换：
 
 ```
    // In this code snippet, someAnchor is a SpatialAnchor^ that has been initialized and is valid in the current environment.
@@ -807,7 +807,7 @@ Windows 全息应用程序模板附带了一个已为你创建的 LocatabilityCh
 ## <a name="see-also"></a>另请参阅
 * [坐标系统](../../design/coordinate-systems.md)
 * [空间定位点](../../design/spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
 * [DirectX 中的头部和眼部凝视](gaze-in-directx.md)
 * [DirectX 中的手和运动控制器](hands-and-motion-controllers-in-directx.md)
 * [DirectX 中的空间映射](spatial-mapping-in-directx.md)

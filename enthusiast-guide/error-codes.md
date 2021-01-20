@@ -8,19 +8,19 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，错误代码
 appliesto:
 - Windows 10
-ms.openlocfilehash: 87649a6ba8d014c11c773741e18188b2764e7971
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 65cb5a6819714095f1a254a7e56c6a3ccde2a88d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725418"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580519"
 ---
 # <a name="error-codes"></a>错误代码
 
 | **版本1809的 Windows 10 错误代码和版本1709的错误代码 & 1803 (下)**  | **错误消息和故障排除建议**                    |
 |-------------------------------------------------------------|--------------------------------------------------------------------|
-|   1-4 <br/><br/> 2197815297-4  | **检查耳机显示电缆，确保其已正确插入。** <br/><br/><ol start="1"><li>拔出并 replug 耳机式 USB 并显示电缆。</li><li>检查 **设备管理器 > 监视器** ，查看是否存在 "混合现实耳机" 的监视器。</li><li>检查图形驱动程序在图形卡制造商的网站上是否是最新的。</li><li>如果使用适配器连接耳机，请确保它 [支持 Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/recommended-adapters-for-windows-mixed-reality-capable-pcs)。</li><li>如果图形卡同时具有 DisplayPort 和 HDMI 端口，请使用图形卡上的 DisplayPort 端口，并使用受支持的混合现实 DisplayPort 到 HDMI 适配器。</li><li>在电脑上尝试使用其他 USB 3.0 端口。</li></ol> |
-|   1-5 <br/><br/> 2197815297-5  | **检查显示电缆：耳机显示无法正确初始化。尝试重启电脑并重新连接耳机。**<br/><br/>Windows 看到了你的耳机监视器，但 Windows Mixed Reality 与混合现实耳机显示通信时遇到问题。 解决方法：<br/><ol start="1"><li>检查图形驱动程序在图形卡制造商的网站上是否是最新的。</li><li>如果使用适配器连接耳机，请确保它 [支持 Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/recommended-adapters-for-windows-mixed-reality-capable-pcs)。</li><li>如果图形卡同时具有 DisplayPort 和 HDMI 端口，请使用图形卡上的 DisplayPort 端口，并使用受支持的混合现实 DisplayPort 到 HDMI 适配器。</li><li>尝试重启电脑。</li></ol> |
+|   1-4 <br/><br/> 2197815297-4  | **检查耳机显示电缆，确保其已正确插入。** <br/><br/><ol start="1"><li>拔出并 replug 耳机式 USB 并显示电缆。</li><li>检查 **设备管理器 > 监视器** ，查看是否存在 "混合现实耳机" 的监视器。</li><li>检查图形驱动程序在图形卡制造商的网站上是否是最新的。</li><li>如果使用适配器连接耳机，请确保它 [支持 Windows Mixed Reality](./recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。</li><li>如果图形卡同时具有 DisplayPort 和 HDMI 端口，请使用图形卡上的 DisplayPort 端口，并使用受支持的混合现实 DisplayPort 到 HDMI 适配器。</li><li>在电脑上尝试使用其他 USB 3.0 端口。</li></ol> |
+|   1-5 <br/><br/> 2197815297-5  | **检查显示电缆：耳机显示无法正确初始化。尝试重启电脑并重新连接耳机。**<br/><br/>Windows 看到了你的耳机监视器，但 Windows Mixed Reality 与混合现实耳机显示通信时遇到问题。 解决方法：<br/><ol start="1"><li>检查图形驱动程序在图形卡制造商的网站上是否是最新的。</li><li>如果使用适配器连接耳机，请确保它 [支持 Windows Mixed Reality](./recommended-adapters-for-windows-mixed-reality-capable-pcs.md)。</li><li>如果图形卡同时具有 DisplayPort 和 HDMI 端口，请使用图形卡上的 DisplayPort 端口，并使用受支持的混合现实 DisplayPort 到 HDMI 适配器。</li><li>尝试重启电脑。</li></ol> |
 |   1-8 <br/><br/> 1709 & 1803 版均无  | **MRP 可以找到监视器，但无法检索其显示模式。尝试拔出所有显示器，然后重试。**<br/><br/>Windows Mixed Reality 会看到你的耳机式监视器，但从图形卡获取任何显示模式时遇到问题。 解决方法：<br/><ol start="1"><li>如果除了耳机外，还有多个显示器连接到电脑，则 GPU 可能没有足够的带宽。 请删除其他监视器，然后重试。</li><li>请确保具有最新的驱动程序</li></ol> |
 |   4-1 <br/><br/> 2181038084-1 | **混合现实设备无法使用创建到计算机的 USB 3.0 SuperSpeed 连接。请确保使用的是 USB 3.0 端口。**<br/><br/>解决方法：<br/><ol start="1"><li>拔下插头，并再次插上电源，以完全连接 USB。</li><li>删除任何分机电缆或适配器。</li><li>使用支持质量的 USB 集线器。</li><li>重启你的电脑。</li><li>查看 USB XHCI 控制器是否具有最新的驱动程序。</li></ol>|
 |   4-4 <br/><br/> 2181038084-4 | **Windows Mixed Reality 检测到你正在尝试的 USB 端口处于符合性模式。**<br/><br/>解决方法：<br/><ol start="1"><li>尝试使用其他 USB 端口。</li><li>重启你的电脑。</li><li>删除任何扩展电缆。</li><li>使用支持质量的 USB 集线器。</li></ol>|
@@ -30,7 +30,7 @@ ms.locfileid: "97725418"
 |   7-6  <br/><br/> 2181038087-6  | **耳机固件存在问题。尝试拔出耳机，并将其重新插入。** <br/><br/>这可能是暂时性的错误。 拔下耳机，并 replug。 如果这不起作用：</li><li>检查 Windows 更新以确保你运行的是最新的耳机驱动程序。</li><li>尝试在另一台电脑上戴上耳机。 如果看到相同的错误消息，则需要为你的耳机提供服务。</li></ul>
 |   7-7  <br/><br/> 2181038087-7  | **Windows Mixed Reality 连接到耳机时遇到问题。尝试将你的耳机插入其他 USB 端口，并暂时拔下连接到电脑的任何其他 USB 设备。**<br/><br/>混合现实耳机驱动程序无法初始化耳机上的固件。 这可能是暂时性的错误。 尝试在耳机中拔出并 replugging，并确保使用的是高质量的 USB 集线器。 如果这不起作用：<li>暂时拔出 USB 设备和外围设备，无需运行 Windows Mixed Reality。</li><li>拔出所有分机电缆。</li><li>检查 Windows 更新以确保你运行的是最新的可用耳机驱动程序。</li></ul>
 |   7-11  <br/><br/> 2181038087-11 | **CPU 太旧，无法与 Windows Mixed Reality 兼容。**<br/><br/>CPU 缺少混合现实运动控制器所需的 AVX 指令集。 需要使用 [Windows Mixed Reality 兼容的 PC](https://www.microsoft.com/en-us/windows/view-all-devices?col=wmr-pcs#icons)。
-|   7-12  <br/><br/> 2181038087-12 | **你的耳机连接到不兼容的 USB 控制器。尝试将你的耳机插入到其他 USB 端口（如果可用）。或者，尝试安装 Microsoft USB 驱动程序来代替任何不兼容的驱动程序。**<br/><br/>你的耳机可能插入到连接到不兼容的非 Microsoft USB 控制器驱动程序的 USB 端口。 这些 USB 3.0 控制器驱动程序通常不会读取和处理 [ContainerID 描述符](https://docs.microsoft.com/windows-hardware/drivers/usbcon/usb-containerids-in-windows)，这会将混合现实耳机的不同部分聚合到一个内聚的单元中 (以便从正确的耳机播放音频，视频输出正确的显示器，并从正确的传感器) 请求跟踪数据。 更改 USB 控制器驱动程序： <ol start="1"><li>启动设备管理器。</li><li>展开 "通用串行总线控制器"，然后右键单击以卸载包含 "可扩展主机控制器" 文本的每个项的驱动程序 **，** 名称中不包含 "Microsoft"。</li><li>选择 "删除此设备的驱动程序软件" 以确保删除旧的驱动程序。</li><li>验证包含文本 "可扩展主机控制器" 的每个项在末尾都有 "Microsoft"。</li><li>插入耳机。</li></ol>如果此问题是间歇性的，则耳机可能无法正确响应耳机驱动程序的命令。 若要解决此问题，请将耳机拔出30或更多秒，然后重新插回。 |
+|   7-12  <br/><br/> 2181038087-12 | **你的耳机连接到不兼容的 USB 控制器。尝试将你的耳机插入到其他 USB 端口（如果可用）。或者，尝试安装 Microsoft USB 驱动程序来代替任何不兼容的驱动程序。**<br/><br/>你的耳机可能插入到连接到不兼容的非 Microsoft USB 控制器驱动程序的 USB 端口。 这些 USB 3.0 控制器驱动程序通常不会读取和处理 [ContainerID 描述符](/windows-hardware/drivers/usbcon/usb-containerids-in-windows)，这会将混合现实耳机的不同部分聚合到一个内聚的单元中 (以便从正确的耳机播放音频，视频输出正确的显示器，并从正确的传感器) 请求跟踪数据。 更改 USB 控制器驱动程序： <ol start="1"><li>启动设备管理器。</li><li>展开 "通用串行总线控制器"，然后右键单击以卸载包含 "可扩展主机控制器" 文本的每个项的驱动程序 **，** 名称中不包含 "Microsoft"。</li><li>选择 "删除此设备的驱动程序软件" 以确保删除旧的驱动程序。</li><li>验证包含文本 "可扩展主机控制器" 的每个项在末尾都有 "Microsoft"。</li><li>插入耳机。</li></ol>如果此问题是间歇性的，则耳机可能无法正确响应耳机驱动程序的命令。 若要解决此问题，请将耳机拔出30或更多秒，然后重新插回。 |
 |   7-13  <br/><br/> 2181038087-13 | **你的耳机连接到不兼容的 USB 控制器。尝试将你的耳机插入到其他 USB 端口（如果可用）。如果没有，则需要安装新的 USB 3.0 控制器。**<br/><br/>Windows Mixed Reality 无法将混合现实摄像机帧时间戳同步到你的电脑时间戳。 这很可能是由不支持 ITP (同步时间戳数据包) 的不兼容 USB 3.0 主机控制器导致的。 请与你的电脑制造商联系，查看是否可以启用 ITP，或切换到另一个具有 ITP 支持的 USB 主机控制器。 |
 |   7-14  <br/><br/> 2181038087-14 | **Windows Mixed Reality 连接到耳机时遇到问题。尝试拔出耳机，并将其重新插入。**<br/><br/>Windows Mixed Reality 在混合现实耳机上初始化状态传感器时遇到问题。 在设备管理器中，耳机将显示错误消息 "PoseThread 无法初始化存在传感器"。 解决方法：<br/><ol start="1"><li>拔出耳机，并重新插入。 确保拔出 USB 电缆。</li><li>尝试在您的 PC 上运行另一个 USB 端口。</li><li>尝试在另一台电脑上戴上耳机，查看耳机是否完全在该电脑上设备管理器。</li><li>检查您的计算机是否安装了任何其他冲突的 HID 驱动程序，例如，通过键盘或鼠标。 在设备管理器中查找任何 HID 设备，其中包含问号标志。</li><li>如果你使用的是运行 Windows 10 版本1709或版本1803的 Samsung Mixed Reality 耳机，请按照错误代码2181038087-12 的说明进行操作，以检查 USB 3.0 控制器是否正在运行非 Microsoft USB 控制器驱动程序。</li></ol> |
 |   7-15  <br/><br/> 2181038087-15 | **Windows Mixed Reality 检测到安装了不兼容的 WinUSB 驱动程序。**<br/><br/><ol start="1"><li>确保你的电脑上的 WinUSB 驱动程序是 Windows 附带的驱动程序，并且第三方 USB 驱动程序未在你的电脑上覆盖 WinUSB 的副本。</li><li>如果问题仍然存在，你可能需要恢复或重新安装 Windows 安装。</li></ol> |

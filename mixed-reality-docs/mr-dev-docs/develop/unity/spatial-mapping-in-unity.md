@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: b4c45ba91a3e864c8cd29f3ebc3396d0250948f4
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 841cc1fa2a37884545ae12865f9b7cf56338dc07
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009287"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582541"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
@@ -34,7 +34,7 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens (第一代) </strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (第一代) </strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -487,7 +487,7 @@ Import_UnderstandingMesh –
 如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识： 
 
 > [!div class="nextstepaction"]
-> [文本](text-in-unity.md)
+> [Text](text-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 

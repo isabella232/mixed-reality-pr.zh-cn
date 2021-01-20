@@ -6,34 +6,34 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens，同步，空间定位，传输，多人，查看，方案，演练，示例代码，传输，本地定位点传输，定位点导出，定位点导入
-ms.openlocfilehash: 5007220f480a3093864502e624737e9707bd3952
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5d539338a25657441ee07acac38a4edd6cd86e58
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009647"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582801"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>DirectX 中的本地定位点传输
 
-在不能使用 <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间锚点</a>的情况下，本地定位点传输允许一台 hololens 设备导出要由第二个 hololens 设备导入的定位点。
+在不能使用 <a href="/azure/spatial-anchors" target="_blank">Azure 空间锚点</a>的情况下，本地定位点传输允许一台 hololens 设备导出要由第二个 hololens 设备导入的定位点。
 
 >[!NOTE]
->与 <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位</a>点相比，本地定位点传输提供的功能更低，并且不支持 IOS 和 Android 设备。
+>与 <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位</a>点相比，本地定位点传输提供的功能更低，并且不支持 IOS 和 Android 设备。
 
 >[!NOTE]
 >本文中的代码片段当前演示了如何 [使用 c +](../develop/native/creating-a-holographic-directx-project.md)+/cx 中的 c + +/cx 而不是 c + + 17 兼容 c + +/WinRT。  概念与 c + +/WinRT 项目等效，但你将需要转换代码。
 
 ## <a name="transferring-spatial-anchors"></a>传输空间锚
 
-可以使用 [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx)在 Windows Mixed Reality 设备之间传输空间锚。 利用此 API，你可以将定位点与在世界上查找确切位置所需的所有支持的传感器数据捆绑在一起，然后将该捆绑导入另一台设备。 在第二台设备上的应用程序导入该定位点后，每个应用程序都可以使用该共享空间定位点的坐标系统呈现全息影像，然后该系统将出现在现实世界中的同一位置。
+可以使用 [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)在 Windows Mixed Reality 设备之间传输空间锚。 利用此 API，你可以将定位点与在世界上查找确切位置所需的所有支持的传感器数据捆绑在一起，然后将该捆绑导入另一台设备。 在第二台设备上的应用程序导入该定位点后，每个应用程序都可以使用该共享空间定位点的坐标系统呈现全息影像，然后该系统将出现在现实世界中的同一位置。
 
 请注意，空间锚不能在不同的设备类型之间传输，例如，可能无法使用沉浸式耳机定位 HoloLens 空间锚。  传输的定位点也与 iOS 或 Android 设备不兼容。
 
 ## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>设置应用程序以使用 spatialPerception 功能
 
-应用必须被授予使用 SpatialPerception 功能的权限，然后才能使用 [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx)。 这是必需的，因为传输空间定位点涉及到共享在该定位点附近收集的传感器映像，其中可能包括敏感信息。
+应用必须被授予使用 SpatialPerception 功能的权限，然后才能使用 [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)。 这是必需的，因为传输空间定位点涉及到共享在该定位点附近收集的传感器映像，其中可能包括敏感信息。
 
-在应用程序的 appxmanifest.xml 文件中声明此功能。 下面的示例说明：
+在应用程序的 appxmanifest.xml 文件中声明此功能。 下面是一个示例：
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ ms.locfileid: "98009647"
 </Capabilities>
 ```
 
-此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面的示例说明：
+此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面是一个示例：
 
 ```
 <Package
@@ -53,11 +53,11 @@ ms.locfileid: "98009647"
     >
 ```
 
-**注意：** 应用需要在运行时请求功能，然后才能访问 SpatialAnchor 导出/导入 Api。 请参阅以下示例中的 [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) 。
+**注意：** 应用需要在运行时请求功能，然后才能访问 SpatialAnchor 导出/导入 Api。 请参阅以下示例中的 [RequestAccessAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) 。
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>通过使用 SpatialAnchorTransferManager 导出定位点数据来对其进行序列化
 
-代码示例中包含 helper 函数，用于导出 (序列化) [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) 数据。 此导出 API 序列化键值对集合中的所有定位点，这些键值对将字符串与定位点相关联。
+代码示例中包含 helper 函数，用于导出 (序列化) [SpatialAnchor](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) 数据。 此导出 API 序列化键值对集合中的所有定位点，这些键值对将字符串与定位点相关联。
 
 ```
 // ExportAnchorDataAsync: Exports a byte buffer containing all of the anchors in the given collection.
@@ -274,7 +274,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
 
 ## <a name="special-considerations"></a>特别注意事项
 
-[TryExportAnchorsAsync](https://msdn.microsoft.com/library/windows/apps/mt592763.aspx) API 允许将多个[SpatialAnchors](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx)导出到同一个不透明二进制 blob。 不过，blob 将包含的数据有细微差别，这取决于单个 SpatialAnchor 或多个 SpatialAnchors 是否在单个调用中导出。
+[TryExportAnchorsAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) API 允许将多个[SpatialAnchors](/uwp/api/Windows.Perception.Spatial.SpatialAnchor)导出到同一个不透明二进制 blob。 不过，blob 将包含的数据有细微差别，这取决于单个 SpatialAnchor 或多个 SpatialAnchors 是否在单个调用中导出。
 
 ### <a name="export-of-a-single-spatialanchor"></a>导出单个 SpatialAnchor
 
@@ -675,6 +675,6 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 就这么简单！ 现在，您应该具有足够的信息来尝试查找通过网络接收的定位点。 同样，请注意，客户端必须具有足够的可视化跟踪数据，空间才能成功定位定位点;如果它不能正常工作，请尝试一段时间。 如果仍不起作用，请让服务器发送更多的定位点，并使用网络通信来与适用于客户端的网络通信达成一致。 你可以通过下载 HolographicSpatialAnchorTransferSample、配置客户端和服务器 Ip 以及将其部署到客户端和服务器 HoloLens 设备来尝试此方法。
 
 ## <a name="see-also"></a>另请参阅
-* [并行模式库 (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
-* [StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
-* [StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)
+* [并行模式库 (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl)
+* [StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
+* [StreamSocketListener](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0ef22142ac2efc3ef47ece2619d31dbeddcff8fe
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: 6c33618e6d09da156bc4a4480fbecf3c0da94378
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192656"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580583"
 ---
 # <a name="project-settings"></a>[项目设置](#tab/project)
 
@@ -39,7 +39,7 @@ ms.locfileid: "98192656"
 > 如果你的应用程序在特定于设备的服务上有任何依赖关系，例如，从流中进行匹配，则需要在此步骤中禁用它们。 你可以挂钩到 Windows 稍后提供的等效服务。
 
 ### <a name="5-setup-your-windows-mixed-reality-hardware"></a>5. 设置 Windows Mixed Reality 硬件
-1. 查看[沉浸式耳机安装程序](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start
+1. 查看[沉浸式耳机安装程序](/windows/mixed-reality/enthusiast-guide/before-you-start
 )中的步骤
 2. 了解如何 [使用 Windows Mixed reality 模拟器](../../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md) 并 [导航 windows mixed reality 主页](../../../discover/navigating-the-windows-mixed-reality-home.md)
 
@@ -95,13 +95,13 @@ else
 
 每个面向现有 HMD 的游戏或应用程序都将具有一组可处理的输入，其所需的输入类型和体验所需的特定 Api 以及用于获取这些输入的特定 Api。 我们已经投入了大量努力，尽可能简单直接地利用 Windows Mixed Reality 中提供的输入。
 
-有关 Windows Mixed Reality 如何公开输入的详细信息以及如何映射到你的应用程序可以执行的操作的详细信息，请参阅相邻选项卡中的 [Unity 的输入移植指南](https://docs.microsoft.com/windows/mixed-reality/develop/porting-apps/porting-guides?tabs=input) 。
+有关 Windows Mixed Reality 如何公开输入的详细信息以及如何映射到你的应用程序可以执行的操作的详细信息，请参阅相邻选项卡中的 [Unity 的输入移植指南](../porting-guides.md?tabs=input) 。
 
 ### <a name="9-performance-testing-and-tuning"></a>9. 性能测试和优化
 
-Windows Mixed Reality 将在各种设备上可用，范围从高端游戏电脑到广泛市场主流 Pc。 根据你的目标市场，你的应用程序的可用计算和图形预算有很大的差异。 在此迁移过程中，你可能会利用高级 PC，并为应用提供大量的计算和图形预算。 如果你希望将应用程序提供给更广泛的受众，则应在 [你想要面向的代表硬件](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)上测试和分析你的应用程序。
+Windows Mixed Reality 将在各种设备上可用，范围从高端游戏电脑到广泛市场主流 Pc。 根据你的目标市场，你的应用程序的可用计算和图形预算有很大的差异。 在此迁移过程中，你可能会利用高级 PC，并为应用提供大量的计算和图形预算。 如果你希望将应用程序提供给更广泛的受众，则应在 [你想要面向的代表硬件](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)上测试和分析你的应用程序。
 
-[Unity](https://docs.unity3d.com/Manual/Profiler.html)和[Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index)都包含性能探查器， [Microsoft](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)和[Intel](https://software.intel.com/articles/vr-content-developer-guide)发布有关性能分析和优化的指导原则。 在 [了解混合现实的性能](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)方面，提供了有关性能的广泛讨论。 此外，针对 [unity 的性能建议](../../unity/performance-recommendations-for-unity.md)下的 unity 有特定的详细信息。
+[Unity](https://docs.unity3d.com/Manual/Profiler.html)和[Visual Studio](/visualstudio/profiling/index)都包含性能探查器， [Microsoft](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)和[Intel](https://software.intel.com/articles/vr-content-developer-guide)发布有关性能分析和优化的指导原则。 在 [了解混合现实的性能](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)方面，提供了有关性能的广泛讨论。 此外，针对 [unity 的性能建议](../../unity/performance-recommendations-for-unity.md)下的 unity 有特定的详细信息。
 
 # <a name="input-mapping"></a>[输入映射](#tab/input)
 

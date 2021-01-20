@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 2da2524ae09014b990ea4f0301a21d4aac963eb9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 87eb22e600ca2426bdd3fec1fd428c11d9c45313
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008627"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581809"
 ---
 # <a name="windows-mixed-reality-setup-faq"></a>Windows Mixed Reality 开发人员工具包常见问题解答
 
@@ -28,7 +28,7 @@ ms.locfileid: "98008627"
 * 重启电脑，然后重试。 可能需要重复几次，或者运行 Windows 更新疑难解答来清除挂起的更新。
 
 > [!NOTE]
-> * 如果你使用的是企业托管网络，请与你的管理员联系。 它们可能需要启用 Windows Mixed Reality。 正在查找 IT pro 说明？ 请参阅 **[此文](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality)**。
+> * 如果你使用的是企业托管网络，请与你的管理员联系。 它们可能需要启用 Windows Mixed Reality。 正在查找 IT pro 说明？ 请参阅 **[此文](/windows/application-management/manage-windows-mixed-reality)**。
 > * 如果 Wi-Fi 网络连接设置为 "按流量计费"，请将其更改为 "不按流量"。 **[了解详细信息](https://support.microsoft.com/help/4028458)**
 
 ## <a name="i-get-a-message-that-says-something-went-wrong-and-we-couldnt-start-windows-mixed-reality"></a>我收到一条消息，指出出现 "出现错误，无法启动 Windows Mixed Reality"。

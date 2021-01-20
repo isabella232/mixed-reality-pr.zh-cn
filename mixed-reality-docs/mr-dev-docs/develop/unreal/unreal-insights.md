@@ -1,19 +1,19 @@
 ---
-title: 用 Unreal Insights 进行分析
+title: 使用 Unreal Insights 进行分析
 description: 了解如何在 HoloLens 2 上使用 Unreal Insights。
 author: sajidfarooq
 ms.author: v-hferrone
 ms.date: 12/10/2020
 ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，开发，分析，Unreal insights，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 20e620f147f2cf5ee05073467c8ce7335340d59d
-ms.sourcegitcommit: 53bde413a174712cb9d3794d02d96363a2d599cd
+ms.openlocfilehash: b41d36679adfb35b5cc3561b8d5e7734654e7fb5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97486317"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580837"
 ---
-# <a name="profiling-with-unreal-insights"></a>用 Unreal Insights 进行分析 
+# <a name="profiling-with-unreal-insights"></a>使用 Unreal Insights 进行分析 
 
 [Unreal Insights](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/Overview/index.html) 是一种分析系统，用于从 Unreal 引擎收集、分析和可视化数据。 分析系统可以帮助你找到优化瓶颈，以及你的应用程序性能可以使用提升的区域。 通常，你可以直接从编辑器中启用 Unreal Insights，但对于 HoloLens 2，你需要使用命令行。  
 
@@ -102,6 +102,6 @@ Unreal 允许你使用启用 Unreal Insights 的命令行参数在 HoloLens 启�
 
 自定义配置文件在项目之间共享。 从这里开始，你可以使用你创建的自定义配置文件，而不必每次都执行此操作。 每次启动 Unreal 时，你只需在 " [设置" 部分](#setup)中通过步骤3到步骤6重新创建与设备的连接。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [Unreal Insights 文档](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/index.html)
 

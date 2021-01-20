@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: e3d150544c3bce99d1aa808229d282b3d2fe1dd0
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 28b377108fdb51d7f922710e579d62e7103ef765
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007477"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580533"
 ---
 # <a name="get-help-with-pc-compatibility-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中获取有关 PC 兼容性的帮助
 
@@ -116,7 +116,7 @@ PCIe 代表 *外围组件互连 Express*，这是 PC 用于与图形卡通信的
 
 ### <a name="this-pc-doesnt-have-bluetooth-40-for-controllers"></a>这台电脑没有适用于控制器的蓝牙4。0
 
-2018和更高版本的 Windows Mixed Reality 耳机已经有内置的蓝牙，但如果你有较旧的耳机，则混合现实运动控制器需要蓝牙4.0。 你仍然可以 [将 Windows Mixed Reality 与 Xbox 控制器](motion-controller-problems.md#can-i-pair-my-xbox-controller-to-my-pc-so-i-can-use-it-in-headset)、 [鼠标和键盘](https://docs.microsoft.com/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home#keyboard-and-mouse)或 [USB 蓝牙适配器一起使用，以将运动控制器连接](motion-controller-problems.md#how-can-i-tell-if-im-using-bluetooth-technology) 到你的 PC。 [查看建议的适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+2018和更高版本的 Windows Mixed Reality 耳机已经有内置的蓝牙，但如果你有较旧的耳机，则混合现实运动控制器需要蓝牙4.0。 你仍然可以 [将 Windows Mixed Reality 与 Xbox 控制器](motion-controller-problems.md#can-i-pair-my-xbox-controller-to-my-pc-so-i-can-use-it-in-headset)、 [鼠标和键盘](/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home#keyboard-and-mouse)或 [USB 蓝牙适配器一起使用，以将运动控制器连接](motion-controller-problems.md#how-can-i-tell-if-im-using-bluetooth-technology) 到你的 PC。 [查看建议的适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 ### <a name="depending-on-your-headset-you-may-need-a-bluetooth-adapter-to-use-motion-controllers"></a>根据你的耳机，你可能需要蓝牙适配器才能使用运动控制器
 

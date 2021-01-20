@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: e482c93233348325736d2c224788e9174c1f3b67
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 1888258321af978ca52623008193e6dae94833a8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010157"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581105"
 ---
 # <a name="hand-tracking-in-unreal"></a>Unreal 中的手部跟踪
 
@@ -156,7 +156,7 @@ UMRMeshComponent* UARTrackedGeometry::GetUnderlyingMesh()
 
 ## <a name="gestures"></a>笔势
 
-HoloLens 2 跟踪空间手势，这意味着您可以将这些手势捕获为输入。 手势跟踪基于订阅模型。 应使用 "配置手势" 功能告诉设备要跟踪的手势。 可以在 [HoloLens 2 基本使用](https://docs.microsoft.com/hololens/hololens2-basic-usage) 文档中找到有关手势的更多详细信息。
+HoloLens 2 跟踪空间手势，这意味着您可以将这些手势捕获为输入。 手势跟踪基于订阅模型。 应使用 "配置手势" 功能告诉设备要跟踪的手势。 可以在 [HoloLens 2 基本使用](/hololens/hololens2-basic-usage) 文档中找到有关手势的更多详细信息。
 
 [!INCLUDE[](includes/tabs-tracking-gestures.md)]
 

@@ -2,16 +2,16 @@
 title: Unreal 中的材料建议
 description: Unreal 引擎中的资料概述。
 author: hferrone
-ms.author: v-hferrone
+ms.author: safarooq
 ms.date: 09/18/2020
 ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，开发，材料，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 11c10577bd3946facb96fd77b09265ab5ca26f24
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: bfe70e730c5fbd6e5d103737b03e76bfd0ab65f6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609568"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580797"
 ---
 # <a name="material-recommendations-in-unreal"></a>Unreal 中的材料建议
 
@@ -26,7 +26,7 @@ ms.locfileid: "96609568"
 可以在以下屏幕截图中的 [Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html) 和最佳做法示例中找到材料详细信息：
 
 建议[ ![ 在 Unreal ](images/unreal-materials-img-01.png) 中设置的材料设置](images/unreal-materials-img-01.png#lightbox) 
- *Recommended material setup*
+ 
 
 不建议[ ![ 的材料设置 Unreal ](images/unreal-materials-img-01b.png) ](images/unreal-materials-img-01b.png#lightbox) 
  *不推荐的材料* 设置
@@ -88,7 +88,7 @@ ms.locfileid: "96609568"
 
 ![Unreal 中的材料复杂性](images/unreal-materials-img-10.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [移动材料](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)
 * [查看模式](https://docs.unrealengine.com/Engine/UI/LevelEditor/Viewports/ViewModes/index.html)
 * [材料实例](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html)

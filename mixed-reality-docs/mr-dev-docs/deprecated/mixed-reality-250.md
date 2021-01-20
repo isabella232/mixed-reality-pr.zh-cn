@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit、mixedrealitytoolkit、mixedrealitytoolkit-unity、沉浸式、运动控制器、共享、xbox 控制器、网络、跨设备
-ms.openlocfilehash: a980441ee73cd8f45afff446d9315eaf08549575
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 8b6711ab3ee833306742fe938dfa501dc5b4ed0e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677463"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580120"
 ---
 # <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>MR 共享 250：HoloLens 和沉浸式头戴显示设备
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../develop/unity/tutorials/mr-learning-base-01.md)。
 
 利用通用 Windows 平台 (UWP) 的灵活性，可以轻松创建跨多个设备的应用程序。 通过这种灵活性，我们可以创建利用每个设备的优势的体验。 本教程将介绍在 HoloLens 和 Windows Mixed Reality 沉浸式耳机上运行的基本共享体验。 此内容最初在华盛顿州西雅图的 Microsoft Build 2017 大会上交付。
 
@@ -31,17 +31,17 @@ ms.locfileid: "91677463"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 共享 250：HoloLens 和沉浸式头戴显示设备</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
-* 带有 [必要的开发工具](../develop/install-the-tools.md) 且 [已配置为支持 windows Mixed Reality 沉浸式耳机](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的 Windows 10 电脑。
+* 带有 [必要的开发工具](../develop/install-the-tools.md) 且 [已配置为支持 windows Mixed Reality 沉浸式耳机](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的 Windows 10 电脑。
 * 适用于你的电脑的 Xbox 控制器。
 * 至少一个 HoloLens 设备和一个沉浸式耳机。
 * 允许 UDP 广播进行发现的网络。
@@ -69,40 +69,40 @@ ms.locfileid: "91677463"
 ### <a name="steps"></a>步骤
 
 * 打开 Unity。
-    * 选择“打开”。
+    * 选择“打开”  。
     * 导航到在其中提取项目文件的位置。
-    * 单击“选择文件夹”  。
+    * 单击“选择文件夹”。
     * *Unity 第一次处理项目需要一些时间。*
 * 检查 Unity 中是否已启用混合现实。
-    * 打开 "生成设置" 对话框 ( **Control + Shift + B** 或 **> 生成设置 ...** ) "。
-    * 选择 **通用 Windows 平台** 然后单击 " **切换平台** "。
-    * 选择 " **编辑>播放机设置** "。
-    * 在右侧的 **检查器** 面板中，展开 " **XR 设置** "。
+    * 打开 "生成设置" 对话框 (**Control + Shift + B** 或 **> 生成设置 ...**) "。
+    * 选择 **通用 Windows 平台** 然后单击 " **切换平台**"。
+    * 选择 " **编辑>播放机设置**"。
+    * 在右侧的 **检查器** 面板中，展开 " **XR 设置**"。
     * 选中 " **支持虚拟现实** " 框。
     * *Windows Mixed Reality 应为虚拟现实 SDK。*
 * 创建场景。
-    * 在 **层次结构** 中右键单击 " **主相机** "，然后选择 " **删除** "。
+    * 在 **层次结构** 中右键单击 " **主相机** "，然后选择 " **删除**"。
     * 从 **HoloToolkit > 输入 > prototyping** 将 **MixedRealityCameraParent** 拖到 **层次结构** 中。
 * 向场景中添加全息影像
-    * From **AppPrefabs** 将 **Skybox** 拖到 **场景视图** 。
+    * From **AppPrefabs** 将 **Skybox** 拖到 **场景视图**。
     * From **AppPrefabs** 将 **经理** 拖到 **层次结构** 中。
     * From **AppPrefabs** 将 **岛** 拖到 **层次结构** 中。
 * 保存并生成
-    * 保存 ( **Control + S** 或 **File > save 场景** ) 
+    * 保存 (**Control + S** 或 **File > save 场景**) 
     * 由于这是新场景，因此需要将其命名为。 名称并不重要，但我们使用的是 SharedMixedReality。
 * 导出到 Visual Studio
-    * 打开 "生成" 菜单 ( **Control + Shift + B** 或 **File > 生成设置** ") 
+    * 打开 "生成" 菜单 (**Control + Shift + B** 或 **File > 生成设置** ") 
     * 单击 " **添加打开的场景"。**
     * 检查 **Unity c # 项目**
-    * 单击“生成”  。
-    * 在出现的 "文件资源管理器" 窗口中，创建一个名为 " **应用** " 的新文件夹。
+    * 单击“生成”。
+    * 在出现的 "文件资源管理器" 窗口中，创建一个名为 " **应用**" 的新文件夹。
     * 单击 **应用** 文件夹。
     * 按 " **选择文件夹"。**
     * **等待生成完成**
     * 在出现的 "文件资源管理器" 窗口中，导航到 " **应用** " 文件夹。
     * 双击 " **SharedMixedReality** " 以启动 Visual Studio
 * 从 Visual Studio 生成
-    * 使用顶部工具栏将目标更改为 " **发布** " 和 " **x86** "。
+    * 使用顶部工具栏将目标更改为 " **发布** " 和 " **x86**"。
     * 单击 " **本地计算机** " 旁边的箭头，并选择 "要部署到 HoloLens 的 **设备** "
     * 单击 " **设备** " 旁边的箭头，并选择 "要为混合现实耳机部署的 **本地计算机** "。
     * 单击 " **调试"->"无调试开始** " 或按 **F5** 启动应用程序。
@@ -129,7 +129,7 @@ ms.locfileid: "91677463"
 
 基于第1章中的应用程序，我们将添加功能，使用户能够选择全息影像，并将其放在 HoloLens 的真实表面上，或将其放置在沉浸式耳机中的虚拟表上。
 
-**输入刷新器：** 在 HoloLens 上，选择手势是 **点击** 。 在沉浸式耳机上，我们将使用 Xbox 控制器上 **的按钮。** 有关详细信息，请查看 [交互模型概述](../design/interaction-fundamentals.md)。
+**输入刷新器：** 在 HoloLens 上，选择手势是 **点击**。 在沉浸式耳机上，我们将使用 Xbox 控制器上 **的按钮。** 有关详细信息，请查看 [交互模型概述](../design/interaction-fundamentals.md)。
 
 ### <a name="steps"></a>步骤
 
@@ -143,24 +143,24 @@ ms.locfileid: "91677463"
     * 检查 **器** 面板中的复选框以启用 **边界**
     * From **AppPrefabs** 将 **VRRoom** 拖到 **层次结构** 中。
 * 添加 WorldAnchorManager
-    * 在 **层次结构** 中，选择 " **管理器** "。
-    * 在 **检查器** 中，单击 " **添加组件** "。
-    * 键入 " **世界定位管理器** "。
+    * 在 **层次结构** 中，选择 " **管理器**"。
+    * 在 **检查器** 中，单击 " **添加组件**"。
+    * 键入 " **世界定位管理器**"。
     * 选择 " **世界锚管理器** " 以添加它。
 * 将 TapToPlace 添加到岛
-    * 在 **层次结构** 中，展开 " **岛** "。
-    * 选择 **MixedRealityLand** 。
-    * 在 **检查器** 中，单击 " **添加组件** "。
+    * 在 **层次结构** 中，展开 " **岛**"。
+    * 选择 **MixedRealityLand**。
+    * 在 **检查器** 中，单击 " **添加组件**"。
     * 键入 " **点击" 以将** 其选中。
-    * **在点击时选中 "父项"** 。
-    * 将 **放置偏移** 设置为 **(0，0.1，0)** 。
+    * **在点击时选中 "父项"**。
+    * 将 **放置偏移** 设置为 **(0，0.1，0)**。
 * 像以前一样保存并生成
 
 ### <a name="digging-into-the-code"></a>深入到代码中
 
 **脚本 1-GamepadInput.cs**
 
-在 "项目" 面板中，导航到 " **Assets\HoloToolkit\Input\Scripts\InputSources** "，然后双击 " **GamepadInput.cs** " 将其打开。 在 "项目" 面板的同一路径中，双击 " **InteractionSourceInputSource.cs** "。
+在 "项目" 面板中，导航到 " **Assets\HoloToolkit\Input\Scripts\InputSources** "，然后双击 " **GamepadInput.cs** " 将其打开。 在 "项目" 面板的同一路径中，双击 " **InteractionSourceInputSource.cs**"。
 
 请注意，这两个脚本都有一个公共的基类 BaseInputSource。
 
@@ -199,7 +199,7 @@ BaseInputSource 保留对 InputManager 的引用，这允许脚本触发事件�
     * 在 **层次结构** 中右键单击 **VRRoom** 选择 **删除**
 * 添加 Usland
     * From **AppPrefabs** 将 **Usland** 拖到 **层次结构** 中。
-* 从 **AppPrefabs** 将以下各项拖动到 **层次结构** ：
+* 从 **AppPrefabs** 将以下各项拖动到 **层次结构**：
     * **UNETSharingStage**
     * **UNetAnchorRoot**
     * **UIContainer**
@@ -208,7 +208,7 @@ BaseInputSource 保留对 InputManager 的引用，这允许脚本触发事件�
 
 ### <a name="digging-into-the-code"></a>深入到代码中
 
-在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\SharingWithUnet\Scripts** "，然后双击 " **UnetAnchorManager.cs** "。 一个 HoloLens 与另一个 HoloLens 共享跟踪信息，使这两个设备可以共享相同空间的功能在神奇附近。 当两个或多个用户可以使用相同的数字数据进行协作时，混合现实的强大功能将处于活动状态。
+在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\SharingWithUnet\Scripts** "，然后双击 " **UnetAnchorManager.cs**"。 一个 HoloLens 与另一个 HoloLens 共享跟踪信息，使这两个设备可以共享相同空间的功能在神奇附近。 当两个或多个用户可以使用相同的数字数据进行协作时，混合现实的强大功能将处于活动状态。
 
 在此脚本中需要指出的几点：
 
@@ -258,19 +258,19 @@ BaseInputSource 保留对 InputManager 的引用，这允许脚本触发事件�
 ### <a name="steps"></a>步骤
 
 * 将 MixedRealityTeleport 添加到 MixedRealityCameraParent
-    * 在 **层次结构** 中，选择 **Usland** 。
-    * 在 **检查器** 中，启用 **级别控制** 。
-    * 在 **层次结构** 中，选择 **MixedRealityCameraParent** 。
-    * 在 **检查器** 中，单击 " **添加组件** "。
+    * 在 **层次结构** 中，选择 **Usland**。
+    * 在 **检查器** 中，启用 **级别控制**。
+    * 在 **层次结构** 中，选择 **MixedRealityCameraParent**。
+    * 在 **检查器** 中，单击 " **添加组件**"。
     * 键入 **混合现实传送** 并将其选中。
 
 ### <a name="digging-into-the-code"></a>深入到代码中
 
 沉浸式耳机用户将通过电缆受限到其电脑上，但岛比电缆长。 若要进行补偿，我们需要能够独立于用户的动作移动相机。 有关设计混合现实应用 ([程序的详细](../design/comfort.md) 信息，请参阅 locomotion) 。
 
-若要描述此过程，请定义两个术语。 首先， **dolly** 将是独立于用户移动相机的对象。 **Dolly** 的子游戏对象将是 **主摄像机** 。 将相机连接到用户的头。
+若要描述此过程，请定义两个术语。 首先， **dolly** 将是独立于用户移动相机的对象。 **Dolly** 的子游戏对象将是 **主摄像机**。 将相机连接到用户的头。
 
-在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\Scripts\GameLogic** "，然后双击 " **MixedRealityTeleport.cs** "。
+在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\Scripts\GameLogic** "，然后双击 " **MixedRealityTeleport.cs**"。
 
 MixedRealityTeleport 有两个作业。 首先，它使用缓冲器处理旋转。 在更新函数中，我们轮询 LeftBumper 和 RightBumper 上的 "ButtonUp"。 GetButtonUp 仅在第一帧上返回 true，按钮在关闭后就会正常运行。 如果引发了任一按钮，则我们知道用户需要旋转。
 
@@ -278,9 +278,9 @@ MixedRealityTeleport 有两个作业。 首先，它使用缓冲器处理旋转�
 
 计算旋转时，请注意，我们要旋转 **dolly** ，但计算出 **摄像机** 周围的旋转。 这一点很重要，因为在 **摄像机** 远离0，0，0时，dolly 的旋转就会从用户的角度来看。 事实上，如果不围绕相机位置旋转，用户将在 **dolly** 上移动，而不是旋转。
 
-MixedRealityTeleport 的第二个作业是处理移动 **dolly** 。 这是在 SetWorldPosition 中完成的。 SetWorldPosition 采用所需的世界位置，该位置是用户想要 percieve 具有的位置。 我们需要将 **dolly** 置于该位置，而不是 **主摄像机** 的本地位置，因为每帧都会添加该偏移量。
+MixedRealityTeleport 的第二个作业是处理移动 **dolly**。 这是在 SetWorldPosition 中完成的。 SetWorldPosition 采用所需的世界位置，该位置是用户想要 percieve 具有的位置。 我们需要将 **dolly** 置于该位置，而不是 **主摄像机** 的本地位置，因为每帧都会添加该偏移量。
 
-第二个脚本调用 SetWorldPosition。 让我们看看该脚本。 在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\Scripts\GameLogic** "，然后双击 " **TeleportScript.cs** "。
+第二个脚本调用 SetWorldPosition。 让我们看看该脚本。 在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\Scripts\GameLogic** "，然后双击 " **TeleportScript.cs**"。
 
 此脚本比 MixedRealityTeleport 更复杂一些。 脚本正在检查 Xbox 控制器上的 Y 按钮是否已关闭。 当按钮被按下时，将呈现一个传送光标，并且该脚本将从用户的注视位置转换一条射线。 如果该射线与更多或更少地指向的图面冲突，则会将该图面视为传送到的一个好图面，并将启用传送光标上的动画。 如果该射线不会与某个面上更多或更少的向上箭头发生冲突，则将禁用游标上的动画。 当 "Y" 按钮被释放并且射线的计算点为有效位置时，该脚本将使用与该射线相交的位置来调用 SetWorldPosition。
 
@@ -311,14 +311,14 @@ MixedRealityTeleport 的第二个作业是处理移动 **dolly** 。 这是在 S
 
 ### <a name="steps"></a>步骤
 
-* 在 **层次结构** 中，选择 **Usland** 。
-* 在 **检查器** 的 " **级别控制** " 中，选中 " **启用协作** "。
+* 在 **层次结构** 中，选择 **Usland**。
+* 在 **检查器** 的 " **级别控制**" 中，选中 " **启用协作**"。
 
 ### <a name="digging-into-the-code"></a>深入到代码中
 
 现在让我们看看 LevelControl.cs。 此脚本是游戏逻辑的核心，并且保持游戏状态。 由于这是一个使用 UNET 的多玩家游戏，我们需要了解数据的流动方式，至少足以修改本教程。 有关 UNET 的更完整概述，请参阅 Unity 的文档。
 
-在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\Scripts\GameLogic** "，然后双击 " **LevelControl.cs** "。
+在 "项目" 面板中，导航到 " **Assets\AppPrefabs\Support\Scripts\GameLogic** "，然后双击 " **LevelControl.cs**"。
 
 让我们了解沉浸式耳机如何指示它们已准备好进行火箭启动。 通过在与岛上的三个路径相对应的布尔列表中设置三个布尔之一，可以传达火箭的启动准备情况。 当分配到路径的用户在火箭房间内的棕色垫的顶部时，将设置路径的 bool。 好了，现在来了解详细信息。
 
@@ -354,6 +354,6 @@ public void SendAtGoal(int GoalIndex)
 
 在上一章中生成，我们将像以前一样启动会话。 这一次，沉浸式头戴显示设备上的用户到达其路径上的 "门" 时，会出现一个工具提示，只有 HoloLens 用户可以看到。 HoloLens 用户负责将此线索传达给沉浸式耳机中的用户。 一旦每个虚拟形象在火山内的相应的棕色垫上火箭，就会启动空间。 场景将在60秒后重置，因此你可以重新执行此操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [MR 输入 213：运动控制器](mixed-reality-213.md)

@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
 keywords: Mixed Reality，注视，停留，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，ux，指导原则，列表视图
-ms.openlocfilehash: 2bfd984a466c1ccd3913e889ca57663800f46380
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: e70536b7247153979b8650ba1f5bcbe1a7cd08af
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007077"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582202"
 ---
 # <a name="head-gaze-and-dwell"></a>头部凝视和停留
 
@@ -32,7 +32,7 @@ ms.locfileid: "98007077"
     </colgroup>
     <tr>
         <td><strong>输入模型</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>

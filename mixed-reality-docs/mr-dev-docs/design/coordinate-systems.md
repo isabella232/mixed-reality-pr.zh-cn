@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 坐标系统，空间坐标系统，仅限方向，固定规模，大规模，世界规模，360度，固定的，房间，房间，世界，缩放，位置，方向，固定，附加，舞台，定位，空间锚，世界锁定，世界锁定，身体锁定，身体锁定，边界，持久性，共享，跟踪丢失，云空间锚，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 42efc1444c030641ad215501c4a12d6315ea9857
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 6d4bddc17027ad32f82fbc8c37860e64b2bc57eb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848025"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582417"
 ---
 # <a name="coordinate-systems"></a>坐标系统
 
@@ -32,9 +32,9 @@ ms.locfileid: "97848025"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
-        <td><a href="https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details"><strong>沉浸式头戴显示设备</strong></a></td>
+        <td><a href="/windows/mixed-reality/immersive-headset-hardware-details"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
      <tr>
         <td><a href="coordinate-systems.md#stationary-frame-of-reference">固定的引用框架</a></td>
@@ -105,7 +105,7 @@ HoloLens 尚不支持引用的阶段框架。 在 HoloLens 上，会议室规模
 
 ## <a name="spatial-coordinate-systems"></a>空间坐标系统
 
-所有3D 图形应用程序都使用 [笛卡尔坐标系统](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) 来表示虚拟对象的位置和方向。 这些坐标系统建立了3个垂直轴，沿该轴放置对象： X 轴、Y 轴和 Z 轴。
+所有3D 图形应用程序都使用 [笛卡尔坐标系统](/windows/uwp/graphics-concepts/coordinate-systems) 来表示虚拟对象的位置和方向。 这些坐标系统建立了3个垂直轴，沿该轴放置对象： X 轴、Y 轴和 Z 轴。
 
 在 [混合现实](../discover/mixed-reality.md)中，应用对虚拟和物理坐标系的原因。 Windows 调用在物理环境中具有实际意义的坐标系统，即 **空间坐标系统**。
 
@@ -191,13 +191,13 @@ Windows Mixed Reality 通过使你能够创建 [空间锚](spatial-anchors.md) �
 
 通过将定位点保存到应用商店，你的用户可以放置单独的全息影像，或放置一个工作区，应用将在该工作区中放置其各种全息影像，然后在其预期的位置找到这些全息影像，这超出了应用的多种用途。
 
-你还可以将 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。  通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
+你还可以将 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。  通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
 
 ### <a name="spatial-anchor-sharing"></a>空间锚点共享
 
 您的应用程序也可以与其他设备实时共享空间锚，从而实现实时共享体验。
 
-使用 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a>，你的应用可以跨多个 HoloLens、IOS 和 Android 设备共享空间锚。 通过使每个设备使用相同的空间定位点呈现全息影像，所有用户将看到全息影像显示在现实世界中的相同位置。
+使用 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a>，你的应用可以跨多个 HoloLens、IOS 和 Android 设备共享空间锚。 通过使每个设备使用相同的空间定位点呈现全息影像，所有用户将看到全息影像显示在现实世界中的相同位置。
 
 ## <a name="avoid-head-locked-content"></a>避免 head 锁定的内容
 
@@ -239,5 +239,5 @@ Windows Mixed Reality 通过使你能够创建 [空间锚](spatial-anchors.md) �
 * [DirectX 中的坐标系统](../develop/native/coordinate-systems-in-directx.md)
 * [空间定位点](spatial-anchors.md)
 * [混合现实中的共享体验](../develop/platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
 * [案例研究 - 看透现实中的洞](../out-of-scope/case-study-looking-through-holes-in-your-reality.md)

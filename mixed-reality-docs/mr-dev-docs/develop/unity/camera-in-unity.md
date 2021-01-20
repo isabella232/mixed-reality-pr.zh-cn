@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，全息呈现，全息，沉浸式，聚焦点，深度缓冲，仅限方向，定位，不透明，透明，剪辑，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: cd5284a8fdef7254b7d0375b57877d30f5d0d708
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: ba42e8a384f62dddcf7b8e685859ddeff7b666bb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006387"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581122"
 ---
 # <a name="camera-in-unity"></a>Unity 中的相机
 
@@ -33,7 +33,7 @@ ms.locfileid: "98006387"
 Unity 相机组件上的默认设置适用于传统的3D 应用程序，这种应用程序需要 skybox 的背景，因为它们不是真实的。
 
 * 在 **[沉浸式头戴式耳机](../../discover/immersive-headset-hardware-details.md)** 上运行时，会呈现用户看到的所有内容，因此你可能需要保留 skybox。
-* 但是，当在 **全息耳机** （如 [HoloLens](../../hololens-hardware-details.md)）上运行时，真实环境应显示在照相机呈现的所有内容之后。 将相机背景设置为在 HoloLens (透明，黑色呈现为透明) 而不是 Skybox 纹理：
+* 但是，当在 **全息耳机** （如 [HoloLens](/hololens/hololens1-hardware)）上运行时，真实环境应显示在照相机呈现的所有内容之后。 将相机背景设置为在 HoloLens (透明，黑色呈现为透明) 而不是 Skybox 纹理：
     1. 选择 "层次结构" 面板中的主相机
     2. 在 "检查器" 面板中，找到照相机组件，并将 "清除标志" 下拉列表从 "Skybox" 更改为纯色
     3. 选择背景色选取器并将 RGBA 值更改为 (0，0，0，0) 
@@ -81,7 +81,7 @@ HoloLens 和沉浸式耳机都将 reproject 你的应用程序呈现的每个帧
 将应用的深度缓冲区共享到 Windows 每个框架都将根据要呈现的耳机类型为应用程序提供以下两个增强功能之一：
 
 * 当提供了深度缓冲区时，**沉浸式耳机** 可以处理位置 reprojection，同时调整您在位置和方向上的 misprediction 影像。
-* **全息耳机** 具有几种不同的方法。 当提供了深度缓冲区时，HoloLens 1 将自动选择 [焦点](focus-point-in-unity.md) ，同时优化与最大内容相交的平面上的全息图稳定性。 HoloLens 2 将使用深度 LSR 来稳定内容 [ (请参阅备注) ](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint)。
+* **全息耳机** 具有几种不同的方法。 当提供了深度缓冲区时，HoloLens 1 将自动选择 [焦点](focus-point-in-unity.md) ，同时优化与最大内容相交的平面上的全息图稳定性。 HoloLens 2 将使用深度 LSR 来稳定内容 [ (请参阅备注) ](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint)。
 
 设置 Unity 应用是否将向 Windows 提供深度缓冲区：
 

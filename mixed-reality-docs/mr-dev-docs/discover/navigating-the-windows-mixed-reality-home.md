@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: shell，os，平台，cliff 房子，房子，home，环境，开始，开始菜单，主页菜单，pin，应用，启动应用，放置应用，传送，移动，导航，混合现实耳机，虚拟现实耳机，什么是虚拟现实
-ms.openlocfilehash: 06e28c9c1f0f6244f7f502382d61d4740b5fb71f
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6b021aff20363f0e3efc1c2675df41ee5819aef6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009687"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582638"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>导航 Windows Mixed Reality 主页
 
@@ -28,7 +28,7 @@ ms.locfileid: "98009687"
 * 沉浸式耳机上 Cortana (，开始磁贴;在 HoloLens 上，在 "开始) 
 * 固定应用
 * "所有应用" 按钮 (加号) 
-* [混合现实捕获](../mixed-reality-capture.md)的照片和视频按钮
+* [混合现实捕获](/hololens/holographic-photos-and-videos)的照片和视频按钮
 
 通过选择加号或减号按钮，在固定应用程序和所有应用程序视图之间切换。 若要在 HoloLens 上打开 "开始" 菜单，请使用布隆手势。 在沉浸式耳机上，按下控制器上的 Windows 按钮。
 
@@ -40,7 +40,7 @@ ms.locfileid: "98009687"
 1. 使用 [注视](../design/gaze-and-commit.md) 或控制器将应用定位到所需的位置。 它将自动调整 (大小和位置) 以符合放置它的空间。
 2. 使用 "air" (HoloLens) 或 "选择" 按钮 (沉浸式耳机) 来放置应用。 若要取消并返回 "开始" 菜单，请使用布隆手势或 Windows 按钮。
 
-可以使用[HOLOGRAPHICSPACE API](https://msdn.microsoft.com/library/windows/apps/windows.graphics.holographic.holographicspace.aspx)将为桌面、移动或 Xbox 创建的[2d 应用](../develop/porting-apps/building-2d-apps.md)修改为作为混合现实沉浸式应用运行。 沉浸式应用使用户离开家里，并进入沉浸式体验。 用户可以使用布隆手势 (HoloLens) 或按其控制器上的 Windows 按钮 (沉浸式耳机) 来返回 home。
+可以使用[HOLOGRAPHICSPACE API](/uwp/api/Windows.Graphics.Holographic.HolographicSpace)将为桌面、移动或 Xbox 创建的[2d 应用](../develop/porting-apps/building-2d-apps.md)修改为作为混合现实沉浸式应用运行。 沉浸式应用使用户离开家里，并进入沉浸式体验。 用户可以使用布隆手势 (HoloLens) 或按其控制器上的 Windows 按钮 (沉浸式耳机) 来返回 home。
 
 还可以通过应用程序到应用程序 API 或通过 Cortana 来启动应用。
 
@@ -122,7 +122,7 @@ ms.locfileid: "98009687"
 Windows Mixed Reality 包含多个内置应用，例如：
 * **Microsoft Store** 获取应用和游戏
 * 提交有关系统和系统应用的反馈的 **反馈中心**
-* 用于配置系统设置的 **设置** ([包括网络](../connecting-to-wi-fi-on-hololens.md)和系统更新) 
+* 用于配置系统设置的 **设置** ([包括网络](/hololens/hololens-network)和系统更新) 
 * **Microsoft Edge** 浏览网站
 * 查看并共享照片和视频的 **照片**
 * **校准** (仅限 hololens) 用于调整当前用户的 hololens 体验
@@ -138,6 +138,6 @@ Windows Mixed Reality 包含多个内置应用，例如：
 * [应用视图](../design/app-views.md)
 * [运动控制器](../design/motion-controllers.md)
 * [硬件配件](hardware-accessories.md)
-* [HoloLens 的环境注意事项](../environment-considerations-for-hololens.md)
+* [HoloLens 的环境注意事项](/hololens/hololens-environment-considerations)
 * [实现 3D 应用启动器](../distribute/implementing-3d-app-launchers.md)
 * [创建用于 Windows Mixed Reality 主页的3D 模型](../distribute/creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)

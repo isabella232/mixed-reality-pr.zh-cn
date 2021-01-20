@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 沉浸式视图，2D 视图，石板，应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: a9cd03212fcbb0d7b3d9e4d2b3108e4d09972455
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b6a16fc3b1ac45d74874f37ce44a36d3e144fee8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009627"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580099"
 ---
 # <a name="app-views"></a>应用视图
 
@@ -24,7 +24,7 @@ Windows 应用可以包含两种类型的视图： **沉浸式视图** 和 **2d 
 ![在沉浸式视图中，可以在世界各地放置全息影像。](images/designoverview-940px.jpg)<br>
 *在沉浸式视图中，可以在世界各地放置全息影像*
 
-在 [HoloLens](https://docs.microsoft.com/hololens/hololens1-hardware)上，你的应用程序会在用户的真实环境上呈现其全息影像。 在 [Windows Mixed Reality 沉浸式耳机](../discover/immersive-headset-hardware-details.md)上，用户看不到现实世界，因此你的应用程序必须呈现用户将看到的所有内容。
+在 [HoloLens](/hololens/hololens1-hardware)上，你的应用程序会在用户的真实环境上呈现其全息影像。 在 [Windows Mixed Reality 沉浸式耳机](../discover/immersive-headset-hardware-details.md)上，用户看不到现实世界，因此你的应用程序必须呈现用户将看到的所有内容。
 
 [Windows Mixed Reality home](../discover/navigating-the-windows-mixed-reality-home.md) (包括在环境中放置的 "开始" 菜单和全息影像) 在沉浸式视图中也不会呈现。 在 HoloLens 上，Cortana 会在显示沉浸式视图时中继发生的任何系统通知，用户可以使用语音输入来做出响应。
 

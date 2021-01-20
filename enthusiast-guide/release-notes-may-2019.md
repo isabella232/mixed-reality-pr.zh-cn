@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: 发行说明，版本，windows 10，build，19h1，os，可能2019
-ms.openlocfilehash: fd5688b7c68e0a16873ff153f3c158a3575e02e9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b8df518b03544bd2473ff67030ed008e1a2bc26e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007117"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581502"
 ---
 # <a name="release-notes---may-2019"></a>发行说明-5 月2019
 
@@ -50,7 +50,7 @@ HoloLens (第一代) 正在进入长期维护 (LTS) 状态。 将来的更新将
 
 ## <a name="provide-feedback-and-report-issues"></a>提供反馈和报告问题
 
-[在 Windows 10 电脑或 HoloLens 设备上使用反馈中心应用](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback)来提供反馈和报告问题。 使用反馈中心可确保包括所有必要的诊断信息，以帮助我们的工程师快速调试和解决问题。
+[在 Windows 10 电脑或 HoloLens 设备上使用反馈中心应用](/windows/mixed-reality/give-us-feedback)来提供反馈和报告问题。 使用反馈中心可确保包括所有必要的诊断信息，以帮助我们的工程师快速调试和解决问题。
 
 >[!NOTE]
 >请确保接受提示，询问你是否想要反馈中心访问文档文件夹 (在出现) 提示时选择 **"是"** 。
@@ -66,8 +66,7 @@ HoloLens (第一代) 正在进入长期维护 (LTS) 状态。 将来的更新将
 * [发行说明 - 2016 年 3 月](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>另请参阅
-* [沉浸式耳机支持 (外部链接) ](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [沉浸式耳机支持 (外部链接) ](./troubleshooting-windows-mixed-reality.md)
 * [HoloLens 支持 (外部链接) ](https://support.microsoft.com/products/hololens)
-* [安装工具](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools)
+* [安装工具](/windows/mixed-reality/develop/install-the-tools)
 * [向我们提供反馈] (https://docs.microsoft.com/windows/mixed-reality/give-us-feedback
-

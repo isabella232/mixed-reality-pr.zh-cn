@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，NuGet
-ms.openlocfilehash: 616765143309fe2a4883c1393713133fcbe2a9d5
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: da3114b2c8c4e04d8da9296687f92d0b23945281
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006487"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581237"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-openxr-api"></a>使用 OpenXR API 编写全息远程处理远程应用
 
@@ -27,7 +27,7 @@ ms.locfileid: "98006487"
 好的起点是基于 OpenXR 的桌面或 UWP 应用。 有关详细信息，请参阅 [OpenXR](../native/openxr-getting-started.md)入门。
 
 >[!IMPORTANT]
->使用全息远程处理的任何应用都应该编写为使用 [多线程单元](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
+>使用全息远程处理的任何应用都应该编写为使用 [多线程单元](//windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](//windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](//windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>获取全息远程处理 NuGet 包
 
@@ -209,5 +209,5 @@ m_window->PresentSwapchain();
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
-* [全息远程处理软件许可条款](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [全息远程处理软件许可条款](//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

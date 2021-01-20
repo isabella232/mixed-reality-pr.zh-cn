@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: 眼睛跟踪，混合现实，输入，眼睛，校准，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，意向，操作
-ms.openlocfilehash: ffc9fd172f3e9a1cfd648e3fb431274690c9f190
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: d603e2576856fe48080a1a1f06c1814a78381192
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009597"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582320"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>HoloLens 2 中的眼动跟踪
 
@@ -32,7 +32,7 @@ HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，
 </colgroup>
 <tr>
      <td><strong>功能</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>
@@ -48,7 +48,7 @@ HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，
 
 ## <a name="calibration"></a>校准 
 
-为了使目视跟踪能准确地工作，每个用户都需要经历 [跟踪用户校准](../calibration.md) ，用户必须查看一组全息目标。 这允许设备调整系统，以便为用户提供更舒适和更高的质量查看体验，并确保同时进行准确的目视跟踪。 
+为了使目视跟踪能准确地工作，每个用户都需要经历 [跟踪用户校准](/hololens/hololens-calibration) ，用户必须查看一组全息目标。 这允许设备调整系统，以便为用户提供更舒适和更高的质量查看体验，并确保同时进行准确的目视跟踪。 
 
 目视跟踪应该适用于大多数用户，但在极少数情况下，用户无法成功校准。 校准可能因多种原因而失败，其中包括但不限于： 
 * 用户以前选择退出校准过程
@@ -59,13 +59,13 @@ HoloLens 2 允许开发人员使用有关用户正在查看的内容的信息，
 
 开发人员应确保向用户提供对其视觉跟踪数据可能不可用 (无法成功) 的用户的充分支持。 我们已在本页底部的部分中提供了有关后备解决方案的建议。 
 
-若要了解有关校准的详细信息以及如何确保流畅的体验，请查看我们的 [眼睛跟踪用户校准](../calibration.md) 页面。
+若要了解有关校准的详细信息以及如何确保流畅的体验，请查看我们的 [眼睛跟踪用户校准](/hololens/hololens-calibration) 页面。
 
 <br>
 
 ## <a name="available-eye-tracking-data"></a>可用的目视跟踪数据
 
-在深入了解有关目视输入的特定用例的详细信息之前，我们想要简要指出 HoloLens 2 [目视跟踪 API](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) 提供的功能。 开发人员可在大约 _30 FPS (30) Hz_ 的情况上，通过一种眼睛 (眼睛和方向) 访问。
+在深入了解有关目视输入的特定用例的详细信息之前，我们想要简要指出 HoloLens 2 [目视跟踪 API](/uwp/api/windows.perception.people.eyespose) 提供的功能。 开发人员可在大约 _30 FPS (30) Hz_ 的情况上，通过一种眼睛 (眼睛和方向) 访问。
 有关如何访问目视跟踪数据的详细信息，请参阅我们的开发人员指南，了解如何使用 [DirectX 中的眼睛](../develop/native/gaze-in-directx.md) ，并看看 [Unity](https://aka.ms/mrtk-eyes)。
 
 围绕实际目标 (的视觉角度看，眼睛的眼睛约为1.5 度，请参阅下图) 。 由于预期的轻微 imprecisions，开发人员应围绕这一下限值来规划一些利润率 (例如，2.0-3.0 度可能会导致更舒适的体验) 。 下面将详细介绍如何处理小目标的选择。 要准确运行眼动跟踪，每个用户需要完成眼动跟踪用户校准。 
@@ -135,8 +135,8 @@ Microsoft 致力于推动创新，同时确保用户对其眼睛跟踪信息的�
 
 在极少数情况下，目视跟踪数据可能不可用。
 这可能是由于下面列出了最常见的原因：
-* 系统未能 [校准用户](../calibration.md)。
-* 用户跳过了 [校准](../calibration.md)。    
+* 系统未能 [校准用户](/hololens/hololens-calibration)。
+* 用户跳过了 [校准](/hololens/hololens-calibration)。   
 * 用户进行了校准，但决定不向应用程序授予使用其眼睛跟踪数据的权限。    
 * 用户具有唯一的眼镜或系统尚不支持的一些目视的情况。 
 * 外部因素抑制了一种可靠的眼睛跟踪，如在眼睛前面的头发的情况下，在 HoloLens 面板上出现污迹、眼镜、强烈直接阳光和 occlusions。  
@@ -168,12 +168,10 @@ Microsoft 致力于推动创新，同时确保用户对其眼睛跟踪信息的�
 
 ## <a name="see-also"></a>另请参阅
 
-* [校准](../calibration.md)
+* [校准](/hololens/hololens-calibration)
 * [舒适](comfort.md)
 * [基于眼睛凝视的交互](eye-gaze-interaction.md)
 * [目视观察 DirectX](../develop/native/gaze-in-directx.md)
 * [眼睛 (混合现实工具包) ](https://aka.ms/mrtk-eyes)
 * [凝视和提交](gaze-and-commit.md)
 * [语音输入](../out-of-scope/voice-design.md)
-
-

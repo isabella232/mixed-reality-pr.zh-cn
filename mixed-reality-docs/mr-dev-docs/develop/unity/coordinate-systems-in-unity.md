@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 坐标系统，空间坐标系统，仅限方向，固定比例大规模，房间规模，世界规模，360度，固定的，房间，房间，世界，，规模，位置，方向，Unity，定位，空间锚，世界锚，世界锁定，世界锁定，身体锚，世界锁定，，跟踪丢失，locatability，界限，recenter，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 900c393bf9ab09f1ac49e3108488d081f8025c19
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: aa68ae44e09dfe579f8ab8924d1b300506a1f00e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010278"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581064"
 ---
 # <a name="coordinate-systems-in-unity"></a>Unity 中的坐标系统
 
@@ -163,15 +163,15 @@ Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 
 ## <a name="sharing-anchors-across-devices"></a>跨设备共享锚
 
-使用 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> ，从本地 WorldAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上找到它。  通过在多个设备之间共享公用空间定位点，每个用户都可以查看相对于同一物理位置中的定位点呈现的内容。  这可实现实时共享体验。
+使用 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> ，从本地 WorldAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上找到它。  通过在多个设备之间共享公用空间定位点，每个用户都可以查看相对于同一物理位置中的定位点呈现的内容。  这可实现实时共享体验。
 
-若要开始在 Unity 中构建共享体验，请尝试执行5分钟的 <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Azure 空间锚点 Unity 快速入门</a>。
+若要开始在 Unity 中构建共享体验，请尝试执行5分钟的 <a href="/azure/spatial-anchors/unity-overview" target="_blank">Azure 空间锚点 Unity 快速入门</a>。
 
-启动并运行 Azure 空间锚点后，便可以 <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">在 Unity 中创建和定位锚</a>。
+启动并运行 Azure 空间锚点后，便可以 <a href="/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">在 Unity 中创建和定位锚</a>。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [凝视](gaze-in-unity.md)
@@ -190,5 +190,5 @@ Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 * [空间定位点](../../design/spatial-anchors.md)
 * [Unity 中的持久性](persistence-in-unity.md)
 * [Unity 中的共享体验](shared-experiences-in-unity.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">用于 Unity 的 Azure 空间定位点 SDK</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
+* <a href="/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">用于 Unity 的 Azure 空间定位点 SDK</a>

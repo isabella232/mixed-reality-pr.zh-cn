@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Mixed Reality，注视，注视目标，交互，设计，眼睛跟踪，打印头跟踪，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: f9e79f8d600002f63e87316ea588741a21c0d68b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: bfbf58ad065f91b27208d36ba63672ee5c28dfdd
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847928"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582333"
 ---
 # <a name="gaze-and-commit"></a>凝视并提交
 
@@ -40,7 +40,7 @@ ms.locfileid: "97847928"
     </colgroup>
     <tr>
         <td><strong>输入模型</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -135,7 +135,7 @@ _在谈论看一看目标_ 的不同方法之后，让我们更深入地谈谈 "
 支持以下提交方法：
 - 空中攻指的手势 (就是，在您自己的前方抬起，并将食指和拇指) 
 - 说 _"选择"_ 或一个目标语音命令
-- 在[HoloLens Clicker](https://docs.microsoft.com/hololens/hololens1-clicker)上按单个按钮
+- 在[HoloLens Clicker](/hololens/hololens1-clicker)上按单个按钮
 - 按下 Xbox 游戏板上的 "A" 按钮
 - 按 Xbox 自适应控制器上的 "A" 按钮
 
@@ -295,4 +295,3 @@ HoloLens 通过跟踪设备可识别的一只手或双手的位置来识别手�
 * [手 - 指向并提交](point-and-commit.md)
 * [本能交互](interaction-fundamentals.md)
 * [语音输入](voice-input.md)
-

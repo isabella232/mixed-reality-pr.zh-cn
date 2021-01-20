@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: DirectX，全息呈现，本机，本机应用，WinRT，WinRT 应用，平台 Api，自定义引擎，中间件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 764cbe0a37501cc176e9bb05a9a7771b03666f0c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b137fad12740542deb4995485201a9bd0d1d7662
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006847"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581042"
 ---
 # <a name="native-development-overview"></a>原生开发概述
 
@@ -32,7 +32,7 @@ Windows Mixed Reality 支持 [两种类型的应用](../../design/app-views.md)�
 * 使用 [HOLOGRAPHICSPACE api](getting-a-holographicspace.md)或 [OpenXR api](openxr.md)呈现可填充耳机显示的 [沉浸式视图](../../design/app-views.md)的 UWP 或 Win32 **混合现实应用程序**
 *  (UWP) 的 **2d 应用**，使用 DIRECTX、XAML 或其他框架在 Windows Mixed Reality 主页上呈现清单的 [2d 视图](../../design/app-views.md#2d-views)
 
-[2d 视图和沉浸式视图](../../design/app-views.md)的 DirectX 开发之间的差异主要涉及全息呈现和空间输入。 UWP 应用程序的 [IFrameworkView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.iframeworkview.aspx) 或 Win32 应用程序的 HWND 是必需的，并且保持基本相同。 适用于应用程序的 WinRT Api 也是如此。 但您必须使用这些 Api 的不同子集才能利用全息功能。 例如，适用于全息应用程序的系统管理存在和帧，以启用姿势预测帧循环。
+[2d 视图和沉浸式视图](../../design/app-views.md)的 DirectX 开发之间的差异主要涉及全息呈现和空间输入。 UWP 应用程序的 [IFrameworkView](/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) 或 Win32 应用程序的 HWND 是必需的，并且保持基本相同。 适用于应用程序的 WinRT Api 也是如此。 但您必须使用这些 Api 的不同子集才能利用全息功能。 例如，适用于全息应用程序的系统管理存在和帧，以启用姿势预测帧循环。
 
 [!INCLUDE[](../includes/native-getting-started.md)]
 

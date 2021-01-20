@@ -6,19 +6,19 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality，HolographicSpace，CoreWindow，空间输入，呈现，交换链，全息帧，更新循环，游戏循环，引用框架，locatability，示例代码，演练，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c630905b4f7f3bf03d575201feb944c3b8f62f32
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 215c3cbacd4c7975d05b3a1b3f3992c9198642f7
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009527"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580916"
 ---
 # <a name="getting-a-holographicspace"></a>获取 HolographicSpace
 
 > [!NOTE]
 > 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
-<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>类是您在全息环境中的门户。 它控制沉浸式渲染、提供相机数据，并提供对空间推理 Api 的访问。 你将为 UWP 应用的 <a href="https://docs.microsoft.com/api/windows.ui.core.corewindow" target="_blank">CoreWindow</a> 或 Win32 应用的 HWND 创建一个。
+<a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>类是您在全息环境中的门户。 它控制沉浸式渲染、提供相机数据，并提供对空间推理 Api 的访问。 你将为 UWP 应用的 <a href="/api/windows.ui.core.corewindow" target="_blank">CoreWindow</a> 或 Win32 应用的 HWND 创建一个。
 
 ## <a name="set-up-the-holographic-space"></a>设置全息空间
 
@@ -30,7 +30,7 @@ ms.locfileid: "98009527"
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-如果是 [从 *BasicHologram* win32 示例开始](creating-a-holographic-directx-project.md#creating-a-win32-project)生成 **Win32 应用**，请查看 **应用：： CreateWindowAndHolographicSpace** 以获取 HWND 示例。 然后，可以通过创建关联的 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>将其转换为沉浸式 HWND：
+如果是 [从 *BasicHologram* win32 示例开始](creating-a-holographic-directx-project.md#creating-a-win32-project)生成 **Win32 应用**，请查看 **应用：： CreateWindowAndHolographicSpace** 以获取 HWND 示例。 然后，可以通过创建关联的 <a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>将其转换为沉浸式 HWND：
 
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
@@ -93,7 +93,7 @@ void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 ```
 
 获取 UWP CoreWindow 或 Win32 HWND 的 HolographicSpace 后，HolographicSpace 可以处理全息相机、创建坐标系统和执行全息着色。 当前全息空间用于 DirectX 模板中的多个位置：
-* **DeviceResources** 类需要从 HolographicSpace 对象获取一些信息才能创建 Direct3D 设备。 这是与全息显示器关联的 DXGI 适配器 ID。 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>类使用应用的 Direct3D 11 设备来创建和管理基于设备的资源，例如每个全息相机的后台缓冲区。 如果你有兴趣查看此函数的作用，你可以在 DeviceResources 中找到它。
+* **DeviceResources** 类需要从 HolographicSpace 对象获取一些信息才能创建 Direct3D 设备。 这是与全息显示器关联的 DXGI 适配器 ID。 <a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>类使用应用的 Direct3D 11 设备来创建和管理基于设备的资源，例如每个全息相机的后台缓冲区。 如果你有兴趣查看此函数的作用，你可以在 DeviceResources 中找到它。
 * 函数 **DeviceResources：： InitializeUsingHolographicSpace** 演示了如何通过查找 LUID 获取适配器，以及如何在未指定首选适配器的情况下选择默认适配器。
 * 应用的主类使用 **AppView：： SetWindow** 中的全息空间或 **应用：： CreateWindowAndHolographicSpace** 进行更新和呈现。
 
@@ -126,12 +126,12 @@ m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
 
 现在，我们将重点放在 AppMain 和设置上，使应用程序能够了解全息相机。 考虑到这一点，请务必注意以下两个要求：
 
-1. 对于 **CameraAdded** 事件处理程序，应用程序可以异步工作，为新的全息相机完成创建资源和加载资产的操作。 需要多个帧来完成此项工作的应用应请求延迟，并在异步加载后完成延迟。 [PPL 任务](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl)可用于执行异步工作。 您的应用程序必须确保在退出事件处理程序时或在完成延迟时立即呈现给该摄像机。 退出事件处理程序或完成延迟，告诉系统你的应用程序现已准备好接收包含该相机的全息帧。
+1. 对于 **CameraAdded** 事件处理程序，应用程序可以异步工作，为新的全息相机完成创建资源和加载资产的操作。 需要多个帧来完成此项工作的应用应请求延迟，并在异步加载后完成延迟。 [PPL 任务](/cpp/parallel/concrt/parallel-patterns-library-ppl)可用于执行异步工作。 您的应用程序必须确保在退出事件处理程序时或在完成延迟时立即呈现给该摄像机。 退出事件处理程序或完成延迟，告诉系统你的应用程序现已准备好接收包含该相机的全息帧。
 
-2. 当应用接收到 **CameraRemoved** 事件时，它必须释放对后台缓冲区的所有引用并立即退出函数。 这包括呈现目标视图和可能包含对 [IDXGIResource](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiresource)的引用的任何其他资源。 应用还必须确保后台缓冲区不会附加为呈现器目标，如 **CameraResources：： ReleaseResourcesForBackBuffer** 中所示。 为了帮助提高速度，你的应用程序可以释放后台缓冲区，然后启动一项任务以异步完成相机的任何其他取消工作。 全息应用模板包括可用于此目的的 PPL 任务。
+2. 当应用接收到 **CameraRemoved** 事件时，它必须释放对后台缓冲区的所有引用并立即退出函数。 这包括呈现目标视图和可能包含对 [IDXGIResource](/windows/desktop/api/dxgi/nn-dxgi-idxgiresource)的引用的任何其他资源。 应用还必须确保后台缓冲区不会附加为呈现器目标，如 **CameraResources：： ReleaseResourcesForBackBuffer** 中所示。 为了帮助提高速度，你的应用程序可以释放后台缓冲区，然后启动一项任务以异步完成相机的任何其他取消工作。 全息应用模板包括可用于此目的的 PPL 任务。
 
 >[!NOTE]
->如果要确定在帧上显示的是已添加或已删除的照相机，请使用 **HolographicFrame** [AddedCameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.addedcameras) 和 [RemovedCameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.removedcameras) 属性。
+>如果要确定在帧上显示的是已添加或已删除的照相机，请使用 **HolographicFrame** [AddedCameras](/uwp/api/windows.graphics.holographic.holographicframe.addedcameras) 和 [RemovedCameras](/uwp/api/windows.graphics.holographic.holographicframe.removedcameras) 属性。
 
 ## <a name="create-a-frame-of-reference-for-your-holographic-content"></a>为全息内容创建参考框架
 
@@ -139,7 +139,7 @@ m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
 
 Windows 全息版中有两种参考帧：附加到设备的参考框架，以及设备在用户的环境中移动时保持静止的参考帧。 默认情况下，全息应用模板使用固定的参考框架。这是一种最简单的方式来呈现全球锁定的全息影像。
 
-固定参考帧旨在使设备当前位置附近的位置稳定。 这意味着，从设备中进一步的坐标可能会相对于用户的环境略微偏移，因为设备会更深入地了解它周围的空间。 可以通过两种方法创建固定的引用框架：从 [空间阶段](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)获取坐标系统，或使用默认的 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>。 如果要为沉浸式耳机创建 Windows Mixed Reality 应用，建议的起点是 [空间阶段](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)。 空间阶段还提供了有关播放机磨损的沉浸式耳机功能的信息。 在这里，我们将演示如何使用默认的 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>。
+固定参考帧旨在使设备当前位置附近的位置稳定。 这意味着，从设备中进一步的坐标可能会相对于用户的环境略微偏移，因为设备会更深入地了解它周围的空间。 可以通过两种方法创建固定的引用框架：从 [空间阶段](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)获取坐标系统，或使用默认的 <a href="/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>。 如果要为沉浸式耳机创建 Windows Mixed Reality 应用，建议的起点是 [空间阶段](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)。 空间阶段还提供了有关播放机磨损的沉浸式耳机功能的信息。 在这里，我们将演示如何使用默认的 <a href="/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>。
 
 空间定位符代表 Windows Mixed Reality 设备，并跟踪设备的运动，并提供可以相对于其位置所理解的坐标系统。
 
@@ -161,7 +161,7 @@ m_stationaryReferenceFrame =
 所有参照帧都是引力，这意味着 y 轴与用户的环境相关。 由于 Windows 使用 "右手传" 坐标系统，因此在创建引用框架时，-z 轴的方向与设备的 "向前" 方向一致。
 
 >[!NOTE]
->当你的应用程序需要精确放置单独的全息影像时，请使用 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a> 将各个全息图锚定到现实世界中的某个位置。 例如，当用户指示某个点是特别感兴趣的点时，请使用空间锚。 定位点位置不会偏移，但可以调整它们。 默认情况下，当调整定位点后，它会在更正发生后，使其在接下来的几个帧上出现位置。 根据你的应用程序，如果发生这种情况，你可能想要以不同的方式处理调整 (例如，通过将其延迟到全息图超出视图) 。 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystem" target="_blank">RawCoordinateSystem</a>属性和<a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystemadjusted" target="_blank">RawCoordinateSystemAdjusted</a>事件启用这些自定义项。
+>当你的应用程序需要精确放置单独的全息影像时，请使用 <a href="/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a> 将各个全息图锚定到现实世界中的某个位置。 例如，当用户指示某个点是特别感兴趣的点时，请使用空间锚。 定位点位置不会偏移，但可以调整它们。 默认情况下，当调整定位点后，它会在更正发生后，使其在接下来的几个帧上出现位置。 根据你的应用程序，如果发生这种情况，你可能想要以不同的方式处理调整 (例如，通过将其延迟到全息图超出视图) 。 <a href="/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystem" target="_blank">RawCoordinateSystem</a>属性和<a href="/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystemadjusted" target="_blank">RawCoordinateSystemAdjusted</a>事件启用这些自定义项。
 
 ## <a name="respond-to-locatability-changed-events"></a>响应 locatability 已更改事件
 

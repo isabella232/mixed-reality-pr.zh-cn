@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 边缘，新，沉浸式 web，microsoft edge，浏览器，vr，360，360视频，360 viewer，webxr，webvr
-ms.openlocfilehash: ef55ee564e0a7ea11aaaad62ebf259459454ab72
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 041c374e1e2120c3aac35bd09889b8594825a186
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010027"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582503"
 ---
 # <a name="the-new-microsoft-edge-for-windows-mixed-reality"></a>新的 Microsoft Edge Windows Mixed Reality
 
@@ -52,7 +52,7 @@ ms.locfileid: "98010027"
 
 **为什么会发生这种情况**
 
-Windows [10 2019 更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-may-2019)中引入了对 Windows Mixed Reality 中经典 Win32 应用程序的支持。 若要启用此支持，必须创建虚拟监视器来托管 Win32 应用程序。 每次启动新的 Win32 应用程序时，都必须创建另一个虚拟监视器。 遗憾的是，创建虚拟监视器是一种密集型任务，可能会导致耳机显示短暂冻结。 客户提供了反馈，指出这是一种令人不安且有中断的体验。 由于反馈和 Win32 应用程序的使用情况，我们决定在 Windows Mixed Reality 启动过程中预分配三个虚拟监视器。 这可以防止中断，并使客户可以启动多达三个并发的 Win32 应用程序，而不会遇到耳机显示冻结。
+Windows [10 2019 更新](/windows/mixed-reality/enthusiast-guide/release-notes-may-2019)中引入了对 Windows Mixed Reality 中经典 Win32 应用程序的支持。 若要启用此支持，必须创建虚拟监视器来托管 Win32 应用程序。 每次启动新的 Win32 应用程序时，都必须创建另一个虚拟监视器。 遗憾的是，创建虚拟监视器是一种密集型任务，可能会导致耳机显示短暂冻结。 客户提供了反馈，指出这是一种令人不安且有中断的体验。 由于反馈和 Win32 应用程序的使用情况，我们决定在 Windows Mixed Reality 启动过程中预分配三个虚拟监视器。 这可以防止中断，并使客户可以启动多达三个并发的 Win32 应用程序，而不会遇到耳机显示冻结。
 
 **解决方法**
 

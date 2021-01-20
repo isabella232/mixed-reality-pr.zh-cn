@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，通知，函数，表，通知中心，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 4b71968eb546cc5d7a5cd767f2ecafae102c763c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 5bf6720fe7be178bf4fb15ae2b87f4ff502afe9b
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679536"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581272"
 ---
 # <a name="mr-and-azure-308-cross-device-notifications"></a>MR 和 Azure 308：跨设备通知
 
@@ -26,11 +26,11 @@ ms.locfileid: "94679536"
 
 在本课程中，你将学习如何使用 Azure 通知中心、Azure 表和 Azure Functions 向混合现实应用程序添加通知中心功能。
 
-**Azure 通知中心** 是一种 Microsoft 服务，它允许开发人员将有针对性的个性化推送通知发送到所有平台，并将其放入云中。 这可以有效地允许开发人员与最终用户通信，甚至可以在各种应用程序之间进行通信，具体取决于方案。 有关详细信息，请访问 **Azure 通知中心**[页](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)。
+**Azure 通知中心** 是一种 Microsoft 服务，它允许开发人员将有针对性的个性化推送通知发送到所有平台，并将其放入云中。 这可以有效地允许开发人员与最终用户通信，甚至可以在各种应用程序之间进行通信，具体取决于方案。 有关详细信息，请访问 **Azure 通知中心**[页](/azure/notification-hubs/notification-hubs-push-notification-overview)。
 
-**Azure Functions** 是一项 Microsoft 服务，它允许开发人员在 Azure 中运行少量的代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 **Azure Functions** 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 **Azure Functions** [页](https://docs.microsoft.com/azure/azure-functions/functions-overview)。
+**Azure Functions** 是一项 Microsoft 服务，它允许开发人员在 Azure 中运行少量的代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 **Azure Functions** 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 **Azure Functions** [页](/azure/azure-functions/functions-overview)。
 
-**Azure 表** 是一种 Microsoft 云服务，可让开发人员在云中存储结构化非 SQL 数据，使其在任何地方都可以轻松访问。 该服务的设计无架构，可根据需要进行表的发展，因此非常灵活。 有关详细信息，请访问 **Azure 表**[页](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+**Azure 表** 是一种 Microsoft 云服务，可让开发人员在云中存储结构化非 SQL 数据，使其在任何地方都可以轻松访问。 该服务的设计无架构，可根据需要进行表的发展，因此非常灵活。 有关详细信息，请访问 **Azure 表**[页](/azure/cosmos-db/table-storage-overview)
 
 完成本课程后，你将拥有一个混合现实沉浸式头戴式耳机应用程序和一个台式 PC 应用程序，该应用程序将能够执行以下操作：
 
@@ -48,7 +48,7 @@ ms.locfileid: "94679536"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 308：跨设备通知</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -57,7 +57,7 @@ ms.locfileid: "94679536"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -69,7 +69,7 @@ ms.locfileid: "94679536"
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - Azure 安装和访问通知中心的 Internet 访问
 
 ## <a name="before-you-start"></a>开始之前
@@ -145,7 +145,7 @@ ms.locfileid: "94679536"
 
     4.  选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。 
+        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。 
 
     5.  选择相应的 **订阅**。
 
@@ -212,7 +212,7 @@ ms.locfileid: "94679536"
 
     9.  选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
 
     10. 如果这是一个选项，请将 **虚拟网络** 保持为 **禁用状态** 。
 
@@ -234,7 +234,7 @@ ms.locfileid: "94679536"
     
     ![](images/AzureLabs-Lab8-18.PNG)
 
-10. 右侧面板将更改为显示 **表服务** 信息，你需要添加一个新表。 单击左上角的 "表" 按钮即可执行此操作 **+** **Table** 。
+10. 右侧面板将更改为显示 **表服务** 信息，你需要添加一个新表。 单击左上角的 "表" 按钮即可执行此操作 **+**  。
 
     ![打开表](images/AzureLabs-Lab8-19.png)
 
@@ -362,7 +362,7 @@ ms.locfileid: "94679536"
 
     4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
 
     5. 对于 **操作系统**，请单击 "Windows"，因为这是预期的平台。
 
@@ -558,7 +558,7 @@ ms.locfileid: "94679536"
     
     ![表输入](images/AzureLabs-Lab8-47-5.png)
 
-29. 请确保以下各项 **your** 的匹配项，因为它们可能不同 (下面的步骤) ：
+29. 请确保以下各项的匹配项，因为它们可能不同 (下面的步骤) ：
 
     1.  **表名**：在 Azure 存储中创建的表的名称，表服务。
 
@@ -601,7 +601,7 @@ ms.locfileid: "94679536"
 
 ![输出完成](images/AzureLabs-Lab8-50.png)
 
-32. 此时，应测试函数，以确保其正常运行。 具体方法为： 
+32. 此时，应测试函数，以确保其正常运行。 要执行此操作： 
 
     1. 再次导航到函数页：
 
@@ -722,7 +722,7 @@ ms.locfileid: "94679536"
 
 ## <a name="chapter-8---importing-the-dlls-in-unity"></a>第8章-在 Unity 中导入 Dll
 
-你将使用适用于 Unity (的 Azure 存储，该存储本身利用 .Net SDK for Azure) 。 有关详细信息，请 [参阅此链接，了解有关适用于 Unity 的 Azure 存储](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity)。
+你将使用适用于 Unity (的 Azure 存储，该存储本身利用 .Net SDK for Azure) 。 有关详细信息，请 [参阅此链接，了解有关适用于 Unity 的 Azure 存储](/sandbox/gamedev/unity/azure-storage-unity)。
 
 当前 Unity 中存在一个已知问题，需要在导入后重新配置插件。 此部分中 (4-7 的这些步骤) 解决 bug 后不再需要这些步骤。
 
@@ -1221,7 +1221,7 @@ ms.locfileid: "94679536"
 
             ![api 兼容性](images/AzureLabs-Lab8-87.png)
 
-    2.  在面板中，在 " **XR 设置**" (的 "发布设置") 下面的 "**发布设置**" 下，请确保已添加 Windows Mixed reality SDK，确保已添加 **Windows Mixed reality SDK** **Virtual Reality Supported**
+    2.  在面板中，在 " **XR 设置**" (的 "发布设置") 下面的 "**发布设置**" 下，请确保已添加 Windows Mixed reality SDK，确保已添加 **Windows Mixed reality SDK** 
 
         ![更新 xr 设置](images/AzureLabs-Lab8-88.png)        
 
@@ -1242,14 +1242,14 @@ ms.locfileid: "94679536"
 
 ### <a name="chapter-13---importing-the-dlls-in-the-mixed-reality-unity-project"></a>第13章-导入混合现实 Unity 项目中的 Dll
 
-将使用适用于 Azure) 的 .Net SDK (用于 Unity 库的 Azure 存储。 请单击以下 [链接，了解如何通过 Unity 使用 Azure 存储](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity)。
+将使用适用于 Azure) 的 .Net SDK (用于 Unity 库的 Azure 存储。 请单击以下 [链接，了解如何通过 Unity 使用 Azure 存储](/sandbox/gamedev/unity/azure-storage-unity)。
 当前 Unity 中存在一个已知问题，需要在导入后重新配置插件。 此部分中 (4-7 的这些步骤) 解决 bug 后不再需要这些步骤。
 
 若要将 SDK 导入到自己的项目中，请确保已下载最新的 [unitypackage](https://aka.ms/azstorage-unitysdk)。 然后执行以下操作：
 
 1.  使用 "**资产**  >  **导入包**  >  **自定义包**" 菜单选项将从上 unitypackage 下载的文件添加到 Unity。
 
-2.  在弹出的 "**导入 Unity 包**" 框中，可以选择 "**插件**" "存储" 下的所有内容  >  **Storage**。
+2.  在弹出的 "**导入 Unity 包**" 框中，可以选择 "**插件**" "存储" 下的所有内容  >  。
 
     ![导入包](images/AzureLabs-Lab8-90.png)
 
@@ -1623,7 +1623,7 @@ ms.locfileid: "94679536"
 
 4.  它将加载与已登录的帐户相关联的所有应用程序。 如果你未登录到你的帐户，则可以在此页上 **登录** 。
 
-5.  查找你在本教程开始时创建的 **应用商店应用名称** ，然后选择它。 然后，单击 **“下一步”** 。
+5.  查找你在本教程开始时创建的 **应用商店应用名称** ，然后选择它。 然后单击“下一步”  。
 
     ![查找并选择你的商店名称](images/AzureLabs-Lab8-107.png)
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 端口，unity，unreal，中间件，引擎，UWP，Win32，移植，HoloLens 第一代，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10，输入映射，
-ms.openlocfilehash: b43b42567183ef77ef76b301212233eeeb7c04ca
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: dd09c6479bfcf3659b3e9355be898d77bccc6dc6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192657"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580574"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>将 VR 应用移植到 Windows Mixed Reality
 
@@ -37,8 +37,8 @@ Windows 10 支持沉浸式和全息耳机。 如果为其他设备（如 Oculus 
 Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Windows 预览体验计划](https://insider.windows.com/) ，以访问 "Windows 有问必答 Fast" 航班。
 1. 安装 [Windows 10 创意者更新](https://www.microsoft.com/software-download/windows10)
 2. [加入](https://insider.windows.com/) Windows 预览体验计划。
-3. 启用 [开发人员模式](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
-4. 通过 "**设置" > 更新 & 安全 "部分**，切换到 [Windows 预览体验快速航班](https://blogs.technet.microsoft.com/uktechnet/2016/07/01/joining-insider-preview)
+3. 启用 [开发人员模式](/windows/uwp/get-started/enable-your-device-for-development)
+4. 通过 "**设置" > 更新 & 安全 "部分**，切换到 [Windows 预览体验快速航班](/archive/blogs/uktechnet/joining-insider-preview)
 
 ### <a name="3-upgrade-to-the-most-recent-build-of-visual-studio"></a>3. 升级到最新版本的 Visual Studio
 * 如果使用的是 Visual Studio，请升级到最新版本
@@ -57,7 +57,7 @@ Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Window
 > 如果你使用的是 HP 回音 G2 控制器，请参阅 [此文](../unreal/unreal-reverb-g2-controllers.md) ，了解更多输入映射说明。
 
 ## <a name="see-also"></a>另请参阅
-* [Windows Mixed Reality 最小电脑硬件兼容性指南](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
+* [Windows Mixed Reality 最小电脑硬件兼容性指南](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [了解混合现实的性能](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Unity 性能建议](../unity/performance-recommendations-for-unity.md)
 * [运动控制器](../../design/motion-controllers.md)

@@ -6,12 +6,12 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助双手，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 07b42482d9258b4189ef43683370bd951f5c88e8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 69afe767e01c57535b79575e4f25fabe4a9f6f39
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009157"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582273"
 ---
 # <a name="hand-coach"></a>手部指导
 
@@ -85,7 +85,7 @@ ms.locfileid: "98009157"
 
 ## <a name="can-i-create-my-own"></a>我能创建自己的吗？
 
-可以！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
+是！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
 我们提供了一个可用于你的应用的 Rigged 的 Maya 文件，可在此处下载 <a href="files/HandCoach_MRTK.zip"> HandCoach_MRTK.zip </a>
 
 ![在 Maya 中进行动画处理的示例](images/HandCoach/MayaSelect_Gif.gif)<br>
@@ -177,7 +177,7 @@ ms.locfileid: "98009157"
 
 * [交互-基础](interaction-fundamentals.md)
 * [资产创建过程](asset-creation-process.md)
-* [笔势](../gestures.md)
+* [笔势](./interaction-fundamentals.md)
 * [安装工具](../develop/install-the-tools.md)
 * [配置 Unity 项目](../develop/unity/Configure-Unity-Project.md)
 * [Unity 开发概述](../develop/unity/unity-development-overview.md)

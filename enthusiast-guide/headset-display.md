@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
 appliesto:
 - Windows 10
-ms.openlocfilehash: 6bcd6db30bf3a8a6e69d45c10be523d45ee4f82a
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: f448cafe3d0952ada63d545e44b58001779a1470
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725408"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580515"
 ---
 # <a name="headset-display-faqs"></a>耳机显示 Faq
 
@@ -52,7 +52,7 @@ ms.locfileid: "97725408"
 
 ## <a name="my-headset-display-occasionally-turns-black-after-some-use"></a>某些使用后，耳机显示偶尔变为黑色
 
-* 尝试在电脑上禁用任何 USB 挂起或节能功能。 例如，在 " **设置" 中 > 系统 > Power & 睡眠 > [USB 选择性挂起](https://docs.microsoft.com/windows-hardware/drivers/usbcon/usb-selective-suspend)**、设备管理器中的 "允许计算机关闭此设备以节省电源" 设置以及 PC 固件中的任何 USB 节能设置。
+* 尝试在电脑上禁用任何 USB 挂起或节能功能。 例如，在 " **设置" 中 > 系统 > Power & 睡眠 > [USB 选择性挂起](/windows-hardware/drivers/usbcon/usb-selective-suspend)**、设备管理器中的 "允许计算机关闭此设备以节省电源" 设置以及 PC 固件中的任何 USB 节能设置。
 * 暂时断开连接到电脑的任何其他 USB 设备和外围设备。
 * 检查你的 GPU 驱动程序版本是否为最新版本，并检查新驱动程序是否存在任何新的性能和兼容性问题和回归。
 
