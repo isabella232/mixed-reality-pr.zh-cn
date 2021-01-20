@@ -1,70 +1,72 @@
 ---
-title: 使用混响为空间音频添加距离感
-description: 了解如何添加回音效果，以增强混合现实应用程序中对空间音频的距离变化方式。
+title: 空间音频教程-5。 使用混响为空间音频添加距离感
+description: 添加回音效果，提高对空间音频的距离变体的意义。
 author: kegodin
 ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，音频混合器，SFX 回音
-ms.openlocfilehash: 6c04ac1e4b52c7eb6104d54c184c789bec413852
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 3d19bb0b22c507eb692a752aa318ecb82a1cf2f7
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006357"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98578362"
 ---
-# <a name="using-reverb-to-add-distance-to-spatial-audio"></a><span data-ttu-id="03059-104">使用混响为空间音频添加距离感</span><span class="sxs-lookup"><span data-stu-id="03059-104">Using reverb to add distance to spatial audio</span></span>
+# <a name="5-using-reverb-to-add-distance-to-spatial-audio"></a><span data-ttu-id="e08e0-105">5.使用混响为空间音频添加距离感</span><span class="sxs-lookup"><span data-stu-id="e08e0-105">5. Using reverb to add distance to spatial audio</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="03059-105">目标</span><span class="sxs-lookup"><span data-stu-id="03059-105">Objectives</span></span>
+## <a name="overview"></a><span data-ttu-id="e08e0-106">概述</span><span class="sxs-lookup"><span data-stu-id="e08e0-106">Overview</span></span>
 
-<span data-ttu-id="03059-106">在前面的章节中，我们将 spatialization 添加到声音，使其成为一种方向。</span><span class="sxs-lookup"><span data-stu-id="03059-106">In previous chapters, we added spatialization to sounds to give them a sense of direction.</span></span> <span data-ttu-id="03059-107">在本5章节中，我们将添加一个回音效果，为声音指定距离。</span><span class="sxs-lookup"><span data-stu-id="03059-107">In this 5th chapter, we'll add a reverb effect to give sounds a sense of distance.</span></span> <span data-ttu-id="03059-108">我们的目标是：</span><span class="sxs-lookup"><span data-stu-id="03059-108">Our objectives are to:</span></span>
-* <span data-ttu-id="03059-109">通过添加回音来改善声音源的感知距离</span><span class="sxs-lookup"><span data-stu-id="03059-109">Improve perceived distance of sound sources by adding reverb</span></span>
-* <span data-ttu-id="03059-110">使用侦听器与全息图的距离控制声音的已知距离</span><span class="sxs-lookup"><span data-stu-id="03059-110">Control perceived distance of the sound using the listener's distance to the hologram</span></span>
+<span data-ttu-id="e08e0-107">在上一教程中，你已为声音添加了 spatialization，以使其在本教程中有一个方向，你将添加一个回音效果，以便为声音提供距离。</span><span class="sxs-lookup"><span data-stu-id="e08e0-107">In previous tutorial, you have added spatialization for the sounds to give them a sense of direction in this tutorial you'll add a reverb effect to give sounds a sense of distance.</span></span>
 
-## <a name="add-a-mixer-group-and-a-reverb-effect"></a><span data-ttu-id="03059-111">添加混音器组和回音效果</span><span class="sxs-lookup"><span data-stu-id="03059-111">Add a mixer group and a reverb effect</span></span>
+## <a name="objectives"></a><span data-ttu-id="e08e0-108">目标</span><span class="sxs-lookup"><span data-stu-id="e08e0-108">Objectives</span></span>
 
-<span data-ttu-id="03059-112">在 [第2章](unity-spatial-audio-ch2.md)，我们添加了一个混音器。</span><span class="sxs-lookup"><span data-stu-id="03059-112">In [Chapter 2](unity-spatial-audio-ch2.md), we added a mixer.</span></span> <span data-ttu-id="03059-113">混音器默认包含一个名为 **Master** 的 **组**。</span><span class="sxs-lookup"><span data-stu-id="03059-113">The mixer includes one **Group** by default called **Master**.</span></span> <span data-ttu-id="03059-114">因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个 **组** 。</span><span class="sxs-lookup"><span data-stu-id="03059-114">Because we'll only want to apply a reverb effect to some sounds, let's add a second **Group** for those sounds.</span></span> <span data-ttu-id="03059-115">若要添加 **组**，请在 **音频混合器** 中右键单击 **主控** 组，然后选择 "**添加子组**"：</span><span class="sxs-lookup"><span data-stu-id="03059-115">To add a **Group**, right click on the **Master** group in the **Audio Mixer** and choose **Add child group**:</span></span>
+* <span data-ttu-id="e08e0-109">通过添加回音来改善声音源的感知距离。</span><span class="sxs-lookup"><span data-stu-id="e08e0-109">Improve perceived distance of sound sources by adding reverb.</span></span>
+* <span data-ttu-id="e08e0-110">使用侦听器与全息图的距离控制声音的已知距离。</span><span class="sxs-lookup"><span data-stu-id="e08e0-110">Control perceived distance of the sound using the listener's distance to the hologram.</span></span>
 
-![添加子组](images/spatial-audio/add-child-group.png)
+## <a name="add-a-mixer-group-and-a-reverb-effect"></a><span data-ttu-id="e08e0-111">添加混音器组和回音效果</span><span class="sxs-lookup"><span data-stu-id="e08e0-111">Add a mixer group and a reverb effect</span></span>
 
-<span data-ttu-id="03059-117">在此示例中，我们已将新组命名为 "房间效果"。</span><span class="sxs-lookup"><span data-stu-id="03059-117">In this example, we've named the new group "Room Effect".</span></span>
+<span data-ttu-id="e08e0-112">在 [Spatializing button 交互声音教程](unity-spatial-audio-ch2.md)中，我们添加了一个混音器。</span><span class="sxs-lookup"><span data-stu-id="e08e0-112">In [Spatializing button interaction sounds Tutorial](unity-spatial-audio-ch2.md), we added a mixer.</span></span> <span data-ttu-id="e08e0-113">混音器默认包含一个名为 **Master** 的 **组**。</span><span class="sxs-lookup"><span data-stu-id="e08e0-113">The mixer includes one **Group** by default called **Master**.</span></span> <span data-ttu-id="e08e0-114">因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个组。</span><span class="sxs-lookup"><span data-stu-id="e08e0-114">Because we'll only want to apply a reverb effect to some sounds, let's add a second Group for those sounds.</span></span> <span data-ttu-id="e08e0-115">若要添加组，请在 **音频混合器** 中右键单击主组，选择 " **添加子组** " 并为 " _会议室效果_" 提供合适的名称：</span><span class="sxs-lookup"><span data-stu-id="e08e0-115">To add a Group, right click on the Master group in the **Audio Mixer** choose **Add child group** and give suitable name for example _Room Effect_:</span></span>
 
-<span data-ttu-id="03059-118">每个 **组** 都有自己的效果集。</span><span class="sxs-lookup"><span data-stu-id="03059-118">Each **Group** has its own set of effects.</span></span> <span data-ttu-id="03059-119">通过在新组中单击 " **添加 ...** " 并选择 " **SFX 回音**"，向新组添加回音效果：</span><span class="sxs-lookup"><span data-stu-id="03059-119">Add a reverb effect to the new group by clicking **Add...** on the new group, and choosing **SFX Reverb**:</span></span>
+![添加子组](images/spatial-audio/spatial-audio-05-section1-step1-1.png)
 
-![添加 SFX 回音](images/spatial-audio/add-sfx-reverb.png)
+<span data-ttu-id="e08e0-117">每个 **组** 都有自己的效果集。</span><span class="sxs-lookup"><span data-stu-id="e08e0-117">Each **Group** has its own set of effects.</span></span> <span data-ttu-id="e08e0-118">通过在新组中单击 " **添加 ...** " 并选择 " **SFX 回音**"，向新组添加回音效果：</span><span class="sxs-lookup"><span data-stu-id="e08e0-118">Add a reverb effect to the new group by clicking **Add...** on the new group, and choosing **SFX Reverb**:</span></span>
 
-<span data-ttu-id="03059-121">在音频术语中，原始、unreverberated 的音频称为 _晾干路径_，筛选后的音频被称为 _湿路径_。</span><span class="sxs-lookup"><span data-stu-id="03059-121">In audio terminology, the original, unreverberated audio is called the _dry path_, and the audio after filtering with the reverb filter is called the _wet path_.</span></span> <span data-ttu-id="03059-122">这两个路径都发送到音频输出，在此组合中，其相对强度称为 _湿/干燥混合_。</span><span class="sxs-lookup"><span data-stu-id="03059-122">Both paths are sent to the audio output, and their relative strengths in this mixture is called the _wet/dry mix_.</span></span> <span data-ttu-id="03059-123">湿/干燥混合会对距离的理解产生很大影响。</span><span class="sxs-lookup"><span data-stu-id="03059-123">The wet/dry mix strongly affects the sense of distance.</span></span>
+![添加 SFX 回音](images/spatial-audio/spatial-audio-05-section1-step1-2.png)
 
-<span data-ttu-id="03059-124">**SFX 回音** 包含用于在效果内调整湿/干燥混合的控件。</span><span class="sxs-lookup"><span data-stu-id="03059-124">The **SFX Reverb** includes controls to adjust the wet/dry mix within the effect.</span></span> <span data-ttu-id="03059-125">由于 **Microsoft Spatializer** 插件处理晾干路径，因此，我们只为湿路径使用 **SFX 回音** 。</span><span class="sxs-lookup"><span data-stu-id="03059-125">Because the **Microsoft Spatializer** plugin handles the dry path, we'll be using the **SFX Reverb** only for the wet path.</span></span> <span data-ttu-id="03059-126">在 **SFX 回音** 的 "**检查器**" 窗格上：</span><span class="sxs-lookup"><span data-stu-id="03059-126">On the **Inspector** pane of your **SFX Reverb**:</span></span>
-* <span data-ttu-id="03059-127">将 "晾干级别" 属性设置为最低 (-10000 mB) </span><span class="sxs-lookup"><span data-stu-id="03059-127">Set the Dry Level property to the lowest setting (-10000 mB)</span></span>
-* <span data-ttu-id="03059-128">将 "房间" 属性设置为最高 (0 mB) </span><span class="sxs-lookup"><span data-stu-id="03059-128">Set the Room property to the highest setting (0 mB)</span></span>
+<span data-ttu-id="e08e0-120">在音频术语中，原始、unreverberated 的音频称为 _晾干路径_，筛选后的音频被称为 _湿路径_。</span><span class="sxs-lookup"><span data-stu-id="e08e0-120">In audio terminology, the original, unreverberated audio is called the _dry path_, and the audio after filtering with the reverb filter is called the _wet path_.</span></span> <span data-ttu-id="e08e0-121">这两个路径都发送到音频输出，在此组合中，其相对强度称为 _湿/干燥混合_。</span><span class="sxs-lookup"><span data-stu-id="e08e0-121">Both paths are sent to the audio output, and their relative strengths in this mixture is called the _wet/dry mix_.</span></span> <span data-ttu-id="e08e0-122">湿/干燥混合会对距离的理解产生很大影响。</span><span class="sxs-lookup"><span data-stu-id="e08e0-122">The wet/dry mix strongly affects the sense of distance.</span></span>
 
-<span data-ttu-id="03059-129">进行这些更改后， **SFX 回音** 的 "**检查器**" 窗格将如下所示：</span><span class="sxs-lookup"><span data-stu-id="03059-129">After these changes, the **Inspector** pane of the **SFX Reverb** will look like this:</span></span>
+<span data-ttu-id="e08e0-123">**SFX 回音** 包含用于在效果内调整湿/干燥混合的控件。</span><span class="sxs-lookup"><span data-stu-id="e08e0-123">The **SFX Reverb** includes controls to adjust the wet/dry mix within the effect.</span></span> <span data-ttu-id="e08e0-124">由于 **Microsoft Spatializer** 插件处理晾干路径，因此，我们只为湿路径使用 **SFX 回音** 。</span><span class="sxs-lookup"><span data-stu-id="e08e0-124">Because the **Microsoft Spatializer** plugin handles the dry path, we'll be using the **SFX Reverb** only for the wet path.</span></span> <span data-ttu-id="e08e0-125">在 **SFX 回音** 的 "检查器" 窗格上：</span><span class="sxs-lookup"><span data-stu-id="e08e0-125">On the Inspector pane of your **SFX Reverb**:</span></span>
 
-![SFX 回音属性](images/spatial-audio/sfx-reverb-properties.png)
+* <span data-ttu-id="e08e0-126">将 " **晾干级别** " 属性设置为最低 (-10000 mB) </span><span class="sxs-lookup"><span data-stu-id="e08e0-126">Set the **Dry Level** property to the lowest setting (-10000 mB)</span></span>
+* <span data-ttu-id="e08e0-127">将 " **房间" 属性** 设置为最高 (0 mB) </span><span class="sxs-lookup"><span data-stu-id="e08e0-127">Set the **Room property** to the highest setting (0 mB)</span></span>
 
-<span data-ttu-id="03059-131">其他设置控制模拟房间的感觉。</span><span class="sxs-lookup"><span data-stu-id="03059-131">The other settings control the feel of the simulated room.</span></span> <span data-ttu-id="03059-132">具体而言， **衰减时间** 与感知到的空间大小相关。</span><span class="sxs-lookup"><span data-stu-id="03059-132">In particular, **Decay Time** is related to perceived room size.</span></span> 
+![SFX 回音属性](images/spatial-audio/spatial-audio-05-section1-step1-3.png)
 
-## <a name="enable-reverb-on-the-video-playback"></a><span data-ttu-id="03059-133">启用视频播放时播放回音</span><span class="sxs-lookup"><span data-stu-id="03059-133">Enable reverb on the video playback</span></span>
+<span data-ttu-id="e08e0-129">其他设置控制模拟房间的感觉。</span><span class="sxs-lookup"><span data-stu-id="e08e0-129">The other settings control the feel of the simulated room.</span></span> <span data-ttu-id="e08e0-130">具体而言， **衰减时间** 与感知到的空间大小相关。</span><span class="sxs-lookup"><span data-stu-id="e08e0-130">In particular, **Decay Time** is related to perceived room size.</span></span>
 
-<span data-ttu-id="03059-134">在音频源上启用回音的步骤有两个：</span><span class="sxs-lookup"><span data-stu-id="03059-134">There are two steps to enable reverb on an audio source:</span></span>
-* <span data-ttu-id="03059-135">将 **音频源** 路由到相应的 **组**</span><span class="sxs-lookup"><span data-stu-id="03059-135">Route the **Audio Source** to the appropriate **Group**</span></span>
-* <span data-ttu-id="03059-136">设置 **Microsoft Spatializer** 插件以将音频传递到 **组** 进行处理</span><span class="sxs-lookup"><span data-stu-id="03059-136">Set the **Microsoft Spatializer** plugin to pass audio into the **Group** for processing</span></span>
+## <a name="enable-reverb-on-the-video-playback"></a><span data-ttu-id="e08e0-131">启用视频播放时播放回音</span><span class="sxs-lookup"><span data-stu-id="e08e0-131">Enable reverb on the video playback</span></span>
 
-<span data-ttu-id="03059-137">在以下步骤中，我们将调整脚本以控制音频路由，并附加 **Microsoft Spatializer** 插件提供的控制脚本，将数据送入回音。</span><span class="sxs-lookup"><span data-stu-id="03059-137">In the following steps, we'll adjust our script to control the audio routing, and attach a control script provided with the **Microsoft Spatializer** plugin to feed data into the reverb.</span></span>
+<span data-ttu-id="e08e0-132">在音频源上启用回音的步骤有两个：</span><span class="sxs-lookup"><span data-stu-id="e08e0-132">There are two steps to enable reverb on an audio source:</span></span>
 
-<span data-ttu-id="03059-138">在 "**四核\*\*\*\*检查器**" 窗格中，单击 "**添加组件**" 并添加 "**房间效果发送级别** 脚本"：</span><span class="sxs-lookup"><span data-stu-id="03059-138">On the **Inspector** pane for the **Quad**, click **Add Component** and add the **Room Effect Send Level** script:</span></span>
+* <span data-ttu-id="e08e0-133">将 **音频源** 路由到相应的 **组**</span><span class="sxs-lookup"><span data-stu-id="e08e0-133">Route the **Audio Source** to the appropriate **Group**</span></span>
+* <span data-ttu-id="e08e0-134">设置 **Microsoft Spatializer** 插件以将音频传递到 **组** 进行处理</span><span class="sxs-lookup"><span data-stu-id="e08e0-134">Set the **Microsoft Spatializer** plugin to pass audio into the **Group** for processing</span></span>
 
-![添加发送级别脚本](images/spatial-audio/add-send-level-script.png)
+<span data-ttu-id="e08e0-135">在以下步骤中，你将调整脚本以控制音频路由，并附加与 **Microsoft Spatializer** 插件一起提供的控制脚本，将数据送入回音。</span><span class="sxs-lookup"><span data-stu-id="e08e0-135">In the following steps, you will adjust the script to control the audio routing, and attach a control script provided with the **Microsoft Spatializer** plugin to feed data into the reverb.</span></span>
+
+<span data-ttu-id="e08e0-136">在层次结构中选择的 **四** 个步骤中，单击 "检查器" 窗口上的 "**添加组件**"，并将 "**房间效果" 发送级别 (脚本)**</span><span class="sxs-lookup"><span data-stu-id="e08e0-136">With the **Quad** selected in the Hierarchy click **Add Component** On the Inspector window and add the **Room Effect Send Level(Script)**:</span></span>
+
+![添加发送级别脚本](images/spatial-audio/spatial-audio-05-section2-step1-1.png)
 
 > [!NOTE]
-> <span data-ttu-id="03059-140">除非你启用 **Microsoft Spatializer** 插件的 **会议室效果发送级别** 功能，否则它不会将任何音频发送回 Unity 音频引擎以进行有效处理。</span><span class="sxs-lookup"><span data-stu-id="03059-140">Unless you enable **Room Effect Send Level** feature of the **Microsoft Spatializer** plugin, it doesn't send any audio back to the Unity audio engine for effect processing.</span></span>
+> <span data-ttu-id="e08e0-138">除非你启用 **Microsoft Spatializer** 插件的 **会议室效果发送级别** 功能，否则它不会将任何音频发送回 Unity 音频引擎以进行有效处理。</span><span class="sxs-lookup"><span data-stu-id="e08e0-138">Unless you enable **Room Effect Send Level** feature of the **Microsoft Spatializer** plugin, it doesn't send any audio back to the Unity audio engine for effect processing.</span></span>
 
-<span data-ttu-id="03059-141">" **房间效果发送级别** " 组件包括一个图形控件，该控件设置发送到 Unity 音频引擎以进行回音处理的音频级别。</span><span class="sxs-lookup"><span data-stu-id="03059-141">The **Room Effect Send Level** component includes a graph control that sets the level of the audio sent to the Unity audio engine for reverb processing.</span></span> <span data-ttu-id="03059-142">单击并向下拖动曲线，将级别设置为30dB：</span><span class="sxs-lookup"><span data-stu-id="03059-142">Click and drag the curve downwards to set the level to about -30dB:</span></span>
+<span data-ttu-id="e08e0-139">" **房间效果发送级别** " 组件包括一个图形控件，该控件设置发送到 Unity 音频引擎以进行回音处理的音频级别。</span><span class="sxs-lookup"><span data-stu-id="e08e0-139">The **Room Effect Send Level** component includes a graph control that sets the level of the audio sent to the Unity audio engine for reverb processing.</span></span> <span data-ttu-id="e08e0-140">若要打开图形控件，请单击 **房间效果发送级别**。</span><span class="sxs-lookup"><span data-stu-id="e08e0-140">To open the graph control, click on the **Room Effect Send Level**.</span></span>  <span data-ttu-id="e08e0-141">单击并向下拖动绿色曲线，将级别设置为30dB：</span><span class="sxs-lookup"><span data-stu-id="e08e0-141">Click and drag the green curve downwards to set the level to about -30dB:</span></span>
 
-![调整回音曲线](images/spatial-audio/adjust-reverb-curve.png)
+![调整回音曲线](images/spatial-audio/spatial-audio-05-section2-step1-2.png)
 
-<span data-ttu-id="03059-144">接下来，取消注释 **SpatializeOnOff** 脚本中的4个注释行。</span><span class="sxs-lookup"><span data-stu-id="03059-144">Next, uncomment the 4 commented lines in the **SpatializeOnOff** script.</span></span> <span data-ttu-id="03059-145">该脚本现在将如下所示：</span><span class="sxs-lookup"><span data-stu-id="03059-145">The script will now look like this:</span></span>
+<span data-ttu-id="e08e0-143">接下来，取消注释 **SpatializeOnOff** 脚本中的4个注释行。</span><span class="sxs-lookup"><span data-stu-id="e08e0-143">Next, uncomment the 4 commented lines in the **SpatializeOnOff** script.</span></span> <span data-ttu-id="e08e0-144">该脚本现在将如下所示：</span><span class="sxs-lookup"><span data-stu-id="e08e0-144">The script will now look like this:</span></span>
+
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -120,18 +122,18 @@ public class SpatializeOnOff : MonoBehaviour
 }
 ```
 
-<span data-ttu-id="03059-146">取消注释这些行将两个属性添加到脚本的 " **检查器** " 窗格中。</span><span class="sxs-lookup"><span data-stu-id="03059-146">Uncommenting these lines adds two properties to the **Inspector** pane for the script.</span></span> <span data-ttu-id="03059-147">若要设置这些设置，请在 Spatialize 的 "**关闭** 组件" 组件的 "**检查器**" 窗格 **中：**</span><span class="sxs-lookup"><span data-stu-id="03059-147">To set these, on the **Inspector** pane of the **Spatialize On Off** component of the **Quad**:</span></span>
-* <span data-ttu-id="03059-148">将 " **房间效果组** " 属性设置为新的 "房间效果" 混音器组</span><span class="sxs-lookup"><span data-stu-id="03059-148">Set the **Room Effect Group** property to your new Room Effect mixer group</span></span>
-* <span data-ttu-id="03059-149">将 " **主组** " 属性设置为 "主混音器" 组</span><span class="sxs-lookup"><span data-stu-id="03059-149">Set the **Master Group** property to the Master mixer group</span></span>
+<span data-ttu-id="e08e0-145">取消注释这些行后，它会将两个属性添加到 **SpatializeOnOff 脚本** 的检查器中。</span><span class="sxs-lookup"><span data-stu-id="e08e0-145">Once these lines are Uncommented  it adds two properties to the Inspector of the **SpatializeOnOff script**.</span></span> <span data-ttu-id="e08e0-146">在 **四** 个 **SpatializeOnOff** 组件的检查器窗口上分配它们。</span><span class="sxs-lookup"><span data-stu-id="e08e0-146">assign these on the Inspector window of **SpatializeOnOff** component of the **Quad**.</span></span>
 
-<span data-ttu-id="03059-150">完成这些更改后， **Spatialize On** 属性将如下所示：</span><span class="sxs-lookup"><span data-stu-id="03059-150">After these changes, the **Spatialize On Off** properties will look like this:</span></span>
+<span data-ttu-id="e08e0-147">在层次结构中，如果仍在层次结构中选择了 Quad 对象，请在检查器窗口中找到 **SpatializeOnOff 脚本** 组件，并：</span><span class="sxs-lookup"><span data-stu-id="e08e0-147">With the Quad object still selected in the Hierarchy , in the Inspector window locate the **SpatializeOnOff Script** component and :</span></span>
 
-![Spatialize 扩展](images/spatial-audio/spatialize-on-off-extended.png)
+* <span data-ttu-id="e08e0-148">将 " **房间效果组** " 属性设置为新的 "房间效果" 混音器组</span><span class="sxs-lookup"><span data-stu-id="e08e0-148">Set the **Room Effect Group** property to your new Room Effect mixer group</span></span>
+* <span data-ttu-id="e08e0-149">将 " **主组** " 属性设置为 "主混音器" 组</span><span class="sxs-lookup"><span data-stu-id="e08e0-149">Set the **Master Group** property to the Master mixer group</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="03059-152">后续步骤</span><span class="sxs-lookup"><span data-stu-id="03059-152">Next steps</span></span>
+![Spatialize 扩展](images/spatial-audio/spatial-audio-05-section2-step1-3.png)
 
-<span data-ttu-id="03059-153">在 HoloLens 2 上或在 Unity 编辑器中试用你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="03059-153">Try out your app on a HoloLens 2 or in the Unity editor.</span></span> <span data-ttu-id="03059-154">现在，在接触应用中的按钮以激活 spatialization 时，该脚本会将视频的音频路由到房间效果组以添加回音。</span><span class="sxs-lookup"><span data-stu-id="03059-154">Now, when touching the button in the app to activate spatialization, the script will route the video's audio to the Room Effect Group to add reverb.</span></span> <span data-ttu-id="03059-155">切换到立体声时，它会将音频路由到主组，并避免添加回音。</span><span class="sxs-lookup"><span data-stu-id="03059-155">When switching to stereo, it will route the audio to the Master group, and avoid adding reverb.</span></span>
+## <a name="congratulations"></a><span data-ttu-id="e08e0-151">祝贺</span><span class="sxs-lookup"><span data-stu-id="e08e0-151">Congratulations</span></span>
 
-<span data-ttu-id="03059-156">已完成适用于 Unity 的 HoloLens 2 空间音频教程。</span><span class="sxs-lookup"><span data-stu-id="03059-156">You've completed the HoloLens 2 spatial audio tutorials for Unity.</span></span> <span data-ttu-id="03059-157">祝贺你！</span><span class="sxs-lookup"><span data-stu-id="03059-157">Congratulations!</span></span>
+<span data-ttu-id="e08e0-152">已完成适用于 Unity 的 HoloLens 2 空间音频教程。</span><span class="sxs-lookup"><span data-stu-id="e08e0-152">You've completed the HoloLens 2 spatial audio tutorials for Unity.</span></span> <span data-ttu-id="e08e0-153">试用 HoloLens 2 或 Unity 上的应用。</span><span class="sxs-lookup"><span data-stu-id="e08e0-153">Try out the app on a HoloLens 2 or Unity.</span></span> <span data-ttu-id="e08e0-154">单击应用中的按钮以激活 spatialization 时，该脚本会将视频的音频路由到房间效果组以添加回音。</span><span class="sxs-lookup"><span data-stu-id="e08e0-154">When you click the button in the app to activate spatialization, the script will route the video's audio to the Room Effect Group to add reverb.</span></span> <span data-ttu-id="e08e0-155">切换到立体声时，它会将音频路由到主组，并避免添加回音。</span><span class="sxs-lookup"><span data-stu-id="e08e0-155">When switching to stereo, it will route the audio to the Master group, and avoid adding reverb.</span></span>
 
-
+> [!TIP]
+> <span data-ttu-id="e08e0-156">要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。</span><span class="sxs-lookup"><span data-stu-id="e08e0-156">For a reminder on how to build and deploy your Unity project to HoloLens 2, you can refer to the [Building your app to your HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2) instructions.</span></span>
