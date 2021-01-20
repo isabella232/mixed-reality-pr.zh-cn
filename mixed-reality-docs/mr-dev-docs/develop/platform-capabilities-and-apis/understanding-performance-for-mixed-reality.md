@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，性能，优化，CPU，GPU
-ms.openlocfilehash: 68aae6408a59b197227ab8cd9042e11f8a255d10
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5012c30dce1ca4149324c916355922086a33c258
+ms.sourcegitcommit: 6725b83adf13f6573faacb27db2bcaafe80df472
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583087"
+ms.locfileid: "98615123"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>了解混合现实的性能
 
@@ -49,6 +49,9 @@ ms.locfileid: "98583087"
 - [Visual Studio 图形调试器](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
 - [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)
 - [Unity 框架调试器](https://docs.unity3d.com/Manual/FrameDebugger.html)
+- [Unreal Insights](../unreal/unreal-insights.md)
+- [PIX](https://devblogs.microsoft.com/pix/)
+- [Unreal 中的 GPU Pofiling](https://docs.unrealengine.com/en-US/TestingAndOptimization/PerformanceAndProfiling/GPU/index.html)
 
 ### <a name="how-to-profile-in-any-environment"></a>如何在任何环境中进行分析
 
@@ -139,5 +142,9 @@ ms.locfileid: "98583087"
 ## <a name="see-also"></a>另请参阅
 - [针对 Unity 的性能建议](../unity/performance-recommendations-for-unity.md)
 - [建议用于 Unity 的设置](../unity/recommended-settings-for-unity.md)
-- [优化3D 模型](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
-- [转换和优化实时3D 模型的最佳做法](/dynamics365/mixed-reality/import-tool/best-practices)
+- [针对 Unreal 的性能建议](../unreal/performance-recommendations-for-unreal.md)
+- [Unreal 中的材料建议](../unreal/unreal-materials.md)
+- [优化3D 模型](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [转换和优化实时3D 模型的最佳做法](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+- [适用于 Unreal 的艺术家和设计人员性能准则](https://docs.unrealengine.com/en-US/TestingAndOptimization/PerformanceAndProfiling/Guidelines/index.html)
+- [Unreal 的 VR 最佳实践](https://docs.unrealengine.com/en-US/SharingAndReleasing/XRDevelopment/VR/DevelopVR/ContentSetup/index.html)
