@@ -6,16 +6,16 @@ ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
 keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: d3a31204275b2d2a9f1f1ea1c283993d2e0285ed
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4a5df06009d2c9c25b12c8e7f4bd1622821964c8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009577"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582891"
 ---
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>针对 HoloLens 2 的 Galaxy 资源管理器创建
 
-欢迎使用适用于 HoloLens 2 应用程序的已更新 Galaxy 资源管理器！ [Galaxy 资源管理器](https://docs.microsoft.com/windows/mixed-reality/galaxy-explorer "星系探索者") 最初是作为一种开源应用程序开发的， (第一代) 通过共享你的想法计划，这是许多人的第一种混合现实体验之一。 现在我们正在更新它，以获得 [HoloLens 2 的全新功能](https://www.microsoft.com/hololens/hardware)。
+欢迎使用适用于 HoloLens 2 应用程序的已更新 Galaxy 资源管理器！ [Galaxy 资源管理器](/windows/mixed-reality/galaxy-explorer "星系探索者") 最初是作为一种开源应用程序开发的， (第一代) 通过共享你的想法计划，这是许多人的第一种混合现实体验之一。 现在我们正在更新它，以获得 [HoloLens 2 的全新功能](https://www.microsoft.com/hololens/hardware)。
 
 作为 [Microsoft 混合现实工作室](galaxy-explorer-update.md#mixed-reality-studios)之一，我们通常会开发商业级解决方案，并在整个创意和开发过程中在目标平台上开发 & 测试。 我们将使用 (的框架和工具（例如) [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) ）来着手此项目，并将其提供给我们和社区，我们想要将你带入。
 

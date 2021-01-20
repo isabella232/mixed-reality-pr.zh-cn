@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality，键盘，鼠标，游戏控制器，xbox 控制器，HoloLens，桌面，演练，示例代码
-ms.openlocfilehash: b7984c86b952612af020e2bd91063e0a9b0d92f6
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 3cf35ba195e839332cbedb8b2c3945334a158cbc
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530050"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583637"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>DirectX 中的键盘、鼠标和控制器输入
 
@@ -60,7 +60,7 @@ ms.locfileid: "97530050"
 还可以通过 UWP CoreWindow 输入事件处理程序再次使用鼠标输入。 下面介绍了如何修改 Windows 全息应用程序模板，以支持通过与按下手势相同的方式进行鼠标单击。 进行此修改后，在戴上沉浸式耳机设备时，单击鼠标将重新定位该多维数据集。
 
 > [!NOTE]
-> UWP 应用还可以通过使用 [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) API 获取鼠标的原始 XY 数据。
+> UWP 应用还可以通过使用 [MouseDevice](/uwp/api/Windows.Devices.Input.MouseDevice) API 获取鼠标的原始 XY 数据。
 
 首先在 AppView 中声明新的 OnPointerPressed 处理程序：
 

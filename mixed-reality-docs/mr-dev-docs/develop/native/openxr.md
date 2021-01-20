@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件
-ms.openlocfilehash: ba03799ff42d3a4c27799dcf2f4035d408360120
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 76193cdf3c790037474b66de9fbbbd1da8f31199
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613122"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583796"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -80,7 +80,7 @@ OpenXR 规范定义了一种扩展机制，它使运行时实现程序能够公�
 
 *Minecraft 的新 RenderDragon 引擎正在使用 OpenXR 构建其 desktop VR 支持*
 
-Microsoft 一直在使用 Unity 和长篇故事来确保未来混合现实处于打开状态，而不仅仅是针对 HoloLens 2，而是在所有的 PC VR 范围内（包括 [HP 的新的回响 G2 耳机](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)）。  有关为 HoloLens (第一代) 进行开发的详细信息，请参阅 [发行说明](https://docs.microsoft.com/hololens/hololens1-release-notes)。
+Microsoft 一直在使用 Unity 和长篇故事来确保未来混合现实处于打开状态，而不仅仅是针对 HoloLens 2，而是在所有的 PC VR 范围内（包括 [HP 的新的回响 G2 耳机](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)）。  有关为 HoloLens (第一代) 进行开发的详细信息，请参阅 [发行说明](/hololens/hololens1-release-notes)。
 
 若要了解如何在 Unity、Unreal 引擎或你自己的引擎中开始处理 OpenXR，请阅读！
 

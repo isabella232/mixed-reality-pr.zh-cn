@@ -6,18 +6,18 @@ ms.author: vladkol
 ms.date: 05/20/2018
 ms.topic: article
 keywords: unity，mixed reality，native，xrdevice，spatialcoordinatesystem，holographicframe，holographiccamera，ispatialcoordinatesystem，iholographicframe，iholographiccamera，getnativeptr，mixed reality 耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 7aa69286942ce98909e23508d92fb88c59ce9175
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 64e83e04e56b1296d5115353eed68baadeba193c
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009807"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583562"
 ---
 # <a name="mixed-reality-native-objects-in-unity"></a>Unity 中的混合现实原生对象
 
 每个混合现实应用都在开始接收相机数据和渲染帧之前 [获得 HolographicSpace](../native/getting-a-holographicspace.md) 。 在 Unity 中，引擎负责处理这些步骤，处理全息对象和内部更新作为其呈现循环的一部分。
 
-但是，在高级方案中，可能需要访问基础本机对象，例如 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> 和 current <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>。 <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">UnityEngine. XR. XRDevice</a> 提供对这些本机对象的访问权限。
+但是，在高级方案中，可能需要访问基础本机对象，例如 <a href="/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> 和 current <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>。 <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">UnityEngine. XR. XRDevice</a> 提供对这些本机对象的访问权限。
 
 ## <a name="xrdevice"></a>XRDevice 
 
@@ -132,7 +132,7 @@ public static bool GetCurrentFrameDateTime(out DateTime frameDateTime)
 ## <a name="see-also"></a>另请参阅
 
 * [将 Windows 命名空间与 Unity 应用配合用于 HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
-* <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>
-* <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>
-* <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a>
+* <a href="/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>
+* <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>
+* <a href="/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a>
 * [在 DirectX 中渲染](../native/rendering-in-directx.md)

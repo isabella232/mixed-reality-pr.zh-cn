@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 部署，unity，visual studio，HoloLens，HoloLens 2，沉浸式耳机，最佳实践，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，UWP，Visual Studio Tools，Windows SDK
-ms.openlocfilehash: 9464c86826b9a8ea2c64384dfa699fc6d98743dd
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6940382af605c28686cec862cf2d9b6cb8411387
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009367"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583462"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>使用 Unity 和 Visual Studio 的最佳做法
 
@@ -35,7 +35,7 @@ Unity 中的 .NET 脚本编写后端支持在 Unity 2018 中被弃用，并且�
 
 ## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 
-下载 [Visual Studio Tools for Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity)
+下载 [Visual Studio Tools for Unity](/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity)
 
 **Visual Studio Tools for Unity 的优点**
 * 通过放置断点、计算变量和复杂表达式，从 Visual Studio 调试 Unity 编辑器播放模式。

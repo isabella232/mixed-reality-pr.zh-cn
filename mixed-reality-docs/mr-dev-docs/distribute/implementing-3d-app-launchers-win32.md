@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，动态立方体，win32，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，清单
-ms.openlocfilehash: 63b07664cb09f51e6d0588fdc50d141ad8985093
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 46d3419d3c8267291496d8f788103d7002e6f230
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009666"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583037"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>实现 3D 应用启动器（Win32 应用）
 
@@ -33,11 +33,11 @@ ms.locfileid: "98009666"
 
 ## <a name="configuring-the-3d-launcher"></a>配置3D 启动器
 
-如果为 Windows Mixed Reality 开始菜单创建了一个3D 应用启动器，Win32 应用程序将显示在 "所有应用程序" 列表中。 为此，请按照以下步骤创建一个引用3D 应用程序启动器的 [视觉元素清单](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) XML 文件：
+如果为 Windows Mixed Reality 开始菜单创建了一个3D 应用启动器，Win32 应用程序将显示在 "所有应用程序" 列表中。 为此，请按照以下步骤创建一个引用3D 应用程序启动器的 [视觉元素清单](/previous-versions/windows/apps/dn393983(v=win.10)) XML 文件：
 
 1. 创建 **三维应用启动器资产 GLB 文件** (参阅 [建模和导出](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)) 。
-2. 为应用程序创建一个 **[可视元素清单](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx)** 。
-    1. 您可以从下面的 [示例](#sample-visual-elements-manifest)开始。  有关更多详细信息，请参阅完整的 [可视元素清单](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) 文档。
+2. 为应用程序创建一个 **[可视元素清单](/previous-versions/windows/apps/dn393983(v=win.10))** 。
+    1. 您可以从下面的 [示例](#sample-visual-elements-manifest)开始。  有关更多详细信息，请参阅完整的 [可视元素清单](/previous-versions/windows/apps/dn393983(v=win.10)) 文档。
     2. 使用适用于应用的 PNG/JPG/GIF 更新 **Square150x150Logo** 和 **Square70x70Logo** 。
         * 这些项将用于 Windows Mixed Reality 的 "所有应用" 列表中的应用的2D 徽标和桌面上的 "开始" 菜单。
         * 文件路径基于包含视觉元素清单的文件夹。

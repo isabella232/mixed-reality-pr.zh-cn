@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，沉浸式，运动总监，学院，教程
-ms.openlocfilehash: c83fd4970e40919e146b0a4e8b4f0f516e9d0906
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1f747c73846f59fdc62a0559068123a50f8a1b07
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677475"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583051"
 ---
 # <a name="mr-input-213-motion-controllers"></a>MR 输入 213：运动控制器
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../develop/unity/tutorials/mr-learning-base-01.md)。
 
 混合现实世界中的运动控制器增加了另一层的交互性。 借助 [运动控制器](../design/motion-controllers.md)，我们可以以更自然的方式与对象直接交互，类似于真实生活中的物理交互，增加浸入式和感到满意的应用体验。
 
@@ -33,13 +33,13 @@ ms.locfileid: "91677475"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 输入 213：运动控制器</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -64,24 +64,24 @@ ms.locfileid: "91677475"
 * 设置混合现实照相机
 * 设置环境
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 启动 Unity。
-* 选择“打开”。
+* 选择“打开”  。
 * 导航到桌面并找到之前 unarchived 的 **MixedReality213** 文件夹。
-* 单击“选择文件夹”  。
+* 单击“选择文件夹”。
 * Unity 完成加载项目文件后，你将能够看到 Unity 编辑器。
-* 在 Unity 中，选择 " **文件 > 生成设置** "。
+* 在 Unity 中，选择 " **文件 > 生成设置**"。
 
     ![MR213_BuildSettings](images/mr213-buildsettings-450px.png)
 
-* 选择 " **平台** " 列表中的 " **通用 Windows 平台** "，然后单击 " **切换平台** " 按钮。
+* 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**" 按钮。
 * 将目标设备设置为 **任何设备**
 * 将生成类型设置为 **D3D**
 * 将 SDK 设置为 **安装的最新版本**
 * 检查 **Unity c # 项目**
     * 这样，便可以修改 Visual Studio 项目中的脚本文件，而无需重新生成 Unity 项目。
-* 单击 " **播放机设置** "。
+* 单击 " **播放机设置**"。
 * 在 " **检查器** " 面板中，向下滚动到底部
 * 在 XR 设置中，检查 **支持的虚拟现实**
 * 在虚拟现实 Sdk 下，选择 " **Windows Mixed Reality** "
@@ -92,29 +92,29 @@ ms.locfileid: "91677475"
 
 ### <a name="project-structure"></a>项目结构
 
-本教程使用 **[混合现实工具包-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 。 可以在 [此页](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)上找到发布。
+本教程使用 **[混合现实工具包-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)**。 可以在 [此页](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)上找到发布。
 
 ![ProjectStructure](images/mr213-projectstructure-650px.png)
 
 **已完成用于引用的场景**
 
 * 你会在 **场景** 文件夹中找到两个已完成的 Unity 场景。
-    * **MixedReality213** ：通过单画笔完成场景
-    * **MixedReality213Advanced** ：已完成用于具有多个画笔的高级设计的场景
+    * **MixedReality213**：通过单画笔完成场景
+    * **MixedReality213Advanced**：已完成用于具有多个画笔的高级设计的场景
 
 **教程的新场景设置**
 
 * 在 Unity 中，单击 " **文件" > 新建场景**
 * 删除 **摄像机** 和 **方向灯**
 * 在 " **项目" 面板** 中，搜索并将以下 prototyping 拖到 " **层次结构** " 面板中：
-    * 资产/HoloToolkit/Input/Prototyping/ **MixedRealityCamera**
-    * 资产/AppPrefabs/ **环境**
+    * 资产/HoloToolkit/Input/Prototyping/**MixedRealityCamera**
+    * 资产/AppPrefabs/**环境**
 
     ![照相机和环境](images/mr213-cameraenvironment-300px.jpg)
 
 * 混合现实工具包中有两个照相机 prototyping：
-    * **MixedRealityCamera. prefab** ：仅照相机
-    * **MixedRealityCameraParent. prefab** ：摄像 + Teleportation + 边界
+    * **MixedRealityCamera. prefab**：仅照相机
+    * **MixedRealityCameraParent. prefab**：摄像 + Teleportation + 边界
     * 在本教程中，我们将使用不带 teleportation 功能的 **MixedRealityCamera** 。 为此，我们添加了简单的 **环境** prefab，其中包含一个基本楼层，使用户感觉不到接地。
     * 若要了解有关 teleportation 与 **MixedRealityCameraParent** 的详细信息，请参阅 [高级设计-teleportation 和 locomotion](#advanced-design---teleportation-and-locomotion)
 
@@ -153,11 +153,11 @@ Windows Mixed Reality 提供适用于控制器可视化的动画控制器模型�
 
 在本章中，我们将了解这些控制器自定义的示例。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目** " 面板的 "搜索" 框中，键入 **MotionControllers** 。 还可以在 "资产/HoloToolkit/输入/Prototyping/" 下找到它。
 * 将 **MotionControllers** prefab 拖到 " **层次结构** " 面板中。
-* 单击 " **层次结构** " 面板中的 **MotionControllers** prefab。
+* 单击 "**层次结构**" 面板中的 **MotionControllers** prefab。
 
 **MotionControllers prefab**
 
@@ -189,7 +189,7 @@ protected override void Awake()
 
 在后面的章节中，我们将了解如何使用这些脚本将 UI 元素附加到控制器。
 
-*在某些脚本中，你将找到带有 #if 的代码块 **！UNITY_EDITOR** 或 **UNITY_WSA** 。这些代码块仅在部署到 Windows 时在 UWP 运行时上运行。这是因为 Unity 编辑器和 UWP 应用运行时所使用的 Api 集是不同的。*
+*在某些脚本中，你将找到带有 #if 的代码块 **！UNITY_EDITOR** 或 **UNITY_WSA**。这些代码块仅在部署到 Windows 时在 UWP 运行时上运行。这是因为 Unity 编辑器和 UWP 应用运行时所使用的 Api 集是不同的。*
 
 * **保存** 场景并单击 " **播放** " 按钮。
 
@@ -208,7 +208,7 @@ protected override void Awake()
 
 在本章中，你将学习如何将用户界面元素添加到用户可随时轻松访问和操作的控制器。 你还将了解如何使用触摸板输入添加简单的颜色选取器 UI。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目** " 面板中，搜索 " **MotionControllerInfo** script"。
 * 在搜索结果中，双击 " **MotionControllerInfo** script" 以查看 Visual Studio 中的代码。
@@ -279,16 +279,16 @@ private void AttachElementToController(MotionControllerInfo newController)
 
 **说明**
 
-* 在 " **项目** " 面板的 "搜索" 框中键入 **ColorPickerWheel** 。 还可以在 "资产/AppPrefabs/" 下找到它。
+* 在 " **项目** " 面板的 "搜索" 框中键入 **ColorPickerWheel**。 还可以在 "资产/AppPrefabs/" 下找到它。
 * 将 **ColorPickerWheel** prefab 拖到 " **层次结构** " 面板中。
-* 单击 " **层次结构** " 面板中的 **ColorPickerWheel** prefab。
+* 单击 "**层次结构**" 面板中的 **ColorPickerWheel** prefab。
 * 在 " **检查器** " 面板中，双击 " **ColorPickerWheel** Script" 以查看 Visual Studio 中的代码。
 
 ![ColorPickerWheel prefab](images/mr213-colorpickerwheel-1000px.jpg)
 
 **ColorPickerWheel 脚本**
 
-由于 **ColorPickerWheel** 继承 **了 AttachToController** ，它会在 " **检查器** " 面板中显示 **左右手使用习惯** 和 **元素** 。 我们会将 UI 附加到左侧控制器上的触摸板元素。
+由于 **ColorPickerWheel** 继承 **了 AttachToController**，它会在 "**检查器**" 面板中显示 **左右手使用习惯** 和 **元素**。 我们会将 UI 附加到左侧控制器上的触摸板元素。
 
 ![ColorPickerWheel 脚本](images/mr213-attachtocontroller-300px.jpg)
 
@@ -318,7 +318,7 @@ public class ColorPickerWheel : AttachToController, IPointerTarget
 
 **将对象附加到控制器的替代方法**
 
-建议你的脚本继承自 **AttachToController** ，并重写 **OnAttachToController** 。 但这并不总是可行。 替代方法是将其用作独立组件。 如果要将现有的 prefab 附加到控制器而不重构脚本，这会很有用。 只需将 IsAttached 设置为 true，然后再执行任何设置。 执行此操作的最简单方法是使用协同程序作为 "Start"。
+建议你的脚本继承自 **AttachToController** ，并重写 **OnAttachToController**。 但这并不总是可行。 替代方法是将其用作独立组件。 如果要将现有的 prefab 附加到控制器而不重构脚本，这会很有用。 只需将 IsAttached 设置为 true，然后再执行任何设置。 执行此操作的最简单方法是使用协同程序作为 "Start"。
 
 ```cs
 private IEnumerator Start() {
@@ -341,10 +341,10 @@ private IEnumerator Start() {
 * 了解如何获取触摸板输入数据事件
 * 了解如何将触摸板轴位置信息用于应用体验
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
-* 在 " **层次结构** " 面板中，单击 " **ColorPickerWheel** "
-* 在 " **检查器** " 面板中的 " **Animator** " 下，双击 " **ColorPickerWheelController** "
+* 在 "**层次结构**" 面板中，单击 " **ColorPickerWheel** "
+* 在 "**检查器**" 面板中的 " **Animator**" 下，双击 " **ColorPickerWheelController** "
 * 你将能够看到 " **Animator** " 选项卡已打开
 
 **显示/隐藏具有 Unity 动画控制器的 UI**
@@ -364,10 +364,10 @@ private IEnumerator Start() {
 
 在 **InteractionSourceUpdated ( # B1** 中，脚本首先检查以确保：
 
-* 实际上为触摸板事件 (的 obj。 **touchpadTouched** ) 
-* 源自左侧控制器 (obj。 **左右手使用习惯** ) 
+* 实际上为触摸板事件 (的 obj。**touchpadTouched**) 
+* 源自左侧控制器 (obj。**左右手使用习惯**) 
 
-如果两者都为 true，则触摸板位置 (为 "状态"。 **touchpadPosition** ) 分配给 **selectorPosition** 。
+如果两者都为 true，则触摸板位置 (为 "状态"。**touchpadPosition**) 分配给 **selectorPosition**。
 
 ```cs
 private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
@@ -439,12 +439,12 @@ if (visible != visibleLastFrame)
 
 ![MR213_BrushToolOverride](images/mr213-brushtooloverride-500px.jpg)
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
-* 在 " **层次结构** " 面板中单击 " **MotionControllers** "。
+* 在 "**层次结构**" 面板中单击 " **MotionControllers** "。
 * 单击 **替换右侧控制器** 字段右侧的圆圈。
-* 键入 **"BrushController** "，并从结果中选择 prefab。 可以在 "资产/AppPrefabs/ **BrushController** " 下找到它。
-* 选中 " **始终使用备用模式** "
+* 键入 **"BrushController**"，并从结果中选择 prefab。 可以在 "资产/AppPrefabs/**BrushController**" 下找到它。
+* 选中 "**始终使用备用模式**"
 
 ![MR213_BrushToolOverrideSlot](images/mr213-motioncontrollersoverride-700px.jpg)
 
@@ -467,9 +467,9 @@ if (visible != visibleLastFrame)
 
 * 了解如何使用 "选择按钮" 事件来启动和停止线条绘制
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
-* 在 " **项目** " 面板中搜索 **BrushController** prefab。
+* 在 "**项目**" 面板中搜索 **BrushController** prefab。
 * 在 " **检查器** " 面板中，双击 " **BrushController** Script" 以查看 Visual Studio 中的代码
 
 **BrushController 脚本**
@@ -535,7 +535,7 @@ private IEnumerator DrawOverTime()
 }
 ```
 
-若要从颜色选取器滚轮 UI 使用当前选定的颜色， **BrushController** 需要具有对 **ColorPickerWheel** 对象的引用。 因为在运行时将 **BrushController** prefab 实例化为替换控制器，所以必须在运行时设置对场景中对象的任何引用。 在此示例中，我们使用 **GameObject** 来查找 **ColorPickerWheel** ：
+若要从颜色选取器滚轮 UI 使用当前选定的颜色， **BrushController** 需要具有对 **ColorPickerWheel** 对象的引用。 因为在运行时将 **BrushController** prefab 实例化为替换控制器，所以必须在运行时设置对场景中对象的任何引用。 在此示例中，我们使用 **GameObject** 来查找 **ColorPickerWheel**：
 
 ```cs
 private void OnEnable()
@@ -560,17 +560,17 @@ private void OnEnable()
 * 了解如何使用 "选择并抓住" 按钮输入事件
 * 了解如何实例化对象
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目** " 面板的 "搜索" 框中，键入 **ObjectSpawner** 。 还可以在 "资产/AppPrefabs/
 * 将 **ObjectSpawner** prefab 拖到 " **层次结构** " 面板中。
-* 在 " **层次结构** " 面板中单击 " **ObjectSpawner** "。
-* **ObjectSpawner** 有一个名为 " **颜色源** " 的字段。
+* 在 "**层次结构**" 面板中单击 " **ObjectSpawner** "。
+* **ObjectSpawner** 有一个名为 " **颜色源**" 的字段。
 * 从 " **层次结构** " 面板中，将 " **ColorPickerWheel** " 引用拖到此字段中。
 
     ![对象 Spawner 检查器](images/mr213-objectspawnercolorpickerwheel-650px.jpg)
 
-* 单击 " **层次结构** " 面板中的 **ObjectSpawner** prefab。
+* 单击 "**层次结构**" 面板中的 **ObjectSpawner** prefab。
 * 在 " **检查器** " 面板中，双击 " **ObjectSpawner** Script" 以查看 Visual Studio 中的代码。
 
 **ObjectSpawner 脚本**
@@ -639,18 +639,18 @@ private void SpawnObject()
 
 ## <a name="build-and-deploy-app-to-mixed-reality-portal"></a>构建应用并将其部署到混合现实门户
 
-* 在 Unity 中，选择 " **文件 > 生成设置** "。
-* 单击 " **添加打开的场景** "，将当前场景添加到 **生成的场景中** 。
-* 单击“生成”  。
+* 在 Unity 中，选择 " **文件 > 生成设置**"。
+* 单击 " **添加打开的场景** "，将当前场景添加到 **生成的场景中**。
+* 单击“生成”。
 * 创建名为 "App" 的 **新文件夹** 。
 * 单击 **应用** 文件夹。
-* 单击“选择文件夹”  。
+* 单击“选择文件夹”。
 * 当 Unity 完成后，将显示文件资源管理器窗口。
 * 打开 **应用程序** 文件夹。
 * 双击 " **YourSceneName** " Visual Studio 解决方案文件。
-* 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **X64** "。
-* 单击 "设备" 按钮旁边的下拉箭头，然后选择 " **本地计算机** "。
-* 单击菜单中的 " **调试-> 启动但不调试** "，或按 **Ctrl + F5** 。
+* 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **X64**"。
+* 单击 "设备" 按钮旁边的下拉箭头，然后选择 " **本地计算机**"。
+* 单击菜单中的 " **调试-> 启动但不调试** "，或按 **Ctrl + F5**。
 
 现在，在混合现实门户中生成并安装应用。 可以通过混合现实门户中的 "开始" 菜单再次启动它。
 
@@ -658,28 +658,28 @@ private void SpawnObject()
 
 ![MixedReality213 Main](images/mr213-main-600px.jpg)
 
-在本章中，你将学习如何将默认运动控制器模型替换为自定义画笔工具集合。 对于引用，可以在 " **场景** " 文件夹下找到已完成的场景 **MixedReality213Advanced** 。
+在本章中，你将学习如何将默认运动控制器模型替换为自定义画笔工具集合。 对于引用，可以在 "**场景**" 文件夹下找到已完成的场景 **MixedReality213Advanced** 。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目** " 面板的 "搜索" 框中，键入 **BrushSelector** 。 还可以在 "资产/AppPrefabs/
 * 将 **BrushSelector** prefab 拖到 " **层次结构** " 面板中。
-* 对于组织，创建名为 " **画笔** " 的空 GameObject
-* 将以下 prototyping 从 " **项目** " 面板拖到 " **画笔** "
-    * 资产/AppPrefabs/ **BrushFat**
-    * 资产/AppPrefabs/ **BrushThin**
-    * 资产/AppPrefabs/ **橡皮擦**
-    * 资产/AppPrefabs/ **MarkerFat**
-    * 资产/AppPrefabs/ **MarkerThin**
-    * 资产/AppPrefabs/ **铅笔**
+* 对于组织，创建名为 "**画笔**" 的空 GameObject
+* 将以下 prototyping 从 "**项目**" 面板拖到 "**画笔**"
+    * 资产/AppPrefabs/**BrushFat**
+    * 资产/AppPrefabs/**BrushThin**
+    * 资产/AppPrefabs/**橡皮擦**
+    * 资产/AppPrefabs/**MarkerFat**
+    * 资产/AppPrefabs/**MarkerThin**
+    * 资产/AppPrefabs/**铅笔**
 
     ![画笔](images/mixedreality213-brushes-250px.png)
 
-* 在 " **层次结构** " 面板中单击 " **MotionControllers** prefab"。
-* 在 " **检查器** " 面板中，取消选中 "在 **运动控制器可视化工具** 上 **始终使用替代右模型** "
-* 在 " **层次结构** " 面板中，单击 " **BrushSelector** "
+* 在 "**层次结构**" 面板中单击 " **MotionControllers** prefab"。
+* 在 "**检查器**" 面板中，取消选中 "在 **运动控制器可视化工具** 上 **始终使用替代右模型**"
+* 在 "**层次结构**" 面板中，单击 " **BrushSelector** "
 * **BrushSelector** 有一个名为 **ColorPicker** 的字段
-* 从 " **层次结构** " 面板中，将 " **ColorPickerWheel** " 拖动到 **检查器** 面板中的 " **ColorPicker** " 字段。
+* 从 "**层次结构**" 面板中，将 " **ColorPickerWheel** " 拖动到 **检查器** 面板中的 " **ColorPicker** " 字段。
 
     ![将 ColorPickerWheel 分配给画笔选择器](images/mr213-brushselector-500px.jpg)
 
@@ -691,12 +691,12 @@ private void SpawnObject()
 
 **BrushSelector prefab**
 
-由于 **BrushSelector** 继承了 **AttachToController** ，它将在 " **检查器** " 面板中显示 **左右手使用习惯** 和 **元素** 选项。 我们选择了 " **向右** " 并将画笔工具 **连接到右侧** 的右控制器。
+由于 **BrushSelector** 继承了 **AttachToController**，它将在 "**检查器**" 面板中显示 **左右手使用习惯** 和 **元素** 选项。 我们选择了 " **向右** " 并将画笔工具 **连接到右侧** 的右控制器。
 
 **BrushSelector** 利用了两个实用工具：
 
-* **椭圆形** ：用于沿椭圆形状生成空间中的点。
-* **LineObjectCollection** ：使用任意 Line 类生成的点（ (例如) 的椭圆形）来分发对象。 这就是我们用来沿椭圆形状放置画笔的内容。
+* **椭圆形**：用于沿椭圆形状生成空间中的点。
+* **LineObjectCollection**：使用任意 Line 类生成的点（ (例如) 的椭圆形）来分发对象。 这就是我们用来沿椭圆形状放置画笔的内容。
 
 结合使用时，可以使用这些实用程序创建放射状菜单。
 
@@ -706,7 +706,7 @@ private void SpawnObject()
 
 **BrushSelector 脚本**
 
-对于 **BrushSelector** ，我们选择了使用过程动画。 首先，画笔模型由 **LineObjectCollection** 脚本分布在一个椭圆中。 然后，每个画笔负责根据其 **DisplayMode** 值来维护其在用户的手边，这会根据所选内容进行更改。 我们选择了过程方法，因为当用户选择画笔时，画笔位置转换的概率很高。 Mecanim 动画可以合理地处理中断，但比简单的 Lerp 操作要复杂得多。
+对于 **BrushSelector**，我们选择了使用过程动画。 首先，画笔模型由 **LineObjectCollection** 脚本分布在一个椭圆中。 然后，每个画笔负责根据其 **DisplayMode** 值来维护其在用户的手边，这会根据所选内容进行更改。 我们选择了过程方法，因为当用户选择画笔时，画笔位置转换的概率很高。 Mecanim 动画可以合理地处理中断，但比简单的 Lerp 操作要复杂得多。
 
 **BrushSelector** 结合使用这两种方法。 检测到触摸板输入后，画笔选项将变为可见，并沿径向菜单向上缩放。 超时时间段之后 (表示用户选择了) 画笔选项再次缩小，只留下所选的画笔。
 
@@ -799,19 +799,19 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 
 ## <a name="advanced-design---teleportation-and-locomotion"></a>高级设计-Teleportation 和 locomotion
 
-如果要允许用户使用 teleportation 在场景周围移动，请使用 **MixedRealityCameraParent** 而不是 **MixedRealityCamera** 。 还需要添加 **InputManager** 和 **DefaultCursor** 。 由于 **MixedRealityCameraParent** 已将 **MotionControllers** 和 **边界** 包含为子组件，因此应该删除现有的 **MotionControllers** 和 **环境** prefab。
+如果要允许用户使用 teleportation 在场景周围移动，请使用 **MixedRealityCameraParent** 而不是 **MixedRealityCamera**。 还需要添加 **InputManager** 和 **DefaultCursor**。 由于 **MixedRealityCameraParent** 已将 **MotionControllers** 和 **边界** 包含为子组件，因此应该删除现有的 **MotionControllers** 和 **环境** prefab。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
-* 在 **层次结构** 面板中删除 **"MixedRealityCamera** "、" **环境** " 和 " **MotionControllers** "
+* 在 **层次结构** 面板中删除 **"MixedRealityCamera**"、"**环境**" 和 " **MotionControllers** "
 * 在 " **项目" 面板** 中，搜索并将以下 prototyping 拖到 " **层次结构** " 面板中：
-    * 资产/AppPrefabs/Input/Prototyping/ **MixedRealityCameraParent**
-    * 资产/AppPrefabs/Input/Prototyping/ **InputManager**
-    * 资产/AppPrefabs/Input/Prototyping/Cursor/ **DefaultCursor**
+    * 资产/AppPrefabs/Input/Prototyping/**MixedRealityCameraParent**
+    * 资产/AppPrefabs/Input/Prototyping/**InputManager**
+    * 资产/AppPrefabs/Input/Prototyping/Cursor/**DefaultCursor**
 
     ![混合现实相机父项](images/mr213-cameraparent-300px.png)
 
-* 在 **层次结构** 面板中，单击 " **输入管理器** "
+* 在 **层次结构** 面板中，单击 "**输入管理器**"
 * 在 " **检查器** " 面板中，向下滚动到 **简单的单指针选择器** 部分
 * 从 " **层次结构** " 面板中，将 **DefaultCursor** 拖到 **Cursor** 字段
 
@@ -832,11 +832,11 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 ## <a name="completed-scenes"></a>已完成场景
 
 * 在 Unity 的 " **项目** " 面板中，单击 " **场景** " 文件夹。
-* 你将发现两个 Unity 场景 **MixedReality213** 和 **MixedReality213Advanced** 。
-    * **MixedReality213** ：通过单画笔完成场景
-    * **MixedReality213Advanced** ：具有多个画笔并带有 "选择按钮的按量" 示例的已完成场景
+* 你将发现两个 Unity 场景 **MixedReality213** 和 **MixedReality213Advanced**。
+    * **MixedReality213**：通过单画笔完成场景
+    * **MixedReality213Advanced**：具有多个画笔并带有 "选择按钮的按量" 示例的已完成场景
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [MR 输入213项目文件](https://github.com/Microsoft/MixedReality213)
 * [混合现实工具包-运动控制器测试场景](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/Input/Scenes)

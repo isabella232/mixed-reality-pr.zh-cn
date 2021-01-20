@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 12/14/2020
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity
-ms.openlocfilehash: 9520ad604125705c60624254b097de5fc93021ec
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 10cb96ffe0496a20c7244ba4c40dec097ebd4bd8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009377"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583752"
 ---
 # <a name="scene-understanding-sdk-overview"></a>场景理解 SDK 概述
 
@@ -47,7 +47,7 @@ SceneUnderstanding 需要 Windows SDK 版本18362或更高版本。
 
 由于每个场景会将其数据存储在应用程序的内存空间中，因此，你可以假定场景对象的所有功能或它的内部数据始终在应用程序的进程中执行。
 
-### <a name="layout"></a>Layout
+### <a name="layout"></a>布局
 
 若要使用场景理解，了解并了解运行时如何以逻辑方式和物理方式表示组件可能会很有价值。 场景表示具有特定布局的数据，其中选择了简单的布局，同时保持基础结构 pliable，而无需进行重大修改。 场景将通过以下方式实现此目标：将所有组件存储在简单列表中) 的所有场景对象 (构建基块，并通过引用（其中特定组件引用其他组件）定义层次结构和组合。
 
@@ -123,15 +123,15 @@ SceneObjects 可以包含以下任一项：
 <tr><td>壁</td><td>物理墙。 墙壁被认为是可移动的环境结构。</td></tr>
 <tr><td>Floor</td><td>楼层是可以进行审核的任何表面。 注意：楼梯不是楼层。 另请注意，该楼层假设有任何不可表面，因此没有明确的假设。 多层结构，斜坡等 .。。应将所有分类为楼层。</td></tr>
 <tr><td>Ceiling</td><td>房间的上部面。</td></tr>
-<tr><td>Platform</td><td>一个大平面，可以在其上放置全息影像。 它们倾向于表示表、countertops 和其他大型水平曲面。</td></tr>
+<tr><td>平台</td><td>一个大平面，可以在其上放置全息影像。 它们倾向于表示表、countertops 和其他大型水平曲面。</td></tr>
 <tr><td>World</td><td>标记不可知的几何数据的保留标签。 通过设置 EnableWorldMesh 更新标志生成的网格将归为 "世界"。</td></tr>
-<tr><td>未知</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
+<tr><td>Unknown</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
 </tr>
 </table>
 
 ### <a name="scenemesh"></a>SceneMesh
 
-SceneMesh 是一种 SceneComponent，它使用三角形列表来模拟任意几何对象的几何。 SceneMeshes 用于多个不同的上下文中，它们可以表示 watertight 单元结构的组件或作为 WorldMesh，这表示与场景关联的未绑定空间映射网格。 每个网格提供的索引和顶点数据使用与用于在所有新式渲染 Api 中呈现三角形网格的 [顶点和索引缓冲区](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) 相同的熟悉布局。 在场景理解中，网格使用32位索引，可能需要分解为某些呈现引擎的块。
+SceneMesh 是一种 SceneComponent，它使用三角形列表来模拟任意几何对象的几何。 SceneMeshes 用于多个不同的上下文中，它们可以表示 watertight 单元结构的组件或作为 WorldMesh，这表示与场景关联的未绑定空间映射网格。 每个网格提供的索引和顶点数据使用与用于在所有新式渲染 Api 中呈现三角形网格的 [顶点和索引缓冲区](/windows/win32/direct3d9/rendering-from-vertex-and-index-buffers) 相同的熟悉布局。 在场景理解中，网格使用32位索引，可能需要分解为某些呈现引擎的块。
 
 #### <a name="winding-order-and-coordinate-systems"></a>缠绕顺序和坐标系统
 
@@ -265,7 +265,7 @@ foreach (var mesh in firstFloor.Meshes)
 
 在处理转换时，场景理解已精心尝试与传统的三维场景表示。 因此，每个场景都局限于一个坐标系统，这与大多数常见的3D 环境表示形式非常类似。 每个 SceneObjects 都提供它们相对于该坐标系统的位置。 如果你的应用程序正在处理的场景会延伸到单个源所提供的限制，则可以将 SceneObjects 定位到 SpatialAnchors，或生成多个场景并将它们合并在一起，但为了简单起见，我们假定 watertight 场景位于其自身的源中，而该已由由场景 OriginSpatialGraphNodeId 定义的一个本地化。
 
-例如，以下 Unity 代码演示了如何使用 Windows 感知和 Unity Api 来协调坐标系。 有关获取与 Unity 世界原点相对应的 SpatialCoordinateSystem 的详细信息，请参阅 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 和 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) ，了解有关 Windows 感知 api 的详细信息，以及 [Unity 中混合现实本机对象](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 的详细信息。
+例如，以下 Unity 代码演示了如何使用 Windows 感知和 Unity Api 来协调坐标系。 有关获取与 Unity 世界原点相对应的 SpatialCoordinateSystem 的详细信息，请参阅 [SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 和 [SpatialGraphInteropPreview](//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) ，了解有关 Windows 感知 api 的详细信息，以及 [Unity 中混合现实本机对象](//windows/mixed-reality/unity-xrdevice-advanced) 的详细信息。
 
 ```cs
 private System.Numerics.Matrix4x4? GetSceneToUnityTransformAsMatrix4x4(SceneUnderstanding.Scene scene)

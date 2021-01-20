@@ -6,18 +6,18 @@ ms.author: mazeller
 ms.date: 05/20/2020
 ms.topic: article
 keywords: 操作说明，附件，蓝牙，bt，控制器，游戏板，clicker，xbox，硬件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，运动控制器
-ms.openlocfilehash: aaed865f3fd2f722ce287bd2362299f785af05dc
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: b9a58a34a88de01d1d2351ff0a5efbe4f99298db
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757715"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583322"
 ---
 # <a name="hardware-accessories"></a>硬件配件
 
 Windows Mixed Reality 设备支持附件。 可以使用蓝牙或 USB 端口将支持的附件与电脑上的沉浸式耳机配对。
 
-有关将蓝牙附件与 HoloLens 配合使用的信息，请参阅 [连接到蓝牙和 USB-C 设备](https://docs.microsoft.com/hololens/hololens-connect-devices)。
+有关将蓝牙附件与 HoloLens 配合使用的信息，请参阅 [连接到蓝牙和 USB-C 设备](/hololens/hololens-connect-devices)。
 
 Windows Mixed Reality 沉浸式耳机需要用于输入的 [附件，看](../design/gaze-and-commit.md) 看看不到 [声音](../design/voice-input.md)。 支持的附件包括 **键盘和鼠标**、 **游戏板** 和 **[运动控制器](../design/motion-controllers.md)**。
 

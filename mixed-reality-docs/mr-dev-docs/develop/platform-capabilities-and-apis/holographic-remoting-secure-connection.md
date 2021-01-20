@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，安全性，身份验证，服务器到客户端
-ms.openlocfilehash: 0881238bfca199958802598a3e1829a9de0d8e5b
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6b8c26bfa32661a180f1f58acc5c4aa13529f3bb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006477"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583843"
 ---
 # <a name="enabling-connection-security-for-holographic-remoting"></a>为全息远程处理启用连接安全性
 
@@ -97,7 +97,7 @@ Windows 应用商店中的示例应用程序和全息远程处理播放机处于
 * 客户端通过全息远程处理将此令牌发送到服务器
 * 服务器根据标识提供程序验证客户端的令牌
 
-标识提供程序的一个示例是 [Microsoft 标识平台](https://docs.microsoft.com/azure/active-directory/develop/)。
+标识提供程序的一个示例是 [Microsoft 标识平台](/azure/active-directory/develop/)。
 
 与上一用例类似，请确保这些标记不通过不安全的通道发送或公开。
 
@@ -115,7 +115,7 @@ Windows 应用商店中的示例应用程序和全息远程处理播放机处于
 所有接口都有一个请求执行操作的函数，该函数接收回调对象作为参数。 使用此对象，可以轻松实现请求的异步处理。 保留对此对象的引用，并在异步操作完成时调用完成函数。 可以从任何线程调用完成函数。
 
 >[!TIP]
->可使用 c + +/WinRT. 轻松实现 WinRT 接口 [带有 c + +/WinRT 的作者 api](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/author-apis)一章将对此进行详细介绍。
+>可使用 c + +/WinRT. 轻松实现 WinRT 接口 [带有 c + +/WinRT 的作者 api](//windows/uwp/cpp-and-winrt-apis/author-apis)一章将对此进行详细介绍。
 
 >[!IMPORTANT]
 >`build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl`NuGet 包中的包含有关与安全连接相关的 API 的详细文档。
@@ -193,5 +193,5 @@ Windows 应用商店中的示例应用程序和全息远程处理播放机处于
 * [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
-* [全息远程处理软件许可条款](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [全息远程处理软件许可条款](//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

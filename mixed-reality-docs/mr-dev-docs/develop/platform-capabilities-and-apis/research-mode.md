@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 07/31/2020
 ms.topic: article
 keywords: 研究模式，cv，rs4，计算机视觉，研究，HoloLens，HoloLens 2
-ms.openlocfilehash: 6c40ac814a5dacfdbb942aec8200f46157bea161
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: c8e626969f87eda8b686ba759a167a2bf48e3277
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530086"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583134"
 ---
 # <a name="hololens-research-mode"></a>HoloLens 研究模式
 
@@ -44,7 +44,7 @@ ms.locfileid: "97530086"
 
 ## <a name="security-and-performance"></a>安全性和性能
 
-即使使用 "调研模式" 功能的应用程序未运行，启用研究模式也比在正常情况下使用 HoloLens 2 的电池电量更多。  启用此模式还可以降低设备的整体安全性，因为应用程序可能会滥用传感器数据。  您可以在 [HoloLens 安全常见问题](https://docs.microsoft.com/hololens/hololens-faq-security)中找到有关设备安全的详细信息。  
+即使使用 "调研模式" 功能的应用程序未运行，启用研究模式也比在正常情况下使用 HoloLens 2 的电池电量更多。  启用此模式还可以降低设备的整体安全性，因为应用程序可能会滥用传感器数据。  您可以在 [HoloLens 安全常见问题](/hololens/hololens-faq-security)中找到有关设备安全的详细信息。  
 
 ## <a name="device-support"></a>设备支持
 <table>
@@ -54,8 +54,8 @@ ms.locfileid: "97530086"
     <col width="33%" /> </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens 第一代</strong></a></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens 第一代</strong></a></td>
+        <td><a href="/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
     </tr>
      <tr>
         <td>标题跟踪相机</td>
@@ -92,7 +92,7 @@ ms.locfileid: "97530086"
 * **为开发人员** 选择并启用 **开发人员模式**。
 * **向下滚动** 并启用“设备门户”。
 
-启用开发人员功能后， [连接到设备门户](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens) 以启用研究模式功能：
+启用开发人员功能后， [连接到设备门户](/windows/uwp/debug-test-perf/device-portal-hololens) 以启用研究模式功能：
 
 * 在 **设备门户** 中转到 "**系统 > 研究模式**"。
 * 选择 " **允许访问传感器流**"。
@@ -104,15 +104,15 @@ ms.locfileid: "97530086"
 *HoloLens 设备门户中的研究模式窗口*
 
 > [!IMPORTANT]
-> HoloLens 2 的研究模式从版本19041.1356 开始提供。 如果在早期版本中需要访问权限，请注册我们的预览 [体验](https://docs.microsoft.com/hololens/hololens-insider) 计划。
+> HoloLens 2 的研究模式从版本19041.1356 开始提供。 如果在早期版本中需要访问权限，请注册我们的预览 [体验](/hololens/hololens-insider) 计划。
 
 ### <a name="using-sensor-data-in-your-apps"></a>在应用中使用传感器数据
 
-应用程序可以访问传感器流数据，其方式与 [媒体基础](https://msdn.microsoft.com/library/windows/desktop/ms694197) 访问照片和视频摄像机流的方式相同。 
+应用程序可以访问传感器流数据，其方式与 [媒体基础](/windows/win32/medfound/microsoft-media-foundation-sdk) 访问照片和视频摄像机流的方式相同。 
 
 适用于 HoloLens 开发的所有 Api 在研究模式下也可用。 具体而言，应用程序在每个传感器帧捕获时间确切地了解 HoloLens 在6DoF 空间的位置。
 
-我们有使用 [内部和 extrinsics](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)和记录流的示例应用程序，显示研究模式流访问：
+我们有使用 [内部和 extrinsics](/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)和记录流的示例应用程序，显示研究模式流访问：
 * [HoloLens (第一代) ](https://github.com/Microsoft/HoloLensForCV)
 * [HoloLens 2](https://github.com/microsoft/HoloLens2ForCV)
 
@@ -124,7 +124,7 @@ ms.locfileid: "97530086"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Microsoft 媒体基础](https://msdn.microsoft.com/library/windows/desktop/ms694197)
+* [Microsoft 媒体基础](/windows/win32/medfound/microsoft-media-foundation-sdk)
 * [HoloLensForCV GitHub 存储库](https://github.com/Microsoft/HoloLensForCV)
 * [HoloLens2ForCV GitHub 存储库](https://github.com/microsoft/HoloLens2ForCV)
 * [使用 Windows 设备门户](using-the-windows-device-portal.md)

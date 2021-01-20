@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality，全息影像，呈现，3D 图形，HolographicFrame，render 循环，更新循环，演练，示例代码，Direct3D
-ms.openlocfilehash: aafead61b45550f499405ae63bda7d7f8e79d224
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f62df75f8febc3f3ee6e7c98f2c8fd91082a4466
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006717"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583782"
 ---
 # <a name="rendering-in-directx"></a>在 DirectX 中渲染
 
@@ -25,7 +25,7 @@ Windows Mixed Reality 建立在 DirectX 之上，为用户生成丰富的3D 图�
 ## <a name="update-for-the-current-frame"></a>更新当前帧
 
 若要更新全息影像的应用程序状态，每帧一次，应用将：
-* 从显示管理系统中获取 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 。
+* 从显示管理系统中获取 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 。
 * 将场景更新为当前预测，即在完成呈现时相机视图将在何处。 请注意，全息场景可以有多个相机。
 
 若要呈现到全息相机视图，每帧一次，应用将：
@@ -33,7 +33,7 @@ Windows Mixed Reality 建立在 DirectX 之上，为用户生成丰富的3D 图�
 
 ### <a name="create-a-new-holographic-frame-and-get-its-prediction"></a>创建新的全息帧并获取其预测
 
-<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>包含应用程序更新和呈现当前帧所需的信息。 应用通过调用 **CreateNextFrame** 方法，开始每个新帧。 调用此方法时，将使用可用的最新传感器数据，并将其封装在 **CurrentPrediction** 对象中。
+<a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>包含应用程序更新和呈现当前帧所需的信息。 应用通过调用 **CreateNextFrame** 方法，开始每个新帧。 调用此方法时，将使用可用的最新传感器数据，并将其封装在 **CurrentPrediction** 对象中。
 
 对于每个呈现的帧，都必须使用新的帧对象，因为它仅对即时时间有效。 **CurrentPrediction** 属性包含照相机位置等信息。 该信息将被推入到帧应向用户显示的确切时刻。
 
@@ -73,7 +73,7 @@ for (HolographicCameraPose const& cameraPose : prediction.CameraPoses())
 
 ### <a name="get-the-coordinate-system-to-use-as-a-basis-for-rendering"></a>获取坐标系统作为渲染的基础
 
-Windows Mixed Reality 使你的应用能够创建各种 [坐标系统](coordinate-systems-in-directx.md)，如用于跟踪物理世界中的位置的附加和固定参考框架。 然后，你的应用程序可以使用这些坐标系统来考虑在何处呈现每个帧的全息影像。 从 API 请求坐标时，始终会传入要在其中表示这些坐标的 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a> 。
+Windows Mixed Reality 使你的应用能够创建各种 [坐标系统](coordinate-systems-in-directx.md)，如用于跟踪物理世界中的位置的附加和固定参考框架。 然后，你的应用程序可以使用这些坐标系统来考虑在何处呈现每个帧的全息影像。 从 API 请求坐标时，始终会传入要在其中表示这些坐标的 <a href="/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a> 。
 
 From **AppMain：： Update**：
 
@@ -313,7 +313,7 @@ context->VSSetConstantBuffers(
 
 Windows Mixed Reality 包含用于 [映像稳定性](../platform-capabilities-and-apis/hologram-stability.md) 的功能，可让你在开发人员或用户将其放在世界各地。 图像稳定性有助于隐藏渲染管道中固有的延迟，以确保用户获得最佳的全息体验。 为了进一步增强图像稳定性，还可以指定一个焦点点，或者可以提供深度缓冲区来实时计算优化的图像稳定性。
 
-为了获得最佳结果，应用应使用 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> API 提供深度缓冲区。 然后，Windows Mixed Reality 可以使用深度缓冲区中的几何信息来实时优化图像稳定性。 默认情况下，Windows 全息应用程序模板会提交应用的深度缓冲区，有助于优化全息影像稳定性。
+为了获得最佳结果，应用应使用 <a href="/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> API 提供深度缓冲区。 然后，Windows Mixed Reality 可以使用深度缓冲区中的几何信息来实时优化图像稳定性。 默认情况下，Windows 全息应用程序模板会提交应用的深度缓冲区，有助于优化全息影像稳定性。
 
 From **AppMain：： Render**：
 
@@ -600,7 +600,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 
 ### <a name="enable-the-holographic-frame-to-present-the-swap-chain"></a>启用全息帧以显示交换链
 
-对于 Windows Mixed Reality，系统控制交换链。 然后，系统会管理向每个全息相机呈现帧，以确保具有高质量的用户体验。 它还为每个照相机提供一个视区来更新每个帧，以优化系统的各个方面，例如图像稳定性或混合现实捕获。 因此，使用 DirectX 的全息版应用不会在 DXGI 交换链 **上调用。** 而是使用 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 类，在完成绘制帧后，为该帧提供所有交换链。
+对于 Windows Mixed Reality，系统控制交换链。 然后，系统会管理向每个全息相机呈现帧，以确保具有高质量的用户体验。 它还为每个照相机提供一个视区来更新每个帧，以优化系统的各个方面，例如图像稳定性或混合现实捕获。 因此，使用 DirectX 的全息版应用不会在 DXGI 交换链 **上调用。** 而是使用 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 类，在完成绘制帧后，为该帧提供所有交换链。
 
 From **DeviceResources：:P 重发**：
 
@@ -608,11 +608,11 @@ From **DeviceResources：:P 重发**：
 HolographicFramePresentResult presentResult = frame.PresentUsingCurrentPrediction();
 ```
 
-默认情况下，此 API 在返回前等待帧完成。 全息应用应等待上一个帧完成，然后在新帧上启动工作，因为这样可以减少延迟，并允许从全息帧预测获得更好的结果。 这并不是一种硬性规则，如果你的帧所需的时间超过了一个屏幕刷新，则可以通过将 HolographicFramePresentWaitBehavior 参数传递给 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction" target="_blank">PresentUsingCurrentPrediction</a>来禁用此等待。 在这种情况下，你可能会使用异步呈现线程来维护 GPU 上的连续负载。 HoloLens 设备的刷新速率为 60 hz，其中一帧的持续时间大约为16毫秒。 沉浸式耳机设备的范围为 60 hz 到 90 hz;刷新 90 hz 的显示时，每个帧的持续时间大约为 11 ms。
+默认情况下，此 API 在返回前等待帧完成。 全息应用应等待上一个帧完成，然后在新帧上启动工作，因为这样可以减少延迟，并允许从全息帧预测获得更好的结果。 这并不是一种硬性规则，如果你的帧所需的时间超过了一个屏幕刷新，则可以通过将 HolographicFramePresentWaitBehavior 参数传递给 <a href="/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction" target="_blank">PresentUsingCurrentPrediction</a>来禁用此等待。 在这种情况下，你可能会使用异步呈现线程来维护 GPU 上的连续负载。 HoloLens 设备的刷新速率为 60 hz，其中一帧的持续时间大约为16毫秒。 沉浸式耳机设备的范围为 60 hz 到 90 hz;刷新 90 hz 的显示时，每个帧的持续时间大约为 11 ms。
 
 ### <a name="handle-devicelost-scenarios-in-cooperation-with-the-holographicframe"></a>与 HolographicFrame 合作，处理 DeviceLost 方案
 
-DirectX 11 应用通常需要检查 DXGI 交换链的 **现有** 函数返回的 HRESULT，以找出是否存在 **DeviceLost** 错误。 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>类将为您处理此情况。 检查返回的 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframepresentresult" target="_blank">HolographicFramePresentResult</a> ，以确定是否需要释放并重新创建 Direct3D 设备和基于设备的资源。
+DirectX 11 应用通常需要检查 DXGI 交换链的 **现有** 函数返回的 HRESULT，以找出是否存在 **DeviceLost** 错误。 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>类将为您处理此情况。 检查返回的 <a href="/uwp/api/windows.graphics.holographic.holographicframepresentresult" target="_blank">HolographicFramePresentResult</a> ，以确定是否需要释放并重新创建 Direct3D 设备和基于设备的资源。
 
 ```cpp
 // The PresentUsingCurrentPrediction API will detect when the graphics device
@@ -625,7 +625,7 @@ if (presentResult == HolographicFramePresentResult::DeviceRemoved)
 }
 ```
 
-如果 Direct3D 设备丢失，并且您重新创建它，则必须告诉 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> 开始使用新设备。 此设备的交换链将重新创建。
+如果 Direct3D 设备丢失，并且您重新创建它，则必须告诉 <a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> 开始使用新设备。 此设备的交换链将重新创建。
 
 From **DeviceResources：： InitializeUsingHolographicSpace**：
 
@@ -641,7 +641,7 @@ Windows 10 创意者更新电脑可能 **配置了离散** 和集成的 gpu。 �
 
 最常见的 Direct3D 示例代码演示如何使用默认硬件适配器创建 DirectX 设备，该设备在混合系统上可能与用于耳机的设备不同。
 
-若要解决任何问题，请使用<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>中的<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicadapterid" target="_blank">HolographicAdapterID</a> 。PrimaryAdapterId ( # A1 或<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay" target="_blank">HolographicDisplay</a>。AdapterId ( # A3。 然后，可以使用此 adapterId，使用 IDXGIFactory4 选择正确的 DXGIAdapter。
+若要解决任何问题，请使用<a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>中的<a href="/uwp/api/windows.graphics.holographic.holographicadapterid" target="_blank">HolographicAdapterID</a> 。PrimaryAdapterId ( # A1 或<a href="/uwp/api/windows.graphics.holographic.holographicdisplay" target="_blank">HolographicDisplay</a>。AdapterId ( # A3。 然后，可以使用此 adapterId，使用 IDXGIFactory4 选择正确的 DXGIAdapter。
 
 From **DeviceResources：： InitializeUsingHolographicSpace**：
 
@@ -711,7 +711,7 @@ const HRESULT hr = D3D11CreateDevice(
 
 在混合系统上使用媒体基础可能会导致视频无法呈现或视频纹理损坏的问题，因为媒体基础默认为系统行为。 在某些情况下，需要创建单独的 ID3D11Device 以支持多线程，并设置正确的创建标志。
 
-初始化 ID3D11Device 时，必须将 D3D11_CREATE_DEVICE_VIDEO_SUPPORT 标志定义为 D3D11_CREATE_DEVICE_FLAG 的一部分。 创建设备和上下文后，调用 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> 以启用多线程处理。 若要将设备与 <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>关联，请使用 <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager：： ResetDevice</a> 函数。
+初始化 ID3D11Device 时，必须将 D3D11_CREATE_DEVICE_VIDEO_SUPPORT 标志定义为 D3D11_CREATE_DEVICE_FLAG 的一部分。 创建设备和上下文后，调用 <a href="/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> 以启用多线程处理。 若要将设备与 <a href="/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>关联，请使用 <a href="/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager：： ResetDevice</a> 函数。
 
 用于 **将 ID3D11Device 与 IMFDXGIDeviceManager 相关联的** 代码：
 

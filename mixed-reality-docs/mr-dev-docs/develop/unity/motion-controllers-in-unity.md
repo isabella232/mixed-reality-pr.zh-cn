@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: 运动控制器，unity，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: bf9aad0ee67a406280cefedec8b55fb1de130b8b
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: db103e674a369f13e62aac5e8c0513b2c2c17f9e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192946"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583502"
 ---
 # <a name="motion-controllers-in-unity"></a>Unity 中的运动控制器
 
@@ -445,7 +445,7 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 - [MR 输入 211：手势](tutorials/holograms-211.md)
 - [MR 输入 213：运动控制器](../../deprecated/mixed-reality-213.md)
 
-[![MR 输入 213-运动控制器](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
+[![MR 输入 213-运动控制器](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
 *MR 输入 213-运动控制器*
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
@@ -453,7 +453,7 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
-> [手部和眼部跟踪](hand-eye-in-unit.md)
+> [手部和眼部跟踪](./hand-eye-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 

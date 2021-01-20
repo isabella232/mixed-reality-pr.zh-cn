@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，自定义视觉对象，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: d40dc1cf23ee8040406047eaddd7ee3b70365199
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: cba2df5841911df6d60a7060a70f835975a21f62
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679546"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583400"
 ---
 # <a name="mr-and-azure-302b-custom-vision"></a>MR 和 Azure 302b：自定义视觉
 
@@ -29,7 +29,7 @@ ms.locfileid: "94679546"
 
 ![课程结果](images/AzureLabs-Lab302b-00.png)
 
-Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建自定义映像分类器。 然后，可以将这些分类器与新图像一起使用，以识别或分类该新图像中的对象。 此服务提供简单易用的联机门户来简化流程。 有关详细信息，请访问 [Azure 自定义影像服务页](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home)。
+Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建自定义映像分类器。 然后，可以将这些分类器与新图像一起使用，以识别或分类该新图像中的对象。 此服务提供简单易用的联机门户来简化流程。 有关详细信息，请访问 [Azure 自定义影像服务页](/azure/cognitive-services/custom-vision-service/home)。
 
 完成本课程后，你将拥有一个混合现实应用程序，可以在两种模式下工作：
 
@@ -43,7 +43,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 302b：自定义视觉</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -52,7 +52,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -64,7 +64,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - 连接到电脑的相机 (沉浸式耳机开发) 
 - Azure 安装和自定义视觉 API 检索的 Internet 访问
 - 一系列至少五个 (5) 映像 (10 (10) 建议) 识别的每个对象。 如果需要，可以使用 [本课程提供的映像 (计算机鼠标和键盘) ](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/ComputerVision_Images.zip)。
@@ -72,12 +72,12 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 ## <a name="before-you-start"></a>开始之前
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。 
+2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。 
 3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](../../../calibration.md#hololens-2)。
+有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](../../../sensor-tuning.md)。
+有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
 
 ## <a name="chapter-1---the-custom-vision-service-portal"></a>第1章-自定义影像服务门户
 
@@ -118,7 +118,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
         ![设置域](images/AzureLabs-Lab302b-05.png)
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
 7.  完成后，单击 " **创建项目**"，你会被重定向到自定义影像服务，"项目" 页。
 
@@ -132,7 +132,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
     ![添加新标记](images/AzureLabs-Lab302b-06.png)
 
-2.  添加要识别的对象的 **名称** 。 单击“保存” 。
+2.  添加要识别的对象的 **名称** 。 单击“保存”  。
 
     ![添加对象名称并保存](images/AzureLabs-Lab302b-07.png)
 
@@ -1662,7 +1662,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
 在 HoloLens 上部署：
 
-1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 具体方法为：
+1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 要执行此操作：
 
     1.  在戴上 HoloLens 的同时，请打开 **设置**。
 
@@ -1670,7 +1670,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
     3.  记下 **IPv4** 地址。
 
-    4.  接下来，导航回 "**设置**"，然后为 **Update & Security**  >  **开发人员** 更新 & 安全性
+    4.  接下来，导航回 "**设置**"，然后为  >  **开发人员** 更新 & 安全性
 
     5.  设置 **开发人员模式**。
 

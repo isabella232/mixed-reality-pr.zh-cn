@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure，混合现实，学院，边缘，iot edge，教程，api，通知，函数，表，hololens，沉浸，vr，iot，虚拟机，ubuntu，python，Windows 10，Visual Studio
-ms.openlocfilehash: 3c01c7351ee284b72a15fd7d5bdd3205fec91e49
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f23a9bf5bcdb0868ef9b0e6f77fbdb7a15dfdce1
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009297"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582813"
 ---
 # <a name="mr-and-azure-313-iot-hub-service"></a>MR 和 Azure 313：IoT 中心服务
 
@@ -39,9 +39,9 @@ ms.locfileid: "98009297"
 
 - **Azure 容器注册表** 是一种 Microsoft Azure 服务，它允许开发人员为各种类型的容器存储容器映像。 有关详细信息，请访问 [ **Azure 容器注册表服务** 页](https://azure.microsoft.com/services/container-registry/)。
 
-- **Azure Function App** 是一种 Microsoft Azure 服务，它允许开发人员在 Azure 中运行小部分代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 **Azure Functions** 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 [ **Azure Functions** 页](https://docs.microsoft.com/azure/azure-functions/functions-overview)。
+- **Azure Function App** 是一种 Microsoft Azure 服务，它允许开发人员在 Azure 中运行小部分代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 **Azure Functions** 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 [ **Azure Functions** 页](/azure/azure-functions/functions-overview)。
 
-- **Azure 存储：表** 是一项 Microsoft Azure 服务，它允许开发人员在云中存储结构化非 SQL 数据，使其在任何位置轻松访问。 此服务的设计良好，可根据需要进行表的发展，因此非常灵活。 有关详细信息，请访问 [ **Azure 表** 页](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- **Azure 存储：表** 是一项 Microsoft Azure 服务，它允许开发人员在云中存储结构化非 SQL 数据，使其在任何位置轻松访问。 此服务的设计良好，可根据需要进行表的发展，因此非常灵活。 有关详细信息，请访问 [ **Azure 表** 页](/azure/cosmos-db/table-storage-overview)
 
 本课程将介绍如何设置和使用 IoT 中心服务，然后将设备提供的响应可视化。 您可以将这些概念应用到您可能会构建的自定义 IoT 中心服务设置。
 
@@ -49,7 +49,7 @@ ms.locfileid: "98009297"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 313：IoT 中心服务</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -57,7 +57,7 @@ ms.locfileid: "98009297"
 
 ## <a name="prerequisites"></a>先决条件
 
-有关利用混合现实进行开发的最新先决条件，包括 Microsoft HoloLens，请访问 [安装工具](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) 一文。
+有关利用混合现实进行开发的最新先决条件，包括 Microsoft HoloLens，请访问 [安装工具](/windows/mixed-reality/install-the-tools) 一文。
 
 > [!NOTE]
 > 本教程适用于具有 Python 的基本经验的开发人员。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的软件内容完全匹配。
@@ -79,19 +79,19 @@ ms.locfileid: "98009297"
 
 
 
-### <a name="before-you-start"></a>准备工作
+### <a name="before-you-start"></a>开始之前
 
-1. 设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。
+1. 设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。
 2. 在开始开发新的 HoloLens 应用程序时，最好执行 **校准** 和 **传感器调整** (有时，它可以帮助为每个用户) 执行这些任务。
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](../../../calibration.md#hololens-2)。
+有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](../../../sensor-tuning.md)。
+有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
 
 3. 使用 **hyper-v** 设置 **Ubuntu 虚拟机**。 以下资源将帮助你执行此过程。
     1.  首先，请单击以下链接 [下载 Ubuntu 16.04.4 LTS (Xenial Xerus) ISO](https://au.releases.ubuntu.com/16.04/)。 选择 **64 (AMD64) 桌面映像**。
-    2.  请确保已在 Windows 10 计算机上启用 **hyper-v** 。 你可以访问此链接以获取有关在 [Windows 10 上安装和启用 hyper-v](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)的指南。
-    3.  启动 Hyper-v 并创建新的 Ubuntu VM。 可以访问此链接，了解有关 [如何使用 hyper-v 创建 VM](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine)的分步指导。 当请求 **"从可启动的映像文件安装操作系统"** 时，选择之前下载的 **Ubuntu ISO** 。
+    2.  请确保已在 Windows 10 计算机上启用 **hyper-v** 。 你可以访问此链接以获取有关在 [Windows 10 上安装和启用 hyper-v](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)的指南。
+    3.  启动 Hyper-v 并创建新的 Ubuntu VM。 可以访问此链接，了解有关 [如何使用 hyper-v 创建 VM](/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine)的分步指导。 当请求 **"从可启动的映像文件安装操作系统"** 时，选择之前下载的 **Ubuntu ISO** 。
 
     > [!NOTE]
     > 不建议使用 **Hyper-v 快速创建** 。  
@@ -135,7 +135,7 @@ ms.locfileid: "98009297"
 
     ![容器注册表](images/AzureLabs-Lab313-05.png)
 
-3. 单击 " **创建**"。
+3. 单击“创建”。
 
     ![](images/AzureLabs-Lab313-06.png)
 
@@ -186,7 +186,7 @@ ms.locfileid: "98009297"
 
     1. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
 
 
     2. 选择适当的 **位置** (在本课程中创建的所有服务中使用同一位置) 。
@@ -382,7 +382,7 @@ ms.locfileid: "98009297"
     >1. 重新启动 VS Code 和/或您的计算机。
     >2. 可能需要将 **VS Code 终端** 切换到你用来安装 Python 的计算机（例如 **Powershell** (），尤其是在你的计算机上安装了 python 环境) 时。 打开终端后，会在终端的右侧找到下拉菜单。
      ![创建容器](images/AzureLabs-Lab313-24b.png) 
-    >3. 请确保将 **Python** 安装路径添加为计算机上的 **环境变量** 。 Cookiecutter 应属于同一位置路径。 [有关环境变量的详细信息](https://msdn.microsoft.com/library/windows/desktop/ms682653(v=vs.85).aspx)，请访问此链接 
+    >3. 请确保将 **Python** 安装路径添加为计算机上的 **环境变量** 。 Cookiecutter 应属于同一位置路径。 [有关环境变量的详细信息](/windows/win32/procthread/environment-variables)，请访问此链接 
 
 7. **Cookiecutter** 安装完成后，应重新启动计算机，以便在系统环境中将 **Cookiecutter** 识别为命令。
 
@@ -870,7 +870,7 @@ ms.locfileid: "98009297"
 
     9. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种方式来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
 
     10. 如果这是一个选项，请将 **虚拟网络** 保留为 **禁用状态**。
 
@@ -1011,7 +1011,7 @@ ms.locfileid: "98009297"
 
     4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种方式来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
 
     5. 对于 **操作系统**，请单击 "Windows"，因为这是预期的平台。
 

@@ -6,19 +6,19 @@ ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 共享、定位、WorldAnchor、MR 共享250、WorldAnchorTransferBatch、SpatialPerception、传输、本地定位点传输、定位点导出和定位点导入
-ms.openlocfilehash: 1048e6a3cfc41a04cd49e201e5d1841e805a4193
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4949dd49817d723729974fb5666d5defb64b72ba
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009637"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583876"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Unity 中的本地定位点传输
 
-在不能使用 <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间锚点</a>的情况下，本地定位点传输允许一台 hololens 设备导出要由第二个 hololens 设备导入的定位点。
+在不能使用 <a href="/azure/spatial-anchors" target="_blank">Azure 空间锚点</a>的情况下，本地定位点传输允许一台 hololens 设备导出要由第二个 hololens 设备导入的定位点。
 
 >[!NOTE]
->与 <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位</a>点相比，本地定位点传输提供的功能更低，并且不支持 IOS 和 Android 设备。
+>与 <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位</a>点相比，本地定位点传输提供的功能更低，并且不支持 IOS 和 Android 设备。
 
 ### <a name="setting-the-spatialperception-capability"></a>设置 SpatialPerception 功能
 
@@ -138,4 +138,3 @@ private void OnImportComplete(SerializationCompletionReason completionReason, Wo
 ```
 
 通过 *LockObject* 调用锁定 *GameObject* 后，它将具有一个 *WorldAnchor* ，它会将其保持在世界上相同的物理位置，但它可能与其他用户在 Unity 坐标空间中的位置不同。
-

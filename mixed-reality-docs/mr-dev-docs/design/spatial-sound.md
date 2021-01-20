@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 11/07/2019
 ms.topic: article
 keywords: 空间音效，环绕声，3d 音频，3d 声音，空间音频，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，案例研究，噪音
-ms.openlocfilehash: b65a4ff3dc64863f02f1459fa0c3adc5d34b0703
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 335ff8acf036591bbbf9868f591ca2c3cef1386c
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848175"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583252"
 ---
 # <a name="audio-in-mixed-reality"></a>混合现实中的音频
 
@@ -43,7 +43,7 @@ ms.locfileid: "97848175"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens (第一代) </strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (第一代) </strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -91,7 +91,7 @@ HRTFs 跨频率范围控制耳之间的级别和阶段差异。 它们基于物�
 
 ### <a name="spatializer-platform-support"></a>Spatializer 平台支持
 
-Windows 通过 [ISPATIALAUDIOCLIENT API](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound)提供 spatialization，包括 HRTFs。 此 API 向应用程序公开 HoloLens 2 HRTF 硬件加速。
+Windows 通过 [ISPATIALAUDIOCLIENT API](/windows/win32/coreaudio/spatial-sound)提供 spatialization，包括 HRTFs。 此 API 向应用程序公开 HoloLens 2 HRTF 硬件加速。
 
 ### <a name="spatializer-middleware-support"></a>Spatializer 中间件支持
 
@@ -103,7 +103,7 @@ Windows 通过 [ISPATIALAUDIOCLIENT API](https://docs.microsoft.com/windows/win3
 
 空间音频约为方向。 其他维度包括封闭、障碍、回音、portaling 和源建模。 这些维度统称为 " *噪声*"。 如果没有噪声，spatialized 声音就会缺少距离。
 
-噪声治疗范围从简单到复杂。 您可以使用任何音频引擎支持的回音，将 spatialized 的声音推送到侦听器的环境中。 诸如 [项目噪声](https://aka.ms/acoustics)  等噪声系统提供更丰富且更具吸引力的噪声处理。 项目噪声可以为声音上的墙壁、门和其他场景几何的效果建模。 这是一个有效的选项，适用于在开发时了解相关场景几何图形的情况。
+噪声治疗范围从简单到复杂。 您可以使用任何音频引擎支持的回音，将 spatialized 的声音推送到侦听器的环境中。 诸如 [项目噪声](/gaming/acoustics/what-is-acoustics)  等噪声系统提供更丰富且更具吸引力的噪声处理。 项目噪声可以为声音上的墙壁、门和其他场景几何的效果建模。 这是一个有效的选项，适用于在开发时了解相关场景几何图形的情况。
 
 ## <a name="next-steps"></a>后续步骤
 

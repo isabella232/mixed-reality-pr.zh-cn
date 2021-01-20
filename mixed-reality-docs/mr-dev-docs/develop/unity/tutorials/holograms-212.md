@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，语音，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: b9d9002180da7a59c62b77b83872e77499da4c09
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6fb3e10cb440fdda941a6d68b106da1bbaaedbc9
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677236"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583682"
 ---
 # <a name="mr-input-212-voice"></a>MR 输入 212：语音
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../../../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
 
 [语音输入](../../../design/voice-input.md) 提供了另一种与全息影像交互的方法。 语音命令的工作方式非常简单。 设计语音命令，以便：
 
@@ -45,13 +45,13 @@ ms.locfileid: "94677236"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 输入 212：语音</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -76,7 +76,7 @@ ms.locfileid: "94677236"
 
 ## <a name="unity-setup"></a>Unity 设置
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 启动 Unity。
 2. 选择“打开”  。
@@ -152,7 +152,7 @@ ms.locfileid: "94677236"
     6. 删除
 * 使用类似的声音。 尝试避免使用偏偏的语音命令。 如果有支持 *"显示商店"* 和 *"显示更多"* 语音命令的购物应用程序，则需要禁用其中一个命令，而另一个命令已被使用。 例如，你可以使用 *"显示商店"* 按钮打开应用商店，然后在显示应用商店时禁用该命令，以便可以使用 *"显示更多"* 命令来浏览。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 Unity 的 " **层次结构** " 面板中，使用 "搜索" 工具查找 **holoComm_screen_mesh** 的对象。
 * 双击 **holoComm_screen_mesh** 对象以在 **场景** 中查看它。 这是 astronaut 的手表，它将响应我们的语音命令。
@@ -192,7 +192,7 @@ ms.locfileid: "94677236"
 >2. 单击 "通用 Windows 平台" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 Unity 的 " **层次结构** " 面板中，验证是否选择了 " **holoComm_screen_mesh** " 对象。
 * 在 " **检查器** " 面板中，找到 **Astronaut Watch (脚本)** 组件。
@@ -248,7 +248,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 >2. 单击 "通用 Windows 平台" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 我们将编辑 **MicrophoneManager.cs** 以使用听写识别器。 这就是我们要添加的内容：
 
@@ -259,7 +259,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 5. 按下 " **停止" 按钮** ，或 mic 会话超时时， **停止 DictationRecognizer**。
 6. 重新启动 **KeywordRecognizer**，这将侦听 " **发送消息** " 命令。
 
-现在就开始吧。 在 **MicrophoneManager.cs** 中完成 3. a 的所有编码练习，或复制并粘贴下面的已完成代码：
+让我们开始吧。 在 **MicrophoneManager.cs** 中完成 3. a 的所有编码练习，或复制并粘贴下面的已完成代码：
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
@@ -475,7 +475,7 @@ namespace Academy
 >2. 单击 "通用 Windows 平台" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 在 " **层次结构** " 面板中，搜索 **Jetpack_Center** 并将其选中。
 2. 在 "**检查器**" 面板中查找 **Tagalong 操作** 脚本。

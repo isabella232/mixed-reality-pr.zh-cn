@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 空间映射，HoloLens，混合现实，表面重建，网格，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，场景理解，世界网格，封闭，物理学，导航，表面观察器，渲染，网格处理
-ms.openlocfilehash: 4305a291a2a83f4425c5a80d25dd8145a7033492
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 1c41706abc0a393e8530b38be83fed49ed3e20a6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848201"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583273"
 ---
 # <a name="spatial-mapping"></a>空间映射
 
@@ -32,7 +32,7 @@ ms.locfileid: "97848201"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -78,7 +78,7 @@ ms.locfileid: "97848201"
 
 ## <a name="what-influences-spatial-mapping-quality"></a>哪些因素会影响空间映射质量？
 
-[此处](../environment-considerations-for-hololens.md)详细介绍的几个因素可能会影响这些错误的频率和严重性。  但是，你应设计应用程序，以便即使在空间映射数据中存在错误时，用户也可以实现其目标。
+[此处](/hololens/hololens-environment-considerations)详细介绍的几个因素可能会影响这些错误的频率和严重性。  但是，你应设计应用程序，以便即使在空间映射数据中存在错误时，用户也可以实现其目标。
 
 ## <a name="common-usage-scenarios"></a>常见使用方案
 
@@ -209,13 +209,13 @@ Unity 中的内置 NavMesh 功能不能与空间映射图面一起使用。 这�
    * 需要注意的一点是，空间网格不同于三维艺术家可能创建的网格类型。 三角形拓扑不会作为用户创建的拓扑 "干净"，并且网格会受到 [各种错误](spatial-mapping.md#what-influences-spatial-mapping-quality)的影响。
    * 若要创建令人满意的视觉对象美观，可能需要进行一些 [网格处理](spatial-mapping.md#mesh-processing)，例如填充孔或平滑曲面法。 您还可能希望使用着色器将艺术家设计的纹理投影到网格上，而不是直接可视化网格拓扑和法线。
 * 对于真实的图面后面的 occluding 全息影像
-   * 空间图面可以在仅深度传递中呈现，这只会影响 [深度缓冲区](https://msdn.microsoft.com/library/windows/desktop/bb219616(v=vs.85).aspx) 并且不会影响颜色呈现器目标。
+   * 空间图面可以在仅深度传递中呈现，这只会影响 [深度缓冲区](/windows/win32/direct3d9/depth-buffers) 并且不会影响颜色呈现器目标。
    * 这 primes 了深度缓冲区，遮蔽随后在空间图面后面呈现全息影像。 最准确的全息影像封闭增强了全息影像在用户的物理空间内确实存在的意义。
-   * 若要启用仅深度渲染，请更新混合状态，将所有颜色渲染目标的 [RenderTargetWriteMask](https://msdn.microsoft.com/library/windows/desktop/hh404492(v=vs.85).aspx) 设置为零。
+   * 若要启用仅深度渲染，请更新混合状态，将所有颜色渲染目标的 [RenderTargetWriteMask](/windows/win32/api/d3d11_1/ns-d3d11_1-d3d11_render_target_blend_desc1) 设置为零。
 * 用于修改真实环境中全息图封闭像素的外观
-   * 当封闭像素时，通常会隐藏呈现的几何图形。 这是通过将 [深度模具状态](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx) 中的深度函数设置为 "小于或等于" 来实现的，这会使几何仅在 **离相机更近** 的位置（而不是所有先前呈现的几何）可见。
+   * 当封闭像素时，通常会隐藏呈现的几何图形。 这是通过将 [深度模具状态](/windows/win32/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc) 中的深度函数设置为 "小于或等于" 来实现的，这会使几何仅在 **离相机更近** 的位置（而不是所有先前呈现的几何）可见。
    * 但是，在某些情况下，即使在封闭像素时也能看到某些几何，并在封闭像素作为向用户提供视觉反馈时修改其外观。 例如，这允许应用程序向用户显示对象的位置，同时使其清楚地显示在实际表面。
-   * 若要实现此目的，请使用另一个创建所需 "封闭像素" 外观的着色器第二次渲染几何。 在第二次渲染几何之前，对 [深度模具状态](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx)进行两次更改。 首先，将 "深度函数" 设置为 "大于或等于"，以便仅在 **其从相机中看到** 的位置比之前呈现的所有几何都可见。 其次，将 DepthWriteMask 设置为零，以便不会修改深度缓冲区 (深度缓冲区应继续表示距离相机) **最近** 的几何深度。
+   * 若要实现此目的，请使用另一个创建所需 "封闭像素" 外观的着色器第二次渲染几何。 在第二次渲染几何之前，对 [深度模具状态](/windows/win32/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)进行两次更改。 首先，将 "深度函数" 设置为 "大于或等于"，以便仅在 **其从相机中看到** 的位置比之前呈现的所有几何都可见。 其次，将 DepthWriteMask 设置为零，以便不会修改深度缓冲区 (深度缓冲区应继续表示距离相机) **最近** 的几何深度。
 
 在呈现空间映射网格时，[性能](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)是一个重要的考虑因素。 下面是一些特定于呈现空间映射网格的呈现性能技巧：
 * 调整三角形密度
@@ -227,11 +227,11 @@ Unity 中的内置 NavMesh 功能不能与空间映射图面一起使用。 这�
    * 由于在每个网格基础上执行剔除，空间表面可能会很大，因此将每个空间曲面网格分割为较小的区块可能会导致更有效的剔除 (，因为) 会呈现较少的屏幕外三角形。 不过，有一种折衷：您拥有的网格越多，您必须进行的绘图调用越多，这会增加 CPU 开销。 在极端情况下，如截锥剔除计算，甚至可能有可度量的 CPU 开销。
 * 调整呈现顺序
    * 空间表面很大，因为它们代表用户在周围的整个环境。 GPU 上的像素处理开销可能很高，尤其是在有多层可见的几何图形 (包括空间表面和其他全息影像) 的情况下。 在这种情况下，离用户最近的层会进一步 occluding 任何层，因此，在呈现这些更远距离的层所用的任何 GPU 时间都将浪费下来。
-   * 若要减少 GPU 上的这一冗余工作，这有助于在最接近的情况下，以从上到下的顺序呈现不透明的图面， (上一次) 。 "不透明" 是指在您的 [深度模具状态](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx)中将 DepthWriteMask 设置为一个的表面。 当呈现最近的图面时，它们将为深度缓冲区的质数，以便 GPU 上的像素处理器能够有效地跳过更远的图面。
+   * 若要减少 GPU 上的这一冗余工作，这有助于在最接近的情况下，以从上到下的顺序呈现不透明的图面， (上一次) 。 "不透明" 是指在您的 [深度模具状态](/windows/win32/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)中将 DepthWriteMask 设置为一个的表面。 当呈现最近的图面时，它们将为深度缓冲区的质数，以便 GPU 上的像素处理器能够有效地跳过更远的图面。
 
 ## <a name="mesh-processing"></a>网格处理
 
-应用程序可能希望对空间 surface 网格执行 [各种操作](spatial-mapping.md#mesh-processing) 以满足其需求。 每个空间 surface 网格提供的索引和顶点数据与用于在所有新式渲染 Api 中呈现三角形网格的 [顶点和索引缓冲区](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) 使用的布局相同。 不过，有一个关键事实需要注意的是，空间映射三角形具有 **前后的缠绕顺序**。 每个三角形都用网格的索引缓冲区中的三个顶点索引表示，当从 **正面** 查看三角形时，这些索引会按 **顺时针** 顺序标识三角形的顶点。 空间 surface 网格的正面 (或外部) 与您预期在实际表面的正面 () 可见。
+应用程序可能希望对空间 surface 网格执行 [各种操作](spatial-mapping.md#mesh-processing) 以满足其需求。 每个空间 surface 网格提供的索引和顶点数据与用于在所有新式渲染 Api 中呈现三角形网格的 [顶点和索引缓冲区](/windows/win32/direct3d9/rendering-from-vertex-and-index-buffers) 使用的布局相同。 不过，有一个关键事实需要注意的是，空间映射三角形具有 **前后的缠绕顺序**。 每个三角形都用网格的索引缓冲区中的三个顶点索引表示，当从 **正面** 查看三角形时，这些索引会按 **顺时针** 顺序标识三角形的顶点。 空间 surface 网格的正面 (或外部) 与您预期在实际表面的正面 () 可见。
 
 如果 surface 观察器提供的益处三角形密度仍不足粗，则应用程序应仅执行网格简化，这种工作的计算成本非常高，且已由运行时执行以生成各种提供的详细信息级别。
 
@@ -292,7 +292,7 @@ Unity 中的内置 NavMesh 功能不能与空间映射图面一起使用。 这�
    * 应用程序可能需要扫描当前房间中的所有表面，包括用户之后的所有表面。
    * 例如，游戏可能将用户作为 Gulliver 的角色，在 siege 中，从数百个微小 Lilliputians 接近所有方向。
    * 在这种情况下，应用程序需要确定当前房间中已经扫描了多少个面，并指示用户的注视填充了重大间隙。
-   * 此过程的关键是提供可视反馈，使用户清楚地知道尚未扫描哪些表面。 例如，应用程序可以使用 [基于距离的雾化](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) 来以可视方式突出显示空间映射图面未涵盖的区域。
+   * 此过程的关键是提供可视反馈，使用户清楚地知道尚未扫描哪些表面。 例如，应用程序可以使用 [基于距离的雾化](/windows/win32/direct3d9/fog-formulas) 来以可视方式突出显示空间映射图面未涵盖的区域。
 
 * **获取环境的初始快照**
    * 在采用初始 "快照" 后，应用程序可能希望忽略环境中的所有更改。

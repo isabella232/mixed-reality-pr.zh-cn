@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 全息影像，稳定性，hololens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，帧速率，渲染，reprojection，颜色分离
 appliesto:
 - HoloLens
-ms.openlocfilehash: 36abf928d8f665717bacaf8da372d299b41fabd6
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 064e42f771391e77874796e91ea8e4d563c08ec2
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006637"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582887"
 ---
 # <a name="hologram-stability"></a>全息影像稳定性
 
@@ -25,11 +25,11 @@ ms.locfileid: "98006637"
 
 以下术语可帮助你确定环境问题、不一致的呈现速率或任何其他内容。
 * **准确性.** 在全局锁定全息图并将其放置在现实世界中后，它应保留相对于周围环境的位置，并独立于用户运动或小型和稀疏环境更改。 如果在意外的位置出现全息图，则这是一个 *准确性* 问题。 如果两个不同的房间看起来相同，则可能会发生这种情况。
-* **抖动.** 用户将抖动视为全息图的高频握手，这在跟踪环境时可能会发生这种情况。 对于用户，解决方案正在运行 [传感器调整](../../sensor-tuning.md)。
+* **抖动.** 用户将抖动视为全息图的高频握手，这在跟踪环境时可能会发生这种情况。 对于用户，解决方案正在运行 [传感器调整](/hololens/hololens-updates)。
 * **Judder.** 低渲染频率会导致动画的不均匀运动和双图像。 Judder 在动态影像中尤其明显。 开发人员需要维护 [常量 60 FPS](hologram-stability.md#frame-rate)。
 * **光标.** 用户在出现全息图后会看到偏移，使其远离其最初放置位置。 当你从 [空间锚](../../design/spatial-anchors.md)，而不是在环境的未映射部分中时，会发生偏移。 创建与空间锚接近的全息影像会降低偏移的可能性。
 * **Jumpiness.** 如果不是，则不会偶尔从其位置 "弹出" 或 "跳转"。 当跟踪调整全息影像以匹配更新的环境时，会发生 Jumpiness。
-* **泳道.** 当 sway 与用户的头运动相对应时，会出现一个全息图。 当应用程序未完全实现 [reprojection](hologram-stability.md#reprojection)，并且没有为当前用户 [校准](../../calibration.md) HoloLens 时，会发生泳道。 用户可以重新运行 [校准](../../calibration.md) 应用程序以解决此问题。 开发人员可以更新稳定平面，以进一步增强稳定性。
+* **泳道.** 当 sway 与用户的头运动相对应时，会出现一个全息图。 当应用程序未完全实现 [reprojection](hologram-stability.md#reprojection)，并且没有为当前用户 [校准](/hololens/hololens-calibration) HoloLens 时，会发生泳道。 用户可以重新运行 [校准](/hololens/hololens-calibration) 应用程序以解决此问题。 开发人员可以更新稳定平面，以进一步增强稳定性。
 * **颜色分离。** HoloLens 中的显示是彩色顺序显示的，它们在 60 Hz (各个颜色字段以 240 Hz) 显示以绿色为绿色的红色通道。 无论用户何时使用其眼睛跟踪移动的全息图，都将在其构成颜色中分离出全息图的前导和尾随边缘，从而产生彩虹效果。 分离程度取决于全息图的速度。 在某些罕见情况下，在查看固定全息图的同时迅速移动打印头也会导致彩虹效果，这称为 *[颜色分离](hologram-stability.md#color-separation)*。
 
 ## <a name="frame-rate"></a>帧速率
@@ -45,7 +45,7 @@ ms.locfileid: "98006637"
 
 **帧速率一致性** 帧速率一致性与高帧/秒一样重要。 对于任何内容丰富的应用程序，偶尔丢弃的帧都是不可避免的，而且 HoloLens 实现了一些复杂的算法来从偶然的故障中恢复。 但是，对于用户而言，持续波动的帧比以较低的帧速率持续运行要多得多。 例如，在这5帧的持续时间内，呈现为五帧 (60 FPS) 的应用程序，然后删除接下来的10帧的每个其他帧 (30 FPS，在这10帧的持续时间内，) 会显得比一致呈现的应用程序的不稳定。
 
-在相关说明中，当 [混合现实捕获](../../mixed-reality-capture.md) 正在运行时，操作系统将应用程序限制为 30 FPS。
+在相关说明中，当 [混合现实捕获](/hololens/holographic-photos-and-videos) 正在运行时，操作系统将应用程序限制为 30 FPS。
 
 **性能分析** 可以使用不同种类的工具来基准应用程序帧速率，例如：
 * GPUView
@@ -66,7 +66,7 @@ ms.locfileid: "98006637"
 
 戴 HoloLens 的用户将始终适应 2.0 m 以维护一个清晰的图像，因为 HoloLens 显示的固定距离离用户约2.0 米。 应用开发人员通过在不同的深度放置内容和全息影像来控制用户的眼睛汇聚。 当用户容纳并聚合到不同的距离时，两个提示之间的自然链接会断开，这可能会导致 visual discomfort 或疲劳，特别是当冲突量大时。 
 
-Discomfort 可以通过将混合内容保持在最接近 2.0 m 的位置来避免或最大程度 (地降低 vergence，这就是在具有很多深度的场景中，尽可能多地将感2.0 兴趣的区域) 。 当内容不能放在 2.0 m 附近时，当用户在不同距离之间来回注视时，discomfort 会出现 vergence 冲突。 换句话说，查看远离50厘米的静止全息图比查看在一段时间内走走或远离您的全息图 50 cm 更为熟悉。
+Discomfort 可以通过将混合内容保持在最接近 2.0 m 的位置来避免或最大程度 (地降低 vergence，这就是在具有很多深度的场景中，尽可能多地将感2.0 兴趣的区域) 。 当内容不能放在 2.0 m 附近时，当用户在不同距离之间来回注视时，discomfort 会出现 vergence 冲突。 换言之，观看 50 厘米远的静态全息影像，比观看 50 厘米远的前后不断移动的全息影像要舒适得多。
 
 将内容放置在 2.0 m 也是有益的，因为这两个显示器的设计目的是完全重叠。 对于放置在此平面之外的图像，当它们移出全息帧的一侧时，它们将显示在一个显示器上，同时仍然可见。 此望远镜 rivalry 可能会对全息图的深度认知造成中断。
 
@@ -91,7 +91,7 @@ HoloLens 提供先进的硬件辅助全息稳定技术（称为 reprojection）�
 应用程序需要执行特定操作才能启用不同类型的 reprojection
 * **深度 Reprojection：** 应用程序将每个呈现的帧的深度缓冲区提交给系统。  在 Unity 上，在 " **XR 插件管理**" 下的 " **Windows Mixed Reality 设置**" 窗格中，通过 "**共享深度缓冲区**" 选项完成深度 Reprojection。  DirectX 应用调用 CommitDirect3D11DepthBuffer。  应用程序不应调用 SetFocusPoint。
 * **平面 Reprojection：** 在每个帧上，应用程序会告诉系统要稳定的平面位置。  Unity 应用程序调用 SetFocusPointForFrame，并应禁用 **共享深度缓冲** 。  DirectX 应用调用 SetFocusPoint，不应调用 CommitDirect3D11DepthBuffer。
-* **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。 使用混合现实工具包 (MRTK) 的应用可以将 [照相机设置提供程序](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) 配置为使用 AutoPlanar Reprojection。 本机应用应将 `DepthReprojectionMode` [HolographicCameraRenderingParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) 中的设置为 `AutoPlanar` 每个框架。 对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
+* **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。 使用混合现实工具包 (MRTK) 的应用可以将 [照相机设置提供程序](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) 配置为使用 AutoPlanar Reprojection。 本机应用应将 `DepthReprojectionMode` [HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) 中的设置为 `AutoPlanar` 每个框架。 对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
 
 ### <a name="choosing-reprojection-technique"></a>选择 Reprojection 技术
 
@@ -183,6 +183,6 @@ renderingParameters.SetFocusPoint(
 
 ## <a name="see-also"></a>另请参阅
 * [了解混合现实的性能](understanding-performance-for-mixed-reality.md)
-* [颜色、光线和材料](../../color,-light-and-materials.md)
+* [颜色、光线和材料](../../design/color-light-and-materials.md)
 * [本能交互](../../design/interaction-fundamentals.md)
 * [MRTK 全息影像稳定性](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html)

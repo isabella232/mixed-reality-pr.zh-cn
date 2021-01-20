@@ -6,19 +6,19 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，自定义环境，地点，cliff 房子，skyloft，用户，创建，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 2d88b4e20c2703b554572c0d39d5c69767164694
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: ca6a41f8388a767b1191ddc3b377822567a603a6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848078"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583306"
 ---
 # <a name="design-your-own-immersive-environments"></a>设计自己的沉浸式环境
 
 >[!NOTE]
 >这是一项实验性功能。 试一试，并对它感兴趣，但如果所有内容均未按预期工作，则不会惊讶。 我们正在评估此功能的生存能力，并对使用它感兴趣，因此请告诉我们你的体验 (以及在 [开发人员论坛](https://forums.hololens.com/categories/custom-home-environments)中找到) 的任何 bug。
 
-从 [windows 10 4 月2018版更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)开始，我们启用了一个试验性功能，该功能使你能够将自定义环境添加到 "开始" 菜单上的 "位置选取器 (，) 用作 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)。 Windows Mixed Reality 提供两个默认环境： Cliff 房子和 Skyloft，你可以选择作为你的家庭。 创建自定义环境使你可以通过自己的创建来扩展列表。 我们正在使此功能在早期状态下提供，以便评估创建者和开发人员的兴趣。 了解你创建了哪些类型的世界，并了解如何使用不同的创作工具。
+从 [windows 10 4 月2018版更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)开始，我们启用了一个试验性功能，该功能使你能够将自定义环境添加到 "开始" 菜单上的 "位置选取器 (，) 用作 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)。 Windows Mixed Reality 提供两个默认环境： Cliff 房子和 Skyloft，你可以选择作为你的家庭。 创建自定义环境使你可以通过自己的创建来扩展列表。 我们正在使此功能在早期状态下提供，以便评估创建者和开发人员的兴趣。 了解你创建了哪些类型的世界，并了解如何使用不同的创作工具。
 
 使用自定义环境时，您会注意到，teleporting、与应用程序的交互，并使全息影像的工作方式与在 Cliff 房子和 Skyloft 中的工作方式相同。 你可以在幻想环境中浏览 web，或使用全息影像来填充现在俨然
 
@@ -32,7 +32,7 @@ ms.locfileid: "97848078"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens</strong></a></td>
+        <td><a href="/hololens/hololens2-hardware"><strong>HoloLens</strong></a></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
      <tr>
@@ -96,7 +96,7 @@ Windows Mixed Reality 支持很多可显著减少环境加载时间的可选优�
 
 转换器当前支持多个标志来调整优化的确切行为。 建议运行以下标志以获得最佳结果：
 
-标志|建议值 (s) |说明
+Flag|建议值 (s) |说明
 ---|---|---
 -最大纹理大小|1024或2048| 调整该值以提高纹理质量，默认值为512x512。 较大的值将显著影响环境的文件大小，因此请记住 256 mb 的限制
 -最小版本|1803|仅在 windows >= 1803 的版本上支持自定义环境。 此标志将删除较旧版本的纹理，并减小最终资产的文件大小
@@ -151,4 +151,3 @@ Windows Mixed Reality [不支持超过 256 mb 的环境](#environment-limits)。
 
 ## <a name="see-also"></a>另请参阅
 * [GitHub 上的 Windows Mixed Reality 资产转换器 () ](https://github.com/Microsoft/glTF-Toolkit/releases)
-

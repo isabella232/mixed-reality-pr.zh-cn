@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: 手势，unity，注视，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 2a968235abaeff9187580b7f5f77263b27c38c28
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: 44c42abdd4628cacd6af334a916fb725da8bb022
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192945"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583893"
 ---
 # <a name="gestures-in-unity"></a>Unity 中的手势
 
@@ -145,7 +145,7 @@ void OnDestroy()
 - [MR 输入 211：手势](tutorials/holograms-211.md)
 - [MR 输入 213：运动控制器](../../deprecated/mixed-reality-213.md)
 
-[![MR 输入 213-运动控制器](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
+[![MR 输入 213-运动控制器](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
 *MR 输入 213-运动控制器*
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
@@ -153,7 +153,7 @@ void OnDestroy()
 如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
-> [手部和眼部跟踪](hand-eye-in-unit.md)
+> [手部和眼部跟踪](./hand-eye-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 

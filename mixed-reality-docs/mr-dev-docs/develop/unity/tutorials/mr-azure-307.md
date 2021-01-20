@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，机器学习，ml，机器学习工作室，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 3bb50c146e11a340f4223d71dd401ac2b84dd6d4
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 95213c3d17bbe0f0f81438d4808db142ad21c595
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679476"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583389"
 ---
 # <a name="mr-and-azure-307-machine-learning"></a>MR 和 Azure 307：机器学习
 
@@ -42,7 +42,7 @@ ms.locfileid: "94679476"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 307：机器学习</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -51,7 +51,7 @@ ms.locfileid: "94679476"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具一文](../../install-the-tools.md)中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -63,7 +63,7 @@ ms.locfileid: "94679476"
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - Azure 安装和 ML 数据检索的 Internet 访问
 
 ## <a name="before-you-start"></a>开始之前
@@ -100,7 +100,7 @@ ms.locfileid: "94679476"
     7.  选择一个“订阅”  。
     4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
     
     5.  如果要创建新的资源组) ，请确定资源组 (的 **位置** 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
 
@@ -132,7 +132,7 @@ ms.locfileid: "94679476"
 
     3. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
     4.  如果要创建新的资源组) ，请确定资源组 (的 **位置** 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。 应使用在上一章中用于创建 Azure 存储的同一资源组。
 
@@ -252,7 +252,7 @@ ms.locfileid: "94679476"
 
     ![机器学习 Studio (经典) ：试验](images/AzureLabs-Lab7-22.png)
 
-11. 你将定型 **多类逻辑回归** 算法，根据一天中的小时和日期预测最销售的 **产品** 。 此文档超出了本文档的讨论范围，可以说明 Azure 机器学习 studio 提供的不同算法的详细信息，但你可以从[机器学习算法](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)备忘单中了解详细信息
+11. 你将定型 **多类逻辑回归** 算法，根据一天中的小时和日期预测最销售的 **产品** 。 此文档超出了本文档的讨论范围，可以说明 Azure 机器学习 studio 提供的不同算法的详细信息，但你可以从[机器学习算法](/azure/machine-learning/studio/algorithm-cheat-sheet)备忘单中了解详细信息
 
 12. 从左侧的 "试验项" 面板中，展开 "**机器学习**  >  **初始化模型**  >  **分类**，然后将"**多类逻辑回归**"项拖到试验画布上。
 
@@ -380,7 +380,7 @@ ms.locfileid: "94679476"
 
             ![设置 Unity 项目](images/AzureLabs-Lab7-37.png)
 
-    3.  在面板中，在 " **XR 设置**" (的 "发布设置") 下面的 "**发布设置**" 下，请确保已添加 Windows Mixed reality SDK，确保已添加 **Windows Mixed reality SDK** **Virtual Reality Supported**
+    3.  在面板中，在 " **XR 设置**" (的 "发布设置") 下面的 "**发布设置**" 下，请确保已添加 Windows Mixed reality SDK，确保已添加 **Windows Mixed reality SDK** 
 
         ![设置 Unity 项目](images/AzureLabs-Lab7-38.png)
 

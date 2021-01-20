@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens，持久性，Unity，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: d74f9c0a118c1886037c564073742ebedc7d0146
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 7d12764dac2259388fe57d3924165783eab3dac5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010438"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583492"
 ---
 # <a name="persistence-in-unity"></a>Unity 中的持久性
 
@@ -101,15 +101,15 @@ for (int index = 0; index < ids.Length; index++)
 
 ## <a name="persisting-holograms-for-multiple-devices"></a>为多台设备保留全息影像
 
-你可以使用 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 从本地 WorldAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上查找，即使这些设备同时不存在。  由于云锚点是永久性的，随着时间的推移，多台设备可以看到相对于同一物理位置中的定位点呈现的内容。
+你可以使用 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 从本地 WorldAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上查找，即使这些设备同时不存在。  由于云锚点是永久性的，随着时间的推移，多台设备可以看到相对于同一物理位置中的定位点呈现的内容。
 
-若要开始在 Unity 中构建共享体验，请尝试执行5分钟的 <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Azure 空间锚点 Unity 快速入门</a>。
+若要开始在 Unity 中构建共享体验，请尝试执行5分钟的 <a href="/azure/spatial-anchors/unity-overview" target="_blank">Azure 空间锚点 Unity 快速入门</a>。
 
-启动并运行 Azure 空间锚点后，便可以 <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">在 Unity 中创建和定位锚</a>。
+启动并运行 Azure 空间锚点后，便可以 <a href="/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">在 Unity 中创建和定位锚</a>。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续执行下一个构建基块：
+如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实核心构建基块的过程。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [空间映射](spatial-mapping-in-unity.md)
@@ -123,5 +123,5 @@ for (int index = 0; index < ids.Length; index++)
 
 ## <a name="see-also"></a>另请参阅
 * [空间锚点持久性](../../design/coordinate-systems.md#spatial-anchor-persistence)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">用于 Unity 的 Azure 空间定位点 SDK</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
+* <a href="/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">用于 Unity 的 Azure 空间定位点 SDK</a>

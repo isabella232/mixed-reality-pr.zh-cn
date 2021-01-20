@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 01/11/2021
 ms.topic: article
-ms.openlocfilehash: 8add6413b0ff4bb32c15d1fce10977397aa33ba1
-ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
+ms.openlocfilehash: f60179c35f6103c4771ea2777e05829bfb7a8ce4
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98108850"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583041"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>对混合现实开发人员文档进行贡献
 
@@ -24,11 +24,11 @@ ms.locfileid: "98108850"
 
 | 存储库名称 | URL |
 | --- | --- |
-| 混合现实 | [MicrosoftDocs/mixed-现实](https://docs.microsoft.com/windows/mixed-reality) |
+| 混合现实 | [MicrosoftDocs/mixed-现实](/windows/mixed-reality) |
 | VR 爱好者指南 | [MicrosoftDocs/混合-现实/发烧-指南](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
 | HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
 
-## <a name="before-you-start"></a>准备工作
+## <a name="before-you-start"></a>开始之前
 
 如果还没有，则需要 [创建一个 GitHub 帐户](https://github.com/join)。
 
@@ -84,7 +84,7 @@ ms.locfileid: "98108850"
 
 - `source_path`是要删除的旧项目的相对存储库路径。 请确保路径以开头 `mixed-reality-docs` ，并以结尾 `.md` 。
 - `redirect_url`是从旧文章到新文章的相对公共 URL。 请确保此 URL **不** 包含 `mixed-reality-docs` 或 `.md` ，因为它引用的是公共 URL，而不是存储库路径。 允许使用链接到新项目中的部分 `#section` 。 如果需要，还可以在此处使用其他站点的绝对路径。
-- `redirect_document_id` 指示是否要保留以前文件中的文档 ID。 默认值为 `false`。 `true`如果要保留 `ms.documentid` 重定向的项目中的属性值，请使用。 如果保留文档 ID，数据（如页面视图和分级）将传输到目标文章。 如果重定向主要用于重命名，而不是指向仅涵盖一些相同内容的不同项目的指针，则执行此操作。
+- `redirect_document_id` 指示是否要保留以前文件中的文档 ID。 默认为 `false`。 `true`如果要保留 `ms.documentid` 重定向的项目中的属性值，请使用。 如果保留文档 ID，数据（如页面视图和分级）将传输到目标文章。 如果重定向主要用于重命名，而不是指向仅涵盖一些相同内容的不同项目的指针，则执行此操作。
 
 如果添加重定向，请确保同时删除旧文件。
 
@@ -131,13 +131,13 @@ ms.locfileid: "98108850"
 
 - [Markdown 基本信息](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 - [一览式参考海报 Markdown](images/MarkdownPoster.pdf)
-- [用于编写 docs.microsoft.com 的 Markdown 的其他资源](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [用于编写 docs.microsoft.com 的 Markdown 的其他资源](/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>添加表
 
 由于 docs.microsoft.com 样式表的方式，它们没有边框或自定义样式，即使您尝试使用内联 CSS 也是如此。 它看起来可以正常工作，但最终平台会去除表的样式。 因此请提前规划并使表保持简单。 [下面是使 Markdown 表变得简单的站点](https://www.tablesgenerator.com/markdown_tables)。
 
-如果你使用[Visual Studio Code (请参阅) 下面](#using-visual-studio-code)的 "Markdown" 文档中的 "[文档" Visual Studio Code 扩展](https://docs.microsoft.com/teamblog/docs-extension)，以编辑该文档。
+如果你使用[Visual Studio Code (请参阅) 下面](#using-visual-studio-code)的 "Markdown" 文档中的 "[文档" Visual Studio Code 扩展](/teamblog/docs-extension)，以编辑该文档。
 
 ### <a name="adding-images"></a>添加图像
 

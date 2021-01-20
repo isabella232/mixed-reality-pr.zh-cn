@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv，语音，cortana，语音，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，注视
-ms.openlocfilehash: 09f99083d769be80d8c15016b3de8713eae76515
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 079a3d457da9403611d2f825dd6e599a4e9f0353
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848130"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583219"
 ---
 # <a name="voice-input"></a>语音输入
 
@@ -19,7 +19,7 @@ ms.locfileid: "97848130"
 
 在 HoloLens 上，语音是重要输入形式之一。 它使你可以直接在无需使用 [手型手势](gaze-and-commit.md#composite-gestures)的情况下直接执行命令。 可以将语音输入作为一种传达意图的自然方式。 语音在遍历复杂接口时特别有用，因为它允许用户通过一个命令剪切嵌套菜单。
 
-语音输入由支持所有 _通用 Windows 应用_ 中的语音的 [同一引擎](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx)提供支持。 在 HoloLens 上，语音识别将始终在设备设置中配置的 Windows 显示语言中工作。 
+语音输入由支持所有 _通用 Windows 应用_ 中的语音的 [同一引擎](/windows/uwp/design/input/speech-recognition)提供支持。 在 HoloLens 上，语音识别将始终在设备设置中配置的 Windows 显示语言中工作。 
 
 <br>
 
@@ -43,7 +43,7 @@ ms.locfileid: "97848130"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -59,7 +59,7 @@ ms.locfileid: "97848130"
 
 **HoloLens（第一代）**
 
-即使不将语音支持专门添加到应用，用户也可以通过口述系统语音命令 "select" 来激活全息影像。 此行为与在 HoloLens 上的 [点击](gaze-and-commit.md#composite-gestures) ，按下 [hololens clicker](https://docs.microsoft.com/hololens/hololens1-clicker)上的 "选择" 按钮或在 [Windows Mixed Reality 运动控制器](motion-controllers.md)上按下触发器的行为相同。 听到声音，并看到带有 "select" 的工具提示显示为确认。 "选择" 由低功率关键字检测算法启用，这意味着您可以在任何时间使用最小的电池寿命。 你甚至可以在一边说 "选择"。
+即使不将语音支持专门添加到应用，用户也可以通过口述系统语音命令 "select" 来激活全息影像。 此行为与在 HoloLens 上的 [点击](gaze-and-commit.md#composite-gestures) ，按下 [hololens clicker](/hololens/hololens1-clicker)上的 "选择" 按钮或在 [Windows Mixed Reality 运动控制器](motion-controllers.md)上按下触发器的行为相同。 听到声音，并看到带有 "select" 的工具提示显示为确认。 "选择" 由低功率关键字检测算法启用，这意味着您可以在任何时间使用最小的电池寿命。 你甚至可以在一边说 "选择"。
 
 <br>
 
@@ -266,7 +266,7 @@ ms.locfileid: "97848130"
 
 ## <a name="communication"></a>通信
 
-对于想要利用 HoloLens 提供的自定义音频输入处理选项的应用程序，请务必了解应用程序可使用的各种 [音频流类别](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) 。 Windows 10 支持多个不同的流类别，并且 HoloLens 使用这三个类别来启用自定义处理，以优化为语音、通信和其他工作而定制的麦克风音频质量，这些质量可用于环境环境音频捕获 (即 "摄像机" ) 方案。
+对于想要利用 HoloLens 提供的自定义音频输入处理选项的应用程序，请务必了解应用程序可使用的各种 [音频流类别](/windows/win32/api/audiosessiontypes/ne-audiosessiontypes-audio_stream_category) 。 Windows 10 支持多个不同的流类别，并且 HoloLens 使用这三个类别来启用自定义处理，以优化为语音、通信和其他工作而定制的麦克风音频质量，这些质量可用于环境环境音频捕获 (即 "摄像机" ) 方案。
 * 为呼叫质量和旁白方案自定义 AudioCategory_Communications 流类别，并为客户端提供用户语音的 16 kHz 24 位 mono 音频流
 * 为 HoloLens (Windows) 语音引擎自定义 AudioCategory_Speech 流类别，并为其提供一个 16-kHz 24 位 mono 的用户语音流。 如果需要，第三方语音引擎可以使用此类别。
 * 为环境环境录音录音自定义 AudioCategory_Other 流类别，并为客户端提供 48-kHz 24 位立体声音频流。
@@ -275,7 +275,7 @@ ms.locfileid: "97848130"
 
 ## <a name="languages"></a>语言
 
-HoloLens 2 [支持多种语言](https://docs.microsoft.com/hololens/hololens2-language-support)。 请记住，即使安装了多个键盘或应用尝试使用其他语言创建语音识别器，语音命令也始终会在系统的显示语言中运行。
+HoloLens 2 [支持多种语言](/hololens/hololens2-language-support)。 请记住，即使安装了多个键盘或应用尝试使用其他语言创建语音识别器，语音命令也始终会在系统的显示语言中运行。
 
 ## <a name="troubleshooting"></a>疑难解答
 

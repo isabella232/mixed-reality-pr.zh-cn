@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，手势，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 9f83e2f3b02cf8d83b2fb58a3a0d05dc8576b0e8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: dfb31901001f760abd60bda3022902267b7c05cf
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678286"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583703"
 ---
 # <a name="mr-input-211-gesture"></a>MR 输入 211：手势
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../../../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
 
 [手势](../../../design/gaze-and-commit.md#composite-gestures) 会使用户意向变为操作。 用户可以使用手势来与全息影像交互。 在本课程中，我们将了解如何跟踪用户的动手，响应用户输入，并根据手头状态和位置向用户提供反馈。
 
@@ -38,13 +38,13 @@ ms.locfileid: "94678286"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 输入 211：手势</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -68,7 +68,7 @@ ms.locfileid: "94678286"
 
 ## <a name="chapter-0---unity-setup"></a>第0章-Unity 设置
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 启动 Unity。
 2. 选择“打开”  。
@@ -124,7 +124,7 @@ ms.locfileid: "94678286"
 >[!NOTE]
 >在 HoloLens 2 上，只要指针可见，就会触发指针 (而不是指手指向上) 。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **层次结构** " 面板中，展开 " **InputManager** " 对象。
 * 查找并选择 " **GesturesInput** " 对象。
@@ -170,7 +170,7 @@ ms.locfileid: "94678286"
 
 * 使用导航手势事件来轮换 astronaut。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 若要在应用中使用导航笔势，我们将在导航手势发生时编辑 **GestureAction.cs** 来旋转对象。 此外，我们还会将反馈添加到要在导航可用时显示的光标。
 
@@ -314,7 +314,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 * 使用 " **手动指南分数** " 有助于预测何时会丢失手动跟踪。
 * 提供 **有关光标的反馈** ，以便在用户尝试观看相机边缘时显示。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 在 " **层次结构** " 面板中，选择 " **CursorWithFeedback** " 对象。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
@@ -339,14 +339,14 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 * 使用操作事件将 astronaut 移动到手中。
 * 提供有关游标的反馈，以让用户知道何时可以使用操作。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 GestureManager.cs 和 AstronautManager.cs 将允许我们执行以下操作：
 
 1. 使用 speech 关键字 "**Move Astronaut**" 启用 **操作** 手势，并使用 "**旋转 Astronaut**" 来禁用它们。
 2. 切换到响应 **操作笔势识别器**。
 
-现在就开始吧。
+让我们开始吧。
 
 1. 在 " **层次结构** " 面板中，创建一个新的空 GameObject。 将其命名为 "**AstronautManager**"。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
@@ -506,7 +506,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 * 将 Astronaut 模型扩展为用户可与之交互的多个较小的部分。
 * 使用导航和操作笔势分别移动各个部分。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 在本部分中，我们将完成下列任务：
 
@@ -524,10 +524,10 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 7. 在菜单中，在 "搜索" 框中键入 **语音输入处理程序**。 选择搜索结果。
 8. 勾选 **是全局侦听器**，因为我们希望这些命令可以正常运行，而不考虑我们的 GameObject。
 9. 单击 "" **+** 按钮，然后从 "关键字" 下拉列表中选择 " **展开模型** "。
-10. 单击 " **+** 响应" 下的 "AstronautManager"，并将 " **AstronautManager** " 从 **层次结构** 拖到 "**无 (" 对象)** "字段。
+10. 单击 " **+** 响应" 下的 "AstronautManager"，并将 "  " 从 **层次结构** 拖到 "**无 (" 对象)** "字段。
 11. 现在，单击 " **无函数** " 下拉列表，选择 " **AstronautManager**"，然后选择 " **ExpandModelCommand**"。
 12. 单击 "语音输入处理程序" **+** 按钮，然后从 "关键字" 下拉列表中选择 " **重置模型** "。
-13. 单击 " **+** 响应" 下的 "AstronautManager"，并将 " **AstronautManager** " 从 **层次结构** 拖到 "**无 (" 对象)** "字段。
+13. 单击 " **+** 响应" 下的 "AstronautManager"，并将 "  " 从 **层次结构** 拖到 "**无 (" 对象)** "字段。
 14. 现在，单击 " **无函数** " 下拉列表，选择 " **AstronautManager**"，然后选择 " **ResetModelCommand**"。
 
 ![如何设置第5章的语音输入源和处理程序](images/holograms211-speechhandler.png)

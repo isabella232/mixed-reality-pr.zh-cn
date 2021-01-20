@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，媒体服务，流视频，360，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 1d53b260b2c4b00ff6bf985646a45948472a56a5
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 3a0401b7503d8a783ba529cf24cdf6cc55c88311
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679516"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583455"
 ---
 # <a name="mr-and-azure-306-streaming-video"></a>MR 和 Azure 306：流式传输视频
 
@@ -43,13 +43,13 @@ ms.locfileid: "94679516"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 306：流式传输视频</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具一文](../../install-the-tools.md)中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -142,7 +142,7 @@ ms.locfileid: "94679516"
 
     3. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
     
-    > 若要了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理 Azure 资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+    > 若要了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理 Azure 资源组](/azure/azure-resource-manager/resource-group-portal)。
 
     4.  如果要创建新的资源组) ，请确定资源组 (的 **位置** 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
 
@@ -250,7 +250,7 @@ ms.locfileid: "94679516"
     2.  **日期** 和 **时间** 将设置为你（从当前日期算起），到未来 (100 年的时间) 。 保持原样，或将其更改为 "符合"。
 
     > [!NOTE]
-    > 有关定位符的详细信息以及可以选择的信息，请访问 [Azure 媒体服务文档](https://docs.microsoft.com/azure/media-services/media-services-concepts)。
+    > 有关定位符的详细信息以及可以选择的信息，请访问 [Azure 媒体服务文档](/azure/media-services/media-services-concepts)。
 
 24. 在该面板的底部，单击 " **添加** " 按钮。
 
@@ -606,7 +606,7 @@ ms.locfileid: "94679516"
     ```
 
     > [!TIP] 
-    > **ChangeScene ( # B1** 方法使用 \# 称为 "*条件运算符*" 的便利 C 功能。 这允许检查条件，然后在单个语句中检查基于检查结果返回的值。 请单击以下 [链接了解有关条件运算符的详细信息](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)。
+    > **ChangeScene ( # B1** 方法使用 \# 称为 "*条件运算符*" 的便利 C 功能。 这允许检查条件，然后在单个语句中检查基于检查结果返回的值。 请单击以下 [链接了解有关条件运算符的详细信息](/dotnet/csharp/language-reference/operators/conditional-operator)。
 
 11. 在返回到 Unity 之前，在 Visual Studio 中保存更改。
 
@@ -797,7 +797,7 @@ ms.locfileid: "94679516"
 
 14. 现在， **GazeButton** 已部分更新，但要看起来不同，但现在你将创建新的 **材料**，使其看起来完全不同，并且更容易识别为不同于第一个场景中的对象的对象。
 
-15. 导航到 "**项目" 面板** 中的 "**材料**" 文件夹。 复制 **ButtonMaterial** 材料 (按 **Ctrl**  +  键盘上的 Ctrl **D** 或左键单击 **材料**，然后从 "**编辑** 文件" 菜单选项中选择 "**复制**) "。
+15. 导航到 "**项目" 面板** 中的 "**材料**" 文件夹。 复制 **ButtonMaterial** 材料 (按  +  键盘上的 Ctrl **D** 或左键单击 **材料**，然后从 "**编辑** 文件" 菜单选项中选择 "**复制**) "。
 
     ![第7章-设置两个 Unity 场景 ](images/AzureLabs-Lab6-55.png)
      ![ 第7章-设置两个 unity 场景](images/AzureLabs-Lab6-56.png)
@@ -888,5 +888,3 @@ ms.locfileid: "94679516"
 **练习2**
 
 试验 Azure 和 Unity，尝试实现此功能，使应用程序能够根据 Internet 连接的强度，自动选择不同文件大小的视频。
-
-

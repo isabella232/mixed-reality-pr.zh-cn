@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，版本历史记录，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 84caf761af15645410c7439660747fa2f369c6c7
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 0eab33a058aee8003b352fbfae3ba038b80319d4
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009517"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582876"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
@@ -39,7 +39,7 @@ ms.locfileid: "98009517"
 
 ## <a name="version-222-july-10-2020"></a>版本 2.2.2 (2020 年7月10日) <a name="v2.2.2"></a>
 
-* 修复了从 Windows Mixed Reality 耳机流式传输时， [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters) 和 [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters) 的问题。
+* 修复了从 Windows Mixed Reality 耳机流式传输时， [HolographicCamera](/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters) 和 [HolographicCamera](/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters) 的问题。
 * 修复了故障，这种情况可能会导致网络连接不佳。
 
 ## <a name="version-221-july-6-2020"></a>版本 2.2.1 (7 月6日 2020) <a name="v2.2.1"></a>
@@ -51,14 +51,14 @@ ms.locfileid: "98009517"
 ## <a name="version-220-july-1-2020"></a>版本 2.2.0 (2020 年7月1日) <a name="v2.2.0"></a>
 
 * 全息远程处理播放器现在可以安装在运行 [Windows Mixed Reality](../../discover/navigating-the-windows-mixed-reality-home.md)的 pc 上，使其可以流式传输到沉浸式耳机。
-* [运动控制器](../../design/motion-controllers.md) 现在支持全息远程处理，并且可以通过 [SpatialInteractionSource](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)检索控制器特定的数据。
-* 现在支持[SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference) ，并且可以通过[SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)检索当前阶段。 此外，还可以通过 SpatialStageFrameOfReference 请求新阶段 [。 RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)。
+* [运动控制器](../../design/motion-controllers.md) 现在支持全息远程处理，并且可以通过 [SpatialInteractionSource](/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)检索控制器特定的数据。
+* 现在支持[SpatialStageFrameOfReference](/uwp/api/windows.perception.spatial.spatialstageframeofreference) ，并且可以通过[SpatialStageFrameOfReference](/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)检索当前阶段。 此外，还可以通过 SpatialStageFrameOfReference 请求新阶段 [。 RequestNewStageAsync](/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)。
 * 在以前的版本中，通过全息远程处理播放机在播放机上处理 "提出预测"。 从版本2.2.0 开始，全息远程处理具有时间同步，并由远程应用程序完全完成预测。 在出现困难的网络情况下，用户还应预计提高的全息影像稳定性。
 
 ## <a name="version-213-may-25-2020"></a>版本 2.1.3 (5 月25日 2020) <a name="v2.1.3"></a>
 
-* 已更改 [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) 事件的行为。 在以前的版本中，**无法** 保证添加的 [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera)在通过 [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe)创建下一帧时还具有有效的 [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose) 。 从版本2.1.3 开始， [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) 与来自全息远程处理播放机的姿势数据同步。 当添加照相机时，用户可能会发现，在下一帧上还可以使用该相机的有效 [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose) 。
-* 已将 **禁用** 添加到 DepthBufferStreamResolution，这可用于通过 RemoteContext.ConfigureDepthVideoStream 禁用深度缓冲区流式处理。 请注意，如果使用的 [HolographicCameraRenderingParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer) 将失败，并 *E_ILLEGAL_METHOD_CALL*。
+* 已更改 [HolographicSpace](/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) 事件的行为。 在以前的版本中，**无法** 保证添加的 [HolographicCamera](/uwp/api/windows.graphics.holographic.holographiccamera)在通过 [HolographicSpace](/uwp/api/windows.graphics.holographic.holographicspace.createnextframe)创建下一帧时还具有有效的 [HolographicCameraPose](/uwp/api/windows.graphics.holographic.holographiccamerapose) 。 从版本2.1.3 开始， [HolographicSpace](/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) 与来自全息远程处理播放机的姿势数据同步。 当添加照相机时，用户可能会发现，在下一帧上还可以使用该相机的有效 [HolographicCameraPose](/uwp/api/windows.graphics.holographic.holographiccamerapose) 。
+* 已将 **禁用** 添加到 DepthBufferStreamResolution，这可用于通过 RemoteContext.ConfigureDepthVideoStream 禁用深度缓冲区流式处理。 请注意，如果使用的 [HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer) 将失败，并 *E_ILLEGAL_METHOD_CALL*。
 * 全息远程处理播放机的启动屏幕经过重新设计，现在不会阻止 "用户" 视图。
 * 稳定性改进和 bug 修复。
 
@@ -75,7 +75,7 @@ ms.locfileid: "98009517"
 ## <a name="version-210-march-11-2020"></a>版本 2.1.0 (2020 年3月11日) <a name="v2.1.0"></a>
 
 * 已将网络传输切换为使用 [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) via UDP。 安全连接现在使用 [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) 。 请注意， [全息远程处理播放器](holographic-remoting-player.md) 仍与所有以前版本的全息远程处理版本兼容。 若要从新的网络传输中获益，全息远程处理播放器和有问题的远程应用必须使用版本2.1.0。
-* 添加了对 [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)的支持。 
+* 添加了对 [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)的支持。 
 
 ## <a name="version-2020-february-2-2020"></a>版本 2.0.20 (2020 年2月2日) <a name="v2.0.20"></a>
 
@@ -83,7 +83,7 @@ ms.locfileid: "98009517"
 
 ## <a name="version-2018-december-17-2019"></a>版本 2.0.18 (2019 年12月17日) <a name="v2.0.18"></a>
 
-* 添加了对[HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration)的支持
+* 添加了对[HolographicViewConfiguration](/uwp/api/windows.graphics.holographic.holographicviewconfiguration)的支持
 * 修复了导致崩溃的各种 bug。
 * 修复了一个 bug，HolographicCamera 需要 HolographicSpace CameraAdded 回调才能接受，并将其显示为 HolographicFrame 中的已添加照相机。
 
@@ -108,7 +108,7 @@ ms.locfileid: "98009517"
 
 ## <a name="version-209-september-19-2019"></a>版本 2.0.9 (2019 年9月19日) <a name="v2.0.9"></a>
 
-* 添加了对[SpatialAnchorExporter](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter)的支持
+* 添加了对[SpatialAnchorExporter](/uwp/api/windows.perception.spatial.spatialanchorexporter)的支持
 * 添加了 ```IPlayerContext2``` 通过 ```PlayerContext```) 提供以下成员 (实现的新接口：
   - [BlitRemoteFrameTimeout](holographic-remoting-create-player.md#BlitRemoteFrameTimeout)  属性。
 * ```Failed_RemoteFrameTooOld```向添加值```BlitResult```
@@ -116,7 +116,7 @@ ms.locfileid: "98009517"
 
 ## <a name="version-208-august-20-2019"></a>版本 2.0.8 (8 月20日 2019) <a name="v2.0.8"></a>
 
-* 修复了使用[IDXGISurface2](https://docs.microsoft.com/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgisurface2)作为参数调用[HolographicCameraRenderingParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer)时的崩溃。
+* 修复了使用[IDXGISurface2](/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgisurface2)作为参数调用[HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer)时的崩溃。
 * 稳定性和可靠性改进
 
 ## <a name="version-207-july-26-2019"></a>版本 2.0.7 (2019) 年7月26日 <a name="v2.0.7"></a>
@@ -129,5 +129,5 @@ ms.locfileid: "98009517"
 * [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
-* [全息远程处理软件许可条款](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [全息远程处理软件许可条款](/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

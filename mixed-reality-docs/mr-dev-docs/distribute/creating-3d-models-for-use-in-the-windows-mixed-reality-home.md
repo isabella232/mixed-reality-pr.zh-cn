@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D，建模，建模指南，资产需求，创作准则，启动器，3D 启动器，纹理，材料，复杂性，三角形，网格，多边形，polycount，限制，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 17014e3deaaa161dd7949a55679b916e872ad5a7
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: c5447661bdbe6aeb59a3e7a524863d68b717ee0e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757780"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583810"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>创建在主页中使用的 3D 模型
 
@@ -101,7 +101,7 @@ Windows Mixed Reality home 不支持每个 LOD 超过64个节点或 32 submeshes
 Windows Mixed Reality 主页在使用自定义扩展定义的核心 glTF 规范之上提供一系列优化。 Windows 版本 <为1709，并且建议在更高版本的 Windows 上执行这些优化。 可以使用 [GitHub 上提供的 Windows Mixed Reality 资产转换器](https://github.com/Microsoft/glTF-Toolkit/releases)轻松优化任何 glTF 2.0 模型。 此工具将执行下面指定的正确纹理打包和优化。 对于常规用法，我们建议使用 WindowsMRAssetConverter，但如果您需要更好地控制体验并想要生成自己的优化管道，则可以参阅下面的详细规范。  
 
 > [!NOTE]
-> 有关准确的模型限制的可能的确切列表，请参阅 [3d 模型优化](https://docs.microsoft.com/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) 一文，了解如何在 Dynamics 365 应用程序中使用。
+> 有关准确的模型限制的可能的确切列表，请参阅 [3d 模型优化](/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) 一文，了解如何在 Dynamics 365 应用程序中使用。
 
 ### <a name="materials"></a>材料
 
@@ -192,7 +192,7 @@ LODs 基于每个 LOD 上设置的屏幕覆盖值驱动的系统，在 Windows M
 ## <a name="animation-guidelines"></a>动画指导原则
 
 > [!NOTE]
-> 此功能已作为 [Windows 10 2018 年4月更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。 在较早版本的 Windows 上，这些动画不会播放，但是，如果按照本文中的指南进行创作，它们仍会加载。  
+> 此功能已作为 [Windows 10 2018 年4月更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。 在较早版本的 Windows 上，这些动画不会播放，但是，如果按照本文中的指南进行创作，它们仍会加载。  
 
 混合现实主页支持在 HoloLens 和沉浸式 (VR) 耳机上进行动画处理的 glTF 对象。 如果要在模型上触发动画，则需要使用 glTF 格式的动画映射扩展。 此扩展使您可以基于用户在世界上的存在性来触发 glTF 模型中的动画，例如，当用户接近对象或正在查看动画时触发动画。 如果 glTF 对象具有动画，但没有定义触发器，动画将不会播放。 下面的部分介绍了一个用于将这些触发器添加到任何动画 glTF 对象的工作流。
 
@@ -255,7 +255,7 @@ Windows Mixed Reality 主页支持以下动画触发语义。
 
 Windows MR 不支持使用负值刻度翻转几何。 具有负刻度的几何可能会导致视觉对象。
 
-GlTF 资产必须指向使用 Windows MR 呈现的场景属性的默认场景。 此外，windows [10 2018 年4月版更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)之前的 Windows MR glTF 加载程序 **需要** 访问器：
+GlTF 资产必须指向使用 Windows MR 呈现的场景属性的默认场景。 此外，windows [10 2018 年4月版更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)之前的 Windows MR glTF 加载程序 **需要** 访问器：
 * 必须具有最小值和最大值。
 * 类型标量必须是 componentType UNSIGNED_SHORT (5123) 或 UNSIGNED_INT (5125) 。
 * 类型 VEC2 和 VEC3 必须为 componentType FLOAT (5126) 。

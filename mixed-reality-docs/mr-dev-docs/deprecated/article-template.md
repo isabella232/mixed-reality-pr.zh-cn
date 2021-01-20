@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 无
-ms.openlocfilehash: 1fc560d170c4e17f4d70b7068474a1aabda472a2
-ms.sourcegitcommit: 3762d207d3b5f4a1d932197aae7a4fae4baec960
+ms.openlocfilehash: 246e87ace1c0b3edf5e9f4829a5a0879cddf7279
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97676130"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583176"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>标题 (尽可能具体，请使用人力条款)  
 
@@ -32,7 +32,7 @@ ms.locfileid: "97676130"
 </colgroup>
 <tr>
      <td><strong>功能</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>
@@ -56,7 +56,7 @@ ms.locfileid: "97676130"
 *   注意事项
 *   经验法则 
 *   使用方法 
-*   优势
+*   优点
 *   Do and don't's
 
 编辑约定：

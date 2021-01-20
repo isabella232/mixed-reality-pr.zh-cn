@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality、设计、交互、语音
-ms.openlocfilehash: 156927f43a09474c3dd6da8e400767f13700a7ce
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: d027dd32e1d7ea0391d2d9262e164a671a57bd29
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678813"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582836"
 ---
 # <a name="voice-commanding"></a>语音命令
 
@@ -29,7 +29,7 @@ ms.locfileid: "91678813"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -47,7 +47,7 @@ ms.locfileid: "91678813"
 
 考虑为生成的任何体验添加语音命令。 语音是控制系统和应用程序的一种强大而方便的方式。 由于用户使用各种方言和口音说话，恰当选择语音关键字将确保用户的命令得到清晰的解释。
 
-### <a name="best-practices"></a>最佳实践
+### <a name="best-practices"></a>最佳做法
 
 以下是一些有助于流畅语音识别的做法。
 * **使用简明命令** - 如果可能的话，选择两个或更多音节的关键词。 不同口音的人说单音节词时倾向于使用不同的元音。 示例： "播放视频" 优于 "播放当前选定的视频"
@@ -69,7 +69,7 @@ ms.locfileid: "91678813"
 
 ### <a name="see-it-say-it"></a>看到它，说出来
 
-Windows Mixed Reality 采用了“看到它，说出来”的语音模型，在该模型中，按钮上的标签与相关的语音命令相同  。 由于标签和语音命令之间没有任何不一致，用户可以更好地理解应该说什么来控制系统。 为了加强这一点，在某个按钮上停留时，会显示“语音停留提示”，提示哪些按钮已启用语音功能  。
+Windows Mixed Reality 采用了“看到它，说出来”的语音模型，在该模型中，按钮上的标签与相关的语音命令相同。 由于标签和语音命令之间没有任何不一致，用户可以更好地理解应该说什么来控制系统。 为了加强这一点，在某个按钮上停留时，会显示“语音停留提示”，提示哪些按钮已启用语音功能。
 
 
 ![“看到它，说出来”示例 1](../design/images/voice-seeitsayit1-640px.jpg)
@@ -79,7 +79,7 @@ Windows Mixed Reality 采用了“看到它，说出来”的语音模型，在�
 
 ### <a name="voices-strengths"></a>语音的优势
 
-语音输入是传达我们意图的自然方式。 语音在接口遍历上特别不错，因为它可以帮助用户在查看网页时，用户可能会说 "返回"，而不需要在应用) 中单击 "后退" 按钮，而是在界面 **traversals** 的多个 (步骤。 这一小段节省时间在用户对体验的认知上带来了强大的 **情绪影响** ，并为他们提供少量的实现超级。 当我们忙得不可开交或同时处理多项任务时，使用语音也是一种方便的输入方法  。 在键盘上键入困难的设备上， **语音听写** 可以是一种有效的输入方式。 最后，在某些情况下，如果注视和手势的 **准确性范围** 有限，则语音可能是用户的唯一受信任的输入方法。
+语音输入是传达我们意图的自然方式。 语音在接口遍历上特别不错，因为它可以帮助用户在查看网页时，用户可能会说 "返回"，而不需要在应用) 中单击 "后退" 按钮，而是在界面的多个 (步骤。 这一小段节省时间在用户对体验的认知上带来了强大的 **情绪影响** ，并为他们提供少量的实现超级。 当我们忙得不可开交或同时处理多项任务时，使用语音也是一种方便的输入方法。 在键盘上键入困难的设备上， **语音听写** 可以是一种有效的输入方式。 最后，在某些情况下，如果注视和手势的 **准确性范围** 有限，则语音可能是用户的唯一受信任的输入方法。
 
 **语音的使用如何让用户受益**
 * 省时 - 它应该使最终目标更高效。
@@ -94,15 +94,15 @@ Windows Mixed Reality 采用了“看到它，说出来”的语音模型，在�
 
 ### <a name="voice-feedback-states"></a>语音反馈状态
 
-当语音应用正确时，用户了解他们能说什么，并得到清晰的反馈 - 系统正确地听到了用户说的话  。 这两个信号使用户在使用语音作为主要输入方法时充满自信。 下面的图表显示了识别语音输入时光标发生的情况以及它是如何将信息传达给用户的。
+当语音应用正确时，用户了解他们能说什么，并得到清晰的反馈 - 系统正确地听到了用户说的话。 这两个信号使用户在使用语音作为主要输入方法时充满自信。 下面的图表显示了识别语音输入时光标发生的情况以及它是如何将信息传达给用户的。
 
 光标的语音反馈状态![](../design/images/voicefeedbackstates.png)<br>
-光标的语音反馈状态 
+光标的语音反馈状态
 
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>在混合现实中，用户应该知道的关于“语音”的重要事项
-* 在将一个按钮设置为目标时，说“选择”（可以在任何位置使用这种方法来单击按钮）  。
-* 可以在某些应用中通过说出应用栏按钮的标签名称来执行操作  。 例如，在查看应用时，用户可以说“移除”命令以从现实中移除应用（这样可以节省用手单击按钮的时间）。
-* 说“你好小娜”可以启动 Cortana 侦听  。 你可以询问她的问题 ( "你好 Cortana，Eiffel 塔有多高？") ，告诉她打开一个应用 ( "你好 Cortana，打开 Netflix" ) ，或者告诉她启动菜单 ( "你好 Cortana，请回家" ) 等。
+* 在将一个按钮设置为目标时，说“选择”（可以在任何位置使用这种方法来单击按钮）。
+* 可以在某些应用中通过说出应用栏按钮的标签名称来执行操作。 例如，在查看应用时，用户可以说“移除”命令以从现实中移除应用（这样可以节省用手单击按钮的时间）。
+* 说“你好小娜”可以启动 Cortana 侦听。 你可以询问她的问题 ( "你好 Cortana，Eiffel 塔有多高？") ，告诉她打开一个应用 ( "你好 Cortana，打开 Netflix" ) ，或者告诉她启动菜单 ( "你好 Cortana，请回家" ) 等。
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>用户对语音的常见问题和关注点
 * 我可以说什么？
@@ -113,6 +113,6 @@ Windows Mixed Reality 采用了“看到它，说出来”的语音模型，在�
 * 我如何将我的语音定向到一个特定的应用或应用命令？
 * 我可以使用语音来对 HoloLens 上的全息帧执行命令吗？
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [笔势](../design/gaze-and-commit.md#composite-gestures)
 * [头部凝视和停留](../design/gaze-and-dwell.md)

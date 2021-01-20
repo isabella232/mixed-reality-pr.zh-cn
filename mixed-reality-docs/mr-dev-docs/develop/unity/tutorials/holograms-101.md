@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，HoloLens，全息影像，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: f2725db17a2991b956c777ee7106b7f094582f77
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 4ca16542060e1cee746ba5095a7bf68ca8136267
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677196"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583718"
 ---
 # <a name="mr-basics-101-complete-project-with-device"></a>MR 基础知识 101：使用设备设置完整的项目
 
@@ -32,13 +32,13 @@ ms.locfileid: "94677196"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 基础知识 101：使用设备设置完整的项目</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -68,7 +68,7 @@ ms.locfileid: "94677196"
 * 制作全息影像。
 * 查看您创建的全息影像。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 启动 Unity。
 * 选择“打开”  。
@@ -137,7 +137,7 @@ ms.locfileid: "94677196"
 
 * 使用全球锁定的光标直观显示注视。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 返回到 Unity 项目，并关闭 "生成设置" 窗口（如果它仍处于打开状态）。
 * 在 "**项目" 面板** 中选择 **全息影像** 文件夹。
@@ -213,7 +213,7 @@ public class WorldCursor : MonoBehaviour
 
 * 用选择手势控制全息影像。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 首先，我们将创建一个脚本，然后可以检测选择的手势。
 
@@ -325,7 +325,7 @@ public class SphereCommands : MonoBehaviour
 * 添加始终在后台侦听的语音命令。
 * 创建可响应语音命令的全息图。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **脚本** " 文件夹中，创建一个名为 **SpeechManager** 的脚本。
 * 将 **SpeechManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象上
@@ -447,7 +447,7 @@ public class SphereCommands : MonoBehaviour
 
 * 收听世界上的全息影像。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 Unity 中从顶部菜单中选择 "**编辑 > 项目设置 > 音频**"
 * 在右侧的检查器面板中，找到 " **Spatializer" 插件** 设置，然后选择 " **MS HRTF Spatializer**"。
@@ -557,7 +557,7 @@ public class SphereSounds : MonoBehaviour
 * 将你的真实世界带入虚拟世界。
 * 将全息影像置于最重要的位置。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 Unity 中，在 "项目" 面板中单击 " **全息影像** " 文件夹。
 * 将 **空间映射** 资产拖到 **层次结构** 的根。
@@ -641,7 +641,7 @@ public class TapToPlaceParent : MonoBehaviour
 
 * 显示全息 underworld 的入口。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 接下来，我们将向您展示如何发现全息 underworld：
 
@@ -695,7 +695,7 @@ public class HitTarget : MonoBehaviour
 
 你现在已准备好开始创建自己的全息体验！
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [MR 基础知识 101E：使用仿真器完成项目](holograms-101e.md)
 * [凝视](../../../design/gaze-and-commit.md)

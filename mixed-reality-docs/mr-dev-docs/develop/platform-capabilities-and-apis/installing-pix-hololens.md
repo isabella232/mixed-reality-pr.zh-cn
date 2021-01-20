@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/02/2020
 ms.topic: article
 keywords: HoloLens，HoloLens 2，PIX，捕获，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 598a6b891798be7059eae2eff578c6bbbae442f6
-ms.sourcegitcommit: 9d79aaa313f003dd42d5610d458031890776ee8e
+ms.openlocfilehash: 29cb741cd986fbb98dabb1faf2051450fd0286c3
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97822921"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583097"
 ---
 # <a name="installing-pix-for-hololens-2"></a>安装适用于 HoloLens 2 的 PIX
 
@@ -21,7 +21,7 @@ ms.locfileid: "97822921"
 
 1. 从主机 PC 获取最新的 PIX [版本]( https://devblogs.microsoft.com/pix/download) ，并通过 USB 电缆将您的 HoloLens 2 连接到您的 PC。
 
-2. 如果你的 HoloLens 2 在 [Windows 有问必答版本](https://insider.windows.com) 上，或具有用于中断 PIX 的配置，则  [刷新你的设备](https://docs.microsoft.com/hololens/hololens-recovery) 以清除所有数据。
+2. 如果你的 HoloLens 2 在 [Windows 有问必答版本](https://insider.windows.com) 上，或具有用于中断 PIX 的配置，则  [刷新你的设备](/hololens/hololens-recovery) 以清除所有数据。
 
 3. 启用 **开发人员模式** 和 **设备门户**：
 
@@ -46,7 +46,7 @@ ms.locfileid: "97822921"
 * 如果设备仍处于连接状态、处于唤醒状态，并且用户已登录，则启动 Visual Studio。
 
 > [!IMPORTANT]
-> 请确保设备不处于待机模式或睡眠状态。 如果在此步骤中遇到问题，请参阅 [Windows 设备门户说明](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)。
+> 请确保设备不处于待机模式或睡眠状态。 如果在此步骤中遇到问题，请参阅 [Windows 设备门户说明](./using-the-windows-device-portal.md)。
 
 ## <a name="preparing-for-deployment"></a>准备部署
 

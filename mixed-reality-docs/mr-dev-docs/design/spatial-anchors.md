@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 坐标系统，空间坐标系统，世界规模，世界，缩放，位置，方向，锚，空间锚，世界锁定，世界锁定，暂留，共享，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens
-ms.openlocfilehash: 2db88f9bc5d128f4a9eb42cfb5211d0597b43cfa
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b11dc8cada8b67a21795dd9838579fc5dd735e6d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009107"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583267"
 ---
 # <a name="spatial-anchors"></a>空间定位点
 
@@ -19,8 +19,8 @@ ms.locfileid: "98009107"
 
 你还可以跨应用程序会话和跨设备保留和共享空间定位点：
 * 通过将本地空间锚点保存到磁盘并稍后将其加载回来，你的应用程序可以在一个 HoloLens 上跨多个应用程序会话计算同一位置。
-* 使用 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚</a> 点创建云锚点，你的应用程序可以跨多个 HoloLens、IOS 和 Android 设备共享空间锚。 通过让每个设备使用相同的空间定位点呈现一个全息影像，用户将看到全息图显示在现实世界中的同一位置。 这可实现实时共享体验。
-* 你还可以将 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。 通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
+* 使用 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚</a> 点创建云锚点，你的应用程序可以跨多个 HoloLens、IOS 和 Android 设备共享空间锚。 通过让每个设备使用相同的空间定位点呈现一个全息影像，用户将看到全息图显示在现实世界中的同一位置。 这可实现实时共享体验。
+* 你还可以将 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> 用于每个 HoloLens、IOS 和 Android 设备上的异步全息影像。 通过共享持久云空间锚点，多个设备可以在一段时间内观察到相同的持久全息图，即使这些设备同时不存在。
 
 对于受限台式机耳机的大规模或房间规模体验，这些体验将停留在5米内，你通常可以使用 [参考的阶段框架](coordinate-systems.md#stage-frame-of-reference) ，而不是空间锚，为你提供一个用于呈现所有内容的单一坐标系统。 但是，如果你的应用程序允许用户在一座办公楼的整个楼层内游离超过5米，则需要使用空间锚来保持内容稳定。
 
@@ -75,7 +75,7 @@ ms.locfileid: "98009107"
 
 * [坐标系统](coordinate-systems.md)
 * [混合现实中的共享体验](../develop/platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位点</a>
 * [Unity 中的持久性](../develop/unity/persistence-in-unity.md)
 * [DirectX 中的空间定位点](../develop/native/coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [案例研究 - 看透现实中的洞](../out-of-scope/case-study-looking-through-holes-in-your-reality.md)

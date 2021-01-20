@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D，徽标，图标，建模，启动器，3D 启动器，磁贴，动态立方体，深层链接，secondarytile，辅助磁贴，UWP，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，XML，边界框，unity
-ms.openlocfilehash: 40a68d0835ec8fb92d6417650700f41e8a31aab6
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7a0b73a0b3638c1aa2c9cbffacd548fb461589ea
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009677"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582977"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>实现 3D 应用启动器（UWP 应用）
 
@@ -118,7 +118,7 @@ MixedRealityModel 元素接受指向存储在应用包中的3D 资产的文件�
 >[!IMPORTANT]
 > (secondaryTiles 的3D 深层链接) 仅适用于 2D UWP 应用。 不过，你可以创建一个 [3d 应用启动器](implementing-3d-app-launchers.md) ，从 Windows Mixed Reality 主页启动一个独占应用。
 
-您的2D 应用程序可以通过添加将3D 模型从应用置于 [Windows Mixed reality 主页](../discover/navigating-the-windows-mixed-reality-home.md) 中来增强 Windows mixed reality，就像 Windows "开始" 菜单上的 [2d 辅助磁贴](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) 一样。 例如，你可以创建360° photospheres，它直接链接到360°照片查看器应用，或让用户从一组资产中放置3D 内容，以便打开有关作者的详细信息页。 这只是使用三维内容展开2D 应用程序功能的几种方法。
+您的2D 应用程序可以通过添加将3D 模型从应用置于 [Windows Mixed reality 主页](../discover/navigating-the-windows-mixed-reality-home.md) 中来增强 Windows mixed reality，就像 Windows "开始" 菜单上的 [2d 辅助磁贴](/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) 一样。 例如，你可以创建360° photospheres，它直接链接到360°照片查看器应用，或让用户从一组资产中放置3D 内容，以便打开有关作者的详细信息页。 这只是使用三维内容展开2D 应用程序功能的几种方法。
 
 ### <a name="creating-a-3d-secondarytile"></a>创建三维 "secondaryTile"
 
@@ -191,7 +191,7 @@ if (!tile.VisualElements.MixedRealityModel.Uri.Equals(updatedUri))
 
 ### <a name="checking-that-the-user-is-in-windows-mixed-reality"></a>正在检查用户是否处于 Windows Mixed Reality
 
-只有在 Windows Mixed Reality 耳机中显示视图时，才能创建 (secondaryTiles) 的3D 深层链接。 如果未在 Windows Mixed Reality 耳机中显示你的视图，我们建议通过隐藏输入点或显示错误消息来处理此问题。 可以通过查询 [IsCurrentViewPresentedOnHolographic ( # B1 ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.holographic.holographicapplicationpreview#Windows_ApplicationModel_Preview_Holographic_HolographicApplicationPreview_IsCurrentViewPresentedOnHolographicDisplay_)来检查此情况。
+只有在 Windows Mixed Reality 耳机中显示视图时，才能创建 (secondaryTiles) 的3D 深层链接。 如果未在 Windows Mixed Reality 耳机中显示你的视图，我们建议通过隐藏输入点或显示错误消息来处理此问题。 可以通过查询 [IsCurrentViewPresentedOnHolographic ( # B1 ](/uwp/api/windows.applicationmodel.preview.holographic.holographicapplicationpreview#Windows_ApplicationModel_Preview_Holographic_HolographicApplicationPreview_IsCurrentViewPresentedOnHolographicDisplay_)来检查此情况。
 
 ## <a name="tile-notifications"></a>磁贴通知
 
@@ -201,7 +201,7 @@ if (!tile.VisualElements.MixedRealityModel.Uri.Equals(updatedUri))
 * 定期轮询
 * 计划的通知
 
-有关其他磁贴功能和属性以及它们如何用于2D 磁贴的详细信息，请参阅 [UWP 应用的磁贴文档](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)。
+有关其他磁贴功能和属性以及它们如何用于2D 磁贴的详细信息，请参阅 [UWP 应用的磁贴文档](/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)。
 
 ## <a name="see-also"></a>另请参阅
 

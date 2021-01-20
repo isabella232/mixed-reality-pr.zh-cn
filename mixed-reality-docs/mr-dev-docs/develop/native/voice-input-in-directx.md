@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 演练，语音命令，短语，识别，语音，directx，平台，cortana，windows mixed reality
-ms.openlocfilehash: c917fbc4215442bc66f52dc2c527e01b2c446594
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 5f7ed587b474d147c0b13e4896a89f655f8dc30b
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613101"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583744"
 ---
 # <a name="voice-input-in-directx"></a>DirectX 中的语音输入
 
@@ -67,7 +67,7 @@ m_speechCommandList->Append(StringReference(L"SpeechRecognizer"));
    m_speechCommandData.push_back(float4(0.5f, 0.1f, 1.f, 1.f));
 ```
 
-若要将命令列表加载到语音识别器的约束列表中，请使用 [SpeechRecognitionListConstraint](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionlistconstraint.aspx) 对象。
+若要将命令列表加载到语音识别器的约束列表中，请使用 [SpeechRecognitionListConstraint](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) 对象。
 
 ```
 SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListConstraint(m_speechCommandList);
@@ -86,7 +86,7 @@ SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListCon
    });
 ```
 
-订阅语音识别器的[SpeechContinuousRecognitionSession](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.aspx)上的[ResultGenerated](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated.aspx)事件。 此事件将在你已识别到你的某个命令时通知你的应用程序。
+订阅语音识别器的[SpeechContinuousRecognitionSession](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)上的[ResultGenerated](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)事件。 此事件将在你已识别到你的某个命令时通知你的应用程序。
 
 ```
 m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
@@ -95,7 +95,7 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
            );
 ```
 
-*OnResultGenerated* 事件处理程序接收 [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx)实例中的事件数据。 如果置信度大于你定义的阈值，应用应注意到事件发生。 保存事件数据，以便您可以在以后的更新循环中使用它。
+*OnResultGenerated* 事件处理程序接收 [SpeechContinuousRecognitionResultGeneratedEventArgs](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs)实例中的事件数据。 如果置信度大于你定义的阈值，应用应注意到事件发生。 保存事件数据，以便您可以在以后的更新循环中使用它。
 
 从 *HolographicVoiceInputSampleMain*：
 
@@ -256,7 +256,7 @@ catch (Exception^ exception)
 ```
 
 > [!NOTE]
-> 可使用多个预定义的 [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) 来优化语音识别。
+> 可使用多个预定义的 [SpeechRecognitionScenarios](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionScenario) 来优化语音识别。
 
 * 若要优化听写，请使用听写方案。<br/>
    ```
@@ -431,5 +431,5 @@ catch (Exception^ exception)
 ```
 
 ## <a name="see-also"></a>另请参阅
-* [语音应用设计](https://msdn.microsoft.com/library/dn596121.aspx)
+* [语音应用设计](/windows/uwp/design/input/speech-interactions)
 * [SpeechRecognitionAndSynthesis 示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

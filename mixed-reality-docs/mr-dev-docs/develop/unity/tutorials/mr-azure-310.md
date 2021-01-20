@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，自定义视觉，对象检测，混合现实，学院，unity，教程，api，hololens，Windows 10，Visual Studio
-ms.openlocfilehash: 8f625ebc1e40edaa6364567686c345386ea37dbf
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: edbd583c5361f8074dc57fedb66d6ab01df16de8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010167"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583476"
 ---
 # <a name="mr-and-azure-310-object-detection"></a>Mr 和 Azure 310：对象检测
 
@@ -28,8 +28,8 @@ ms.locfileid: "98010167"
 
 **Azure 自定义视觉中，对象检测** 是一种 Microsoft 服务，它允许开发人员构建自定义映像分类器。 然后，可以将这些分类器用于新的图像，通过在图像本身中提供 **框边界** 来检测该新图像内的对象。 此服务提供简单易用的联机门户来简化此过程。 有关详细信息，请访问以下链接：
 
-* [Azure 自定义视觉页面](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home)
-* [限制和配额](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/limits-and-quotas)
+* [Azure 自定义视觉页面](/azure/cognitive-services/custom-vision-service/home)
+* [限制和配额](/azure/cognitive-services/custom-vision-service/limits-and-quotas)
 
 完成本课程后，你将拥有一个混合现实应用程序，该应用程序将能够执行以下操作：
 
@@ -49,7 +49,7 @@ ms.locfileid: "98010167"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 310：对象检测</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -63,23 +63,23 @@ ms.locfileid: "98010167"
 本课程建议采用以下硬件和软件：
 
 - 开发 PC
-- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [最新的 Windows 10 SDK](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Unity 2017.4 LTS](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Visual Studio 2017](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- 已启用开发人员模式的[Microsoft HoloLens](https://docs.microsoft.com/windows/mixed-reality/hololens-hardware-details)
+- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [最新的 Windows 10 SDK](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [Unity 2017.4 LTS](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [Visual Studio 2017](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- 已启用开发人员模式的[Microsoft HoloLens](/windows/mixed-reality/hololens-hardware-details)
 - Azure 安装和自定义影像服务检索的 Internet 访问
 -  对于希望自定义视觉识别的每个对象) ，需要一系列至少15个 (15) 的图像。 如果需要，可以使用本课程提供的映像， [一系列 cup](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)) 。
 
-## <a name="before-you-start"></a>准备工作
+## <a name="before-you-start"></a>开始之前
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。 
+2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。 
 3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](../../../calibration.md#hololens-2)。
+有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](../../../sensor-tuning.md)。
+有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
 
 ## <a name="chapter-1---the-custom-vision-portal"></a>第1章-自定义视觉门户
 
@@ -116,7 +116,7 @@ ms.locfileid: "98010167"
         ![](images/AzureLabs-Lab310-05.png)
 
         > [!NOTE]
-        > 若要 [阅读有关 Azure 资源组的详细信息，请导航到相关文档](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)
+        > 若要 [阅读有关 Azure 资源组的详细信息，请导航到相关文档](/azure/azure-resource-manager/resource-group-portal)
 
     4.  将 **项目类型** 设置为 **对象检测 (预览)**。
 

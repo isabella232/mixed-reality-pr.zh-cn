@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: d07909bbf05ff882eb0a4b6123c39eae9280e3e8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c6364b190ca90c5e6faf7fb8ef79314134e93cfc
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009797"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583721"
 ---
 # <a name="voice-input-in-unity"></a>Unity 中的语音输入
 
@@ -105,7 +105,7 @@ keywordRecognizer.Start();
 **命名空间：** *UnityEngine*<br>
 **类型**： *GrammarRecognizer*、 *PhraseRecognizedEventArgs*、 *SpeechError*、 *SpeechSystemStatus*
 
-如果要使用 SRGS 指定识别语法，则使用 GrammarRecognizer。 如果你的应用程序包含多个关键字（如果你想要识别更复杂的短语），或者如果你想要轻松打开和关闭命令集，这会很有用。 请参阅： [使用 SRGS XML 创建语法](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) 以获取文件格式信息。
+如果要使用 SRGS 指定识别语法，则使用 GrammarRecognizer。 如果你的应用程序包含多个关键字（如果你想要识别更复杂的短语），或者如果你想要轻松打开和关闭命令集，这会很有用。 请参阅： [使用 SRGS XML 创建语法](/previous-versions/office/developer/speech-technologies/hh378349(v=office.14)) 以获取文件格式信息。
 
 获得 SRGS 语法后，在项目中的 [StreamingAssets 文件夹](https://docs.unity3d.com/Manual/StreamingAssets.html)中：
 

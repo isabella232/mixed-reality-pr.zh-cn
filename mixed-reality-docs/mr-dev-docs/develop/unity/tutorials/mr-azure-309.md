@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，application insights，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: d663da0e3a0d00532669a122dc95f2089bf08712
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 5d599e7c3c6f887675bf010a10fb8841e80143db
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679466"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582962"
 ---
 # <a name="mr-and-azure-309-application-insights"></a>MR 和 Azure 309：Application Insights
 
@@ -40,7 +40,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 309：Application Insights</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -49,7 +49,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -61,7 +61,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - 带有内置麦克风的一组耳机 (如果耳机没有内置麦克风和扬声器) 
 - Azure 安装和 Application Insights 数据检索的 Internet 访问
 
@@ -102,7 +102,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 
     4.  选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
     5.  选择“位置”  。
 
@@ -1281,4 +1281,3 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 **练习2**
 
 按时间对 Application Insights 结果进行排序，以便获取最相关的数据，并在应用程序中实现该时间敏感的数据。
-

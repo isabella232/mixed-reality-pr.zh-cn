@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens，测试
-ms.openlocfilehash: d26a3717da2ee9943e92e3602b6029435815262b
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b6f1c6bcff9f9db1a1fb7f5b3ea9d2c4c2be969a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008537"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583766"
 ---
 # <a name="testing-your-app-on-hololens"></a>在 HoloLens 上测试应用
 
@@ -111,7 +111,7 @@ ms.locfileid: "98008537"
 
 ## <a name="windows-app-certification-kit"></a>Windows 应用认证工具包
 
-若要为你的应用程序提供在 [Windows 应用商店上发布](../../distribute/submitting-an-app-to-the-microsoft-store.md)的最大机会，请在提交该应用程序进行认证之前，在本地对其进行验证和测试。 如果你的应用面向 Windows 全息设备家族， [Windows 应用程序认证工具包](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) 将仅在你的电脑上运行本地静态分析测试。 不会在 HoloLens 上运行任何测试。
+若要为你的应用程序提供在 [Windows 应用商店上发布](../../distribute/submitting-an-app-to-the-microsoft-store.md)的最大机会，请在提交该应用程序进行认证之前，在本地对其进行验证和测试。 如果你的应用面向 Windows 全息设备家族， [Windows 应用程序认证工具包](/windows/uwp/debug-test-perf/windows-app-certification-kit) 将仅在你的电脑上运行本地静态分析测试。 不会在 HoloLens 上运行任何测试。
 
 ## <a name="see-also"></a>另请参阅
 

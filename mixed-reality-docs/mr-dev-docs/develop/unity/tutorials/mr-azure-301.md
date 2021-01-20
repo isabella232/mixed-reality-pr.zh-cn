@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，翻译人员文本，hololens，沉浸，vr，语言翻译，Windows 10，Visual Studio
-ms.openlocfilehash: 3f7d48df92ae5ed979c6fa8d69d348ce084d3fb9
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 0b7e7c2e4146d3c60e62c25764aae48260fdf3ef
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679566"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583292"
 ---
 # <a name="mr-and-azure-301-language-translation"></a>MR 和 Azure 301：语言翻译
 
@@ -40,7 +40,7 @@ ms.locfileid: "94679566"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 301：语言翻译</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -49,7 +49,7 @@ ms.locfileid: "94679566"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -61,7 +61,7 @@ ms.locfileid: "94679566"
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - 带有内置麦克风的一组耳机 (如果耳机没有内置麦克风和扬声器) 
 - Azure 安装和翻译检索的 Internet 访问
 
@@ -106,7 +106,7 @@ ms.locfileid: "94679566"
     3. 选择适合于你的 **定价层** ，如果这是第一次创建 *文本翻译服务*，则 (名为 F0) 的免费层。
     4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
     5. 如果要创建新的资源组) ，请确定资源组 (的 **位置** 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
     6. 还需要确认是否已了解应用于此服务的条款和条件。
@@ -609,7 +609,7 @@ ms.locfileid: "94679566"
     ```
 
     > [!NOTE]
-    > - 插入语言 **枚举** 中的语言只是示例。 如果需要，可以随意添加更多内容;此 [API 支持60多种语言](https://docs.microsoft.com/azure/cognitive-services/translator/languages) (包括克) ！
+    > - 插入语言 **枚举** 中的语言只是示例。 如果需要，可以随意添加更多内容;此 [API 支持60多种语言](/azure/cognitive-services/translator/languages) (包括克) ！
     > - 还有一个 [涵盖可用语言的更交互式页面](https://www.microsoft.com/translator/business/languages/)，不过，在站点语言设置为 "" (并且 Microsoft 网站可能会重定向到你的母语) 时，此页仅显示为 "正常"。 您可以在页面底部或通过更改 URL 来更改站点语言。
     > - 在上述代码片段中， **authorizationKey** 值必须是在订阅 *Azure 文本翻译 API* 时收到的 **密钥**。 [第1章](#chapter-1--the-azure-portal)中对此进行了介绍。
 

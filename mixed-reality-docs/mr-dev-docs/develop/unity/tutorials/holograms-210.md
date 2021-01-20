@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，院校，教程，注视，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 2cbbdba0a74ab94c6a291cbe6af1cd1ae9020fe4
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7e8d72bc4d37d76f8f9ec40956cb85591e237ac8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677246"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583867"
 ---
 # <a name="mr-input-210-gaze"></a>MR 输入 210：凝视
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../../../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
 
 "[注视](../../../design/gaze-and-commit.md)" 是输入的第一种形式，它显示用户的意图和认知。 MR Input 210 (亦称为 "项目资源管理器") 是深入了解 Windows Mixed Reality 的与注视相关的概念。 我们会将上下文感知添加到游标和全息影像，充分利用你的应用程序对用户外观的了解。
 
@@ -37,13 +37,13 @@ ms.locfileid: "94677246"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 输入 210：凝视</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -74,14 +74,14 @@ ms.locfileid: "94677246"
 * 导入资产并设置场景。
 * 查看 HoloLens 中的 astronaut。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 启动 Unity。
 2. 选择 **“新建项目”**。
 3. 将项目命名为 **ModelExplorer**。
 4. 输入 "位置" 作为先前未存档的 " **注视** " 文件夹。
 5. 请确保将项目设置为“3D”。
-6. 单击 " **创建项目**"。
+6. 单击“创建项目”。
 
 ### <a name="unity-settings-for-hololens"></a>HoloLens 的 Unity 设置
 
@@ -184,7 +184,7 @@ ms.locfileid: "94677246"
 * 不要让光标变得太小或太大。
 * 避免阻碍内容。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 在 **HoloToolkit\Input\Prefabs** 文件夹中，找到 " **InputManager** " 资产。
 2. 将 **InputManager** 拖放到 **层次结构** 中。
@@ -203,7 +203,7 @@ ms.locfileid: "94677246"
 4. 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。
 5. 观察如何绘制光标，以及如何在触摸全息图时更改其外观。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 在 "**层次结构**" 面板中，展开 " **AstroMan** -> **GEO_G** -> **Back_Center** " 对象。
 2. 双击 " **Interactible.cs** " 在 Visual Studio 中打开它。
@@ -248,7 +248,7 @@ void IFocusable.OnFocusExit()
 * 更轻松地定位全息影像。
 * 稳定的自然头运动。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 1. 在 " **层次结构** " 面板中，选择 " **InputManager** " 对象。
 2. 在 " **检查器** " 面板中，找到 " **注视" 稳定** 的脚本。 如果要查看，请单击它以在 Visual Studio 中打开。
@@ -263,7 +263,7 @@ void IFocusable.OnFocusExit()
 
 * 在光标处添加方向指示器以帮助查找全息影像。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 我们将使用 **DirectionIndicator.cs** 文件，该文件将：
 
@@ -271,7 +271,7 @@ void IFocusable.OnFocusExit()
 2. 如果用户在全息影像上 gazing，则隐藏方向指示器。
 3. 更新方向指示器以指向全息影像。
 
-现在就开始吧。
+让我们开始吧。
 
 1. 单击 "**层次结构**" 面板中的 **AstroMan** 对象，然后 **单击箭头** 将其展开。
 2. 在 "**层次结构**" 面板中，选择 " **AstroMan**" 下的 **DirectionalIndicator** 对象。

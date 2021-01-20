@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，封闭，SDK
-ms.openlocfilehash: c4485c5501300d6ca629f4e587fde1f88eea7ea5
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 1458ca9e70a52913ae150c58393c3e030e2c1add
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008867"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583338"
 ---
 # <a name="scene-understanding"></a>场景理解
 
@@ -56,7 +56,7 @@ ms.locfileid: "98008867"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>

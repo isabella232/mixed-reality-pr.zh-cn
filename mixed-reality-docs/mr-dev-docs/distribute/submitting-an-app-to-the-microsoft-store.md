@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store，HoloLens，沉浸式耳机，应用，uwp，提交，提交，筛选器，元数据，系统要求，关键字，wack，证书，包，appx，销售，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 7b1953fe0244b06f019f0e28432b7f9be9c21081
-ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
+ms.openlocfilehash: 8597526d35aa7ac7afadec0dd33fd23ef82d668a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98031973"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583888"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>将应用提交到 Microsoft Store
 
@@ -20,9 +20,9 @@ ms.locfileid: "98031973"
 
 ## <a name="prerequisites"></a>先决条件
 
-[HoloLens](../hololens-hardware-details.md)和 WINDOWS 10 PC 均支持[沉浸式耳机](../discover/immersive-headset-hardware-details.md)运行通用 Windows 平台应用。 无论是提交支持 HoloLens、PC 还是同时提交这两种应用，都可以通过 [合作伙伴中心](https://partner.microsoft.com/dashboard)进行应用提交。
+[HoloLens](/hololens/hololens1-hardware)和 WINDOWS 10 PC 均支持[沉浸式耳机](../discover/immersive-headset-hardware-details.md)运行通用 Windows 平台应用。 无论是提交支持 HoloLens、PC 还是同时提交这两种应用，都可以通过 [合作伙伴中心](https://partner.microsoft.com/dashboard)进行应用提交。
 
-如果还没有合作伙伴中心开发人员帐户，请在继续之前 [注册](https://developer.microsoft.com/store/register) 一个。 可在此 [应用提交文章](https://docs.microsoft.com/windows/uwp/publish/app-submissions)中找到有关提交指南和清单的详细信息。
+如果还没有合作伙伴中心开发人员帐户，请在继续之前 [注册](https://developer.microsoft.com/store/register) 一个。 可在此 [应用提交文章](/windows/uwp/publish/app-submissions)中找到有关提交指南和清单的详细信息。
 
 > [!IMPORTANT]
 > 如果合作伙伴中心开发人员帐户未能通过雇用验证检查，则无法将任何应用程序提交到 Microsoft Store。 请联系合作伙伴中心 [支持团队](https://developer.microsoft.com/windows/support) 了解更多详细信息。
@@ -42,7 +42,7 @@ ms.locfileid: "98031973"
 
 ### <a name="prepare-image-assets-included-in-the-appx"></a>准备包含在 appx 中的映像资产
 
-Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 包中，这对于提交到 Microsoft Store 是必需的。 你可以在 MSDN 上详细了解 [磁贴和图标资产的准则](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx) 。
+Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 包中，这对于提交到 Microsoft Store 是必需的。 你可以在 MSDN 上详细了解 [磁贴和图标资产的准则](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast) 。
 
 | 所需资产 | 建议的缩放 | 图像格式 | 资产显示在哪个位置？ | 
 |----------|----------|----------|------------------|
@@ -75,7 +75,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ### <a name="specifying-target-device-families"></a>指定目标设备系列
 
-适用于 [hololens](../hololens-hardware-details.md)和 [沉浸式耳机](../discover/immersive-headset-hardware-details.md)) 的 Windows Mixed Reality 应用程序 (是通用 Windows 平台的一部分，因此具有 **Windows 通用**[目标设备系列](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx)的任何应用包都可以通过沉浸式耳机在 HoloLens 或 windows 10 电脑上运行。 如果未在应用程序清单中指定目标设备系列，可能会无意中打开应用程序，使其不会出现意外的 Windows 10 设备。 按照以下步骤指定所需的 Windows 10 设备系列，然后在 [将应用包上传到 Microsoft Store 提交时，请仔细检查是否设置了正确的设备系列。](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
+适用于 [hololens](/hololens/hololens1-hardware)和 [沉浸式耳机](../discover/immersive-headset-hardware-details.md)) 的 Windows Mixed Reality 应用程序 (是通用 Windows 平台的一部分，因此具有 **Windows 通用**[目标设备系列](/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)的任何应用包都可以通过沉浸式耳机在 HoloLens 或 windows 10 电脑上运行。 如果未在应用程序清单中指定目标设备系列，可能会无意中打开应用程序，使其不会出现意外的 Windows 10 设备。 按照以下步骤指定所需的 Windows 10 设备系列，然后在 [将应用包上传到 Microsoft Store 提交时，请仔细检查是否设置了正确的设备系列。](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
 
 * 若要在 Visual Studio 中设置此字段，请右键单击 **appxmanifest.xml** 并选择 " **查看代码**"，然后找到 " **y 名称** " 字段。 默认情况下，它应类似于以下条目：
 
@@ -118,7 +118,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 </Dependencies>
 ```
 
-若要了解有关面向设备家族的详细信息，请阅读 [y UWP 文档](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)。
+若要了解有关面向设备家族的详细信息，请阅读 [y UWP 文档](/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)。
 
 ### <a name="associate-app-with-the-store"></a>将应用与应用商店关联
 
@@ -136,14 +136,14 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ### <a name="creating-an-upload-package"></a>创建上传包
 
-按照 [打包适用于 windows 10 的通用 windows 应用程序中的](https://msdn.microsoft.com/library/hh454036.aspx#Anchor_2)准则。
+按照 [打包适用于 windows 10 的通用 windows 应用程序中的](/previous-versions/windows/apps/hh454036(v=vs.140)#Anchor_2)准则。
 
 创建上传包的最后一步是使用 [Windows 应用认证](#windows-app-certification-kit)包验证包。
 
 如果要将特定于 HoloLens 的包添加到其他 Windows 10 设备家族上可用的现有产品，请注意以下事项： 
 
-* [版本号可能如何影响向特定客户发送的包](https://msdn.microsoft.com/library/windows/apps/mt188602.aspx)
-* [如何将包分发到不同的操作系统](https://msdn.microsoft.com/library/windows/apps/mt188601.aspx)
+* [版本号可能如何影响向特定客户发送的包](/windows/uwp/publish/package-version-numbering)
+* [如何将包分发到不同的操作系统](/windows/uwp/publish/guidance-for-app-package-management)
 
 一般指导原则是，设备中版本号最高的包是存储区分发的包。
 
@@ -167,7 +167,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ### <a name="windows-app-certification-kit"></a>Windows 应用认证工具包
 
-通过 Visual Studio 创建要提交到合作伙伴中心的应用包时，"创建应用程序包" 向导会提示你针对创建的包运行 Windows 应用认证工具包。 若要对应用程序进行平滑提交，最好先验证应用的本地副本是否通过 [Windows 应用认证包测试](https://msdn.microsoft.com/library/windows/apps/jj657973.aspx) ，然后再将其提交到应用商店。 当前不支持在远程 HoloLens 上运行 Windows 应用程序认证包。
+通过 Visual Studio 创建要提交到合作伙伴中心的应用包时，"创建应用程序包" 向导会提示你针对创建的包运行 Windows 应用认证工具包。 若要对应用程序进行平滑提交，最好先验证应用的本地副本是否通过 [Windows 应用认证包测试](/previous-versions/windows/apps/jj657973(v=win.10)) ，然后再将其提交到应用商店。 当前不支持在远程 HoloLens 上运行 Windows 应用程序认证包。
 
 ### <a name="run-on-all-targeted-device-families"></a>在所有目标设备系列上运行
 
@@ -177,19 +177,19 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 如果要提交基于 Unity 项目的混合现实应用，请先参阅此 [视频](https://channel9.msdn.com/Blogs/One-Dev-Minute/How-to-publish-your-Unity-game-as-a-UWP-app) 。
 
-通常，提交在 HoloLens 或沉浸式耳机上运行的 Windows Mixed Reality 应用就像将任何 UWP 应用提交到 Microsoft Store。 [通过保留应用名称创建应用](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)后，请遵循[UWP 提交清单](https://docs.microsoft.com/windows/uwp/publish/app-submissions)。
+通常，提交在 HoloLens 或沉浸式耳机上运行的 Windows Mixed Reality 应用就像将任何 UWP 应用提交到 Microsoft Store。 [通过保留应用名称创建应用](/windows/uwp/publish/create-your-app-by-reserving-a-name)后，请遵循[UWP 提交清单](/windows/uwp/publish/app-submissions)。
 
-你要做的第一项工作就是为混合现实体验 [选择一个类别和子](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) 类别。 **请务必为应用选择最准确的类别**。 类别可帮助将应用程序商品置于正确的存储类别中，并确保它使用相关搜索查询显示。 将 **您的 VR 标题列为游戏不会导致您的应用程序的曝光更好，** 可能会阻止其显示在更具可容纳性和更少的类别中。
+你要做的第一项工作就是为混合现实体验 [选择一个类别和子](/windows/uwp/publish/category-and-subcategory-table) 类别。 **请务必为应用选择最准确的类别**。 类别可帮助将应用程序商品置于正确的存储类别中，并确保它使用相关搜索查询显示。 将 **您的 VR 标题列为游戏不会导致您的应用程序的曝光更好，** 可能会阻止其显示在更具可容纳性和更少的类别中。
 
 但在提交过程中，有四个重要方面需要进行特定于现实的特定选择：
-1. 在 "[属性](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties)" 下的 "**[产品声明](submitting-an-app-to-the-microsoft-store.md#mixed-reality-product-declarations)**" 部分。
-2. 在 "[属性](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties)" 下的 "**[系统要求](submitting-an-app-to-the-microsoft-store.md#mixed-reality-system-requirements)**" 部分。
-3. "[包](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages)" 下的 "**[设备系列可用性](submitting-an-app-to-the-microsoft-store.md#device-family-availability)**" 部分。
+1. 在 "[属性](/windows/uwp/publish/enter-app-properties)" 下的 "**[产品声明](submitting-an-app-to-the-microsoft-store.md#mixed-reality-product-declarations)**" 部分。
+2. 在 "[属性](/windows/uwp/publish/enter-app-properties)" 下的 "**[系统要求](submitting-an-app-to-the-microsoft-store.md#mixed-reality-system-requirements)**" 部分。
+3. "[包](/windows/uwp/publish/upload-app-packages)" 下的 "**[设备系列可用性](submitting-an-app-to-the-microsoft-store.md#device-family-availability)**" 部分。
 4. 几个 **[商店列表页](submitting-an-app-to-the-microsoft-store.md#store-listing-page)** 字段。
 
 ### <a name="mixed-reality-product-declarations"></a>混合现实产品声明
 
-在应用提交过程的 " **[属性](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties)** " 页上，可以在 " **[产品声明](https://docs.microsoft.com/windows/uwp/publish/app-declarations)** " 部分中找到几个与混合现实相关的选项。
+在应用提交过程的 " **[属性](/windows/uwp/publish/enter-app-properties)** " 页上，可以在 " **[产品声明](/windows/uwp/publish/app-declarations)** " 部分中找到几个与混合现实相关的选项。
 
 ![混合现实产品声明](images/product-declarations-900px.png)<br>
 混合现实产品声明
@@ -207,7 +207,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ### <a name="mixed-reality-system-requirements"></a>混合现实系统要求
 
-在应用提交过程的 " **[属性](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties)** " 页上，可以在 " **[系统要求](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties#system-requirements)** " 部分中找到几个与混合现实相关的选项。
+在应用提交过程的 " **[属性](/windows/uwp/publish/enter-app-properties)** " 页上，可以在 " **[系统要求](/windows/uwp/publish/enter-app-properties#system-requirements)** " 部分中找到几个与混合现实相关的选项。
 
 ![系统要求](images/system-reqs-800px.png)<br>
 系统要求
@@ -234,7 +234,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 **PC 规范：**
 
-如果你希望你的应用程序尽可能多地访问 Windows Mixed reality 沉浸式耳机用户，请将适用于[Windows Mixed Reality 电脑](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的 PC 规格作为集成图形[定位](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)。
+如果你希望你的应用程序尽可能多地访问 Windows Mixed reality 沉浸式耳机用户，请将适用于[Windows Mixed Reality 电脑](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的 PC 规格作为集成图形[定位](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)。
 
 无论你的混合现实应用程序是以最低的 Windows Mixed Reality PC 需求为目标还是需要特定的 PC 配置（如 [Windows Mixed Reality 超 PC] (的专用 GPU https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines ），都应该在 "最低硬件" 列中添加相关的 pc 规范。
 
@@ -259,7 +259,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ### <a name="store-listing-page"></a>商店列表页
 
-在应用提交过程的 "应用 [商店列表](https://docs.microsoft.com/windows/uwp/publish/create-app-store-listings) " 页上，可以添加有关混合现实应用的有用信息。
+在应用提交过程的 "应用 [商店列表](/windows/uwp/publish/create-app-store-listings) " 页上，可以添加有关混合现实应用的有用信息。
 
 >[!IMPORTANT]
 >若要确保应用程序正确地分类了应用程序并将其视为 Windows Mixed Reality 客户，应将 **"Windows Mixed Reality"** 添加为应用的 "搜索词"， (可以通过展开 "共享字段" 部分) 来查找搜索词。
@@ -269,7 +269,7 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 
 ## <a name="offering-a-free-trial-for-your-game-or-app"></a>为游戏或应用提供免费试用版
 
-在许多情况下，使用者在购买 Windows Mixed Reality 沉浸式耳机之前，将不会受到虚拟现实的经验限制。 他们可能不知道从重要游戏中获得的内容，或者在沉浸式体验中熟悉自己的舒适阈值。 许多客户还可能会尝试在未徽章为 [Windows Mixed Reality pc](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的电脑上使用 Windows mixed reality 沉浸式耳机。 出于上述考虑，强烈建议您考虑为付费混合现实应用或游戏提供 [免费试用版](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) 。
+在许多情况下，使用者在购买 Windows Mixed Reality 沉浸式耳机之前，将不会受到虚拟现实的经验限制。 他们可能不知道从重要游戏中获得的内容，或者在沉浸式体验中熟悉自己的舒适阈值。 许多客户还可能会尝试在未徽章为 [Windows Mixed Reality pc](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)的电脑上使用 Windows mixed reality 沉浸式耳机。 出于上述考虑，强烈建议您考虑为付费混合现实应用或游戏提供 [免费试用版](/windows/uwp/publish/set-app-pricing-and-availability#free-trial) 。
 
 ## <a name="see-also"></a>另请参阅
 * [什么是混合现实？](../discover/mixed-reality.md)
@@ -278,4 +278,4 @@ Appx 构建工具需要以下图像资产，以便将应用程序构建到 appx 
 * [了解混合现实的性能](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Unity 性能建议](../develop/unity/performance-recommendations-for-unity.md)
 * [在 HoloLens 上测试应用](../develop/platform-capabilities-and-apis/testing-your-app-on-hololens.md)
-* [Windows Mixed Reality 最小电脑硬件兼容性指南](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
+* [Windows Mixed Reality 最小电脑硬件兼容性指南](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)

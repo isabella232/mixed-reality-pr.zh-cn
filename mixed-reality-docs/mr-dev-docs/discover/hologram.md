@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，HoloLens，全息影像，设计，交互，混合现实耳机，windows Mixed reality 耳机，增加的现实情况
-ms.openlocfilehash: b390910fcece8e6263d19f52c80b784efb2561f6
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: cc6b4a4838e7a275b1ef3a45e54c4b894a04b9c2
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757555"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583339"
 ---
 # <a name="what-is-a-hologram"></a>什么是全息图？
 
@@ -33,7 +33,7 @@ HoloLens 使你能够创建 **全息影像**，这是像像现实对象一样出
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -71,7 +71,7 @@ HoloLens [呈现](../develop/platform-capabilities-and-apis/rendering.md) 的全
 
 某些全息影像会按照用户的喜好进行操作，而不管用户在何处进行定位。 你甚至可以选择将一段时间带到一段时间，然后将其放在墙上的另一个房间。
 
-**最佳做法**
+**最佳实践**
 * 在某些情况下，可能需要在整个体验中轻松发现和查看全息影像。 此类定位有两个高级方法。 让我们将它们称为 **"显示-锁定"** 和 **"正文锁定"**。
    * 显示锁定的内容按位置 "锁定" 到设备显示。 由于多种原因，这种类型的内容有点棘手，其中包括 "clingyness" 非自然的 ""，这使得许多用户感到沮丧并希望 "将其关闭"。 通常，许多设计人员发现，更好的做法是避免显示锁定内容。
    * 主体锁定的方法远远 forgivable。 当您在三维空间中接入到用户的主体或注视着矢量时，会锁定正文。 许多经验都采用了一种正文锁定行为，其中全息图 "跟随" 用户看，这使用户可以旋转其身体，而不会丢失全息影像。 合并延迟有助于使全息图移动更加自然。 例如，Windows 全息版 OS 的某些核心 UI 使用的是正文锁定，这种情况下，用户将看起来像是一种灵活的、弹性的延迟，同时用户会将其标头。
@@ -126,8 +126,7 @@ HoloLens [呈现](../develop/platform-capabilities-and-apis/rendering.md) 的全
 
 ## <a name="next-discovery-checkpoint"></a>下一个发现检查点
 
-如果你按安排的[发现之旅](get-started-with-mr.md)操作，则你正在了解混合现实的基本知识。 从这里，你可以继续学习下一基础主题： 
+如果你按安排的[发现之旅](get-started-with-mr.md)操作，则你正在了解混合现实的基本知识。 从这里，你可以进入下一基本主题： 
 
 > [!div class="nextstepaction"]
 > [扩展设计过程](case-study-expanding-the-design-process-for-mixed-reality.md)
-

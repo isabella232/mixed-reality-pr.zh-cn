@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，函数，存储，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: bc609e5a4a1c4252f498ada4dba2206140635667
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 5c9784446923b3eae7a600b8e672574ce6465038
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679486"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583427"
 ---
 # <a name="mr-and-azure-305-functions-and-storage"></a>MR 和 Azure 305：Functions 和存储
 
@@ -26,9 +26,9 @@ ms.locfileid: "94679486"
 
 在本课程中，你将了解如何在混合现实应用程序中创建和使用 Azure 存储资源 Azure Functions 和存储数据。
 
-*Azure Functions* 是一项 Microsoft 服务，它允许开发人员在 Azure 中运行少量的代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 *Azure Functions* 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 [Azure Functions 文章](https://docs.microsoft.com/azure/azure-functions/functions-overview)。
+*Azure Functions* 是一项 Microsoft 服务，它允许开发人员在 Azure 中运行少量的代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 *Azure Functions* 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 [Azure Functions 文章](/azure/azure-functions/functions-overview)。
 
-*Azure 存储* 是一种 Microsoft 云服务，可让开发人员存储数据，保证其高度可用、安全、持久、可缩放和冗余。 这意味着，Microsoft 将处理所有维护和关键问题。 有关详细信息，请访问 [Azure 存储一文](https://docs.microsoft.com/azure/storage/common/storage-introduction)。
+*Azure 存储* 是一种 Microsoft 云服务，可让开发人员存储数据，保证其高度可用、安全、持久、可缩放和冗余。 这意味着，Microsoft 将处理所有维护和关键问题。 有关详细信息，请访问 [Azure 存储一文](/azure/storage/common/storage-introduction)。
 
 完成本课程后，你将拥有一个混合现实沉浸式耳机应用程序，该应用程序将能够执行以下操作：
 
@@ -44,7 +44,7 @@ ms.locfileid: "94679486"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 和 Azure 305：Functions 和存储</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -53,7 +53,7 @@ ms.locfileid: "94679486"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -65,7 +65,7 @@ ms.locfileid: "94679486"
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - Azure 帐户的订阅，用于创建 Azure 资源
 - Azure 安装和数据检索的 Internet 访问
 
@@ -113,7 +113,7 @@ ms.locfileid: "94679486"
 
     9. 选择一个 *资源组* ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
     10. 还需要确认是否已了解应用于此服务的条款和条件。
 
@@ -166,7 +166,7 @@ ms.locfileid: "94679486"
 
     3. 选择一个 *资源组* ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
     4.  对于本练习，请选择 " *Windows* " 作为所选 **操作系统**。
 
@@ -225,7 +225,7 @@ ms.locfileid: "94679486"
         }
     ```
 
-13. 选择“保存”。
+13. 选择“保存”。 
 
 14. 结果应类似于下图。
 
@@ -463,15 +463,15 @@ ms.locfileid: "94679486"
 
 ## <a name="chapter-6---import-azure-storage-for-unity"></a>第6章-导入适用于 Unity 的 Azure 存储
 
-你将使用适用于 Unity (的 Azure 存储，该存储本身利用 .Net SDK for Azure) 。 有关详细信息，请参阅适用于 [Unity 的 Azure 存储一文](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity)。
+你将使用适用于 Unity (的 Azure 存储，该存储本身利用 .Net SDK for Azure) 。 有关详细信息，请参阅适用于 [Unity 的 Azure 存储一文](/sandbox/gamedev/unity/azure-storage-unity)。
 
 当前 Unity 中存在一个已知问题，需要在导入后重新配置插件。 此部分中 (4-7 的这些步骤) 解决 bug 后不再需要这些步骤。
 
 若要将 SDK 导入到自己的项目中，请确保已从 GitHub 下载最新的 ["unitypackage"](https://aka.ms/azstorage-unitysdk)。 然后执行以下操作：
 
-1.  使用 " **.unitypackage** **资产**  >  **导入包**  >  **自定义包**" 菜单选项将 unitypackage 文件添加到 Unity。
+1.  使用 "  **资产**  >  **导入包**  >  **自定义包**" 菜单选项将 unitypackage 文件添加到 Unity。
 
-2.  在弹出的 "**导入 Unity 包**" 框中，可以选择 "**插件**" "存储" 下的所有内容  >  **Storage**。 取消选中所有其他内容，因为本课程不需要这样做。
+2.  在弹出的 "**导入 Unity 包**" 框中，可以选择 "**插件**" "存储" 下的所有内容  >  。 取消选中所有其他内容，因为本课程不需要这样做。
 
     ![导入到包](images/AzureLabs-Lab5-45.png)
 
@@ -1221,7 +1221,7 @@ ms.locfileid: "94679486"
 
     > 对于 Microsoft HoloLens，你可能会发现将其设置为 *远程计算机* 会更容易，因此你不会受限到计算机上。 不过，还需要执行以下操作：
     > - 了解你的 HoloLens 的 **IP 地址**，该地址可在 "**设置**"  >  **网络 & Internet**  >  **wi-fi**  >  **高级选项**"中找到; IPv4 是你应使用的地址。 
-    > - 确保 **开发人员模式** 已 **打开**;在 "**设置** 更新" 中找到  >  **Update & Security**  >  **开发人员**& 安全性。
+    > - 确保 **开发人员模式** 已 **打开**;在 "**设置** 更新" 中找到  >    >  **开发人员**& 安全性。
 
     ![部署解决方案](images/AzureLabs-Lab5-55.png)
 
@@ -1243,4 +1243,4 @@ ms.locfileid: "94679486"
 
 ### <a name="exercise-2"></a>练习2
 
-创建一种方法来重新启动应用程序，而不必每次都重新打开它。 **加载场景** 是一种很好的起点。 完成此操作后，创建一种方法来清除 *Azure 存储* 中存储的列表，以便可以轻松地从应用重置。 
+创建一种方法来重新启动应用程序，而不必每次都重新打开它。 **加载场景** 是一种很好的起点。 完成此操作后，创建一种方法来清除 *Azure 存储* 中存储的列表，以便可以轻松地从应用重置。

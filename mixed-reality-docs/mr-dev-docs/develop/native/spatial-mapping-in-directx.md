@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows mixed reality，空间映射，环境，交互，directx，winrt，api，示例代码，UWP，SDK，演练
-ms.openlocfilehash: bcd78487e96aaf09707aa4bf58917223cc2e8583
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 19479a4efb577bad629e46b59334f0d23b0b2db4
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006707"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583770"
 ---
 # <a name="spatial-mapping-in-directx"></a>DirectX 中的空间映射
 
@@ -36,7 +36,7 @@ ms.locfileid: "98006707"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -50,35 +50,35 @@ ms.locfileid: "98006707"
 
 ## <a name="directx-development-overview"></a>DirectX 开发概述
 
-空间映射的本机应用程序开发使用 [Windows 感知](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx) 命名空间中的 api。 这些 Api 使您能够完全控制空间映射功能，其方式与 [Unity](../unity/spatial-mapping-in-unity.md)公开空间映射 api 的方式相同。
+空间映射的本机应用程序开发使用 [Windows 感知](/uwp/api/Windows.Perception.Spatial) 命名空间中的 api。 这些 Api 使您能够完全控制空间映射功能，其方式与 [Unity](../unity/spatial-mapping-in-unity.md)公开空间映射 api 的方式相同。
 
 ### <a name="perception-apis"></a>感知 Api
 
 为空间映射开发提供的主要类型如下：
-* [SpatialSurfaceObserver](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.aspx) 以 SpatialSurfaceInfo 对象的形式提供与用户附近的应用程序指定区域中的表面相关的信息。
-* [SpatialSurfaceInfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx) 描述单个存在空间图面，包括唯一 ID、边界量和上次更改时间。 它将根据请求异步提供 SpatialSurfaceMesh。
-* [SpatialSurfaceMeshOptions](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemeshoptions.aspx) 包含用于自定义 SpatialSurfaceInfo 中请求的 SpatialSurfaceMesh 对象的参数。
-* [SpatialSurfaceMesh](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.aspx) 表示单个空间图面的网格数据。 顶点位置、顶点法线和三角索引的数据包含在 member SpatialSurfaceMeshBuffer 对象中。
-* [SpatialSurfaceMeshBuffer](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemeshbuffer.aspx) 环绕一种类型的网格数据。
+* [SpatialSurfaceObserver](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) 以 SpatialSurfaceInfo 对象的形式提供与用户附近的应用程序指定区域中的表面相关的信息。
+* [SpatialSurfaceInfo](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo) 描述单个存在空间图面，包括唯一 ID、边界量和上次更改时间。 它将根据请求异步提供 SpatialSurfaceMesh。
+* [SpatialSurfaceMeshOptions](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions) 包含用于自定义 SpatialSurfaceInfo 中请求的 SpatialSurfaceMesh 对象的参数。
+* [SpatialSurfaceMesh](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh) 表示单个空间图面的网格数据。 顶点位置、顶点法线和三角索引的数据包含在 member SpatialSurfaceMeshBuffer 对象中。
+* [SpatialSurfaceMeshBuffer](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer) 环绕一种类型的网格数据。
 
 当使用这些 Api 开发应用程序时，基本程序流将如下所示 (如下面所述的示例应用程序所示) ：
 - **设置 SpatialSurfaceObserver**
-  - 调用 [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.requestaccessasync.aspx)，以确保用户为应用程序提供了使用设备的空间映射功能的权限。
+  - 调用 [RequestAccessAsync](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver)，以确保用户为应用程序提供了使用设备的空间映射功能的权限。
   - 实例化 SpatialSurfaceObserver 对象。
-  - 调用 [SetBoundingVolumes](https://msdn.microsoft.com/library/windows/apps/mt592747.aspx) 可指定要在其中显示空间图面信息的区域。 以后可以通过再次调用此函数来修改这些区域。 每个区域都是使用 [SpatialBoundingVolume](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialboundingvolume.aspx)指定的。
-  - 注册 [ObservedSurfacesChanged](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.observedsurfaceschanged.aspx) 事件，只要有新信息可用于指定空间区域中的空间图面，就会触发该事件。
+  - 调用 [SetBoundingVolumes](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) 可指定要在其中显示空间图面信息的区域。 以后可以通过再次调用此函数来修改这些区域。 每个区域都是使用 [SpatialBoundingVolume](/uwp/api/Windows.Perception.Spatial.SpatialBoundingVolume)指定的。
+  - 注册 [ObservedSurfacesChanged](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) 事件，只要有新信息可用于指定空间区域中的空间图面，就会触发该事件。
 - **处理 ObservedSurfacesChanged 事件**
-  - 在事件处理程序中，调用 [GetObservedSurfaces](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.getobservedsurfaces.aspx) 来接收 SpatialSurfaceInfo 对象的映射。 使用此地图，可以更新 [用户环境中存在](../../design/spatial-mapping.md#mesh-caching)的空间表面的记录。
-  - 对于每个 SpatialSurfaceInfo 对象，可以通过查询 [TryGetBounds](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.trygetbounds.aspx) 来确定图面的空间范围，用所选的 [空间坐标系统](../../design/coordinate-systems.md) 表示。
-  - 如果决定为空间图面请求，请调用 [TryComputeLatestMeshAsync](https://msdn.microsoft.com/library/windows/apps/mt592715.aspx)。 您可以提供指定三角形密度和返回的网格数据格式的选项。
+  - 在事件处理程序中，调用 [GetObservedSurfaces](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) 来接收 SpatialSurfaceInfo 对象的映射。 使用此地图，可以更新 [用户环境中存在](../../design/spatial-mapping.md#mesh-caching)的空间表面的记录。
+  - 对于每个 SpatialSurfaceInfo 对象，可以通过查询 [TryGetBounds](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo) 来确定图面的空间范围，用所选的 [空间坐标系统](../../design/coordinate-systems.md) 表示。
+  - 如果决定为空间图面请求，请调用 [TryComputeLatestMeshAsync](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo)。 您可以提供指定三角形密度和返回的网格数据格式的选项。
 - **接收和处理网格**
   - 对 TryComputeLatestMeshAsync 的每次调用都将以异步方式返回一个 SpatialSurfaceMesh 对象。
-  - 通过此对象，您可以访问包含的 SpatialSurfaceMeshBuffer 对象，这样，您就可以访问该网格的三角形索引、顶点位置和顶点法线。 此数据将采用与用于呈现网格的 [Direct3D 11 api](https://msdn.microsoft.com/library/windows/desktop/ff476501(v=vs.85).aspx) 直接兼容的格式。
+  - 通过此对象，您可以访问包含的 SpatialSurfaceMeshBuffer 对象，这样，您就可以访问该网格的三角形索引、顶点位置和顶点法线。 此数据将采用与用于呈现网格的 [Direct3D 11 api](/windows/win32/api/d3d11/nf-d3d11-id3d11device-createbuffer) 直接兼容的格式。
   - 从这里，你的应用程序可以选择分析或 [处理](../../design/spatial-mapping.md#mesh-processing) 网格数据，并将其用于 [呈现](../../design/spatial-mapping.md#rendering) 和物理学 [raycasting 和冲突](../../design/spatial-mapping.md#raycasting-and-collision)。
-  - 需要注意的一个重要细节是，您必须将一个规模应用到网格顶点位置 (例如，在用于呈现网格) 的顶点着色器中，将它们从缓冲区中存储的优化整数单位转换为米。 可以通过调用 [VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)来检索此缩放。
+  - 需要注意的一个重要细节是，您必须将一个规模应用到网格顶点位置 (例如，在用于呈现网格) 的顶点着色器中，将它们从缓冲区中存储的优化整数单位转换为米。 可以通过调用 [VertexPositionScale](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh)来检索此缩放。
 
 ### <a name="troubleshooting"></a>疑难解答
-* 别忘了使用 SpatialSurfaceMesh 返回的刻度在顶点着色器中缩放网格顶点位置 [。 VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)
+* 别忘了使用 SpatialSurfaceMesh 返回的刻度在顶点着色器中缩放网格顶点位置 [。 VertexPositionScale](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh)
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>空间映射代码示例
 
@@ -88,7 +88,7 @@ ms.locfileid: "98006707"
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>设置应用程序以使用 spatialPerception 功能
 
-应用可使用空间映射功能。 这是必需的，因为空间网格是用户环境的表示形式，该环境可能被视为私有数据。 在应用程序的 appxmanifest.xml 文件中声明此功能。 下面的示例说明：
+应用可使用空间映射功能。 这是必需的，因为空间网格是用户环境的表示形式，该环境可能被视为私有数据。 在应用程序的 appxmanifest.xml 文件中声明此功能。 下面是一个示例：
 
 ```xml
 <Capabilities>
@@ -96,7 +96,7 @@ ms.locfileid: "98006707"
 </Capabilities>
 ```
 
-此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面的示例说明：
+此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面是一个示例：
 
 ```xml
 <Package
@@ -159,7 +159,7 @@ initSurfaceObserverTask.then([this, coordinateSystem](Windows::Perception::Spati
 
 ### <a name="create-a-surface-observer"></a>创建 surface 观察器
 
-**Windows：:P erception：：空间：：** surface 命名空间包括 [SpatialSurfaceObserver](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.aspx)类，该类用于观察在 [SpatialCoordinateSystem](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.aspx)中指定的一个或多个卷。 使用 [SpatialSurfaceObserver](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.aspx) 实例实时访问 surface 网格数据。
+**Windows：:P erception：：空间：：** surface 命名空间包括 [SpatialSurfaceObserver](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver)类，该类用于观察在 [SpatialCoordinateSystem](/uwp/api/Windows.Perception.Spatial.SpatialCoordinateSystem)中指定的一个或多个卷。 使用 [SpatialSurfaceObserver](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) 实例实时访问 surface 网格数据。
 
 从 **AppMain**：
 
@@ -219,7 +219,7 @@ m_surfaceObserver->SetBoundingVolume(
             );
 ```
 
-如果你的应用程序在表面映射数据不可用时需要以不同的方式执行任何操作，则可以编写代码来响应不 **允许** [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx)的情况（例如，由于这些设备没有用于空间映射的硬件，因此不允许在连接有沉浸设备的电脑上使用。 对于这些设备，你应改用空间阶段来了解有关用户的环境和设备配置的信息。
+如果你的应用程序在表面映射数据不可用时需要以不同的方式执行任何操作，则可以编写代码来响应不 **允许** [SpatialPerceptionAccessStatus](/uwp/api/Windows.Perception.Spatial.SpatialPerceptionAccessStatus)的情况（例如，由于这些设备没有用于空间映射的硬件，因此不允许在连接有沉浸设备的电脑上使用。 对于这些设备，你应改用空间阶段来了解有关用户的环境和设备配置的信息。
 
 ### <a name="initialize-and-update-the-surface-mesh-collection"></a>初始化和更新 surface 网格集合
 
@@ -250,7 +250,7 @@ m_surfaceObserver->ObservedSurfacesChanged += ref new TypedEventHandler<SpatialS
 
 **注意：** 这可能不是你的应用程序处理网格数据的最有效方法。 此代码为清楚起见而编写，未经过优化。
 
-在存储使用[Platform：： guid](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx)作为键值的[SpatialSurfaceInfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx)对象的只读映射中提供了 surface 网格数据。
+在存储使用[Platform：： guid](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx)作为键值的[SpatialSurfaceInfo](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo)对象的只读映射中提供了 surface 网格数据。
 
 ```cpp
 IMapView<Guid, SpatialSurfaceInfo^>^ const& surfaceCollection = sender->GetObservedSurfaces();
@@ -397,7 +397,7 @@ CreateDirectXBuffer(device, D3D11_BIND_VERTEX_BUFFER, positions, m_vertexPositio
 
 ### <a name="update-and-render-surface-meshes"></a>更新和呈现 surface 网格
 
-我们的 SurfaceMesh 类具有专用的更新函数。 每个 [SpatialSurfaceMesh](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.aspx) 都有其自己的转换，我们的示例使用 **SpatialStationaryReferenceFrame** 的当前坐标系统来获取转换。 然后，它会更新 GPU 上的模型常量缓冲区。
+我们的 SurfaceMesh 类具有专用的更新函数。 每个 [SpatialSurfaceMesh](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh) 都有其自己的转换，我们的示例使用 **SpatialStationaryReferenceFrame** 的当前坐标系统来获取转换。 然后，它会更新 GPU 上的模型常量缓冲区。
 
 ```cpp
 void SurfaceMesh::UpdateTransform(
@@ -678,4 +678,4 @@ m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 
 ## <a name="see-also"></a>另请参阅
 * [创建全息 DirectX 项目](creating-a-holographic-directx-project.md)
-* [Windows 感知. 空间 API](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)
+* [Windows 感知. 空间 API](/uwp/api/Windows.Perception.Spatial)

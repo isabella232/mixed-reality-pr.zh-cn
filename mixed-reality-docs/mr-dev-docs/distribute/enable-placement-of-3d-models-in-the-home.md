@@ -6,17 +6,17 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D，模型，在家中放置，地方，世界，建模，混合现实主页，web，应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c92ba7a3242b618b9ef9cef01ae400cf4dbf36b2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 58da61add35546331ff8199fa20885f9869a9f43
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010097"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583802"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>允许在混合现实主页中放置 3D 模型
 
 > [!NOTE]
-> 此功能已作为 [Windows 10 2018 年4月更新](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。 Windows 的较早版本与此功能不兼容。
+> 此功能已作为 [Windows 10 2018 年4月更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)的一部分添加。 Windows 的较早版本与此功能不兼容。
 
 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)是用户在启动应用程序之前居住的起点。 在某些情况下，二维应用 (如全息影像应用) 会将3D 模型直接置于混合现实主页中作为装饰，或以完整的3D 形式进行进一步检查。 使用 " *添加模型" 协议* ，可以将三维模型从你的网站或应用程序直接发送到 Windows Mixed Reality 主页，它将在其中持久保存，如 [3d 应用程序启动器](3d-app-launcher-design-guidance.md)、二维应用和全息影像。 
 
@@ -32,7 +32,7 @@ ms.locfileid: "98010097"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens</strong></a></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
      <tr>

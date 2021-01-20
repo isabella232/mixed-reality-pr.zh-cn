@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 08/03/2020
 ms.topic: article
 keywords: lbe、MixedRealitySpatialDataPackager.exe、MixedRealitySpatialDataPackager
-ms.openlocfilehash: df6757730c8a5448d96811bfe4ce024f6942dc07
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 93d598a6add8350850faadab241b254e9cb341aa
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91677697"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583647"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>混合现实空间数据包装程序文档
 
@@ -37,7 +37,7 @@ ms.locfileid: "91677697"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -71,8 +71,7 @@ ms.locfileid: "91677697"
 4. 最大程度地减少空白、textureless 的图面，例如，将一系列不同海报置于白名单上
 5. 在场景中映射不包含动态对象的空间，例如移动人员
 6. 在导入时锁定地图 (通过预览体验) 
-7. 当跟踪质量下降和/或环境中的更改 (光源或对象布局中的变化时，解锁地图并重新扫描环境) 
-***
+7. 当跟踪质量下降并且/或环境中的更改 (光源或对象布局中的更改时，解锁地图并重新扫描环境) * * _
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>运行带辅助脚本的混合现实空间数据包装器
 
@@ -154,7 +153,7 @@ MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target pa
 导入删除现有空间数据，并将其替换为指定目录中的数据。 应用名称输入指定要为其导入空间锚点的目标应用的包名称，而目标用户 SID 指定应该有权访问已导入的空间锚的用户。 目标包系列名称和用户 Sid 必须与电脑上的现有值匹配，否则 exe 将会失败。
 
 
-***
+_**
 ## <a name="error-messages"></a>错误消息
 此外，以下错误消息还将附带 HRESULT
 

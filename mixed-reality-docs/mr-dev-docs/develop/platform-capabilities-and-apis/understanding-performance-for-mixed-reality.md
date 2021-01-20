@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，性能，优化，CPU，GPU
-ms.openlocfilehash: ff3db5d49ddab13a20c4c32de8e5640fff4f0d81
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 68aae6408a59b197227ab8cd9042e11f8a255d10
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008467"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583087"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>了解混合现实的性能
 
@@ -19,9 +19,9 @@ ms.locfileid: "98008467"
 
 下面列出了每个目标平台的高性能帧速率值。
 
-| Platform | 目标帧速率 |
+| 平台 | 目标帧速率 |
 |----------|-------------------|
-| [HoloLens](../../hololens-hardware-details.md) | 60 FPS |
+| [HoloLens](/hololens/hololens1-hardware) | 60 FPS |
 | [Windows Mixed Reality 超 Pc](../../discover/immersive-headset-hardware-details.md) | 90 FPS |
 | [Windows Mixed Reality Pc](../../discover/immersive-headset-hardware-details.md) | 60 FPS |
 
@@ -46,7 +46,7 @@ ms.locfileid: "98008467"
 
 下面是一些常用工具，可帮助你收集应用程序的深入分析信息：
 - [Intel 图形性能分析器](https://software.intel.com/gpa)
-- [Visual Studio 图形调试器](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
+- [Visual Studio 图形调试器](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
 - [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)
 - [Unity 框架调试器](https://docs.unity3d.com/Manual/FrameDebugger.html)
 
@@ -100,7 +100,7 @@ ms.locfileid: "98008467"
 
 #### <a name="reduce-polygon-count"></a>减少多边形计数
 
-较大的多边形计数会导致更多的 GPU 操作，因此减少场景中 [的多边形数量](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) 会减少渲染时间。 还有其他一些因素会使几何变得昂贵，但多边形计数是确定呈现场景所需的工作量的最简单指标。
+较大的多边形计数会导致更多的 GPU 操作，因此减少场景中 [的多边形数量](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) 会减少渲染时间。 还有其他一些因素会使几何变得昂贵，但多边形计数是确定呈现场景所需的工作量的最简单指标。
 
 #### <a name="limit-overdraw"></a>限制过度绘制
 
@@ -139,6 +139,5 @@ ms.locfileid: "98008467"
 ## <a name="see-also"></a>另请参阅
 - [针对 Unity 的性能建议](../unity/performance-recommendations-for-unity.md)
 - [建议用于 Unity 的设置](../unity/recommended-settings-for-unity.md)
-- [优化3D 模型](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
-- [转换和优化实时3D 模型的最佳做法](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
-
+- [优化3D 模型](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [转换和优化实时3D 模型的最佳做法](/dynamics365/mixed-reality/import-tool/best-practices)

@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof 控制器，运动控制器，配对，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，滚动，手柄，状态
-ms.openlocfilehash: 94a9292b3a765131ae197fd9f91c27a52a463eef
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: 367c9d9e0179c82af05af3fded9341ff7960d19e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192615"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583659"
 ---
 # <a name="motion-controllers"></a>运动控制器
 
@@ -41,7 +41,7 @@ ms.locfileid: "98192615"
 </colgroup>
 <tr>
      <td><strong>功能</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>
@@ -71,7 +71,7 @@ Windows Mixed Reality 运动控制器使用沉浸式耳机中的传感器在视�
 
 ## <a name="setup"></a>设置
 
-### <a name="before-you-begin"></a>在开始之前
+### <a name="before-you-begin"></a>开始之前
 
 需要的软件：
 * 两个运动控制器的集合。
@@ -80,14 +80,14 @@ Windows Mixed Reality 运动控制器使用沉浸式耳机中的传感器在视�
 
 **检查 Windows、Unity 和驱动程序更新**
 * 若要进行混合现实开发，请参阅安装适用于 Windows、Unity 等的首选版本的 [工具](../develop/install-the-tools.md) 。
-* 请确保具有最新的 [耳机和运动控制器驱动程序](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/mixed-reality-software)。
+* 请确保具有最新的 [耳机和运动控制器驱动程序](/windows/mixed-reality/enthusiast-guide/mixed-reality-software)。
 
 ### <a name="pairing-controllers"></a>配对控制器
 
 可以使用 Windows 设置（如任何其他蓝牙设备）将运动控制器绑定到主机。
 
 1. 将两个 AA 电池插入控制器背面。 暂时停止电池护盖。
-2. 如果你使用的是外部 USB 蓝牙适配器而不是内置蓝牙收音机，请在继续操作之前查看 [蓝牙最佳实践](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) 。 对于带有内置收音机的桌面配置，请确保天线已连接。
+2. 如果你使用的是外部 USB 蓝牙适配器而不是内置蓝牙收音机，请在继续操作之前查看 [蓝牙最佳实践](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) 。 对于带有内置收音机的桌面配置，请确保天线已连接。
 3. 打开 **Windows 设置**  ->  **设备**  ->  **添加 bluetooth 或其他设备**  ->  **蓝牙**，并删除任何早期的 "运动控制器–右侧" 和 "运动控制器–左侧" 实例。 查看列表底部的 "其他设备" 类别。
 4. 选择 " **添加蓝牙或其他设备** "，并查看它是否开始发现蓝牙设备。
 5. 按住控制器的 Windows 按钮，在 buzzes 后打开控制器。
@@ -142,7 +142,7 @@ Windows Mixed Reality 运动控制器使用沉浸式耳机中的传感器在视�
 
 * 验证控制器是否正常工作：
     1. 启动 **混合现实门户** ，并输入混合现实主页。
-    2. 移动控制器并验证跟踪、测试按钮并验证 [teleportation](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) 是否正常工作。 如果没有，请检查 [运动控制器故障排除](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers)。
+    2. 移动控制器并验证跟踪、测试按钮并验证 [teleportation](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) 是否正常工作。 如果没有，请检查 [运动控制器故障排除](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers)。
 
 ## <a name="gazing-and-pointing"></a>Gazing 和指向
 
@@ -249,7 +249,7 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中�
  
 ["" 中的整分辨率动作控制器线条图黑色 ""](images/motioncontrollers-black.png)
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>常见问题解答
 
 ### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>是否可以将运动控制器配对到多台电脑？
 
@@ -257,7 +257,7 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中�
 
 ### <a name="how-do-i-update-motion-controller-firmware"></a>如何实现更新运动控制器固件？
 
-运动控制器固件是耳机驱动程序的一部分，如有必要，它将在连接时自动更新。 固件更新通常需要1-2 分钟的时间，具体取决于蓝牙无线电和链接质量。 在极少数情况下，控制器固件更新可能需要长达10分钟的时间，这可能表示 Bluetooth 连接或无线电干扰较差。 请参阅 [发烧指南中的蓝牙最佳实践](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) ，以解决连接问题。 固件更新之后，控制器将重新启动并重新连接到主机计算机 (你可能会注意到，Led 对于跟踪) 会有所鲜。 如果固件更新被中断 (例如，控制器丢失了电源) ，则在下次打开控制器时，将再次尝试此固件。
+运动控制器固件是耳机驱动程序的一部分，如有必要，它将在连接时自动更新。 固件更新通常需要1-2 分钟的时间，具体取决于蓝牙无线电和链接质量。 在极少数情况下，控制器固件更新可能需要长达10分钟的时间，这可能表示 Bluetooth 连接或无线电干扰较差。 请参阅 [发烧指南中的蓝牙最佳实践](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) ，以解决连接问题。 固件更新之后，控制器将重新启动并重新连接到主机计算机 (你可能会注意到，Led 对于跟踪) 会有所鲜。 如果固件更新被中断 (例如，控制器丢失了电源) ，则在下次打开控制器时，将再次尝试此固件。
 
 ### <a name="how-i-can-check-battery-level"></a>如何检查电池电量级别？
 
@@ -269,17 +269,17 @@ Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中�
 
 ## <a name="troubleshooting"></a>疑难解答
 
-请参阅发烧指南中的 [运动控制器故障排除](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) 。
+请参阅发烧指南中的 [运动控制器故障排除](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) 。
 
 ## <a name="filing-motion-controller-feedbackbugs"></a>存档运动控制器反馈/bug
 
-使用 "Mixed Reality-> 输入" 类别在反馈中心[向我们提供反馈](../give-us-feedback.md)。
+使用 "Mixed Reality-> 输入" 类别在反馈中心[向我们提供反馈](/hololens/hololens-feedback)。
 
 ## <a name="see-also"></a>另请参阅
 
 * [Unity 中的运动控制器](../develop/unity/motion-controllers-in-unity.md)
 * [DirectX 中的手和运动控制器](../develop/native/hands-and-motion-controllers-in-directx.md)
 * [笔势](gaze-and-commit.md#composite-gestures)
-* [发烧本指南： Windows Mixed Reality 主页](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
-* [发烧本指南：在 Windows Mixed Reality 中使用游戏 & 应用](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
-* [由内而外跟踪的工作原理](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)
+* [发烧本指南： Windows Mixed Reality 主页](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
+* [发烧本指南：在 Windows Mixed Reality 中使用游戏 & 应用](/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
+* [由内而外跟踪的工作原理](/windows/mixed-reality/enthusiast-guide/tracking-system)

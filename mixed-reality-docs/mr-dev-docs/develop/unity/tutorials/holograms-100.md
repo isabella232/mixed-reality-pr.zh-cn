@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，HoloLens，，vr，尊敬，，入门，全息影像，学院，教程，混合现实院校，unity，混合现实耳机，Windows Mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 7b316314d7aa693e8be9006b2c5578c1bae7e3ff
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 86ac759cb73e39f88d62db5dab0c38108bb17d55
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006507"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583737"
 ---
 # <a name="mr-basics-100-getting-started-with-unity"></a>MR 基础知识 100：Unity 入门
 
@@ -24,7 +24,7 @@ ms.locfileid: "98006507"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 基础知识 100：Unity 入门</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -154,7 +154,7 @@ Unity 摄像机处理头跟踪和 stereoscopic 呈现。 需要对主摄像机�
 2. **> 全息仿真打开 > XR 的窗口**。
 3. 将 **仿真模式** 从 **None** 更改为 **远程到设备**。
 4. 在 **远程计算机** 上，输入你之前记下的 HOLOLENS 的 IP 地址。
-5. 单击“连接” 。
+5. 单击“连接”  。
 6. 确保 **连接状态** 更改为 " **已连接** 绿色"。
 7. 现在，你可以在 Unity 编辑器中单击 " **播放** "。
 

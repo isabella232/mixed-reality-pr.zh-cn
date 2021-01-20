@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，样式，设计，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，规模，全息影像
-ms.openlocfilehash: 6711a58fb4dde2aa28272c3003e642c4f4d3e236
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 12b1c96146f76274831c9bc3427cef93bb326f70
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848274"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583318"
 ---
 # <a name="scale"></a>缩放
 
@@ -81,6 +81,6 @@ ms.locfileid: "97848274"
 ---
 
 ## <a name="see-also"></a>另请参阅
-* [颜色、光线和材料](../color,-light-and-materials.md)
+* [颜色、光线和材料](./color-light-and-materials.md)
 * [版式](typography.md)
 * [空间音效设计](spatial-sound-design.md)

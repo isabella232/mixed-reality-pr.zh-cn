@@ -1,22 +1,22 @@
 ---
-title: MR 共享 240-多个 HoloLens 设备
+title: MR 共享 240 - 多个 HoloLens 设备
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 了解共享全息影像的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，共享，网络，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: f57629e37463c9a05219ebae92bff8870728d688
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 97f2067c043912e7608361e73e54fdf769b8bf51
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678256"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582922"
 ---
 # <a name="mr-sharing-240-multiple-hololens-devices"></a>MR 共享 240：多个 HoloLens 设备
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../../../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
 
 随着我们在空间中的发展，我们将在世界各地提供全息影像。 通过使用各种 [坐标系统](../../../design/coordinate-systems.md) 跟踪对象的位置和方向，HoloLens 保留了全息影像。 当我们在设备之间共享这些坐标系统时，我们可以创建共享体验，使我们能够参与共享全息环境。
 
@@ -31,13 +31,13 @@ ms.locfileid: "94678256"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 共享 240：多个 HoloLens 设备</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -66,7 +66,7 @@ ms.locfileid: "94678256"
 * 安装 Unity 以开发全息版应用。
 * 查看全息图！
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 启动 Unity。
 * 选择“打开”  。
@@ -121,7 +121,7 @@ ms.locfileid: "94678256"
 * 使用 "注视输入" 控制光标。
 * 使用手势输入与全息影像交互。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 **凝视**
 
@@ -168,7 +168,7 @@ ms.locfileid: "94678256"
 >2. 单击 "Windows 应用商店" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，查看 **InternetClientServer** 功能和 **PrivateNetworkClientServer** 功能
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目" 面板** 中，导航到 **HoloToolkit-Sharing-240\Prefabs\Sharing** 文件夹。
 * 将 **共享** prefab 拖放到 **层次结构面板**。
@@ -319,7 +319,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * 选择并共享播放机头像。
 * 将播放机头像附加到每个人的标题旁边。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目" 面板** 中，导航到 " **全息影像** " 文件夹。
 * 将 **PlayerAvatarStore** 拖放到 **层次结构** 中。
@@ -618,7 +618,7 @@ public class AppStateManager : Singleton<AppStateManager>
 
 * 根据玩家的头位置，将全息影像置于空间映射网格上。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目" 面板** 中，导航到 " **全息影像** " 文件夹。
 * 将 **CustomSpatialMapping** prefab 拖放到 **层次结构** 中。
@@ -997,7 +997,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * 启动炮弹，从实际表面弹跳。
 * 共享炮弹，使其他玩家可以看到它们。
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 **层次结构** 中，选择 " **HologramCollection** " 对象。
 * 在 **检查器** 中单击 " **添加组件**"。
@@ -1019,7 +1019,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 
 * 协同工作，在定位点上启动足够的炮弹来发现机密门户！
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>说明
 
 * 在 " **项目" 面板** 中，导航到 " **全息影像** " 文件夹。
 * 将 **Underworld** 资产拖放为 HologramCollection 的 **子项**。

@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，WinRT，windows mixed reality，API，演练，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，混合现实 Api
-ms.openlocfilehash: 2c57af72a10867b5ef4fc87ff96679e576d203f4
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 2116f0025449fdf127998e605f87de456e9bdaf9
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007317"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583551"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>用于 HoloLens 的适用于 Unity 的 WinRT Api
 
@@ -19,7 +19,7 @@ ms.locfileid: "98007317"
 
 ## <a name="mixed-reality-apis"></a>混合现实 Api
 
-已在 .NET Standard 2.0 兼容的投影中提供 Windows SDK 的混合现实重点，你可以在不带预处理器指令的项目中使用。 Windows 中的大多数 Api。 感知和 Windows UI. Input 命名空间包括在内，并且可能会在将来扩展以包含其他 Api。 在编辑器中运行时，可以使用投影的 Api，这允许使用 [播放模式](https://docs.microsoft.com//windows/mixed-reality/unity-play-mode)。 若要使用此投影，请对项目进行以下修改：
+已在 .NET Standard 2.0 兼容的投影中提供 Windows SDK 的混合现实重点，你可以在不带预处理器指令的项目中使用。 Windows 中的大多数 Api。 感知和 Windows UI. Input 命名空间包括在内，并且可能会在将来扩展以包含其他 Api。 在编辑器中运行时，可以使用投影的 Api，这允许使用 [播放模式](//windows/mixed-reality/unity-play-mode)。 若要使用此投影，请对项目进行以下修改：
 
 1) 使用[NuGet For Unity](https://github.com/GlitchEnzo/NuGetForUnity)添加对[MixedReality](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT) nuget 包的引用。
 2) 命名空间的前缀引用 `Windows` 包含 `Microsoft.` ：

@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，手势，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，布隆
-ms.openlocfilehash: 9e29d483375db103cebc30be9117e40899a9f81f
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: d0f3bd81cab945a01a523806ebaf4546752d74c1
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009427"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583237"
 ---
 # <a name="start-gesture"></a>开始手势
 
@@ -28,7 +28,7 @@ ms.locfileid: "98009427"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>

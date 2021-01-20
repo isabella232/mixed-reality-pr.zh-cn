@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 08/21/2019
 ms.topic: overview
 keywords: 混合现实、开发、开发、HoloLens、Azure 服务、空间锚、语音、视觉、远程渲染
-ms.openlocfilehash: c25584bd77495ab4e45713d2ad25b1b7b4e526e9
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 74be047e31806fce97339756205b93c01af6f79b
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757565"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582819"
 ---
 # <a name="azure-mixed-reality-services"></a>Azure 混合现实服务
 使用 Azure 混合现实服务，解锁每个人都熟悉的世界 - 我们周围的三维物理世界。 通过数字信息捕获和呈现更有效地帮助用户创建、学习和协作。 将 3D 引入移动设备、头戴显示设备和其他不受限制的设备上。 使用 Azure 有助于确保最敏感的信息受到保护。
@@ -22,7 +22,7 @@ ms.locfileid: "97757565"
 
 使用空间定位点生成多用户、空间混合现实的应用程序。 创建各种混合现实应用，用于映射、指定和撤回在 HoloLens、iOS 和 Android 设备上可访问的确切兴趣点。 跨空间启用 wayfinding 可帮助用户更有效地进行协作。
 
-[试用 Azure 空间锚](https://docs.microsoft.com/azure/spatial-anchors)
+[试用 Azure 空间锚](/azure/spatial-anchors)
 
 
 ## <a name="interactive-high-quality-3d-models-using-remote-rendering"></a>使用远程呈现的交互式优质3D 模型
@@ -41,10 +41,10 @@ Azure 远程渲染预览将交互式、高质量的3D 模型带入 untethered �
 
 :::row:::
     :::column:::
-       [![带有空白灰色背景的语音气泡图标](images/speech.jpg)](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+       [![带有空白灰色背景的语音气泡图标](images/speech.jpg)](/azure/cognitive-services/speech-service/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="speech"></a>[语音](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+        ### <a name="speech"></a>[语音](/azure/cognitive-services/speech-service/)
         了解语音服务如何支持将语音处理功能集成到任何应用或服务中。 使用标准的（或可自定义的）语音字体将口语转换为文本或基于文本产生自然发音。 免费试用所有服务，并使用以下功能快速生成启用了语音服务的应用和服务。
     :::column-end:::
 :::row-end:::
@@ -53,10 +53,10 @@ Azure 远程渲染预览将交互式、高质量的3D 模型带入 untethered �
 
 :::row:::
     :::column:::
-       [![带有空白灰色背景的视觉眼睛图形](images/vision.jpg)](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+       [![带有空白灰色背景的视觉眼睛图形](images/vision.jpg)](/azure/cognitive-services/computer-vision/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="vision"></a>[影像](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+        ### <a name="vision"></a>[影像](/azure/cognitive-services/computer-vision/)
         识别、标识、说明、索引和调整你的图片、视频和数字墨迹内容。了解视觉服务如何使应用和服务能够准确地识别和分析图像、视频和数字墨迹中的内容。
     :::column-end:::
 :::row-end:::
@@ -64,5 +64,5 @@ Azure 远程渲染预览将交互式、高质量的3D 模型带入 untethered �
 
 ## <a name="see-also"></a>请参阅
 
-* 适用于 HoloLens 2 的 Azure 空间定位点教程 - [Azure 空间定位点入门第 1 部分（共 3 部分）](../mrlearning-asa-ch1.md)
+* 适用于 HoloLens 2 的 Azure 空间定位点教程 - [Azure 空间定位点入门第 1 部分（共 3 部分）](../develop/unity/tutorials/mr-learning-asa-02.md)
 * 适用于 HoloLens 2 的 Azure 语音服务教程 - [集成和使用语音识别与听录第 1 部分（共 4 部分）](../develop/unity/tutorials/mrlearning-speechSDK-ch1.md)

@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy 资源管理器，HoloLens，Windows Mixed Reality，分享你的想法，案例研究
-ms.openlocfilehash: 0226c38e9fa21407a7a6529693a2adb3c5da7659
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: ef97920d22df65a9d4fa5e630840759e58c80b53
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009777"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583547"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>案例研究-在混合现实中创建 galaxy
 
@@ -147,7 +147,7 @@ float3 ComputeStarPosition(StarDescriptor star)
 
 ### <a name="a-bit-of-context-first"></a>首先是一个上下文
 
-当在游戏中使用纹理时，纹理大小很少与我们要在中使用的区域匹配，但我们可以使用不同种类的纹理筛选来使图形卡从纹理 ([纹理筛选](https://msdn.microsoft.com/library/dn642451.aspx)) 的像素中插入所需的颜色。 对我们感兴趣的筛选是 [双线性筛选](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) 器，它将使用最接近的邻居计算任何像素的值。
+当在游戏中使用纹理时，纹理大小很少与我们要在中使用的区域匹配，但我们可以使用不同种类的纹理筛选来使图形卡从纹理 ([纹理筛选](/previous-versions/visualstudio/visual-studio-2015/debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants)) 的像素中插入所需的颜色。 对我们感兴趣的筛选是 [双线性筛选](/windows/win32/direct3d9/bilinear-texture-filtering) 器，它将使用最接近的邻居计算任何像素的值。
 
 ![筛选前的原始](images/texture-1.png)
 

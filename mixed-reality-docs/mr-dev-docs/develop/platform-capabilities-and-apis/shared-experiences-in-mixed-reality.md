@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: 共享体验，混合现实，全息影像，空间锚，多用户，多
-ms.openlocfilehash: 6db5bb13d7e04dbee6b4d9d6568b821347bd769a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 3383bcd8b87dad6e817262d96b8ac1ebb3d0c8f5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530121"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583151"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>混合现实中的共享体验
 
@@ -95,7 +95,7 @@ ms.locfileid: "97530121"
 * **类似**：往往具有相似家具、环境光线和声音、物理房间大小的环境。 例如：教授在讲座厅 A 中，学生处于讲座厅 B。讲座厅的椅子可能比 B 小，但这两家公司可能都有物理办公桌来放置全息影像。
 * **不同：家具** 设置、房间大小、光源和声音注意事项中的环境不同。 例如：教授在一个侧重点房间里，学生们处于大讲座厅，并与学生和老师一起填写。
 
-[考虑环境](../../environment-considerations-for-hololens.md)很重要，因为它会影响：
+[考虑环境](/hololens/hololens-environment-considerations)很重要，因为它会影响：
 
 * 用户将如何体验这些对象。 例如：如果你的体验最适用于表，并且用户没有表？ 或在平面地面表面上，但用户的空间很混乱。
 * 对象的小数位数。 例如：在表中放置一个六英尺的人类模型可能具有挑战性，但心形模型会很好。
@@ -137,11 +137,11 @@ ms.locfileid: "97530121"
 
 共享体验的关键是，多个用户在自己的设备上看到同一个全息影像，这通常通过共享锚点来跨设备对齐坐标来完成。
 
-若要共享锚，请使用 [Azure 空间锚点](https://docs.microsoft.com/azure/spatial-anchors)：
+若要共享锚，请使用 [Azure 空间锚点](/azure/spatial-anchors)：
 
 * 首先，用户放置全息影像。
 * 应用创建 [空间锚](../../design/spatial-anchors.md)，以便在世界上准确固定该全息图。
-* 可以通过 [Azure 空间锚点](https://docs.microsoft.com/azure/spatial-anchors/)将锚点共享到 HoloLens、IOS 和 Android 设备。
+* 可以通过 [Azure 空间锚点](/azure/spatial-anchors/)将锚点共享到 HoloLens、IOS 和 Android 设备。
 
 使用共享空间定位点，每个设备上的应用现在都有一个可放置内容的 [通用坐标系统](../../design/coordinate-systems.md) 。 现在，应用可以确保在同一位置定位和定位全息影像。
 
@@ -153,7 +153,7 @@ ms.locfileid: "97530121"
 
 ## <a name="shared-static-holograms-no-interactions"></a>共享静态全息影像 (无交互) 
 
-在应用中利用 [Azure 空间锚](https://docs.microsoft.com/azure/spatial-anchors/) 。  通过跨设备启用并共享空间锚，你可以创建一个应用程序，让用户同时查看同一位置的全息影像。  需要跨设备进行额外的同步，以使用户能够与全息影像交互，并查看影像的移动或状态更新。
+在应用中利用 [Azure 空间锚](/azure/spatial-anchors/) 。  通过跨设备启用并共享空间锚，你可以创建一个应用程序，让用户同时查看同一位置的全息影像。  需要跨设备进行额外的同步，以使用户能够与全息影像交互，并查看影像的移动或状态更新。
 
 ## <a name="share-first-person-perspective"></a>共享第一人称视角
 
@@ -172,7 +172,7 @@ ms.locfileid: "97530121"
 
 ## <a name="multi-user-collaborative-experience"></a>多用户协作体验
 
-首先介绍[多用户学习教程](../../mrlearning-sharing(photon)-ch1.md)，该教程利用了用于本地用户和[Photon SDK](https://www.photonengine.com/PUN)的[Azure 空间锚点](https://docs.microsoft.com/azure/spatial-anchors/)来同步场景中的内容/状态。 创建本地协作应用程序，其中每个用户在场景中的全息影像上都有自己的观点，每个用户都可以完全与全息影像交互。  所有设备都提供更新，交互冲突管理由 Photon 处理。
+首先介绍[多用户学习教程](../unity/tutorials/mr-learning-sharing-02.md)，该教程利用了用于本地用户和[Photon SDK](https://www.photonengine.com/PUN)的[Azure 空间锚点](/azure/spatial-anchors/)来同步场景中的内容/状态。 创建本地协作应用程序，其中每个用户在场景中的全息影像上都有自己的观点，每个用户都可以完全与全息影像交互。  所有设备都提供更新，交互冲突管理由 Photon 处理。
 
 > [!NOTE]
 > 请注意， [Photon](https://www.photonengine.com/) 是一种非 Microsoft 产品，因此，可能需要使用 Photon 进行计费关系，以实现更高的使用量。
@@ -185,7 +185,7 @@ ms.locfileid: "97530121"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Azure 空间定位点](https://docs.microsoft.com/azure/spatial-anchors)
+* [Azure 空间定位点](/azure/spatial-anchors)
 * [DirectX 中的共享空间定位点](shared-spatial-anchors-in-directx.md)
 * [Unity 中的共享体验](../unity/shared-experiences-in-unity.md)
 * [旁观视图](spectator-view.md)

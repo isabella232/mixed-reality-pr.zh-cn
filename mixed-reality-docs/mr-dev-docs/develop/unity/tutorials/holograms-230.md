@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间映射，表面重建，网格，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: dc96fbff43c21216e3b860f1dbbbaae330e1f176
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6b218de239da04190fbf08ff8668fa16009df949
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677186"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582930"
 ---
 # <a name="mr-spatial-230-spatial-mapping"></a>MR 空间 230：空间映射
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](../../../mr-learning-base-01.md)。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
 
 [空间映射](../../../design/spatial-mapping.md) 将现实世界和虚拟世界结合在一起，并讲授有关环境的影像。 在尊敬的空间 230 (项目 Planetarium) ，我们将学习如何：
 
@@ -32,13 +32,13 @@ ms.locfileid: "94677186"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td>MR 空间 230：空间映射</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>开始之前
+## <a name="before-you-start"></a>准备工作
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -58,7 +58,7 @@ ms.locfileid: "94677186"
 >[!NOTE]
 >如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping)找到。
 
-### <a name="notes"></a>备注
+### <a name="notes"></a>说明
 
 * 需要禁用 Visual Studio 中的 "Enable 仅我的代码" ("工具" > "> 选项" 下的 " *未选中*) " 调试，以便在代码中命中断点。
 
@@ -70,7 +70,7 @@ ms.locfileid: "94677186"
 * 选择 " **新建** " 以创建新项目。
 * 将项目命名为 **Planetarium**。
 * 验证是否选择了 **3d** 设置。
-* 单击 " **创建项目**"。
+* 单击“创建项目”。
 * Unity 启动后，请参阅 " **编辑 > 项目设置" > Player**"。
 * 在 " **检查器** " 面板中，找到并选择绿色的 **Windows 应用商店** 图标。
 * 展开 " **其他设置**"。
@@ -134,7 +134,7 @@ ms.locfileid: "94677186"
 * 在 Visual Studio 中，使用顶部工具栏将配置更改为 " **发布**"。
 * 将平台更改为 **x86**。
 * 单击 "本地计算机" 右侧的下拉箭头，然后选择 " **远程计算机**"。
-* 在 "地址" 字段中输入 [设备的 IP 地址](../../../connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) ，并将身份验证模式更改为 **通用 (未加密协议)**。
+* 在 "地址" 字段中输入 [设备的 IP 地址](/hololens/hololens-network#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) ，并将身份验证模式更改为 **通用 (未加密协议)**。
 * 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。
 * 在 Visual Studio 中查看 " **输出** " 面板以了解 "生成和部署" 状态。
 * 在应用程序部署完成后，请四处浏览聊天室。 你将看到由黑色和白色线框网格覆盖的周围面。
@@ -148,7 +148,7 @@ ms.locfileid: "94677186"
 * 单击 " **添加探查器 > GPU**"。
 * 单击 "**活动探查 <Enter IP> 器 >**。
 * 输入 HoloLens 的 **IP 地址** 。
-* 单击“连接”。
+* 单击“连接”  。
 * 观察 GPU 呈现帧所花的时间（以毫秒为单位）。
 * 阻止应用程序在设备上运行。
 * 返回到 Visual Studio 并打开 **SpatialMappingObserver.cs**。 你会在 Assembly-CSharp (通用 Windows) 项目的 HoloToolkit\SpatialMapping 文件夹中找到它。

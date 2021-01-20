@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: vr，lbe，基于位置的娱乐，vr 拱廊类，拱廊类，沉浸，qr，qr 码，hololens2
-ms.openlocfilehash: 7e5931e0d23ef6c905b8ec54d08e572a89e747e0
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 08ed651deaab0c230142f45b93858f41ee300323
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009397"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583146"
 ---
 # <a name="qr-code-tracking"></a>QR 码跟踪
 
@@ -21,7 +21,7 @@ HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在�
 
 <table>
 <tr>
-<th>功能</th><th style="width:150px"> <a href="../../hololens-hardware-details.md">HoloLens (第一代) </a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>功能</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens (第一代) </a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> QR 码检测</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️</td>
 </tr>
@@ -128,7 +128,7 @@ private:
 
 当直接使用 QR SDK 时，Z 轴指向纸张 (不显示) -在转换为 Unity 坐标时，Z 轴将从纸上指向并向左传递。
 
-QR 码的 SpatialCoordinateSystem 对齐方式如下所示。 可以通过调用 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview：： CreateCoordinateSystemForNode</a> 并传入代码的 SpatialGraphNodeId，从平台中获取坐标系。
+QR 码的 SpatialCoordinateSystem 对齐方式如下所示。 可以通过调用 <a href="/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview：： CreateCoordinateSystemForNode</a> 并传入代码的 SpatialGraphNodeId，从平台中获取坐标系。
 
 下面的 c + + 代码演示如何创建一个矩形，并使用 QR 码的坐标系统来放置它：
 
@@ -222,7 +222,7 @@ Windows Mixed Reality 设备检测驱动程序的系统级别的 QR 码。 设�
 建议将应用配置为忽略特定时间戳之前的 QR 码。 目前，API 不支持清除 QR 码历史记录。
 
 ### <a name="qr-code-placement-in-a-space"></a>空格中的 QR 码位置
-有关在何处以及如何放置 QR 码的建议，请参阅 [HoloLens 环境注意事项](../../environment-considerations-for-hololens.md)。
+有关在何处以及如何放置 QR 码的建议，请参阅 [HoloLens 环境注意事项](/hololens/hololens-environment-considerations)。
 
 ## <a name="qr-api-reference"></a>QR API 参考
 
@@ -460,4 +460,4 @@ namespace Microsoft.MixedReality.QR
 
 ## <a name="see-also"></a>另请参阅
 * [坐标系统](../../design/coordinate-systems.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 空间定位点</a>
+* <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间定位点</a>

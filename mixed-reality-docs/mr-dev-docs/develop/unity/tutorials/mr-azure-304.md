@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，人脸识别，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: a6578950039a0a9267b7191f5b96775dca366c01
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6cdb8b7af9988bbfbc6670d0ef79f00487db7f3c
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010147"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583372"
 ---
 # <a name="mr-and-azure-304-face-recognition"></a>MR 和 Azure 304：人脸识别
 
@@ -43,7 +43,7 @@ ms.locfileid: "98010147"
 
 <table>
 <tr>
-<th>课程</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
+<th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
 <td> MR 和 Azure 304：人脸识别</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -64,19 +64,19 @@ ms.locfileid: "98010147"
 - [最新的 Windows 10 SDK](../../install-the-tools.md)
 - [Unity 2017。4](../../install-the-tools.md)
 - [Visual Studio 2017](../../install-the-tools.md)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](../../../hololens-hardware-details.md) ，启用了开发人员模式
+- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
 - 连接到电脑的相机 (沉浸式耳机开发) 
 - Azure 安装和人脸 API 检索的 Internet 访问
 
-## <a name="before-you-start"></a>准备工作
+## <a name="before-you-start"></a>开始之前
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](https://docs.microsoft.com/hololens/hololens-setup)。 
+2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。 
 3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](../../../calibration.md#hololens-2)。
+有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](../../../sensor-tuning.md)。
+有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
 
 ## <a name="chapter-1---the-azure-portal"></a>第1章-Azure 门户
 
@@ -108,7 +108,7 @@ ms.locfileid: "98010147"
 
     4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)。
+        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
     5. 你稍后使用的 UWP 应用（ **人员 Maker**）要求使用 "美国西部" 作为位置。
 
@@ -147,7 +147,7 @@ ms.locfileid: "98010147"
 
 > 无关紧要 **人员 Maker** 使用一些基本限制，以帮助确保没有超过 **免费订阅层** 每分钟的服务调用数。 当发生限制时，顶部的绿色文本将更改为红色，并更新为 "活动"。如果是这种情况，只需等待应用程序 (，它将一直等待，直到接下来可以继续访问面部服务，当你可以) 再次使用它时将其更新为 "处于活动状态"。
 
-此应用程序使用 *microsoft.projectoxford.face* 库，可让你充分利用人脸 API。 此库以 NuGet 包的形式提供。 有关此情况的详细信息以及类似的 Api，请 [确保访问 api 参考文章](https://docs.microsoft.com/azure/cognitive-services/face/apireference)。
+此应用程序使用 *microsoft.projectoxford.face* 库，可让你充分利用人脸 API。 此库以 NuGet 包的形式提供。 有关此情况的详细信息以及类似的 Api，请 [确保访问 api 参考文章](/azure/cognitive-services/face/apireference)。
 
 > [!NOTE] 
 > 这些只是所需的步骤，有关如何执行这些操作的说明，请查看该文档。 **人员 Maker** 应用允许你：
@@ -842,7 +842,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
 ## <a name="chapter-10---using-the-application"></a>第10章-使用应用程序
 
 1.  戴上 HoloLens，启动应用。
-2.  查看在 *人脸 API* 注册的人。 请确保：
+2.  查看在 *人脸 API* 注册的人。 确保：
 
     -  人脸不太遥远并且明显可见
     -  环境照明不太暗
