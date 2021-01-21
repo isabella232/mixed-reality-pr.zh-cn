@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7302e6c8d5de866b652ec4741fbef128eca616e0
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: eca0b12cd9ba4e3d5d4033790184ffd770b44280
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580818"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635395"
 ---
 # <a name="the-making-of-kippys-escape"></a>Kippy 的转义
 
@@ -62,21 +62,21 @@ HoloLens 2 可访问目前在游戏中的其他地方。 对象可以使用您�
 
 Kippy 的转义很大程度上依赖于混合现实 UX 工具组件，以使游戏成为交互的（即手交互参与者、边界控件、操控器、滑杆和按钮）。   
 
-[手动交互执行组件](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/HandInteraction.html)允许直接和远端操作全息影像。 在 Kippy 的转义开始时，用户有机会设置游戏的位置。 手动光标从用户的掌中进行扩展，可以轻松地操作距离较远的大全息影像，如以下 gif 所示。  
+[手动交互执行组件](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/HandInteraction.html)允许直接和远端操作全息影像。 在 Kippy 的转义开始时，用户有机会设置游戏的位置。 手动光标从用户的掌中进行扩展，可以轻松地操作距离较远的大全息影像，如以下 gif 所示。  
 
 ![手动交互执行组件 gif](images/kippys-escape/kippys-escape-img-06.gif)
 
-占位符场景本身可使用 UX 工具的 [边界控件](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/BoundsControl.html) 组件进行拖动和旋转。  
+占位符场景本身可使用 UX 工具的 [边界控件](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/BoundsControl.html) 组件进行拖动和旋转。  
 
-在第二个岛上，用户必须选择宝物，并将其放入匹配的插槽中。 这些 gem 附加了操控器，这些 [操控](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/Manipulator.html) 器允许用户选取它们并将其放置。 
+在第二个岛上，用户必须选择宝物，并将其放入匹配的插槽中。 这些 gem 附加了操控器，这些 [操控](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/Manipulator.html) 器允许用户选取它们并将其放置。 
 
 ![操控器示例 gif](images/kippys-escape/kippys-escape-img-07.gif)
 
-[Pressable 按钮](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PressableButton.html)是在第三个岛上使用炸弹的关键所在。  
+[Pressable 按钮](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PressableButton.html)是在第三个岛上使用炸弹的关键所在。  
 
 ![Pressable 按钮示例 gif](images/kippys-escape/kippys-escape-img-08.gif)
 
-第四个岛上会出现一个 [滑块](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PinchSlider.html) 组件，触发要引发的最终桥。  
+第四个岛上会出现一个 [滑块](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PinchSlider.html) 组件，触发要引发的最终桥。  
 
 ![滑块组件示例 gif](images/kippys-escape/kippys-escape-img-09.gif) 
 

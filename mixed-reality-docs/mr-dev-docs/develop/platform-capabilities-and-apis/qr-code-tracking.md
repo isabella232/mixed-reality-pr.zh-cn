@@ -3,19 +3,19 @@ title: QR 码跟踪
 description: 了解如何在 HoloLens 2 上检测 QR 码，添加网络摄像机功能并管理混合现实应用中的坐标系统。
 author: dorreneb
 ms.author: dobrown
-ms.date: 05/15/2019
+ms.date: 01/21/2021
 ms.topic: article
 keywords: vr，lbe，基于位置的娱乐，vr 拱廊类，拱廊类，沉浸，qr，qr 码，hololens2
-ms.openlocfilehash: 08ed651deaab0c230142f45b93858f41ee300323
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 0f53b8def268b2d501c6efe3c3e40ea18f9323e0
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583146"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635429"
 ---
 # <a name="qr-code-tracking"></a>QR 码跟踪
 
-HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在每个代码的真实位置建立坐标系统。
+HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在每个代码的真实位置建立坐标系统。 启用设备的网络摄像机后，便可以在最新版本的 Unreal 或 Unity 项目中识别 QR 码。 在转到生产环境之前，我们建议遵循本文末尾介绍的 [最佳实践](#best-practices-for-qr-code-detection) 。
 
 ## <a name="device-support"></a>设备支持
 

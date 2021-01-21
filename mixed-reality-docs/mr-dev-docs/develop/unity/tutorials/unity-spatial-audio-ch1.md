@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
-ms.openlocfilehash: 7d4702a21fccbb18c7c4b07675953c37785ae6db
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: cc7a4db5a3b4d853f2912a5e8e022fddd372e105
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580223"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635385"
 ---
 # <a name="1-adding-spatial-audio-to-your-unity-project"></a>1. 将空间音频添加到 Unity 项目
 
@@ -63,7 +63,7 @@ ms.locfileid: "98580223"
 
 1. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene) 并为场景提供一个合适的名称，例如 *SpatialAudio*
 
-然后，按照 [更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) 说明进行操作，以确保场景的 MRTK 配置文件为 **DefaultXRSDKConfigurationProfile** ，并将空间感知网格的显示选项改为 " **封闭**"。
+然后，按照 [更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) 说明进行操作，以确保场景的 MRTK 配置文件为 **DefaultHoloLens2ConfigurationProfile** ，并将空间感知网格的显示选项改为 " **封闭**"。
 
 ## <a name="adding-microsoft-spatializer-to-the-project"></a>向项目添加 Microsoft Spatializer
 
