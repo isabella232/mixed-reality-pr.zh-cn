@@ -3,64 +3,64 @@ title: QR 码跟踪
 description: 了解如何在 HoloLens 2 上检测 QR 码，添加网络摄像机功能并管理混合现实应用中的坐标系统。
 author: dorreneb
 ms.author: dobrown
-ms.date: 05/15/2019
+ms.date: 01/21/2021
 ms.topic: article
 keywords: vr，lbe，基于位置的娱乐，vr 拱廊类，拱廊类，沉浸，qr，qr 码，hololens2
-ms.openlocfilehash: 08ed651deaab0c230142f45b93858f41ee300323
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 0f53b8def268b2d501c6efe3c3e40ea18f9323e0
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583146"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635429"
 ---
-# <a name="qr-code-tracking"></a><span data-ttu-id="0a5de-104">QR 码跟踪</span><span class="sxs-lookup"><span data-stu-id="0a5de-104">QR code tracking</span></span>
+# <a name="qr-code-tracking"></a><span data-ttu-id="013d3-104">QR 码跟踪</span><span class="sxs-lookup"><span data-stu-id="013d3-104">QR code tracking</span></span>
 
-<span data-ttu-id="0a5de-105">HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在每个代码的真实位置建立坐标系统。</span><span class="sxs-lookup"><span data-stu-id="0a5de-105">HoloLens 2 can detect QR codes in the environment around the headset, establishing a coordinate system at each code's real-world location.</span></span>
+<span data-ttu-id="013d3-105">HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在每个代码的真实位置建立坐标系统。</span><span class="sxs-lookup"><span data-stu-id="013d3-105">HoloLens 2 can detect QR codes in the environment around the headset, establishing a coordinate system at each code's real-world location.</span></span> <span data-ttu-id="013d3-106">启用设备的网络摄像机后，便可以在最新版本的 Unreal 或 Unity 项目中识别 QR 码。</span><span class="sxs-lookup"><span data-stu-id="013d3-106">Once you enable your device's webcam, you'll be able to recognize QR codes in the latest versions of your Unreal or Unity projects.</span></span> <span data-ttu-id="013d3-107">在转到生产环境之前，我们建议遵循本文末尾介绍的 [最佳实践](#best-practices-for-qr-code-detection) 。</span><span class="sxs-lookup"><span data-stu-id="013d3-107">Before going to production, we recommend following the [best practices](#best-practices-for-qr-code-detection) we've laid at the end of the article.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="0a5de-106">设备支持</span><span class="sxs-lookup"><span data-stu-id="0a5de-106">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="013d3-108">设备支持</span><span class="sxs-lookup"><span data-stu-id="013d3-108">Device support</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="0a5de-107">功能</span><span class="sxs-lookup"><span data-stu-id="0a5de-107">Feature</span></span></th><th style="width:150px"> <span data-ttu-id="0a5de-108"><a href="/hololens/hololens1-hardware">HoloLens (第一代) </a></span><span class="sxs-lookup"><span data-stu-id="0a5de-108"><a href="/hololens/hololens1-hardware">HoloLens (first gen)</a></span></span></th><th style="width:150px"><span data-ttu-id="0a5de-109">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="0a5de-109">HoloLens 2</span></span></th><th style="width:150px"> <span data-ttu-id="0a5de-110"><a href="../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></span><span class="sxs-lookup"><span data-stu-id="0a5de-110"><a href="../../discover/immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
+<th><span data-ttu-id="013d3-109">功能</span><span class="sxs-lookup"><span data-stu-id="013d3-109">Feature</span></span></th><th style="width:150px"> <span data-ttu-id="013d3-110"><a href="/hololens/hololens1-hardware">HoloLens (第一代) </a></span><span class="sxs-lookup"><span data-stu-id="013d3-110"><a href="/hololens/hololens1-hardware">HoloLens (first gen)</a></span></span></th><th style="width:150px"><span data-ttu-id="013d3-111">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="013d3-111">HoloLens 2</span></span></th><th style="width:150px"> <span data-ttu-id="013d3-112"><a href="../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></span><span class="sxs-lookup"><span data-stu-id="013d3-112"><a href="../../discover/immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
 </tr><tr>
-<td> <span data-ttu-id="0a5de-111">QR 码检测</span><span class="sxs-lookup"><span data-stu-id="0a5de-111">QR code detection</span></span></td><td style="text-align: center;"><span data-ttu-id="0a5de-112">️</span><span class="sxs-lookup"><span data-stu-id="0a5de-112">️</span></span></td><td style="text-align: center;"> <span data-ttu-id="0a5de-113">✔️</span><span class="sxs-lookup"><span data-stu-id="0a5de-113">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="0a5de-114">✔️</span><span class="sxs-lookup"><span data-stu-id="0a5de-114">✔️</span></span></td>
+<td> <span data-ttu-id="013d3-113">QR 码检测</span><span class="sxs-lookup"><span data-stu-id="013d3-113">QR code detection</span></span></td><td style="text-align: center;"><span data-ttu-id="013d3-114">️</span><span class="sxs-lookup"><span data-stu-id="013d3-114">️</span></span></td><td style="text-align: center;"> <span data-ttu-id="013d3-115">✔️</span><span class="sxs-lookup"><span data-stu-id="013d3-115">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="013d3-116">✔️</span><span class="sxs-lookup"><span data-stu-id="013d3-116">✔️</span></span></td>
 </tr>
 </table>
 
 >[!NOTE]
-><span data-ttu-id="0a5de-115">Windows 10 版本2004及更高版本支持在台式计算机上通过沉浸式 Windows Mixed Reality 耳机进行 QR 代码跟踪。</span><span class="sxs-lookup"><span data-stu-id="0a5de-115">QR code tracking with immersive Windows Mixed Reality headsets on desktop PCs is supported on Windows 10 Version 2004 and higher.</span></span> <span data-ttu-id="0a5de-116">使用 IsSupported ( # A1 API 来确定当前设备上是否支持此功能。</span><span class="sxs-lookup"><span data-stu-id="0a5de-116">Use the Microsoft.MixedReality.QRCodeWatcher.IsSupported() API to determine whether the feature is supported on the current device.</span></span>
+><span data-ttu-id="013d3-117">Windows 10 版本2004及更高版本支持在台式计算机上通过沉浸式 Windows Mixed Reality 耳机进行 QR 代码跟踪。</span><span class="sxs-lookup"><span data-stu-id="013d3-117">QR code tracking with immersive Windows Mixed Reality headsets on desktop PCs is supported on Windows 10 Version 2004 and higher.</span></span> <span data-ttu-id="013d3-118">使用 IsSupported ( # A1 API 来确定当前设备上是否支持此功能。</span><span class="sxs-lookup"><span data-stu-id="013d3-118">Use the Microsoft.MixedReality.QRCodeWatcher.IsSupported() API to determine whether the feature is supported on the current device.</span></span>
 
-## <a name="getting-the-qr-package"></a><span data-ttu-id="0a5de-117">获取 QR 包</span><span class="sxs-lookup"><span data-stu-id="0a5de-117">Getting the QR package</span></span>
+## <a name="getting-the-qr-package"></a><span data-ttu-id="013d3-119">获取 QR 包</span><span class="sxs-lookup"><span data-stu-id="013d3-119">Getting the QR package</span></span>
 
-<span data-ttu-id="0a5de-118">可在 [此处](https://nuget.org/Packages/Microsoft.MixedReality.QR)下载用于 QR 码检测的 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="0a5de-118">You can download the NuGet package for QR code detection [here](https://nuget.org/Packages/Microsoft.MixedReality.QR).</span></span>
+<span data-ttu-id="013d3-120">可在 [此处](https://nuget.org/Packages/Microsoft.MixedReality.QR)下载用于 QR 码检测的 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="013d3-120">You can download the NuGet package for QR code detection [here](https://nuget.org/Packages/Microsoft.MixedReality.QR).</span></span>
 
-## <a name="detecting-qr-codes"></a><span data-ttu-id="0a5de-119">检测 QR 码</span><span class="sxs-lookup"><span data-stu-id="0a5de-119">Detecting QR codes</span></span>
+## <a name="detecting-qr-codes"></a><span data-ttu-id="013d3-121">检测 QR 码</span><span class="sxs-lookup"><span data-stu-id="013d3-121">Detecting QR codes</span></span>
 
-### <a name="adding-the-webcam-capability"></a><span data-ttu-id="0a5de-120">添加网络摄像机功能</span><span class="sxs-lookup"><span data-stu-id="0a5de-120">Adding the webcam capability</span></span>
+### <a name="adding-the-webcam-capability"></a><span data-ttu-id="013d3-122">添加网络摄像机功能</span><span class="sxs-lookup"><span data-stu-id="013d3-122">Adding the webcam capability</span></span>
 
-<span data-ttu-id="0a5de-121">需要将功能添加 `webcam` 到清单以检测 QR 码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-121">You'll need to add the capability `webcam` to your manifest to detect QR codes.</span></span> <span data-ttu-id="0a5de-122">此功能是必需的，因为用户环境中检测到的代码中的数据可能包含敏感信息。</span><span class="sxs-lookup"><span data-stu-id="0a5de-122">This capability is required as the data within detected codes in the user's environment may contain sensitive information.</span></span>
+<span data-ttu-id="013d3-123">需要将功能添加 `webcam` 到清单以检测 QR 码。</span><span class="sxs-lookup"><span data-stu-id="013d3-123">You'll need to add the capability `webcam` to your manifest to detect QR codes.</span></span> <span data-ttu-id="013d3-124">此功能是必需的，因为用户环境中检测到的代码中的数据可能包含敏感信息。</span><span class="sxs-lookup"><span data-stu-id="013d3-124">This capability is required as the data within detected codes in the user's environment may contain sensitive information.</span></span>
 
-<span data-ttu-id="0a5de-123">可以通过调用来请求权限 `QRCodeWatcher.RequestAccessAsync()` ：</span><span class="sxs-lookup"><span data-stu-id="0a5de-123">Permission can be requested by calling `QRCodeWatcher.RequestAccessAsync()`:</span></span>
+<span data-ttu-id="013d3-125">可以通过调用来请求权限 `QRCodeWatcher.RequestAccessAsync()` ：</span><span class="sxs-lookup"><span data-stu-id="013d3-125">Permission can be requested by calling `QRCodeWatcher.RequestAccessAsync()`:</span></span>
 
-<span data-ttu-id="0a5de-124">_导向_</span><span class="sxs-lookup"><span data-stu-id="0a5de-124">_C#:_</span></span>
+<span data-ttu-id="013d3-126">_导向_</span><span class="sxs-lookup"><span data-stu-id="013d3-126">_C#:_</span></span>
 ```cs
 await QRCodeWatcher.RequestAccessAsync();
 ```
 
-<span data-ttu-id="0a5de-125">_C_</span><span class="sxs-lookup"><span data-stu-id="0a5de-125">_C++:_</span></span>
+<span data-ttu-id="013d3-127">_C_</span><span class="sxs-lookup"><span data-stu-id="013d3-127">_C++:_</span></span>
 ```cpp
 co_await QRCodeWatcher.RequestAccessAsync();
 ```
 
-<span data-ttu-id="0a5de-126">构造 QRCodeWatcher 对象之前，必须先请求权限。</span><span class="sxs-lookup"><span data-stu-id="0a5de-126">Permission must be requested before you construct a QRCodeWatcher object.</span></span>
+<span data-ttu-id="013d3-128">构造 QRCodeWatcher 对象之前，必须先请求权限。</span><span class="sxs-lookup"><span data-stu-id="013d3-128">Permission must be requested before you construct a QRCodeWatcher object.</span></span>
 
-<span data-ttu-id="0a5de-127">尽管 QR 码检测需要 `webcam` 功能，但使用设备的跟踪相机进行检测。</span><span class="sxs-lookup"><span data-stu-id="0a5de-127">While QR code detection requires the `webcam` capability, the detection occurs using the device's tracking cameras.</span></span> <span data-ttu-id="0a5de-128">与使用设备的照片/视频 (PV) 照相机进行检测相比，此功能可提供更广泛的检测 FOV 和更好的电池寿命。</span><span class="sxs-lookup"><span data-stu-id="0a5de-128">This provides a wider detection FOV and better battery life compared to detection with the device's photo/video (PV) camera.</span></span>
+<span data-ttu-id="013d3-129">尽管 QR 码检测需要 `webcam` 功能，但使用设备的跟踪相机进行检测。</span><span class="sxs-lookup"><span data-stu-id="013d3-129">While QR code detection requires the `webcam` capability, the detection occurs using the device's tracking cameras.</span></span> <span data-ttu-id="013d3-130">与使用设备的照片/视频 (PV) 照相机进行检测相比，此功能可提供更广泛的检测 FOV 和更好的电池寿命。</span><span class="sxs-lookup"><span data-stu-id="013d3-130">This provides a wider detection FOV and better battery life compared to detection with the device's photo/video (PV) camera.</span></span>
 
-### <a name="detecting-qr-codes-in-unity"></a><span data-ttu-id="0a5de-129">检测 Unity 中的 QR 码</span><span class="sxs-lookup"><span data-stu-id="0a5de-129">Detecting QR codes in Unity</span></span>
+### <a name="detecting-qr-codes-in-unity"></a><span data-ttu-id="013d3-131">检测 Unity 中的 QR 码</span><span class="sxs-lookup"><span data-stu-id="013d3-131">Detecting QR codes in Unity</span></span>
 
-<span data-ttu-id="0a5de-130">你可以使用 Unity 中的 QR 代码检测 API，而无需导入 MRTK，方法是使用 [nuget For Unity](https://github.com/GlitchEnzo/NuGetForUnity)安装 nuget 包。</span><span class="sxs-lookup"><span data-stu-id="0a5de-130">You can use the QR code detection API in Unity without importing MRTK by installing the NuGet package using [NuGet for Unity](https://github.com/GlitchEnzo/NuGetForUnity).</span></span> <span data-ttu-id="0a5de-131">如果要了解其工作原理，请下载 [示例 Unity 应用](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes)。</span><span class="sxs-lookup"><span data-stu-id="0a5de-131">If you want to get a feel for how it works, download the [sample Unity app](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes).</span></span> <span data-ttu-id="0a5de-132">该示例应用包含的示例演示了如何使用 QR 代码和关联数据（如 GUID、物理大小、时间戳和解码的数据）显示全息方形。</span><span class="sxs-lookup"><span data-stu-id="0a5de-132">The sample app has examples for displaying a holographic square over QR codes and associated data such as GUID, physical size, timestamp, and decoded data.</span></span>
+<span data-ttu-id="013d3-132">你可以使用 Unity 中的 QR 代码检测 API，而无需导入 MRTK，方法是使用 [nuget For Unity](https://github.com/GlitchEnzo/NuGetForUnity)安装 nuget 包。</span><span class="sxs-lookup"><span data-stu-id="013d3-132">You can use the QR code detection API in Unity without importing MRTK by installing the NuGet package using [NuGet for Unity](https://github.com/GlitchEnzo/NuGetForUnity).</span></span> <span data-ttu-id="013d3-133">如果要了解其工作原理，请下载 [示例 Unity 应用](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes)。</span><span class="sxs-lookup"><span data-stu-id="013d3-133">If you want to get a feel for how it works, download the [sample Unity app](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes).</span></span> <span data-ttu-id="013d3-134">该示例应用包含的示例演示了如何使用 QR 代码和关联数据（如 GUID、物理大小、时间戳和解码的数据）显示全息方形。</span><span class="sxs-lookup"><span data-stu-id="013d3-134">The sample app has examples for displaying a holographic square over QR codes and associated data such as GUID, physical size, timestamp, and decoded data.</span></span>
 
-### <a name="detecting-qr-codes-in-c"></a><span data-ttu-id="0a5de-133">在 c + + 中检测 QR 码</span><span class="sxs-lookup"><span data-stu-id="0a5de-133">Detecting QR codes in C++</span></span>
+### <a name="detecting-qr-codes-in-c"></a><span data-ttu-id="013d3-135">在 c + + 中检测 QR 码</span><span class="sxs-lookup"><span data-stu-id="013d3-135">Detecting QR codes in C++</span></span>
 
 ```cpp
 using namespace winrt::Windows::Foundation;
@@ -120,17 +120,17 @@ private:
 };
 ```
 
-## <a name="getting-the-coordinate-system-for-a-qr-code"></a><span data-ttu-id="0a5de-134">获取 QR 码的坐标系统</span><span class="sxs-lookup"><span data-stu-id="0a5de-134">Getting the coordinate system for a QR code</span></span>
+## <a name="getting-the-coordinate-system-for-a-qr-code"></a><span data-ttu-id="013d3-136">获取 QR 码的坐标系统</span><span class="sxs-lookup"><span data-stu-id="013d3-136">Getting the coordinate system for a QR code</span></span>
 
-<span data-ttu-id="0a5de-135">每个检测到的 QR 码都公开一个 [空间坐标系统](../../design/coordinate-systems.md) ，该系统与左上角快速检测方的左上角中的 QR 代码对齐：</span><span class="sxs-lookup"><span data-stu-id="0a5de-135">Each detected QR code exposes a [spatial coordinate system](../../design/coordinate-systems.md) aligned with the QR code at the top-left corner of the fast detection square in the top left:</span></span>  
+<span data-ttu-id="013d3-137">每个检测到的 QR 码都公开一个 [空间坐标系统](../../design/coordinate-systems.md) ，该系统与左上角快速检测方的左上角中的 QR 代码对齐：</span><span class="sxs-lookup"><span data-stu-id="013d3-137">Each detected QR code exposes a [spatial coordinate system](../../design/coordinate-systems.md) aligned with the QR code at the top-left corner of the fast detection square in the top left:</span></span>  
 
 ![QR 码坐标系统](images/Qr-coordinatesystem.png) 
 
-<span data-ttu-id="0a5de-137">当直接使用 QR SDK 时，Z 轴指向纸张 (不显示) -在转换为 Unity 坐标时，Z 轴将从纸上指向并向左传递。</span><span class="sxs-lookup"><span data-stu-id="0a5de-137">When directly using the QR SDK, the Z-axis is pointing into the paper (not shown) - when converted into Unity coordinates, the Z-axis points out of the paper and is left-handed.</span></span>
+<span data-ttu-id="013d3-139">当直接使用 QR SDK 时，Z 轴指向纸张 (不显示) -在转换为 Unity 坐标时，Z 轴将从纸上指向并向左传递。</span><span class="sxs-lookup"><span data-stu-id="013d3-139">When directly using the QR SDK, the Z-axis is pointing into the paper (not shown) - when converted into Unity coordinates, the Z-axis points out of the paper and is left-handed.</span></span>
 
-<span data-ttu-id="0a5de-138">QR 码的 SpatialCoordinateSystem 对齐方式如下所示。</span><span class="sxs-lookup"><span data-stu-id="0a5de-138">A QR code's SpatialCoordinateSystem aligns as shown.</span></span> <span data-ttu-id="0a5de-139">可以通过调用 <a href="/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview：： CreateCoordinateSystemForNode</a> 并传入代码的 SpatialGraphNodeId，从平台中获取坐标系。</span><span class="sxs-lookup"><span data-stu-id="0a5de-139">You can get the coordinate system from the platform by calling <a href="/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview::CreateCoordinateSystemForNode</a> and passing in the code's SpatialGraphNodeId.</span></span>
+<span data-ttu-id="013d3-140">QR 码的 SpatialCoordinateSystem 对齐方式如下所示。</span><span class="sxs-lookup"><span data-stu-id="013d3-140">A QR code's SpatialCoordinateSystem aligns as shown.</span></span> <span data-ttu-id="013d3-141">可以通过调用 <a href="/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview：： CreateCoordinateSystemForNode</a> 并传入代码的 SpatialGraphNodeId，从平台中获取坐标系。</span><span class="sxs-lookup"><span data-stu-id="013d3-141">You can get the coordinate system from the platform by calling <a href="/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview::CreateCoordinateSystemForNode</a> and passing in the code's SpatialGraphNodeId.</span></span>
 
-<span data-ttu-id="0a5de-140">下面的 c + + 代码演示如何创建一个矩形，并使用 QR 码的坐标系统来放置它：</span><span class="sxs-lookup"><span data-stu-id="0a5de-140">The C++ code below shows how to create a rectangle and place it using the QR code's coordinate system:</span></span>
+<span data-ttu-id="013d3-142">下面的 c + + 代码演示如何创建一个矩形，并使用 QR 码的坐标系统来放置它：</span><span class="sxs-lookup"><span data-stu-id="013d3-142">The C++ code below shows how to create a rectangle and place it using the QR code's coordinate system:</span></span>
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
@@ -147,13 +147,13 @@ std::vector<float3> MyApplication::CreateRectangle(float width, float height)
 }
 ```
 
-<span data-ttu-id="0a5de-141">可以使用物理尺寸来创建 QR 矩形：</span><span class="sxs-lookup"><span data-stu-id="0a5de-141">You can use the physical size to create the QR rectangle:</span></span>
+<span data-ttu-id="013d3-143">可以使用物理尺寸来创建 QR 矩形：</span><span class="sxs-lookup"><span data-stu-id="013d3-143">You can use the physical size to create the QR rectangle:</span></span>
 
 ```cpp
 std::vector<float3> qrVertices = CreateRectangle(code.PhysicalSideLength(), code.PhysicalSideLength()); 
 ```
 
-<span data-ttu-id="0a5de-142">坐标系统可用于绘制 QR 码，或将全息影像附加到该位置：</span><span class="sxs-lookup"><span data-stu-id="0a5de-142">The coordinate system can be used to draw the QR code or attach holograms to the location:</span></span>
+<span data-ttu-id="013d3-144">坐标系统可用于绘制 QR 码，或将全息影像附加到该位置：</span><span class="sxs-lookup"><span data-stu-id="013d3-144">The coordinate system can be used to draw the QR code or attach holograms to the location:</span></span>
 
 ```cpp
 using namespace winrt::Windows::Perception::Spatial;
@@ -161,7 +161,7 @@ using namespace winrt::Windows::Perception::Spatial::Preview;
 SpatialCoordinateSystem qrCoordinateSystem = SpatialGraphInteropPreview::CreateCoordinateSystemForNode(code.SpatialGraphNodeId());
 ```
 
-<span data-ttu-id="0a5de-143">*QRCodeAddedHandler* 可以完全像下面这样：</span><span class="sxs-lookup"><span data-stu-id="0a5de-143">Altogether, your *QRCodeAddedHandler* may look something like this:</span></span>
+<span data-ttu-id="013d3-145">*QRCodeAddedHandler* 可以完全像下面这样：</span><span class="sxs-lookup"><span data-stu-id="013d3-145">Altogether, your *QRCodeAddedHandler* may look something like this:</span></span>
 
 ```cpp
 void MyApplication::OnAddedQRCode(const QRCodeAddedEventArgs& args)
@@ -184,47 +184,47 @@ void MyApplication::OnAddedQRCode(const QRCodeAddedEventArgs& args)
 }
 ```
 
-## <a name="best-practices-for-qr-code-detection"></a><span data-ttu-id="0a5de-144">QR 码检测的最佳实践</span><span class="sxs-lookup"><span data-stu-id="0a5de-144">Best practices for QR code detection</span></span>
+## <a name="best-practices-for-qr-code-detection"></a><span data-ttu-id="013d3-146">QR 码检测的最佳实践</span><span class="sxs-lookup"><span data-stu-id="013d3-146">Best practices for QR code detection</span></span>
 
-### <a name="quiet-zones-around-qr-codes"></a><span data-ttu-id="0a5de-145">关于 QR 码的安静区</span><span class="sxs-lookup"><span data-stu-id="0a5de-145">Quiet zones around QR Codes</span></span>
+### <a name="quiet-zones-around-qr-codes"></a><span data-ttu-id="013d3-147">关于 QR 码的安静区</span><span class="sxs-lookup"><span data-stu-id="013d3-147">Quiet zones around QR Codes</span></span>
 
-<span data-ttu-id="0a5de-146">若要正确读取，QR 码需要代码两侧的边距。</span><span class="sxs-lookup"><span data-stu-id="0a5de-146">To be read correctly, QR codes require a margin around all sides of the code.</span></span> <span data-ttu-id="0a5de-147">此边距不能包含任何打印内容，并且应为四个模块， (代码中的单个黑色方块) 宽度。</span><span class="sxs-lookup"><span data-stu-id="0a5de-147">This margin must not contain any printed content and should be four modules (a single black square in the code) wide.</span></span> 
+<span data-ttu-id="013d3-148">若要正确读取，QR 码需要代码两侧的边距。</span><span class="sxs-lookup"><span data-stu-id="013d3-148">To be read correctly, QR codes require a margin around all sides of the code.</span></span> <span data-ttu-id="013d3-149">此边距不能包含任何打印内容，并且应为四个模块， (代码中的单个黑色方块) 宽度。</span><span class="sxs-lookup"><span data-stu-id="013d3-149">This margin must not contain any printed content and should be four modules (a single black square in the code) wide.</span></span> 
 
-<span data-ttu-id="0a5de-148">[QR 规范](https://www.qrcode.com/en/howto/code.html)包含有关 quiet 区域的详细信息。</span><span class="sxs-lookup"><span data-stu-id="0a5de-148">The [QR spec](https://www.qrcode.com/en/howto/code.html) contains more information about quiet zones.</span></span>
+<span data-ttu-id="013d3-150">[QR 规范](https://www.qrcode.com/en/howto/code.html)包含有关 quiet 区域的详细信息。</span><span class="sxs-lookup"><span data-stu-id="013d3-150">The [QR spec](https://www.qrcode.com/en/howto/code.html) contains more information about quiet zones.</span></span>
 
-### <a name="lighting-and-backdrop"></a><span data-ttu-id="0a5de-149">照明和背景</span><span class="sxs-lookup"><span data-stu-id="0a5de-149">Lighting and backdrop</span></span>
-<span data-ttu-id="0a5de-150">QR 码检测质量容易产生不同的照明和背景。</span><span class="sxs-lookup"><span data-stu-id="0a5de-150">QR code detection quality is susceptible to varying illumination and backdrop.</span></span> 
+### <a name="lighting-and-backdrop"></a><span data-ttu-id="013d3-151">照明和背景</span><span class="sxs-lookup"><span data-stu-id="013d3-151">Lighting and backdrop</span></span>
+<span data-ttu-id="013d3-152">QR 码检测质量容易产生不同的照明和背景。</span><span class="sxs-lookup"><span data-stu-id="013d3-152">QR code detection quality is susceptible to varying illumination and backdrop.</span></span> 
 
-<span data-ttu-id="0a5de-151">在具有明亮光照的场景中，打印灰色背景上的黑色代码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-151">In a scene with bright lighting, print a code that is black on a gray background.</span></span> <span data-ttu-id="0a5de-152">否则，在白色背景上打印黑色 QR 码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-152">Otherwise, print a black QR code on a white background.</span></span>
+<span data-ttu-id="013d3-153">在具有明亮光照的场景中，打印灰色背景上的黑色代码。</span><span class="sxs-lookup"><span data-stu-id="013d3-153">In a scene with bright lighting, print a code that is black on a gray background.</span></span> <span data-ttu-id="013d3-154">否则，在白色背景上打印黑色 QR 码。</span><span class="sxs-lookup"><span data-stu-id="013d3-154">Otherwise, print a black QR code on a white background.</span></span>
 
-<span data-ttu-id="0a5de-153">如果代码的背景较暗，则尝试使用黑色的灰色代码（如果检测频率较低）。</span><span class="sxs-lookup"><span data-stu-id="0a5de-153">If the backdrop to the code is dark, try a black on gray code if your detection rate is low.</span></span> <span data-ttu-id="0a5de-154">如果背景相对较轻，则常规代码应正常工作。</span><span class="sxs-lookup"><span data-stu-id="0a5de-154">If the backdrop is relatively light, a regular code should work fine.</span></span>
+<span data-ttu-id="013d3-155">如果代码的背景较暗，则尝试使用黑色的灰色代码（如果检测频率较低）。</span><span class="sxs-lookup"><span data-stu-id="013d3-155">If the backdrop to the code is dark, try a black on gray code if your detection rate is low.</span></span> <span data-ttu-id="013d3-156">如果背景相对较轻，则常规代码应正常工作。</span><span class="sxs-lookup"><span data-stu-id="013d3-156">If the backdrop is relatively light, a regular code should work fine.</span></span>
 
-### <a name="size-of-qr-codes"></a><span data-ttu-id="0a5de-155">QR 码的大小</span><span class="sxs-lookup"><span data-stu-id="0a5de-155">Size of QR codes</span></span>
-<span data-ttu-id="0a5de-156">Windows Mixed Reality 设备不适用于每个边小于 5 cm 的 QR 码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-156">Windows Mixed Reality devices don't work with QR codes with sides smaller than 5 cm each.</span></span>
+### <a name="size-of-qr-codes"></a><span data-ttu-id="013d3-157">QR 码的大小</span><span class="sxs-lookup"><span data-stu-id="013d3-157">Size of QR codes</span></span>
+<span data-ttu-id="013d3-158">Windows Mixed Reality 设备不适用于每个边小于 5 cm 的 QR 码。</span><span class="sxs-lookup"><span data-stu-id="013d3-158">Windows Mixed Reality devices don't work with QR codes with sides smaller than 5 cm each.</span></span>
 
-<span data-ttu-id="0a5de-157">对于介于 5 cm 到 10 cm 长度之间的 QR 码，必须非常接近检测代码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-157">For QR codes between 5 cm and 10-cm length sides, you must be fairly close to detect the code.</span></span> <span data-ttu-id="0a5de-158">它还需要更长的时间来检测此大小的代码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-158">It will also take longer to detect codes at this size.</span></span> 
+<span data-ttu-id="013d3-159">对于介于 5 cm 到 10 cm 长度之间的 QR 码，必须非常接近检测代码。</span><span class="sxs-lookup"><span data-stu-id="013d3-159">For QR codes between 5 cm and 10-cm length sides, you must be fairly close to detect the code.</span></span> <span data-ttu-id="013d3-160">它还需要更长的时间来检测此大小的代码。</span><span class="sxs-lookup"><span data-stu-id="013d3-160">It will also take longer to detect codes at this size.</span></span> 
 
-<span data-ttu-id="0a5de-159">检测代码的确切时间不仅取决于 QR 码的大小，还取决于代码的距离。</span><span class="sxs-lookup"><span data-stu-id="0a5de-159">The exact time to detect codes depends not only on the size of the QR codes, but how far you're away from the code.</span></span> <span data-ttu-id="0a5de-160">接近代码会有助于偏移大小问题。</span><span class="sxs-lookup"><span data-stu-id="0a5de-160">Moving closer to the code will help offset issues with size.</span></span>
+<span data-ttu-id="013d3-161">检测代码的确切时间不仅取决于 QR 码的大小，还取决于代码的距离。</span><span class="sxs-lookup"><span data-stu-id="013d3-161">The exact time to detect codes depends not only on the size of the QR codes, but how far you're away from the code.</span></span> <span data-ttu-id="013d3-162">接近代码会有助于偏移大小问题。</span><span class="sxs-lookup"><span data-stu-id="013d3-162">Moving closer to the code will help offset issues with size.</span></span>
 
-### <a name="distance-and-angular-position-from-the-qr-code"></a><span data-ttu-id="0a5de-161">QR 代码的距离和角度位置</span><span class="sxs-lookup"><span data-stu-id="0a5de-161">Distance and angular position from the QR code</span></span>
-<span data-ttu-id="0a5de-162">跟踪相机只能检测到特定级别的详细信息。</span><span class="sxs-lookup"><span data-stu-id="0a5de-162">The tracking cameras can only detect a certain level of detail.</span></span> <span data-ttu-id="0a5de-163">对于小代码-沿两侧 < 10 厘米-必须非常接近。</span><span class="sxs-lookup"><span data-stu-id="0a5de-163">For small codes - < 10 cm along the sides - you must be fairly close.</span></span> <span data-ttu-id="0a5de-164">对于版本 1 QR 码，从10厘米到 25 cm，最小检测距离范围为0.15 米到0.5 米。</span><span class="sxs-lookup"><span data-stu-id="0a5de-164">For a version 1 QR code varying from 10 cm to 25 cm wide, the minimum detection distance ranges from 0.15 meters to 0.5 meters.</span></span> 
+### <a name="distance-and-angular-position-from-the-qr-code"></a><span data-ttu-id="013d3-163">QR 代码的距离和角度位置</span><span class="sxs-lookup"><span data-stu-id="013d3-163">Distance and angular position from the QR code</span></span>
+<span data-ttu-id="013d3-164">跟踪相机只能检测到特定级别的详细信息。</span><span class="sxs-lookup"><span data-stu-id="013d3-164">The tracking cameras can only detect a certain level of detail.</span></span> <span data-ttu-id="013d3-165">对于小代码-沿两侧 < 10 厘米-必须非常接近。</span><span class="sxs-lookup"><span data-stu-id="013d3-165">For small codes - < 10 cm along the sides - you must be fairly close.</span></span> <span data-ttu-id="013d3-166">对于版本 1 QR 码，从10厘米到 25 cm，最小检测距离范围为0.15 米到0.5 米。</span><span class="sxs-lookup"><span data-stu-id="013d3-166">For a version 1 QR code varying from 10 cm to 25 cm wide, the minimum detection distance ranges from 0.15 meters to 0.5 meters.</span></span> 
 
-<span data-ttu-id="0a5de-165">大小的检测距离线性增加。</span><span class="sxs-lookup"><span data-stu-id="0a5de-165">The detection distance for size increases linearly.</span></span> 
+<span data-ttu-id="013d3-167">大小的检测距离线性增加。</span><span class="sxs-lookup"><span data-stu-id="013d3-167">The detection distance for size increases linearly.</span></span> 
 
-<span data-ttu-id="0a5de-166">QR 检测适用于一系列角度 + = 45 度，以确保我们有合适的分辨率来检测代码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-166">QR detection works with a range of angles += 45 deg to ensure we have proper resolution to detect the code.</span></span>
+<span data-ttu-id="013d3-168">QR 检测适用于一系列角度 + = 45 度，以确保我们有合适的分辨率来检测代码。</span><span class="sxs-lookup"><span data-stu-id="013d3-168">QR detection works with a range of angles += 45 deg to ensure we have proper resolution to detect the code.</span></span>
 
-### <a name="qr-codes-with-logos"></a><span data-ttu-id="0a5de-167">带有徽标的 QR 码</span><span class="sxs-lookup"><span data-stu-id="0a5de-167">QR codes with logos</span></span>
-<span data-ttu-id="0a5de-168">带有徽标的 QR 码尚未经过测试，当前不受支持。</span><span class="sxs-lookup"><span data-stu-id="0a5de-168">QR codes with logos haven't been tested and are currently unsupported.</span></span>
+### <a name="qr-codes-with-logos"></a><span data-ttu-id="013d3-169">带有徽标的 QR 码</span><span class="sxs-lookup"><span data-stu-id="013d3-169">QR codes with logos</span></span>
+<span data-ttu-id="013d3-170">带有徽标的 QR 码尚未经过测试，当前不受支持。</span><span class="sxs-lookup"><span data-stu-id="013d3-170">QR codes with logos haven't been tested and are currently unsupported.</span></span>
 
-### <a name="managing-qr-code-data"></a><span data-ttu-id="0a5de-169">管理 QR 码数据</span><span class="sxs-lookup"><span data-stu-id="0a5de-169">Managing QR code data</span></span>
-<span data-ttu-id="0a5de-170">Windows Mixed Reality 设备检测驱动程序的系统级别的 QR 码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-170">Windows Mixed Reality devices detect QR codes at the system level in the driver.</span></span> <span data-ttu-id="0a5de-171">设备重新启动后，检测到的 QR 码已消失，并将在下次重新检测为新对象。</span><span class="sxs-lookup"><span data-stu-id="0a5de-171">When the device is rebooted, the detected QR codes are gone and will be redetected as new objects next time.</span></span>
+### <a name="managing-qr-code-data"></a><span data-ttu-id="013d3-171">管理 QR 码数据</span><span class="sxs-lookup"><span data-stu-id="013d3-171">Managing QR code data</span></span>
+<span data-ttu-id="013d3-172">Windows Mixed Reality 设备检测驱动程序的系统级别的 QR 码。</span><span class="sxs-lookup"><span data-stu-id="013d3-172">Windows Mixed Reality devices detect QR codes at the system level in the driver.</span></span> <span data-ttu-id="013d3-173">设备重新启动后，检测到的 QR 码已消失，并将在下次重新检测为新对象。</span><span class="sxs-lookup"><span data-stu-id="013d3-173">When the device is rebooted, the detected QR codes are gone and will be redetected as new objects next time.</span></span>
 
-<span data-ttu-id="0a5de-172">建议将应用配置为忽略特定时间戳之前的 QR 码。</span><span class="sxs-lookup"><span data-stu-id="0a5de-172">We recommend configuring your app to ignore QR codes older than a specific timestamp.</span></span> <span data-ttu-id="0a5de-173">目前，API 不支持清除 QR 码历史记录。</span><span class="sxs-lookup"><span data-stu-id="0a5de-173">Currently, the API doesn't support clearing QR code history.</span></span>
+<span data-ttu-id="013d3-174">建议将应用配置为忽略特定时间戳之前的 QR 码。</span><span class="sxs-lookup"><span data-stu-id="013d3-174">We recommend configuring your app to ignore QR codes older than a specific timestamp.</span></span> <span data-ttu-id="013d3-175">目前，API 不支持清除 QR 码历史记录。</span><span class="sxs-lookup"><span data-stu-id="013d3-175">Currently, the API doesn't support clearing QR code history.</span></span>
 
-### <a name="qr-code-placement-in-a-space"></a><span data-ttu-id="0a5de-174">空格中的 QR 码位置</span><span class="sxs-lookup"><span data-stu-id="0a5de-174">QR code placement in a space</span></span>
-<span data-ttu-id="0a5de-175">有关在何处以及如何放置 QR 码的建议，请参阅 [HoloLens 环境注意事项](/hololens/hololens-environment-considerations)。</span><span class="sxs-lookup"><span data-stu-id="0a5de-175">For recommendations on where and how to place QR codes, refer to [Environment considerations for HoloLens](/hololens/hololens-environment-considerations).</span></span>
+### <a name="qr-code-placement-in-a-space"></a><span data-ttu-id="013d3-176">空格中的 QR 码位置</span><span class="sxs-lookup"><span data-stu-id="013d3-176">QR code placement in a space</span></span>
+<span data-ttu-id="013d3-177">有关在何处以及如何放置 QR 码的建议，请参阅 [HoloLens 环境注意事项](/hololens/hololens-environment-considerations)。</span><span class="sxs-lookup"><span data-stu-id="013d3-177">For recommendations on where and how to place QR codes, refer to [Environment considerations for HoloLens](/hololens/hololens-environment-considerations).</span></span>
 
-## <a name="qr-api-reference"></a><span data-ttu-id="0a5de-176">QR API 参考</span><span class="sxs-lookup"><span data-stu-id="0a5de-176">QR API reference</span></span>
+## <a name="qr-api-reference"></a><span data-ttu-id="013d3-178">QR API 参考</span><span class="sxs-lookup"><span data-stu-id="013d3-178">QR API reference</span></span>
 
 ```cs
 namespace Microsoft.MixedReality.QR
@@ -458,6 +458,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0a5de-177">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0a5de-177">See also</span></span>
-* [<span data-ttu-id="0a5de-178">坐标系统</span><span class="sxs-lookup"><span data-stu-id="0a5de-178">Coordinate systems</span></span>](../../design/coordinate-systems.md)
-* <span data-ttu-id="0a5de-179"><a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间定位点</a></span><span class="sxs-lookup"><span data-stu-id="0a5de-179"><a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a></span></span>
+## <a name="see-also"></a><span data-ttu-id="013d3-179">另请参阅</span><span class="sxs-lookup"><span data-stu-id="013d3-179">See also</span></span>
+* [<span data-ttu-id="013d3-180">坐标系统</span><span class="sxs-lookup"><span data-stu-id="013d3-180">Coordinate systems</span></span>](../../design/coordinate-systems.md)
+* <span data-ttu-id="013d3-181"><a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间定位点</a></span><span class="sxs-lookup"><span data-stu-id="013d3-181"><a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a></span></span>
