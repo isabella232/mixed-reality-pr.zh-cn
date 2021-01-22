@@ -256,8 +256,14 @@
   items:
     - name: Unreal 开发概述
       href: unreal/unreal-development-overview.md
+    - name: MRTK 简介
+      href: unreal/unreal-mrtk-introduction.md
     - name: 在 Unreal 中升级项目
       href: unreal/unreal-porting.md
+    - name: 快速入门
+      items:
+        - name: 创建 HoloLens 项目
+          href: unreal/unreal-quickstart.md
     - name: 教程
       items:
         - name: 使用 MRTK UX 工具构建国际象棋应用
@@ -290,7 +296,19 @@
           href: unreal/unreal-azure-spatial-anchors.md
         - name: 语音输入
           href: unreal/unreal-voice-input.md
-    - name: 高级功能
+    - name: 最佳做法
+      items:
+        - name: 一般最佳实践
+          href: unreal/unreal-best-practices.md
+        - name: 针对 Unreal 的性能建议
+          href: unreal/performance-recommendations-for-unreal.md
+        - name: Unreal 中的材料建议
+          href: unreal/unreal-materials.md
+        - name: 使用 Unreal Insights 进行分析
+          href: unreal/unreal-insights.md
+        - name: Unreal 中的编辑器扩展
+          href: unreal/unreal-editor-extensions.md
+    - name: 平台功能和 API
       items:
         - name: HoloLens 照片/摄像头
           href: unreal/unreal-hololens-camera.md
@@ -300,6 +318,8 @@
           href: unreal/unreal-umg-keyboard.md
         - name: WinRT
           href: unreal/unreal-winrt.md
+        - name: Unreal 中的流式传输
+          href: unreal/unreal-streaming.md
     - name: 沉浸式 VR
       items:
         - name: HP Reverb G2 手柄
@@ -308,20 +328,12 @@
       items:
         - name: Kippy 的转义
           href: unreal/unreal-kippys-escape.md
-    - name: 部署和性能
+    - name: 部署和发布
       items:
         - name: 部署到设备
           href: unreal/unreal-deploying.md
         - name: 发布到 Microsoft Store
           href: unreal/unreal-publishing-to-store.md
-        - name: 性能建议
-          href: unreal/performance-recommendations-for-unreal.md
-        - name: 材料建议
-          href: unreal/unreal-materials.md
-        - name: 使用 Unreal Insights 进行分析
-          href: unreal/unreal-insights.md
-        - name: 流式处理
-          href: unreal/unreal-streaming.md
 - name: Web
   items:
     - name: Web 开发概述
@@ -387,7 +399,7 @@
         - name: Mixed Reality 中的共享体验
           href: platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md
         - name: Azure 空间定位点
-          href: 'https://docs.microsoft.com/azure/spatial-anchors/'
+          href: /azure/spatial-anchors/
         - name: 旁观视图
           href: platform-capabilities-and-apis/spectator-view.md
         - name: WebRTC
@@ -423,9 +435,9 @@
         - name: 版本历史记录
           href: platform-capabilities-and-apis/holographic-remoting-version-history.md
         - name: 全息远程处理软件许可条款
-          href: 'https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms'
+          href: /legal/mixed-reality/microsoft-holographic-remoting-software-license-terms
         - name: HoloLens（第 1 代）的全息远程处理
-          href: 'https://docs.microsoft.com'
+          href: null
         - name: 添加全息远程处理
           href: platform-capabilities-and-apis/add-holographic-remoting.md
     - name: 应用质量和测试
