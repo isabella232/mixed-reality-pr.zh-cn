@@ -5,19 +5,19 @@ brand: windows
 metadata:
   title: Windows Mixed Reality VR 文档
   description: 在游戏、旅游和直播中体验虚拟现实带来的刺激。 在此处，你可了解如何在 Windows Mixed Reality 中开始使用 VR 并进一步操作
-  services: guidance
-  ms.service: guidance
+  services: service
+  ms.service: service
   ms.topic: hub-page
   ms.prod: mixed-reality
   ms.technology: enthusiast-guide
   author: mattwojo
   ms.author: mattwoj
-  ms.openlocfilehash: b8ff9f6abbd27d3f73548e19e13888dcd7321181
-  ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+  ms.openlocfilehash: 3a9ffacb2d62cab93bd41f9842c25ae2c9d35190
+  ms.sourcegitcommit: be33fcda10d1cb98df90b428a923289933d42c77
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/20/2021
-  ms.locfileid: "98581682"
+  ms.lasthandoff: 01/22/2021
+  ms.locfileid: "98672724"
 highlightedContent:
   items:
   - title: 关于 Windows Mixed Reality VR
