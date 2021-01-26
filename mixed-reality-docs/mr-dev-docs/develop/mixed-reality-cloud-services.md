@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: 251fd68d2a3fea79c1db160b6aaf64aad05c686f
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 725e41e94923f1738eb11064c772f9138a6be09a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009567"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582706"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
@@ -66,10 +66,10 @@ ASA 是针对混合现实中常见用例特别定制的解决方案，其中包�
 
 :::row:::
     :::column:::
-       [![语音](../whats-new/images/speech.jpg)](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+       [![语音](../whats-new/images/speech.jpg)](/azure/cognitive-services/speech-service/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="speech"></a>[语音](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+        ### <a name="speech"></a>[语音](/azure/cognitive-services/speech-service/)
         了解语音服务如何支持将语音处理功能集成到任何应用或服务中。 使用标准的（或可自定义的）语音字体将口语转换为文本或基于文本产生自然发音。 免费试用所有服务，并使用以下功能快速生成启用了语音服务的应用和服务。
     :::column-end:::
 :::row-end:::
@@ -78,10 +78,10 @@ ASA 是针对混合现实中常见用例特别定制的解决方案，其中包�
 
 :::row:::
     :::column:::
-       [![影像](../whats-new/images/vision.jpg)](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+       [![影像](../whats-new/images/vision.jpg)](/azure/cognitive-services/computer-vision/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="vision"></a>[影像](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+        ### <a name="vision"></a>[影像](/azure/cognitive-services/computer-vision/)
         识别、标识、说明、索引和调整你的图片、视频和数字墨迹内容。了解视觉服务如何使应用和服务能够准确地识别和分析图像、视频和数字墨迹中的内容。
     :::column-end:::
 :::row-end:::
@@ -95,7 +95,7 @@ ASA 是针对混合现实中常见用例特别定制的解决方案，其中包�
 <table>
     <tr>
         <td><strong>Azure 云服务</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens 第 1 代</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens 第 1 代</strong></a></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
      <tr>
@@ -167,5 +167,5 @@ ASA 是针对混合现实中常见用例特别定制的解决方案，其中包�
 
 ## <a name="see-also"></a>请参阅
 
-* 适用于 HoloLens 2 的 Azure 空间定位点教程 - [Azure 空间定位点入门第 1 部分（共 3 部分）](../mrlearning-asa-ch1.md)
+* 适用于 HoloLens 2 的 Azure 空间定位点教程 - [Azure 空间定位点入门第 1 部分（共 3 部分）](./unity/tutorials/mr-learning-asa-02.md)
 * 适用于 HoloLens 2 的 Azure 语音服务教程 - [集成和使用语音识别与听录第 1 部分（共 4 部分）](../develop/unity/tutorials/mrlearning-speechSDK-ch1.md)
