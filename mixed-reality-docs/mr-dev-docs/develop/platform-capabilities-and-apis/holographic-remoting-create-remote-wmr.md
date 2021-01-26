@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，NuGet
-ms.openlocfilehash: 65c76266c00f51cbe17f6bfd2991a6adf4103855
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6884c2679b155c36a21bcf89352524e4957a9f20
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583857"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810085"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-holographicspace-api"></a>使用 HolographicSpace API 编写全息远程处理远程应用
 
@@ -27,7 +27,7 @@ ms.locfileid: "98583857"
 一个很好的起点是基于 DirectX 的基于 DirectX 的桌面或 UWP 应用，以 [HOLOGRAPHICSPACE API](../native/getting-a-holographicspace.md)为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 [C + + 全息版项目模板](../native/creating-a-holographic-directx-project.md)是一个很好的起点。
 
 >[!IMPORTANT]
->使用全息远程处理的任何应用都应该编写为使用 [多线程单元](//windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](//windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](//windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
+>使用全息远程处理的任何应用都应该编写为使用 [多线程单元](/windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](/windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](/windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
 
 
 
@@ -104,7 +104,7 @@ catch(winrt::hresult_error& e)
 >与任何 c + +/WinRT API 一样， ```Connect``` 都可能引发需要处理的 WinRT：： hresult_error。
 
 >[!TIP]
->若要避免使用 [c + +/WinRT](//windows/uwp/cpp-and-winrt-apis/) 语言投影， ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` 可以包含位于全息远程处理 NuGet 包内的文件。 它包含基础 COM 接口的声明。 不过，建议使用 c + +/WinRT。
+>若要避免使用 [c + +/WinRT](/windows/uwp/cpp-and-winrt-apis/) 语言投影， ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` 可以包含位于全息远程处理 NuGet 包内的文件。 它包含基础 COM 接口的声明。 不过，建议使用 c + +/WinRT。
 
 可以通过调用方法来侦听远程应用上的传入连接 ```Listen``` 。 在此调用过程中，可以同时指定握手端口和传输端口。 握手端口用于初始握手。 然后通过传输端口发送数据。 默认情况下，使用 **8265** 和 **8266** 。
 
@@ -197,7 +197,7 @@ if (auto remoteSpeech = m_remoteContext.GetRemoteSpeech())
 }
 ```
 
-使用异步帮助器方法，你可以初始化远程语音。 这应异步完成，因为初始化可能需要相当长的时间。 [带有 c + +/WinRT 的并发和异步操作](//windows/uwp/cpp-and-winrt-apis/concurrency) 介绍了如何通过 c + + 编写异步函数/WinRT。
+使用异步帮助器方法，你可以初始化远程语音。 这应异步完成，因为初始化可能需要相当长的时间。 [带有 c + +/WinRT 的并发和异步操作](/windows/uwp/cpp-and-winrt-apis/concurrency) 介绍了如何通过 c + + 编写异步函数/WinRT。
 
 ```cpp
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile> LoadGrammarFileAsync()
@@ -234,7 +234,7 @@ winrt::fire_and_forget InitializeSpeechAsync(
 ```
 
 可以通过两种方法来指定要识别的短语。
-1) 语音语法 xml 文件中的规范。 有关详细信息，请参阅 [如何创建基本 XML 语法](//previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) 。
+1) 语音语法 xml 文件中的规范。 有关详细信息，请参阅 [如何创建基本 XML 语法](/previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) 。
 2) 通过将字典向量传入到来指定 ```ApplyParameters``` 。
 
 在 OnRecognizedSpeech 回调中，可以处理语音事件：
@@ -362,5 +362,5 @@ void SampleRemoteMain::Render(HolographicFrame holographicFrame)
 * [自定义全息远程处理数据通道](holographic-remoting-custom-data-channels.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
-* [全息远程处理软件许可条款](//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [全息远程处理软件许可条款](/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

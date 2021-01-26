@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: 照相机，hololens，彩色相机，正面朝，hololens 2，cv，计算机视觉，基准，标记，qr 码，qr，照片，视频
-ms.openlocfilehash: bc478aa658b26eb3a4efb16c62d0874b12992e78
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: f34973fee56f9469632b320a62dd441ed32e5805
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583624"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810156"
 ---
 # <a name="locatable-camera"></a>可定位相机
 
@@ -37,7 +37,7 @@ HoloLens 包含在设备前面安装的面向世界的相机，使应用能够�
 
 * 自动聚焦照片/视频 (PV) 带有自动白平衡、自动曝光和完整图像处理管道的相机。
 * 当照相机处于活动状态时，世界上的白色隐私 LED 将会亮起。
-* HoloLens 2 支持不同的相机配置文件。 了解如何 [发现和选择相机功能](//windows/uwp/audio-video-camera/camera-profiles)。
+* HoloLens 2 支持不同的相机配置文件。 了解如何 [发现和选择相机功能](/windows/uwp/audio-video-camera/camera-profiles)。
 * 摄像头支持以下配置文件和分辨率 (所有视频模式16:9 纵横比) ：
   
   | 配置文件                                         | 视频     | 预览   | 正常     | 帧速率 | 视图的水平字段 (H-FOV)  | 建议的用法                             |
@@ -75,14 +75,14 @@ HoloLens 文档中其他地方的 "照相机" 可能指的是应用呈现) 的 (
 
 ### <a name="using-mediaframereference"></a>使用 MediaFrameReference
 
-如果 you'r 使用 [MediaFrameReference](//uwp/api/windows.media.capture.frames.mediaframereference) 类从照相机读取图像帧，则会应用这些说明。
+如果 you'r 使用 [MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference) 类从照相机读取图像帧，则会应用这些说明。
 
-每个图像帧都 (照片或视频) 在捕获时是否包括位于照相机的[SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem) ，可使用[MediaFrameReference](//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)的[坐标系](//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem)属性访问。 每个帧都包含对相机镜头型号的说明，可在 [CameraIntrinsics](//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 属性中找到。 这些转换一起为每个像素定义了三维空间中的射线，表示生成像素的 photons 所采用的路径。 通过获取从帧的坐标系统到某个其他坐标 (系统的转换（例如，从 [固定的引用帧](../../design/coordinate-systems.md#stationary-frame-of-reference)) 进行转换，可以将这些光线与应用程序中的其他内容相关。 
+每个图像帧都 (照片或视频) 在捕获时是否包括位于照相机的[SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem) ，可使用[MediaFrameReference](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)的[坐标系](/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem)属性访问。 每个帧都包含对相机镜头型号的说明，可在 [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 属性中找到。 这些转换一起为每个像素定义了三维空间中的射线，表示生成像素的 photons 所采用的路径。 通过获取从帧的坐标系统到某个其他坐标 (系统的转换（例如，从 [固定的引用帧](../../design/coordinate-systems.md#stationary-frame-of-reference)) 进行转换，可以将这些光线与应用程序中的其他内容相关。 
 
 每个图像框架提供以下内容：
 * 像素数据 (RGB/NV12/JPEG/等格式) 
-* 捕获位置的[SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem)
-* 包含照相机镜头模式的 [CameraIntrinsics](//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 类
+* 捕获位置的[SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem)
+* 包含照相机镜头模式的 [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 类
 
 [HolographicFaceTracking 示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)演示了查询照相机坐标系统和自己的应用程序坐标系统之间的转换的相当直接的方法。
 

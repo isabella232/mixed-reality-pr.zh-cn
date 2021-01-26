@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，NuGet，应用清单，播放机上下文，远程应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: b6a0d65b8ec1f07f7ebaae17b9921d48105474a4
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 391650025398b4bdd89e30db1df7df5e3d6ab5f2
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581242"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810127"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>编写自定义全息远程处理播放器应用
 
@@ -27,7 +27,7 @@ ms.locfileid: "98581242"
 很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息项目模板](../native/creating-a-holographic-directx-project.md) 是一个不错的开端。
 
 >[!IMPORTANT]
->使用全息远程处理的任何应用都应该编写为使用 [多线程单元](//windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](//windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](//windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
+>使用全息远程处理的任何应用都应该编写为使用 [多线程单元](/windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](/windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](/windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>获取全息远程处理 NuGet 包
 
@@ -94,7 +94,7 @@ m_playerContext = winrt::Microsoft::Holographic::AppRemoting::PlayerContext::Cre
 >[!WARNING]
 >全息远程处理的工作原理是通过使用远程处理特定运行时替换作为 Windows 一部分的 Windows Mixed Reality 运行时。 这是在创建播放机上下文的过程中完成的。 因此，在创建播放机上下文之前对任何 Windows Mixed Reality API 进行的任何调用都可能导致意外的行为。 推荐的方法是尽早创建播放机上下文，然后再与任何混合现实 API 交互。 永远不要混合通过任何 Windows Mixed Reality API 创建或检索的对象 ```PlayerContext::Create``` 。
 
-接下来，可以通过调用 [CreateForCoreWindow](//uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow)创建 HolographicSpace。
+接下来，可以通过调用 [CreateForCoreWindow](/uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow)创建 HolographicSpace。
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(window);
@@ -177,9 +177,9 @@ winrt::Microsoft::Holographic::AppRemoting::ConnectionState state = m_playerCont
 
 ## <a name="display-the-remotely-rendered-frame"></a>显示远程呈现的帧
 
-若要显示远程呈现的内容，请 ```PlayerContext::BlitRemoteFrame``` 在呈现 [HolographicFrame](//uwp/api/windows.graphics.holographic.holographicframe)时调用。 
+若要显示远程呈现的内容，请 ```PlayerContext::BlitRemoteFrame``` 在呈现 [HolographicFrame](/uwp/api/windows.graphics.holographic.holographicframe)时调用。 
 
-```BlitRemoteFrame``` 要求当前 HolographicFrame 的后台缓冲区绑定为呈现器目标。 可以通过[Direct3D11BackBuffer](//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer)属性从[HolographicCameraRenderingParameters](//uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters)接收后台缓冲区。
+```BlitRemoteFrame``` 要求当前 HolographicFrame 的后台缓冲区绑定为呈现器目标。 可以通过[Direct3D11BackBuffer](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer)属性从[HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters)接收后台缓冲区。
 
 调用时，会 ```BlitRemoteFrame``` 将远程应用程序中接收的最新帧复制到 HolographicFrame 的后台缓冲区中。 此外，如果远程应用程序在呈现远程帧期间指定了焦点，则会设置焦点集。
 
@@ -190,8 +190,8 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 
 >[!NOTE]
 >```PlayerContext::BlitRemoteFrame``` 可能覆盖当前帧的焦点。 
->- 若要指定回退焦点点，请在之前调用 [HolographicCameraRenderingParameters：： SetFocusPoint](//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) ```PlayerContext::BlitRemoteFrame``` 。 
->- 若要覆盖远程焦点，请在之后调用 [HolographicCameraRenderingParameters：： SetFocusPoint](//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) ```PlayerContext::BlitRemoteFrame``` 。
+>- 若要指定回退焦点点，请在之前调用 [HolographicCameraRenderingParameters：： SetFocusPoint](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) ```PlayerContext::BlitRemoteFrame``` 。 
+>- 若要覆盖远程焦点，请在之后调用 [HolographicCameraRenderingParameters：： SetFocusPoint](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) ```PlayerContext::BlitRemoteFrame``` 。
 
 如果成功，则 ```BlitRemoteFrame``` 返回 ```BlitResult::Success_Color``` 。 否则，它将返回失败原因：
 - ```BlitResult::Failed_NoRemoteFrameAvailable```：失败，因为没有可用的远程帧。
@@ -237,7 +237,7 @@ m_playerContext.BlitRemoteFrameTimeout(500ms);
 
 ## <a name="optional-get-statistics-about-the-last-remote-frame"></a>可选：获取有关最后一个远程帧的统计信息
 
-若要诊断性能或网络问题，可以通过属性检索有关最后一个远程帧的统计信息 ```PlayerContext::LastFrameStatistics``` 。 在调用 HolographicFrame 期间更新统计信息 [：:P resentusingcurrentprediction](//uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction)。
+若要诊断性能或网络问题，可以通过属性检索有关最后一个远程帧的统计信息 ```PlayerContext::LastFrameStatistics``` 。 在调用 HolographicFrame 期间更新统计信息 [：:P resentusingcurrentprediction](/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction)。
 
 ```cpp
 // Get statistics for the last presented frame.
@@ -256,5 +256,5 @@ winrt::Microsoft::Holographic::AppRemoting::PlayerFrameStatistics statistics = m
 * [自定义全息远程处理数据通道](holographic-remoting-custom-data-channels.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
-* [全息远程处理软件许可条款](//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [全息远程处理软件许可条款](/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)

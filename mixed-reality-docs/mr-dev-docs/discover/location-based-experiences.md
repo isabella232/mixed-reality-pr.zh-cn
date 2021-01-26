@@ -6,12 +6,12 @@ ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
 keywords: mixed reality，vr，lbe，位置，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，硬件，HoloLens，多玩家，云服务，azure
-ms.openlocfilehash: 41b35e7f92f8410357c685362ebc1714aea616e8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 1cc54ad0ef4b9892c49e13c7437a4d5356093c79
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580678"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810101"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>具有 Windows Mixed Reality 的基于位置的娱乐
 
@@ -98,11 +98,11 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
  
 **问：是否有关于配置 playspace 的指导？**
 
-答：配置 playspace 应像使用使用者安装体验一样完成。 房间设置过程还将允许您定义房间边界。 有关配置空间边界的详细信息，请参阅 [此处](//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)。
+答：配置 playspace 应像使用使用者安装体验一样完成。 房间设置过程还将允许您定义房间边界。 有关配置空间边界的详细信息，请参阅 [此处](/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)。
 
 如以上文档中所述，最大合理的单个坐标 playspace 是围绕5mx5m 的。 如果要获得更大的区域，可以使用 Windows 全息 API 堆栈中的空间锚功能。 使用此 API 需要在生成的体验中进行自定义工程。  
 
-可在 [此处](//windows/mixed-reality/coordinate-systems)阅读有关如何针对不同的空间大小优化内容的更多详细信息。
+可在 [此处](/windows/mixed-reality/coordinate-systems)阅读有关如何针对不同的空间大小优化内容的更多详细信息。
  
 
 **问：我的空间太大了，在尝试使用边界建立持续的体验时，我遇到了错误。设置大的免费漫游体验应该怎么办？**
@@ -113,7 +113,7 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 应用程序开发人员负责显示必要的安全措施，使用户不会与物理环境发生冲突。  这可能是经验或自定义游戏边界视觉对象中的数字背景。 
 
-可在 [此处](//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)找到有关通过 WMR 设置空间边界的指南。
+可在 [此处](/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)找到有关通过 WMR 设置空间边界的指南。
 
 **问： playspace 的来源是什么？**
 
@@ -140,7 +140,7 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 问： Windows Mixed Reality 耳机中的跟踪技术是如何工作的？  
 
-混合现实与 HoloLens 共享相同的跟踪技术。 若要详细了解内部输出跟踪系统，请查看 [此处](//windows/mixed-reality/enthusiast-guide/tracking-system)的文档。
+混合现实与 HoloLens 共享相同的跟踪技术。 若要详细了解内部输出跟踪系统，请查看 [此处](/windows/mixed-reality/enthusiast-guide/tracking-system)的文档。
 
 有关更高级的空间映射系统的工作原理的说明，请参阅 [此处](../design/spatial-mapping.md)的说明。
 
@@ -188,13 +188,13 @@ LBE 预订系统和预订系统
 
 **问：我使用 SteamVR 来部署我的体验。Windows Mixed Reality 是否适用于 SteamVR？**
 
-答： SteamVR 的 Windows Mixed Reality 允许用户在 Windows Mixed Reality 沉浸式耳机上运行 SteamVR 体验。 [在此处](//windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)了解有关 SteamVR 的详细信息。
+答： SteamVR 的 Windows Mixed Reality 允许用户在 Windows Mixed Reality 沉浸式耳机上运行 SteamVR 体验。 [在此处](/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)了解有关 SteamVR 的详细信息。
 
 ### <a name="support-and-community"></a>支持和社区  
 
 我们提供了一些有用的资源，可帮助你在我们的团队中与行业专家进行合作，获取故障排除支持，并为更广泛的混合现实开发社区提供帮助。  
 
-如果遇到任何公开发布功能的问题，请使用反馈中心提交 bug。有关指南，请参阅此 [页](//windows/mixed-reality/enthusiast-guide/filing-feedback)。
+如果遇到任何公开发布功能的问题，请使用反馈中心提交 bug。有关指南，请参阅此 [页](/windows/mixed-reality/enthusiast-guide/filing-feedback)。
 
 有关 WMR 的其他故障排除帮助，请向我们的客户支持团队提供 [支持请求](https://support.microsoft.com//supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782) 。
 

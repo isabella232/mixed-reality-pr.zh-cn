@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 双手，运动控制器，directx，输入，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 843065ccc0989f9c3bc2ad494503ee46d08d0d77
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2f14cb06e440787bbd6541a05a983e0614293727
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580799"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810163"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>DirectX 中的手和运动控制器
 
@@ -22,7 +22,7 @@ ms.locfileid: "98580799"
 
 ## <a name="getting-started"></a>入门
 
-若要访问 Windows Mixed Reality 中的空间输入，请从 SpatialInteractionManager 接口开始。  可以通过调用  [SpatialInteractionManager：： GetForCurrentView](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getforcurrentview)访问此接口，通常在应用启动期间进行。
+若要访问 Windows Mixed Reality 中的空间输入，请从 SpatialInteractionManager 接口开始。  可以通过调用  [SpatialInteractionManager：： GetForCurrentView](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getforcurrentview)访问此接口，通常在应用启动期间进行。
 
 ```cpp
 using namespace winrt::Windows::UI::Input::Spatial;
@@ -30,15 +30,15 @@ using namespace winrt::Windows::UI::Input::Spatial;
 SpatialInteractionManager interactionManager = SpatialInteractionManager::GetForCurrentView();
 ```
 
-SpatialInteractionManager 的作业是提供对 [SpatialInteractionSources](//uwp/api/windows.ui.input.spatial.spatialinteractionsource)（表示输入源）的访问权限。  系统中提供了三种 SpatialInteractionSources。
+SpatialInteractionManager 的作业是提供对 [SpatialInteractionSources](/uwp/api/windows.ui.input.spatial.spatialinteractionsource)（表示输入源）的访问权限。  系统中提供了三种 SpatialInteractionSources。
 * **手型** 表示用户检测到的手。 手动源根据设备提供不同的功能，范围从 HoloLens 上的基本手势到 HoloLens 2 上的完全表述的手动跟踪。 
 * **控制器** 表示配对的运动控制器。 运动控制器可以提供不同的功能，例如，选择触发器、菜单按钮、"抓住按钮"、"触摸板" 和 "thumbsticks"。
 * **语音** 表示用户在系统中检测到的语音关键字。 例如，每当用户显示 "选择" 时，此源都会注入一个选择按下和释放。
 
-源的每帧数据由  [SpatialInteractionSourceState](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) 接口表示。 可以通过两种不同的方式来访问此数据，这取决于您是要在应用程序中使用基于事件驱动或基于轮询的模型。
+源的每帧数据由  [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) 接口表示。 可以通过两种不同的方式来访问此数据，这取决于您是要在应用程序中使用基于事件驱动或基于轮询的模型。
 
 ### <a name="event-driven-input"></a>事件驱动的输入
-SpatialInteractionManager 提供了多个应用可以侦听的事件。  一些示例包括   [SourcePressed](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed)、[SourceReleased 和 [SourceUpdated](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourceupdated)。
+SpatialInteractionManager 提供了多个应用可以侦听的事件。  一些示例包括   [SourcePressed](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed)、[SourceReleased 和 [SourceUpdated](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourceupdated)。
 
 例如，下面的代码将名为 MyApp：： OnSourcePressed 的事件处理程序挂接到 SourcePressed 事件。  这允许你的应用检测任何类型的交互源的按下操作。
 
@@ -67,9 +67,9 @@ void MyApp::OnSourcePressed(SpatialInteractionManager const& sender, SpatialInte
 上述代码仅检查 "Select" 按下，它对应于设备上的主要操作。 示例包括在 HoloLens 上执行 AirTap 或在运动控制器上拉取触发器。  "选择" 按下表示用户激活其目标全息图的意图。  将为多个不同的按钮和手势触发 SourcePressed 事件，您可以检查 SpatialInteractionSource 上的其他属性，以测试这些情况。
 
 ### <a name="polling-based-input"></a>基于轮询的输入
-还可以使用 SpatialInteractionManager 轮询每个帧的当前输入状态。  为此，请在每个帧上调用 [GetDetectedSourcesAtTimestamp](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getdetectedsourcesattimestamp) 。  此函数返回一个数组，其中包含每个活动[SpatialInteractionSource](//uwp/api/windows.ui.input.spatial.spatialinteractionsource)的一个[SpatialInteractionSourceState](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) 。 这意味着每个活动的运动控制器有一个，每次被跟踪，一个用于语音，另一个用于语音。 然后，你可以检查每个 SpatialInteractionSourceState 上的属性以将输入驱动到你的应用程序中。 
+还可以使用 SpatialInteractionManager 轮询每个帧的当前输入状态。  为此，请在每个帧上调用 [GetDetectedSourcesAtTimestamp](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getdetectedsourcesattimestamp) 。  此函数返回一个数组，其中包含每个活动[SpatialInteractionSource](/uwp/api/windows.ui.input.spatial.spatialinteractionsource)的一个[SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) 。 这意味着每个活动的运动控制器有一个，每次被跟踪，一个用于语音，另一个用于语音。 然后，你可以检查每个 SpatialInteractionSourceState 上的属性以将输入驱动到你的应用程序中。 
 
-下面的示例演示如何使用轮询方法检查 "select" 操作。 *预测* 变量表示可从 [HolographicFrame](//uwp/api/windows.graphics.holographic.holographicframe)中获取的 [HolographicFramePrediction](//uwp/api/Windows.Graphics.Holographic.HolographicFramePrediction)对象。
+下面的示例演示如何使用轮询方法检查 "select" 操作。 *预测* 变量表示可从 [HolographicFrame](/uwp/api/windows.graphics.holographic.holographicframe)中获取的 [HolographicFramePrediction](/uwp/api/Windows.Graphics.Holographic.HolographicFramePrediction)对象。
 
 ```cpp
 using namespace winrt::Windows::UI::Input::Spatial;
@@ -86,40 +86,40 @@ for (auto& sourceState : sourceStates)
 }
 ```
 
-每个 SpatialInteractionSource 都有一个 ID，可用于标识新源并将现有源从帧关联到帧。  每次离开并进入 FOV 时，都可以获得新的 ID，但在会话期间，控制器 Id 会保持静态。  您可以使用 SpatialInteractionManager （如 [SourceDetected](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcedetected) 和 [SourceLost](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcelost)）上的事件来做出手动输入或离开设备的视图，或者当动作控制器开启/关闭或配对/不成对时做出反应。
+每个 SpatialInteractionSource 都有一个 ID，可用于标识新源并将现有源从帧关联到帧。  每次离开并进入 FOV 时，都可以获得新的 ID，但在会话期间，控制器 Id 会保持静态。  您可以使用 SpatialInteractionManager （如 [SourceDetected](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcedetected) 和 [SourceLost](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcelost)）上的事件来做出手动输入或离开设备的视图，或者当动作控制器开启/关闭或配对/不成对时做出反应。
 
 ### <a name="predicted-vs-historical-poses"></a>预测与历史记录
-GetDetectedSourcesAtTimestamp 具有 timestamp 参数。 这使您可以请求状态并引发预测或历史数据，从而使您可以将空间交互与其他输入源关联起来。 例如，在呈现当前帧中的位置时，可以传入由 [HolographicFrame](//uwp/api/windows.graphics.holographic.holographicframe)提供的预测时间戳。 这样一来，系统就可以向前预测该位置，使其与呈现的帧输出保持一致，从而最大程度地减少感觉滞后时间。
+GetDetectedSourcesAtTimestamp 具有 timestamp 参数。 这使您可以请求状态并引发预测或历史数据，从而使您可以将空间交互与其他输入源关联起来。 例如，在呈现当前帧中的位置时，可以传入由 [HolographicFrame](/uwp/api/windows.graphics.holographic.holographicframe)提供的预测时间戳。 这样一来，系统就可以向前预测该位置，使其与呈现的帧输出保持一致，从而最大程度地减少感觉滞后时间。
 
 但是，这种预测的姿势并不会生成适合于交互源的最佳定点光线。 例如，按下运动控制器按钮时，该事件最多需要20毫秒才能通过蓝牙向上向上冒泡到操作系统。 同样，在用户执行手型手势后，在系统检测到该笔势之前一定会经历一定的时间，然后应用程序会轮询该手势。 当应用程序轮询状态更改时，使用的是过去发生的这种交互的头和手。 如果目标是将当前 HolographicFrame 的时间戳传递给 GetDetectedSourcesAtTimestamp，则会在显示帧时将姿势预测到目标射线，这可能会在将来的 20 ms 以上。 这种未来的理由适用于 *渲染* 交互源，但会因为用户在过去发生的目标问题而为 *交互提供了* 时间问题。
 
-幸运的是， [SourcePressed](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed)、[SourceReleased 和 [SourceUpdated](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourceupdated) 事件提供与每个输入事件关联的历史 [状态](//uwp/api/windows.ui.input.spatial.spatialinteractionsourceeventargs.state) 。  这直接包括通过 [TryGetPointerPose](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)提供的历史头和手中的内容，以及可传递给其他 api 以与此事件关联的历史 [时间戳](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.timestamp) 。
+幸运的是， [SourcePressed](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed)、[SourceReleased 和 [SourceUpdated](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourceupdated) 事件提供与每个输入事件关联的历史 [状态](/uwp/api/windows.ui.input.spatial.spatialinteractionsourceeventargs.state) 。  这直接包括通过 [TryGetPointerPose](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)提供的历史头和手中的内容，以及可传递给其他 api 以与此事件关联的历史 [时间戳](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.timestamp) 。
 
 这会在每个帧呈现和定位时提供以下最佳做法：
-* 对于呈现每个帧的 **手动/控制器** ，应用应按照当前帧的 photon 时间 **轮询** 每个交互源的 **前预测** 姿势。  可以通过调用每个帧的 [GetDetectedSourcesAtTimestamp](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getdetectedsourcesattimestamp) 来轮询所有交互源，并传入 [HolographicFrame：： CurrentPrediction](//uwp/api/windows.graphics.holographic.holographicframe.currentprediction)提供的预测时间戳。
-* 对于在按下或释放时的 **手动/控制器目标** ，你的应用程序应处理按下/已释放的 **事件**，raycasting **基于该事件的打印头或** 手。 可以通过以下方式获取此目标射线：处理 [SourcePressed](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed) 或 [SourceReleased](//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcereleased) 事件，从事件参数获取 [状态](//uwp/api/windows.ui.input.spatial.spatialinteractionsourceeventargs.state) 属性，然后调用其 [TryGetPointerPose](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose) 方法。
+* 对于呈现每个帧的 **手动/控制器** ，应用应按照当前帧的 photon 时间 **轮询** 每个交互源的 **前预测** 姿势。  可以通过调用每个帧的 [GetDetectedSourcesAtTimestamp](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getdetectedsourcesattimestamp) 来轮询所有交互源，并传入 [HolographicFrame：： CurrentPrediction](/uwp/api/windows.graphics.holographic.holographicframe.currentprediction)提供的预测时间戳。
+* 对于在按下或释放时的 **手动/控制器目标** ，你的应用程序应处理按下/已释放的 **事件**，raycasting **基于该事件的打印头或** 手。 可以通过以下方式获取此目标射线：处理 [SourcePressed](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed) 或 [SourceReleased](/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcereleased) 事件，从事件参数获取 [状态](/uwp/api/windows.ui.input.spatial.spatialinteractionsourceeventargs.state) 属性，然后调用其 [TryGetPointerPose](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose) 方法。
 
 ## <a name="cross-device-input-properties"></a>跨设备输入属性
 SpatialInteractionSource API 支持使用各种功能的控制器和手动跟踪系统。 许多这些功能在设备类型之间是通用的。 例如，手动跟踪和运动控制器都提供 "选择" 操作和三维位置。 只要有可能，API 就会将这些常见功能映射到 SpatialInteractionSource 上的相同属性。  这使应用程序能够更轻松地支持各种输入类型。 下表介绍了支持的属性，以及它们如何跨输入类型进行比较。
 
 | properties | 说明 | HoloLens (第一代) 手势 | 运动控制器 | 明确表述|
 |--- |--- |--- |--- |--- |
-| [SpatialInteractionSource：：**左右手使用习惯**](//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Right 或 left 右手/controller。 | 不支持 | 支持 | 支持 |
-| [SpatialInteractionSourceState：：**IsSelectPressed**](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | 主要按钮的当前状态。 | Air | 触发器 | 宽松 (直立的喷)  |
-| [SpatialInteractionSourceState：：**IsGrasped**](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | 抓取按钮的当前状态。 | 不支持 | 抓取按钮 | 挤压或合上 |
-| [SpatialInteractionSourceState：：**IsMenuPressed**](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | 菜单按钮的当前状态。    | 不支持 | 菜单按钮 | 不支持 |
-| [SpatialInteractionSourceLocation：：**Position**](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | 控制器上的抓手或抓握位置的 XYZ 位置。 | 掌上位置 | 抓握姿势位置 | 掌上位置 |
-| [SpatialInteractionSourceLocation：：**取向**](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | 表示手柄在控制器上的方向的四元数。 | 不支持 | 抓住姿势方向 | 棕榈方向 |
-| [SpatialPointerInteractionSourcePose：：**Position**](//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | 指针射线的原点。 | 不支持 | 支持 | 支持 |
-| [SpatialPointerInteractionSourcePose：：**ForwardDirection**](//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | 指向射线的方向。 | 不支持 | 支持 | 支持 |
+| [SpatialInteractionSource：：**左右手使用习惯**](/uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Right 或 left 右手/controller。 | 不支持 | 支持 | 支持 |
+| [SpatialInteractionSourceState：：**IsSelectPressed**](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | 主要按钮的当前状态。 | Air | 触发器 | 宽松 (直立的喷)  |
+| [SpatialInteractionSourceState：：**IsGrasped**](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | 抓取按钮的当前状态。 | 不支持 | 抓取按钮 | 挤压或合上 |
+| [SpatialInteractionSourceState：：**IsMenuPressed**](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | 菜单按钮的当前状态。    | 不支持 | 菜单按钮 | 不支持 |
+| [SpatialInteractionSourceLocation：：**Position**](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | 控制器上的抓手或抓握位置的 XYZ 位置。 | 掌上位置 | 抓握姿势位置 | 掌上位置 |
+| [SpatialInteractionSourceLocation：：**取向**](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | 表示手柄在控制器上的方向的四元数。 | 不支持 | 抓住姿势方向 | 棕榈方向 |
+| [SpatialPointerInteractionSourcePose：：**Position**](/uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | 指针射线的原点。 | 不支持 | 支持 | 支持 |
+| [SpatialPointerInteractionSourcePose：：**ForwardDirection**](/uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | 指向射线的方向。 | 不支持 | 支持 | 支持 |
 
-以上一些属性在所有设备上都不可用，API 提供了一种方法来测试这一点。 例如，你可以检查 [SpatialInteractionSource：： IsGraspSupported](//uwp/api/windows.ui.input.spatial.spatialinteractionsource.isgraspsupported) 属性以确定源是否提供了 "获取" 操作。
+以上一些属性在所有设备上都不可用，API 提供了一种方法来测试这一点。 例如，你可以检查 [SpatialInteractionSource：： IsGraspSupported](/uwp/api/windows.ui.input.spatial.spatialinteractionsource.isgraspsupported) 属性以确定源是否提供了 "获取" 操作。
 
 ### <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指针姿势
 
 Windows Mixed Reality 支持采用不同外形规格的运动控制器。  它还支持已表述的手动跟踪系统。  这些系统中的所有系统都具有不同的位置和自然的 "前进" 方向之间的关系，应用程序应将这些方向用于用户的指针或呈现对象。  为支持所有此类情况，可为手动跟踪和运动控制器提供两种类型的3D 姿势。  第一种是手柄姿势，表示用户的手位置。  第二个是指姿势，它表示源自用户的手或控制器的一个指针。 因此，如果想要呈现 **用户的手** 或 **某个对象**（例如剑或机枪），请使用抓握姿势。 如果要从控制器或 raycast 中进行，例如当用户是 * * 指向 UI 时，请使用指针姿势。
 
-可以通过 [SpatialInteractionSourceState：:P r) ：： TryGetLocation ( ... )](//uwp/api/windows.ui.input.spatial.spatialinteractionsourceproperties.trygetlocation#Windows_UI_Input_Spatial_SpatialInteractionSourceProperties_TryGetLocation_Windows_Perception_Spatial_SpatialCoordinateSystem_)访问 **抓握姿势**。定义如下：
+可以通过 [SpatialInteractionSourceState：:P r) ：： TryGetLocation ( ... )](/uwp/api/windows.ui.input.spatial.spatialinteractionsourceproperties.trygetlocation#Windows_UI_Input_Spatial_SpatialInteractionSourceProperties_TryGetLocation_Windows_Perception_Spatial_SpatialCoordinateSystem_)访问 **抓握姿势**。定义如下：
 * **手柄位置**：在固定控制器时，掌上质心，向左或向右调整以使其在手柄内居中。
 * **手柄方向的右轴**：当你完全打开手形成一个平面的5指形姿势时，与你的掌上的光线 (从右手掌向后) 
 * **手柄方向的正向轴**：当您关闭手中的部分 (时，就如同按住控制器) 一样，通过您的非拇指形来表示 "转发" 的射线。
@@ -156,7 +156,7 @@ Windows Mixed Reality API 为已表述的手动跟踪提供完全支持，例如
 |半径 | 位于接合位置的外观的距离。 用于优化依赖于手指宽度的直接交互或可视化效果。 |
 |精确度 | 提供有关系统如何自信地了解此共同信息的提示。 |
 
-可以通过 [SpatialInteractionSourceState](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)上的函数访问手写框架数据。  函数被称为 [TryGetHandPose](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygethandpose#Windows_UI_Input_Spatial_SpatialInteractionSourceState_TryGetHandPose)，并返回一个名为 [HandPose](//uwp/api/windows.perception.people.handpose)的对象。  如果源不支持明确表述，则此函数将返回 null。  有了 HandPose 后，就可以通过调用 [TryGetJoint](//uwp/api/windows.perception.people.handpose.trygetjoint#Windows_Perception_People_HandPose_TryGetJoint_Windows_Perception_Spatial_SpatialCoordinateSystem_Windows_Perception_People_HandJointKind_Windows_Perception_People_JointPose__)来获取当前的联合数据，并使用感兴趣的联合的名称。  数据返回为 [JointPose](//uwp/api/windows.perception.people.jointpose) 结构。  下面的代码获取索引 finger 笔尖的位置。 变量 *currentState* 表示 [SpatialInteractionSourceState](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)的实例。
+可以通过 [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)上的函数访问手写框架数据。  函数被称为 [TryGetHandPose](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygethandpose#Windows_UI_Input_Spatial_SpatialInteractionSourceState_TryGetHandPose)，并返回一个名为 [HandPose](/uwp/api/windows.perception.people.handpose)的对象。  如果源不支持明确表述，则此函数将返回 null。  有了 HandPose 后，就可以通过调用 [TryGetJoint](/uwp/api/windows.perception.people.handpose.trygetjoint#Windows_Perception_People_HandPose_TryGetJoint_Windows_Perception_Spatial_SpatialCoordinateSystem_Windows_Perception_People_HandJointKind_Windows_Perception_People_JointPose__)来获取当前的联合数据，并使用感兴趣的联合的名称。  数据返回为 [JointPose](/uwp/api/windows.perception.people.jointpose) 结构。  下面的代码获取索引 finger 笔尖的位置。 变量 *currentState* 表示 [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)的实例。
 
 ```cpp
 using namespace winrt::Windows::Perception::People;
@@ -177,9 +177,9 @@ if (handPose)
 
 ### <a name="hand-mesh"></a>手写网格
 
-已表述的手动跟踪 API 允许使用完全 deformable 的三角手写网格。  此网格可以与手形框架实时变形，并对可视化和高级物理学技术非常有用。  若要访问手写网格，需要先通过对[SpatialInteractionSource](//uwp/api/windows.ui.input.spatial.spatialinteractionsource)调用[TryCreateHandMeshObserverAsync](//uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserverasync)来创建一个[HandMeshObserver](//uwp/api/windows.perception.people.handmeshobserver)对象。  每个源仅需执行一次此操作，通常是第一次出现此操作。  这意味着，只要手进入 FOV，就会调用此函数创建 HandMeshObserver 对象。  这是一个异步函数，因此你必须在此处处理一些并发操作。  在可用时，可以通过调用 [GetTriangleIndices](//uwp/api/windows.perception.people.handmeshobserver.gettriangleindices#Windows_Perception_People_HandMeshObserver_GetTriangleIndices_System_UInt16___)来请求三角形索引缓冲区的 HandMeshObserver 对象。  索引不会在帧之间更改帧，因此你可以获得一次框架，并将其缓存在源的生存期内。  以顺时针缠绕顺序提供索引。
+已表述的手动跟踪 API 允许使用完全 deformable 的三角手写网格。  此网格可以与手形框架实时变形，并对可视化和高级物理学技术非常有用。  若要访问手写网格，需要先通过对[SpatialInteractionSource](/uwp/api/windows.ui.input.spatial.spatialinteractionsource)调用[TryCreateHandMeshObserverAsync](/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserverasync)来创建一个[HandMeshObserver](/uwp/api/windows.perception.people.handmeshobserver)对象。  每个源仅需执行一次此操作，通常是第一次出现此操作。  这意味着，只要手进入 FOV，就会调用此函数创建 HandMeshObserver 对象。  这是一个异步函数，因此你必须在此处处理一些并发操作。  在可用时，可以通过调用 [GetTriangleIndices](/uwp/api/windows.perception.people.handmeshobserver.gettriangleindices#Windows_Perception_People_HandMeshObserver_GetTriangleIndices_System_UInt16___)来请求三角形索引缓冲区的 HandMeshObserver 对象。  索引不会在帧之间更改帧，因此你可以获得一次框架，并将其缓存在源的生存期内。  以顺时针缠绕顺序提供索引。
 
-下面的代码将向上旋转分离的 std：： thread 来创建网格观察器并在网格观察器可用后提取索引缓冲区。  它从名为 *currentState* 的变量开始，该变量是表示跟踪手的 [SpatialInteractionSourceState](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) 的实例。
+下面的代码将向上旋转分离的 std：： thread 来创建网格观察器并在网格观察器可用后提取索引缓冲区。  它从名为 *currentState* 的变量开始，该变量是表示跟踪手的 [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) 的实例。
 
 ```cpp
 using namespace Windows::Perception::People;
@@ -198,9 +198,9 @@ std::thread createObserverThread([this, currentState]()
 });
 createObserverThread.detach();
 ```
-启动分离的线程只是一种用于处理异步调用的选项。  或者，你可以使用 c + +/WinRT. 支持的新 [co_await](//windows/uwp/cpp-and-winrt-apis/concurrency) 功能
+启动分离的线程只是一种用于处理异步调用的选项。  或者，你可以使用 c + +/WinRT. 支持的新 [co_await](/windows/uwp/cpp-and-winrt-apis/concurrency) 功能
 
-获得 HandMeshObserver 对象后，应在其对应的 SpatialInteractionSource 处于活动状态的持续时间内保留该对象。  然后，每个帧都可以通过调用 [GetVertexStateForPose](//uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) 并传入表示想要使用顶点的 [HandPose](//uwp/api/windows.perception.people.handpose) 实例的最新顶点缓冲区来请求该缓冲区。  缓冲区中的每个顶点都有一个位置和一个法线。  下面的示例演示如何获取手写网格的当前顶点集。  如前所述， *currentState* 变量表示 [SpatialInteractionSourceState](//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)的实例。
+获得 HandMeshObserver 对象后，应在其对应的 SpatialInteractionSource 处于活动状态的持续时间内保留该对象。  然后，每个帧都可以通过调用 [GetVertexStateForPose](/uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) 并传入表示想要使用顶点的 [HandPose](/uwp/api/windows.perception.people.handpose) 实例的最新顶点缓冲区来请求该缓冲区。  缓冲区中的每个顶点都有一个位置和一个法线。  下面的示例演示如何获取手写网格的当前顶点集。  如前所述， *currentState* 变量表示 [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)的实例。
 
 ```cpp
 using namespace winrt::Windows::Perception::People;
@@ -220,7 +220,7 @@ if (handPose)
 }
 ```
 
-与骨架接点不同，手动网格 API 不允许为顶点指定坐标系统。  相反， [HandMeshVertexState](//uwp/api/windows.perception.people.handmeshvertexstate) 指定在其中提供顶点的坐标系统。  然后，可以通过调用 [TryGetTransformTo](//uwp/api/windows.perception.spatial.spatialcoordinatesystem.trygettransformto#Windows_Perception_Spatial_SpatialCoordinateSystem_TryGetTransformTo_Windows_Perception_Spatial_SpatialCoordinateSystem_) 并指定所需的坐标系统来获取网格转换。  使用顶点时，需要使用此网格转换。  此方法减少了 CPU 开销，尤其是在使用网格进行呈现的情况下。
+与骨架接点不同，手动网格 API 不允许为顶点指定坐标系统。  相反， [HandMeshVertexState](/uwp/api/windows.perception.people.handmeshvertexstate) 指定在其中提供顶点的坐标系统。  然后，可以通过调用 [TryGetTransformTo](/uwp/api/windows.perception.spatial.spatialcoordinatesystem.trygettransformto#Windows_Perception_Spatial_SpatialCoordinateSystem_TryGetTransformTo_Windows_Perception_Spatial_SpatialCoordinateSystem_) 并指定所需的坐标系统来获取网格转换。  使用顶点时，需要使用此网格转换。  此方法减少了 CPU 开销，尤其是在使用网格进行呈现的情况下。
 
 ## <a name="gaze-and-commit-composite-gestures"></a>注视并提交复合手势
 对于使用注视输入模式的应用程序（尤其是在 HoloLens (第一代) 上），空间输入 API 提供了一个可选的 [SpatialGestureRecognizer](/uwp/api/Windows.UI.Input.Spatial.SpatialGestureRecognizer) ，可用于启用在 "select" 事件顶部构建的复合手势。  通过从 SpatialInteractionManager 到全息图的 SpatialGestureRecognizer 的路由交互，应用可以跨手、语音和空间输入设备统一检测点击、保持、操作和导航事件，而无需手动处理按下和释放操作。
