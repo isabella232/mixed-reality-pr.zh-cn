@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc、照片、视频、捕获、照相机
-ms.openlocfilehash: cbdd99ab7ab405163fb7e0ba366ee85f8bcc634d
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2539c8e2a6f26ba1f36cd28502bf8d0f50803657
+ms.sourcegitcommit: bd9b2734903652b106db86686428c03acf104707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583675"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763719"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>面向开发人员的混合现实捕获
 
@@ -84,7 +84,7 @@ if (view != null)
 ##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unity"></a>在 Unity 中启用 PhotoVideoCamera HolographicViewConfiguration
 
 > [!NOTE]
-> 这需要 **unity 2018.4.13 f1**、 **unity 2019.3.0 f1** 或更高版本。
+> 如果使用的是 Unity 2018，则需要使用 **unity 2018.4.13 f1** 或更高版本。 如果使用的是 Unity 2019，则需要 **unity 2019.4** 或更高版本。
 
 若要在使用 [混合现实工具包](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)时选择使用 pv 相机进行呈现，请启用 [Windows Mixed reality 相机设置](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html) 提供程序，并 **通过 PV 相机检查 Render**。
 
@@ -224,8 +224,8 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 |  属性名  |  类型  |  默认值  |  说明 |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([mediastreamtype.video](/uwp/api/Windows.Media.Capture.MediaStreamType))   |  1 (VideoRecord)   |  描述此影响所使用的捕获流。 音频不可用。 |
-|  HologramCompositionEnabled  |  boolean  |  true  |  用于在视频捕获中启用或禁用全息影像的标志。 |
-|  RecordingIndicatorEnabled  |  boolean  |  true  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
+|  HologramCompositionEnabled  |  boolean  |  TRUE  |  用于在视频捕获中启用或禁用全息影像的标志。 |
+|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
 |  VideoStabilizationEnabled  |  boolean  |  FALSE  |  用于启用或禁用由 HoloLens 跟踪器支持的视频稳定的标志。 |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  设置视频抖动使用的历史帧数。 从电源和性能的角度来看，0从0到延迟，几乎是 "免费"。 15对于最高质量 (建议使用15帧延迟和内存) 。 |
 |  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
