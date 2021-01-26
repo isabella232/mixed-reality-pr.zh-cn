@@ -7,12 +7,12 @@ ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 设计, 舒适感, HoloLens 2, HoloLens（第一代）, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包, 用户位移
-ms.openlocfilehash: 74ead209beb3396db83e5e446490efe17293b14e
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 9f366b2eb3ef33d3f63d3227d14aec642e8203b7
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847490"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582497"
 ---
 # <a name="comfort"></a>舒适感
 
@@ -78,15 +78,15 @@ IPD 是指眼睛瞳孔或中心之间的距离。 VO 是指相对于观看者眼
 
 #### <a name="hololens-1st-gen"></a>HoloLens（第 1 代）
 
-对于 HoloLens（第一代），在设备[校准](https://docs.microsoft.com/hololens/hololens-calibration)过程中会估算和设置 IPD。 对于使用已设置的设备的新用户，必须运行校准，否则必须手动设置 IPD。 VO 完全取决于设备装配。 具体而言，若要最小化 VO，设备需固定在用户的头部，使显示器与用户眼睛的轴齐平。 
+对于 HoloLens（第一代），在设备[校准](/hololens/hololens-calibration)过程中会估算和设置 IPD。 对于使用已设置的设备的新用户，必须运行校准，否则必须手动设置 IPD。 VO 完全取决于设备装配。 具体而言，若要最小化 VO，设备需固定在用户的头部，使显示器与用户眼睛的轴齐平。 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-对于 HoloLens 2，将在视线/设备[校准](https://docs.microsoft.com/hololens/hololens-calibration)过程中估算和设置 IPD。 对于使用已设置的设备的新用户，必须运行校准，以确保正确设置 IPD。 HoloLens 2 会自动处理 VO。 
+对于 HoloLens 2，将在视线/设备[校准](/hololens/hololens-calibration)过程中估算和设置 IPD。 对于使用已设置的设备的新用户，必须运行校准，以确保正确设置 IPD。 HoloLens 2 会自动处理 VO。 
 
 ### <a name="guidance-for-immersive-devices"></a>沉浸式设备指导
 
-Windows Mixed Reality 沉浸式 HMD 不会自动校准 IPD 或 VO。 可以在软件中手动设置 IPD（在混合现实门户设置中进行设置，具体请参阅[校准](https://docs.microsoft.com/hololens/hololens-calibration)）；某些 HMD 提供一个机械滑块，让用户将透镜间距调整到大致与 HMD 的 IPD 相匹配的舒适位置。 
+Windows Mixed Reality 沉浸式 HMD 不会自动校准 IPD 或 VO。 可以在软件中手动设置 IPD（在混合现实门户设置中进行设置，具体请参阅[校准](/hololens/hololens-calibration)）；某些 HMD 提供一个机械滑块，让用户将透镜间距调整到大致与 HMD 的 IPD 相匹配的舒适位置。 
 
 ## <a name="rendering-rates"></a>渲染速率
 
@@ -177,4 +177,4 @@ Windows Mixed Reality 沉浸式 HMD 不会自动校准 IPD 或 VO。 可以在�
 * [全息影像稳定性](../develop/platform-capabilities-and-apis/hologram-stability.md)
 * [本能交互](interaction-fundamentals.md)
 * [全息帧](holographic-frame.md)
-* [校准](https://docs.microsoft.com/hololens/hololens-calibration)
+* [校准](/hololens/hololens-calibration)

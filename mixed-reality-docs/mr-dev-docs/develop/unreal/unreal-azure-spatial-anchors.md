@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure 开发, 空间定位点, 混合现实, 开发, 功能, 新项目, 仿真器, 文档, 指南, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 95e8ad708dd44a05fb306b2ea49f167fd400c5d8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5797cd48198b163b55f3724685126b1d4d85c69c
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009767"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583025"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Unreal 中的 Azure 空间定位点
 
@@ -30,17 +30,17 @@ Azure 空间定位点是一项 Microsoft Mixed Reality 服务，增强现实设�
 
 - 已安装 [Unreal 4.25](https://www.unrealengine.com/get-now) 或更高版本
 - 已在 Unreal 中设置 [HoloLens 2 项目](tutorials/unreal-uxt-ch1.md) 
-- 已仔细阅读 [Azure 空间定位点概述](https://docs.microsoft.com/azure/spatial-anchors/overview)
+- 已仔细阅读 [Azure 空间定位点概述](/azure/spatial-anchors/overview)
 - 具备 C++ 和 Unreal 的基础知识
 
 ## <a name="getting-azure-spatial-anchors-account-info"></a>获取 Azure 空间定位点帐户信息
 
 在项目中使用 Azure 空间定位点之前，你需要：
-* [创建空间定位点资源](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource)并复制下面列出的帐户字段。 这些值用于向你的应用程序的帐户验证用户的身份：
+* [创建空间定位点资源](/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource)并复制下面列出的帐户字段。 这些值用于向你的应用程序的帐户验证用户的身份：
     * **帐户 ID**
     * **帐户密钥**
 
-有关详细信息，请查看 [Azure 空间定位点身份验证](https://docs.microsoft.com/azure/spatial-anchors/concepts/authentication?tabs=csharp)文档。
+有关详细信息，请查看 [Azure 空间定位点身份验证](/azure/spatial-anchors/concepts/authentication?tabs=csharp)文档。
 
 > [!NOTE]
 > Unreal 4.25 中的 Azure 空间定位点不支持 Azure AD 身份验证令牌，但今后的版本中将提供对该功能的支持。
@@ -65,7 +65,7 @@ Azure 空间定位点是一项 Microsoft Mixed Reality 服务，增强现实设�
 ![详细信息面板的屏幕截图，其中突出显示了 Azure 空间定位点帐户 ID、密钥和变量类型](images/asa-unreal/unreal-spatial-anchors-img-02.png)
 
 通过以下方式启动 Azure 空间定位点会话：
-1. 检查 AR 会话是否正在 HoloLens 应用程序中运行，因为在 AR 会话运行之后，才能启动 Azure 空间定位点会话。 如果未设置，请[创建 AR 会话资产](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset)。
+1. 检查 AR 会话是否正在 HoloLens 应用程序中运行，因为在 AR 会话运行之后，才能启动 Azure 空间定位点会话。 如果未设置，请[创建 AR 会话资产](/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset)。
 2. 添加名为“启动 Azure 空间定位点会话”的自定义事件并对其进行配置，如下面的屏幕截图所示。
     * 默认情况下，创建会话不会启动会话，这使得你可配置会话来向 Azure 空间定位点服务进行身份验证。
 
@@ -216,6 +216,6 @@ Azure 空间定位点是现实世界中的姿势在增强现实应用空间中�
 
 ## <a name="next-steps"></a>后续步骤
 * [本地空间定位点](unreal-spatial-anchors.md)
-* [空间定位点文档](https://docs.microsoft.com/azure/spatial-anchors/)
+* [空间定位点文档](/azure/spatial-anchors/)
 * [空间定位点功能](https://azure.microsoft.com/services/spatial-anchors/#features)
-* [有效定位点体验准则](https://docs.microsoft.com/azure/spatial-anchors/concepts/guidelines-effective-anchor-experiences)
+* [有效定位点体验准则](/azure/spatial-anchors/concepts/guidelines-effective-anchor-experiences)
