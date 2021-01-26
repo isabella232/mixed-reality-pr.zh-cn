@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 应用会话
 ms.localizationpriority: high
-ms.openlocfilehash: abe0c8bc70469826e25f7016a3cc1ba971c1fcc1
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4bae36bfb24130fc7914563af07c09374162f3cb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008357"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582057"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3.保存、检索和共享 Azure 空间定位点
 
@@ -58,7 +58,7 @@ ms.locfileid: "98008357"
 8. 查找 Azure 定位点（将“漫游者探测器”定位到步骤 3 所述的位置）
 
 > [!NOTE]
-> 若要完全重启应用，在退出沉浸式应用视图之后，需要先关闭混合现实主页中的应用窗口，然后从“开始”菜单重新启动应用。 如需更多详细信息，可以参阅[在 HoloLens 上使用应用](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens)文档。
+> 若要完全重启应用，在退出沉浸式应用视图之后，需要先关闭混合现实主页中的应用窗口，然后从“开始”菜单重新启动应用。 如需更多详细信息，可以参阅[在 HoloLens 上使用应用](/hololens/holographic-home#using-apps-on-hololens)文档。
 
 ## <a name="sharing-azure-spatial-anchors-between-devices"></a>在设备之间共享 Azure 空间定位点
 

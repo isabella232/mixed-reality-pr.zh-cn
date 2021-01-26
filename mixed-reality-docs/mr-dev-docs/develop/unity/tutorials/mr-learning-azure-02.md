@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 存储, azure 云服务, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: a948e035a467588091a2b5e16a3e2632ab3049d3
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 9c2041f9dac284fc4a7bea7d79b95e3e6240902a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008197"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581928"
 ---
 # <a name="2-integrating-azure-storage"></a>2.集成 Azure 存储
 
@@ -28,7 +28,7 @@ ms.locfileid: "98008197"
 
 Azure 存储是云中的 Microsoft 存储解决方案，可适应多种场景和需求。 它可以大规模扩展，并且开发人员也很容易使用它。 所有服务可以在一个 Azure 存储帐户下使用。 对于我们的用例，我们将使用表存储和 Blob 存储 。
 
-了解有关 [Azure 存储服务](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-overview)的详细信息。
+了解有关 [Azure 存储服务](/azure/storage/blobs/storage-blobs-overview)的详细信息。
 
 ### <a name="azure-table-storage"></a>Azure 表存储
 
@@ -36,18 +36,18 @@ Azure 存储是云中的 Microsoft 存储解决方案，可适应多种场景和
 
 在演示应用程序的上下文中，你需要两个表，一个用于存储有关项目的信息以及有关经训练模型状态的信息（详见[集成 Azure 自定义视觉](mr-learning-azure-03.md)教程），另一个用于存储有关跟踪对象的信息。
 
-了解有关 [Azure 表存储](https://docs.microsoft.com/azure/storage/tables/table-storage-overview)的详细信息。
+了解有关 [Azure 表存储](/azure/storage/tables/table-storage-overview)的详细信息。
 
 ### <a name="azure-blob-storage"></a>Azure Blob 存储
 
 此服务允许存储大型二进制文件，你将使用它，将为跟踪对象拍摄的照片存储为缩略图。
 对于演示应用程序，需要一个 Blob 容器来存储图像。
 
-了解有关 [Azure Blob 存储](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)的详细信息。
+了解有关 [Azure Blob 存储](/azure/storage/blobs/storage-blobs-introduction)的详细信息。
 
 ## <a name="preparing-azure-storage"></a>准备 Azure 存储
 
-要使用 Azure 存储服务，需要一个 Azure 存储帐户。 若要创建存储帐户，请参阅[创建存储帐户](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)。 若要了解有关存储帐户的详细信息，请参阅 [Azure 存储帐户概述](https://docs.microsoft.com/azure/storage/common/storage-account-overview)。
+要使用 Azure 存储服务，需要一个 Azure 存储帐户。 若要创建存储帐户，请参阅[创建存储帐户](/azure/storage/common/storage-account-create?tabs=azure-portal)。 若要了解有关存储帐户的详细信息，请参阅 [Azure 存储帐户概述](/azure/storage/common/storage-account-overview)。
 
 拥有存储帐户后，可从 Azure 门户检索连接字符串，本课程的下一部分将会用到它。
 
@@ -57,7 +57,7 @@ Azure 存储是云中的 Microsoft 存储解决方案，可适应多种场景和
 
 > [!TIP]
 > 若要在 Unity 编辑器中进行测试，可以使用本地模拟器：
-> * 在 Windows 10 中，可使用 [Azure 存储模拟器](https://docs.microsoft.com/azure/storage/common/storage-use-emulator)
+> * 在 Windows 10 中，可使用 [Azure 存储模拟器](/azure/storage/common/storage-use-emulator)
 > * 在 MacOS/Linux 中，可以使用适用于 Docker 的 [Azurite Docker 映像](https://hub.docker.com/_/microsoft-azure-storage-azurite)
 
 ## <a name="preparing-the-scene"></a>准备场景

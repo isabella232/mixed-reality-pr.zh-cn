@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 53d22260603c4e52096eccf1d7af6a3b0732124e
-ms.sourcegitcommit: 672a7a145cfc656273af4ea34f99583eb9fa849c
+ms.openlocfilehash: e79b14c19a452b5b78c6f8cf7ea24bd65bfa0eaa
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98225368"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98605204"
 ---
 # <a name="426"></a>[4.26](#tab/426) 
 
@@ -197,7 +197,7 @@ void ACamCapture::Tick(float DeltaTime)
 然后，Unreal 将处理 MRC 要从 PV 摄像头的角度进行渲染的请求。
 
 > [!NOTE]
-> 仅当触发[混合现实捕获](../../../mixed-reality-capture.md)时，才会要求应用从照片/视频摄像头的角度进行渲染。
+> 仅当触发[混合现实捕获](/hololens/holographic-photos-and-videos)时，才会要求应用从照片/视频摄像头的角度进行渲染。
 
 ## <a name="using-the-pv-camera"></a>使用 PV 摄像头
 
@@ -224,4 +224,3 @@ void ACamCapture::Tick(float DeltaTime)
 5. 请确保材料的参数与绑定到颜色条目的 SetTextureParameterValue 中的名称匹配。 若没有该参数，便无法正确显示摄像头图像。
 
 ![摄像头纹理](../images/unreal-camera-material.PNG)
-

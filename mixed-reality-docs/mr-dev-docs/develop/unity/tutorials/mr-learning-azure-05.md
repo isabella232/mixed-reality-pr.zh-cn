@@ -7,16 +7,16 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 机器人服务, luis, 自然语言, 对话机器人, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 70d136467bc677c028614429e6e197ce25b30327
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7119dfd54c2b5384ff0e219a494ca8423fe4ebfc
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008247"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583379"
 ---
 # <a name="5-integrating-azure-bot-service"></a>5.集成 Azure 机器人服务
 
-在本教程中，你将了解如何在 HoloLens 2 演示应用程序中使用 Azure 机器人服务添加语言理解 (LUIS)，并让机器人在搜索被跟踪对象时为用户提供帮助  。 本教程分为两部分，在第一部分中，使用 [Bot Composer](https://docs.microsoft.com/composer/introduction) 作为无代码解决方案来创建机器人，并快速浏览为机器人提供所需数据的 Azure Functions。 在第二部分中，在 Unity 项目中使用“BotManager (脚本)”来利用托管的机器人服务。
+在本教程中，你将了解如何在 HoloLens 2 演示应用程序中使用 Azure 机器人服务添加语言理解 (LUIS)，并让机器人在搜索被跟踪对象时为用户提供帮助  。 本教程分为两部分，在第一部分中，使用 [Bot Composer](/composer/introduction) 作为无代码解决方案来创建机器人，并快速浏览为机器人提供所需数据的 Azure Functions。 在第二部分中，在 Unity 项目中使用“BotManager (脚本)”来利用托管的机器人服务。
 
 ## <a name="objectives"></a>目标
 
@@ -33,9 +33,9 @@ ms.locfileid: "98008247"
 
 ## <a name="understanding-azure-bot-service"></a>了解 Azure 机器人服务
 
-借助 LUIS，Azure 机器人服务让开发人员能够创建与用户进行自然对话的智能机器人 。 对话机器人是扩展用户与应用程序交互的方式的好方法。 机器人可以充当具有 [QnA Maker](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-qna?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) 的知识库，借助[语言理解智能服务 (LUIS)](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) 功能进行复杂的对话。
+借助 LUIS，Azure 机器人服务让开发人员能够创建与用户进行自然对话的智能机器人 。 对话机器人是扩展用户与应用程序交互的方式的好方法。 机器人可以充当具有 [QnA Maker](/azure/bot-service/bot-builder-howto-qna?preserve-view=true&tabs=cs&view=azure-bot-service-4.0) 的知识库，借助[语言理解智能服务 (LUIS)](/azure/bot-service/bot-builder-howto-v4-luis?preserve-view=true&tabs=csharp&view=azure-bot-service-4.0) 功能进行复杂的对话。
 
-详细了解 [Azure 机器人服务](https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0&preserve-view=true)。
+详细了解 [Azure 机器人服务](/azure/bot-service/bot-service-overview-introduction?preserve-view=true&view=azure-bot-service-4.0)。
 
 ## <a name="part-1---creating-the-bot"></a>第 1 部分 - 创建机器人
 
@@ -50,18 +50,18 @@ ms.locfileid: "98008247"
 
 此 Azure Functions 具有两个操作（Count 和 Find），你可以通过基本的 HTTP GET 调用来调用这两个操作  。 可以在 Visual Studio 中检查代码。
 
-详细了解 [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)。
+详细了解 [Azure Functions](/azure/azure-functions/functions-overview)。
 
 Count 函数从表存储查询表中的所有 TrackedObject，这非常简单  。 另一方面，Find 函数从 GET 请求中获取名称查询参数，并在表存储中查询匹配的 TrackedObject，然后将 DTO 以 JSON 的形式返回  。
 
 可以直接从 Visual Studio 部署此 Azure Functions 。
-在此处查找有关 [Azure Functions 部署](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-functions?view=azure-devops&tabs=dotnet-core%2Cyaml&preserve-view=true)的所有信息。
+在此处查找有关 [Azure Functions 部署](/azure/devops/pipelines/targets/azure-functions?preserve-view=true&tabs=dotnet-core%2cyaml&view=azure-devops)的所有信息。
 
 完成部署后，在 Azure 门户中，打开相应的资源，然后单击“设置”部分下的“配置” 。 在“应用程序设置”上，需要向存储被跟踪对象的 Azure 存储提供连接字符串 。 单击“新应用程序设置”，并使用其名称(AzureStorageConnectionString)，然后提供正确的连接字符串作为值。 接下来，单击“保存”，现在 Azure Functions 已准备就绪，可以为接下来要创建的机器人提供服务 。
 
 ### <a name="creating-a-conversation-bot"></a>创建对话机器人
 
-可以通过多种方式来开发基于 Bot Framework 的对话机器人。 本课程将使用 [Bot Framework Composer](https://docs.microsoft.com/composer/) 桌面应用程序，该应用程序是非常适合快速开发的可视化设计器。
+可以通过多种方式来开发基于 Bot Framework 的对话机器人。 本课程将使用 [Bot Framework Composer](/composer/) 桌面应用程序，该应用程序是非常适合快速开发的可视化设计器。
 
 可以从 [Github 存储库](https://github.com/microsoft/BotFramework-Composer/releases)下载最新版本。 它适用于 Windows、Mac 和 Linux。
 
@@ -77,7 +77,7 @@ Count 函数从表存储查询表中的所有 TrackedObject，这非常简单  �
 
 让我们集中在左侧，你可以在其中看到“对话框面板”。 左侧有一个名为 TrackedObjectsBot 的对话框，你可以在其中看到几个触发器 。
 
-详细了解 [Bot Framework 概念](https://docs.microsoft.com/composer/concept-dialog)。
+详细了解 [Bot Framework 概念](/composer/concept-dialog)。
 
 这些触发器执行以下操作：
 
@@ -97,7 +97,7 @@ Count 函数从表存储查询表中的所有 TrackedObject，这非常简单  �
 
 ![TrackedObjectsBot 项目对话框触发器 - AskForCount](images/mr-learning-azure/tutorial5-section4-step1-4.png)
 
-借助 [LUIS](https://docs.microsoft.com/composer/how-to-use-luis)，用户不必以这种确切的方式询问短语，从而允许用户进行自然对话 。
+借助 [LUIS](/composer/how-to-use-luis)，用户不必以这种确切的方式询问短语，从而允许用户进行自然对话 。
 
 在此对话中，机器人还将与 Azure Functions 的“Count”对话，稍后再进行详细介绍。
 
@@ -130,7 +130,7 @@ AskingForCount 和 FindEntity 触发器需要与后端通信，这意味着必�
 
 完成所有设置后，现在即可部署机器人。 由于你已经安装了 Bot Framework Composer，因此可以直接从此处发布机器人。
 
-详细了解[从 Bot Composer 发布机器人](https://docs.microsoft.com/composer/how-to-publish-bot)。
+详细了解[从 Bot Composer 发布机器人](/composer/how-to-publish-bot)。
 
 > [!TIP]
 > 通过添加更多触发短语、新响应或对话分支，可以随时与机器人对话。

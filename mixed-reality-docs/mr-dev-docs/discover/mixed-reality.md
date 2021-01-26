@@ -7,12 +7,12 @@ ms.date: 08/26/2020
 ms.topic: article
 keywords: 混合现实, 全息, AR, VR, MR, XR, 增强现实, 虚拟现实, 说明, 案例研究, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实
 ms.localizationpriority: high
-ms.openlocfilehash: 7f06909b12137598649d113697651277751bcb22
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 2eac20b85ceeb9413dfc0b6820cceda2ddf335c5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757695"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583014"
 ---
 # <a name="what-is-mixed-reality"></a>什么是混合现实？
 
@@ -34,7 +34,7 @@ ms.locfileid: "97757695"
 
 过去几十年来，对人类输入与计算机输入之间关系的探索一直在继续，从而形成了称作“人机交互”(HCI) 的学科。 人类输入是通过不同的方式进行的，包括键盘、鼠标、触摸、笔迹、语音，甚至 Kinect 框架跟踪。
 
-传感器和处理技术的进步为计算机环境输入创造了新领域。 计算机与环境之间的交互是对环境的理解或认知，这就是 Windows 中显示环境信息的 API 称作[感知 API](https://docs.microsoft.com/uwp/api/Windows.Perception) 的原因。 环境输入捕获如下所述的信息：用户在世界上的位置（[头部跟踪](../design/coordinate-systems.md)）、表面和边界（[空间映射](../design/spatial-mapping.md)和[场景理解](../design/scene-understanding.md)）、环境照明、环境音效、对象识别和定位。
+传感器和处理技术的进步为计算机环境输入创造了新领域。 计算机与环境之间的交互是对环境的理解或认知，这就是 Windows 中显示环境信息的 API 称作[感知 API](/uwp/api/Windows.Perception) 的原因。 环境输入捕获如下所述的信息：用户在世界上的位置（[头部跟踪](../design/coordinate-systems.md)）、表面和边界（[空间映射](../design/spatial-mapping.md)和[场景理解](../design/scene-understanding.md)）、环境照明、环境音效、对象识别和定位。
 
 <br>
 
@@ -117,5 +117,3 @@ ms.locfileid: "97757695"
 
 > [!div class="nextstepaction"]
 > [什么是全息图？](hologram.md)
-
-

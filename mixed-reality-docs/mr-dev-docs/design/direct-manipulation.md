@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计, 手动近距, HoloLens, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, MRTK, 混合现实工具包, 按钮, 碰撞体, 边界框, 2D, 本能手势
-ms.openlocfilehash: a5e3497926d977f2a60cd32bb5f009d27d7b86ee
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 194212fd19196990eaf873299afbf1c11846946d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848049"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583416"
 ---
 # <a name="direct-manipulation-with-hands"></a>用手直接操作
 
@@ -31,9 +31,9 @@ ms.locfileid: "97848049"
 </colgroup>
 <tr>
      <td><strong>输入模型</strong></td>
-     <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
-     <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
-     <td><a href="https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details"><strong>沉浸式头戴显示设备</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
+     <td><a href="/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
+     <td><a href="/windows/mixed-reality/immersive-headset-hardware-details"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>
 <tr>
      <td>用手直接操作</td>

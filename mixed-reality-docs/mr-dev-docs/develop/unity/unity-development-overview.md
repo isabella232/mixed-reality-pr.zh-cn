@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: c5b7683574378565c71e95bc6205be3dbf92fcaf
-ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
+ms.openlocfilehash: fc444f4d40d8bc013253869fe77ddd563e889d85
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226436"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583008"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
@@ -85,7 +85,7 @@ ms.locfileid: "98226436"
 
 如果你当前有想要移植的应用，那么接下来请查看以下文章：
 
-* [HoloToolkit/MRTK 到 MRTK v2](mrtk-porting-guide.md)
+* [HoloToolkit/MRTK 到 MRTK v2](../porting-apps/porting-hl1-hl2.md)
 * [沉浸式应用移植指南](../porting-apps/porting-guides.md)
 * [输入移植指南](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md)
 

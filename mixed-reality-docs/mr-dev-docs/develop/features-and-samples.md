@@ -7,12 +7,12 @@ ms.date: 12/3/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 了解, 示例, MRTK, 研究模式, HoloLens 2, qr 码, WebRTC, 混合现实捕获, 全息远程处理, UX Tools
 ms.localizationpriority: high
-ms.openlocfilehash: 3aa0e51a92b909689ff97a07b45900ab65579c59
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 78cfc726bdffdb461a83bd1e9805d8f0e64b0f01
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007607"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583198"
 ---
 # <a name="samples-and-feature-apps"></a>示例和功能应用
 
@@ -30,7 +30,7 @@ ms.locfileid: "98007607"
 
 ### <a name="research-mode"></a>研究模式
 
-第一代 HoloLens 引入了研究模式，用于访问设备上的主要传感器，尤其适用于不打算部署的研究应用程序。 以下应用程序示例是访问和记录研究模式流以及使用[内部函数和外部函数](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)的示例。
+第一代 HoloLens 引入了研究模式，用于访问设备上的主要传感器，尤其适用于不打算部署的研究应用程序。 以下应用程序示例是访问和记录研究模式流以及使用[内部函数和外部函数](/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)的示例。
 
 <br>
 
@@ -67,7 +67,7 @@ MixedReality-WebRTC 项目是一系列组件，可帮助混合现实应用开发
 
 | 参考文章 | 示例 |
 | --- | --- |
-| [混合现实捕获](platform-capabilities-and-apis/mixed-reality-capture-for-developers.md) | [混合现实捕获示例](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/holographicmixedrealitycapture/) |
+| [混合现实捕获](platform-capabilities-and-apis/mixed-reality-capture-for-developers.md) | [混合现实捕获示例](/samples/microsoft/windows-universal-samples/holographicmixedrealitycapture/) |
 
 ### <a name="holographic-remoting"></a>全息远程处理
 

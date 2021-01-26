@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, learn, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语言翻译, Azure, Azure 认知服务, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: 211d8e61a45a59df725f4c6c7d11c93f129d63b5
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f8188cc8c417b60864cd963120ad004d6169c3c2
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006907"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583527"
 ---
 # <a name="mixed-reality-learn-overview"></a>混合现实学习概述
 
@@ -26,7 +26,7 @@ ms.locfileid: "98006907"
 
 如果你有兴趣了解混合现实的基础知识，或者尚未选择开发路径，那么可从我们不涉及技术知识的学习模块着手。
 
-### <a name="introduction-to-mixed-reality"></a>[混合现实简介](https://docs.microsoft.com/learn/modules/intro-to-mixed-reality/)
+### <a name="introduction-to-mixed-reality"></a>[混合现实简介](/learn/modules/intro-to-mixed-reality/)
 
 掌握混合现实开发空间所独有的概念、术语和设计过程方面的基础知识。
 
@@ -44,7 +44,7 @@ ms.locfileid: "98006907"
 
 无论你是新手还是经验丰富的专业人员，我们针对在 Unity 中进行混合现实开发所提供的实践方法都可帮助你按照你自己的节奏，更快、更自信地实现目标。
 
-### <a name="set-up-a-mixed-reality-project-in-unity-with-the-mixed-reality-toolkit"></a>[使用混合现实工具包在 Unity 中创建混合现实项目](https://docs.microsoft.com/learn/modules/mixed-reality-toolkit-project-unity/)
+### <a name="set-up-a-mixed-reality-project-in-unity-with-the-mixed-reality-toolkit"></a>[使用混合现实工具包在 Unity 中创建混合现实项目](/learn/modules/mixed-reality-toolkit-project-unity/)
 
 将混合现实工具包导入 Unity 项目中，以加速混合现实开发。
 
@@ -58,7 +58,7 @@ ms.locfileid: "98006907"
 * 比较和对比三种主要的 MRTK 交互模型
 * 使用 ObjectManipulator 操作全息影像
 
-### <a name="create-a-language-translator-app-with-unity--azure-cognitive-services"></a>[使用 Unity 和 Azure 认知服务创建语言翻译器应用](https://docs.microsoft.com/learn/modules/create-language-translator-mixed-reality-application-unity-azure-cognitive-services/)
+### <a name="create-a-language-translator-app-with-unity--azure-cognitive-services"></a>[使用 Unity 和 Azure 认知服务创建语言翻译器应用](/learn/modules/create-language-translator-mixed-reality-application-unity-azure-cognitive-services/)
 
 使用认知服务为混合现实设备（Windows Mixed Reality、HoloLens 2 等）创建语言转换器应用程序。
 

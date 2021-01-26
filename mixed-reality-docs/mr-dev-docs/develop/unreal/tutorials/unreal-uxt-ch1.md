@@ -7,16 +7,16 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 762247f550a3471bbbb6d1004283c6f901346503
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: a46b9fef96f75f3d80b9ebbd5cbd724730374b41
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009787"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580567"
 ---
 # <a name="1-getting-started"></a>1.入门
 
-无论你是混合现实新手还是经验丰富的专业人员，都可以使用 [HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/) 和 [Unreal Engine](https://www.unrealengine.com/en-US/) 开始你的体验之旅。 本系列教程将为你提供有关如何使用 [UX Tools 插件](https://github.com/microsoft/MixedReality-UXTools-Unreal)构建交互式象棋应用的分步指南，该插件是 [Unreal 混合现实工具包](https://github.com/microsoft/MixedRealityToolkit-Unreal)的一部分。 该插件将帮助你通过代码、蓝图和示例将常见的 UX 功能添加到项目中。 
+无论你是混合现实新手还是经验丰富的专业人员，都可以使用 [HoloLens 2](../../../index.yml) 和 [Unreal Engine](https://www.unrealengine.com/en-US/) 开始你的体验之旅。 本系列教程将为你提供有关如何使用 [UX Tools 插件](https://github.com/microsoft/MixedReality-UXTools-Unreal)构建交互式象棋应用的分步指南，该插件是 [Unreal 混合现实工具包](https://github.com/microsoft/MixedRealityToolkit-Unreal)的一部分。 该插件将帮助你通过代码、蓝图和示例将常见的 UX 功能添加到项目中。 
 
 ![在视口中结束场景](images/unreal-uxt/5-endscene.PNG)
 
@@ -40,7 +40,7 @@ ms.locfileid: "98009787"
 
 首先，确保使用所有必需的 Visual Studio 包进行设置：
 1. 安装最新版本的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-1. 安装以下[工作负载](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-workloads)：
+1. 安装以下[工作负载](/visualstudio/install/modify-visual-studio#modify-workloads)：
     * 使用 C++ 的桌面开发
     * .NET 桌面开发
     * 通用 Windows 平台开发
@@ -48,7 +48,7 @@ ms.locfileid: "98009787"
     * USB 设备连接性
     * C++ (v142) 通用 Windows 平台工具
 
-1. 安装以下[组件](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-individual-components)：
+1. 安装以下[组件](/visualstudio/install/modify-visual-studio#modify-individual-components)：
     * 编译器、生成工具和运行时 > MSVC v142 - VS 2019 C++ ARM64 生成工具（最新版本）
 
 可使用以下图片确认安装

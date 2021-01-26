@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: 959ed164e566f5bee3db203437145fa08ce168d8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6006bf5e3edaee13c8ede0bdc04fd5ea928f1757
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008017"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98579142"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -141,4 +141,5 @@ ms.locfileid: "98008017"
 
 若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[求解器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)指南。
 
-[下一教程：6.创建用户界面](mr-learning-base-06.md)
+> [!div class="nextstepaction"]
+>[下一教程：6.创建用户界面](mr-learning-base-06.md)

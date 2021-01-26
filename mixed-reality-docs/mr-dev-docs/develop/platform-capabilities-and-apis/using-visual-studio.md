@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, 混合现实, Mixed Reality, 调试, 部署
-ms.openlocfilehash: 20bda2cd247f18680d3f9fe95284e238a32e1140
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: c4ffe3a426ad82c324efef20639cf836f16a7f63
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97529963"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583612"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>使用 Visual Studio 进行部署和调试
 
@@ -129,7 +129,7 @@ ms.locfileid: "97529963"
 
 ## <a name="graphics-debugger-for-hololens-1st-gen"></a>适用于 HoloLens（第一代）的图形调试器
 
-在编写和优化全息应用时，Visual Studio 图形诊断工具非常有用。 有关完整详细信息，请参阅 [MSDN 上的“Visual Studio 图形诊断”](https://msdn.microsoft.com/library/hh315751.aspx)。
+在编写和优化全息应用时，Visual Studio 图形诊断工具非常有用。 有关完整详细信息，请参阅 [MSDN 上的“Visual Studio 图形诊断”](/previous-versions/visualstudio/visual-studio-2015/debugger/visual-studio-graphics-diagnostics)。
 
 **启动图形调试器**
 1. 按上面的说明将目标指定为设备或仿真器
@@ -138,7 +138,7 @@ ms.locfileid: "97529963"
 
 ## <a name="profiling"></a>分析
 
-使用 Visual Studio 分析工具可以分析应用的性能和资源使用情况。 这些工具包括用于优化 CPU、内存、图形和网络使用情况的工具。 有关完整详细信息，请参阅 [MSDN 上的“运行诊断工具但不调试”](https://msdn.microsoft.com/library/dn957936.aspx)。
+使用 Visual Studio 分析工具可以分析应用的性能和资源使用情况。 这些工具包括用于优化 CPU、内存、图形和网络使用情况的工具。 有关完整详细信息，请参阅 [MSDN 上的“运行诊断工具但不调试”](/previous-versions/visualstudio/visual-studio-2015/profiling/profiling-tools)。
 
 **在 HoloLens 上启动分析工具**
 1. 按上面的说明将目标指定为设备或仿真器
@@ -175,5 +175,5 @@ ms.locfileid: "97529963"
 ## <a name="see-also"></a>另请参阅
 * [安装工具](../install-the-tools.md)
 * [使用 HoloLens 仿真器](using-the-hololens-emulator.md)
-* [部署和调试通用 Windows 平台 (UWP) 应用](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
-* [启用设备进行开发](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
+* [部署和调试通用 Windows 平台 (UWP) 应用](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)
+* [启用设备进行开发](/windows/uwp/get-started/enable-your-device-for-development)

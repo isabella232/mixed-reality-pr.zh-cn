@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, 实用工具, 教程, hololens, hololens 2, azure 自定义视觉, azure 认知服务, azure 云服务, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: bd99b2ca8f41c276db747dc7fc75328c31807512
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: aa3ad219ab2cd45b14d06881757ec776d3e098f3
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008207"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581929"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3.集成 Azure 自定义视觉
 
@@ -28,13 +28,13 @@ ms.locfileid: "98008207"
 
 Azure 自定义视觉属于认知服务系列，可用于训练图像分类器 。 图像分类器是一种 AI 服务，它使用经过训练的模型来应用匹配标记。 应用程序将使用此分类功能来检测被跟踪对象。
 
-详细了解 [Azure 自定义视觉](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home)。
+详细了解 [Azure 自定义视觉](/azure/cognitive-services/custom-vision-service/home)。
 
 ## <a name="preparing-azure-custom-vision"></a>为 Azure 自定义视觉做好准备
 
 在开始之前，请创建一个自定义视觉项目，最快的方法是使用 Web 门户。
 
-按照以下[快速入门教程](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#choose-training-images)中“上传和标记图像”之前的部分设置你的帐户和项目。
+按照以下[快速入门教程](/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#choose-training-images)中“上传和标记图像”之前的部分设置你的帐户和项目。
 
 > [!WARNING]
 > 若要训练模型，至少需要 2 个标记，每个标记 5 张图像。 若要使用此应用程序，至少应创建一个涵盖 5 张图片的标记，这样之后的训练过程才不会失败。

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器, 网格对象集合
 ms.localizationpriority: high
-ms.openlocfilehash: e09047e4f75697722f76301630c275f126b3cbda
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 27964cad03111a3f7dad89c66df0cb9a4f95a9e2
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613251"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98579206"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4.定位场景中的对象
 
@@ -143,4 +143,5 @@ ms.locfileid: "97613251"
 
 本教程介绍了如何在场景中相对于用户定位对象，以及如何使用 MRTK 的网格对象集合功能来组织集合中的对象。
 
-[下一教程：5.使用求解器创建动态内容](mr-learning-base-05.md)
+> [!div class="nextstepaction"]
+>[下一教程：5.使用求解器创建动态内容](mr-learning-base-05.md)

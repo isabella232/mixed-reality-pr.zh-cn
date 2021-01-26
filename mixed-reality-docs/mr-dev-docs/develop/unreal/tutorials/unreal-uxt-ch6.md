@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 83d8068ca8ce73f23edb85cf9044db5409105380
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 7b706cf2a8685954ed916c825c3617ade190f1e0
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865392"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583649"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6.打包并部署到设备或仿真器
 
@@ -25,7 +25,7 @@ ms.locfileid: "97865392"
 
 ## <a name="device-only-streaming"></a>[仅设备] 流式传输
 
-[全息远程处理](https://docs.microsoft.com/windows/mixed-reality/add-holographic-remoting)是指将数据从电脑或独立 UWP 设备流式传输到 HoloLens 2，而非切换通道。 远程处理主机应用从 HoloLens 接收输入数据流，在虚拟沉浸式视图中呈现内容，并通过 Wi-Fi 将内容帧流式传输回 HoloLens。 通过流式处理，可以将远程沉浸式视图添加到现有的台式电脑软件中，并可访问更多系统资源。
+[全息远程处理](/windows/mixed-reality/add-holographic-remoting)是指将数据从电脑或独立 UWP 设备流式传输到 HoloLens 2，而非切换通道。 远程处理主机应用从 HoloLens 接收输入数据流，在虚拟沉浸式视图中呈现内容，并通过 Wi-Fi 将内容帧流式传输回 HoloLens。 通过流式处理，可以将远程沉浸式视图添加到现有的台式电脑软件中，并可访问更多系统资源。
 
 如果要将此方法用于该象棋应用，需要完成以下事项：
 
@@ -81,7 +81,7 @@ ms.locfileid: "97865392"
 5. 转到“文件”>“包项目”并选择“HoloLens”。
     * 创建新文件夹以保存包，并单击“选择文件夹”。
 
-6.  打包应用后，请打开 [Windows 设备门户](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)，转到“视图 > 应用”，并找到“部署应用”部分。
+6.  打包应用后，请打开 [Windows 设备门户](/windows/mixed-reality/using-the-windows-device-portal)，转到“视图 > 应用”，并找到“部署应用”部分。
 
 7.  单击“浏览...”，转到“ChessApp.appxbundle”文件，然后单击“打开”。  
 
@@ -91,7 +91,7 @@ ms.locfileid: "97865392"
 8.  单击“安装” 
     * 现在可以转到“所有应用”，并点击新安装的应用来运行它，或者直接从 Windows 设备门户启动应用 。 
 
-恭喜！ 你的 HoloLens 混合现实应用程序已完成，并且可随时运行。 但是，这一体验过程并未就此结束。 MRTK 有许多独立功能，你可以将其添加到项目中，其中包括空间映射、凝视和语音输入甚至 QR 码。 有关这些功能的详细信息，请参阅 [Unreal 开发概述](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview)。
+恭喜！ 你的 HoloLens 混合现实应用程序已完成，并且可随时运行。 但是，这一体验过程并未就此结束。 MRTK 有许多独立功能，你可以将其添加到项目中，其中包括空间映射、凝视和语音输入甚至 QR 码。 有关这些功能的详细信息，请参阅 [Unreal 开发概述](/windows/mixed-reality/unreal-development-overview)。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 

@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 31f11712c2f1cbe7e6726ecf5a83ccd31a2e616e
-ms.sourcegitcommit: 0509cf6c57067cffd75a0189106e3369e9ecc5c8
+ms.openlocfilehash: 2ccad1adee0098233d08c6694dbb84d9fc1df6ff
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96912189"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580035"
 ---
 # <a name="426"></a>[4.26](#tab/ue426)
 
 最新的 Unreal Engine 4.26 版本包括：
-* 支持新的[跨设备 XR API](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-porting)
+* 支持新的[跨设备 XR API](../unreal-porting.md)
 * OpenXR 支持 + [Microsoft OpenXR](https://github.com/microsoft/Microsoft-OpenXR-Unreal) 插件 
 * 用于高质量视频播放的 HoloLens Media Player 插件
 * 适用于 iOS 和 Android 的 Azure 空间定位点（beta 版）
@@ -31,4 +31,4 @@ Unreal Engine 4.25 包括：
 * 混合现实捕获
 * 对 Azure 空间定位点的初始支持
 
-请参阅 Unreal Engine 4.25 <a href="https://docs.unrealengine.com/Support/Builds/ReleaseNotes/4_25/index.html" target="_blank" title="Unreal Engine 4.25 发行说明">发行说明</a>，了解详细信息。 
+请参阅 Unreal Engine 4.25 <a href="https://docs.unrealengine.com/Support/Builds/ReleaseNotes/4_25/index.html" target="_blank" title="Unreal Engine 4.25 发行说明">发行说明</a>，了解详细信息。

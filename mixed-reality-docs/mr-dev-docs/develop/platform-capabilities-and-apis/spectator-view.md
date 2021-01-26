@@ -7,12 +7,12 @@ ms.date: 02/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 旁观视图, iPhone, iOS, iPad, OpenCV, 相机, ARKit, HoloLens, 混合现实, MixedRealityToolkit, 演示, 录制
-ms.openlocfilehash: 1f61d2094ec2762ab22576d2eac85ed6bf81d5c7
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: aa85b54283b260447c36072b74031554e1aa1939
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008607"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583116"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 和 HoloLens 2 的旁观视图
 
@@ -60,6 +60,6 @@ ms.locfileid: "98008607"
 | 运行时设置持续时间               |         即时          |                     慢                    |
 ## <a name="see-also"></a>请参阅
 
-* [混合现实捕获](../../mixed-reality-capture.md) 
+* [混合现实捕获](/hololens/holographic-photos-and-videos) 
 * [面向开发人员的混合现实捕获](mixed-reality-capture-for-developers.md)
 * [混合现实中的共享体验](shared-experiences-in-mixed-reality.md)

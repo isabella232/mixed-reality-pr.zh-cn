@@ -7,12 +7,12 @@ ms.date: 06/15/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式传输, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 空间音频
-ms.openlocfilehash: 98c10e370cd4ca5e437a4677be6fce3d3aee53a9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: fdb4f401188a813b99884929cd835453dec5aaf0
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009967"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580430"
 ---
 # <a name="spatial-audio-in-unreal"></a>Unreal 中的空间音频
 
@@ -124,6 +124,6 @@ ms.locfileid: "98009967"
 
 
 ## <a name="see-also"></a>另请参阅
-* [空间音效](https://docs.microsoft.com/windows/mixed-reality/spatial-sound)
-* [空间音效设计](https://docs.microsoft.com/windows/mixed-reality/spatial-sound-design)
-* [MR 空间 220：空间音效](https://docs.microsoft.com/windows/mixed-reality/holograms-220)
+* [空间音效](/windows/mixed-reality/spatial-sound)
+* [空间音效设计](/windows/mixed-reality/spatial-sound-design)
+* [MR 空间 220：空间音效](/windows/mixed-reality/holograms-220)

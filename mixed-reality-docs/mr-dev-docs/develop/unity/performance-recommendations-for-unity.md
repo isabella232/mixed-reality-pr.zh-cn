@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 图形, cpu, gpu, 渲染, 垃圾回收, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 3508edae9fa0e60e9d9b60000186dfd3e49ff134
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 738f9032b0e0500e0f5daa3b59cc1740ef570928
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009347"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583180"
 ---
 # <a name="performance-recommendations-for-unity"></a>针对 Unity 的性能建议
 
@@ -84,7 +84,7 @@ public class ExampleClass : MonoBehaviour
 
 #### <a name="avoid-expensive-operations"></a>避免高开销的操作
 
-1) **避免使用 [LINQ](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/getting-started-with-linq)**
+1) **避免使用 [LINQ](/dotnet/csharp/programming-guide/concepts/linq/getting-started-with-linq)**
 
     尽管 LINQ 很容易读写，但与比手动编写算法相比，使用 LINQ 通常需要更多的计算和内存。
 
@@ -120,7 +120,7 @@ public class ExampleClass : MonoBehaviour
 
 3) **注意装箱**
 
-    [装箱](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing)是 C# 语言和运行时的核心概念。 它是将值类型化变量（例如 `char`、`int` 和 `bool` 等）包装到引用类型化变量中的过程。 将值类型化变量“装箱”后，该变量将包装在 `System.Object` 内，后者存储在托管堆上。 需要分配内存，并在最终释放内存后，由垃圾回收器处理内存。 这种分配和解除分配会损害性能，且在许多情况下是不必要的，或者可以由开销更低的替代做法轻松取代。
+    [装箱](/dotnet/csharp/programming-guide/types/boxing-and-unboxing)是 C# 语言和运行时的核心概念。 它是将值类型化变量（例如 `char`、`int` 和 `bool` 等）包装到引用类型化变量中的过程。 将值类型化变量“装箱”后，该变量将包装在 `System.Object` 内，后者存储在托管堆上。 需要分配内存，并在最终释放内存后，由垃圾回收器处理内存。 这种分配和解除分配会损害性能，且在许多情况下是不必要的，或者可以由开销更低的替代做法轻松取代。
 
     若要避免装箱，请务必将用于存储数值类型和结构（包括 `Nullable<T>`）的变量、字段和属性强类型化为特定类型（例如 `int`、`float?` 或 `MyStruct`），而不是使用对象。  如果将这些对象放入列表中，请确保使用强类型列表（例如 `List<int>`），而不是 `List<object>` 或 `ArrayList`。
 
@@ -180,7 +180,7 @@ public class ExampleClass : MonoBehaviour
 
 4) **避免按值传递结构**
 
-    与类不同，结构是值类型，将其直接传递给函数时，其内容将复制到新建的实例。 这种复制增加了 CPU 开销以及堆栈上的附加内存。 对于小型结构，这种影响可以忽略不计，因此是可接受的。 但是，对于要对每个帧重复调用的函数，以及采用大型结构的函数，如果可能，请修改函数定义以按引用传递。 [在此处了解详细信息](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
+    与类不同，结构是值类型，将其直接传递给函数时，其内容将复制到新建的实例。 这种复制增加了 CPU 开销以及堆栈上的附加内存。 对于小型结构，这种影响可以忽略不计，因此是可接受的。 但是，对于要对每个帧重复调用的函数，以及采用大型结构的函数，如果可能，请修改函数定义以按引用传递。 [在此处了解详细信息](/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
 
 #### <a name="miscellaneous"></a>杂项
 
@@ -337,9 +337,9 @@ Unity 在一个很好的网页中详细说明了垃圾回收器的工作原理�
 导致过度垃圾回收的最常见原因之一是在 Unity 开发中不缓存对组件和类的引用。 应在运行 Start() 或 Awake() 期间捕获所有引用，并在以后运行 Update() 或 LateUpdate() 等函数期间重复使用这些引用。
 
 其他快速提示：
-- 在运行时使用 [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder) C# 类动态生成复杂字符串
+- 在运行时使用 [StringBuilder](/dotnet/api/system.text.stringbuilder) C# 类动态生成复杂字符串
 - 删除不再需要的 Debug.Log() 调用，因为它们仍会在应用的所有生成版本中执行
-- 如果全息应用通常需要大量的内存，请考虑在加载阶段（例如，在演示加载或过渡屏幕时）调用 [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect)
+- 如果全息应用通常需要大量的内存，请考虑在加载阶段（例如，在演示加载或过渡屏幕时）调用 [_**System.GC.Collect()**_](/dotnet/api/system.gc.collect)
 
 #### <a name="object-pooling"></a>对象池
 

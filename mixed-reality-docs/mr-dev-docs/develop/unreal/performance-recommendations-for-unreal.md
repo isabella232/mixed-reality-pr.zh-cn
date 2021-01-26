@@ -2,17 +2,17 @@
 title: 针对 Unreal 的性能建议
 description: 了解如何使用我们推荐的 Unreal 项目设置在混合现实应用中获得最佳性能。
 author: hferrone
-ms.author: v-hferrone
+ms.author: safarooq
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 性能, 优化, 设置, 文档
-ms.openlocfilehash: a1a8dacd0206882c7ebd67b2658fa2e6300aa66a
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: e956f12d27c826cff35e0b65957060953073a28b
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009817"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583066"
 ---
 # <a name="performance-recommendations-for-unreal"></a>针对 Unreal 的性能建议
 

@@ -7,12 +7,12 @@ ms.date: 11/18/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 12e94e880f8b681ed9c4720b841f8a44ae9e0fd7
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: c26f5579aad29624c9a8f374caa4799423d0637e
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609578"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635439"
 ---
 # <a name="4-making-your-scene-interactive"></a>4.使场景具有交互性
 
@@ -56,7 +56,7 @@ ms.locfileid: "96609578"
 - 提供可通过 Pawn 操纵的精确手势输入事件。
 - 通过从虚拟手的手掌延伸出的手部光线允许远距交互输入事件。
 
-建议在继续之前通读介绍手动交互的[文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/HandInteraction.html)。
+建议在继续之前通读介绍手动交互的[文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/HandInteraction.html)。
 
 准备就绪后，打开“MRPawn”蓝图，然后转到“事件图”。
 
@@ -85,7 +85,7 @@ ms.locfileid: "96609578"
 
 ![完成 UXT 手势交互 Actor 设置](images/unreal-uxt/4-fingerptrs.PNG)
 
-可以在 [UX Tools 文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/HandInteraction.html)中找到有关手动交互 Actor 的详细信息。
+可以在 [UX Tools 文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/HandInteraction.html)中找到有关手动交互 Actor 的详细信息。
 
 现在，项目中的虚拟手可以选择对象，但仍无法对其进行操纵。 测试应用之前的最后一个任务是将操控器组件添加到场景中的 Actor。
 

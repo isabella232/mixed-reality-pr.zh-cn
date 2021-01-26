@@ -7,12 +7,12 @@ ms.date: 01/13/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 仿真器
-ms.openlocfilehash: c26048db18c482312472210c133b20a42fdecae6
-ms.sourcegitcommit: 4b6815605e2ea3830052baed38df21af354d2f9b
+ms.openlocfilehash: 6770ce215fb846b7863b77e4b9fe6da7d7b0c98f
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98166782"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583481"
 ---
 # <a name="using-the-hololens-emulator"></a>使用 HoloLens 仿真器
 
@@ -43,7 +43,7 @@ HoloLens 仿真器结合使用 Hyper-V 和 RemoteFx（第 1 代仿真器）或 G
 * 64 位 CPU
 * 4 核 CPU（或总共有 4 个核心的多个 CPU）
 * 8 GB 或更大的 RAM
-* 在 BIOS 中，必须[支持且启用](https://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx)以下功能：
+* 在 BIOS 中，必须[支持且启用](/archive/blogs/iftekhar/enable-hardware-settings-in-bios-to-run-hyper-v)以下功能：
    * 硬件协助的虚拟化
    * 二级地址转换 (SLAT)
    * 基于硬件的数据执行保护 (DEP)
@@ -255,7 +255,7 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 * 卸载 HoloLens 2 仿真器时，硬盘映像 (Flash.vhdx) 可能会留在硬盘驱动器上的 Windows Kits\10\Emulation\HoloLens\<build number> 文件夹中。  删除此文件是安全的。
 * 硬件图形加速可能导致全息应用在一些带有 AMD 或 Intel 显卡的系统上崩溃。  在仿真器的“工具”窗口中禁用硬件图形加速可以解决此问题。
 * 自 2020 年 7 月起安装最新的 Windows 更新后，HoloLens 仿真器（第 1 代）中的硬件图形加速功能可能不再可用。
-硬件图形加速所需的 RemoteFX 组件已被弃用，将在将来的 Windows 版本中删除。  若要重新启用硬件图形加速，请使用 [Enable-VMRemoteFXPhysicalVideoAdapter PowerShell cmdlet](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter)。  有关其他信息，请参阅[有关在 Windows 中弃用和删除 RemoteFX 支持的文档](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component)。
+硬件图形加速所需的 RemoteFX 组件已被弃用，将在将来的 Windows 版本中删除。  若要重新启用硬件图形加速，请使用 [Enable-VMRemoteFXPhysicalVideoAdapter PowerShell cmdlet](/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter)。  有关其他信息，请参阅[有关在 Windows 中弃用和删除 RemoteFX 支持的文档](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component)。
 
 ## <a name="troubleshooting"></a>疑难解答
 

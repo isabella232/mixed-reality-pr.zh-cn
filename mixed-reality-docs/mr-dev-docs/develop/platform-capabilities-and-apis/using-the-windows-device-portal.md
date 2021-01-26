@@ -7,18 +7,18 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 75eda2775486b1ace82b574816db34a2f895c80b
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c354a6f7c3afd6164182f915c39bbf1ce306ef39
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007787"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583245"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
 <table>
 <tr>
-<th>功能</th><th style="width:150px"><a href="../../hololens-hardware-details.md">HoloLens（第一代）</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px">
+<th>功能</th><th style="width:150px"><a href="/hololens/hololens1-hardware">HoloLens（第一代）</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px">
 </tr><tr>
 <td> Windows 设备门户</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -26,19 +26,19 @@ ms.locfileid: "98007787"
 
 使用适用于 HoloLens 的 Windows 设备门户可以通过 Wi-Fi 或 USB 远程配置和管理设备。 Device Portal 是 HoloLens 上的 Web 服务器，你可以从电脑上的 Web 浏览器连接到它。 设备门户包含许多工具，可帮助你管理 HoloLens 以及调试和优化应用。
 
-本文档专门介绍适用于 HoloLens 的 Windows 设备门户。 若要使用适用于桌面（包括 Windows Mixed Reality）的 Windows 设备门户，请参阅 [Windows 设备门户概述](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal)
+本文档专门介绍适用于 HoloLens 的 Windows 设备门户。 若要使用适用于桌面（包括 Windows Mixed Reality）的 Windows 设备门户，请参阅 [Windows 设备门户概述](/windows/uwp/debug-test-perf/device-portal)
 
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>将 HoloLens 设置为使用 Windows 设备门户
 
 1. 打开 HoloLens 的电源，然后戴上设备。
-2. 针对 HoloLens2 使用[开始手势](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture)，或者在 HoloLens（第 1 代）上使用[开花手势](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom)，以启动主菜单。 
-3. 凝视“设置”磁贴，在 HoloLens（第 1 代）上，使用[隔空敲击](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap)手势。 在 HoloLens 2 上，还可以通过[触摸或使用手部射线](https://docs.microsoft.com/hololens/hololens2-basic-usage)选择该磁贴。 
+2. 针对 HoloLens2 使用[开始手势](/hololens/hololens2-basic-usage#start-gesture)，或者在 HoloLens（第 1 代）上使用[开花手势](/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom)，以启动主菜单。 
+3. 凝视“设置”磁贴，在 HoloLens（第 1 代）上，使用[隔空敲击](/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap)手势。 在 HoloLens 2 上，还可以通过[触摸或使用手部射线](/hololens/hololens2-basic-usage)选择该磁贴。 
 4. 选择“更新”菜单项。
 5. 选择“面向开发人员”  菜单项。
 6. 启用“开发人员模式”。
 
 > [!IMPORTANT]
-> 如果你使用的是多用户而不是管理员，则进入开发人员模式的功能可能灰显。请确保你是[设备上的管理员](https://docs.microsoft.com/hololens/security-adminless-os)。
+> 如果你使用的是多用户而不是管理员，则进入开发人员模式的功能可能灰显。请确保你是[设备上的管理员](/hololens/security-adminless-os)。
 
 7. [向下滚动](../../design/gaze-and-commit.md#composite-gestures)并启用“设备门户”。
 8. 如果要设置 Windows 设备门户以便可以通过 USB 或 Wi-Fi 将应用部署到此 HoloLens，请选择“配对”以[生成配对 PIN](using-visual-studio.md)。 在首次部署期间，请在“PIN”弹出窗口中保持打开“设置”应用，直到在 Visual Studio 中输入了 PIN 才将它关闭。
@@ -47,7 +47,7 @@ ms.locfileid: "98007787"
 
 ## <a name="connecting-over-wi-fi"></a>通过 Wi-Fi 进行连接
 
-1. [将 HoloLens 连接到 Wi-Fi](../../connecting-to-wi-fi-on-hololens.md)。
+1. [将 HoloLens 连接到 Wi-Fi](/hololens/hololens-network)。
 2. 通过以下任一方法查找设备的 IP 地址：
    * 依次转到“设置”>“网络和 Internet”>“Wi-Fi”>“高级选项”。
    * 转到“设置”>“网络和 Internet”，然后选择“硬件属性” 。
@@ -281,13 +281,13 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 ![Microsoft HoloLens 上 Windows 设备门户中的“性能跟踪”页](images/using-windows-portal-img-08.png)<br>
 *Microsoft HoloLens 上 Windows 设备门户中的“性能跟踪”页*
 
-从 HoloLens 中捕获 [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR) 跟踪。
+从 HoloLens 中捕获 [Windows Performance Recorder](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448205(v=win.10)) (WPR) 跟踪。
 * **可用配置文件**：从下拉列表中选择 WPR 配置文件，然后选择或点击“开始”以开始跟踪。
 * **自定义配置文件**：选择或点击“浏览”以从电脑中选择 WPR 配置文件。 选择或点击“上传并启动”以开始跟踪。
 
 要停止跟踪，请选择“停止”链接。 请保持打开此页，直到跟踪文件完成下载。
 
-可以打开捕获的 ETL 文件以供在 [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx) 中进行分析。
+可以打开捕获的 ETL 文件以供在 [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)) 中进行分析。
 
 ### <a name="processes"></a>进程
 
@@ -330,7 +330,7 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 ![Microsoft HoloLens 上 Windows 设备门户中的“应用故障转储”页](images/using-windows-portal-img-12.png)<br>
 *Microsoft HoloLens 上 Windows 设备门户中的“应用故障转储”页*
 
-此页面允许你收集旁加载应用的故障转储。 对于要收集其故障转储的每个应用，请选中对应的“已启用故障转储”复选框。 返回到此页面可收集故障转储。 可[在 Visual Studio 中打开转储文件进行调试](https://msdn.microsoft.com/library/d5zhxt22.aspx)。
+此页面允许你收集旁加载应用的故障转储。 对于要收集其故障转储的每个应用，请选中对应的“已启用故障转储”复选框。 返回到此页面可收集故障转储。 可[在 Visual Studio 中打开转储文件进行调试](/previous-versions/visualstudio/visual-studio-2015/debugger/using-dump-files)。
 
 ### <a name="file-explorer"></a>文件资源浏览器
 
@@ -342,11 +342,11 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 ### <a name="kiosk-mode"></a>展台模式
 
 >[!NOTE]
->展台模式仅适用于 [Microsoft HoloLens Commercial Suite](../../commercial-features.md)。
+>展台模式仅适用于 [Microsoft HoloLens Commercial Suite](/hololens/hololens-commercial-features)。
 
 ![Microsoft HoloLens 上 Windows 设备门户中的“展台模式”页](images/using-windows-portal-img-14.png)
 
-有关如何通过 Windows 设备门户启用展台模式的最新说明，请查看 Windows IT 专业人员中心内的[在展台模式下设置 HoloLens](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) 一文。
+有关如何通过 Windows 设备门户启用展台模式的最新说明，请查看 Windows IT 专业人员中心内的[在展台模式下设置 HoloLens](/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) 一文。
 
 ### <a name="logging"></a>日志记录
 

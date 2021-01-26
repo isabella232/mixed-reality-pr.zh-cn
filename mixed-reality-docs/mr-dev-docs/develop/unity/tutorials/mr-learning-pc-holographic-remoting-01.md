@@ -7,12 +7,12 @@ ms.date: 07/29/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, 工具提示, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: 551c6427d9659dd7f5bad8558c777e918456b4d7
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: d8c7de8a93a32107afe67a1d0375612ab6245be9
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007917"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581961"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1.电脑全息远程处理入门
 
@@ -46,7 +46,7 @@ ms.locfileid: "98007917"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)的说明：
+为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
 
@@ -56,7 +56,7 @@ ms.locfileid: "98007917"
 
 4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
 
-5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
 
 6. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如“电脑全息远程处理”
 
@@ -67,7 +67,7 @@ ms.locfileid: "98007917"
 下载并导入 [MRTK.Tutorials.PCHolographicRemoting.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/pc-holographic-remoting-v2.4.0/MRTK.Tutorials.PCHolographicRemoting.unitypackage)。
 
 >[!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](../../../mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)中的说明。
+> 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](./mr-learning-base-02.md#importing-the-mixed-reality-toolkit)中的说明。
 
 导入教程资产后，项目窗口应如下所示：
 
@@ -191,7 +191,7 @@ ms.locfileid: "98007917"
 
 按照相同的过程，将各自的工具提示对象分配给对应的 MarsCuriosityRover 部分的“While Looking At Target ()”和“On Look Away ()”事件  。
 
-若要启用眼动跟踪，请遵循这些[准则](https://docs.microsoft.com/windows/mixed-reality/mrlearning-base-ch5#5-enable-simulated-eye-tracking-for-in-editor-simulations)。
+若要启用眼动跟踪，请遵循这些[准则](/windows/mixed-reality/mrlearning-base-ch5#5-enable-simulated-eye-tracking-for-in-editor-simulations)。
 
 ## <a name="congratulations"></a>祝贺
 

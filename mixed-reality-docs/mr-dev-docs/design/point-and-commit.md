@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 交互, 设计, HoloLens, 手, 远距, 指向和提交, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, 手部射线, 对象操作, MRTK, 混合现实工具包, DoF
-ms.openlocfilehash: 4ee1fabac763a22006b956e46a908ff4d11e395f
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 3351a38cad99089a60555ffe450447fc5c356fdc
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009737"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583208"
 ---
 # <a name="point-and-commit-with-hands"></a>使用手指向和提交
 
@@ -31,7 +31,7 @@ ms.locfileid: "98009737"
 </colgroup>
 <tr>
      <td><strong>输入模型</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens（第 1 代）</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
 </tr>

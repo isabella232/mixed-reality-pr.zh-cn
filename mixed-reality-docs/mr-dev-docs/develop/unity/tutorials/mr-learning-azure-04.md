@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, Azure 空间定位点, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 50e5bccf09e03ebda8057dbb3ca9d83fc01694bd
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 75c3f98c2f40f03240906716d9b942a157994130
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008167"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581892"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4.集成 Azure 空间定位点
 
@@ -28,12 +28,12 @@ ms.locfileid: "98008167"
 
  Azure 空间定位点是 Azure 云服务系列的一部分，用于保存定位点位置。 可根据定位点 ID 从云中检索保存的定位点位置。 多种平台的设备（如 HoloLens、iOS 和 Android 设备）均可共享和访问此定位点位置。
 
-详细了解 [Azure 空间定位点](https://docs.microsoft.com/azure/spatial-anchors/overview)。
+详细了解 [Azure 空间定位点](/azure/spatial-anchors/overview)。
 
 ## <a name="preparing-azure-spatial-anchors"></a>准备 Azure 空间定位点
 
 在开始之前，需要在 Azure 门户中创建一个空间定位点资源。
-了解如何创建[空间定位点资源](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource)。
+了解如何创建[空间定位点资源](/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource)。
 
 ## <a name="preparing-the-scene"></a>准备场景
 

@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 03db5f79a531d77bfd1cd6513c5bed9ad1202189
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 222c70882826e61d2b60e104c460156687f8b5df
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009717"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583353"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 
@@ -152,7 +152,7 @@ ms.locfileid: "98009717"
 |  概念  |  业务成效  |
 | --- | --- |
 | [HoloLens 硬件](https://www.microsoft.com//hololens/hardware) | HoloLens 2 提供最舒适的沉浸式混合现实体验，其行业领先的解决方案可以在数分钟内让你感受到其价值 — 这一切由 Microsoft 推出的云和 AI 服务所特有的可靠性、安全性和可伸缩性来增强 |
-| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | 了解可通过 Dynamics 365 为员工助力并优化运营的一系列产品，包括[远程协助](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview)、[布局和[指南](https://docs.microsoft.com/dynamics365/mixed-reality/guides/)。 有意义的见解源于从事实际工作、使用实际设备，以及对话真实用户 |
+| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | 了解可通过 Dynamics 365 为员工助力并优化运营的一系列产品，包括[远程协助](/dynamics365/mixed-reality/remote-assist/ra-overview)、[布局和[指南](/dynamics365/mixed-reality/guides/)。 有意义的见解源于从事实际工作、使用实际设备，以及对话真实用户 |
 | [Azure 云服务](../develop/mixed-reality-cloud-services.md) | 通过添加空间感知、空间锚点和复杂的 3D 模型渲染，在不同平台上生成具有吸引力的沉浸式体验 |
 
 ## <a name="what-would-you-like-to-do-next"></a>接下来，你想做什么？
@@ -181,5 +181,4 @@ ms.locfileid: "98009717"
 <br>
 
 >[!IMPORTANT]
->本站点提供的所有混合现实开发材料仅供参考。 你作为应用程序开发人员，必须全权负责你的应用程序、应用程序使用情况以及应用程序对最终用户的影响，包括确保应用不会为最终用户带来不适、伤害或任何其他方式的损害，并提供适当的警告和免责声明。 在开发和发布应用程序的过程中，你需要时刻采取适当的措施，确保应用程序安全并履行 [Microsoft 应用开发人员协议](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)中规定的所有义务。
-
+>本站点提供的所有混合现实开发材料仅供参考。 你作为应用程序开发人员，必须全权负责你的应用程序、应用程序使用情况以及应用程序对最终用户的影响，包括确保应用不会为最终用户带来不适、伤害或任何其他方式的损害，并提供适当的警告和免责声明。 在开发和发布应用程序的过程中，你需要时刻采取适当的措施，确保应用程序安全并履行 [Microsoft 应用开发人员协议](/legal/windows/agreements/app-developer-agreement)中规定的所有义务。

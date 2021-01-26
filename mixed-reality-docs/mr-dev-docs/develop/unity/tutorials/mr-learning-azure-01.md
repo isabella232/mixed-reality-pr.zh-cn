@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: azure, 混合现实, unity, 教程, hololens, hololens 2, azure blob 存储, azure 表存储, azure 空间定位点, azure bot framework, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 24f44e7ecef3aeab45978787bf09d1f947bc2411
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 8f8727074870d07ac9fcd7190f5f53931d75643f
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008317"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635543"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1.适用于 HoloLens 2 的 Azure 云服务
 
@@ -82,13 +82,13 @@ ms.locfileid: "98008317"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-首先，请按照[初始化项目和第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)说明；其中操作包括以下步骤：
+首先，请按照[初始化项目和第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)说明；其中操作包括以下步骤：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如 Azure 云教程
 2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
 3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
 6. [创建并设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如 AzureCloudServices
 
 然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明将场景的 MRTK 配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
@@ -197,7 +197,7 @@ SceneController (预制件)包含两个脚本：SceneController (脚本)和 Unit
 并非你将在本系列教程中使用的所有功能都可以在 Unity 编辑器中运行，这意味着你需要熟悉如何将应用程序部署到 HoloLens 2 设备上。
 
 > [!TIP]
-> 有关如何生成 Unity 项目并将其部署到 HoloLens 2 的提示，可参阅[入门教程 - 在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)中的说明。
+> 有关如何生成 Unity 项目并将其部署到 HoloLens 2 的提示，可参阅[入门教程 - 在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
 
 ### <a name="3-run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>3.在 HoloLens 2 上运行该应用，并按照应用中的说明进行操作
 
