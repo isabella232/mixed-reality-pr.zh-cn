@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 空间感知
 ms.localizationpriority: high
-ms.openlocfilehash: 58f9c5f756a12e99fd10b136b2a450c6227b2dad
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 9b0c914bd1f518d53abdd681b3a5f6959c9a6211
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008007"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98579288"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3.配置 MRTK 配置文件
 
@@ -47,7 +47,7 @@ ms.locfileid: "98008007"
 > [!NOTE]
 > 配置配置文件是顶级配置文件。 因此，若要编辑任何其他配置文件，必须先克隆配置配置文件。
 
-在“层次结构”窗口中，选择 MixedRealityToolkit 对象，然后在检查器窗口中将“MixedRealityToolkit”配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”：
+在“层次结构”窗口中，选择 MixedRealityToolkit 对象，然后在“检查器”窗口中，验证 MixedRealityToolkit 配置文件是否已设置为 DefaultXRSDKConfigurationProfile  ：
 
 ![选中 DefaultHoloLens2ConfigurationProfile 的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step1-1.png)
 
@@ -55,7 +55,7 @@ ms.locfileid: "98008007"
 
 ![Unity MixedRealityToolkit 组件的“复制和自定义”按钮](images/mr-learning-base/base-03-section1-step1-2.png)
 
-在“克隆配置文件”窗口中，输入合适的配置文件名（例如 GettingStarted_HoloLens2ConfigurationProfile），然后单击“克隆”按钮，创建“DefaultHololens2ConfigurationProfile”的可编辑副本 ：
+在“克隆配置文件”窗口中，输入合适的配置文件名（例如 GettingStarted_XRSDKConfigurationProfile），然后单击“克隆”按钮，创建“DefaultXRSDKConfigurationProfile”的可编辑副本 ：
 
 ![Unity MixedRealityToolkit 的“克隆配置文件”弹出窗口](images/mr-learning-base/base-03-section1-step1-3.png)
 
@@ -83,7 +83,7 @@ ms.locfileid: "98008007"
 
 ![选中“空间感知”选项卡的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step3-1.png)
 
-在“克隆配置文件”窗口中，输入合适的配置文件名（例如 GettingStarted_MixedRealitySpatialAwarenessSystemProfile），然后单击“克隆”按钮，创建“DefaultMixedRealitySpatialAwarenessSystemProfile”的可编辑副本 ：
+在“克隆配置文件”窗口中，输入合适的配置文件名（例如 GettingStarted_XRSDKSpatialAwarenessSystemProfile），然后单击“克隆”按钮，创建“DefaultXRSDKSpatialAwarenessSystemProfile”的可编辑副本 ：
 
 ![Unity MixedRealityToolkit 的“克隆空间感知系统配置文件”弹出窗口](images/mr-learning-base/base-03-section1-step3-2.png)
 
@@ -93,7 +93,7 @@ ms.locfileid: "98008007"
 
 ### <a name="4-clone-the-default-spatial-awareness-mesh-observer-profile"></a>4.克隆默认的空间感知网格观察程序配置文件
 
-在仍然选中了“空间感知”选项卡的情况下，展开“Windows Mixed Reality 空间网格观察程序”部分，然后单击“克隆”按钮打开“克隆配置文件”窗口：  
+在仍然选中了“空间感知”选项卡的情况下，展开“XR SDK Windows Mixed Reality 空间网格观察程序”部分，然后单击“克隆”按钮打开“克隆配置文件”窗口  ：
 
 ![已展开“Windows Mixed Reality 空间网格观察程序”部分的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step4-1.png)
 

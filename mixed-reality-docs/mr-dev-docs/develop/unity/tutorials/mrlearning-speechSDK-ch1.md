@@ -1,20 +1,22 @@
 ---
-title: 集成并使用语音识别和听录
-description: 完成本课程可以了解如何在混合现实应用程序中添加和使用 Azure 语音识别和听录。
+title: Azure 语音服务教程 - 1. 集成并使用语音识别和听录
+description: 请完成本课程来了解如何在混合现实应用程序中实施 Azure 语音 SDK。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: f0c26c861cb3400c552d17d45f77cfe3a5cc284c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c663bbf443c206750854c1b8f4cd8946eacd28b1
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010117"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635455"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1.集成并使用语音识别和听录
+
+## <a name="overview"></a>概述
 
 在本教程系列中，你将创建一个混合现实应用程序用于探索如何将 Azure 语音服务与 HoloLens 2 配合使用。 完成本教程系列后，你便可以使用设备的麦克风实时进行语音转文本的听录，将语音翻译成其他语言，并利用意向识别功能通过人工智能来理解语音命令。
 
@@ -41,16 +43,16 @@ ms.locfileid: "98010117"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)的说明：
+为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
-2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
+2. [切换生成平台](mr-learning-base-02.md#configuring-the-unity-project)
 3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
 6. [创建并配置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景指定适当的名称，例如 AzureSpeechServices
 
-然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明将场景的 MRTK 配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
+然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明，确保场景的 MRTK 配置配置文件为“DefaultHoloLens2ConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
 
 ## <a name="configuring-the-speech-commands-start-behavior"></a>配置语音命令的启动行为
 
@@ -79,7 +81,7 @@ ms.locfileid: "98010117"
 
 * [Microsoft.CognitiveServices.Speech.N.N.N.unitypackage](https://aka.ms/csspeech/unitypackage)（最新版本）
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.3/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage)
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.3.0.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-speech-services-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.3.0.0.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.5.1.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/2.5.1/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.5.1.unitypackage)
 
 > [!TIP]
 > 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)说明。
@@ -117,7 +119,7 @@ ms.locfileid: "98010117"
 
 ## <a name="connecting-the-unity-project-to-the-azure-resource"></a>将 Unity 项目连接到 Azure 资源
 
-若要使用 Azure 语音服务，需要创建一个 Azure 资源并获取语音服务的 API 密钥。 按照“[免费试用语音服务](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started)”中的说明进行操作，并记下服务区域（也称为“位置”）和 API 密钥（也称为“密钥 1”或“密钥 2”）。
+若要使用 Azure 语音服务，需要创建一个 Azure 资源并获取语音服务的 API 密钥。 按照“[免费试用语音服务](/azure/cognitive-services/speech-service/get-started)”中的说明进行操作，并记下服务区域（也称为“位置”）和 API 密钥（也称为“密钥 1”或“密钥 2”）。
 
 在“层次结构”窗口中选择“Lunarcom”对象，然后在“检查器”窗口中找到“Lunarcom 控制器(脚本)”组件的“语音 SDK 凭据”部分，并按如下所述对其进行配置：  
 
@@ -142,7 +144,6 @@ ms.locfileid: "98010117"
 假设计算机上配备了麦克风，当你讲话时，会在终端面板上听录你的语音：
 
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section7-step1-3.png)
-
 
 > [!CAUTION]
 > 应用程序需要连接到 Azure，因此请确保计算机/设备已连接到 Internet。

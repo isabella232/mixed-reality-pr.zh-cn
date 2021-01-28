@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式处理, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, OpenXR
-ms.openlocfilehash: eb9ec39d663dec2b5bf4c9177524449f31aaf554
-ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
+ms.openlocfilehash: a5b65bbfe5a1f365a93836406365fdc395b73c47
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98247730"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580057"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 
@@ -49,6 +49,8 @@ ms.locfileid: "98247730"
 
 * [适用于 Unreal 的 UX Tools](https://www.unrealengine.com/marketplace/en-US/product/mixed-reality-ux-tools) 是第一个要发布的插件，目前仅在 HoloLens 2 上受支持。 此插件包括 C++ 代码、蓝图，以及用于输入模拟、手部交互、表面磁性等的常见 UX 功能的示例资产。
 
+* [适用于 Unreal 的 Graphics Tools](https://github.com/microsoft/MixedReality-GraphicsTools-Unreal/) 是 UE 游戏插件，其中创建了代码、蓝图和示例资产，有助于优化混合现实应用程序的视觉保真，同时不超出性能预算。
+
 [!INCLUDE[](../includes/unreal-building-blocks.md)]
 
 > [!NOTE]
@@ -82,7 +84,7 @@ ms.locfileid: "98247730"
 
 ### <a name="debugging"></a>调试
 
-如果希望使用 Visual Studio 对在设备上运行的应用程序进行调试，请按照以下[说明](https://docs.microsoft.com/visualstudio/debugger/debug-installed-app-package#remote)操作。
+如果希望使用 Visual Studio 对在设备上运行的应用程序进行调试，请按照以下[说明](/visualstudio/debugger/debug-installed-app-package#remote)操作。
 
 ### <a name="performance"></a>性能
 
@@ -104,7 +106,7 @@ ms.locfileid: "98247730"
 | 空间音频 | 4.23 | ✔️ |
 | Spectator Screen 支持流式传输 | 4.24 |
 | 通过流式传输的平面 LSR | 4.24 |
-| [示例应用](unreal-samples.md) | 4.24 | ✔️ |
+| [示例应用](../features-and-samples.md) | 4.24 | ✔️ |
 | 移动多视图：性能达到 60 fps | 4.25 | ✔️ |
 | 第三人称摄像机渲染 | 4.25 |
 | 从打包的桌面应用进行流式传输 | 4.25.1 | ✔️ |

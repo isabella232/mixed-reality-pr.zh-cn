@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, android, ios, MRTK, 混合现实工具包, UWP, Azure 空间定位点, AR Foundation, ARCore, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 545373ed169a77614b0a00264f5ba1bf1f3deb8e
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 741c000de0ab2feb3dcbff33e2a0b0acc70838e8
+ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008387"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699238"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5.适用于 Android 和 iOS 的 Azure 空间定位点
 
@@ -28,7 +28,7 @@ ms.locfileid: "98008387"
 在本部分中，你将升级并安装以下内置包：
 
 * AR Foundation 3.1.3
-* XR 旧版 Input Helpers 2.1.4
+* XR 旧版 Input Helpers 2.1.6
 * 适用于 Android 的 ARCore XR 插件 3.1.3 支持
 * 适用于 iOS 的 ARKit XR 插件 3.1.3 支持
 
@@ -73,6 +73,10 @@ ms.locfileid: "98008387"
 > [!NOTE]
 > 添加“AR 引用点管理器(脚本)”组件时，会自动添加“AR 会话来源(脚本)”组件，因为它是“AR 引用点管理器(脚本)”组件所必需的。
 
+
+
+通过调用菜单项来更新 MRTK UnityAR 脚本定义：“混合现实工具包” > “实用工具” > “UnityAR”>“更新脚本定义”  
+
 ## <a name="building-your-application-to-your-android-device"></a>将应用程序生成到 Android 设备
 
 在本部分，你将学习如何配置项目来生成它并将其部署到 Android 设备。
@@ -93,6 +97,10 @@ ms.locfileid: "98008387"
 在 Unity 菜单中，选择“编辑” > “项目设置…”来打开播放器设置窗口，然后找到“播放器” >  “其他设置”部分，选择“Vulkan”，然后单击“-”符号将其删除：     
 
 ![选中了 Vulcan 的 Unity“其他设置”](images/mr-learning-asa/asa-05-section3-step1-3.png)
+
+在 Unity 菜单中，选择“编辑” > “项目设置...” >“播放器”> “XR 设置”，确保使用的是 Android 平台，勾选“支持的虚拟现实”复选框，然后单击“+”图标并选择“无”     ：
+
+![Unity“MRTK 项目配置器”窗口 Android](images/mr-learning-asa/asa-05-section3-step1-2-1.png)
 
 关闭“播放器设置”窗口，再次打开“生成设置”窗口。
 
@@ -147,7 +155,7 @@ ms.locfileid: "98008387"
 
 ![具有“保存”提示窗口 iOS 的 Unity“生成设置”窗口](images/mr-learning-asa/asa-05-section4-step1-5.png)
 
-生成过程完成后，按照[导出 Xcode 项目](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-ios#export-the-xcode-project)中的说明了解如何将 Xcode 项目部署到 iOS 设备。
+生成过程完成后，按照[导出 Xcode 项目](/azure/spatial-anchors/quickstarts/get-started-unity-ios#export-the-xcode-project)中的说明了解如何将 Xcode 项目部署到 iOS 设备。
 
 ## <a name="congratulations"></a>祝贺
 

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 6cc77b32e9479bafeb53dcb99cba4f2f29865fd7
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 0c6bf0871836ad7aae9c3906b2042f97ae003ebf
+ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007207"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699043"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 
@@ -63,13 +63,13 @@ ms.locfileid: "98007207"
 
 在检查器窗口中，使用“添加组件”按钮将“Photon 视图(脚本)”组件添加到 PhotonUser 对象，并按如下所示对其进行配置：
 
-* 向“观察到的组件”字段分配“通用网络同步(脚本)”组件 
+* 确保“观察到的组件”字段分配有“通用网络同步(脚本)”组件 
 
 ![添加并配置了 Photon 视图组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-4.png)
 
 ### <a name="2-create-the-avatar"></a>2.创建头像
 
-在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “StandardAssets” > “材料”文件夹，找到 MRTK 材料    。
+在“项目”窗口中，导航到“资产” > “MRTK” > “StandardAssets” > “材料”文件夹，找到 MRTK 材料   。
 
 然后，在“层次结构”窗口中，右键单击 PhotonUser 对象，然后选择“3D 对象” > “球体”来创建一个球体对象作为 PhotonUser 对象的子项，并按如下所示对它进行配置  ：
 
@@ -112,7 +112,7 @@ ms.locfileid: "98007207"
 ![动画显示了具有联网用户的 Unity](images/mr-learning-sharing/sharing-03-section4-step1-1.gif)
 
 > [!TIP]
-> 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)中的说明。
+> 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
 
 > [!CAUTION]
 > 应用需要连接到 Photon，因此请确保计算机/设备已连接到 Internet。

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 预制件, 全息影像, 工具提示
 ms.localizationpriority: high
-ms.openlocfilehash: 989de4871332608448619e75ffd760c616332533
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4fe4b016be36e04abffeb415f690cc0c01a6f767
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008057"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635551"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
 
@@ -97,17 +97,17 @@ ms.locfileid: "98008057"
 
 ![选中了“菜单”对象并展开了 ButtonCollection 对象的 Unity](images/mr-learning-base/base-06-section2-step1-2.png)
 
-将第一个按钮重命名为“指示器”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示 ：
+将 ButtonCollection 中的第一个按钮重命名为“指示器”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示：
 
 * 更改主标签文本以匹配按钮的名称
-* 向“无(对象)”字段分配“Indicator”对象 
+* 向“无(对象)”字段分配 V 形外观的“指示器”对象
 * 从“无函数”下拉列表中，选择“GameObject” > “SetActive (bool)”将此函数设置为触发事件时要执行的操作  
 * 验证是否已选中参数复选框
 * 将图标更改为“搜索”图标
 
 ![配置了“指示器”按钮对象“按钮配置帮助程序”的 Unity](images/mr-learning-base/base-06-section2-step1-3.png)
 
-在“层次结构”窗口中，选择“指示器”对象，然后在“检查器”窗口中执行以下操作：
+若要禁用 V 形“指示器”对象，请在“层次结构”窗口中选择 V 形外观的“指示器”对象，然后在“检查器”窗口中：
 
 * 取消选中其名称旁的复选框，以使其在默认情况下处于非活动状态
 * 使用“添加组件”按钮添加“方向指示器控制器(脚本)”组件 
@@ -115,7 +115,7 @@ ms.locfileid: "98008057"
 ![选中并禁用了“指示器”对象、添加了 DirectionalIndicatorController 组件的 Unity](images/mr-learning-base/base-06-section2-step1-4.png)
 
 > [!NOTE]
-> 现在，当应用程序启动时，会默认禁用指示器，并且可以通过按“指标器”按钮来启用。
+> 现在，当应用程序启动时，会默认禁用 V 形指示器，并且可以通过按“指标器”按钮来启用。
 
 将第二个按钮重命名为“TapToPlace”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示 ：
 
@@ -169,7 +169,7 @@ ms.locfileid: "98008057"
 在“层次结构”窗口中展开“RoverExplorer”>“RoverParts”对象并选择其所有子探测器部件对象，然后在“检查器”窗口中，使用“添加组件”按钮添加“ToolTipSpawner”组件并按如下所述配置  ：
 
 * 确保选中“启用焦点”复选框，以要求用户查看部件以显示工具提示
-* 从“项目”窗口中将“简单行工具提示”预制件分配给“工具提示预制件”字段 
+* 从“项目”窗口中将“简单行工具提示”预制件分配给“预制件”字段 
 * 将“工具提示替代设置”>“设置模式”更改为“替代” 
 * 将“工具提示替代设置”>“手动透视本地位置 Y”更改为 1.5 
 
@@ -196,4 +196,5 @@ ms.locfileid: "98008057"
 
 在本教程中，你了解了如何使用 MRTK 提供的按钮和菜单预制件以及 Unity 的 TextMeshPro 组件来创建简单的用户界面，以及如何配置按钮以在按下按钮时触发事件。 还了解了如何添加动态工具提示 UI 元素以向用户提供其他信息。
 
-[下一教程：7.与 3D 对象交互](mr-learning-base-07.md)
+> [!div class="nextstepaction"]
+>[下一教程：7.与 3D 对象交互](mr-learning-base-07.md)

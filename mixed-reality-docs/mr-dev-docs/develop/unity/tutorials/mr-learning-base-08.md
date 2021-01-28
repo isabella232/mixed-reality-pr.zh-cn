@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: f464ba4e08f1446f1d50eda577aedf9d070630ee
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5efe1c54d9e3b4096dfec4221e4ce04e7370ca47
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007887"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635471"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
 
@@ -33,7 +33,7 @@ ms.locfileid: "98007887"
 ![Unity“MRTK 项目配置器”窗口](images/mr-learning-base/base-08-section1-step1-1.png)
 
 > [!NOTE]
-> 当你在本系列教程开头配置 Unity 项目时，[应用 MRTK 项目配置器设置](mr-learning-base-02.md#selecting-mrtk-and-project-settings)指令期间应该已经启用了眼睛凝视输入功能。 但如果未启用此功能，请确保立即启用。
+> 当你在本系列教程开头配置 Unity 项目时，[应用 MRTK 项目配置器设置](mr-learning-base-02.md#creating-and-configuring-the-scene)指令期间应该已经启用了眼睛凝视输入功能。 但如果未启用此功能，请确保立即启用。
 
 ## <a name="enabling-eye-based-gaze-in-the-gaze-provider"></a>在凝视提供者中启用基于眼睛的凝视
 
@@ -55,9 +55,9 @@ ms.locfileid: "98007887"
 
 * 展开“输入数据提供者” > “输入模拟服务”部分 
 * 克隆 DefaultMixedRealityInputSimulationProfile 并为其指定合适的名称，例如 GettingStarted_MixedRealityInputSimulationProfile
-* 找到“眼动模拟”部分，然后选中“模拟眼睛位置”复选框 
+* 找到“眼睛凝视模拟”，并将“默认眼睛凝视模拟模式”设置为“摄像头前轴”  
 
-![应用了新创建的配置文件并启用了眼动模拟的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-08-section3-step1-1.png)
+![选中了 TextMeshPro 对象的 Unity](images/mr-learning-base/base-08-section3-step1-1.png)
 
 ## <a name="adding-eye-tracking-to-objects"></a>将眼动跟踪添加到对象
 

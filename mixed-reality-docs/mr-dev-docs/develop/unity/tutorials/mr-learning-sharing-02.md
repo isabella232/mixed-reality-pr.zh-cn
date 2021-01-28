@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: 8bf8d440cb47d817514e34c98ac45f34f495c2bb
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 1c47da28b3ccdc706f372749f265ac0329a2327b
+ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007297"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699123"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2.设置 Photon Unity Networking
 
@@ -28,13 +28,13 @@ ms.locfileid: "98007297"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-首先，请按照[初始化项目和部署第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2)说明；其中操作包括以下步骤：
+首先，请按照[初始化项目和部署第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)说明；其中操作包括以下步骤：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
 2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
 3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
 6. [创建和配置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供适当的名称，例如 MultiUserCapabilities
 
 然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)中的说明执行以下操作：
@@ -48,7 +48,7 @@ ms.locfileid: "98007297"
 
 ![Unity 播放器设置](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
 
-在“发布设置”中，向下滚动到“功能”部分，仔细检查你在上面的[配置 Unity 项目](mr-learning-base-02.md#selecting-mrtk-and-project-settings)步骤中启用的“InternetClient”、“Microphone”、“SpatialPerception”和“GazeInput”都已启用     。
+在“发布设置”中，向下滚动到“功能”部分，仔细检查你在上面的[配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)步骤中启用的“InternetClient”、“Microphone”、“SpatialPerception”和“GazeInput”都已启用     。
 
 然后，启用以下附加功能：
 
@@ -68,9 +68,11 @@ ms.locfileid: "98007297"
 
 ## <a name="importing-the-tutorial-assets"></a>导入教程资产
 
-下载以下 Unity 自定义包，并 **按其列出顺序** 将其 **导入**：
+将 AzurespatialAnchors SDK V2.7.1 添加到 unity 项目，若要添加包，请遵循此[教程](https://docs.microsoft.com/en-us/azure/spatial-anchors/how-tos/setup-unity-project?tabs=UPMPackage)
 
-* [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.2.1/AzureSpatialAnchors.unitypackage)（版本 2.2.1）
+
+下载以下 Unity 自定义包，并 **按其列出顺序** 将其 **导入**：
+ 
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.4.0.unitypackage)
@@ -83,7 +85,7 @@ ms.locfileid: "98007297"
 > 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)说明。
 
 > [!NOTE]
-> 导入 MultiUserCapabilities 教程资产包后，会在控制台窗口中看到几个 [CS0246](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0246) 错误，指出缺少类型或命名空间。 这符合预期，并且会在下一部分中（当你导入 PUN 资产时）解决。
+> 导入 MultiUserCapabilities 教程资产包后，会在控制台窗口中看到几个 [CS0246](/dotnet/csharp/language-reference/compiler-messages/cs0246) 错误，指出缺少类型或命名空间。 这符合预期，并且会在下一部分中（当你导入 PUN 资产时）解决。
 
 ## <a name="importing-the-pun-assets"></a>导入 PUN 资产
 

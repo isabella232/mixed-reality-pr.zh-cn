@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, 求解器, 眼动跟踪, 语音命令
 ms.localizationpriority: high
-ms.openlocfilehash: 27a5f2cae4f08fbc142c8b872c22d23ab41cdc62
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: a917aea812c262e3589110a29e2399da4c1e5348
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008077"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98579266"
 ---
 # <a name="1-introduction-to-the-mrtk-tutorials"></a>1.MRTK 教程简介
 
@@ -42,14 +42,14 @@ ms.locfileid: "98008077"
 * 一台 Windows 10 电脑，其中已[安装](../../install-the-tools.md)并配置正确的工具
 * [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) 10.0.18362.0 或更高版本
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
+
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块
 
 > [!CAUTION]
-> 建议用于本系列教程的 MRTK 版本是 MRTK 2.4.0。
+> 建议用于本系列教程的 MRTK 版本是 MRTK 2.5.1。
 
 > [!CAUTION]
 > 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求。
 
 > [!div class="nextstepaction"]
 > [下一教程：2.初始化项目并部署第一个应用程序](mr-learning-base-02.md)
-
