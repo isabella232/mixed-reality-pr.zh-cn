@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: c5d312161b7d0f4f832e8d09dbacf5af700ffd8d
-ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
+ms.openlocfilehash: 1adfb979cfc22be5da18ed990c9db55e6bad97f3
+ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98108872"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238137"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
@@ -27,51 +27,11 @@ ms.locfileid: "98108872"
 > [!NOTE]
 > 如果要在 Windows 电脑上构建 VR 应用程序，则不一定需要混合现实 OpenXR 插件。 但是，如果要自定义 HP 回音 G2 控制器的控制器映射，或生成在 HoloLens 2 和 VR 耳机上都适用的应用，则需要安装该插件。
 
-## <a name="installing-the-mixed-reality-openxr-plugin"></a>安装混合现实 OpenXR 插件
+## <a name="installing-openxr-with-the-mixed-reality-feature-tool"></a>通过混合现实功能工具安装 OpenXR
 
-你的项目需要在使用混合现实 OpenXR 插件之前安装 **OpenXR 插件** 和 **XR 插件管理** 包。 如果已安装了这些文件，很好！ 否则，安装混合现实 OpenXR 插件会自动将它们作为依赖项进行安装：
+安装具有新的混合现实功能工具应用程序的 OpenXR 插件。 按照 [安装和使用说明](welcome-to-mr-feature-tool.md) ，在混合现实工具包类别中选择 **混合现实 OpenXR 插件** 包：
 
-1. 在 Unity 编辑器中，导航到 "**编辑" > 项目设置 > 包管理器**"
-2. 展开 " **限定作用域** " 部分，输入以下信息，然后选择 " **保存**"：
-    * 将 **名称** 设置为 **Microsoft Mixed Reality**
-    * 将 **URL** 设置为 **https://pkgs.dev.azure.com/aipmr/MixedReality-Unity-Packages/_packaging/Unity-packages/npm/registry/**
-    * 将 **范围 (s)** 设置为 **mixedreality**
-
-3. 在 "**高级设置**" 下，选择 "**启用预览包**"
-
-![在项目设置中打开的 "Unity 包管理器" 窗口的屏幕截图](images/openxr-img-01.png)
-
-Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装的包以及可以从中安装这些包的注册表。
-
-> [!IMPORTANT]
-> OpenXR 仍在 Unity 中试验，此过程可能会随时间而改变，因为我们将努力优化开发人员体验。
-
-### <a name="registering-the-mixed-reality-dependency"></a>注册混合现实依赖项
-
-将 Microsoft 混合现实范围内的注册表添加到清单后，可以指定 OpenXR 包。
-
-添加 OpenXR 包：
-
-1. 在文本编辑器中打开 **[projectRoot]/Packages/manifest.js** ，如 Visual Studio Code
-    1. 为此，请在项目窗口的左面板中右键单击 " **包** "。 然后单击 " **在资源管理器中显示**"。
-    ![项目窗口中列出的包的屏幕截图](images/packages.png)
-1. 按如下所示修改文件 *中包/manifest.js* 的依赖项部分：
-
-    > [!IMPORTANT]
-    > 清单文件中的依赖关系可能比此处显示的更多。 请勿删除任何文件，只需将 "OpenXR" 依赖项添加到列表。
-
-    ``` json
-      "dependencies": {
-        "com.microsoft.mixedreality.openxr": "0.1.2",
-      }
-    ```
-
-1. 保存该文件，切换回 Unity 编辑器，打开 **包管理器** 以确认已安装插件：
-
-    ![在 Unity 编辑器中打开的 Unity 包管理器的屏幕截图，其中突出显示了混合现实 OpenXR 插件](images/openxr-img-03.png)
-
-    > [!Note]
-    > 如果使用 Unity 包管理器删除 OpenXR 包，则必须使用前面介绍的步骤重新添加它。
+![突出显示了 "打开 xr" 插件的混合现实功能工具包窗口](images/feature-tool-openxr.png)
 
 ## <a name="configuring-xr-plugin-management-for-openxr"></a>为 OpenXR 配置 XR 插件管理
 
@@ -124,9 +84,13 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 
 ## <a name="using-mrtk-with-openxr-support"></a>结合使用 MRTK 与 OpenXR 支持
 
-从2.5.3 版本开始，MRTK Unity 支持混合现实 OpenXR 插件。  安装 [混合现实 OpenXR 插件](#installing-the-mixed-reality-openxr-plugin)时，可以从与设置相同的作用域注册表中安装 MRTK 插件。 可在 [MRTK 文档](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/usingupm.html#registering-the-mixed-reality-component-server)中找到更多详细信息。
+从2.5.3 版本开始，MRTK Unity 支持混合现实 OpenXR 插件。  
 
-1. 将以下包添加到文件中的 **[projectRoot]/Packages/manifest.js** ：
+1. 再次打开 [混合现实功能工具](welcome-to-mr-feature-tool.md) ，并在平台支持类别中选择 **混合现实 OpenXR 插件** 包
+
+<!-- MRTK plugins can be installed from the same scoped registries as you set up when [installing the Mixed Reality OpenXR plugin](#installing-the-mixed-reality-openxr-plugin). You can find more detailed information in the [MRTK documentation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/usingupm.html#registering-the-mixed-reality-component-server).
+
+1. Add following packages in your **[projectRoot]/Packages/manifest.json** file:
 
 ```json
 "dependencies": {
@@ -135,7 +99,7 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
     "com.microsoft.mixedreality.toolkit.examples": "2.5.3",
     …
 }
-```
+``` -->
 
 2. 转到检查器中的 MixedReality 工具包组件脚本，并切换到 **DefaultOpenXRConfigurationProfile** 配置文件：
 
@@ -157,7 +121,7 @@ Unity 包管理器使用名为 *manifest.js* 的清单文件来确定要安装�
 
 OpenXR 仍是实验性的，因此我们非常感谢你的反馈，你可以向我们提供更好的帮助。 你将在 [Unity 论坛](https://aka.ms/unityforums)上查找我们，方法是使用 **Microsoft**  +  **OpenXR** 和 **HoloLens 2** 或 **Windows Mixed Reality** 标记论坛帖子。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [配置项目时不使用 MRTK](configure-unity-project.md)
 * [建议用于 Unity 的设置](recommended-settings-for-unity.md)
