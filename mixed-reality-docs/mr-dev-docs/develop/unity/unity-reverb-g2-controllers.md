@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/14/2020
 ms.topic: article
 keywords: Unity，回音，回音 G2，HP 回音 G2，mixed reality，开发，运动控制器，用户输入，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发
-ms.openlocfilehash: fa9b80076d65978ae1602fc4f9519d7e11c651b5
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 26435ef57c9baf59b1008fb4750aedd913a19814
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583572"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421387"
 ---
 # <a name="hp-reverb-g2-controllers-in-unity"></a>Unity 中的 HP 回音 G2 控制器
 
@@ -31,38 +31,11 @@ HP 运动控制器是全新类型的 Windows Mixed Reality 控制器：所有相
 
 可以通过创建 *MotionControllerWatcher* 并订阅其事件来获取 MotionController 实例，类似于使用 *InteractionManager* 事件来发现新的 *InteractionSource* 实例。 MotionController 的方法和属性说明控制器支持的输入，包括其按钮、触发器、二维轴和操纵杆。 MotionController 类还公开通过 *MotionControllerReading* 类访问输入状态的方法。 MotionControllerReading 类表示在给定时间的控制器状态的快照。 
 
-## <a name="installing-microsoftmixedrealityinput-using-the-unity-package-manager"></a>使用 Unity 包管理器安装 MixedReality 
+## <a name="installing-microsoftmixedrealityinput-with-the-mixed-reality-feature-tool"></a>通过混合现实功能工具安装 MixedReality
 
-Unity 包管理器使用 [清单文件](https://docs.unity3d.com/Manual/upm-manifestPkg.html) () 上的 # B0 来确定要安装的包以及要安装的注册表 (服务器) 可以从安装这些包。 你需要注册混合现实组件服务器，然后才能使用 MixedReality 包。
+安装新的混合现实功能工具应用程序的 MixedReality 插件。 按照 [安装和使用说明](welcome-to-mr-feature-tool.md) 进行操作，并在混合现实工具包类别中选择 **混合现实输入** 包：
 
-### <a name="registering-the-mixed-reality-component-server"></a>注册混合现实组件服务器 
-
-对于将使用混合现实输入包的每个项目，"包" 文件夹中文件 (的 manifest.js) 需要添加混合现实范围内的注册表。 若要正确修改 manifest.js以支持混合现实： 
-    1. <projectRoot>在文本编辑器中打开/Packages/manifest.js，如 Visual Studio Code。 
-    2. 在清单文件的顶部，将混合现实服务器添加到作用域注册表部分，并保存该文件。 
-    
-<pre>
-{ 
-  "scopedRegistries": [ 
-    { 
-      "name": "Microsoft Mixed Reality", 
-      "url": "https://pkgs.dev.azure.com/aipmr/MixedReality-Unity-Packages/_packaging/Unity-packages/npm/registry/", 
-      "scopes": [ 
-        "com.microsoft.mixedreality" 
-      ] 
-    } 
-  ], 
-</pre>
-
-### <a name="adding-the-microsoftmixedrealityinput-package"></a>添加 MixedReality 包 
-
-<projectRoot>在文本编辑器中修改/Packages/manifest.json file 的依赖项部分，以添加 mixedreality 包并保存该文件。 
-
-<pre>
-  "dependencies": { 
-    "com.microsoft.mixedreality.input": "0.9.2006", 
-  }
-</pre>
+![突出显示混合现实输入的混合现实功能工具包窗口](images/feature-tool-mrinput.png)
 
 ## <a name="using-microsoftmixedrealityinput"></a>使用 MixedReality 
 
