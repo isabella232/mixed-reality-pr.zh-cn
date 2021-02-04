@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, TextMeshPro
 ms.localizationpriority: high
-ms.openlocfilehash: 4d82d0974a0a797e7f8d2de2d4943666f7d32a4f
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: ff479df81316ab5ceeabf045ad1bbae007190ed4
+ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635486"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238151"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2.初始化项目并部署第一个应用程序
 
@@ -86,7 +86,13 @@ ms.locfileid: "98635486"
 
 ## <a name="importing-the-mixed-reality-toolkit"></a>导入混合现实工具包
 
-下载 Unity 自定义包：
+### <a name="using-the-mixed-reality-feature-tool"></a>使用混合现实功能工具
+
+若要使用全新的混合现实功能工具应用程序安装 MRTK，请遵循我们的[安装和使用说明](../welcome-to-mr-feature-tool.md)并在“混合现实工具包”类别中选择“Mixed Reality Toolkit Foundation”包。
+
+### <a name="using-unity-packages"></a>使用 Unity 包
+
+使用自定义包安装 MRTK：
 
 * [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.5.1/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage)
 
@@ -128,7 +134,7 @@ Unity 完成上一部分中的导入包操作后，应显示“MRTK 项目配置
 
 在“项目设置”窗口中，选择“XR 插件管理” > “安装 XR 插件管理”，安装 XR 插件管理 ：
 
-![配置了包名称的 Unity 发布设置](images/mr-learning-base/base-02-section5-step2-2.png)
+![选择了 XR 插件管理的项目设置](images/mr-learning-base/base-02-section5-step2-2.png)
 
 Unity 安装完 XR 插件管理后。 确保转到“通用 Windows 平台”设置，然后选中“在启动时初始化 XR”。
 
@@ -142,10 +148,10 @@ Unity 导入完 Windows Mixed Reality SDK 后，应再次显示“MRTK 项目配
 
 在“MRTK 项目配置器”窗口中，使用“音频空间定位器”下拉列表选择 MS HRTF Spatializer，然后单击“应用”按钮以应用该设置  ：
 
-![选中了“添加 Windows Mixed Reality SDK”的 Unity XR 设置](images/mr-learning-base/base-02-section5-step2-5.png)
+![突出显示音频空间定位器属性的 MRTK 项目配置器窗口](images/mr-learning-base/base-02-section5-step2-5.png)
 
 > [!TIP]
->可以根据需要决定是否设置“音频空间定位器”属性，如果设置，可提高项目中的音频体验。 如果将其设置为“MS HRTF 空间定位器”，则启用 Unity 的 AudioSource.spatialize 属性时将使用此空间定位器插件。 若要了解有关本主题的详细信息，请参阅<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/tutorials/unity-spatial-audio-ch1" target="_blank">空间音频教程</a>。
+>可以根据需要决定是否设置“音频空间定位器”属性，如果设置，可提高项目中的音频体验。 如果将其设置为“MS HRTF 空间定位器”，则启用 Unity 的 AudioSource.spatialize 属性时将使用此空间定位器插件。 若要了解有关本主题的详细信息，请参阅<a href="https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/unity-spatial-audio-ch1" target="_blank">空间音频教程</a>。
 
 在“项目设置”窗口中，选择“播放器” > “XR 设置”，然后使用“深度格式”下拉列表选“16 位深度”   ：
 

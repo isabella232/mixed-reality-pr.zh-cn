@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: 725e41e94923f1738eb11064c772f9138a6be09a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: e4ddfd5951945cc6a5bc9d7b71cad86a296fe725
+ms.sourcegitcommit: cd2987467044fde1e2eb227e6c25d00e744aabfc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582706"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98923809"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
@@ -26,7 +26,10 @@ ms.locfileid: "98582706"
 混合现实云服务（例如 Azure 远程渲染和 Azure 空间定位点）可帮助开发人员在各种平台上构建引人注目的沉浸式体验 。 借助这些服务，当你创建应用程序来进行 3D 训练、预测性设备维护和设计审查时，可在项目中集成空间感知 - 所有操作均在用户环境的上下文中进行。
 
 ### <a name="azure-remote-rendering"></a>Azure 远程渲染
-Azure 远程渲染（也称为 ARR）是一项服务，可用于实时渲染高度复杂的 3D 模型并将其流式传输到设备。 ARR 目前为公共预览版，可将其添加到面向 HoloLens 2 或 Windows 桌面电脑的 Unity 或 Native C++ 项目中。
+
+[Azure 远程渲染](https://docs.microsoft.com/azure/remote-rendering/)（也称为 ARR）是一项服务，可用于实时渲染高度复杂的 3D 模型并将其流式传输到设备。 ARR 目前为公共预览版，可将其添加到面向 HoloLens 2 或 Windows 桌面电脑的 Unity 或 Native C++ 项目中。
+
+<br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Intro-to-Azure-Mixed-Reality-Services-Azure-Remote-Rendering/player]
 
@@ -43,7 +46,8 @@ ARR 不会限制可在应用中使用的用户界面类型，这是一个额外�
 ![Unity 展示应用中的 Azure 远程渲染示例](images/showcase-app.png)
 
 ### <a name="azure-spatial-anchors"></a>Azure 空间定位点
-Azure 空间定位点（又称为 ASA）是一项跨平台服务，可用于生成空间感知的混合现实应用程序。 借助 Azure 空间定位点，你可按真实世界的规模跨多台设备映射、保存和共享全息内容。 
+
+[Azure 空间定位点](https://docs.microsoft.com /azure/spatial-anchors/)（又称为 ASA）是一项跨平台服务，可用于生成空间感知的混合现实应用程序。 借助 Azure 空间定位点，你可按真实世界的规模跨多台设备映射、保存和共享全息内容。 
 
 ASA 是针对混合现实中常见用例特别定制的解决方案，其中包括：
 * 导视：可以连接两个或多个空间定位点以创建用户必须与之交互的任务列表或关注点。

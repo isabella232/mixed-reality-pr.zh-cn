@@ -1,5 +1,5 @@
 ---
-title: 创建 HoloLens 项目
+title: 创建第一个 HoloLens Unreal 应用程序
 description: 了解如何为 HoloLens 混合现实开发正确配置具有场景对象和输入交互的 Unreal 项目。
 author: hferrone
 ms.author: safarooq
@@ -7,14 +7,27 @@ ms.date: 01/19/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, Unreal 编辑器, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 移植, 升级
-ms.openlocfilehash: 3b2b88ac897a8791fec1ca2942d0db34efcee598
-ms.sourcegitcommit: be33fcda10d1cb98df90b428a923289933d42c77
+ms.openlocfilehash: 467987f69b50c0ec635c99899d6bcecab5a62af0
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98672734"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421426"
 ---
-# <a name="creating-a-hololens-project"></a>创建 HoloLens 项目
+# <a name="creating-your-first-hololens-unreal-application"></a>创建第一个 HoloLens Unreal 应用程序
+
+本指南将指导你创建在 Unreal 引擎中的 HoloLens 上运行的第一个混合现实应用。 在“Hello World”的传统程序中，你将创建一个在屏幕上显示多维数据集的简单应用程序。 为了使应用程序更有用，还会创建第一个手势来旋转多维数据集并退出应用程序。 
+
+## <a name="objectives"></a>目标
+
+* 启动 HoloLens 项目
+* 启用正确的插件
+* 创建 ARSessionConfig 数据资产
+* 设置手势输入
+* 构建初级内容
+* 实现收缩手势
+
+## <a name="creating-a-new-project"></a>创建新项目
 
 首先需要一个待处理的项目。 如果你是刚接触的 Unreal 开发人员，则需要从 Epic Launcher [下载支持文件](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal)。
 
@@ -29,7 +42,8 @@ ms.locfileid: "98672734"
 
 4. 在“项目设置”中，设置“C++、可缩放的 3D 或 2D、移动/平板电脑”和“非初学者内容”，然后选择保存位置并单击“创建项目”   
 
-> [!NOTE] 使用 C++ 而不是 Blueprint 项目，以便后续可以使用 OpenXR 插件。 本快速入门使用 Unreal Engine 随附的默认 OpenXR 插件。 但建议下载和使用官方的 Microsoft OpenXR 插件。 这要求项目是 C++ 项目。
+> [!NOTE] 
+> 使用 C++ 而不是 Blueprint 项目，以便后续可以使用 OpenXR 插件。 本快速入门使用 Unreal Engine 随附的默认 OpenXR 插件。 但建议下载和使用官方的 Microsoft OpenXR 插件。 这要求项目是 C++ 项目。
 
 ![“项目设置”窗口，突出显示了项目、性能、目标平台和初学者内容选项](images/unreal-quickstart-img-03.png)
 
@@ -131,13 +145,17 @@ Unreal 中的 AR 会话无法自行发生。 要使用会话，需要借助 ARSe
 
 ![操作映射，其中突出显示了 Open XR Msft Hand Interaction 选项](images/unreal-quickstart-img-16.jpg)
 
-4. 打开“关卡蓝图”，然后添加 InputAction RightPinch 和 InputAction LeftPinch  
+## <a name="setting-up-gestures"></a>设置手势
+
+现在我们已设置了输入，接下来我们将进入有趣的部分：添加手势！ 右收缩时旋转立方体，左收缩时退出应用程序。
+
+1. 打开“关卡蓝图”，然后添加 InputAction RightPinch 和 InputAction LeftPinch  
 * 将右收缩事件连接到 AddActorLocalRotation，并将立方体作为目标，将“Delta 旋转”设置为“X = 0, Y = 0”和“Z = 20”    。 现在每次收缩时，立方体将旋转 20 度
 * 将左收缩事件连接到“退出游戏”
 
 ![关卡蓝图打开，其中有针对右收缩和左收缩事件的输入操作](images/unreal-quickstart-img-17.jpg)
 
-5. 在立方体的“转换”设置中，将“移动性”设置为“可移动”，使其可动态移动  ：
+2. 在立方体的“转换”设置中，将“移动性”设置为“可移动”，使其可动态移动  ：
 
 ![“转换”设置，其中突出显示了“移动性”属性](images/unreal-quickstart-img-18.jpg)
 

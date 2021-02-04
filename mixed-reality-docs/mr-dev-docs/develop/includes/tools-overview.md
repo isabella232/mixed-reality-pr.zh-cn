@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b6e75419ef9cdd4595e23e6217ab1b1762cd134e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: c205e3b812eeb7a85bfe361d4fd83f9aec7b7999
+ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98605337"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99244924"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -13,21 +13,30 @@ ms.locfileid: "98605337"
 ### <a name="1-download-the-latest-version"></a>1.下载最新版本
 
 建议使用 [Unity LTS（长期支持）](https://unity3d.com/unity/qa/lts-releases)流作为启动新项目时使用的最佳版本，更新到最新版本可获得最新的稳定修补程序。
-* 目前的建议是使用“Unity 2019”，这是下文的 MRTK v2 所需的 LTS 版本。
+* 目前的建议是使用 [Unity 2019.4 LTS](https://unity3d.com/unity/qa/lts-releases?version=2019.4)，这是下文的 MRTK v2 所需的 LTS 版本。
 * 如果由于特定原因需要使用其他版本的 Unity，Unity 支持并行安装不同的版本。
 
-### <a name="2-import-mixed-reality-toolkit-mrtk"></a>2.导入混合现实工具包 (MRTK)
+### <a name="2-install-the-mixed-reality-feature-tool"></a>2.安装混合现实功能工具
+
+[混合现实功能工具](../unity/welcome-to-mr-feature-tool.md)是开发人员发现混合现实功能包并将其添加到 Unity 项目中的一种新方式。 
+
+你可以按名称或类别搜索包，查看其依赖项，甚至在导入之前查看项目清单文件的建议更改。 验证所需的包后，混合现实功能工具会将它们下载到所选的项目中。
+
+#### <a name="importing-the-mixed-reality-toolkit"></a>导入混合现实工具包
+
 ![MRTK](../../design/images/MRTK_UX_Hero.png)
 
-[混合现实工具包](../unity/mrtk-getting-started.md) (MRTK) 是一个用于混合现实应用程序的开源跨平台开发工具包。 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 该工具包旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序的开发。
+[混合现实工具包](../unity/mrtk-getting-started.md) (MRTK) 是一个用于混合现实应用程序的开源跨平台开发工具包。 
 
-若要安装，建议完成我们策划的 [HoloLens](../unity/unity-development-overview.md#1-getting-started) 或 [VR](../unity/unity-development-wmr-overview.md#1-getting-started) 开发历程中的入门部分。 如果你已遵循针对 HoloLens 的 Unity 开发历程，请完成下面列出的其余设置步骤，并继续学习 [HoloLens 2 入门教程](../unity/tutorials/mr-learning-base-01.md)。
+* 遵循下面的[安装和使用说明](../unity/welcome-to-mr-feature-tool.md#system-requirements)，选择“Mixed Reality Toolkit Foundation”包，安装混合现实工具包。
+
+建议完成我们策划的 [HoloLens](../unity/unity-development-overview.md#1-getting-started) 或 [VR](../unity/unity-development-wmr-overview.md#1-getting-started) 开发历程中的入门部分。 如果你已遵循针对 HoloLens 的 Unity 开发历程，请完成下面列出的其余设置步骤，并继续学习 [HoloLens 2 入门教程](../unity/tutorials/mr-learning-base-01.md)。
 
 > [!IMPORTANT]
-> 请注意，安装说明面向的是 MRTK 和 Unity 版本的最新稳定组合，即 MRTK 2.4.0 和 Unity 2019.3.15 。
+> 请注意，安装说明面向的是 MRTK 和 Unity 版本的最新稳定组合，即 MRTK 2.5.1 和 Unity 2019.4 LTS 。
 
 > [!NOTE]
-> 如果你不想使用 Unity 的 MRTK，则需要自行编写所有交互和行为的脚本。
+> 如果你不想使用 MRTK for Unity，则需要[自行编写所有交互和行为的脚本](../unity/configure-unity-project.md)。
 
 :::row:::
     :::column:::

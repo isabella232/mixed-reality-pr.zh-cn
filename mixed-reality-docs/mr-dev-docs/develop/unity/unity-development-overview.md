@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: fc444f4d40d8bc013253869fe77ddd563e889d85
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 59bb269bfb8d7e0a9cfd6963cf144ddb0e070c5f
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583008"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421406"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
@@ -36,6 +36,7 @@ ms.locfileid: "98583008"
 | [什么是 MRTK？](mrtk-getting-started.md) | 通过熟悉混合现实工具包及其所提供的功能开始历程 |
 | [安装最新工具](../install-the-tools.md) | 下载并安装最新 Unity 包，并为混合现实设置你的项目 |
 | [HoloLens 2 教程系列](tutorials/mr-learning-base-01.md) | 深入研究 HoloLens 2 硬件的初学者级别 MRTK 教程 |
+| **可选** [下载混合现实功能工具](welcome-to-mr-feature-tool.md) | 用于发现、更新混合现实功能包并将其添加到 Unity 项目的全新开发人员工具 |
 
 > [!IMPORTANT]
 > 若要在不导入混合现实工具包的情况下创建新的 Unity 项目，需针对 Windows Mixed Reality 手动更改一小组 Unity 设置。 这些设置分为两个类别：按项目设置和按场景设置。 有关分步过程，请参阅我们的[配置指南](configure-unity-project.md)。

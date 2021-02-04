@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: 混合现实, 实用工具, 教程, hololens, hololens 2, azure 自定义视觉, azure 认知服务, azure 云服务, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: aa3ad219ab2cd45b14d06881757ec776d3e098f3
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 7676a55a2276b88f3bc123dda90a1b8d39536a61
+ms.sourcegitcommit: daa45a19a3a353334380cda78fee7fa149f0e48b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581929"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98981716"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3.集成 Azure 自定义视觉
 
@@ -50,17 +50,17 @@ Azure 自定义视觉属于认知服务系列，可用于训练图像分类器 �
 ![检查器中显示了 ObjectDetectionManager 脚本组件配置字段的 Unity](images/mr-learning-azure/tutorial3-section4-step1-2.png)
 
 在“层次结构”窗口中，找到并选中 ObjectDetectionManager 对象。
-ObjectDetectionManager 预制件包含“ObjectDetectionManager(脚本)”组件，你可从“检查器”窗口中看到，它取决于多项设置 。
+ObjectDetectionManager 预制件包含“ObjectDetectionManager(脚本)”组件，你可从“检查器”窗口中看到，具体取决于 Azure 设置和项目设置 。
 
 ## <a name="retrieving-azure-api-resource-credentials"></a>检索 Azure API 资源凭据
 
 可从 Azure 门户和自定义视觉门户检索“ObjectDetectionManager(脚本)”设置所需的凭据。
 
-### <a name="azure-portal"></a>Azure 门户
+### <a name="retrieving-azure-settings-credentials"></a>检索 Azure 设置凭据
 
-查找并找到你在本教程的“准备场景”部分中创建的“认知服务”类型的自定义视觉资源。 然后，单击“密钥和终结点”，以检索所需的凭据。
+查找并找到你在本教程的“准备场景”部分中创建的“认知服务”类型的自定义视觉资源（选择自定义视觉资源名称，后跟 -Prediction） 。 然后，单击“概述”或“密钥和终结点”，以检索所需的凭据 。
 
-### <a name="custom-vision-dashboard"></a>自定义视觉仪表板
+### <a name="retrieving-project-settings-credentials"></a>检索项目设置凭据
 
 在[自定义视觉](https://www.customvision.ai/projects)仪表板中，打开已为本教程创建的项目，并单击页面右上角的齿轮图标以打开“设置”页。 此时，你可在“资源”部分中找到所需的凭据。
 
@@ -87,6 +87,10 @@ ObjectDetectionManager 预制件包含“ObjectDetectionManager(脚本)”组件
 > “ObjectDetectionManager(脚本)”会直接将拍摄的图像上传到自定义视觉服务。 作为一种替代方法，自定义视觉 API 接受图像 URL，你可以练习修改“ObjectDetectionManager(script)”，将图像上传到 Blob 存储。
 
 ## <a name="detect-objects"></a>检测对象
+
+在检测对象之前，必须更改 API 密钥，该密钥显示在已分配有自定义视觉密钥的项目设置下的 ObjectDetectionManager (脚本) 中。
+
+在 Azure 门户中查找并找到自定义视觉资源。单击“密钥和终结点”，检索 API 密钥，并替换为项目设置下的旧 API 密钥。
 
 现在，你可以测试训练后的模型，运行应用程序并从主菜单中单击“搜索对象”，然后键入相关的被跟踪对象的名称 。 随即将显示“对象卡片”，单击“自定义视觉”按钮 。 自此，ObjectDetectionManager 将开始在后台使用相机拍摄图像，菜单上将指示进度。 将相机指向你用于训练模型的对象，你将看到相机在一小段时间后会检测到对象。
 

@@ -7,12 +7,12 @@ ms.date: 05/15/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, 测试, 混合现实工具包, MRTK 版本 2, MRTK, 工具, SDK, HoloLens, HoloLens 2, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 跨平台
-ms.openlocfilehash: 4c013f1fa50518404f899b4181e7c07b9e4e0e56
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 54ad49bbf4da577a398a0bfb12fbdc84cdff34d9
+ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581703"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238114"
 ---
 # <a name="introducing-mrtk-for-unity"></a>用于 Unity 的 MRTK 简介
 
@@ -22,13 +22,15 @@ ms.locfileid: "98581703"
 
 MRTK 是一个很棒的开源工具包，自 HoloLens 首次发布以来就有了它。 该工具包现在的优秀，归功于我们开发人员社区的努力贡献。 在过去 3 年里，我们听取了开发人员社区的反馈，在构建 MRTK v2 时考虑到了大家最关注的一些事项。  
 
-MRTK for Unity 是一款面向混合现实应用程序的开源跨平台开发工具包。 该工具包提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 MRTK 版本 2 旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序开发。 该项目旨在降低准入门槛、创建混合现实应用程序，并随着我们的共同成长回馈社区。
+MRTK for Unity 是一款面向混合现实应用程序的开源跨平台开发工具包。 安装工具包的最简单方法是使用新的混合现实功能工具应用程序。 遵循我们的[安装和使用说明](welcome-to-mr-feature-tool.md)并在“混合现实工具包”类别中选择“Mixed Reality Toolkit Foundation”包。 
+
+用于 Unity 的 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 MRTK 版本 2 旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序开发。 该项目旨在降低准入门槛、创建混合现实应用程序，并随着我们的共同成长回馈社区。
 
 <br>
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IkCG]
 
-查看 [GitHub 上的 MRTK 文档](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)，并通过[安装指南](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)开始使用。
+有关更多功能的详细信息，请参阅 [GitHub 上关于 MRTK 的文档](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)。
 
 ## <a name="new-with-mrtk-v2"></a>MRTK v2 新增功能
 
@@ -49,7 +51,7 @@ MRTK for Unity 是一款面向混合现实应用程序的开源跨平台开发�
 ## <a name="see-also"></a>另请参阅
 
 * [安装工具](../install-the-tools.md)
+* [混合现实功能工具](welcome-to-mr-feature-tool.md)
 * [使用适用于 Unity 的 MRTK 进行开发](unity-development-overview.md)
-* [MRTK - 安装指南 (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)
 * [MRTK - 文档主页 (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 * [从 HoloToolkit/MRTK 移植到 MRTK 版本 2 (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)
