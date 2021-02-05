@@ -3,15 +3,15 @@ title: 空间音频教程-5。 使用混响为空间音频添加距离感
 description: 添加回音效果，提高对空间音频的距离变体的意义。
 author: kegodin
 ms.author: v-hferrone
-ms.date: 12/01/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，音频混合器，SFX 回音
-ms.openlocfilehash: 3d19bb0b22c507eb692a752aa318ecb82a1cf2f7
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: f7a5270d969f2e462db0244bd6c68b99347ae1a7
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98578362"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590719"
 ---
 # <a name="5-using-reverb-to-add-distance-to-spatial-audio"></a>5.使用混响为空间音频添加距离感
 

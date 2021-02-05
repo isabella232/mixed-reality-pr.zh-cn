@@ -3,15 +3,15 @@ title: 空间音频教程-2。 将按钮交互声音空间化
 description: 向项目添加一个按钮，并 spatialize 按钮交互声音。
 author: kegodin
 ms.author: v-hferrone
-ms.date: 12/01/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，prototyping，音量曲线
-ms.openlocfilehash: e4b2ed99f56fea82b1c72e4fce5205c14e1d3533
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 12d159cb162cbf136483f7be94b0d297319a0737
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98578472"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590759"
 ---
 # <a name="2-spatializing-button-interaction-sounds"></a>2.将按钮交互声音空间化
 
@@ -25,7 +25,7 @@ ms.locfileid: "98578472"
 
 ## <a name="add-a-button"></a>添加按钮
 
-若要添加按钮 prefab，请在 " **项目** " 窗口中选择 " **资产** "，并在搜索栏中键入 "PressableButtonHoloLens2"。
+若要添加按钮 prefab，请在 " **项目** " 窗口中，选择 " **包** "，并在搜索栏中键入 "PressableButtonHoloLens2"。
 
 ![资产中的 prefab 按钮](images/spatial-audio/spatial-audio-02-section1-step1-1.png)
 

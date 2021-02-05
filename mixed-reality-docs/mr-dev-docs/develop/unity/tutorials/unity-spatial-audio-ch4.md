@@ -3,15 +3,15 @@ title: 空间音频教程-4。 在运行时启用和禁用空间音频
 description: 使用按钮来启用和禁用运行时音频的 spatialization。
 author: kegodin
 ms.author: v-hferrone
-ms.date: 12/01/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
-ms.openlocfilehash: 9239c45efa5196b94fe2e05f85a2e83df6c7789f
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 26143975707b2cd6141803a6335cec89db5bbd26
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98578300"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590729"
 ---
 # <a name="4-enabling-and-disabling-spatialization-at-run-time"></a>4. 在运行时启用和禁用 spatialization
 
