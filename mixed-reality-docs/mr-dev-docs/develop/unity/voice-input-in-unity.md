@@ -6,37 +6,40 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: c6364b190ca90c5e6faf7fb8ef79314134e93cfc
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 7268a4df9c7fce03029937c72540ed274574067d
+ms.sourcegitcommit: 8c3af63fb49494f75c8ab46236fc3dd8533c1e9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583721"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606112"
 ---
 # <a name="voice-input-in-unity"></a>Unity 中的语音输入
 
->[!NOTE]
->请不要使用以下信息，而应考虑将 Unity 插件用于认知语音服务 SDK，它具有更好的语音准确性结果，并提供对语音到文本解码和高级语音功能（如对话框、基于意向的交互、翻译、文本到语音合成和自然语言语音识别）的方便访问。 在此处找到示例和文档： https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
+> [!CAUTION]
+> 在开始之前，请考虑使用认知语音服务 SDK 的 Unity 插件。 此插件提供更好的语音准确性结果，并可轻松访问语音到文本解码，以及高级语音功能，如对话框、基于意向的交互、翻译、文本到语音合成和自然语言语音识别。 若要开始，请查看 [示例和文档](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-unity)。
 
-Unity 公开了三种将 [语音输入](../../design/voice-input.md) 添加到 Unity 应用程序的方法。
+Unity 公开了三种向 Unity 应用程序添加 [语音输入](../../design/voice-input.md) 的方法，这两种方法是 PhraseRecognizer 类型：
+* `KeywordRecognizer`向你的应用程序提供一个要侦听的字符串命令数组
+* 为 `GrammarRecognizer` 应用程序提供一个 SRGS 文件，用于定义要侦听的特定语法
+* `DictationRecognizer`允许你的应用程序侦听任何字词，并向用户提供其语音的注释或其他显示方式
 
-使用 KeywordRecognizer () 两种类型的 PhraseRecognizers 中的一种，可以为应用提供一个要侦听的字符串命令数组。 使用 GrammarRecognizer (PhraseRecognizer) 的另一种类型，可为应用程序指定一个 SRGS 文件，用于定义要侦听的特定语法。 使用 DictationRecognizer，你的应用程序可以侦听任何字词，并向用户提供其语音的注释或其他显示。
-
->[!NOTE]
->一次只能处理听写或短语识别。 这意味着，如果 GrammarRecognizer 或 KeywordRecognizer 处于活动状态，则 DictationRecognizer 不能处于活动状态，反之亦然。
+> [!NOTE]
+> 不能同时处理听写和短语识别。 如果 GrammarRecognizer 或 KeywordRecognizer 处于活动状态，则 DictationRecognizer 不能处于活动状态，反之亦然。
 
 ## <a name="enabling-the-capability-for-voice"></a>启用语音功能
 
 必须为应用声明 **麦克风** 功能才能使用语音输入。
-1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player"，转到 "播放机" 设置
-2. 选择 "Windows 应用商店" 选项卡
-3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
+1. 在 Unity 编辑器中，导航到 "编辑" " **> 项目设置" > Player**
+2. 选择 " **Windows 应用商店** " 选项卡
+3. 在 " **发布设置 > 功能** " 部分中，检查 **麦克风** 功能
+4. 在你的 HoloLens 设备上向应用程序授予麦克风访问权限
+    * 系统会要求你在设备启动时执行此操作，但如果意外单击了 "否"，则可以在设备设置中更改权限
 
 ## <a name="phrase-recognition"></a>短语识别
 
 若要使你的应用能够侦听用户所说的特定短语，请采取一些操作，你需要执行以下操作：
-1. 使用 KeywordRecognizer 或 GrammarRecognizer 指定要侦听的短语
-2. 处理 OnPhraseRecognized 事件并执行与已识别的短语对应的操作
+1. 使用或指定要侦听的短语 `KeywordRecognizer``GrammarRecognizer`
+2. 处理 `OnPhraseRecognized` 事件，并采取相应的操作来识别已识别的短语
 
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
@@ -58,7 +61,7 @@ KeywordRecognizer keywordRecognizer;
 Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 ```
 
-现在，请将关键字添加到字典中，例如，在开始 ( # A1 方法中。 在此示例中，我们要添加 "activate" 关键字：
+现在，将关键字添加到字典中，例如，在方法中添加关键字 `Start()` 。 在此示例中，我们要添加 "activate" 关键字：
 
 ```
 //Create keywords for keyword recognizer
@@ -74,7 +77,7 @@ keywords.Add("activate", () =>
 keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 ```
 
-现在注册 OnPhraseRecognized 事件
+现在注册 `OnPhraseRecognized` 事件
 
 ```
 keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
@@ -113,20 +116,20 @@ keywordRecognizer.Start();
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
 ```
 
-创建 GrammarRecognizer 并向其传递 SRGS 文件的路径：
+创建 `GrammarRecognizer` 并向其传递 SRGS 文件的路径：
 
 ```
 private GrammarRecognizer grammarRecognizer;
 grammarRecognizer = new GrammarRecognizer(Application.streamingDataPath + "/SRGS/myGrammar.xml");
 ```
 
-现在注册 OnPhraseRecognized 事件
+现在注册 `OnPhraseRecognized` 事件
 
 ```
 grammarRecognizer.OnPhraseRecognized += grammarRecognizer_OnPhraseRecognized;
 ```
 
-你将获得一个回调，其中包含你可以进行相应处理的 SRGS 语法中指定的信息。 最重要的信息将在 semanticMeanings 数组中提供。
+你将获得一个回调，其中包含你可以进行相应处理的 SRGS 语法中指定的信息。 数组中将提供大部分重要信息 `semanticMeanings` 。
 
 ```
 private void Grammar_OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -147,19 +150,22 @@ grammarRecognizer.Start();
 **命名空间：** *UnityEngine*<br>
 **类型**： *DictationRecognizer*、 *SpeechError*、 *SpeechSystemStatus*
 
-使用 DictationRecognizer 将用户的语音转换为文本。 DictationRecognizer 公开 [听写](../../design/voice-input.md#dictation) 功能，并支持注册和侦听假设和短语完成的事件，因此，你可以在用户讲话和之后向用户提供反馈。 开始 ( # A1，并分别停止 ( # A3 方法启用和禁用听写识别。 使用识别器完成后，应使用 Dispose ( # A1 方法来释放它所使用的资源。 如果未在此之前释放这些资源，它将在垃圾回收期间自动释放这些资源。
+使用将 `DictationRecognizer` 用户的语音转换为文本。 DictationRecognizer 公开 [听写](../../design/voice-input.md#dictation) 功能，并支持注册和侦听假设和短语完成的事件，因此，你可以在用户讲话和之后向用户提供反馈。 `Start()` 和 `Stop()` 方法分别启用和禁用听写识别。 完成识别器后，应使用将其释放， `Dispose()` 以释放它所使用的资源。 如果未在此之前释放这些资源，它将在垃圾回收期间自动释放这些资源。
 
 开始使用听写只需几个步骤：
-1. 创建新的 DictationRecognizer
+1. 创建新的 `DictationRecognizer`
 2. 处理听写事件
 3. 启动 DictationRecognizer
 
 ### <a name="enabling-the-capability-for-dictation"></a>启用听写功能
 
-必须为应用声明 "Internet 客户端" 功能以及上面提到的 "麦克风" 功能，才能利用听写。
-1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player" 页，转到 "播放机" 设置
-2. 选择 "Windows 应用商店" 选项卡
-3. 在 "发布设置 > 功能" 部分中，查看 **InternetClient** 功能
+必须为应用声明 **Internet 客户端** 和 **麦克风** 功能才能使用听写：
+1. 在 Unity 编辑器中，参阅 **编辑 > 项目设置 > Player**
+2. 选择 " **Windows 应用商店** " 选项卡
+3. 在 " **发布设置 > 功能** " 部分中，查看 **InternetClient** 功能
+    * 如果还没有启用麦克风，可以选择选中 **麦克风** 功能
+4. 向应用程序授予对你的 HoloLens 设备上麦克风的访问权限（如果尚未这样做）
+    * 系统会要求你在设备启动时执行此操作，但如果意外单击了 "否"，则可以在设备设置中更改权限
 
 ### <a name="dictationrecognizer"></a>DictationRecognizer
 
@@ -170,16 +176,16 @@ dictationRecognizer = new DictationRecognizer();
 ```
 
 可以订阅和处理四个听写事件，以实现听写行为。
-1. DictationResult
-2. DictationComplete
-3. DictationHypothesis
-4. DictationError
+1. `DictationResult`
+2. `DictationComplete`
+3. `DictationHypothesis`
+4. `DictationError`
 
 **DictationResult**
 
 此事件在用户暂停之后（通常是在句子结束时）触发。 此处返回了已识别的完整字符串。
 
-首先，订阅 DictationResult 事件：
+首先，订阅该 `DictationResult` 事件：
 
 ```
 dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
@@ -198,7 +204,7 @@ private void DictationRecognizer_DictationResult(string text, ConfidenceLevel co
 
 当用户正在对话时，将连续触发此事件。 当识别器倾听时，它提供了到目前为止所听说内容的文本。
 
-首先，订阅 DictationHypothesis 事件：
+首先，订阅该 `DictationHypothesis` 事件：
 
 ```
 dictationRecognizer.DictationHypothesis += DictationRecognizer_DictationHypothesis;
@@ -217,7 +223,7 @@ private void DictationRecognizer_DictationHypothesis(string text)
 
 当识别器停止时，无论是从停止 ( # A1，还是发生超时或其他错误，都将激发此事件。
 
-首先，订阅 DictationComplete 事件：
+首先，订阅该 `DictationComplete` 事件：
 
 ```
 dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
@@ -236,7 +242,7 @@ private void DictationRecognizer_DictationComplete(DictationCompletionCause caus
 
 当发生错误时，将激发此事件。
 
-首先，订阅 DictationError 事件：
+首先，订阅该 `DictationError` 事件：
 
 ```
 dictationRecognizer.DictationError += DictationRecognizer_DictationError;
@@ -268,9 +274,9 @@ dictationRecognizer.Dispose();
 ```
 
 **提示**
-* 开始 ( # A1，并分别停止 ( # A3 方法启用和禁用听写识别。
-* 完成识别器后，必须使用 Dispose ( # A1 方法释放它所使用的资源。 如果未在此之前释放这些资源，它将在垃圾回收期间自动释放这些资源。
-* 超时发生在设定的时间段之后。 可以在 DictationComplete 事件中检查这些超时。 需要注意两个超时：
+* `Start()` 和 `Stop()` 方法分别启用和禁用听写识别。
+* 完成识别器后，必须使用将其释放， `Dispose()` 以释放它所使用的资源。 如果未在此之前释放这些资源，它将在垃圾回收期间自动释放这些资源。
+* 超时发生在设定的时间段之后。 您可以在事件中检查这些超时 `DictationComplete` 。 需要注意两个超时：
    1. 如果识别器在前五秒内开始播放并且不听到任何音频，则会超时。
    2. 如果识别器给出了结果，但随后听到了20秒，则会超时。
 
@@ -282,7 +288,7 @@ dictationRecognizer.Dispose();
 PhraseRecognitionSystem.Shutdown();
 ```
 
-若要将所有识别器还原到其以前的状态，在 DictationRecognizer 停止后，可以调用：
+在 `Restart()` DictationRecognizer 停止后，可以调用将所有识别器还原到其以前的状态：
 
 ```
 PhraseRecognitionSystem.Restart();
@@ -290,16 +296,11 @@ PhraseRecognitionSystem.Restart();
 
 还可以只启动 KeywordRecognizer，这也会重新启动 PhraseRecognitionSystem。
 
-## <a name="using-the-microphone-helper"></a>使用麦克风帮助器
-
-如果系统上有可用麦克风，则 GitHub 上的混合现实工具包包含一个麦克风帮助器类，用于提示开发人员。 其中一种用途是在显示应用程序中的任何语音交互提示之前，要检查系统上是否有麦克风。
-
-麦克风帮助器脚本可以在 " [输入/脚本/实用工具" 文件夹](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Utilities/MicrophoneHelper.cs)中找到。 GitHub 存储库还包含一 [小示例](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scripts/MicrophoneHelperSample.cs) ，演示如何使用帮助程序。
-
 ## <a name="voice-input-in-mixed-reality-toolkit"></a>混合现实工具包中的语音输入
-在此场景中，可以找到语音输入的示例。
 
-- [HoloToolkit-Examples/Input/场景/SpeechInputSource](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scenes/SpeechInputSource.unity)
+在以下演示场景中，可以找到语音输入的 MRTK 示例：
+* [听写](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Examples/Demos/Input/Scenes/Dictation)
+* [语音](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Examples/Demos/Input/Scenes/Speech)
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
