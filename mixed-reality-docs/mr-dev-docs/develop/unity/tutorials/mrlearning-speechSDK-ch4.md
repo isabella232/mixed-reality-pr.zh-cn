@@ -3,16 +3,16 @@ title: 设置意向和自然语言理解
 description: 完成本课程可以了解如何在混合现实应用程序中设置意向和自然语言理解。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10, LUIS, LUIS 门户, 意图, 实体, 言语, 自然语言理解
 ms.localizationpriority: high
-ms.openlocfilehash: 8d840855321de5d4e055b944783649c9d8028f9a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 49e2b44000add22e924d9552f60b63ac1ac30288
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581471"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590359"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4.设置意向和自然语言理解
 

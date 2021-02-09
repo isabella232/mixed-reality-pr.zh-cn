@@ -3,16 +3,16 @@ title: 使用眼动跟踪
 description: 本课程介绍如何将混合现实应用中的眼动跟踪与混合现实工具包 (MRTK) 结合使用。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: 5efe1c54d9e3b4096dfec4221e4ce04e7370ca47
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: e4104dfd0d7b27425217c8cb92fa36c807053081
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635471"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590369"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
 

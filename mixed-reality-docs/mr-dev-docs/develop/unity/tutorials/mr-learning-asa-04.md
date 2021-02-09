@@ -3,16 +3,16 @@ title: 显示 Azure 空间定位点反馈
 description: 请完成本课程，了解如何在混合现实应用程序中显示来自 Azure 空间定位点的反馈。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 会话, 反馈元素
 ms.localizationpriority: high
-ms.openlocfilehash: 05e418b84f3370274433c4cc21f0122f3475301c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f5f92d8b19da6a449b8630d7f87e0719e438b4ab
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008327"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590669"
 ---
 # <a name="4-displaying-feedback-from-azure-spatial-anchors"></a>4.显示来自 Azure 空间定位点的反馈
 

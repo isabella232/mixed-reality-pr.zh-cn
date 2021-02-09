@@ -3,16 +3,16 @@ title: 将 Azure 空间定位点集成到共享体验中
 description: 完成本课程可以了解如何使用 Azure 空间定位点来锚定共享的多用户 HoloLens 2 应用程序中的对象。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 665979d860a2507fbf6cc9b962f5449c7d7d12f2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4eb7470487a584ef820be82f651ed9bd16392395
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010127"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590219"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5.将 Azure 空间定位点集成到共享体验中
 

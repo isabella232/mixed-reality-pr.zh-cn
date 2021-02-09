@@ -3,16 +3,16 @@ title: 保存、检索和共享 Azure 空间定位点
 description: 完成本课程可以了解如何在混合现实应用程序中保存、检索和共享 Azure 空间定位点。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 应用会话
 ms.localizationpriority: high
-ms.openlocfilehash: 4bae36bfb24130fc7914563af07c09374162f3cb
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 91f1139181a5a77123e003fc0c64d0661220a143
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582057"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590679"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3.保存、检索和共享 Azure 空间定位点
 
