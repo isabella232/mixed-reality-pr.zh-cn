@@ -3,16 +3,16 @@ title: 使用求解器创建动态内容
 description: 本课程介绍如何使用混合现实工具包 (MRTK) 求解器创建动态内容。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: 6006bf5e3edaee13c8ede0bdc04fd5ea928f1757
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 73fbbc64eadec1e3b83d6e10866bd227217f0c9c
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98579142"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590479"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -26,14 +26,14 @@ ms.locfileid: "98579142"
 
 ## <a name="location-of-solvers-in-the-mrtk"></a>解算器在 MRTK 中的位置
 
- MRTK 的解算器位于 MRTK SDK 文件夹中。 若要在项目中查看可用的求解器，请在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “功能” > “实用工具” > “求解器”     ：
+ MRTK 的解算器位于 MRTK SDK 文件夹中。 若要在项目中查看可用的解算器，请在“项目”窗口中，导航到“包” > “混合现实工具包基础” > “SDK” > “功能” > “实用工具” > “解算器”     ：
 
 ![选中了 SOlvers 文件夹的 Unity“项目”窗口](images/mr-learning-base/base-05-section1-step1-1.png)
 
 本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[求解器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)指南。
 
 > [!NOTE]
-> 方向指示器求解器不在上面所述的求解器文件夹中，而是在“资产”>“MRTK”>“SDK”>“实验性”>“功能”>“实用工具”文件夹，因为这是一项实验性功能。
+> 方向指示器求解器不在上面所述的求解器文件夹中，而是在“包”>“混合现实工具包基础”>“SDK”>“实验性”>“功能”>“实用工具”文件夹，因为这是一项实验性功能。
 
 ## <a name="using-the-directional-indicator-solver-to-direct-the-user-to-objects"></a>使用方向指示器求解器将用户定向到对象
 

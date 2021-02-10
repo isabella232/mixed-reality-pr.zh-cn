@@ -3,16 +3,16 @@ title: MRTK 教程简介
 description: 本课程从零开始介绍如何使用混合现实工具包 (MRTK) 创建混合现实应用程序。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, 求解器, 眼动跟踪, 语音命令
 ms.localizationpriority: high
-ms.openlocfilehash: a917aea812c262e3589110a29e2399da4c1e5348
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 8bae8b821e7ffe67b745bbbab763193612a58485
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98579266"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590409"
 ---
 # <a name="1-introduction-to-the-mrtk-tutorials"></a>1.MRTK 教程简介
 
@@ -46,7 +46,7 @@ ms.locfileid: "98579266"
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块
 
 > [!CAUTION]
-> 建议用于本系列教程的 MRTK 版本是 MRTK 2.5.1。
+> 建议用于本系列教程的 MRTK 版本是 MRTK 2.5.3。
 
 > [!CAUTION]
 > 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求。

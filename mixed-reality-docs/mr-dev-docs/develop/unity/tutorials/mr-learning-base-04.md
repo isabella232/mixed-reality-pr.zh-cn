@@ -3,16 +3,16 @@ title: MRTK 教程 - 4. 定位场景中的对象
 description: 本课程介绍如何定位场景中的对象，以及如何使用混合现实工具包 (MRTK) 来组织网格中的对象。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器, 网格对象集合
 ms.localizationpriority: high
-ms.openlocfilehash: 27964cad03111a3f7dad89c66df0cb9a4f95a9e2
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 9087800eca3536704ed4ef01a5d8178720b6a875
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98579206"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590493"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4.定位场景中的对象
 
@@ -27,16 +27,25 @@ ms.locfileid: "98579206"
 
 ## <a name="importing-the-tutorial-assets"></a>导入教程资产
 
-下载并导入以下 Unity 自定义包：
+下载以下 Unity 自定义包：
 
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
 
-导入教程资产后，“项目”窗口应如下所示：
+若要导入 Unity 自定义包，在 Unity 菜单中选择“资产” > “导入包” > “自定义包...”，打开“导入包...”窗口：  
 
 ![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-base/base-04-section1-step1-1.png)
 
-> [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入 MRTK](mr-learning-base-02.md#importing-the-mixed-reality-toolkit) 说明。
+在“导入包…”窗口中，选择下载的 MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage，然后单击“打开”按钮：
+
+![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-base/base-04-section1-step1-2.png)
+
+在“导入 Unity 包”窗口中单击“全部”按钮，确保选择所有资产，然后单击“导入”按钮以导入资产：
+
+![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-base/base-04-section1-step1-3.png)
+
+导入教程资产后，“项目”窗口应如下所示：
+
+![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-base/base-04-section1-step1-4.png)
 
 ## <a name="creating-the-parent-object"></a>创建父对象
 

@@ -3,16 +3,16 @@ title: Azure 空间定位点教程简介
 description: 完成本课程可以了解如何在混合现实应用程序中实现 Azure 空间定位点。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, ios, android, Windows 10, ARCore, macOS, Android 生成支持, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 9529b12968c5cbc985f4af8eb0053d277eb00c03
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: 6ef488dec38a918e0a3707b06644002a51c7d5e5
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699026"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590689"
 ---
 # <a name="1-introduction-to-the-azure-spatial-anchors-tutorials"></a>1.Azure 空间定位点教程简介
 
@@ -50,7 +50,7 @@ ms.locfileid: "98699026"
   * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 且已添加 iOS 生成支持模块
 
 > [!CAUTION]
-> 建议对本系列教程使用混合现实工具包版本 MRTK 2.5.1。
+> 建议对本系列教程使用混合现实工具包版本 MRTK 2.5.3。
 
 > [!CAUTION]
 > 本系列教程推荐的 Unity 版本是 Unity 2019 LTS。它将取代上述链接的先决条件中所述的任何 Unity 版本要求。

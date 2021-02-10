@@ -3,16 +3,16 @@ title: 连接多个用户
 description: 完成本课程可以了解如何在 HoloLens 2 混合现实应用程序中连接多名用户。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 0c6bf0871836ad7aae9c3906b2042f97ae003ebf
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: 58ea52332485a3e0ca460322f6af60266b119ede
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699043"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590189"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 
@@ -69,7 +69,7 @@ ms.locfileid: "98699043"
 
 ### <a name="2-create-the-avatar"></a>2.创建头像
 
-在“项目”窗口中，导航到“资产” > “MRTK” > “StandardAssets” > “材料”文件夹，找到 MRTK 材料   。
+在“项目”窗口中，导航到“包” > “混合现实工具包基础” > “SDK” > “StandardAssets” > “材料”文件夹，找到 MRTK 材料    。
 
 然后，在“层次结构”窗口中，右键单击 PhotonUser 对象，然后选择“3D 对象” > “球体”来创建一个球体对象作为 PhotonUser 对象的子项，并按如下所示对它进行配置  ：
 

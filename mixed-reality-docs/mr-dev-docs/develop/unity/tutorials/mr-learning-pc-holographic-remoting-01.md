@@ -3,16 +3,16 @@ title: 电脑全息远程处理入门
 description: 完成本课程可以了解如何将混合现实应用程序从电脑远程地流式传输到 HoloLens 2。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/29/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, 工具提示, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: d8c7de8a93a32107afe67a1d0375612ab6245be9
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5a779ca03921701b2111e4ed5525b6f7bc250070
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581961"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590379"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1.电脑全息远程处理入门
 
@@ -67,7 +67,7 @@ ms.locfileid: "98581961"
 下载并导入 [MRTK.Tutorials.PCHolographicRemoting.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/pc-holographic-remoting-v2.4.0/MRTK.Tutorials.PCHolographicRemoting.unitypackage)。
 
 >[!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](./mr-learning-base-02.md#importing-the-mixed-reality-toolkit)中的说明。
+> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-04.md#importing-the-tutorial-assets)说明。
 
 导入教程资产后，项目窗口应如下所示：
 
@@ -131,7 +131,7 @@ ms.locfileid: "98581961"
 
 我们提供了 6 种不同的 3D 模型用于演示，展开 ModelParentobject 可公开这些 3D 模型。
 
-在“层次结构”窗口中仍选中 ButtonParent 对象的情况下，在检查器窗口中找到“视图按钮控件(脚本)”组件并展开“模型”变量。
+在“层次结构”窗口中仍选中 ButtonParent 对象的情况下，在检查器窗口中找到“视图按钮控件(脚本)”组件并展开“模型”变量 。
 
 在“大小”字段中，输入要在场景中拥有的 3D 模型的数量。 在本例中，为 6 个模型。 它将创建用于添加新 3D 模型的字段。
 

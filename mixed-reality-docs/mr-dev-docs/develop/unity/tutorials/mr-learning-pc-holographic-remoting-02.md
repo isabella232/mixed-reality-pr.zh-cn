@@ -3,16 +3,16 @@ title: 创建全息远程处理电脑应用程序
 description: 完成本课程可以了解如何创建电脑应用程序来远程处理从电脑到 HoloLens 2 的混合现实体验。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, Visual Studio
 ms.localizationpriority: high
-ms.openlocfilehash: fd357b0b487b948afb6ae15c9e84362e2bc1ef90
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 916a9396c0b29637d5619bac203718e05112b598
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007327"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590299"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2.创建全息远程处理电脑应用程序
 
@@ -53,7 +53,7 @@ ms.locfileid: "98007327"
 
 在 Unity 菜单中选择“文件”>“生成设置”，打开“生成设置”窗口。
 
-在“生成设置”窗口中，单击“添加打开场景”按钮，将当前场景添加到“场景”中。 在“生成”列表中，单击“生成”按钮以打开“生成通用 Windows 平台”窗口：
+在“生成设置”窗口中，单击“添加打开的场景”按钮，将当前场景添加到“场景”中。 在“生成”列表中，单击“生成”按钮以打开“生成通用 Windows 平台”窗口：
 
 ![添加了场景的 Unity“生成设置”窗口](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-1.png)
 
@@ -86,7 +86,7 @@ ms.locfileid: "98007327"
 
 ### <a name="1-install-the-remoting-player-application-on-hololens-2-device"></a>1.在 HoloLens 2 设备上安装“远程播放器”应用程序
 
-_ 在 HoloLens 2 上，访问 Store 应用并搜索“远程播放器”。
+* 在 HoloLens 2 上，访问 Store 应用并搜索“远程播放器”。
 * 选择“远程播放器”应用。
 * 点击“安装”，下载并安装该应用。
 

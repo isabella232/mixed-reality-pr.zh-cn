@@ -3,16 +3,16 @@ title: 初始化项目并部署第一个应用程序
 description: 本课程介绍如何配置 Unity 项目以使用混合现实工具包 (MRTK) 以及如何将其部署到 HoloLens 2。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, TextMeshPro
 ms.localizationpriority: high
-ms.openlocfilehash: ff479df81316ab5ceeabf045ad1bbae007190ed4
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: 82551257339d41940075ee06a6e6937624b83900
+ms.sourcegitcommit: 08503cada8a29a34bcbd9fd955cb23adfe9b60a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99238151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627848"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2.初始化项目并部署第一个应用程序
 
@@ -86,27 +86,46 @@ ms.locfileid: "99238151"
 
 ## <a name="importing-the-mixed-reality-toolkit"></a>导入混合现实工具包
 
-### <a name="using-the-mixed-reality-feature-tool"></a>使用混合现实功能工具
+若要将“混合现实工具包”导入 Unity 项目中，需要使用[混合现实功能工具](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)，开发人员使用该工具能够发现、更新混合现实功能包并将其添加到 Unity 项目中。 你可以按名称或类别搜索包，查看其依赖项，甚至在导入之前查看项目清单文件的建议更改。
 
-若要使用全新的混合现实功能工具应用程序安装 MRTK，请遵循我们的[安装和使用说明](../welcome-to-mr-feature-tool.md)并在“混合现实工具包”类别中选择“Mixed Reality Toolkit Foundation”包。
+从 [Microsoft 下载中心](https://aka.ms/MRFeatureTool)下载最新版本的混合现实功能工具，下载完成后，解压缩文件并将其保存到桌面。
 
-### <a name="using-unity-packages"></a>使用 Unity 包
+> [!NOTE]
+> 需先安装 [.NET 5.0 运行时](https://dotnet.microsoft.com/download/dotnet/5.0)，才能运行混合现实功能工具
 
-使用自定义包安装 MRTK：
+> [!NOTE]
+> 混合现实功能工具目前仅在 Windows 上运行，对于 MacOS，请按照此[过程](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html#1-get-the-latest-mrtk-unity-packages)下载混合现实工具包并将其导入 unity 项目。
 
-* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.5.1/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage)
+从下载的文件夹中打开可执行文件“MixedRealityFeatureTool”，以启动混合现实功能工具。  
 
-在 Unity 菜单中选择“资产” > “导入包” > “自定义包...”，打开“导入包...”窗口：  
+![打开 MixedRealityFeatureTool](images/mr-learning-base/base-02-section4-step1-1.png)
 
-![Unity“导入自定义包...”菜单路径](images/mr-learning-base/base-02-section4-step1-1.png)
+打开“MixedRealityFeatureTool”后，单击“开始”以开始使用混合现实功能工具。
 
-在“导入包…”窗口中，选择下载的 Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage，然后单击“打开”按钮 ：
+![MixedRealityFeatureTool](images/mr-learning-base/base-02-section4-step1-2.png)
 
-![具有“打开”提示窗口的 Unity“导入自定义包”](images/mr-learning-base/base-02-section4-step1-2.png)
+功能按类别进行了分组，以便于查找，单击“混合现实工具包”下拉列表，查找与混合现实工具包相关的包。
 
-在“导入 Unity 包”窗口中单击“全部”按钮，确保选择所有资产，然后单击“导入”按钮以导入资产：
+![MixedRealityFeatureTool 窗口](images/mr-learning-base/base-02-section4-step1-3.png)
 
-![Unity MRTK Foundation 导入窗口](images/mr-learning-base/base-02-section4-step1-3.png)
+勾选“混合现实工具包基础”，并单击其旁边的下拉列表，选择所需的 MRTK 版本，在本教程系列中，请选择“2.5.3”。 然后单击“获取功能”按钮，下载所选的包。
+
+![选择混合现实基础](images/mr-learning-base/base-02-section4-step1-4.png)
+
+“导入功能”窗口中出现了所选包“混合现实工具包基础 2.5.3”及其依赖项包“混合现实工具包标准资产 2.5.3”  。
+
+还需要设置目标 unity 项目的位置以提供“项目路径”，单击项目路径旁边的三个点，在浏览器中浏览到所需项目文件夹，例如“D:\MixedRealityLearning\MRTK Tutorials”。
+
+> [!NOTE]
+> 浏览 Unity 项目文件夹时显示的对话框包含“_”作为文件名。 文件名必须有一个值才能使文件夹被选中。
+
+接下来，单击“验证”按钮以验证所选包，随即显示一个弹出窗口，其中显示消息“未检测到任何验证问题”，单击“确定”以关闭弹出窗口，然后单击“导入”按钮。
+
+![验证混合现实基础](images/mr-learning-base/base-02-section4-step1-5.png)
+
+单击“批准”按钮，将“混合现实工具包”添加到项目中。
+
+![批准混合现实基础](images/mr-learning-base/base-02-section4-step1-6.png)
 
 ## <a name="configuring-the-unity-project"></a>配置 Unity 项目
 
@@ -130,28 +149,18 @@ Unity 完成上一部分中的导入包操作后，应显示“MRTK 项目配置
 
 在 Unity 菜单中选择“编辑” > “项目设置...”，打开“项目设置”窗口： 
 
-![Unity“项目设置...”菜单路径](images/mr-learning-base/base-02-section5-step2-1.png)
-
-在“项目设置”窗口中，选择“XR 插件管理” > “安装 XR 插件管理”，安装 XR 插件管理 ：
-
-![选择了 XR 插件管理的项目设置](images/mr-learning-base/base-02-section5-step2-2.png)
-
-Unity 安装完 XR 插件管理后。 确保转到“通用 Windows 平台”设置，然后选中“在启动时初始化 XR”。
-
-![Unity 配置 XR 插件管理](images/mr-learning-base/base-02-section5-step2-3.png)
-
-在“项目设置”窗口中，选择“播放器” > “XR 设置”，单击 + 图标，然后选择“Windows Mixed Reality”以添加 Windows Mixed Reality SDK  ：
+在“项目设置”窗口中，选择“播放器” > “XR 设置”，勾选“支持虚拟现实”复选框，然后单击 + 图标，选择“Windows Mixed Reality”以添加 Windows Mixed Reality SDK   ：
 
 ![选中了“添加 Windows Mixed Reality SDK”的 Unity XR 设置](images/mr-learning-base/base-02-section5-step2-4.png)
 
-Unity 导入完 Windows Mixed Reality SDK 后，应再次显示“MRTK 项目配置器”窗口。 如果未显示，请使用 Unity 菜单打开它。
+Unity 导入完 Windows Mixed Reality SDK 后，应再次显示“MRTK 项目配置器”窗口。 如果未显示该窗口，可从 Unity 菜单手动将其打开，方法是转到“混合现实工具包” > “实用程序” > “配置 Unity 项目”
 
 在“MRTK 项目配置器”窗口中，使用“音频空间定位器”下拉列表选择 MS HRTF Spatializer，然后单击“应用”按钮以应用该设置  ：
 
-![突出显示音频空间定位器属性的 MRTK 项目配置器窗口](images/mr-learning-base/base-02-section5-step2-5.png)
+![选中了“添加 Windows Mixed Reality SDK”的 Unity XR 设置](images/mr-learning-base/base-02-section5-step2-5.png)
 
 > [!TIP]
->可以根据需要决定是否设置“音频空间定位器”属性，如果设置，可提高项目中的音频体验。 如果将其设置为“MS HRTF 空间定位器”，则启用 Unity 的 AudioSource.spatialize 属性时将使用此空间定位器插件。 若要了解有关本主题的详细信息，请参阅<a href="https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/unity-spatial-audio-ch1" target="_blank">空间音频教程</a>。
+>可以根据需要决定是否设置“音频空间定位器”属性，如果设置，可提高项目中的音频体验。 如果将其设置为“MS HRTF 空间定位器”，则启用 Unity 的 AudioSource.spatialize 属性时将使用此空间定位器插件。 若要了解有关本主题的详细信息，请参阅<a href="https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/tutorials/unity-spatial-audio-ch1" target="_blank">空间音频教程</a>。
 
 在“项目设置”窗口中，选择“播放器” > “XR 设置”，然后使用“深度格式”下拉列表选“16 位深度”   ：
 

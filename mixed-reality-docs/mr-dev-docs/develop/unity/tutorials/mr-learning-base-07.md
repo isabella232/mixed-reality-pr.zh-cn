@@ -3,16 +3,16 @@ title: 与 3D 对象交互
 description: 本课程介绍如何使用混合现实工具包 (MRTK) 来操作混合现实应用中的 3D 对象并与之交互。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
-keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界框
+keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界控件
 ms.localizationpriority: high
-ms.openlocfilehash: 23cfe3d3746d6ab6dbc0757f32b95ddc8637a366
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: f92eca294e2114207a5e28ebe80aa480b9029b66
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98578739"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590423"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 
@@ -76,7 +76,7 @@ ms.locfileid: "98578739"
 > [!NOTE]
 > 至此，已为所有探测器部件对象和 RoverAssembly 对象启用了对象操作。
 
-在“项目”窗口中，导航到“资产” > “MRTK” > “StandardAssets” > “音频”文件夹来查找音频剪辑   ：
+在“项目”窗口中，导航到“包” > “混合现实工具包标准资产” > “音频”文件夹，查找音频剪辑：
 
 ![选中了音频文件夹的 Unity 项目窗口](images/mr-learning-base/base-07-section1-step1-3.png)
 
@@ -115,15 +115,15 @@ ms.locfileid: "98578739"
 
 若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
 
-## <a name="adding-bounding-boxes"></a>添加边界框
+## <a name="adding-bounds-control"></a>添加边界控件
 
-边界框提供用于缩放和旋转的控点，在近距和远距交互时，使用边界框可以更轻松、更直观地单手操作对象。
+边界控件提供用于缩放和旋转的控点，在近距和远距交互时，使用边界控件可以更轻松、更直观地单手操作对象。
 
-在此示例中，将向 RoverExplorer 对象添加一个边界框，以便可以轻松实现整体移动、旋转和缩放。 此外，还将配置菜单，以便可以打开和关闭边界框。
+在此示例中，将向 RoverExplorer 对象添加一个边界控件，以便可以轻松实现整体移动、旋转和缩放。 此外，还将配置菜单，以便可以打开和关闭边界控件。
 
 在“层次结构”窗口中选择“RoverExplorer”对象，然后在“检查器”窗口中，使用“添加组件”按钮添加以下组件 ：
 
-* BoundingBox 组件
+* BoundsControl 组件
 * “对象操控器(脚本)”组件
 
 然后取消选中所有组件旁边的复选框，以使其默认为“禁用” ：
@@ -131,19 +131,19 @@ ms.locfileid: "98578739"
 ![选中 RoverExplorer 对象并添加和禁用了组件的 Unity](images/mr-learning-base/base-07-section2-step1-1.png)
 
 > [!NOTE]
-> 边界框可视化效果是在运行时创建的，因此在进入“游戏”模式之前不可见。
+> 边界控件可视化效果是在运行时创建的，因此在进入“游戏”模式之前不可见。
 
 > [!NOTE]
->BoundingBox 组件将在运行时自动添加 NearInteractionGrabbable 组件。 因此，无需添加此组件即可使用跟踪的双手抓取包含的对象。
+>BoundsControl 组件将在运行时自动添加 NearInteractionGrabbable 组件。 因此，无需添加此组件即可使用跟踪的双手抓取包含的对象。
 
 > [!NOTE]
 >对象操控器（脚本）自动添加约束管理器（脚本）
 
-在“层次结构”窗口中展开“菜单”>“ButtonCollection”对象以显示第四个按钮，并将第三个按钮重命名为“BoundingBox_Enable”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”，如下所示  ：
+在“层次结构”窗口中展开“菜单”>“ButtonCollection”对象以显示第四个按钮，并将第三个按钮重命名为“BoundsControl_Enable”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”，如下所示  ：
 
 * 将“主标签文本”更改为“启用” 
 * 向“无(对象)”字段分配“RoverExplorer”对象 
-* 在“无函数”下拉列表中选择“BoundingBox” > “启用布尔”，以便在触发事件时更新此属性  
+* 在“无函数”下拉列表中选择“BoundsControl” > “启用布尔”，以便在触发事件时更新此属性  
 * 验证是否已选中参数复选框
 * 单击小 + 图标以添加另一个事件
 * 向“无(对象)”字段分配“RoverExplorer”对象 
@@ -151,13 +151,13 @@ ms.locfileid: "98578739"
 * 验证是否已选中参数复选框
 * 将图标保留为“带有边界控件的多维数据集”图标
 
-![选中了 BoundingBox_Enable 按钮对象并配置了“按钮配置帮助程序”组件的 Unity](images/mr-learning-base/base-07-section2-step1-2.png)
+![选中了 BoundsControl_Enable 按钮对象并配置了“按钮配置帮助程序”组件的 Unity](images/mr-learning-base/base-07-section2-step1-2.png)
 
-将第四个和最后一个按钮重命名为“BoundingBox_Disable”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示 ：
+将第四个和最后一个按钮重命名为“BoundsControl_Disable”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示 ：
 
 * 将“主标签文本”更改为“禁用” 
 * 向“无(对象)”字段分配“RoverExplorer”对象 
-* 在“无函数”下拉列表中选择“BoundingBox” > “启用布尔”，以便在触发事件时更新此属性  
+* 在“无函数”下拉列表中选择“BoundsControl” > “启用布尔”，以便在触发事件时更新此属性  
 * 验证是否已取消选中参数复选框
 * 单击小 + 图标以添加另一个事件
 * 向“无(对象)”字段分配“RoverExplorer”对象 
@@ -165,17 +165,17 @@ ms.locfileid: "98578739"
 * 验证是否已取消选中参数复选框
 * 将图标更改为“带有边界控件的多维数据集”图标
 
-![选中了 BoundingBox_Disable 按钮对象并配置了“按钮配置帮助程序”组件的 Unity](images/mr-learning-base/base-07-section2-step1-3.png)
+![选中了 BoundsControl_Disable 按钮对象并配置了“按钮配置帮助程序”组件的 Unity](images/mr-learning-base/base-07-section2-step1-3.png)
 
-如果现在进入“游戏”模式并通过单击“启用”按钮启用边界控件，则可以使用近距或远距交互来移动、旋转和缩放边界框，然后使用“禁用”按钮再次禁用边界框：
+如果现在进入“游戏”模式并通过单击“启用”按钮启用边界控件，则可以使用近距或远距交互来移动、旋转和缩放边界控件，然后使用“禁用”按钮再次禁用边界控件：
 
-![显示正在操作边界框的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section2-step1-4.png)
+![显示正在操作边界控件的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section2-step1-4.png)
 
-若要详细了解“边界框”组件及其相关属性，可以访问 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[边界框](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)指南。
+若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[边界控件](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html)指南。
 
 ## <a name="congratulations"></a>祝贺
 
-在本教程中，你了解了如何为 3D 对象启用近距和远距操作，以及如何限制允许的操作类型。 还了解了如何在 3D 对象周围添加边界框，以便更轻松地控制对象操作。
+在本教程中，你了解了如何为 3D 对象启用近距和远距操作，以及如何限制允许的操作类型。 你还了解了如何在 3D 对象周围添加边界控件，以便更轻松地控制对象操作。
 
 > [!div class="nextstepaction"]
 > [下一教程：8.使用眼动跟踪](mr-learning-base-08.md)

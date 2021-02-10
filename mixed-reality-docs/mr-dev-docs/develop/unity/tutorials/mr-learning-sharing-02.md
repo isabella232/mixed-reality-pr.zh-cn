@@ -3,16 +3,16 @@ title: 设置 Photon Unity Networking
 description: 完成本课程可以了解如何在 HoloLens 2 混合现实应用程序中实现 Photon Unity Network。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: 1c47da28b3ccdc706f372749f265ac0329a2327b
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: 372cb7c9516a994cb7c3da1efb6cade792e862d1
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699123"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590309"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2.设置 Photon Unity Networking
 
@@ -82,7 +82,7 @@ ms.locfileid: "98699123"
 ![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-sharing/sharing-02-section4-step1-1.png)
 
 > [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)说明。
+> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-04.md#importing-the-tutorial-assets)说明。
 
 > [!NOTE]
 > 导入 MultiUserCapabilities 教程资产包后，会在控制台窗口中看到几个 [CS0246](/dotnet/csharp/language-reference/compiler-messages/cs0246) 错误，指出缺少类型或命名空间。 这符合预期，并且会在下一部分中（当你导入 PUN 资产时）解决。

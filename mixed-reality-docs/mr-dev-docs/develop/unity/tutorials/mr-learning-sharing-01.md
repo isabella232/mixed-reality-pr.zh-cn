@@ -3,16 +3,16 @@ title: 多用户功能教程简介
 description: 请完成本课堂，了解如何在 HoloLens 2 应用程序中实现共享的多用户体验。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: c18bd7c10ed042278053a51c2d1894564000dfe2
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: 90c5b2ee3f25c39fc644aee0fbbf49643f7d2a59
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699016"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590169"
 ---
 # <a name="1-introduction-to-the-multi-user-capabilities-tutorials"></a>1.多用户功能教程简介
 
@@ -50,7 +50,7 @@ ms.locfileid: "98699016"
   * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 且已添加 iOS 生成支持模块
 
 > [!CAUTION]
-> 建议对本系列教程使用混合现实工具包版本 MRTK 2.5.1。
+> 建议对本系列教程使用混合现实工具包版本 MRTK 2.5.3。
 
 > [!CAUTION]
 > 本系列教程推荐的 Unity 版本是 Unity 2019 LTS。它将取代上述链接的先决条件中所述的任何 Unity 版本要求。

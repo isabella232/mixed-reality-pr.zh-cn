@@ -3,16 +3,16 @@ title: 使用语音命令
 description: 本课程介绍如何使用混合现实工具包 (MRTK) 在混合现实应用中设置、创建和使用语音命令。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 语音命令, 语音输入
 ms.localizationpriority: high
-ms.openlocfilehash: c052c3501ab34811f33f1f6464c8394669eebe77
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: bb238ee6ca4c657d7e2cb8e3c41f2cdebc7fc0de
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635447"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590389"
 ---
 # <a name="9-using-speech-commands"></a>9.使用语音命令
 
@@ -59,7 +59,7 @@ ms.locfileid: "98635447"
 
 ## <a name="controlling-speech-commands"></a>控制语音命令
 
-在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “功能” > “UX” > “预制件” > “工具提示”文件夹，以查找工具提示预制件      ：
+在“项目”窗口中，导航到“包” > “混合现实工具包基础” > “SDK” > “功能” > “UX” > “预制件” > “工具提示”文件夹，以查找工具提示预制件      ：
 
 ![打开工具提示文件夹](images/mr-learning-base/base-09-section3-step1-1.png)
 

@@ -3,16 +3,16 @@ title: 创建用户界面
 description: 本课程介绍如何使用混合现实工具包 (MRTK) 创建静态和动态用户界面。
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 预制件, 全息影像, 工具提示
 ms.localizationpriority: high
-ms.openlocfilehash: 4fe4b016be36e04abffeb415f690cc0c01a6f767
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: 3b32faab4be13d42f228659285244c206680466e
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635551"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590549"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
 
@@ -86,7 +86,7 @@ ms.locfileid: "98635551"
 
 ## <a name="creating-a-dynamic-menu-that-follows-the-user"></a>创建跟随用户的动态菜单
 
-在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “功能” > “UX” > “预制件” > “菜单”文件夹，单击“NearMenu4x1”预制件并将其拖动到“层次结构”窗口中，然后将其“转换”位置设置为 X = 0、Y = -0.4、Z = 0 并按如下所述进行配置        ：
+在“项目”窗口中，导航到“包” > “混合现实工具包基础” > “SDK” > “功能” > “UX” > “预制件” > “菜单”文件夹，单击“NearMenu4x1”预制件并将其拖动到“层次结构”窗口中，然后将其“转换”位置设置为 X = 0、Y = -0.4、Z = 0 并按如下所述进行配置        ：
 
 * 验证 SolverHandler 组件的“跟踪的目标类型”是否设置为“头部”  
 * 选中“RadialView”解算器旁的复选框，使其默认为启用
@@ -162,7 +162,7 @@ ms.locfileid: "98635551"
 
 ## <a name="adding-tooltips"></a>添加工具提示
 
-在“项目”窗口中，导航到“资产” > “MRTK” > “SDK” > “功能” > “UX” > “预制件” > “工具提示”文件夹，以查找工具提示预制件      ：
+在“项目”窗口中，导航到“包” > “混合现实工具包基础” > “SDK” > “功能” > “UX” > “预制件” > “工具提示”文件夹，以查找工具提示预制件      ：
 
 ![选中了 ToolTips 文件夹的 Unity 项目窗口](images/mr-learning-base/base-06-section4-step1-1.png)
 
