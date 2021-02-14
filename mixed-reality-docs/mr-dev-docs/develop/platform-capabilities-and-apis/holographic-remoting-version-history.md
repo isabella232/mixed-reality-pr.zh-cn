@@ -6,17 +6,29 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，版本历史记录，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: e1f80d0d2cbd02b78ed07e3ec60825ffe1059309
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: 8fa1671657a7cb057f88da24fe4cfe68b0401397
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699006"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496035"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
 > [!IMPORTANT]
 > 本指南特定于 HoloLens 2 上的全息远程处理。
+
+## <a name="version-250-february-12-2021"></a>版本 2.5.0 (2021 年2月12日) <a name="v2.5.0"></a>
+* 使用 [OPENXR API](../native/openxr.md) 的全息远程处理现在支持：
+  * XR_MSFT_spatial_anchor 扩展。 此扩展允许应用程序创建空间锚点，这是用户的物理环境中的任意可用空间点，将由运行时跟踪。
+  * XR_MSFT_controller_model 扩展。 此扩展提供了一种机制，用于加载控制器的 GLTF 模型。
+  * 作为 XR_MSFT_holographic_remoting 扩展的一部分的自定义数据通道。 [OpenXR 远程示例](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)中显示了一个示例。
+* 改善了播放器与远程端之间的同步。 这允许动态变化的姿势和帧缓冲，确保远程呈现的内容平稳地达到预期的目标帧速率。
+* 通过 Microsoft Store 提高的全息远程处理播放机的性能。 在 HoloLens 2 上，播放机现在在每秒60帧上运行。
+* 优化了可通过 [SpatialSurfaceObserver](https://docs.microsoft.com/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceobserver) 通过远程应用查询的空间 surface 网格传输。
+* 修复了在断开连接时调用 SpatialAnchorManager 方法或释放定位点的问题。
+* 固定线程问题导致关闭 PlayerContext 或 RemoteContext 实例时出现故障。
+* 许多其他 bug 修复和稳定性改进。
 
 ## <a name="version-241-january-22-2021"></a>版本 2.4.1 (2021 年1月22日) <a name="v2.4.1"></a>
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目，Windows Mixed Reality，UWP，XR，性能
-ms.openlocfilehash: 70df0314cb714d78c2eeb17335f67d6d90134770
-ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
+ms.openlocfilehash: 6a9bc0d9a565de1d25e1906c439e39773cb99244
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226446"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496075"
 ---
 # <a name="configuring-your-project-without-mrtk"></a>配置项目时不使用 MRTK
 
@@ -125,7 +125,7 @@ HoloLens 具有移动类 GPU。 如果你的应用面向 HoloLens，你需要调
 
 * 添加 [核心构建基块](unity-development-overview.md#2-core-building-blocks)
 * 查看可用 [的平台功能和 api](unity-development-overview.md#3-advanced-features)
-* 了解如何 [部署应用](../platform-capabilities-and-apis/using-visual-studio.md#deploying-an-app-to-your-local-pc---immersive-headset)
+* 了解如何 [部署应用](../platform-capabilities-and-apis/using-visual-studio.md#)
 * 使用 [混合现实模拟器](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md)
 
 ## <a name="see-also"></a>另请参阅

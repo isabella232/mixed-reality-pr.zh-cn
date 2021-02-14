@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: e4ddfd5951945cc6a5bc9d7b71cad86a296fe725
-ms.sourcegitcommit: cd2987467044fde1e2eb227e6c25d00e744aabfc
+ms.openlocfilehash: abd1515b587842dbccb1747b606059e190559480
+ms.sourcegitcommit: 07d6a5c19c9f6ffd0316bce5629ab0e185e1d542
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98923809"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99973067"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
@@ -47,9 +47,9 @@ ARR 不会限制可在应用中使用的用户界面类型，这是一个额外�
 
 ### <a name="azure-spatial-anchors"></a>Azure 空间定位点
 
-[Azure 空间定位点](https://docs.microsoft.com /azure/spatial-anchors/)（又称为 ASA）是一项跨平台服务，可用于生成空间感知的混合现实应用程序。 借助 Azure 空间定位点，你可按真实世界的规模跨多台设备映射、保存和共享全息内容。 
+[Azure 空间定位点](https://docs.microsoft.com /azure/spatial-anchors/)是一项跨平台服务，可用于构建空间感知的混合现实应用程序。 借助 Azure 空间定位点，你可按真实世界的规模跨多台设备映射、保存和共享全息内容。 
 
-ASA 是针对混合现实中常见用例特别定制的解决方案，其中包括：
+Azure 空间定位点是针对混合现实中常见用例特别定制的解决方案，其中包括：
 * 导视：可以连接两个或多个空间定位点以创建用户必须与之交互的任务列表或关注点。
 * 多用户体验：通过与同一虚拟空间中的对象进行交互，用户可以来回传递动作。
 * 在现实世界中保留虚拟内容：用户可以在现实世界中放置虚拟对象，这些虚拟对象可以从其他受支持的设备查看。

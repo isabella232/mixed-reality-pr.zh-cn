@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件
-ms.openlocfilehash: 76193cdf3c790037474b66de9fbbbd1da8f31199
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: afb0627a0fb29ff63ea2174676fc2fdfbd252de6
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583796"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496055"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -109,7 +109,7 @@ Unreal 引擎4.23 也是发布预览版支持的第一个重要游戏引擎版�
 
 >[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/OpenXR-Cross-platform-native-mixed-reality/player?format=ny]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * <a href="https://www.khronos.org/openxr/" target="_blank">有关 OpenXR 的详细信息</a>
 * <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">OpenXR 1.0 规范</a>

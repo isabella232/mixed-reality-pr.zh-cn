@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: 09067498d33fb2c96da53aa54c0449959355d809
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: bad18c5f30465120bce370aa91c13ff3f229bef6
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583516"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496128"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>混合现实 OpenXR 支持 Unity 中的功能
 
-**Mixed Reality OpenXR 插件** 包是 Unity 的 **OpenXR 插件** 的扩展，支持用于 HoloLens 2 和 Windows Mixed Reality 耳机的一套功能。 继续之前，请确保已安装 **Unity 2020.2** 或更高版本， **OpenXR 插件版本 0.1.2** 或更高版本，并且 Unity 项目已 [配置为 OpenXR](openxr-getting-started.md)。
+**Mixed Reality OpenXR 插件** 包是 Unity 的 **OpenXR 插件** 的扩展，支持用于 HoloLens 2 和 Windows Mixed Reality 耳机的一套功能。 继续之前，请确保已安装 **Unity 2020.2** 或更高版本， **OpenXR 插件版本 0.1.3** 或更高版本，并且 Unity 项目已 [配置为 OpenXR](openxr-getting-started.md)。
 
 ## <a name="whats-supported"></a>支持的操作
 
@@ -32,24 +32,28 @@ ms.locfileid: "98583516"
 * 混合现实通过 PV 相机使用第三种目视渲染来捕获。
 * 支持 [通过全息远程处理应用 "播放" 到 HoloLens 2](#holographic-remoting-in-unity-editor-play-mode)，使开发人员无需生成并部署到设备即可调试脚本。
 * 与 MRTK Unity 2.5.3 和更高版本通过 [MRTK OpenXR 提供程序支持](openxr-getting-started.md#using-mrtk-with-openxr-support)兼容。
-* 与 Unity [ARFoundation 4.0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) 或更高版本兼容
+* 与 Unity [ARFoundation 4.0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) 或更高版本兼容。
+*  (在 0.1.3) 中添加的功能支持从生成和部署的 Windows 独立应用进行 [桌面应用全息远程处理](#holographic-remoting-in-desktop-app) 。
 
-## <a name="holographic-remoting-in-unity-editor-play-mode"></a>Unity 编辑器播放模式下的全息远程处理
+## <a name="holographic-remoting-setup"></a>全息远程处理安装
 
-在 Visual Studio 项目中生成 UWP Unity 项目，然后将其打包并部署到 HoloLens 2 设备可能需要一些时间。 一种解决方法是启用全息编辑器远程处理，这使你能够通过网络将 "播放" 模式直接调试到 HoloLens 2 设备的 c # 脚本。 此方案可避免生成 UWP 包并将其部署到远程设备的系统开销。
-
-1. 首先，需要在 HoloLens 2 上从应用商店[安装全息远程处理播放器应用](https://www.microsoft.com/store/productId/9NBLGGH4SV40)
+1. 首先，需要从 HoloLens 2 上的 Microsoft Store[安装全息远程处理播放器应用程序](https://www.microsoft.com/store/productId/9NBLGGH4SV40)
 2. 在 HoloLens 2 上运行全息远程处理播放器应用程序，你将看到要连接到的版本号和 IP 地址
     * 你需要使用版本2.4 或更高版本才能使用 OpenXR 插件
 
     ![HoloLens 中运行的全息远程处理播放机的屏幕截图](images/openxr-features-img-01.png)
 
-3. 打开 " **> 项目**" "设置"，导航到 "XR" " **插件管理**"，然后选中 " **Windows Mixed Reality 功能集** " 框：
+## <a name="holographic-remoting-in-unity-editor-play-mode"></a>Unity 编辑器播放模式下的全息远程处理
+
+在 Visual Studio 项目中生成 UWP Unity 项目，然后将其打包并部署到 HoloLens 2 设备可能需要一些时间。 一种解决方案是启用全息编辑器远程处理功能，该功能使你能够通过网络将 "播放" 模式直接调试到 HoloLens 2 设备。 此方案可避免生成 UWP 包并将其部署到远程设备的系统开销。
+
+1. 按照[全息远程处理设置](#holographic-remoting-setup)中的步骤操作
+2. 打开 " **> 项目**" "设置"，导航到 "XR" " **插件管理**"，然后选中 " **Windows Mixed Reality 功能集** " 框：
 
     ![在 Unity 编辑器中打开的项目设置面板的屏幕截图，其中突出显示了 XR 插件管理](images/openxr-features-img-02.png)
 
-4. 展开 " **OpenXR** " 下的 "**功能**" 部分，然后选择 "**全部显示**"
-5. 选中 " **全息编辑器远程处理** " 复选框并输入从全息远程处理应用获取的 IP 地址：
+3. 展开 " **OpenXR** " 下的 "**功能**" 部分，然后选择 "**全部显示**"
+4. 选中 " **全息编辑器远程处理** " 复选框并输入从全息远程处理应用获取的 IP 地址：
 
     ![在 Unity 编辑器中打开的项目设置面板的屏幕截图，其中突出显示了功能](images/openxr-features-img-03.png)
 
@@ -57,6 +61,56 @@ ms.locfileid: "98583516"
 
 > [!NOTE]
 > 从版本0.1.0 起，全息远程处理运行时不支持定位点，并且 ARAnchorManager 功能将无法通过远程处理。  此功能即将推出。
+
+## <a name="holographic-remoting-in-desktop-app"></a>桌面应用中的全息远程处理
+
+> [!NOTE]
+> 0.1.3 包版本中添加了 Windows 独立应用远程处理支持。
+> 从版本0.1.3 起，此功能不支持 UWP 生成。
+
+1. 按照[全息远程处理设置](#holographic-remoting-setup)中的步骤操作
+2. 打开 " **> 项目**" "设置"，导航到 "XR" " **插件管理**"，然后选中 " **Windows Mixed Reality 功能集** " 框。 另外，取消选中 " **启动时初始化 XR"**：
+
+    ![项目设置面板的屏幕截图在 Unity 编辑器中打开，并取消选中 "启动时初始化 XR"](images/openxr-features-img-02-app.png)
+
+3. 展开 " **OpenXR** " 下的 "**功能**" 部分，然后选择 "**全部显示**"
+4. 选中 " **全息应用远程处理** " 复选框：
+
+    ![启用了应用远程处理的 Unity 编辑器中打开的项目设置面板的屏幕截图](images/openxr-features-img-03-app.png)
+
+5. 接下来，编写一些代码以设置远程处理配置和触发器 XR 初始化。 使用 [混合现实 OpenXR 插件](openxr-getting-started.md#hololens-2-samples) 分发的示例应用包含 AppRemoting.cs，其中显示了在运行时连接到特定 IP 地址的示例方案。 此时，将示例应用程序部署到本地计算机，将使用 "连接" 按钮显示 IP 地址输入字段。 键入 IP 地址并单击 "连接" 将初始化 XR 并尝试连接到目标设备：
+
+    ![示例应用显示示例应用远程处理 UI 的屏幕截图](images/openxr-sample-app-remoting.png)
+
+6. 若要编写自定义连接代码，请使用已填充的进行调用 `Microsoft.MixedReality.OpenXR.Remoting.AppRemoting.Connect` `RemotingConfiguration` 。 该示例应用在检查器中公开此内容，并演示如何在文本字段中填充 IP 地址。 调用 `Connect` 将设置配置并自动初始化 XR，这就是为什么必须将其称为协同程序的原因：
+
+    ``` cs
+    StartCoroutine(Remoting.AppRemoting.Connect(remotingConfiguration));
+    ```
+
+7. 运行时，可以使用 API 获取当前连接状态 `AppRemoting.TryGetConnectionState` ，还可以选择断开连接，并使用取消初始化 XR `AppRemoting.Disconnect()` 。 这可用于断开连接并重新连接到同一应用会话中的其他设备。 示例应用提供了一个 tappable 多维数据集，该多维数据集会在点击时断开远程处理会话。
+
+### <a name="migration-from-previous-apis"></a>从以前的 Api 迁移
+
+#### <a name="unityenginexrwsaholographicremoting"></a>UnityEngine. XR. HolographicRemoting
+
+在 [Unity 文档](https://docs.unity3d.com/2018.4/Documentation/ScriptReference/XR.WSA.HolographicRemoting.html)的示例代码中：
+
+| XR.WSA.HolographicRemoting | OpenXR. AppRemoting |
+| ---- | ---- |
+| `HolographicRemoting.Connect(String)` | `AppRemoting.Connect(RemotingConfiguration)` |
+| `HolographicRemoting.ConnectionState` | `AppRemoting.TryGetConnectionState(out ConnectionState, out DisconnectReason)`|
+| `StartCoroutine(LoadDevice("WindowsMR"))`| [N/A：调用时自动发生 `AppRemoting.Connect` ]  |
+
+#### <a name="unityenginexrwindowsmrwindowsmrremoting"></a>UnityEngine. XR. WindowsMR. WindowsMRRemoting
+
+| XR.WindowsMR.WindowsMRRemoting | OpenXR. AppRemoting |
+| ---- | ---- |
+| `WindowsMRRemoting.Connect()` | `AppRemoting.Connect(RemotingConfiguration)` |
+| `WindowsMRRemoting.Disconnect()` | `AppRemoting.Disconnect()` |
+| `WindowsMRRemoting.TryGetConnectionState(out ConnectionState)` 和 `WindowsMRRemoting.TryGetConnectionFailureReason(out ConnectionFailureReason)`| `AppRemoting.TryGetConnectionState(out ConnectionState, out DisconnectReason)`|
+| `WindowsMRRemoting.isAudioEnabled`, `WindowsMRRemoting.maxBitRateKbps`, `WindowsMRRemoting.remoteMachineName` | `AppRemoting.Connect`通过 `RemotingConfiguration` 结构传入 |
+| `WindowsMRRemoting.isConnected` | `AppRemoting.TryGetConnectionState(out ConnectionState state, out _) && state == ConnectionState.Connected`
 
 ## <a name="anchors-and-anchor-persistence"></a>定位点和定位点持久性
 
@@ -164,4 +218,5 @@ public static readonly InputFeatureUsage<Vector3> PointerPosition = new InputFea
 ## <a name="troubleshooting"></a>疑难解答
 
 当你在 HoloLens 2 上挂起和恢复 Unity 应用时，该应用无法正确恢复，这将导致在 HoloLens 视图中显示4个旋转点。
+
 * 将 OpenXR 项目设置中的 " **深度提交模式** " 设置为 " **无** " 作为一种解决方法
