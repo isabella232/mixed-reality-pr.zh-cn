@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure 开发, 空间定位点, 混合现实, 开发, 功能, 新项目, 仿真器, 文档, 指南, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 5797cd48198b163b55f3724685126b1d4d85c69c
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 01d7217f038519d68eabfbf4f273c7ff8cbe7193
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583025"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496187"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Unreal 中的 Azure 空间定位点
 
@@ -44,6 +44,12 @@ Azure 空间定位点是一项 Microsoft Mixed Reality 服务，增强现实设�
 
 > [!NOTE]
 > Unreal 4.25 中的 Azure 空间定位点不支持 Azure AD 身份验证令牌，但今后的版本中将提供对该功能的支持。
+
+## <a name="enabling-internet-access"></a>启用 Internet 访问
+
+打开“项目设置”>“HoloLens”，并启用“Internet 客户端”功能： 
+
+![HoloLens 项目设置，突出显示了功能](images/asa-enable-wifi-connection.jpg)
 
 ## <a name="adding-azure-spatial-anchors-plugins"></a>添加 Azure 空间定位点插件
 

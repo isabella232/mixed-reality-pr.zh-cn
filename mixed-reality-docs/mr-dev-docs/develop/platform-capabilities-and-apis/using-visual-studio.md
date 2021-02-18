@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, 混合现实, Mixed Reality, 调试, 部署
-ms.openlocfilehash: c4ffe3a426ad82c324efef20639cf836f16a7f63
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2ab89311163a48ee3c14511446a1498ce883a232
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583612"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496086"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>使用 Visual Studio 进行部署和调试
 
@@ -22,7 +22,8 @@ ms.locfileid: "98583612"
 * 调试混合现实应用。
 
 ## <a name="prerequisites"></a>必备条件
-1. 有关安装说明，请参阅[安装工具](../../develop/install-the-tools.md)。
+
+1. 有关安装说明，请参阅[安装工具](../../develop/install-the-tools.md#installation-checklist)。
 2. 在 Visual Studio 中创建新的通用 Windows 应用项目。  对于 HoloLens（第一代），请使用 Visual Studio 2017 或更高版本。  对于 HoloLens 2，请使用 Visual Studio 2019 16.2 或更高版本。 支持 C# 和 C++。 （或按说明[在 Unity 中创建应用](../../develop/unity/tutorials/holograms-100.md)。）
 
 ## <a name="enabling-developer-mode"></a>启用开发人员模式
@@ -30,12 +31,13 @@ ms.locfileid: "98583612"
 首先在设备上启用“开发人员模式”，使 Visual Studio 能够连接到该设备。 
 
 ### <a name="hololens"></a>HoloLens
+
 1. 打开 HoloLens，然后戴上设备。
 2. 使用[开始手势](../../design/system-gesture.md)以启动主菜单。
 3. 选择“设置”  磁贴，以在你的环境中启动应用。
 4. 选择“更新”  菜单项。
 5. 选择“面向开发人员”  菜单项。
-6. 启用“开发人员模式”，[将应用从 Visual Studio 部署到](using-visual-studio.md) HoloLens。
+6. 启用“开发人员模式”，将应用从 Visual Studio 部署到 HoloLens。
 7. 可选：向下滚动，并启用设备门户，以便从 Web 浏览器连接到 HoloLens 上的 [Windows 设备门户](using-the-windows-device-portal.md)。
 
 ### <a name="windows-pc"></a>Windows 电脑
@@ -46,61 +48,99 @@ ms.locfileid: "98583612"
 3. 选择“面向开发人员” 
 4. 启用“开发人员模式”，阅读所选设置的免责声明，然后选择“是”以接受更改。
 
-## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>通过 Wi-Fi 部署应用 - HoloLens（第一代）
-1. 为你的应用选择一个 **x86** 生成配置</br>
-![Visual Studio 中的 x86 生成配置](images/x86setting.png)</br>
-2. 在部署目标下拉菜单中选择“远程计算机” </br>
-![Visual Studio 中的远程计算机部署目标](images/remotemachinesetting.png)</br>
-3. 对于 C++ 和 JavaScript 项目，请转到“项目”>“属性”>“配置属性”>“调试”。  对于 C# 项目，屏幕上会自动显示一个用于配置连接的对话框。
-  a. 在“地址”或“计算机名”字段中输入设备的 IP 地址。   在“设置”>“网络和 Internet”>“高级选项”下找到 HoloLens 的 IP 地址，或者可以向 Cortana 提问“我的 IP 地址是什么？” 
-  b. 将身份验证模式设置为“通用(未加密协议)” </br>
-  ![Visual Studio 中的远程连接对话框](images/remotedeploy.png)</br>
-4. 选择“调试”>“开始调试”以部署应用并开始调试 </br>
-![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
-5. 首次将应用从电脑部署到 HoloLens 时，系统会提示输入 PIN。 按下面的说明 **配对设备**。
+## <a name="deploying-a-hololens-app-over-wi-fi"></a>通过 Wi-Fi 部署 HoloLens 应用 
 
-## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>通过 Wi-Fi 部署应用 - HoloLens 2
-1. 为你的应用选择一个 **ARM** 或 **ARM64** 生成配置</br>
-![Visual Studio 中的 ARM64 生成配置](images/arm64setting.png)</br>
-2. 在部署目标下拉菜单中选择“远程计算机” </br>
-![Visual Studio 中的远程计算机部署目标](images/remotemachinesetting_arm64.png)</br>
-3. 对于 C++ 和 JavaScript 项目，请转到“项目”>“属性”>“配置属性”>“调试”。  对于 C# 项目，屏幕上会自动显示一个用于配置连接的对话框。
-  a. 在“地址”或“计算机名”字段中输入设备的 IP 地址。   在“设置”>“网络和 Internet”>“高级选项”下找到 HoloLens 的 IP 地址，或者可以向 Cortana 提问“我的 IP 地址是什么？” 
-  b. 将身份验证模式设置为“通用(未加密协议)” </br>
-  ![Visual Studio 中的远程连接对话框](images/remotedeploy.png)</br>
-4. 选择“调试”>“开始调试”以部署应用并开始调试 </br>
-![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
-5. 首次将应用从电脑部署到 HoloLens 时，系统会提示输入 PIN。 按下面的说明 **配对设备**。
+为 Visual Studio 项目配置以下属性：
 
-如果 HoloLens IP 地址已更改，你可以转到“项目”>“属性”>“配置属性”>“调试”来更改目标计算机的 IP 地址 
+1. 选择应用编译选项
+    * 对于 Unity 项目，请选择“Master”或“Master”  
+    * 对于所有其他项目，请选择“Release”
 
-## <a name="deploying-an-app-over-usb---hololens-1st-gen"></a>通过 USB 部署应用 - HoloLens（第一代）
-1. 为你的应用选择一个 **x86** 生成配置</br>
-![Visual Studio 中的 x86 生成配置](images/x86setting.png)</br>
-2. 在部署目标下拉菜单中选择“设备” </br>
-![Visual Studio 中的设备部署](images/buildsettingsusbdeploy.png)</br>
-3. 选择“调试”>“开始调试”以部署应用并开始调试 </br>
-![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
+> [!NOTE]
+> 可以在[导出和生成 Visual Studio 解决方案](../unity/exporting-and-building-a-unity-visual-studio-solution.md#building-and-deploying-a-unity-visual-studio-solution)中找到每个编译选项的完整定义。
+
+2. 根据设备选择生成配置
+
+[!INCLUDE[](includes/vs-wifi-hl-include.md)]
+
+3. 在部署目标下拉菜单中选择“远程计算机” 
+
+![Visual Studio 中的远程计算机部署目标](images/remotemachinesetting_arm64.png)
+
+接下来，需要设置远程连接。 对于 C++ 和 JavaScript 项目，请转到“项目”>“属性”>“配置属性”>“调试”。  如果正在处理 C# 项目，将自动显示一个对话框。
+
+> [!NOTE]
+> 如果 C# 项目中未显示远程连接对话框，你可以从“属性”>“调试”手动打开它。
+
+1. 在“地址”或“计算机名”字段中输入设备的 IP 地址。   
+    * 可在“设置”>“网络和 Internet”>“高级选项”下找到 HoloLens 的 IP 地址
+    * 我们始终建议手动输入你的 IP 地址，而不要依赖于“自动检测到”功能
+
+2. 将身份验证模式设置为“通用(未加密协议)” 
+
+  ![Visual Studio 中的远程连接对话框](images/remotedeploy.png)
+
+3. 根据需要生成、部署和调试应用
+    * 选择“调试”>“开始调试”以部署应用并开始调试 
+    * 选择“生成”>“部署”以生成并部署而不调试
+
+![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)
+
 4. 首次将应用从电脑部署到 HoloLens 时，系统会提示输入 PIN。 按下面的说明 **配对设备**。
 
-## <a name="deploying-an-app-over-usb---hololens-2"></a>通过 USB 部署应用 - HoloLens 2
+## <a name="deploying-a-hololens-app-over-usb"></a>通过 USB部署 HoloLens 应用 
+
+<br>
 
 >[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
 
-1. 为你的应用选择一个 **ARM** 或 **ARM64** 生成配置</br>
-![Visual Studio 中的 ARM64 生成配置](images/arm64setting.png)</br>
-2. 在部署目标下拉菜单中选择“设备” </br>
-![Visual Studio 中的设备部署](images/buildsettingsusbdeploy_arm64.png)</br>
-3. 选择“调试”>“开始调试”以部署应用并开始调试 </br>
-![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
-4. 首次将应用从电脑部署到 HoloLens 时，系统会提示输入 PIN。 按下面的说明 **配对设备**。
+1. 选择应用编译选项
+    * 对于 Unity 项目，请选择“Master”或“Master”  
+    * 对于所有其他项目，请选择“Release”
 
-## <a name="deploying-an-app-to-your-local-pc---immersive-headset"></a>将应用部署到本地电脑 - 沉浸式头戴显示设备
+> [!NOTE]
+> 可以在[导出和生成 Visual Studio 解决方案](../unity/exporting-and-building-a-unity-visual-studio-solution.md#building-and-deploying-a-unity-visual-studio-solution)中找到每个编译选项的完整定义。
+
+2. 根据设备选择生成配置
+
+[!INCLUDE[](includes/vs-wifi-hl-include.md)]
+
+3. 在部署目标下拉菜单中选择“设备” 
+
+![Visual Studio 中的设备部署](images/buildsettingsusbdeploy_arm64.png)
+
+4. 根据需要生成、部署和调试应用
+    * 选择“调试”>“开始调试”以部署应用并开始调试 
+    * 选择“生成”>“部署”以生成并部署而不调试
+
+![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
+
+5. 首次将应用从电脑部署到 HoloLens 时，系统会提示输入 PIN。 按下面的说明 **配对设备**。
+
+> [!NOTE]
+> 如果通过 USB 进行应用部署时出现相当长的延迟时间，建议使用上一节中的[远程计算机说明](#deploying-a-hololens-app-over-wi-fi)。
+
+## <a name="deploying-an-app-to-the-hololens-emulator"></a>将应用部署到 HoloLens 仿真器
+
+1. 请确保已[安装 HoloLens 2 或 HoloLens（第一代）仿真器](../install-the-tools.md#installation-checklist)
+2. 根据设备选择生成配置和仿真器
+
+[!INCLUDE[](includes/vs-wifi-hl-include.md)]
+
+3. 根据需要生成、部署和调试应用
+    * 选择“调试”>“开始调试”以部署应用并开始调试 
+    * 选择“生成”>“部署”以生成并部署而不调试
+
+![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)
+
+## <a name="deploying-a-vr-app-to-your-local-pc"></a>将 VR 应用部署到本地 PC 
 
 使用连接到电脑或 [Mixed Reality 仿真器](using-the-windows-mixed-reality-simulator.md)的 Windows Mixed Reality 沉浸式头戴显示设备：
 1. 为应用选择一种 **x86** 或 **x64** 生成配置
 2. 在部署目标下拉菜单中选择“本地计算机” 
-3. 选择“调试”>“开始调试”以部署应用并开始调试 
+3. 根据需要生成、部署和调试应用
+    * 选择“调试”>“开始调试”以部署应用并开始调试 
+    * 选择“生成”>“部署”以生成并部署而不调试
 
 ## <a name="pairing-your-device"></a>配对设备
 
@@ -108,24 +148,6 @@ ms.locfileid: "98583612"
 
 将 HoloLens 与所有配对的计算机取消配对：
 * 启动“设置”应用，转到“更新”>“面向开发人员”，并点击“清除”  。
-
-## <a name="deploying-an-app-to-the-hololens-1st-gen-emulator"></a>将应用部署到 HoloLens（第一代）仿真器
-1. 请确保已[安装 HoloLens 仿真器](../install-the-tools.md)。
-2. 为应用选择一种 **x86** 生成配置。</br>
-![Visual Studio 中的 x86 生成配置](images/x86setting.png)</br>
-3. 在部署目标下拉菜单中选择“HoloLens 仿真器” </br>
-![Visual Studio 中的仿真器目标](images/deployemulator.png)</br>
-4. 选择“调试”>“开始调试”以部署应用并开始调试 </br>
-![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
-
-## <a name="deploying-an-app-to-the-hololens-2-emulator"></a>将应用部署到 HoloLens 2 仿真器
-1. 请确保已[安装 HoloLens 仿真器](../install-the-tools.md)。
-2. 为应用选择一种 **x86** 或 **x64** 生成配置。</br>
-![Visual Studio 中的 x86 生成配置](images/x86setting.png)</br>
-3. 在部署目标下拉菜单中选择“HoloLens 2 仿真器” </br>
-![Visual Studio 中的仿真器目标](images/deployemulator2.png)</br>
-4. 选择“调试”>“开始调试”以部署应用并开始调试 </br>
-![在不调试的情况下在 Visual Studio 中启动](images/deploywithdebugging.png)</br>
 
 ## <a name="graphics-debugger-for-hololens-1st-gen"></a>适用于 HoloLens（第一代）的图形调试器
 
