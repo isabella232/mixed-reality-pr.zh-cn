@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目，Windows Mixed Reality，UWP，XR，性能
-ms.openlocfilehash: 6a9bc0d9a565de1d25e1906c439e39773cb99244
-ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
+ms.openlocfilehash: bd25c56947007f90c0310ea9802bba91a81b0914
+ms.sourcegitcommit: fd19bf57607c7ed94a849d4cf606bba2bb93e668
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496075"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117621"
 ---
 # <a name="configuring-your-project-without-mrtk"></a>配置项目时不使用 MRTK
 
@@ -56,8 +56,10 @@ Windows Mixed Reality (WMR) 是作为 Windows 10 操作系统的一部分引入�
 
 ![在 unity 编辑器中打开的 "项目设置" 窗口的屏幕截图，其中突出显示了 XR 插件管理](images/wmr-config-img-7.png)
 
-4. 展开 " **XR 插件管理**" 部分，并选择 " **Windows Mixed Reality** "
-5. 选中所有框并将 **深度提交模式** 设置为 **深度16位**
+4. 展开 " **XR 插件管理** " 部分，并选择 " **通用 Windows 平台设置** " 选项卡
+5. 如果你使用的是 Unity 2020 或更高版本，你将看到用于检查 **OpenXR (preview)** 或 **Windows Mixed Reality** 的选项
+6. 您可以选择 "运行时"。  如果你要专门针对 HoloLens 2 或 HP 回音 G2 进行开发，并决定尝试使用 **OpenXR (预览)**，请选择 "OpenXR (预览") 框，并查看我们指南以了解如何使用适用于 [Unity 的 Mixed Reality OpenXR 插件](openxr-getting-started.md) 为这些设备正确设置，然后再返回到本教程
+7. 如果决定选择 **Windows Mixed Reality** 插件，请选中所有复选框，并将 **深度提交模式** 设置为 **深度16位**
 
 ![突出显示了 Windows Mixed Reality 部分的 "项目设置" 窗口的屏幕截图已在 unity 编辑器中打开](images/wmr-config-img-8.png)
 
@@ -90,11 +92,11 @@ Windows Mixed Reality (WMR) 是作为 Windows 10 操作系统的一部分引入�
 
 ### <a name="quality-settings"></a>质量设置
 
-HoloLens 具有移动类 GPU。 如果你的应用面向 HoloLens，你需要调整应用中的质量设置以实现最快的性能，以确保它保持完整的帧速率：
+HoloLens 具有移动类 GPU。 如果你的应用面向 HoloLens，你需要先将应用中的质量设置调整为最快的性能，以确保它保持完整的帧速率。  在开发中进一步发展之后，可以考虑 upping 质量设置，以找出适当的质量和性能平衡： 
 
-1. 选择 "**编辑 > 项目设置 > 质量**"
-2. 选择 **Windows 应用商店** 徽标下的 **下拉列表**，并选择 "**非常低**"。 如果 Windows 应用商店列和 **极低** 的行中的框为绿色，将知道设置正确应用
-3. 在 **阴影** 部分，选择 "**禁用阴影**"
+1. 选择 " **编辑 > 项目设置 > 质量**" 
+2. 选择  **Windows 应用商店** 徽标下的 **下拉列表**   ，并选择 " **非常低**"。 如果 Windows 应用商店列和极低的行中的框为绿色，将知道设置正确应用 
+3. 在 **阴影**   部分，选择 " **禁用阴影**" 
 
 ![突出显示了 "质量设置" 部分的 "项目设置" 窗口的屏幕截图](images/wmr-config-img-10.png)<br>
 *Unity 质量设置*

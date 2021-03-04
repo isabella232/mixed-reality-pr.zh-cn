@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 1888258321af978ca52623008193e6dae94833a8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: ea4ba3ad5905e899eae474e4d571585fef77c0c2
+ms.sourcegitcommit: fd19bf57607c7ed94a849d4cf606bba2bb93e668
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581105"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117651"
 ---
 # <a name="hand-tracking-in-unreal"></a>Unreal 中的手部跟踪
 
@@ -21,7 +21,7 @@ ms.locfileid: "98581105"
 
 使用举手功能，您可以跟踪和使用用户的手和手指作为输入，可在蓝图和 c + + 中访问。 Unreal API 以坐标系统的形式发送数据，并使用 Unreal 引擎同步刻度。
 
-![手写框架](../native/images/hand-skeleton.png)
+![手写框架](images/hand-tracking-skeleton-update.png)
 
 [!INCLUDE[](includes/tabs-tracking-hand-pose.md)]
 
