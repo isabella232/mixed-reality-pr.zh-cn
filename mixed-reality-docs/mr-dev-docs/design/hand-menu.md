@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: 手型，菜单，按钮，快速访问，布局，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 77df5974f54323310a696ed6630fbdde0b0faeb0
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 8a8b80843b7a107255a45b11868b0bd29a4e3108
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847801"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759453"
 ---
 # <a name="hand-menu"></a>手动菜单
 
@@ -21,7 +21,7 @@ ms.locfileid: "97847801"
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAg]
 
-你将在下面的列表中找到建议使用的最佳实践。 你还可以在 [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandMenu.html)中找到演示菜单的示例场景。
+你将在下面的列表中找到建议使用的最佳实践。 你还可以在 [MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/hand-menu.md)中找到演示菜单的示例场景。
 
 <br>
 
@@ -170,11 +170,11 @@ ms.locfileid: "97847801"
 
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为手形菜单提供脚本和示例场景。 HandConstraintPalmUp 求解器脚本允许您将任何对象附加到各种可配置选项。 MRTK 的手形菜单示例包含有用的选项，例如，用于防止错误激活的平面掌和注视要求。
 
-* [手动菜单文档](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandMenu.html)
+* [手动菜单文档](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/hand-menu.md)
 * [手型菜单示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity)
 
 可以在 HoloLens 2 中试用带有 MRTK 示例中心应用的菜单示例。 
-* [MRTK 示例中心中的手形菜单场景](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4?activetab=pivot:overviewtab)
+* [MRTK 示例中心中的手形菜单场景](https://www.microsoft.com/p/mrtk-examples-hub/9mv8c39l2sj4?activetab=pivot:overviewtab)
 
 <br>
 

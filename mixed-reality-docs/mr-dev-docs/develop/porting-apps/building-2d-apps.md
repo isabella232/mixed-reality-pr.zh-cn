@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 2D 应用，UWP，平面应用，HoloLens，沉浸式头戴式耳机，应用型号，后退按钮，应用程序栏，dpi，分辨率，缩放，移植，HoloLens 第一代，HoloLens 2，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10
-ms.openlocfilehash: 2d6b03a8cca70ac2db810209263139ebdf3c22a7
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6e8e000f694b40f637c932ee9764415ec3a57698
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583530"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759793"
 ---
 # <a name="updating-2d-uwp-apps-for-windows-mixed-reality"></a>更新适用于 Windows Mixed Reality 的 2D UWP 应用
 
@@ -51,7 +51,7 @@ Windows Mixed Reality 使你的用户能够像在物理和数字世界中那样�
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>面向沉浸式耳机和 HoloLens
 
-恭喜！ 应用现在正在使用 Windows 10 通用 Windows 平台 (UWP) 。
+祝贺！ 应用现在正在使用 Windows 10 通用 Windows 平台 (UWP) 。
 
 现在，你的应用程序能够在当前的 Windows 设备（如桌面、移动、Xbox、Windows Mixed Reality 沉浸式耳机、HoloLens 和未来的 Windows 设备）上运行。 但是，若要实际将所有这些设备作为目标，需要确保应用面向 Windows。 通用设备系列。
 

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，表面磁性
-ms.openlocfilehash: 5bc1b22db00e46d95d05c719b46c8f17426be8ef
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: e8a77d2fb1c147c353d74349961977f27aea71e0
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848152"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759783"
 ---
 # <a name="surface-magnetism"></a>表面磁吸
 
@@ -27,7 +27,7 @@ ms.locfileid: "97848152"
 
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为 surface 磁性技术提供脚本和示例场景。 您可以对各种类型的输入（如手 ray、眼睛眼睛和运动控制器）使用表面磁性。
 
-* [MRTK-Surface 磁性规划求解](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#surfacemagnetism)
+* [MRTK-Surface 磁性规划求解](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/solvers/solver.md#surfacemagnetism)
 * [MRTK-空间感知和 Surface 磁性示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity)
 
 <br>

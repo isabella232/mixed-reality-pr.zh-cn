@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/06/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，提示，ui，ux，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，音频
-ms.openlocfilehash: d0dc8ce6425d597d04b47a6c8b08f72534488594
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b93092b597d0267c1169cf823b1a5c1fa03c3c3f
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007197"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759873"
 ---
 # <a name="interactable-object"></a>可交互对象
 
@@ -41,19 +41,19 @@ ms.locfileid: "98007197"
 
 :::row:::
     :::column:::
-       ![interactibleobject-默认值](images/interactibleobject-states-default.jpg)<br>
+       ![具有默认状态的种不可交互对象](images/interactibleobject-states-default.jpg)<br>
        **默认 (观察) 状态**<br>
         对象的默认空闲状态。
     光标不在对象上。 未检测到手写。
     :::column-end:::
     :::column:::
-       ![interactibleobject-目标](images/interactibleobject-states-targeted.jpg)<br>
+       ![具有目标和悬停状态的种不可交互对象](images/interactibleobject-states-targeted.jpg)<br>
         **目标 (悬停) 状态**<br>
         当对象面向注视光标时，指的是指邻近的或运动控制器的指针。
     光标位于对象上。 已检测到手型，准备就绪。
     :::column-end:::
     :::column:::
-       ![interactibleobject-按下](images/interactibleobject-states-pressed.jpg)<br>
+       ![具有按下状态的种不可交互对象](images/interactibleobject-states-pressed.jpg)<br>
        **按下状态**<br>
         如果按下了按压按钮，请按下或运动控制器的选择按钮。
     光标位于对象上。 检测到手型，并攻丝。
@@ -70,15 +70,15 @@ ms.locfileid: "98007197"
 
 :::row:::
     :::column:::
-       ![interactibleobject-默认值](images/MRTK_InteractableState-default.jpg)<br>
+       ![处于默认状态的全息按钮](images/MRTK_InteractableState-default.jpg)<br>
        **默认 (观察) 状态**<br>
     :::column-end:::
     :::column:::
-       ![interactibleobject-目标](images/MRTK_InteractableState-targeted.jpg)<br>
+       ![目标和悬停状态的全息按钮](images/MRTK_InteractableState-targeted.jpg)<br>
         **目标 (悬停) 状态**<br>
     :::column-end:::
     :::column:::
-       ![interactibleobject-按下](images/MRTK_InteractableState-pressed.jpg)<br>
+       ![处于按下状态的全息按钮](images/MRTK_InteractableState-pressed.jpg)<br>
        **按下状态**<br>
     :::column-end:::
 :::row-end:::
@@ -264,12 +264,12 @@ HoloLens 2 支持已表述的手动跟踪输入，这允许您与对象进行交
 
 在 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 中，可以使用脚本 [**种不可交互**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) 使对象对各种类型的输入交互状态进行响应。 它支持各种类型的主题，这些主题允许您通过控制对象属性（如颜色、大小、材料和着色器）来定义可视状态。
 
-* [种不可交互](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
-* [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* [种不可交互](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/interactable.md)
+* [Button](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/button.md)
 * [手动交互示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 MixedRealityToolkit 的标准着色器提供了各种选项 **，例如，可** 帮助您创建视觉对象和音频提示。
-* [MRTK 标准着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
+* [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/rendering/mrtk-standard-shader.md)
 
 
 <br>

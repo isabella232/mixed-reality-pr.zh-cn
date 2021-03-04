@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: 手势，unity，注视，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 44c42abdd4628cacd6af334a916fb725da8bb022
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 4c3db98e3047cdc74663c5cbee1c4607b77008e0
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583893"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759078"
 ---
 # <a name="gestures-in-unity"></a>Unity 中的手势
 
@@ -44,7 +44,7 @@ GestureRecognizer recognizer = new GestureRecognizer();
 
 ### <a name="specify-which-gestures-to-watch-for"></a>指定要监视的手势
 
-通过 SetRecognizableGestures 指定你对其感兴趣的手势 *( # B1*：
+通过 *SetRecognizableGestures ()* 指定你感兴趣的手势：
 
 ```cs
 recognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.Hold);
@@ -69,7 +69,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>开始捕获手势
 
-默认情况下，在调用 *StartCapturingGestures ( # B1* 之前， *GestureRecognizer* 不监视输入。 如果在处理 *StopCapturingGestures ( # B3* 的帧之前执行了输入，则可能会在 *StopCapturingGestures ( # B1* 之后生成笔势事件。 *GestureRecognizer* 将记得在上一帧实际发生的情况下，它是处于打开还是关闭状态，因此，根据此帧的注视目标启动和停止手势监视是可靠的。
+默认情况下， *GestureRecognizer* 不会监视输入，直到调用 *StartCapturingGestures ()* 。 如果在处理 *StopCapturingGestures ()* 的帧之前执行了输入，则在调用 *StopCapturingGestures ()* 之后可能会生成该笔势事件。 *GestureRecognizer* 将记得在上一帧实际发生的情况下，它是处于打开还是关闭状态，因此，根据此帧的注视目标启动和停止手势监视是可靠的。
 
 ```cs
 recognizer.StartCapturingGestures();
@@ -131,11 +131,11 @@ void OnDestroy()
 
 在将来的 Windows 更新中，引发将继续改进，你可以在此处找到详细信息。
 
-## <a name="gesture-and-motion-controllers-in-mrtk-v2"></a>MRTK v2 中的手势和运动控制器
+## <a name="gesture-and-motion-controllers-in-mrtk"></a>MRTK 中的手势和运动控制器
 
 可以从输入管理器访问笔势和运动控制器。
-* [MRTK v2 中的手势](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Gestures.html)
-* [MRTK v2 中的运动控制器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Controllers.html)
+* [MRTK 中的手势](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/gestures.md)
+* [MRTK 中的运动控制器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/controllers.md)
 
 
 ## <a name="follow-along-with-tutorials"></a>按照教程进行操作

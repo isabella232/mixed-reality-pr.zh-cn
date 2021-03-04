@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，tooltip，MRTK，混合现实工具包
-ms.openlocfilehash: bed9e83cac381fceddbf94cd4048d36427a27874
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: ac8d12dbf681fb02df6fe70f3fd7b67615f4a5d6
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009407"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759773"
 ---
 # <a name="tooltip"></a>工具提示
 
@@ -25,7 +25,7 @@ ms.locfileid: "98009407"
 
 ## <a name="tooltip-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的工具提示 (适用于 Unity 的混合现实工具包) 
 
-* [MRTK-Tooltip](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html)
+* [MRTK-Tooltip](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/tooltip.md)
 
 <br>
 

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，菜单，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 3cba4452861f05a1ce921c1f18f6636661ee34b0
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 71e88ab94f9051d58b666f2b3c27c33564194e19
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009927"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759168"
 ---
 # <a name="near-menu"></a>追踪菜单
 
@@ -26,7 +26,7 @@ ms.locfileid: "98009927"
 ## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的靠近菜单 (混合现实工具包) 适用于 Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供各种近菜单 prefab 示例。
 
-* [MRTK-邻近菜单](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
+* [MRTK-邻近菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/near-menu.md)
 
 <br>
 

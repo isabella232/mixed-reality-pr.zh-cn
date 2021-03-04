@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，全息呈现，全息，沉浸式，聚焦点，深度缓冲，仅限方向，定位，不透明，透明，剪辑，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: ba42e8a384f62dddcf7b8e685859ddeff7b666bb
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 865d19482e5f612eab95fa2f74cb2bad59171496
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581122"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759763"
 ---
 # <a name="camera-in-unity"></a>Unity 中的相机
 
@@ -93,7 +93,7 @@ HoloLens 和沉浸式耳机都将 reproject 你的应用程序呈现的每个帧
 
 ## <a name="automatic-scene-and-camera-setup-with-mixed-reality-toolkit"></a>带有混合现实工具包的自动场景和照相机设置 
 
-按照将混合现实工具包添加到 Unity [项目中的分步指南操作](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) ，它将自动配置你的项目。 你还可以通过以下部分中的指南手动配置项目，而无需 MRTK。
+按照将混合现实工具包添加到 Unity [项目中的分步指南操作](tutorials/mr-learning-base-01.md) ，它将自动配置你的项目。 你还可以通过以下部分中的指南手动配置项目，而无需 MRTK。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 

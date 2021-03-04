@@ -6,12 +6,12 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助双手，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 69afe767e01c57535b79575e4f25fabe4a9f6f39
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: ca23617e18c84f592ebd0575195b6bf4a98e80e5
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582273"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759473"
 ---
 # <a name="hand-coach"></a>手部指导
 
@@ -85,7 +85,7 @@ ms.locfileid: "98582273"
 
 ## <a name="can-i-create-my-own"></a>我能创建自己的吗？
 
-是！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
+能！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
 我们提供了一个可用于你的应用的 Rigged 的 Maya 文件，可在此处下载 <a href="files/HandCoach_MRTK.zip"> HandCoach_MRTK.zip </a>
 
 ![在 Maya 中进行动画处理的示例](images/HandCoach/MayaSelect_Gif.gif)<br>
@@ -169,7 +169,7 @@ ms.locfileid: "98582273"
 * 只需教授一次。 优于教授会导致混淆和麻烦
 *   将它引入 Unity，在此处下载最新的 MRTK： https://github.com/microsoft/MixedRealityToolkit-Unity
     *   材料： Teaching_Hand2
-    *   脚本：请参阅<a href= "https://github.com/MixedRealityToolkit-Unity/blob/'HandCoachUX'/Documentation/README_HandCoach.md">MRTK 手型指导</a>的 MRTK 准则
+    *   脚本：请参阅<a href= "https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/hand-coach.md">MRTK 手型指导</a>的 MRTK 准则
     *   每项目设置
         *   场景设置为 UWP：可在 [配置 Unity 项目](../develop/unity/Configure-Unity-Project.md) 中找到 Windows Mixed Reality 的说明
 

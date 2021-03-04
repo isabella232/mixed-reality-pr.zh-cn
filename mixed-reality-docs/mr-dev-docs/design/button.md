@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，按钮
-ms.openlocfilehash: b4e8388c4e3ea855c191cbdfc06621018274ff86
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 9e4d0637d8c10c3cd23bd2ee1369fd57137af795
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847587"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759423"
 ---
 # <a name="button"></a>Button
 
@@ -46,13 +46,13 @@ ms.locfileid: "97847587"
 ---
 
 ## <a name="button-in-mrtkmixed-reality-toolkit-for-unity"></a>MRTK (混合现实工具包) 适用于 Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供各种类型的按钮 prototyping，包括 hololens 2 和 hololens (第一代) 的 shell 样式按钮。 HoloLens 2 按钮 prefab 包含多个详细实用，有助于提高用户置信度：
+**[MRTK For Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供各种类型的按钮 prototyping，包括 hololens 2 和 hololens (第一代) 的 shell 样式按钮。 HoloLens 2 按钮 prefab 包含多个详细实用，有助于提高用户置信度：
 
 * 基于邻近性的突出显示
 * 压缩前端固定架
 * 对触发器的脉冲效果。
 
-* 有关更多说明和自定义示例，请查看 [MRTK-按钮](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) 。
+* 有关更多说明和自定义示例，请查看 [MRTK-按钮](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/button.md) 。
 
 <br>
 

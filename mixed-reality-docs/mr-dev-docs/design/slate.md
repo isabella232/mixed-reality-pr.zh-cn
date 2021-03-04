@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，石板，MRTK，混合现实工具包
-ms.openlocfilehash: cbb4a741f4f78dcad603670bc282a25bc0e70fd2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 444116b8946c763b284cdc83d45f5de118e965aa
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008807"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759833"
 ---
 # <a name="slate"></a>平板
 
@@ -25,7 +25,7 @@ ms.locfileid: "98008807"
 
 ## <a name="slate-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的盖板 (混合现实工具包) 适用于 Unity
 
-* [MRTK-石板](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html)
+* [MRTK-石板](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/slate.md)
 
 <br>
 

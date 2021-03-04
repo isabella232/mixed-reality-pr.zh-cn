@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: 60854785d526c7abff6327ddbb8d39d4eef23ae4
-ms.sourcegitcommit: c904d47ab2ce03d433d5eff394ec4078f404a0f7
+ms.openlocfilehash: 9b477042ebed33600a007778cd534d3074e34770
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98242529"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759282"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>HP 回音
 
@@ -102,3 +102,8 @@ Windows 电脑首次识别 HP 回音 G2 麦克风时，输入音量级别会自�
 ## <a name="how-can-i-power-down-the-headset-while-still-using-my-pc"></a>如何在仍使用电脑的同时关闭耳机
 
 从耳机电缆上的 "链接" 框中拔出交流连接适配器，以断开耳机的电源。
+
+## <a name="the-image-of-the-displays-of-the-reverb-g2-is-smaller-and-only-in-the-upper-left"></a>回音 G2 的显示图像更小，仅在左上角
+
+如果有 AMD power GPU，则需要禁用自动增加。 当耳机连接时，导航到 "设置"-> 混合现实-> 耳机 > 解决方案。
+在下拉菜单中，选择 "4320 x 2160 (最佳质量) " 选项。 如果选择了 "自动增加 (最佳性能) "，则可能会遇到显示问题。

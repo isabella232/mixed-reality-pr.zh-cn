@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，键盘，MRTK，混合现实工具包
-ms.openlocfilehash: 8efb5446479e53569349eda302c7d4dcb844a137
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 9f42940b689a8fef77c9cf2f269100fccccfe6e0
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009727"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759853"
 ---
 # <a name="keyboard"></a>键盘
 
@@ -25,7 +25,7 @@ ms.locfileid: "98009727"
 
 ## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的系统键盘 (混合现实工具包) 适用于 Unity
 
-* [MRTK 键盘](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
+* [MRTK 键盘](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/system-keyboard.md)
 
 <br>
 

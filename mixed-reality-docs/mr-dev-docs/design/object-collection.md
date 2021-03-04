@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，控制，设计，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，对象集合，二维，3D，MRTK，混合现实工具包
-ms.openlocfilehash: a459d03246b8df4c17d523f57ece54997849c209
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 53ec99b998f1c65fdd3ca8b5d935b43ff0070500
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847209"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759148"
 ---
 # <a name="object-collection"></a>对象集合
 
@@ -48,7 +48,7 @@ ms.locfileid: "97847209"
 
 ## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的对象集合 (适用于 Unity 的混合现实工具包) 
 
-* [MRTK-对象集合](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
+* [MRTK-对象集合](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/object-collection.md)
 
 <br>
 

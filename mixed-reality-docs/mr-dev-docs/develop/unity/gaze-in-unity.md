@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 眼睛，眼睛，头盔，unity，全息影像，混合现实，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 7efc77eff90a164fdc0476a90912a0f52c9bb33d
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: 7602eb27da19dc77e4eab1c1a428dc9a1cf8b252
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192635"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759683"
 ---
 # <a name="head-gaze-in-unity"></a>头-注视 Unity
 
@@ -43,7 +43,7 @@ void Update()
 }
 ```
 
-### <a name="best-practices"></a>最佳实践
+### <a name="best-practices"></a>最佳做法
 
 尽管上面的示例从更新循环中触发了单个 raycast 以查找用户头所在的目标，但我们建议使用单个对象来管理所有的头节点。 将您的头看起来的逻辑结合起来可节省您的应用程序的宝贵处理能力，并将 raycasting 限制为每帧一次。
 
@@ -52,7 +52,7 @@ void Update()
 就像在计算机上使用鼠标指针一样，你应该实现表示用户头看的 [光标](../../design/cursors.md) 。 了解用户的目标内容会对要与之交互的内容增加信心。
 
 ## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>打印头-注视混合现实工具包 
-可以通过 MRTK 中的 [输入管理器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) 访问 head。
+可以通过 MRTK 中的 [输入管理器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md) 访问 head。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
