@@ -6,56 +6,56 @@ ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: 混合现实，HoloLens，UI 控制，交互，UI，ux，UX 设计，空间 UI，空间交互，三维 UI，三维 UX，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 9ef4fc5e4d781d235996a645e8d1bb81e040a64c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c9e1bf3e263214f9691f6c788f6115f93e690489
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009047"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759252"
 ---
-# <a name="dialog"></a><span data-ttu-id="0fca8-104">对话框</span><span class="sxs-lookup"><span data-stu-id="0fca8-104">Dialog</span></span>
+# <a name="dialog"></a><span data-ttu-id="ccdb7-104">对话框</span><span class="sxs-lookup"><span data-stu-id="ccdb7-104">Dialog</span></span>
 
 ![HoloLens 上显示 "是" 和 "否" 按钮的对话框覆盖屏幕截图](images/MRTK_UX_Dialog.jpg)
 
-<span data-ttu-id="0fca8-106">对话框控件是提供上下文应用信息的 UI 覆盖，通常请求用户操作。</span><span class="sxs-lookup"><span data-stu-id="0fca8-106">Dialog controls are UI overlays that provide contextual app information, often requesting a user action.</span></span> <span data-ttu-id="0fca8-107">在完成操作之前，请使用对话向用户授予重要信息并请求确认或附加信息。</span><span class="sxs-lookup"><span data-stu-id="0fca8-107">Use dialogs to give users important information and request confirmation or extra information before an action can be completed.</span></span>
+<span data-ttu-id="ccdb7-106">对话框控件是提供上下文应用信息的 UI 覆盖，通常请求用户操作。</span><span class="sxs-lookup"><span data-stu-id="ccdb7-106">Dialog controls are UI overlays that provide contextual app information, often requesting a user action.</span></span> <span data-ttu-id="ccdb7-107">在完成操作之前，请使用对话向用户授予重要信息并请求确认或附加信息。</span><span class="sxs-lookup"><span data-stu-id="ccdb7-107">Use dialogs to give users important information and request confirmation or extra information before an action can be completed.</span></span>
 
 <br>
 
 ---
 
-## <a name="dialog-in-mrtk-mixed-reality-toolkit-for-unity"></a><span data-ttu-id="0fca8-108">MRTK 中的对话框 (适用于 Unity 的混合现实工具包) </span><span class="sxs-lookup"><span data-stu-id="0fca8-108">Dialog in MRTK (Mixed Reality Toolkit) for Unity</span></span>
-<span data-ttu-id="0fca8-109">MRTK 提供了三种大小的对话框控件，其中包含一个或两个按钮选项。</span><span class="sxs-lookup"><span data-stu-id="0fca8-109">MRTK provides dialog control in three sizes with one or two button options.</span></span> <span data-ttu-id="0fca8-110">您还可以为近或远交互范围指定放置距离。</span><span class="sxs-lookup"><span data-stu-id="0fca8-110">You can also specify the placement distance for near or far interaction range.</span></span> 
+## <a name="dialog-in-mrtk-mixed-reality-toolkit-for-unity"></a><span data-ttu-id="ccdb7-108">MRTK 中的对话框 (适用于 Unity 的混合现实工具包) </span><span class="sxs-lookup"><span data-stu-id="ccdb7-108">Dialog in MRTK (Mixed Reality Toolkit) for Unity</span></span>
+<span data-ttu-id="ccdb7-109">MRTK 提供了三种大小的对话框控件，其中包含一个或两个按钮选项。</span><span class="sxs-lookup"><span data-stu-id="ccdb7-109">MRTK provides dialog control in three sizes with one or two button options.</span></span> <span data-ttu-id="ccdb7-110">您还可以为近或远交互范围指定放置距离。</span><span class="sxs-lookup"><span data-stu-id="ccdb7-110">You can also specify the placement distance for near or far interaction range.</span></span> 
 
-- <span data-ttu-id="0fca8-111">DialogSmall_192x96： prefab：192x96mm</span><span class="sxs-lookup"><span data-stu-id="0fca8-111">DialogSmall_192x96.prefab: 192x96mm</span></span>
-- <span data-ttu-id="0fca8-112">DialogMedium_192x128： prefab：192x128mm</span><span class="sxs-lookup"><span data-stu-id="0fca8-112">DialogMedium_192x128.prefab: 192x128mm</span></span>
-- <span data-ttu-id="0fca8-113">DialogLarge_192x192： prefab：192x192mm</span><span class="sxs-lookup"><span data-stu-id="0fca8-113">DialogLarge_192x192.prefab: 192x192mm</span></span>
+- <span data-ttu-id="ccdb7-111">DialogSmall_192x96： prefab：192x96mm</span><span class="sxs-lookup"><span data-stu-id="ccdb7-111">DialogSmall_192x96.prefab: 192x96mm</span></span>
+- <span data-ttu-id="ccdb7-112">DialogMedium_192x128： prefab：192x128mm</span><span class="sxs-lookup"><span data-stu-id="ccdb7-112">DialogMedium_192x128.prefab: 192x128mm</span></span>
+- <span data-ttu-id="ccdb7-113">DialogLarge_192x192： prefab：192x192mm</span><span class="sxs-lookup"><span data-stu-id="ccdb7-113">DialogLarge_192x192.prefab: 192x192mm</span></span>
 
 ![在 HoloLens 上运行的不同大小对话框覆盖的屏幕截图](images/MRTK_UX_Dialog_Types.jpg)
 
 
-* <span data-ttu-id="0fca8-115">有关详细信息，请参阅 [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html)。</span><span class="sxs-lookup"><span data-stu-id="0fca8-115">For more information, see [MRTK - Dialog](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html).</span></span>
+* <span data-ttu-id="ccdb7-115">有关详细信息，请参阅 [MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/dialog.md)。</span><span class="sxs-lookup"><span data-stu-id="ccdb7-115">For more information, see [MRTK - Dialog](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/dialog.md).</span></span>
 
 <br>
 
 ---
 
-## <a name="see-also"></a><span data-ttu-id="0fca8-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0fca8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ccdb7-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ccdb7-116">See also</span></span>
 
-* [<span data-ttu-id="0fca8-117">光标</span><span class="sxs-lookup"><span data-stu-id="0fca8-117">Cursors</span></span>](cursors.md)
-* [<span data-ttu-id="0fca8-118">手部射线</span><span class="sxs-lookup"><span data-stu-id="0fca8-118">Hand ray</span></span>](point-and-commit.md)
-* [<span data-ttu-id="0fca8-119">Button</span><span class="sxs-lookup"><span data-stu-id="0fca8-119">Button</span></span>](button.md)
-* [<span data-ttu-id="0fca8-120">可交互对象</span><span class="sxs-lookup"><span data-stu-id="0fca8-120">Interactable object</span></span>](interactable-object.md)
-* [<span data-ttu-id="0fca8-121">边界框和应用栏</span><span class="sxs-lookup"><span data-stu-id="0fca8-121">Bounding box and App bar</span></span>](app-bar-and-bounding-box.md)
-* [<span data-ttu-id="0fca8-122">操作</span><span class="sxs-lookup"><span data-stu-id="0fca8-122">Manipulation</span></span>](direct-manipulation.md)
-* [<span data-ttu-id="0fca8-123">手动菜单</span><span class="sxs-lookup"><span data-stu-id="0fca8-123">Hand menu</span></span>](hand-menu.md)
-* [<span data-ttu-id="0fca8-124">追踪菜单</span><span class="sxs-lookup"><span data-stu-id="0fca8-124">Near menu</span></span>](near-menu.md)
-* [<span data-ttu-id="0fca8-125">对象集合</span><span class="sxs-lookup"><span data-stu-id="0fca8-125">Object collection</span></span>](object-collection.md)
-* [<span data-ttu-id="0fca8-126">语音命令</span><span class="sxs-lookup"><span data-stu-id="0fca8-126">Voice command</span></span>](voice-input.md)
-* [<span data-ttu-id="0fca8-127">键盘</span><span class="sxs-lookup"><span data-stu-id="0fca8-127">Keyboard</span></span>](keyboard.md)
-* [<span data-ttu-id="0fca8-128">工具提示</span><span class="sxs-lookup"><span data-stu-id="0fca8-128">Tooltip</span></span>](tooltip.md)
-* [<span data-ttu-id="0fca8-129">平板</span><span class="sxs-lookup"><span data-stu-id="0fca8-129">Slate</span></span>](slate.md)
-* [<span data-ttu-id="0fca8-130">滑块</span><span class="sxs-lookup"><span data-stu-id="0fca8-130">Slider</span></span>](slider.md)
-* [<span data-ttu-id="0fca8-131">着色器</span><span class="sxs-lookup"><span data-stu-id="0fca8-131">Shader</span></span>](shader.md)
-* [<span data-ttu-id="0fca8-132">公告和尾随</span><span class="sxs-lookup"><span data-stu-id="0fca8-132">Billboarding and tag-along</span></span>](billboarding-and-tag-along.md)
-* [<span data-ttu-id="0fca8-133">显示进度</span><span class="sxs-lookup"><span data-stu-id="0fca8-133">Displaying progress</span></span>](progress.md)
-* [<span data-ttu-id="0fca8-134">表面磁吸</span><span class="sxs-lookup"><span data-stu-id="0fca8-134">Surface magnetism</span></span>](surface-magnetism.md)
+* [<span data-ttu-id="ccdb7-117">光标</span><span class="sxs-lookup"><span data-stu-id="ccdb7-117">Cursors</span></span>](cursors.md)
+* [<span data-ttu-id="ccdb7-118">手部射线</span><span class="sxs-lookup"><span data-stu-id="ccdb7-118">Hand ray</span></span>](point-and-commit.md)
+* [<span data-ttu-id="ccdb7-119">Button</span><span class="sxs-lookup"><span data-stu-id="ccdb7-119">Button</span></span>](button.md)
+* [<span data-ttu-id="ccdb7-120">可交互对象</span><span class="sxs-lookup"><span data-stu-id="ccdb7-120">Interactable object</span></span>](interactable-object.md)
+* [<span data-ttu-id="ccdb7-121">边界框和应用栏</span><span class="sxs-lookup"><span data-stu-id="ccdb7-121">Bounding box and App bar</span></span>](app-bar-and-bounding-box.md)
+* [<span data-ttu-id="ccdb7-122">操作</span><span class="sxs-lookup"><span data-stu-id="ccdb7-122">Manipulation</span></span>](direct-manipulation.md)
+* [<span data-ttu-id="ccdb7-123">手动菜单</span><span class="sxs-lookup"><span data-stu-id="ccdb7-123">Hand menu</span></span>](hand-menu.md)
+* [<span data-ttu-id="ccdb7-124">追踪菜单</span><span class="sxs-lookup"><span data-stu-id="ccdb7-124">Near menu</span></span>](near-menu.md)
+* [<span data-ttu-id="ccdb7-125">对象集合</span><span class="sxs-lookup"><span data-stu-id="ccdb7-125">Object collection</span></span>](object-collection.md)
+* [<span data-ttu-id="ccdb7-126">语音命令</span><span class="sxs-lookup"><span data-stu-id="ccdb7-126">Voice command</span></span>](voice-input.md)
+* [<span data-ttu-id="ccdb7-127">键盘</span><span class="sxs-lookup"><span data-stu-id="ccdb7-127">Keyboard</span></span>](keyboard.md)
+* [<span data-ttu-id="ccdb7-128">工具提示</span><span class="sxs-lookup"><span data-stu-id="ccdb7-128">Tooltip</span></span>](tooltip.md)
+* [<span data-ttu-id="ccdb7-129">平板</span><span class="sxs-lookup"><span data-stu-id="ccdb7-129">Slate</span></span>](slate.md)
+* [<span data-ttu-id="ccdb7-130">滑块</span><span class="sxs-lookup"><span data-stu-id="ccdb7-130">Slider</span></span>](slider.md)
+* [<span data-ttu-id="ccdb7-131">着色器</span><span class="sxs-lookup"><span data-stu-id="ccdb7-131">Shader</span></span>](shader.md)
+* [<span data-ttu-id="ccdb7-132">公告和尾随</span><span class="sxs-lookup"><span data-stu-id="ccdb7-132">Billboarding and tag-along</span></span>](billboarding-and-tag-along.md)
+* [<span data-ttu-id="ccdb7-133">显示进度</span><span class="sxs-lookup"><span data-stu-id="ccdb7-133">Displaying progress</span></span>](progress.md)
+* [<span data-ttu-id="ccdb7-134">表面磁吸</span><span class="sxs-lookup"><span data-stu-id="ccdb7-134">Surface magnetism</span></span>](surface-magnetism.md)
