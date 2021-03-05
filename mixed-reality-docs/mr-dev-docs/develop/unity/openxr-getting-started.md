@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: a4606eeb1fa6c8dc0858653a196c1e536ae473d4
-ms.sourcegitcommit: e2228b9585302eeff1d853ddb54be8421a21c954
+ms.openlocfilehash: 9b95a0978522fb9fefaca3c4b96189131b88d0ec
+ms.sourcegitcommit: 4647712788a91a2b26d4b01e62285c2942bb0bd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/05/2021
-ms.locfileid: "102189119"
+ms.locfileid: "102230841"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
@@ -20,7 +20,7 @@ ms.locfileid: "102189119"
 ## <a name="prerequisites"></a>先决条件
 
 * Unity 2020.2 或更高版本
-* Unity OpenXR 插件0.1.3 或更高版本
+* Unity OpenXR 插件0.1.4 或更高版本
 * Visual Studio 2019 或更高版本
 * 在适用于 HoloLens 2 应用的 Unity 中安装 **UWP** 平台支持
 
@@ -110,7 +110,7 @@ ms.locfileid: "102189119"
 
 OpenXR 仍是实验性的，因此我们非常感谢你的反馈，你可以向我们提供更好的帮助。 你将在 [Unity 论坛](https://aka.ms/unityforums)上查找我们，方法是使用 **Microsoft**  +  **OpenXR** 和 **HoloLens 2** 或 **Windows Mixed Reality** 标记论坛帖子。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [配置项目时不使用 MRTK](configure-unity-project.md)
 * [建议用于 Unity 的设置](recommended-settings-for-unity.md)
