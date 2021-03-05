@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: cae588acbcddeefae45a555f335f1c74389f1824
-ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
+ms.openlocfilehash: a4606eeb1fa6c8dc0858653a196c1e536ae473d4
+ms.sourcegitcommit: e2228b9585302eeff1d853ddb54be8421a21c954
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496165"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102189119"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
@@ -51,7 +51,7 @@ ms.locfileid: "100496165"
 
 你现在已准备好开始通过 Unity 中的 OpenXR 进行开发！  继续阅读下一节，了解如何使用 OpenXR 示例。
 
-## <a name="optimization"></a>Optimization
+## <a name="optimization"></a>优化
 
 如果你正在开发 HoloLens 2，请导航到 **混合现实> OpenXR > 应用适用于 hololens 2 的推荐项目设置** ，以获得更好的应用性能。
 
@@ -84,20 +84,23 @@ ms.locfileid: "100496165"
 
 ## <a name="using-mrtk-with-openxr-support"></a>结合使用 MRTK 与 OpenXR 支持
 
-从2.5.3 版本开始，MRTK Unity 支持混合现实 OpenXR 插件。  
+从2.5.3 版本开始，MRTK-Unity 支持混合现实 OpenXR 插件。
 
-1. 再次打开 [混合现实功能工具](welcome-to-mr-feature-tool.md) ，并在平台支持类别中选择 **混合现实 OpenXR 插件** 包
+1. 再次打开 [混合现实功能工具](welcome-to-mr-feature-tool.md) 以安装混合现实工具包（如果尚未安装）。 OpenXR 支持在 **基础** 包中提供。
 2. 转到检查器中的 MixedReality 工具包组件脚本，并切换到 **DefaultOpenXRConfigurationProfile** 配置文件：
 
-![在检查器的混合现实工具包组件中切换 MRTK 配置的屏幕截图](images/openxr-img-11.png)
+    ![在检查器的混合现实工具包组件中切换 MRTK 配置的屏幕截图](images/openxr-img-11.png)
 
-### <a name="known-issues"></a>已知问题 
+    1. 有关 [迁移到 OpenXR 的更深入信息](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)，请参阅 MRTK 文档。
 
-使用手动跟踪功能时，请在 **资产/MixedRealityToolkit/link.xml** 文件中添加以下行：
-
-```
-<assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
-```
+> [!NOTE]
+> 从 MRTK 的早期版本进行升级时，请确保以下行位于 **资产/MixedRealityToolkit/link.xml** 文件中：
+>
+> ```xml
+> <assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
+> ```
+>
+> 如果开始使用 MRTK 2.5.4 或更高版本，则默认情况下会添加此行。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -107,7 +110,7 @@ ms.locfileid: "100496165"
 
 OpenXR 仍是实验性的，因此我们非常感谢你的反馈，你可以向我们提供更好的帮助。 你将在 [Unity 论坛](https://aka.ms/unityforums)上查找我们，方法是使用 **Microsoft**  +  **OpenXR** 和 **HoloLens 2** 或 **Windows Mixed Reality** 标记论坛帖子。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [配置项目时不使用 MRTK](configure-unity-project.md)
 * [建议用于 Unity 的设置](recommended-settings-for-unity.md)
