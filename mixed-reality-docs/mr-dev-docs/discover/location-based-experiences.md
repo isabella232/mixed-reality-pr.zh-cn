@@ -6,12 +6,12 @@ ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
 keywords: mixed reality，vr，lbe，位置，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，硬件，HoloLens，多玩家，云服务，azure
-ms.openlocfilehash: 1cc54ad0ef4b9892c49e13c7437a4d5356093c79
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+ms.openlocfilehash: 49e96b99d3f74bd24a4a0e71f212018108148ad2
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810101"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236908"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>具有 Windows Mixed Reality 的基于位置的娱乐
 
@@ -68,7 +68,7 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 全屏显示预览–混合现实门户将默认为在使用耳机时在台式计算机上全屏显示耳机预览。  
 
-隐藏侧面板的新增部分–禁止在启动混合现实门户时展开面板的新新。  
+隐藏 "侧窗格"-禁止在启动混合现实门户时展开 "新建" 面板。  
 
 #### <a name="how-to-configure"></a>配置方式：  
 

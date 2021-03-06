@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 照片，视频，hololens，照相机，unity，定位，PVC，照片视频摄像机，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，网络摄像机，照片捕获，视频捕获
-ms.openlocfilehash: 8916b332774185e4453b514ca7b6916947bdcd81
-ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
+ms.openlocfilehash: ccf0c17a5f419341e64a87fb9ef04ef0a40c2a33
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226416"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236898"
 ---
 # <a name="locatable-camera-in-unity"></a>Unity 中的可定位相机
 
@@ -26,7 +26,8 @@ ms.locfileid: "98226416"
 
 ## <a name="photo-capture"></a>照片捕获
 
-**命名空间：** *UnityEngine. XR*<br>
+**命名空间:**  
+*UnityEngine \~) UnityEngine (unity 2018 (Unity 2019 \~)*<br>
 **类型：** *PhotoCapture*
 
 *PhotoCapture* 类型允许你使用照片摄像机拍摄照片。 使用 *PhotoCapture* 拍摄照片的一般模式如下所示：
@@ -167,7 +168,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 若要与内存中帧的原始字节交互，请按照与在 Texture2D 中捕获 *照片时相同* 的设置步骤进行操作。 不同之处在于，可在 *OnCapturedPhotoToMemory* 中获取原始字节并与其进行交互。
 
-在此示例中，你将创建 *一个 <Color> 列表*，通过 SetPixels 将其进一步处理或应用于纹理 *( # B1*
+在此示例中，你将创建 *一个 <Color> 列表*，以通过 SetPixels 进一步处理或应用于纹理 *()*
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)

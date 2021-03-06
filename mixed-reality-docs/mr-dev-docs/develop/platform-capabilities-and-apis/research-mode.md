@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 07/31/2020
 ms.topic: article
 keywords: 研究模式，cv，rs4，计算机视觉，研究，HoloLens，HoloLens 2
-ms.openlocfilehash: c8e626969f87eda8b686ba759a167a2bf48e3277
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6737f9b668b73258e65f8d00e85dcd19c28ddfb5
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583134"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102237128"
 ---
 # <a name="hololens-research-mode"></a>HoloLens 研究模式
 
@@ -104,7 +104,7 @@ ms.locfileid: "98583134"
 *HoloLens 设备门户中的研究模式窗口*
 
 > [!IMPORTANT]
-> HoloLens 2 的研究模式从版本19041.1356 开始提供。 如果在早期版本中需要访问权限，请注册我们的预览 [体验](/hololens/hololens-insider) 计划。
+> HoloLens 2 的研究模式从版本19041.1364 开始提供。 如果在早期版本中需要访问权限，请注册我们的预览 [体验](/hololens/hololens-insider) 计划。 可以在 " [研究模式 GitHub 存储库](https://github.com/microsoft/HoloLens2ForCV)" 中找到更多详细信息。
 
 ### <a name="using-sensor-data-in-your-apps"></a>在应用中使用传感器数据
 
@@ -122,7 +122,7 @@ ms.locfileid: "98583134"
 
 对于 HoloLens 2，请使用 HoloLens2ForCV 存储库中的 [问题跟踪](https://github.com/microsoft/HoloLens2ForCV/issues) 程序发布反馈并跟踪已知问题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [Microsoft 媒体基础](/windows/win32/medfound/microsoft-media-foundation-sdk)
 * [HoloLensForCV GitHub 存储库](https://github.com/Microsoft/HoloLensForCV)
