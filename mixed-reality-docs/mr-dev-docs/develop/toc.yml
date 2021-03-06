@@ -352,9 +352,9 @@
           href: unreal/unreal-deploying.md
         - name: 发布到 Microsoft Store
           href: unreal/unreal-publishing-to-store.md
-- name: Web
+- name: Javascript
   items:
-    - name: Web 开发概述
+    - name: JavaScript 开发概述
       href: web/javascript-development-overview.md
     - name: WebXR
       href: web/webxr-overview.md
