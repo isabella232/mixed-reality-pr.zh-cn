@@ -1,0 +1,8 @@
+- name: 生成和部署
+  href: build-and-deploy.md
+- name: HRTK 到 MRTK 移植指南
+  href: hrtk-to-mrtk-porting-guide.md
+- name: MRTK 和托管代码剥离
+  href: mrtk-and-managed-code-stripping.md
+- name: 更新
+  href: updating.md
