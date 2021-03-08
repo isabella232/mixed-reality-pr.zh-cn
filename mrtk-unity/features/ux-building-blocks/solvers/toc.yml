@@ -1,0 +1,4 @@
+- name: 求解器概述
+  href: solver.md
+- name: 点击以放置
+  href: tap-to-place.md
