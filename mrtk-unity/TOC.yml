@@ -1,0 +1,22 @@
+- name: 欢迎使用 MRTK
+  href: index.md
+- name: 发行说明
+  href: release-notes/toc.yml
+- name: 路线图
+  href: roadmap.md
+- name: 安装工具
+  href: install-the-tools.md
+- name: 配置
+  href: configuration/toc.yml
+- name: 更新和部署
+  href: updates-deployment/toc.yml
+- name: 包
+  href: packages/toc.yml
+- name: 性能和最佳做法
+  href: performance/toc.yml
+- name: 体系结构
+  href: architecture/toc.yml
+- name: 功能概述
+  href: features/toc.yml
+- name: 供稿
+  href: contributing/toc.yml
