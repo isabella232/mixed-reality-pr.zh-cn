@@ -1,0 +1,6 @@
+- name: 输入动画文件格式
+  href: input-animation-file-format.md
+- name: 输入动画录制
+  href: input-animation-recording.md
+- name: 输入模拟服务
+  href: input-simulation-service.md
