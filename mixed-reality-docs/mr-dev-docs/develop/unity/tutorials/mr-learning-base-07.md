@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界控件
 ms.localizationpriority: high
-ms.openlocfilehash: f92eca294e2114207a5e28ebe80aa480b9029b66
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 1ab7b3a334639be564717d77d3bbc478a25e8326
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590423"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102237238"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 
@@ -113,7 +113,7 @@ ms.locfileid: "99590423"
 
 ![显示正在按下“重置”按钮的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section1-step1-7.png)
 
-若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
+若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
 
 ## <a name="adding-bounds-control"></a>添加边界控件
 
@@ -132,9 +132,6 @@ ms.locfileid: "99590423"
 
 > [!NOTE]
 > 边界控件可视化效果是在运行时创建的，因此在进入“游戏”模式之前不可见。
-
-> [!NOTE]
->BoundsControl 组件将在运行时自动添加 NearInteractionGrabbable 组件。 因此，无需添加此组件即可使用跟踪的双手抓取包含的对象。
 
 > [!NOTE]
 >对象操控器（脚本）自动添加约束管理器（脚本）
@@ -171,7 +168,7 @@ ms.locfileid: "99590423"
 
 ![显示正在操作边界控件的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section2-step1-4.png)
 
-若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的[边界控件](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html)指南。
+若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/)中的[边界控件](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html)指南。
 
 ## <a name="congratulations"></a>祝贺
 
