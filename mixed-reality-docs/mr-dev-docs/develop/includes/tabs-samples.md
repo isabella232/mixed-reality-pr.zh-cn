@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e4eb106a92b953f7c16f5cf1fc9322d7103ad182
-ms.sourcegitcommit: 924f8c1ceb93c378f800cf88d82944cf80f092bc
+ms.openlocfilehash: 465229efca35a5ac3e254ac60481a447c8708ea1
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96615533"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102244621"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -29,7 +29,7 @@ ms.locfileid: "96615533"
 
 ### <a name="hololens-2-open-source-sample-apps"></a>HoloLens 2 开源示例应用
 
-* [HoloLens2Example](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/HoloLens2Example) 
+* [HoloLens2Example](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/HoloLens2Example)
 * [HoloPipes](https://github.com/microsoft/MixedReality-Unreal-HoloPipes) - 从 HoloLens 2 中的 [Microsoft Store](https://www.microsoft.com/p/holopipes/9mszb3nnrxn9) 下载
 
 ### <a name="made-with-the-mixed-reality-toolkit-for-unreal"></a>使用适用于 Unreal 的混合现实工具包制作
@@ -41,10 +41,9 @@ ms.locfileid: "96615533"
 
 ### <a name="made-by-epic-games"></a>由 Epic Games 制作
 
-我们在 Epic Games 的合作伙伴已在 Unreal 商城上发布了优秀的 HoloLens 2 示例项目。 
+我们在 Epic Games 的合作伙伴已在 Unreal 商城上发布了优秀的 HoloLens 2 示例项目。
 
-> [!NOTE] 
+> [!NOTE]
 > 此体验必须从高端电脑流式传输到头戴显示设备。
 
 * [Mission AR](https://docs.unrealengine.com/Resources/Showcases/MissionAR/index.html)
-
