@@ -3,16 +3,16 @@ title: 授权项目更改
 description: 了解如何授权对面向 HoloLens 和 VR 开发的混合现实功能工具进行项目更改。
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 01/27/2021
+ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: b9e4f53c9a1e5503cfa92a612879be1971422acc
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: db7ae079e19c7739f57f0b9e4a375a3e6f9a3cdd
+ms.sourcegitcommit: 4647712788a91a2b26d4b01e62285c2942bb0bd2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99243875"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102230753"
 ---
 # <a name="authorizing-project-changes"></a>授权项目更改
 

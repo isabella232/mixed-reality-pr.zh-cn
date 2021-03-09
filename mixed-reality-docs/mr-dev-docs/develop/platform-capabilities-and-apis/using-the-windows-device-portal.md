@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: c354a6f7c3afd6164182f915c39bbf1ce306ef39
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 83bc2183d40f9dbfb00799475522606ff59ccfa0
+ms.sourcegitcommit: fd19bf57607c7ed94a849d4cf606bba2bb93e668
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583245"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117641"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
@@ -65,7 +65,7 @@ ms.locfileid: "98583245"
 > 如果在 USB 连接方面遇到问题，请再次检查 USB 设备连接可选组件是否已作为 [Visual Studio工具包](../install-the-tools.md#installation-checklist)的一部分安装。
 
 2. 使用适用于 HoloLens（第一代）的 micro-USB 数据线或适用于 HoloLens 2 的 USB-C 数据线将 HoloLens 连接到电脑。
-3. 在电脑上的 Web 浏览器中，转到 [https://127.0.0.1:10080](https://127.0.0.1:10080)。
+3. 在电脑上的 Web 浏览器中，转到 [http://127.0.0.1:10080](http://127.0.0.1:10080)。
 
 ### <a name="moving-files-over-usb"></a>通过 USB 移动文件
 

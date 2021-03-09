@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 空间感知
 ms.localizationpriority: high
-ms.openlocfilehash: 8a45037f7a73d9e74cd714ae4af49b58f44ce297
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 0a8beb647516ebcb5bc07cb58d0193e8fe71e9fc
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590469"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101760013"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3.配置 MRTK 配置文件
 
@@ -20,11 +20,11 @@ ms.locfileid: "99590469"
 
 在本教程中，你将学习如何自定义和配置 MRTK 配置文件。
 
-<a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Profiles/Profiles.html" target="_blank">MRTK 配置文件</a>是一个嵌套配置文件树，它们构成了应如何初始化 MRTK 系统和功能的配置信息。 顶级配置文件（即“配置”配置文件）包含每个主要核心系统的嵌套配置文件。 每个嵌套的配置文件都设计为配置其对应系统的行为。
+<a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/profiles/profiles.md" target="_blank">MRTK 配置文件</a>是一个嵌套配置文件树，它们构成了应如何初始化 MRTK 系统和功能的配置信息。 顶级配置文件（即“配置”配置文件）包含每个主要核心系统的嵌套配置文件。 每个嵌套的配置文件都设计为配置其对应系统的行为。
 
 此特定示例将演示如何通过更改空间网格观察程序的设置来隐藏空间感知网格。 但是，可以按照相同的原则来自定义 MRTK 配置文件中的任何设置或值。
 
-正如你在[上一教程](mr-learning-base-02.md#congratulations)期间将项目部署到 HoloLens 2 时遇到的一样，<a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">空间感知</a>网格是一系列表示环境几何图形的网格。 这是一种有用的可视化效果，一开始就能看到，但通常也可将它关闭，以避免用它后产生视觉干扰和额外的性能影响。
+正如你在[上一教程](mr-learning-base-02.md#congratulations)期间将项目部署到 HoloLens 2 时遇到的一样，<a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">空间感知</a>网格是一系列表示环境几何图形的网格。 这是一种有用的可视化效果，一开始就能看到，但通常也可将它关闭，以避免用它后产生视觉干扰和额外的性能影响。
 
 ## <a name="objectives"></a>目标
 
@@ -116,7 +116,7 @@ ms.locfileid: "99590469"
 > [!NOTE]
 > 尽管空间映射网格不可见，但它依然存在且可正常运行。 例如，空间映射网格后面的任何全息影像（如真实墙壁后面的全息影像）将不可见。
 
-你已了解如何修改 MRTK 配置文件中的设置。 可以看到，若要自定义 MRTK 设置，首先需要创建默认配置文件的副本。 由于默认配置文件不可编辑，因此，应始终保留这些配置文件，以便在还原为默认设置时参考。 若要详细了解 MRTK 配置文件及其体系结构，可参阅 [MRTK 文档门户](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)中的 [MRTK 配置文件配置指南](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html)。
+你已了解如何修改 MRTK 配置文件中的设置。 可以看到，若要自定义 MRTK 设置，首先需要创建默认配置文件的副本。 由于默认配置文件不可编辑，因此，应始终保留这些配置文件，以便在还原为默认设置时参考。 若要详细了解 MRTK 配置文件及其体系结构，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs)中的 [MRTK 配置文件配置指南](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mixed-reality-configuration-guide.md)。
 
 ## <a name="congratulations"></a>祝贺
 

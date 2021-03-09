@@ -3,16 +3,16 @@ title: 导入功能
 description: 了解如何从面向 HoloLens 和 VR 开发的混合现实功能工具导入并安装功能。
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 01/27/2021
+ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: a82eea93a07b662314f3a718eef0c1bd18a4ca4e
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: 0d9139835b9eb4e3e5ce3d1f378c56a4724bfa55
+ms.sourcegitcommit: 4647712788a91a2b26d4b01e62285c2942bb0bd2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99243878"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102230803"
 ---
 # <a name="importing-features"></a>导入功能
 
@@ -22,26 +22,18 @@ ms.locfileid: "99243878"
 
 ## <a name="features-list"></a>特征列表
 
-“功能”列表包含在发现过程中选择的包的集合。 
-* 在导入之前，可以选择或取消选择每个功能。 可使用下面所示的“详细信息”链接查看包详细信息
+“功能”列表包含在发现过程中选择的包的集合。 在导入之前，可以选择或取消选择每个功能。 可使用下面所示的“详细信息”链接查看包详细信息
 
 ![特征列表](images/FeaturesList.png)
 
 ## <a name="required-dependencies-list"></a>必需的依赖项列表
 
-“必需的依赖项”列表包含运行一个或多个所选功能所需的包。 此列表还将包含依赖项的依赖项。
-* 在导入之前，可以选择或取消选择每个依赖项。 可使用下面所示的“详细信息”链接查看包详细信息
+“必需的依赖项”列表包含运行一个或多个所选功能所需的包。 此列表还将包含依赖项的依赖项。 在导入之前，可以选择或取消选择每个依赖项。 可使用下面所示的“详细信息”链接查看包详细信息
 
 ![依赖项列表](images/RequiredDependencyList.png)
 
 > [!NOTE]
 > 如果取消选择所需的依赖项，则会导致在 Unity 中加载项目时出现一个或多个依赖项缺失的错误。 这些功能在项目中不可用。
-
-## <a name="specifying-the-unity-project-path"></a>指定 Unity 项目路径
-
-必须先向混合现实功能工具注册路径，然后才能将功能导入到项目中。
-
-![设置项目路径](images/ProjectPath.png)
 
 ## <a name="validating-selections"></a>验证选定内容
 
@@ -50,11 +42,6 @@ ms.locfileid: "99243878"
 ![验证问题](images/ValidationIssues.png)
 
 混合现实功能工具提供了两个自行解决问题的方法（如后面部分所述）以及手动取消和解决问题的选项。
-
-> [!IMPORTANT]
-> 混合现实功能工具无法自行解决与所需版本的 Unity 相关的问题。 必须通过升级项目所使用的 Unity 版本或禁用需要更新版本的功能，手动处理这些问题。
->
-> 未来版本的混合现实功能工具将根据项目所使用的 Unity 版本提供更好的功能筛选。
 
 ### <a name="enable-dependencies"></a>启用依赖项
 

@@ -7,18 +7,18 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: 59bb269bfb8d7e0a9cfd6963cf144ddb0e070c5f
-ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
+ms.openlocfilehash: ed0f27822ab83baa2c1de6575067bdbd6b00a5e6
+ms.sourcegitcommit: 5694cc472bde67c940204ebe6671b0598501e62a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99421406"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102126610"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
 ![Unity 横幅徽标](../images/unity_logo_banner.png)
 
-在 [Unity](https://unity.com) 中生成 HoloLens [混合现实应用](../../design/app-views.md)的最快途径是使用混合现实工具包。 如果你尚不熟悉 Unity，我们建议你先在 Unity Learn 平台上浏览初学者级别[教程](https://unity3d.com/learn/tutorials)，然后再继续操作。 访问综合性的 [Asset Store](https://www.assetstore.unity3d.com/) 和 [Unity 混合现实论坛](https://forum.unity3d.com/forums/hololens.102/)，与在线社区一起生成混合现实应用程序也是一个好主意。 你永远都不知道你可能会在未知领域发现什么样的绝佳资产或解决方案。 准备好开始使用 MRTK 时，请前往下面的开发检查点！
+在 [Unity](https://unity.com) 中生成 HoloLens [混合现实应用](../../design/app-views.md)的最快途径是使用混合现实工具包。 如果你尚不熟悉 Unity，我们建议你先在 Unity Learn 平台上浏览初学者级别[教程](https://unity3d.com/learn/tutorials)，然后再继续操作。 访问综合性的 [Asset Store](https://assetstore.unity.com) 和 [Unity 混合现实论坛](https://forum.unity3d.com/forums/hololens.102/)，与在线社区一起生成混合现实应用程序也是一个好主意。 你永远都不知道你可能会在未知领域发现什么样的绝佳资产或解决方案。 准备好开始使用 MRTK 时，请前往下面的开发检查点！
 
 > [!IMPORTANT]
 > 如果你有一个想要引入到 HoloLens 2 的现有 Unity 项目，请查看 **[移植指南](../porting-apps/porting-overview.md)** 。 我们有指南针对正在使用 HTK、MRTK v1 或 SteamVR 的项目。
@@ -104,7 +104,7 @@ ms.locfileid: "99421406"
 | --- | --- |
 | [MRTK 体系结构概述](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/Overview.html) | 更深入地了解 MRTK SDK 在项目中的工作方式 |
 | [设置和性能](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Performance/PerfGettingStarted.html) | 分析你的应用、更新 Unity 设置并实现最佳的全息影像稳定性能 |
-| [MRTK + XR 入门](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithMRTKAndXRSDK.html) | 转到 Unity 提供的替代 XR 管道 |
+| [MRTK + XR 入门](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/getting-started-with-mrtk-and-xrsdk.md) | 转到 Unity 提供的替代 XR 管道 |
 
 ### <a name="unity-resources"></a>Unity 资源
 
