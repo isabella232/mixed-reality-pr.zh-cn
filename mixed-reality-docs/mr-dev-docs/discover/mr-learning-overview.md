@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, learn, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语言翻译, Azure, Azure 认知服务, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: f8188cc8c417b60864cd963120ad004d6169c3c2
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: c4e068dda72c4dc2f22ca0a56a835b334d90c713
+ms.sourcegitcommit: a2b1c75f25adcd238b6a93b103a13aa898a62c76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583527"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770325"
 ---
 # <a name="mixed-reality-learn-overview"></a>混合现实学习概述
 
@@ -69,3 +69,15 @@ ms.locfileid: "98583527"
 * 在 Azure 认知服务中为语音服务配置 Unity 项目
 * 将语音服务与 Windows Mixed Reality 应用程序集成
 * 使用语音识别转换文本
+
+### <a name="render-a-model-with-azure-remote-rendering"></a>[使用 Azure 远程渲染来渲染模型](/learn/modules/render-model-azure-remote-rendering-unity/)
+
+创建 Azure 远程渲染会话并渲染 3D 模型。
+
+**学习目标**
+
+学完本模块后，你将能够：
+
+* 创建远程渲染会话
+* 加载 3D 模型
+* 渲染 3D 模型
