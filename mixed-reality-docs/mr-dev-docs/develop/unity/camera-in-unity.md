@@ -1,17 +1,17 @@
 ---
-title: Unity 中的相机
+title: Unity 中的照相机设置
 description: 了解如何设置和使用 Unity 的用于 Windows Mixed Reality 开发的主照相机进行全息渲染。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，全息呈现，全息，沉浸式，聚焦点，深度缓冲，仅限方向，定位，不透明，透明，剪辑，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 865d19482e5f612eab95fa2f74cb2bad59171496
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 23f6f1c996ba71b1bcfa62e0c64136bc9fda34b7
+ms.sourcegitcommit: e51e18e443d73a74a9c0b86b3ca5748652cd1b24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759763"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103574963"
 ---
 # <a name="camera-in-unity"></a>Unity 中的相机
 
