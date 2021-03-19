@@ -192,24 +192,24 @@
               href: unity/reviewing-changes.md
     - name: 基本构建基块
       items:
-        - name: 照相机
+        - name: 照相机设置
           href: unity/camera-in-unity.md
-        - name: 坐标系统
-          href: unity/coordinate-systems-in-unity.md
-        - name: 持久性
-          href: unity/persistence-in-unity.md
-        - name: 头部凝视
-          href: unity/gaze-in-unity.md
+        - name: 空间定位点
+          href: unity/spatial-anchors-in-unity.md
+        - name: 交互
+          items:
+            - name: 运动控制器
+              href: unity/motion-controllers-in-unity.md
+            - name: 笔势
+              href: unity/gestures-in-unity.md
+            - name: 手部和眼部跟踪
+              href: unity/hand-eye-in-unity.md
+            - name: 头部凝视
+              href: unity/gaze-in-unity.md
+            - name: 语音输入
+              href: unity/voice-input-in-unity.md
         - name: 文本
           href: unity/text-in-unity.md
-        - name: 运动控制器
-          href: unity/motion-controllers-in-unity.md
-        - name: 笔势
-          href: unity/gestures-in-unity.md
-        - name: 手部和眼部跟踪
-          href: unity/hand-eye-in-unit.md
-        - name: 语音输入
-          href: unity/voice-input-in-unity.md
         - name: 空间映射
           href: unity/spatial-mapping-in-unity.md
         - name: 空间音效
@@ -220,6 +220,8 @@
           href: unity/shared-experiences-in-unity.md
         - name: 可定位相机
           href: unity/locatable-camera-in-unity.md
+        - name: 桌面应用中的全息远程处理
+          href: unity/holographic-remoting-desktop.md
         - name: 焦点
           href: unity/focus-point-in-unity.md
         - name: 失跟
@@ -352,7 +354,7 @@
           href: unreal/unreal-deploying.md
         - name: 发布到 Microsoft Store
           href: unreal/unreal-publishing-to-store.md
-- name: Javascript
+- name: JavaScript
   items:
     - name: JavaScript 开发概述
       href: web/javascript-development-overview.md
