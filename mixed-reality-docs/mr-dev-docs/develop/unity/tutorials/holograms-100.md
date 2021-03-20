@@ -1,19 +1,19 @@
 ---
-title: MR 基础 100 - Unity 入门
+title: HoloLens (第一代) 基础知识 100-Unity 入门
 description: 了解如何创建适用于 HoloLens 和 Windows Mixed Reality 设备的第一个基本混合现实 "hello world" 应用程序。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，HoloLens，，vr，尊敬，，入门，全息影像，学院，教程，混合现实院校，unity，混合现实耳机，Windows Mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 86ac759cb73e39f88d62db5dab0c38108bb17d55
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 999ab7dc87a639f10aad9eaf2a7ef8de2cf92633
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583737"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730354"
 ---
-# <a name="mr-basics-100-getting-started-with-unity"></a>MR 基础知识 100：Unity 入门
+# <a name="hololens-1st-gen-basics-100-getting-started-with-unity"></a>HoloLens (第一代) 基础知识100： Unity 入门
 
 >[!IMPORTANT]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
@@ -30,7 +30,7 @@ ms.locfileid: "98583737"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 * 配置了正确 [工具](../../install-the-tools.md)的 WINDOWS 10 电脑。
 
@@ -154,7 +154,7 @@ Unity 摄像机处理头跟踪和 stereoscopic 呈现。 需要对主摄像机�
 2. **> 全息仿真打开 > XR 的窗口**。
 3. 将 **仿真模式** 从 **None** 更改为 **远程到设备**。
 4. 在 **远程计算机** 上，输入你之前记下的 HOLOLENS 的 IP 地址。
-5. 单击“连接”  。
+5. 单击“连接”。
 6. 确保 **连接状态** 更改为 " **已连接** 绿色"。
 7. 现在，你可以在 Unity 编辑器中单击 " **播放** "。
 
@@ -223,7 +223,7 @@ Unity 摄像机处理头跟踪和 stereoscopic 呈现。 需要对主摄像机�
 
 部署你的应用后，请尝试四处移动该多维数据集，并观察它是否在世界各地。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [Unity 开发概述](../unity-development-overview.md)
 * [使用 Unity 和 Visual Studio 的最佳做法](../best-practices-for-working-with-unity-and-visual-studio.md)

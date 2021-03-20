@@ -1,19 +1,19 @@
 ---
-title: MR 输入 212 - 语音
+title: HoloLens (第一代) 输入 212-语音
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解语音概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，语音，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 6fb3e10cb440fdda941a6d68b106da1bbaaedbc9
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 3218585c8c485e05fc511cf06b32542709027493
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583682"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730444"
 ---
-# <a name="mr-input-212-voice"></a>MR 输入 212：语音
+# <a name="hololens-1st-gen-input-212-voice"></a>HoloLens (第一代) 输入212：语音
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
@@ -79,7 +79,7 @@ ms.locfileid: "98583682"
 ### <a name="instructions"></a>说明
 
 1. 启动 Unity。
-2. 选择“打开”  。
+2. 选择“打开”。
 3. 导航到之前未存档的 **HolographicAcademy-212** 文件夹。
 4. 查找并选择 "**启动** / **模型资源管理器**" 文件夹。
 5. 单击 " **选择文件夹** " 按钮。
@@ -159,7 +159,7 @@ ms.locfileid: "98583682"
 * 在 " **检查器** " 面板中，找到 **(脚本) 组件的语音输入源** 。
 * 展开 **关键字** 部分，查看支持的语音命令： **打开 Communicator**。
 * 单击右侧的 "齿轮"，然后选择 " **编辑脚本**"。
-* 探索 **SpeechInputSource.cs** ，了解它如何使用 **KeywordRecognizer** 添加语音命令。
+* 探索 **SpeechInputSource** ，了解它如何使用 **KeywordRecognizer** 添加语音命令。
 
 ### <a name="build-and-deploy"></a>生成和部署
 
@@ -203,9 +203,9 @@ ms.locfileid: "98583682"
 * 请注意， **Communicator** 对象有一个 **语音输入处理程序 (脚本)** 组件来响应 " **发送消息** " 命令。
 * 查看 **Communicator (脚本)** 组件，然后双击脚本，在 Visual Studio 中将其打开。
 
-Communicator.cs 负责在 communicator 设备上设置正确的按钮状态。 这将允许我们的用户记录消息，播放消息，并将消息发送到 astronaut。 它还将启动和停止动画波形窗体，以便向用户确认他们的声音被听到。
+Communicator 负责在 communicator 设备上设置正确的按钮状态。 这将允许我们的用户记录消息，播放消息，并将消息发送到 astronaut。 它还将启动和停止动画波形窗体，以便向用户确认他们的声音被听到。
 
-* 在 **Communicator.cs** 中，从 **Start** 方法中删除 (81 和 82) 的以下行。 这将启用 communicator 上的 "录制" 按钮。
+* 在 " **Communicator**" 中，从 **Start** 方法中删除以下行 (81 和 82) 。 这将启用 communicator 上的 "录制" 按钮。
 
 ```cs
 // TODO: 2.a Delete the following two lines:
@@ -250,7 +250,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 
 ### <a name="instructions"></a>说明
 
-我们将编辑 **MicrophoneManager.cs** 以使用听写识别器。 这就是我们要添加的内容：
+我们将编辑 **MicrophoneManager** 以使用听写识别器。 这就是我们要添加的内容：
 
 1. 按下 " **记录" 按钮** 后，将 **启动 DictationRecognizer**。
 2. 显示 DictationRecognizer 理解的 **假设** 。
@@ -259,7 +259,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 5. 按下 " **停止" 按钮** ，或 mic 会话超时时， **停止 DictationRecognizer**。
 6. 重新启动 **KeywordRecognizer**，这将侦听 " **发送消息** " 命令。
 
-让我们开始吧。 在 **MicrophoneManager.cs** 中完成 3. a 的所有编码练习，或复制并粘贴下面的已完成代码：
+现在就开始吧。 完成 3. **MicrophoneManager** 中的所有编码练习，或复制并粘贴以下找到的已完成代码：
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.

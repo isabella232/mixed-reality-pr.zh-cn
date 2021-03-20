@@ -1,19 +1,19 @@
 ---
-title: 'MR 和 Azure 303-自然语言理解 (LUIS) '
+title: 'HoloLens (第一代) 和 Azure 303-自然语言理解 (LUIS) '
 description: 完成本课程，了解如何在混合现实应用程序中实现 Azure 语言理解智能服务 (LUIS) 。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，语言理解智能服务，luis，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: a91fcd2e20ce1e1731bd398fa72923f6ff5e8406
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 663ac44dbf15ce2db63d7ffe0ecc605d3555857f
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583433"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730554"
 ---
-# <a name="mr-and-azure-303-natural-language-understanding-luis"></a>MR 和 Azure 303：自然语言理解 (LUIS) 
+# <a name="hololens-1st-gen-and-azure-303-natural-language-understanding-luis"></a>HoloLens (第一代) 和 Azure 303：自然语言理解 (LUIS) 
 
 <br>
 
@@ -53,7 +53,7 @@ ms.locfileid: "98583433"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -504,7 +504,7 @@ change the color of this object to blue
         public TextMesh dictationText; //a UI object used to debug dictation result
     ``` 
 
-6.  现在需要添加用于 *唤醒 ( # B1* 和 *Start ( # B3* 方法的代码。 当类初始化时，将调用以下内容：
+6.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。 当类初始化时，将调用以下内容：
 
     ```csharp
         private void Awake()
@@ -580,7 +580,7 @@ change the color of this object to blue
     ```
  
     > [!IMPORTANT]
-    > 删除 *更新 ( # B1* 方法，因为此类将不会使用它。
+    > 删除 () 方法的 *更新* ，因为此类将不会使用它。
 
 9.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
 
@@ -611,7 +611,7 @@ change the color of this object to blue
         using UnityEngine.Networking;
     ```
 
-5.  首先) *(* ，在同一脚本 **文件中** 的 *LuisManager* 类中创建三个类 (在同一脚本文件中，该文件将表示来自 Azure 的反序列化 JSON 响应。
+5.  首先，在同一脚本文件中的 *LuisManager* 类中创建三 **个类 (** 在同一脚本文件中，该 *()*) 方法将表示来自 Azure 的反序列化 JSON 响应。
 
     ```csharp
         [Serializable] //this class represents the LUIS response
@@ -654,7 +654,7 @@ change the color of this object to blue
 
 7.  请确保现在将 LUIS 终结点置于) 门户 (。
 
-8.  现在需要添加 *唤醒 ( # B1* 方法的代码。 当类初始化时，将调用此方法：
+8.  现在需要添加 *唤醒 ()* 方法的代码。 当类初始化时，将调用此方法：
 
     ```csharp
         private void Awake()
@@ -705,7 +705,7 @@ change the color of this object to blue
         }
     ```
  
-11. 创建名为 AnalyseResponseElements 的新方法 *( # B1* ，该方法将读取生成的 *AnalysedQuery* 并确定实体。 确定这些实体后，它们将被传递到要在操作中使用的 *行为* 类的实例。
+11. 创建一个名为 *AnalyseResponseElements ()* 的新方法，该方法将读取生成的 *AnalysedQuery* 并确定实体。 确定这些实体后，它们将被传递到要在操作中使用的 *行为* 类的实例。
 
     ```csharp
         private void AnalyseResponseElements(AnalysedQuery aQuery)
@@ -766,7 +766,7 @@ change the color of this object to blue
     ```
  
     > [!IMPORTANT]
-    > 删除 *开始 ( # B1* 并 *更新 ( # B3* 方法，因为此类将不会使用它们。
+    > 删除 *开始 ()* 并 *更新 ()* 方法，因为此类将不会使用它们。
 
 12. 在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
 
@@ -794,7 +794,7 @@ change the color of this object to blue
         internal GameObject gazedTarget;
     ```
  
-5.  添加 *唤醒 ( # B1* 方法代码。 当类初始化时，将调用此方法：
+5.  添加 *唤醒的 ()* 方法代码。 当类初始化时，将调用此方法：
 
     ```csharp
         void Awake()
@@ -866,7 +866,7 @@ change the color of this object to blue
         }
     ```
  
-7.  添加 *FindTarget ( # B1* 方法，以确定哪一个 *Gameobject* 是当前意向的目标。 如果实体中未定义显式目标，则此方法默认为 "gazed" 的 *GameObject* 。
+7.  添加 *FindTarget ()* 方法，以确定哪一个 *Gameobject* 是当前意向的目标。 如果实体中未定义显式目标，则此方法默认为 "gazed" 的 *GameObject* 。
 
     ```csharp
         /// <summary>
@@ -905,7 +905,7 @@ change the color of this object to blue
     ```
  
     > [!IMPORTANT]
-    > 删除 *开始 ( # B1* 并 *更新 ( # B3* 方法，因为此类将不会使用它们。
+    > 删除 *开始 ()* 并 *更新 ()* 方法，因为此类将不会使用它们。
 
 8.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
 
@@ -1111,10 +1111,10 @@ change the color of this object to blue
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 使用此应用程序时，您可能会注意到，如果注视地面对象并要求更改其颜色，则会这样做。 您可以如何阻止您的应用程序更改地面颜色？
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 尝试扩展 LUIS 和应用功能，为场景中的对象添加其他功能;例如，在注视点处创建新的对象，具体取决于用户所显示的内容，然后可以将这些对象和当前场景对象与现有的命令一起使用。

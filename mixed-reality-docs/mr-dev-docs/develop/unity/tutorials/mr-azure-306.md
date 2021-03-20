@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 306 - 流式传输视频
+title: HoloLens (第一代) 和 Azure 306-流式处理视频
 description: 完成本课程，了解如何在混合现实应用程序中实现 Azure 媒体服务。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，媒体服务，流视频，360，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 3a0401b7503d8a783ba529cf24cdf6cc55c88311
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: c6afedfd2dae9da3bcd6b044381a6dc20604ded8
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583455"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730564"
 ---
-# <a name="mr-and-azure-306-streaming-video"></a>MR 和 Azure 306：流式传输视频
+# <a name="hololens-1st-gen-and-azure-306-streaming-video"></a>HoloLens (第一代) 和 Azure 306：流式处理视频
 
 <br>
 
@@ -49,7 +49,7 @@ ms.locfileid: "98583455"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具一文](../../install-the-tools.md)中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -150,7 +150,7 @@ ms.locfileid: "98583455"
 
     6.  还需要确认是否已了解应用于此服务的条款和条件。
 
-    7.  单击“创建”。
+    7.  单击 **“创建”** 。
 
         ![Azure 门户](images/AzureLabs-Lab6-08.png)
 
@@ -285,7 +285,7 @@ ms.locfileid: "98583455"
 
     ![Azure 门户](images/AzureLabs-Lab6-30.png)
 
-4.  接下来，转到 " **_文件_*生成设置*** "，并通过单击 "**切换平台**" 按钮将平台切换到 **通用 Windows 平台**。
+4.  接下来，转到 " ***文件**生成设置*** "，并通过单击 "**切换平台**" 按钮将平台切换到 **通用 Windows 平台**。
 
 5.  另外，请确保：
 
@@ -455,7 +455,7 @@ ms.locfileid: "98583455"
     using UnityEngine.Video;
     ```
 
-6.  在 **VideoController** 类中输入以下变量以及 **唤醒 ( # B1** 方法：
+6.  在 **VideoController** 类中输入以下变量以及 **唤醒 ()** 方法：
 
     ```csharp
         /// <summary> 
@@ -508,7 +508,7 @@ ms.locfileid: "98583455"
     > [!WARNING]
     > 在 Unity 内使用 *https* 时存在一个已知问题，版本2017.4.1 为 f1。 如果视频在播放时出现错误，请尝试改用 "http"。
 
-8.  接下来，需要编辑 **Start ( # B1** 方法。 每次用户切换场景时都会触发此方法， (通过查看 "注视" 按钮切换视频) 。
+8.  接下来，需要编辑 **启动 ()** 方法。 每次用户切换场景时都会触发此方法， (通过查看 "注视" 按钮切换视频) 。
 
     ```csharp
         // Use this for initialization
@@ -519,7 +519,7 @@ ms.locfileid: "98583455"
         }
     ```
 
-9.  按照 **开始 ( # B1** 方法，插入 **PlayVideo ( # B3** *IEnumerator* 方法，该方法将用于无缝地启动视频 (因此) 不会出现断断续续的情况。
+9.  在 " **开始 ()** 方法" 下，插入 **PlayVideo ()** *IEnumerator* 方法，该方法将用于无缝地启动视频 (因此) 无断断续续情况。
 
     ```csharp
         private IEnumerator PlayVideo()
@@ -596,7 +596,7 @@ ms.locfileid: "98583455"
         }
     ```
 
-10. 此类需要的最后一种方法是 **ChangeScene ( # B1** 方法，此方法将用于在场景间进行交换。
+10. 此类需要的最后一种方法是 **ChangeScene ()** 方法，该方法将用于在场景间进行交换。
 
     ```csharp
         public void ChangeScene()
@@ -606,7 +606,7 @@ ms.locfileid: "98583455"
     ```
 
     > [!TIP] 
-    > **ChangeScene ( # B1** 方法使用 \# 称为 "*条件运算符*" 的便利 C 功能。 这允许检查条件，然后在单个语句中检查基于检查结果返回的值。 请单击以下 [链接了解有关条件运算符的详细信息](/dotnet/csharp/language-reference/operators/conditional-operator)。
+    > **ChangeScene ()** 方法使用 \# 称为 "*条件运算符*" 的便利 C 功能。 这允许检查条件，然后在单个语句中检查基于检查结果返回的值。 请单击以下 [链接了解有关条件运算符的详细信息](/dotnet/csharp/language-reference/operators/conditional-operator)。
 
 11. 在返回到 Unity 之前，在 Visual Studio 中保存更改。
 
@@ -629,7 +629,7 @@ ms.locfileid: "98583455"
 
 2.  右键单击 " **项目** " 面板中的 "*创建* * C \# 脚本"。 将脚本命名为 " **注视**"。
 
-3.  双击新的 " **_注视_"*脚本，用 _* Visual Studio 2017 打开它。**
+3.  双击新的 * "**注视**" 脚本，用 _ *Visual Studio 2017* 打开它。*
 
 4.  确保以下命名空间位于该脚本的顶部，并删除所有其他命名空间：
 
@@ -667,7 +667,7 @@ ms.locfileid: "98583455"
         public bool Hit { get; private set; }
     ```
 
-6.  现在需要添加 **唤醒 ( # B1** 和 **Start ( # B3** 方法的代码。
+6.  现在需要添加 **唤醒 ()** 和 **启动 ()** 方法的代码。
 
     ```csharp
         private void Awake()
@@ -682,7 +682,7 @@ ms.locfileid: "98583455"
         }
     ```
 
-7.  在 **Update ( # B1** 方法中添加以下代码，以投影 Raycast 并检测目标命中：
+7.  在 **Update ()** 方法中添加以下代码，以投影 Raycast 并检测目标命中：
 
     ```csharp
         void Update()
@@ -881,10 +881,10 @@ ms.locfileid: "98583455"
 
 ## <a name="bonus-exercises"></a>额外练习
 
-**练习1**
+**练习 1**
 
 在本教程中，完全可以仅使用一个场景来更改视频。 试验应用程序并将其放入一个场景！ 甚至可能将其他视频添加到组合。
 
-**练习2**
+**练习 2**
 
 试验 Azure 和 Unity，尝试实现此功能，使应用程序能够根据 Internet 连接的强度，自动选择不同文件大小的视频。

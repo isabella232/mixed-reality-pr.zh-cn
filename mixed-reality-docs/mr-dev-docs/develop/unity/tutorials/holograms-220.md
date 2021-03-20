@@ -1,19 +1,19 @@
 ---
-title: MR 空间 220 - 空间音效
+title: HoloLens (第一代) 空间 220-空间音效
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解空间音效概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间音效，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: da130a5a93ec261d2e767874faa31dbc50d51b12
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: aea093aa8f5e6c983cd66acf8cec89d8e7ecf52d
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582762"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730304"
 ---
-# <a name="mr-spatial-220-spatial-sound"></a>MR 空间 220：空间音效
+# <a name="hololens-1st-gen-spatial-220-spatial-sound"></a>HoloLens (第一代) 空间220：空间音效
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
@@ -70,7 +70,7 @@ ms.locfileid: "98582762"
 ### <a name="instructions"></a>说明
 
 * 启动 Unity。
-* 选择“打开”  。
+* 选择“打开”。
 * 导航到桌面并找到以前未存档的文件夹。
 * 单击 " **Starting\Decibel** " 文件夹，然后按 " **选择文件夹** " 按钮。
 * 等待项目在 Unity 中加载。

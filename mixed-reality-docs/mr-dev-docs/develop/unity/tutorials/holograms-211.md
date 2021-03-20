@@ -1,19 +1,19 @@
 ---
-title: MR 输入 211 - 手势
+title: HoloLens (第一代) 输入 211-手势
 description: 按照以下编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解手势概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，手势，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: dfb31901001f760abd60bda3022902267b7c05cf
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: fe5d3d736c3ad460feeb7aaf66597344618bc1cb
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583703"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730454"
 ---
-# <a name="mr-input-211-gesture"></a>MR 输入 211：手势
+# <a name="hololens-1st-gen-input-211-gesture"></a>HoloLens (第一代) 输入211：手势
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
@@ -71,7 +71,7 @@ ms.locfileid: "98583703"
 ### <a name="instructions"></a>说明
 
 1. 启动 Unity。
-2. 选择“打开”  。
+2. 选择“打开”。
 3. 导航到之前未存档的 **手势** 文件夹。
 4. 查找并选择 "**启动** / **模型资源管理器**" 文件夹。
 5. 单击 " **选择文件夹** " 按钮。
@@ -129,7 +129,7 @@ ms.locfileid: "98583703"
 * 在 " **层次结构** " 面板中，展开 " **InputManager** " 对象。
 * 查找并选择 " **GesturesInput** " 对象。
 
-**InteractionInputSource.cs** 脚本将执行以下步骤：
+**InteractionInputSource** 脚本将执行以下步骤：
 
 1. 订阅 InteractionSourceDetected 和 InteractionSourceLost 事件。
 2. 设置 HandDetected 状态。
@@ -172,7 +172,7 @@ ms.locfileid: "98583703"
 
 ### <a name="instructions"></a>说明
 
-若要在应用中使用导航笔势，我们将在导航手势发生时编辑 **GestureAction.cs** 来旋转对象。 此外，我们还会将反馈添加到要在导航可用时显示的光标。
+若要在应用中使用导航笔势，我们将在导航手势发生时编辑 **GestureAction** 来旋转对象。 此外，我们还会将反馈添加到要在导航可用时显示的光标。
 
 1. 在 " **层次结构** " 面板中，展开 " **CursorWithFeedback**"。
 2. 在 **全息影像** 文件夹中，找到 " **ScrollFeedback** 资产"。
@@ -185,7 +185,7 @@ ms.locfileid: "98583703"
 9. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
 10. 在菜单中，键入 "搜索框 **手势" 操作**。 选择搜索结果。
 
-接下来，在 Visual Studio 中打开 **GestureAction.cs** 。 在编码练习 2. c 中，编辑脚本以执行以下操作：
+接下来，在 Visual Studio 中打开 **GestureAction** 。 在编码练习 2. c 中，编辑脚本以执行以下操作：
 
 1. 只要执行导航手势，就会 **旋转 AstroMan** 对象。
 2. 计算 **rotationFactor** 以控制应用于对象的旋转量。
@@ -341,12 +341,12 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 ### <a name="instructions"></a>说明
 
-GestureManager.cs 和 AstronautManager.cs 将允许我们执行以下操作：
+GestureManager 和 AstronautManager 将允许我们执行以下操作：
 
 1. 使用 speech 关键字 "**Move Astronaut**" 启用 **操作** 手势，并使用 "**旋转 Astronaut**" 来禁用它们。
 2. 切换到响应 **操作笔势识别器**。
 
-让我们开始吧。
+现在就开始吧。
 
 1. 在 " **层次结构** " 面板中，创建一个新的空 GameObject。 将其命名为 "**AstronautManager**"。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
@@ -361,7 +361,7 @@ GestureManager.cs 和 AstronautManager.cs 将允许我们执行以下操作：
 3. 将关键字键入为 **Move Astronaut**。 如果需要，可以随意添加密钥快捷方式。
 4. 单击右侧的， **+** 添加一个新关键字。
 5. 将关键字键入为 **轮换 Astronaut**。 如果需要，可以随意添加密钥快捷方式。
-6. 可在 **GestureAction.cs** 中的 **ISpeechHandler. OnSpeechKeywordRecognized** 处理程序中找到相应的处理程序代码。
+6. 可在 **GestureAction** 中的 **ISpeechHandler. OnSpeechKeywordRecognized** 处理程序中找到相应的处理程序代码。
 
 ![如何设置第4章的语音输入源](images/holograms211-speech.png)
 
@@ -372,13 +372,13 @@ GestureManager.cs 和 AstronautManager.cs 将允许我们执行以下操作：
 3. 在 " **层次结构** " 面板中，单击 " **CursorWithFeedback**"。
 4. 将 **PathingFeedback** 对象从 **层次结构** 中拖放到 **检查器** 的 "**游标反馈**" 组件中的 "**检测到路径" 游戏对象** 属性上。
 
-现在，我们需要将代码添加到 **GestureAction.cs** ，以启用以下内容：
+现在，我们需要将代码添加到 **GestureAction** ，以启用以下内容：
 
 1. 将代码添加到 **IManipulationHandler. OnManipulationUpdated** 函数，该函数将在检测到 **操作** 笔势时移动 astronaut。
 2. 计算 **移动向量** ，以根据手头位置确定应将 astronaut 移动到的位置。
 3. **将 Astronaut 移动** 到新位置。
 
-完成编码练习 4. 在 **GestureAction.cs** 中，或使用下面的已完成解决方案：
+完成编码练习 4. 在 **GestureAction** 中，或使用下面的已完成解决方案：
 
 ```cs
 using HoloToolkit.Unity.InputModule;

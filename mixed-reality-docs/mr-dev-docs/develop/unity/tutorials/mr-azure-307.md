@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 307-机器学习
+title: HoloLens (第一代) 和 Azure 307-机器学习
 description: 完成本课程以了解如何在混合现实应用程序内实现 Azure 机器学习 Studio (经典) 。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，机器学习，ml，机器学习工作室，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 95213c3d17bbe0f0f81438d4808db142ad21c595
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: c9d6408d41340b1c0fcb1f41b61d84ba115258c3
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583389"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730514"
 ---
-# <a name="mr-and-azure-307-machine-learning"></a>MR 和 Azure 307：机器学习
+# <a name="hololens-1st-gen-and-azure-307-machine-learning"></a>HoloLens (第一代) 和 Azure 307：机器学习
 
 <br>
 
@@ -51,7 +51,7 @@ ms.locfileid: "98583389"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具一文](../../install-the-tools.md)中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -146,7 +146,7 @@ ms.locfileid: "98583389"
 
     9.  还需要确认是否已了解应用于此服务的条款和条件。
 
-    10. 单击“创建”。
+    10. 单击 **“创建”** 。
 
         ![Azure 机器学习 Studio (经典) ](images/AzureLabs-Lab7-6.png)
 
@@ -242,7 +242,7 @@ ms.locfileid: "98583389"
 
     ![机器学习 Studio (经典) ：试验](images/AzureLabs-Lab7-20.png)
 
-8.  从 ***"_* Split 数据项" 的 _左下方_ _** 将连接拖到 "**定型模型**" 项的 **右上方**。 定型模型将使用数据集中的第一个70% 拆分来训练该算法。
+8.  从 _ *Split Data** 项的 **左下方** _ 将连接拖到 **定型模型** 项的 **右上方**。 定型模型将使用数据集中的第一个70% 拆分来训练该算法。
 
     ![机器学习 Studio (经典) ：试验](images/AzureLabs-Lab7-21.png)
 
@@ -338,11 +338,11 @@ ms.locfileid: "98583389"
 
 2.  当 Unity 处于打开状态时，有必要选中 "默认 **脚本编辑器** " 设置为 " **Visual Studio**"。 转到 "**编辑**  >  **首选项**"，然后在新窗口中导航到 "**外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
 
-3.  接下来，转到 "**文件**  >  **生成设置**"，并通过单击 "*_切换平台_*" 按钮将平台切换到 **通用 Windows 平台**。
+3.  接下来，转到 "**文件**  >  **生成设置**"，并通过单击 "**_切换平台_**" 按钮将平台切换到 **通用 Windows 平台**。
 
 4.  另外，请确保：
 
-    1.  _ *目标设备** 设置为 " **任何设备**"。
+    1.  "**目标设备**" 设置为 "**任何设备**"。
 
         > 对于 Microsoft HoloLens，将 " **目标设备** " 设置为 " *hololens*"。
 
@@ -368,9 +368,9 @@ ms.locfileid: "98583389"
 
         1.  **脚本****运行时版本** 应为 **试验** ( .net 4.6 等效) 
 
-        2. **脚本后端** 应为 **_.net_* _
+        2. **脚本编写后端** 应为 **_.net_**
 
-        3. _ *API 兼容级别** 应为 **.net 4.6**
+        3. **API 兼容级别** 应为 **.net 4.6**
 
             ![设置 Unity 项目](images/AzureLabs-Lab7-36.png)
 
@@ -654,7 +654,7 @@ ms.locfileid: "98583389"
     >
     > ![机器学习 Studio (经典) ：试验](images/AzureLabs-Lab7-53-2.png)
 
-8.  在 **Start ( # B1** 方法中插入此代码。 当类初始化时，将调用 **Start ( # B1** 方法：
+8.  在 **Start ()** 方法中插入此代码。 当类初始化时，将调用 **Start ()** 方法：
 
     ```csharp
         void Start()
@@ -696,7 +696,7 @@ ms.locfileid: "98583389"
         }
     ```
 
-10. 可以 **删除****更新 ( # B1** 方法，因为此类将不会使用它。
+10. 您可以 **删除** () 方法的 **更新** ，因为此类将不会使用它。
 
 11. 添加以下方法，该方法将当前日期和时间传递到机器学习终结点，并接收 JSON 格式的响应。
 
@@ -880,10 +880,10 @@ ms.locfileid: "98583389"
 
 ## <a name="exercise"></a>练习
 
-**练习1**
+**练习 1**
 
 试验您的应用程序的排序顺序并使这三个最低预测出现在货位上，因为此数据可能也很有用。
 
-**练习2**
+**练习 2**
 
 使用 **Azure 表** 时，将使用天气信息填充新表，并使用数据创建新试验。

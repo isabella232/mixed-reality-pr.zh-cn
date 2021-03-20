@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 302b - 自定义视觉
+title: HoloLens (第一代) 和 Azure 302b-自定义视觉
 description: 完成本课程，了解如何训练机器学习模型，然后使用训练的模型识别混合现实应用程序内的类似对象。
 author: drneil
 ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，自定义视觉对象，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: cba2df5841911df6d60a7060a70f835975a21f62
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 97fd0ae72401b67a83752cb2cf6799fa2b1ccc0c
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583400"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730524"
 ---
-# <a name="mr-and-azure-302b-custom-vision"></a>MR 和 Azure 302b：自定义视觉
+# <a name="hololens-1st-gen-and-azure-302b-custom-vision"></a>HoloLens (第一代) 和 Azure 302b：自定义视觉
 
 <br>
 
@@ -52,7 +52,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -132,7 +132,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
     ![添加新标记](images/AzureLabs-Lab302b-06.png)
 
-2.  添加要识别的对象的 **名称** 。 单击“保存”  。
+2.  添加要识别的对象的 **名称** 。 单击“保存” 。
 
     ![添加对象名称并保存](images/AzureLabs-Lab302b-07.png)
 
@@ -392,7 +392,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     > [!NOTE]
     > 请确保将 **预测密钥** 插入到 **predictionKey** 变量中，并将 **预测终结点** 插入到 **predictionEndpoint** 变量中。 您在本课程的前面部分将它们复制到 *记事本* 。
 
-7.  现在需要添加用于 **唤醒 ( # B1** 的代码以初始化实例变量：
+7.  现在需要添加 **唤醒 ()** 的代码以初始化实例变量：
 
     ```csharp
         /// <summary>
@@ -405,9 +405,9 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-8.  删除方法 **开始 ( # B1** 并 **更新 ( # B3**。
+8.  删除方法 **启动 ()** 并 **更新 ()**。
 
-9.  接下来，将协同程序 (与静态 **GetImageAsByteArray ( # B2** 方法一起添加) ，该方法将获得 *ImageCapture* 类捕获的映像的分析结果。
+9.  接下来，将协同程序 (与) 下的静态 **GetImageAsByteArray ()** 方法一起添加，该方法将获得 *ImageCapture* 类捕获的映像的分析结果。
 
     > [!NOTE]
     > 在 **AnalyseImageCapture** 协同程序中，有一个对你还需要创建的 *SceneOrganiser* 类的调用。 因此，请 **暂时将这些行注释为**。
@@ -489,7 +489,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     using UnityEngine.Networking;
     ```
 
-4.  删除 *CustomVisionObjects* 类中的 **开始 ( # B1** 并 **更新 ( # B3** 方法;此类现在应为空。
+4.  删除 *CustomVisionObjects* 类中的 **Start ()** 和 **Update ()** 方法;此类现在应为空。
 
 5.  将以下类添加到 *CustomVisionObjects* 类的 **外部**。 *Newtonsoft.json* 库使用这些对象序列化和反序列化响应数据：
 
@@ -627,7 +627,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     using UnityEngine.Windows.Speech;
     ```
 
-4.  然后，将以下变量添加到 *VoiceRecognizer* 类中的 *Start ( # B1* 方法之上：
+4.  然后将以下变量添加到 *VoiceRecognizer* 类中，并将其置于 *Start ()* 方法之上：
 
     ```csharp
         /// <summary>
@@ -646,7 +646,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         private Dictionary<string, Action> _keywords = new Dictionary<string, Action>();
     ```
 
-5.  添加 **唤醒 ( # B1** 并 **开始 ( # B3** 方法，后者将设置在将标记关联到图像时要识别的用户 *关键字* ：
+5.  添加 **唤醒的 ()** 并 **启动 ()** 方法，后者将设置在将标记关联到图像时要识别的用户 *关键字* ：
 
     ```csharp
         /// <summary>
@@ -691,7 +691,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-6.  删除 **( # B1** 方法的更新。
+6.  删除 () 方法的 **更新** 。
 
 7.  添加以下处理程序，只要识别语音输入，就会调用该处理程序：
 
@@ -737,7 +737,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     using UnityEngine.Networking;
     ```
 
-4.  然后，将以下变量添加到 *CustomVisionTrainer* 类中的 **Start ( # B1** 方法之上。 
+4.  然后，将以下变量添加到 *CustomVisionTrainer* 类中的 **Start ()** 方法之上。 
 
     > [!NOTE]
     > 此处使用的训练 URL 在 *自定义视觉培训 1.2* 文档中提供，并具有以下结构： https://southcentralus.api.cognitive.microsoft.com/customvision/v1.2/Training/projects/{projectId}/  
@@ -786,7 +786,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     > [!IMPORTANT]
     > 请确保将你的 **服务密钥** 添加 (定型密钥) 值和 **项目 Id** 值，你之前记下;这是你 [在本课程前面部分中收集的值 (第2章 "第10步")](#chapter-2---training-your-custom-vision-project)。
 
-5.  添加以下 **开始 ( # B1** 和 **唤醒 ( # B3** 方法。 这些方法在初始化时调用，并包含设置 UI 的调用：
+5.  添加以下 **开始 ()** 和 **唤醒 ()** 方法。 这些方法在初始化时调用，并包含设置 UI 的调用：
 
     ```csharp
         /// <summary>
@@ -806,9 +806,9 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-6.  删除 **( # B1** 方法的更新。 此类不需要此类。
+6.  删除 () 方法的 **更新** 。 此类不需要此类。
 
-7.  添加 **RequestTagSelection ( # B1** 方法。 此方法是在捕获图像并将其存储在设备中，并且现在已准备好提交到 *自定义影像服务* 的第一个调用。 此方法在定型 UI 中显示一组关键字，用户可以使用这些关键字标记已捕获的映像。 它还提醒 *VoiceRecognizer* 类开始倾听用户的语音输入。
+7.  添加 **RequestTagSelection ()** 方法。 此方法是在捕获图像并将其存储在设备中，并且现在已准备好提交到 *自定义影像服务* 的第一个调用。 此方法在定型 UI 中显示一组关键字，用户可以使用这些关键字标记已捕获的映像。 它还提醒 *VoiceRecognizer* 类开始倾听用户的语音输入。
 
     ```csharp
         internal void RequestTagSelection()
@@ -820,7 +820,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-8.  添加 **VerifyTag ( # B1** 方法。 此方法将接收 **VoiceRecognizer** 类识别的语音输入并验证其有效性，然后开始训练过程。
+8.  添加 **VerifyTag ()** 方法。 此方法将接收 **VoiceRecognizer** 类识别的语音输入并验证其有效性，然后开始训练过程。
 
     ```csharp
         /// <summary>
@@ -838,7 +838,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-9.  添加 **SubmitImageForTraining ( # B1** 方法。 此方法将开始自定义影像服务训练过程。 第一步是从服务中检索与用户的经验证的语音输入相关联的 **标记 Id** 。 **标记 Id** 随后将连同图像一起上传。
+9.  添加 **SubmitImageForTraining ()** 方法。 此方法将开始自定义影像服务训练过程。 第一步是从服务中检索与用户的经验证的语音输入相关联的 **标记 Id** 。 **标记 Id** 随后将连同图像一起上传。
 
     ```csharp
         /// <summary>
@@ -908,7 +908,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-10. 添加 **TrainCustomVisionProject ( # B1** 方法。 提交并标记该映像后，将调用此方法。 它将创建一个新的迭代，该迭代将使用提交到服务的所有之前的图像以及刚刚上传的图像进行训练。 完成训练后，此方法将调用方法将新创建的 **迭代** 设置为 **默认值**，以便用于分析的终结点是最新的定型迭代。
+10. 添加 **TrainCustomVisionProject ()** 方法。 提交并标记该映像后，将调用此方法。 它将创建一个新的迭代，该迭代将使用提交到服务的所有之前的图像以及刚刚上传的图像进行训练。 完成训练后，此方法将调用方法将新创建的 **迭代** 设置为 **默认值**，以便用于分析的终结点是最新的定型迭代。
 
     ```csharp
         /// <summary>
@@ -950,7 +950,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-11. 添加 **SetDefaultIteration ( # B1** 方法。 此方法会将以前创建和训练的迭代设置为 *默认值*。 完成后，此方法将不得不删除服务中的上一个迭代。 撰写本课程时，在服务中允许同时存在的最大 10 (10) 迭代数限制。
+11. 添加 **SetDefaultIteration ()** 方法。 此方法会将以前创建和训练的迭代设置为 *默认值*。 完成后，此方法将不得不删除服务中的上一个迭代。 撰写本课程时，在服务中允许同时存在的最大 10 (10) 迭代数限制。
 
     ```csharp
         /// <summary>
@@ -991,7 +991,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-12. 添加 **DeletePreviousIteration ( # B1** 方法。 此方法将查找并删除以前的非默认迭代：
+12. 添加 **DeletePreviousIteration ()** 方法。 此方法将查找并删除以前的非默认迭代：
 
     ```csharp
         /// <summary>
@@ -1050,7 +1050,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-13. 要添加到此类中的最后一个方法是 **GetImageAsByteArray ( # B1** 方法，用于在 web 调用上将捕获的图像转换为字节数组。
+13. 要添加到此类中的最后一个方法是 **GetImageAsByteArray ()** 方法，用于在 web 调用上将捕获的图像转换为字节数组。
 
     ```csharp
         /// <summary>
@@ -1092,7 +1092,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     using UnityEngine;
     ```
 
-4.  然后，将以下变量添加到 *SceneOrganiser* 类中的 **Start ( # B1** 方法之上：
+4.  然后将以下变量添加到 *SceneOrganiser* 类中，并将其置于 **Start ()** 方法之上：
 
     ```csharp
         /// <summary>
@@ -1132,9 +1132,9 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         internal float probabilityThreshold = 0.5f;
     ```
 
-5.  删除 **开始 ( # B1** 并 **更新 ( # B3** 方法。
+5.  删除 **开始 ()** 并 **更新 ()** 方法。
 
-6.  在变量的下方，添加 **唤醒 ( # B1** 方法，这将初始化类并设置场景。
+6.  在变量的下方，添加 **唤醒 ()** 方法，这将初始化类并设置场景。
 
     ```csharp
         /// <summary>
@@ -1175,7 +1175,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-7.  现在，添加用于创建和定位主相机光标的 **CreateCameraCursor ( # B1** 方法，并添加 **CreateLabel ( # B3** 方法，该方法创建 **分析标签** 对象。
+7.  现在，添加创建和定位主相机光标的 **CreateCameraCursor ()** 方法，并添加 **CreateLabel ()** 方法，该方法创建 **分析标签** 对象。
 
     ```csharp
         /// <summary>
@@ -1224,7 +1224,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-8. 添加 **SetCameraStatus ( # B1** 方法，该方法将处理旨在提供相机状态的文本网格的消息。
+8. 添加 **SetCameraStatus ()** 方法，该方法将处理旨在提供相机状态的文本网格的消息。
 
     ```csharp
         /// <summary>
@@ -1265,7 +1265,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-9. 将 **PlaceAnalysisLabel ( # B1** 和 **SetTagsToLastLabel ( # B3** 方法，该方法将生成数据并将其显示自定义影像服务到场景中。
+9. 添加 **PlaceAnalysisLabel ()** 和 **SetTagsToLastLabel ()** 方法，这些方法将生成数据并将数据从自定义影像服务显示到场景。
 
     ```csharp
         /// <summary>
@@ -1298,7 +1298,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         }
     ```
 
-10. 最后，添加 **CreateTrainingUI ( # B1** 方法，该方法将生成在应用程序处于定型模式时显示训练过程的多个阶段的 UI。 此方法也将伴随创建相机状态对象。
+10. 最后，添加 **CreateTrainingUI ()** 方法，该方法将生成在应用程序处于定型模式时显示训练过程的多个阶段的 UI。 此方法也将伴随创建相机状态对象。
 
     ```csharp
         /// <summary>
@@ -1328,7 +1328,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 11. 在返回到 **Unity** 之前，请务必保存 **Visual Studio** 中所做的更改。
 
 > [!IMPORTANT]
-> 继续之前，请打开 **CustomVisionAnalyser** 类，并在 AnalyseLastImageCaptured 中 **( # B1** 方法， *取消注释* 以下行：
+> 继续之前，请打开 **CustomVisionAnalyser** 类，在 **AnalyseLastImageCaptured ()** 方法中， *取消注释* 以下行：
 >
 > ```csharp
 >   AnalysisObject analysisObject = new AnalysisObject();
@@ -1367,7 +1367,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
     using UnityEngine.XR.WSA.WebCam;
     ```
 
-5.  然后，将以下变量添加到 *ImageCapture* 类中的 **Start ( # B1** 方法之上：
+5.  然后将以下变量添加到 *ImageCapture* 类中，并将其置于 **Start ()** 方法之上：
 
     ```csharp
         /// <summary>
@@ -1416,7 +1416,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
         internal string filePath = string.Empty;
     ```
 
-6.  现在需要添加用于 **唤醒 ( # B1** 和 **Start ( # B3** 方法的代码：
+6.  现在需要添加 **唤醒 ()** 和 **启动 ()** 方法的代码：
 
     ```csharp
         /// <summary>
@@ -1691,7 +1691,7 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
 ## <a name="to-use-the-application"></a>使用应用程序：
 
-若要在 *定型* 模式和 *预测* 模式间切换应用功能，需要更新 **AppMode** 变量，该变量位于 *ImageCapture* 类中的 "**唤醒 ( # B1** " 方法中。
+若要在 *定型* 模式和 *预测* 模式间切换应用功能，需要更新 **AppMode** 变量，该变量位于 *ImageCapture* 类中的 "**唤醒的 ()** 方法中。
 
 ```
         // Change this flag to switch between Analysis mode and Training mode 
@@ -1750,11 +1750,11 @@ Azure 自定义视觉是一种 Microsoft 认知服务，允许开发人员构建
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 训练 **自定义影像服务** 来识别更多对象。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 若要在了解的情况下进行扩展，请完成以下练习：
 

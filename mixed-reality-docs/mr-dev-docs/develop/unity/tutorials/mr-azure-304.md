@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 304 - 人脸识别
+title: HoloLens (第一代) 和 Azure 304-面部识别
 description: 请完成本课程来了解如何在混合现实应用程序中实现 Azure 人脸识别。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，人脸识别，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 6cdb8b7af9988bbfbc6670d0ef79f00487db7f3c
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6266cb206a0686745bcd7a92f64d78436c71a228
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583372"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730504"
 ---
-# <a name="mr-and-azure-304-face-recognition"></a>MR 和 Azure 304：人脸识别
+# <a name="hololens-1st-gen-and-azure-304-face-recognition"></a>HoloLens (第一代) 和 Azure 304：人脸识别
 
 <br>
 
@@ -52,7 +52,7 @@ ms.locfileid: "98583372"
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -416,7 +416,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
             public string name { get; set; }
         }
     ```
-7. *开始 ( # B1* 和 *Update ( # B3* 方法将不会使用，因此请立即将其删除。 
+7. 不会使用 " *开始 ()* " 和 " *更新 ()* " 方法，因此请立即将其删除。 
 
 8.  在 *FaceAnalysis* 类中，添加以下变量：
 
@@ -460,7 +460,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
     > [!NOTE]
     > 将 **密钥** 和 **personGroupId** 替换为你的服务密钥，并将其 Id 替换为之前创建的组的 Id。
 
-9.  添加 *唤醒 ( # B1* 方法，该方法 initialises 类，将 *ImageCapture* 类添加到主相机并调用标签创建方法：
+9.  添加 *唤醒 ()* 方法，该方法 initialises 类，将 *ImageCapture* 类添加到主相机并调用标签创建方法：
 
     ```csharp
         /// <summary>
@@ -479,7 +479,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         }
     ```
 
-10. 添加 *CreateLabel ( # B1* 方法，该方法创建 *标签* 对象以显示分析结果：
+10. 添加 *CreateLabel ()* 方法，该方法创建 *标签* 对象以显示分析结果：
 
     ```csharp
         /// <summary>
@@ -507,7 +507,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         }
     ```
 
-11. 将 *DetectFacesFromImage ( # B1* 和 *GetImageAsByteArray ( # B3* 方法。 前者会请求面部识别服务检测提交的图像中任何可能的人脸，而后者则需要将捕获的图像转换为字节数组：
+11. 添加 *DetectFacesFromImage ()* 和 *GetImageAsByteArray ()* 方法。 前者会请求面部识别服务检测提交的图像中任何可能的人脸，而后者则需要将捕获的图像转换为字节数组：
 
     ```csharp
         /// <summary>
@@ -558,7 +558,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         }
     ```
 
-12. 添加 *IdentifyFaces ( # B1* 方法，该方法请求 *面部识别服务* 来识别以前在提交的图像中检测到的任何已知的人脸。 请求将返回标识的人员的 id，但不返回名称：
+12. 添加 *IdentifyFaces ()* 方法，该方法请求 *面部识别服务* 来识别以前在提交的图像中检测到的任何已知的人脸。 请求将返回标识的人员的 id，但不返回名称：
 
     ```csharp
         /// <summary>
@@ -610,7 +610,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         }
     ```
 
-13. 添加 *GetPerson ( # B1* 方法。 通过提供人员 id，此方法会请求 *面部识别服务* 返回标识的人员的姓名：
+13. 添加 *GetPerson ()* 方法。 通过提供人员 id，此方法会请求 *面部识别服务* 返回标识的人员的姓名：
 
     ```csharp
         /// <summary>
@@ -685,7 +685,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         private GestureRecognizer recognizer;
     ```
 
-5.  添加 *唤醒的 ( # B1* 并 *开始 (* 初始化类所需的 # B3 方法，并允许 HoloLens 捕获用户的手势：
+5.  添加 *唤醒的 ()* 并 *启动* 初始化类所需的 () 方法，并允许 HoloLens 捕获用户的手势：
 
     ```csharp
         /// <summary>
@@ -709,7 +709,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         }
     ```
 
-6.  添加在用户执行 *攻* 指操作时调用的 *TapHandler ( # B1* ：
+6.  添加在用户执行 *攻* 指操作时调用的 *TapHandler ()* ：
 
     ```csharp
         /// <summary>
@@ -722,7 +722,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
         }
     ```
 
-7.  添加 *ExecuteImageCaptureAndAnalysis ( # B1* 方法，该方法将开始映像捕获过程：
+7.  添加 *ExecuteImageCaptureAndAnalysis ()* 方法，该方法将开始映像捕获过程：
 
     ```csharp
         /// <summary>
@@ -842,7 +842,7 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
 ## <a name="chapter-10---using-the-application"></a>第10章-使用应用程序
 
 1.  戴上 HoloLens，启动应用。
-2.  查看在 *人脸 API* 注册的人。 确保：
+2.  查看在 *人脸 API* 注册的人。 请确保：
 
     -  人脸不太遥远并且明显可见
     -  环境照明不太暗
@@ -860,10 +860,10 @@ FaceAnalysis 类的目的是托管与 Azure 面部识别服务进行通信所需
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 **Azure 人脸 API** 的强大功能足以在单个映像中检测到64面。 扩展应用程序，使其能够识别多个其他人的两个或三个面。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 **Azure 人脸 API** 还可以提供返回各种类型的属性信息。 将此集成到应用程序中。 与 [情感 API](https://azure.microsoft.com/services/cognitive-services/emotion/)结合时，这可能更加有趣。

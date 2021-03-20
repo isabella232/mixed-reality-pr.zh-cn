@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 305 - 功能和存储
+title: HoloLens (第一代) 和 Azure 305-功能和存储
 description: 完成本课程以了解如何在混合现实应用程序中实现 Azure 存储和功能。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，函数，存储，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 5c9784446923b3eae7a600b8e672574ce6465038
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: b55acaf003a1cdf50a5a78e48fdf05a9ab07d0d6
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583427"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730544"
 ---
-# <a name="mr-and-azure-305-functions-and-storage"></a>MR 和 Azure 305：Functions 和存储
+# <a name="hololens-1st-gen-and-azure-305-functions-and-storage"></a>HoloLens (第一代) 和 Azure 305：函数和存储
 
 <br>
 
@@ -53,7 +53,7 @@ ms.locfileid: "98583427"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -225,7 +225,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-13. 选择“保存”。 
+13. 选择“保存”  。
 
 14. 结果应类似于下图。
 
@@ -614,7 +614,7 @@ ms.locfileid: "98583427"
     > [!IMPORTANT]
     > 请确保将 *终结点* 和 *连接字符串* 值替换为 Azure 门户中的 azure 存储值
 
-8.  现在需要添加用于 *唤醒 ( # B1* 和 *Start ( # B3* 方法的代码。 类初始化时，将调用这些方法：
+8.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。 类初始化时，将调用这些方法：
 
     ```csharp
         private void Awake()
@@ -639,9 +639,9 @@ ms.locfileid: "98583427"
     ```
 
     > [!IMPORTANT]
-    > 我们将在 [以后的章节](#chapter-10---completing-the-azureservices-class)中填写 *CallAzureFunctionForNextShape (* 的代码。
+    > 我们将在 [以后的章节](#chapter-10---completing-the-azureservices-class)中填写 *CallAzureFunctionForNextShape ()* 的代码。
 
-9.  删除 *更新 ( # B1* 方法，因为此类将不会使用它。
+9.  删除 () 方法的 *更新* ，因为此类将不会使用它。
 
 10. 在 Visual Studio 中保存更改，然后返回到 Unity。
 
@@ -670,7 +670,7 @@ ms.locfileid: "98583427"
         using UnityEngine;
     ```
 
-5.  将下面显示的变量添加到 *ShapeFactory* 类，并将 *Start ( # B1* 和 *清醒 ( # B3* 函数替换为以下内容：
+5.  将下面显示的变量添加到 *ShapeFactory* 类，并将 *Start ()* 和 *唤醒 ()* 函数替换为以下内容：
 
     ```csharp
         /// <summary>
@@ -707,7 +707,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-6.  *CreateShape ( # B1* 方法基于提供的 *整数* 参数生成基元形状。 布尔参数用于指定当前创建的形状是来自存储还是新的。 在 *ShapeFactory* 类中，将以下代码放在前面的方法之前：
+6.  *CreateShape ()* 方法基于提供的 *整数* 参数生成基元形状。 布尔参数用于指定当前创建的形状是来自存储还是新的。 在 *ShapeFactory* 类中，将以下代码放在前面的方法之前：
 
     ```csharp
         /// <summary>
@@ -867,7 +867,7 @@ ms.locfileid: "98583427"
 > [!IMPORTANT]
 > 其中一些变量将能够在 *编辑器* 中进行编辑。
 
-6.  现在需要添加 *唤醒 ( # B1* 和 *Start ( # B3* 方法的代码。
+6.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。
 
     ```csharp
         /// <summary>
@@ -889,7 +889,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-7.  添加下面的代码，该代码将在开始时创建一个 cursor 对象，以及 *更新 ( # B1* 方法，该方法将运行 Raycast 方法，并将运行 GazeEnabled 布尔值的位置：
+7.  添加下面的代码，它将在开始时创建一个 cursor 对象，以及 *更新 ()* 方法，该方法将运行 Raycast 方法，并在 GazeEnabled 布尔值的切换位置：
 
     ```csharp
         /// <summary>
@@ -933,7 +933,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-8. 接下来，添加 *UpdateRaycast ( # B1* 方法，该方法将投影 Raycast 并检测命中目标。
+8. 接下来，添加 *UpdateRaycast ()* 方法，该方法将投影 Raycast 并检测命中目标。
 
     ```csharp
         private void UpdateRaycast()
@@ -1006,7 +1006,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-9. 最后，添加 *ResetFocusedObject ( # B1* 方法，该方法会将 GazeButton 对象的当前颜色切换为当前颜色，指示是否正在创建新的形状。
+9. 最后，添加 *ResetFocusedObject ()* 方法，该方法将切换 GazeButton 对象的当前颜色，以指示是否正在创建新的形状。
 
     ```csharp
         /// <summary>
@@ -1035,7 +1035,7 @@ ms.locfileid: "98583427"
 
 当其他脚本准备就绪后，现在可以 *完成* *azure 服务* 类。 这将通过以下步骤实现：
 
-1.  添加名为 CreateCloudIdentityAsync 的新方法 *( # B1*，以设置与 Azure 进行通信所需的身份验证变量。
+1.  添加一个名为 *CreateCloudIdentityAsync ()* 的新方法来设置与 Azure 进行通信所需的身份验证变量。
 
     > 此方法还会检查是否存在包含形状列表的以前存储的文件。
     >
@@ -1090,7 +1090,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-2.  下一个代码段来自 *Start ( # B1* 方法;将对 *CreateCloudIdentityAsync ( # B3* 方法进行调用。 可随意复制当前 *开始 ( # B1* 方法，如下所示：
+2.  下一个代码段来自 *Start ()* 方法，将对 *CreateCloudIdentityAsync ()* 方法进行调用。 可随意复制当前 *开始 ()* 方法，如下所示：
 
     ```csharp
         private void Start()
@@ -1108,7 +1108,7 @@ ms.locfileid: "98583427"
         }
     ```
 
-3.  填充方法 *CallAzureFunctionForNextShape ( # B1* 的代码。 你将使用之前创建的 *Azure Function App* 来请求形状索引。 接收到新形状后，此方法会将形状发送到 *ShapeFactory* 类，以在场景中创建新的形状。 使用以下代码完成 *CallAzureFunctionForNextShape # B1 (* 的正文。
+3.  填写方法 *CallAzureFunctionForNextShape ()* 的代码。 你将使用之前创建的 *Azure Function App* 来请求形状索引。 接收到新形状后，此方法会将形状发送到 *ShapeFactory* 类，以在场景中创建新的形状。 使用下面的代码完成 *CallAzureFunctionForNextShape ()* 的正文。
 
     ```csharp
         /// <summary>
@@ -1237,10 +1237,10 @@ ms.locfileid: "98583427"
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 创建第二个生成点，并记录创建对象的生成点。 加载数据文件时，请重播从其最初创建的位置生成的形状。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 创建一种方法来重新启动应用程序，而不必每次都重新打开它。 **加载场景** 是一种很好的起点。 完成此操作后，创建一种方法来清除 *Azure 存储* 中存储的列表，以便可以轻松地从应用重置。

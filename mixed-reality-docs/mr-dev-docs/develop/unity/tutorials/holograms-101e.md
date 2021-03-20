@@ -1,19 +1,19 @@
 ---
-title: MR 基础 101 - 使用模拟器完成项目
+title: HoloLens (第一代) 基本 101E-通过模拟器完成项目
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 模拟器了解全息应用程序的基础知识。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，全息影像，院校，教程，模拟器，HoloLens，混合现实院校，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10，注视，手势，语音输入，空间音效，空间映射
-ms.openlocfilehash: afe62dbc3385b41d08011bf7893672272f25485b
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8d75ee610f352d11ac8396ad50c336b541a062a2
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583689"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730284"
 ---
-# <a name="mr-basics-101e-complete-project-with-emulator"></a>MR 基础知识 101E：使用仿真器设置完整的项目
+# <a name="hololens-1st-gen-basics-101e-complete-project-with-emulator"></a>HoloLens (第一代) 基本101E：通过模拟器完成项目
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
@@ -66,7 +66,7 @@ ms.locfileid: "98583689"
 ### <a name="instructions"></a>说明
 
 * 启动 Unity。
-* 选择“打开”  。
+* 选择“打开”。
 * 输入 "位置" 作为以前未存档的 **日式折纸** 文件夹。
 * 选择 " **日式折纸** " 并单击 " **选择文件夹**"。
 * 保存新场景： **File**  /  **save 场景 As**。
@@ -141,7 +141,7 @@ ms.locfileid: "98583689"
 * 选择 "**层次结构" 面板** 中的 **光标** 对象。
 * 将 **WorldCursor** 脚本拖放到 **检查器面板**。
 * 双击 **WorldCursor** 脚本，在 Visual Studio 中将其打开。
-* 将此代码复制并粘贴到 **WorldCursor.cs** ，并 **保存全部**。
+* 将此代码复制并粘贴到 **WorldCursor** ，并 **保存全部**。
 
 ```cs
 using UnityEngine;
@@ -321,7 +321,7 @@ public class SphereCommands : MonoBehaviour
 * 在 " **脚本** " 文件夹中，创建一个名为 **SpeechManager** 的脚本。
 * 将 **SpeechManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象上
 * 在 Visual Studio 中打开 **SpeechManager** 脚本。
-* 将此代码复制并粘贴到 **SpeechManager.cs** ，并 **保存全部** 内容：
+* 将此代码复制并粘贴到 **SpeechManager** ，并 **保存全部** 内容：
 
 ```cs
 using System.Collections.Generic;
@@ -638,7 +638,7 @@ public class TapToPlaceParent : MonoBehaviour
 
 你现在已准备好开始创建自己的全息应用！
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [MR 基础知识 101：使用设备完成项目](holograms-101.md)
 * [凝视](../../../design/gaze-and-commit.md)

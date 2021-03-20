@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 313 - IoT 中心服务
+title: HoloLens (第一代) 和 Azure 313-IoT 中心服务
 description: 了解如何在运行 Ubuntu 16.4 的虚拟机上实现 Azure IoT 中心服务，以及如何使用 Microsoft HoloLens 或 VR 耳机直观显示邮件数据。
 author: drneil
 ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure，混合现实，学院，边缘，iot edge，教程，api，通知，函数，表，hololens，沉浸，vr，iot，虚拟机，ubuntu，python，Windows 10，Visual Studio
-ms.openlocfilehash: f23a9bf5bcdb0868ef9b0e6f77fbdb7a15dfdce1
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: f4306e7940e2447fe31afb8c7071c00abc98dd34
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582813"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730494"
 ---
-# <a name="mr-and-azure-313-iot-hub-service"></a>MR 和 Azure 313：IoT 中心服务
+# <a name="hololens-1st-gen-and-azure-313-iot-hub-service"></a>HoloLens (第一代) 和 Azure 313： IoT 中心服务
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
@@ -55,7 +55,7 @@ ms.locfileid: "98582813"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 有关利用混合现实进行开发的最新先决条件，包括 Microsoft HoloLens，请访问 [安装工具](/windows/mixed-reality/install-the-tools) 一文。
 
@@ -73,7 +73,7 @@ ms.locfileid: "98582813"
 - **已启用 HoloLens、开发人员模式**
 - Visual Studio 2017.15.4 (仅用于访问 Azure Cloud Explorer) 
 - Azure 和 IoT 中心服务的 Internet 访问。 有关详细信息，请访问 [IoT 中心服务页面链接](https://azure.microsoft.com/services/iot-hub/)
-- 机器学习模型。 如果没有现成的可用模型， [可以使用本课程提供的模型](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20313%20-%20IoT%20Hub%20Service/Custom%20Vision%20Model.zip)。
+- 一个机器学习模型。 如果没有现成的可用模型， [可以使用本课程提供的模型](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20313%20-%20IoT%20Hub%20Service/Custom%20Vision%20Model.zip)。
 - 在 Windows 10 开发计算机上启用 **hyper-v** 软件。
 - 运行 Ubuntu 的虚拟机 (16.4 或 18.4) ，在开发计算机上运行，或者也可以使用运行 Linux (Ubuntu 16.4 或 18.4) 的单独计算机。 可以在 ["开始之前" 一章](#before-you-start)中找到有关如何使用 Hyper-v 在 Windows 上创建虚拟机的详细信息。 (https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine) 。  
 
@@ -874,7 +874,7 @@ ms.locfileid: "98582813"
 
     10. 如果这是一个选项，请将 **虚拟网络** 保留为 **禁用状态**。
 
-    11. 单击“创建”。
+    11. 单击 **“创建”** 。
 
         ![填写存储详细信息](images/AzureLabs-Lab313-37.png)
 
@@ -1023,7 +1023,7 @@ ms.locfileid: "98582813"
 
     9. 在此应用中不需要 *Application Insights* ，因此可随意将其 **关闭**。
 
-    10. 单击“创建”。
+    10. 单击 **“创建”** 。
 
         ![创建新实例](images/AzureLabs-Lab313-55.png)
 
@@ -1269,10 +1269,10 @@ ms.locfileid: "98582813"
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 展开表中存储的消息结构，并将其显示为图形。 您可能想要收集更多的数据，并将其存储在同一个表中，以便以后显示。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 创建要部署在 IoT 板上的其他 "相机捕获" 模块，使其可以通过要分析的相机捕获映像。

@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 302 - 计算机视觉
+title: HoloLens (第一代) 和 Azure 302-计算机视觉
 description: 完成本课程，了解如何使用 Azure 计算机视觉在混合现实应用程序中识别所提供的映像中的视觉内容。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，计算机视觉对象，hololens，沉浸式，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 2ba5f01b0b14c655f8639f74590a511629350fbb
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 119d83ec9fef97b4e4017b2226a9593404847a71
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583287"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730534"
 ---
-# <a name="mr-and-azure-302-computer-vision"></a>MR 和 Azure 302：计算机视觉
+# <a name="hololens-1st-gen-and-azure-302-computer-vision"></a>HoloLens (第一代) 和 Azure 302：计算机视觉
 
 <br>
 
@@ -51,7 +51,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -392,7 +392,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
         using UnityEngine.XR.WSA.WebCam;
     ```
 
-5.  然后，将以下变量添加到 *ImageCapture* 类中的 *Start ( # B1* 方法之上：
+5.  然后将以下变量添加到 *ImageCapture* 类中，并将其置于 *Start ()* 方法之上：
 
     ```csharp
         public static ImageCapture instance; 
@@ -404,7 +404,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
  
 **TapsCount** 变量将存储从用户捕获的攻丝手势的数目。 此编号用于捕获的映像的命名。
 
-6.  现在需要添加用于 *唤醒 ( # B1* 和 *Start ( # B3* 方法的代码。 当类初始化时，将调用以下内容：
+6.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。 当类初始化时，将调用以下内容：
 
     ```csharp
         private void Awake()
@@ -448,9 +448,9 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
         }
     ```
  
-*TapHandler ( # B1* 方法会递增从用户捕获的点击次数，并使用当前光标位置确定新标签的位置。
+*TapHandler ()* 方法会递增从用户捕获的点击次数，并使用当前光标位置确定新标签的位置。
 
-然后，此方法会调用 *ExecuteImageCaptureAndAnalysis ( # B1* 方法来开始此应用程序的核心功能。
+然后，此方法会调用 *ExecuteImageCaptureAndAnalysis ()* 方法来开始此应用程序的核心功能。
 
 8.  捕获并存储映像后，将调用以下处理程序。 如果该过程成功，则会将结果传递给 *VisionManager* (您还需要创建) 进行分析。
 
@@ -546,7 +546,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
         using UnityEngine.Networking;
     ```
  
-5.  在脚本顶部 *("* *开始 ( # B2*) 方法 *的上方，* 你现在需要创建两个 *类*，用于表示从 Azure 反序列化的 JSON 响应：
+5.  在脚本顶部 *("* *开始 ()* 方法) *上方，你* 现在需要创建两个 *类*，用于表示从 Azure 反序列化的 JSON 响应：
 
     ```csharp
         [System.Serializable]
@@ -737,10 +737,10 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 正如你在 *VisionManager*) 内使用的 *终结点* 中使用了 *Tags* 参数 (作为出现，扩展应用程序以检测其他信息;查看你可以 [访问的其他参数。](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 显示返回的 Azure 数据，其显示方式更多，而且可能会隐藏数字。 如机器人可能对用户讲话。

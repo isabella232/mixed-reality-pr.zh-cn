@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 301 - 语言翻译
+title: HoloLens (第一代) 和 Azure 301-语言翻译
 description: 完成本课程，了解如何在混合现实应用程序中实现 Azure 文本翻译 API。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，翻译人员文本，hololens，沉浸，vr，语言翻译，Windows 10，Visual Studio
-ms.openlocfilehash: 0b7e7c2e4146d3c60e62c25764aae48260fdf3ef
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: d02b86b6e62a46cd3ed4ebe7e6188cfda18e0d49
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583292"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730574"
 ---
-# <a name="mr-and-azure-301-language-translation"></a>MR 和 Azure 301：语言翻译
+# <a name="hololens-1st-gen-and-azure-301-language-translation"></a>HoloLens (第一代) 和 Azure 301：语言翻译
 
 <br>
 
@@ -49,7 +49,7 @@ ms.locfileid: "98583292"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -90,7 +90,7 @@ ms.locfileid: "98583292"
 
 2.  登录后，单击左上角的 " **新建** "，搜索 "文本翻译 API"。 选择 **Enter**。
 
-    ![新资源](images/AzureLabs-Lab1-02.png)
+    ![新建资源](images/AzureLabs-Lab1-02.png)
 
     > [!NOTE]
     > 在较新的门户中，可能已将 " **新建** " 一词替换为 " **创建资源**"。
@@ -388,7 +388,7 @@ ms.locfileid: "98583292"
         public Text translationResultText;
     ```
 
-6.  然后添加 *唤醒 ( # B1* 方法，此方法将在类初始化时调用。 
+6.  然后添加 *唤醒 ()* 方法，此方法将在类初始化时调用。 
 
     ```csharp
         private void Awake() 
@@ -478,7 +478,7 @@ ms.locfileid: "98583292"
         private DictationRecognizer dictationRecognizer; 
     ```
 
-6.  现在需要添加 *唤醒 ( # B1* 和 *Start ( # B3* 方法的代码。 当类初始化时，将调用以下内容：
+6.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。 当类初始化时，将调用以下内容：
 
     ```csharp
         private void Awake() 
@@ -503,8 +503,8 @@ ms.locfileid: "98583292"
         } 
     ```
 
-7.  可以 *删除**更新 ( # B1* 方法，因为此类将不会使用它。
-8.  现在，你需要应用程序用来启动和停止语音捕获，并将其传递给 *Translator* 类的方法。 复制以下代码，并将其粘贴到 *Start ( # B1* 方法下。
+7.  您可以 *删除* () 方法的 *更新* ，因为此类将不会使用它。
+8.  现在，你需要应用程序用来启动和停止语音捕获，并将其传递给 *Translator* 类的方法。 复制以下代码，并将其粘贴到 *开始 ()* 方法下。
 
     ```csharp
         /// <summary> 
@@ -537,7 +537,7 @@ ms.locfileid: "98583292"
     ```
 
     > [!TIP]
-    > 虽然此应用程序不会使用它，但在此还提供了 *StopCapturingAudio ( # B1* 方法，因此，如果要实现在应用程序中停止捕获音频的功能，则也是如此。
+    > 尽管此应用程序将不会使用它，但在此还提供了 *StopCapturingAudio ()* 方法，因此，如果你想要在应用程序中实现停止捕获音频的功能，则也是如此。
 
 9.  现在需要添加语音停止时将调用的听写处理程序。 此方法随后将听写的文本传递到 *转换器* 类。
 
@@ -613,7 +613,7 @@ ms.locfileid: "98583292"
     > - 还有一个 [涵盖可用语言的更交互式页面](https://www.microsoft.com/translator/business/languages/)，不过，在站点语言设置为 "" (并且 Microsoft 网站可能会重定向到你的母语) 时，此页仅显示为 "正常"。 您可以在页面底部或通过更改 URL 来更改站点语言。
     > - 在上述代码片段中， **authorizationKey** 值必须是在订阅 *Azure 文本翻译 API* 时收到的 **密钥**。 [第1章](#chapter-1--the-azure-portal)中对此进行了介绍。
 
-6.  现在需要添加 *唤醒 ( # B1* 和 *Start ( # B3* 方法的代码。 
+6.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。 
 7.  在这种情况下，代码将使用授权密钥调用 *Azure* 以获取 *令牌*。
 
     ```csharp
@@ -675,7 +675,7 @@ ms.locfileid: "98583292"
     ```
 
     > [!WARNING]
-    > 如果编辑 IEnumerator 方法 GetTokenCoroutine 的名称 **( # B1**，则需要更新以上代码中的 *StartCoroutine* 和 *StopCoroutine* 调用字符串值。 [按照 Unity 文档](https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html)，若要停止特定的 *协同程序*，需要使用字符串值方法。
+    > 如果编辑 IEnumerator 方法 **GetTokenCoroutine ()** 的名称，则需要更新以上代码中的 *StartCoroutine* 和 *StopCoroutine* 调用字符串值。 [按照 Unity 文档](https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html)，若要停止特定的 *协同程序*，需要使用字符串值方法。
 
 9.  接下来，将协同程序 (的 "支持" 流方法添加到) ，以获取 *MicrophoneManager* 类收到的文本的翻译。 此代码将创建一个要发送到 *Azure 文本翻译 API* 的查询字符串，然后使用内部 Unity UnityWebRequest 类通过查询字符串对终结点进行 "Get" 调用。 然后，将使用该结果在结果对象中设置翻译。 下面的代码显示了实现：
 
@@ -784,10 +784,10 @@ ms.locfileid: "98583292"
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 是否可以向应用程序中添加文本到语音功能，以使返回的文本被朗读？
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 使用户能够在应用程序中更改源和输出语言 ( "from" 和 "to" ) ，因此在每次需要更改语言时，无需重新生成应用程序。
