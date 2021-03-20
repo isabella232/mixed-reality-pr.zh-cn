@@ -1,156 +1,156 @@
 ---
-title: MR 基础 101 - 使用设备完成项目
+title: HoloLens (第一代) 基础知识 101-设备的完整项目
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 了解 Windows Mixed Reality 的基本知识。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，HoloLens，全息影像，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 4ca16542060e1cee746ba5095a7bf68ca8136267
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5015dff1487dce9ff761a4ca606657eca6f75406
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583718"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730334"
 ---
-# <a name="mr-basics-101-complete-project-with-device"></a><span data-ttu-id="b0662-104">MR 基础知识 101：使用设备设置完整的项目</span><span class="sxs-lookup"><span data-stu-id="b0662-104">MR Basics 101: Complete project with device</span></span>
+# <a name="hololens-1st-gen-basics-101-complete-project-with-device"></a><span data-ttu-id="ee49a-104">HoloLens (第一代) 基础知识101：包含设备的完成项目</span><span class="sxs-lookup"><span data-stu-id="ee49a-104">HoloLens (1st gen) Basics 101: Complete project with device</span></span>
 
 <br>
 
 >[!NOTE]
-><span data-ttu-id="b0662-105">混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。</span><span class="sxs-lookup"><span data-stu-id="b0662-105">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="b0662-106">因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。</span><span class="sxs-lookup"><span data-stu-id="b0662-106">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="b0662-107">我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。</span><span class="sxs-lookup"><span data-stu-id="b0662-107">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="b0662-108">我们将维护这些教程，使之持续适用于支持的设备。</span><span class="sxs-lookup"><span data-stu-id="b0662-108">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="b0662-109">已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。</span><span class="sxs-lookup"><span data-stu-id="b0662-109">[A new series of tutorials](mrlearning-base.md) has been posted for HoloLens 2.</span></span>
+><span data-ttu-id="ee49a-105">混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。</span><span class="sxs-lookup"><span data-stu-id="ee49a-105">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="ee49a-106">因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。</span><span class="sxs-lookup"><span data-stu-id="ee49a-106">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="ee49a-107">我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。</span><span class="sxs-lookup"><span data-stu-id="ee49a-107">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="ee49a-108">我们将维护这些教程，使之持续适用于支持的设备。</span><span class="sxs-lookup"><span data-stu-id="ee49a-108">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="ee49a-109">已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-109">[A new series of tutorials](mrlearning-base.md) has been posted for HoloLens 2.</span></span>
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
 
-<span data-ttu-id="b0662-110">本教程将引导你完成 Unity 中内置的完整项目，该项目演示了 HoloLens 上核心的 Windows Mixed Reality 功能，包括 [注视](../../../design/gaze-and-commit.md)、 [手势](../../../design/gaze-and-commit.md#composite-gestures)、 [语音输入](../../../design/voice-input.md)、 [空间音效](../../../design/spatial-sound.md) 和 [空间映射](../../../design/spatial-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="b0662-110">This tutorial will walk you through a complete project, built in Unity, that demonstrates core Windows Mixed Reality features on HoloLens including [gaze](../../../design/gaze-and-commit.md), [gestures](../../../design/gaze-and-commit.md#composite-gestures), [voice input](../../../design/voice-input.md), [spatial sound](../../../design/spatial-sound.md) and [spatial mapping](../../../design/spatial-mapping.md).</span></span>
+<span data-ttu-id="ee49a-110">本教程将引导你完成 Unity 中内置的完整项目，该项目演示了 HoloLens 上核心的 Windows Mixed Reality 功能，包括 [注视](../../../design/gaze-and-commit.md)、 [手势](../../../design/gaze-and-commit.md#composite-gestures)、 [语音输入](../../../design/voice-input.md)、 [空间音效](../../../design/spatial-sound.md) 和 [空间映射](../../../design/spatial-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-110">This tutorial will walk you through a complete project, built in Unity, that demonstrates core Windows Mixed Reality features on HoloLens including [gaze](../../../design/gaze-and-commit.md), [gestures](../../../design/gaze-and-commit.md#composite-gestures), [voice input](../../../design/voice-input.md), [spatial sound](../../../design/spatial-sound.md) and [spatial mapping](../../../design/spatial-mapping.md).</span></span>
 
-<span data-ttu-id="b0662-111">教程大约需要1小时才能完成。</span><span class="sxs-lookup"><span data-stu-id="b0662-111">The tutorial will take approximately 1 hour to complete.</span></span>
+<span data-ttu-id="ee49a-111">教程大约需要1小时才能完成。</span><span class="sxs-lookup"><span data-stu-id="ee49a-111">The tutorial will take approximately 1 hour to complete.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="b0662-112">设备支持</span><span class="sxs-lookup"><span data-stu-id="b0662-112">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="ee49a-112">设备支持</span><span class="sxs-lookup"><span data-stu-id="ee49a-112">Device support</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="b0662-113">课程</span><span class="sxs-lookup"><span data-stu-id="b0662-113">Course</span></span></th><th style="width:150px"> <span data-ttu-id="b0662-114"><a href="/hololens/hololens1-hardware">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="b0662-114"><a href="/hololens/hololens1-hardware">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="b0662-115"><a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></span><span class="sxs-lookup"><span data-stu-id="b0662-115"><a href="../../../discover/immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
+<th><span data-ttu-id="ee49a-113">课程</span><span class="sxs-lookup"><span data-stu-id="ee49a-113">Course</span></span></th><th style="width:150px"> <span data-ttu-id="ee49a-114"><a href="/hololens/hololens1-hardware">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="ee49a-114"><a href="/hololens/hololens1-hardware">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="ee49a-115"><a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></span><span class="sxs-lookup"><span data-stu-id="ee49a-115"><a href="../../../discover/immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
 </tr><tr>
-<td><span data-ttu-id="b0662-116">MR 基础知识 101：使用设备设置完整的项目</span><span class="sxs-lookup"><span data-stu-id="b0662-116">MR Basics 101: Complete project with device</span></span></td><td style="text-align: center;"> <span data-ttu-id="b0662-117">✔️</span><span class="sxs-lookup"><span data-stu-id="b0662-117">✔️</span></span></td><td style="text-align: center;"> </td>
+<td><span data-ttu-id="ee49a-116">MR 基础知识 101：使用设备设置完整的项目</span><span class="sxs-lookup"><span data-stu-id="ee49a-116">MR Basics 101: Complete project with device</span></span></td><td style="text-align: center;"> <span data-ttu-id="ee49a-117">✔️</span><span class="sxs-lookup"><span data-stu-id="ee49a-117">✔️</span></span></td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a><span data-ttu-id="b0662-118">准备工作</span><span class="sxs-lookup"><span data-stu-id="b0662-118">Before you start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="ee49a-118">准备工作</span><span class="sxs-lookup"><span data-stu-id="ee49a-118">Before you start</span></span>
 
-### <a name="prerequisites"></a><span data-ttu-id="b0662-119">必备条件</span><span class="sxs-lookup"><span data-stu-id="b0662-119">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="ee49a-119">必备条件</span><span class="sxs-lookup"><span data-stu-id="ee49a-119">Prerequisites</span></span>
 
-* <span data-ttu-id="b0662-120">配置了正确 [工具](../../install-the-tools.md)的 WINDOWS 10 电脑。</span><span class="sxs-lookup"><span data-stu-id="b0662-120">A Windows 10 PC configured with the correct [tools installed](../../install-the-tools.md).</span></span>
-* <span data-ttu-id="b0662-121">[为开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 设备。</span><span class="sxs-lookup"><span data-stu-id="b0662-121">A HoloLens device [configured for development](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode).</span></span>
+* <span data-ttu-id="ee49a-120">配置了正确 [工具](../../install-the-tools.md)的 WINDOWS 10 电脑。</span><span class="sxs-lookup"><span data-stu-id="ee49a-120">A Windows 10 PC configured with the correct [tools installed](../../install-the-tools.md).</span></span>
+* <span data-ttu-id="ee49a-121">[为开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 设备。</span><span class="sxs-lookup"><span data-stu-id="ee49a-121">A HoloLens device [configured for development](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode).</span></span>
 
-### <a name="project-files"></a><span data-ttu-id="b0662-122">项目文件</span><span class="sxs-lookup"><span data-stu-id="b0662-122">Project files</span></span>
+### <a name="project-files"></a><span data-ttu-id="ee49a-122">项目文件</span><span class="sxs-lookup"><span data-stu-id="ee49a-122">Project files</span></span>
 
-* <span data-ttu-id="b0662-123">下载项目所需的 [文件](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip) 。</span><span class="sxs-lookup"><span data-stu-id="b0662-123">Download the [files](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip) required by the project.</span></span> <span data-ttu-id="b0662-124">需要 Unity 2017.2 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="b0662-124">Requires Unity 2017.2 or later.</span></span>
-  * <span data-ttu-id="b0662-125">如果仍需要 Unity 5.6 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-101.zip)。</span><span class="sxs-lookup"><span data-stu-id="b0662-125">If you still need Unity 5.6 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-101.zip).</span></span>
-  * <span data-ttu-id="b0662-126">如果仍需要 Unity 5.5 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-101.zip)。</span><span class="sxs-lookup"><span data-stu-id="b0662-126">If you still need Unity 5.5 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-101.zip).</span></span>
-  * <span data-ttu-id="b0662-127">如果仍需要 Unity 5.4 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-101.zip)。</span><span class="sxs-lookup"><span data-stu-id="b0662-127">If you still need Unity 5.4 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-101.zip).</span></span>
-* <span data-ttu-id="b0662-128">取消将文件存档到桌面或其他易于访问的位置。</span><span class="sxs-lookup"><span data-stu-id="b0662-128">Un-archive the files to your desktop or other easy to reach location.</span></span> <span data-ttu-id="b0662-129">将文件夹名称保留为 **日式折纸**。</span><span class="sxs-lookup"><span data-stu-id="b0662-129">Keep the folder name as **Origami**.</span></span>
+* <span data-ttu-id="ee49a-123">下载项目所需的 [文件](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip) 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-123">Download the [files](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip) required by the project.</span></span> <span data-ttu-id="ee49a-124">需要 Unity 2017.2 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-124">Requires Unity 2017.2 or later.</span></span>
+  * <span data-ttu-id="ee49a-125">如果仍需要 Unity 5.6 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-101.zip)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-125">If you still need Unity 5.6 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-101.zip).</span></span>
+  * <span data-ttu-id="ee49a-126">如果仍需要 Unity 5.5 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-101.zip)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-126">If you still need Unity 5.5 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-101.zip).</span></span>
+  * <span data-ttu-id="ee49a-127">如果仍需要 Unity 5.4 支持，请使用 [此版本](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-101.zip)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-127">If you still need Unity 5.4 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-101.zip).</span></span>
+* <span data-ttu-id="ee49a-128">取消将文件存档到桌面或其他易于访问的位置。</span><span class="sxs-lookup"><span data-stu-id="ee49a-128">Un-archive the files to your desktop or other easy to reach location.</span></span> <span data-ttu-id="ee49a-129">将文件夹名称保留为 **日式折纸**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-129">Keep the folder name as **Origami**.</span></span>
 
 >[!NOTE]
-><span data-ttu-id="b0662-130">如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101)找到。</span><span class="sxs-lookup"><span data-stu-id="b0662-130">If you want to look through the source code before downloading, it's [available on GitHub](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101).</span></span>
+><span data-ttu-id="ee49a-130">如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101)找到。</span><span class="sxs-lookup"><span data-stu-id="ee49a-130">If you want to look through the source code before downloading, it's [available on GitHub](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101).</span></span>
 
-## <a name="chapter-1---holo-world"></a><span data-ttu-id="b0662-131">第1章-"Holo" 世界</span><span class="sxs-lookup"><span data-stu-id="b0662-131">Chapter 1 - "Holo" world</span></span>
+## <a name="chapter-1---holo-world"></a><span data-ttu-id="ee49a-131">第1章-"Holo" 世界</span><span class="sxs-lookup"><span data-stu-id="ee49a-131">Chapter 1 - "Holo" world</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/PmtZGjYFroY]
 
-<span data-ttu-id="b0662-132">在本章中，我们将设置第一个 Unity 项目，并逐步完成生成和部署过程。</span><span class="sxs-lookup"><span data-stu-id="b0662-132">In this chapter, we'll setup our first Unity project and step through the build and deploy process.</span></span>
+<span data-ttu-id="ee49a-132">在本章中，我们将设置第一个 Unity 项目，并逐步完成生成和部署过程。</span><span class="sxs-lookup"><span data-stu-id="ee49a-132">In this chapter, we'll setup our first Unity project and step through the build and deploy process.</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-133">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-133">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-133">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-133">Objectives</span></span>
 
-* <span data-ttu-id="b0662-134">为全息版开发设置 Unity。</span><span class="sxs-lookup"><span data-stu-id="b0662-134">Set up Unity for holographic development.</span></span>
-* <span data-ttu-id="b0662-135">制作全息影像。</span><span class="sxs-lookup"><span data-stu-id="b0662-135">Make a hologram.</span></span>
-* <span data-ttu-id="b0662-136">查看您创建的全息影像。</span><span class="sxs-lookup"><span data-stu-id="b0662-136">See a hologram that you made.</span></span>
+* <span data-ttu-id="ee49a-134">为全息版开发设置 Unity。</span><span class="sxs-lookup"><span data-stu-id="ee49a-134">Set up Unity for holographic development.</span></span>
+* <span data-ttu-id="ee49a-135">制作全息影像。</span><span class="sxs-lookup"><span data-stu-id="ee49a-135">Make a hologram.</span></span>
+* <span data-ttu-id="ee49a-136">查看您创建的全息影像。</span><span class="sxs-lookup"><span data-stu-id="ee49a-136">See a hologram that you made.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-137">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-137">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-137">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-137">Instructions</span></span>
 
-* <span data-ttu-id="b0662-138">启动 Unity。</span><span class="sxs-lookup"><span data-stu-id="b0662-138">Start Unity.</span></span>
-* <span data-ttu-id="b0662-139">选择“打开”  。</span><span class="sxs-lookup"><span data-stu-id="b0662-139">Select **Open**.</span></span>
-* <span data-ttu-id="b0662-140">输入 "位置" 作为以前未存档的 **日式折纸** 文件夹。</span><span class="sxs-lookup"><span data-stu-id="b0662-140">Enter location as the **Origami** folder you previously un-archived.</span></span>
-* <span data-ttu-id="b0662-141">选择 " **日式折纸** " 并单击 " **选择文件夹**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-141">Select **Origami** and click **Select Folder**.</span></span>
-* <span data-ttu-id="b0662-142">由于 **日式折纸** 项目不包含场景，因此请将空的默认场景保存到新文件，使用： **file**  /  **save 场景 As**。</span><span class="sxs-lookup"><span data-stu-id="b0662-142">Since the **Origami** project does not contain a scene, save the empty default scene to a new file using: **File** / **Save Scene As**.</span></span>
-* <span data-ttu-id="b0662-143">将新场景命名为 **日式折纸** ，并按 " **保存** " 按钮。</span><span class="sxs-lookup"><span data-stu-id="b0662-143">Name the new scene **Origami** and press the **Save** button.</span></span>
+* <span data-ttu-id="ee49a-138">启动 Unity。</span><span class="sxs-lookup"><span data-stu-id="ee49a-138">Start Unity.</span></span>
+* <span data-ttu-id="ee49a-139">选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="ee49a-139">Select **Open**.</span></span>
+* <span data-ttu-id="ee49a-140">输入 "位置" 作为以前未存档的 **日式折纸** 文件夹。</span><span class="sxs-lookup"><span data-stu-id="ee49a-140">Enter location as the **Origami** folder you previously un-archived.</span></span>
+* <span data-ttu-id="ee49a-141">选择 " **日式折纸** " 并单击 " **选择文件夹**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-141">Select **Origami** and click **Select Folder**.</span></span>
+* <span data-ttu-id="ee49a-142">由于 **日式折纸** 项目不包含场景，因此请将空的默认场景保存到新文件，使用： **file**  /  **save 场景 As**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-142">Since the **Origami** project does not contain a scene, save the empty default scene to a new file using: **File** / **Save Scene As**.</span></span>
+* <span data-ttu-id="ee49a-143">将新场景命名为 **日式折纸** ，并按 " **保存** " 按钮。</span><span class="sxs-lookup"><span data-stu-id="ee49a-143">Name the new scene **Origami** and press the **Save** button.</span></span>
 
-#### <a name="setup-the-main-virtual-camera"></a><span data-ttu-id="b0662-144">设置主虚拟摄像机</span><span class="sxs-lookup"><span data-stu-id="b0662-144">Setup the main virtual camera</span></span>
+#### <a name="setup-the-main-virtual-camera"></a><span data-ttu-id="ee49a-144">设置主虚拟摄像机</span><span class="sxs-lookup"><span data-stu-id="ee49a-144">Setup the main virtual camera</span></span>
 
-* <span data-ttu-id="b0662-145">在“层次结构面板”中，选择“主摄像头” 。</span><span class="sxs-lookup"><span data-stu-id="b0662-145">In the **Hierarchy Panel**, select **Main Camera**.</span></span>
-* <span data-ttu-id="b0662-146">**检查器** 将其转换位置设置为 **0，0，0**。</span><span class="sxs-lookup"><span data-stu-id="b0662-146">In the **Inspector** set its transform position to **0,0,0**.</span></span>
-* <span data-ttu-id="b0662-147">找到 " **清除标志** " 属性，然后将下拉列表中的 **Skybox** 更改为 **纯色**。</span><span class="sxs-lookup"><span data-stu-id="b0662-147">Find the **Clear Flags** property, and change the dropdown from **Skybox** to **Solid color**.</span></span>
-* <span data-ttu-id="b0662-148">单击“背景”字段以打开颜色选取器。</span><span class="sxs-lookup"><span data-stu-id="b0662-148">Click on the **Background** field to open a color picker.</span></span>
-* <span data-ttu-id="b0662-149">将“R、G、B 和 A”设置为“0” 。</span><span class="sxs-lookup"><span data-stu-id="b0662-149">Set **R, G, B, and A** to **0**.</span></span>
+* <span data-ttu-id="ee49a-145">在“层次结构面板”中，选择“主摄像头” 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-145">In the **Hierarchy Panel**, select **Main Camera**.</span></span>
+* <span data-ttu-id="ee49a-146">**检查器** 将其转换位置设置为 **0，0，0**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-146">In the **Inspector** set its transform position to **0,0,0**.</span></span>
+* <span data-ttu-id="ee49a-147">找到 " **清除标志** " 属性，然后将下拉列表中的 **Skybox** 更改为 **纯色**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-147">Find the **Clear Flags** property, and change the dropdown from **Skybox** to **Solid color**.</span></span>
+* <span data-ttu-id="ee49a-148">单击“背景”字段以打开颜色选取器。</span><span class="sxs-lookup"><span data-stu-id="ee49a-148">Click on the **Background** field to open a color picker.</span></span>
+* <span data-ttu-id="ee49a-149">将“R、G、B 和 A”设置为“0” 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-149">Set **R, G, B, and A** to **0**.</span></span>
 
-#### <a name="setup-the-scene"></a><span data-ttu-id="b0662-150">设置场景</span><span class="sxs-lookup"><span data-stu-id="b0662-150">Setup the scene</span></span>
+#### <a name="setup-the-scene"></a><span data-ttu-id="ee49a-150">设置场景</span><span class="sxs-lookup"><span data-stu-id="ee49a-150">Setup the scene</span></span>
 
-* <span data-ttu-id="b0662-151">在 " **层次结构" 面板** 中，单击 " **创建** " 并 **创建空**。</span><span class="sxs-lookup"><span data-stu-id="b0662-151">In the **Hierarchy Panel**, click on **Create** and **Create Empty**.</span></span>
-* <span data-ttu-id="b0662-152">右键单击新的 " **GameObject** "，然后选择 "重命名"。</span><span class="sxs-lookup"><span data-stu-id="b0662-152">Right-click the new **GameObject** and select Rename.</span></span> <span data-ttu-id="b0662-153">将 GameObject 重命名为 **OrigamiCollection**。</span><span class="sxs-lookup"><span data-stu-id="b0662-153">Rename the GameObject to **OrigamiCollection**.</span></span>
-* <span data-ttu-id="b0662-154">在 "项目" 面板中的 " **全息影像** " 文件夹中 (展开 "资产" 并选择全息影像，或双击 "项目" 面板中的 "全息影像" 文件夹) </span><span class="sxs-lookup"><span data-stu-id="b0662-154">From the **Holograms** folder in the Project Panel (expand Assets and select Holograms or double click the Holograms folder in the Project Panel):</span></span>
-  * <span data-ttu-id="b0662-155">将 **阶段** 拖到层次结构中，使其成为 **OrigamiCollection** 的子级。</span><span class="sxs-lookup"><span data-stu-id="b0662-155">Drag **Stage** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
-  * <span data-ttu-id="b0662-156">将 **Sphere1** 拖到层次结构中，使其成为 **OrigamiCollection** 的子元素。</span><span class="sxs-lookup"><span data-stu-id="b0662-156">Drag **Sphere1** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
-  * <span data-ttu-id="b0662-157">将 **Sphere2** 拖到层次结构中，使其成为 **OrigamiCollection** 的子元素。</span><span class="sxs-lookup"><span data-stu-id="b0662-157">Drag **Sphere2** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
-* <span data-ttu-id="b0662-158">右键单击 "**层次结构" 面板** 中的 **方向浅** 对象，然后选择 "**删除**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-158">Right-click the **Directional Light** object in the **Hierarchy Panel** and select **Delete**.</span></span>
-* <span data-ttu-id="b0662-159">从 " **全息影像** " 文件夹中，将 **灯光** 拖到 **层次结构面板** 的根。</span><span class="sxs-lookup"><span data-stu-id="b0662-159">From the **Holograms** folder, drag **Lights** into the root of the **Hierarchy Panel**.</span></span>
-* <span data-ttu-id="b0662-160">在 **层次结构** 中，选择 " **OrigamiCollection**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-160">In the **Hierarchy**, select the **OrigamiCollection**.</span></span>
-* <span data-ttu-id="b0662-161">在 **检查器** 中，将转换位置设置为 **0、-0.5、2.0**。</span><span class="sxs-lookup"><span data-stu-id="b0662-161">In the **Inspector**, set the transform position to **0, -0.5, 2.0**.</span></span>
-* <span data-ttu-id="b0662-162">按下 Unity 中的 " **播放** " 按钮，预览全息影像。</span><span class="sxs-lookup"><span data-stu-id="b0662-162">Press the **Play** button in Unity to preview your holograms.</span></span>
-* <span data-ttu-id="b0662-163">预览窗口中应会显示日式折纸对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-163">You should see the Origami objects in the preview window.</span></span>
-* <span data-ttu-id="b0662-164">按第二次 **播放** 以停止预览模式。</span><span class="sxs-lookup"><span data-stu-id="b0662-164">Press **Play** a second time to stop preview mode.</span></span>
+* <span data-ttu-id="ee49a-151">在 " **层次结构" 面板** 中，单击 " **创建** " 并 **创建空**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-151">In the **Hierarchy Panel**, click on **Create** and **Create Empty**.</span></span>
+* <span data-ttu-id="ee49a-152">右键单击新的 " **GameObject** "，然后选择 "重命名"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-152">Right-click the new **GameObject** and select Rename.</span></span> <span data-ttu-id="ee49a-153">将 GameObject 重命名为 **OrigamiCollection**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-153">Rename the GameObject to **OrigamiCollection**.</span></span>
+* <span data-ttu-id="ee49a-154">在 "项目" 面板中的 " **全息影像** " 文件夹中 (展开 "资产" 并选择全息影像，或双击 "项目" 面板中的 "全息影像" 文件夹) </span><span class="sxs-lookup"><span data-stu-id="ee49a-154">From the **Holograms** folder in the Project Panel (expand Assets and select Holograms or double click the Holograms folder in the Project Panel):</span></span>
+  * <span data-ttu-id="ee49a-155">将 **阶段** 拖到层次结构中，使其成为 **OrigamiCollection** 的子级。</span><span class="sxs-lookup"><span data-stu-id="ee49a-155">Drag **Stage** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
+  * <span data-ttu-id="ee49a-156">将 **Sphere1** 拖到层次结构中，使其成为 **OrigamiCollection** 的子元素。</span><span class="sxs-lookup"><span data-stu-id="ee49a-156">Drag **Sphere1** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
+  * <span data-ttu-id="ee49a-157">将 **Sphere2** 拖到层次结构中，使其成为 **OrigamiCollection** 的子元素。</span><span class="sxs-lookup"><span data-stu-id="ee49a-157">Drag **Sphere2** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
+* <span data-ttu-id="ee49a-158">右键单击 "**层次结构" 面板** 中的 **方向浅** 对象，然后选择 "**删除**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-158">Right-click the **Directional Light** object in the **Hierarchy Panel** and select **Delete**.</span></span>
+* <span data-ttu-id="ee49a-159">从 " **全息影像** " 文件夹中，将 **灯光** 拖到 **层次结构面板** 的根。</span><span class="sxs-lookup"><span data-stu-id="ee49a-159">From the **Holograms** folder, drag **Lights** into the root of the **Hierarchy Panel**.</span></span>
+* <span data-ttu-id="ee49a-160">在 **层次结构** 中，选择 " **OrigamiCollection**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-160">In the **Hierarchy**, select the **OrigamiCollection**.</span></span>
+* <span data-ttu-id="ee49a-161">在 **检查器** 中，将转换位置设置为 **0、-0.5、2.0**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-161">In the **Inspector**, set the transform position to **0, -0.5, 2.0**.</span></span>
+* <span data-ttu-id="ee49a-162">按下 Unity 中的 " **播放** " 按钮，预览全息影像。</span><span class="sxs-lookup"><span data-stu-id="ee49a-162">Press the **Play** button in Unity to preview your holograms.</span></span>
+* <span data-ttu-id="ee49a-163">预览窗口中应会显示日式折纸对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-163">You should see the Origami objects in the preview window.</span></span>
+* <span data-ttu-id="ee49a-164">按第二次 **播放** 以停止预览模式。</span><span class="sxs-lookup"><span data-stu-id="ee49a-164">Press **Play** a second time to stop preview mode.</span></span>
 
-#### <a name="export-the-project-from-unity-to-visual-studio"></a><span data-ttu-id="b0662-165">将项目从 Unity 导出到 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b0662-165">Export the project from Unity to Visual Studio</span></span>
+#### <a name="export-the-project-from-unity-to-visual-studio"></a><span data-ttu-id="ee49a-165">将项目从 Unity 导出到 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ee49a-165">Export the project from Unity to Visual Studio</span></span>
 
-* <span data-ttu-id="b0662-166">在 Unity 中，选择 " **文件 > 生成设置**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-166">In Unity select **File > Build Settings**.</span></span>
-* <span data-ttu-id="b0662-167">选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-167">Select **Universal Windows Platform** in the **Platform** list and click **Switch Platform**.</span></span>
-* <span data-ttu-id="b0662-168">将 **SDK** 设置为 **通用 10** ，将 **类型** 设置为 **D3D**。</span><span class="sxs-lookup"><span data-stu-id="b0662-168">Set **SDK** to **Universal 10** and **Build Type** to **D3D**.</span></span>
-* <span data-ttu-id="b0662-169">检查 **Unity c # 项目**。</span><span class="sxs-lookup"><span data-stu-id="b0662-169">Check **Unity C# Projects**.</span></span>
-* <span data-ttu-id="b0662-170">单击 " **添加打开的场景** " 添加场景。</span><span class="sxs-lookup"><span data-stu-id="b0662-170">Click **Add Open Scenes** to add the scene.</span></span>
-* <span data-ttu-id="b0662-171">单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="b0662-171">Click **Build**.</span></span>
-* <span data-ttu-id="b0662-172">在出现的 "文件资源管理器" 窗口中，创建一个名为 "App" 的 **新文件夹** 。</span><span class="sxs-lookup"><span data-stu-id="b0662-172">In the file explorer window that appears, create a **New Folder** named "App".</span></span>
-* <span data-ttu-id="b0662-173">单击 **应用文件夹**。</span><span class="sxs-lookup"><span data-stu-id="b0662-173">Single click the **App Folder**.</span></span>
-* <span data-ttu-id="b0662-174">按 " **选择文件夹**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-174">Press **Select Folder**.</span></span>
-* <span data-ttu-id="b0662-175">当 Unity 完成后，将显示文件资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="b0662-175">When Unity is done, a File Explorer window will appear.</span></span>
-* <span data-ttu-id="b0662-176">打开 **应用程序** 文件夹。</span><span class="sxs-lookup"><span data-stu-id="b0662-176">Open the **App** folder.</span></span>
-* <span data-ttu-id="b0662-177">打开 (双击 ") **日式**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-177">Open (double click) **Origami.sln**.</span></span>
-* <span data-ttu-id="b0662-178">使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **X86**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-178">Using the top toolbar in Visual Studio, change the target from Debug to **Release** and from ARM to **X86**.</span></span>
-* <span data-ttu-id="b0662-179">单击 "设备" 按钮旁边的箭头，并选择 " **远程计算机** " 以通过 wi-fi 进行部署。</span><span class="sxs-lookup"><span data-stu-id="b0662-179">Click on the arrow next to the Device button, and select **Remote Machine** to deploy over Wi-Fi.</span></span>
-  * <span data-ttu-id="b0662-180">将 **地址** 设置为 HoloLens 的名称或 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="b0662-180">Set the **Address** to the name or IP address of your HoloLens.</span></span> <span data-ttu-id="b0662-181">如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** **" 或 "我的 IP 地址是什么？"。**</span><span class="sxs-lookup"><span data-stu-id="b0662-181">If you do not know your device IP address, look in **Settings > Network & Internet > Advanced Options** or ask Cortana **"Hey Cortana, What's my IP address?"**</span></span>
-  * <span data-ttu-id="b0662-182">如果 HoloLens 通过 USB 连接，则可以选择 " **设备** 通过 usb 进行部署"。</span><span class="sxs-lookup"><span data-stu-id="b0662-182">If the HoloLens is attached over USB, you may instead select **Device** to deploy over USB.</span></span>
-  * <span data-ttu-id="b0662-183">将 **身份验证模式** 设置为 " **通用**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-183">Leave the **Authentication Mode** set to **Universal**.</span></span>
-  * <span data-ttu-id="b0662-184">单击 "**选择**"</span><span class="sxs-lookup"><span data-stu-id="b0662-184">Click **Select**</span></span>
+* <span data-ttu-id="ee49a-166">在 Unity 中，选择 " **文件 > 生成设置**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-166">In Unity select **File > Build Settings**.</span></span>
+* <span data-ttu-id="ee49a-167">选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-167">Select **Universal Windows Platform** in the **Platform** list and click **Switch Platform**.</span></span>
+* <span data-ttu-id="ee49a-168">将 **SDK** 设置为 **通用 10** ，将 **类型** 设置为 **D3D**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-168">Set **SDK** to **Universal 10** and **Build Type** to **D3D**.</span></span>
+* <span data-ttu-id="ee49a-169">检查 **Unity c # 项目**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-169">Check **Unity C# Projects**.</span></span>
+* <span data-ttu-id="ee49a-170">单击 " **添加打开的场景** " 添加场景。</span><span class="sxs-lookup"><span data-stu-id="ee49a-170">Click **Add Open Scenes** to add the scene.</span></span>
+* <span data-ttu-id="ee49a-171">单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="ee49a-171">Click **Build**.</span></span>
+* <span data-ttu-id="ee49a-172">在出现的 "文件资源管理器" 窗口中，创建一个名为 "App" 的 **新文件夹** 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-172">In the file explorer window that appears, create a **New Folder** named "App".</span></span>
+* <span data-ttu-id="ee49a-173">单击 **应用文件夹**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-173">Single click the **App Folder**.</span></span>
+* <span data-ttu-id="ee49a-174">按 " **选择文件夹**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-174">Press **Select Folder**.</span></span>
+* <span data-ttu-id="ee49a-175">当 Unity 完成后，将显示文件资源管理器窗口。</span><span class="sxs-lookup"><span data-stu-id="ee49a-175">When Unity is done, a File Explorer window will appear.</span></span>
+* <span data-ttu-id="ee49a-176">打开 **应用程序** 文件夹。</span><span class="sxs-lookup"><span data-stu-id="ee49a-176">Open the **App** folder.</span></span>
+* <span data-ttu-id="ee49a-177">打开 (双击 ") **日式**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-177">Open (double click) **Origami.sln**.</span></span>
+* <span data-ttu-id="ee49a-178">使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **X86**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-178">Using the top toolbar in Visual Studio, change the target from Debug to **Release** and from ARM to **X86**.</span></span>
+* <span data-ttu-id="ee49a-179">单击 "设备" 按钮旁边的箭头，并选择 " **远程计算机** " 以通过 wi-fi 进行部署。</span><span class="sxs-lookup"><span data-stu-id="ee49a-179">Click on the arrow next to the Device button, and select **Remote Machine** to deploy over Wi-Fi.</span></span>
+  * <span data-ttu-id="ee49a-180">将 **地址** 设置为 HoloLens 的名称或 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="ee49a-180">Set the **Address** to the name or IP address of your HoloLens.</span></span> <span data-ttu-id="ee49a-181">如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项** **" 或 "我的 IP 地址是什么？"。**</span><span class="sxs-lookup"><span data-stu-id="ee49a-181">If you do not know your device IP address, look in **Settings > Network & Internet > Advanced Options** or ask Cortana **"Hey Cortana, What's my IP address?"**</span></span>
+  * <span data-ttu-id="ee49a-182">如果 HoloLens 通过 USB 连接，则可以选择 " **设备** 通过 usb 进行部署"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-182">If the HoloLens is attached over USB, you may instead select **Device** to deploy over USB.</span></span>
+  * <span data-ttu-id="ee49a-183">将 **身份验证模式** 设置为 " **通用**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-183">Leave the **Authentication Mode** set to **Universal**.</span></span>
+  * <span data-ttu-id="ee49a-184">单击 "**选择**"</span><span class="sxs-lookup"><span data-stu-id="ee49a-184">Click **Select**</span></span>
 
-* <span data-ttu-id="b0662-185">单击 " **调试" > "开始但不调试** " 或按 **Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="b0662-185">Click **Debug > Start Without debugging** or press **Ctrl + F5**.</span></span> <span data-ttu-id="b0662-186">如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。</span><span class="sxs-lookup"><span data-stu-id="b0662-186">If this is the first time deploying to your device, you will need to [pair it with Visual Studio](../../platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device).</span></span>
+* <span data-ttu-id="ee49a-185">单击 " **调试" > "开始但不调试** " 或按 **Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-185">Click **Debug > Start Without debugging** or press **Ctrl + F5**.</span></span> <span data-ttu-id="ee49a-186">如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-186">If this is the first time deploying to your device, you will need to [pair it with Visual Studio](../../platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device).</span></span>
 
-* <span data-ttu-id="b0662-187">现在，日式折纸项目将生成、部署到 HoloLens，然后运行。</span><span class="sxs-lookup"><span data-stu-id="b0662-187">The Origami project will now build, deploy to your HoloLens, and then run.</span></span>
-* <span data-ttu-id="b0662-188">放在你的 HoloLens 上，并查看你的新全息影像。</span><span class="sxs-lookup"><span data-stu-id="b0662-188">Put on your HoloLens and look around to see your new holograms.</span></span>
+* <span data-ttu-id="ee49a-187">现在，日式折纸项目将生成、部署到 HoloLens，然后运行。</span><span class="sxs-lookup"><span data-stu-id="ee49a-187">The Origami project will now build, deploy to your HoloLens, and then run.</span></span>
+* <span data-ttu-id="ee49a-188">放在你的 HoloLens 上，并查看你的新全息影像。</span><span class="sxs-lookup"><span data-stu-id="ee49a-188">Put on your HoloLens and look around to see your new holograms.</span></span>
 
-## <a name="chapter-2---gaze"></a><span data-ttu-id="b0662-189">第2章-注视</span><span class="sxs-lookup"><span data-stu-id="b0662-189">Chapter 2 - Gaze</span></span>
+## <a name="chapter-2---gaze"></a><span data-ttu-id="ee49a-189">第2章-注视</span><span class="sxs-lookup"><span data-stu-id="ee49a-189">Chapter 2 - Gaze</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/MSO2BoFSQbM]
 
-<span data-ttu-id="b0662-190">在本章中，我们将介绍第三种与全息影像交互的方式-- [注视](../../../design/gaze-and-commit.md)。</span><span class="sxs-lookup"><span data-stu-id="b0662-190">In this chapter, we are going to introduce the first of three ways of interacting with your holograms -- [gaze](../../../design/gaze-and-commit.md).</span></span>
+<span data-ttu-id="ee49a-190">在本章中，我们将介绍第三种与全息影像交互的方式-- [注视](../../../design/gaze-and-commit.md)。</span><span class="sxs-lookup"><span data-stu-id="ee49a-190">In this chapter, we are going to introduce the first of three ways of interacting with your holograms -- [gaze](../../../design/gaze-and-commit.md).</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-191">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-191">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-191">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-191">Objectives</span></span>
 
-* <span data-ttu-id="b0662-192">使用全球锁定的光标直观显示注视。</span><span class="sxs-lookup"><span data-stu-id="b0662-192">Visualize your gaze using a world-locked cursor.</span></span>
+* <span data-ttu-id="ee49a-192">使用全球锁定的光标直观显示注视。</span><span class="sxs-lookup"><span data-stu-id="ee49a-192">Visualize your gaze using a world-locked cursor.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-193">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-193">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-193">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-193">Instructions</span></span>
 
-* <span data-ttu-id="b0662-194">返回到 Unity 项目，并关闭 "生成设置" 窗口（如果它仍处于打开状态）。</span><span class="sxs-lookup"><span data-stu-id="b0662-194">Go back to your Unity project, and close the Build Settings window if it's still open.</span></span>
-* <span data-ttu-id="b0662-195">在 "**项目" 面板** 中选择 **全息影像** 文件夹。</span><span class="sxs-lookup"><span data-stu-id="b0662-195">Select the **Holograms** folder in the **Project panel**.</span></span>
-* <span data-ttu-id="b0662-196">将 **光标** 对象拖到 **层次结构面板** 中的根级别。</span><span class="sxs-lookup"><span data-stu-id="b0662-196">Drag the **Cursor** object into the **Hierarchy panel** at the root level.</span></span>
-* <span data-ttu-id="b0662-197">双击 **光标** 对象以详细查看它。</span><span class="sxs-lookup"><span data-stu-id="b0662-197">Double-click on the **Cursor** object to take a closer look at it.</span></span>
-* <span data-ttu-id="b0662-198">右键单击 "项目" 面板中的 " **脚本** " 文件夹。</span><span class="sxs-lookup"><span data-stu-id="b0662-198">Right-click on the **Scripts** folder in the Project panel.</span></span>
-* <span data-ttu-id="b0662-199">单击 " **创建** " 子菜单。</span><span class="sxs-lookup"><span data-stu-id="b0662-199">Click the **Create** sub-menu.</span></span>
-* <span data-ttu-id="b0662-200">选择 " **c # 脚本**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-200">Select **C# Script**.</span></span>
-* <span data-ttu-id="b0662-201">将脚本命名为 **WorldCursor**。</span><span class="sxs-lookup"><span data-stu-id="b0662-201">Name the script **WorldCursor**.</span></span> <span data-ttu-id="b0662-202">注意：名称区分大小写。</span><span class="sxs-lookup"><span data-stu-id="b0662-202">Note: The name is case-sensitive.</span></span> <span data-ttu-id="b0662-203">无需添加 .cs 扩展名。</span><span class="sxs-lookup"><span data-stu-id="b0662-203">You do not need to add the .cs extension.</span></span>
-* <span data-ttu-id="b0662-204">选择 "**层次结构" 面板** 中的 **光标** 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-204">Select the **Cursor** object in the **Hierarchy panel**.</span></span>
-* <span data-ttu-id="b0662-205">将 **WorldCursor** 脚本拖放到 **检查器面板**。</span><span class="sxs-lookup"><span data-stu-id="b0662-205">Drag and drop the **WorldCursor** script into the **Inspector panel**.</span></span>
-* <span data-ttu-id="b0662-206">双击 **WorldCursor** 脚本，在 Visual Studio 中将其打开。</span><span class="sxs-lookup"><span data-stu-id="b0662-206">Double-click the **WorldCursor** script to open it in Visual Studio.</span></span>
-* <span data-ttu-id="b0662-207">将此代码复制并粘贴到 **WorldCursor.cs** ，并 **保存全部**。</span><span class="sxs-lookup"><span data-stu-id="b0662-207">Copy and paste this code into **WorldCursor.cs** and **Save All**.</span></span>
+* <span data-ttu-id="ee49a-194">返回到 Unity 项目，并关闭 "生成设置" 窗口（如果它仍处于打开状态）。</span><span class="sxs-lookup"><span data-stu-id="ee49a-194">Go back to your Unity project, and close the Build Settings window if it's still open.</span></span>
+* <span data-ttu-id="ee49a-195">在 "**项目" 面板** 中选择 **全息影像** 文件夹。</span><span class="sxs-lookup"><span data-stu-id="ee49a-195">Select the **Holograms** folder in the **Project panel**.</span></span>
+* <span data-ttu-id="ee49a-196">将 **光标** 对象拖到 **层次结构面板** 中的根级别。</span><span class="sxs-lookup"><span data-stu-id="ee49a-196">Drag the **Cursor** object into the **Hierarchy panel** at the root level.</span></span>
+* <span data-ttu-id="ee49a-197">双击 **光标** 对象以详细查看它。</span><span class="sxs-lookup"><span data-stu-id="ee49a-197">Double-click on the **Cursor** object to take a closer look at it.</span></span>
+* <span data-ttu-id="ee49a-198">右键单击 "项目" 面板中的 " **脚本** " 文件夹。</span><span class="sxs-lookup"><span data-stu-id="ee49a-198">Right-click on the **Scripts** folder in the Project panel.</span></span>
+* <span data-ttu-id="ee49a-199">单击 " **创建** " 子菜单。</span><span class="sxs-lookup"><span data-stu-id="ee49a-199">Click the **Create** sub-menu.</span></span>
+* <span data-ttu-id="ee49a-200">选择 " **c # 脚本**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-200">Select **C# Script**.</span></span>
+* <span data-ttu-id="ee49a-201">将脚本命名为 **WorldCursor**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-201">Name the script **WorldCursor**.</span></span> <span data-ttu-id="ee49a-202">注意：名称区分大小写。</span><span class="sxs-lookup"><span data-stu-id="ee49a-202">Note: The name is case-sensitive.</span></span> <span data-ttu-id="ee49a-203">无需添加 .cs 扩展名。</span><span class="sxs-lookup"><span data-stu-id="ee49a-203">You do not need to add the .cs extension.</span></span>
+* <span data-ttu-id="ee49a-204">选择 "**层次结构" 面板** 中的 **光标** 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-204">Select the **Cursor** object in the **Hierarchy panel**.</span></span>
+* <span data-ttu-id="ee49a-205">将 **WorldCursor** 脚本拖放到 **检查器面板**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-205">Drag and drop the **WorldCursor** script into the **Inspector panel**.</span></span>
+* <span data-ttu-id="ee49a-206">双击 **WorldCursor** 脚本，在 Visual Studio 中将其打开。</span><span class="sxs-lookup"><span data-stu-id="ee49a-206">Double-click the **WorldCursor** script to open it in Visual Studio.</span></span>
+* <span data-ttu-id="ee49a-207">将此代码复制并粘贴到 **WorldCursor** ，并 **保存全部**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-207">Copy and paste this code into **WorldCursor.cs** and **Save All**.</span></span>
 
 ```cs
 using UnityEngine;
@@ -197,29 +197,29 @@ public class WorldCursor : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-208">从 **文件 > 生成设置** 重新生成应用。</span><span class="sxs-lookup"><span data-stu-id="b0662-208">Rebuild the app from **File > Build Settings**.</span></span>
-* <span data-ttu-id="b0662-209">返回到以前用于部署到 HoloLens 的 Visual Studio 解决方案。</span><span class="sxs-lookup"><span data-stu-id="b0662-209">Return to the Visual Studio solution previously used to deploy to your HoloLens.</span></span>
-* <span data-ttu-id="b0662-210">出现提示时，选择 "全部重新加载"。</span><span class="sxs-lookup"><span data-stu-id="b0662-210">Select 'Reload All' when prompted.</span></span>
-* <span data-ttu-id="b0662-211">单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="b0662-211">Click **Debug -> Start Without debugging** or press **Ctrl + F5**.</span></span>
-* <span data-ttu-id="b0662-212">现在，浏览场景并注意光标如何与对象的形状交互。</span><span class="sxs-lookup"><span data-stu-id="b0662-212">Now look around the scene and notice how the cursor interacts with the shape of objects.</span></span>
+* <span data-ttu-id="ee49a-208">从 **文件 > 生成设置** 重新生成应用。</span><span class="sxs-lookup"><span data-stu-id="ee49a-208">Rebuild the app from **File > Build Settings**.</span></span>
+* <span data-ttu-id="ee49a-209">返回到以前用于部署到 HoloLens 的 Visual Studio 解决方案。</span><span class="sxs-lookup"><span data-stu-id="ee49a-209">Return to the Visual Studio solution previously used to deploy to your HoloLens.</span></span>
+* <span data-ttu-id="ee49a-210">出现提示时，选择 "全部重新加载"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-210">Select 'Reload All' when prompted.</span></span>
+* <span data-ttu-id="ee49a-211">单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-211">Click **Debug -> Start Without debugging** or press **Ctrl + F5**.</span></span>
+* <span data-ttu-id="ee49a-212">现在，浏览场景并注意光标如何与对象的形状交互。</span><span class="sxs-lookup"><span data-stu-id="ee49a-212">Now look around the scene and notice how the cursor interacts with the shape of objects.</span></span>
 
-## <a name="chapter-3---gestures"></a><span data-ttu-id="b0662-213">第3章-手势</span><span class="sxs-lookup"><span data-stu-id="b0662-213">Chapter 3 - Gestures</span></span>
+## <a name="chapter-3---gestures"></a><span data-ttu-id="ee49a-213">第3章-手势</span><span class="sxs-lookup"><span data-stu-id="ee49a-213">Chapter 3 - Gestures</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/kW3ThJ2MbvQ]
 
-<span data-ttu-id="b0662-214">在本章中，我们将添加对 [手势](../../../design/gaze-and-commit.md#composite-gestures)的支持。</span><span class="sxs-lookup"><span data-stu-id="b0662-214">In this chapter, we'll add support for [gestures](../../../design/gaze-and-commit.md#composite-gestures).</span></span> <span data-ttu-id="b0662-215">当用户选择某一回形针时，我们将使用 Unity 的物理引擎开启重心来使球落在一起。</span><span class="sxs-lookup"><span data-stu-id="b0662-215">When the user selects a paper sphere, we'll make the sphere fall by turning on gravity using Unity's physics engine.</span></span>
+<span data-ttu-id="ee49a-214">在本章中，我们将添加对 [手势](../../../design/gaze-and-commit.md#composite-gestures)的支持。</span><span class="sxs-lookup"><span data-stu-id="ee49a-214">In this chapter, we'll add support for [gestures](../../../design/gaze-and-commit.md#composite-gestures).</span></span> <span data-ttu-id="ee49a-215">当用户选择某一回形针时，我们将使用 Unity 的物理引擎开启重心来使球落在一起。</span><span class="sxs-lookup"><span data-stu-id="ee49a-215">When the user selects a paper sphere, we'll make the sphere fall by turning on gravity using Unity's physics engine.</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-216">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-216">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-216">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-216">Objectives</span></span>
 
-* <span data-ttu-id="b0662-217">用选择手势控制全息影像。</span><span class="sxs-lookup"><span data-stu-id="b0662-217">Control your holograms with the Select gesture.</span></span>
+* <span data-ttu-id="ee49a-217">用选择手势控制全息影像。</span><span class="sxs-lookup"><span data-stu-id="ee49a-217">Control your holograms with the Select gesture.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-218">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-218">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-218">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-218">Instructions</span></span>
 
-<span data-ttu-id="b0662-219">首先，我们将创建一个脚本，然后可以检测选择的手势。</span><span class="sxs-lookup"><span data-stu-id="b0662-219">We'll start by creating a script then can detect the Select gesture.</span></span>
+<span data-ttu-id="ee49a-219">首先，我们将创建一个脚本，然后可以检测选择的手势。</span><span class="sxs-lookup"><span data-stu-id="ee49a-219">We'll start by creating a script then can detect the Select gesture.</span></span>
 
-* <span data-ttu-id="b0662-220">在 " **脚本** " 文件夹中，创建一个名为 **GazeGestureManager** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-220">In the **Scripts** folder, create a script named **GazeGestureManager**.</span></span>
-* <span data-ttu-id="b0662-221">将 **GazeGestureManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-221">Drag the **GazeGestureManager** script onto the **OrigamiCollection** object in the Hierarchy.</span></span>
-* <span data-ttu-id="b0662-222">在 Visual Studio 中打开 **GazeGestureManager** 脚本，并添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="b0662-222">Open the **GazeGestureManager** script in Visual Studio and add the following code:</span></span>
+* <span data-ttu-id="ee49a-220">在 " **脚本** " 文件夹中，创建一个名为 **GazeGestureManager** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-220">In the **Scripts** folder, create a script named **GazeGestureManager**.</span></span>
+* <span data-ttu-id="ee49a-221">将 **GazeGestureManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-221">Drag the **GazeGestureManager** script onto the **OrigamiCollection** object in the Hierarchy.</span></span>
+* <span data-ttu-id="ee49a-222">在 Visual Studio 中打开 **GazeGestureManager** 脚本，并添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="ee49a-222">Open the **GazeGestureManager** script in Visual Studio and add the following code:</span></span>
 
 ```cs
 using UnityEngine;
@@ -286,11 +286,11 @@ public class GazeGestureManager : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-223">在 Scripts 文件夹中创建另一个脚本，这一次名为 **SphereCommands**。</span><span class="sxs-lookup"><span data-stu-id="b0662-223">Create another script in the Scripts folder, this time named **SphereCommands**.</span></span>
-* <span data-ttu-id="b0662-224">展开层次结构视图中的 **OrigamiCollection** 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-224">Expand the **OrigamiCollection** object in the Hierarchy view.</span></span>
-* <span data-ttu-id="b0662-225">将 **SphereCommands** 脚本拖到 "层次结构" 面板中的 " **Sphere1** " 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-225">Drag the **SphereCommands** script onto the **Sphere1** object in the Hierarchy panel.</span></span>
-* <span data-ttu-id="b0662-226">将 **SphereCommands** 脚本拖到 "层次结构" 面板中的 " **Sphere2** " 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-226">Drag the **SphereCommands** script onto the **Sphere2** object in the Hierarchy panel.</span></span>
-* <span data-ttu-id="b0662-227">在 Visual Studio 中打开脚本进行编辑，并将默认代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="b0662-227">Open the script in Visual Studio for editing, and replace the default code with this:</span></span>
+* <span data-ttu-id="ee49a-223">在 Scripts 文件夹中创建另一个脚本，这一次名为 **SphereCommands**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-223">Create another script in the Scripts folder, this time named **SphereCommands**.</span></span>
+* <span data-ttu-id="ee49a-224">展开层次结构视图中的 **OrigamiCollection** 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-224">Expand the **OrigamiCollection** object in the Hierarchy view.</span></span>
+* <span data-ttu-id="ee49a-225">将 **SphereCommands** 脚本拖到 "层次结构" 面板中的 " **Sphere1** " 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-225">Drag the **SphereCommands** script onto the **Sphere1** object in the Hierarchy panel.</span></span>
+* <span data-ttu-id="ee49a-226">将 **SphereCommands** 脚本拖到 "层次结构" 面板中的 " **Sphere2** " 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-226">Drag the **SphereCommands** script onto the **Sphere2** object in the Hierarchy panel.</span></span>
+* <span data-ttu-id="ee49a-227">在 Visual Studio 中打开脚本进行编辑，并将默认代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="ee49a-227">Open the script in Visual Studio for editing, and replace the default code with this:</span></span>
 
 ```cs
 using UnityEngine;
@@ -310,27 +310,27 @@ public class SphereCommands : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-228">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="b0662-228">Export, build and deploy the app to your HoloLens.</span></span>
-* <span data-ttu-id="b0662-229">查看球之一。</span><span class="sxs-lookup"><span data-stu-id="b0662-229">Look at one of the spheres.</span></span>
-* <span data-ttu-id="b0662-230">执行 "选择手势" 并观看以下图面上的球。</span><span class="sxs-lookup"><span data-stu-id="b0662-230">Perform the select gesture and watch the sphere drop onto the surface below.</span></span>
+* <span data-ttu-id="ee49a-228">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="ee49a-228">Export, build and deploy the app to your HoloLens.</span></span>
+* <span data-ttu-id="ee49a-229">查看球之一。</span><span class="sxs-lookup"><span data-stu-id="ee49a-229">Look at one of the spheres.</span></span>
+* <span data-ttu-id="ee49a-230">执行 "选择手势" 并观看以下图面上的球。</span><span class="sxs-lookup"><span data-stu-id="ee49a-230">Perform the select gesture and watch the sphere drop onto the surface below.</span></span>
 
-## <a name="chapter-4---voice"></a><span data-ttu-id="b0662-231">第4章-语音</span><span class="sxs-lookup"><span data-stu-id="b0662-231">Chapter 4 - Voice</span></span>
+## <a name="chapter-4---voice"></a><span data-ttu-id="ee49a-231">第4章-语音</span><span class="sxs-lookup"><span data-stu-id="ee49a-231">Chapter 4 - Voice</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/1-Aq0VVtHM8]
 
-<span data-ttu-id="b0662-232">在本章中，我们将添加对两个 [声音命令](../../../design/voice-input.md)的支持： "重置世界"，将已删除的球返回到其原始位置，并将 "丢球" 设置为球落。</span><span class="sxs-lookup"><span data-stu-id="b0662-232">In this chapter, we'll add support for two [voice commands](../../../design/voice-input.md): "Reset world" to return the dropped spheres to their original location, and "Drop sphere" to make the sphere fall.</span></span>
+<span data-ttu-id="ee49a-232">在本章中，我们将添加对两个 [声音命令](../../../design/voice-input.md)的支持： "重置世界"，将已删除的球返回到其原始位置，并将 "丢球" 设置为球落。</span><span class="sxs-lookup"><span data-stu-id="ee49a-232">In this chapter, we'll add support for two [voice commands](../../../design/voice-input.md): "Reset world" to return the dropped spheres to their original location, and "Drop sphere" to make the sphere fall.</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-233">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-233">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-233">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-233">Objectives</span></span>
 
-* <span data-ttu-id="b0662-234">添加始终在后台侦听的语音命令。</span><span class="sxs-lookup"><span data-stu-id="b0662-234">Add voice commands that always listen in the background.</span></span>
-* <span data-ttu-id="b0662-235">创建可响应语音命令的全息图。</span><span class="sxs-lookup"><span data-stu-id="b0662-235">Create a hologram that reacts to a voice command.</span></span>
+* <span data-ttu-id="ee49a-234">添加始终在后台侦听的语音命令。</span><span class="sxs-lookup"><span data-stu-id="ee49a-234">Add voice commands that always listen in the background.</span></span>
+* <span data-ttu-id="ee49a-235">创建可响应语音命令的全息图。</span><span class="sxs-lookup"><span data-stu-id="ee49a-235">Create a hologram that reacts to a voice command.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-236">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-236">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-236">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-236">Instructions</span></span>
 
-* <span data-ttu-id="b0662-237">在 " **脚本** " 文件夹中，创建一个名为 **SpeechManager** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-237">In the **Scripts** folder, create a script named **SpeechManager**.</span></span>
-* <span data-ttu-id="b0662-238">将 **SpeechManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象上</span><span class="sxs-lookup"><span data-stu-id="b0662-238">Drag the **SpeechManager** script onto the **OrigamiCollection** object in the Hierarchy</span></span>
-* <span data-ttu-id="b0662-239">在 Visual Studio 中打开 **SpeechManager** 脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-239">Open the **SpeechManager** script in Visual Studio.</span></span>
-* <span data-ttu-id="b0662-240">将此代码复制并粘贴到 **SpeechManager.cs** ，并 **保存全部** 内容：</span><span class="sxs-lookup"><span data-stu-id="b0662-240">Copy and paste this code into **SpeechManager.cs** and **Save All**:</span></span>
+* <span data-ttu-id="ee49a-237">在 " **脚本** " 文件夹中，创建一个名为 **SpeechManager** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-237">In the **Scripts** folder, create a script named **SpeechManager**.</span></span>
+* <span data-ttu-id="ee49a-238">将 **SpeechManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象上</span><span class="sxs-lookup"><span data-stu-id="ee49a-238">Drag the **SpeechManager** script onto the **OrigamiCollection** object in the Hierarchy</span></span>
+* <span data-ttu-id="ee49a-239">在 Visual Studio 中打开 **SpeechManager** 脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-239">Open the **SpeechManager** script in Visual Studio.</span></span>
+* <span data-ttu-id="ee49a-240">将此代码复制并粘贴到 **SpeechManager** ，并 **保存全部** 内容：</span><span class="sxs-lookup"><span data-stu-id="ee49a-240">Copy and paste this code into **SpeechManager.cs** and **Save All**:</span></span>
 
 ```cs
 using System.Collections.Generic;
@@ -381,8 +381,8 @@ public class SpeechManager : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-241">在 Visual Studio 中打开 **SphereCommands** 脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-241">Open the **SphereCommands** script in Visual Studio.</span></span>
-* <span data-ttu-id="b0662-242">按如下所示更新脚本以进行读取：</span><span class="sxs-lookup"><span data-stu-id="b0662-242">Update the script to read as follows:</span></span>
+* <span data-ttu-id="ee49a-241">在 Visual Studio 中打开 **SphereCommands** 脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-241">Open the **SphereCommands** script in Visual Studio.</span></span>
+* <span data-ttu-id="ee49a-242">按如下所示更新脚本以进行读取：</span><span class="sxs-lookup"><span data-stu-id="ee49a-242">Update the script to read as follows:</span></span>
 
 ```cs
 using UnityEngine;
@@ -433,36 +433,36 @@ public class SphereCommands : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-243">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="b0662-243">Export, build and deploy the app to your HoloLens.</span></span>
-* <span data-ttu-id="b0662-244">查看某一球，说 "**击落球**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-244">Look at one of the spheres, and say "**Drop Sphere**".</span></span>
-* <span data-ttu-id="b0662-245">说 "**重置世界**"，将其返回到其初始位置。</span><span class="sxs-lookup"><span data-stu-id="b0662-245">Say "**Reset World**" to bring them back to their initial positions.</span></span>
+* <span data-ttu-id="ee49a-243">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="ee49a-243">Export, build and deploy the app to your HoloLens.</span></span>
+* <span data-ttu-id="ee49a-244">查看某一球，说 "**击落球**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-244">Look at one of the spheres, and say "**Drop Sphere**".</span></span>
+* <span data-ttu-id="ee49a-245">说 "**重置世界**"，将其返回到其初始位置。</span><span class="sxs-lookup"><span data-stu-id="ee49a-245">Say "**Reset World**" to bring them back to their initial positions.</span></span>
 
-## <a name="chapter-5---spatial-sound"></a><span data-ttu-id="b0662-246">第5章-空间音效</span><span class="sxs-lookup"><span data-stu-id="b0662-246">Chapter 5 - Spatial sound</span></span>
+## <a name="chapter-5---spatial-sound"></a><span data-ttu-id="ee49a-246">第5章-空间音效</span><span class="sxs-lookup"><span data-stu-id="ee49a-246">Chapter 5 - Spatial sound</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/Aj4de5Ncbfo]
 
-<span data-ttu-id="b0662-247">在本章中，我们将向应用程序添加音乐，并触发对某些操作的声音影响。</span><span class="sxs-lookup"><span data-stu-id="b0662-247">In this chapter, we'll add music to the app, and then trigger sound effects on certain actions.</span></span> <span data-ttu-id="b0662-248">我们将使用 [空间音效](../../../design/spatial-sound.md) 为声音指定3d 空间中的特定位置。</span><span class="sxs-lookup"><span data-stu-id="b0662-248">We'll be using [spatial sound](../../../design/spatial-sound.md) to give sounds a specific location in 3D space.</span></span>
+<span data-ttu-id="ee49a-247">在本章中，我们将向应用程序添加音乐，并触发对某些操作的声音影响。</span><span class="sxs-lookup"><span data-stu-id="ee49a-247">In this chapter, we'll add music to the app, and then trigger sound effects on certain actions.</span></span> <span data-ttu-id="ee49a-248">我们将使用 [空间音效](../../../design/spatial-sound.md) 为声音指定3d 空间中的特定位置。</span><span class="sxs-lookup"><span data-stu-id="ee49a-248">We'll be using [spatial sound](../../../design/spatial-sound.md) to give sounds a specific location in 3D space.</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-249">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-249">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-249">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-249">Objectives</span></span>
 
-* <span data-ttu-id="b0662-250">收听世界上的全息影像。</span><span class="sxs-lookup"><span data-stu-id="b0662-250">Hear holograms in your world.</span></span>
+* <span data-ttu-id="ee49a-250">收听世界上的全息影像。</span><span class="sxs-lookup"><span data-stu-id="ee49a-250">Hear holograms in your world.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-251">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-251">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-251">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-251">Instructions</span></span>
 
-* <span data-ttu-id="b0662-252">在 Unity 中从顶部菜单中选择 "**编辑 > 项目设置 > 音频**"</span><span class="sxs-lookup"><span data-stu-id="b0662-252">In Unity select from the top menu **Edit > Project Settings > Audio**</span></span>
-* <span data-ttu-id="b0662-253">在右侧的检查器面板中，找到 " **Spatializer" 插件** 设置，然后选择 " **MS HRTF Spatializer**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-253">In the Inspector Panel on the right side, find the **Spatializer Plugin** setting and select **MS HRTF Spatializer**.</span></span>
-* <span data-ttu-id="b0662-254">在 "项目" 面板中， **将 "** **环境** " 对象拖到 "层次结构" 面板中的 **OrigamiCollection** 对象上。</span><span class="sxs-lookup"><span data-stu-id="b0662-254">From the **Holograms** folder in the Project panel, drag the **Ambience** object onto the **OrigamiCollection** object in the Hierarchy Panel.</span></span>
-* <span data-ttu-id="b0662-255">选择 **OrigamiCollection** 并在 "检查器" 面板中查找 **音频源** 组件。</span><span class="sxs-lookup"><span data-stu-id="b0662-255">Select **OrigamiCollection** and find the **Audio Source** component in the Inspector panel.</span></span> <span data-ttu-id="b0662-256">更改这些属性：</span><span class="sxs-lookup"><span data-stu-id="b0662-256">Change these properties:</span></span>
-  * <span data-ttu-id="b0662-257">检查 **Spatialize** 属性。</span><span class="sxs-lookup"><span data-stu-id="b0662-257">Check the **Spatialize** property.</span></span>
-  * <span data-ttu-id="b0662-258">选中 " **在唤醒状态播放**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-258">Check the **Play On Awake**.</span></span>
-  * <span data-ttu-id="b0662-259">通过将滑块一直拖到右侧，将 **空间混合** 更改为 **三维** 。</span><span class="sxs-lookup"><span data-stu-id="b0662-259">Change **Spatial Blend** to **3D** by dragging the slider all the way to the right.</span></span> <span data-ttu-id="b0662-260">移动滑块时，值应从0更改为1。</span><span class="sxs-lookup"><span data-stu-id="b0662-260">The value should change from 0 to 1 when you move the slider.</span></span>
-  * <span data-ttu-id="b0662-261">检查 **循环** 属性。</span><span class="sxs-lookup"><span data-stu-id="b0662-261">Check the **Loop** property.</span></span>
-  * <span data-ttu-id="b0662-262">展开 "**三维声音设置**"，然后为 " **Doppler" 级别** 输入 **0.1** 。</span><span class="sxs-lookup"><span data-stu-id="b0662-262">Expand **3D Sound Settings**, and enter **0.1** for **Doppler Level**.</span></span>
-  * <span data-ttu-id="b0662-263">将 **Volume Rolloff** 设置为 **对数 Rolloff**。</span><span class="sxs-lookup"><span data-stu-id="b0662-263">Set **Volume Rolloff** to **Logarithmic Rolloff**.</span></span>
-  * <span data-ttu-id="b0662-264">将 **最大距离** 设置为 **20**。</span><span class="sxs-lookup"><span data-stu-id="b0662-264">Set **Max Distance** to **20**.</span></span>
-* <span data-ttu-id="b0662-265">在 " **脚本** " 文件夹中，创建一个名为 **SphereSounds** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-265">In the **Scripts** folder, create a script named **SphereSounds**.</span></span>
-* <span data-ttu-id="b0662-266">将 **SphereSounds** 拖放到层次结构中的 **Sphere1** 和 **Sphere2** 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-266">Drag and drop **SphereSounds** to the **Sphere1** and **Sphere2** objects in the Hierarchy.</span></span>
-* <span data-ttu-id="b0662-267">在 Visual Studio 中打开 **SphereSounds** ，更新以下代码并 **全部保存**。</span><span class="sxs-lookup"><span data-stu-id="b0662-267">Open **SphereSounds** in Visual Studio, update the following code and **Save All**.</span></span>
+* <span data-ttu-id="ee49a-252">在 Unity 中从顶部菜单中选择 "**编辑 > 项目设置 > 音频**"</span><span class="sxs-lookup"><span data-stu-id="ee49a-252">In Unity select from the top menu **Edit > Project Settings > Audio**</span></span>
+* <span data-ttu-id="ee49a-253">在右侧的检查器面板中，找到 " **Spatializer" 插件** 设置，然后选择 " **MS HRTF Spatializer**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-253">In the Inspector Panel on the right side, find the **Spatializer Plugin** setting and select **MS HRTF Spatializer**.</span></span>
+* <span data-ttu-id="ee49a-254">在 "项目" 面板中， **将 "** **环境** " 对象拖到 "层次结构" 面板中的 **OrigamiCollection** 对象上。</span><span class="sxs-lookup"><span data-stu-id="ee49a-254">From the **Holograms** folder in the Project panel, drag the **Ambience** object onto the **OrigamiCollection** object in the Hierarchy Panel.</span></span>
+* <span data-ttu-id="ee49a-255">选择 **OrigamiCollection** 并在 "检查器" 面板中查找 **音频源** 组件。</span><span class="sxs-lookup"><span data-stu-id="ee49a-255">Select **OrigamiCollection** and find the **Audio Source** component in the Inspector panel.</span></span> <span data-ttu-id="ee49a-256">更改这些属性：</span><span class="sxs-lookup"><span data-stu-id="ee49a-256">Change these properties:</span></span>
+  * <span data-ttu-id="ee49a-257">检查 **Spatialize** 属性。</span><span class="sxs-lookup"><span data-stu-id="ee49a-257">Check the **Spatialize** property.</span></span>
+  * <span data-ttu-id="ee49a-258">选中 " **在唤醒状态播放**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-258">Check the **Play On Awake**.</span></span>
+  * <span data-ttu-id="ee49a-259">通过将滑块一直拖到右侧，将 **空间混合** 更改为 **三维** 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-259">Change **Spatial Blend** to **3D** by dragging the slider all the way to the right.</span></span> <span data-ttu-id="ee49a-260">移动滑块时，值应从0更改为1。</span><span class="sxs-lookup"><span data-stu-id="ee49a-260">The value should change from 0 to 1 when you move the slider.</span></span>
+  * <span data-ttu-id="ee49a-261">检查 **循环** 属性。</span><span class="sxs-lookup"><span data-stu-id="ee49a-261">Check the **Loop** property.</span></span>
+  * <span data-ttu-id="ee49a-262">展开 "**三维声音设置**"，然后为 " **Doppler" 级别** 输入 **0.1** 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-262">Expand **3D Sound Settings**, and enter **0.1** for **Doppler Level**.</span></span>
+  * <span data-ttu-id="ee49a-263">将 **Volume Rolloff** 设置为 **对数 Rolloff**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-263">Set **Volume Rolloff** to **Logarithmic Rolloff**.</span></span>
+  * <span data-ttu-id="ee49a-264">将 **最大距离** 设置为 **20**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-264">Set **Max Distance** to **20**.</span></span>
+* <span data-ttu-id="ee49a-265">在 " **脚本** " 文件夹中，创建一个名为 **SphereSounds** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-265">In the **Scripts** folder, create a script named **SphereSounds**.</span></span>
+* <span data-ttu-id="ee49a-266">将 **SphereSounds** 拖放到层次结构中的 **Sphere1** 和 **Sphere2** 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-266">Drag and drop **SphereSounds** to the **Sphere1** and **Sphere2** objects in the Hierarchy.</span></span>
+* <span data-ttu-id="ee49a-267">在 Visual Studio 中打开 **SphereSounds** ，更新以下代码并 **全部保存**。</span><span class="sxs-lookup"><span data-stu-id="ee49a-267">Open **SphereSounds** in Visual Studio, update the following code and **Save All**.</span></span>
 
 ```cs
 using UnityEngine;
@@ -542,39 +542,39 @@ public class SphereSounds : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-268">保存该脚本并返回到 Unity。</span><span class="sxs-lookup"><span data-stu-id="b0662-268">Save the script, and return to Unity.</span></span>
-* <span data-ttu-id="b0662-269">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="b0662-269">Export, build and deploy the app to your HoloLens.</span></span>
-* <span data-ttu-id="b0662-270">从舞台更近和更密切地移动，并翻到一边，倾听声音发生变化。</span><span class="sxs-lookup"><span data-stu-id="b0662-270">Move closer and further from the Stage and turn side-to-side to hear the sounds change.</span></span>
+* <span data-ttu-id="ee49a-268">保存该脚本并返回到 Unity。</span><span class="sxs-lookup"><span data-stu-id="ee49a-268">Save the script, and return to Unity.</span></span>
+* <span data-ttu-id="ee49a-269">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="ee49a-269">Export, build and deploy the app to your HoloLens.</span></span>
+* <span data-ttu-id="ee49a-270">从舞台更近和更密切地移动，并翻到一边，倾听声音发生变化。</span><span class="sxs-lookup"><span data-stu-id="ee49a-270">Move closer and further from the Stage and turn side-to-side to hear the sounds change.</span></span>
 
-## <a name="chapter-6---spatial-mapping"></a><span data-ttu-id="b0662-271">第6章-空间映射</span><span class="sxs-lookup"><span data-stu-id="b0662-271">Chapter 6 - Spatial mapping</span></span>
+## <a name="chapter-6---spatial-mapping"></a><span data-ttu-id="ee49a-271">第6章-空间映射</span><span class="sxs-lookup"><span data-stu-id="ee49a-271">Chapter 6 - Spatial mapping</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/Pkt1_wNLLXY]
 
-<span data-ttu-id="b0662-272">现在，我们将使用 [空间映射](../../../design/spatial-mapping.md) 将游戏板置于真实世界的真实对象上。</span><span class="sxs-lookup"><span data-stu-id="b0662-272">Now we are going to use [spatial mapping](../../../design/spatial-mapping.md) to place the game board on a real object in the real world.</span></span>
+<span data-ttu-id="ee49a-272">现在，我们将使用 [空间映射](../../../design/spatial-mapping.md) 将游戏板置于真实世界的真实对象上。</span><span class="sxs-lookup"><span data-stu-id="ee49a-272">Now we are going to use [spatial mapping](../../../design/spatial-mapping.md) to place the game board on a real object in the real world.</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-273">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-273">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-273">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-273">Objectives</span></span>
 
-* <span data-ttu-id="b0662-274">将你的真实世界带入虚拟世界。</span><span class="sxs-lookup"><span data-stu-id="b0662-274">Bring your real world into the virtual world.</span></span>
-* <span data-ttu-id="b0662-275">将全息影像置于最重要的位置。</span><span class="sxs-lookup"><span data-stu-id="b0662-275">Place your holograms where they matter most to you.</span></span>
+* <span data-ttu-id="ee49a-274">将你的真实世界带入虚拟世界。</span><span class="sxs-lookup"><span data-stu-id="ee49a-274">Bring your real world into the virtual world.</span></span>
+* <span data-ttu-id="ee49a-275">将全息影像置于最重要的位置。</span><span class="sxs-lookup"><span data-stu-id="ee49a-275">Place your holograms where they matter most to you.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-276">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-276">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-276">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-276">Instructions</span></span>
 
-* <span data-ttu-id="b0662-277">在 Unity 中，在 "项目" 面板中单击 " **全息影像** " 文件夹。</span><span class="sxs-lookup"><span data-stu-id="b0662-277">In Unity, click on the **Holograms** folder in the Project panel.</span></span>
-* <span data-ttu-id="b0662-278">将 **空间映射** 资产拖到 **层次结构** 的根。</span><span class="sxs-lookup"><span data-stu-id="b0662-278">Drag the **Spatial Mapping** asset into the root of the **Hierarchy**.</span></span>
-* <span data-ttu-id="b0662-279">单击层次结构中的 **空间映射** 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-279">Click on the **Spatial Mapping** object in the Hierarchy.</span></span>
-* <span data-ttu-id="b0662-280">在 " **检查器" 面板** 中，更改以下属性：</span><span class="sxs-lookup"><span data-stu-id="b0662-280">In the **Inspector panel**, change the following properties:</span></span>
-  * <span data-ttu-id="b0662-281">选中 " **绘制可视网格** " 框。</span><span class="sxs-lookup"><span data-stu-id="b0662-281">Check the **Draw Visual Meshes** box.</span></span>
-  * <span data-ttu-id="b0662-282">定位 **绘图材料** ，并单击右侧的圆圈。</span><span class="sxs-lookup"><span data-stu-id="b0662-282">Locate **Draw Material** and click the circle on the right.</span></span> <span data-ttu-id="b0662-283">在顶部的搜索字段中键入 "**线框**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-283">Type "**wireframe**" into the search field at the top.</span></span> <span data-ttu-id="b0662-284">单击结果，然后关闭窗口。</span><span class="sxs-lookup"><span data-stu-id="b0662-284">Click on the result and then close the window.</span></span> <span data-ttu-id="b0662-285">执行此操作时，绘制材料的值应设置为线框。</span><span class="sxs-lookup"><span data-stu-id="b0662-285">When you do this, the value for Draw Material should get set to Wireframe.</span></span>
-* <span data-ttu-id="b0662-286">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="b0662-286">Export, build and deploy the app to your HoloLens.</span></span>
-* <span data-ttu-id="b0662-287">当应用程序运行时，线框网格将覆盖你的真实世界。</span><span class="sxs-lookup"><span data-stu-id="b0662-287">When the app runs, a wireframe mesh will overlay your real world.</span></span>
-* <span data-ttu-id="b0662-288">观看某个滚动球如何偏离舞台，并观看地面！</span><span class="sxs-lookup"><span data-stu-id="b0662-288">Watch how a rolling sphere will fall off the stage, and onto the floor!</span></span>
+* <span data-ttu-id="ee49a-277">在 Unity 中，在 "项目" 面板中单击 " **全息影像** " 文件夹。</span><span class="sxs-lookup"><span data-stu-id="ee49a-277">In Unity, click on the **Holograms** folder in the Project panel.</span></span>
+* <span data-ttu-id="ee49a-278">将 **空间映射** 资产拖到 **层次结构** 的根。</span><span class="sxs-lookup"><span data-stu-id="ee49a-278">Drag the **Spatial Mapping** asset into the root of the **Hierarchy**.</span></span>
+* <span data-ttu-id="ee49a-279">单击层次结构中的 **空间映射** 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-279">Click on the **Spatial Mapping** object in the Hierarchy.</span></span>
+* <span data-ttu-id="ee49a-280">在 " **检查器" 面板** 中，更改以下属性：</span><span class="sxs-lookup"><span data-stu-id="ee49a-280">In the **Inspector panel**, change the following properties:</span></span>
+  * <span data-ttu-id="ee49a-281">选中 " **绘制可视网格** " 框。</span><span class="sxs-lookup"><span data-stu-id="ee49a-281">Check the **Draw Visual Meshes** box.</span></span>
+  * <span data-ttu-id="ee49a-282">定位 **绘图材料** ，并单击右侧的圆圈。</span><span class="sxs-lookup"><span data-stu-id="ee49a-282">Locate **Draw Material** and click the circle on the right.</span></span> <span data-ttu-id="ee49a-283">在顶部的搜索字段中键入 "**线框**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-283">Type "**wireframe**" into the search field at the top.</span></span> <span data-ttu-id="ee49a-284">单击结果，然后关闭窗口。</span><span class="sxs-lookup"><span data-stu-id="ee49a-284">Click on the result and then close the window.</span></span> <span data-ttu-id="ee49a-285">执行此操作时，绘制材料的值应设置为线框。</span><span class="sxs-lookup"><span data-stu-id="ee49a-285">When you do this, the value for Draw Material should get set to Wireframe.</span></span>
+* <span data-ttu-id="ee49a-286">导出应用，生成应用并将其部署到 HoloLens。</span><span class="sxs-lookup"><span data-stu-id="ee49a-286">Export, build and deploy the app to your HoloLens.</span></span>
+* <span data-ttu-id="ee49a-287">当应用程序运行时，线框网格将覆盖你的真实世界。</span><span class="sxs-lookup"><span data-stu-id="ee49a-287">When the app runs, a wireframe mesh will overlay your real world.</span></span>
+* <span data-ttu-id="ee49a-288">观看某个滚动球如何偏离舞台，并观看地面！</span><span class="sxs-lookup"><span data-stu-id="ee49a-288">Watch how a rolling sphere will fall off the stage, and onto the floor!</span></span>
 
-<span data-ttu-id="b0662-289">现在，我们将向你展示如何将 OrigamiCollection 移动到一个新位置：</span><span class="sxs-lookup"><span data-stu-id="b0662-289">Now we'll show you how to move the OrigamiCollection to a new location:</span></span>
+<span data-ttu-id="ee49a-289">现在，我们将向你展示如何将 OrigamiCollection 移动到一个新位置：</span><span class="sxs-lookup"><span data-stu-id="ee49a-289">Now we'll show you how to move the OrigamiCollection to a new location:</span></span>
 
-* <span data-ttu-id="b0662-290">在 " **脚本** " 文件夹中，创建一个名为 **TapToPlaceParent** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-290">In the **Scripts** folder, create a script named **TapToPlaceParent**.</span></span>
-* <span data-ttu-id="b0662-291">在 **层次结构** 中，展开 " **OrigamiCollection** "，然后选择 " **暂存** " 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-291">In the **Hierarchy**, expand the **OrigamiCollection** and select the **Stage** object.</span></span>
-* <span data-ttu-id="b0662-292">将 **TapToPlaceParent** 脚本拖到 "暂存" 对象上。</span><span class="sxs-lookup"><span data-stu-id="b0662-292">Drag the **TapToPlaceParent** script onto the Stage object.</span></span>
-* <span data-ttu-id="b0662-293">在 Visual Studio 中打开 **TapToPlaceParent** 脚本，并将其更新为以下内容：</span><span class="sxs-lookup"><span data-stu-id="b0662-293">Open the **TapToPlaceParent** script in Visual Studio, and update it to be the following:</span></span>
+* <span data-ttu-id="ee49a-290">在 " **脚本** " 文件夹中，创建一个名为 **TapToPlaceParent** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-290">In the **Scripts** folder, create a script named **TapToPlaceParent**.</span></span>
+* <span data-ttu-id="ee49a-291">在 **层次结构** 中，展开 " **OrigamiCollection** "，然后选择 " **暂存** " 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-291">In the **Hierarchy**, expand the **OrigamiCollection** and select the **Stage** object.</span></span>
+* <span data-ttu-id="ee49a-292">将 **TapToPlaceParent** 脚本拖到 "暂存" 对象上。</span><span class="sxs-lookup"><span data-stu-id="ee49a-292">Drag the **TapToPlaceParent** script onto the Stage object.</span></span>
+* <span data-ttu-id="ee49a-293">在 Visual Studio 中打开 **TapToPlaceParent** 脚本，并将其更新为以下内容：</span><span class="sxs-lookup"><span data-stu-id="ee49a-293">Open the **TapToPlaceParent** script in Visual Studio, and update it to be the following:</span></span>
 
 ```cs
 using UnityEngine;
@@ -632,26 +632,26 @@ public class TapToPlaceParent : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-294">导出、生成并部署应用。</span><span class="sxs-lookup"><span data-stu-id="b0662-294">Export, build and deploy the app.</span></span>
-* <span data-ttu-id="b0662-295">现在，您应该能够通过 gazing 将游戏置于特定位置，使用 "选择手势"，然后移动到一个新位置，然后再次使用 "选择手势"。</span><span class="sxs-lookup"><span data-stu-id="b0662-295">Now you should now be able to place the game in a specific location by gazing at it, using the Select gesture and then moving to a new location, and using the Select gesture again.</span></span>
+* <span data-ttu-id="ee49a-294">导出、生成并部署应用。</span><span class="sxs-lookup"><span data-stu-id="ee49a-294">Export, build and deploy the app.</span></span>
+* <span data-ttu-id="ee49a-295">现在，您应该能够通过 gazing 将游戏置于特定位置，使用 "选择手势"，然后移动到一个新位置，然后再次使用 "选择手势"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-295">Now you should now be able to place the game in a specific location by gazing at it, using the Select gesture and then moving to a new location, and using the Select gesture again.</span></span>
 
-## <a name="chapter-7---holographic-fun"></a><span data-ttu-id="b0662-296">第7章-全息娱乐</span><span class="sxs-lookup"><span data-stu-id="b0662-296">Chapter 7 - Holographic fun</span></span>
+## <a name="chapter-7---holographic-fun"></a><span data-ttu-id="ee49a-296">第7章-全息娱乐</span><span class="sxs-lookup"><span data-stu-id="ee49a-296">Chapter 7 - Holographic fun</span></span>
 
-### <a name="objectives"></a><span data-ttu-id="b0662-297">目标</span><span class="sxs-lookup"><span data-stu-id="b0662-297">Objectives</span></span>
+### <a name="objectives"></a><span data-ttu-id="ee49a-297">目标</span><span class="sxs-lookup"><span data-stu-id="ee49a-297">Objectives</span></span>
 
-* <span data-ttu-id="b0662-298">显示全息 underworld 的入口。</span><span class="sxs-lookup"><span data-stu-id="b0662-298">Reveal the entrance to a holographic underworld.</span></span>
+* <span data-ttu-id="ee49a-298">显示全息 underworld 的入口。</span><span class="sxs-lookup"><span data-stu-id="ee49a-298">Reveal the entrance to a holographic underworld.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="b0662-299">说明</span><span class="sxs-lookup"><span data-stu-id="b0662-299">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="ee49a-299">说明</span><span class="sxs-lookup"><span data-stu-id="ee49a-299">Instructions</span></span>
 
-<span data-ttu-id="b0662-300">接下来，我们将向您展示如何发现全息 underworld：</span><span class="sxs-lookup"><span data-stu-id="b0662-300">Now we'll show you how to uncover the holographic underworld:</span></span>
+<span data-ttu-id="ee49a-300">接下来，我们将向您展示如何发现全息 underworld：</span><span class="sxs-lookup"><span data-stu-id="ee49a-300">Now we'll show you how to uncover the holographic underworld:</span></span>
 
-* <span data-ttu-id="b0662-301">从 "项目" 面板中的 " **全息影像** " 文件夹：</span><span class="sxs-lookup"><span data-stu-id="b0662-301">From the **Holograms** folder in the Project Panel:</span></span>
-  * <span data-ttu-id="b0662-302">将 **Underworld** 拖到层次结构中，使其成为 **OrigamiCollection** 的子元素。</span><span class="sxs-lookup"><span data-stu-id="b0662-302">Drag **Underworld** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
-* <span data-ttu-id="b0662-303">在 " **脚本** " 文件夹中，创建一个名为 **HitTarget** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="b0662-303">In the **Scripts** folder, create a script named **HitTarget**.</span></span>
-* <span data-ttu-id="b0662-304">在 **层次结构** 中，展开 " **OrigamiCollection**"。</span><span class="sxs-lookup"><span data-stu-id="b0662-304">In the **Hierarchy**, expand the **OrigamiCollection**.</span></span>
-* <span data-ttu-id="b0662-305">展开 " **暂存** " 对象，然后选择 " **目标** " 对象 (蓝色风扇) 。</span><span class="sxs-lookup"><span data-stu-id="b0662-305">Expand the **Stage** object and select the **Target** object (blue fan).</span></span>
-* <span data-ttu-id="b0662-306">将 **HitTarget** 脚本拖到 **目标** 对象上。</span><span class="sxs-lookup"><span data-stu-id="b0662-306">Drag the **HitTarget** script onto the **Target** object.</span></span>
-* <span data-ttu-id="b0662-307">在 Visual Studio 中打开 **HitTarget** 脚本，并将其更新为以下内容：</span><span class="sxs-lookup"><span data-stu-id="b0662-307">Open the **HitTarget** script in Visual Studio, and update it to be the following:</span></span>
+* <span data-ttu-id="ee49a-301">从 "项目" 面板中的 " **全息影像** " 文件夹：</span><span class="sxs-lookup"><span data-stu-id="ee49a-301">From the **Holograms** folder in the Project Panel:</span></span>
+  * <span data-ttu-id="ee49a-302">将 **Underworld** 拖到层次结构中，使其成为 **OrigamiCollection** 的子元素。</span><span class="sxs-lookup"><span data-stu-id="ee49a-302">Drag **Underworld** into the Hierarchy to be a child of **OrigamiCollection**.</span></span>
+* <span data-ttu-id="ee49a-303">在 " **脚本** " 文件夹中，创建一个名为 **HitTarget** 的脚本。</span><span class="sxs-lookup"><span data-stu-id="ee49a-303">In the **Scripts** folder, create a script named **HitTarget**.</span></span>
+* <span data-ttu-id="ee49a-304">在 **层次结构** 中，展开 " **OrigamiCollection**"。</span><span class="sxs-lookup"><span data-stu-id="ee49a-304">In the **Hierarchy**, expand the **OrigamiCollection**.</span></span>
+* <span data-ttu-id="ee49a-305">展开 " **暂存** " 对象，然后选择 " **目标** " 对象 (蓝色风扇) 。</span><span class="sxs-lookup"><span data-stu-id="ee49a-305">Expand the **Stage** object and select the **Target** object (blue fan).</span></span>
+* <span data-ttu-id="ee49a-306">将 **HitTarget** 脚本拖到 **目标** 对象上。</span><span class="sxs-lookup"><span data-stu-id="ee49a-306">Drag the **HitTarget** script onto the **Target** object.</span></span>
+* <span data-ttu-id="ee49a-307">在 Visual Studio 中打开 **HitTarget** 脚本，并将其更新为以下内容：</span><span class="sxs-lookup"><span data-stu-id="ee49a-307">Open the **HitTarget** script in Visual Studio, and update it to be the following:</span></span>
 
 ```cs
 using UnityEngine;
@@ -675,31 +675,31 @@ public class HitTarget : MonoBehaviour
 }
 ```
 
-* <span data-ttu-id="b0662-308">在 Unity 中，选择 **目标** 对象。</span><span class="sxs-lookup"><span data-stu-id="b0662-308">In Unity, select the **Target** object.</span></span>
-* <span data-ttu-id="b0662-309">现在，两个公共属性在 **命中目标** 组件上可见，需要引用场景中的对象：</span><span class="sxs-lookup"><span data-stu-id="b0662-309">Two public properties are now visible on the **Hit Target** component and need to reference objects in our scene:</span></span>
-  * <span data-ttu-id="b0662-310">将 **Underworld** 从 "**层次结构**" 面板拖到 **命中目标** 组件上的 " **Underworld** " 属性。</span><span class="sxs-lookup"><span data-stu-id="b0662-310">Drag **Underworld** from the **Hierarchy** panel to the **Underworld** property on the **Hit Target** component.</span></span>
-  * <span data-ttu-id="b0662-311">从 "**层次结构**" 面板将 "**阶段**" 拖到对象上，**以隐藏\*\*\*\*命中目标** 组件的属性。</span><span class="sxs-lookup"><span data-stu-id="b0662-311">Drag **Stage** from the **Hierarchy** panel to the **Object to Hide** property on the **Hit Target** component.</span></span>
-* <span data-ttu-id="b0662-312">导出、生成并部署应用。</span><span class="sxs-lookup"><span data-stu-id="b0662-312">Export, build and deploy the app.</span></span>
-* <span data-ttu-id="b0662-313">将日式折纸收集到地面上，然后使用 "选择手势" 创建球体放置。</span><span class="sxs-lookup"><span data-stu-id="b0662-313">Place the Origami Collection on the floor, and then use the Select gesture to make a sphere drop.</span></span>
-* <span data-ttu-id="b0662-314">当球碰到目标 (蓝色风扇) 时，将发生爆炸。</span><span class="sxs-lookup"><span data-stu-id="b0662-314">When the sphere hits the target (blue fan), an explosion will occur.</span></span> <span data-ttu-id="b0662-315">该集合将隐藏，并且将显示 underworld 的孔。</span><span class="sxs-lookup"><span data-stu-id="b0662-315">The collection will be hidden and a hole to the underworld will appear.</span></span>
+* <span data-ttu-id="ee49a-308">在 Unity 中，选择 **目标** 对象。</span><span class="sxs-lookup"><span data-stu-id="ee49a-308">In Unity, select the **Target** object.</span></span>
+* <span data-ttu-id="ee49a-309">现在，两个公共属性在 **命中目标** 组件上可见，需要引用场景中的对象：</span><span class="sxs-lookup"><span data-stu-id="ee49a-309">Two public properties are now visible on the **Hit Target** component and need to reference objects in our scene:</span></span>
+  * <span data-ttu-id="ee49a-310">将 **Underworld** 从 "**层次结构**" 面板拖到 **命中目标** 组件上的 " **Underworld** " 属性。</span><span class="sxs-lookup"><span data-stu-id="ee49a-310">Drag **Underworld** from the **Hierarchy** panel to the **Underworld** property on the **Hit Target** component.</span></span>
+  * <span data-ttu-id="ee49a-311">从 "**层次结构**" 面板将 "**阶段**" 拖到对象上，**以隐藏\*\*\*\*命中目标** 组件的属性。</span><span class="sxs-lookup"><span data-stu-id="ee49a-311">Drag **Stage** from the **Hierarchy** panel to the **Object to Hide** property on the **Hit Target** component.</span></span>
+* <span data-ttu-id="ee49a-312">导出、生成并部署应用。</span><span class="sxs-lookup"><span data-stu-id="ee49a-312">Export, build and deploy the app.</span></span>
+* <span data-ttu-id="ee49a-313">将日式折纸收集到地面上，然后使用 "选择手势" 创建球体放置。</span><span class="sxs-lookup"><span data-stu-id="ee49a-313">Place the Origami Collection on the floor, and then use the Select gesture to make a sphere drop.</span></span>
+* <span data-ttu-id="ee49a-314">当球碰到目标 (蓝色风扇) 时，将发生爆炸。</span><span class="sxs-lookup"><span data-stu-id="ee49a-314">When the sphere hits the target (blue fan), an explosion will occur.</span></span> <span data-ttu-id="ee49a-315">该集合将隐藏，并且将显示 underworld 的孔。</span><span class="sxs-lookup"><span data-stu-id="ee49a-315">The collection will be hidden and a hole to the underworld will appear.</span></span>
 
-## <a name="the-end"></a><span data-ttu-id="b0662-316">结束</span><span class="sxs-lookup"><span data-stu-id="b0662-316">The end</span></span>
+## <a name="the-end"></a><span data-ttu-id="ee49a-316">结束</span><span class="sxs-lookup"><span data-stu-id="ee49a-316">The end</span></span>
 
-<span data-ttu-id="b0662-317">这就是本教程的结尾！</span><span class="sxs-lookup"><span data-stu-id="b0662-317">And that's the end of this tutorial!</span></span>
+<span data-ttu-id="ee49a-317">这就是本教程的结尾！</span><span class="sxs-lookup"><span data-stu-id="ee49a-317">And that's the end of this tutorial!</span></span>
 
-<span data-ttu-id="b0662-318">你已了解：</span><span class="sxs-lookup"><span data-stu-id="b0662-318">You learned:</span></span>
+<span data-ttu-id="ee49a-318">你已了解：</span><span class="sxs-lookup"><span data-stu-id="ee49a-318">You learned:</span></span>
 
-* <span data-ttu-id="b0662-319">如何在 Unity 中创建全息应用。</span><span class="sxs-lookup"><span data-stu-id="b0662-319">How to create a holographic app in Unity.</span></span>
-* <span data-ttu-id="b0662-320">如何使用注视、手势、语音、声音和空间映射。</span><span class="sxs-lookup"><span data-stu-id="b0662-320">How to make use of gaze, gesture, voice, sound, and spatial mapping.</span></span>
-* <span data-ttu-id="b0662-321">如何使用 Visual Studio 生成和部署应用。</span><span class="sxs-lookup"><span data-stu-id="b0662-321">How to build and deploy an app using Visual Studio.</span></span>
+* <span data-ttu-id="ee49a-319">如何在 Unity 中创建全息应用。</span><span class="sxs-lookup"><span data-stu-id="ee49a-319">How to create a holographic app in Unity.</span></span>
+* <span data-ttu-id="ee49a-320">如何使用注视、手势、语音、声音和空间映射。</span><span class="sxs-lookup"><span data-stu-id="ee49a-320">How to make use of gaze, gesture, voice, sound, and spatial mapping.</span></span>
+* <span data-ttu-id="ee49a-321">如何使用 Visual Studio 生成和部署应用。</span><span class="sxs-lookup"><span data-stu-id="ee49a-321">How to build and deploy an app using Visual Studio.</span></span>
 
-<span data-ttu-id="b0662-322">你现在已准备好开始创建自己的全息体验！</span><span class="sxs-lookup"><span data-stu-id="b0662-322">You are now ready to start creating your own holographic experience!</span></span>
+<span data-ttu-id="ee49a-322">你现在已准备好开始创建自己的全息体验！</span><span class="sxs-lookup"><span data-stu-id="ee49a-322">You are now ready to start creating your own holographic experience!</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b0662-323">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b0662-323">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee49a-323">请参阅</span><span class="sxs-lookup"><span data-stu-id="ee49a-323">See also</span></span>
 
-* [<span data-ttu-id="b0662-324">MR 基础知识 101E：使用仿真器完成项目</span><span class="sxs-lookup"><span data-stu-id="b0662-324">MR Basics 101E: Complete project with emulator</span></span>](holograms-101e.md)
-* [<span data-ttu-id="b0662-325">凝视</span><span class="sxs-lookup"><span data-stu-id="b0662-325">Gaze</span></span>](../../../design/gaze-and-commit.md)
-* [<span data-ttu-id="b0662-326">头部凝视并提交</span><span class="sxs-lookup"><span data-stu-id="b0662-326">Head-gaze and commit</span></span>](../../../design/gaze-and-commit.md)
-* [<span data-ttu-id="b0662-327">语音输入</span><span class="sxs-lookup"><span data-stu-id="b0662-327">Voice input</span></span>](../../../design/voice-input.md)
-* [<span data-ttu-id="b0662-328">空间音效</span><span class="sxs-lookup"><span data-stu-id="b0662-328">Spatial sound</span></span>](../../../design/spatial-sound.md)
-* [<span data-ttu-id="b0662-329">空间映射</span><span class="sxs-lookup"><span data-stu-id="b0662-329">Spatial mapping</span></span>](../../../design/spatial-mapping.md)
+* [<span data-ttu-id="ee49a-324">MR 基础知识 101E：使用仿真器完成项目</span><span class="sxs-lookup"><span data-stu-id="ee49a-324">MR Basics 101E: Complete project with emulator</span></span>](holograms-101e.md)
+* [<span data-ttu-id="ee49a-325">凝视</span><span class="sxs-lookup"><span data-stu-id="ee49a-325">Gaze</span></span>](../../../design/gaze-and-commit.md)
+* [<span data-ttu-id="ee49a-326">头部凝视并提交</span><span class="sxs-lookup"><span data-stu-id="ee49a-326">Head-gaze and commit</span></span>](../../../design/gaze-and-commit.md)
+* [<span data-ttu-id="ee49a-327">语音输入</span><span class="sxs-lookup"><span data-stu-id="ee49a-327">Voice input</span></span>](../../../design/voice-input.md)
+* [<span data-ttu-id="ee49a-328">空间音效</span><span class="sxs-lookup"><span data-stu-id="ee49a-328">Spatial sound</span></span>](../../../design/spatial-sound.md)
+* [<span data-ttu-id="ee49a-329">空间映射</span><span class="sxs-lookup"><span data-stu-id="ee49a-329">Spatial mapping</span></span>](../../../design/spatial-mapping.md)
