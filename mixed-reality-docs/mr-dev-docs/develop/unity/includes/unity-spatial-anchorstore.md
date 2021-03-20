@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: df8dbe19b0a93e2452a8e0b677145bed42b05010
-ms.sourcegitcommit: e51e18e443d73a74a9c0b86b3ca5748652cd1b24
+ms.openlocfilehash: bb2df8c85dd05981c1438bdb076b0aad16c7efd7
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603373"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104719917"
 ---
 # <a name="unity-2020--openxr"></a>[Unity 2020 + OpenXR](#tab/openxr)
+
+另外一个名为 **XRAnchorStore** 的 API 允许在会话之间保留定位点。 XRAnchorStore 是设备上保存的定位点的表示形式。 定位点可以从 Unity 场景中的 **ARAnchors** 保存、从存储加载到新 **ARAnchors** 或从存储中删除。
 
 > [!NOTE]
 > 这些定位点将保存并加载到同一设备上。 未来版本中将通过 Azure 空间锚点支持跨设备锚定存储。
@@ -48,13 +50,15 @@ ARAnchorManager arAnchorManager = GetComponent<ARAnchorManager>();
 XRAnchorStore anchorStore = await arAnchorManager.subsystem.LoadAnchorStoreAsync();
 ```
 
-若要查看保留/unpersisting 定位点的完整示例，请查看 [Mixed Reality OpenXR 插件示例场景](../openxr-getting-started.md#hololens-2-samples)中的定位点 > 锚样品 GameObject 和 AnchorsSample.cs 脚本：
+若要查看保留/unpersisting 定位点的完整示例，请查看 [Mixed Reality OpenXR 插件示例场景](../openxr-getting-started.md#hololens-2-samples)中的定位点 > 定位点示例 GameObject 和 AnchorsSample 脚本：
 
 ![在 Unity 编辑器中打开的 "层次结构" 面板的屏幕截图，其中突出显示了定位点示例](../images/openxr-features-img-04.png)
 
 ![在 Unity 编辑器中打开的检查器面板屏幕截图，其中突出显示了定位点示例脚本](../images/openxr-features-img-05.png)
 
 # <a name="unity-20192020--windows-xr-plugin"></a>[Unity 2019/2020 + Windows XR 插件](#tab/winxr)
+
+名为 **XRAnchorStore** 的 API 允许在会话之间保留定位点。 XRAnchorStore 是设备上保存的定位点的表示形式。 定位点可以从 Unity 场景中的 **ARAnchors** 保存、从存储加载到新 **ARAnchors** 或从存储中删除。
 
 > [!NOTE]
 > 这些定位点将保存并加载到同一设备上。 未来版本中将通过 Azure 空间锚点支持跨设备锚定存储。
@@ -105,6 +109,8 @@ XRAnchorStore anchorStore = await arAnchorManager.subsystem.TryGetAnchorStoreAsy
 ```
 
 # <a name="legacy-wsa"></a>[旧 WSA](#tab/wsa)
+
+**WorldAnchorStore** 是创建全息体验的关键，其中全息在应用程序的实例上保持特定的实际位置。 然后，用户可以在所需位置固定各个全息影像，稍后在对应用程序的许多应用程序的同一位置进行查找。
 
 **命名空间：** *UnityEngine. XR*<br>
 **类：** *WorldAnchorStore*
@@ -186,84 +192,6 @@ for (int index = 0; index < ids.Length; index++)
 {
     Debug.Log(ids[index]);
 }
-```
-
-## <a name="building-a-world-scale-experience"></a>构建全球范围的体验
-
-**命名空间：** *UnityEngine. XR*<br>
-**类型：** *WorldAnchor*
-
-对于 HoloLens 上真正的 **全球规模体验** ，让用户游离5米以上，你将需要超出用于房间规模体验的新技术。 你将使用的一项关键方法是创建一个 [空间定位点](../../../design/coordinate-systems.md#spatial-anchors) ，以便在物理世界中精确地锁定影像的分类，无论用户漫游到多远，然后 [在以后的会话中再次查找这些全息影像](../../../design/coordinate-systems.md#spatial-anchor-persistence)。
-
-在 Unity 中，可以通过将 **WorldAnchor** Unity 组件添加到 GameObject 来创建空间锚。
-
-### <a name="adding-a-world-anchor"></a>添加世界锚
-
-若要添加世界定位点，请 `AddComponent<WorldAnchor>()` 使用要锚定的转换，对游戏对象调用。
-
-```cs
-WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
-```
-
-就这么简单！ 现在，此游戏对象将锚定到其在物理世界中的当前位置-你可能会看到其 Unity 世界坐标在一段时间后会略微调整，以确保物理对齐。 请参阅 [加载世界定位点](#loading-a-worldanchor) ，在未来的应用程序会话中再次查找此定位位置。
-
-### <a name="removing-a-world-anchor"></a>删除世界锚
-
-如果不再希望 GameObject 锁定到物理世界位置，并且不打算将其移动到此帧，则可以只在世界锚点组件上调用销毁。
-
-```cs
-Destroy(gameObject.GetComponent<WorldAnchor>());
-```
-
-如果要将 GameObject 移动到此帧，则需改为调用 DestroyImmediate。
-
-```cs
-DestroyImmediate(gameObject.GetComponent<WorldAnchor>());
-```
-
-### <a name="moving-a-world-anchored-gameobject"></a>移动世界定位的 GameObject
-
-GameObject 在世界锚点上时无法移动。 如果需要将 GameObject 移动到此框架，需要执行以下操作：
-
-1. DestroyImmediate 世界锚组件
-2. 移动 GameObject
-3. 向 GameObject 添加新的世界锚点组件。
-
-```cs
-DestroyImmediate(gameObject.GetComponent<WorldAnchor>());
-gameObject.transform.position = new Vector3(0, 0, 2);
-WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
-```
-
-### <a name="handling-locatability-changes"></a>处理 Locatability 更改
-
-在物理环境中，可能无法在某个时间点定位 WorldAnchor。 如果出现这种情况，则 Unity 不会更新定位对象的转换。 在应用程序运行时，这也可能会更改。 如果无法处理 locatability 中的更改，则会导致对象不显示在世界上正确的物理位置。
-
-若要获得有关 locatability 更改的通知：
-
-1. 订阅 OnTrackingChanged 事件
-2. 处理事件
-
-每当基础空间锚点在正在定位的状态与不能定位的状态之间发生变化时，将调用 **OnTrackingChanged** 事件。
-
-```cs
-anchor.OnTrackingChanged += Anchor_OnTrackingChanged;
-```
-
-然后处理事件：
-
-```cs
-private void Anchor_OnTrackingChanged(WorldAnchor self, bool located)
-{
-    // This simply activates/deactivates this object and all children when tracking changes
-    self.gameObject.SetActiveRecursively(located);
-}
-```
-
-有时会立即定位锚点。 在这种情况下，当 AddComponent () 返回时，定位点的 isLocated 属性将设置为 true <WorldAnchor> 。 因此，不会触发 OnTrackingChanged 事件。 清理模式是在附加定位点后使用初始 IsLocated 状态调用 OnTrackingChanged 处理程序。
-
-```cs
-Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 ```
 
 ## <a name="persisting-holograms-for-multiple-devices"></a>为多台设备保留全息影像

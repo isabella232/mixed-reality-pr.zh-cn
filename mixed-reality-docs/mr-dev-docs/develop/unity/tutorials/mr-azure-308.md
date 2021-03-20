@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 308 - 跨设备通知
+title: HoloLens (第一代) 和 Azure 308-跨设备通知
 description: 完成本课程，了解如何在混合现实应用程序中实现 Azure 通知中心、Azure Functions 以及 Azure 存储和表。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，通知，函数，表，通知中心，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 5bf6720fe7be178bf4fb15ae2b87f4ff502afe9b
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8fef7fe2da76e228264037ca51daa57662fbc554
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581272"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730584"
 ---
-# <a name="mr-and-azure-308-cross-device-notifications"></a>MR 和 Azure 308：跨设备通知
+# <a name="hololens-1st-gen-and-azure-308-cross-device-notifications"></a>HoloLens (第一代) 和 Azure 308：跨设备通知
 
 <br>
 
@@ -57,7 +57,7 @@ ms.locfileid: "98581272"
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -124,22 +124,22 @@ ms.locfileid: "98581272"
     > [!NOTE] 
     > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室中按照本教程进行学习，请咨询教师或 proctors，以获得设置新帐户的帮助。
 
-2.  登录后，单击左上角的 " **新建** "，搜索 " **通知中心**"，然后单击 "*_输入_* _"。
+2.  登录后，单击左上角的 " **新建** "，搜索 " **通知中心**"，然后单击 " **_输入_**"。
 
     ![搜索通知中心](images/AzureLabs-Lab8-06.png)
 
     > [!NOTE] 
-    > 在较新的门户中，可以将 " _*_新建_*_ " 一词替换为 _ * "创建资源"。
+    > 在较新的门户中，可以使用 _ * Create a 资源 * * 来替换 word ***New** _。
 
 3.  新页将提供 *通知中心* 服务的说明。 在此提示符下，选择 " **创建** " 按钮以创建与此服务的关联。
 
     ![创建通知中心实例](images/AzureLabs-Lab8-07.png)
 
-4.  单击 "*_创建_*" 后，请执行以下操作：
+4.  单击 " ***创建***" 后：
 
     1.  为此服务实例插入所需的名称。
 
-    2.  提供一个 _ *命名空间**，你可以将其与此应用关联。
+    2.  提供可与此应用关联的 **命名空间** 。
 
     3.  选择一个 **位置。**
 
@@ -182,7 +182,7 @@ ms.locfileid: "98581272"
 2.  登录后，单击左上角的 " **新建** "，然后搜索 " **存储帐户**"，然后单击 " **Enter**"。
 
     > [!NOTE] 
-    > 在较新的门户中，可以将 " **_新建_" 一词 *替换为 _*"创建资源**"。
+    > 在较新的门户中，可以使用 _ * Create a 资源 * * 来替换 word ***New** _。
 
 3.  从列表中选择 " **存储帐户-blob、文件、表、队列** "。
 
@@ -216,7 +216,7 @@ ms.locfileid: "98581272"
 
     10. 如果这是一个选项，请将 **虚拟网络** 保持为 **禁用状态** 。
 
-    11. 单击“创建”。
+    11. 单击 **“创建”** 。
 
         ![填写存储详细信息](images/AzureLabs-Lab8-15.png)
 
@@ -374,7 +374,7 @@ ms.locfileid: "98581272"
 
     9. 在此应用中不需要 *Application Insights* ，因此可随意将其 **关闭**。
 
-    10. 单击“创建”。
+    10. 单击 **“创建”** 。
 
         ![创建新实例](images/AzureLabs-Lab8-34.png)
 
@@ -734,9 +734,9 @@ ms.locfileid: "98581272"
 
     ![导入到包](images/AzureLabs-Lab8-61.png)
 
-3.  单击 "*_导入_*" 按钮以将项添加到项目。
+3.  单击 " ***导入*** " 按钮，将项添加到项目。
 
-4.  在项目视图中，在 "**插件**" 下，单击 "_ *存储**" 文件夹，并 *仅* 选择以下插件：
+4.  在项目视图中，在 "**插件**" 下，选择 "**存储**" 文件夹，并 *仅* 选择以下插件：
 
     -   Microsoft.Data.Edm
     -   Microsoft.Data.OData
@@ -759,7 +759,7 @@ ms.locfileid: "98581272"
 
         ![为 dll 设置不处理](images/AzureLabs-Lab8-64.png)
 
-7.  选中 "**平台设置**" 下的 "**不处理**" 框，并单击 "*_应用_*"。
+7.  选中 "**平台设置**" 下的 "**不处理**" 框，并单击 "**_应用_**"。
 
     ![不应用处理](images/AzureLabs-Lab8-65.png)
 
@@ -770,7 +770,7 @@ ms.locfileid: "98581272"
 
 现在，需要创建包含代码的脚本来运行此应用程序。
 
-需要创建的第一个脚本是 _ * TableToScene * *，它负责：
+需要创建的第一个脚本是 **TableToScene**，它负责：
 
 -   读取 Azure 表中的实体。
 -   使用表数据确定要生成的对象，以及在哪个位置生成的对象。
@@ -830,7 +830,7 @@ ms.locfileid: "98581272"
     >
     > ![提取帐户密钥](images/AzureLabs-Lab8-70.png)
 
-7.  现在，请添加 **开始 ( # B1** 和 **唤醒 ( # B3** 方法，以便初始化类。
+7.  现在，添加 **开始 ()** 和 **唤醒 ()** 方法来初始化类。
 
     ```csharp
         /// <summary>
@@ -1018,7 +1018,7 @@ ms.locfileid: "98581272"
 
     ![获取函数 URL](images/AzureLabs-Lab8-74.png)
 
-5.  现在，请添加 **开始 ( # B1** 和 **唤醒 ( # B3** 方法，以便初始化类。
+5.  现在，添加 **开始 ()** 和 **唤醒 ()** 方法来初始化类。
 
     ```csharp
         /// <summary>
@@ -1040,7 +1040,7 @@ ms.locfileid: "98581272"
         }
     ```
 
-6.  在 **Update ( # B1** 方法中，添加以下代码，用于检测鼠标输入并拖动，这反过来会移动场景中的 gameobject。 如果用户已拖放了一个对象，它会将该对象的名称和坐标传递到 **UpdateCloudScene # B1 (** 方法，此方法将调用 azure Function App 服务，该服务将更新 azure 表并触发通知。
+6.  在 **Update ()** 方法中，添加下面的代码，用于检测鼠标输入并拖动，这反过来会移动场景中的 gameobject。 如果用户已拖放了一个对象，它会将该对象的名称和坐标传递给 **UpdateCloudScene ()** 方法，该方法将调用 azure Function App 服务，该服务将更新 azure 表并触发通知。
 
     ```csharp
         /// <summary>
@@ -1086,7 +1086,7 @@ ms.locfileid: "98581272"
         }
     ```
 
-7.  现在，按如下所示添加 **UpdateCloudScene ( # B1** 方法：
+7.  现在，按如下所示添加 **UpdateCloudScene ()** 方法：
 
     ```csharp
         private IEnumerator UpdateCloudScene(string objName, double xPos, double yPos, double zPos)
@@ -1216,8 +1216,8 @@ ms.locfileid: "98581272"
     1.  在 " **其他设置** " 选项卡中：
 
         1.  **脚本运行时版本** 应为 **试验** ( .net 4.6 等效) 
-        2.  **脚本后端** 应为 **_.net_* _
-        3.  _ *API 兼容级别** 应为 **.net 4.6**
+        2.  **脚本编写后端** 应为 **_.net_**
+        3.  **API 兼容级别** 应为 **.net 4.6**
 
             ![api 兼容性](images/AzureLabs-Lab8-87.png)
 
@@ -1361,7 +1361,7 @@ ms.locfileid: "98581272"
 
     ![插入通知中心策略终结点](images/AzureLabs-Lab8-97.png)
 
-6.  现在，请添加 **开始 ( # B1** 和 **唤醒 ( # B3** 方法，以便初始化类。
+6.  现在，添加 **开始 ()** 和 **唤醒 ()** 方法来初始化类。
 
     ```csharp
         /// <summary>
@@ -1412,7 +1412,7 @@ ms.locfileid: "98581272"
         }
     ```
 
-8.  以下方法 **InitNotificationAsync ( # B1**，将在初始化时将应用程序注册到通知中心服务。 代码已注释掉，因为 Unity 将不能生成项目。 在 Visual Studio 中导入 Azure 消息传递 Nuget 包时，将删除注释。
+8.  以下方法 **InitNotificationAsync ()** 将在初始化时向通知中心服务注册应用程序。 代码已注释掉，因为 Unity 将不能生成项目。 在 Visual Studio 中导入 Azure 消息传递 Nuget 包时，将删除注释。
 
     ```csharp
         /// <summary>
@@ -1435,7 +1435,7 @@ ms.locfileid: "98581272"
         }
     ```
 
-9.  每次收到通知时，都会触发以下处理程序 **\_ ( PushNotificationReceived**。 它将反序列化通知，该通知将是已移动到桌面应用程序中的 Azure 表实体，然后将 MR 场景中的相应 GameObject 移到相同的位置。 
+9.  每次收到通知时，将触发以下处理程序 **\_ PushNotificationReceived ()**。 它将反序列化通知，该通知将是已移动到桌面应用程序中的 Azure 表实体，然后将 MR 场景中的相应 GameObject 移到相同的位置。 
     
     > [!IMPORTANT]
     > 代码已被注释掉，因为代码引用 Azure 消息库，你将在 Visual Studio 中使用 Nuget 包管理器生成 Unity 项目后添加该消息库。 因此，除非已注释掉，否则 Unity 项目将无法生成。请注意，如果你生成项目，然后希望返回到 Unity，你将需要 **重新注释** 该代码。
@@ -1487,9 +1487,9 @@ ms.locfileid: "98581272"
 
 1.  导航到 "**生成设置**" (**文件**  >  **生成设置**") 。
 
-2.  在 " **生成设置** " 菜单中，确保 **Unity c # 项目** _ 为勾选 (这将允许您在生成) 之后编辑此项目中的脚本。
+2.  从 " **生成设置** " 菜单中，确保 **Unity c # 项目*** 是勾选 (这将允许您在生成) 之后编辑此项目中的脚本。
 
-3.  完成此操作后，单击 "生成"。
+3.  完成此操作后，单击 " **生成**"。
 
     ![生成项目](images/AzureLabs-Lab8-99.png)
 
@@ -1523,7 +1523,7 @@ ms.locfileid: "98581272"
 
     ![打开 nuget 管理器](images/AzureLabs-Lab8-102.png)
 
-3.  选择 " **_浏览_"*选项卡并搜索 _* windowsazure.storage**。
+3.  选择 "**浏览**" 选项卡并搜索 _ * windowsazure.storage * *。
 
     ![查找 windows azure 消息包](images/AzureLabs-Lab8-103.png)
 
@@ -1549,7 +1549,7 @@ ms.locfileid: "98581272"
     using Microsoft.WindowsAzure.Messaging;
     ```
 
-2. InitNotificationsAsync 中的所有代码 **( # B1** 方法：
+2. **InitNotificationsAsync ()** 方法中的所有代码：
 
     ```csharp
         /// <summary>
@@ -1617,7 +1617,7 @@ ms.locfileid: "98581272"
 
     ![打开存储关联](images/AzureLabs-Lab8-105.png)
 
-3.  将显示一个新窗口 **，称为 "将应用与 Windows 应用商店关联"**。 单击“下一步”  。
+3.  将显示一个新窗口 **，称为 "将应用与 Windows 应用商店关联"**。 单击“下一步”。
 
     ![切换到下一个屏幕](images/AzureLabs-Lab8-106.png)
 
@@ -1680,10 +1680,10 @@ ms.locfileid: "98581272"
  
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 能否使用如何更改 Gameobject 的颜色并将该通知发送到其他应用程序查看场景？
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 能否将 Gameobject 移动到 MR 应用并在桌面应用中看到更新的场景？
