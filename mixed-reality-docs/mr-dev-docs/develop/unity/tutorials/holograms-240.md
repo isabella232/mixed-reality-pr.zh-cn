@@ -1,19 +1,19 @@
 ---
-title: MR 共享 240 - 多个 HoloLens 设备
+title: HoloLens (第一代) 共享 240-多个 HoloLens 设备
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 了解共享全息影像的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，共享，网络，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 97f2067c043912e7608361e73e54fdf769b8bf51
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8e3631c80702f04e9f7e50c98bed91d92c332841
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582922"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730144"
 ---
-# <a name="mr-sharing-240-multiple-hololens-devices"></a>MR 共享 240：多个 HoloLens 设备
+# <a name="hololens-1st-gen-sharing-240-multiple-hololens-devices"></a>HoloLens (第一代) 共享240：多个 HoloLens 设备
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
@@ -69,7 +69,7 @@ ms.locfileid: "98582922"
 ### <a name="instructions"></a>说明
 
 * 启动 Unity。
-* 选择“打开”  。
+* 选择“打开”。
 * 输入位置作为之前 unarchived 的 **SharedHolograms** 文件夹。
 * 选择 " **项目名称** "，然后单击 " **选择文件夹**"。
 * 在 **层次结构** 中，右键单击 **主相机** ，然后选择 " **删除**"。

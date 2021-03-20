@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 309-Application insights
+title: HoloLens (第一代) 和 Azure 309-Application insights
 description: 完成本课程，了解如何使用 Azure 应用程序 Insights 服务在混合现实应用程序内收集有关用户行为的分析。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，application insights，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 5d599e7c3c6f887675bf010a10fb8841e80143db
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: efd6a3f8bf526dcf6a7eaee199f5c22ffa1dd639
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582962"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730374"
 ---
-# <a name="mr-and-azure-309-application-insights"></a>MR 和 Azure 309：Application Insights
+# <a name="hololens-1st-gen-and-azure-309-application-insights"></a>HoloLens (第一代) 和 Azure 309： Application insights
 
 <br>
 
@@ -49,7 +49,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 > [!NOTE]
 > 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -433,7 +433,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
     > [!NOTE] 
     > 按照第 [1 章第 1](#chapter-1---the-azure-portal)步中所述，使用 Azure 门户中的 *服务密钥*，正确设置 **instrumentationKey、applicationId 和 API_Key** 值。
 
-6.  然后，添加 **开始 ( # B1** 和 **唤醒 ( # B3** 方法，当类初始化时，将调用该方法：
+6.  然后添加 **启动 ()** 和 **唤醒 ()** 方法，当类初始化时，将调用这些方法：
 
     ```csharp
         /// <summary>
@@ -557,7 +557,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-5.  现在需要添加 **唤醒 ( # B1** 和 **Start ( # B3** 方法的代码。
+5.  现在需要添加 **唤醒 ()** 和 **启动 ()** 方法的代码。
 
     ```csharp
         private void Awake()
@@ -594,7 +594,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-6.  在 " **注视** " 类中，在 **Update ( # B1** 方法中添加以下代码，以投影 *Raycast* 并检测目标命中：
+6.  在 " **注视** " 类中，将以下代码添加到 **Update ()** 方法中，以便投影 *Raycast* 并检测目标命中：
 
     ```csharp
         /// <summary>
@@ -658,7 +658,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-7.  添加 **ResetFocusedObject ( # B1** 方法，以便在用户查看对象时将数据发送到 **Application Insights** 。
+7.  添加 **ResetFocusedObject ()** 方法，以便在用户查看对象时将数据发送到 **Application Insights** 。
 
     ```csharp
         /// <summary>
@@ -827,7 +827,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-6.  在 **DataFromAnalytics** 类中，在 **Start ( # B1** 方法的后面添加以下名为 FetchAnalytics 的方法 **( # B3**。 此方法负责填充键值对的列表，其中包含 *GameObject* 和占位符事件计数号。 然后初始化 **GetWebRequest ( # B1** 协同程序。 在此方法中，还可以找到对 *Application Insights* 的调用的查询结构，作为 *查询 URL* 终结点。
+6.  在 **DataFromAnalytics** 类中，在 **Start ()** 方法的后面，添加以下名为 **FetchAnalytics ()** 的方法。 此方法负责填充键值对的列表，其中包含 *GameObject* 和占位符事件计数号。 然后，它会将 GetWebRequest 初始化为协同程序 **()** 。 在此方法中，还可以找到对 *Application Insights* 的调用的查询结构，作为 *查询 URL* 终结点。
 
     ```csharp
         private void FetchAnalytics()
@@ -859,7 +859,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-7.  在 **FetchAnalytics ( # B1** 方法的下方，添加一个名为 **( GetWebRequest** 的方法，该方法将返回 *IEnumerator*。 此方法负责请求在 *Application Insights* 中调用与特定 *GameObject* 对应的事件次数。 所有发送的查询都返回后，将调用 **DetermineWinner ( # B1** 方法。
+7.  在 **FetchAnalytics ()** 方法的下方，添加一个名为 **() GetWebRequest** 的方法，该方法将返回 *IEnumerator*。 此方法负责请求在 *Application Insights* 中调用与特定 *GameObject* 对应的事件次数。 所有发送的查询都返回后，将调用 **DetermineWinner ()** 方法。
 
     ```csharp
         /// <summary>
@@ -925,7 +925,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-8.  下一种方法是 **DetermineWinner ( # B1**，这会根据最大事件计数对 *GameObject* 和 *Int* 对的列表进行排序。 然后，它会将该 *GameObject* 的材料颜色更改为 *绿色* (为具有最高计数) 的反馈。 这将显示一条包含分析结果的消息。
+8.  下一种方法是 **DetermineWinner ()**，它根据最大事件计数对 *GameObject* 和 *Int* 对的列表进行排序。 然后，它会将该 *GameObject* 的材料颜色更改为 *绿色* (为具有最高计数) 的反馈。 这将显示一条包含分析结果的消息。
 
     ```csharp
         /// <summary>
@@ -1061,7 +1061,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }
     ```
 
-5.  在 **移动** 类中的空 **更新 ( # B1** 方法 *下*，插入以下允许用户使用手形控制器在虚拟空间中移动的方法：
+5.  在 **移动** 类中的空 **更新 ()** 方法 *下*，插入以下允许用户使用手形控制器在虚拟空间中移动的方法：
 
     ```csharp
         /// <summary>
@@ -1179,7 +1179,7 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
         }   
     ```
 
-6.  最后，在 **Update ( # B1** 方法中添加方法调用。
+6.  最后，在 **Update ()** 方法中添加方法调用。
 
     ```csharp
         // Update is called once per frame
@@ -1274,10 +1274,10 @@ Application Insights 是一项 Microsoft 服务，它允许开发人员从其应
 
 ## <a name="bonus-exercises"></a>额外练习
 
-**练习1**
+**练习 1**
 
 尝试生成，而不是手动创建 ObjectInScene 对象，并在脚本内的平面上设置它们的坐标。 通过这种方式，你可以询问 Azure 最受欢迎的对象 (从注视或邻近结果) ，并生成一个 *额外* 的对象。
 
-**练习2**
+**练习 2**
 
 按时间对 Application Insights 结果进行排序，以便获取最相关的数据，并在应用程序中实现该时间敏感的数据。

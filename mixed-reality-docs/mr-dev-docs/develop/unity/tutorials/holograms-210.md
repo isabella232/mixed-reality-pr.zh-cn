@@ -1,19 +1,19 @@
 ---
-title: MR 输入 210 - 凝视
+title: HoloLens (第一代) 输入 210-注视
 description: 遵循以下编码演练，使用 Unity、Visual Studio 和 HoloLens 来了解注视概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，院校，教程，注视，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 7e8d72bc4d37d76f8f9ec40956cb85591e237ac8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 99c0d2ae00416f5d26e99e6d7d00c73ea07e5fb3
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583867"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730324"
 ---
-# <a name="mr-input-210-gaze"></a>MR 输入 210：凝视
+# <a name="hololens-1st-gen-input-210-gaze"></a>HoloLens (第一代) 输入210：注视
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
@@ -206,8 +206,8 @@ ms.locfileid: "98583867"
 ### <a name="instructions"></a>说明
 
 1. 在 "**层次结构**" 面板中，展开 " **AstroMan** -> **GEO_G** -> **Back_Center** " 对象。
-2. 双击 " **Interactible.cs** " 在 Visual Studio 中打开它。
-3. 取消注释 **IFocusable. OnFocusEnter 中的行 ( # B1** 和 **IFocusable ( # B3** in **Interactible.cs** 中的回调。 当焦点 (通过注视或控制器) 进入并退出特定 GameObject 的碰撞器时，混合现实工具包的 InputManager 将调用这些方法。
+2. 双击 " **Interactible** " 在 Visual Studio 中打开它。
+3. 取消注释 IFocusable 中的行 **OnFocusEnter ()** 和 IFocusable **中的** **()** 回调。 当焦点 (通过注视或控制器) 进入并退出特定 GameObject 的碰撞器时，混合现实工具包的 InputManager 将调用这些方法。
 
 ```cs
 /* TODO: DEVELOPER CODING EXERCISE 2.d */
@@ -265,13 +265,13 @@ void IFocusable.OnFocusExit()
 
 ### <a name="instructions"></a>说明
 
-我们将使用 **DirectionIndicator.cs** 文件，该文件将：
+我们将使用 **DirectionIndicator** 文件，该文件将：
 
 1. 如果用户不 gazing 在全息影像上，则显示方向指示器。
 2. 如果用户在全息影像上 gazing，则隐藏方向指示器。
 3. 更新方向指示器以指向全息影像。
 
-让我们开始吧。
+现在就开始吧。
 
 1. 单击 "**层次结构**" 面板中的 **AstroMan** 对象，然后 **单击箭头** 将其展开。
 2. 在 "**层次结构**" 面板中，选择 " **AstroMan**" 下的 **DirectionalIndicator** 对象。
@@ -279,7 +279,7 @@ void IFocusable.OnFocusExit()
 4. 在菜单中，键入 "搜索框 **方向" 指示器**。 选择搜索结果。
 5. 在 "**层次结构**" 面板中，将 **cursor** 对象拖放到 **检查器** 的 **cursor** 属性上。
 6. 在 "**项目**" 面板中，将 " **DirectionalIndicator** **" 资产** 拖放到 **检查器** 的 "**方向指示器**" 属性中。
-7. 生成并部署应用。
+7. 构建并部署应用。
 8. 观看方向指示器对象如何帮助您找到 astronaut。
 
 ## <a name="chapter-5---billboarding"></a>第5章-Billboarding
@@ -290,7 +290,7 @@ void IFocusable.OnFocusExit()
 
 * 使用 billboarding，让全息影像始终面向你。
 
-我们将使用 **Billboard.cs** 文件来保持 GameObject，使其始终面向用户。
+我们将使用 **GameObject 文件来** 保持面向用户的面向用户，使其始终面向用户。
 
 1. 在 " **层次结构** " 面板中，选择 " **AstroMan** " 对象。
 2. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
@@ -318,15 +318,15 @@ void IFocusable.OnFocusExit()
 
 标记靠对象从不完全离开用户的视图。 可以将标记作为附加到用户 head 的对象（通过橡胶带）。 随着用户的移动，内容将一直滑入视图边缘，无需完全离开。 当用户 gazes 沿标记的对象时，它会更全面地进入视图。
 
-我们将使用 **SimpleTagalong.cs** 文件，该文件将：
+我们将使用 **SimpleTagalong** 文件，该文件将：
 
 1. 确定 Tag-Along 对象是否处于相机边界内。
 2. 如果不在视图的 "被" Tag-Along 截
 3. 否则，将 Tag-Along 定位到用户的默认距离。
 
-为此，我们必须先更改 **Interactible.cs** 脚本，以便调用 **TagalongAction**。
+为此，必须首先更改 **Interactible** 脚本，以便调用 **TagalongAction**。
 
-1. 完成编码练习6，编辑 **Interactible.cs** 。 (取消注释行84到 87) 。
+1. 完成编码练习6，编辑 **Interactible** 。 (取消注释行84到 87) 。
 
 ```cs
 /* TODO: DEVELOPER CODING EXERCISE 6.a */
@@ -337,9 +337,9 @@ if (interactibleAction != null)
 }
 ```
 
-当点击全息影像时，与 **Interactible.cs** 配对的 **InteractibleAction.cs** 脚本将执行自定义操作。 在这种情况下，我们将专门用于标记。
+当点击全息影像时，与 **Interactible** 配对的 **InteractibleAction** 脚本将执行自定义操作。 在这种情况下，我们将专门用于标记。
 
-* 在 " **脚本** " 文件夹中，单击 " **TagalongAction.cs** 资产" 以在 Visual Studio 中打开。
+* 在 " **脚本** " 文件夹中，单击要在 Visual Studio 中打开的 **TagalongAction** 资产。
 * 完成编码练习，或将其更改为：
   * 在 **层次结构** 的顶部，在搜索栏中键入 " **ChestButton_Center** "，然后选择结果。
   * 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
@@ -357,7 +357,7 @@ if (interactibleAction != null)
 * 将 billboarding 添加到 gazed 对象，并将透视轴设置为 XY。
 * 然后，将简单的 Tag-Along 添加到对象。
 
-下面是 **TagalongAction.cs** 的解决方案：
+下面是 **TagalongAction** 的解决方案：
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
@@ -407,5 +407,5 @@ public class TagalongAction : InteractibleAction
 }
 ```
 
-* 试试看！ 生成并部署应用。
+* 试试看！ 构建并部署应用。
 * 观察内容如何沿着注视点的中心，但不会不断地进行阻止。

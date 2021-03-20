@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 312 - 机器人集成
+title: HoloLens (第一代) 和 Azure 312-机器人集成
 description: 完成本课程，了解如何使用 Microsoft Bot Framework v4 创建和部署 bot，并在混合现实应用程序中与其通信。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，计算机视觉，hololens，沉浸，vr，microsoft bot framework v4，web 应用机器人，bot framework，microsoft bot，Windows 10，Visual Studio
-ms.openlocfilehash: 6b8b4624615a3c3f62800b396803572b0b67ad1a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5bef129b9ccbbba6bf2bce835bd1567d4f596932
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582461"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730314"
 ---
-# <a name="mr-and-azure-312-bot-integration"></a>MR 和 Azure 312：机器人集成
+# <a name="hololens-1st-gen-and-azure-312-bot-integration"></a>HoloLens (第一代) 和 Azure 312：机器人集成
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
@@ -45,7 +45,7 @@ ms.locfileid: "98582461"
 > [!NOTE]
 > 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -74,9 +74,9 @@ ms.locfileid: "98582461"
 
 第一步是创建机器人作为本地 ASP.Net Core Web 应用程序。 完成并测试后，将其发布到 Azure 门户。
 
-1.  打开 Visual Studio。 创建一个新项目，选择 " **ASP NET Core Web 应用程序** " 作为项目类型 (你将在 ".net core") 下找到它，然后 **MyBot** 将其调用。 单击“确定”。
+1.  打开 Visual Studio。 创建一个新项目，选择 " **ASP NET Core Web 应用程序** " 作为项目类型 (你将在 ".net core") 下找到它，然后 **MyBot** 将其调用。 单击“确定”。 
 
-2.  在将显示的窗口中选择 " **空**"。 此外，请确保将目标设置为 **ASP NET Core 2.0** ，并将身份验证设置为 " **无身份验证**"。 单击“确定”。  
+2.  在将显示的窗口中选择 " **空**"。 此外，请确保将目标设置为 **ASP NET Core 2.0** ，并将身份验证设置为 " **无身份验证**"。 单击“确定”。   
 
     ![创建机器人应用程序](images/AzureLabs-Lab312-01.png)
 
@@ -325,7 +325,7 @@ ms.locfileid: "98582461"
     ![将机器人发布到 Azure Web 应用机器人服务](images/AzureLabs-Lab312-17.png)
 
 4. 如果尚未登录到 Microsoft 帐户，则必须在此处执行此操作。
-5. 在 "**发布**" 页上，你将发现你必须设置用于 *Web 应用程序机器人* 服务创建的同一 **订阅**。 然后，将 " **视图** " 设置为 " **资源组** "，并在下拉文件夹结构中，选择之前创建的 **资源组** 。 单击“确定”。 
+5. 在 "**发布**" 页上，你将发现你必须设置用于 *Web 应用程序机器人* 服务创建的同一 **订阅**。 然后，将 " **视图** " 设置为 " **资源组** "，并在下拉文件夹结构中，选择之前创建的 **资源组** 。 单击“确定”。  
 
     ![将机器人发布到 Azure Web 应用机器人服务](images/AzureLabs-Lab312-18.png)
 
@@ -576,7 +576,7 @@ ms.locfileid: "98582461"
     public class GazeInput : MonoBehaviour
     ```
 
-5.  然后，将以下变量添加到 **GazeInput** 类中的 **Start ( # B1** 方法之上：
+5.  然后将以下变量添加到 **GazeInput** 类中，并将其置于 **Start ()** 方法之上：
 
     ```csharp
         [Tooltip("Used to compare whether an object is to be interacted with.")]
@@ -612,7 +612,7 @@ ms.locfileid: "98582461"
         private Vector3 _gazeDirection;
     ```
 
-6.  应添加 **开始 ( # B1** 方法的代码。 当类初始化时，将调用此操作：
+6.  应添加 **开始 ()** 方法的代码。 当类初始化时，将调用此操作：
 
     ```csharp
         /// <summary>
@@ -756,7 +756,7 @@ ms.locfileid: "98582461"
 - 启动与 Web 应用机器人的会话所需的方法 
 - 向 Web 应用机器人发送消息所需的方法 
 
-若要将消息发送到机器人服务， **SendMessageToBot ( # B1** 协同程序将生成一个活动，该活动是由 Bot 框架识别为用户发送的数据的对象。 
+若要将消息发送到机器人服务， **SendMessageToBot ()** 协同程序将生成一个活动，该活动是由 Bot 框架识别为用户发送的数据的对象。 
  
 若要创建此类： 
 
@@ -838,7 +838,7 @@ ms.locfileid: "98582461"
     > [!NOTE] 
     > 请确保将你的 **机器人机密密钥** 插入到 **botSecret** 变量。 你将在本课程的第 **[2 章](#chapter-2---create-the-azure-bot-service)"步骤 10**" 中记下你的 **机器人机密密钥**。
 
-7. 现在需要添加 **唤醒 ( # B1** 和 **Start ( # B3** 的代码。 
+7. 现在需要添加 **唤醒 ()** 和 **开始 ()** 的代码。 
 
     ```csharp
         /// <summary>
@@ -904,7 +904,7 @@ ms.locfileid: "98582461"
         }     
     ```
 
-10. 调用以下协同程序来开始与机器人的对话。 你会注意到，一旦会话调用完成，它将通过传递一系列参数将 SendMessageToCoroutine 设置为将活动作为空消息发送到机器人服务，来调用 **(** 。 这样做是为了提示机器人服务启动对话框。
+10. 调用以下协同程序来开始与机器人的对话。 你会注意到，一旦完成会话调用，它将通过传递一系列参数（将活动设置为以空消息形式发送到机器人服务）来调用 **SendMessageToCoroutine ()** 。 这样做是为了提示机器人服务启动对话框。
 
     ```csharp
         /// <summary>
@@ -1041,7 +1041,7 @@ ms.locfileid: "98582461"
 
 如果用户在查看场景中的 *机器人* 对象时点击，并准备好侦听语音输入，则机器人对象会将颜色更改为 **红色** ，并开始侦听语音输入。 
 
-此类继承自 **GazeInput** 类，因此，可以从该类引用 **Start ( # B1** 方法和变量，通过使用 **base** 来表示。 
+此类继承自 **GazeInput** 类，因此，可以从该类引用 **开始 ()** 方法和变量，使用 **base** 来表示。 
  
 若要创建此类：
 
@@ -1065,7 +1065,7 @@ ms.locfileid: "98582461"
         /// </summary>
         private GestureRecognizer _gestureRecognizer;
     ```
-6.  然后添加 **Start ( # B1** 方法：
+6.  然后添加 **Start ()** 方法：
 
     ```csharp
         /// <summary>
@@ -1138,7 +1138,7 @@ ms.locfileid: "98582461"
         internal TextMesh botResponseText;
     ```
 
-6.  然后添加 **唤醒 ( # B1** 并 **开始 ( # B3** 方法：
+6.  然后添加 **唤醒的 ()** 并 **启动 ()** 方法：
 
     ```csharp
         /// <summary>
@@ -1303,10 +1303,10 @@ how much are raincoats?
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 此实验室中的会话结构非常基本。 使用 Microsoft LUIS 为机器人指定自然语言理解功能。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 此示例不包括终止会话和重新启动新会话。 若要使机器人功能完成，请尝试将结束实现到会话中。

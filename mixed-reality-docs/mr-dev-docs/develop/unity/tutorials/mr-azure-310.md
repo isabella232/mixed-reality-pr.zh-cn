@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 310 - 对象检测
+title: HoloLens (第一代) 和 Azure 310-对象检测
 description: 完成本课程，了解如何定型和使用机器学习模型来识别相似对象及其在实际中的位置。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，自定义视觉，对象检测，混合现实，学院，unity，教程，api，hololens，Windows 10，Visual Studio
-ms.openlocfilehash: edbd583c5361f8074dc57fedb66d6ab01df16de8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 29b3622e510a0d97ee3f1dea04661b7d6ab51f9f
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583476"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730344"
 ---
-# <a name="mr-and-azure-310-object-detection"></a>Mr 和 Azure 310：对象检测
+# <a name="hololens-1st-gen-and-azure-310-object-detection"></a>HoloLens (第一代) 和 Azure 310：对象检测
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
@@ -55,7 +55,7 @@ ms.locfileid: "98583476"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -378,7 +378,7 @@ ms.locfileid: "98583476"
     > [!NOTE]
     > 请确保将 **服务预测密钥** 插入到 **predictionKey** 变量中，并将 **预测终结点** 插入到 **predictionEndpoint** 变量中。 你之前将它们复制到 [记事本，步骤14中的第2章](#chapter-2---training-your-custom-vision-project)。
 
-7.  现在需要添加用于 **唤醒 ( # B1** 的代码以初始化实例变量：
+7.  现在需要添加 **唤醒 ()** 的代码以初始化实例变量：
 
     ```csharp
         /// <summary>
@@ -391,7 +391,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-8.  使用静态 **GetImageAsByteArray ( # B2** 方法将协同程序 (添加到其下方) ，该方法将获得 **ImageCapture** 类捕获的映像分析结果。
+8.  将协同程序 (与) 的静态 **GetImageAsByteArray ()** 方法一起添加，这将获取 **ImageCapture** 类捕获的映像分析结果。
 
     > [!NOTE]
     > 在 **AnalyseImageCapture** 协同程序中，有一个对你还需要创建的 **SceneOrganiser** 类的调用。 因此，请 **暂时将这些行注释为**。
@@ -455,7 +455,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-9. 删除 **开始 ( # B1** 并 **更新 ( # B3** 方法，因为它们不会被使用。 
+9. 删除 **开始 ()** 并 **更新 ()** 方法，因为它们不会被使用。 
 
 10.  在返回到 **Unity** 之前，请务必保存 **Visual Studio** 中所做的更改。
 
@@ -483,7 +483,7 @@ ms.locfileid: "98583476"
     using UnityEngine.Networking;
     ```
 
-4.  删除 **CustomVisionObjects** 类中的 **开始 ( # B1** 并 **更新 ( # B3** 方法，此类现在应为空。
+4.  删除 **开始 ()** 并更新 **CustomVisionObjects** 类中的 **()** 方法，此类现在应为空。
 
     > [!WARNING]
     > 务必认真遵循下一条指令。 如果将新的类声明放在 **CustomVisionObjects** 类中，将会在第 [10 章](#chapter-10---create-the-imagecapture-class)中出现编译错误，指出找不到 **AnalysisRootObject** 和 **BoundingBox** 。
@@ -637,7 +637,7 @@ ms.locfileid: "98583476"
     using UnityEngine.XR.WSA;
     ```
 
-4.  然后，将以下变量添加到 **SpatialMapping** 类中的 **Start ( # B1** 方法之上：
+4.  然后，将以下变量添加到 **SpatialMapping** 类中，并将其置于 **Start ()** 方法之上：
 
     ```csharp
         /// <summary>
@@ -661,7 +661,7 @@ ms.locfileid: "98583476"
         private SpatialMappingCollider spatialMappingCollider;
     ```
 
-5.  添加 **唤醒 ( # B1** 并 **开始 ( # B3**：
+5.  添加 **唤醒的 ()** 并 **启动 ()**：
 
     ```csharp
         /// <summary>
@@ -692,7 +692,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-6.  删除 **( # B1** 方法的更新。
+6.  删除 () 方法的 **更新** 。
 
 7.  在返回到 **Unity** 之前，请务必保存 **Visual Studio** 中所做的更改。
 
@@ -713,7 +713,7 @@ ms.locfileid: "98583476"
     using UnityEngine;
     ```
 
-4.  然后，将以下变量添加到 **GazeCursor** 类中，并将其置于 **Start ( # B1** 方法之上。 
+4.  然后，将以下变量添加到 **GazeCursor** 类中的 **Start ()** 方法之上。 
 
     ```csharp
         /// <summary>
@@ -722,7 +722,7 @@ ms.locfileid: "98583476"
         private MeshRenderer meshRenderer;
     ```
 
-5.  将 **Start ( # B1** 方法更新为以下代码：
+5.  将 **Start ()** 方法更新为以下代码：
 
     ```csharp
         /// <summary>
@@ -742,7 +742,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-6.  用以下代码更新 **更新 ( # B1** 方法：
+6.  将 **更新 ()** 方法更新为以下代码：
 
     ```csharp
         /// <summary>
@@ -799,7 +799,7 @@ ms.locfileid: "98583476"
     using UnityEngine;
     ```
 
-4.  然后，将以下变量添加到 **SceneOrganiser** 类中的 **Start ( # B1** 方法之上：
+4.  然后将以下变量添加到 **SceneOrganiser** 类中，并将其置于 **Start ()** 方法之上：
 
     ```csharp
         /// <summary>
@@ -844,9 +844,9 @@ ms.locfileid: "98583476"
         internal Renderer quadRenderer;
     ```
 
-5.  删除 **开始 ( # B1** 并 **更新 ( # B3** 方法。
+5.  删除 **开始 ()** 并 **更新 ()** 方法。
 
-6.  在变量的下面添加 **唤醒 ( # B1** 方法，这将初始化类并设置场景。
+6.  在变量的下面添加 **唤醒 ()** 方法，这将初始化类并设置场景。
 
     ```csharp
         /// <summary>
@@ -868,7 +868,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-7.  添加 **PlaceAnalysisLabel ( # B1** 方法，该方法将 *实例化* 场景中的标签 (此时此点对于用户) 不可见。 它还将四个 (也不可见) 在其中放置图像，并与现实世界重叠。 这一点很重要，因为在分析后从服务中检索的 box 坐标将追溯到此四个部分，以确定对象在现实世界中的大致位置。 
+7.  添加 **PlaceAnalysisLabel ()** 方法，该方法将 *实例化* 场景中的标签 (此时此点对于用户) 不可见。 它还将四个 (也不可见) 在其中放置图像，并与现实世界重叠。 这一点很重要，因为在分析后从服务中检索的 box 坐标将追溯到此四个部分，以确定对象在现实世界中的大致位置。 
 
     ```csharp
         /// <summary>
@@ -905,7 +905,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-8.  添加 **FinaliseLabel ( # B1** 方法。 它负责：
+8.  添加 **FinaliseLabel ()** 方法。 它负责：
 
     *   将 *标签* 文本设置为具有最高置信度的预测 *标记* 。
     *   在前面定位的四个对象上调用 *边界框* 的计算，并在场景中放置该标签。
@@ -961,7 +961,7 @@ ms.locfileid: "98583476"
         }
     ```
 
-9.  添加 **CalculateBoundingBoxPosition ( # B1** 方法，该方法承载转换从服务中检索的 *边界框* 坐标所需的多个计算，并在四个部分按比例重新创建它们。
+9.  添加 **CalculateBoundingBoxPosition ()** 方法，该方法承载转换从服务中检索的 *边界框* 坐标所需的多种计算，并在四个四个上按比例重新创建它们。
 
     ```csharp
         /// <summary>
@@ -991,7 +991,7 @@ ms.locfileid: "98583476"
 10. 在返回到 **Unity** 之前，请务必保存 **Visual Studio** 中所做的更改。
 
     > [!IMPORTANT]
-    > 继续之前，请打开 **CustomVisionAnalyser** 类，并在 AnalyseLastImageCaptured 中 **( # B1** 方法， *取消注释* 以下行：
+    > 继续之前，请打开 **CustomVisionAnalyser** 类，在 **AnalyseLastImageCaptured ()** 方法中， *取消注释* 以下行：
     >
     >   ```csharp
     >   // Create a texture. Texture size does not matter, since 
@@ -1039,7 +1039,7 @@ ms.locfileid: "98583476"
     using UnityEngine.XR.WSA.WebCam;
     ```
 
-5.  然后，将以下变量添加到 **ImageCapture** 类中的 **Start ( # B1** 方法之上：
+5.  然后将以下变量添加到 **ImageCapture** 类中，并将其置于 **Start ()** 方法之上：
 
     ```csharp
         /// <summary>
@@ -1073,7 +1073,7 @@ ms.locfileid: "98583476"
         internal string filePath = string.Empty;
     ```
 
-6.  现在需要添加用于 **唤醒 ( # B1** 和 **Start ( # B3** 方法的代码：
+6.  现在需要添加 **唤醒 ()** 和 **启动 ()** 方法的代码：
 
     ```csharp
         /// <summary>
@@ -1331,11 +1331,11 @@ ms.locfileid: "98583476"
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 若要添加到文本标签，请使用半透明的多维数据集包装 3D *边界框* 中的实际对象。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
 训练自定义影像服务来识别更多对象。
 

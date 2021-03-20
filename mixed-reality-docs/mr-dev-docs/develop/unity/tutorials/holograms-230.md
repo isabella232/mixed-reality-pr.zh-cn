@@ -1,19 +1,19 @@
 ---
-title: MR 空间 230 - 空间映射
+title: HoloLens (第一代) 空间 230-空间映射
 description: 遵循以下编码演练，使用 Unity、Visual Studio 和 HoloLens 来了解空间映射概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间映射，表面重建，网格，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 6b218de239da04190fbf08ff8668fa16009df949
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 933b5d331e814cdb2ced2689e06e0c8508f2d68a
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582930"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730134"
 ---
-# <a name="mr-spatial-230-spatial-mapping"></a>MR 空间 230：空间映射
+# <a name="hololens-1st-gen-spatial-230-spatial-mapping"></a>HoloLens (第一代) 空间230：空间映射
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
@@ -58,7 +58,7 @@ ms.locfileid: "98582930"
 >[!NOTE]
 >如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping)找到。
 
-### <a name="notes"></a>说明
+### <a name="notes"></a>备注
 
 * 需要禁用 Visual Studio 中的 "Enable 仅我的代码" ("工具" > "> 选项" 下的 " *未选中*) " 调试，以便在代码中命中断点。
 
@@ -148,11 +148,11 @@ ms.locfileid: "98582930"
 * 单击 " **添加探查器 > GPU**"。
 * 单击 "**活动探查 <Enter IP> 器 >**。
 * 输入 HoloLens 的 **IP 地址** 。
-* 单击“连接”  。
+* 单击“连接”。
 * 观察 GPU 呈现帧所花的时间（以毫秒为单位）。
 * 阻止应用程序在设备上运行。
-* 返回到 Visual Studio 并打开 **SpatialMappingObserver.cs**。 你会在 Assembly-CSharp (通用 Windows) 项目的 HoloToolkit\SpatialMapping 文件夹中找到它。
-* 找到 **唤醒 ( # B1** 函数并添加以下代码行： **TrianglesPerCubicMeter = 1200;**
+* 返回到 Visual Studio 并打开 **SpatialMappingObserver**。 你会在 Assembly-CSharp (通用 Windows) 项目的 HoloToolkit\SpatialMapping 文件夹中找到它。
+* 查找 **唤醒的 ()** 函数，并添加以下代码行： **TrianglesPerCubicMeter = 1200;**
 * 将项目重新部署到你的设备，然后 **重新连接探查器**。 观察帧的呈现时间（毫秒）。
 * 阻止应用程序在设备上运行。
 
@@ -160,7 +160,7 @@ ms.locfileid: "98582930"
 
 最后，让我们保存房间网格，并将其加载到 Unity。
 
-* 返回到 Visual Studio，并删除在上一节中在 **唤醒 ( # B1** 函数中添加的 **TrianglesPerCubicMeter** 行。
+* 返回到 Visual Studio 并删除在上一节中在 **唤醒 ()** 函数中添加的 **TrianglesPerCubicMeter** 行。
 * 将项目重新部署到你的设备。 现在，我们应该运行每个立方米的 **500** 三角形。
 * 打开浏览器并输入你的 HoloLens IPAddress 以导航到 **Windows 设备门户**。
 * 在左侧面板中选择 " **3D 视图** " 选项。
@@ -231,15 +231,15 @@ Unity 非常适合用于预览材料，但在设备中签出渲染始终是一�
 * 在 Unity 的 " **项目** " 面板 **中，找到** " **SpatialProcessing** " 对象。
 * 拖动 & 将 **SpatialProcessing** 对象放入 **层次结构** 面板。
 
-SpatialProcessing prefab 包含用于处理空间映射数据的组件。 **SurfaceMeshesToPlanes.cs** 将根据空间映射数据查找并生成平面。 我们将在应用程序中使用平面来表示墙壁、地面和上限。 此 prefab 还包含 **RemoveSurfaceVertices.cs** ，可从空间映射网格中删除顶点。 这可用于在网格中创建孔洞，或删除不再需要的多余三角形 (因为可以改为使用飞机) 。
+SpatialProcessing prefab 包含用于处理空间映射数据的组件。 **SurfaceMeshesToPlanes** 将根据空间映射数据查找并生成平面。 我们将在应用程序中使用平面来表示墙壁、地面和上限。 此 prefab 还包含 **RemoveSurfaceVertices** ，可从空间映射网格中删除顶点。 这可用于在网格中创建孔洞，或删除不再需要的多余三角形 (因为可以改为使用飞机) 。
 
 * 在 Unity 的 " **项目** " 面板 **中，找到** " **SpaceCollection** " 对象。
 * 将 **SpaceCollection** 对象拖放到 **层次结构** 面板。
 * 在 " **层次结构** " 面板中，选择 " **SpatialProcessing** " 对象。
 * 在 " **检查器** " 面板中，找到 " **播放空间管理器" (脚本)** 组件。
-* 双击 **PlaySpaceManager.cs** ，在 Visual Studio 中将其打开。
+* 双击 " **PlaySpaceManager** " 在 Visual Studio 中将其打开。
 
-PlaySpaceManager.cs 包含应用程序特定的代码。 我们将向此脚本添加功能，以实现以下行为：
+PlaySpaceManager 包含应用程序特定的代码。 我们将向此脚本添加功能，以实现以下行为：
 
 1. 超过扫描时间限制时停止收集空间映射数据 (10 秒) 。
 2. 处理空间映射数据：
@@ -247,7 +247,7 @@ PlaySpaceManager.cs 包含应用程序特定的代码。 我们将向此脚本�
     2. 使用 RemoveSurfaceVertices 可删除位于平面边界内的曲面三角形。
 3. 在世界各地生成全息影像的集合，并将其放在靠近用户的墙壁和地面平面上。
 
-完成标记为在 PlaySpaceManager.cs 中的编码练习，或将脚本替换为以下已完成的解决方案：
+完成标记为 PlaySpaceManager 的编码练习，或将脚本替换为下面的已完成解决方案：
 
 ```cs
 using System.Collections.Generic;
@@ -470,7 +470,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 * 在 " **检查器** " 面板中，找到 **要平面 (脚本) 组件的表面网格** 。
 * 将 " **绘图平面** " 属性更改为 " **无** " 以清除选定内容。
 * 将 " **绘图平面** " 属性更改为 " **墙壁**"，以便仅呈现墙壁平面。
-* 在 " **项目** " 面板的 " **脚本** " 文件夹中，双击 **Placeable.cs** 以在 Visual Studio 中将其打开。
+* 在 " **项目** " 面板的 " **脚本** " 文件夹中，双击 "可 **放置的 .Cs** "，在 Visual Studio 中将其打开。
 
 可 **放置** 脚本已附加到在完成平面查找之后创建的 "海报和投影" 框。 我们需要做的就是取消注释某些代码，此脚本将实现以下内容：
 
@@ -482,7 +482,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 6. 重新定向全息图，使其与 (垂直或水平) 的表面类型对齐。
 7. 将全息图平滑放置在所选表面上，以避免跳跃或对齐行为。
 
-取消注释以下代码中的所有代码，或在 **Placeable.cs** 中使用此完整解决方案：
+取消注释以下代码中的所有代码，或将此已完成的解决方案用于可 **放置的 .cs** 中：
 
 ```cs
 using System.Collections.Generic;
@@ -1098,13 +1098,13 @@ public class Placeable : MonoBehaviour
 * 在 " **检查器** " 面板中，找到地球材料 (底部组件) 。
 * 在 " **着色器" 下拉**> OcclusionRim 中，将着色器更改为 " **自定义**"。 当另一对象封闭像素时，这会在地球周围呈现蓝色突出显示。
 
-最后，我们将为太阳系中的行星启用 x 光视觉效果。 需要编辑 Scripts\SolarSystem 文件夹) 中找到的 **PlanetOcclusion.cs** (，以实现以下目的：
+最后，我们将为太阳系中的行星启用 x 光视觉效果。 需要编辑在 Scripts\SolarSystem 文件夹) 中找到的 **PlanetOcclusion** (，以实现以下目的：
 
 1. 确定 SpatialMapping 层是否封闭像素了地球， (房间网格和飞机) 。
 2. 在 SpatialMapping 层封闭像素时显示行星的线框表示。
 3. 隐藏 SpatialMapping 层不阻止的行星的线框表示。
 
-按照 PlanetOcclusion.cs 中的编码练习进行操作，或使用以下解决方案：
+按照 PlanetOcclusion 中的编码练习进行操作，或使用以下解决方案：
 
 ```cs
 using UnityEngine;

@@ -1,19 +1,19 @@
 ---
-title: MR 基础 101 - 使用设备完成项目
+title: HoloLens (第一代) 基础知识 101-设备的完整项目
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 了解 Windows Mixed Reality 的基本知识。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，HoloLens，全息影像，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 4ca16542060e1cee746ba5095a7bf68ca8136267
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5015dff1487dce9ff761a4ca606657eca6f75406
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583718"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730334"
 ---
-# <a name="mr-basics-101-complete-project-with-device"></a>MR 基础知识 101：使用设备设置完整的项目
+# <a name="hololens-1st-gen-basics-101-complete-project-with-device"></a>HoloLens (第一代) 基础知识101：包含设备的完成项目
 
 <br>
 
@@ -71,7 +71,7 @@ ms.locfileid: "98583718"
 ### <a name="instructions"></a>说明
 
 * 启动 Unity。
-* 选择“打开”  。
+* 选择“打开”。
 * 输入 "位置" 作为以前未存档的 **日式折纸** 文件夹。
 * 选择 " **日式折纸** " 并单击 " **选择文件夹**"。
 * 由于 **日式折纸** 项目不包含场景，因此请将空的默认场景保存到新文件，使用： **file**  /  **save 场景 As**。
@@ -150,7 +150,7 @@ ms.locfileid: "98583718"
 * 选择 "**层次结构" 面板** 中的 **光标** 对象。
 * 将 **WorldCursor** 脚本拖放到 **检查器面板**。
 * 双击 **WorldCursor** 脚本，在 Visual Studio 中将其打开。
-* 将此代码复制并粘贴到 **WorldCursor.cs** ，并 **保存全部**。
+* 将此代码复制并粘贴到 **WorldCursor** ，并 **保存全部**。
 
 ```cs
 using UnityEngine;
@@ -330,7 +330,7 @@ public class SphereCommands : MonoBehaviour
 * 在 " **脚本** " 文件夹中，创建一个名为 **SpeechManager** 的脚本。
 * 将 **SpeechManager** 脚本拖到层次结构中的 **OrigamiCollection** 对象上
 * 在 Visual Studio 中打开 **SpeechManager** 脚本。
-* 将此代码复制并粘贴到 **SpeechManager.cs** ，并 **保存全部** 内容：
+* 将此代码复制并粘贴到 **SpeechManager** ，并 **保存全部** 内容：
 
 ```cs
 using System.Collections.Generic;
@@ -695,7 +695,7 @@ public class HitTarget : MonoBehaviour
 
 你现在已准备好开始创建自己的全息体验！
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [MR 基础知识 101E：使用仿真器完成项目](holograms-101e.md)
 * [凝视](../../../design/gaze-and-commit.md)

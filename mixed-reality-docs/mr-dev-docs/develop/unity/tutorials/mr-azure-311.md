@@ -1,19 +1,19 @@
 ---
-title: MR 和 Azure 311 - Microsoft Graph
+title: HoloLens (第一代) 和 Azure 311-Microsoft Graph
 description: 完成本课程，了解如何利用 Microsoft Graph，并在混合现实应用程序中连接到用于驱动工作效率的数据。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，microsoft graph，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 699e520fb9db8d8d3b5bab8b98d92fa39f0acb2d
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6afa1e8c5d2baa2d46652901558b2917c5c43d70
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583448"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730244"
 ---
-# <a name="mr-and-azure-311---microsoft-graph"></a>MR 和 Azure 311 - Microsoft Graph
+# <a name="hololens-1st-gen-and-azure-311---microsoft-graph"></a>HoloLens (第一代) 和 Azure 311-Microsoft Graph
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
@@ -43,7 +43,7 @@ ms.locfileid: "98583448"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -298,7 +298,7 @@ ms.locfileid: "98583448"
         private TextMesh _meetingDisplayTextMesh;
     ```
 
-6.  然后，将 **Start ( # B1** 方法，并添加一个 **唤醒 ( # B3** 方法。 当类初始化时，将调用以下内容：
+6.  然后替换 **Start ()** 方法，并添加一个 **唤醒的 ()** 方法。 当类初始化时，将调用以下内容：
 
     ```csharp    
         /// <summary>
@@ -367,7 +367,7 @@ ms.locfileid: "98583448"
         }
     ```
 
-8. **删除** **( # B1** 方法的更新，并在 Visual Studio 返回到 Unity 之前 **保存更改** 。 
+8. **删除** () 方法的 **更新** ，并在 Visual Studio 返回到 Unity 之前 **保存更改** 。 
 
 ## <a name="chapter-6---create-the-graph-class"></a>第6章-创建图形类
 
@@ -400,7 +400,7 @@ ms.locfileid: "98583448"
     > [!IMPORTANT]
     > 你将注意到，此脚本中的部分代码围绕 [预编译指令](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)环绕，这是为了避免生成 Visual Studio 解决方案时库出现问题。
 
-5.  删除 **开始 ( # B1** 并 **更新 ( # B3** 方法，因为它们不会被使用。
+5.  删除 **开始 ()** 并 **更新 ()** 方法，因为它们不会被使用。
 
 6.  在 **图形** 类外部，插入以下对象，这些对象是反序列化表示每日计划会议的 JSON 对象所必需的：
 
@@ -477,7 +477,7 @@ ms.locfileid: "98583448"
     > [!NOTE]
     > 将 **appId** 值更改为你在 **第 [1 章](#chapter-1---create-your-app-in-the-application-registration-portal)步骤 4** 中记下的 **应用 Id** 。 此值应与应用程序注册页面中显示的应用程序注册 **门户** 中的值相同。
 
-8.  在 **Graph** 类中，添加 **SignInAsync ( # B1** 和 **( AquireTokenAsync** 的方法，该方法将提示用户插入登录凭据。
+8.  在 **Graph** 类中，添加方法 **SignInAsync ()** 和 **AquireTokenAsync ()**，这将提示用户插入登录凭据。
 
     ```csharp
         /// <summary>
@@ -548,9 +548,9 @@ ms.locfileid: "98583448"
 
 9.  添加以下两个方法：
 
-    1.  **BuildTodayCalendarEndpoint ( # B1**，用于生成指定在其中检索计划会议的日期和时间范围的 URI。
+    1.  **BuildTodayCalendarEndpoint ()**，用于生成指定在其中检索计划会议的日期和时间范围的 URI。
 
-    2.  **ListMeetingsAsync ( # B1**，请求 *Microsoft Graph* 的计划会议。
+    2.  **ListMeetingsAsync ()**，它从 *Microsoft Graph* 请求计划会议。
 
     ```csharp
         /// <summary>
@@ -677,7 +677,7 @@ ms.locfileid: "98583448"
         private Vector3 _gazeDirection;
     ```
 
-6.  将 **CreateCursor ( # B1** 方法添加到场景中，并从 **开始 ( # B3** 方法调用方法：
+6.  将 **CreateCursor ()** 方法添加到场景中，并从 **Start ()** 方法调用方法：
 
     ```csharp    
         /// <summary>
@@ -846,7 +846,7 @@ ms.locfileid: "98583448"
         private GestureRecognizer _gestureRecognizer;
     ```
 
-7.  替换 **Start** 方法;请注意，它是一个重写方法，它调用 "基" 注视类方法。 初始化类时，将调用 **开始 ( # B1** ，并注册输入识别并在场景中创建 "登录"*按钮*：
+7.  替换 **Start** 方法;请注意，它是一个重写方法，它调用 "基" 注视类方法。 在类初始化、注册输入识别并在场景中创建 "登录"*按钮* 时，将调用 **Start ()** ：
 
     ```csharp    
         /// <summary>
@@ -868,7 +868,7 @@ ms.locfileid: "98583448"
         }
     ```
 
-8.  添加 **CreateSignInButton ( # B1** 方法，该方法将实例化场景中的 "登录" *按钮* 并设置其属性：
+8.  添加 **CreateSignInButton ()** 方法，该方法将实例化场景中的 "登录" *按钮* 并设置其属性：
 
     ```csharp    
         /// <summary>
@@ -889,7 +889,7 @@ ms.locfileid: "98583448"
         }
     ```
 
-9.  添加 **GestureRecognizer_Tapped ( # B1** 方法，该方法将响应 *点击* 用户事件。
+9.  添加 **GestureRecognizer_Tapped ()** 方法，该方法将响应 *点击* 用户事件。
 
     ```csharp   
         /// <summary>
@@ -905,7 +905,7 @@ ms.locfileid: "98583448"
         }
     ```
 
-10. **删除** **( # B1** 方法的更新，然后在 Visual Studio 返回到 Unity 之前 **保存更改** 。
+10. **删除** () 方法的 **更新** ，然后在 Visual Studio 返回到 Unity 之前 **保存更改** 。
 
 ## <a name="chapter-9---set-up-the-script-references"></a>第9章-设置脚本引用
 
@@ -987,12 +987,12 @@ ms.locfileid: "98583448"
 
 ## <a name="bonus-exercises"></a>额外练习
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 使用 Microsoft Graph 显示有关用户的其他信息
 
 -   用户电子邮件/电话号码/个人资料图片
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 实现语音控制以导航 Microsoft Graph UI。
