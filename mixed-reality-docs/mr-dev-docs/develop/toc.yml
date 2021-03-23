@@ -118,53 +118,53 @@
           items:
             - name: 混合现实功能
               items:
-                - name: MR 基础 100 - Unity 入门
+                - name: HoloLens（第一代）基础知识 100 - Unity 入门
                   href: unity/tutorials/holograms-100.md
-                - name: MR 基础 101 - 使用设备完成项目
+                - name: HoloLens（第一代）基础知识 101 - 使用设备完成项目
                   href: unity/tutorials/holograms-101.md
-                - name: MR 基础 101 - 使用模拟器完成项目
+                - name: HoloLens（第一代）基础知识 101E - 使用模拟器完成项目
                   href: unity/tutorials/holograms-101e.md
-                - name: MR 输入 210 - 凝视
+                - name: HoloLens（第一代）输入 210 - 注视
                   href: unity/tutorials/holograms-210.md
-                - name: MR 输入 211 - 手势
+                - name: HoloLens（第一代）输入 211 - 手势
                   href: unity/tutorials/holograms-211.md
-                - name: MR 输入 212 - 语音
+                - name: HoloLens（第一代）输入 212 - 语音
                   href: unity/tutorials/holograms-212.md
-                - name: MR 空间 220 - 空间音效
+                - name: HoloLens（第一代）空间 220 - 空间音效
                   href: unity/tutorials/holograms-220.md
-                - name: MR 空间 230 - 空间映射
+                - name: HoloLens（第一代）空间 230 - 空间映射
                   href: unity/tutorials/holograms-230.md
-                - name: MR 共享 240 - 多个 HoloLens 设备
+                - name: HoloLens（第一代）共享 240 - 多个 HoloLens 设备
                   href: unity/tutorials/holograms-240.md
             - name: 混合现实和 Azure 服务
               items:
-                - name: MR 和 Azure 301 - 语言翻译
+                - name: HoloLens（第一代）和 Azure 301 - 语言翻译
                   href: unity/tutorials/mr-azure-301.md
-                - name: MR 和 Azure 302 - 计算机视觉
+                - name: HoloLens（第一代）和 Azure 302 - 计算机视觉
                   href: unity/tutorials/mr-azure-302.md
-                - name: MR 和 Azure 302b - 自定义视觉
+                - name: HoloLens（第一代）和 Azure 302b - 自定义视觉
                   href: unity/tutorials/mr-azure-302b.md
-                - name: MR 和 Azure 303 - 自然语言理解
+                - name: HoloLens（第一代）和 Azure 303 - 自然语言理解
                   href: unity/tutorials/mr-azure-303.md
-                - name: MR 和 Azure 304 - 人脸识别
+                - name: HoloLens（第一代）和 Azure 304 - 人脸识别
                   href: unity/tutorials/mr-azure-304.md
-                - name: MR 和 Azure 305 - 功能和存储
+                - name: HoloLens（第一代）和 Azure 305 - 功能和存储
                   href: unity/tutorials/mr-azure-305.md
-                - name: MR 和 Azure 306 - 流式传输视频
+                - name: HoloLens（第一代）和 Azure 306 - 流式传输视频
                   href: unity/tutorials/mr-azure-306.md
-                - name: MR 和 Azure 307 - 机器学习
+                - name: HoloLens（第一代）和 Azure 307 - 机器学习
                   href: unity/tutorials/mr-azure-307.md
-                - name: MR 和 Azure 308 - 跨设备通知
+                - name: HoloLens（第一代）和 Azure 308 - 跨设备通知
                   href: unity/tutorials/mr-azure-308.md
-                - name: MR 和 Azure 309 - 应用程序见解
+                - name: HoloLens（第一代）和 Azure 30 9- 应用程序见解
                   href: unity/tutorials/mr-azure-309.md
-                - name: MR 和 Azure 310 - 对象检测
+                - name: HoloLens（第一代）和 Azure 310 - 物体检测
                   href: unity/tutorials/mr-azure-310.md
-                - name: MR 和 Azure 311 - Microsoft Graph
+                - name: HoloLens（第一代）和 Azure 311 - Microsoft Graph
                   href: unity/tutorials/mr-azure-311.md
-                - name: MR 和 Azure 312 - 机器人集成
+                - name: HoloLens（第一代）和 Azure 312 - 机器人集成
                   href: unity/tutorials/mr-azure-312.md
-                - name: MR 和 Azure 313 - IoT 中心服务
+                - name: HoloLens（第一代）和 Azure 313 - IoT 中心服务
                   href: unity/tutorials/mr-azure-301.md
     - name: 设置项目
       items:
