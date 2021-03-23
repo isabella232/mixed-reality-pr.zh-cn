@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目，Windows Mixed Reality，UWP，XR，性能
-ms.openlocfilehash: 8d247a6a5b7c8a3d8b7ea26ebc72e86ada5dc99f
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 47ca4041e997d623d08fa1732f7039c655810bfc
+ms.sourcegitcommit: b0fb5497bf9f280ba5610c30e4b9e5aa1cda52c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730164"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104837410"
 ---
 # <a name="configuring-your-project-without-mrtk"></a>配置项目时不使用 MRTK
 
@@ -57,8 +57,8 @@ Windows Mixed Reality (WMR) 是作为 Windows 10 操作系统的一部分引入�
 ![在 unity 编辑器中打开的 "项目设置" 窗口的屏幕截图，其中突出显示了 XR 插件管理](images/wmr-config-img-7.png)
 
 4. 展开 " **XR 插件管理** " 部分，并选择 " **通用 Windows 平台设置** " 选项卡
-5. 如果使用的是 Unity 2020 或更高版本，则会看到用于检查 **OpenXR (preview)** 或 **Windows Mixed Reality** 的选项。 
-    * 您可以选择 "运行时"。  如果你要专门针对 HoloLens 2 或 HP 回音 G2 进行开发，并决定尝试使用 **OpenXR (预览)**，请选择 "OpenXR (预览") 框，并查看我们指南以了解如何使用适用于 [Unity 的 Mixed Reality OpenXR 插件](openxr-getting-started.md) 为这些设备正确设置，然后再返回到本教程
+5. 如果使用的是 Unity 2020 或更高版本，则会看到用于检查 **OpenXR** 或 **Windows Mixed Reality** 的选项。 
+    * 您可以选择 "运行时"。  如果你要专门针对 HoloLens 2 或 HP 回音 G2 进行开发，并决定尝试 **OpenXR**，请选择 "OpenXR" 框，并查看本指南，以 [了解如何使用适用于 Unity 的 Mixed Reality OpenXR 插件](openxr-getting-started.md) 为这些设备正确设置，然后再返回到本教程
 
 > [!NOTE]
 > 从 Unity 2020 LTS 开始，Microsoft 正在接纳 OpenXR 的开发。  随着我们迁移到此路径，在 Unity 2021.1 中，Windows XR 插件将被弃用并在2021.2 中删除，从而使 OpenXR 成为唯一支持的路径。 可以在 [使用混合现实 OpenXR 插件](openxr-getting-started.md)中找到详细信息。
