@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 73a0fac8519881a9deb7049b122a7d739ef972b4
-ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2020
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "97718179"
 ---
-# <a name="426"></a>[<span data-ttu-id="35f02-101">4.26</span><span class="sxs-lookup"><span data-stu-id="35f02-101">4.26</span></span>](#tab/426)
+# <a name="426"></a>[<span data-ttu-id="700f8-101">4.26</span><span class="sxs-lookup"><span data-stu-id="700f8-101">4.26</span></span>](#tab/426)
 
 ![空间定位点存储准备就绪 - 4.26](../images/local-spatial-anchors-img-01.png)
 
-# <a name="425"></a>[<span data-ttu-id="35f02-103">4.25</span><span class="sxs-lookup"><span data-stu-id="35f02-103">4.25</span></span>](#tab/425)
+# <a name="425"></a>[<span data-ttu-id="700f8-103">4.25</span><span class="sxs-lookup"><span data-stu-id="700f8-103">4.25</span></span>](#tab/425)
 
 ![空间定位点存储准备就绪](../images/unreal-spatialanchors-store-ready.PNG)
