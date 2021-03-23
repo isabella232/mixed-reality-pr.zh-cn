@@ -8,15 +8,15 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: 眼动跟踪, 混合现实, 输入, 眼睛凝视, 视线定位, HoloLens 2, 视线选择, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包, 凝视
 ms.openlocfilehash: 1f337d3cbc1f82b4f69194d4b903687be067f9d6
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "97847874"
 ---
 # <a name="eye-gaze-and-commit"></a>眼睛凝视和提交
 
-_眼睛凝视和提交_ 是[凝视和提交](gaze-and-commit.md)输入模型的一种特殊案例，涉及通过凝视对象来设定目标。 可以通过辅助性 _提交_ 输入来操作目标，如手势、语音命令或外围设备输入（如游戏控制器）。 
+_眼睛凝视和提交_ 是 [凝视和提交](gaze-and-commit.md)输入模型的一种特殊案例，涉及通过凝视对象来设定目标。 可以通过辅助性 _提交_ 输入来操作目标，如手势、语音命令或外围设备输入（如游戏控制器）。 
 
 使用 HoloLens 2，我们可通过使用眼睛凝视（而不是头部凝视）来更加快速舒适地进行凝视和提交。  扩展常见的[头部凝视和提交](gaze-and-commit.md)交互模型： 
 1. 注视目标 

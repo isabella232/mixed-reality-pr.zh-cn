@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
 ms.openlocfilehash: 26bb874578e56b21d319741b8b1c1ff6decebe4b
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "96609698"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3.设置混合现实项目

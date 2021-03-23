@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，自定义环境，地点，cliff 房子，skyloft，用户，创建，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: ca6a41f8388a767b1191ddc3b377822567a603a6
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2a626b91b79eadb49c9da95c9d61f92a375015a0
+ms.sourcegitcommit: f74d33d50c1fbfebe8571695d631ce78dd599f74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583306"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881214"
 ---
 # <a name="design-your-own-immersive-environments"></a>设计自己的沉浸式环境
 
@@ -82,7 +82,7 @@ Windows Mixed Reality 依赖于二进制 glTF (. glb) 作为环境的资产传�
 
 导出要用作自定义家庭环境的资产的第一步是生成 glTF 2.0 模型。 GlTF 工作组维护一 [系列受支持的导出程序和转换器](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) ，以创建 glTF 2.0 模型。 若要开始使用，请使用此页上列出的程序之一创建和导出 glTF 2.0 模型，或使用其中一个受支持的转换器转换现有的模型。
 
-此外，请查看 [这篇有用的文章，其中概述了如何直接从 Blender 和 3DS Max 导出 glTF 模型。 
+<!-- Additionally, check out [this helpful article, which provides an overview of an art workflow for exporting glTF models from Blender and 3DS Max directly.  -->
 
 ### <a name="environment-limits"></a>环境限制
 
@@ -96,7 +96,7 @@ Windows Mixed Reality 支持很多可显著减少环境加载时间的可选优�
 
 转换器当前支持多个标志来调整优化的确切行为。 建议运行以下标志以获得最佳结果：
 
-Flag|建议值 (s) |说明
+标志|建议值 (s) |说明
 ---|---|---
 -最大纹理大小|1024或2048| 调整该值以提高纹理质量，默认值为512x512。 较大的值将显著影响环境的文件大小，因此请记住 256 mb 的限制
 -最小版本|1803|仅在 windows >= 1803 的版本上支持自定义环境。 此标志将删除较旧版本的纹理，并减小最终资产的文件大小
@@ -149,5 +149,5 @@ Windows Mixed Reality [不支持超过 256 mb 的环境](#environment-limits)。
 
 创建自定义环境时，它将使用与所创建的物理空间不匹配的噪声渲染模拟。 声音可能来自错误的方向，可能听起来 muffled。 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 * [GitHub 上的 Windows Mixed Reality 资产转换器 () ](https://github.com/Microsoft/glTF-Toolkit/releases)

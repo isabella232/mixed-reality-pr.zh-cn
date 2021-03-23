@@ -9,10 +9,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 学院, 教程, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, unity, unreal, HoloLens, Azure 空间定位点, Azure 语音服务
 ms.openlocfilehash: 76c8cdcddd9617df8e823b4967593c37fa1e6bb9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "98006517"
 ---
 # <a name="tutorials"></a>教程

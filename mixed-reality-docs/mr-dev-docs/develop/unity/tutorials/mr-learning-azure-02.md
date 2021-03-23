@@ -8,10 +8,10 @@ ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 存储, azure 云服务, Windows 10
 ms.localizationpriority: high
 ms.openlocfilehash: cebf86901ec7b91888e1e46a13e5dee47f640c6c
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "99590559"
 ---
 # <a name="2-integrating-azure-storage"></a>2.集成 Azure 存储

@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: ed0f27822ab83baa2c1de6575067bdbd6b00a5e6
-ms.sourcegitcommit: 5694cc472bde67c940204ebe6671b0598501e62a
+ms.openlocfilehash: 4979c6f0f88544b4f00cd0859e5c807ddef137e5
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102126610"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730484"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
@@ -27,7 +27,7 @@ ms.locfileid: "102126610"
 
 使用以下检查点，将 Unity 游戏和应用程序带入混合现实的世界。 如果你尚未浏览[设计全息影像示例应用程序](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)，我们建议下载并使用它来熟悉混合现实 UX 的基本知识。
 
-### <a name="1-getting-started"></a>1.入门
+## <a name="1-getting-started"></a>1.入门
 
 若要在 Unity 中进行开发，最简单的方法是使用混合现实工具包。 MRTK 将帮助你自动为混合现实设置项目，并提供一组功能以加速开发过程。 本部分结束时，你将对混合现实工具包有一个基本的了解、对混合现实应用有一个正确配置的开发环境以及一个你自己构建的、可在 Unity 中正常工作的 MRTK 项目。
 
@@ -44,13 +44,13 @@ ms.locfileid: "102126610"
 > [!NOTE]
 > 在项目中设置 MRTK V2，标准的 Unity 游戏对象（例如相机）就会立即启动，为你带来坐定式体验。 可在[坐标系统](coordinate-systems-in-unity.md)页面上找到有关更改应用程序的体验范围的说明。
 
-### <a name="2-core-building-blocks"></a>2.核心构建基块
+## <a name="2-core-building-blocks"></a>2.核心构建基块
 
 混合现实应用程序的所有核心构建基块的公开方式与其他 Unity API 一致。 这些构建基块可以作为独立功能提供，也可以通过混合现实工具包提供。 你可能不需要一次全部使用它们，但建议你尽早进行使用。 深入了解下面列出的核心构建基块后，你将拥有一个工具箱，其中包含了各种你可以集成到混合现实项目中的功能（通过这些功能本身或通过 MRTK 实现）。
 
 [!INCLUDE[](../includes/unity-building-blocks.md)]
 
-### <a name="3-advanced-features"></a>3.高级功能
+## <a name="3-advanced-features"></a>3.高级功能
 
 在混合现实应用程序中起作用的其他关键功能可通过 Unity API 获得，而无需任何额外的包或设置。 可以在安装或未安装 MRTK 的情况下将这些功能添加到 Unity 项目中。 深入了解 Unity 提供的更高级功能后，你将能够生成更深层、更复杂的混合现实应用。
 
@@ -62,7 +62,7 @@ ms.locfileid: "102126610"
 | [失跟](tracking-loss-in-unity.md) | 处理设备无法在应用程序世界空间中定位自己的情况 |
 | [键盘输入](keyboard-input-in-unity.md) | 在应用中获取来自现实世界和混合现实键盘的输入 |
 
-### <a name="4-deploying-to-a-device-or-emulator"></a>4.部署到设备或仿真器
+## <a name="4-deploying-to-a-device-or-emulator"></a>4.部署到设备或仿真器
 
 准备好对全息 Unity 项目进行测试以后，下一步是导出和构建 Unity Visual Studio 解决方案。 有了该 VS 解决方案以后，即可使用下述三种方法之一在真实的或模拟的设备运行应用程序。 本部分结束后，你将能够在适合你的开发需求的任何设备或仿真器上部署应用程序。
 
@@ -70,7 +70,7 @@ ms.locfileid: "102126610"
 * [HoloLens 仿真器](../platform-capabilities-and-apis/using-the-hololens-emulator.md)
 * [Windows Mixed Reality 沉浸式头戴显示设备模拟器](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md)
 
-### <a name="5-adding-services"></a>5.添加服务
+## <a name="5-adding-services"></a>5.添加服务
 
 在开发历程中的这个阶段，你可能希望添加服务或寻求商业部署方面的帮助。 将 [Azure 云服务](../mixed-reality-cloud-services.md) 与 Dynamics 365 功能集成可以在很大程度上提高项目的水平。 我们已编译了几个入门点，用于探索和扩展你的混合现实知识。
 
