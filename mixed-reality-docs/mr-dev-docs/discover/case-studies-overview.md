@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 08/24/2019
 ms.topic: overview
 keywords: Windows Mixed Reality，HoloLens，案例研究，构想，方案，案例研究，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 7d3e2f3bbbc6a89bf4f136e2657f8a9abe7b9560
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 696223d2c5d122a1b1c092a2769d27ac0e94046c
+ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757645"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104895151"
 ---
 # <a name="case-study-gallery"></a>案例研究库
 
@@ -19,23 +19,28 @@ ms.locfileid: "97757645"
 
 :::row:::
     :::column:::
-       [ ![ 3 HoloStudio ui 和交互设计知识](images/thought-bubble-500px.jpg)](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md) **[3 HoloStudio ui and 交互设计知识](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md)**<br>
-        HoloStudio 是适用于 HoloLens 的第一个应用。 因此，我们必须为三维 UI 和交互设计创建新的最佳做法。 为此，我们完成了用户测试、原型制作和试用和错误。<br>
-        *2016 年 7 月*
+       Ford GT40 [ ![ Ford GT40 体验](../develop/unreal/images/ford-gt40-img-01.jpg)](../develop/unreal/unreal-ford-gt40.md) **[](../develop/unreal/unreal-ford-gt40.md)**<br>
+        此案例研究使你可以与传奇 racecar 保持密切配合，在 Le Mans 比赛中，在 1966 24 小时内就会击败 Ferrari，因为 Ford GT40 会在你前面的表中显示。<br>
+        *2021 年 2 月*
+    :::column-end:::
+    :::column:::
+       跨具有不同性能的设备跨设备 [ ![ 扩展 Datascape 跨设备](images/cloud-steps-1-4-700px.jpg)](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md) **[](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md)**<br>
+        此案例研究为 Microsoft 开发人员提供了对 Datascape 应用的优化，以便在具有一系列性能功能的设备之间提供引人注目的体验。<br>
+        *2017 年 8 月*
     :::column-end:::
     :::column:::
        [ ![ 生成 HoloSketch，一种用于 hololens 构建 HoloSketch 的空间布局和 ux 草图应用](images/holosketch-image-01-640px.png)](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md) **[，用于 hololens 的空间布局和 ux 草绘应用](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)**<br>
         HoloSketch 是一种设备上的空间布局和适用于 HoloLens 的 UX 草图工具，用于帮助构建全息体验。<br>
          *2017 年 7 月*
     :::column-end:::
-    :::column:::
-       [ ![ 在片段中创建沉浸式体验](images/surfacereconstruction.jpg)](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md) **[在片段中创建沉浸式体验](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md)**<br>
-        片段是适用于 Microsoft HoloLens 的交互式犯罪 drama，你可以在其中按线索解决实际空间中发生的神秘。<br>
-        *2016 年 8 月*
-    :::column-end:::
 :::row-end:::
 
 :::row:::
+    :::column:::
+       [ ![ 使用](images/holotour-stabilization-plane-500px.jpg)](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)"稳定" 平面，使用 **["稳定" 平面缩短全息 turbulence 以减少全息 turbulence](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)**<br>
+        使用全息影像可能比较棘手。 这样一来，您可以四处移动空间，从所有不同角度查看全息影像，都提供了一种不能使用普通计算机屏幕获得的浸入式。<br>
+        *2017 年 4 月*
+    :::column-end:::
     :::column:::
        [ ![ 扩展了 hololens 的空间映射功能](images/away-from-camera-position-500px.png)](../out-of-scope/case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md) **[扩展了 hololens 的空间映射功能](../out-of-scope/case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)**<br>
         在创建 Microsoft HoloLens 的第一个应用程序时，我们渴望知道我们可以在设备上推送空间映射边界。<br>
@@ -46,20 +51,18 @@ ms.locfileid: "97757645"
         HoloLens 团队想要分享一些派生自 Lowe HoloLens 项目的最佳实践。<br>
         *2016 年 9 月*
     :::column-end:::
-    :::column:::
-       [ ![ 使用](images/holotour-stabilization-plane-500px.jpg)](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)"稳定" 平面，使用 **["稳定" 平面缩短全息 turbulence 以减少全息 turbulence](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)**<br>
-        使用全息影像可能比较棘手。 这样一来，您可以四处移动空间，从所有不同角度查看全息影像，都提供了一种不能使用普通计算机屏幕获得的浸入式。<br>
-        *2017 年 4 月*
-    :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       跨具有不同性能的设备跨设备 [ ![ 扩展 Datascape 跨设备](images/cloud-steps-1-4-700px.jpg)](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md) **[](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md)**<br>
-        此案例研究为 Microsoft 开发人员提供了对 Datascape 应用的优化，以便在具有一系列性能功能的设备之间提供引人注目的体验。<br>
-        *2017 年 8 月*
+       [ ![ 在片段中创建沉浸式体验](images/surfacereconstruction.jpg)](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md) **[在片段中创建沉浸式体验](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md)**<br>
+        片段是适用于 Microsoft HoloLens 的交互式犯罪 drama，你可以在其中按线索解决实际空间中发生的神秘。<br>
+        *2016 年 8 月*
     :::column-end:::
     :::column:::
+       [ ![ 3 HoloStudio ui 和交互设计知识](images/thought-bubble-500px.jpg)](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md) **[3 HoloStudio ui and 交互设计知识](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md)**<br>
+        HoloStudio 是适用于 HoloLens 的第一个应用。 因此，我们必须为三维 UI 和交互设计创建新的最佳做法。 为此，我们完成了用户测试、原型制作和试用和错误。<br>
+        *2016 年 7 月*
     :::column-end:::
     :::column:::
     :::column-end:::

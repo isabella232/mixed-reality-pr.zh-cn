@@ -8,14 +8,18 @@ ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d610907123898471e92598da134e9c4d77a195e9
-ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
+ms.openlocfilehash: ca577bdc5bc30aebf80c9888345eb0e2d5c3ce6d
+ms.sourcegitcommit: cc9d90b046a9fce792058fea25ae13a9186e43e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104909017"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105008922"
 ---
 # <a name="the-making-of-the-ford-gt40-experience"></a>Ford GT40 体验
+
+*"MRTK，使用 Unreal 开发 HoloLens 2 的工作有点枯燥，因为所有空间交互都必须在 c + + 中手动编码。Unreal 的 MRTK 对这些任务进行了很多简单的操作。我估计它会缩短初始原型所需的时间。 "* -Rodriguez，软件开发人员
+
+*"Ford GT40 体验证明，高保真的 HoloLens 2 应用只需几个月就能完成，并且仍能提供高度的有影响力结果。"*  -Daniel Cheetham，首席创新官员，快乐
 
 使用混合现实工具包 (适用于 Unreal 的 MRTK) ，创造性生产公司满意度提供了一种在 Ford GT40 上的全新观点，即在 Le 传奇的24小时击败 Ferrari 的 Mans 赛车！
 
@@ -120,14 +124,6 @@ Ford GT40 体验的 **工程** 细分展示了帮助 Ford 赢得竞赛的工程�
 > [下载 Ford GT40 应用程序](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp)
 
 请在 GitHub 上的 Unreal 上了解 [如何在 HoloLens 2](../development.md) 或 [MRTK for](https://github.com/microsoft/MixedRealityToolkit-Unreal) 上开发混合现实。
-
-## <a name="what-people-are-saying"></a>用户的说法
-
-*"MRTK，使用 Unreal 开发 HoloLens 2 的工作有点枯燥，因为所有空间交互都必须在 c + + 中手动编码。Unreal 的 MRTK 对这些任务进行了很多简单的操作。我估计它会缩短初始原型所需的时间。 "*
-- Rodriguez，软件开发人员
-
-*"Ford GT40 体验证明，高保真的 HoloLens 2 应用只需几个月就能完成，并且仍能提供高度的有影响力结果。"*  
-- Daniel Cheetham，首席创新官员，快乐
 
 <!-- ## About the team
 
