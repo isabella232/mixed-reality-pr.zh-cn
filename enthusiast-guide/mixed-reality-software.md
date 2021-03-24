@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，软件组件，发布历史记录，发行说明，版本历史记录
 appliesto:
 - Windows 10
-ms.openlocfilehash: a5261303a8ba1c0ffbf87ec9e28bd392c19da9a7
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: ea65dd2c6c821189b1248bf3b418e38fdd7a6d7f
+ms.sourcegitcommit: 919bdc3e46325f3c44a022c8852cd38ffec33d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581654"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105029385"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Mixed Reality 软件概述和版本历史记录
 
@@ -105,8 +105,9 @@ Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程
 
    | 版本          | 发布日期          | 重大更改                                                 |
    |------------------|-----------------------|---------------------------------------------------------------|
+   | [10.0.19041.2041](https://www.microsoft.com/download/details.aspx?id=102903)  | 2021年3月23日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>更新用于 HP 回音 G2 的隐藏区域网格的缠绕顺序，使其与其他耳机保持一致。</li><li>面向 HP 回音 G2 耳机的视觉质量改善。</li><li>Windows Mixed Reality 耳机平台和可靠性改进。</li>|
    | [10.0.19041.2037](https://www.microsoft.com/en-us/download/details.aspx?id=102527)  | 2020年12月10日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>用于 HP 控制器的新控制器固件用于解决某些控制器具有非正常运行的触发器的问题。</li>|
-   | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 2020年10月8日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>HP 回音 G2、HP Omnicept 和新 HP 控制器的官方支持。</li><li>HP 回音和 Samsung 太空 + 耳机的轻微显示更正。  (要求 [Os 版本 19041.546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) 或更高版本 [，或者操作系统版本18362.1110 和 18363.1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) 或更高版本) 。</li><li>改进了计算机电源状态从睡眠转换到减少 SWW 1-4 错误。</li><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。|
+   | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 2020 年 10 月 8 日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>HP 回音 G2、HP Omnicept 和新 HP 控制器的官方支持。</li><li>HP 回音和 Samsung 太空 + 耳机的轻微显示更正。  (要求 [Os 版本 19041.546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) 或更高版本 [，或者操作系统版本18362.1110 和 18363.1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) 或更高版本) 。</li><li>改进了计算机电源状态从睡眠转换到减少 SWW 1-4 错误。</li><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。|
    | [10.0.19041.1009](https://www.microsoft.com/en-us/download/details.aspx?id=101260)  | 2020 年 5 月 7 日      | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。</li></ul>  |
 
 #### <a name="windows-10-version-1903-may-2019-update"></a>Windows 10 版本 1903 (2019 更新)  ####
