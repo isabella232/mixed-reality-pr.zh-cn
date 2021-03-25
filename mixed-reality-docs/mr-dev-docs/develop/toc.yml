@@ -348,6 +348,8 @@
       items:
         - name: Kippy 的转义
           href: unreal/unreal-kippys-escape.md
+        - name: Ford GT40 体验
+          href: unreal/unreal-ford-gt40.md
     - name: 部署和发布
       items:
         - name: 部署到设备
@@ -357,11 +359,19 @@
 - name: JavaScript
   items:
     - name: JavaScript 开发概述
-      href: web/javascript-development-overview.md
+      href: javascript/javascript-development-overview.md
     - name: WebXR
-      href: web/webxr-overview.md
-    - name: WebVR
-      href: web/webvr-overview.md
+      href: javascript/webxr-overview.md
+    - name: 教程
+      items:
+        - name: 使用 BabylonJS 创建 Hello World 程序
+          items:
+            - name: 1. 简介
+              href: javascript/tutorials/babylonjs-webxr-helloworld/introduction-01.md
+            - name: 2. 使用基本 3D 对象准备场景
+              href: javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02.md
+            - name: 3. 与 3D 对象交互
+              href: javascript/tutorials/babylonjs-webxr-helloworld/interact-03.md
 - name: 本机
   items:
     - name: 原生开发概述
