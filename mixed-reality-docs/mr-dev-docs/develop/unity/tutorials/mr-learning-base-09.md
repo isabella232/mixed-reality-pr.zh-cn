@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 语音命令, 语音输入
 ms.localizationpriority: high
-ms.openlocfilehash: bb238ee6ca4c657d7e2cb8e3c41f2cdebc7fc0de
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 65f989f6f587b236d7931c295e9375ad20a53218
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590389"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102237201"
 ---
 # <a name="9-using-speech-commands"></a>9.使用语音命令
 
@@ -49,8 +49,8 @@ ms.locfileid: "99590389"
 
 * 启用指示器
 * 启用点击放置
-* 启用边界框
-* 禁用边界框
+* 启用边界控制
+* 禁用边界控制
 
 ![添加新语音命令](images/mr-learning-base/base-09-section2-step1-2.png)
 
@@ -88,10 +88,10 @@ ms.locfileid: "99590389"
 
 展开“元素 1”并按如下所示对其进行配置：
 
-* 在“关键字”字段中，输入“启用边界框”，以引用在上一部分中创建的“启用边界框”命令 
+* 在“关键字”字段中，输入“启用边界控制”，以引用在上一部分中创建的“启用边界控制”命令 
 * 单击 + 图标以添加事件
 * 从“层次结构”窗口中，向“无(对象)”字段分配 RoverExplorer 对象 
-* 在“无函数”下拉列表中选择“BoundingBox” > “启用布尔”，以便在触发事件时更新此属性  
+* 在“无函数”下拉列表中选择“BoundsControl” > “启用布尔”，以便在触发事件时更新此属性  
 * 选中参数复选框，让其处于选中状态
 * 单击小 + 图标以添加另一个事件
 * 从“层次结构”窗口中，向“无(对象)”字段分配 RoverExplorer 对象 
@@ -102,10 +102,10 @@ ms.locfileid: "99590389"
 
 展开“元素 2”并按如下所示对其进行配置：
 
-* 在“关键字”字段中，输入“禁用边界框”，以引用在上一部分中创建的“禁用边界框”命令 
+* 在“关键字”字段中，输入“禁用边界控制”，以引用在上一部分中创建的“禁用边界控制”命令 
 * 单击 + 图标以添加事件
 * 从“层次结构”窗口中，向“无(对象)”字段分配 RoverExplorer 对象 
-* 在“无函数”下拉列表中选择“BoundingBox” > “启用布尔”，以便在触发事件时更新此属性  
+* 在“无函数”下拉列表中选择“BoundsControl” > “启用布尔”，以便在触发事件时更新此属性  
 * 验证是否已取消选中参数复选框
 * 单击小 + 图标以添加另一个事件
 * 从“层次结构”窗口中，向“无(对象)”字段分配 RoverExplorer 对象 

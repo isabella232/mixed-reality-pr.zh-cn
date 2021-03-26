@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: e4104dfd0d7b27425217c8cb92fa36c807053081
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 08793622917ca977c51be56267d8710e5abb78e8
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590369"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102237161"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
 
@@ -61,35 +61,34 @@ ms.locfileid: "99590369"
 
 ## <a name="adding-eye-tracking-to-objects"></a>将眼动跟踪添加到对象
 
-在“层次结构”窗口中，展开“RoverExplorer”>“按钮”对象，然后为三个子按钮对象中的每一个对象展开并选择“SeeItSayItLabel”>“TextMeshPro”对象 ：
+在“层次结构”窗口中，展开“RoverExplorer” > “Buttons”，然后选择全部三个子按钮对象：
 
-![选中了 TextMeshPro 对象的 Unity](images/mr-learning-base/base-08-section4-step1-1.png)
+![已选中 Button 对象的 Unity](images/mr-learning-base/base-08-section4-step1-1.png)
 
-当“检查器”窗口中的三个“TextMeshPro”对象仍处于选中状态时，请使用“添加组件”按钮将以下组件添加到所有选定对象：
-
-* 盒碰撞体组件
-* EyeTrackingTarget 组件
+在三个 Button 对象仍处于选中状态时，在“检查器”窗口中使用“添加组件”按钮将 EyeTrackingTarget 组件添加到所有选定对象 ：
 
 ![选中了 TextMeshPro 对象并添加了组件的 Unity](images/mr-learning-base/base-08-section4-step1-2.png)
 
-在“层次结构”窗口中，选择“提示”>“SeeItSayItLabel”>“TextMeshPro”对象，然后按以下方式配置“EyeTrackingTarget”组件  ：
+在“层次结构”窗口中，展开“RoverExplorer” > “Buttons” > “Hints” > “SeeItSayItLabel” > “TextMeshPro”
+
+在“层次结构”窗口中，选择“Hints”按钮对象，然后按以下方式配置“EyeTrackingTarget”组件： 
 
 * 在“On Look At Start ()”事件部分
   * 单击小 + 图标以添加另一个事件
-  * 将对象本身（即相同的 TextMeshPro 对象）分配给“无(对象)”字段 
+  * 将“Hints”按钮中的“TextMeshPro”对象分配给“None (Object)”字段  
   * 在“无函数”下拉列表中选择“TextMeshPro” > “float fontSize”，以便在触发事件时更新此属性  
   * 将参数设置为 0.06，以将 0.04 的当前字号增加 50%
 * 在“On Look Away ()”事件部分
   * 单击小 + 图标以添加另一个事件
-  * 将对象本身（即相同的 TextMeshPro 对象）分配给“无(对象)”字段 
+  * 将“Hints”按钮中的“TextMeshPro”对象分配给“None (Object)”字段  
   * 在“无函数”下拉列表中选择“TextMeshPro” > “float fontSize”，以便在触发事件时更新此属性  
   * 将参数设置为 0.04 以将字号重置为 0.04
 
 ![选中了“提示 TextMeshPro 对象”并配置了 EyeTrackingTarget 组件的 Unity](images/mr-learning-base/base-08-section4-step1-3.png)
 
-对“分解”>“SeeItSayItLabel”>“TextMeshPro”对象和“重置”>“SeeItSayItLabel”>“TextMeshPro”对象重复此步骤    。
+对“Explode”和“Reset”按钮对象重复此步骤，为剩余按钮配置眼动跟踪。  
 
-如果你现在进入游戏模式，然后按住鼠标右键，同时移动鼠标，直到凝视命中的某个标签出现，你将看到字号增加了 50%，而鼠标移走时字号将重置回其原始大小：
+如果你现在进入游戏模式，然后按住鼠标右键，同时移动鼠标，直到凝视命中的某个按钮出现，你将看到文本字号增加了 50%，而鼠标移走时字号将重置回其原始大小：
 
 ![视线对准眼动跟踪目标“分解”按钮标签的 Unity“播放”模式分屏视图](images/mr-learning-base/base-08-section4-step1-4.png)
 
