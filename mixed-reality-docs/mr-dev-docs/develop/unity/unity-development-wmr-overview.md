@@ -7,12 +7,12 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: 65b45d448854f8903ed37466ebaa3c427dea3089
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: e80c5411c7d180e0d78e031599455235dabaceb7
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582940"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102237138"
 ---
 # <a name="unity-development-for-vr-and-windows-mixed-reality"></a>针对 VR 和 Windows Mixed Reality 的 Unity 开发
 
@@ -74,7 +74,7 @@ ms.locfileid: "98582940"
 在你自己进入混合现实世界之前，建议先阅读下面的额外文档。 
 
 * [VR 发烧友指南](/windows/mixed-reality/enthusiast-guide/vr-journey)
-* [Unity Asset Store](https://www.assetstore.unity3d.com)
+* [Unity Asset Store](https://assetstore.unity.com)
 
 ## <a name="see-also"></a>请参阅 
 

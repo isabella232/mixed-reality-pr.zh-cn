@@ -1,18 +1,18 @@
 ---
 title: 发现并获取功能
-description: 了解并下载混合现实功能。
+description: 发现并下载混合现实功能。
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 01/27/2021
+ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: 4da6b6fdfc0205d4fa7fb5bf4ae9e48993d7c1e6
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: 859abd0c8e538392a7ba2a1adbb4387956c50028
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99243888"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102230709"
 ---
 # <a name="discovering-and-acquiring-features"></a>发现并获取功能
 
@@ -51,8 +51,7 @@ ms.locfileid: "99243888"
 
 ## <a name="refresh-the-feature-catalog"></a>刷新功能目录
 
-若要检查有无新功能和更新的功能，请单击“刷新” ![“刷新”按钮](images/RefreshButton.png) 按钮。 随即会连接到目录站点并检索最新信息。
-* 读取目录后，将显示上次更新的日期和时间。
+若要检查有无新功能和更新的功能，请单击“刷新” ![“刷新”按钮](images/RefreshButton.png) 按钮。 随即会连接到目录站点并检索最新信息。 读取目录后，将显示上次更新的日期和时间。
 
 ## <a name="select-features"></a>选择特征
 
@@ -73,7 +72,7 @@ ms.locfileid: "99243888"
 
 ## <a name="going-back-to-the-previous-step"></a>返回到上一步骤
 
-在“发现功能”中，混合现实功能工具允许返回到开始。 选择“返回”重新开始。
+在“发现功能”中，混合现实功能工具允许返回到项目选择。 选择“返回”重新开始。
 
 ## <a name="see-also"></a>另请参阅
 
