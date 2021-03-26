@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，版本历史记录，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 8fa1671657a7cb057f88da24fe4cfe68b0401397
-ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
+ms.openlocfilehash: 101061f69fcd4bd3885aa265f32ba2a8f93bf3dc
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496035"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550127"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
@@ -25,7 +25,7 @@ ms.locfileid: "100496035"
   * 作为 XR_MSFT_holographic_remoting 扩展的一部分的自定义数据通道。 [OpenXR 远程示例](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)中显示了一个示例。
 * 改善了播放器与远程端之间的同步。 这允许动态变化的姿势和帧缓冲，确保远程呈现的内容平稳地达到预期的目标帧速率。
 * 通过 Microsoft Store 提高的全息远程处理播放机的性能。 在 HoloLens 2 上，播放机现在在每秒60帧上运行。
-* 优化了可通过 [SpatialSurfaceObserver](https://docs.microsoft.com/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceobserver) 通过远程应用查询的空间 surface 网格传输。
+* 优化了可通过 [SpatialSurfaceObserver](/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceobserver) 通过远程应用查询的空间 surface 网格传输。
 * 修复了在断开连接时调用 SpatialAnchorManager 方法或释放定位点的问题。
 * 固定线程问题导致关闭 PlayerContext 或 RemoteContext 实例时出现故障。
 * 许多其他 bug 修复和稳定性改进。

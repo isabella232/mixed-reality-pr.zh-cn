@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: a713497e0c5f061e9e81bf66197b3e2116218219
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: e2ef6ac43e81ff2b8e66a4bd197ea41c198a1626
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759743"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105549947"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
@@ -311,7 +311,7 @@ struct TopologyResult
 ```
 
 > [!NOTE]
-> 在 Unity 示例中，其中每个查询都链接到 "虚拟 UI" 面板中的某个按钮。 示例将每个查询的参数硬编码为合理的值。 有关更多示例，请参阅示例代码中的 SpaceVisualizer.cs。
+> 在 Unity 示例中，其中每个查询都链接到 "虚拟 UI" 面板中的某个按钮。 示例将每个查询的参数硬编码为合理的值。 有关更多示例，请参阅示例代码中的 SpaceVisualizer。
 
 ### <a name="shape-queries"></a>形状查询
 
@@ -319,7 +319,7 @@ struct TopologyResult
 
 形状分析仅适用于水平曲面。 例如，沙发由平面座位表面和沙发顶部的扁平顶部定义。 形状查询查找特定大小、高度和方位范围的两个图面，两个图面对齐并连接起来。 使用 Api 术语，沙发座位和后端是形状组件，对齐要求是形状组件约束。
 
-"Sittable" 对象的 Unity 示例 (ShapeDefinition.cs) 中定义的示例查询如下所示。
+"Sittable" 对象在 Unity 示例 () ShapeDefinition 中定义的示例查询如下所示。
 
 ```cs
 shapeComponents = new List<ShapeComponent>()
@@ -350,7 +350,7 @@ shapeConstraints = new List<ShapeConstraint>()
 };
 ```
 
-在 Unity 模块中提供包装函数以便于创建自定义形状定义。 可以在 "ShapeComponentConstraint" 和 "ShapeConstraint" 结构内的 "SpatialUnderstandingDll.cs" 中找到组件和形状约束的完整列表。
+在 Unity 模块中提供包装函数以便于创建自定义形状定义。 可以在 "ShapeComponentConstraint" 和 "ShapeConstraint" 结构内的 "SpatialUnderstandingDll" 中找到组件和形状约束的完整列表。
 
 ![在此图面上找到矩形形状](images/su-shapequery-300px.jpg)<br>
 *在此图面上找到矩形形状*
@@ -421,7 +421,7 @@ Solver_PlaceObject(
     UnderstandingDLL.GetStaticObjectPlacementResultPtr());
 ```
 
-如果成功，则返回包含放置位置、尺寸和方向的 "ObjectPlacementResult" 结构。 此外，放置将添加到 dll 的已放置对象的内部列表中。 后续的放置查询会将此对象考虑在内。 Unity 示例中的 "LevelSolver.cs" 文件包含更多示例查询。
+如果成功，则返回包含放置位置、尺寸和方向的 "ObjectPlacementResult" 结构。 此外，放置将添加到 dll 的已放置对象的内部列表中。 后续的放置查询会将此对象考虑在内。 Unity 示例中的 "LevelSolver" 文件包含更多示例查询。
 
 ![对象放置的结果](images/su-objectplacement-1000px.jpg)<br>
 *图3：从三个位置对地面查询产生的结果与相机位置规则的结果的蓝色方框*
@@ -441,7 +441,7 @@ One-time scan process –
     Query functions will not function until after the scan has been finalized.
 ```
 
-用户驱动的 playspace "painting" –在扫描阶段，用户移动并浏览重头戏，并有效地绘制应包括的区域。 在此阶段，生成的网格非常重要，可提供用户反馈。 室内家庭或办公设置–查询函数围绕平整表面和墙壁围绕直角设计。 这是一个软限制。 但是，在扫描阶段，将完成主轴分析以按主要轴和次要轴优化网格分割。 包含的 SpatialUnderstanding.cs 文件管理扫描阶段过程。 它调用以下函数。
+用户驱动的 playspace "painting" –在扫描阶段，用户移动并浏览重头戏，并有效地绘制应包括的区域。 在此阶段，生成的网格非常重要，可提供用户反馈。 室内家庭或办公设置–查询函数围绕平整表面和墙壁围绕直角设计。 这是一个软限制。 但是，在扫描阶段，将完成主轴分析以按主要轴和次要轴优化网格分割。 包含的 SpatialUnderstanding 文件管理扫描阶段过程。 它调用以下函数。
 
 ```
 SpatialUnderstanding_Init – Called once at the start.
@@ -480,7 +480,7 @@ Import_UnderstandingMesh –
 * 跟踪丢失时，下一个 OnSurfaceChanged 事件将删除所有网格。
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>混合现实工具包中的空间映射
-有关将空间映射用于混合现实工具包 v2 的详细信息，请参阅 MRTK 文档的 <a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">空间感知部分</a> 。
+有关将空间映射用于混合现实工具包 v2 的详细信息，请参阅 MRTK 文档的 <a href="/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">空间感知部分</a> 。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 

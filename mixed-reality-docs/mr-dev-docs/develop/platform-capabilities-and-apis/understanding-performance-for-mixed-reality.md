@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，性能，优化，CPU，GPU
-ms.openlocfilehash: 5012c30dce1ca4149324c916355922086a33c258
-ms.sourcegitcommit: 6725b83adf13f6573faacb27db2bcaafe80df472
+ms.openlocfilehash: eabc151382652bc2588249ef78d2f9f3b0f8cd99
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98615123"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550117"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>了解混合现实的性能
 
@@ -144,7 +144,7 @@ ms.locfileid: "98615123"
 - [建议用于 Unity 的设置](../unity/recommended-settings-for-unity.md)
 - [针对 Unreal 的性能建议](../unreal/performance-recommendations-for-unreal.md)
 - [Unreal 中的材料建议](../unreal/unreal-materials.md)
-- [优化3D 模型](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
-- [转换和优化实时3D 模型的最佳做法](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+- [优化3D 模型](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [转换和优化实时3D 模型的最佳做法](/dynamics365/mixed-reality/import-tool/best-practices)
 - [适用于 Unreal 的艺术家和设计人员性能准则](https://docs.unrealengine.com/en-US/TestingAndOptimization/PerformanceAndProfiling/Guidelines/index.html)
 - [Unreal 的 VR 最佳实践](https://docs.unrealengine.com/en-US/SharingAndReleasing/XRDevelopment/VR/DevelopVR/ContentSetup/index.html)

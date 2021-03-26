@@ -6,17 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 语音输入，KeywordRecognizer，GrammarRecognizer，麦克风，听写，语音，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 7268a4df9c7fce03029937c72540ed274574067d
-ms.sourcegitcommit: 8c3af63fb49494f75c8ab46236fc3dd8533c1e9d
+ms.openlocfilehash: c062289a1a26365528a86761b6b68a9a24041f7c
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606112"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550377"
 ---
 # <a name="voice-input-in-unity"></a>Unity 中的语音输入
 
 > [!CAUTION]
-> 在开始之前，请考虑使用认知语音服务 SDK 的 Unity 插件。 此插件提供更好的语音准确性结果，并可轻松访问语音到文本解码，以及高级语音功能，如对话框、基于意向的交互、翻译、文本到语音合成和自然语言语音识别。 若要开始，请查看 [示例和文档](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-unity)。
+> 在开始之前，请考虑使用认知语音服务 SDK 的 Unity 插件。 此插件提供更好的语音准确性结果，并可轻松访问语音到文本解码，以及高级语音功能，如对话框、基于意向的交互、翻译、文本到语音合成和自然语言语音识别。 若要开始，请查看 [示例和文档](/azure/cognitive-services/speech-service/quickstart-csharp-unity)。
 
 Unity 公开了三种向 Unity 应用程序添加 [语音输入](../../design/voice-input.md) 的方法，这两种方法是 PhraseRecognizer 类型：
 * `KeywordRecognizer`向你的应用程序提供一个要侦听的字符串命令数组
@@ -221,7 +221,7 @@ private void DictationRecognizer_DictationHypothesis(string text)
 
 **DictationComplete**
 
-当识别器停止时，无论是从停止 ( # A1，还是发生超时或其他错误，都将激发此事件。
+当识别器停止时，无论是从停止 () 调用、发生超时还是发生其他错误，都将激发此事件。
 
 首先，订阅该 `DictationComplete` 事件：
 

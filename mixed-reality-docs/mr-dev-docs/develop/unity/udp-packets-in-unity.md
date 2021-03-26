@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/3/2021
 ms.topic: article
 keywords: UDP，UWP，Unity，UDP 数据包，套接字，客户端服务器，终结点，网络，远程计算机，datagramsocket，示例，.net
-ms.openlocfilehash: e4fbdc12a1f7fbca44e14f6ace89ef791a09608f
-ms.sourcegitcommit: 8647702638f7600c51df1d89d76c761b52bdf0d7
+ms.openlocfilehash: b38897f228a62abeb63b7e2ffc0f2a98a840b781
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99566972"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550517"
 ---
 # <a name="udp-packets-in-unity-uwp-apps"></a>Unity UWP 应用中的 UDP 数据包
 
@@ -25,7 +25,7 @@ ms.locfileid: "99566972"
 
 ## <a name="build-your-socket-client-and-server"></a>构建套接字客户端和服务器 
 
-按照说明 [生成基本的 UDP 套接字客户端和服务器](https://docs.microsoft.com/windows/uwp/networking/sockets#build-a-basic-udp-socket-client-and-server)。 你将使用 [DatagramSocket](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) 类通过 UDP 发送和接收数据，并形成回音客户端和服务器。 我们还建议通读本文中的其他资源部分，因为它们适用于更多的自定义和复杂的用例。 
+按照说明 [生成基本的 UDP 套接字客户端和服务器](/windows/uwp/networking/sockets#build-a-basic-udp-socket-client-and-server)。 你将使用 [DatagramSocket](/uwp/api/Windows.Networking.Sockets.DatagramSocket) 类通过 UDP 发送和接收数据，并形成回音客户端和服务器。 我们还建议通读本文中的其他资源部分，因为它们适用于更多的自定义和复杂的用例。 
 
 > [!IMPORTANT]
 > 如果在将 UDP 数据包从 PC 发送到 PC 时遇到问题，请检查你的网络是否允许这些操作。 如果您的网络以任何方式阻止 UDP 数据包，则您的 HoloLens 设备将无法侦听它们。
@@ -33,7 +33,7 @@ ms.locfileid: "99566972"
 可从以下链接下载完整的 DatagramSocket UDP 示例应用：
 
 > [!div class="nextstepaction"]
-> [安装工具](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/datagramsocket/)
+> [安装工具](/samples/microsoft/windows-universal-samples/datagramsocket/)
 
 ## <a name="see-also"></a>另请参阅 
 * [带有共享全息影像和 Azure Blob 存储/UDP 多播的试验](https://mtaulty.com/2017/12/29/experiments-with-shared-holograms-and-azure-blob-storage-udp-multicasting-part-1/)
