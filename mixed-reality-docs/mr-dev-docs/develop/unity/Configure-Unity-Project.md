@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目，Windows Mixed Reality，UWP，XR，性能
-ms.openlocfilehash: 47ca4041e997d623d08fa1732f7039c655810bfc
-ms.sourcegitcommit: b0fb5497bf9f280ba5610c30e4b9e5aa1cda52c9
+ms.openlocfilehash: 5889a76941c36e24f600df5a459440d93bdd4c64
+ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104837410"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636389"
 ---
 # <a name="configuring-your-project-without-mrtk"></a>配置项目时不使用 MRTK
 
@@ -117,7 +117,7 @@ HoloLens 具有移动类 GPU。 如果你的应用面向 HoloLens，你需要先
 2. 在 " **检查器** " 面板中，将转换 **位置** 设置为 **0，0，0，** 以使用户头部的位置从 Unity 世界原点开始。
 3. 将 **清除标志** 更改为 **纯色**。
 4. 将 **背景** 色更改为 **RGBA 0，0，0，0**。 在 HoloLens 中，黑色呈现为透明。
-5. 更改 **剪辑平面-接近** 于 [HoloLens 建议](camera-in-unity.md#clip-planes) 0.85 (米) 。
+5. 更改 **剪辑平面-接近** 于 [HoloLens 建议](camera-in-unity.md#using-clipping-planes) 0.85 (米) 。
 
 ![在 Unity 编辑器中打开的 "检查器" 选项卡的屏幕截图](images/wmr-config-img-11.png)<br>
 *Unity 照相机设置*

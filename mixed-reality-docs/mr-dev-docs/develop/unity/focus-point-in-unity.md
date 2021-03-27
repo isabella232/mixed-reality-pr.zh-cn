@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，焦点，焦点平面，稳定平面，稳定点，reprojection，LSR，深度缓冲区，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 2ceb5f2b58cbd1571b2d9f4de79acfe45779bfea
-ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
+ms.openlocfilehash: 16f359e1742b86c5f12c0c5965ac9e818ea76aee
+ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226396"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636219"
 ---
 # <a name="focus-point-in-unity"></a>Unity 中的焦点
 
@@ -20,7 +20,7 @@ ms.locfileid: "98226396"
 
 使用 [焦点](../platform-capabilities-and-apis/hologram-stability.md#reprojection) 向 HoloLens 提供有关如何最好地使当前正在显示的全息影像稳定的提示。
 
-如果要在 Unity 中设置焦点，则需要使用 *HolographicSettings. SetFocusPointForFrame ( # B1* 来设置每个框架。 如果未为帧设置焦点，则使用默认的稳定平面。
+如果要在 Unity 中设置焦点，则需要使用 *HolographicSettings. SetFocusPointForFrame ()* 设置每个框架。 如果未为帧设置焦点，则使用默认的稳定平面。
 
 > [!NOTE]
 > 默认情况下，新的 Unity 项目设置了 "启用深度缓冲共享" 选项。  使用此选项时，在沉浸式桌面耳机上运行的 Unity 应用或运行 Windows 10 4 月2018更新 (RS4) 或更高版本的应用程序将向 Windows 提交深度缓冲区以自动优化全息影像稳定性，无需应用指定焦点：
@@ -49,7 +49,7 @@ void Update()
 ```
 
 > [!NOTE]
-> 如果焦点对象最终出现在用户后面，则上述简单代码可以减少全息图的稳定性。 我们通常建议设置 " **[启用深度缓冲区共享"，](camera-in-unity.md#sharing-your-depth-buffers-with-windows)** 而不是手动指定焦点。
+> 如果焦点对象最终出现在用户后面，则上述简单代码可以减少全息图的稳定性。 我们通常建议设置 " **[启用深度缓冲区共享"，](camera-in-unity.md#sharing-depth-buffers)** 而不是手动指定焦点。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
