@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: 1c9e185c63d3efef66cdc2782d8d8d4e3692c705
-ms.sourcegitcommit: d5e4eb94c87b86a7774a639f11cd9e35a7050107
+ms.openlocfilehash: 1fbc03fe446d9e9619348618c6d0b9aab828fe1a
+ms.sourcegitcommit: 6272d086a2856e8b514a719e1f9e3b78554be5be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623627"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105937423"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>混合现实 OpenXR 支持 Unity 中的功能
 
-**Mixed Reality OpenXR 插件** 包是 Unity 的 **OpenXR 插件** 的扩展，支持用于 HoloLens 2 和 Windows Mixed Reality 耳机的一套功能。 继续之前，请确保已安装 **Unity 2020.2** 或更高版本， **OpenXR 插件版本 0.1.3** 或更高版本，并且 Unity 项目已 [配置为 OpenXR](openxr-getting-started.md)。
+**Mixed Reality OpenXR 插件** 包是 Unity 的 **OpenXR 插件** 的扩展，支持用于 HoloLens 2 和 Windows Mixed Reality 耳机的一套功能。 在继续之前，请确保已 [为 OpenXR 配置](openxr-getting-started.md)了 Unity 项目。
 
 ## <a name="whats-supported"></a>支持的操作
 
@@ -35,6 +35,9 @@ ms.locfileid: "103623627"
 * 与 Unity [ARFoundation 4.0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) 或更高版本兼容。
 *  (在 0.1.3) 中添加的功能支持从生成和部署的 Windows 独立应用进行 [桌面应用全息远程处理](holographic-remoting-desktop.md) 。
 * 在 0.1.4) 中添加 (支持通过 SpatialGraphNode 在 HoloLens2 上进行[QR 代码跟踪](#qr-codes)
+* 在为0.2.0 中添加的 () 支持全息远程处理中的 **定位点**
+* 在为 0.2.0) 中添加的 (支持 **手型和手写网格跟踪**
+* 在为 0.2.0) 中添加的 (支持用于平面检测的 **ARPlaneSubsystems** ，并使用 **ARRaycastManager** 放置全息影像。
 
 ## <a name="holographic-remoting-setup"></a>全息远程处理安装
 
@@ -112,13 +115,10 @@ HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在�
 
 以下问题和缺少的功能是通过混合现实 OpenXR 插件 **版本 0.1.0** 知道的。 我们正在处理这些问题，将在即将发布的版本中发布修补程序和新功能。
 
-* 尚不支持 **ARPlaneSubsystem** 。 HoloLens 2 上还不支持 **ARPlaneManager**、 **ARRAYCASTMANAGER** 和相关 API，如 **ARAnchorManager。**
-* 全息远程处理尚不支持 **定位点暂留**，但不久后会出现此情况。
-* 目前尚不支持 **手写网格** 跟踪和 **XRMeshSubsystem** 。
 * 未来版本中将提供 **Azure 空间锚点** 支持。
 * **ARM64** 是仅适用于 HoloLens 2 应用的受支持平台。 **ARM** 平台即将发布。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 当你在 HoloLens 2 上挂起和恢复 Unity 应用时，该应用无法正确恢复，这将导致在 HoloLens 视图中显示4个旋转点。
 
