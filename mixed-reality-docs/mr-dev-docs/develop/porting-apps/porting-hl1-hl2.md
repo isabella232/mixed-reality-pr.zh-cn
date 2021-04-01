@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, 测试, MRTK, MRTK 版本 2, HoloLens 2, unity, 移植, HoloLens 第一代, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 迁移, 最佳做法, ARM
-ms.openlocfilehash: 6f3c12bf54a4f4339c54908a47369746e0d743a4
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 52055f35df05c2cc69e960c681598adac7bd6f1c
+ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "101759128"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636229"
 ---
 # <a name="porting-hololens-1st-gen-apps-to-hololens-2"></a>将 HoloLens（第 1 代）应用移植到 HoloLens 2
 
@@ -107,7 +107,7 @@ HoloLens（第 1 代）在 x86 处理器上执行应用程序，而 HoloLens 2 �
     - 此操作方便将来的 MRTK 引入和更新。
 - 查看并探索 MRTK 中提供的示例场景，尤其是 *HandInteractionExamples.scene*。
 - 使用四面体、碰撞体和 TextMeshPro 文本重新生成基于画布的 UI。
-- 启用[深度缓冲区共享](../unity/camera-in-unity.md#sharing-your-depth-buffers-with-windows)或[设置焦点](../unity/focus-point-in-unity.md)；首选使用 16 位深度缓冲区以提高性能。 确保在渲染颜色的同时渲染深度。 Unity 通常不会写入透明和文本游戏对象的深度。 
+- 启用[深度缓冲区共享](../unity/camera-in-unity.md#sharing-depth-buffers)或[设置焦点](../unity/focus-point-in-unity.md)；首选使用 16 位深度缓冲区以提高性能。 确保在渲染颜色的同时渲染深度。 Unity 通常不会写入透明和文本游戏对象的深度。 
 - 设置单通道实例化渲染路径。
 - 使用 [MRTK 的 HoloLens 2 配置文件](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/profiles/profiles.md#hololens-2-profile)
 
