@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: 372cb7c9516a994cb7c3da1efb6cade792e862d1
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: dd4eb8400a7aac491cb893d19e18afc6d6401d1b
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590309"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550237"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2.设置 Photon Unity Networking
 
@@ -68,7 +68,7 @@ ms.locfileid: "99590309"
 
 ## <a name="importing-the-tutorial-assets"></a>导入教程资产
 
-将 AzurespatialAnchors SDK V2.7.1 添加到 unity 项目，若要添加包，请遵循此[教程](https://docs.microsoft.com/en-us/azure/spatial-anchors/how-tos/setup-unity-project?tabs=UPMPackage)
+将 AzurespatialAnchors SDK V2.7.1 添加到 unity 项目，若要添加包，请遵循此[教程](/azure/spatial-anchors/how-tos/setup-unity-project?tabs=UPMPackage)
 
 
 下载以下 Unity 自定义包，并 **按其列出顺序** 将其 **导入**：
