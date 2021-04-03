@@ -1,22 +1,22 @@
 ---
-title: HoloLens (第一代) 共享 240-多个 HoloLens 设备
+title: HoloLens（第一代）共享 240 - 多个 HoloLens 设备
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 了解共享全息影像的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，共享，网络，学院，教程，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 8e3631c80702f04e9f7e50c98bed91d92c332841
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 446f82558781e47b5381ee3f59af70953954ad2a
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730144"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106269913"
 ---
 # <a name="hololens-1st-gen-sharing-240-multiple-hololens-devices"></a>HoloLens (第一代) 共享240：多个 HoloLens 设备
 
->[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
+>[!IMPORTANT]
+>混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
 随着我们在空间中的发展，我们将在世界各地提供全息影像。 通过使用各种 [坐标系统](../../../design/coordinate-systems.md) 跟踪对象的位置和方向，HoloLens 保留了全息影像。 当我们在设备之间共享这些坐标系统时，我们可以创建共享体验，使我们能够参与共享全息环境。
 

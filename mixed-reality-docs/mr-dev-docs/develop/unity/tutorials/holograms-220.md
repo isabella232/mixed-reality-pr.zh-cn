@@ -1,22 +1,22 @@
 ---
-title: HoloLens (第一代) 空间 220-空间音效
+title: HoloLens（第一代）空间 220 - 空间音效
 description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解空间音效概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间音效，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: aea093aa8f5e6c983cd66acf8cec89d8e7ecf52d
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 789f4da924c00554042ad991cc5610d3e816f12d
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730304"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106269993"
 ---
 # <a name="hololens-1st-gen-spatial-220-spatial-sound"></a>HoloLens (第一代) 空间220：空间音效
 
->[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
+>[!IMPORTANT]
+>混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
 [空间音效](../../../design/spatial-sound.md) breathes 影像，并使其在世界中存在。 全息影像同时包含光和声音，如果你发生丢失全息影像的情况，空间音效可以帮助你找到它们。 空间音效并不像您在广播上听到的典型声音，而是位于3D 空间中的声音。 利用空间音效，你可以制作出全息影像，就像你，甚至是你自己的背景上！ 在本课程中，你将：
 
@@ -108,7 +108,7 @@ ms.locfileid: "104730304"
 
 1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
 2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”  。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
+3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
 4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 
 如果要部署到沉浸式耳机：
@@ -512,6 +512,6 @@ Underworld 将隐藏，并且以前隐藏的全息影像会重新出现。
 
 ## <a name="the-end"></a>结束
 
-恭喜！ 你现在已经完成了 **MR 空间220：空间音质**。
+祝贺你！ 你现在已经完成了 **MR 空间220：空间音质**。
 
 听世界，让你的体验生活生动！

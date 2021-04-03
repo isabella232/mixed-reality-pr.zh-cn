@@ -1,22 +1,22 @@
 ---
-title: HoloLens (第一代) 空间 230-空间映射
+title: HoloLens（第一代）空间 230 - 空间映射
 description: 遵循以下编码演练，使用 Unity、Visual Studio 和 HoloLens 来了解空间映射概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间映射，表面重建，网格，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 933b5d331e814cdb2ced2689e06e0c8508f2d68a
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 24814925bfc154989822e326d2f088fe459c7aa0
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730134"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106269902"
 ---
 # <a name="hololens-1st-gen-spatial-230-spatial-mapping"></a>HoloLens (第一代) 空间230：空间映射
 
->[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](./mr-learning-base-01.md)。
+>[!IMPORTANT]
+>混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
 [空间映射](../../../design/spatial-mapping.md) 将现实世界和虚拟世界结合在一起，并讲授有关环境的影像。 在尊敬的空间 230 (项目 Planetarium) ，我们将学习如何：
 
@@ -148,7 +148,7 @@ ms.locfileid: "104730134"
 * 单击 " **添加探查器 > GPU**"。
 * 单击 "**活动探查 <Enter IP> 器 >**。
 * 输入 HoloLens 的 **IP 地址** 。
-* 单击“连接”。
+* 单击“连接”  。
 * 观察 GPU 呈现帧所花的时间（以毫秒为单位）。
 * 阻止应用程序在设备上运行。
 * 返回到 Visual Studio 并打开 **SpatialMappingObserver**。 你会在 Assembly-CSharp (通用 Windows) 项目的 HoloToolkit\SpatialMapping 文件夹中找到它。
@@ -1208,7 +1208,7 @@ public class PlanetOcclusion : MonoBehaviour
 
 ## <a name="the-end"></a>结束
 
-恭喜！ 你现在已经完成了 **MR 空间230：空间映射**。
+祝贺你！ 你现在已经完成了 **MR 空间230：空间映射**。
 
 * 你知道如何扫描环境并将空间映射数据加载到 Unity。
 * 你了解着色器的基本知识，以及如何使用材料来重新可视化世界。

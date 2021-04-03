@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 10/12/2020
 ms.topic: article
 keywords: 事件，calendar，学院，计划，sf，旧金山，反应器
-ms.openlocfilehash: f534a170594eb26e0d7f56e8694b9112cb0acbac
-ms.sourcegitcommit: 4647712788a91a2b26d4b01e62285c2942bb0bd2
+ms.openlocfilehash: 17db5ecac5953326eeb30c33693be18243579869
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102230878"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106270013"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft 混合现实事件
 
@@ -21,6 +21,7 @@ ms.locfileid: "102230878"
 
 |事件|Date|主题|
 |-------------|-------------|-----|
+| 混合现实演讲系列活动|2021年4月6日， @10 PST|[创建具有 Microsoft PowerApps 的混合现实应用](https://www.meetup.com/hololens-mr/events/277257132)|
 | 混合现实演讲系列活动|2020 年 4 月 23 日|[扩充 web](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Augmenting-WebXR-Standards)|
 | 混合现实演讲系列活动|2020年6月22日|[用 MR 创建培训体验](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Educational-Experiences-in-MR)|
 | [Microsoft 虚拟现实事件](https://www.meetup.com/hololens-mr/events/272364822/)|2020 年 8 月 20 日|VR 迷你峰会|

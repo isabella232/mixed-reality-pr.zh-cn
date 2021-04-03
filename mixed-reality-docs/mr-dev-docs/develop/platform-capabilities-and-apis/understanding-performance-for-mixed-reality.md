@@ -6,16 +6,21 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，性能，优化，CPU，GPU
-ms.openlocfilehash: eabc151382652bc2588249ef78d2f9f3b0f8cd99
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: d0218902864586e678f6d51dfade58bd567bcc02
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550117"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106269953"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>了解混合现实的性能
 
 本文介绍了如何了解混合现实应用的性能的重要性。  如果你的应用程序不能以最佳帧速率运行，用户体验会大大降低。 全息影像会显得不稳定，因此，对环境的打印头跟踪是不准确的，导致用户体验不佳。 对于混合现实开发而言，必须将性能视为第一类功能，而不是波兰语任务。
+
+我们最近发布了一个名为 "质量基础" 的应用程序，该应用程序涵盖用于 HoloLens 2 应用的常见性能、设计和环境问题和解决方案。 此应用程序非常适合以下内容。
+
+> [!div class="nextstepaction"]
+> [下载质量基础应用](https://www.microsoft.com/en-us/p/quality-fundamentals/9mwz852q88fw)
 
 下面列出了每个目标平台的高性能帧速率值。
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/26/2021
 ms.topic: article
 keywords: Unity，混合现实，开发，入门，新项目，Windows Mixed Reality，UWP，XR，性能，旧，mrtk
-ms.openlocfilehash: 0860154034a63d5058da09a3b842e70bc3775dc5
-ms.sourcegitcommit: 6272d086a2856e8b514a719e1f9e3b78554be5be
+ms.openlocfilehash: 09989b3b2b7fa1d351235a2cc9b885d4795dc2b6
+ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105938100"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106088526"
 ---
 # <a name="using-legacy-built-in-xr-support"></a>使用旧的内置 XR 支持
 
@@ -20,7 +20,7 @@ ms.locfileid: "105938100"
 用于 Unity 的 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 MRTK 版本 2 旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序开发。 该项目旨在降低准入门槛、创建混合现实应用程序，并随着我们的共同成长回馈社区。
 
 > [!div class="nextstepaction"]
-> [试用我们的 MRTK 教程](tutorials/mr-learning-base-01.md)
+> [试用我们的 MRTK 教程](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=wsa)
 
 有关更多功能的详细信息，请参阅 [MRTK 的文档](/windows/mixed-reality/mrtk-unity) 。
 

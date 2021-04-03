@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 混合现实，Windows Mixed Reality，HoloLens，，vr，尊敬，，入门，全息影像，学院，教程，混合现实院校，unity，混合现实耳机，Windows Mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c764c28cea812314d9c83136fe771c5b4077adc5
-ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
+ms.openlocfilehash: 68939eda0a18e2d49948d2a87b9f709389857bf3
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105636169"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106269973"
 ---
 # <a name="hololens-1st-gen-basics-100-getting-started-with-unity"></a>HoloLens (第一代) 基础知识100： Unity 入门
 
 >[!IMPORTANT]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
+>混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
 本教程将指导你创建使用 Unity 构建的基本混合现实应用。
 
@@ -30,7 +30,7 @@ ms.locfileid: "105636169"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 配置了正确 [工具](../../install-the-tools.md)的 WINDOWS 10 电脑。
 
