@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: 11d25a13e679308ef7f0f4302dd7df29e413a435
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 5e231fe91c96dc8b6a7c07c6fdbc2c07286d6ab2
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237044"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982980"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -30,7 +30,7 @@ ms.locfileid: "102237044"
 
 ![选中了 SOlvers 文件夹的 Unity“项目”窗口](images/mr-learning-base/base-05-section1-step1-1.png)
 
-本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/solvers/solver.md)指南。
+本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver.md)指南。
 
 > [!NOTE]
 > 方向指示器求解器不在上面所述的求解器文件夹中，而是在“包”>“混合现实工具包基础”>“SDK”>“实验性”>“功能”>“实用工具”文件夹，因为这是一项实验性功能。
@@ -72,7 +72,7 @@ ms.locfileid: "102237044"
 > 如果在“场景”窗口中未看到相机光线，请确保已启用调节器菜单，如上图所示。
 
 > [!TIP]
-> 若要了解如何使用编辑器中的输入模拟功能，可以参考 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs)中的[使用编辑器中的手写输入模拟来测试场景](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene)指南。
+> 若要了解如何使用编辑器中的输入模拟功能，可以参考 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)中的[使用编辑器中的手写输入模拟来测试场景](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene)指南。
 
 > [!TIP]
 > 如果计算机有麦克风，你可以使用语音命令“切换诊断”轻松切换游戏窗口中显示的“诊断”面板的活动状态。 或者，你也可以在“MRTK 配置文件”>“诊断”>“启用诊断系统”中禁用它。 但是，我们通常建议你在开发过程中使诊断系统保持活动状态。
@@ -140,7 +140,7 @@ ms.locfileid: "102237044"
 
 在本教程中，你学习了如何使用 MRTK 的方向指示器求解器让 UI 元素直观地将用户定向到对象。 还了解了如何使用“点击放置”求解器轻松重新定位对象。
 
-若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/solvers/solver.md)指南。
+若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver.md)指南。
 
 > [!div class="nextstepaction"]
 >[下一教程：6.创建用户界面](mr-learning-base-06.md)

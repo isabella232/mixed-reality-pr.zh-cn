@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界控件
 ms.localizationpriority: high
-ms.openlocfilehash: 1ab7b3a334639be564717d77d3bbc478a25e8326
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: c2cca67afe19665ea899eb56140011bd9c756a7f
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237238"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982860"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 
@@ -113,7 +113,7 @@ ms.locfileid: "102237238"
 
 ![显示正在按下“重置”按钮的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section1-step1-7.png)
 
-若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
+若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
 
 ## <a name="adding-bounds-control"></a>添加边界控件
 
@@ -168,7 +168,7 @@ ms.locfileid: "102237238"
 
 ![显示正在操作边界控件的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section2-step1-4.png)
 
-若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/)中的[边界控件](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html)指南。
+若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[边界控件](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html)指南。
 
 ## <a name="congratulations"></a>祝贺
 

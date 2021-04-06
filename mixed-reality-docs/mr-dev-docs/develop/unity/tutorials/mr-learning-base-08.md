@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: 08793622917ca977c51be56267d8710e5abb78e8
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: bf7bd266eb471193979c588d97d14dd37aed175e
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237161"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982873"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
 
@@ -26,14 +26,7 @@ ms.locfileid: "102237161"
 * 了解如何为 HoleLens 2 启用眼动跟踪
 * 了解如何使用眼动跟踪触发操作
 
-## <a name="ensuring-the-eye-gaze-input-capability-is-enabled"></a>确保启用了“眼睛凝视输入”功能
-
-在 Unity 菜单中，选择“混合现实工具包”>“实用工具”>“配置 Unity 项目”，打开“MRTK 项目配置器”窗口，然后在“UWP 功能”部分中，验证“启用眼睛凝视输入功能”是否灰显   ：
-
-![Unity“MRTK 项目配置器”窗口](images/mr-learning-base/base-08-section1-step1-1.png)
-
-> [!NOTE]
-> 当你在本系列教程开头配置 Unity 项目时，[应用 MRTK 项目配置器设置](mr-learning-base-02.md#creating-and-configuring-the-scene)指令期间应该已经启用了眼睛凝视输入功能。 但如果未启用此功能，请确保立即启用。
+[!INCLUDE[](includes/ensuring-eye-gaze-capabality.md)]
 
 ## <a name="enabling-eye-based-gaze-in-the-gaze-provider"></a>在凝视提供者中启用基于眼睛的凝视
 

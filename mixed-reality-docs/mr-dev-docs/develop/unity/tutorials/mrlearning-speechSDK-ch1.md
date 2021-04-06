@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 818e4c7ab60a2b17b60bfc97f564a4a87bf33a9b
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 9a149e5b80c5989ab960db3e9522b67473b2095c
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590119"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982770"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1.集成并使用语音识别和听录
 
@@ -63,7 +63,7 @@ ms.locfileid: "99590119"
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section2-step1-1.png)
 
 > [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-04.md#importing-the-tutorial-assets)说明。
+> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-02.md#importing-the-tutorial-assets)说明。
 
 ## <a name="configuring-the-capabilities"></a>配置功能
 
