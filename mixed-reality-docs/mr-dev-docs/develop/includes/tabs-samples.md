@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 465229efca35a5ac3e254ac60481a447c8708ea1
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: cd8a8229c7f70891a8f01d39ee1d6315c47429f6
+ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102244621"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104988109"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -38,6 +38,7 @@ ms.locfileid: "102244621"
 
 * [象棋应用](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp)
 * [Kippy's Escape](../unreal/unreal-kippys-escape.md) - 从 HoloLens 2 中的 [Microsoft Store](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) 下载
+* [Ford GT40](../unreal/unreal-ford-gt40.md) - 从 [Microsoft Store](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp) 下载
 
 ### <a name="made-by-epic-games"></a>由 Epic Games 制作
 

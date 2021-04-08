@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
-keywords: OpenXR，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件
-ms.openlocfilehash: afb0627a0fb29ff63ea2174676fc2fdfbd252de6
-ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
+keywords: OpenXR，路线图，扩展，Khronos，BasicXRApp，DirectX，本机，本机应用，自定义引擎，中间件
+ms.openlocfilehash: cf2613bcd7c31ee5fc09d2708688d8f7356433be
+ms.sourcegitcommit: 848b4b7bb8514c2e088a3a55512b1a8075d29093
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496055"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003086"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -47,7 +47,7 @@ OpenXR 规范定义了一种扩展机制，它使运行时实现程序能够公�
 * **跨供应商 `EXT` 扩展：** 多个公司定义和实现的跨供应商扩展。  一组感兴趣的公司随时可以引入扩展扩展。
 * **官方 `KHR` 扩展：** 正式 Khronos 扩展作为核心规范版本的一部分而被批准。  KHR 扩展与核心规范本身具有相同的许可证。
 
-截止2020年7月，Windows Mixed Reality OpenXR 运行时支持一组 `MSFT` 和 `EXT` 扩展，这些扩展将一组完整的 HoloLens 2 功能提供给 OpenXR 应用程序：
+Windows Mixed Reality OpenXR 运行时支持一组 `MSFT` 和 `EXT` 扩展，这些扩展将一组完整的 HoloLens 2 功能引入 OpenXR 应用程序：
 
 | 功能区域 | 扩展可用性 |
 |--------------|------------------------|
@@ -64,23 +64,24 @@ OpenXR 规范定义了一种扩展机制，它使运行时实现程序能够公�
 | [手动交互 <br /> (手柄/aim 姿势、分流、抓住) ](../../design/hands-and-tools.md)<p>*仅 HoloLens 2*</p> | **`MSFT` 扩展已发布：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_hand_interaction">XR_MSFT_hand_interaction</a></code> |
 | [手型 articulation + 手写网格](../../design/hands-and-tools.md)<p>*仅 HoloLens 2*</p> | <p>**`EXT` 在运行时102中发布的扩展：**<code><br /><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_hand_tracking">XR_EXT_hand_tracking</a></code></p>**`MSFT` 在运行时102中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_hand_tracking_mesh">XR_MSFT_hand_tracking_mesh</a></code> |
 | [眼睛凝视](../../design/eye-tracking.md)<p>*仅 HoloLens 2*</p> | **`EXT` 扩展已发布：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_eye_gaze_interaction" target="_blank">XR_EXT_eye_gaze_interaction</a></code> |
-| 与其他 HoloLens Sdk 互操作<br /> (例如， [QR](../platform-capabilities-and-apis/qr-code-tracking.md)) <p>*仅 HoloLens 2*</p> | <p>**`MSFT` 在运行时102中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code></p><p>**`MSFT`[预览版运行时 104](openxr-getting-started.md#using-preview-extensions)中的扩展：**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_perception_anchor_interop_preview">XR_MSFT_perception_anchor_interop_preview</a></code></p> |
+| 与其他 HoloLens Sdk 互操作<br /> (例如， [QR](../platform-capabilities-and-apis/qr-code-tracking.md)) <p>*仅 HoloLens 2*</p> | <p>**`MSFT` 在运行时102中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code></p><p>**`MSFT` 运行时105中的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_perception_anchor_interop">XR_MSFT_perception_anchor_interop</a></code></p> |
 | [混合现实捕获 <br /> 从 PV 相机 (第三个渲染) ](../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)<p>*仅 HoloLens 2*</p> | **`MSFT` 在运行时102中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_secondary_view_configuration">XR_MSFT_secondary_view_configuration</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_first_person_observer">XR_MSFT_first_person_observer</a></code> |
 | 与 UWP CoreWindow API 互操作<br />例如，对于键盘/鼠标)  ( | **`MSFT` 在运行时103中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_holographic_window_attachment">XR_MSFT_holographic_window_attachment</a></code>
-| 运动控制器交互配置文件 (Samsung 太空和 HP 回音 G2)  | **`MSFT` 在运行时103中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_samsung_odyssey_controller">XR_EXT_samsung_odyssey_controller</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_hp_mixed_reality_controller">XR_EXT_hp_mixed_reality_controller</a></code> |
-| [运动控制器呈现模型](../../design/motion-controllers.md#rendering-the-motion-controller-model) | **`MSFT`[预览版运行时 104](openxr-getting-started.md#using-preview-extensions)中的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_controller_model">XR_MSFT_controller_model</a></code> |
-| [了解 (平面、网格) 的场景 ](../../design/scene-understanding.md)<p>*仅 HoloLens 2*</p> | <p>**在 [预览版 runtime 102 或更高版本](openxr-getting-started.md#using-preview-extensions)中：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code>与[场景理解 SDK](../platform-capabilities-and-apis/scene-understanding-sdk.md)一起使用</p><p>**`MSFT_preview` 未来预览运行时中的扩展** *(计划)*</p> |
-| 其他跨供应商扩展 | <p>**正式 `KHR` 扩展已发布：**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_composition_layer_depth" target="_blank">XR_KHR_composition_layer_depth</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_visibility_mask" target="_blank">XR_KHR_visibility_mask</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_win32_convert_performance_counter_time" target="_blank">XR_KHR_win32_convert_performance_counter_time</a></code><p>**`EXT` 已发布的扩展：**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_win32_appcontainer_compatible" target="_blank">XR_EXT_win32_appcontainer_compatible</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_debug_utils" target="_blank">XR_EXT_debug_utils</a></code> |
+| 运动控制器交互配置文件<br /> (Samsung 太空和 HP 回音 G2)  | **`MSFT` 在运行时103中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_samsung_odyssey_controller">XR_EXT_samsung_odyssey_controller</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_hp_mixed_reality_controller">XR_EXT_hp_mixed_reality_controller</a></code> |
+| [运动控制器呈现模型](../../design/motion-controllers.md#rendering-the-motion-controller-model) | **`MSFT` 在运行时104中发布的扩展：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_controller_model">XR_MSFT_controller_model</a></code> |
+| [了解 (平面、网格) 的场景 ](../../design/scene-understanding.md)<p>*仅 HoloLens 2*</p> | <p>**从运行时102：**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code>与[场景理解 SDK](../platform-capabilities-and-apis/scene-understanding-sdk.md)一起使用</p><p>**`MSFT`[预览版运行时 105](openxr-getting-started.md#using-preview-extensions)中的扩展：**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_scene_understanding_preview2">XR_MSFT_scene_understanding_preview2</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_scene_understanding_serialization_preview">XR_MSFT_scene_understanding_serialization_preview</a></code></p> |
+| [复合层 reprojection 模式 <br /> (自动平面或仅限方向的 reprojection) ](../platform-capabilities-and-apis/hologram-stability.md#reprojection) | **`MSFT`[预览版运行时 105](openxr-getting-started.md#using-preview-extensions)中的扩展：**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_composition_layer_reprojection_preview">XR_MSFT_composition_layer_reprojection_preview</a></code> |
+| 其他跨供应商扩展 | <p>**正式 `KHR` 扩展已发布：**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_composition_layer_depth" target="_blank">XR_KHR_composition_layer_depth</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_visibility_mask" target="_blank">XR_KHR_visibility_mask</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_win32_convert_performance_counter_time" target="_blank">XR_KHR_win32_convert_performance_counter_time</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_composition_layer_color_scale_bias" target="_blank">XR_KHR_composition_layer_color_scale_bias</a></code><p>**`EXT` 已发布的扩展：**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_win32_appcontainer_compatible" target="_blank">XR_EXT_win32_appcontainer_compatible</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_debug_utils" target="_blank">XR_EXT_debug_utils</a></code> |
 
 尽管其中一些扩展可能会作为特定于供应商的 `MSFT` 扩展开始，但 Microsoft 和其他 OpenXR 运行时供应商正在协同工作，以便为 `EXT` 其中许多功能领域设计跨供应商或 `KHR` 扩展。 跨供应商扩展会使你为在运行时供应商提供的这些功能编写的代码与核心规范相同。
 
 ## <a name="getting-started-with-openxr"></a>OpenXR 入门
 
-![戴上混合现实耳机的用户正在播放的 minecraft 屏幕截图](images/openxr-minecraft.jpg)
+![戴上混合现实耳机的用户正在播放的 Minecraft 屏幕截图](images/openxr-minecraft.jpg)
 
-*Minecraft 的新 RenderDragon 引擎正在使用 OpenXR 构建其 desktop VR 支持*
+*Minecraft 的新 RenderDragon 引擎已使用 OpenXR 构建了其 desktop VR 支持！*
 
-Microsoft 一直在使用 Unity 和长篇故事来确保未来混合现实处于打开状态，而不仅仅是针对 HoloLens 2，而是在所有的 PC VR 范围内（包括 [HP 的新的回响 G2 耳机](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)）。  有关为 HoloLens (第一代) 进行开发的详细信息，请参阅 [发行说明](/hololens/hololens1-release-notes)。
+Microsoft 一直在使用 Unity 和长篇故事来确保未来混合现实处于打开状态，而不仅仅是针对 HoloLens 2，而是在所有的 PC VR 范围内（包括 [HP 的新的回响 G2 耳机](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)）。  OpenXR 为当前交付的主要职位（如 Minecraft 和 Microsoft 航班模拟器）提供跨供应商 VR 支持。  有关为 HoloLens (第一代) 进行开发的详细信息，请参阅 [发行说明](/hololens/hololens1-release-notes)。
 
 若要了解如何在 Unity、Unreal 引擎或你自己的引擎中开始处理 OpenXR，请阅读！
 
@@ -88,7 +89,7 @@ Microsoft 一直在使用 Unity 和长篇故事来确保未来混合现实处于
 
 如今，为 HoloLens 2、HoloLens (第一代) 和 Windows Mixed Reality 耳机支持的 Unity 开发路径是与现有 WinRT API 后端的 **unity 2019 LTS** 。  可以 [通过 Unity](../unity/openxr-getting-started.md)跳转到 OpenXR;如果要以 Unity 2019 应用中的新 HP 回音 G2 控制器为目标，请参阅 [HP 回音 g2 输入文档](../unity/unity-reverb-g2-controllers.md)。
 
-从 **unity 2020 LTS** 开始，unity 将提供支持 HoloLens 2 和 Windows Mixed Reality 耳机的 [OpenXR 后端](https://forum.unity.com/threads/unitys-plans-for-openxr.993225/) 。  这包括对安装 [HoloLens 2 和 Windows Mixed Reality 耳机的全部功能](#roadmap)的 OpenXR 扩展的支持，包括手写/眼睛跟踪、空间锚定和 HP 回音 G2 控制器。  MRTK-Unity 对 OpenXR 的支持当前正在 [mrtk_development 分支](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development) 中进行开发，并将与 OpenXR 预览版包一起使用。
+从 **unity 2020 LTS** 开始， [unity 附带了一个 OpenXR 后端，该后端](https://forum.unity.com/threads/unitys-plans-for-openxr.993225/) 支持 HoloLens 2 和 Windows Mixed Reality 耳机。  这包括对安装 [HoloLens 2 和 Windows Mixed Reality 耳机的全部功能](#roadmap)的 OpenXR 扩展的支持，包括手写/眼睛跟踪、空间锚定和 HP 回音 G2 控制器。  MRTK-Unity 支持从 [MRTK 2.7](../unity/tutorials/mr-learning-base-02.md?tabs=openxr#importing-the-mixed-reality-toolkit)到的 OpenXR。  若要详细了解适用于当前的 Unity 2020 LTS 支持，请参阅 [选择 unity 版本](../unity/choosing-unity-version.md)。
 
 从 **Unity 2021** 开始，OpenXR 将毕业为面向 HoloLens 2 和 Windows Mixed Reality 耳机的唯一受支持的 Unity 后端。
 
@@ -96,7 +97,7 @@ Microsoft 一直在使用 Unity 和长篇故事来确保未来混合现实处于
 
 截至 **Unreal 引擎 4.23**，完全支持 HoloLens 2 和 Windows mixed reality 耳机通过 Windows mixed Reality (WinRT) 插件提供。
 
-Unreal 引擎4.23 也是发布预览版支持的第一个重要游戏引擎版本 OpenXR 1.0！  现在，在 **Unreal engine 4.26** 中，对 HoloLens 2 的支持，Windows Mixed Reality 和其他 desktop VR 耳机将通过 [Unreal 引擎的内置 OpenXR 插件](https://github.com/microsoft/Microsoft-OpenXR-Unreal)提供。  Unreal 引擎4.26 还附带第一组 OpenXR 扩展插件，启用手动交互和 HP 回音 G2 控制器支持，并使 [HoloLens 2 和 Windows Mixed Reality 耳机](#roadmap)上的功能保持最新。  现在，Unreal 引擎4.26 在 [长篇故事游戏启动器](https://www.unrealengine.com/download/creators)上提供预览版，并在今年晚些时候发布。  该版本还提供了对 OpenXR 的 MRTK-Unreal 支持。
+Unreal 引擎4.23 也是发布预览版支持的第一个重要游戏引擎版本 OpenXR 1.0！  现在，在 **Unreal engine 4.26** 中，支持 HoloLens 2、Windows Mixed Reality 和其他 desktop VR 耳机通过 Unreal 引擎的内置 OpenXR 支持获得。  Unreal 引擎4.26 还支持 [Microsoft 的 OpenXR 扩展插件](https://github.com/microsoft/Microsoft-OpenXR-Unreal)、启用手动交互和 HP 回音 G2 控制器支持， [并使 HoloLens 2 和 Windows Mixed Reality 耳机](#roadmap)上的功能保持最新。  Unreal 引擎4.26 现已在 [长篇故事游戏启动器](https://www.unrealengine.com/download/creators)中提供，并在4月晚些时候推出 MRTK-Unreal 支持。
 
 
 ### <a name="openxr-for-native-development"></a>用于本机开发的 OpenXR
@@ -109,7 +110,7 @@ Unreal 引擎4.23 也是发布预览版支持的第一个重要游戏引擎版�
 
 >[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/OpenXR-Cross-platform-native-mixed-reality/player?format=ny]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * <a href="https://www.khronos.org/openxr/" target="_blank">有关 OpenXR 的详细信息</a>
 * <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">OpenXR 1.0 规范</a>

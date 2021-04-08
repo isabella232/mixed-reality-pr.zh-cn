@@ -1,5 +1,4 @@
 ---
-layout: LandingPage
 title: 教程
 description: 跟进了解我们为 HoloLens 和 Azure 服务提供的混合现实开发教程。
 author: keveleigh
@@ -8,12 +7,12 @@ ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 学院, 教程, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, unity, unreal, HoloLens, Azure 空间定位点, Azure 语音服务
-ms.openlocfilehash: 76c8cdcddd9617df8e823b4967593c37fa1e6bb9
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: c64ceb918cfec31b7ac934d9a1f9c719a4dde244
+ms.sourcegitcommit: b8a3367bf6dfed01de1ffa10f635385a92ca06b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98006517"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106223938"
 ---
 # <a name="tutorials"></a>教程
 
@@ -25,12 +24,13 @@ ms.locfileid: "98006517"
 
 HoloLens 2 教程旨在传授用于开发混合现实应用程序的技术和最佳做法。 Unity 教程基于 [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)，Unreal 教程基于[适用于 Unreal Engine 0.8 的 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)。
 
-* 入门教程
-    * Unity - [简介第 1 部分（共 9 部分）](tutorials/mr-learning-base-01.md)
-    * Unreal - [入门第 1 部分（共 6 部分）](../unreal/tutorials/unreal-uxt-ch1.md)
-* Azure 空间定位点教程 - [简介第 1 部分（共 5 部分）](tutorials/mr-learning-asa-01.md)
-* 多用户功能教程 - [简介第 1 部分（共 5 部分）](tutorials/mr-learning-sharing-01.md)
-* Azure 语音服务教程 - [集成和使用语音识别与听录第 1 部分（共 4 部分）](tutorials/mrlearning-speechSDK-ch1.md)
+* 初学者 MRTK 教程 - [简介 (1/9)](tutorials/mr-learning-base-01.md)
+* Azure 空间定位点教程 - [简介 (1/5)](tutorials/mr-learning-asa-01.md)
+* 多用户功能教程 - [简介 (1/5)](tutorials/mr-learning-sharing-01.md)
+* Azure 语音服务教程 - [集成和使用语音识别与听录 (1/4)](tutorials/mrlearning-speechSDK-ch1.md)
+* 空间音频教程 - [添加空间音频 (1/5)](tutorials/unity-spatial-audio-ch1.md)
+* Azure 云服务教程 - [简介 (1/5)](tutorials/mr-learning-azure-01.md)
+* PC 全息远程教程 - [入门 (1/2)](tutorials/mr-learning-pc-holographic-remoting-01.md)
 
 ## <a name="mixed-reality-academy"></a>混合现实学院 
 

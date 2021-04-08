@@ -1,20 +1,37 @@
 ---
-ms.openlocfilehash: c205e3b812eeb7a85bfe361d4fd83f9aec7b7999
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: d7e248788d4c4976acbb9ff23177d354894f57dd
+ms.sourcegitcommit: 6272d086a2856e8b514a719e1f9e3b78554be5be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99244924"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105958284"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
 ![Unity 徽标横幅](../images/unity_logo_banner.png)<br>
 
-### <a name="1-download-the-latest-version"></a>1.下载最新版本
+### <a name="1-download-the-recommended-unity-version"></a>1. 下载推荐的 Unity 版本 
 
-建议使用 [Unity LTS（长期支持）](https://unity3d.com/unity/qa/lts-releases)流作为启动新项目时使用的最佳版本，更新到最新版本可获得最新的稳定修补程序。
-* 目前的建议是使用 [Unity 2019.4 LTS](https://unity3d.com/unity/qa/lts-releases?version=2019.4)，这是下文的 MRTK v2 所需的 LTS 版本。
-* 如果由于特定原因需要使用其他版本的 Unity，Unity 支持并行安装不同的版本。
+用于 Mixed Reality 开发的最新推荐版本是 Unity 2019.4 LTS（长期支持）。 最好通过 Unity Hub 安装和管理 Unity。 
+
+> [!NOTE]
+>  如果使用 Unity 2020 LTS，则可对 HoloLens 2 开发提供 Mixed Reality 支持。 但当前有一些已知问题。 今年晚些时候，这将成为推荐的 Unity 版本。 
+
+请参阅[选择 Unity 版本和 XR 插件](../unity/choosing-unity-version.md)，了解不同的 Unity 引擎和 XR 插件版本中提供了哪些 Mixed Reality 支持。
+
+> [!div class="nextstepaction"]
+> [下载 Unity Hub](https://unity3d.com/get-unity/download)
+
+安装 Unity 时，请务必在“平台”下检查以下组件。
+* **通用 Windows 平台生成支持** 
+* **Windows 生成支持 (IL2CPP)**
+
+![Unity 通用 Windows 平台生成支持选项](../../develop/images/Unity_Install_Option_UWP.png)
+
+如果安装 Unity 时未使用这些选项，可以通过 Unity Hub 中的“添加模块”菜单添加它们。
+
+![Unity Windows 生成支持选项](../../develop/images/Unity_Install_Option_UWP2.png)
+
 
 ### <a name="2-install-the-mixed-reality-feature-tool"></a>2.安装混合现实功能工具
 
@@ -33,7 +50,7 @@ ms.locfileid: "99244924"
 建议完成我们策划的 [HoloLens](../unity/unity-development-overview.md#1-getting-started) 或 [VR](../unity/unity-development-wmr-overview.md#1-getting-started) 开发历程中的入门部分。 如果你已遵循针对 HoloLens 的 Unity 开发历程，请完成下面列出的其余设置步骤，并继续学习 [HoloLens 2 入门教程](../unity/tutorials/mr-learning-base-01.md)。
 
 > [!IMPORTANT]
-> 请注意，安装说明面向的是 MRTK 和 Unity 版本的最新稳定组合，即 MRTK 2.5.1 和 Unity 2019.4 LTS 。
+> 请注意，安装说明面向的是 MRTK 和 Unity 版本的最新稳定组合，即 MRTK 2.6.1 和 Unity 2019.4 LTS 。
 
 > [!NOTE]
 > 如果你不想使用 MRTK for Unity，则需要[自行编写所有交互和行为的脚本](../unity/configure-unity-project.md)。
@@ -150,6 +167,9 @@ Windows 10 SDK 在 Windows 10 操作系统上效果最佳。 Windows 8.1、Windo
 ### <a name="1-download-the-latest-version"></a>1.下载最新版本
 
 建议安装 [Unreal Engine 4.25](https://docs.unrealengine.com//GettingStarted/Installation/index.html) 或更高版本，以充分利用内置的 HoloLens 支持。
+
+转到 Epic Games Launcher 的“库”选项卡，选择“启动”旁的下拉箭头，然后单击“选项”。   在“目标平台”下，选择“HoloLens 2”，然后单击“应用”。
+![Unreal 安装选项 HoloLens 2](../../develop/images/Unreal_Install_Option_HoloLens2.png)
 
 ### <a name="2-import-mixed-reality-toolkit-mrtk"></a>2.导入混合现实工具包 (MRTK)
 ![MRTK](../../design/images/MRTK_UX_Hero.png)

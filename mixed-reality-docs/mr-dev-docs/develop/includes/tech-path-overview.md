@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c61fda885b6cffba2a16b368aa48ad1426fd9fa6
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5b99eda2ca8bc2ba48a46513b867e94c45b198c1
+ms.sourcegitcommit: 919bdc3e46325f3c44a022c8852cd38ffec33d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98605329"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105105600"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -35,6 +35,7 @@ ms.locfileid: "98605329"
 |  工具/SDK  |  说明  |
 | --- | --- |
 | [Unity 的混合现实工具包](../unity/mrtk-getting-started.md) | Unity 的混合现实工具包是一个开源的跨平台开发工具包，旨在加快对面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序的开发。 |
+| [Microsoft Mesh](/mesh/overview) 个人预览版 | 完成 [Microsoft Mesh 注册意向](https://aka.ms/meshsignup)表，以便随时了解 Mesh 公告和新闻。 借助 Mesh，你可以增强虚拟会议、召开虚拟设计会议、远程帮助其他人以及主持虚拟网络会议。 |
 
 ## <a name="cloud-services"></a>云服务
 
@@ -49,9 +50,10 @@ ms.locfileid: "98605329"
 ## <a name="examples"></a>示例
 
 我们提供了很多开源[示例应用](../features-and-samples.md)，你可下载和使用它们，在 Unity 中体验混合现实的最终产品。 还有 MRTK 示例场景供你测试特定功能：
-* [用于 Unity 的手动交互示例场景 (MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor) - HandInteractionExamples.unity 示例场景包含各种类型的交互和 UI 控件，它们重点强调表达清晰的手动输入。
 
-* [用于 Unity 的眼动跟踪示例 (MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html) - 此页面介绍如何通过在我们提供的 MRTK 眼动跟踪示例的基础上进行构建，快速完成在 MRTK 中使用眼动跟踪的入门。
+* [用于 Unity 的手动交互示例场景 (MRTK)](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/example-scenes/hand-interaction-examples) - HandInteractionExamples.unity 示例场景包含各种类型的交互和 UI 控件，它们重点强调表达清晰的手动输入。
+
+* [用于 Unity 的眼动跟踪示例 (MRTK)](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/example-scenes/eye-tracking-examples-overview) - 此页面介绍如何通过在我们提供的 MRTK 眼动跟踪示例的基础上进行构建，快速完成在 MRTK 中使用眼动跟踪的入门。
 
 >[!NOTE]
 >这两个 MRTK 示例场景都需要安装 MRTK Foundation 和示例 Unity 包。
@@ -106,7 +108,7 @@ Azure 空间定位点涵盖在 [Unity 开发历程](../unreal/unreal-development
 
 ![Web](../images/javascript_logo_banner.png)
 
-WebXR 设备 API 是一种开放式规范，你可用它在任意平台中通过浏览器来体验混合现实应用。 请参阅 [JavaScript 开发概述](../web/javascript-development-overview.md)，开始为任何平台构建混合现实应用。
+WebXR 设备 API 是一种开放式规范，你可用它在任意平台中通过浏览器来体验混合现实应用。 请参阅 [JavaScript 开发概述](../javascript/javascript-development-overview.md)，开始为任何平台构建混合现实应用。
 
 
 # <a name="native-openxr"></a>[原生 (OpenXR)](#tab/native)
