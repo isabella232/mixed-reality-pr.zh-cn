@@ -110,7 +110,7 @@ Unreal 引擎4.23 也是发布预览版支持的第一个重要游戏引擎版�
 
 >[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/OpenXR-Cross-platform-native-mixed-reality/player?format=ny]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * <a href="https://www.khronos.org/openxr/" target="_blank">有关 OpenXR 的详细信息</a>
 * <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">OpenXR 1.0 规范</a>

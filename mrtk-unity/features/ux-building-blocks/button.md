@@ -358,7 +358,7 @@ HoloLens 2 的 shell 样式按钮的大小为32x32mm。 若要自定义维度，
 
 <img src="../images/button/MRTK_PressableButtonCubeRun1.jpg" alt="Pressable button cube run 1">
 
-#### <a name="troubleshooting"></a>故障排除
+#### <a name="troubleshooting"></a>疑难解答
 
 如果按钮正在执行双击，请确保 " **强制前台推送** " 属性处于活动状态，" **开始推送距离** " 平面置于 **Near 交互可触摸** 平面的前方。 **近交互可触摸** 平面由下方 gif 中白色箭头原点前面的蓝色平面表示：
 
@@ -409,7 +409,7 @@ MRTK 标准着色器提供各种功能，可轻松添加视觉反馈。 创建�
 
 <img src="../images/button/MRTK_Button_Custom3.png" width="450" alt="Pressable Custom3">
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [可交互](interactable.md)
 * [视觉主题](visual-themes.md)
