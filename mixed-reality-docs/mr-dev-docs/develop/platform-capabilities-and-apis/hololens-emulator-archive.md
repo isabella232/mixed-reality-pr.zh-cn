@@ -3,24 +3,26 @@ title: HoloLens 仿真器存档
 description: 随时了解 Microsoft HoloLens (第一代) 和 HoloLens 2 仿真程序的已发布生成的存档列表。
 author: hamalawi
 ms.author: moelhama
-ms.date: 02/09/2021
+ms.date: 04/13/2021
 ms.topic: article
 keywords: HoloLens，模拟器，生成，版本，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，存档
-ms.openlocfilehash: 0466ebe84388164e1c29f6f93325987118bb80b4
-ms.sourcegitcommit: 55dab2b9f2d9b98fdb1cb9f26d3d075bb8f95dcd
+ms.openlocfilehash: fcf53ddc5514103955452fc620962d3db0b031b5
+ms.sourcegitcommit: be79d8e9ebac553aabec7c57c44eee56123aa00e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102526014"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369860"
 ---
 # <a name="hololens-2-emulator-archive"></a>HoloLens 2 模拟器存档
 
 HoloLens 模拟器 (第一代) 和 HoloLens 2 模拟器构建的并行安装。 建议使用最新的可用版本，但在某些情况下，你可能想要针对旧的模拟器来测试应用程序。 此页包含指向所有已发布版本的链接。
 
-|  构建 |  发布日期 |  备注 |
+|  构建 |  发布日期 |  注释 |
 |----------|----------|----------|
-|  [HoloLens 2 模拟器生成10.0.19041.1140](https://go.microsoft.com/fwlink/?linkid=2156684) | 2021年3月9日 | Windows 全息版20H2 三月2021更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
-|  [HoloLens 2 模拟器生成10.0.18362.1102](https://go.microsoft.com/fwlink/?linkid=2156989) | 2021年3月9日 | Windows 全息版1903年 3 2021 月更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 模拟器生成10.0.19041.1144](https://go.microsoft.com/fwlink/?linkid=2160829) | 2021 年 4 月 13 日 | Windows 全息版 20H2 2021 年4月更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 模拟器生成10.0.18362.1108](https://go.microsoft.com/fwlink/?linkid=2160820) | 2021 年 4 月 13 日 | Windows 全息版，1903年 4 2021 月更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 模拟器生成10.0.19041.1140](https://go.microsoft.com/fwlink/?linkid=2156684) | 2021 年 3 月 9 日 | Windows 全息版20H2 三月2021更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 模拟器生成10.0.18362.1102](https://go.microsoft.com/fwlink/?linkid=2156989) | 2021 年 3 月 9 日 | Windows 全息版1903年 3 2021 月更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 模拟器生成10.0.19041.1136](https://go.microsoft.com/fwlink/?linkid=2154784) | 2021 年 2 月 9 日 | Windows 全息版 20H2 2021 年2月更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 模拟器生成10.0.18362.1098](https://go.microsoft.com/fwlink/?linkid=2154381) | 2021 年 2 月 9 日 | Windows 全息版，1903 2021 年2月更新版。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 模拟器生成10.0.19041.1134](https://go.microsoft.com/fwlink/?linkid=2152389) | 2021年1月13日 | Windows 全息版 20H2 2021 年1月更新。  有关常规 HoloLens 2 发行说明，请参阅 https://docs.microsoft.com/hololens/hololens-release-notes |
@@ -54,7 +56,7 @@ HoloLens 模拟器 (第一代) 和 HoloLens 2 模拟器构建的并行安装。 
 
 ## <a name="hololens-emulator-first-gen-archive"></a>HoloLens 模拟器 (第一代) 存档
 
-|  构建 |  发布日期 |  备注 |
+|  构建 |  发布日期 |  注释 |
 |----------|----------|----------|
 |  [HoloLens 模拟器生成10.0.17763.134](https://go.microsoft.com/fwlink/?linkid=2065980) | 2018 年 11 月 19 日 | 最新的 HoloLens (第一代) 版本。 Windows 10 10 月2018更新。 |
 |  [HoloLens 模拟器生成10.0.17134.80](https://go.microsoft.com/fwlink/?linkid=874531) | 2018 年 5 月 21 日 |
