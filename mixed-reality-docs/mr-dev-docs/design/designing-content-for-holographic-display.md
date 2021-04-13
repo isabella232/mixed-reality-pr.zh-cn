@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: UI 设计，全息显示，内容设计，深色主题，浅色主题，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，像素
-ms.openlocfilehash: 6bf65b9e40e42f1609b1108b366ac65637fcf106
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 325b7bf6318d1b54c4b4c33aa58faea7388e0864
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759272"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300032"
 ---
 # <a name="designing-content-for-holographic-display"></a>设计适用于全息显示器的内容
 
@@ -85,7 +85,7 @@ HolographicBackplate 材料适用于 HoloLens shell 中的几个 UI 面板。 �
 
 默认情况下，透明或半透明对象不会写入深度以允许进行适当的混合。 缓解此问题的方法包括：使用不透明对象，并确保半透明对象接近于不透明的对象 (例如，在不透明的 backplate) 前面添加半透明的按钮、强制半透明对象写入深度 (不适用于所有方案) ，或呈现代理对象，这些对象只在帧末尾提供深度值。
 
-MRTK 中的解决方案-Unity： https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/performance/hologram-stabilization.md#depth-buffer-sharing-in-unity  
+MRTK 中的解决方案-Unity： https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/performance/hologram-stabilization#depth-buffer-sharing-in-unity  
 
 通过使用纯和不透明的 backplate，我们可以确保可读性和交互置信度。
 
@@ -103,9 +103,9 @@ MRTK 中的解决方案-Unity： https://docs.microsoft.com/windows/mixed-realit
 
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供了许多基于深色方案的 UI 构建基块示例。
 
-* [邻近菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/near-menu.md)
-* [对话框](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/dialog.md)
-* [手动菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/hand-menu.md)
+* [邻近菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/near-menu)
+* [对话框](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/dialog)
+* [手动菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)
 
 <br>
 

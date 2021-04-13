@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，billboarding，标记和混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: f0a5c4fc66e287c04fe8fa42c0c671e895a26169
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 48c7aa28217a38c6c226b65a6e16ed7c950cec59
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759403"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299882"
 ---
 # <a name="billboarding-and-tag-along"></a>公告和尾随
 
@@ -47,9 +47,9 @@ Billboarding 是一种可应用于混合现实中的对象的行为概念。 具
 ---
 
 ## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Billboarding 和标记 (混合现实工具包) 适用于 Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为 Billboarding 和标记的行为提供脚本。 将 Billboard.cs 脚本分配到任何对象，以添加 billboarding 行为，并使对象始终为你所需的外观。 若要添加标记和行为，请使用 RadialView.cs 脚本。 可以调整各种选项，如 lerping 时间、距离和角度。
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为 Billboarding 和标记的行为提供脚本。 将布告栏脚本分配到任何对象，以添加 billboarding 行为并使对象始终为你。 若要添加标记和行为，请使用 RadialView 脚本。 可以调整各种选项，如 lerping 时间、距离和角度。
 
-* [MRTK-径向视图规划求解](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/solvers/solver.md#radialview)
+* [MRTK-径向视图规划求解](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#radialview)
 * [MRTK-布告栏脚本](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
 
 

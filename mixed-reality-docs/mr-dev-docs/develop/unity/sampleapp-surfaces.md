@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: Windows Mixed Reality，设计，示例应用，控件，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: bd4ecabda749d4a2760fe0225caf7c53966a1b98
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 0e75a72ec518dea3513b6868aec56d1c7c89bd05
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759713"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300132"
 ---
 # <a name="surfaces"></a>表面
 
@@ -31,8 +31,9 @@ ms.locfileid: "101759713"
 ## <a name="about-the-app"></a>关于应用
 
 图面演示了如何使用混合现实工具包 (MRTK) 的输入系统和构建基块，为 HoloLens 2 创建应用体验。 在此项目中，可以找到以下示例：
-- 使用 MRTK 的 [输入系统](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md)，尤其是手动/联合跟踪。
-- 使用 MRTK 的 [标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mrtk-standard-shader.md) 来实现高性能图形。
+
+- 使用 MRTK 的 [输入系统](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview)，尤其是手动/联合跟踪。
+- 使用 MRTK 的 [标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader) 来实现高性能图形。
 
 可以使用此项目的组件来创建自己的混合现实应用体验。
 
@@ -63,7 +64,7 @@ https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0#activetab=pivot:overview
 
 ## <a name="see-also"></a>另请参阅
 
-* [MRTK 示例中心](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/example-scenes/example-hub.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
+* [MRTK 示例中心](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/example-scenes/example-hub) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
 * [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
 * [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 * [星系探索者 2.0](galaxy-explorer-update.md)

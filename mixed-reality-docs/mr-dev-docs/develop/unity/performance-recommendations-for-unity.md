@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 图形, cpu, gpu, 渲染, 垃圾回收, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f8757e5a5f5c9163dc70d8c8d0e93848c49a6694
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 2ff766c3fb2c9f8a91c3c8cc81bb21adae9956e8
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "101759723"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300152"
 ---
 # <a name="performance-recommendations-for-unity"></a>针对 Unity 的性能建议
 
@@ -301,15 +301,15 @@ Unity 中的[实时全局照明](https://docs.unity3d.com/Manual/GIIntro.html)�
 
 #### <a name="optimize-pixel-shaders"></a>优化像素着色器
 
-使用上述方法查看编译的统计信息结果时可以看到，[段着色器](https://en.wikipedia.org/wiki/Shader#Pixel_shaders)执行的平均操作数目通常比[顶点着色器](https://en.wikipedia.org/wiki/Shader#Vertex_shaders)更多。 段着色器（也称为像素着色器）是按屏幕输出中的像素执行的，而顶点着色器只是按屏幕上绘制的所有网格的每个顶点执行的。 
+使用上述方法查看编译的统计信息结果时可以看到，[段着色器](https://en.wikipedia.org/wiki/Shader#Pixel_shaders)执行的平均操作数目通常比[顶点着色器](https://en.wikipedia.org/wiki/Shader#Vertex_shaders)更多。 段着色器（也称为像素着色器）是按屏幕输出中的像素执行的，而顶点着色器只是按屏幕上绘制的所有网格的每个顶点执行的。
 
-因此，段着色器不仅仅是指令数比顶点着色器更多（因为要执行所有照明计算），而且段着色器几乎总是针对较大数据集执行的。 例如，如果屏幕输出为 2,000 x 2,000 图像，则段着色器可能会执行 2,000*2,000 = 4,000,000 次。 如果渲染两只眼睛，此数字将会翻倍，因为有两个屏幕。 如果混合现实应用程序使用多个通道、全屏后处理效果或以相同的像素渲染多个网格，则此数字会大幅提高。 
+因此，段着色器不仅仅是指令数比顶点着色器更多（因为要执行所有照明计算），而且段着色器几乎总是针对较大数据集执行的。 例如，如果屏幕输出为 2,000 x 2,000 图像，则段着色器可能会执行 2,000*2,000 = 4,000,000 次。 如果渲染两只眼睛，此数字将会翻倍，因为有两个屏幕。 如果混合现实应用程序使用多个通道、全屏后处理效果或以相同的像素渲染多个网格，则此数字会大幅提高。
 
 因此，在段着色器中减少操作数目所带来的性能增益，通常远远好过在顶点着色器中进行优化。
 
 #### <a name="unity-standard-shader-alternatives"></a>Unity 标准着色器替代技术
 
-不要使用基于物理学的渲染 (PBR) 或其他优质着色器，而是寻求利用更高性能且更经济的着色器。 [混合现实工具包](https://github.com/Microsoft/MixedRealityToolkit-Unity)提供针对混合现实项目进行优化的 [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mrtk-standard-shader.md)。
+不要使用基于物理学的渲染 (PBR) 或其他优质着色器，而是寻求利用更高性能且更经济的着色器。 [混合现实工具包](https://github.com/Microsoft/MixedRealityToolkit-Unity)提供针对混合现实项目进行优化的 [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)。
 
 与 Unity 标准着色器相比，Unity 还提供不发光、顶点发亮、漫射和其他简化的着色器选项。 有关更多详细信息，请参阅[内置着色器的用法和性能](https://docs.unity3d.com/Manual/shader-Performance.html)。
 

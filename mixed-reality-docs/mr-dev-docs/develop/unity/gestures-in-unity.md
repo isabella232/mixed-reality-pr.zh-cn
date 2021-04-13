@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: 手势，unity，注视，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 4c3db98e3047cdc74663c5cbee1c4607b77008e0
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 523f05f9b3dd05a140bb40168b654a2dc0b00bb5
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759078"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299712"
 ---
 # <a name="gestures-in-unity"></a>Unity 中的手势
 
@@ -134,9 +134,9 @@ void OnDestroy()
 ## <a name="gesture-and-motion-controllers-in-mrtk"></a>MRTK 中的手势和运动控制器
 
 可以从输入管理器访问笔势和运动控制器。
-* [MRTK 中的手势](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/gestures.md)
-* [MRTK 中的运动控制器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/controllers.md)
 
+* [MRTK 中的手势](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/gestures)
+* [MRTK 中的运动控制器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/controllers)
 
 ## <a name="follow-along-with-tutorials"></a>按照教程进行操作
 

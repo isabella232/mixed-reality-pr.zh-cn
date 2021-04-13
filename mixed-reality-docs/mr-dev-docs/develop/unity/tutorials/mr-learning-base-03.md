@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 空间感知
 ms.localizationpriority: high
-ms.openlocfilehash: 3b44ba6c4eac3cf7b42d15c8fb19d42676b10a4a
-ms.sourcegitcommit: 5017f309827c1d20df4ce656d105a1a49ba7942c
+ms.openlocfilehash: f6c17dc361846808ec10f1d94932e3089072e642
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106011136"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300452"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3.配置 MRTK 配置文件
 
@@ -20,11 +20,11 @@ ms.locfileid: "106011136"
 
 在本教程中，你将学习如何自定义和配置 MRTK 配置文件。
 
-<a href="/windows/mixed-reality/mrtk-unity/features/profiles/profiles.md" target="_blank">MRTK 配置文件</a>是一个嵌套配置文件树，它们构成了应如何初始化 MRTK 系统和功能的配置信息。 顶级配置文件（即“配置”配置文件）包含每个主要核心系统的嵌套配置文件。 每个嵌套的配置文件都设计为配置其对应系统的行为。
+<a href="/windows/mixed-reality/mrtk-unity/features/profiles/profiles" target="_blank">MRTK 配置文件</a>是一个嵌套配置文件树，它们构成了应如何初始化 MRTK 系统和功能的配置信息。 顶级配置文件（即“配置”配置文件）包含每个主要核心系统的嵌套配置文件。 每个嵌套的配置文件都设计为配置其对应系统的行为。
 
 此特定示例将演示如何通过更改空间网格观察程序的设置来隐藏空间感知网格。 但是，可以按照相同的原则来自定义 MRTK 配置文件中的任何设置或值。
 
-正如你在[上一教程](mr-learning-base-02.md#congratulations)期间将项目部署到 HoloLens 2 时遇到的一样，<a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">空间感知</a>网格是一系列表示环境几何图形的网格。 这是一种有用的可视化效果，一开始就能看到，但通常也可将它关闭，以避免用它后产生视觉干扰和额外的性能影响。
+正如你在[上一教程](mr-learning-base-02.md#congratulations)期间将项目部署到 HoloLens 2 时遇到的一样，<a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">空间感知</a>网格是一系列表示环境几何图形的网格。 这是一种有用的可视化效果，一开始就能看到，但通常也可将它关闭，以避免用它后产生视觉干扰和额外的性能影响。
 
 ## <a name="objectives"></a>目标
 

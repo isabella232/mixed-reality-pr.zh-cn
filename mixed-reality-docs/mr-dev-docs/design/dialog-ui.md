@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: 混合现实，HoloLens，UI 控制，交互，UI，ux，UX 设计，空间 UI，空间交互，三维 UI，三维 UX，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: c9e1bf3e263214f9691f6c788f6115f93e690489
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 18e446f6b35e8073f939d065de3572204e2967a1
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759252"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299992"
 ---
 # <a name="dialog"></a>对话框
 
@@ -33,7 +33,7 @@ MRTK 提供了三种大小的对话框控件，其中包含一个或两个按钮
 ![在 HoloLens 上运行的不同大小对话框覆盖的屏幕截图](images/MRTK_UX_Dialog_Types.jpg)
 
 
-* 有关详细信息，请参阅 [MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/dialog.md)。
+* 有关详细信息，请参阅 [MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/dialog)。
 
 <br>
 

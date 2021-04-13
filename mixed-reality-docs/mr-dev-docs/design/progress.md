@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，控件，ui，ux，进度指示器，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: f323559c9a50a6f01636f0aba0bddc93b547125b
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: e949d8805446429d3853a3fedb1b776c50c710dd
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759843"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299732"
 ---
 # <a name="progress-indicator"></a>进度指示器
 
@@ -91,8 +91,8 @@ ms.locfileid: "101759843"
 
 ## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的进度指示器 (适用于 Unity 的混合现实工具包) 
 
-* [MRTK-进度指示器 prototyping](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MRTK/SDK/Features/UX/Prefabs/ProgressIndicators)
-* [MRTK-场景转换服务](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/extensions/scene-transition-service.md)
+* [MRTK-进度指示器 prototyping](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/Features/UX/Prefabs/ProgressIndicators)
+* [MRTK-场景转换服务](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/extensions/scene-transition-service)
 
 
 <br>

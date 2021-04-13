@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，按钮
-ms.openlocfilehash: 9e4d0637d8c10c3cd23bd2ee1369fd57137af795
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 177ccfc1c07df9a9523c9ed6733d3da61bdb7921
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759423"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299752"
 ---
 # <a name="button"></a>Button
 
@@ -52,7 +52,7 @@ ms.locfileid: "101759423"
 * 压缩前端固定架
 * 对触发器的脉冲效果。
 
-* 有关更多说明和自定义示例，请查看 [MRTK-按钮](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/button.md) 。
+* 有关更多说明和自定义示例，请查看 [MRTK-按钮](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button) 。
 
 <br>
 

@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 07/29/2020
 ms.topic: article
 keywords: unity，设置，混合现实，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，性能，质量设置，照明设置，深度缓冲区，xr，跟踪丢失
-ms.openlocfilehash: cc1d2692a172c84274299580a0ce580264f65fcf
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: b8da51bdc57d8586706d11e86ca3b7543023c119
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759693"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300122"
 ---
 # <a name="recommended-settings-for-unity"></a>建议用于 Unity 的设置
 
@@ -68,7 +68,7 @@ Unity 提供了一组默认选项，这些选项通常是所有平台的平均�
 
 为了使 Windows Mixed Reality 平台优化全息影像稳定性，它依赖于深度缓冲区来精确并匹配屏幕上呈现的所有全息影像。 因此，在上进行深度缓冲共享时，在呈现颜色时，这一点非常重要，也就是呈现深度。 在 Unity 中，大多数不透明或 TransparentCutout 的材料默认呈现深度，但透明和文本对象将不会呈现深度，尽管这与着色器相关，等等。
 
-如果使用 [混合现实工具包标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mrtk-standard-shader.md)来呈现透明对象的深度：
+如果使用 [混合现实工具包标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)来呈现透明对象的深度：
 
 1) 选择使用 MRTK 标准着色器的透明材料，并打开检查器编辑器窗口
 2) 选择深度缓冲区共享警告中的 " **立即修复** " 按钮。 也可以通过将 **呈现模式** 设置为 " **自定义**" 来手动执行此方法。然后将 **模式** 设置为 **透明** ，最后将 " **深度写入** " 设置为 **"开"**
@@ -114,10 +114,10 @@ HoloLens 具有移动类 CPU 和 GPU，这意味着可能需要更长的时间�
 
 |  显示 Unity 初始屏幕  |  全息闪屏映像  |  行为 |
 |----------|----------|----------|
-|  启用  |  None  |  显示5秒的默认 Unity 初始屏幕或在加载应用之前，以较长者为准。 |
-|  启用  |  自定义  |  显示自定义初始屏幕5秒或在加载应用之前，以较长者为准。 |
-|  关闭  |  None  |  显示透明的黑色 (没有) ，直到加载应用。 |
-|  关闭  |  自定义  |  显示自定义初始屏幕5秒或在加载应用之前，以较长者为准。 |
+|  开  |  无  |  显示5秒的默认 Unity 初始屏幕或在加载应用之前，以较长者为准。 |
+|  开  |  自定义  |  显示自定义初始屏幕5秒或在加载应用之前，以较长者为准。 |
+|  关  |  无  |  显示透明的黑色 (没有) ，直到加载应用。 |
+|  关  |  自定义  |  显示自定义初始屏幕5秒或在加载应用之前，以较长者为准。 |
 
 有关详细信息，请阅读 [Unity 初始屏幕文档](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) 。
 

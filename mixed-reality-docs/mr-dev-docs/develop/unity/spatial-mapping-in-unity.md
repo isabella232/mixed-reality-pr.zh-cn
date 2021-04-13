@@ -6,18 +6,19 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: e2ef6ac43e81ff2b8e66a4bd197ea41c198a1626
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: f7fe6e86f9672f36a34f9d7c32d25fccd7760f5e
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105549947"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300162"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
 [空间映射](../../design/spatial-mapping.md) 使你可以检索表示 HoloLens 设备周围的表面的三角形网格。 你可以使用 "位置"、"封闭" 和 "房间" 分析的 surface data，为 Unity 项目提供浸入式的额外剂量。
 
 Unity 包含对空间映射的完全支持，可通过以下方式向开发人员公开：
+
 1. MixedRealityToolkit 中提供了空间映射组件，可为空间映射入门提供方便快捷的路径
 2. 较低级别的空间映射 Api，提供完全控制并实现更复杂的特定于应用程序的自定义
 
@@ -51,6 +52,7 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 为了使应用程序能够使用空间映射数据，必须启用 SpatialPerception 功能。
 
 如何启用 SpatialPerception 功能：
+
 1. 在 Unity 编辑器中，打开 **"播放机设置"** 窗格， (> 播放机编辑 > 项目设置) 
 2. 选择 **"Windows 应用商店"** 选项卡
 3. 展开 **"发布设置"** ，然后在 **"功能"** 列表中检查 **"SpatialPerception"** 功能
@@ -59,6 +61,7 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 > 如果已将 Unity 项目导出到 Visual Studio 解决方案，则需要导出到新文件夹或 [在 Visual studio 的 appxmanifest.xml 中手动设置此功能](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)。
 
 空间映射还需要至少10.0.10586.0 的 MaxVersionTested：
+
 1. 在 Visual Studio 中，右键单击解决方案资源管理器中的 **appxmanifest.xml** ，然后选择 "**查看代码**"
 2. 查找指定 **y** 的行，并将 **MaxVersionTested = "10.0.10240.0"** 更改为 **MaxVersionTested = "10.0.10586.0"**
 3. **保存** appxmanifest.xml。
@@ -84,6 +87,7 @@ Unity 提供了两个组件，可以轻松地将空间映射添加到应用、 *
 如果要可视化和与物理表面交互，则可以将这两个组件添加到应用中。
 
 在 Unity 应用中使用这两个组件：
+
 1. 在要检测空间图面网格的区域的中心选择一个 GameObject。
 2. 在检查器窗口中，**添加组件**  >  **XR**  >  **空间映射碰撞** 器或 **空间映射呈现** 器。
 
@@ -92,6 +96,7 @@ Unity 提供了两个组件，可以轻松地将空间映射添加到应用、 *
 ### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>超越内置的空间映射组件
 
 利用这些组件，您可以轻松地开始进行空间映射。  若要进一步了解，需要了解两个主要的路径：
+
 * 若要执行自己的低级网格处理，请参阅下面有关低级别空间映射脚本 API 的部分。
 * 若要执行更高级别的网格分析，请参阅以下部分，了解 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>中的 SpatialUnderstanding 库。
 
@@ -137,6 +142,7 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
 ### <a name="handling-surface-changes"></a>处理表面更改
 
 有几个用来处理-添加和更新的主要案例，它们可以使用相同的代码路径，并将其删除。
+
 * 在添加和更新的情况下，我们将从字典中添加或获取表示此网格的 GameObject，使用必要的组件创建 SurfaceData 结构，然后调用 RequestMeshDataAsync，用网格数据和场景中的位置来填充 GameObject。
 * 在已删除的示例中，我们从字典中删除表示此网格的 GameObject 并销毁它。
 
@@ -268,7 +274,7 @@ struct RaycastResult
 
 ### <a name="topology-queries"></a>拓扑查询
 
-在 DLL 中，拓扑管理器处理环境的标记。 如上所述，很多数据存储在 surfels 中，包含在 voxel 卷中。 此外，"PlaySpaceInfos" 结构用于存储有关 playspace 的信息，其中包括世界对齐 (下面) 、楼层和天花板高度的详细信息。 试探法用于确定地面、天花板和墙。 例如，具有大于 1-m2 的图面区域的最大和最低水平曲面被视为楼层。 
+在 DLL 中，拓扑管理器处理环境的标记。 如上所述，很多数据存储在 surfels 中，包含在 voxel 卷中。 此外，"PlaySpaceInfos" 结构用于存储有关 playspace 的信息，其中包括世界对齐 (下面) 、楼层和天花板高度的详细信息。 试探法用于确定地面、天花板和墙。 例如，具有大于 1-m2 的图面区域的最大和最低水平曲面被视为楼层。
 
 > [!NOTE]
 > 在此过程中也使用了扫描过程中的照相机路径。
@@ -470,21 +476,23 @@ Import_UnderstandingMesh –
 
 ### <a name="understanding-mesh"></a>了解网格
 
-理解 dll 在内部将 playspace 存储为 8 cm 大小的 voxel 多维数据集的网格。 在扫描的初始部分中，将完成主要组件分析以确定房间的轴。 在内部，它存储其 voxel 空间与这些轴对齐。 大约每秒生成一次网格，方法是从 voxel 卷中提取等值面。 
+理解 dll 在内部将 playspace 存储为 8 cm 大小的 voxel 多维数据集的网格。 在扫描的初始部分中，将完成主要组件分析以确定房间的轴。 在内部，它存储其 voxel 空间与这些轴对齐。 大约每秒生成一次网格，方法是从 voxel 卷中提取等值面。
 
 ![从 voxel 卷生成的生成的网格](images/su-custommesh.jpg)<br>
 *从 voxel 卷生成的生成的网格*
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
+
 * 确保已设置 [SpatialPerception](#setting-the-spatialperception-capability) 功能
 * 跟踪丢失时，下一个 OnSurfaceChanged 事件将删除所有网格。
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>混合现实工具包中的空间映射
-有关将空间映射用于混合现实工具包 v2 的详细信息，请参阅 MRTK 文档的 <a href="/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">空间感知部分</a> 。
+
+有关将空间映射用于混合现实工具包 v2 的详细信息，请参阅 MRTK 文档的 <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">空间感知部分</a> 。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识： 
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [文本](text-in-unity.md)
@@ -497,6 +505,7 @@ Import_UnderstandingMesh –
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
 ## <a name="see-also"></a>另请参阅
+
 * [坐标系统](../../design/coordinate-systems.md)
 * [Unity 中的坐标系统](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 眼睛，眼睛，头盔，unity，全息影像，混合现实，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 7602eb27da19dc77e4eab1c1a428dc9a1cf8b252
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 98eb4445d04b236dea74917d9c51108b66d6df3b
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759683"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300362"
 ---
 # <a name="head-gaze-in-unity"></a>头-注视 Unity
 
@@ -51,8 +51,9 @@ void Update()
 
 就像在计算机上使用鼠标指针一样，你应该实现表示用户头看的 [光标](../../design/cursors.md) 。 了解用户的目标内容会对要与之交互的内容增加信心。
 
-## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>打印头-注视混合现实工具包 
-可以通过 MRTK 中的 [输入管理器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md) 访问 head。
+## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>打印头-注视混合现实工具包
+
+可以通过 MRTK 中的 [输入管理器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview) 访问 head。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 

@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv，语音，cortana，语音，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，注视
-ms.openlocfilehash: cc1ecd7d236748c3c4de77678e6f67c69a2c1af1
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 3f178442d892e284ed3e3454d2d54ed68c732313
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759138"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300292"
 ---
 # <a name="voice-input"></a>语音输入
 
@@ -23,9 +23,9 @@ ms.locfileid: "101759138"
 
 <br>
 
-## <a name="voice-and-gaze"></a>语音和注视
+## <a name="voice-and-gaze&quot;></a>语音和注视
 
-使用语音命令时，head 或眼睛看起来是典型的目标机制，无论是使用光标 "选择" 还是将命令通道到你要查看的应用程序。 可能甚至不需要显示任何看起来光标 _( "查看它" )_。 某些语音命令根本不需要目标，如 "开始" 或 "你好 Cortana"。
+使用语音命令时，head 或眼睛看起来是典型的目标机制，无论是使用光标 &quot;选择&quot; 还是将命令通道到你要查看的应用程序。 可能甚至不需要显示任何看起来光标 _( &quot;查看它" )_。 某些语音命令根本不需要目标，如 "开始" 或 "你好 Cortana"。
 
 <br>
 
@@ -277,7 +277,7 @@ ms.locfileid: "101759138"
 
 HoloLens 2 [支持多种语言](/hololens/hololens2-language-support)。 请记住，即使安装了多个键盘或应用尝试使用其他语言创建语音识别器，语音命令也始终会在系统的显示语言中运行。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 如果使用 "选择" 和 "你好 Cortana" 时遇到任何问题，请尝试移动到可取消选择的空间、远离噪音源或说出更大的声音。 目前，HoloLens 上的所有语音识别都专门针对美国英语的本机扬声器进行优化和优化。
 
@@ -290,7 +290,7 @@ HoloLens 2 [支持多种语言](/hololens/hololens2-language-support)。 请记�
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的语音输入 (混合现实工具包) 适用于 Unity
 借助 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**，你可以轻松地为任何对象分配语音命令。 使用 MRTK 的 **语音输入配置文件** 定义关键字。 通过分配 **SpeechInputHandler** 脚本，你可以使任何对象响应语音输入配置文件中定义的关键字。 SpeechInputHandler 还提供了语音确认标签以提高用户信心。
 
-* [MRTK-语音命令](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/speech.md)
+* [MRTK-语音命令](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/speech)
 
 ---
 

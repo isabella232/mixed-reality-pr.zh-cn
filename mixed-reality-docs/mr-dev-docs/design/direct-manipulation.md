@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计, 手动近距, HoloLens, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, MRTK, 混合现实工具包, 按钮, 碰撞体, 边界框, 2D, 本能手势
-ms.openlocfilehash: 8316452b8308e159612a81d097c352cf1d935362
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 555b27764d077332a2d8618672e6aed7def1dd3f
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "101759319"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300092"
 ---
 # <a name="direct-manipulation-with-hands"></a>用手直接操作
 
@@ -327,7 +327,7 @@ HoloLens 2 可让用户将边界框应用到每个 3D 对象，以便用手引�
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 的 MRTK（混合现实工具包）中的操作
 有了 [MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)，便可使用脚本 ObjectManipulator 轻松实现常见的操作行为 。 借助 ObjectManipulator，可以直接使用手或手部射线抓取和移动对象。 它还支持使用双手操作来缩放和旋转对象。
 
-* [MRTK - 操作](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/object-manipulator.md)
+* [MRTK - 操作](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-manipulator)
 
 ---
 

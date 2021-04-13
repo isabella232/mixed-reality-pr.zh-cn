@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 交互, 设计, HoloLens, 手, 远距, 指向和提交, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, 手部射线, 对象操作, MRTK, 混合现实工具包, DoF
-ms.openlocfilehash: 8196b67f103bae346ba4da065ee6045ff231b004
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 78a3ff87a48bbff838df4ee8baab7f8ea80203c0
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "101759863"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299802"
 ---
 # <a name="point-and-commit-with-hands"></a>使用手指向和提交
 
@@ -202,15 +202,16 @@ ms.locfileid: "101759863"
 
 ## <a name="hand-ray-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 的 MRTK（混合现实工具包）中的手部射线
 
-默认情况下，MRTK 提供一个手部射线 prefab ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers))，其视觉状态与 shell 的系统手部射线相同。 它分配在 MRTK 的输入配置文件的“指针”下。 在沉浸式头戴显示设备中，相同的射线会用于运动控制器。
+默认情况下，MRTK 提供一个手部射线 prefab ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers))，其视觉状态与 shell 的系统手部射线相同。 它分配在 MRTK 的输入配置文件的“指针”下。 在沉浸式头戴显示设备中，相同的射线会用于运动控制器。
 
-* [MRTK - 指针配置文件](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mixed-reality-configuration-guide.md#pointer-configuration)
-* [MRTK - 输入系统](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md)
-* [MRTK - 指针](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/pointers.md)
+* [MRTK - 指针配置文件](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide#pointer-configuration)
+* [MRTK - 输入系统](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview)
+* [MRTK - 指针](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/pointers)
 
 ---
 
 ## <a name="see-also"></a>另请参阅
+
 * [使用手直接操作](direct-manipulation.md)
 * [凝视和提交](gaze-and-commit.md)
 * [手 - 直接操作](direct-manipulation.md)

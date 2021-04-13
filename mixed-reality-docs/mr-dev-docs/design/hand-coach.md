@@ -6,12 +6,12 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助双手，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 56a56893a7c5bc772268ab9980f25327eae83af5
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: ec302cecb106b339828adf1c8777c2ea7ec7fa30
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550067"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300042"
 ---
 # <a name="hand-coach"></a>手部指导
 
@@ -85,7 +85,7 @@ ms.locfileid: "105550067"
 
 ## <a name="can-i-create-my-own"></a>我能创建自己的吗？
 
-会！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
+可以！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
 我们提供了一个可用于你的应用的 Rigged 的 Maya 文件，可在此处下载 <a href="files/HandCoach_MRTK.zip"> HandCoach_MRTK.zip </a>
 
 ![在 Maya 中进行动画处理的示例](images/HandCoach/MayaSelect_Gif.gif)<br>
@@ -157,7 +157,7 @@ ms.locfileid: "105550067"
 *   如果你至少已经教授了一次，则只会在其检测到用户停滞时重复手势。
 *   如果特定的 finger 位置是关键的，请确保用户可以清楚地查看动画中的这些差异。 尝试右倾，以清楚地显示最重要的部分。 
 * 如果你注意到了手上的扭曲，则需要中转到 Unity 的质量设置以增加骨骼数量。 
- 请参阅 Unity 的编辑 > 项目设置 > Quality > 其他 > Blend 权重。 请确保选择 "4 骨骼" 以查看平滑联接。 
+ 请参阅 Unity 的编辑 > 项目设置 > Quality > 其他 > Blend 权重。 请确保选择 "4 骨骼" 以查看平滑联接。
 
    ![示例： "项目设置" 窗口](images/HandCoach/ProjectSettings.png)<br>
 
@@ -167,11 +167,11 @@ ms.locfileid: "105550067"
 * 将指针放大太大
 * 将指针放在靠近用户的附近
 * 只需教授一次。 优于教授会导致混淆和麻烦
-*   将它引入 Unity，在此处下载最新的 MRTK： https://github.com/microsoft/MixedRealityToolkit-Unity
-    *   材料： Teaching_Hand2
-    *   脚本：请参阅<a href= "/windows/mixed-reality/mrtk-docs/features/experimental/hand-coach.md">MRTK 手型指导</a>的 MRTK 准则
-    *   每项目设置
-        *   场景设置为 UWP：可在 [配置 Unity 项目](../develop/unity/Configure-Unity-Project.md) 中找到 Windows Mixed Reality 的说明
+* 将它引入 Unity，在此处下载最新的 MRTK： https://github.com/microsoft/MixedRealityToolkit-Unity
+  * 材料： Teaching_Hand2
+  * 脚本：请参阅<a href= "/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-coach">MRTK 手型指导</a>的 MRTK 准则
+  * 每项目设置
+    * 场景设置为 UWP：可在 [配置 Unity 项目](../develop/unity/Configure-Unity-Project.md) 中找到 Windows Mixed Reality 的说明
 
 ## <a name="see-also"></a>另请参阅
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: 运动控制器，unity，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: 6dee5f03ab5fe84ac11a4eb10ef0483fea6e0083
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: d3df49c2f6c626e9f4eb47c38f4a8e61059a8438
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759058"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300472"
 ---
 # <a name="motion-controllers-in-unity"></a>Unity 中的运动控制器
 
@@ -152,11 +152,11 @@ Windows Mixed Reality 支持各种外形规格的运动控制器。 每个控制
 <tr>
 <th> 跟踪状态 </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>高准确度</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> true</td>
+<td> <b>高准确度</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>高准确度 (丢失) 的风险 </b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> true</td>
+<td> <b>高准确度 (丢失) 的风险 </b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>近似准确度</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> true</td>
+<td> <b>近似准确度</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
 <td> <b>无位置</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
 </tr>
@@ -436,7 +436,7 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 
 ## <a name="motion-controllers-in-mrtk"></a>MRTK 中的运动控制器
 
-可以从输入管理器访问 [笔势和运动控制器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/controllers.md) 。
+可以从输入管理器访问 [笔势和运动控制器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/controllers) 。
 
 ## <a name="follow-along-with-tutorials"></a>按照教程进行操作
 

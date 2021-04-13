@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，键盘，MRTK，混合现实工具包
-ms.openlocfilehash: 9f42940b689a8fef77c9cf2f269100fccccfe6e0
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: d20fabb2536b028ce4c48aac84592bbdc3a0c291
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759853"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300432"
 ---
 # <a name="keyboard"></a>键盘
 
@@ -25,7 +25,7 @@ ms.locfileid: "101759853"
 
 ## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的系统键盘 (混合现实工具包) 适用于 Unity
 
-* [MRTK 键盘](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/system-keyboard.md)
+* [MRTK 键盘](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/system-keyboard)
 
 <br>
 
@@ -33,7 +33,7 @@ ms.locfileid: "101759853"
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，下一个任务就是将应用程序部署到设备或仿真程序。 
+如果遵循我们所说的 Unity 开发旅程，下一个任务就是将应用程序部署到设备或仿真程序。
 
 > [!div class="nextstepaction"]
 > [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../develop/platform-capabilities-and-apis/using-visual-studio.md)

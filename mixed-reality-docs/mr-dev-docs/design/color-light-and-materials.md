@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，颜色，浅色，材料，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 6e5857436b0325537d0ea5d0321d296c58c09eae
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: b3ee769208bdcd0d86beb05760de377f2a776a47
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759262"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299742"
 ---
 # <a name="color-light-and-materials"></a>颜色、光线和材料
 
@@ -88,7 +88,7 @@ ms.locfileid: "101759262"
     :::column:::
 材料是用于制作真实全息影像的重要元素。 通过提供适当的视觉特征，你可以制作出引人注目的全息对象，这些对象可与物理环境完美融合。 材料对于为各种类型的用户输入交互提供可视反馈也很重要。  
 
-[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) 提供了一个 MRTK 标准着色器，其中包含可用于视觉反馈的各种视觉效果选项。 例如，当用户的手指接近对象的表面时，可以使用 "邻近感应" 属性来提供灯光效果。 了解有关[MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/rendering/mrtk-standard-shader.md)的详细信息
+[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) 提供了一个 MRTK 标准着色器，其中包含可用于视觉反馈的各种视觉效果选项。 例如，当用户的手指接近对象的表面时，可以使用 "邻近感应" 属性来提供灯光效果。 了解有关[MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)的详细信息
     :::column-end:::
         :::column:::
     *视频循环：基于与边界框* 

@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, TextMeshPro
 ms.localizationpriority: high
-ms.openlocfilehash: 4363d3280036ef2cd93e75233005c00db17eb59b
-ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
+ms.openlocfilehash: c9cf580b1123002e9e8cdfd5c3914c3aa39e2825
+ms.sourcegitcommit: 848b4b7bb8514c2e088a3a55512b1a8075d29093
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106088602"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107003126"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2.初始化项目并部署第一个应用程序
 

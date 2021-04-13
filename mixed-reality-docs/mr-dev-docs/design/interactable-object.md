@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/06/2019
 ms.topic: article
 keywords: 混合现实，控件，交互，提示，ui，ux，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，音频
-ms.openlocfilehash: b93092b597d0267c1169cf823b1a5c1fa03c3c3f
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 0e9f4dc09e3c4a4c38ffeb1a9042f39996918e36
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759873"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300462"
 ---
 # <a name="interactable-object"></a>可交互对象
 
@@ -140,7 +140,7 @@ HoloLens 2 支持已表述的手动跟踪输入，这允许您与对象进行交
 :::row:::
     :::column:::
         ![默认](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
-        **默认**<br>
+        **默认值**<br>
     :::column-end:::
     :::column:::
         ![悬停](images/640px-interactibleobject-pressablebutton-hover.jpg)<br>
@@ -214,13 +214,11 @@ HoloLens 2 支持已表述的手动跟踪输入，这允许您与对象进行交
 
 ---
 
-
-## <a name="sizing-recommendations"></a>重设大小建议 
+## <a name="sizing-recommendations"></a>重设大小建议
 
 为了确保可以轻松地接触所有种不可交互对象，我们建议确保种不可交互根据其从用户的距离来确定最小大小。 视觉角度通常以视觉弧的度数来度量。视觉角度基于用户眼睛与对象之间的距离并保持不变，而目标的物理大小可能会随用户更改的距离而更改。 若要根据用户的距离确定对象的必要物理大小，请尝试使用视觉角度计算器（如 [此](https://elvers.us/perception/visualAngle/)类）。
 
 下面是有关种不可交互内容的最小大小建议。
-
 
 ### <a name="target-size-for-direct-hand-interaction"></a>直接手动交互的目标大小
 
@@ -254,28 +252,25 @@ HoloLens 2 支持已表述的手动跟踪输入，这允许您与对象进行交
 ![手动 ray 或注视交互的目标大小](images/TargetSizingFar.jpg)<br>
 *手动 ray 或注视交互的目标大小*
 
-
 <br>
 
 ---
-
 
 ## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的种不可交互对象 (Unity 的混合现实工具包) 
 
 在 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 中，可以使用脚本 [**种不可交互**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) 使对象对各种类型的输入交互状态进行响应。 它支持各种类型的主题，这些主题允许您通过控制对象属性（如颜色、大小、材料和着色器）来定义可视状态。
 
-* [种不可交互](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/interactable.md)
-* [Button](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/button.md)
+* [可交互](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable)
+* [Button](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button)
 * [手动交互示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 MixedRealityToolkit 的标准着色器提供了各种选项 **，例如，可** 帮助您创建视觉对象和音频提示。
-* [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/rendering/mrtk-standard-shader.md)
 
+* [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
 
 <br>
 
 ---
-
 
 ## <a name="see-also"></a>另请参阅
 

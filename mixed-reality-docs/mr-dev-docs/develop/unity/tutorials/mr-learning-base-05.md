@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: 5e231fe91c96dc8b6a7c07c6fdbc2c07286d6ab2
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: b2d23601419c36f2a79a0c6e19d06eda6dc54d09
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982980"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300392"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -30,7 +30,7 @@ ms.locfileid: "105982980"
 
 ![选中了 SOlvers 文件夹的 Unity“项目”窗口](images/mr-learning-base/base-05-section1-step1-1.png)
 
-本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver.md)指南。
+本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver)指南。
 
 > [!NOTE]
 > 方向指示器求解器不在上面所述的求解器文件夹中，而是在“包”>“混合现实工具包基础”>“SDK”>“实验性”>“功能”>“实用工具”文件夹，因为这是一项实验性功能。
@@ -140,7 +140,7 @@ ms.locfileid: "105982980"
 
 在本教程中，你学习了如何使用 MRTK 的方向指示器求解器让 UI 元素直观地将用户定向到对象。 还了解了如何使用“点击放置”求解器轻松重新定位对象。
 
-若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver.md)指南。
+若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver)指南。
 
 > [!div class="nextstepaction"]
 >[下一教程：6.创建用户界面](mr-learning-base-06.md)
