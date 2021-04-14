@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包
-ms.openlocfilehash: f4a4ea50c45263f18079da76dd8dfd5f31e2af44
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 36af6b1c439c47eef2126408d1185ecfe151cf8b
+ms.sourcegitcommit: e9a0ba97fd288479ad324cdaabee9b6abc9f4dc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98110445"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107221559"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
@@ -40,6 +40,7 @@ ms.locfileid: "98110445"
 | [混合现实应用的类型](types-of-mixed-reality-apps.md) | 确定你的应用体验在混合现实范围内的位置 |
 | [“设计全息影像”应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | 了解混合现实 UX 设计的基础知识，只需体验创建出色 HoloLens 应用相关的行为、提示和建议即可（可在 HoloLens 2 中从 Microsoft Store 下载） |
 | [MRTK 中心示例](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4) | 体验混合现实的常见空间交互和 UX 构建基块（可从 HoloLens 2 中的 Microsoft Store 下载） |
+| （可选）[下载 Figma 工具包](figma-toolkit.md) | Figma 工具包提供了一些资产，你可以使用它们根据 MRTK 中的可用组件来草拟和布置 UI |
 
 ### <a name="2-core-concepts"></a>2.核心概念
 

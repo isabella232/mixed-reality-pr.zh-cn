@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, 测试, MRTK, MRTK 版本 2, HoloLens 2, unity, 移植, HoloLens 第一代, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 迁移, 最佳做法, ARM
-ms.openlocfilehash: 52055f35df05c2cc69e960c681598adac7bd6f1c
-ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
+ms.openlocfilehash: 5315e4d391824bbc17bc4cc4c3c047d671063895
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105636229"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299892"
 ---
 # <a name="porting-hololens-1st-gen-apps-to-hololens-2"></a>将 HoloLens（第 1 代）应用移植到 HoloLens 2
 
@@ -80,36 +80,36 @@ HoloLens（第 1 代）在 x86 处理器上执行应用程序，而 HoloLens 2 �
 
 有关使用 MRTK 版本 2 的详细信息，，请查看下列资源：
 
-- [MRTK - 文档主页](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs)
-- [安装指南 (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)
-- [MRTK - 手动跟踪 (GitHub)](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/hand-tracking.md)
-- [MRTK - 眼动跟踪 (GitHub)](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/eye-tracking/eye-tracking-main.md)
+- [MRTK - 文档主页](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)
+- [安装指南](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/install-the-tools)
+- [MRTK - 手部跟踪](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/hand-tracking)
+- [MRTK - 眼动跟踪](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
 
 ### <a name="prepare-for-the-migration"></a>准备迁移
 
-在引入新的[适用于 MRTK v2 的 *.unitypackage 文件](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)之前，建议清点：1) 与 MRTK v1 集成的任何自定义生成代码；2) 用于输入交互或 UX 组件的任何自定义生成代码 。 混合现实开发人员在引入 MRTK v2 时最常出现的冲突与输入和交互相关。 我们建议阅读并理解 [MRTK v2 输入模型](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md)。
+在引入新的[适用于 MRTK v2 的 *.unitypackage 文件](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)之前，建议清点：1) 与 MRTK v1 集成的任何自定义生成代码；2) 用于输入交互或 UX 组件的任何自定义生成代码 。 混合现实开发人员在引入 MRTK v2 时最常出现的冲突与输入和交互相关。 我们建议阅读并理解 [MRTK v2 输入模型](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview)。
 
-最后，新的 [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity) 已从脚本和场景内管理器对象模型过渡到配置与服务提供程序体系结构。 这可以建立一种更简洁的场景层次结构和体系结构模型，但需要通过学习来了解新的配置文件。 请阅读[混合现实工具包配置指南](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mixed-reality-configuration-guide.md)，以开始熟悉重要的设置和配置文件，并根据应用程序的需求进行调整。
+最后，新的 [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity) 已从脚本和场景内管理器对象模型过渡到配置与服务提供程序体系结构。 这可以建立一种更简洁的场景层次结构和体系结构模型，但需要通过学习来了解新的配置文件。 请阅读[混合现实工具包配置指南](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide)，以开始熟悉重要的设置和配置文件，并根据应用程序的需求进行调整。
 
 ### <a name="migrating-the-project"></a>迁移项目
 
 导入 [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity) 后，Unity 项目很可能会出现多种与编译器相关的错误。 这些错误通常是新的命名空间结构和新的组件名称造成的。 请将脚本修改为新的命名空间和组件，以继续解决这些错误。
 
-若要了解 HTK/MRTK 与 MRTK v2 之间的具体 API 差异，请参阅 [MRTK 版本 2 Wiki](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/updates-deployment/hrtk-to-mrtk-porting-guide.md) 中的移植指南。
+若要了解 HTK/MRTK 与 MRTK v2 之间的具体 API 差异，请参阅 [MRTK 版本 2 Wiki](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide) 中的移植指南。
 
 ### <a name="best-practices"></a>最佳实践
 
-- 优先使用 [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/rendering/mrtk-standard-shading.md)。
-- 每次处理一种重大更改类型（例如：将 IFocusable 更改为 [IMixedRealityFocusHandler](https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html)）。
+- 优先使用 [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)。
+- 每次处理一种重大更改类型（例如：将 IFocusable 更改为 [IMixedRealityFocusHandler](https://docs.microsoft.com/dotnet/api/microsoft.mixedreality.toolkit.input.imixedrealityfocushandler)）。
 - 每次更改后进行测试，并使用源代码管理。
 - 尽可能使用默认 MRTK UX（按钮、盖板等）。
 - 避免直接修改 MRTK 文件，改为创建围绕 MRTK 组件的包装器。
-    - 此操作方便将来的 MRTK 引入和更新。
+  - 此操作方便将来的 MRTK 引入和更新。
 - 查看并探索 MRTK 中提供的示例场景，尤其是 *HandInteractionExamples.scene*。
 - 使用四面体、碰撞体和 TextMeshPro 文本重新生成基于画布的 UI。
-- 启用[深度缓冲区共享](../unity/camera-in-unity.md#sharing-depth-buffers)或[设置焦点](../unity/focus-point-in-unity.md)；首选使用 16 位深度缓冲区以提高性能。 确保在渲染颜色的同时渲染深度。 Unity 通常不会写入透明和文本游戏对象的深度。 
+- 启用[深度缓冲区共享](../unity/camera-in-unity.md#sharing-depth-buffers)或[设置焦点](../unity/focus-point-in-unity.md)；首选使用 16 位深度缓冲区以提高性能。 确保在渲染颜色的同时渲染深度。 Unity 通常不会写入透明和文本游戏对象的深度。
 - 设置单通道实例化渲染路径。
-- 使用 [MRTK 的 HoloLens 2 配置文件](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/profiles/profiles.md#hololens-2-profile)
+- 使用 [MRTK 的 HoloLens 2 配置文件](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/profiles/profiles#hololens-2-profile)
 
 ### <a name="testing-your-application"></a>测试应用程序
 
@@ -150,10 +150,10 @@ HoloLens（第 1 代）在 x86 处理器上执行应用程序，而 HoloLens 2 �
 - ARM 上的着色器编译器将在加载着色器，或者在着色器所依赖的设置发生更改后，在首次发出绘制调用期间运行，而不是在加载着色器时运行。 对帧速率的影响可能比较明显（具体取决于需要编译的着色器数量），并且会对应当如何在 HoloLens 2 与 HoloLens（第 1 代）上以不同方式处理、打包、更新着色器造成各种影响。
 
 ## <a name="see-also"></a>另请参阅
+
 * [安装工具](../install-the-tools.md)
-* [MRTK - 安装指南 (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)
-* [MRTK - 文档主页](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs)
-* [从 HoloToolkit/MRTK 移植到 MRTK 版本 2 (GitHub)]([MRTK - 文档主页](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/updates-deployment/hrtk-to-mrtk-porting-guide.md)
+* [MRTK - 安装指南](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/install-the-tools)
+* [MRTK - 文档主页](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)
+* [从 HoloToolkit/MRTK 移植到 MRTK 版本 2](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide)
 * [建议用于 Unity 的设置](../unity/recommended-settings-for-unity.md)
 * [了解混合现实的性能](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
-
