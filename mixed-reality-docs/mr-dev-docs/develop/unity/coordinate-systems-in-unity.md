@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 坐标系统，空间坐标系统，仅限方向，固定比例大规模，房间规模，世界规模，360度，固定的，房间，房间，世界，，规模，位置，方向，Unity，定位，空间锚，世界锚，世界锁定，世界锁定，身体锚，世界锁定，，跟踪丢失，locatability，界限，recenter，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: aa68ae44e09dfe579f8ab8924d1b300506a1f00e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 91b1adf6dcf1c54d0d29a02bfb97ac4674a87c88
+ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581064"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107528751"
 ---
 # <a name="coordinate-systems-in-unity"></a>Unity 中的坐标系统
 
-Windows Mixed Reality 在各种 [经验](../../design/coordinate-systems.md)范围内支持应用，从仅限方向和大规模应用，再到房间规模的应用。 在 HoloLens 上，你可以进一步构建全球规模的应用程序，让用户经历5米以上的工作，探索一座建筑的整个楼层。
+Windows Mixed Reality 在各种经验范围内支持应用，从仅限方向和大规模应用，再到房间规模的应用。 在 HoloLens 上，你可以进一步构建全球规模的应用程序，让用户经历5米以上的工作，探索一座建筑的整个楼层。
 
-在 Unity 中构建混合现实体验的第一步是确定应用将面向哪些 [经验](../../design/coordinate-systems.md) 。
+在 Unity 中构建混合现实体验的第一步是了解 [坐标系统，并选择应用将面向的体验扩展](../../design/coordinate-systems.md) 。
 
 ## <a name="building-an-orientation-only-or-seated-scale-experience"></a>构建仅限方向或固定规模的体验
 
@@ -96,7 +96,7 @@ if (UnityEngine.Experimental.XR.Boundary.TryGetGeometry(vertices, Boundary.Type.
 
 ### <a name="adding-a-world-anchor"></a>添加世界锚
 
-若要添加世界定位点，请 <WorldAnchor> 使用要锚定的转换在游戏对象上调用 AddComponent ( # A1。
+若要添加世界定位点，请 <WorldAnchor> 使用要锚定的转换在游戏对象上调用 AddComponent () 。
 
 ```cs
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
@@ -155,7 +155,7 @@ private void Anchor_OnTrackingChanged(WorldAnchor self, bool located)
 }
 ```
 
-有时会立即定位锚点。 在这种情况下，当 AddComponent <WorldAnchor> ( # A1 返回时，定位点的 isLocated 属性将设置为 true。 因此，不会触发 OnTrackingChanged 事件。 清理模式是在附加定位点后使用初始 IsLocated 状态调用 OnTrackingChanged 处理程序。
+有时会立即定位锚点。 在这种情况下，当 AddComponent () 返回时，定位点的 isLocated 属性将设置为 true <WorldAnchor> 。 因此，不会触发 OnTrackingChanged 事件。 清理模式是在附加定位点后使用初始 IsLocated 状态调用 OnTrackingChanged 处理程序。
 
 ```cs
 Anchor_OnTrackingChanged(anchor, anchor.isLocated);
