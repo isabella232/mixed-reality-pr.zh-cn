@@ -168,11 +168,13 @@
                   href: unity/tutorials/mr-azure-301.md
     - name: 设置项目
       items:
-        - name: MRTK 简介
-          href: unity/mrtk-getting-started.md
-        - name: 配置项目时不使用 MRTK
-          href: unity/configure-unity-project.md
-        - name: 使用混合现实 OpenXR 插件
+        - name: 选择 Unity 版本和 XR 插件
+          href: unity/choosing-unity-version.md
+        - name: 使用旧的内置 XR 支持
+          href: unity/legacy-xr-support.md
+        - name: 使用 Windows XR 插件
+          href: unity/windows-xr-plugin.md
+        - name: 使用 OpenXR 插件
           href: unity/openxr-getting-started.md
         - name: OpenXR 插件支持的功能
           href: unity/openxr-supported-features.md
@@ -194,8 +196,10 @@
       items:
         - name: 照相机设置
           href: unity/camera-in-unity.md
-        - name: 空间定位点
+        - name: 世界锁定和空间锚
           href: unity/spatial-anchors-in-unity.md
+        - name: 共享体验
+          href: unity/shared-experiences-in-unity.md
         - name: 交互
           items:
             - name: 运动控制器
@@ -216,8 +220,6 @@
           href: unity/spatial-sound-in-unity.md
     - name: 高级功能
       items:
-        - name: 共享体验
-          href: unity/shared-experiences-in-unity.md
         - name: Unity 中的照片/视频摄像头
           href: unity/locatable-camera-in-unity.md
         - name: 桌面应用中的全息远程处理
