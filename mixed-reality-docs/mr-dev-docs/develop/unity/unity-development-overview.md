@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: 52c6fb57473255e440d9c2f795cc228cca44ea32
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: ba68c3d74f58fc43af3de039e5eba1712d195cc0
+ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982780"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107528739"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
@@ -33,22 +33,34 @@ ms.locfileid: "105982780"
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [什么是 MRTK？](mrtk-getting-started.md) | 通过熟悉混合现实工具包及其所提供的功能开始历程 |
-| [安装最新工具](../install-the-tools.md) | 下载并安装最新 Unity 包，并为混合现实设置你的项目 |
-| [HoloLens 2 教程系列](tutorials/mr-learning-base-01.md) | 深入研究 HoloLens 2 硬件的初学者级别 MRTK 教程 |
-| **可选** [下载混合现实功能工具](welcome-to-mr-feature-tool.md) | 用于发现、更新混合现实功能包并将其添加到 Unity 项目的全新开发人员工具 |
+| [混合现实工具包简介](mrtk-getting-started.md) | 通过熟悉混合现实工具包及其所提供的功能开始历程 |
+| [下载混合现实功能工具](welcome-to-mr-feature-tool.md) | 用于发现、更新混合现实功能包并将其添加到 Unity 项目的全新开发人员工具 |
+| [设置开发人员环境](../install-the-tools.md) | 下载并安装最新 Unity 包，并为混合现实设置你的项目 |
+| [完成 HoloLens 2 教程系列](tutorials/mr-learning-base-01.md) | 深入研究 HoloLens 2 硬件的初学者级别 MRTK 教程 |
 
 > [!IMPORTANT]
-> 若要在不导入混合现实工具包的情况下创建新的 Unity 项目，需针对 Windows Mixed Reality 手动更改一小组 Unity 设置。 这些设置分为两个类别：按项目设置和按场景设置。 有关分步过程，请参阅我们的[配置指南](configure-unity-project.md)。
+> 若要在不导入混合现实工具包的情况下创建新的 Unity 项目，需针对 Windows Mixed Reality 手动更改一小组 Unity 设置。 有关详细信息，请查看我们的[配置指南](choosing-unity-version.md)。
 
 > [!NOTE]
-> 在项目中设置 MRTK V2，标准的 Unity 游戏对象（例如相机）就会立即启动，为你带来坐定式体验。 可在[坐标系统](coordinate-systems-in-unity.md)页面上找到有关更改应用程序的体验范围的说明。
+> 在项目中设置 MRTK 后，标准的 Unity 游戏对象（例如相机）将立即亮起，提供坐定式体验。 可在[坐标系统](coordinate-systems-in-unity.md)页面上找到有关更改应用程序的体验范围的说明。
 
 ## <a name="2-core-building-blocks"></a>2.核心构建基块
 
 混合现实应用程序的所有核心构建基块的公开方式与其他 Unity API 一致。 这些构建基块可以作为独立功能提供，也可以通过混合现实工具包提供。 你可能不需要一次全部使用它们，但建议你尽早进行使用。 深入了解下面列出的核心构建基块后，你将拥有一个工具箱，其中包含了各种你可以集成到混合现实项目中的功能（通过这些功能本身或通过 MRTK 实现）。
 
-[!INCLUDE[](../includes/unity-building-blocks.md)]
+|  功能  |  功能  |
+| --- | --- |
+| [摄像头](../unity/camera-in-unity.md) | 全面优化混合现实应用中的视觉质量和全息影像稳定性 |
+| [世界锁定和空间定位点](spatial-anchors-in-unity.md) | 解决稳定性问题、相机调整并集成稳定的坐标系解决方案 |
+| [共享体验](shared-experiences-in-unity.md) | 使用空间定位点共享，在空间中的固定点共同观看同一全息影像并与之交互 |
+| [凝视](../unity/gaze-in-unity.md) | 让用户通过查看全息影像来定位它们 |
+| [运动控制器](../unity/motion-controllers-in-unity.md) | 向混合现实应用添加空间操作 |
+| [笔势](../unity/gestures-in-unity.md) | 在混合现实体验中将手势作为输入内容 |
+| [手部和眼部跟踪](../unity/hand-eye-in-unity.md) | 将铰接式手部和眼部跟踪输入集成到用户体验中 |
+| [空间映射](../unity/spatial-mapping-in-unity.md) | 使用虚拟网格覆盖映射物理空间以标记环境边界 |
+| [空间音效](../unity/spatial-sound-in-unity.md) | 使用沉浸式 3D 音频增强应用 |
+| [Text](../unity/text-in-unity.md) | 获得清晰的高质量文本，其具有可管理的大小和质量渲染 |
+| [语音输入](../unity/voice-input-in-unity.md) | 捕获用户的口语关键字、短语和听写|
 
 ## <a name="3-advanced-features"></a>3.高级功能
 
@@ -56,8 +68,7 @@ ms.locfileid: "105982780"
 
 |  功能  |  功能  |
 | --- | --- |
-| [共享体验](shared-experiences-in-unity.md) | 使用空间定位点共享，在空间中的固定点共同观看同一全息影像并与之交互 |
-| [可定位相机](locatable-camera-in-unity.md) | 在混合现实应用程序中捕获照片和视频内容 |
+| [照片视频相机](locatable-camera-in-unity.md) | 在混合现实应用程序中捕获照片和视频内容 |
 | [焦点](focus-point-in-unity.md) | 向 HoloLens 提供有关如何最好地对当前显示的全息影像执行稳定化的提示 |
 | [失跟](tracking-loss-in-unity.md) | 处理设备无法在应用程序世界空间中定位自己的情况 |
 | [键盘输入](keyboard-input-in-unity.md) | 在应用中获取来自现实世界和混合现实键盘的输入 |

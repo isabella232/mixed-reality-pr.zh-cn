@@ -7,12 +7,12 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: e80c5411c7d180e0d78e031599455235dabaceb7
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 50300ff08dd06c5fc250bc93979d537e10b38044
+ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237138"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107528712"
 ---
 # <a name="unity-development-for-vr-and-windows-mixed-reality"></a>针对 VR 和 Windows Mixed Reality 的 Unity 开发
 
@@ -34,13 +34,23 @@ ms.locfileid: "102237138"
 |  Checkpoint  |  业务成效  |
 | --- | --- |
 | [安装最新工具](../install-the-tools.md) | 下载并安装最新 Unity 包，并为混合现实设置你的项目 |
-| [针对 WMR 配置项目](configure-unity-project.md) | 了解如何构建在全息和 VR 显示设备上呈现数字内容的应用程序 |
+| [针对 WMR 配置项目](windows-xr-plugin.md) | 了解如何构建在全息和 VR 显示设备上呈现数字内容的应用程序 |
+
+> [!IMPORTANT]
+> 若要详细了解如何设置项目，请查看我们的 Unity 项目[配置指南](choosing-unity-version.md)。
 
 ### <a name="2-core-building-blocks"></a>2.核心构建基块
 
 启动新的沉浸式项目后，你需要一些基本的构建基块来开发沉浸式应用。 混合现实应用程序的所有核心构建基块的公开方式与其他 Unity API 一致。 你可能不需要一次全部使用它们，但建议你尽早进行使用。 深入了解下面列出的核心构建基块后，你将拥有一个工具箱，其中包含了你可集成到 VR 项目中的各种功能。
 
-[!INCLUDE[](../includes/unity-building-blocks-wmr.md)]
+|  功能  |  功能  |
+| --- | --- |
+| [摄像头](../unity/camera-in-unity.md) | 全面优化混合现实应用中的视觉质量和全息影像稳定性 |
+| [世界锁定和空间定位点](spatial-anchors-in-unity.md) | 解决稳定性问题、相机调整并集成稳定的坐标系解决方案 || [运动控制器](../unity/motion-controllers-in-unity.md) | 向混合现实应用添加空间操作 |
+| [笔势](../unity/gestures-in-unity.md) | 在混合现实体验中将手势作为输入内容 |
+| [空间音效](../unity/spatial-sound-in-unity.md) | 使用沉浸式 3D 音频增强应用 |
+| [Text](../unity/text-in-unity.md) | 获得清晰的高质量文本，其具有可管理的大小和质量渲染 |
+| [语音输入](../unity/voice-input-in-unity.md) | 捕获用户的口语关键字、短语和听写|
 
 ### <a name="3-advanced-features"></a>3.高级功能
 

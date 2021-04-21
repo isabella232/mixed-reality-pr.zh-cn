@@ -3,16 +3,16 @@ title: 发现并获取功能
 description: 发现并下载混合现实功能。
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 03/04/2021
+ms.date: 04/19/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: 859abd0c8e538392a7ba2a1adbb4387956c50028
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 9f12a1eba0c28b89000f1541ba62747a03e3564b
+ms.sourcegitcommit: 286384e6e255135939bce2ab0267a62558837562
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102230709"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107731993"
 ---
 # <a name="discovering-and-acquiring-features"></a>发现并获取功能
 
@@ -37,6 +37,10 @@ ms.locfileid: "102230709"
 - 类别名称（例如：混合现实工具包）
 - 选定的功能计数
 - 可用功能计数
+- 分区按钮
+
+> [!NOTE]
+> 选择按钮与上下文相关。 根据类别中功能选择的状态，将显示一个或多个`Select All`和`Select None`按钮。
 
 ### <a name="feature"></a>功能
 
@@ -49,6 +53,9 @@ ms.locfileid: "102230709"
 - 可用版本列表
 - 指向[功能包详细信息](viewing-package-details.md)的链接
 
+> [!NOTE]
+> 如果某功能是由抢先访问功能提供的（也称为个人预览版），则将显示一个指示器图标 ![抢先访问](images/EarlyAccess.png)。
+
 ## <a name="refresh-the-feature-catalog"></a>刷新功能目录
 
 若要检查有无新功能和更新的功能，请单击“刷新” ![“刷新”按钮](images/RefreshButton.png) 按钮。 随即会连接到目录站点并检索最新信息。 读取目录后，将显示上次更新的日期和时间。
@@ -58,6 +65,8 @@ ms.locfileid: "102230709"
 功能的选择方法是：展开类别，选择版本，然后单击复选框：
 
 ![所选功能](images/SelectedFeatures.png)
+
+若要选择某类别中的每个包，可使用`Select All`按钮。 `Select None`将取消选择所有已选定的包。 
 
 具有一个或多个选定功能的每个类别都将更新以显示计数。
 

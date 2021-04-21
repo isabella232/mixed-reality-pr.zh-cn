@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, learn, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语言翻译, Azure, Azure 认知服务, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: c4e068dda72c4dc2f22ca0a56a835b334d90c713
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 1dee5448448cca83d96eee352765ddc33b37d606
+ms.sourcegitcommit: 47c402dc8e588817ce60229bf019170fa36f3045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102770325"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107581549"
 ---
 # <a name="mixed-reality-learn-overview"></a>混合现实学习概述
 
@@ -20,7 +20,10 @@ ms.locfileid: "102770325"
 
 针对混合现实进行开发时，拥有的工具越多越好。 虽然文档和书面教程至关重要，但如果你更偏向于是一名视觉型学习者，那么可查看我们在 Microsoft Learn 上的视频内容。 我们不断在添加更多模块，因此请务必回来查看更多更新内容！
 
-我们的 Learn 模块可帮助你精通混合现实开发，它提供一种基于模块的结构，让你能够开始使用混合现实工具包、Unity 和 Azure 混合现实服务等重要工具。 了解基础知识从未如此简单清晰，这是因为我们布置好学习目标、先决条件，还设置了完成预期时间 - 所有内容都放在一个界面中。 立即从关于混合现实的 Learn 模板入门，或者查看我们的 Microsoft Learn 介绍[视频](https://channel9.msdn.com/Blogs/One-Dev-Minute/What-is-Microsoft-Learn)！
+我们的 Learn 模块可帮助你精通混合现实开发，它提供一种基于模块的结构，让你能够开始使用混合现实工具包、Unity 和 Azure 混合现实服务等重要工具。 了解基础知识从未如此简单清晰，这是因为我们布置好学习目标、先决条件，还设置了完成预期时间 - 所有内容都放在一个界面中。 
+
+> [!div class="nextstepaction"]
+> [混合现实学习路径入门](https://docs.microsoft.com/learn/browse/?terms=mixed%20reality)
 
 ## <a name="general-modules"></a>常规模块
 

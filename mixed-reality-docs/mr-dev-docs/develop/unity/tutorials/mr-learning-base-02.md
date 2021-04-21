@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, TextMeshPro
 ms.localizationpriority: high
-ms.openlocfilehash: c9cf580b1123002e9e8cdfd5c3914c3aa39e2825
-ms.sourcegitcommit: 848b4b7bb8514c2e088a3a55512b1a8075d29093
+ms.openlocfilehash: b0b8d97471dfae9d6dc6bbee26079af04f97de62
+ms.sourcegitcommit: 94ae851f78e5b861af601b445f8f0a3405197c40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "107003126"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107716018"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2.初始化项目并部署第一个应用程序
 
@@ -186,7 +186,7 @@ Unity 完成上一部分中的导入包操作后，应显示“MRTK 项目配置
 > [!NOTE]
 > 在本教程中，碰撞体已添加到立方体对象中。 若要详细了解碰撞体，可访问 Unity 的<a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">碰撞体</a>文档。
 
-若要在 Unity 编辑器中测试此情况，可以进入播放模式并按住左 Shift 或空格键来启用控制器，这样即可通过鼠标移动来移动控制器，还可以使用鼠标滚轮将其移动到距离相机更远或更近的位置。  当指针位于立方体上时，按住鼠标右键以移动立方体对象。
+若要在 Unity 编辑器中测试此情况，可以进入播放模式并按住左 Shift 或空格键来启用控制器，这样即可通过鼠标移动来移动控制器，还可以使用鼠标滚轮将其移动到距离相机更远或更近的位置。  当指针在立方体上时，按住鼠标左键可移动立方体对象。
 
 ![游戏模式](images/mr-learning-base/base-02-section8-step1-4.png)
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5b99eda2ca8bc2ba48a46513b867e94c45b198c1
-ms.sourcegitcommit: 919bdc3e46325f3c44a022c8852cd38ffec33d33
+ms.openlocfilehash: ab95f0c89a4b77c6ea69fefa331bfbdccf35f79d
+ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105105600"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107564543"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -35,6 +35,7 @@ ms.locfileid: "105105600"
 |  工具/SDK  |  说明  |
 | --- | --- |
 | [Unity 的混合现实工具包](../unity/mrtk-getting-started.md) | Unity 的混合现实工具包是一个开源的跨平台开发工具包，旨在加快对面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序的开发。 |
+| [Microsoft World Locking Tools](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/GettingStartedWithWorldLocking.html) | 提供稳定的坐标系和相机调整，可最大程度减少明显的不一致情况。 |
 | [Microsoft Mesh](/mesh/overview) 个人预览版 | 完成 [Microsoft Mesh 注册意向](https://aka.ms/meshsignup)表，以便随时了解 Mesh 公告和新闻。 借助 Mesh，你可以增强虚拟会议、召开虚拟设计会议、远程帮助其他人以及主持虚拟网络会议。 |
 
 ## <a name="cloud-services"></a>云服务
