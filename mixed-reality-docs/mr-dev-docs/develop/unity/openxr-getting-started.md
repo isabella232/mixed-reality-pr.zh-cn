@@ -6,21 +6,21 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: ebe7d32b236e28259b2ed9a7915bd337f84f8762
-ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
+ms.openlocfilehash: 97169507e2b61110d2d16580ba957feff3755258
+ms.sourcegitcommit: aca5fddb98fbbd9aa22bdf8174d7fdcdb9d4c08a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106088498"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107894009"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
 
 从 Unity 版本2020.2 开始，Microsoft 的 Mixed Reality OpenXR 插件包可通过 Unity 包管理器 (UPM) 提供。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 * Unity 2020.3 LTS 或更高版本
-* Unity OpenXR 插件1.0.3 或更高版本
+* Unity OpenXR 插件1.1.1 或更高版本
 * Visual Studio 2019 或更高版本
 * 在适用于 HoloLens 2 应用的 Unity 中安装 **UWP** 平台支持
 
@@ -34,7 +34,7 @@ ms.locfileid: "106088498"
 > [!div class="nextstepaction"]
 > [使用 MRTK 设置项目](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=openxr)
 
-有关更多功能的详细信息，请参阅 [MRTK 的文档](/windows/mixed-reality/mrtk-unity) 。
+有关更多功能的详细信息，请参阅[关于 MRTK 的文档](/windows/mixed-reality/mrtk-unity)。
 
 ## <a name="manual-setup-without-mrtk"></a>无 MRTK 的手动设置
 
@@ -52,11 +52,11 @@ ms.locfileid: "106088498"
 
 1.  选择 **文件 > 生成设置 ...**
 2.  选择 "平台" 列表中的 "**通用 Windows 平台**"，然后选择 "**切换平台**"
-3.  将 **体系结构** 设置为 **ARM 64**
-4.  将 **目标设备** 设置为 **HoloLens**
-5.  将 **生成类型** 设置为 **D3D**
-6.  将 **UWP SDK** 设置为 **安装的最新版本**
-7.  将 **生成配置** 设置为 **发布** ，因为调试存在已知的性能问题
+3.  将“体系结构”设置为“ARM 64” 
+4.  将“目标设备”设置为“HoloLens” 
+5.  将“生成类型”设置为“D3D” 
+6.  将“UWP SDK”设置为“最近安装的版本” 
+7.  将“生成配置”设置为“发布”，因为调试存在已知的性能问题 
 
 ![在 unity 编辑器中打开的生成设置窗口的屏幕截图，其中通用 Windows 平台突出显示](images/wmr-config-img-4.png)
 
@@ -80,7 +80,7 @@ ms.locfileid: "106088498"
 ![所选 OpenXR 打开的混合现实菜单项的屏幕截图](images/openxr-img-08.png)
 
 > [!IMPORTANT]
-> 如果在 " **OpenXR" 插件** 旁出现一个红色警告图标，请单击该图标，然后选择 " **全部修复** "，然后继续。 Unity 编辑器可能需要重新启动才能使更改生效。
+> 如果在 " **OpenXR" 插件** 旁出现一个红色警告图标，请单击该图标，然后选择 " **全部修复** "，然后继续。 Unity 编辑器可能需要自动重启以使更改生效。
 
 ![OpenXR 项目验证窗口的屏幕截图](images/openxr-img-06.png)
 

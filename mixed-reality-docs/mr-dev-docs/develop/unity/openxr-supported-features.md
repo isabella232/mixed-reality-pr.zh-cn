@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: d45cc9ab0c0c922c1946f4c188202a99f049f4fc
-ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
+ms.openlocfilehash: e6756df7f082e56b029b6e82e06d960ba39ed04a
+ms.sourcegitcommit: aca5fddb98fbbd9aa22bdf8174d7fdcdb9d4c08a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106088486"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107893997"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>混合现实 OpenXR 支持 Unity 中的功能
 
@@ -39,6 +39,8 @@ ms.locfileid: "106088486"
 * 在为 0.2.0) 中添加的 (支持 **手型和手写网格跟踪**
 * 在为 0.2.0) 中添加的 (支持用于平面检测的 **ARPlaneSubsystems** ，并使用 **ARRaycastManager** 放置全息影像。
 *  (0.9.0) 支持用于空间映射的 **XRMeshSubsystem** 和 **ARMeshManager** 。
+*  (在0.9.0 中添加) 支持适用于 Windows 插件的 Azure 空间定位点 SDK。 有关详细信息，请参阅 [GitHub 上的 Mixed Reality + OpenXR Azure 空间锚定示例项目](https://github.com/microsoft/OpenXR-Unity-MixedReality-Samples/tree/main/AzureSpatialAnchorsSample)。
+*  (在0.9.1 中添加的) 支持从生成和部署的 Windows UWP 应用进行桌面应用全息远程处理。
 
 ## <a name="holographic-remoting-setup"></a>全息远程处理安装
 
@@ -114,9 +116,8 @@ HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在�
 
 ## <a name="whats-coming-soon"></a>即将推出的内容
 
-以下问题和缺少的功能是通过混合现实 OpenXR 插件 **版本 0.9.0** 知道的。 我们正在处理这些问题，将在即将发布的版本中发布修补程序和新功能。
+以下问题和缺少的功能是通过混合现实 OpenXR 插件 **版本 0.9.2** 知道的。 我们正在处理这些问题，将在即将发布的版本中发布修补程序和新功能。
 
-* 未来版本中将提供 **Azure 空间锚点** 支持。
 * **ARM64** 是仅适用于 HoloLens 2 应用的受支持平台。 **ARM** 平台即将发布。
 
 ## <a name="troubleshooting"></a>疑难解答
