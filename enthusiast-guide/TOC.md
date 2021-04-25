@@ -9,7 +9,7 @@
 ### [接入头戴显示设备](plug-in-your-headset.md)
 ### [安装 Windows Mixed Reality](install-windows-mixed-reality.md)
 ### [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
-### [Windows Mixed Reality 开发人员工具包常见问题解答](wmr-setup-faq.md)
+### [Windows Mixed Reality 开发人员工具包常见问题解答](wmr-setup-faq.yml)
 
 ## 使用 Windows Mixed Reality
 ### [混合现实中的学习体验](learn-mixed-reality.md)
@@ -20,7 +20,7 @@
 ### [使用 SteamVR](using-steamvr-with-windows-mixed-reality.md)
 ### [使用 Microsoft Edge](using-microsoft-edge.md)
 ### [什么是 WebVR](webvr.md)
-### [使用 Windows Mixed Reality 常见问题解答](using-wmr-faq.md)
+### [使用 Windows Mixed Reality 常见问题解答](using-wmr-faq.yml)
 
 ## 排除故障和常见问题解答
 ### [FAQ 概述](troubleshooting-windows-mixed-reality.md)
@@ -38,7 +38,7 @@
 ### [跟踪系统](tracking.md)
 ### [WebVR](webvr-questions.md)
 ### [其他问题](other-questions.md)
-### [HP Reverb G2 常见问题解答](reverbG2-faq.md)
+### [HP Reverb G2 常见问题解答](reverbG2-faq.yml)
 
 ## 资源
 ### [沉浸式头戴显示设备运行状况、安全和舒适](wmr-health-safety-comfort.md)
