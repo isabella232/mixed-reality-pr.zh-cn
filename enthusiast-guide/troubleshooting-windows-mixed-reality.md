@@ -3,12 +3,12 @@ title: Windows Mixed Reality 疑难解答
 description: 使用最新的 Windows Mixed Reality 故障排除，这超出了标准使用者支持文档的范围。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
-ms.openlocfilehash: 6e685aac0919d920f47c2bd8954706da79dbc8c4
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 2fbdb434eb3ccc0a327af990b4f4854faafbdf85
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009477"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944638"
 ---
 # <a name="troubleshooting-windows-mixed-reality-faqs"></a>Windows Mixed Reality (常见问题的疑难解答) 
 
@@ -16,7 +16,7 @@ ms.locfileid: "98009477"
 
 ## <a name="whats-new"></a>新增功能！
 
-对于新发布的 HP 回音和控制器，我们为所有问题（G2）编译了一个 [专用的常见问题页面](reverbG2-faq.md) 。 本文介绍了从连接问题和图像清晰到运动控制器问题并运行混合现实的一切内容。
+对于新发布的 HP 回音和控制器，我们为所有问题（G2）编译了一个 [专用的常见问题页面](reverbG2-faq.yml) 。 本文介绍了从连接问题和图像清晰到运动控制器问题并运行混合现实的一切内容。
 
 ## <a name="troubleshooting-topics"></a>疑难解答主题
 
@@ -27,7 +27,7 @@ ms.locfileid: "98009477"
 对于安装、运行 Windows Mixed Reality、安装错误、最小 PC 要求或管理员权限的问题，请查看以下两个常见问题解答：
 
 - [安装错误](installation_errors.md)
-- [安装](wmr-setup-faq.md)
+- [安装](wmr-setup-faq.yml)
 
 ### <a name="hardware-issues"></a>硬件问题
 

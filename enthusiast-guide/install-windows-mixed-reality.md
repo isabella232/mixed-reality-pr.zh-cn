@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，混合现实门户
 appliesto:
 - Windows 10
-ms.openlocfilehash: 72782d14218e0a95b5a88297310f791c977fe094
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: a0ce559372d854e5f0bd51d25d112ba285e4d81e
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726068"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944738"
 ---
 # <a name="install-windows-mixed-reality-software"></a>安装 Windows Mixed Reality 软件
 
@@ -96,5 +96,5 @@ Windows Mixed Reality 的大小为 1 GB，下载时间因 internet 连接而异�
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
 * [安装疑难解答](installation_errors.md)
-* [安装疑难解答](wmr-setup-faq.md)
+* [安装疑难解答](wmr-setup-faq.yml)
 * [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)

@@ -3,12 +3,12 @@ title: 设置 Windows Mixed Reality
 description: 如何设置 Windows Mixed Reality 运动控制器、语音和音频，并为安全播放空间定义房间边界。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，入门，安装，运动控制器，控制器，语音，音频，固定，下，边界，图形驱动程序，Microsoft Edge，chromium
-ms.openlocfilehash: 8cd313651665fe2e50deb21e2ba2434883dc873a
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: a08982112fea4d1b67b690233ae387b76afc2f90
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725938"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944748"
 ---
 # <a name="set-up-windows-mixed-reality"></a>设置 Windows Mixed Reality
 
@@ -182,7 +182,7 @@ Windows Mixed Reality 根据你的电脑的硬件配置，自动选择用于平�
 * [询问社区](https://answers.microsoft.com)
 * [联系我们以获取支持](https://support.microsoft.com/contactus/)
 * [排查安装问题](installation_errors.md)
-* [安装疑难解答](wmr-setup-faq.md)
+* [安装疑难解答](wmr-setup-faq.yml)
 * [了解 Mixed Reality](learn-mixed-reality.md)
 * [运动控制器](controllers-in-wmr.md)
 * [由内而外跟踪的工作原理](tracking-system.md)

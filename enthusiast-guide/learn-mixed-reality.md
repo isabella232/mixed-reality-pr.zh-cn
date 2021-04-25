@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，教程，入门
 appliesto:
 - Windows 10
-ms.openlocfilehash: 2cbfb171065b0f2cf616348194b286e37159d425
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 9210f9bb7dd4c922c0d202ddc114beab60e66de8
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726048"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944728"
 ---
 # <a name="learn-mixed-reality"></a>了解 Mixed Reality
 
@@ -54,5 +54,5 @@ ms.locfileid: "97726048"
 ## <a name="see-also"></a>另请参阅
 
 * [排查安装问题](installation_errors.md)
-* [安装疑难解答](wmr-setup-faq.md)
+* [安装疑难解答](wmr-setup-faq.yml)
 * [混合现实主页](your-mixed-reality-home.md)

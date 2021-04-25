@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，版本历史记录，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 101061f69fcd4bd3885aa265f32ba2a8f93bf3dc
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: 93ab38108d5ad557d61ad366ebb7aebd8cb65ab7
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550127"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944699"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
@@ -28,6 +28,7 @@ ms.locfileid: "105550127"
 * 优化了可通过 [SpatialSurfaceObserver](/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceobserver) 通过远程应用查询的空间 surface 网格传输。
 * 修复了在断开连接时调用 SpatialAnchorManager 方法或释放定位点的问题。
 * 固定线程问题导致关闭 PlayerContext 或 RemoteContext 实例时出现故障。
+* 桌面上的全息远程处理播放机：未安装 Windows Mixed Reality 而不是以无提示方式关闭时显示错误消息。
 * 许多其他 bug 修复和稳定性改进。
 
 ## <a name="version-241-january-22-2021"></a>版本 2.4.1 (2021 年1月22日) <a name="v2.4.1"></a>

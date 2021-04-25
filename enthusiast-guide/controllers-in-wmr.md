@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 960b26d16e9edd387eb94c469d45b0c669fadc10
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 66b352696016577ab121520102dd766b030ccf0e
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580539"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944628"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Windows Mixed Reality 中的运动控制器
 
@@ -36,7 +36,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 > * 对于直接与电脑配对的控制器，需要将它们打开并按下电池隔离舱内的 "配对" 按钮，将其置于配对模式，直至指示灯开始闪烁。
 > * 运动控制器仅支持一次配对到一台 PC。 如果需要将它们用于不同的耳机，则需要完成配对过程。 请参阅 [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
 
-[获取帮助连接](wmr-setup-faq.md#my-motion-controllers-arent-working)
+[获取帮助连接](wmr-setup-faq.yml#my-motion-controllers-aren-t-working)
 
 > [!IMPORTANT]
 > **已获取 Xbox 控制器？**
@@ -75,7 +75,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 
 ### <a name="common-issues"></a>常见问题
 
-* 验证计算机上是否只有一个蓝牙无线电处于活动状态。 如果有多个蓝牙收音机，则需要禁用设备管理器中的其他无线电。
+* 验证计算机上是否只有一个蓝牙无线电处于活动状态。 如果有多个蓝牙收音机，则需要禁用 Device Manager 中的其他无线电。
 * 将你的蓝牙转换器放置在一个端口中，该端口对你的控制器具有清晰的视觉位置，并已插入 USB 3.0 设备。 已知 USB 3.0 与蓝牙的射频干扰 (从 Intel 阅读 [本文](https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/usb3-frequency-interference-paper.pdf) ，了解更多详细信息) 。 USB 2.0 端口可能更适用于蓝牙转换器。
 * 确保你的蓝牙转换器未插入 HMD 的 USB 电缆旁边的 USB 端口。 已知道耳机电缆可能会干扰蓝牙转换器。 将该转换器插到电脑上的前 USB 端口，以获得最佳结果。
 * 对于笔记本，请确保 WiFi 连接到 5 GHz 波段以获得最佳体验。 选择 "无线网络" 图标右下送纸盒，然后选择要使用的网络的 "属性"。 为了共享 2.4 GHz 天线进行蓝牙和 WiFi 连接而设计的笔记本会出现数据拥塞，导致网络速度缓慢或移动控制器跟踪性能不佳。
@@ -94,7 +94,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 |  要执行此操作  |  运动控制器  | 游戏板 | 鼠标 + 键盘 |
 | --- | --- | --- | --- |
 | 过去 | 向前按操纵杆，然后将控制器指向你要转到的位置。 释放操纵杆。 | 向前按左操纵杆，然后查看要转到的位置。 释放操纵杆。 | 选择并按住鼠标右键，然后将鼠标指向要移到的位置。 释放该按钮。 |
-| Select | 指向控制器，然后拉取触发器或使用触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
+| 选择 | 指向控制器，然后拉取触发器或使用触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
 | 打开“开始”菜单 | 按 **Windows** 按钮。 | 按 **Xbox** 按钮。 | 按 **Windows 徽标键**。 |
 | 离开沉浸式应用 | 按 **Windows** 按钮。 然后，在 "快速操作" 菜单中选择 " **混合现实主页** "。 | 按 **Xbox** 按钮。 然后选择 "快速操作" 菜单上的 " **混合现实主页** " 按钮。 | 按下 "Windows 徽标键"。 然后在显示的 "快速操作" 菜单上选择 " **混合现实" 主页** 按钮。 |
 | 旋转 | 向左或向右移动操纵杆。 | 向左或向右移动右摇杆。 | 不可用。 |
@@ -116,7 +116,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 | --- | --- |
 | Led 打开，控制器 vibrates 一次 | **开启** |  
 | Led 关闭，控制器 vibrates 两次 | **关闭** |
-| Led 每3秒闪烁一次 | **Sleeping** |
+| Led 每3秒闪烁一次 | **等待** |
 | Led 慢慢脉冲，控制器 vibrates 一次 | **进入配对模式** |
 | 控制器 vibrates 一次 | **连接或断开计算机连接** |
 | Led 亮 | **由耳机跟踪的控制器** |
@@ -135,7 +135,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
   * 启动 **混合现实门户** ，并输入混合现实主页。
   * 移动控制器并验证跟踪、测试按钮并验证 teleportation 是否正常工作。 如果没有，请查看 [运动控制器故障排除部分](motion-controller-problems.md)
 
-## <a name="faq"></a>常见问题解答
+## <a name="faq"></a>FAQ
 
 ### <a name="how-can-i-check-battery-level"></a>如何检查电池电量级别？
 
@@ -155,6 +155,6 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 - [Unreal 中的 HP 控制器](/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
 - [询问社区](https://answers.microsoft.com)
 - [联系我们以获取支持](https://support.microsoft.com/contactus/)
-- [疑难解答](troubleshooting-windows-mixed-reality.md)
+- [故障排除](troubleshooting-windows-mixed-reality.md)
 
 运动控制器遇到问题？ [获取帮助](motion-controller-problems.md)

@@ -3,12 +3,12 @@ title: 混合现实主页
 description: 如何在 Windows Mixed Reality 主页中导航和传送，启动应用和游戏，个性化家庭，并更改视觉对象、音频和语音设置。
 ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，导航，接收，应用，游戏
-ms.openlocfilehash: 4fd4fb70edf9aadb9b34187f4d8fd421ca1e8a95
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 440660b12b92e0c818cd3601be486d6fd1dfdb92
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725538"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944688"
 ---
 # <a name="your-windows-mixed-reality-home"></a>Windows Mixed Reality 主页
 
@@ -84,7 +84,7 @@ Windows Mixed Reality 主页包含一个空间音效模拟，其中每个应用�
 
 ## <a name="see-also"></a>另请参阅
 
-* [Windows Mixed Reality 主页疑难解答](wmr-setup-faq.md#my-motion-controllers-arent-working)
+* [Windows Mixed Reality 主页疑难解答](wmr-setup-faq.yml#my-motion-controllers-aren-t-working)
 * [在 Windows Mixed Reality 中使用游戏和应用](using-games-and-apps-in-windows-mixed-reality.md)
 * [由内而外跟踪的工作原理](tracking-system.md)
 * [运动控制器的工作原理](controllers-in-wmr.md)

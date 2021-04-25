@@ -8,18 +8,18 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 9c1863a3fb0c7d8681f82aa6e0d93400bef578c9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 0254b7c4ac6a9602517adb3d9e5c024ebd69db4e
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007667"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944674"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中使用语音
 
 你可以使用你的语音更快地绕过 Windows Mixed Reality。 拍摄快速照片、打开应用，甚至在没有控制器的情况下都是 teleporting 的。 若要快速键入，请在混合现实键盘上尝试使用听写模式。 
 
-语音出现问题了吗？ [获取帮助](using-wmr-faq.md#speech-commands-arent-working)
+语音出现问题了吗？ [获取帮助](using-wmr-faq.yml#speech-commands-aren-t-working)
 
 <!-- NEED VIDEO: https://support.microsoft.com/en-us/help/4041322/windows-10-speech-in-windows-mixed-reality -->
 
