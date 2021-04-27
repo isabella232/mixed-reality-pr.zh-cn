@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，软件组件，发布历史记录，发行说明，版本历史记录
 appliesto:
 - Windows 10
-ms.openlocfilehash: ea65dd2c6c821189b1248bf3b418e38fdd7a6d7f
-ms.sourcegitcommit: 919bdc3e46325f3c44a022c8852cd38ffec33d33
+ms.openlocfilehash: 5e6cdcbc7d91a6c1fadb519f94fc0339bdd39ca7
+ms.sourcegitcommit: 229c33afab7c70341982f48962028aad13956356
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105029385"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "108069201"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Mixed Reality 软件概述和版本历史记录
 
@@ -105,7 +105,7 @@ Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程
 
    | 版本          | 发布日期          | 重大更改                                                 |
    |------------------|-----------------------|---------------------------------------------------------------|
-   | [10.0.19041.2041](https://www.microsoft.com/download/details.aspx?id=102903)  | 2021年3月23日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>更新用于 HP 回音 G2 的隐藏区域网格的缠绕顺序，使其与其他耳机保持一致。</li><li>面向 HP 回音 G2 耳机的视觉质量改善。</li><li>Windows Mixed Reality 耳机平台和可靠性改进。</li>|
+   | [10.0.19041.2041](https://www.microsoft.com/download/details.aspx?id=102903)  | 2021 年 3 月 23 日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>更新用于 HP 回音 G2 的隐藏区域网格的缠绕顺序，使其与其他耳机保持一致。</li><li>面向 HP 回音 G2 耳机的视觉质量改善。</li><li>Windows Mixed Reality 耳机平台和可靠性改进。</li>|
    | [10.0.19041.2037](https://www.microsoft.com/en-us/download/details.aspx?id=102527)  | 2020年12月10日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>用于 HP 控制器的新控制器固件用于解决某些控制器具有非正常运行的触发器的问题。</li>|
    | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 2020 年 10 月 8 日  | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>HP 回音 G2、HP Omnicept 和新 HP 控制器的官方支持。</li><li>HP 回音和 Samsung 太空 + 耳机的轻微显示更正。  (要求 [Os 版本 19041.546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) 或更高版本 [，或者操作系统版本18362.1110 和 18363.1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) 或更高版本) 。</li><li>改进了计算机电源状态从睡眠转换到减少 SWW 1-4 错误。</li><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。|
    | [10.0.19041.1009](https://www.microsoft.com/en-us/download/details.aspx?id=101260)  | 2020 年 5 月 7 日      | 与 Windows 10 版本1903和更高版本兼容。<br/><ul><li>Windows Mixed Reality 耳机平台辅助修补程序和可靠性改进。</li></ul>  |
@@ -168,7 +168,8 @@ Windows 的这一更新包括最新版本的 Cortana 应用程序，该应用程
 
    | 版本            | 发布日期          | 重大更改                                                 |
    |--------------------|-----------------------|---------------------------------------------------------------|
-   | 2000.20111.1381.0  | 2020年12月10日        | <ul><li>更新混合现实门户的登录页。</li><li>减少固件更新过程中的耳机连接错误。 </li></ul>  |    | 2000.20071.1133.0  | 2020 年 8 月 5 日        | <ul><li>支持 [OpenXR](/windows/mixed-reality/openxr) 以暂停预览窗口。</li></ul>  | 
+   | 2000.21041.1051.0  | 2020年4月26日        | <ul><li>更新混合现实门户的应用图标。</li></ul>  |
+   | 2000.20111.1381.0  | 2020年12月10日        | <ul><li>更新混合现实门户的登录页。</li><li>减少固件更新过程中的耳机连接错误。 </li></ul>  |
    | 2000.20071.1133.0  | 2020 年 8 月 5 日        | <ul><li>支持 [OpenXR](/windows/mixed-reality/openxr) 以暂停预览窗口。</li></ul>  | 
    | 2000.20041.1212.0  | 2020 年 5 月 11 日          | <ul><li>解决导致15-5 错误的计时问题。</li><li>改进了对运行 Windows Mixed Reality 而无 internet 连接的支持。</li><li>通过 **安装控制器** 改进了对配对运动控制器的支持。</li></ul>  | 
    | 2000.20031.1202.0  | 2020 年 4 月 14 日        | <ul><li>支持注册有关 Windows Mixed Reality 的信息、提示和产品。</li></ul>  | 
