@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2a2dcb6ec9133eb5efa0dc04e4d757cabd48461a
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: d7232ca645c2a8cfb2508b090fdb7ae02c2ab010
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107327709"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107984415"
 ---
 # <a name="unity-20192020--windows-xr-plugin"></a>[Unity 2019/2020 + Windows XR 插件](#tab/winxr)
 
@@ -33,11 +33,13 @@ ms.locfileid: "107327709"
 在“生成设置”窗口中选择“通用 Windows 平台”，然后：
 1.  将“目标设备”设置为“HoloLens” 
 2.  将“体系结构”设置为“ARM 64” 
-3.  将“生成类型”设置为“D3D” 
-4.  将“最低平台版本”设置为 10.0.18362 
-5.  将“UWP SDK”设置为“最近安装的版本” 
-6.  将“生成配置”设置为“发布”，因为调试存在已知的性能问题 
-7.  单击“切换平台”按钮
+3.  将“生成类型”设置为“D3D 项目”
+4.  将“目标 SDK 版本”设置为“最新安装项” 
+5.  将“最低平台版本”设置为 10.0.18362 
+6.  将“Visual Studio 版本”设置为“最新安装项” 
+7.  将“生成和运行位置”设置为“USB 设备” 
+8.  将“生成配置”设置为“发布”，因为调试存在已知的性能问题 
+9.  单击“切换平台”按钮
 
 
 ![设置了通用 Windows 平台设置的 Unity 生成设置](../images/mr-learning-base/base-02-section2-step1-2-openxr.png)
