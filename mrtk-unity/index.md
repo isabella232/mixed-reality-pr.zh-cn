@@ -6,12 +6,12 @@ ms.author: kesemple
 ms.date: 03/03/2021
 ms.localizationpriority: high
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK
-ms.openlocfilehash: 85a203f22c62871265f7775c364f5388194b53a1
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: 6576eaedbfba11fae62e59fa9777fe928f0c6a69
+ms.sourcegitcommit: 728f4523188628950478cc03ec7145e89569e0d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550967"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108172559"
 ---
 # <a name="what-is-the-mixed-reality-toolkit"></a>混合现实工具包指的是什么
 
@@ -26,32 +26,31 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 * 为空间交互和 UI 提供跨平台输入系统和构建基块。
 * 通过编辑器内模拟实现快速原型制作，让你能够立即看到变化。
 * 作为可扩展的框架运行，使开发人员能够交换出核心组件。
-* 支持一系列广泛的平台，包括
-  * OpenXR（Unity 2020.2 或更高版本）
-    * Microsoft HoloLens 2
-    * Windows Mixed Reality 头戴显示设备
-  * Windows Mixed Reality
-    * Microsoft HoloLens
-    * Microsoft HoloLens 2
-    * Windows Mixed Reality 头戴显示设备
-  * Oculus（Unity 2019.3 或更高版本）
-    * Oculus Quest
-  * OpenVR
-    * Windows Mixed Reality 头戴显示设备
-    * HTC Vive
-    * Oculus Rift
-  * Ultraleap 手部跟踪
-  * iOS 和 Android 等移动设备
+* 支持一系列广泛的平台：
+
+| 平台 | 支持的设备 |
+|---|---|
+| OpenXR（Unity 2020.2 或更高版本） | Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备 |
+| Windows Mixed Reality | Microsoft HoloLens <br> Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备  |
+| Oculus（Unity 2019.3 或更高版本） | Oculus Quest |
+| OpenVR |  Windows Mixed Reality 头戴显示设备 <br> HTC Vive <br> Oculus Rift |
+| Ultraleap 手部跟踪 | Ultraleap Leap 运动控制器 |
+| 移动型 | iOS 和 Android |
 
 ## <a name="getting-started-with-mrtk"></a>MRTK 入门
 
-如果你刚接触在 Unity 中进行 MRTK 或混合现实开发的操作，我们建议你安装必备的工具，然后按照 HoloLens 2 教程系列操作。
+如果你不熟悉 Unity 中的 MRTK 或混合现实开发，我们建议在设备或模拟器上安装并浏览 MRTK 示例中心示例应用程序。 
 
 > [!div class="nextstepaction"]
-> [安装工具](install-the-tools.md)
+> [下载 MRTK 示例中心应用](running-examples-hub.md)
+
+在熟悉混合现实和 MRTK 的内容后，请安装所需的工具，并遵循初级级别 HoloLens 2 教程系列操作。
 
 > [!div class="nextstepaction"]
-> [HoloLens 2 教程系列](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
+> [安装工具](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+
+> [!div class="nextstepaction"]
+> [HoloLens 2 教程系列](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
 
 想要查看后台正在执行的情况？
 > [!div class="nextstepaction"]
