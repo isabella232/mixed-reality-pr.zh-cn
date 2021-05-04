@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, HoloLens, unity, unreal, directx, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, 虚拟现实开发, 增强现实开发
-ms.openlocfilehash: 9bb0f1c62315bf106a0d6d45b8a2a24203ac9296
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: fb470fe0ec146346d18b353b5d359956d2fd28ac
+ms.sourcegitcommit: 728f4523188628950478cc03ec7145e89569e0d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98007627"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108172539"
 ---
 # <a name="introduction-to-mixed-reality-development"></a>混合现实开发简介
 
@@ -44,31 +44,4 @@ ms.locfileid: "98007627"
 
 > [!div class="nextstepaction"]
 > [安装工具](install-the-tools.md)
-
-<!-- 
-## What would you like to do next?
-
-:::row:::
-    :::column:::
-       [![Understand the basics](images/icon-lightbulb.png)](get-started-with-mr.md#understand-the-basics)<br>
-        **[Understand the basics](get-started-with-mr.md#understand-the-basics)**<br>
-        Get a better understanding of what defines mixed reality and how it’s being used.
-    :::column-end:::
-    :::column:::
-        [![Become a creator](images/icon-design.jpg)](design.md)<br>
-         **[Become a creator](design.md)**<br>
-        Learn the basic concepts you need to begin designing and prototyping.
-    :::column-end:::
-    :::column:::
-        [![Install the tools](images/icon-developer.jpg)](install-the-tools.md)<br>
-         **[Install the tools](install-the-tools.md)**<br>
-        Use the installation checklist to get the tools you need to build apps for HoloLens and mixed reality.
-    :::column-end:::
-    :::column:::
-        [![Come to an event](images/icon-calendar.jpg)](sf-academy-events.md)<br>
-         **[Come to an event](sf-academy-events.md)**<br>
-        See the hardware and get a hands-on tutorial to make your first HoloLens 2 application.
-    :::column-end:::
-:::row-end:::
--->
 
