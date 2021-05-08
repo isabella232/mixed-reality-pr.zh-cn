@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity,HoloLens, HoloLens 2, 混合现实, 开发, MRTK, PR,
-ms.openlocfilehash: c49934139ae23b714addcb9c015e95377f47900e
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
-ms.translationtype: HT
+ms.openlocfilehash: 008e719cd2fd3c854cbbe6876090b2de96f369be
+ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104693284"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "109489227"
 ---
 # <a name="pull-requests"></a>拉取请求
 
@@ -24,7 +24,7 @@ ms.locfileid: "104693284"
 
 ## <a name="creating-a-pull-request"></a>创建拉取请求
 
-在准备好提交拉取请求时，请[创建](https://github.com/microsoft/MixedRealityToolkit-Unity/compare/mrtk_development...mrtk_development?expand=1)一个针对 [mrtk_development](https://github.com/microsoft/mixedrealitytoolkit-unity/tree/mrtk_development) 分支的拉取请求。
+准备好提交拉取请求时，请创建一个面向[main](https://github.com/microsoft/mixedrealitytoolkit-unity/tree/main)分支的[拉取请求](https://github.com/microsoft/MixedRealityToolkit-Unity/compare/main...main?expand=1)。 对于在发布稳定期间的 bug 修复，请查找最新的 `prerelease/*` 分支。 新功能应始终进入 `main` 。
 
 请阅读指南，确保你的拉取请求遵循这些指南。
 

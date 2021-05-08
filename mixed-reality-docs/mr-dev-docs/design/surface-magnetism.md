@@ -1,34 +1,34 @@
 ---
 title: 表面磁吸
-description: 使用 surface 磁性技术，可以在实际的物理表面上放置全息对象。
+description: 使用表面磁力技术，可以将全息对象放在真实物理表面上。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，表面磁性
-ms.openlocfilehash: c8e1c7e03f46992dd584f974c9573deb1d0e6474
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: 混合现实， 控件， 交互， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包， 表面磁力
+ms.openlocfilehash: e3cf8511a2486c8ea862fcc70a20f5956e5095c4
+ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300332"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "109489217"
 ---
 # <a name="surface-magnetism"></a>表面磁吸
 
 ![表面磁吸](images/MRTK_SurfaceMagnetism.gif)
 
-磁 Surface 使你可以在实际的物理表面上放置全息对象。 通过将对象的方向与实际表面对齐，可以为用户创建更具沉浸和自然的体验。
+表面磁力使你能够将全息对象放在真实物理表面上。 通过使对象的方向与实际表面对齐，你可以为用户创建更沉浸式和自然的体验。
 
 <br>
 
 ---
 
-## <a name="surface-magnetism-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的表面磁性 (混合现实工具包) 适用于 Unity
+## <a name="surface-magnetism-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的混合现实工具包 (MRTK) 表面磁化
 
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为 surface 磁性技术提供脚本和示例场景。 您可以对各种类型的输入（如手 ray、眼睛眼睛和运动控制器）使用表面磁性。
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为表面磁力技术提供了脚本和示例场景。 可以将表面磁力与各种类型的输入（如手部射线、眼睛凝视和运动控制器）一同使用。
 
-* [MRTK-Surface 磁性规划求解](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#surfacemagnetism)
-* [MRTK-空间感知和 Surface 磁性示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity)
+* [MRTK - 表面磁力求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#surfacemagnetism)
+* [MRTK - 空间感知 + 表面磁力示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/main/Assets/MRTK/Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity)
 
 <br>
 

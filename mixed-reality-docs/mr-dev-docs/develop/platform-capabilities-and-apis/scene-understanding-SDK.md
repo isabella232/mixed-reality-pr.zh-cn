@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 12/14/2020
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity
-ms.openlocfilehash: 2a1bf87ae4ce13b47d373f44e398d02382674fe7
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+ms.openlocfilehash: 2f6e0c9d0370caed2b2bc01399b9e4fc00836556
+ms.sourcegitcommit: 0c717ed0043c7a65e2caf1452eb0f49059cdf154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810138"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108644833"
 ---
 # <a name="scene-understanding-sdk-overview"></a>场景理解 SDK 概述
 
@@ -19,17 +19,13 @@ ms.locfileid: "98810138"
 
 ## <a name="where-do-i-get-the-sdk"></a>在何处获取 SDK？
 
-SceneUnderstanding SDK 可通过 NuGet 下载。
-
-[SceneUnderstanding SDK](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
+SceneUnderstanding SDK 可通过 [混合现实功能工具](../unity/welcome-to-mr-feature-tool.md)下载。
 
 **注意：** 最新版本依赖于预览包，你需要启用预发布包才能查看。
 
 对于版本 0.5.2022-rc 和更高版本，场景理解支持适用于 c # 和 c + + 的语言投影，使应用程序可以为 Win32 或 UWP 平台开发应用程序。 在此版本中，SceneUnderstanding 支持 unity 的编辑器中的支持，该支持仅用于与 HoloLens2 通信。 
 
 SceneUnderstanding 需要 Windows SDK 版本18362或更高版本。 
-
-如果你使用的是 Unity 项目中的 SDK，则使用 [NuGet For Unity](https://github.com/GlitchEnzo/NuGetForUnity) 将包安装到你的项目中。
 
 ## <a name="conceptual-overview"></a>概念概述
 
@@ -47,7 +43,7 @@ SceneUnderstanding 需要 Windows SDK 版本18362或更高版本。
 
 由于每个场景会将其数据存储在应用程序的内存空间中，因此，你可以假定场景对象的所有功能或它的内部数据始终在应用程序的进程中执行。
 
-### <a name="layout"></a>布局
+### <a name="layout"></a>Layout
 
 若要使用场景理解，了解并了解运行时如何以逻辑方式和物理方式表示组件可能会很有价值。 场景表示具有特定布局的数据，其中选择了简单的布局，同时保持基础结构 pliable，而无需进行重大修改。 场景将通过以下方式实现此目标：将所有组件存储在简单列表中) 的所有场景对象 (构建基块，并通过引用（其中特定组件引用其他组件）定义层次结构和组合。
 
@@ -167,7 +163,7 @@ if (!SceneObserver.IsSupported())
 await SceneObserver.RequestAccessAsync();
 ```
 
-如果未调用 RequestAccessAsync ( # A1，则计算新场景将会失败。 接下来，我们将计算一个以混合现实耳机为根的新场景，其半径为10米。
+如果未调用 RequestAccessAsync () ，则计算新场景将会失败。 接下来，我们将计算一个以混合现实耳机为根的新场景，其半径为10米。
 
 ```cs
 // Create Query settings for the scene update
@@ -222,7 +218,7 @@ foreach (var sceneObject in myScene.SceneObjects)
 
 ### <a name="component-update-and-refinding-components"></a>组件更新和 refinding 组件
 
-还有另一个函数，用于在场景（称为 **_FindComponent_* _）中检索组件。 当更新跟踪对象并在以后的场景中查找这些对象时，此函数很有用。 下面的代码将计算一个相对于以前场景的新场景，然后在新场景中查找楼层。
+还有另一个函数，可检索场景中名为 ***FindComponent*** 的组件。 当更新跟踪对象并在以后的场景中查找这些对象时，此函数很有用。 下面的代码将计算一个相对于以前场景的新场景，然后在新场景中查找楼层。
 
 ```cs
 // Compute a new scene, and tell the system that we want to compute relative to the previous scene
@@ -239,7 +235,7 @@ if (firstFloor != null)
 
 ## <a name="accessing-meshes-and-quads-from-scene-objects"></a>从场景对象访问网格和四边形
 
-找到 SceneObjects 后，你的应用程序很可能需要访问由组成的四边形/网格中包含的数据。 可以通过 _*_四边形_*_ 和 _*_网格_*_ 属性访问此数据。 下面的代码将枚举地面对象的所有四边形和网格。
+找到 SceneObjects 后，你的应用程序很可能需要访问由组成的四边形/网格中包含的数据。 可以通过 ***四边形** _ 和 _ *_网格_** 属性访问此数据。 下面的代码将枚举地面对象的所有四边形和网格。
 
 ```cs
 
@@ -351,7 +347,7 @@ SetUnityTransformFromMatrix4x4(unityObject.transform, converted4x4LocationMatrix
 
 四边形旨在帮助2D 布局方案，并应被视为2D 画布 UX 元素的扩展。 尽管四边形是 SceneObjects 的组件并且可以在3D 中呈现，但四个 Api 本身假设四边形是2D 结构。 它们提供了信息（如区、形状），并提供了用于放置的 Api。
 
-四边形具有矩形区，但它们表示任意形状的2D 图面。 若要在与3D 环境四边形的图面上实现放置，使此交互成为可能。 当前场景理解提供了两个此类函数： _ *FindCentermostPlacement** 和 **GetSurfaceMask**。 FindCentermostPlacement 是一个高级别 API，它在四个位置上定位一个对象，并尝试查找您的对象的最佳位置，以确保您提供的边界框保持在底层的表面上。
+四边形具有矩形区，但它们表示任意形状的2D 图面。 若要在与3D 环境四边形的图面上实现放置，使此交互成为可能。 当前场景理解提供了两个此类函数： **FindCentermostPlacement** 和 **GetSurfaceMask**。 FindCentermostPlacement 是一个高级别 API，它在四个位置上定位一个对象，并尝试查找您的对象的最佳位置，以确保您提供的边界框保持在底层的表面上。
 
 > [!NOTE]
 > 输出的坐标是相对于 "四个空间" 中的四个部分的，其中左上角是 (x = 0，y = 0) ，就像对其他 windows Rect 类型一样。 在使用自己的对象的源时，请务必考虑这一点。 

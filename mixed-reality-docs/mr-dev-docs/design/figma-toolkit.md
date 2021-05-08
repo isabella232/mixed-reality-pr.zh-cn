@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/29/2021
 ms.topic: article
 keywords: Figma，草绘，Adobe XD，设计，设计器，设计文件，UX 设计，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 1386ce6238a406c2e2b45c9a6a551ae57c52cc59
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: a24f06b29accaa64a9095054f1e6f8df13a9162e
+ms.sourcegitcommit: 0c717ed0043c7a65e2caf1452eb0f49059cdf154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299935"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108644853"
 ---
 # <a name="figma-toolkit"></a>Figma 工具包
 
@@ -24,6 +24,7 @@ Figma 工具包提供可用于草拟和布局 UI 的资产。 所有 UI 控件�
 
 ## <a name="how-to-use-figma-toolkit"></a>如何使用 Figma 工具包
 **在 "草稿**" 菜单中使用 "重复" 进行复制。
+
 <img src="images/UX_Figma_Use1.png" width="500px" alt="Menu duplicate 1"><br>
 
 单击 " **返回到文件** " 查看重复的副本。 您可以使用此副本来创建自己的。
