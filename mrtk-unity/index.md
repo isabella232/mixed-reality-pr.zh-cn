@@ -6,12 +6,12 @@ ms.author: kesemple
 ms.date: 03/03/2021
 ms.localizationpriority: high
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK
-ms.openlocfilehash: cb8b95cf9e563e8a277fa0d4b253639a763f5ad5
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.openlocfilehash: cef4bcf671caaaf8d5cb7cdc639446c6c6e91fa0
+ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489297"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109850433"
 ---
 # <a name="what-is-the-mixed-reality-toolkit"></a>混合现实工具包指的是什么
 
@@ -47,10 +47,10 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 在熟悉混合现实和 MRTK 的内容后，请安装所需的工具，并遵循初级级别 HoloLens 2 教程系列操作。
 
 > [!div class="nextstepaction"]
-> [安装工具](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+> [安装工具](/windows/mixed-reality/develop/install-the-tools?tabs=unity)
 
 > [!div class="nextstepaction"]
-> [HoloLens 2 教程系列](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
+> [HoloLens 2 教程系列](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
 
 想要查看后台正在执行的情况？
 > [!div class="nextstepaction"]
@@ -90,8 +90,8 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 
 :::row:::
     :::column:::
-       [![手部跟踪 (Ultraleap)](features/images/MRTK_Icon_HandTracking.png)](features/cross-platform/leap-motion-mrtk.md)<br>
-        **[手部跟踪 <br/> (Ultraleap)](features/cross-platform/leap-motion-mrtk.md)**<br>
+       [![手部跟踪 (Ultraleap)](features/images/MRTK_Icon_HandTracking.png)](supported-devices/leap-motion-mrtk.md)<br>
+        **[手部跟踪 <br/> (Ultraleap)](supported-devices/leap-motion-mrtk.md)**<br>
     :::column-end:::
     :::column:::
         [![UI 控件](features/images/MRTK_Icon_UIControls.png)](#ux-building-blocks)<br>

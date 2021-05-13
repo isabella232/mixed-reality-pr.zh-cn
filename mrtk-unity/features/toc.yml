@@ -2,8 +2,6 @@
   href: boundary/toc.yml
 - name: 照相机系统
   href: camera-system/toc.yml
-- name: 跨平台
-  href: cross-platform/toc.yml
 - name: 诊断
   href: diagnostics/toc.yml
 - name: 示例场景

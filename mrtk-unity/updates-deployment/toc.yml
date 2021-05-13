@@ -1,5 +1,3 @@
-- name: 生成和部署
-  href: build-and-deploy.md
 - name: 从 HTK 升级
   href: htk-to-mrtk-porting-guide.md
 - name: MRTK 和托管代码剥离
