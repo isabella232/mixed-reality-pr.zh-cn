@@ -4,13 +4,15 @@
   href: running-examples-hub.md
 - name: 配置
   href: configuration/toc.yml
+- name: 支持的设备概述
+  href: supported-devices/toc.yml
 - name: 体系结构
   href: architecture/toc.yml
 - name: 功能概述
   href: features/toc.yml
 - name: 性能和最佳做法
   href: performance/toc.yml
-- name: 更新和部署
+- name: 更新和升级
   href: updates-deployment/toc.yml
 - name: 包
   href: packages/toc.yml
