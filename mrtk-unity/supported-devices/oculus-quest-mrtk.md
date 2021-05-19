@@ -1,16 +1,16 @@
 ---
-title: OculusQuestMRTK
+title: 眼部追寻 MRTK
 description: 在 MRTK 中为 Oculus Quest 配置的文档
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Oculus Quest，
-ms.openlocfilehash: 9350ed7c8426c3bb31cf41493056fb6fc1e26107
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: c0eccd0b366d39529eafc51d23031fc30144b1ae
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109852336"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143961"
 ---
 # <a name="how-to-configure-oculus-quest-in-mrtk-using-the-xr-sdk-pipeline"></a>如何使用 XR SDK 管道在 MRTK 中配置 Oculus Quest
 
@@ -92,7 +92,7 @@ Unity [的 XR 管道](https://docs.unity3d.com/Manual/XR.html) 支持将 Oculus 
     ![Oculus 运行设备](../images/cross-platform/oculus-quest/OculusRunDevice.png)
 
 1. 选择生成并运行
-    - 当您选择 " *生成" 并* 首次运行时，您可能会遇到以下生成错误集。 再次选择"生成并运行"后，应该能够 *成功* 部署。
+    - 当您选择 " *生成" 并* 首次运行时，您可能会遇到以下生成错误集。 选择 " *生成" 并再次运行* 后，应该能够成功部署。
 
     ![Oculus 预期生成错误](../images/cross-platform/oculus-quest/OculusExpectedBuildErrors.png)
 

@@ -1,27 +1,27 @@
 ---
 title: 全息帧
-description: 了解用户如何通过全息帧查看混合现实世界，以及如何最好地设计体验。
+description: 了解用户如何通过全息帧查看混合现实世界以及如何以最佳方式设计体验。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/25/2020
 ms.topic: article
-keywords: HoloLens，Windows Mixed Reality，全息帧，视图，FOV，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，交互，导航，菜单
-ms.openlocfilehash: 5898f98054afadb58fb059ff54be23f015232d55
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: HoloLens， Windows Mixed Reality， 全息帧， 视场， FOV， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包， 交互， 导航， 菜单
+ms.openlocfilehash: fee6af6370f9f3d166768144e689e09fd3fda2db
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009587"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143258"
 ---
 # <a name="holographic-frame"></a>全息帧
 
-用户通过其头戴显示设备支持的矩形视区来看到混合现实的世界。 在 HoloLens 上，此矩形区域称为全息框，它可让用户看到覆盖在他们周围现实世界上的数字内容。 针对全息框架进行了优化的设计体验带来了机会，可减轻挑战，并增强了混合现实应用程序的用户体验。
+用户通过其头戴显示设备支持的矩形视区来看到混合现实的世界。 在 HoloLens 上，此矩形区域称为全息框，它可让用户看到覆盖在他们周围现实世界上的数字内容。 针对全息帧优化的设计体验可创造机会、缓解挑战，并增强混合现实应用程序的用户体验。
 
-## <a name="designing-for-content"></a>内容设计
+## <a name="designing-for-content"></a>设计内容
 
-通常，设计人员认为需要将他们的体验范围限制为用户可以立即看到的内容，从而牺牲现实世界规模，以确保用户能够完全查看对象。 与复杂应用程序类似的设计器通常会重载全息帧，其中包含内容、难于交互的用户和混乱的界面。 创建混合现实内容的设计器不需要将体验限制为直接在用户面前，并在其即时视图中。 如果已映射用户的物理世界，则所有这些曲面都应被视为数字内容和交互的潜在画布。 在体验中正确设计交互和内容应鼓励用户在其空间中移动、将注意力引向重要内容并帮助查看混合现实的全部潜能。
+通常，设计者需要将体验范围限制为用户能够立即看到的范围，从而牺牲实际规模来确保用户看到整个对象。 类似地，具有复杂应用程序的设计人员通常会使用内容重载全息帧，使用户难以交互，界面混乱。 创建混合现实内容的设计者不需要将体验限制为直接在用户前面和即时视图中。 如果用户周围的物理世界已映射，则所有这些图面都应被视为数字内容和交互的潜在画布。 在体验中正确设计交互和内容应鼓励用户四处移动，将注意力引导到关键内容，并帮助了解混合现实的全部潜力。
 
-在应用程序中鼓励移动和浏览的最重要技术可能是 **让用户调整体验**。 使用设备为用户提供短时间的 "任务免费"。 这可以很简单，只是将一个对象置于空间中，并让用户四处移动或 narrating 体验。 这一次应该不会有任何关键任务，也不应像点击那样的特定手势。 目的是让用户在需要交互性或通过应用的进展之前，使用户能够通过设备查看内容。 这对于首次使用的用户来说尤为重要，因为用户可以通过全息帧和全息影像的性质轻松查看内容。
+也许鼓励在应用中移动和探索最重要的技术是 **让用户根据体验进行调整**。 为用户提供一小段时间的"无任务"时间。 这非常简单，只需将对象放置在空间中，让用户在空间中移动，或者对体验进行介绍。 这一次应没有任何关键任务或特定手势（如空敲击）。 目的是让用户在需要交互性或通过应用前，适应通过设备查看内容。 这对于首次使用的用户来说尤为重要，因为用户可以通过全息帧和全息影像的性质轻松查看内容。
 
 ### <a name="large-objects"></a>大型对象
 
@@ -35,9 +35,9 @@ ms.locfileid: "98009587"
 
 许多对象或组件的经验应考虑对用户使用完整的空间，以避免直接在用户面前打乱全息帧。 建议将内容引入到体验中，特别是计划为用户提供多个对象的经验。 关键是 **让用户了解体验中的内容布局** ，这有助于用户了解内容更新所围绕的内容。
 
-实现此目的的一种方法是在将内容定位到现实世界的体验中，提供永久性点 (也称为特征点) 。 例如，路标可以是实际的物理对象（例如显示数字内容的表），也可以是数字对象，例如内容经常出现在其中的数字屏幕集。 还可将对象放入全息帧的绕，以鼓励用户查看关键内容。 绕之外的内容发现可由 "注意" [导演](holographic-frame.md#attention-directors)进行干预。
+实现此目的的一种方法是在将内容定位到现实世界的体验中，提供永久性点 (也称为特征点) 。 例如，地标可以是现实世界中的物理对象，例如显示数字内容的表，或者是数字对象，例如一组经常显示内容的数字屏幕。 对象还可以放置在全息帧的外围，以鼓励用户查看关键内容。 注意主管可以协助发现超出边缘 [的内容](holographic-frame.md#attention-directors)。
 
-将对象放置在绕中可鼓励用户寻找一侧，这可由 "注意" 导演进行干预，如下所述。 有关全息帧注意事项的详细信息，请参阅 [舒适](comfort.md#holographic-frame-considerations) 的文档。
+将对象放在边缘可以鼓励用户查看侧边，这可以通过注意主管辅助，如下所述。 有关全息帧注意事项详细信息，请参阅 [舒适](comfort.md#holographic-frame-considerations) 文档。
 
 <br>
 
@@ -45,13 +45,13 @@ ms.locfileid: "98009587"
 
 ## <a name="interaction-considerations"></a>交互注意事项
 
-与内容一样，混合现实体验中的交互不需要限于用户可以立即看到的内容。 交互可以在用户周围的实际空间中的任何位置发生。 这些交互可帮助鼓励用户四处移动和探索经验。
+与内容一样，混合现实体验中的交互不一定局限于用户可以立即看到的内容。 交互可以发生在用户实际空间的任意位置。 这些交互有助于鼓励用户四处移动和探索体验。
 
-### <a name="attention-directors"></a>注意控制器
+### <a name="attention-directors"></a>注意主管
 
-指示兴趣点或关键交互对于使用户获得经验非常重要。 用户注意和巧妙帧的移动可通过微妙或重型方式定向。 请记住在混合现实中平衡密切的主管， (尤其是在开始体验) ，以避免用户不堪重负。 通常，有两种类型的注意控制器：
-* **视觉对象控制器：** 让用户知道他们应该在特定方向上移动的最简单方法是提供直观的指示。 这可以通过视觉效果来实现 (例如，用户可在此过程中以可视方式跟踪) ，甚至是简单的方向箭头的路径。 任何可视指示器都应在用户环境中进行接地，而不是 "附加" 到全息帧或光标。
-* **音频控制器：** [空间音效](spatial-sound-design.md) 可提供一种功能强大的方式在场景中建立对象。 您可以向用户发出警报，提醒用户进入体验，或通过将用户的视图移到关键对象来强调空间中的特定点。 使用音频控制器来指导用户的关注性比视觉控制器更微妙，更不具侵入性。 在某些情况下，最好从音频控制器开始，如果用户不能识别提示，请转到视觉对象总监。 音频控制器还可与视觉对象控制器配对以增加强调。
+指示兴趣点或关键交互对于通过体验使用户前进至关重要。 用户对全息帧的注意和移动可以通过细微或繁重的方式定向。 请记住，在混合现实体验中，将关注焦点与自由探索 (尤其是在体验阶段) 避免用户过度。 通常，有两种类型的关注焦点：
+* **视觉对象主管：** 让用户知道他们应朝特定方向移动的最简单方法是提供视觉指示。 这可以通过视觉效果实现 (例如，用户可以直观地遵循到体验的下一部分的路径) 甚至是简单的方向箭头。 任何视觉指示器都应以用户环境为底，而不是"附加到"全息帧或光标。
+* **音频控制器：**[空间](spatial-sound-design.md)音效可以提供一种功能强大的方法在场景中建立对象。 您可以向用户发出警报，提醒用户进入体验，或通过将用户的视图移到关键对象来强调空间中的特定点。 使用音频控制器来指导用户的关注性比视觉控制器更微妙，更不具侵入性。 在某些情况下，最好从音频控制器开始，如果用户不能识别提示，请转到视觉对象总监。 音频控制器还可与视觉对象控制器配对以增加强调。
 
 ### <a name="commanding-navigation-and-menus"></a>命令、导航和菜单
 
@@ -61,9 +61,13 @@ ms.locfileid: "98009587"
 
 ### <a name="gaze-and-gaze-targeting"></a>注视并注视目标
 
-全息帧提供了一个工具，让开发人员触发交互，并评估用户关注 dwells 的位置。 "[注视](gaze-and-commit.md)" 是一[项在 HoloLens 上的关键交互](interaction-fundamentals.md)，其中注视可与[手势](gaze-and-commit.md#composite-gestures)配对 (例如，与轻攻) 或[语音](voice-input.md) (，允许更短、更自然的基于语音的交互) 。 因此，这使得全息帧可以使用空间来观察数字内容并与之进行交互。 如果体验在用户的空间周围与多个对象进行交互 (例如，通过 "注视 + 手势") 多选对象，请考虑将这些对象置于用户的视图中，或限制必要的头运动量来改善 [用户舒适](comfort.md)。
+全息帧提供了一个工具，让开发人员触发交互，并评估用户关注 dwells 的位置。 "[注视](gaze-and-commit.md)" 是一[项在 HoloLens 上的关键交互](interaction-fundamentals.md)，其中注视可与[手势](gaze-and-commit.md#composite-gestures)配对 (例如，与轻攻) 或[语音](voice-input.md) (，允许更短、更自然的基于语音的交互) 。 因此，这使得全息帧可以使用空间来观察数字内容并与之进行交互。 如果体验要求与用户空间周围的多个对象交互 (例如，使用凝视 + 手势) 在用户空间周围选择多个对象，请考虑将这些对象引入用户视图或限制必要的头部运动量，以提升用户舒适[感。](comfort.md)
 
-注视还可用于跟踪用户体验，并查看用户对哪些对象或部分用户最关注的部分。 这会特别用于调试体验，允许使用分析工具（如热图）查看用户花费最多时间或缺少特定对象或交互的位置。 注视跟踪还可以为 facilitators 提供强大的工具， (参见 [Lowe 的厨房](holographic-frame.md#lowes-kitchen) 示例) 。
+凝视还可用于通过体验跟踪用户注意力，并查看用户最关注的对象或场景部分。 这尤其可用于调试体验，使热度地图等分析工具能够查看用户花费时间最多或缺少某些对象或交互的地方。 凝视跟踪还可以为体验中的 (提供强大的工具，请参阅 [Lowe's Kitchen](holographic-frame.md#lowes-kitchen) 示例) 。
+
+若要了解头部和眼动跟踪设计概念的运行情况，请查看下面的设计 [全息影像 -]() 头部跟踪和眼动跟踪视频演示：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
 
 <br>
 
@@ -71,9 +75,9 @@ ms.locfileid: "98009587"
 
 ## <a name="performance"></a>性能
 
-正确使用全息帧是 [性能质量](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md) 体验的基础。 常见的技术 (和可用性) 难题是使用数字内容使用户的帧超载，从而导致渲染性能下降。 请考虑对用户使用整个空间来排列数字内容（使用上述方法），以减少呈现的负担并确保最佳显示质量。
+正确使用全息帧是性能质量 [体验的基础](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md) 。 常见的技术 (和可用性) 挑战是使用数字内容重载用户的帧，从而导致呈现性能下降。 请考虑改为使用用户周围的全部空间来排列数字内容，使用上述技术减轻呈现负担并确保最佳显示质量。
 
-HoloLens 全息帧中的数字内容也可以与 [稳定平面](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md) 配对，以实现最佳性能和 [全息影像稳定性](../develop/platform-capabilities-and-apis/hologram-stability.md)。
+HoloLens 全息帧中的数字内容还可以与稳定平面配对，以获得最佳性能和[全息影像稳定性](../develop/platform-capabilities-and-apis/hologram-stability.md)。 [](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
 
 <br>
 
@@ -81,11 +85,11 @@ HoloLens 全息帧中的数字内容也可以与 [稳定平面](../develop/platf
 
 ## <a name="examples"></a>示例
 
-### <a name="volvo-cars"></a>Volvo 汽车
+### <a name="volvo-cars"></a>中国汽车
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/DilzwF90vec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-在 Volvo 汽车的 showroom 体验中，客户受邀了解一项新汽车在 Volvo 关联的中的功能。 Volvo 面临着一个与全息框架有关的挑战：全尺寸汽车太大，无法放在用户旁。 解决方法就是开始使用物理标志（showroom 中的一个中心表）的体验，并在表的顶部放置一小的汽车数字模型。 这可确保用户在引入时看到全部汽车，这可确保在汽车之后的体验中，一旦汽车发展到现实世界规模，就可以了解空间。
+在来自一家汽车的展示室体验中，客户将受邀了解由一名用户引导的 HoloLens 体验中的一款新汽车功能。 对于全息帧，用户面临一项挑战：全尺寸汽车太大，用户旁边放不下。 解决方案是开始使用物理地标（一个中央表）的体验，将较小的汽车数字模型放置在表的顶部。 这可确保用户在引入时看到全部汽车，这可确保在汽车之后的体验中，一旦汽车发展到现实世界规模，就可以了解空间。
 
 Volvo 的经验还利用了视觉对象总监，创建从表的小规模汽车模型到显示房间中的墙壁的长视觉效果。 这会导致 "魔术窗口" 效果，同时显示汽车的完整视图，并以真实的规模展示汽车的更多功能。 头运动是水平的，无需任何直接交互即可从用户 (改为直接收集提示，并从 Volvo 的体验) 的旁白中收集提示。
 
@@ -102,9 +106,9 @@ Volvo 的经验还利用了视觉对象总监，创建从表的小规模汽车�
 ![Lowe 的关联使用平板电脑来指导客户完成 HoloLens 体验。](images/loweskitchen-750px.jpg)<br>
 *Lowe 的关联使用平板电脑来指导客户完成 HoloLens 体验。*
 
-用户体验在某种程度上由 Lowe 的关联控制的平板电脑体验进行管理。 在这种情况下，这种情况下，关联角色的一部分也是限制过多的头运动，并使其在厨房中感兴趣的点上顺畅地关注。 Tablet 体验还提供 Lowe 与厨房的热度地图视图形式的 "注视" 数据的关联，有助于了解用户的 dwelling (例如，在 cabinetry) 的特定区域，以便更准确地为其提供装修指导。
+用户体验在某种程度上由 Lowe 的关联控制的平板电脑体验进行管理。 在这种情况下，这种情况下，关联角色的一部分也是限制过多的头运动，并使其在厨房中感兴趣的点上顺畅地关注。 平板电脑体验还以厨房热度地图视图的形式为 Lowe 提供凝视数据关联，帮助了解用户在何处 (例如，在办公室的特定区域) 以更准确地为用户提供重新建模指导。
 
-若要深入了解 Lowe 的厨房体验，请参阅 [Microsoft 在 Ignite 2016 上的主题](https://www.youtube.com/watch?v=gC_4JxF0e_k)。
+有关 Lowe 的厨房体验的深入探讨，请参阅 [Ignite 2016](https://www.youtube.com/watch?v=gC_4JxF0e_k)的 Microsoft 主题。
 
 <br>
 
@@ -112,25 +116,25 @@ Volvo 的经验还利用了视觉对象总监，创建从表的小规模汽车�
 
 ### <a name="fragments"></a>Fragments
 
-在 HoloLens 游戏片段中，生活空间被转换为显示线索和证据的虚拟犯罪场景，以及一个虚拟会议室，其中，你可以与坐在椅子上并在墙壁上精益的字符交谈。
+在 HoloLens 游戏片段中，你的房间将转换为显示线索和证据的虚拟犯罪场景，以及一个虚拟会议室，你可在这里与位于你的房间并靠在墙上的字符交谈。
 
-![片段的设计目的是在用户的家里发生，其中的字符与现实世界的对象和图面交互。](images/fragments-750px.jpg)<br>
-*片段的设计目的是在用户的家里发生，其中的字符与现实世界的对象和图面交互。*
+![片段设计为在用户主页中发生，字符与真实对象和表面交互。](images/fragments-750px.jpg)<br>
+*片段设计为在用户主页中发生，字符与真实对象和表面交互。*
 
-用户最初开始体验时，会为其提供较短的一段时间，几乎不会发生交互。 相反，我们建议他们来寻找并调整自己的方向，并确保为游戏的交互式内容正确映射房间。
+当用户最初开始体验时，他们获得短暂的调整期，几乎不会交互。 相反，建议他们四处查看并调整自身方向，并确保房间正确映射到游戏的交互式内容。
 
-在整个体验中，字符将成为焦点，作为视觉对象总监 (字符之间的头运动，使其在) 感兴趣的领域中进行查找或手势。 当输入场景) 时，该游戏还会依赖更突出的视觉提示，使用户在查找对象或事件时耗时过长，并大量使用空间音频 (尤其是使用字符语音。
+在整个体验中，字符成为焦点，并充当视觉 (控制字符之间的头部运动，向用户感兴趣的区域) 。 当用户花费太长时间查找对象或事件，并大量使用空间音频时，游戏还依赖于更突出的视觉提示 (尤其是在进入场景场景时) 。
 
 <br>
 
 ---
 
-### <a name="destination-mars"></a>目标： Mars
+### <a name="destination-mars"></a>目标：Mars
 
-在目标：在 [NASA 的肯尼迪太空中心](https://blogs.windows.com/devices/2016/09/19/hololens-experience-destination-mars-now-open-at-kennedy-space-center-visitor-complex/)使用的 Mars 体验中，访问者可以通过传奇 Astronaut 商业 Aldrin 的虚拟表示形式，通过的。
+在"目标 [：NASA](https://blogs.windows.com/devices/2016/09/19/hololens-experience-destination-mars-now-open-at-kennedy-space-center-visitor-complex/)的宇航员太空中心"特别介绍的"太空体验"中，访问者受邀参加到月球表面沉浸式之旅，由宇航员 Immers Aldrin 的虚拟表示形式引导。
 
-![对于目标中的用户来说，虚拟的商业 Aldrin 成为了重点： Mars。](images/destinationmars-750px.png)<br>
-*对于目标中的用户来说，虚拟的商业 Aldrin 成为了重点： Mars。*
+![虚拟的"高声 Aldrin"成为目标：Mars 中用户的焦点。](images/destinationmars-750px.png)<br>
+*虚拟的"高声 Aldrin"成为目标：Mars 中用户的焦点。*
 
 作为沉浸式体验，我们鼓励这些用户浏览，在所有方向上移动其标题以查看虚拟 Martian。 尽管为了确保用户舒适，Aldrin 的旁白和虚拟状态在整个体验中都提供了一个要点。 [Microsoft 的混合) 现实](https://www.microsoft.com/mixed-reality/capture-studios)考验创建的商业智能 (的这项虚拟记录可让用户在其近乎完全的视图中看到其真实的人为大小。 有问题的旁白用户要将精力集中在环境中的不同点 (例如，地面上的一组 Martian rocks，或在与特定场景变化或其引入的对象) 距离的山地范围内。
 
@@ -142,6 +146,6 @@ Volvo 的经验还利用了视觉对象总监，创建从表的小规模汽车�
 ## <a name="see-also"></a>另请参阅
 * [本能交互](interaction-fundamentals.md)
 * [舒适](comfort.md)
-* [可伸缩](scale.md)
+* [缩放](scale.md)
 * [头部凝视和停留](gaze-and-dwell.md)
 * [全息影像稳定性](../develop/platform-capabilities-and-apis/hologram-stability.md)

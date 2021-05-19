@@ -1,16 +1,16 @@
 ---
-title: InputFeatureUsageTool
+title: 输入功能使用情况工具
 description: MRTK 中的文档 InputFeatureUsage 工具
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 35b28557df37abee19a0c950b362117eb6a120b0
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 0f2d3d3eb07d8b631f3f11a8b497a22a028a2f24
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300193"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110145014"
 ---
 # <a name="inputfeatureusage-tool"></a>InputFeatureUsage 工具
 

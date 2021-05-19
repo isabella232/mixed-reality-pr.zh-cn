@@ -1,33 +1,35 @@
 ---
 title: 场景理解
-description: 了解如何使用适用于 HoloLens 的场景理解进行开发，其中包括 SDK、功能和常见使用方案。
+description: 了解如何使用 HoloLens 的场景理解进行开发，包括 SDK、功能和常见使用方案。
 author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
-keywords: 场景了解，空间映射，Windows Mixed Reality，Unity，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，封闭，SDK
-ms.openlocfilehash: 1458ca9e70a52913ae150c58393c3e030e2c1add
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: 场景理解、空间映射、Windows Mixed Reality、Unity、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、遮挡、SDK
+ms.openlocfilehash: 06a4fdb6f3ad777c47151950acbd4ccdec9935ca
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583338"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143597"
 ---
 # <a name="scene-understanding"></a>场景理解
 
-场景理解为混合现实开发人员提供了一种结构化的高级别环境表示形式，旨在简化环保感知应用程序的开发。 场景理解通过组合现有混合现实运行时的强大功能来实现此功能，如高度准确但结构较少的 [空间映射](spatial-mapping.md) 和新的 AI 驱动的运行时。 通过将这些技术相结合，场景理解会生成与你可能已在 Unity 或 ARKit/ARCore 等框架中使用的3D 环境的表示形式。 场景理解入口点从场景观察器开始，该观察程序由应用程序调用以计算新场景。 目前，该技术可以生成3个不同但相关的对象类别： 
+场景理解为混合现实开发人员提供了结构化的高级别环境表示形式，旨在直观地为环境感知型应用程序进行开发。 场景理解通过组合现有混合现实运行时（如高度准确但结构不太结构化的空间映射和新的 AI[](spatial-mapping.md)驱动运行时）的能力来实现此点。 通过组合这些技术，场景理解可生成类似于 Unity 或 ARKit/ARCore 等框架中使用的三维环境的表示形式。 场景理解入口点从场景观察程序开始，应用程序调用它来计算新场景。 目前，该技术可以生成 3 个不同但相关的对象类别：
 
-* 简化的 watertight 环境网格，可推断平面房间结构而不会造成混乱
-* 我们调用四边形的放置的平面区域
-* 与我们的表面上的四边形/Watertight 数据对齐的 [空间映射](spatial-mapping.md) 网格的快照
+* 简化的 watertight 环境网格，可推断平面房间结构，且无杂乱
+* 用于放置的平面区域，我们称之为四边形
+* 与 [所显示](spatial-mapping.md) Quads/Watertight 数据对齐的空间映射网格的快照
 
-![空间映射网格，标签平面表面，watertight 网格](images/SUScenarios.png)
+![空间映射网格、带标签的平面图面、watertight 网格](images/SUScenarios.png)
 
-本文档旨在提供方案概述，并阐明场景理解和空间映射共享的关系。
+本文档旨在提供方案概述，并阐明场景理解和空间映射共享的关系。 若要了解场景理解的运行情况，请查看下面的设计 [全息影像 - 空间]() 感知视频演示：
 
-## <a name="developing-with-scene-understanding"></a>通过场景理解进行开发
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Spatial-Awareness-Chapter/player]
 
-本文仅用于介绍运行时和概念的场景。 如果你正在查找有关如何通过场景理解进行开发的文档，你可能对以下文章感兴趣：
+## <a name="developing-with-scene-understanding"></a>使用场景理解进行开发
+
+本文仅介绍场景理解运行时和概念。 如果你正在寻找有关如何使用场景理解进行开发的文档，你可能对以下文章感兴趣：
 
 [场景理解 SDK 概述](../develop/platform-capabilities-and-apis/scene-understanding-SDK.md)
 
@@ -105,23 +107,23 @@ ms.locfileid: "98583338"
 
 [空间映射封闭](spatial-mapping.md#occlusion) 仍是捕获环境的实时状态的最小延迟方式。 虽然这对于在高度动态的场景中提供封闭可能很有用，但出于多种原因，你可能希望考虑到封闭的场景理解。 如果使用通过场景理解生成的空间映射网格，则可以从空间映射请求数据，这些数据不会存储在本地缓存中，也不能从感知 Api 获得。 使用封闭和 watertight 网格的空间映射将提供额外的价值，特别是完成了未扫描的空间结构。
 
-如果你的要求可容忍更多场景理解延迟，应用程序开发人员应考虑使用场景理解 watertight 网格，并将空间映射网格与平面表示形式结合使用。 这将提供 "这两个领域的最佳" 方案，其中简化的 watertight 封闭可以提供更好的 nonplanar 几何，提供最现实的封闭地图。
+如果你的要求可以容忍场景理解的延迟增加，应用程序开发人员应考虑使用场景理解 watertight 网格，以及与平面表示形式一致的空间映射网格。 这将提供"两全其美"方案，其中简化的 watertight 遮挡通过更精细的非平面几何图形进行渗透，从而尽可能提供最真实的遮挡贴图。
 
 ### <a name="physics"></a>物理
 
-场景理解会生成 watertight 的网格，这些网格通过语义分解空间，特别是解决空间映射网格施加的物理限制。 Watertight 结构可确保始终命中物理射线强制转换，通过语义分解可以更简单地生成用于室内导航的导航网格。 如 [封闭](#occlusion)上的部分中所述，使用 EnableSceneObjectMeshes 和 EnableWorldMesh 创建场景可能会产生最实际的完整网格。 环境网格的 watertight 属性可防止命中测试失败。 网格数据将确保物理学与场景中的所有对象交互，而不仅仅是与房间结构交互。
+场景理解会生成使用语义分解空间的 watertight 网格，专门用于解决空间映射网格施加的许多物理限制。 Watertight 结构可确保始终命中物理光线投射，语义分解允许更简单地生成用于室内导航的导航网格。 如有关遮挡 [的部分](#occlusion)中所述，使用 EnableSceneObjectMeshes 和 EnableWorldMesh 创建场景将生成尽可能完整的物理网格。 环境网格的 watertight 属性可防止命中测试无法命中表面。 网格数据将确保物理与场景中的所有对象交互，而不只是房间结构。
 
 ### <a name="navigation"></a>导航
 
-按语义类分解的平面网格是用于导航和路径规划的理想构造，可减轻 [空间映射导航](spatial-mapping.md#navigation) 概述中所述的许多问题。 场景中计算出的 SceneMesh 对象由表面类型消除，这确保导航网格的生成仅限于可遍历的图面。 由于地面结构的简单性，根据实时要求，将根据实时要求，对三维引擎（如 Unity）生成动态导航网格。
+由语义类分解的平面网格是导航和路径规划的理想构造，可缓解空间映射导航概述 [中所述的许多](spatial-mapping.md#navigation) 问题。 场景中计算的 SceneMesh 对象由表面类型取消组合，确保导航网格生成仅限于可进行演练的图面。 由于地面结构的简单性，3D 引擎（如 Unity）中的动态导航网格生成取决于实时要求。
 
-生成准确的 nav-网格目前仍需要后处理，也就是说，应用程序仍然必须将 occluders 到地面上，以确保导航不会通过混乱/表等。 实现此目的的最准确方法是投影世界网格数据，如果场景是通过 EnableWorldMesh 标志计算的，则会提供此数据。
+生成准确的导航网格目前仍然需要后期处理，即应用程序仍必须将遮挡器项目到楼层，以确保导航不会通过混乱/表等。 实现此目的的最准确方法就是预测世界网格数据，如果场景是使用 EnableWorldMesh 标志计算的，则提供该数据。
 
 ### <a name="visualization"></a>可视化效果
 
-虽然 [空间映射可视化](spatial-mapping.md#visualization) 可用于环境的实时反馈，但在很多情况下，平面和 watertight 对象的简单性提供了更高的性能或视觉质量。 如果在四边形或平面 watertight 网格提供的平面表面上投影，则使用空间映射描述的阴影投影和接地技术可能更好。 这对于完全预扫描并非最佳的环境/方案特别适用，因为场景将推断并完成环境，而平面假设将最小化项目。
+虽然 [空间](spatial-mapping.md#visualization) 映射可视化可用于环境实时反馈，但在许多情况下，平面对象和 watertight 对象的简单性提供了更多的性能或视觉质量。 如果投影在四边形网格或平面水台网格提供的平面图面上，则使用空间映射描述的阴影投影和地面技术可能更美观。 对于环境/方案尤其如此，因为场景将推断出全面预扫描，而完整的环境和平面假设将最大程度地减少项目。
 
-此外，空间映射返回的图面总数受内部空间缓存限制，而场景理解的空间映射网格版本可以访问未缓存的空间映射数据。 因此，场景理解更适合捕获更大空间的网格表示形式 (例如，大于单个房间) 用于可视化或进一步的网格处理。 使用 EnableWorldMesh 返回的世界网格在整个中具有一致的详细级别，这可能会产生更好的可视化效果（如果以线框形式呈现）。
+此外，空间映射返回的图面总数受内部空间缓存限制，而场景理解的空间映射网格版本可以访问未缓存的空间映射数据。 因此，场景理解更适用于捕获较大空间的网格表示形式 (例如，大于单个房间) 可视化或进一步网格处理。 使用 EnableWorldMesh 返回世界网格将始终具有一致的详细级别，如果呈现为线框，则可能会生成更美观的可视化效果。
 
 ### <a name="see-also"></a>另请参阅
 

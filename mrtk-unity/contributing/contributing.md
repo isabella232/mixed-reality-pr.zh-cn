@@ -1,18 +1,18 @@
 ---
-title: 贡献
+title: 参与 MRTK
 description: 如何参与混合现实工具包
 author: polar-kev
 ms.author: kesemple
 ms.date: 03/17/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Bug 报告，
-ms.openlocfilehash: 11a62708b4cb1a5acc3d230f933be2e88e0ac87b
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: 8132c39a2bac7ae0926f125a6362e411100c8406
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109850363"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110144514"
 ---
-# <a name="contributing"></a>贡献
+# <a name="contributing"></a>供稿
 
 混合现实工具包 (MRTK) 欢迎来自社区的贡献。 所有更改（小或大）都需要遵守 [MRTK](coding-guidelines.md)编码标准，因此请确保在开发时熟悉这些更改，以避免在评审更改时出现延迟。
 
@@ -56,5 +56,5 @@ ms.locfileid: "109850363"
 1. 如果添加实验功能，则不需要编写测试和文档。 相反，请遵循 [试验性功能准则](../contributing/experimental-features.md)。
 1. 添加用于验证 bug 修复/功能的测试。 有关编写和运行测试的说明，请参阅 [run-unittests](../contributing/unit-tests.md)。
 1. 请确保按照 [文档准则](../contributing/documentation-guide.md)所述说明了代码和功能 (的) 。
-1. 确保代码在所有平台上按预期方式工作。 有关支持的平台列表，请参阅 [发行说明](../release-notes/mrtk-26-release-notes.md) 。 对于 Windows UWP 项目，代码必须 [符合 WACK](https://developer.microsoft.com/windows/develop/app-certification-kit)。 为此，请生成 Visual Studio 解决方案，右键单击 "项目";**应用商店**  > **创建应用包**。 按照提示操作并运行 WACK 测试。 请确保它们全部成功。
-1. 提出拉取 [请求时，](../contributing/pull-requests.md) 请按照拉取请求中的说明进行操作。
+1. 确保代码在所有平台上按预期方式工作。 有关支持的平台列表，请参阅 [发行说明](../release-notes/mrtk-26-release-notes.md) 。 对于 Windows UWP 项目，代码必须 [符合 WACK](https://developer.microsoft.com/windows/develop/app-certification-kit)。 为此，请生成 Visual Studio 解决方案，右键单击 "项目";**应用商店**  > **创建应用包**。 按照提示操作并运行 WACK 测试。 确保它们都成功。
+1. 发出拉取请求时，请按照 [拉取请求](../contributing/pull-requests.md) 中的说明进行操作。

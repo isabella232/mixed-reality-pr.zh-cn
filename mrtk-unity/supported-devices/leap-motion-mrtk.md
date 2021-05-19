@@ -1,72 +1,72 @@
 ---
-title: LeapMotionMRTK
-description: 为 Leap Motion 配置的文档
+title: 跳跃运动 MRTK
+description: 为 Leap 运动配置的文档
 author: CDiaz-ms
 ms.author: cadia
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Leap Motion，
-ms.openlocfilehash: ea9e257815116c364fe2f1e37ca3477ec56262cb
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，Leap 运动，
+ms.openlocfilehash: 285328b1248f04504f30192f1294e9ae665b3fc9
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109852348"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110145191"
 ---
-# <a name="how-to-configure-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>如何在 MRTK 中配置 Ultraleap (Leap Motion) 手动跟踪
+# <a name="how-to-configure-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>如何在 MRTK 中配置 Ultraleap) 手动跟踪的 Leap 运动 (
 
-[使用此数据访问接口](https://www.ultraleap.com/product/leap-motion-controller/)需要 Leap Motion 控制器。
+需要使用 [Leap 运动控制器](https://www.ultraleap.com/product/leap-motion-controller/) 才能使用此数据访问接口。
 
-Leap Motion 数据提供程序支持 VR 的明确手部跟踪，并且可用于在编辑器中快速原型制作。  可以将数据访问接口配置为使用安装在头戴显示设备上或放在桌面人脸上的 Leap Motion 控制器。
+Leap 运动数据提供程序支持用于 VR 的有表述的手动跟踪，可用于在编辑器中快速制作原型。  可以将数据访问接口配置为使用耳机上装入的 Leap 运动控制器，或将其放置在桌面面上。
 
 ![LeapMotionIntroGif](../images/cross-platform/leap-motion/LeapHandsGif3.gif)
 
-在独立平台上，此提供程序可在编辑器和设备上使用。  它还可以在 UWP 平台上的编辑器中使用，但不能在 UWP 生成中使用。
+在独立平台上，可以在编辑器和设备上使用此提供程序。  它还可用于在 UWP 平台而不是 UWP 版本中的编辑器中。
 
-|支持 Leap Motion Unity 模块版本|
+|支持 Leap 运动 Unity 模块版本|
 |---|
 |4.5.0|
 |4.5.1|
 
-## <a name="using-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>使用 Ultraleap (Leap Motion) MRTK 中的手动跟踪
+## <a name="using-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>在 MRTK 中使用 Ultraleap) 手动跟踪的 Leap 运动 (
 
-1. 导入 MRTK 和 Leap Motion Unity 模块
-    - 安装 [Leap Motion SDK 4.0.0（](https://developer.leapmotion.com/releases/?category=orion) 如果尚未安装）
-    - 将 **Microsoft.MixedReality.Toolkit.Foundation** 包导入 Unity 项目。
-    - 下载最新版本的 Leap Motion [Unity 模块并导入](https://developer.leapmotion.com/unity) 到项目中
-        - 仅导入 **Unity** 模块中的 Core 包
+1. 导入 MRTK 和 Leap 运动 Unity 模块
+    - 安装 [Leap 运动 SDK 4.0.0](https://developer.leapmotion.com/releases/?category=orion) （如果尚未安装）
+    - 将 **MixedReality** 包导入 Unity 项目。
+    - 下载最新版本的 [Leap 运动 Unity 模块](https://developer.leapmotion.com/unity) 并将其导入到项目中
+        - 仅导入 Unity 模块内的 **核心** 包
 
-1. 将 Leap Motion Unity 模块与 MRTK 集成
-    - Unity 模块进入项目后，导航到"混合 **现实工具包**  >  **""Leap Motion**  >  **集成 Leap Motion Unity 模块"**
+1. 将 Leap 运动 Unity 模块与 MRTK 集成
+    - 在 Unity 模块位于项目中后，导航到 **混合现实工具包** 的  >  **leap 运动**  >  **集成 leap 运动 Unity 模块**
     > [!NOTE]
-    > 将 Unity 模块集成到 MRTK 会向项目添加 10 个程序集定义，并添加 **对 Microsoft.MixedReality.Toolkit.Providers.LeapMotion** 程序集定义的引用。 确保已关闭 Visual Studio。
+    > 将 Unity 模块集成到 MRTK 会将10个程序集定义添加到项目，并添加对 **LeapMotion** 程序集定义的引用。 确保已关闭 Visual Studio。
 
      ![LeapMotionIntegration](../images/cross-platform/leap-motion/LeapMotionIntegrateMenu.png)
 
-1. 添加 Leap 运动数据提供程序
+1. 添加 Leap Motion 数据提供程序
     - 创建新的 Unity 场景
-    - 通过导航到 **混合现实工具包**"  >  **添加到场景" 并配置，** 将 MRTK 添加到场景
-    - 选择层次结构中的 MixedRealityToolkit 游戏对象，并选择 " **复制" 和 "自定义** " 克隆默认的混合现实配置文件。
+    - 导航到"混合现实工具包""添加到场景并配置"，将 MRTK  >  **添加到场景**
+    - 选择层次结构中的 MixedRealityToolkit 游戏对象，然后选择"复制和自定义"以克隆默认的混合现实配置文件。
 
     ![LeapMotionProfileClone](../images/cross-platform/CloneProfile.png)
 
     - 选择 **输入** 配置文件
 
-    ![输入配置文件1](../images/cross-platform/InputConfigurationProfile.png)
+    ![输入配置文件 1](../images/cross-platform/InputConfigurationProfile.png)
 
-    - 选择输入系统配置文件中的 " **克隆** " 以启用修改。
+    - 在 **输入** 系统配置文件中选择"克隆"以启用修改。
 
     ![LeapMotionInputProfileClone](../images/cross-platform/CloneInputSystemProfile.png)
 
-    - 打开 " **输入数据提供程序** " 部分，选择顶部的 " **添加数据访问接口** "，将在列表的末尾添加一个新的数据提供程序。  打开新的数据提供程序并将 **类型** 设置为 **MixedReality > LeapMotionDeviceManager**
+    - 打开"**输入数据提供程序"** 部分，选择顶部的"添加数据提供程序"，将在列表末尾添加新的数据提供程序。  打开新的数据访问接口，将"类型"设置为 **"Microsoft.MixedReality.Toolkit.LeapMotion.Input > LeapMotionDeviceManager"**
 
     ![Leap 添加数据提供程序](../images/cross-platform/leap-motion/LeapAddDataProvider.png)
 
-    - 选择 " **克隆** " 以更改默认的 Leap 运动设置。
+    - 选择 **"克隆** "以更改默认的 Leap Motion 设置。
 
     ![LeapDataProviderPreClone](../images/cross-platform/leap-motion/LeapMotionDeviceManagerProfile.png)
 
-    - Leap 运动数据提供程序包含属性，该 `LeapControllerOrientation` 属性是 Leap 运动控制器的位置。 `LeapControllerOrientation.Headset` 指示控制器已装入耳机。 `LeapControllerOrientation.Desk` 指示控制器位于桌面上。 默认值设置为 `LeapControllerOrientation.Headset` 。
-    - 每个控制器方向都包含偏移属性：
+    - Leap Motion 数据提供程序包含 `LeapControllerOrientation` 属性，该属性是 Leap Motion 控制器的位置。 `LeapControllerOrientation.Headset` 指示控制器已装载在头戴显示设备上。 `LeapControllerOrientation.Desk` 指示控制器在桌面上平面放置。 默认值设置为 `LeapControllerOrientation.Headset` 。
+    - 每个控制器方向都包含偏移量属性：
       - 头 **戴** 显示设备方向偏移属性镜像 LeapXRServiceProvider 组件中的偏移属性。  有 `LeapVRDeviceOffsetMode` 三个选项："默认"、"手动头部偏移"和"转换"。  如果偏移模式为 Default，则偏移量将不会应用于 Leap Motion 控制器。  手动头部偏移模式允许修改三个属性： 和 `LeapVRDeviceOffsetY` `LeapVRDeviceOffsetZ` `LeapVRDeviceTiltX` 。  然后，轴偏移属性值将应用于默认控制器位置。  转换偏移模式包含 `LeapVRDeviceOrigin` Transform 属性，该属性指定 Leap Motion 控制器的新原点。
       - 桌面 **方向** 包含 `LeapControllerOffset` 属性，该属性定义桌面闰手的定位点位置。  偏移量相对于主相机位置进行计算，默认值为 (0、-0.2、0.35) 以确保手出现在相机的前面和视图中。
 
@@ -84,7 +84,7 @@ Leap Motion 数据提供程序支持 VR 的明确手部跟踪，并且可用于�
     ![LeapHeadsetGif](../images/cross-platform/leap-motion/LeapHeadsetOrientationExampleMetacarpals.gif)  |  ![LeapDeskGif](../images/cross-platform/leap-motion/LeapDeskOrientationExampleMetacarpals.gif)
     ![LeapHeadsetInspector](../images/cross-platform/leap-motion/LeapMotionDeviceManagerHeadset.png) |     ![LeapDeskInspector](../images/cross-platform/leap-motion/LeapMotionDeviceManagerDesk.png)
 
-1. 测试 Leap 运动数据提供程序
+1. 测试 Leap Motion 数据提供程序
     - 在将 Leap 运动数据提供程序添加到输入系统配置文件后，按 "播放"，将你的手移动到 Leap 运动控制器的前方，你应该会看到手的接合表示形式。
 
 1. 生成项目
@@ -151,7 +151,7 @@ public class LeapHandJoints : MonoBehaviour, IMixedRealityHandJointHandler
 > [!NOTE]
 > 如果使用 WASD 中的 "键" 来移动照相机并且 `LeapControllerOrientation` 为 " **耳机**"，则不会跟随摄像机。 如果在 `LeapControllerOrientation` 设置了 **耳机** 时插入了 VR 耳机，则只会跟随摄像机运动。  如果设置为 "桌面"，则在编辑器中，Leap 会按照相机的移动进行操作 `LeapControllerOrientation` 。 
 
-## <a name="removing-leap-motion-from-the-project"></a>从项目中删除 Leap Motion
+## <a name="removing-leap-motion-from-the-project"></a>从项目中删除 Leap 运动
 
 1. 导航到混合 **现实工具包**  >  **Leap Motion**  >  **独立闰运动 Unity 模块**
     - 在此步骤中修改 **Microsoft.MixedReality.Toolkit.Providers.LeapMotion.asmdef** 文件中的引用时，让 Unity 刷新
@@ -179,7 +179,7 @@ public class LeapHandJoints : MonoBehaviour, IMixedRealityHandJointHandler
   - 请确保支持添加的版本，请参阅页面顶部的表，了解支持的版本。
   - 在 **集成 Leap Motion Unity 模块> Leap Motion >混合现实工具包>实用工具**
 
-### <a name="copying-assembly-multiplayer-hlapi-failed"></a>复制程序集多人 HLAPI 失败
+### <a name="copying-assembly-multiplayer-hlapi-failed"></a>复制程序集多人游戏 HLAPI 失败
 
 导入 Leap 运动 Unity 核心资产时，可能会记录此错误：
 

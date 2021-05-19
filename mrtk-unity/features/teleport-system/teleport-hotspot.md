@@ -1,17 +1,17 @@
 ---
-title: TeleportHotspot
+title: 传送热点
 description: 有关 MRTK 中传送热点组件的文档
 author: RogPodge
 ms.author: roliu
 ms.date: 03/25/2021
 ms.localizationpriority: medium
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，传送系统，传送热点
-ms.openlocfilehash: 986105dd771c38b1e26fd9f86df90224110591a4
-ms.sourcegitcommit: 4be6f36df9063ccfdce2662e299accc7406b6779
+ms.openlocfilehash: 0cbdad3c038d457109077b742d3f453d63436ae4
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105582950"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110144436"
 ---
 # <a name="teleport-hotspot-experimental"></a>传送热点 [实验]
 

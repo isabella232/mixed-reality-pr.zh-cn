@@ -5,35 +5,35 @@ author: hferrone
 ms.author: daescu
 ms.date: 11/24/2020
 ms.topic: article
-keywords: MRTK，混合现实工具包，全息影像，设计全息影像，学习，示例应用，混合现实耳机，虚拟现实耳机，什么是虚拟现实
-ms.openlocfilehash: 2480b5e0b4dca502c746dad6f070226ffa8cd1f9
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+keywords: MRTK， 混合现实工具包， 全息影像， 设计全息影像， 学习， 示例应用， 混合现实头戴显示设备， 虚拟现实头戴显示设备， 什么是虚拟现实
+ms.openlocfilehash: 6e37c3f1ba98f202addb9c323632bca8bffae3b6
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757755"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143629"
 ---
-# <a name="the-making-of-designing-holograms"></a>设计全息影像的过程
+# <a name="the-making-of-designing-holograms"></a>设计全息影像的制作
 
 > [!NOTE]
-> 请在此页上为所有的冷 Gif 和嵌入视频提供小的加载窗口。
+> 请允许一个小的加载窗口，以说明此页上的所有冷 GIF 和嵌入式视频。
 
-了解如何设计混合现实很难，因为介质并不一定能顺利地转换为2D 设计过程。 在 Microsoft，我们为 HoloLens 2 创建了免费应用，帮助你了解混合现实 UX 设计亲身的基础知识。 设计全息影像应用程序的独特方法深入混合现实行为、提示和建议，帮助你创建自己的富有吸引力的、令人惊叹的 HoloLens 应用。 从 Microsoft Store 免费下载应用，并从 Microsoft 混合现实设计团队那里了解！
+了解如何为混合现实进行设计可能很难，因为媒体并不总是能很好地转换为 2D 设计过程。 在 Microsoft，我们创建了一个免费应用，HoloLens 2帮助你第一手了解混合现实 UX 设计的基本知识。 设计全息影像应用的独特方法深入探讨混合现实行为、提示和建议，以帮助你创建自己的具有吸引力且令人惊叹的 HoloLens 应用。 从 Microsoft 混合现实设计Microsoft Store下载应用并学习！
 
 > [!div class="nextstepaction"]
 > [下载设计全息影像应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)
 
 <br>
 
-![设计全息图的演示房间中标题跟踪场景的动画 GIF](images/designing-holograms/demo-room.gif)
+![设计全息影像演示房间中头部跟踪场景的动画 GIF](images/designing-holograms/demo-room.gif)
 
-*设计全息图的演示房间 (也称为娃房子)*
+*设计全息影像的演示 (也称为"房屋")*
 
-## <a name="designing-for-mixed-reality"></a>混合现实设计
+## <a name="designing-for-mixed-reality"></a>针对混合现实进行设计
 
-与许多人一样，我使用的是设计移动应用。 从2D 设计世界来，跳转到空间计算的完整，其中一切现在都在世界中，这是一项重大转变。 在混合现实中，应用不再局限于2D 屏幕;事实上，它们几乎是免费的，放在现实世界中，并与真实对象进行交互。
+和许多人一样，我过去设计移动应用。 从 2D 设计世界开始，进入空间计算领域（现在一切都位于全球）是一个显著转变。 在混合现实中，应用不再局限于 2D 屏幕;事实上，它们几乎是免费的，放置在现实世界中并与真实对象交互。
 
-对于我来说，将3D 体验连接到传统的2D 设计过程是混合现实开发的最具挑战性的方面。 在与客户的对话中，我知道 "我知道要包含哪些功能以及如何让它们启动并运行"。 就是代码，我可以按照文档和教程操作，而是在用户体验方面？ 如此多的功能、不同的输入选项、不同的方案和物理环境，这一点很惊人。
+就我来说，将 3D 体验连接到传统的 2D 设计过程是混合现实开发最具挑战性方面。 在与客户的聊天中，我听说过"我了解要包含哪些功能以及如何启动和运行这些功能。 这是代码，我可以按照文档和教程操作，但用户体验如何？ 有很多功能、不同的输入选项、不同的方案和物理环境，这一点非常巨大"。
 
 ![从圣马力诺2中的 HoloLens 2 设计研讨会开始的图像，位于旧金山 ](images/designing-holograms/workshop.jpeg)
  *2 的 Hololens 2 设计研讨会* 中
@@ -63,37 +63,37 @@ ms.locfileid: "97757755"
 
 - 大多数开发人员会在办公室或比演示房间小的房间内运行应用程序，因此不适合。
 - 显示是累加的，这意味着整个虚拟环境将覆盖在用户的空间上。 这可能会使两个表（可能为 double couches）和不对齐的墙壁产生混淆。
-- 并且最糟糕的是，所有虚拟环境都受视图的字段约束。
+- 最差的一个虚拟环境受到视场的严格约束。
 
-当我们尝试使用微型1:10 刻度时，结果是一个极好的鸟瞰视图。 你可以从任何角度查看所有内容。 最令人吃惊的是，大多数测试人员发现它很多地都可以看到较小的版本，然后他们永远无法切换回1:1 规模。 我们决定实际会弃用1:1 版本，并避免在 UI 和应用程序的其他方面进行调整所需的额外工作。
+当我们尝试了一个微型 1：10 刻度时，结果是一个真实的房间的精彩眼睛视图。 你可以同时从任何角度查看所有正在进行的所有内容。 最令人意外的是，大多数测试人员发现查看小版本更沉浸式，然后他们从未切换回 1：1 比例。 因此，我们决定实际放弃 1：1 版本，并避免适应 UI 和应用的其他方面所需的额外工作。
 
-![具有 ](images/designing-holograms/1-1-scale.png)
- *1:1 刻度的* 1:1 缩放字段视图的视图字段
+![比例为 1：1 的视图字段，比例为 ](images/designing-holograms/1-1-scale.png)
+ *1：1*
 
-![具有 ](images/designing-holograms/1-10-scale.png)
- *1:10 刻度的* 1:10 缩放字段视图的视图字段
+![比例为 1：10 的视图字段，比例为 ](images/designing-holograms/1-10-scale.png)
+ *1：10*
 
-## <a name="using-mixed-reality-capture"></a>使用混合现实捕获
+## <a name="using-mixed-reality-capture"></a>使用 混合现实捕获
 
-此应用程序的最重要特性之一是使用混合现实捕获来讲授和演示混合现实设计概念。
+此应用的最特征之一是使用 混合现实捕获来教授和演示混合现实设计概念。
 
-Microsoft 的 San 中有混合现实的捕获工作室。 Microsoft 还向其他工作室提供此技术，其中包括华盛顿特区的头像、洛杉矶、伦敦的 Dimension 工作室、首尔的 SK 电信和柏林上的 Volucap。 可在此处找到有关 [混合现实捕获工作室](https://www.microsoft.com/mixed-reality/capture-studios)的详细信息。
+Microsoft 在混合现实捕获有一个工作室。 Microsoft 还将此技术许可给其他工作室，包括华盛顿特区的头像维度、洛杉矶的 Metastage、伦敦的 Dimension Studios、位于意大利的 SK Telecom 和位于意大利的 Volucap。 可在此处找到有关 混合现实捕获 [工作室的信息](https://www.microsoft.com/mixed-reality/capture-studios)。
 
 <br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Raw-capture-footage-for-the-Designing-Holograms-app/player]
-*在 San 中，混合现实中的一106照相机的 Daniel Escudero 的原始胶片。*
+*来自旧金山 混合现实捕获 Studio 中 106 个相机之一的 Daniel Escudero 的原始视频。*
 
-捕获过程将生成一个 keyframed 的网格、法线和纹理，可将其作为 "OBJ/PNG" 文件传送，以便进一步后期生产，或准备好将其作为 " 这些文件可以导入到 Unity、Unreal、本机和 WebXR 项目中。 文件可在 Windows、iOS、Mac、Android、幻 Leap 和 Playstation VR 上运行。
+捕获过程会生成关键帧网格、法线和纹理，这些网格、法线和纹理可以作为 OBJ/PNG 文件传送，供进一步后期制作，或准备好播放为 H.264 压缩 MP4 文件。 这些文件可以导入 Unity、Unreal、Native 和 WebXR 项目中。 文件可以在 Windows、iOS、Mac、Android、Magic Leap 和 Playstation VR 中运行。
 
 <br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Mixed-Reality-Capture-footage-for-the-Designing-Holograms-app/player]
-*提供的捕获播放机用于分析包含音频和嵌入网格的视频的 mp4。*
+*提供的捕获播放器，用于分析包含带音频和嵌入网格的视频的 mp4。*
 
 ## <a name="manipulating-captures-and-virtual-objects"></a>操作捕获和虚拟对象
 
-混合现实捕获会生成人员或动物的虚拟表示形式，但有时您可能需要这些字符与其他虚拟对象进行交互。 下面两个示例演示了我们处理场景以实现此效果的不同方式。
+混合现实捕获生成人员或动物的虚拟表示形式，但有时可能需要这些字符来与其他虚拟对象交互。 下面两个示例演示了我们处理场景以实现此效果的不同方式。
 
 ### <a name="head-gaze-adjustment"></a>打印头注视调整
 
@@ -115,35 +115,47 @@ Headgaze 调整使你可以在运行时移动已捕获人员的标题，这意�
 
 ### <a name="ui-creative-process"></a>UI 创作过程
 
-开始使用 UI 设计时，我们想要展示全息影像必须提供的一些神奇的做法。 在三维世界中，简单地显示静态2D 窗口和文本框并不合适。 很多情况下不会显示，因此，从现在开始，我们决定从该位置移走，充分利用全息的3D 空间。
+开始使用 UI 设计时，我们想要展示全息影像必须提供的一些神奇的做法。 在三维世界中，简单地显示静态2D 窗口和文本框并不合适。 许多可能性不会显示，因此，我们决定从一开始就放弃这种可能性，并充分利用全息 3D 空间。
 
-首先，我们开始向面板、图标和文本信息添加一些粗细。 而且，作为用户，我看到的是一个文本框。 包含图像的文本框，但不存在。 我们将使用混合现实工具包 (MRTK) 着色器进行进一步的介绍。 MRTK 着色器变成了一个功能强大的工具，并使用其模具功能向面板添加了消极的深度。 这意味着，图标现在显示在透明面板的后面，而不是在文本框前面添加元素。 我现在看到的是，我只是在现实世界中不能再复制，而这是一种开始使用全息幻的地方。 我也不是我想要阅读的，我还在现实世界中做了很多工作。
+最初，我们从向面板、图标和文本信息添加一些粗细开始。 不过，作为用户，我所看到的是一个文本框。 包含图像的文本框，但我们不存在。 我们进一步利用混合现实工具包和 MRTK (器) 器。 MRTK 着色器成为功能强大的工具，我们利用其模具功能向面板添加负深度。 这意味着，图标现在显示在透明面板后面，而不是在文本框前面添加元素。 现在，作为用户，我不再可以在现实世界中复制它，这是全息幻像开始发生的地方。 此外，作为一个不想阅读的用户，我已在物理世界做很多工作。
 
-显然，图标的工作方式比简单文本更好，若要提供更为强大的指导，然后开始创建一组动画对象和头像，其中每个对象都告诉您在各自的方案中所执行的操作及其使用方式的一小部分。
+显然，图标比简单文本的效果要强很多，为了提供更强大的指导，我随后开始创建一组动画对象和头像，每个图标都讲述一个有关各自方案中正在完成的工作及其使用方式的小故事。
 
 ![交互式全息菜单系统的动画 GIF](images/designing-holograms/creative-process.gif)
 
 ## <a name="core-concepts"></a>核心概念
 
+**头部跟踪和眼动跟踪**
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
+
+**手部跟踪**
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Hand-Tracking-Chapter/player]
+
+**空间感知**
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Spatial-Awareness-Chapter/player]
+
 **全息帧**
 
-![用户的动画 GIF，其中突出显示了全息框架的 dollhouse](images/designing-holograms/FOVandFOI.gif)
+![用户通过动画 GIF 来四处查看，其中突出显示了全息帧](images/designing-holograms/FOVandFOI.gif)
 
 **坐标系统**
 
-![用户使用突出显示的坐标系统围绕 dollhouse 的动画 GIF](images/designing-holograms/CoordinateSystems.gif)
+![用户通过动画 GIF 来四处查看仓库，其中突出显示了坐标系统](images/designing-holograms/CoordinateSystems.gif)
 
 **眼动跟踪**
 
-![用户的动画 GIF，其中突出显示了眼睛为眼睛的静止全息影像](images/designing-holograms/EyeTracking.gif)
+![用户查看固定全息影像的动画 GIF，其中突出显示了眼睛凝视射线](images/designing-holograms/EyeTracking.gif)
 
 **房间扫描可视化和空间映射**
 
-![要映射的 dollhouse 中的所有表面的动画 GIF](images/designing-holograms/SpatialMapping.gif)
+![要映射的仓库内所有图面的动画 GIF](images/designing-holograms/SpatialMapping.gif)
 
 **场景理解**
 
-![正在识别的 dollhouse 中的对象的动画 GIF](images/designing-holograms/SceneUnderstanding.gif)
+![正在识别的仓库中对象的动画 GIF](images/designing-holograms/SceneUnderstanding.gif)
 
 **手动射线的点和提交**
 
@@ -181,7 +193,7 @@ Headgaze 调整使你可以在运行时移动已捕获人员的标题，这意�
 </tr>
 </table>
 
-非常感谢你对混合现实设计团队共享如此多的知识，并为 [对象理论](https://objecttheory.com/) 的令人惊叹的用户提供有关项目中每个步骤的重要团队。 非常感谢您的热情，为您的热情和杰出的设计设计。
+非常感谢你对混合现实设计团队共享如此多的知识，并为 [对象理论](https://objecttheory.com/) 的令人惊叹的用户提供有关项目中每个步骤的重要团队。 感谢你的出色人才，感谢你对设计的兴趣和出色的眼睛。
 
 > [!div class="nextstepaction"]
 > [下载设计全息影像应用](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)

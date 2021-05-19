@@ -1,16 +1,16 @@
 ---
-title: GettingStartedWithMRTKAndXRSDK
+title: 与 MRTK 和 XRSDK 入门
 description: XRSDK 的 MRTK 的登陆页
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，XRSDK，
-ms.openlocfilehash: fe50de31ae24b415738db64073822b2aff061636
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: ef6d8c9205a9d801e8cb0ec2690d77b74c72b5fb
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109850423"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143523"
 ---
 # <a name="getting-started-with-mrtk-and-xr-sdk"></a>MRTK 和 XR SDK 入门
 
@@ -143,7 +143,7 @@ to
 
 | OpenXR | Windows Mixed Reality |
 |--------|-----------------------|
-| 正在进行 | [`XRSDK.WindowsMixedReality.WindowsMixedRealitySpatialMeshObserver`](xref:Microsoft.MixedReality.Toolkit.XRSDK.WindowsMixedReality.WindowsMixedRealitySpatialMeshObserver) |
+| 正在学习 | [`XRSDK.WindowsMixedReality.WindowsMixedRealitySpatialMeshObserver`](xref:Microsoft.MixedReality.Toolkit.XRSDK.WindowsMixedReality.WindowsMixedRealitySpatialMeshObserver) |
 
 ![XR SDK 空间感知设置](../features/images/xrsdk/SpatialAwarenessXRSDK.png)
 

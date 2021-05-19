@@ -1,0 +1,104 @@
+---
+title: 空间感知
+description: 介绍 MRTK 中的空间感知
+author: davidkline-ms
+ms.author: davidkl
+ms.date: 01/12/2021
+keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
+ms.openlocfilehash: 776033dbb4736ccaa44cdb683c4fce284758a51c
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110144461"
+---
+# <a name="spatial-awareness"></a>空间感知
+
+![空间感知](../images/spatial-awareness/MRTK_SpatialAwareness_Main.png)
+
+空间感知系统在混合现实应用程序中提供真实的环境意识。 在 Microsoft HoloLens 上引入时，空间感知提供了一个网格集合，表示环境的几何图形，从而允许在全息影像与现实世界之间进行引人注目的交互。
+
+> [!NOTE]
+> 目前，混合现实工具包未随最初打包在 HoloToolkit 中的空间理解算法一起提供。 空间理解通常涉及转换空间网格数据，以创建简化的和/或分组的网格数据，例如平面、墙、楼层、上限等。
+
+## <a name="getting-started"></a>入门
+
+添加对空间感知的支持需要混合现实工具包的两个关键组件：空间感知系统和受支持的平台提供程序。
+
+1. [启用](#enable-the-spatial-awareness-system) 空间感知系统
+2. [注册](#register-observers) 并 [配置](configuring-spatial-awareness-mesh-observer.md) 一个或多个空间观察器以提供网格数据
+3. [生成并](#build-and-deploy) 部署到支持空间感知的平台
+
+### <a name="enable-the-spatial-awareness-system"></a>启用空间感知系统
+
+空间感知系统由 MixedRealityToolkit 对象管理 (或其他 [服务](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) 注册器组件) 。 按照以下步骤在 *MixedRealityToolkit* *配置文件* 中启用或禁用空间感知系统。
+
+混合现实工具包附带一些默认预配置的配置文件。 其中一些默认已启用或禁用空间感知系统。 此预配置（尤其是禁用时）的目的是避免计算和呈现网格的视觉开销。
+
+| 配置文件 | 系统默认启用 |
+| --- | --- |
+| `DefaultHoloLens1ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens1)  | False |
+| `DefaultHoloLens2ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens2)  | False |
+| `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles)  | True |
+
+1. 选择场景层次结构中的 MixedRealityToolkit 对象，以在检查器面板中打开。
+
+    ![MRTK 配置场景层次结构](../images/MRTK_ConfiguredHierarchy.png)
+
+1. 导航到 "*空间感知系统*" 部分，并选中 "*启用空间感知系统*"
+
+    ![启用空间感知](../images/spatial-awareness/MRTKConfig_SpatialAwareness.png)
+
+1. 选择所需的空间感知系统实现类型。 [`MixedRealitySpatialAwarenessSystem`](xref:Microsoft.MixedReality.Toolkit.SpatialAwareness.MixedRealitySpatialAwarenessSystem)为提供的默认值。
+
+    ![选择空间感知系统实现](../images/spatial-awareness/SpatialAwarenessSelectSystemType.png)
+
+### <a name="register-observers"></a>注册观察者
+
+混合现实工具包中的服务可以拥有使用平台特定的数据和实现控制来补充主要服务的 [数据提供程序服务](../../architecture/systems-extensions-providers.md) 。 这种情况的一个示例是混合现实输入系统，它具有 [多个数据提供程序](../input/input-providers.md) ，可从各种特定于平台的 api 获取控制器和其他相关输入信息。
+
+空间感知系统类似于数据访问接口为系统提供关于现实世界的网格数据。 空间识别配置文件必须至少注册一个空间观察程序。 空间观察器通常是特定于平台的组件，用作提供程序，用于从特定于平台的终结点呈现各种类型的网格数据 (即 HoloLens) 。
+
+1. 打开或展开 *空间感知系统配置文件*
+
+    ![空间感知系统配置文件](../images/spatial-awareness/SpatialAwarenessProfile.png)
+
+1. 单击 *"添加空间观察器"* 按钮
+1. 选择所需的 *空间观察程序实现类型*
+
+    ![选择空间观察程序实现](../images/spatial-awareness/SpatialAwarenessSelectObserver.png)
+
+1. 根据需要[修改观察者的配置属性](configuring-spatial-awareness-mesh-observer.md)
+
+> [!NOTE]
+> `DefaultMixedRealityToolkitConfigurationProfile` (资产/MRTK/SDK/配置文件) 的用户将为使用类的 Windows Mixed Reality 平台预配置空间感知系统 [`WindowsMixedRealitySpatialMeshObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver) 。
+
+### <a name="build-and-deploy"></a>生成并部署
+
+一旦将空间感知系统配置 () 的所需观察程序，就可以生成项目并将其部署到目标平台。
+
+> [!IMPORTANT]
+> 如果面向 Windows Mixed Reality 平台 (例如： HoloLens) ，请务必确保启用 [空间感知功能](/windows/mixed-reality/spatial-mapping-in-unity) ，以便在设备上使用空间感知系统。
+
+> [!WARNING]
+> 某些平台（包括 Microsoft HoloLens）为从 Unity 内的远程执行提供支持。 此功能可实现快速开发和测试，而无需执行生成和部署步骤。 请确保使用在目标硬件和平台上运行的应用程序的构建和部署版本执行最终的验收测试。
+
+## <a name="next-steps"></a>后续步骤
+
+按照上述步骤启用空间感知系统后，可以更详细地配置和控制系统。
+
+用于在检查器中配置观察程序的信息：
+
+- [为设备使用配置观察程序](configuring-spatial-awareness-mesh-observer.md)
+- [为编辑器内使用配置观察器](spatial-object-mesh-observer.md)
+
+有关通过代码控制和扩展观察程序的信息：
+
+- [通过代码配置观察者](usage-guide.md)
+- [创建自定义观察程序](create-data-provider.md)
+
+## <a name="see-also"></a>另请参阅
+
+- [空间感知 API 文档](xref:Microsoft.MixedReality.Toolkit.SpatialAwareness)
+- [空间映射概述 WMR](/windows/mixed-reality/spatial-mapping)
+- [Unity WMR 中的空间映射](/windows/mixed-reality/spatial-mapping-in-unity)
