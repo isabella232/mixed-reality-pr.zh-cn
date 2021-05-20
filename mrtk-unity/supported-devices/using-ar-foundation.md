@@ -4,13 +4,13 @@ description: 在 unity 中使用 ARFoundation 的文档
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，AR Core，AR 工具包
-ms.openlocfilehash: 1c39950e8b64968e182ddc551ef344dee42060e9
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，AR Core，AR 工具包，iOS，IOS，Android，AR Foundation
+ms.openlocfilehash: 0f02eb94d95c2900348adaa9e1a02c3e54832a96
+ms.sourcegitcommit: 62beb626b2db6ce7df86014bd22bf1946b8906b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143944"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110207441"
 ---
 # <a name="how-to-configure-mrtk-for-ios-and-android-experimental"></a>如何配置适用于 iOS 和 Android 的 MRTK [实验]
 
@@ -41,7 +41,10 @@ ms.locfileid: "110143944"
     | AR Foundation  <br/> 版本：3.1.3 |  AR Foundation  <br/> 版本：3.1.3 |
     | ARCore XR 插件 <br/> 版本：3.1.4 | ARKit XR 插件 <br/> 版本：3.1.3 |
 
-1. 通过调用菜单项更新 MRTK UnityAR 脚本定义：混合现实工具包 > 实用工具 > **UnityAR >更新脚本定义**
+1. 通过调用以下菜单项更新 MRTK UnityAR 脚本定义：UnityAR 中的混合现实 > 工具包 > 实用工具 > **UnityAR** >更新脚本定义
+
+    ![更新脚本定义](../features/images/UpdateScriptingDefineUnityAR.png)
+
 
 ## <a name="enabling-the-unity-ar-camera-settings-provider"></a>启用 Unity AR 相机设置提供程序
 
@@ -51,7 +54,7 @@ ms.locfileid: "110143944"
 
     ![MRTK 配置的场景层次结构](../features/images/MRTK_ConfiguredHierarchy.png)
 
-1. 选择 **"复制和自定义** "以克隆 MRTK 配置文件以启用自定义配置。
+1. 选择 " **复制并自定义** "，克隆 MRTK 配置文件以启用自定义配置。
 
     ![克隆 MRTK 配置文件](../features/images/camera-system/CloneProfileARFoundation.png)
 
@@ -84,20 +87,9 @@ ms.locfileid: "110143944"
 
 1. 在 Unity 生成设置中将平台切换到 Android 或 iOS
 
-    切换平台时，应会看到 "MRTK 项目配置器" 窗口，其中包含所选平台的设置。  单击 "应用" 以启用特定于平台的设置。
+1. 确保已启用关联的 XR 插件管理提供程序
 
-    iOS 项目配置器设置
-
-    ![iOS 项目配置器](../features/images/camera-system/MRTKProjectConfigurator.png)
-
-1. 切换适用于 Android 的平台后，无需执行其他步骤。
-
-1. 如果平台为 iOS，请>">播放器">"其他设置"下，取消选中"条 **带引擎代码** "
-
-    ![iOS 设置](../features/images/camera-system/UncheckStripEngineCodeiOS.png)
-
-    > [!NOTE]
-    > 取消选中"带状引擎代码"是 Xcode 中错误的短期[#6646。](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/6646)  我们正在努力解决长期问题。
+    iOS XR 插件管理：  ![ XR 插件管理 ios](../features/images/XRManagementiOS.png)
 
 1. 生成并运行场景
 

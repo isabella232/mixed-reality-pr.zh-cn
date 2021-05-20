@@ -1,3 +1,5 @@
+- name: “生成”窗口
+  href: build-window.md
 - name: 资产交换实用工具
   href: asset-swap-utility.md
 - name: 控制器映射工具
