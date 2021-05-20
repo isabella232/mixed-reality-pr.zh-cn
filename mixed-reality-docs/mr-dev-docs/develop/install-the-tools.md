@@ -3,16 +3,16 @@ title: 安装工具
 description: 从这里开始，了解最新版本的 Unity、Visual Studio，以及推荐用于 HoloLens 和 VR 开发的工具。
 author: thetuvix
 ms.author: alexturn
-ms.date: 04/13/2021
+ms.date: 05/11/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: 40bf9930124e6f64197aaa5daca8b332dc741546
-ms.sourcegitcommit: be79d8e9ebac553aabec7c57c44eee56123aa00e
+ms.openlocfilehash: 03977467b27f7a4a70f241f25f3046675cd824ad
+ms.sourcegitcommit: f77adfa23a98ccc0412eb6be5871ad4b1da0f755
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107369870"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109740628"
 ---
 # <a name="install-the-tools"></a>安装工具
 
@@ -36,7 +36,7 @@ ms.locfileid: "107369870"
 | ![Windows 徽标](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10**（手动安装链接）</a><br><br>安装最新版本的 Windows 10，以便电脑的操作系统与正在为其生成混合现实应用程序的平台匹配。  | **安装 Windows 10** <br> 可以通过“设置”中的“Windows 更新”，或者使用左栏中的链接创建安装媒体，来安装最新版本的 Windows 10。 <br><br>有关每个 Windows 10 版本提供的最新混合现实功能的信息，请参阅[当前发行说明](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-october-2018.md)。 通过“设置”>“更新和安全”>“对于开发人员”在电脑上启用开发人员模式。 <br><br> **企业和公司管理电脑的注意事项**<br>如果你的电脑由组织的 IT 部门管理，可能需要与他们联系才能进行更新。 <br><br> **Windows 的“N”版本**<br> Windows 的“N”版本不支持 Windows Mixed Reality 沉浸式 (VR) 头戴显示设备。 |
 | ![Visual Studio 徽标图像](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019（16.8 或更高版本）** （安装链接）</a> <br><br>适用于 Windows 等的功能齐全的集成开发环境 (IDE)。 将使用 Visual Studio 来编写代码、调试、测试和部署。 | **安装 Visual Studio 2019** <br> 请确保安装以下工作负载： <br><br>*● 使用 C++ 的桌面开发*<br>*● 通用 Windows 平台 (UWP) 开发*<br><br>在 UWP 工作负载内，如果要针对 HoloLens 进行开发，请务必选中以下可选组件：<br><br>*● USB 设备连接*<br><br>**有关 USB 连接性的说明**<br>需要在安装过程中选中“通过 USB 访问 IP”框（默认情况下未选中）。 这是通过 USB 与 HoloLens 进行通信所必需的。<br><br>**有关 Unity 的注意事项**<br>除非你有意尝试安装较新（非 LTS）版本的 Unity，否则我们建议不要将 Unity 工作负载作为 Visual Studio 安装的一部分进行安装，而是改为安装“Unity 2019 LTS”流。<br><br>**已知问题**<br>在 Visual Studio 2019 版本16.0 中调试混合现实应用时存在一些已知问题。  请确保更新到 Visual Studio 2019 版本 16.8 或更高版本。 |
 | ![Windows 徽标](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com//windows/downloads/windows-10-sdk" target="_blank">**Windows 10 SDK (10.0.18362.0)** （手动安装链接）</a> <br><br>提供用于在 HoloLens 2 上生成 Windows 10 应用的最新标头、库、元数据和工具。 | **要生成 HoloLens 2 应用，必须安装 Windows SDK 内部版本 18362 或更高版本。**<br> <br> 如果仅针对桌面 Windows Mixed Reality 头戴显示设备或 HoloLens（第 1 代）开发应用程序，则可以使用 Visual Studio 2017 安装的 Windows SDK。 |
-| ![Visual Studio 徽标](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2160829" target="_blank">HoloLens 2 仿真器（Windows Holographic 版本 20H2，2021 年 4 月更新）（安装链接：10.0.19041.1144）</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens（第一代）仿真器**（安装链接：10.0.17763.134）</a> <br><br>使用仿真器可在没有 HoloLens 的情况下在 HoloLens 虚拟机映像上运行应用程序。<br> <br> | 有关如何开始使用仿真器的详细信息，请参阅[使用 HoloLens 仿真器](../develop/platform-capabilities-and-apis/using-the-hololens-emulator.md)。<br> <br> 系统必须支持 Hyper-V 才能成功安装仿真器。 有关详细信息，请参阅下面的“系统要求”部分。 <br> <br> HoloLens（第一代）仿真器的说明 <br>  若要成功完成安装，需要 Visual Studio 2017。 若要使用 Visual Studio 2019 安装 HoloLens（第一代）仿真器，则需要取消选择 VS 模板，然后[从 Visual Studio Marketplace 进行安装](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)。 |
+| ![Visual Studio 徽标](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2162581" target="_blank">**HoloLens 2 仿真器（Windows 全息版 21H1，2021 年 5 月更新）** （安装链接：10.0.20346.1002）</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens（第一代）仿真器**（安装链接：10.0.17763.134）</a> <br><br>使用仿真器可在没有 HoloLens 的情况下在 HoloLens 虚拟机映像上运行应用程序。<br> <br> | 有关如何开始使用仿真器的详细信息，请参阅[使用 HoloLens 仿真器](../develop/platform-capabilities-and-apis/using-the-hololens-emulator.md)。<br> <br> 系统必须支持 Hyper-V 才能成功安装仿真器。 有关详细信息，请参阅下面的“系统要求”部分。 <br> <br> HoloLens（第一代）仿真器的说明 <br>  若要成功完成安装，需要 Visual Studio 2017。 若要使用 Visual Studio 2019 安装 HoloLens（第一代）仿真器，则需要取消选择 VS 模板，然后[从 Visual Studio Marketplace 进行安装](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)。 |
 
 ## <a name="install-your-engine-of-choice"></a>安装你选择的引擎
 

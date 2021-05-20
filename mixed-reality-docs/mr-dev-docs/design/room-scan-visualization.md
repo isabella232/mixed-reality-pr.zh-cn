@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，应用模式，设计，HoloLens，房间扫描，空间映射，网格，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens
-ms.openlocfilehash: 8c7f1ae95cfdb520e84835f7fd5d78522e62e341
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 87312a5d5361ac0e8c24a622cf69fe3e9b147ff5
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143613"
+ms.locfileid: "110196402"
 ---
 # <a name="room-scan-visualization"></a>房间扫描可视化
 
@@ -22,9 +22,11 @@ ms.locfileid: "110143613"
 * 要求用户使用布隆手势进入 Windows Mixed Reality 主页，并浏览他们希望用于体验的领域。 他们可以使用分流来确认设备是否知道所有必要的区域。
 * 在自己的应用程序中生成自定义浏览体验。
 
-在所有这些情况下，系统会存储浏览过程中收集的实际数据，而应用程序无需执行此操作。 若要查看房间扫描视觉对象的运行情况，请查看下面 [的设计全息影像-空间感知]() 视频演示：
+在所有这些情况下，系统会存储浏览过程中收集的实际数据，而应用程序无需执行此操作。 若要查看房间扫描视觉对象的运行情况，请查看下面 **的设计全息影像-空间感知** 视频演示：
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Spatial-Awareness-Chapter/player]
+
+*此视频取自 "设计全息影像" HoloLens 2 应用。下载并在 [此处](https://aka.ms/dhapp)享受完全体验。*
 
 ## <a name="device-support"></a>设备支持
 
@@ -52,7 +54,7 @@ ms.locfileid: "110143613"
 * 用户附近的用户总数需要成为体验的一部分
 * 用户应在何处着手改善数据
 
-用户不知道什么是 "良好" 扫描。 如果系统要求他们评估扫描（平面度、距离实际墙的距离等）时，需要显示或告知他们要查找什么。 开发人员应实现反馈循环，包括在扫描或探索阶段刷新空间映射数据。
+用户不知道什么是"好的"扫描。 如果系统要求他们评估扫描（平面度、距离实际墙的距离等）时，需要显示或告知他们要查找什么。 开发人员应实现反馈循环，包括在扫描或探索阶段刷新空间映射数据。
 
 在许多情况下，最好告诉用户需要执行哪些操作才能获得必要的扫描质量。 例如，查看上限、查看装饰后，等等。
 
@@ -79,7 +81,7 @@ ms.locfileid: "110143613"
 
 ### <a name="continuous-spatial-mapping"></a>连续空间映射
 
-某些应用程序可能依赖于继续扫描来刷新空间映射数据。
+某些应用程序可能依赖于继续扫描以刷新空间映射数据。
 
 **优点**
 * 无需在应用程序中提前构建单独的扫描或浏览体验。
