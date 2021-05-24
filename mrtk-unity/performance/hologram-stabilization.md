@@ -1,50 +1,50 @@
 ---
 title: 全息影像稳定化
-description: 处于不同环境和帧速率条件下的全息影像性能。
+description: 不同环境和帧速率条件下全息影像的性能。
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，环境跟踪，TMP，
-ms.openlocfilehash: e2c83e7e4ca909e31803d55aabbc0c2344e89139
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 环境跟踪， TMP，
+ms.openlocfilehash: 338ae2719764b84b7c58c1422e08fe02176eccf0
+ms.sourcegitcommit: b195b82f7e83e2ac4f5d8937d169e9dcb865d46d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143891"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110333429"
 ---
-# <a name="hologram-stabilization"></a>全息影像稳定性
+# <a name="hologram-stabilization"></a>全息影像稳定
 
 ## <a name="performance"></a>性能
 
-为了使底层混合现实平台和设备产生最佳结果，实现帧速率非常重要。 目标帧速率 (例如： 60 FPS 或 90 FPS) 在不同的平台和设备之间有所不同。 不过，以帧速率为的混合现实应用程序将具有稳定的全息影像，并具有有效的头跟踪、手动跟踪等。  
+为了使基础混合现实平台和设备产生最佳结果，必须实现帧速率。 目标帧速率 (例如 60 FPS 或 90 FPS) 平台和设备不同。 但是，满足帧速率的混合现实应用程序将具有稳定的全息影像以及高效的头部跟踪、手部跟踪等。  
 
 ## <a name="environment-tracking"></a>环境跟踪
 
-稳定的全息呈现很大程度上取决于平台 & 设备的头姿势跟踪。 Unity 将从相机中呈现每个帧，这是由基础平台估计和提供的。 如果此跟踪没有正确地遵循实际头运动，则全息影像将显示不准确。 这对于 AR 设备（如 HoloLens）尤其明显且非常重要，用户可在其中将虚拟全息关联到现实世界。 性能对于可靠的头跟踪非常重要，但也有 [其他重要功能](/windows/mixed-reality/environment-considerations-for-hololens)。 影响用户体验的环境元素类型将取决于目标平台细节。
+稳定的全息渲染严重依赖于平台和设备的头部&跟踪。 Unity 将呈现基础平台估计和提供的相机姿势中每个帧的场景。 如果此跟踪未正确跟踪实际头部移动，则全息影像在视觉上将显示不准确。 对于 HoloLens 等 AR 设备来说，这一点尤其明显，并且非常重要，用户可以将虚拟全息影像与现实世界关联。 性能对于可靠的头部跟踪非常重要，但也可能还有其他 [重要](/windows/mixed-reality/environment-considerations-for-hololens)功能。 影响用户体验的环境元素类型取决于目标平台的具体信息。
 
 ## <a name="windows-mixed-reality"></a>Windows Mixed Reality
 
-Windows Mixed Reality 平台提供了一些用于平台上的稳定影像的 [参考材料](/windows/mixed-reality/hologram-stability) 。 虽然开发人员可以利用这些重要工具来改进用户的全息图视觉体验。
+该Windows Mixed Reality平台提供了 [一些用于](/windows/mixed-reality/hologram-stability) 稳定平台上全息影像的参考资料。 不过，开发人员可以利用一些关键工具来改进用户的全息影像视觉体验。
 
 ### <a name="depth-buffer-sharing"></a>深度缓冲区共享
 
-Unity 开发人员可以选择使用平台共享应用程序的深度缓冲区。 这提供了一些信息，其中，对于当前帧，该平台可通过硬件辅助过程（称为 Late-Stage Reprojection）将其用于稳定的全息影像。
+Unity 开发人员可以选择与平台共享应用程序的深度缓冲区。 这提供了当前帧的全息影像存在位置的信息，平台可以利用这些信息通过硬件辅助过程（称为"重新Late-Stage来稳定全息影像。
 
-#### <a name="late-stage-reprojection"></a>后期阶段 reprojection
+#### <a name="late-stage-reprojection"></a>后期阶段重新项目
 
-在呈现帧结束时，Windows Mixed Reality 平台采用应用程序生成的颜色 & 深度呈现器目标，并转换最终屏幕输出，以考虑自上次头部姿势预测以来任何略微头部运动。 应用程序的游戏循环需要一段时间来执行。 例如，在 60 FPS 时，这意味着应用程序需要大约 16.667 毫秒来呈现帧。 即使这看起来可能只是一小段时间，用户头部的位置和方向也会发生变化，从而在渲染时为相机带来新的投影矩阵。 后期阶段重新项目会转换最终图像中的像素，以考虑到这一新透视图。
+在呈现帧的末尾，Windows Mixed Reality 平台使用应用程序生成的颜色 & 深度呈现目标，并转换最终屏幕输出，以考虑自上一次头姿势预测后的任何轻微运动。 应用程序的游戏循环需要执行时间。 例如，在 60 FPS，这意味着应用程序将占用 ~ 16.667 ms 来呈现帧。 尽管这可能看起来像是远少于的时间，但用户的位置和方向会变化，导致照相机呈现时的新投影矩阵。 后期阶段 reprojection 转换最终图像中的像素，以考虑此新透视。
 
 #### <a name="per-pixel-vs-stabilization-plane-lsr"></a>每像素与稳定平面 LSR
 
-根据设备终结点和在 Windows Mixed Reality 上运行的 OS 版本，Late-Stage重新保护算法将按像素或通过稳定平面 [执行](/windows/mixed-reality/hologram-stability#stabilization-plane)。
+根据 Windows Mixed Reality 设备上运行的设备终结点和操作系统版本，Late-Stage 的 Reprojection 算法将按像素或通过 [稳定平面](/windows/mixed-reality/hologram-stability#stabilization-plane)执行。
 
-##### <a name="per-pixel-depth-based"></a>基于每像素深度
+##### <a name="per-pixel-depth-based"></a>基于像素的深度
 
-基于每像素深度的重现涉及利用深度缓冲区修改每个像素的图像输出，从而稳定不同距离的全息影像。 例如，距离 1 米的球体可能位于距离 10 米的支柱的前面。 如果用户稍微倾斜了头部，表示球体的像素将不同于表示支柱的远距离像素的转换。 每像素重新预测将考虑每个像素的此距离差，以更准确地重新进行重现。
+基于像素深度的 reprojection 涉及到使用深度缓冲区来修改每个像素的图像输出，进而以不同的距离来修改稳定的全息影像。 例如，球1m 可能位于10m 的支柱的前面。 如果用户稍微倾斜其球，表示球的像素将具有不同的变换（表示支柱）。 以像素为单位的 reprojection 将在每个像素上考虑此距离差异，以获得更精确的 reprojection。
 
 ##### <a name="stabilization-plane"></a>稳定平面
 
-如果无法创建准确的深度缓冲区来与平台共享，另一种形式的 LSR 会利用稳定平面。 场景中的所有全息影像都将获得一些稳定，但全息影像在所需平面中会获得最大硬件稳定性。 平面的点和法线可以通过 Unity 提供的 *HolographicSettings.SetFocusPointForFrame* [API 提供给平台](/windows/mixed-reality/focus-point-in-unity)。
+如果无法创建与平台共享的准确的深度缓冲区，则另一种形式的 LSR 将使用稳定平面。 场景中的所有全息影像都将接收到一些稳定性，但所需平面的全息影像将接收到最大硬件稳定性。 可以通过 [Unity 提供](/windows/mixed-reality/focus-point-in-unity)的 *SetFocusPointForFrame* API 将平面的点和法线提供给平台。
 
 #### <a name="depth-buffer-format"></a>深度缓冲区格式
 
@@ -80,13 +80,13 @@ Unity 中的不[透明 gameobject](https://docs.unity3d.com/Manual/StandardShade
 
 ##### <a name="text-mesh-pro"></a>文本网格 Pro
 
-对于文本网格 Pro 对象，请选择 TMP GameObject 以在检查器中查看它。 在材料组件下，切换所分配材料的着色器，以使用 MRTK TextMeshPro 着色器。
+对于文本网格 Pro 对象，请选择 TMP GameObject 以在检查器中查看它。 在材料组件下，切换所分配材料的着色器以使用 MRTK TextMeshPro 着色器。
 
-![文本网格 Pro 深度缓冲区修复](../features/images/performance/TextMeshPro-DepthBuffer-Fix.PNG)
+![文本网格 Pro 深度缓冲修补程序](../features/images/performance/TextMeshPro-DepthBuffer-Fix.PNG)
 
 ##### <a name="custom-shader"></a>自定义着色器
 
-如果编写自定义着色器，将 [ZWrite](https://docs.unity3d.com/Manual/SL-CullAndDepth.html) 标志添加到 *Pass* 块定义的顶部，以将着色器配置为写入深度缓冲区。
+如果编写自定义着色器，请将 [ZWrite 标志](https://docs.unity3d.com/Manual/SL-CullAndDepth.html) 添加到 *传递* 块定义的顶部，以将着色器配置为写入深度缓冲区。
 
 ```
 Shader "Custom/MyShader"
@@ -103,15 +103,15 @@ Shader "Custom/MyShader"
 }
 ```
 
-##### <a name="opaque-backings"></a>不透明的后备
+##### <a name="opaque-backings"></a>不透明 backings
 
-如果上述方法对给定的方案不起作用， (即 使用 Unity UI) ，可能会将另一个对象写入深度缓冲区。 常见示例是在场景中的浮动面板上使用 Unity UI 文本。 通过使面板不透明或至少写入深度，&面板的文本将被平台稳定，因为它们的 z 值非常接近。
+如果上面的方法不适用于给定方案 (即 使用 Unity UI) ，可以将另一个对象写入深度缓冲区。 常见的示例是在场景中的浮动面板上使用 Unity UI 文本。 通过使面板不透明或至少写入深度，该面板 & 的文本都将被平台稳定，因为其 z 值彼此接近。
 
-### <a name="worldanchors-hololens"></a>HoloLens (WorldAnchors) 
+### <a name="worldanchors-hololens"></a>WorldAnchors (HoloLens) 
 
-除了确保满足正确的配置以确保视觉稳定性外，必须确保全息影像在正确的物理位置保持稳定。 若要在物理空间中的重要位置通知平台，开发人员可以利用 GameObject 上需要停留在一个位置的[WorldAnchors。](https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html) [WorldAnchor](https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html)是添加到 GameObject 的组件，可绝对控制该对象的转换。
+除了确保满足正确的配置以确保视觉稳定性，还必须确保全息影像在正确的物理位置上保持稳定。 若要将平台通知到物理空间中的重要位置，开发人员可以利用 Gameobject 上的 [WorldAnchors](https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html) 。 [WorldAnchor](https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html)是一个添加到 GameObject 的组件，可对该对象的转换进行绝对控制。
 
-HoloLens 等设备不断扫描和了解环境。 因此，当 HoloLens 跟踪&移动位置时，其估计值将更新 [，Unity 坐标系会进行调整](/windows/mixed-reality/coordinate-systems-in-unity)。 例如，如果 GameObject 从相机开始放置 1 米，当 HoloLens 跟踪环境时，它可能会意识到 GameObject 所在的物理点实际距离 1.1 米。 这可能会导致全息影像偏移。 将 WorldAnchor 应用于 GameObject 将使定位点能够控制对象的转换，使对象保留在正确的物理位置 (即 在运行时) 更新为 1.1 m，而不是1m。 若要跨应用会话保持 [WorldAnchors](https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html) ，开发人员可以使用 [WorldAnchorStore](https://docs.unity3d.com/ScriptReference/XR.WSA.Persistence.WorldAnchorStore.html) 来 [保存和加载 WorldAnchors](/windows/mixed-reality/persistence-in-unity)。
+HoloLens 等设备会持续扫描并了解环境。 因此，当 HoloLens 在空间中 & 位置跟踪移动时，将更新其估计值并 [调整 Unity 坐标系统](/windows/mixed-reality/coordinate-systems-in-unity)。 例如，如果 GameObject 是从照相机开始，而在 HoloLens 跟踪环境时，它可能会认识到 GameObject 所在的物理点实际上是 1.1 m。 这将导致全息图偏移。 将 WorldAnchor 应用于 GameObject 会使定位点控制对象的转换，以便对象将保留在正确的物理位置 (即 在运行时) 更新为 1.1 m，而不是1m。 若要跨应用会话保持 [WorldAnchors](https://docs.unity3d.com/ScriptReference/XR.WSA.WorldAnchor.html) ，开发人员可以使用 [WorldAnchorStore](https://docs.unity3d.com/ScriptReference/XR.WSA.Persistence.WorldAnchorStore.html) 来 [保存和加载 WorldAnchors](/windows/mixed-reality/persistence-in-unity)。
 
 > [!NOTE]
 > 将 WorldAnchor 组件添加到 GameObject 后，不能修改该 GameObject 的转换 (例如 transform： position = x) 。 开发人员必须删除 WorldAnchor 才能编辑转换。
@@ -133,7 +133,7 @@ public void RemoveAnchor()
 如果你想要使用其他方法手动处理锚点，请查看 Microsoft World 锁定工具。 
 
 > [!div class="nextstepaction"]
-> [具有 MR 功能工具的安装](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/HowTos/WLTviaMRFeatureTool.html)
+> [用 MR 功能工具安装](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/HowTos/WLTviaMRFeatureTool.html)
 
 ## <a name="see-also"></a>另请参阅
 

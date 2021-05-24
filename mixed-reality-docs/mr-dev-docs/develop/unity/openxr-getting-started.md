@@ -1,28 +1,29 @@
 ---
-title: 为 Unity 使用混合现实 OpenXR 插件
+title: 使用混合现实 OpenXR 插件
 description: 了解如何为 Unity 项目启用混合现实 OpenXR 插件。
 author: hferrone
 ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr，unity，hololens，hololens 2，混合现实，MRTK，混合现实工具包，扩充现实，虚拟现实，混合现实耳机，学习，教程，入门
-ms.openlocfilehash: 4c220deeca13c6807857375b71640207823b94ed
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: 733bbbd75dd170241e8781e24989d23902781fb9
+ms.sourcegitcommit: b195b82f7e83e2ac4f5d8937d169e9dcb865d46d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944658"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110333439"
 ---
-# <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>为 Unity 使用混合现实 OpenXR 插件
+# <a name="using-the-mixed-reality-openxr-plugin"></a>使用混合现实 OpenXR 插件
 
-从 Unity 版本2020.2 开始，Microsoft 的混合现实 OpenXR 插件包可通过 [混合现实功能工具](welcome-to-mr-feature-tool.md)获得。
+对于面向 Unity 2020 的开发人员构建 HoloLens 2 或混合现实应用程序，可以使用 OpenXR 插件代替 WindowsXR 插件，以实现更好的跨平台兼容性。  混合现实 OpenXR 插件还适用于最新的 [混合现实功能工具](welcome-to-mr-feature-tool.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
-* Unity 2020.3 LTS 或更高版本
-* Unity OpenXR 插件1.1.1 或更高版本
-* Visual Studio 2019 或更高版本
-* 在适用于 HoloLens 2 应用的 Unity 中安装 **UWP** 平台支持
+* 最新 Unity 2020.3 LTS，建议 2020.3.6 f1 或更高版本。
+* 最新 Unity OpenXR 插件，建议1.2 或更高版本
+* [适用于 HoloLens 2 开发的](/windows/mixed-reality/develop/install-the-tools?tabs=unity#installation-checklist)最新工具
+* 最新 MRTK (可选) ，建议版本2.6 或更高版本
+* 最新混合现实 OpenXR 插件，建议版本0.9.5 或更高版本
 
 > [!NOTE]
 > 如果要在 Windows 电脑上构建 VR 应用程序，则不一定需要混合现实 OpenXR 插件。 但是，如果要自定义 HP 回音 G2 控制器的控制器映射，或生成在 HoloLens 2 和 VR 耳机上都适用的应用，则需要安装该插件。
@@ -32,7 +33,7 @@ ms.locfileid: "107944658"
 用于 Unity 的 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 MRTK 版本 2 旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序开发。 该项目旨在降低准入门槛、创建混合现实应用程序，并随着我们的共同成长回馈社区。
 
 > [!div class="nextstepaction"]
-> [使用 MRTK 设置项目](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=openxr)
+> [使用 MRTK 设置项目](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=openxr)
 
 有关更多功能的详细信息，请参阅[关于 MRTK 的文档](/windows/mixed-reality/mrtk-unity)。
 
@@ -48,92 +49,72 @@ ms.locfileid: "107944658"
 
 ![在 unity 编辑器中打开的 "生成设置" 窗口的屏幕截图，其中突出显示了 Mac & 独立平台](images/wmr-config-img-3.png)
 
-如果面向的是 HoloLens 2，则需要切换到通用 Windows 平台：
+如果面向 HoloLens 2，则需要切换到以下通用 Windows 平台：
 
-1.  选择 **文件 > 生成设置 ...**
-2.  选择 "平台" 列表中的 "**通用 Windows 平台**"，然后选择 "**切换平台**"
-3.  将“体系结构”设置为“ARM 64” 
-4.  将“目标设备”设置为“HoloLens” 
-5.  将“生成类型”设置为“D3D” 
-6.  将“UWP SDK”设置为“最近安装的版本” 
-7.  将“生成配置”设置为“发布”，因为调试存在已知的性能问题 
+1. 选择 **"文件>生成设置..."**
+2. 在 **通用 Windows 平台** 列表中选择"交换平台 **"，然后选择"切换平台"**
+3. 将“体系结构”设置为“ARM 64” 
+4. 将“目标设备”设置为“HoloLens” 
+5. 将“生成类型”设置为“D3D” 
+6. 将“UWP SDK”设置为“最近安装的版本” 
 
-![在 unity 编辑器中打开的生成设置窗口的屏幕截图，其中通用 Windows 平台突出显示](images/wmr-config-img-4.png)
-
-设置平台后，需要让 Unity 知道在导出后创建 [沉浸式视图](../../design/app-views.md) 而不是2d 视图。
+![Unity 编辑器中打开的"生成设置"窗口的屏幕截图，其中通用 Windows 平台突出显示](images/wmr-config-img-4.png)
 
 ## <a name="configuring-xr-plugin-management-for-openxr"></a>为 OpenXR 配置 XR 插件管理
 
-若要将 OpenXR 设置为 Unity 中的运行时：
+若要在 Unity 中将 OpenXR 设置为运行时，请执行以下操作：
 
-1. 在 Unity 编辑器中，导航到 "**编辑 > 项目设置**"
-2. 在设置列表中，选择 " **XR 插件管理**"
-3. 选中 " **在启动时初始化 XR"** 和 " **OpenXR** " 框
-4. 如果面向 HoloLens 2，请确保位于 UWP 平台上，并选择 " **Microsoft HoloLens 功能集**"
+1. 在 Unity 编辑器中，导航到 **"编辑>项目设置"**
+2. 在"设置"列表中，选择 **"XR 插件管理"**
+3. 选中"**启动时初始化 XR"和****"OpenXR"** 框
+4. 如果以HoloLens 2为目标，请确保你位于 UWP 平台上，然后选择"Microsoft HoloLens **功能集"**
 
-![在 Unity 编辑器中打开的 "项目设置" 面板的屏幕截图，其中突出显示了 XR 插件管理](images/openxr-img-05.png)
+![Unity 编辑器中打开的项目设置面板的屏幕截图，其中突出显示了 XR 插件管理](images/openxr-img-05.png)
 
 ## <a name="optimization"></a>优化
 
-如果你正在开发 HoloLens 2，请导航到 **混合现实> OpenXR > 应用适用于 hololens 2 的推荐项目设置** ，以获得更好的应用性能。
+如果要针对 HoloLens 2 进行开发，请导航到"混合现实> **OpenXR >应用** 针对 HoloLens 2 的建议项目设置，以获得更好的应用性能。
 
-![所选 OpenXR 打开的混合现实菜单项的屏幕截图](images/openxr-img-08.png)
+![已选中 OpenXR 的混合现实菜单项的屏幕截图](images/openxr-img-08.png)
 
 > [!IMPORTANT]
-> 如果在 " **OpenXR" 插件** 旁出现一个红色警告图标，请单击该图标，然后选择 " **全部修复** "，然后继续。 Unity 编辑器可能需要自动重启以使更改生效。
+> 如果在 **OpenXR** 插件旁边看到红色警告图标，请单击该图标并选择" **全部修复** "，然后再继续。 Unity 编辑器可能需要自动重启以使更改生效。
 
 ![OpenXR 项目验证窗口的屏幕截图](images/openxr-img-06.png)
 
-你现在已准备好开始通过 Unity 中的 OpenXR 进行开发！  继续阅读下一节，了解如何使用 OpenXR 示例。
+现在，你已准备好在 Unity 中开始使用 OpenXR 进行开发！  继续学习下一部分，了解如何使用 OpenXR 示例。
 
-## <a name="try-out-the-unity-sample-scenes"></a>试用 Unity 示例场景
+## <a name="unity-sample-projects-for-openxr-and-hololens-2"></a>OpenXR 和 HoloLens 2 的 Unity 示例项目
 
-### <a name="hololens-2-samples"></a>HoloLens 2 示例
+请查看 [OpenXR Mixed Reality](https://github.com/microsoft/OpenXR-Unity-MixedReality-Samples) 示例存储库，了解示例 Unity 项目，了解如何使用混合现实 OpenXR 插件为 HoloLens 2 或混合现实头戴显示设备生成 Unity 应用程序。
 
-1. 在 Unity 编辑器中，导航到 "**窗口 >" 包管理器**"
-2. 在包列表中，选择 " **混合现实 OpenXR" 插件**
-3. 在 **示例** 列表中找到示例，然后选择 "**导入**"
+## <a name="using-mrtk-with-openxr-support"></a>使用具有 OpenXR 支持的 MRTK
 
-![已在 Unity 编辑器中打开 Unity 包管理器的屏幕截图，并选中混合现实 OpenXR 插件，并突出显示示例导入按钮](images/openxr-img-03.png)
+MRTK-Unity 2.5.3 版开始，支持混合现实 OpenXR 插件。
 
-<!-- ### For all other OpenXR samples
+1. 再次 [打开混合现实功能工具](welcome-to-mr-feature-tool.md) 以安装混合现实工具包（如果尚未安装）。 OpenXR 支持位于 **Foundation 包** 中。
+2. 转到检查器中的 MixedReality Toolkit 组件脚本，并切换到 **DefaultOpenXRConfigurationProfile** 配置文件：
 
-1. In the Unity Editor, navigate to **Window > Package Manager**
-2. In the list of packages, select **OpenXR Plugin**
-3. Locate the sample in the **Samples** list and select **Import**
+    ![在检查器中切换混合现实工具包组件中的 MRTK 配置的屏幕截图](images/openxr-img-11.png)
 
-![Screenshot of Unity Package Manager open in Unity editor with OpenXR Plugin selected and samples import button highlighted](images/openxr-img-10.png) -->
+    1. 有关迁移到 OpenXR 的更深入的信息，请参阅 [MRTK 文档](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)。
 
 > [!NOTE]
-> 更新包时，Unity 提供更新导入的示例的选项。  更新导入的示例将覆盖对示例和关联的资产所做的任何更改。
-
-## <a name="using-mrtk-with-openxr-support"></a>结合使用 MRTK 与 OpenXR 支持
-
-从2.5.3 版本开始，MRTK-Unity 支持混合现实 OpenXR 插件。
-
-1. 再次打开 [混合现实功能工具](welcome-to-mr-feature-tool.md) 以安装混合现实工具包（如果尚未安装）。 OpenXR 支持在 **基础** 包中提供。
-2. 转到检查器中的 MixedReality 工具包组件脚本，并切换到 **DefaultOpenXRConfigurationProfile** 配置文件：
-
-    ![在检查器的混合现实工具包组件中切换 MRTK 配置的屏幕截图](images/openxr-img-11.png)
-
-    1. 有关 [迁移到 OpenXR 的更深入信息](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)，请参阅 MRTK 文档。
-
-> [!NOTE]
-> 从 MRTK 的早期版本进行升级时，请确保以下行位于 **资产/MixedRealityToolkit/link.xml** 文件中：
+> 从以前版本的 MRTK 升级时，请确保以下行位于 **Assets/MixedRealityToolkit.Generated/link.xml** 文件中：
 >
 > ```xml
 > <assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
 > ```
 >
-> 如果开始使用 MRTK 2.5.4 或更高版本，则默认情况下会添加此行。
+> 如果从 MRTK 2.5.4 或更高版本开始，则默认情况下将添加此行。
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，你已为 OpenXR 配置了项目并有权访问示例，请查看我们的 OpenXR 插件当前支持的 [功能](openxr-supported-features.md) 。
+为 OpenXR 配置项目并有权访问示例后，请查看 OpenXR 插件中[](openxr-supported-features.md)当前支持的功能。
 
-## <a name="have-feedback"></a>是否有反馈？
+## <a name="have-feedback"></a>有反馈？
 
-OpenXR 仍是实验性的，因此我们非常感谢你的反馈，你可以向我们提供更好的帮助。 你将在 [Unity 论坛](https://aka.ms/unityforums)上查找我们，方法是使用 **Microsoft**  +  **OpenXR** 和 **HoloLens 2** 或 **Windows Mixed Reality** 标记论坛帖子。
+OpenXR 仍处于试验阶段，因此，我们感谢你提供的任何反馈来帮助改进它。 使用 [](https://aka.ms/unityforums)**Microsoft**  +  **OpenXR** 标记你的论坛帖子，并HoloLens 2或 Windows Mixed Reality。 
 
 ## <a name="see-also"></a>另请参阅
 
