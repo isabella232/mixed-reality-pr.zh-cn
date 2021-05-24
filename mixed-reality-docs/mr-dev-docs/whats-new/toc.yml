@@ -18,6 +18,8 @@
   href: new-microsoft-edge.md
 - name: 计划和活动
   items:
+    - name: Build 2021 - 混合现实
+      href: mr-build.md
     - name: 混合现实演讲系列活动
       href: sf-academy-events.md
     - name: 混合现实开发人员日
