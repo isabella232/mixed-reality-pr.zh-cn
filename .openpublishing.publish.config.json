@@ -15,6 +15,20 @@
       "template_folder": "_themes"
     },
     {
+      "docset_name": "maquette",
+      "build_source_folder": "maquette",
+      "build_output_subfolder": "maquette",
+      "locale": "zh-cn",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "mixed-reality-docs",
       "build_source_folder": "mixed-reality-docs/mr-dev-docs",
       "build_output_subfolder": "mixed-reality-docs/mr-dev-docs",
@@ -35,10 +49,12 @@
       "build_source_folder": "mrtk-unity",
       "build_output_subfolder": "mrtk-unity",
       "locale": "zh-cn",
-      "monikers": [],
-      "moniker_ranges": [],
       "xref_query_tags": [
         "/dotnet"
+      ],
+      "monikers": [],
+      "moniker_ranges": [
+        ">= mrtkunity-2021-01"
       ],
       "open_to_public_contributors": false,
       "type_mapping": {
@@ -49,10 +65,8 @@
       "docset_name": "mrtk-unreal",
       "build_source_folder": "mrtk-unreal",
       "build_output_subfolder": "mrtk-unreal",
-      "locale": "zh-cn",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -80,12 +94,6 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
-      "branch_mapping": {}
-    },
-    {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/MicrosoftDocs/mixed-reality-pr",
       "branch": "live",
@@ -93,6 +101,12 @@
         "live": "live",
         "main": "main"
       }
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
