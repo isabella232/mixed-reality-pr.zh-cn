@@ -4,50 +4,46 @@ description: MRTK 中的手动交互示例
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 手部交互， 边界控制， 可按下按钮，
-ms.openlocfilehash: 1cbf4efe9075ea6e86401e041cdf5b07098b22e0
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，手型交互，边界控制，Pressable 按钮，
+ms.openlocfilehash: 229933dfd2414e485da6c1a77a2ffb08c9982249
+ms.sourcegitcommit: 2f69fb62eb81f91e655d7b55306b0550a1162496
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144670"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111908408"
 ---
-# <a name="hand-interaction-examples-scene"></a><span data-ttu-id="0889d-104">手部交互示例场景</span><span class="sxs-lookup"><span data-stu-id="0889d-104">Hand interaction examples scene</span></span>
+# <a name="hand-interaction-examples-scene"></a><span data-ttu-id="69400-104">手动交互示例场景</span><span class="sxs-lookup"><span data-stu-id="69400-104">Hand interaction examples scene</span></span>
 
-![手部交互示例 1](../images/MRTK_Examples.png)
+![手动交互示例1](../images/hand-interaction-examples/MRTK_HandInteractionExamples.png)
 
-<span data-ttu-id="0889d-106"> (`HandInteractionExamples` Assets/MRTK/Examples/Demos/HandTracking/Scene/HandInteractionExamples.unity) 示例场景包含各种类型的交互和 UI 控件，这些控件突出显示了明确手部输入。</span><span class="sxs-lookup"><span data-stu-id="0889d-106">The `HandInteractionExamples` (Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandInteractionExamples.unity) example scene contains various types of interactions and UI controls that highlight articulated hand input.</span></span>
+<span data-ttu-id="69400-106">**HandInteractionExamples** 示例场景包含各种类型的交互和 UI 控件，它们突出显示了可表述的手动输入。</span><span class="sxs-lookup"><span data-stu-id="69400-106">The **HandInteractionExamples** example scene contains various types of interactions and UI controls that highlight articulated hand input.</span></span> <span data-ttu-id="69400-107">借助 MRTK 的输入模拟，你可以在 Unity 编辑器中体验手动跟踪交互。</span><span class="sxs-lookup"><span data-stu-id="69400-107">With MRTK's input simulation, you can experience hand-tracking interactions in Unity editor.</span></span> 
+
+<span data-ttu-id="69400-108">**HandInteractionExamples** 场景包含在 MRTK 的示例包中。</span><span class="sxs-lookup"><span data-stu-id="69400-108">**HandInteractionExamples** scene is included in the MRTK's Examples package.</span></span> <span data-ttu-id="69400-109">可以通过 [混合现实功能工具](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)下载并导入 **混合现实工具包示例** 包</span><span class="sxs-lookup"><span data-stu-id="69400-109">You can download and import **Mixed Reality Toolkit Examples** package through [Mixed Reality Feature Tool](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)</span></span>
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_MRFT.png" width="550" alt="Example Package 1"><br/>
+
+<span data-ttu-id="69400-110">在 Unity 中，使用菜单窗口 > "包管理器" > 在 "项目 >" 自定义 "，然后选择 **混合现实工具包示例**。</span><span class="sxs-lookup"><span data-stu-id="69400-110">In Unity, use the menu Window > Package Manager > In Project > Custom and select **Mixed Reality Toolkit Examples**.</span></span> <span data-ttu-id="69400-111">单击 "**演示-HandTracking**" 旁边的 "**导入项目**" 按钮。</span><span class="sxs-lookup"><span data-stu-id="69400-111">Click **Import into Project** button next to **Demos - HandTracking**.</span></span> <span data-ttu-id="69400-112">你将能够在资产 > Samples 文件夹下找到 **HandInteractionExamples** 场景。</span><span class="sxs-lookup"><span data-stu-id="69400-112">You will be able to find **HandInteractionExamples** scene under Assets > Samples folder.</span></span>
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_2.png" width="300" alt="Example Package 2"><br/>
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_3.png" width="650" alt="Example Package 3"><br/>
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_4.png" width="650" alt="Example Package 4"><br/>
+
+* <span data-ttu-id="69400-113">如果不使用混合现实功能工具，则可以直接从 [MRTK GitHub 的发布页](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)中下载并导入 **MixedReality unitypackage**</span><span class="sxs-lookup"><span data-stu-id="69400-113">If you don't use Mixed Reality Feature Tool, you can directly download and import **Microsoft.MixedReality.Toolkit.Unity.Examples.unitypackage** from [MRTK GitHub's release page](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0889d-107">此示例场景使用 *TextMesh Pro*。</span><span class="sxs-lookup"><span data-stu-id="0889d-107">This example scene uses *TextMesh Pro*.</span></span> <span data-ttu-id="0889d-108">若要打开场景，请在导入场景期间显示相应的提示时单击"导入 *TMP Essentials"。*</span><span class="sxs-lookup"><span data-stu-id="0889d-108">To open the scene, click *'Import TMP Essentials'* when the respective prompt is shown during the import of the scene.</span></span> <span data-ttu-id="0889d-109">Unity 随后将导入 TextMesh Pro 包。</span><span class="sxs-lookup"><span data-stu-id="0889d-109">Unity will then import TextMesh Pro packages.</span></span>
+> <span data-ttu-id="69400-114">此示例场景使用 *TextMesh Pro*。</span><span class="sxs-lookup"><span data-stu-id="69400-114">This example scene uses *TextMesh Pro*.</span></span> <span data-ttu-id="69400-115">若要打开场景，请在导入场景时，单击 *"导入 TMP Essentials"* 。</span><span class="sxs-lookup"><span data-stu-id="69400-115">To open the scene, click *'Import TMP Essentials'* when the respective prompt is shown during the import of the scene.</span></span> <span data-ttu-id="69400-116">然后，Unity 将导入 TextMesh Pro 包。</span><span class="sxs-lookup"><span data-stu-id="69400-116">Unity will then import TextMesh Pro packages.</span></span>
 
 <img src="../images/hand-interaction-examples/MRTK_Examples_TMP2.png" width="450" alt="Example TMP2">
 
-<span data-ttu-id="0889d-110">如果在 TextMesh Pro 导入后看到大文本，请打开另一个 Unity 场景，然后再次打开示例场景。</span><span class="sxs-lookup"><span data-stu-id="0889d-110">If you see large text after the TextMesh Pro import, open another Unity scene and then open the example scene again.</span></span>
 
-<img src="../images/hand-interaction-examples/MRTK_Examples_TMP1.png" width="350" alt="Example TMP1">
 
-## <a name="pressable-button"></a><span data-ttu-id="0889d-111">可按按钮</span><span class="sxs-lookup"><span data-stu-id="0889d-111">Pressable button</span></span>
+<span data-ttu-id="69400-117">可以在 **HandInteractionExamples** 场景中体验这些组件</span><span class="sxs-lookup"><span data-stu-id="69400-117">You can experience these components in **HandInteractionExamples** scene</span></span>
 
-<span data-ttu-id="0889d-112">有关详细信息 [，](../ux-building-blocks/button.md) 请参阅按钮页。</span><span class="sxs-lookup"><span data-stu-id="0889d-112">See [button](../ux-building-blocks/button.md) page for the details.</span></span>
-<span data-ttu-id="0889d-113">![手部交互示例 2](../images/hand-interaction-examples/MRTK_Examples_PressTouch.png)</span><span class="sxs-lookup"><span data-stu-id="0889d-113">![Hand Interaction Examples 2](../images/hand-interaction-examples/MRTK_Examples_PressTouch.png)</span></span>
-
-## <a name="bounds-control"></a><span data-ttu-id="0889d-114">边界控制</span><span class="sxs-lookup"><span data-stu-id="0889d-114">Bounds Control</span></span>
-
-<span data-ttu-id="0889d-115">有关详细信息 [，请参阅边界](../ux-building-blocks/bounds-control.md) 控件页。</span><span class="sxs-lookup"><span data-stu-id="0889d-115">See [bounds control](../ux-building-blocks/bounds-control.md) page for the details.</span></span>
-<span data-ttu-id="0889d-116">![手部交互示例 3](../images/hand-interaction-examples/MRTK_Examples_BoundingBox.png)</span><span class="sxs-lookup"><span data-stu-id="0889d-116">![Hand Interaction Examples 3](../images/hand-interaction-examples/MRTK_Examples_BoundingBox.png)</span></span>
-
-## <a name="manipulation-handler"></a><span data-ttu-id="0889d-117">操作处理程序</span><span class="sxs-lookup"><span data-stu-id="0889d-117">Manipulation handler</span></span>
-
-<span data-ttu-id="0889d-118">有关详细信息 [，请参阅](../ux-building-blocks/manipulation-handler.md) 操作处理程序页。</span><span class="sxs-lookup"><span data-stu-id="0889d-118">See [manipulation handler](../ux-building-blocks/manipulation-handler.md) page for the details.</span></span>
-<span data-ttu-id="0889d-119">![手部交互示例](../images/hand-interaction-examples/MRTK_Examples_Manipulation.png)</span><span class="sxs-lookup"><span data-stu-id="0889d-119">![Hand Interaction Examples](../images/hand-interaction-examples/MRTK_Examples_Manipulation.png)</span></span>
-
-## <a name="slate"></a><span data-ttu-id="0889d-120">平板</span><span class="sxs-lookup"><span data-stu-id="0889d-120">Slate</span></span>
-
-<span data-ttu-id="0889d-121">有关详细信息 [，请参阅平板电脑](../ux-building-blocks/slate.md) 页。</span><span class="sxs-lookup"><span data-stu-id="0889d-121">See [slate](../ux-building-blocks/slate.md) page for the details.</span></span>
-<span data-ttu-id="0889d-122">![手部交互示例板](../images/hand-interaction-examples/MRTK_Examples_Slate.png)</span><span class="sxs-lookup"><span data-stu-id="0889d-122">![Hand Interaction Examples Slate](../images/hand-interaction-examples/MRTK_Examples_Slate.png)</span></span>
-
-## <a name="system-keyboard"></a><span data-ttu-id="0889d-123">系统键盘</span><span class="sxs-lookup"><span data-stu-id="0889d-123">System keyboard</span></span>
-
-<span data-ttu-id="0889d-124">有关详细信息 [，](../ux-building-blocks/system-keyboard.md) 请参阅系统键盘页。</span><span class="sxs-lookup"><span data-stu-id="0889d-124">See [system keyboard](../ux-building-blocks/system-keyboard.md) page for the details.</span></span>
-<span data-ttu-id="0889d-125">![手部交互示例键盘](../images/hand-interaction-examples/MRTK_Examples_Keyboard.png)</span><span class="sxs-lookup"><span data-stu-id="0889d-125">![Hand Interaction Examples Keyboard](../images/hand-interaction-examples/MRTK_Examples_Keyboard.png)</span></span>
+- [<span data-ttu-id="69400-118">可按按钮</span><span class="sxs-lookup"><span data-stu-id="69400-118">Pressable button</span></span>](../ux-building-blocks/button.md)
+- [<span data-ttu-id="69400-119">边界控件</span><span class="sxs-lookup"><span data-stu-id="69400-119">Bounds control</span></span>](../ux-building-blocks/bounds-control.md)
+- [<span data-ttu-id="69400-120">对象操控器</span><span class="sxs-lookup"><span data-stu-id="69400-120">Object manipulator</span></span>](../ux-building-blocks/object-manipulator.md)
+- [<span data-ttu-id="69400-121">平板</span><span class="sxs-lookup"><span data-stu-id="69400-121">Slate</span></span>](../ux-building-blocks/slate.md)
+- [<span data-ttu-id="69400-122">滑块</span><span class="sxs-lookup"><span data-stu-id="69400-122">Slider</span></span>](../ux-building-blocks/sliders.md)
+- [<span data-ttu-id="69400-123">系统键盘</span><span class="sxs-lookup"><span data-stu-id="69400-123">System keyboard</span></span>](../ux-building-blocks/system-keyboard.md)
