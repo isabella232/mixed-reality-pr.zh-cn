@@ -1,78 +1,78 @@
 ---
 title: Unity 中的运动控制器
-description: 了解如何使用 XR 和通用按钮和轴 Api 在 Unity 中通过运动控制器输入采取措施。
+description: 了解如何使用 XR 和常用按钮和轴 API 通过运动控制器输入在 Unity 中对凝视采取措施。
 author: hferrone
 ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
-keywords: 运动控制器，unity，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: d3df49c2f6c626e9f4eb47c38f4a8e61059a8438
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: 运动控制器， unity， 输入， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， MRTK， 混合现实工具包
+ms.openlocfilehash: ff1eedcc337edd2d7edfe8d961bb88bcb859cd23
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300472"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743487"
 ---
 # <a name="motion-controllers-in-unity"></a>Unity 中的运动控制器
 
-您可以通过两种主要方式在您的 [HMD 中进行](gaze-in-unity.md)操作，在 HoloLens 和沉浸式的中的 [手势](../../design/gaze-and-commit.md#composite-gestures) 和 [运动控制器](../../design/motion-controllers.md) 。 可以通过 Unity 中的相同 Api 访问空间输入的两个源的数据。
+在 Unity 中，有两种对凝视采取措施的关键[](../../design/gaze-and-commit.md#composite-gestures)方法[：HoloLens](gaze-in-unity.md)和沉浸式 HMD 中的手势和运动控制器。 [](../../design/motion-controllers.md) 可以通过 Unity 中的相同 API 访问两个空间输入源的数据。
 
-Unity 提供了两种主要方法来访问 Windows Mixed Reality 的空间输入数据。 常见的 *GetButton/GetAxis* api 跨多个 Unity XR sdk 工作，而特定于 Windows Mixed Reality 的 *InteractionManager/GestureRecognizer* api 会公开一组完整的空间输入数据。
+Unity 提供两种主要方法来访问空间输入数据Windows Mixed Reality。 常见的 *Input.GetButton/Input.GetAxis* API 可跨多个 Unity XR SDK 工作，而特定于 Windows Mixed Reality 的 *InteractionManager/GestureRecognizer* API 则公开一组完整的空间输入数据。
 
-## <a name="unity-xr-input-apis"></a>Unity XR 输入 Api
+## <a name="unity-xr-input-apis"></a>Unity XR 输入 API
 
-对于新项目，建议从头开始使用新的 XR 输入 Api。 
+对于新项目，我们建议从头开始使用新的 XR 输入 API。 
 
-可在此处找到有关 [XR api](https://docs.unity3d.com/Manual/xr_input.html)的详细信息。
+可在此处找到 [有关 XR API 详细信息](https://docs.unity3d.com/Manual/xr_input.html)。
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Unity 按钮/轴映射表
 
-适用于 Windows Mixed Reality 运动控制器的 Unity 输入管理器支持通过 *GetButton/GetAxis* api 在下面列出的按钮和轴 id。 "Windows MR 特定" 列是指 *InteractionSourceState* 类型可用的属性。 以下各节将详细介绍其中的每个 Api。
+用于运动控制器的 Unity Windows Mixed Reality通过 *Input.GetButton/GetAxis* API 支持下面列出的按钮和轴 ID。 "特定于 Windows MR"列是指 *InteractionSourceState* 类型中可用的属性。 以下各部分详细介绍了其中每个 API。
 
-Windows Mixed Reality 的按钮/轴 ID 映射通常与 Oculus 按钮/轴 Id 匹配。
+按钮/轴 ID 映射通常Windows Mixed Reality Oculus 按钮/轴 ID 匹配。
 
-Windows Mixed Reality 的按钮/轴 ID 映射在以下两个方面不同于 OpenVR 的映射：
-1. 该映射使用不同于操纵杆的触摸板 Id，以支持同时具有 thumbsticks 和触摸板的控制器。
-2. 映射避免了对菜单按钮的 A 和 X 按钮 Id 进行重载，以使它们可用于物理 ABXY 按钮。
+用于存储的按钮/轴 ID Windows Mixed Reality两个方面与 OpenVR 的映射不同：
+1. 映射使用与 thumbstick 不同的触摸板 ID 来支持具有指纹和触摸板的控制器。
+2. 映射可避免重载菜单按钮的 A 和 X 按钮 ID，使它们可用于物理 ABXY 按钮。
 
 <table>
 <tr>
-<th rowspan="2">输入 </th><th colspan="2"><a href="motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">通用 Unity API</a><br /> (GetButton/GetAxis)  </th><th rowspan="2"><a href="motion-controllers-in-unity.md#windows-specific-apis-xrwsainput">Windows MR 专用输入 API</a><br /> (XR。WSA.输入) </th>
+<th rowspan="2">输入 </th><th colspan="2"><a href="motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">通用 Unity API</a><br /> (Input.GetButton/GetAxis)  </th><th rowspan="2"><a href="motion-controllers-in-unity.md#windows-specific-apis-xrwsainput">特定于 Windows MR 的输入 API</a><br /> (XR。Wsa。输入) </th>
 </tr><tr>
-<th> 左手 </th><th> 右手</th>
+<th> 左侧 </th><th> 右侧</th>
 </tr><tr>
-<td> 选择触发按下 </td><td> 轴 9 = 1。0 </td><td> 轴 10 = 1。0 </td><td> selectPressed</td>
+<td> 选择按下的触发器 </td><td> 轴 9 = 1.0 </td><td> 轴 10 = 1.0 </td><td> selectPressed</td>
 </tr><tr>
-<td> 选择触发器模拟值 </td><td> 轴9 </td><td> 轴10 </td><td> selectPressedAmount</td>
+<td> 选择触发器模拟值 </td><td> 轴 9 </td><td> 轴 10 </td><td> selectPressedAmount</td>
 </tr><tr>
-<td> 选择触发器部分按下 </td><td> 按钮 14 <i> (游戏板兼容) </i> </td><td> 按钮 15 <i> (游戏板兼容) </i> </td><td> selectPressedAmount &gt; 0。0</td>
+<td> 选择部分按下的触发器 </td><td> 按钮 14 <i> (游戏板) </i> </td><td> 游戏板<i> (按钮</i>15)  </td><td> selectPressedAmount &gt; 0.0</td>
 </tr><tr>
-<td> 按下菜单按钮 </td><td> 按钮 6 * </td><td> 按钮 7 * </td><td> menuPressed</td>
+<td> 按下菜单按钮 </td><td> 按钮 6* </td><td> 按钮 7* </td><td> menuPressed</td>
 </tr><tr>
-<td> 按下手柄按钮 </td><td> Axis 11 = 1.0 (没有模拟值) <br />按钮 4 <i> (游戏板兼容) </i> </td><td> 轴 12 = 1.0 (没有模拟值) <br />按钮 5 <i> (游戏板兼容) </i> </td><td> grasped</td>
+<td> 按下手柄按钮 </td><td> 轴 11 = 1.0 (无模拟) <br />按钮 4 <i> (游戏板) </i> </td><td> 轴 12 = 1.0 (无模拟) <br />按钮 5 <i> (游戏板) </i> </td><td> 抓住</td>
 </tr><tr>
-<td> 操纵杆 X <i> (左：-1.0，right： 1.0) </i> </td><td> 轴1 </td><td> 轴4 </td><td> thumbstickPosition</td>
+<td> Thumbstick X <i> (左侧：-1.0、右侧：1.0) </i> </td><td> 轴 1 </td><td> 轴 4 </td><td> thumbstickPosition.x</td>
 </tr><tr>
-<td> 操纵杆 Y <i> (顶部：-1.0、底部： 1.0) </i> </td><td> 轴2 </td><td> 轴5 </td><td> thumbstickPosition</td>
+<td> Thumbstick Y <i> (top： -1.0， bottom： 1.0) </i> </td><td> 轴 2 </td><td> 轴 5 </td><td> thumbstickPosition.y</td>
 </tr><tr>
-<td> 已按下操纵杆 </td><td> 按钮8 </td><td> 按钮9 </td><td> thumbstickPressed</td>
+<td> 已按下 Thumbstick </td><td> 按钮 8 </td><td> 按钮 9 </td><td> thumbstickPressed</td>
 </tr><tr>
-<td> 触摸板 X <i> (左：-1.0，右： 1.0) </i> </td><td> 轴 17 * </td><td> 轴 19 * </td><td> touchpadPosition</td>
+<td> Touchpad X <i> (左侧：-1.0、右侧：1.0) </i> </td><td> 轴 17* </td><td> 轴 19* </td><td> touchpadPosition.x</td>
 </tr><tr>
-<td> 触摸板 Y <i> (顶部：-1.0、底部： 1.0) </i> </td><td> Axis 18 * </td><td> 轴 20 * </td><td> touchpadPosition</td>
+<td> 触控板 Y <i> (顶部：-1.0，底部：1.0) </i> </td><td> 轴 18* </td><td> 轴 20* </td><td> touchpadPosition.y</td>
 </tr><tr>
-<td> 接触触摸板 </td><td> 按钮 18 * </td><td> 按钮 19 * </td><td> touchpadTouched</td>
+<td> 触摸的触摸板 </td><td> 按钮 18* </td><td> 按钮 19* </td><td> touchpadTouched</td>
 </tr><tr>
-<td> 已按触摸板 </td><td> 按钮 16 * </td><td> 按钮 17 * </td><td> touchpadPressed</td>
+<td> 已按下触摸板 </td><td> 按钮 16* </td><td> 按钮 17* </td><td> touchpadPressed</td>
 </tr><tr>
-<td> 6DoF 手柄姿势或指针姿势 </td><td colspan="2"> 仅限<i>抓握</i>： <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR。InputTracking. GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR.InputTracking.GetLocalRotation</a></td><td> Pass <i>手柄</i> 或 <i>指针</i> 作为参数： SourceState. sourcePose. TryGetPosition<br />sourceState.sourcePose.TryGetRotation<br /></td>
+<td> 6DoF 手柄姿势或指针姿势 </td><td colspan="2"> <i>仅</i> 手柄姿势 <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">：XR。InputTracking.GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR。InputTracking.GetLocalRotation</a></td><td> 将 <i>手柄</i> 或 <i>指针作为</i> 参数传递：sourceState.sourcePose.TryGetPosition<br />sourceState.sourcePose.TryGetRotation<br /></td>
 </tr><tr>
-<td> 跟踪状态 </td><td colspan="2"> <i>位置准确性和源丢失风险仅通过 MR 专用 API 提供</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState.sourcePose.positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceState. sourceLossRisk</a></td>
+<td> 跟踪状态 </td><td colspan="2"> <i>位置准确性和源丢失风险仅通过特定于 MR 的 API 提供</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState.sourcePose.positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceState.properties.sourceLossRisk</a></td>
 </tr>
 </table>
 
 >[!NOTE]
->这些按钮/轴 Id 不同于 Unity 用于 OpenVR 的 Id，因为 gamepads、Oculus 触控和 OpenVR 所使用的映射中出现冲突。
+>由于游戏板、Oculus Touch 和 OpenVR 使用的映射发生冲突，这些按钮/轴的ID 不同于 Unity 用于 OpenVR 的ID。
 
 <!-- ### Using HP Reverb G2 controllers
 
@@ -102,101 +102,101 @@ If you're using the HP Reverb G2 controllers, refer to the table below for butto
 </table> -->
 
 
-## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指针姿势
+## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指向姿势
 
-Windows Mixed Reality 支持各种外形规格的运动控制器。 每个控制器的设计不同于用户的位置与应用在呈现控制器时使用的自然 "转发" 方向之间的关系。
+Windows Mixed Reality支持各种外形因素中的运动控制器。 每个控制器的设计在用户手部位置与应用在呈现控制器时应该用于指向的自然"向前"方向之间的关系有所不同。
 
-为了更好地表示这些控制器，可以针对每个交互源来调查两种类型的姿势， **手柄姿势** 和 **指针姿势**。 手柄姿势和指针姿势坐标都由全局 Unity 世界坐标中的所有 Unity Api 表示。
+为了更好地表示这些控制器，可以针对每个交互源调查两种类型的姿势：手柄 **姿势** 和 **指针姿势**。 手柄姿势和指针姿势坐标都由全局 Unity 世界坐标的所有 Unity API 表示。
 
-### <a name="grip-pose"></a>抓握姿势
+### <a name="grip-pose"></a>手柄姿势
 
-**抓握姿势** 表示用户掌的位置，由 HoloLens 检测到或持有运动控制器。
+手柄 **姿势** 表示用户手部的位置，由 HoloLens 检测或持有运动控制器。
 
-在沉浸式耳机上，手柄姿势最适合用于呈现 **用户的手** 或 **持有用户的对象**。 可视化运动控制器时也使用手柄姿势。 用于运动控制器的 Windows 提供的 **呈现模型** 使用手柄姿势作为原点和旋转中心。
+在沉浸式头戴显示设备中，手柄姿势最适合用于呈现用户手部或用户手 **部中持有的对象**。 在可视化运动控制器时，也使用手柄姿势。 Windows **为运动控制器** 提供的可呈现模型使用手柄姿势作为旋转的原点和中心。
 
 手柄姿势的定义具体如下：
-* **手柄位置**：在固定控制器时，掌上质心，向左或向右调整以使其在手柄内居中。 在 Windows Mixed Reality 运动控制器上，此位置通常与 "抓住" 按钮对齐。
-* **手柄方向的右轴**：当你完全打开手形成一个平面的5指形姿势时，与你的掌上的光线 (从右手掌向后) 
-* **手柄方向的正向轴**：当您关闭手中的部分 (时，就如同按住控制器) 一样，通过您的非拇指形来表示 "转发" 的射线。
-* **手柄方向的上轴**：向右和向后定义隐含的上轴。
+* 手柄 **位置**：自然按住控制器时，通过向左或向右调整以将手柄中的位置居中时，手心中心。 在Windows Mixed Reality控制器上，此位置通常与"抓取"按钮对齐。
+* 手柄 **方向的** 右轴：完全打开手形成平面 5 指姿势时，与手部正常的射线从左 (向前，从右手心向后) 
+* 手柄方向 **的** 向前轴：当你部分关闭手部 (就像按住控制器) 一样，指向"向前"的射线通过由非滚动手指组成的管道。
+* 手柄 **方向的上轴**：右侧和向前定义隐含的向上轴。
 
-可以通过 Unity 的跨供应商输入 API (XR 来访问抓握姿势 *[。InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)。GetLocalPosition/旋转*) 或通过 WINDOWS MR (*sourcePose*，请求) 请求为 **抓握** 节点提供数据。
+可以通过 Unity 的跨供应商输入 API 或 XR 访问手柄 (*[姿势。InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)。GetLocalPosition/Rotation*) 或 Windows MR 特定的 API (*sourceState.sourcePose.TryGetPosition/Rotation，* 请求手柄节点节点的姿势) 。 
 
 ### <a name="pointer-pose"></a>指针姿势
 
-**指针姿势** 代表着控制器的末端。
+指针 **姿势** 表示指向向前的控制器的提示。
 
-系统提供的指针姿势最适合用于在 **呈现控制器模型本身** 时进行 raycast。 如果要渲染某个其他虚拟对象来替代控制器（如虚拟压力），则应指出该虚拟对象的最自然的射线，如沿应用定义的机枪模型的桶向下移动的射线。 由于用户可以看到虚拟对象，而不是物理控制器，因此，使用虚拟对象指向虚拟对象可能会更自然地使用应用。
+在呈现控制器模型本身时，系统提供的指针姿势最适合用于 **光线广播**。 如果要呈现一些其他虚拟对象（例如虚拟照片）来更换控制器，则应该指向该虚拟对象最自然的射线，例如沿应用定义的"手形"模型群移动的射线。 由于用户可以看到虚拟对象，而不是物理控制器，因此使用应用的用户可能更自然地指向虚拟对象。
 
-目前，指针姿势仅通过 Windows MR 专用 API TryGetPosition/轮换提供，并传入 InteractionSourceNode 作为参数传递 。 *sourceState/sourcePose。*
+目前，指针姿势仅在 Unity 中通过特定于 Windows MR 的 API *sourceState.sourcePose.TryGetPosition/Rotation* 提供，并作为参数传递 *InteractionSourceNode.Pointer。*
 
 ## <a name="controller-tracking-state"></a>控制器跟踪状态
 
-与耳机一样，Windows Mixed Reality 运动控制器不需要外部跟踪传感器的设置。 相反，控制器由耳机本身中的传感器跟踪。
+与头戴显示设备一样，Windows Mixed Reality控制器不需要设置外部跟踪传感器。 相反，控制器由头戴显示设备本身的传感器进行跟踪。
 
-如果用户将控制器移出耳机的视图，则在大多数情况下，Windows 将继续推断控制器位置。 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。
+如果用户将控制器从头戴显示设备视场中移开，则在大多数情况下，Windows 将继续推断控制器位置。 当控制器丢失视觉跟踪的时间足够长时，控制器的位置将下降至近似准确性位置。
 
-此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器指向和激活 UI 元素的应用程序可以正常运行，而无需用户注意。
+此时，系统会将控制器进行正文锁定，跟踪用户移动时的位置，同时仍使用其内部方向传感器公开控制器的真实方向。 许多使用控制器指向和激活 UI 元素的应用都可以正常运行，同时大致准确无误，而无需用户通知。
 
-为此，最好的方法是亲自尝试一下。 查看此视频，其中包含可在各种跟踪状态下使用运动控制器的沉浸式内容的示例：
+<!-- The best way to get a feel for this is to try it yourself. Check out this video with examples of immersive content that works with motion controllers across various tracking states:
 
 <br>
 
- >[!VIDEO https://www.youtube.com/embed/QK_fOFDHj0g]
+ >[!VIDEO https://www.youtube.com/embed/QK_fOFDHj0g] -->
 
-### <a name="reasoning-about-tracking-state-explicitly"></a>显式跟踪状态的推理
+### <a name="reasoning-about-tracking-state-explicitly"></a>有关显式跟踪状态的原因
 
-希望根据跟踪状态以不同方式对位置进行处理的应用可能会进一步检查控制器状态的属性，如 *SourceLossRisk* 和 *PositionAccuracy*：
+希望根据跟踪状态以不同方式处理位置的应用可能会进一步检查控制器状态的属性，例如 *SourceLossRisk* 和 *PositionAccuracy*：
 
 <table>
 <tr>
 <th> 跟踪状态 </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>高准确度</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>准确度高</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>高准确度 (丢失) 的风险 </b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>高准确度 (有丢失数据) </b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>近似准确度</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>近似准确度</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>无位置</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
+<td> <b>无位置</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
 这些运动控制器跟踪状态的定义如下：
-* **高准确度：** 尽管运动控制器位于耳机的视图中，但它通常会根据视觉对象跟踪提供高准确性位置。 一种移动控制器，该控制器暂时离开了 "查看" 字段或暂时不能从耳机传感器中遮盖 (例如，根据用户的另一种情况，) 将继续根据控制器本身的惯性跟踪来返回高准确度姿势。
-* **高准确度 (丢失) 的风险：** 当用户将运动控制器移出耳机的视图边缘后，耳机不久就无法直观地跟踪控制器的位置。 此应用通过查看 **SourceLossRisk** 到1.0，来了解控制器何时到达此 FOV 边界。 此时，应用程序可以选择暂停需要稳定的高质量姿势流的控制器手势。
-* **近似准确性：** 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。 此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器指向和激活 UI 元素的应用程序可以正常运行，而无需用户注意。 对于输入要求较高的应用，可以通过检查 **PositionAccuracy** 属性，从 **高** 准确度到 **接近** 准确性，从而为用户提供更多的 hitbox。
-* **无位置：** 尽管控制器可以在很长时间内正常运行，但有时系统也知道，甚至在当前情况下，该位置都没有意义。 例如，已打开的控制器可能从未被可视化地观察到，或者用户可能会关闭控制器，然后由其他人选取。 在这种情况下，系统不会提供应用程序的任何位置，并且 *TryGetPosition* 将返回 false。
+* **高精度：** 虽然运动控制器位于头戴显示设备视场内，但它通常基于视觉跟踪提供高精度位置。 暂时离开视场或被头戴显示设备传感器短暂遮盖（例如，被用户另一手遮挡）的移动控制器) 将基于控制器本身的惯性跟踪，在短时间内继续返回高精度姿势。 (
+* **高准确度 (有丢失数据) ：** 当用户将运动控制器移到头戴显示设备视场的边缘之后，头戴显示设备很快就会无法直观地跟踪控制器的位置。 应用通过看到 **SourceLossRisk** 达到 1.0，知道控制器何时到达此 FOV 边界。 此时，应用可以选择暂停需要稳定高质量手势流的控制器手势。
+* **近似准确度：** 当控制器丢失视觉跟踪的时间足够长时，控制器的位置将下降至近似准确性位置。 此时，系统会将控制器进行正文锁定，跟踪用户移动时的位置，同时仍使用其内部方向传感器公开控制器的真实方向。 许多使用控制器指向和激活 UI 元素的应用可以正常运行，同时大致准确，无需用户通知。 具有较重输入要求的应用可以选择通过检查 **PositionAccuracy** 属性来检测从"高准确度"到"近似准确度"的下降，例如，在此期间，在屏幕外目标上为用户提供更丰富的命中框。  
+* **无位置：** 虽然控制器可以长时间以近似精度运行，但有时系统知道，即使是人体锁定的位置目前也无意义。 例如，打开的控制器可能从未在视觉上观察到，或者用户可能会关闭随后由其他人选取的控制器。 此时，系统不会向应用提供任何位置 *，TryGetPosition* 将返回 false。
 
-## <a name="common-unity-apis-inputgetbuttongetaxis"></a>常见 Unity Api (GetButton/GetAxis) 
+## <a name="common-unity-apis-inputgetbuttongetaxis"></a>Input.GetButton/GetAxis (的常见 Unity API) 
 
-**命名空间：** *UnityEngine*、 *UnityEngine. XR*<br>
-**类型**： *输入*， *XR。InputTracking*
+**命名空间***：UnityEngine、UnityEngine.XR* <br>
+**类型**： *输入* *、XR。InputTracking*
 
-Unity 目前使用其常规 *输入. GetButton/GetAxis* Api 公开 [Oculus SDK](https://docs.unity3d.com/Manual/OculusControllers.html)、 [OpenVR SDK](https://docs.unity3d.com/Manual/OpenVRControllers.html) 和 Windows Mixed Reality 的输入，包括双手和运动控制器。 如果你的应用程序使用这些 Api 进行输入，则它可以在多个 XR Sdk （包括 Windows Mixed Reality）中轻松支持运动控制器。
+Unity 当前使用常规 *Input.GetButton/Input.GetAxis* API 公开 [Oculus](https://docs.unity3d.com/Manual/OculusControllers.html)SDK、OpenVR [SDK](https://docs.unity3d.com/Manual/OpenVRControllers.html) 和 Windows Mixed Reality 的输入，包括手部和运动控制器。 如果应用使用这些 API 进行输入，则可以轻松地支持跨多个 XR SDK（包括 Windows Mixed Reality）。
 
 ### <a name="getting-a-logical-buttons-pressed-state"></a>获取逻辑按钮的按下状态
 
-若要使用一般 Unity 输入 Api，通常先将按钮和轴向上滑到 [Unity 输入管理器](https://docs.unity3d.com/Manual/ConventionalGameInput.html)中的逻辑名称，然后将按钮或轴 id 绑定到每个名称。 然后，你可以编写引用该逻辑按钮/轴名称的代码。
+若要使用常规 Unity 输入 API，通常首先将按钮和轴与 [Unity 输入](https://docs.unity3d.com/Manual/ConventionalGameInput.html)管理器中的逻辑名称连接，将按钮或轴 ID 绑定到每个名称。 然后，可以编写引用该逻辑按钮/轴名称的代码。
 
-例如，若要将左运动控制器的触发器按钮映射到 "提交" 操作，请在 Unity 内执行 " **编辑 > 项目设置" > 输入** ，然后展开 "轴" 下 "提交" 部分的属性。 更改 " **正按钮** " 或 " **Alt 正** 向按钮" 属性以阅读 **游戏杆按钮 14**，如下所示：
+例如，若要将左侧运动控制器的触发器按钮映射到"提交"操作，请转到"编辑 **> 项目设置">** Unity 中的"输入"，然后展开"轴"下的"提交"部分的属性。 更改" **正按钮"** 或 **"Alt 正按钮** "属性以读取 **按钮 14，** 如下所示：
 
 ![Unity 的 InputManager](images/unity-input-manager.png)<br>
 *Unity InputManager*
 
-然后，你的脚本可以使用 *GetButton* 检查提交操作：
+然后，脚本可以使用 *Input.GetButton 检查"提交&quot;操作*：
 
 ```cs
-if (Input.GetButton("Submit"))
+if (Input.GetButton(&quot;Submit"))
 {
   // ...
 }
 ```
-可以通过在 "**轴**" 下更改 " **Size** " 属性来添加更多逻辑按钮。
+可以通过更改"轴"下的 **"大小"属性来****添加更多逻辑按钮**。
 
 ### <a name="getting-a-physical-buttons-pressed-state-directly"></a>直接获取物理按钮的按下状态
 
-还可以使用 *GetKey*，通过其完全限定的名称手动访问按钮：
+还可使用 *Input.GetKey* 按其完全限定名称手动访问按钮：
 
 ```cs
 if (Input.GetKey("joystick button 8"))
@@ -205,9 +205,9 @@ if (Input.GetKey("joystick button 8"))
 }
 ```
 
-### <a name="getting-a-hand-or-motion-controllers-pose"></a>获取手或运动控制器的姿势
+### <a name="getting-a-hand-or-motion-controllers-pose"></a>获取手部或运动控制器的姿势
 
-可以使用 XR 访问控制器的位置和旋转 *。InputTracking*：
+可以使用 XR 访问控制器的位置和 *旋转。InputTracking*：
 
 ```cs
 Vector3 leftPosition = InputTracking.GetLocalPosition(XRNode.LeftHand);
@@ -215,23 +215,23 @@ Quaternion leftRotation = InputTracking.GetLocalRotation(XRNode.LeftHand);
 ```
 
 > [!NOTE] 
-> 上面的代码代表控制器的手柄姿势 (其中，用户在其中保存控制器) ，这对于渲染用户的剑或压力或控制器本身的模型非常有用。
+> 上面的代码表示控制器的手柄姿势 (其中用户持有控制器) ，这可用于在用户手部或控制器本身的模型中呈现一个手部或手部。
 > 
-> 这种控制手柄的关系导致，指针 (在控制器的笔尖指向) 在控制器之间可能会有所不同。 目前，仅通过 MR 专用输入 API （在以下各节中介绍）才能访问控制器的指针姿势。
+> 此手柄姿势与指针姿势之间的关系 (控制器的指针指向的位置) 控制器之间可能有所不同。 目前，只有通过特定于 MR 的输入 API 才能访问控制器的指针姿势，如以下各节所述。
 
-## <a name="windows-specific-apis-xrwsainput"></a> (XR 的特定于 Windows 的 Api。WSA.输入) 
+## <a name="windows-specific-apis-xrwsainput"></a>XR 中特定于 Windows (API。Wsa。输入) 
 
 > [!CAUTION]
-> 如果你的项目使用的是任何 XR。WSA Api 在未来的 Unity 版本中，这些 Api 将在 XR SDK 的后面逐步推出。 对于新项目，建议从头开始使用 XR SDK。 可在此处找到有关 [XR 输入系统和 api](https://docs.unity3d.com/Manual/xr_input.html)的详细信息。
+> 如果项目正在使用任何 XR。WSA API 正在逐步淘汰，以在将来的 Unity 版本中支持 XR SDK。 对于新项目，我们建议从头开始使用 XR SDK。 可在此处找到有关 [XR 输入系统和 API 详细信息](https://docs.unity3d.com/Manual/xr_input.html)。
 
-**命名空间：** *UnityEngine. XR*<br>
-**类型**： *InteractionManager*、 *InteractionSourceState*、 *InteractionSource*、 *InteractionSourceProperties*、 *InteractionSourceKind*、 *InteractionSourceLocation*
+**命名空间***：UnityEngine.XR.WSA.Input*<br>
+**类型**：InteractionManager、InteractionSourceState、InteractionSource、InteractionSourceProperties、InteractionSourceKind、InteractionSourceLocation      
 
-若要获取有关 HoloLens) 和运动控制器的 Windows Mixed Reality 手型输入 (的更多详细信息，可以选择在 *XR* 命名空间下使用特定于 windows 的空间输入 api。 这样，你就可以访问其他信息，例如位置准确性或源种类，使你可以区分手和控制器。
+若要获取有关适用于 HoloLens) 和运动控制器的 Windows Mixed Reality 手动输入 (的更多详细信息，可以选择在 *UnityEngine.XR.WSA.Input* 命名空间下使用特定于 Windows 的空间输入 API。 这使你可以访问其他信息，例如位置准确性或源类型，使你能够将手和控制器分开。
 
-### <a name="polling-for-the-state-of-hands-and-motion-controllers"></a>对双手和运动控制器的状态进行轮询
+### <a name="polling-for-the-state-of-hands-and-motion-controllers"></a>轮询手部和运动控制器的状态
 
-使用 *GetCurrentReading* 方法，可以轮询每个交互源 (手型或运动控制器) 的此帧状态。
+可以使用 (*GetCurrentReading* 方法轮询手部或运动控制器) 每个交互源的状态。
 
 ```cs
 var interactionSourceStates = InteractionManager.GetCurrentReading();
@@ -240,15 +240,15 @@ foreach (var interactionSourceState in interactionSourceStates) {
 }
 ```
 
-返回的每个 *InteractionSourceState* 表示当前时刻的交互源。 *InteractionSourceState* 显示如下信息：
-*  (选择/菜单/抓住/触摸板/操纵杆) 出现哪些[类型的按下](../../design/motion-controllers.md)
+返回 *的每个 InteractionSourceState* 表示当前时刻的交互源。 *InteractionSourceState* 公开如下信息：
+* 选择 [/菜单](../../design/motion-controllers.md) / (/触摸板/Thumbstick) 
 
    ```cs
    if (interactionSourceState.selectPressed) {
        // ...
    }
    ```
-* 其他特定于运动控制器的数据，例如触摸板和/或操纵杆的 XY 坐标和接触状态
+* 特定于运动控制器的其他数据，例如触摸板和/或 thumbstick 的 XY 坐标和触摸状态
 
    ```cs
    if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) {
@@ -256,7 +256,7 @@ foreach (var interactionSourceState in interactionSourceStates) {
    }
    ```
 
-* 要了解源是手型还是运动控制器的 InteractionSourceKind
+* InteractionSourceKind，用于了解源是手还是运动控制器
 
    ```cs
    if (interactionSourceState.source.kind == InteractionSourceKind.Hand) {
@@ -264,9 +264,9 @@ foreach (var interactionSourceState in interactionSourceStates) {
    }
    ```
 
-### <a name="polling-for-forward-predicted-rendering-poses"></a>轮询前向预测呈现姿势
+### <a name="polling-for-forward-predicted-rendering-poses"></a>轮询向前预测的呈现姿势
 
-* 当轮询来自双手和控制器的交互源数据时，您获得的是向前预测的，这是框架的 photons 将达到用户的眼睛。  向前预测的姿势最适合用于 **呈现** 控制器或每个帧的持有对象。  如果使用的是针对控制器的给定按下或发布，则在使用下面所述的历史事件 Api 时，这将是最准确的。
+* 轮询来自手和控制器的交互源数据时，你获取的姿势是向前预测的，此时此帧的光子将到达用户眼睛。  向前预测的姿势最适合用于 **呈现每个** 帧的控制器或持有的对象。  如果以控制器的给定按下或发布为目标，如果使用下面所述的历史事件 API，则最准确。
 
    ```cs
    var sourcePose = interactionSourceState.sourcePose;
@@ -278,7 +278,7 @@ foreach (var interactionSourceState in interactionSourceStates) {
    }
    ```
 
-* 你还可以获取此当前帧的前推预测 head。  与源姿势一样，这对于 **呈现** 游标非常有用，但如果你使用下面所述的历史事件 api，则以给定的按下或释放为目标是最准确的。
+* 还可以获取此当前帧的向前预测头部姿势。  与源姿势一样，这可用于呈现光标，不过，如果使用下面所述的历史事件 API，面向给定的按下或发布将最准确。
 
    ```cs
    var headPose = interactionSourceState.headPose;
@@ -292,16 +292,16 @@ foreach (var interactionSourceState in interactionSourceStates) {
 
 ### <a name="handling-interaction-source-events"></a>处理交互源事件
 
-若要在输入事件的准确历史记录数据发生时处理输入事件，可处理交互源事件，而不是轮询。
+若要处理输入事件及其准确的历史姿势数据，可以处理交互源事件，而不是轮询。
 
 处理交互源事件：
-* 注册 *InteractionManager* 输入事件。 对于你感兴趣的每种类型的交互事件，你需要订阅该事件。
+* 注册 *InteractionManager* 输入事件。 对于你感兴趣的每种类型的交互事件，需要订阅它。
 
    ```cs
    InteractionManager.InteractionSourcePressed += InteractionManager_InteractionSourcePressed;
    ```
 
-* 处理事件。 订阅交互事件后，会在适当的时候获取回调。 在 *SourcePressed* 示例中，这会在检测到源后、发布或丢失之前。
+* 处理 事件。 订阅交互事件后，将在适当时获取回调。 在 *SourcePressed* 示例中，这将在检测到源之后以及释放或丢失源之前发生。
 
    ```cs
    void InteractionManager_InteractionSourceDetected(InteractionSourceDetectedEventArgs args)
@@ -317,33 +317,33 @@ foreach (var interactionSourceState in interactionSourceStates) {
 
 ### <a name="how-to-stop-handling-an-event"></a>如何停止处理事件
 
-如果不再对事件感兴趣或正在销毁已订阅事件的对象，则需要停止处理事件。 若要停止处理事件，请取消订阅该事件。
+如果不再对事件感兴趣，或者要销毁已订阅该事件的对象，则需要停止处理事件。 若要停止处理事件，请取消订阅该事件。
 
 ```cs
 InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSourcePressed;
 ```
 
-### <a name="list-of-interaction-source-events"></a>交互源事件的列表
+### <a name="list-of-interaction-source-events"></a>交互源事件列表
 
 可用的交互源事件包括：
-* *InteractionSourceDetected* (源成为活动) 
-* *InteractionSourceLost* (变为非活动状态) 
-* *InteractionSourcePressed* (点击，按下按钮或 "选择" 失措) 
-* *InteractionSourceReleased* (点击、按钮已释放或结束 "Select" 失措) 
-* *InteractionSourceUpdated* (移动或以其他方式更改某种状态) 
+* *InteractionSourceDetected (* 源变为活动) 
+* *InteractionSourceLost (* 变为非活动) 
+* *InteractionSourcePressed* (点击、按下按钮或"选择") 
+* *InteractionSourceReleased* (点击结束、按钮释放或"选择"话语结束) 
+* *InteractionSourceUpdated (* 移动或以其他方式更改某些状态) 
 
-### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>最准确地匹配新闻或发布的历史目标姿势的事件
+### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>历史目标事件造成与按下或发布最准确的匹配
 
-前面所述的轮询 Api 为应用程序带来了前推预测的姿势。  尽管这些预测的姿势最适用于渲染控制器或虚拟手持对象，但出于以下两个重要原因，未来的姿势并不是最佳目标：
-* 当用户按下控制器上的某个按钮时，系统收到该按键之前，蓝牙上可能会出现大约 20 ms 的无线延迟。
-* 然后，如果您使用的是前推预测型，则会有另一个 10-20 ms 应用于当前帧的 photons 将达到用户眼睛的时间。
+前面所述的轮询 API 为应用提供前向预测的姿势。  虽然这些预测的姿势最适合呈现控制器或虚拟桌面对象，但未来姿势并不是目标的最佳，有两个关键原因：
+* 当用户按下控制器上的按钮时，系统接收按下前，蓝牙上的无线延迟可能约 20 毫秒。
+* 然后，如果使用的是前向预测姿势，则还有 10-20 毫秒的向前预测应用于当前帧的光子到达用户眼睛的时间。
 
-这意味着，轮询会为你提供源姿势或 head 型，即从用户的头和用户在按下或释放发生时实际返回的位置为30-40 毫秒。  对于 HoloLens 手写输入，在没有无线传输延迟的情况下，可以使用类似的处理延迟来检测按键。
+这意味着轮询会提供源姿势或头部姿势，向前 30-40 毫秒，从用户头部和手在按下或松开时实际返回的 30-40 毫秒。  对于 HoloLens 手动输入，虽然没有无线传输延迟，但存在类似的处理延迟来检测按下。
 
-若要精确地根据用户的原始意图或按下控制器，应使用来自该 *InteractionSourcePressed* 或 *InteractionSourceReleased* 输入事件的历史源姿势或 head 姿势。
+若要根据用户对手或控制器按下的原始意图准确定位，应使用该 *InteractionSourcePressed* 或 *InteractionSourceReleased* 输入事件的历史源姿势或头部姿势。
 
-你可以从用户的头或其控制器使用历史姿势数据作为新闻或发布的目标：
-* 当该笔势或控制器按下时，头姿势会出现， **可用于确定** 用户的 [gazing](../../design/gaze-and-commit.md) ：
+可以使用来自用户头部或控制器的历史姿势数据的按下或释放目标：
+* 发生手势或控制器按下时头部姿势，可用于确定用户正在[的目标位置：](../../design/gaze-and-commit.md) 
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args) {
@@ -357,7 +357,7 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
    }
    ```
 
-* 当运动控制器按下时，源会出现，这可用于确定用户在何处定位控制器的 **目标** 。  这将是遇到按下的控制器的状态。  如果要渲染控制器本身，则可以请求指针（而不是手柄姿势），以从用户将考虑呈现的控制器的自然提示的那种情况下生成目标射线：
+* 源在运动控制器按下发生时的姿势，可用于确定用户指向控制器的位置。   这将是遇到按下的控制器的状态。  如果要呈现控制器本身，可以请求指针姿势而不是手柄姿势，以从用户将考虑的呈现控制器的自然提示中发射目标射线：
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args)
@@ -436,21 +436,21 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 
 ## <a name="motion-controllers-in-mrtk"></a>MRTK 中的运动控制器
 
-可以从输入管理器访问 [笔势和运动控制器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/controllers) 。
+可以从输入 [管理器访问手势](/windows/mixed-reality/mrtk-unity/features/input/controllers) 和运动控制器。
 
 ## <a name="follow-along-with-tutorials"></a>按照教程进行操作
 
-混合现实学院中提供了更详细的自定义示例的分步教程：
+混合现实学院中提供了分步教程和更详细的自定义示例：
 
 - [MR 输入 211：手势](tutorials/holograms-211.md)
 - [MR 输入 213：运动控制器](../../deprecated/mixed-reality-213.md)
 
-[![MR 输入 213-运动控制器](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
-*MR 输入 213-运动控制器*
+[![MR 输入 213 - 运动控制器](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
+*MR 输入 213 - 运动控制器*
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
+如果你遵循我们布局的 Unity 开发旅程，则你正在探索 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [手部和眼部跟踪](./hand-eye-in-unity.md)

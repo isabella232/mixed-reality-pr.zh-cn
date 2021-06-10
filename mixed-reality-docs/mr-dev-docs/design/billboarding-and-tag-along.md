@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，billboarding，标记和混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 48c7aa28217a38c6c226b65a6e16ed7c950cec59
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 0bd1ac2168284d714240c6775468a61ed3e665b8
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299882"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600336"
 ---
 # <a name="billboarding-and-tag-along"></a>公告和尾随
 
@@ -49,7 +49,7 @@ Billboarding 是一种可应用于混合现实中的对象的行为概念。 具
 ## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Billboarding 和标记 (混合现实工具包) 适用于 Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为 Billboarding 和标记的行为提供脚本。 将布告栏脚本分配到任何对象，以添加 billboarding 行为并使对象始终为你。 若要添加标记和行为，请使用 RadialView 脚本。 可以调整各种选项，如 lerping 时间、距离和角度。
 
-* [MRTK-径向视图规划求解](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#radialview)
+* [MRTK-径向视图规划求解](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#radialview)
 * [MRTK-布告栏脚本](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
 
 

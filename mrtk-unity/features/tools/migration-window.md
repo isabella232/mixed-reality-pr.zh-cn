@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 8e03848097c313a518f638de591f692ab71f0985
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: a6e268dd28be2a3d485f937ec5b5ce6b1f29851f
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143877"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647126"
 ---
 # <a name="migration-window"></a>迁移时限
 
@@ -21,7 +21,7 @@ ms.locfileid: "110143877"
 
 ## <a name="usage"></a>使用情况
 
-若要打开该窗口，请选择 "*混合现实工具包*  >  *实用工具*  >  *迁移" 窗口*。 在迁移窗口打开后，可以通过选择迁移处理程序的特定于组件的实现来启用选择模式导航选项卡。  
+若要打开该窗口，请选择 "**混合现实**  >  **工具包**  >  **实用工具**  >  **迁移" 窗口**。 在迁移窗口打开后，可以通过选择迁移处理程序的特定于组件的实现来启用选择模式导航选项卡。  
 
 ![迁移选择模式](../images/migration-window/MRTK_Migration_Modes.png)
 

@@ -1,16 +1,16 @@
 ---
-title: 使用 AR Foundation
-description: 在 unity 中使用 ARFoundation 的文档
+title: 'Android 和 iOS MRTK 配置 (ARFoundation) '
+description: 用于在 unity 中为 Android 和 iOS (ARFoundation) 配置 MRTK 的文档
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，AR Core，AR 工具包，iOS，IOS，Android，AR Foundation
-ms.openlocfilehash: 0f02eb94d95c2900348adaa9e1a02c3e54832a96
-ms.sourcegitcommit: 62beb626b2db6ce7df86014bd22bf1946b8906b9
+ms.openlocfilehash: 9f621008db76e3f8e443545b795db442d7c17dda
+ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "110207441"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110345130"
 ---
 # <a name="how-to-configure-mrtk-for-ios-and-android-experimental"></a>如何配置适用于 iOS 和 Android 的 MRTK [实验]
 
@@ -32,27 +32,27 @@ ms.locfileid: "110207441"
     | **Android** | **iOS** |
     | --- | --- |
     | AR Foundation  <br/> 版本：2.1。8 |  AR Foundation  <br/> 版本：2.1。8 |
-    | ARCore XR 插件 <br/> 版本：2.1.11 | ARKit XR 插件 <br/> 版本：2.1.9 |
+    | ARCore XR 插件 <br/> 版本：2.1.11 | ARKit XR 插件 <br/> 版本：2.1。9 |
 
-    **Unity 2020.1.x (目前不受正式支持，仅出于信息目的包含在)**
+    **目前尚不支持 Unity 2020.1 (，仅包含在信息中)**
 
     | **Android** | **iOS** |
     | --- | --- |
-    | AR Foundation  <br/> 版本：3.1.3 |  AR Foundation  <br/> 版本：3.1.3 |
-    | ARCore XR 插件 <br/> 版本：3.1.4 | ARKit XR 插件 <br/> 版本：3.1.3 |
+    | AR Foundation  <br/> 版本：3.1。3 |  AR Foundation  <br/> 版本：3.1。3 |
+    | ARCore XR 插件 <br/> 版本：3.1。4 | ARKit XR 插件 <br/> 版本：3.1。3 |
 
-1. 通过调用以下菜单项更新 MRTK UnityAR 脚本定义：UnityAR 中的混合现实 > 工具包 > 实用工具 > **UnityAR** >更新脚本定义
+1. 通过调用菜单项来更新 MRTK UnityAR 脚本定义： **混合现实 > 工具包 > 实用工具 > UnityAR > 更新脚本定义**
 
     ![更新脚本定义](../features/images/UpdateScriptingDefineUnityAR.png)
 
 
-## <a name="enabling-the-unity-ar-camera-settings-provider"></a>启用 Unity AR 相机设置提供程序
+## <a name="enabling-the-unity-ar-camera-settings-provider"></a>启用 Unity AR 照相机设置提供程序
 
-以下步骤将预先使用 MixedRealityToolkit 对象。 其他服务注册机构所需的步骤可能有所不同。
+以下步骤假定使用 MixedRealityToolkit 对象。 其他服务注册机构所需的步骤可能不同。
 
 1. 选择场景层次结构中的 MixedRealityToolkit 对象。
 
-    ![MRTK 配置的场景层次结构](../features/images/MRTK_ConfiguredHierarchy.png)
+    ![MRTK 配置场景层次结构](../features/images/MRTK_ConfiguredHierarchy.png)
 
 1. 选择 " **复制并自定义** "，克隆 MRTK 配置文件以启用自定义配置。
 
@@ -91,8 +91,8 @@ ms.locfileid: "110207441"
 
     iOS XR 插件管理：  ![ XR 插件管理 ios](../features/images/XRManagementiOS.png)
 
-1. 生成并运行场景
+1. 生成和运行场景
 
 ## <a name="see-also"></a>另请参阅
 
-- [Unity AR 相机设置](../features/camera-system/unity-ar-camera-settings.md)
+- [Unity AR 照相机设置](../features/camera-system/unity-ar-camera-settings.md)

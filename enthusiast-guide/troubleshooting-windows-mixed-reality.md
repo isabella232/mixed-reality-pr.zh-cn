@@ -4,12 +4,12 @@ description: 使用最新的 Windows Mixed Reality 故障排除，这超出了�
 ms.topic: article
 ms.author: rajhawar
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
-ms.openlocfilehash: b347145e73c3e3f96d9a387edbfdb6dc0360b094
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+ms.openlocfilehash: 24120e9c1bb34b8b32c00e2b677f530c4ba563ab
+ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196642"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110345080"
 ---
 # <a name="troubleshooting-in-windows-mixed-reality"></a>Windows Mixed Reality 疑难解答
 
@@ -49,14 +49,14 @@ ms.locfileid: "110196642"
 
 ### <a name="installation-and-setup-issues"></a>安装和设置问题
 
-有关安装、运行Windows Mixed Reality、安装错误、最低电脑要求或管理员权限的问题，请查看以下两个常见问题解答：
+对于安装、运行 Windows Mixed Reality、安装错误、最小 PC 要求或管理员权限的问题，请查看以下两个常见问题解答：
 
 - [安装错误](installation_errors.md)
-- [设置实际问题](wmr-setup-faq.yml)
+- [安装程序相关问题](wmr-setup-faq.yml)
 
 ### <a name="hardware-issues"></a>硬件问题
 
-有关物理头戴显示设备、电缆连接、连接错误、启动 混合现实门户以及黑色或空白头戴显示的问题，请查看以下文章：
+有关物理耳机设备、电缆连接、连接错误、启动混合现实门户以及黑色或空白耳机显示的问题，请查看以下文章：
 
 - [头戴显示设备连接性](headset-connectivity.md)
 - [头戴显示设备显示](headset-display.md)
@@ -64,22 +64,22 @@ ms.locfileid: "110196642"
 
 ### <a name="core-experience-issues"></a>核心体验问题
 
-如果在创建边界、听到或不听到声音、蓝牙音频或头戴显示设备跟踪时遇到问题，请查看以下常见问题解答：
+如果在创建边界、听力或听不到声音、蓝牙音频或耳机跟踪时遇到问题，请查看以下 Faq：
 
 - [有关边界的帮助](boundary-questions.md)
-- [针对最常见的语音和音频问题的 Suppprt](speech-and-audio.md)
+- [最常见语音和音频问题的 Suppprt](speech-and-audio.md)
 - [跟踪系统](tracking.md)
 
 ### <a name="vr-experience-issues"></a>VR 体验问题
 
-如果在使用 SteamVR 游戏、安装 Windows 开发人员模式或在浏览器中查看 WebVR 内容时遇到问题，可以阅读以下文章：
+如果遇到 SteamVR 游戏问题、安装 Windows 开发人员模式，或在浏览器中查看 WebVR 内容，以下文章是：
 
 - [支持 SteamVR](steamvr-questions.md)
 - [支持 WebVR](webvr-questions.md)
 
-### <a name="performance-issues-and-immersice-hardware-related-issues"></a>性能问题和沉浸式硬件相关问题
+### <a name="performance-issues-and-immersice-hardware-related-issues"></a>性能问题和 immersice 硬件相关问题
 
-如果你的电脑运行缓慢、变得太暖，或者只是遇到难受的视觉对象，我们介绍了：
+如果您的 PC 运行速度缓慢，在手边，甚至遇到不连贯的视觉对象，我们都能满足您的需求：
 
-- [与性能相关的一般问题](performance-questions.md)
+- [常规性能相关问题](performance-questions.md)
 - [沉浸式硬件相关问题](other-questions.md)

@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
-ms.openlocfilehash: 7964ecdc8adee7c61c4c7086b8d04983f6e3903f
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 112531a3248461a5b380ad4b93de34545a2f2c3f
+ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982790"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111403358"
 ---
 # <a name="1-adding-spatial-audio-to-your-unity-project"></a>1. 将空间音频添加到 Unity 项目
 
@@ -37,13 +37,12 @@ ms.locfileid: "105982790"
 * 一台 Windows 10 电脑，其中已[安装](../../install-the-tools.md)并配置正确的工具
 * 基本 C# 编程知识
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已装载 Unity 2019 LTS 且已添加通用 Windows 平台生成支持模块
+* 已装载 unity 2020/2019 LTS 的<a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity 中心</a>，并添加了通用 Windows 平台生成支持模块
 
 我们 **强烈建议** 先完成 [入门](mr-learning-base-01.md) 教程系列，或先熟悉 Unity 和 MRTK，然后再继续。
 
-> [!IMPORTANT]
->
-> * 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的所有 Unity 版本要求或建议。
+> [!Important]
+> 本系列教程支持 Unity 2020 LTS (当前 2020.3) 如果使用的是 Open XR 或 Windows XR 插件，同时还支持 Unity 2019 LTS (目前 2019.4) 如果使用的是旧的 WSA 或 Windows XR 插件。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求。
 
 ## <a name="creating-and-preparing-the-unity-project"></a>创建和准备 Unity 项目
 
@@ -57,11 +56,9 @@ ms.locfileid: "105982790"
 
 1. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 
-1. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+1. [导入混合现实工具包并配置 Unity 项目](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
 
-1. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-
-1. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene) 并为场景提供一个合适的名称，例如 *SpatialAudio*
+1. [创建和配置场景](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk) 并为场景提供一个合适的名称，例如 *SpatialAudio*
 
 然后，按照 [更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) 说明进行操作，以确保场景的 MRTK 配置文件为 **DefaultHoloLens2ConfigurationProfile** ，并将空间感知网格的显示选项改为 " **封闭**"。
 
@@ -74,15 +71,19 @@ ms.locfileid: "105982790"
 
 ## <a name="enable-the-microsoft-spatializer-plugin"></a>启用 Microsoft Spatializer 插件
 
-导入 **Microsoft Spatializer** 后，需要启用它。 打开 **> 项目设置-> 音频**"，然后将 **Spatializer 插件** 更改为" Microsoft Spatializer "。
+将 Microsoft Spatializer 导入 unity 项目后，将显示 " **MRTK 项目配置** 器" 窗口，使用 " **音频 Spatializer** " 下拉列表选择 **Microsoft Spatializer**，然后单击 "应用" 按钮应用该设置：
 
-![显示 spatializer 插件的项目设置](images/spatial-audio/spatial-audio-01-section3-step1-1.png)
+![MRTK 项目配置器](images/spatial-audio/spatial-audio-01-section3-step1-1.PNG)
+
+你还可以手动启用 Microsoft Spatializer：打开 **编辑 > 项目设置-> 音频**，然后将 **Spatializer 插件** 更改为 "Microsoft Spatializer"。
+
+![显示 spatializer 插件的项目设置](images/spatial-audio/spatial-audio-01-section3-step1-2.PNG)
 
 ## <a name="enable-spatial-audio-on-your-workstation"></a>启用工作站上的空间音频
 
 在桌面版本的 Windows 上，默认情况下禁用空间音频。 右键单击任务栏中的音量图标即可启用此项。 若要获得有关在 HoloLens 2 上收到的内容的最佳表示，请选择 " **空间音效-> Windows Sonic 用于耳机**"。
 
-![桌面空间音频设置](images/spatial-audio/spatial-audio-01-section4-step1-1.png)
+![桌面空间音频设置](images/spatial-audio/spatial-audio-01-section4-step1-1.PNG)
 
 > [!NOTE]
 > 仅当计划在 Unity 编辑器中测试项目时，才需要此设置。

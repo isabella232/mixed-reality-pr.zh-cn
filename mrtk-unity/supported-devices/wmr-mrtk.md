@@ -1,26 +1,35 @@
 ---
-title: 部署到 Hololens 和 WMR 设备
+title: 部署到 Hololens 和 WMR 头戴显示设备
 description: 介绍生成应用并将其部署到各种设备中的文档。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，Visual Studio
-ms.openlocfilehash: ec66c6ccb8cf1c702fed804230f5cf3ca0526139
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Visual Studio
+ms.openlocfilehash: 1547f0630d307e9e87505890adef4cad366d6c00
+ms.sourcegitcommit: 4c1dd5c22af69eeb192425118c2bfb95344b8dd9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109852338"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110441153"
 ---
-# <a name="building-and-deploying-mrtk-uwp"></a>生成并部署 MRTK (UWP) 
+# <a name="deploying-to-hololens-and-wmr-headsets"></a>部署到 Hololens 和 WMR 头戴显示设备
 
-若要在设备上将某应用作为独立应用来运行（对于 HoloLens,、Android、iOS 等），需要在 Unity 项目中执行生成和部署步骤。 生成和部署使用 MRTK 的应用就像生成和部署任何其他 Unity 应用一样。 不存在 MRTK 特定的说明。 请在下面查看详细步骤，了解如何生成和部署适合 HoloLens 的 Unity 应用。 在[发布版本](https://docs.unity3d.com/Manual/PublishingBuilds.html)中详细了解如何针对其他平台进行生成。
+有两种方法将使用 MRTK 构建的应用程序部署到 Windows 设备：Univeral Windows Platform (UWP) 和独立平台。 为 HoloLens 1 或 HoloLens 2的应用程序必须面向 UWP，而为 WMR 头戴显示设备构建的应用程序可能面向 UWP 或独立设备。
 
-## <a name="building-and-deploying-mrtk-to-hololens-1-hololens-2-and-wmr-headsets-uwp"></a>生成 MRTK 并将其部署到 HoloLens 1、HoloLens 2 和 WMR 耳机 (UWP) 
+## <a name="building-and-deploying-mrtk-to-hololens-1-hololens-2-and-wmr-headsets-uwp"></a>构建 MRTK 并部署到 HoloLens 1、HoloLens 2和 WMR 头戴显示设备 (UWP) 
 
-有关如何为 **hololens 1** 和 **HOLOLENS 2** (UWP) 进行生成和部署的说明，请参阅在 [设备上生成应用程序](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device)。 这些步骤还允许你部署到 **WMR 耳机**。
+有关如何为 **HoloLens 1** 和 HoloLens 2  (UWP) 的说明，请参阅生成应用程序 [到设备](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device)。 这些步骤还允许部署到 **WMR 头戴显示设备**。
 
-**提示：** 为 HoloLens 1、HoloLens 2 或 WMR 进行生成时，建议生成设置 "目标 SDK 版本" 和 "最低平台版本" 与下图中所示类似：
+> [!NOTE]
+> 在 Visual Studio 中将应用程序部署到设备时，Visual Studio配置方式略有不同，具体取决于设备。 配置如下
+>
+>| 平台 | 配置 | 体系结构 | 目标 |
+|---|---|---|---|
+| HoloLens 2 | Release 或 Master | ARM64 | 设备 |
+| HoloLens 1 | Release 或 Master | x86 | 设备 |
+| WMR 头戴显示设备 | Release 或 Master | X64 | 本地计算机 |
+
+**提示：** 为 HoloLens 1、HoloLens 2 或 WMR 进行生成时，建议将生成设置"目标 SDK 版本"和"最低平台版本"设置为如下图所示：
 
 ![“生成”窗口](../features/images/getting-started/BuildWindow.png)
 
@@ -50,9 +59,9 @@ ms.locfileid: "109852338"
 >
 > 如果需要使用 ARM 体系结构，请导航到“编辑”>“项目设置，播放器”，然后在“其他设置”菜单下，禁用“图形作业”  。 如果禁用“图形作业”，那么应用将能够对 Unity 2019.3.x 使用 ARM 生成体系结构进行部署，但建议使用 ARM64。
 
-## <a name="building-and-deploying-mrtk-standalone"></a>构建和部署 MRTK (独立) 
+## <a name="building-and-deploying-mrtk-to-wmr-headsets-standalone"></a>构建 MRTK 并部署到 WMR 头戴显示设备 (独立) 
 
-可在 WMR 耳机上使用独立的 MRTK 版本。 对于适合 WMR 头戴显示设备的独立版本，需额外执行下列步骤：
+MRTK 的独立版本可用于 WMR 头戴显示设备。 对于适合 WMR 头戴显示设备的独立版本，需额外执行下列步骤：
 
 > [!NOTE]
 > Unity 的 XR SDK 也支持独立版本中的原生 WMR，但它不需要 SteamVR 或 WMR 插件。 需要对 Unity 的旧版 XR 执行这些步骤。

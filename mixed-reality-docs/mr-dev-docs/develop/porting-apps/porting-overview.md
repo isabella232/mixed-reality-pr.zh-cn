@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 移植，unity，中间件，引擎，UWP，Win32
-ms.openlocfilehash: 5b89d3448a7baf12cc76dd3677140fcf6e297ee2
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 9b056bd81a725fea23c1e7f3bfcd9844680086c6
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299782"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600496"
 ---
 # <a name="porting-overview"></a>移植概述
 
@@ -35,7 +35,7 @@ ms.locfileid: "107299782"
 > [!CAUTION]
 > 尽管此版本的 Unity 提供了 XR SDK，但 Azure 空间锚不与此安装程序兼容。 将使用适用于 Unity 的 Azure 空间定位包的未来版本更新此建议。
 > 
-> * 如果不需要 Azure 空间锚，可以 [配置适用于 XR 的 Unity 项目](https://docs.unity3d.com/Manual/configuring-project-for-xr.html) 并 [开始 MRTK 和 XR SDK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk)。
+> * 如果不需要 Azure 空间锚，可以 [配置适用于 XR 的 Unity 项目](https://docs.unity3d.com/Manual/configuring-project-for-xr.html) 并 [开始 MRTK 和 XR SDK](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk)。
 > 
 > * 如果你当前使用的是项目中的 XR SDK，并且想要使用 Azure 空间锚，请卸载 XR SDK，并重新安装旧版 XR 包以恢复你的项目设置。
 

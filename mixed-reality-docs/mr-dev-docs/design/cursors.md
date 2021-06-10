@@ -1,21 +1,21 @@
 ---
-title: 光标
+title: 游标
 description: 对于目标向量，光标或指示器可为用户提供持续的反馈，以了解 HoloLens 对其意图的了解情况。
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (第一代) ，HoloLens 2，Mixed Reality，光标，目标，注视，手势，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，射线，输入
-ms.openlocfilehash: 744e75f4212046b7c237a6c6634a4980e9148b0e
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 829d7b3f766f848228946ee0a623f9f3013adca3
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300082"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600376"
 ---
-# <a name="cursors"></a>光标
+# <a name="cursors"></a>游标
 
-![光标](images/UX_Hero_Cursor.jpg)
+![游标](images/UX_Hero_Cursor.jpg)
 
 光标提供持续的反馈，其中基于耳机认为用户当前焦点在给定时间的位置。 光标反馈包括虚拟环境中的哪些区域、全息图或点对输入的响应。 尽管光标是设备理解用户注意的数字表示形式，但这与确定用户的意图并不相同。 光标反馈还允许用户了解系统对预期的响应。 你可以使用反馈将其意图传达给设备，从而提高用户信心。
 
@@ -33,7 +33,7 @@ ms.locfileid: "107300082"
     <tr>
         <td><strong>功能</strong></td>
         <td><a href="/hololens/hololens1-hardware"><strong>HoloLens（第 1 代）</strong></a></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
      <tr>
@@ -165,9 +165,9 @@ Ray 光标连接到最靠近的光线的末尾，以允许对不是手接触的�
 
 默认情况下， [MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)提供与 shell 的系统游标具有相同可视状态的 Prefab ([DefaultCursor) prefab。](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors) 它分配在 MRTK 的输入配置文件的“指针”下。 您可以根据自己的经验来替换/自定义此光标。 对于目视跟踪输入经验，MRTK 还提供了 EyeGazeCursor，它具有微妙的视觉对象，可将干扰降到最低。
 
-* [MRTK - 指针配置文件](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide#pointer-configuration)
-* [MRTK - 输入系统](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview)
-* [MRTK - 指针](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/pointers)
+* [MRTK - 指针配置文件](/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide#pointer-configuration)
+* [MRTK - 输入系统](/windows/mixed-reality/mrtk-unity/features/input/overview)
+* [MRTK - 指针](/windows/mixed-reality/mrtk-unity/features/input/pointers)
 
 ---
 

@@ -1,19 +1,19 @@
 ---
-title: 使用 Unity IL2CPP 进行托管调试
+title: 通过 Unity 进行托管调试
 description: 本文介绍如何在 Unity IL2CPP UWP 项目上运行托管调试器。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: unity，visual studio，调试，il2cpp，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，UWP
-ms.openlocfilehash: 4b21e4888e467e6bd5f1938024a1b8312d8ecbcb
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 8e3967971220fa453f4e60639bd08f2554a8dd7e
+ms.sourcegitcommit: 5617575cf550dd03fba0bfd5263e97972dcc646b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010238"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547078"
 ---
-# <a name="managed-debugging-with-unity-il2cpp"></a>使用 Unity IL2CPP 进行托管调试
+# <a name="managed-debugging-with-unity"></a>通过 Unity 进行托管调试
 
 按照以下步骤将托管调试器附加到适用于 HoloLens 和 HoloLens 2 的 Unity IL2CPP UWP 生成。
 

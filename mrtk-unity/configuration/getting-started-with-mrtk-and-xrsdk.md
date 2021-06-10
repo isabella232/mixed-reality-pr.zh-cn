@@ -1,16 +1,16 @@
 ---
-title: 与 MRTK 和 XRSDK 入门
-description: XRSDK 的 MRTK 的登陆页
+title: MRTK 和 XR SDK 入门
+description: MRTK with XR SDK 的登录页
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，XRSDK，
-ms.openlocfilehash: ef6d8c9205a9d801e8cb0ec2690d77b74c72b5fb
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，XRSDK，XR SDK
+ms.openlocfilehash: d3ff4306205cc6548bc5617d727f32a780855439
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143523"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647199"
 ---
 # <a name="getting-started-with-mrtk-and-xr-sdk"></a>MRTK 和 XR SDK 入门
 
@@ -37,32 +37,32 @@ XR SDK 管道当前支持3个平台： Windows Mixed Reality、Oculus 和 OpenXR
 3. 单击 "项目设置" 窗口中的 XR 插件管理选项卡。
 4. 请访问 "通用 Windows 平台设置"，并确保在 "插件提供程序" 下选中 "Windows Mixed Reality"。
 5. 请确保已选中 "在启动时初始化 XR"。
-6.  (**_编辑器中的 HoloLens 远程_** 处理是必需的，否则为可选) 转到"独立"设置，并确保Windows Mixed Reality插件提供程序下选中了"设置"。 另请确保选中"启动时初始化 XR"。
+6.  (**_编辑器内的 HoloLens 远程处理需要此项，否则) 选择_** "切换到独立设置，并确保在插件提供程序下检查 Windows Mixed Reality"。 还要确保已选中 "在启动时初始化 XR"。
 
-![选中"独立"选项卡的 XR 插件管理](images/xr-management-img-02.png)
+![已选择 "独立" 选项卡的 XR 插件管理](images/xr-management-img-02.png)
 
-7.  (**_可选_**) 单击"XR 插件管理"下的"Windows Mixed Reality"选项卡，并创建自定义设置配置文件以更改默认值。 如果设置列表已存在，则无需创建配置文件。
+7.  (**_可选_**) 单击 "XR 插件管理" 下的 "Windows Mixed Reality" 选项卡，并创建自定义设置配置文件以更改默认值。 如果已存在设置列表，则无需创建配置文件。
 
-![选中 Windows 选项卡的 XR 插件管理](images/xr-management-img-01.png)
+![选择了 "Windows" 选项卡的 XR 插件管理](images/xr-management-img-01.png)
 
 ### <a name="oculus"></a>Oculus
 
-1. 按照 [如何使用 XR SDK 管道在 MRTK](../supported-devices/oculus-quest-mrtk.md) 中配置 Oculus Quest 指南操作到最后。 本指南概述了将 Unity 和 MRTK 配置为使用 Oculus Quest 的 XR SDK 管道所需的步骤。
+1. 按照 [如何使用 XR SDK 管道指南在 MRTK 中配置 Oculus 的](../supported-devices/oculus-quest-mrtk.md) 操作。 本指南概述了将 Unity 和 MRTK 配置为使用 XR SDK 管道进行 Oculus 寻找所需的步骤。
 
 ### <a name="openxr-preview"></a>OpenXR (预览) 
 
 > [!IMPORTANT]
-> Unity 中的 OpenXR 仅在 Unity 2020.2 及更高版本上受支持。
+> Unity 中的 OpenXR 仅在 Unity 2020.2 和更高版本上受支持。
 >
 > 目前，它还仅支持 x64 和 ARM64 生成。
 
-1. 按照 [使用适用于 Unity 的混合现实 OpenXR 插件](/windows/mixed-reality/develop/unity/openxr-getting-started) 指南操作，包括配置 XR 插件管理和优化的步骤，将 OpenXR 插件安装到项目中。 确保已成功安装以下内容：
+1. 遵循 [使用 Mixed Reality OpenXR 插件了解 Unity](/windows/mixed-reality/develop/unity/openxr-getting-started) 指南，其中包括配置 XR 插件管理和优化以将 OpenXR 插件安装到项目的步骤。 确保已成功安装以下各项：
    1. XR 插件管理
    1. OpenXR 插件
    1. 混合现实 OpenXR 插件
-1. 转到"编辑>项目设置"。
-1. 单击"项目设置"窗口中的"XR 插件管理"选项卡。
-1. 确保选中"启动时初始化 XR"。
+1. 请参阅编辑 > 项目设置。
+1. 单击 "项目设置" 窗口中的 XR 插件管理选项卡。
+1. 请确保已选中 "在启动时初始化 XR"。
 1.  (**_可选_**) 如果面向 HoloLens 2，请确保位于 UWP 平台上，并选择 "Microsoft HoloLens 功能集"
 
 ![插件管理打开 XR](../features/images/xrsdk/PluginManagementOpenXR.png)
@@ -76,7 +76,73 @@ XR SDK 管道当前支持3个平台： Windows Mixed Reality、Oculus 和 OpenXR
 > 对于 MRTK 和 OpenXR 的初始版本，仅支持 HoloLens 2 表述的手势和 Windows Mixed Reality 运动控制器。 未来版本中将添加对其他硬件的支持。
 
 ## <a name="configuring-mrtk-for-the-xr-sdk-pipeline"></a>为 XR SDK 管道配置 MRTK
+::: moniker range=">= mrtkunity-2021-05" 
+如果使用的是 OpenXR，请选择 "DefaultOpenXRConfigurationProfile" 作为活动配置文件，或将其克隆以便进行自定义。
 
+如果在 XR 插件管理配置（如 Windows Mixed Reality 或 Oculus）中使用其他 XR 运行时，请选择 "DefaultXRSDKConfigurationProfile" 作为活动配置文件，或将其克隆以便进行自定义。
+
+这些配置文件在需要时设置为正确的系统和提供程序。 请参阅 [配置文件文档](../features/profiles/profiles.md#xr-sdk) ，以了解有关 XR SDK 的配置文件和示例支持的详细信息。
+
+若要将现有配置文件迁移到 XR SDK，应添加以下服务和数据访问接口。 你将能够在 XR SDK 选项卡下看到新的数据提供程序
+
+![XR SDK 选项卡](../features/images/xrsdk/XrsdkTabView.png)
+
+### <a name="camera"></a>照相机
+
+添加以下数据访问接口 
+
+| OpenXR | Windows Mixed Reality |
+|--------|-----------------------|
+| [`GenericXRSDKCameraSettings`](xref:Microsoft.MixedReality.Toolkit.XRSDK.GenericXRSDKCameraSettings) | [`XRSDK.WindowsMixedReality.WindowsMixedRealityCameraSettings`](xref:Microsoft.MixedReality.Toolkit.XRSDK.WindowsMixedReality.WindowsMixedRealityCameraSettings)**和**[`GenericXRSDKCameraSettings`](xref:Microsoft.MixedReality.Toolkit.XRSDK.GenericXRSDKCameraSettings) |
+
+![XR SDK 照相机设置](../features/images/xrsdk/CameraSystemXRSDK.png)
+
+### <a name="input"></a>输入
+
+添加以下数据访问接口 
+
+| OpenXR | Windows Mixed Reality |
+|--------|-----------------------|
+| [`OpenXRDeviceManager`](xref:Microsoft.MixedReality.Toolkit.XRSDK.OpenXR.OpenXRDeviceManager) | [`XRSDK.WindowsMixedReality.WindowsMixedRealityDeviceManager`](xref:Microsoft.MixedReality.Toolkit.XRSDK.WindowsMixedReality.WindowsMixedRealityDeviceManager) |
+
+__OpenXR__：
+
+![OpenXR 输入设置](../features/images/xrsdk/InputSystemOpenXR.png)
+
+__Windows Mixed Reality__：
+
+![XR SDK 输入设置](../features/images/xrsdk/InputSystemWMRXRSDK.png)
+
+### <a name="boundary"></a>边界
+
+添加以下数据访问接口 
+
+| OpenXR | Windows Mixed Reality |
+|--------|-----------------------|
+| [`XRSDKBoundarySystem`](xref:Microsoft.MixedReality.Toolkit.XRSDK.XRSDKBoundarySystem) | [`XRSDKBoundarySystem`](xref:Microsoft.MixedReality.Toolkit.XRSDK.XRSDKBoundarySystem) |
+
+![XR SDK 边界设置](../features/images/xrsdk/BoundarySystemXRSDK.png)
+
+### <a name="spatial-awareness"></a>空间感知
+
+添加以下数据访问接口 
+
+| OpenXR | Windows Mixed Reality |
+|--------|-----------------------|
+| 正在学习 | [`XRSDK.WindowsMixedReality.WindowsMixedRealitySpatialMeshObserver`](xref:Microsoft.MixedReality.Toolkit.XRSDK.WindowsMixedReality.WindowsMixedRealitySpatialMeshObserver) |
+
+![XR SDK 空间感知设置](../features/images/xrsdk/SpatialAwarenessXRSDK.png)
+
+### <a name="controller-mappings"></a>控制器映射
+
+如果使用自定义控制器映射配置文件，请打开其中一个配置文件并运行混合现实工具包-> 实用程序-> > 控制器映射配置文件 "菜单项，以确保定义了新的 XR SDK 控制器类型。
+
+## <a name="see-also"></a>另请参阅
+
+* [Unity 中的 AR 开发入门](https://docs.unity3d.com/Manual/AROverview.html)
+* [Unity 中的 VR 开发入门](https://docs.unity3d.com/Manual/VROverview.html)
+::: moniker-end
+::: moniker range="< mrtkunity-2021-05"
 如果使用的是 OpenXR，请选择 "DefaultOpenXRConfigurationProfile" 作为活动配置文件，或将其克隆以便进行自定义。
 
 如果在 XR 插件管理配置（如 Windows Mixed Reality 或 Oculus）中使用其他 XR 运行时，请选择 "DefaultXRSDKConfigurationProfile" 作为活动配置文件，或将其克隆以便进行自定义。
@@ -111,11 +177,11 @@ to
 |--------|-----------------------|
 | [`OpenXRDeviceManager`](xref:Microsoft.MixedReality.Toolkit.XRSDK.OpenXR.OpenXRDeviceManager) | [`XRSDK.WindowsMixedReality.WindowsMixedRealityDeviceManager`](xref:Microsoft.MixedReality.Toolkit.XRSDK.WindowsMixedReality.WindowsMixedRealityDeviceManager) |
 
-__OpenXR__：
+__OpenXR：__
 
 ![OpenXR 输入设置](../features/images/xrsdk/InputSystemOpenXR.png)
 
-__Windows Mixed Reality__：
+__Windows Mixed Reality：__
 
 ![XR SDK 输入设置](../features/images/xrsdk/InputSystemWMRXRSDK.png)
 
@@ -155,3 +221,4 @@ to
 
 * [Unity 中的 AR 开发入门](https://docs.unity3d.com/Manual/AROverview.html)
 * [Unity 中的 VR 开发入门](https://docs.unity3d.com/Manual/VROverview.html)
+::: moniker-end

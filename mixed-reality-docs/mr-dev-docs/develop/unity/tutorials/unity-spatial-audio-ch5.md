@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，音频混合器，SFX 回音
-ms.openlocfilehash: f7a5270d969f2e462db0244bd6c68b99347ae1a7
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 6f41fe904c21591915e0ef13b61dc6bff04527fe
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590719"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712672"
 ---
 # <a name="5-using-reverb-to-add-distance-to-spatial-audio"></a>5.使用混响为空间音频添加距离感
 
@@ -28,11 +28,11 @@ ms.locfileid: "99590719"
 
 在 [Spatializing button 交互声音教程](unity-spatial-audio-ch2.md)中，我们添加了一个混音器。 混音器默认包含一个名为 **Master** 的 **组**。 因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个组。 若要添加组，请在 **音频混合器** 中右键单击主组，选择 " **添加子组** " 并为 " _会议室效果_" 提供合适的名称：
 
-![添加子组](images/spatial-audio/spatial-audio-05-section1-step1-1.png)
+![添加子组](images/spatial-audio/spatial-audio-05-section1-step1-1.PNG)
 
 每个 **组** 都有自己的效果集。 通过在新组中单击 " **添加 ...** " 并选择 " **SFX 回音**"，向新组添加回音效果：
 
-![添加 SFX 回音](images/spatial-audio/spatial-audio-05-section1-step1-2.png)
+![添加 SFX 回音](images/spatial-audio/spatial-audio-05-section1-step1-2.PNG)
 
 在音频术语中，原始、unreverberated 的音频称为 _晾干路径_，筛选后的音频被称为 _湿路径_。 这两个路径都发送到音频输出，在此组合中，其相对强度称为 _湿/干燥混合_。 湿/干燥混合会对距离的理解产生很大影响。
 
@@ -41,7 +41,7 @@ ms.locfileid: "99590719"
 * 将 " **晾干级别** " 属性设置为最低 (-10000 mB) 
 * 将 " **房间" 属性** 设置为最高 (0 mB) 
 
-![SFX 回音属性](images/spatial-audio/spatial-audio-05-section1-step1-3.png)
+![SFX 回音属性](images/spatial-audio/spatial-audio-05-section1-step1-3.PNG)
 
 其他设置控制模拟房间的感觉。 具体而言， **衰减时间** 与感知到的空间大小相关。
 
@@ -56,14 +56,14 @@ ms.locfileid: "99590719"
 
 在层次结构中选择的 **四** 个步骤中，单击 "检查器" 窗口上的 "**添加组件**"，并将 "**房间效果" 发送级别 (脚本)**
 
-![添加发送级别脚本](images/spatial-audio/spatial-audio-05-section2-step1-1.png)
+![添加发送级别脚本](images/spatial-audio/spatial-audio-05-section2-step1-1.PNG)
 
 > [!NOTE]
 > 除非你启用 **Microsoft Spatializer** 插件的 **会议室效果发送级别** 功能，否则它不会将任何音频发送回 Unity 音频引擎以进行有效处理。
 
 " **房间效果发送级别** " 组件包括一个图形控件，该控件设置发送到 Unity 音频引擎以进行回音处理的音频级别。 若要打开图形控件，请单击 **房间效果发送级别**。  单击并向下拖动绿色曲线，将级别设置为30dB：
 
-![调整回音曲线](images/spatial-audio/spatial-audio-05-section2-step1-2.png)
+![调整回音曲线](images/spatial-audio/spatial-audio-05-section2-step1-2.PNG)
 
 接下来，取消注释 **SpatializeOnOff** 脚本中的4个注释行。 该脚本现在将如下所示：
 
@@ -129,7 +129,7 @@ public class SpatializeOnOff : MonoBehaviour
 * 将 " **房间效果组** " 属性设置为新的 "房间效果" 混音器组
 * 将 " **主组** " 属性设置为 "主混音器" 组
 
-![Spatialize 扩展](images/spatial-audio/spatial-audio-05-section2-step1-3.png)
+![Spatialize 扩展](images/spatial-audio/spatial-audio-05-section2-step1-3.PNG)
 
 ## <a name="congratulations"></a>祝贺
 

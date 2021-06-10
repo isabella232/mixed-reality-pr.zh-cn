@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Unity
-ms.openlocfilehash: ef326a4e4c9e34479cebacf3f3f575cd902ff24e
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: fd05f7f3b579522a1225e11b0411b255a43e1e3f
+ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144837"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110345090"
 ---
 # <a name="mrtk-project-configuration-dialog"></a>MRTK 项目配置对话框
 
@@ -47,32 +47,32 @@ ms.locfileid: "110144837"
 
 将空间感知注册为第31层，以实现 raycast 和物理学选项的简单一致的配置。
 
-### <a name="audio-spatializer"></a>音频空间化程序
+### <a name="audio-spatializer"></a>音频 spatializer
 
-音频空间化程序是解锁空间音效和位置音频功能的组件，使混合现实体验真正沉浸式。
+音频 spatializers 是用于解锁空间声音和位置音频功能的组件，使混合现实体验真正成为沉浸式体验。
 
 > [!NOTE]
-> 将音频空间化程序设置为"无"将禁用位置音频功能。
+> 将音频 spatializer 设置为 "无" 将禁用位置音频特征。
 
-#### <a name="common-spatializers"></a>常见空间化程序
+#### <a name="common-spatializers"></a>常见 spatializers
 
 - Microsoft Spatializer
 
-Microsoft 提供了空间化程序，支持对硬件加速进行HoloLens 2。
+Microsoft 提供的 spatializer 支持在 HoloLens 2 上利用硬件加速。
 
-此空间化程序通过 [NuGet](https://www.nuget.org/packages/Microsoft.SpatialAudio.Spatializer.Unity/) 和 [GitHub 提供](https://github.com/microsoft/spatialaudio-unity)。
+此 spatializer 通过 [NuGet](https://www.nuget.org/packages/Microsoft.SpatialAudio.Spatializer.Unity/) 和 [GitHub](https://github.com/microsoft/spatialaudio-unity)提供。
 
-有关 Microsoft 空间化程序的详细信息，请参阅 [空间音效文档](/windows/mixed-reality/spatial-sound-in-unity)。
+有关 Microsoft Spatializer 的更多详细信息，请参阅 [空间音效文档](/windows/mixed-reality/spatial-sound-in-unity)。
 
-- MS HRTF 空间化程序
+- MS HRTF Spatializer
 
-Microsoft Windows 空间化程序，由 Unity 作为 Windows Mixed Reality 和 Windows XR 平台包的一部分提供。
+由 Unity 作为 Windows Mixed Reality 和 Windows XR Platform 包的一部分提供的 Microsoft Windows spatializer。
 
-- 音频
+- Resonance 音频
 
-来自 Google 的由 Unity 提供的跨平台空间化程序。
+由 Unity 提供的来自 Google 的跨平台 spatializer。
 
-有关详细信息，请参阅 [Audio 文档](https://resonance-audio.github.io/resonance-audio/develop/unity/getting-started) 站点。
+有关详细信息，请参阅 [Resonance 音频文档](https://resonance-audio.github.io/resonance-audio/develop/unity/getting-started) 网站。
 
 ## <a name="universal-windows-platform-settings"></a>通用 Windows 平台设置
 
@@ -80,11 +80,11 @@ Microsoft Windows 空间化程序，由 Unity 作为 Windows Mixed Reality 和 W
 
 ### <a name="uwp-capabilities"></a>UWP 功能
 
-为应用程序启用通用 Windows 平台功能。 这些功能使平台能够通知和请求启用特定功能的权限。
+为通用 Windows 平台应用程序启用特定应用程序功能。 这些功能使平台能够通知并请求启用特定功能的权限。
 
 - 麦克风
 
-  允许通过麦克风捕获声音。
+  通过麦克风启用捕获声音。
 
 - Internet 客户端
 
@@ -133,8 +133,8 @@ Microsoft Windows 空间化程序，由 Unity 作为 Windows Mixed Reality 和 W
 
 ### <a name="set-required-architecture"></a>设置所需的体系结构
 
-设置"播放器 **设置**  >  **""其他设置**  >  **体系结构"** 的值，以强制实施 AR 应用程序的平台要求。
+设置 "**播放机设置**"  >  **其他设置**  >  **结构** 的值，以强制执行 AR 应用程序的平台要求。
 
-### <a name="set-camera-usage-descriptions"></a>设置相机使用情况说明
+### <a name="set-camera-usage-descriptions"></a>设置相机使用说明
 
-设置"播放器 **设置**  >  **"的值"其他设置** 相机使用情况说明"，该值用于请求使用  >  设备摄像头的权限。
+设置 **播放机设置** 的值  >  **其他设置**  >  **相机使用说明**，用于请求使用设备相机的权限。

@@ -1,39 +1,39 @@
 ---
-title: 空间音频教程-4。 在运行时启用和禁用空间音频
-description: 使用按钮来启用和禁用运行时音频的 spatialization。
+title: 空间音频教程 - 4. 在运行时启用和禁用空间音频
+description: 使用按钮可启用和禁用音频运行时的空间化。
 author: kegodin
 ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
-keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，head 相关传输函数，回音，Microsoft Spatializer
-ms.openlocfilehash: 26143975707b2cd6141803a6335cec89db5bbd26
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+keywords: 混合现实， unity， 教程， hololens2， 空间音频， MRTK， 混合现实工具包， UWP， Windows 10， HRTF， 与头部相关的传输函数， 混响， Microsoft 空间化程序
+ms.openlocfilehash: 9d0fa432f2e653cdd6820cb6c779cc1acc5c4b15
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590729"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712740"
 ---
-# <a name="4-enabling-and-disabling-spatialization-at-run-time"></a>4. 在运行时启用和禁用 spatialization
+# <a name="4-enabling-and-disabling-spatialization-at-run-time"></a>4.运行时启用和禁用空间化
 
 ## <a name="overview"></a>概述
 
-在本教程中，您将学习如何在运行时启用和禁用 spatialization，并在 unity 编辑器和 HoloLens 2 中对此进行测试。
+本教程介绍如何运行时启用和禁用空间化，以及如何在 unity 编辑器和HoloLens 2。
 
 ## <a name="objectives"></a>目标
 
-* 添加新脚本以控制游戏对象上的 spatialization
-* 从按钮操作驱动 spatialization 控件脚本
+* 添加新脚本以控制游戏对象上的空间化
+* 通过按钮操作驱动空间化控制脚本
 
-## <a name="add-spatialization-control-script"></a>添加 spatialization 控件脚本
+## <a name="add-spatialization-control-script"></a>添加空间化控制脚本
 
- 在项目窗口中右键单击，然后选择 "**创建**  >  **c # 脚本**" 以创建新的 c # 脚本，为脚本输入合适的名称，例如， _SpatializeOnOff_：
+ 在"项目"窗口中右键单击，然后选择"创建 C# 脚本"以创建新的 C# 脚本，输入脚本的合适名称，  >  例如 _SpatializeOnOff_：
 
-![创建脚本](images/spatial-audio/spatial-audio-04-section1-step1-1.png)
+![创建脚本](images/spatial-audio/spatial-audio-04-section1-step1-1.PNG)
 
-双击 "项目" 窗口中的脚本，在 Visual Studio 中将其打开。 将默认脚本内容替换为以下内容：
+双击"项目"窗口中的脚本，在"项目"窗口中Visual Studio。 将默认脚本内容替换为以下内容：
 
 > [!NOTE]
-> 脚本的几行被注释掉。以下各行将在 [下一章中取消注释：使用回音向空间音频添加距离](unity-spatial-audio-ch5.md)。
+> 脚本的几个行被注释掉。下一章：使用混响添加空间音频 的距离中 [将取消注释这些行](unity-spatial-audio-ch5.md)。
 
 ```c#
 using System.Collections;
@@ -91,39 +91,39 @@ public class SpatializeOnOff : MonoBehaviour
 ```
 
 > [!NOTE]
-> 若要启用或禁用 spatialization，此脚本只会调整 **spatialBlend** 属性，使 **spatialization** 属性保持启用状态。 在此模式下，Unity 仍会应用 **卷** 曲线。 否则，如果用户在远距离源时禁用了 spatialization，则会听到音量突然增加。
-> 如果希望完全禁用 spatialization，请修改脚本，同时调整 **SourceObject** 变量的 **spatialization** 布尔值属性。
+> 若要启用或禁用空间化，脚本仅调整 **spatialBlend** 属性，使 **空间化属性** 保留为启用状态。 在此模式下，Unity 仍应用"卷 **"** 曲线。 否则，如果用户在远离源时禁用空间化，他们将听到卷突然增加。
+> 如果希望完全禁用空间化，请修改脚本以同时调整 **SourceObject** 变量的空间化布尔属性。 
 
-## <a name="attach-your-script-and-drive-it-from-the-button"></a>附加脚本，然后从按钮中进行驱动器
+## <a name="attach-your-script-and-drive-it-from-the-button"></a>附加脚本，然后从按钮驱动它
 
-选择层次结构中的 **四** 个，并在 "检查器" 窗口中，使用 "添加组件" 按钮添加 **SpatializeOnOff (脚本)**
+在 **"** 层次结构"中选择"四边形"，在"检查器"窗口中，使用"添加组件"按钮添加 **SpatializeOnOff (脚本)**
 
-![将脚本添加到四个](images/spatial-audio/spatial-audio-04-section2-step1-1.png)
+![将脚本添加到四边形](images/spatial-audio/spatial-audio-04-section2-step1-1.PNG)
 
-在层次结构中找到 **PressableButtonHoloLens2**  >  **IconAndText**  >  **TextMeshPro**。
+在"层次结构"中，找到 **PressableButtonHoloLens2**  >  **IconAndText**  >  **TextMeshPro**。
 
-如果仍在层次结构中选择了 **Quad** 对象，则在 "检查器" 窗口中，找到 " **Spatialize On Off" (Script)** Component 并拖放 PressableButtonHoloLens2 的 **TextMeshPro** 组件。
+在" **层次结构** "中仍选中 Quad 对象时，在"检查器"窗口中，找到 **"Spatialize On (Script) "** 组件，然后拖放 PressableButtonHoloLens2 的 **TextMeshPro** 组件。
 
-![在层次结构中查找 PressableButtonHoloLens2 对象](images/spatial-audio/spatial-audio-04-section2-step1-2.png)
+![在层次结构中查找 PressableButtonHoloLens2 对象](images/spatial-audio/spatial-audio-04-section2-step1-2.PNG)
 
-若要将按钮设置为在释放按钮时调用 **SpatializeOnOff** 脚本，需要配置种不可交互脚本。
+若要设置按钮以在按钮释放时调用 **SpatializeOnOff** 脚本，需要配置可交互脚本。
 
-在 "层次结构" 窗口中，选择 " **PressableButtonHoloLens2**"。 在 "检查器" 窗口中，找到 **种不可交互 (Script)** 组件，并单击 OnClick ( # A3 事件下的 + 图标。
+在"层次结构"窗口中，选择 **"PressableButtonHoloLens2"。** 在"检查器"窗口中，找到"可 **交互** (脚本) 组件，然后单击 OnClick () 事件下的"+"图标。
 
-* 如果仍在 "层次结构" 窗口中选择 "PressableButtonHoloLens2" 对象，请在 "层次结构" 窗口中单击 "  "，并将 **该对象从**"层次结构" 窗口中拖到 "空 **None (") 对象** 中，然后将 ButtonParent 对象侦听此按钮中的按钮单击事件：
+* 在"层次结构"窗口中仍选中 **PressableButtonHoloLens2** 对象时，单击"四边形"对象并将其从"层次结构"窗口拖动到刚添加事件的空"无 (对象 **) "** 字段中，使 ButtonParent 对象侦听此按钮中的按钮单击事件：
 
-* 单击同一事件的“无函数”下拉列表。 然后选择 **SpatializeOnOff**  >  **SwapSpatialization ( # B1** 以打开和关闭空间音频
+* 单击同一事件的“无函数”下拉列表。 然后选择 **"SpatializeOnOff**  >  **SwapSpatialization () "** 以打开和关闭空间音频
 
-![按钮操作设置](images/spatial-audio/spatial-audio-04-section2-step1-3.png)
+![按钮操作设置](images/spatial-audio/spatial-audio-04-section2-step1-3.PNG)
 
 ## <a name="congratulations"></a>祝贺
 
-在本教程中，已学习了如何在运行时启用和禁用 spatialization、在 HoloLens 2 上或在 Unity 编辑器中测试应用程序。 在应用程序中，你现在可以单击该按钮以激活和停用 spatialization 的音频。
+在本教程中，你已了解如何在运行时启用和禁用空间化，以及如何在应用HoloLens 2 Unity 编辑器中测试应用。 在应用中，现在可以单击按钮来激活和停用音频的空间化。
 
-在下一教程中，你将添加一个回音效果，以便为声音指定距离。
+下一教程将添加混响效果，使声音具有距离感。
 
 > [!TIP]
 > 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。
 
 > [!div class="nextstepaction"]
-> [下一教程： 5. 使用回音向空间音频添加距离](unity-spatial-audio-ch5.md)
+> [下一教程：5.使用混响添加与空间音频的距离](unity-spatial-audio-ch5.md)

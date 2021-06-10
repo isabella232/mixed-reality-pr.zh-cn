@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，
-ms.openlocfilehash: c238ec41c75e565cc3eb2bb8bcb9b68eff015f59
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: 88aab47a943fd004ef0a90a8c6749da1a403ff2f
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944648"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600506"
 ---
 # <a name="start-your-vr-journey"></a>开始你的 VR 旅程
 
@@ -33,7 +33,7 @@ ms.locfileid: "107944648"
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [准备工作](before-you-start.md) | 请确保拥有启动 VR 旅程所需的一切 |
+| [开始之前](before-you-start.md) | 请确保拥有启动 VR 旅程所需的一切 |
 | [电脑硬件最低要求指南](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) | 你需要了解的有关运行 Windows Mixed Reality、Windows Mixed Reality 和 Windows Mixed Reality 门户应用程序的所有信息 |
 | [获取有关电脑兼容性的帮助](get-help-with-pc-compatibility.md) | 了解 Windows Mixed Reality PC 检查中生成的报告 |
 | [购买常见问题解答](before-you-buy-faqs.md) | 获取有关技术规格、设备和控制器的所有购买问题的解答 |
@@ -82,7 +82,7 @@ ms.locfileid: "107944648"
 | [使用 SteamVR](using-steamvr-with-windows-mixed-reality.md) | 连接设备并播放 SteamVR 游戏并了解 Windows 预览体验计划 |
 | [使用 Microsoft Edge](using-microsoft-edge.md) | 在沉浸式设备上安装最新版本的 Microsoft Edge |
 | [使用 WebVR](webvr.md) | 在浏览器环境中设置体验 VR |
-| [探索 AltspaceVR](https://docs.microsoft.com/windows/mixed-reality/altspace-vr/journey) | 通过 AltspaceVR 了解如何扩展 VR 事件 |
+| [了解 AltspaceVR](/windows/mixed-reality/altspace-vr/journey) | 通过 AltspaceVR 了解如何扩展 VR 事件 |
 
 ## <a name="troubleshooting-tips--resources"></a>故障排除、提示 & 资源
 

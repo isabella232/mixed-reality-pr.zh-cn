@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，设计，控件，ui，ux，进度指示器，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: e949d8805446429d3853a3fedb1b776c50c710dd
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 01f032efb887ecfc6f8d66683fb954cd0574a4f3
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299732"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600546"
 ---
 # <a name="progress-indicator"></a>进度指示器
 
@@ -31,7 +31,7 @@ ms.locfileid: "107299732"
 
 :::row:::
     :::column:::
-        ### <a name="progress-barbr"></a>进度条<br>
+        ### <a name="progress-barbr"></a>进度栏<br>
         进度栏显示任务完成的百分比。 它应在其持续时间已知 (确定性) 的操作过程中使用，但其进度不应阻止用户与应用程序交互。<br>
         <br>
         *图像： HoloLens 中的进度栏示例*
@@ -80,7 +80,7 @@ ms.locfileid: "107299732"
 
 ---
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
 * 将 [billboarding 或标记一起](billboarding-and-tag-along.md) 紧密地转换为进度的显示，因为用户可以轻松地将其标头移到空空间，并丢失上下文。 如果用户无法看到任何内容，你的应用可能看起来好像已崩溃。 Billboarding 和标记一起内置于 prefab 中。
 * 提供有关用户发生的情况的状态信息始终是好的。 进度 prefab 提供了各种视觉样式，包括用于提供状态的 Windows 标准环形类型进度。 如果希望进度的样式与应用的品牌保持一致，还可以将自定义网格与动画一起使用。
@@ -92,7 +92,7 @@ ms.locfileid: "107299732"
 ## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的进度指示器 (适用于 Unity 的混合现实工具包) 
 
 * [MRTK-进度指示器 prototyping](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/Features/UX/Prefabs/ProgressIndicators)
-* [MRTK-场景转换服务](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/extensions/scene-transition-service)
+* [MRTK-场景转换服务](/windows/mixed-reality/mrtk-unity/features/extensions/scene-transition-service)
 
 
 <br>

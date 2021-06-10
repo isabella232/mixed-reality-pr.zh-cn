@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，视频导入，视频播放器
-ms.openlocfilehash: 876918c3e886fae6cd2066d84c55a6e158e4c773
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 60b70fc3b7f49f5b39138a218f93c0b37f29b9d9
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590049"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712867"
 ---
 # <a name="3-spatializing-audio-from-a-video"></a>3.将视频中的音频空间化
 
@@ -30,11 +30,11 @@ ms.locfileid: "99590049"
 在本教程中，你可以从空间音频示例项目使用 [此视频](https://github.com/microsoft/spatialaudio-unity/blob/develop/Samples/MicrosoftSpatializerSample/Assets/Microsoft%20HoloLens%20-%20Spatial%20Sound-PTPvx7mDon4.mp4?raw=true) 。
 
 将视频导入 unity 项目。 在 Unity 菜单中，选择 "**资产**  >  **导入新资产** 
- ![ 导入资产"](images/spatial-audio/spatial-audio-03-section1-step1-1.png)
+ ![ 导入资产"](images/spatial-audio/spatial-audio-03-section1-step1-1.PNG)
 
 在 " **导入新资产 ...** " 窗口中，选择已下载的 **Microsoft HoloLens 空间 PTPvx7mDon4** 文件，并单击 " **打开** " 按钮将资产导入到项目中：
 
-![选择资产](images/spatial-audio/spatial-audio-03-section1-step1-2.png)
+![选择资产](images/spatial-audio/spatial-audio-03-section1-step1-2.PNG)
 
 调整视频剪辑的质量设置可以确保在 HoloLens 2 上顺畅地播放。 在 " **项目** " 窗口中选择视频文件，并在视频文件的 "检查器" 窗口中， **覆盖** **Windows 应用商店应用** 的设置，并执行以下操作：
 
@@ -45,11 +45,11 @@ ms.locfileid: "99590049"
 
 完成这些调整后，单击 "应用" 以更改视频剪辑的质量设置。
 
-![视频属性更改](images/spatial-audio/spatial-audio-03-section1-step1-3.png)
+![视频属性更改](images/spatial-audio/spatial-audio-03-section1-step1-3.PNG)
 
 右键单击层次结构，选择 "**视频**  >  **视频播放器**" 添加视频播放器组件。
 
-![添加视频播放器](images/spatial-audio/spatial-audio-03-section1-step1-4.png)
+![添加视频播放器](images/spatial-audio/spatial-audio-03-section1-step1-4.PNG)
 
 ## <a name="play-video-onto-a-quadrangle"></a>播放视频到 quadrangle
 
@@ -61,22 +61,22 @@ ms.locfileid: "99590049"
 * **旋转**：X = 0, Y = 0, Z = 0
 * **Scale**： X = 1.28，Y = 0.72，Z = 1
 
-![添加四](images/spatial-audio/spatial-audio-03-section2-step1-1.png)
+![添加四](images/spatial-audio/spatial-audio-03-section2-step1-1.PNG)
 
 现在，需要使用视频对 **四核** 进行着色，在 "**项目**" 窗口中，右键单击并选择 "**创建**  >  **渲染纹理**" 以创建渲染纹理组件，为渲染纹理输入合适的名称（例如，_空间音频纹理_）：
 
-![创建着色纹理](images/spatial-audio/spatial-audio-03-section2-step1-2.png)
+![创建着色纹理](images/spatial-audio/spatial-audio-03-section2-step1-2.PNG)
 
 选择 " **渲染纹理** "，然后在 "检查器" 窗口中，设置 " **Size** " 属性以匹配视频的 "1280x720 的本机分辨率"。 然后，若要确保在 HoloLens 2 上呈现良好的性能，请将 **深度缓冲区** 属性设置为 **至少16位深度**。
 
-![呈现纹理属性](images/spatial-audio/spatial-audio-03-section2-step1-3.png)
+![呈现纹理属性](images/spatial-audio/spatial-audio-03-section2-step1-3.PNG)
 
 接下来，使用创建的呈现纹理 **空间音频纹理** 作为 **四** 个的纹理：
 
 1. 将 **空间音频纹理** 从 " **项目** " 窗口拖到层次结构中的 " **四** 个"，将渲染纹理添加到 "四核"
 2. 若要在 HoloLens 2 上确保良好的性能，请在层次结构中选择四个四个，并在着色器的检查器窗口中选择 **混合现实工具包**  >  **标准** 着色器。
 
-![四纹理属性](images/spatial-audio/spatial-audio-03-section2-step1-4.png)
+![四纹理属性](images/spatial-audio/spatial-audio-03-section2-step1-4.PNG)
 
 若要设置 **视频播放机** 和 **渲染纹理** 以播放视频剪辑，请在 **层次结构** 中选择 **视频播放器**，然后在 "**检查器**" 窗口中选择
 
@@ -84,7 +84,7 @@ ms.locfileid: "99590049"
 * 选中 " **循环** " 复选框
 * 将 **目标纹理** 设置为新的呈现纹理 **空间音频纹理**
 
-![视频播放器属性](images/spatial-audio/spatial-audio-03-section2-step1-5.png)
+![视频播放器属性](images/spatial-audio/spatial-audio-03-section2-step1-5.PNG)
 
 ## <a name="spatialize-the-audio-from-the-video"></a>Spatialize 视频中的音频
 
@@ -96,14 +96,14 @@ ms.locfileid: "99590049"
 * 选中 " **Spatialize** " 框
 * 将 **空间混合** 滑块移动到 1 (3d) 
 
-![四核音频源检查器](images/spatial-audio/spatial-audio-03-section3-step1-1.png)
+![四核音频源检查器](images/spatial-audio/spatial-audio-03-section3-step1-1.PNG)
 
 若要将视频播放机设置为将音频源路由到 **音频源**，请在 "层次结构" 窗口中选择 **视频播放器** ，然后在 "检查器" 中的 "视频播放器" 对象中执行以下更改。
 
 * 将 **音频输出模式** 设置为 **音频源**
 * 将 " **音频源** " 属性设置为 **四**
 
-![视频播放器设置音频源](images/spatial-audio/spatial-audio-03-section3-step1-2.png)
+![视频播放器设置音频源](images/spatial-audio/spatial-audio-03-section3-step1-2.PNG)
 
 > [!TIP]
 > 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。

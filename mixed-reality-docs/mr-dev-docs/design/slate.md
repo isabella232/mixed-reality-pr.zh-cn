@@ -1,31 +1,31 @@
 ---
 title: 平板
-description: 清单，它是一种使用混合现实工具包显示2D 内容的精简窗口样式控件。
+description: 了解平板电脑，这是一种精简窗口样式控件，用于使用混合现实工具包显示 2D 内容。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，石板，MRTK，混合现实工具包
-ms.openlocfilehash: 30d5e63eecb45aa8eb1a59d1a288f084a6937764
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: 混合现实， 控件， 交互， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， Slate， MRTK， 混合现实工具包
+ms.openlocfilehash: 2988419e44b21f6655a71d726dabd5091569f7ac
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299682"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600126"
 ---
 # <a name="slate"></a>平板
 
 ![平板](images/UX_Hero_Slate.jpg)
 
-石板是用于显示2D 内容（如纯文本、图像或文档）的精简窗口样式控件。 石板提供一个 grabbable 标题栏，其中包含 "关注我 (标记-沿) " 和 "关闭" 功能的按钮。 可以通过 [直接操作](direct-manipulation.md#2d-slate-interaction) 滚动盖板中的内容，就像物理触摸屏幕一样。 您也可以使用 "注视"、"空中点击" 和 "拖动手势" 或运动控制器的指针。
+平板电脑是一种精简窗口样式控件，用于显示纯文本、图像或文档等 2D 内容。 平板电脑提供可抓取的标题栏，其按钮用于"关注我 (标记和) "和关闭功能。 平板电脑中的内容可以通过直接操作进行滚动 [，](direct-manipulation.md#2d-slate-interaction) 就像物理触摸屏一样。 也可使用凝视、敲击和拖动手势或运动控制器的指针。
 
 <br>
 
 ---
 
-## <a name="slate-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的盖板 (混合现实工具包) 适用于 Unity
+## <a name="slate-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的 (Unity 混合现实工具包) 板
 
-* [MRTK-石板](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/slate)
+* [MRTK - 平板电脑](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/slate)
 
 <br>
 

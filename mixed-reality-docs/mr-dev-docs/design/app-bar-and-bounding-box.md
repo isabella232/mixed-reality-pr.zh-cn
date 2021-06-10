@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality，应用程序栏，边界箱，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 0ccec5240854de9a7db6a79d5b90b97f1e6b81de
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 750fb238e5b7f22998a86f71607498c8f6982076
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299902"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600516"
 ---
 # <a name="bounding-box-and-app-bar"></a>边界框和应用栏
 !["边界" 是用于在混合现实中进行对象操作的标准接口。](images/UX_Hero_BoundingBox.jpg)<br>
@@ -95,7 +95,7 @@ ms.locfileid: "107299902"
 ## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK (混合现实工具包) 适用于 Unity 的边界框
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为边界框和应用栏提供脚本和 prototyping。 可以通过将 BoundingBox 脚本分配到任何对象来添加边界框。
 
-* [MRTK-边界框](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounding-box)
+* [MRTK-边界框](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounding-box)
 
 
 <br>

@@ -1,42 +1,41 @@
 ---
 title: 眼部追寻 MRTK
-description: 在 MRTK 中为 Oculus Quest 配置的文档
+description: 用于在 MRTK 中配置 Oculus 寻找的文档
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Oculus Quest，
-ms.openlocfilehash: c0eccd0b366d39529eafc51d23031fc30144b1ae
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Oculus 寻找，
+ms.openlocfilehash: 0892e0d416cd07d1bedbeea0ddb316e3eb012b94
+ms.sourcegitcommit: 4c1dd5c22af69eeb192425118c2bfb95344b8dd9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143961"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110441178"
 ---
-# <a name="how-to-configure-oculus-quest-in-mrtk-using-the-xr-sdk-pipeline"></a>如何使用 XR SDK 管道在 MRTK 中配置 Oculus Quest
+# <a name="building-and-deploying-mrtk-to-oculus-quest-using-the-xr-sdk-pipeline"></a>使用 XR SDK 管道构建 MRTK 并将其部署到 Oculus
 
-需要[Oculus Quest。](https://www.oculus.com/quest/)
+需要 [Oculus](https://www.oculus.com/quest/) 请求。
 
-MRTK 对 Oculus Quest 的支持通过两个不同的源提供：Unity 的 XR 管道和 Oculus Integration Unity 包。 **Oculus XRSDK 数据提供程序** 允许使用这两个源，并且必须用于在 Oculus Quest 上使用 MRTK。
+MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管道和 Oculus Integration Unity 包提供。 **OCULUS XRSDK 数据提供程序** 允许同时使用这两个源，并且必须用于在 Oculus 的寻找上部署 MRTK。
 
-Unity [的 XR 管道](https://docs.unity3d.com/Manual/XR.html) 支持将 Oculus Touch 控制器和头部跟踪与 Oculus Quest 一同使用。
-此管道是在 Unity 2019.3 及更中开发 XR 应用程序的标准。 若要使用此管道，请确保使用 **Unity 2019.3 或更高版本**。
+[UNITY XR SDK 管道](https://docs.unity3d.com/Manual/XR.html)允许使用 Oculus 触摸控制器和使用 Oculus 寻找进行头跟踪。
+此管道是在 Unity 2019.3 和更高版本中开发 XR 应用程序的标准。 若要使用此管道，请确保使用 **Unity 2019.3 或更高版本**。 这是将 MRTK 应用程序部署到 Oculus **请求所必需** 的。 
 
-[Oculus Integration Unity 包](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)允许将 **手部跟踪与** Oculus Quest 一起使用。
-此数据访问接口不使用Unity 的 **XR** 管道或旧版 **XR** 管道，但由于控制器和头跟踪由 Unity 的 XR 管道处理，因此，必须遵循为 **Oculus Quest** 设置项目中的步骤，以确保使用的是 **XR 管道**，而不是要弃用的旧 **XR 管道**。
+[Oculus Integration Unity 包](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)允许在 Oculus 中使用 **手动跟踪**。 此数据访问接口 **不** 使用 Unity 的 **XR SDK 管道** 或 **旧的 XR 管道**。
 
-## <a name="setting-up-project-for-the-oculus-quest"></a>为 Oculus Quest 设置项目
+## <a name="setting-up-project-for-the-oculus-quest"></a>设置 Oculus 的项目
 
-1. 请按照 [以下步骤](https://developer.oculus.com/documentation/unity/book-unity-gsg/) 操作，确保项目已准备好在 Oculus Quest 上部署。
+1. 请按照 [以下步骤](https://developer.oculus.com/documentation/unity/book-unity-gsg/) 操作，确保你的项目已准备好在 Oculus 上部署。
 
-1. 确保在 [设备上启用](https://developer.oculus.com/documentation/native/android/mobile-device-setup/) 开发人员模式。 安装 Oculus ADB 驱动程序是可选的。
+1. 确保在你的设备上启用了 [开发人员模式](https://developer.oculus.com/documentation/native/android/mobile-device-setup/) 。 安装 Oculus ADB 驱动程序是可选的。
 
-## <a name="setting-up-the-xr-pipeline-for-oculus-quest"></a>为 Oculus Quest 设置 XR 管道
+## <a name="setting-up-the-xr-sdk-pipeline-for-oculus-quest"></a>设置用于 Oculus 的 XR SDK 管道
 
-1. 确保 **Oculus XR 插件** 安装在 **"窗口"--> 程序包管理器**
+1. 确保 **OCULUS XR 插件** 安装在 " **> 包管理器" 窗口** 中
 
     ![Oculus XR 插件包](../images/cross-platform/oculus-quest/OculusXRPluginPackage.png)
 
-1. 通过访问"编辑 --> 项目设置 "--> XR 插件管理 --> 插件提供程序，确保 **Oculus 插件提供程序包含在项目中**
+1. 转到 "**编辑 > 项目设置--> XR 插件" "> 插件提供程序**，确保项目中包含 Oculus 插件提供程序
 
     ![Oculus 插件提供程序](../images/cross-platform/oculus-quest/OculusPluginProvider.png)
 
@@ -96,27 +95,27 @@ Unity [的 XR 管道](https://docs.unity3d.com/Manual/XR.html) 支持将 Oculus 
 
     ![Oculus 预期生成错误](../images/cross-platform/oculus-quest/OculusExpectedBuildErrors.png)
 
-1. 从 _任务内部接受"允许 USB_ 调试"提示
-1. 在 Oculus 任务中查看场景
+1. 接受来自接收内部的 " _允许 USB 调试_ " 提示
+1. 查看 Oculus 的内部场景
 
 ## <a name="removing-oculus-integration-from-the-project"></a>从项目中删除 Oculus 集成
 
-1. 导航到混合现实工具包 > Oculus >独立 Oculus Integration Unity 模块  ![ Oculus 分离 Asmdef](../images/cross-platform/oculus-quest/OculusSeparationAsmdef.png)
-1. 在此步骤中，将修改 Unity 作为 Microsoft.MixedReality.Toolkit.Providers.Oculus.asmdef 和其他文件中的引用进行刷新
+1. 导航到混合现实工具包 > Oculus > 单独的 Oculus 集成 Unity 模块  ![ Oculus 隔离 Asmdef](../images/cross-platform/oculus-quest/OculusSeparationAsmdef.png)
+1. 允许 Unity 刷新为 MixedReality 中的引用，并在此步骤中修改其他文件
 1. 关闭 Unity
-1. 关闭Visual Studio（如果已打开）
+1. 关闭 Visual Studio （如果它已打开）
 1. 打开文件资源管理器并导航到 MRTK Unity 项目的根目录
-1. 删除 UnityProjectName/Library 目录
-1. 删除 UnityProjectName/Assets/Oculus 目录
-1. 删除 UnityProjectName/Assets/Oculus.meta 文件
+1. 删除 UnityProjectName/库目录
+1. 删除 UnityProjectName/资产/Oculus 目录
+1. 删除 UnityProjectName/资产/Oculus 文件
 1. 重新打开 Unity
 
 ## <a name="common-errors"></a>常见错误
 
-### <a name="quest-not-recognized-by-unity"></a>Unity 无法识别的探索
+### <a name="quest-not-recognized-by-unity"></a>Unity 无法识别的寻找
 
-请确保正确配置 Android 路径。 如果仍然遇到问题，请遵循 [本指南](https://developer.oculus.com/documentation/unity/book-unity-gsg/#install-android-tools)
+请确保正确配置了 Android 路径。 如果继续遇到问题，请遵循本 [指南](https://developer.oculus.com/documentation/unity/book-unity-gsg/#install-android-tools)
 
-**在 Android >外部>编辑>首选项**
+**> 外部工具 > Android 编辑 > 首选项**
 
 ![Android 工具配置](../images/cross-platform/oculus-quest/AndroidToolsConfig.png)

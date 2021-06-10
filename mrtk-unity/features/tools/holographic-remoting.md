@@ -5,40 +5,40 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 637f68e5ad5f360aea4b5c0603a682d61d152a89
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 196bbb7027389ea75ddc577e4efc397ca779d550
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144583"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647186"
 ---
 # <a name="holographic-remoting"></a>全息远程处理
 
-全息远程处理通过使用 Wi-Fi 或 USB 电缆连接，将电脑中的全息内容实时流式处理到你的 Microsoft HoloLens。 当开发混合现实应用程序时，此功能可以显著提高开发人员的工作效率。
+全息远程处理使用 Wi-Fi 或 USB 电缆连接将全息内容从电脑实时流式Microsoft HoloLens到你的计算机。 在开发混合现实应用程序时，此功能可以显著提高开发人员的工作效率。
 
-下面所述的 XR SDK 是 unity [2019.3 和更高版本中的 unity 新 XR 管道](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/)。 有关将 XR SDK 与 MRTK 配合使用的详细信息，请参阅 [此处](../../configuration/getting-started-with-mrtk-and-xrsdk.md) 。 旧 XR 是指 Unity 2018 中包含的现有 XR 管道，在 Unity 2019.3 中已弃用，并已在 Unity 2020 中删除。
+下面提到的 XR SDK 是指 Unity [2019.3](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/)及更新的 XR 管道。 请参阅 [此处](../../configuration/getting-started-with-mrtk-and-xrsdk.md) ，详细了解将 XR SDK 与 MRTK 一起使用。 旧版 XR 是指 Unity 2018 中包含的现有 XR 管道，在 Unity 2019.3 中已弃用，在 Unity 2020 中已删除。
 
 ## <a name="initial-setup"></a>初始设置
 
-若要启用到 HoloLens 的远程处理，确保项目使用的是最新的远程处理组件非常重要。
+若要启用到 HoloLens 的远程处理，必须确保项目使用最新的远程处理组件。
 
-1. **> 包管理器打开窗口**
-    - 如果使用旧版 XR：验证是否安装了最新版本的 **Windows Mixed Reality** 包。
-    - 如果使用 XR SDK：验证是否安装了最新版本的 **WINDOWS XR 插件** 包。
-1. 通过 Microsoft Store 确保在 HoloLens 上安装了最新的全息远程处理应用程序。
+1. 打开 **窗口> 程序包管理器**
+    - 如果使用旧版 XR：验证是否安装了最新版本 **Windows Mixed Reality** 包。
+    - 如果使用 XR SDK：验证是否安装了最新版本的 **Windows XR 插件** 包。
+1. 确保 HoloLens 上已安装最新的全息远程处理应用程序，Microsoft Store。
 
-请继续阅读 [旧版 XR 安装说明](#legacy-xr-setup-instructions) 或 [XR SDK 安装说明](#xr-sdk-setup-instructions) ，具体取决于项目中使用的管道。
+请继续阅读 [旧版 XR 设置说明](#legacy-xr-setup-instructions) 或 [XR SDK](#xr-sdk-setup-instructions) 安装说明，具体取决于项目中使用的管道。
 
 ## <a name="legacy-xr-setup-instructions"></a>旧版 XR 安装说明
 
-以下说明仅适用于使用 HoloLens 2 的远程处理。 如果仅通过 HoloLens (第一代) 执行远程处理，请跳到 [通过 Wi-fi 连接到 hololens](#connecting-to-the-hololens-with-wi-fi)。
+以下说明仅适用于使用远程处理HoloLens 2。 如果仅使用 HoloLens (第一代) 执行远程处理，请跳到使用[Wi-Fi 连接到 HoloLens。](#connecting-to-the-hololens-with-wi-fi)
 
-使用 HoloLens 2 时，已向 MRTK 中添加了对远程处理表述的手势和眼睛跟踪数据的支持。 若要启用这些功能，请按照将 [DotNetWinRT 导入到项目](#import-dotnetwinrt-into-the-project)中所述的步骤进行操作。
+使用远程HoloLens 2，MRTK 中添加了对远程处理手部和眼动跟踪数据的支持。 若要启用这些功能，请按照将 [DotNetWinRT](#import-dotnetwinrt-into-the-project)导入项目 中记录的步骤操作。
 
-导入后，下一步是选择 **混合现实工具包**  >  **实用工具**  >  **Windows mixed reality**  >  **检查配置**。 此步骤添加启用 DotNetWinRT 依赖关系的脚本定义。
+导入后，下一步是选择"混合 **现实** 工具包实用工具Windows Mixed Reality  >    >    >    >  **检查配置"。** 此步骤添加启用 DotNetWinRT 依赖项的脚本定义。
 
 > [!NOTE]
-> 使用 Unity 2019.4 和更高版本时，无需运行检查配置实用程序。
+> 使用 Unity 2019.4 及更高版本时，不需要运行"检查配置"实用工具。
 
 若要启用手部眼部跟踪和眼动跟踪，请遵循调试HoloLens 2 **Unity** 包导入和相关部分进行远程处理的步骤。
 
@@ -100,7 +100,7 @@ ms.locfileid: "110144583"
 
     ![输入 IP 地址](../images/tools/remoting/EnterIPAddress.png)
 
-1. 单击“连接”  。
+1. 单击“连接”。
 
 > [!NOTE]
 > 如果无法连接，请确保HoloLens 2连接到电脑并重启 Unity。

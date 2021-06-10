@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality，示例应用，设计，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 797e8d5ea4d72d1c19ee167ff655f99ab37da271
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: ebac2c5680524b408d6dde8635d2585236fa0b08
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300182"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743512"
 ---
 # <a name="lunar-module"></a>登月舱
 
@@ -91,13 +91,13 @@ HoloLens 基本输入只包含两个笔势： " [Air" 和 "布隆](../../design/
 ![左操纵杆映射到偏航并滚动，将右操纵杆映射到螺距并滚动](images/thumbsticksidebyside.gif)<br>
 *左操纵杆映射到偏航并滚动向右操纵杆映射到间距和滚动*
 
-双重 thumbsticks 自然会为控制运输旋转提供控制。 遗憾的是，发货可以旋转三个轴，两个均支持两个轴的 thumbsticks。 这种不匹配意味着一个操纵杆控制一个轴;或 thumbsticks 的轴重叠。 以前的解决方案最终会 "损坏"，因为 thumbsticks 原本会混合其本地 X 和 Y 值。 后一种解决方案需要进行一些测试，以发现哪些冗余轴感觉最自然。 最后一个示例使用 *偏航* 并 *滚动* 使用左侧操纵杆 (Y 和 x 轴) *，并为* 右操纵杆 *)  (Z 和 x* 轴。 这种感觉最自然的 *做法是，* 在 *偏航* 和 *音调* 上，自然会使其不受影响。 作为一条注释，同时使用两个 thumbsticks 进行 *滚动* 还会使旋转值翻倍;让 lander 执行循环非常有趣。
+双重 thumbsticks 自然会为控制运输旋转提供控制。 遗憾的是，发货可以旋转三个轴，两个均支持两个轴的 thumbsticks。 这种不匹配意味着一个指纹控制一个轴;或滚动块的轴重叠。 由于指纹本身混合了本地 X 和 Y 值，因此以前的解决方案最终感觉"中断"。 后一种解决方案需要一些测试来找出哪些冗余轴感觉最自然。 最终示例使用偏 (Y 轴和 X 轴) 作为左滚动条，将 *(* Z 轴和 X 轴) 向右滚动。  这感觉最自然 *，因为滚动* 似乎可以独立地与 *yaw 和 pitch* *配对*。 另请注意，将两个滚动块用于 *滚动* 也会使旋转值翻倍;让登陆者执行循环非常有趣。
 
-此示例应用演示了如何通过 Windows Mixed Reality 的可扩展输入情态，空间识别和 tactile 浸入式可以显著改变体验。 虽然农历 Lander 可能接近40年，但使用这种小小的小小的概念却会永远不会出现。 在应该构想将来，为什么不会看到过去？
+此示例应用演示空间识别和触感沉浸式如何显著改变体验，Windows Mixed Reality可扩展输入形式。 虽然登月者可能接近 40 岁，但用这个小八边形和四边形公开的概念将永久存在。 在想象未来时，为何不看过去？
 
 ## <a name="technical-details"></a>技术详细信息
 
-可在 [混合现实设计实验室 GitHub](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule)上查找农历模块示例应用的脚本和 prototyping。
+可以在混合现实设计实验室 GitHub 上找到登月舱示例 [应用的脚本和预制文件](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule)。
 
 ## <a name="about-the-author"></a>关于作者
 
@@ -110,7 +110,7 @@ HoloLens 基本输入只包含两个笔势： " [Air" 和 "布隆](../../design/
 
 ## <a name="see-also"></a>另请参阅
 
-* [MRTK 示例中心](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/example-scenes/example-hub) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
+* [MRTK 示例中心](/windows/mixed-reality/mrtk-unity/features/example-scenes/example-hub) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
 * [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
 * [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 * [星系探索者 2.0](galaxy-explorer-update.md)

@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: f7fe6e86f9672f36a34f9d7c32d25fccd7760f5e
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: fa571a13ce192b29b2a35033b55061f3ffb707da
+ms.sourcegitcommit: ec80ef1e496bf0b17a161735535517e87ffdd364
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300162"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110351775"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
@@ -26,26 +26,9 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 
 ## <a name="device-support"></a>设备支持
 
-<table>
-    <colgroup>
-    <col width="25%" />
-    <col width="25%" />
-    <col width="25%" />
-    <col width="25%" />
-    </colgroup>
-    <tr>
-        <td><strong>功能</strong></td>
-        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (第一代) </strong></a></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
-        <td><a href="../../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
-    </tr>
-     <tr>
-        <td>空间映射</td>
-        <td>✔️</td>
-        <td>✔️</td>
-        <td>❌</td>
-    </tr>
-</table>
+| 功能 | [HoloLens (第一代) ](/hololens/hololens1-hardware) | [HoloLens 2](/hololens/hololens2-hardware) | [沉浸式头戴显示设备](../../discover/immersive-headset-hardware-details.md) |
+| ---- | ---- | ---- | ---- |
+| 空间映射 | ✔️ | ✔️ | ❌ |
 
 ## <a name="setting-the-spatialperception-capability"></a>设置 SpatialPerception 功能
 
@@ -116,17 +99,18 @@ Unity 提供了两个组件，可以轻松地将空间映射添加到应用、 *
 ```cs
 SurfaceObserver surfaceObserver;
 
- void Start () {
-     surfaceObserver = new SurfaceObserver();
- }
+private void Start()
+{
+    surfaceObserver = new SurfaceObserver();
+}
 ```
 
 通过调用 SetVolumeAsSphere、SetVolumeAsAxisAlignedBox、SetVolumeAsOrientedBox 或 SetVolumeAsFrustum，指定每个 SurfaceObserver 对象将为其提供数据的空间区域。 您可以重新定义将来的空间区域，只需再次调用其中一种方法即可。
 
 ```cs
-void Start () {
-    ...
-     surfaceObserver.SetVolumeAsAxisAlignedBox(Vector3.zero, new Vector3(3, 3, 3));
+private void Start()
+{
+    surfaceObserver.SetVolumeAsAxisAlignedBox(Vector3.zero, new Vector3(3, 3, 3));
 }
 ```
 
@@ -134,9 +118,9 @@ void Start () {
 
 ```cs
 private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
- {
-    //see Handling Surface Changes
- }
+{
+    // see Handling Surface Changes
+}
 ```
 
 ### <a name="handling-surface-changes"></a>处理表面更改
@@ -147,51 +131,51 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
 * 在已删除的示例中，我们从字典中删除表示此网格的 GameObject 并销毁它。
 
 ```cs
-System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects = 
+System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects =
     new System.Collections.Generic.Dictionary<SurfaceId, GameObject>();
 
-   private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
-   {
-       switch (changeType)
-       {
-           case SurfaceChange.Added:
-           case SurfaceChange.Updated:
-               if (!spatialMeshObjects.ContainsKey(surfaceId))
-               {
-                   spatialMeshObjects[surfaceId] = new GameObject("spatial-mapping-" + surfaceId);
-                   spatialMeshObjects[surfaceId].transform.parent = this.transform;
-                   spatialMeshObjects[surfaceId].AddComponent<MeshRenderer>();
-               }
-               GameObject target = spatialMeshObjects[surfaceId];
-               SurfaceData sd = new SurfaceData(
-                   //the surface id returned from the system
-                   surfaceId,
-                   //the mesh filter that is populated with the spatial mapping data for this mesh
-                   target.GetComponent<MeshFilter>() ?? target.AddComponent<MeshFilter>(),
-                   //the world anchor used to position the spatial mapping mesh in the world
-                   target.GetComponent<WorldAnchor>() ?? target.AddComponent<WorldAnchor>(),
-                   //the mesh collider that is populated with collider data for this mesh, if true is passed to bakeMeshes below
-                   target.GetComponent<MeshCollider>() ?? target.AddComponent<MeshCollider>(),
-                   //triangles per cubic meter requested for this mesh
-                   1000,
-                   //bakeMeshes - if true, the mesh collider is populated, if false, the mesh collider is empty.
-                   true
-                   );
+private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
+{
+    switch (changeType)
+    {
+        case SurfaceChange.Added:
+        case SurfaceChange.Updated:
+            if (!spatialMeshObjects.ContainsKey(surfaceId))
+            {
+                spatialMeshObjects[surfaceId] = new GameObject("spatial-mapping-" + surfaceId);
+                spatialMeshObjects[surfaceId].transform.parent = this.transform;
+                spatialMeshObjects[surfaceId].AddComponent<MeshRenderer>();
+            }
+            GameObject target = spatialMeshObjects[surfaceId];
+            SurfaceData sd = new SurfaceData(
+                // the surface id returned from the system
+                surfaceId,
+                // the mesh filter that is populated with the spatial mapping data for this mesh
+                target.GetComponent<MeshFilter>() ?? target.AddComponent<MeshFilter>(),
+                // the world anchor used to position the spatial mapping mesh in the world
+                target.GetComponent<WorldAnchor>() ?? target.AddComponent<WorldAnchor>(),
+                // the mesh collider that is populated with collider data for this mesh, if true is passed to bakeMeshes below
+                target.GetComponent<MeshCollider>() ?? target.AddComponent<MeshCollider>(),
+                // triangles per cubic meter requested for this mesh
+                1000,
+                // bakeMeshes - if true, the mesh collider is populated, if false, the mesh collider is empty.
+                true
+            );
 
-               SurfaceObserver.RequestMeshAsync(sd, OnDataReady);
-               break;
-           case SurfaceChange.Removed:
-               var obj = spatialMeshObjects[surfaceId];
-               spatialMeshObjects.Remove(surfaceId);
-               if (obj != null)
-               {
-                   GameObject.Destroy(obj);
-               }
-               break;
-           default:
-               break;
-       }
-   }
+            SurfaceObserver.RequestMeshAsync(sd, OnDataReady);
+            break;
+        case SurfaceChange.Removed:
+            var obj = spatialMeshObjects[surfaceId];
+            spatialMeshObjects.Remove(surfaceId);
+            if (obj != null)
+            {
+                GameObject.Destroy(obj);
+            }
+            break;
+        default:
+            break;
+    }
+}
 ```
 
 ### <a name="handling-data-ready"></a>处理数据准备就绪
@@ -203,23 +187,26 @@ OnDataReady 处理程序接收 SurfaceData 对象。 "WorldAnchor"、"MeshFilter
 SurfaceObserver 应延迟，而不是每个帧调用更新 () 。
 
 ```cs
-void Start () {
-    ...
-     StartCoroutine(UpdateLoop());
+void Start ()
+{
+    StartCoroutine(UpdateLoop());
 }
 
- IEnumerator UpdateLoop()
+IEnumerator UpdateLoop()
+{
+    var wait = new WaitForSeconds(2.5f);
+    while(true)
     {
-        var wait = new WaitForSeconds(2.5f);
-        while(true)
-        {
-            surfaceObserver.Update(OnSurfaceChanged);
-            yield return wait;
-        }
+        surfaceObserver.Update(OnSurfaceChanged);
+        yield return wait;
     }
+}
 ```
 
-## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>更高级别的网格分析： SpatialUnderstanding
+## <a name="higher-level-mesh-analysis-spatial-understanding"></a>更高级别的网格分析：空间理解
+
+> [!CAUTION]
+> 空间理解已弃用，以支持 [场景理解](../../design/scene-understanding.md)。
 
 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>是一系列实用工具代码，适用于基于 Unity 的全息 api 构建的全息开发。
 
@@ -237,7 +224,7 @@ void Start () {
 
 ### <a name="ray-casting"></a>Ray 转换
 
-完成房间扫描后，会在内部生成标签，如地面、天花板和墙。 "PlayspaceRaycast" 函数采用 ray，如果该射线与已知表面冲突，则返回，如果是，则返回 "RaycastResult" 形式的有关该曲面的信息。
+完成房间扫描后，会在内部生成标签，如地面、天花板和墙。 此 `PlayspaceRaycast` 函数采用一条射线，如果该射线与已知表面冲突，则返回; 如果是，则返回有关该图面的形式的信息 `RaycastResult` 。
 
 ```cpp
 struct RaycastResult
@@ -247,18 +234,18 @@ struct RaycastResult
         Invalid,    // No intersection
         Other,
         Floor,
-        FloorLike,  // Not part of the floor topology, 
+        FloorLike,  // Not part of the floor topology,
                     //  but close to the floor and looks like the floor
-        Platform,   // Horizontal platform between the ground and 
+        Platform,   // Horizontal platform between the ground and
                     //  the ceiling
         Ceiling,
         WallExternal,
-        WallLike,   // Not part of the external wall surface, 
-                    //  but vertical surface that looks like a 
+        WallLike,   // Not part of the external wall surface,
+                    //  but vertical surface that looks like a
                     //  wall structure
     };
     SurfaceTypes SurfaceType;
-    float SurfaceArea;  // Zero if unknown 
+    float SurfaceArea;  // Zero if unknown
                         //  (i.e. if not part of the topology analysis)
     DirectX::XMFLOAT3 IntersectPoint;
     DirectX::XMFLOAT3 IntersectNormal;
@@ -307,11 +294,11 @@ EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
 "TopologyResult" 包含返回的卷的中心位置，方向 (如 normal) ，以及所找到空间的尺寸。
 
 ```cpp
-struct TopologyResult 
-{ 
-    DirectX::XMFLOAT3 position; 
-    DirectX::XMFLOAT3 normal; 
-    float width; 
+struct TopologyResult
+{
+    DirectX::XMFLOAT3 position;
+    DirectX::XMFLOAT3 normal;
+    float width;
     float length;
 };
 ```
@@ -380,17 +367,17 @@ public static int Solver_PlaceObject(
 
 ```cpp
 public enum PlacementType
-            {
-                Place_OnFloor,
-                Place_OnWall,
-                Place_OnCeiling,
-                Place_OnShape,
-                Place_OnEdge,
-                Place_OnFloorAndCeiling,
-                Place_RandomInAir,
-                Place_InMidAir,
-                Place_UnderFurnitureEdge,
-            };
+{
+    Place_OnFloor,
+    Place_OnWall,
+    Place_OnCeiling,
+    Place_OnShape,
+    Place_OnEdge,
+    Place_OnFloorAndCeiling,
+    Place_RandomInAir,
+    Place_InMidAir,
+    Place_UnderFurnitureEdge,
+};
 ```
 
 每个放置类型都具有一组特定于该类型的参数。 "ObjectPlacementDefinition" 结构包含一组静态 helper 函数，用于创建这些定义。 例如，若要查找在楼层上放置对象的位置，可以使用以下函数。 public static ObjectPlacementDefinition Create_OnFloor (System.numerics.vector2 halfDims) 除了放置类型之外，还可以提供一组规则和约束。 不能违反规则。 然后，将根据一组约束优化满足类型和规则的可能放置位置，以便选择最佳放置位置。 每个规则和约束都可以通过提供的静态创建函数来创建。 下面提供了一个示例规则和约束构造函数。
@@ -405,12 +392,12 @@ public static ObjectPlacementConstraint Create_NearPoint(
 以下对象放置查询正在寻找一个位置，用于将半米式立方体放置在表面的边缘，远离其他以前放置的对象，靠近房间的中心。
 
 ```cs
-List<ObjectPlacementRule> rules = 
+List<ObjectPlacementRule> rules =
     new List<ObjectPlacementRule>() {
         ObjectPlacementRule.Create_AwayFromOtherObjects(1.0f),
     };
 
-List<ObjectPlacementConstraint> constraints = 
+List<ObjectPlacementConstraint> constraints =
     new List<ObjectPlacementConstraint> {
         ObjectPlacementConstraint.Create_NearCenter(),
     };
@@ -418,7 +405,7 @@ List<ObjectPlacementConstraint> constraints =
 Solver_PlaceObject(
     “MyCustomObject”,
     new ObjectPlacementDefinition.Create_OnEdge(
-        new Vector3(0.25f, 0.25f, 0.25f), 
+        new Vector3(0.25f, 0.25f, 0.25f),
         new Vector3(0.25f, 0.25f, 0.25f)),
     rules.Count,
     UnderstandingDLL.PinObject(rules.ToArray()),
@@ -438,37 +425,37 @@ Solver_PlaceObject(
 
 虽然 HoloLens 提供的空间映射解决方案设计为能够满足整个范围的问题空间的通用需求，但却构建了空间理解模块来支持两个特定游戏的需求。 其解决方案是围绕特定过程和假设集构造的，如下所示。
 
-```
+```txt
 Fixed size playspace – The user specifies the maximum playspace size in the init call.
 
-One-time scan process – 
+One-time scan process –
     The process requires a discrete scanning phase where the user walks around,
-    defining the playspace. 
+    defining the playspace.
     Query functions will not function until after the scan has been finalized.
 ```
 
 用户驱动的 playspace "painting" –在扫描阶段，用户移动并浏览重头戏，并有效地绘制应包括的区域。 在此阶段，生成的网格非常重要，可提供用户反馈。 室内家庭或办公设置–查询函数围绕平整表面和墙壁围绕直角设计。 这是一个软限制。 但是，在扫描阶段，将完成主轴分析以按主要轴和次要轴优化网格分割。 包含的 SpatialUnderstanding 文件管理扫描阶段过程。 它调用以下函数。
 
-```
+```txt
 SpatialUnderstanding_Init – Called once at the start.
 
 GeneratePlayspace_InitScan – Indicates that the scan phase should begin.
 
-GeneratePlayspace_UpdateScan_DynamicScan – 
-    Called each frame to update the scanning process. The camera position and 
-    orientation is passed in and is used for the playspace painting process, 
+GeneratePlayspace_UpdateScan_DynamicScan –
+    Called each frame to update the scanning process. The camera position and
+    orientation is passed in and is used for the playspace painting process,
     described above.
 
-GeneratePlayspace_RequestFinish – 
-    Called to finalize the playspace. This will use the areas “painted” during 
-    the scan phase to define and lock the playspace. The application can query 
-    statistics during the scanning phase as well as query the custom mesh for 
+GeneratePlayspace_RequestFinish –
+    Called to finalize the playspace. This will use the areas “painted” during
+    the scan phase to define and lock the playspace. The application can query
+    statistics during the scanning phase as well as query the custom mesh for
     providing user feedback.
 
-Import_UnderstandingMesh – 
-    During scanning, the “SpatialUnderstandingCustomMesh” behavior provided by 
-    the module and placed on the understanding prefab will periodically query the 
-    custom mesh generated by the process. In addition, this is done once more 
+Import_UnderstandingMesh –
+    During scanning, the “SpatialUnderstandingCustomMesh” behavior provided by
+    the module and placed on the understanding prefab will periodically query the
+    custom mesh generated by the process. In addition, this is done once more
     after scanning has been finalized.
 ```
 
@@ -481,14 +468,14 @@ Import_UnderstandingMesh –
 ![从 voxel 卷生成的生成的网格](images/su-custommesh.jpg)<br>
 *从 voxel 卷生成的生成的网格*
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 * 确保已设置 [SpatialPerception](#setting-the-spatialperception-capability) 功能
 * 跟踪丢失时，下一个 OnSurfaceChanged 事件将删除所有网格。
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>混合现实工具包中的空间映射
 
-有关将空间映射用于混合现实工具包 v2 的详细信息，请参阅 MRTK 文档的 <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">空间感知部分</a> 。
+有关将空间映射用于混合现实工具包的详细信息，请参阅 MRTK 文档的 [空间感知部分](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started) 。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
@@ -509,6 +496,6 @@ Import_UnderstandingMesh –
 * [坐标系统](../../design/coordinate-systems.md)
 * [Unity 中的坐标系统](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
-* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
-* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a>

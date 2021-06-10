@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 59bf0df2a32030281c8bf0a1a8574b4dd9bf4607
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: a0c66969a9058adc790919f0054783b7368da8f6
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143792"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647072"
 ---
 # <a name="screenshot-utility"></a>屏幕截图实用工具
 
@@ -20,7 +20,7 @@ ScreenshotUtility 类可以帮助在 Unity 编辑器中通过菜单项和公共 
 
 ## <a name="taking-screenshots"></a>拍摄屏幕截图
 
-可以在编辑器中选择“混合现实工具包”->“实用程序”>“拍摄屏幕截图”，然后选择所需的选项，轻松拍摄屏幕截图。 如果在未播放时拍摄，请确保让游戏窗口选项卡可见，否则无法保存屏幕截图。
+在编辑器中，通过选择 "**混合现实**  >  **工具包**"  >  **实用工具**  >  **拍摄屏幕截图**，然后选择所需的选项，可以轻松捕获屏幕截图。 如果在未播放时拍摄，请确保让游戏窗口选项卡可见，否则无法保存屏幕截图。
 
 默认情况下，所有屏幕截图都保存到[临时缓存路径](https://docs.unity3d.com/ScriptReference/Application-temporaryCachePath.html)，屏幕截图的路径将显示在 Unity 控制台中。
 

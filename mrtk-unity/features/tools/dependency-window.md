@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 22ecbb09ebf759e15f1f21085a7b7696cb24bc6e
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: fd17db3f365d8bd97b8cd9c43a6111e2b82a61fe
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144447"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647036"
 ---
 # <a name="dependency-window"></a>"依赖项"窗口
 
@@ -20,7 +20,7 @@ ms.locfileid: "110144447"
 
 ## <a name="usage"></a>使用情况
 
-若要打开该窗口，请选择" *混合现实工具包>Utilities->依赖项窗口* "，这将打开该窗口并自动开始生成项目的依赖项关系图。 生成依赖项关系图后，可以在项目选项卡中选择资产以检查其依赖项。
+若要打开该窗口，请选择"**混合现实** 工具包实用工具依赖关系窗口"，这将打开该窗口并自动开始生成项目的  >    >    >  依赖项关系图。 生成依赖项关系图后，可以在项目选项卡中选择资产以检查其依赖项。
 
 !["依赖项"窗口](../images/dependency-window/MRTK_Dependency_Window.png)
 

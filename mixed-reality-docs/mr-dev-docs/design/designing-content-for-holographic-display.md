@@ -1,97 +1,97 @@
 ---
 title: 设计适用于全息显示器的内容
-description: 了解有关在 HoloLens 设备上进行全息显示的设计准则和最佳实践。
+description: 了解 HoloLens 设备上全息显示的设计准则和最佳做法。
 author: yoonpark
 ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
-keywords: UI 设计，全息显示，内容设计，深色主题，浅色主题，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，像素
-ms.openlocfilehash: 325b7bf6318d1b54c4b4c33aa58faea7388e0864
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: UI 设计， 全息显示， 内容设计， 深色主题， 浅色主题， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包， 设计， 像素
+ms.openlocfilehash: 2c68acb5478bfbd438c8bbb9dd2f8d9686bcefc5
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300032"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600316"
 ---
 # <a name="designing-content-for-holographic-display"></a>设计适用于全息显示器的内容
 
-![Ulnar 端位置](images/UX_Hero_DarkTheme.jpg)
+![Ulnar 手部位置](images/UX_Hero_DarkTheme.jpg)
 
-设计全息显示器内容时，需要考虑几个元素，以便获得最佳体验。 下面列出了下面的一些建议，你可以在 ["颜色、光线和材料](color-light-and-materials.md) " 页面上详细了解全息版显示的特征。
+设计全息显示器的内容时，需要考虑几个元素，以获得最佳体验。 下面列出了一些建议，可以在"颜色、光线和材料"页上详细了解全息[显示器的特征。](color-light-and-materials.md)
 
 <br>
 
-## <a name="challenges-with-bright-color-on-a-large-surface"></a>大型表面上明亮的颜色挑战 
+## <a name="challenges-with-bright-color-on-a-large-surface"></a>大型表面上的亮色挑战 
 
-根据我们的 HoloLens 体验研究和测试，我们发现，在大范围的显示中使用明亮的颜色可能会导致几个问题： 
+根据我们的 HoloLens 体验研究与测试，我们发现在大量显示器中使用亮色可能会导致多个问题： 
 
-**眼睛疲劳** 
+**眼动** 
 
-由于全息显示是累加的，因此具有明亮颜色的全息影像会占用更少的颜色。 在较大的显示区域中，颜色明亮，很容易导致用户的眼睛疲劳。 
+由于全息显示是累加性的，因此具有亮色的全息影像使用更多的光。 显示较大区域中的亮色、纯色很容易让用户感到眼动。 
 
-**手动封闭** 
+**手部遮挡** 
 
-明亮的颜色使用户在直接与对象交互时很难看到其手。 由于用户无法看到其手，因此很难感觉到该手指与目标表面之间的深度/距离。 Finger 游标有助于弥补此问题，但在明亮的表面上，它仍会有挑战性。 
+亮色使得用户在直接与对象交互时难以看到手部。 由于用户看不到手部，因此很难感知手/手指与目标图面的深度/距离。 手指光标有助于弥补此问题，但它在亮白色表面上仍然具有挑战性。 
 
-![颜色和手封闭 ](images/color_handocclusion.jpg)
- *很难看到鲜艳的彩色内容 backplate*
+![颜色和手部遮挡 难以在亮色内容底板上 ](images/color_handocclusion.jpg)
+ *看到手*
 
 **颜色一致性**
 
-由于全息显示器的特性，显示屏上的一个较亮的区域可能会变得 blotchy。 通过使用暗色方案，你可以最大程度地减少此问题。 
+由于全息显示器的特征，显示器上的大亮区域可能会变得浮点。 通过使用深色配色方案，可以最大程度地减少此问题。 
 
-## <a name="design-guidelines-for-color-choices"></a>颜色选择设计准则
+## <a name="design-guidelines-for-color-choices"></a>颜色选择的设计准则
 
-**为 UI 背景使用暗色**
+**对 UI 背景使用深色**
 
-通过使用暗色方案，你可以最大程度地减少眼睛疲劳并改善直接交互的置信度。 
+通过使用深色配色方案，可以最大程度地减少眼动，并提高直接手部交互的置信度。 
 
-![用于 ](images/color_dark_examples.jpg)
- *内容背景的深色颜色示例* 的深色颜色示例
+![用于内容背景的深色颜色示例 用于内容背景 ](images/color_dark_examples.jpg)
+ *的深色示例*
 
-**使用 semibold 或粗体字体粗细**
+**使用半双曲或粗体字体粗细**
 
-HoloLens 允许你的体验显示漂亮的高分辨率文本。 但是，建议您避免使用细的字体粗细，如浅色或半光，因为垂直笔划可以在小字号内抖动。 
+HoloLens 允许体验显示美观的高分辨率文本。 但是，建议避免字体粗细，如浅色或半浅，因为垂直笔划可能会以较小的字体大小抖动。 
 
-![ (上部面板的粗体或半粗体字体粗细) 会提高清晰度 ](images/color_font_examples.jpg)
- *粗体或半粗体字体粗细， (上面板) 提高清晰度*
+![在上面板中 (粗或半粗体字体粗) 提高上面板上半 (粗或半粗体字体粗细) 提高 ](images/color_font_examples.jpg)
+ *可读性*
 
 **使用 MRTK 的 HolographicBackplate 材料**
 
-HolographicBackplate 材料适用于 HoloLens shell 中的几个 UI 面板。 其中一项功能是在用户根据面板移动其位置时对用户可见的 iridescence 效果。 Backplate 颜色在一系列预定义的光谱上略有变化，从而创造生动生动的动态视觉效果，而不会干扰内容的可读性。 此微妙的颜色转变还用于弥补任何次要颜色不规则性。 
+HolographicBackplate 材料应用于 HoloLens shell 中的多个 UI 面板。 它的一个功能是一种网格效果，当用户基于面板移动其位置时，用户可以看到该效果。 反板颜色在预定义的色系中以小微方式移动，从而创建一种吸引力和动态视觉效果，而不会干扰内容的可读性。 这种细微的颜色变化还有助于补偿任何次要的颜色异常。 
 
 
-## <a name="challenges-with-transparent-or-translucent-ui-backplate"></a>透明或半透明 UI backplate 的挑战 
+## <a name="challenges-with-transparent-or-translucent-ui-backplate"></a>透明或半透明 UI 底板的挑战 
 
-![透明 ](images/color_transparent_examples.jpg)
- *ui backplate 的* 透明 ui 示例
+![透明 UI ](images/color_transparent_examples.jpg)
+ *示例透明 UI 底板示例*
 
-**视觉对象复杂性和辅助功能**
+**视觉复杂性和可访问性**
 
-由于全息对象与物理环境混合，透明或半透明窗口上的内容或 UI 清晰度可能会下降。 此外，当透明全息对象重叠在一起时，这可能会使用户难以在不太深入的情况下进行交互。
+由于全息对象与物理环境混合，因此透明或半透明窗口上的内容或 UI 可读性可能会下降。 此外，当透明全息对象彼此叠加时，由于深度令人困惑，用户难以交互。
 
 **“性能”**
 
-若要正确呈现透明或半透明对象，必须将其与存在于后台的任何对象进行排序和混合。 透明对象的排序具有适度的 CPU 开销，混合具有相当大的 GPU 开销，因为它不允许 GPU 通过 z 剔除来执行隐藏的图面删除 (例如 深度测试) 。 不允许隐藏的图面会增加最终呈现的像素所需的操作的数目。 这将导致更多压力填充率约束。
+若要正确呈现透明或半透明对象，必须排序这些对象，并与存在于后台的任何对象混合。 透明对象的排序具有适度的 CPU 成本，混合具有相当的 GPU 成本，因为它不允许 GPU 通过 z-culling 执行隐藏表面 (即 深度测试) 。 不允许隐藏表面移除会增加最终呈现像素所需的操作数。 这会使填充速率受到更多压力约束。
 
-**LSR 技术的全息影像稳定性问题**
+**深度 LSR 技术的全息影像稳定性问题**
 
-若要改善全息 reprojection 或全息图稳定性，应用程序可以为每个呈现的帧提交系统的深度缓冲区。 使用 reprojection 的深度缓冲区时，需要为每个颜色呈现的像素写入一个相应深度的深度缓冲区。 具有深度值的任何像素还应具有颜色值。 如果未遵循上述指导原则，呈现图像中缺少有效深度信息的区域可能会 reprojected 生成项目的方式，这通常作为类似于波形的失真显示。
+为了提高全息重新投影或全息影像稳定性，应用程序可以针对每个渲染帧向系统提交深度缓冲区。 使用深度缓冲区进行重新分析时，需要为每个颜色呈现的像素编写一个深度缓冲区，以对应深度。 具有深度值的任何像素也应具有颜色值。 如果未遵循上述指南，可能会以生成项目的方式重新重现呈现的图像中缺少有效深度信息的区域，这些项目通常以波形扭曲方式显示。
 
 
 ## <a name="design-guidelines-for-transparent-elements"></a>透明元素的设计准则
 
-**使用不透明的 UI 背景**
+**使用不透明 UI 背景**
 
-默认情况下，透明或半透明对象不会写入深度以允许进行适当的混合。 缓解此问题的方法包括：使用不透明对象，并确保半透明对象接近于不透明的对象 (例如，在不透明的 backplate) 前面添加半透明的按钮、强制半透明对象写入深度 (不适用于所有方案) ，或呈现代理对象，这些对象只在帧末尾提供深度值。
+默认情况下，透明或半透明对象不会写入深度以允许适当的混合。 缓解此问题的方法包括：使用不透明对象，确保半透明对象显示在不透明对象附近 (如不透明底板) 前面的半透明按钮、强制半透明对象写入深度 (不适用于所有方案) 或呈现代理对象（仅在帧末尾提供深度值）。
 
-MRTK 中的解决方案-Unity： https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/performance/hologram-stabilization#depth-buffer-sharing-in-unity  
+MRTK-Unity 中的解决方案：/windows/mixed-reality/mrtk-unity/performance/hologram-stabilization#depth-buffer-sharing-in-unity  
 
-通过使用纯和不透明的 backplate，我们可以确保可读性和交互置信度。
+通过使用实心不透明的底板，我们可以确保可读性和交互置信度。
 
-**最大程度地减少受影响的像素数**
+**最小化受影响的像素数**
 
-如果项目必须使用透明对象，请尝试最大程度地减少受影响的像素数。 例如，如果某一对象仅在某些条件下可见 (如) 的加法光亮效果，则在该对象完全不可见时禁用该对象 (而不是将附加颜色设置为黑色) 。 对于使用带有 alpha 掩码的四核创建的简单二维形状，请考虑改为使用不透明着色器来创建形状的网格表示形式。 
+如果项目必须使用透明对象，请尝试最大程度地减少受影响的像素数。 例如，如果对象仅在特定条件下可见 (如累加光效果) ，则当对象完全不可见时 (禁用该对象，而不是将加法色设置为黑色) 。 对于使用带 alpha 掩码的四边形创建的简单 2D 形状，请考虑改为使用不透明着色器创建形状的网格表示形式。 
 
 <br/>
 
@@ -99,13 +99,13 @@ MRTK 中的解决方案-Unity： https://docs.microsoft.com/windows/mixed-realit
 
 <br/>
 
-## <a name="dark-ui-examples-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的深色 UI 示例 (混合现实工具包) 适用于 Unity
+## <a name="dark-ui-examples-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的深色 UI (Mixed Reality Toolkit) for Unity
 
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供了许多基于深色方案的 UI 构建基块示例。
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 基于深色配色方案提供了许多 UI 构建基块示例。
 
-* [邻近菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/near-menu)
-* [对话框](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/dialog)
-* [手动菜单](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)
+* [近菜单](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/near-menu)
+* [对话框](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/dialog)
+* [手部菜单](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)
 
 <br>
 
