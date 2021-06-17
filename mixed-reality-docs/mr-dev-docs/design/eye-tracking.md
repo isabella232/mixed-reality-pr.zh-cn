@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: 眼动跟踪， 混合现实， 输入， 眼睛凝视， 校准， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包， 意向， 操作
-ms.openlocfilehash: b76fd2e05999e5807156714fcdf12ca2863501bc
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+ms.openlocfilehash: 4dac059f72dd043802286081a54137c392c1e912
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196502"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110118"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>HoloLens 2 中的眼动跟踪
 
@@ -60,40 +60,40 @@ HoloLens 2可让开发人员使用有关用户正在查看的内容的信息，�
 
 眼动跟踪应该适用于大多数用户，但在极少数情况下，用户无法成功校准。 校准可能会由于各种原因失败，包括但不限于： 
 * 用户以前选择退出校准过程
-* 用户已分散注意力，未遵循校准目标
-* 用户具有某些类型的 contact 重用功能区和眼镜，系统尚不支持该系统 
-* 用户具有某些眼睛 physiology、目视状况或状态外科，系统尚不支持该系统  
-* 外部因素抑制可靠的眼睛跟踪，如在眼睛正面的眼睛上出现污迹，如污迹面板或眼镜、强烈直接阳光和 occlusions
+* 用户发散了注意力，没有遵循校准目标
+* 用户具有某些类型的接触镜和眼镜，系统尚不支持这些 
+* 用户有一定的眼部眼部、眼部条件或眼部疾病，系统尚不支持这些  
+* 外部因素会阻止可靠的眼动跟踪，例如 HoloLens 视口或眼镜上的闪烁、密集直接吸收，以及眼前发造成的遮挡
 
-开发人员应确保向用户提供对其视觉跟踪数据可能不可用 (无法成功) 的用户的充分支持。 我们已在本页底部的部分中提供了有关后备解决方案的建议。 
+对于无法成功校准眼动跟踪数据的用户，开发人员 (提供足够的支持) 。 我们在此页底部的 部分中提供了回退解决方案的建议。 
 
-若要了解有关校准的详细信息以及如何确保流畅的体验，请查看我们的 [眼睛跟踪用户校准](/hololens/hololens-calibration) 页面。
+若要详细了解校准以及如何确保顺畅的体验，请查看眼 [动跟踪用户校准](/hololens/hololens-calibration) 页。
 
 <br>
 
-## <a name="available-eye-tracking-data"></a>可用的目视跟踪数据
+## <a name="available-eye-tracking-data"></a>可用的眼动跟踪数据
 
-在深入了解有关目视输入的特定用例的详细信息之前，我们想要简要指出 HoloLens 2 [目视跟踪 API](/uwp/api/windows.perception.people.eyespose) 提供的功能。 开发人员可在大约 _30 FPS (30) Hz_ 的情况上，通过一种眼睛 (眼睛和方向) 访问。
-有关如何访问目视跟踪数据的详细信息，请参阅我们的开发人员指南，了解如何使用 [DirectX 中的眼睛](../develop/native/gaze-in-directx.md) ，并看看 [Unity](https://aka.ms/mrtk-eyes)。
+在详细介绍眼睛凝视输入的特定用例之前，我们想要简要指出眼动跟踪 API HoloLens 2 [的功能](/uwp/api/windows.perception.people.eyespose) 。 开发人员可以访问 _30 Hz (约 30 F (PS) 30 Hz_ 的单个眼睛凝视射线和) 。
+若要详细了解如何访问眼动跟踪数据，请参阅开发人员指南，了解如何在 [DirectX](../develop/native/gaze-in-directx.md) 中使用眼睛凝视，在 Unity 中 [使用眼睛凝视](https://aka.ms/mrtk-eyes)。
 
-围绕实际目标 (的视觉角度看，眼睛的眼睛约为1.5 度，请参阅下图) 。 由于预期的轻微 imprecisions，开发人员应围绕这一下限值来规划一些利润率 (例如，2.0-3.0 度可能会导致更舒适的体验) 。 下面将详细介绍如何处理小目标的选择。 要准确运行眼动跟踪，每个用户需要完成眼动跟踪用户校准。 
+预测眼睛凝视大约位于实际目标周围 1.5 度（可视角度 (，请参阅下图) 。 由于预期会稍有不精确，开发人员应围绕此下限值规划一些边距 (例如，2.0-3.0 度可能会导致更舒适) 。 下面将更详细地讨论如何处理小型目标的选择。 要准确运行眼动跟踪，每个用户需要完成眼动跟踪用户校准。 
 
 ![2 米远处的最佳目标大小](images/gazetargeting-size-1000px.jpg)<br>
-*以2米距离为目标的最佳目标大小*
+*2 米距离的最佳目标大小*
 
 <br>
 
 ## <a name="use-cases"></a>用例
 
-眼动跟踪可让应用程序实时跟踪用户正在注视的位置。 以下用例描述了在混合现实中，在 HoloLens 2 上使用目视跟踪可能会发生的一些交互。
+眼动跟踪可让应用程序实时跟踪用户正在注视的位置。 以下用例描述了在混合现实中通过眼动跟踪HoloLens 2交互。
 这些用例尚不是 Holographic Shell 体验的一 (，即启动应用程序时看到的HoloLens 2) 。
-可以在混合现实工具包 中试用其中[](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html)一些功能，该工具包提供了几个有趣且功能强大的眼动跟踪示例，例如快速轻松地选择眼部支持的目标，以及根据用户看到的内容自动滚动文本。 
+可以在混合现实工具包 中试用其中[](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)一些功能，该工具包提供了几个有趣且功能强大的眼动跟踪示例，例如快速轻松地选择眼部支持的目标，以及根据用户看到的内容自动滚动文本。 
 
 ### <a name="user-intent"></a>用户意图
 
 有关用户查看位置和内容的信息为其他输入（如语音、手和控制器）提供了强大的上下文。
 可在各种任务中使用此信息。
-例如，通过查看全息影像并说"选择" (还可以看到凝视和提交) 或"放置此 *..."，* 然后查看用户想要 [](gaze-and-commit.md)放置全息影像的位置并说 *"...there"*。 在[混合现实工具包 - 视线支持的目标选择](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html)和[混合现实工具包 - 视线支持的目标定位](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html)中可以找到相关示例。
+例如，通过查看全息影像并说"选择" (还可以看到凝视和提交) 或"放置此 *..."，* 然后查看用户想要 [](gaze-and-commit.md)放置全息影像的位置并说 *"...there"*。 在[混合现实工具包 - 视线支持的目标选择](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection)和[混合现实工具包 - 视线支持的目标定位](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-positioning)中可以找到相关示例。
 
 此外，用户意向的示例可能包括使用有关用户所查看内容的信息来增强与虚拟代理和交互式全息影像的交互。 例如，虚拟代理可能会根据当前查看的内容调整可用选项及其行为。 
 
@@ -102,18 +102,18 @@ HoloLens 2可让开发人员使用有关用户正在查看的内容的信息，�
 隐式操作的类别与用户意图密切相关。
 其思路是，全息影像或用户界面元素以一种本能的方式做出反应，甚至不会像用户与系统交互一样，而是让系统和用户保持同步。例如， **基于眼睛凝** 视的自动滚动，用户可以读取长文本，一旦用户进入文本框底部，即可自动开始滚动，使用户保持在阅读流中，而无需举手。  
 这一点的关键方面是滚动速度适应用户的阅读速度。
-另一个示例 **是支持** 眼睛的缩放和平移，用户可以在其中感觉完全深入到自己所关注的地方。 触发和控制缩放速度可以通过语音或手写输入来控制，这对于向用户提供控制感受，同时避免被淹没非常重要。 下面将更详细地讨论这些设计注意事项。 放大后，用户可以通过使用眼睛来平稳地关注街道的学习过程，以浏览其邻居。
-[混合现实工具包 - 视线支持的导航](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html)示例中可以找到此类交互的演示。
+另一个示例 **是支持** 眼睛的缩放和平移，用户可以在其中感觉完全深入到自己所关注的地方。 可以通过语音或手动输入来控制触发和控制缩放速度，这一点对于为用户提供控制感，同时避免被过度控制非常重要。 下面将更详细地讨论这些设计注意事项。 放大后，用户可以顺畅地跟随街道路线，使用眼睛凝视来探索自己附近的区域。
+[混合现实工具包 - 视线支持的导航](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation)示例中可以找到此类交互的演示。
 
-_隐式操作_ 的其他用例可能包括：
-- **智能通知：** 在你要查找的位置，厌恶的通知会出现问题？ 考虑到用户正在关注的内容，你可以通过从当前 gazing 用户的位置偏移通知来更好地进行此体验。 这会限制干扰，并在用户完成读取后自动将其关闭。 
-- **留心全息影像：** 在 gazed 时，会对影像进行细微反应。 这可能包括稍微光亮的 UI 元素，这是一种对虚拟狗的缓慢百花齐放花，开始回顾用户并 wagging 其尾部。 这种交互可能会在应用程序中提供更有趣的连接和满意度。
+隐式操作的其他 _用例_ 可能包括：
+- **智能通知：** 是否曾经因为通知弹出而感到麻烦？ 考虑到用户正在关注哪些方面，可以通过从用户当前正在其中接收的通知进行偏移来改善此体验。 这会限制干扰，在用户完成阅读后自动消除这些干扰。 
+- **全息影像：** 在被放大时做出小反应的全息影像。 这可以从略微闪烁的 UI 元素、一种缓慢闪烁的花色，到开始回过头看用户并缩小其尾部的虚拟狗。 这种交互可能在应用程序中提供有趣的连接感和满意度。
 
 ### <a name="attention-tracking"></a>注意力跟踪
 
-有关用户所在位置或位置的信息可以是非常强大的工具。 它可帮助评估设计的可用性并识别工作流中的问题，使其更高效。
-目视跟踪可视化和分析是各种应用程序领域的常见做法。 在 HoloLens 2 中，我们提供了一种新的维度来理解，因为3D 全息图可以放置在真实的上下文中并进行相应的评估。 [混合现实工具包](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html)提供了用于记录和加载目视跟踪数据的基本示例，以及如何对其进行可视化。
-Microsoft 致力于推动创新，同时确保用户对其眼睛跟踪信息的使用方式有了经验和透明性。  我们将与我们的开发人员和 UX 团队合作，为第三方提供指导，以确保在用户的中心获得经验。  
+有关用户查看位置或内容的信息可能是一个非常强大的工具。 它可以帮助评估设计的可用性，并确定工作流中的问题，使其更高效。
+眼动跟踪可视化和分析是各种应用程序领域的常见做法。 借助HoloLens 2，我们为这种理解提供了一个新维度，因为 3D 全息影像可以放置在实际上下文中并相应地进行评估。 混合 [现实工具包](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main) 提供了日志记录和加载眼动跟踪数据以及如何可视化它们的基本示例。
+Microsoft 致力于促进创新，同时确保用户在眼动跟踪信息的使用方式方面获得明智的透明体验。  我们将与开发人员和 UX 团队合作，为第三方提供指导，以确保体验以用户为中心。  
 
 此领域的其他应用场景包括： 
 -   **远程眼睛凝视可视化：** 远程眼睛凝视可视化效果：可视化远程协作者正在查看的内容，以便提供即时反馈，促进更准确的信息处理。
@@ -136,23 +136,23 @@ Microsoft 致力于推动创新，同时确保用户对其眼睛跟踪信息的�
 ## <a name="using-eye-gaze-for-interaction"></a>使用眼睛凝视进行交互
 
 构建利用快速移动眼睛定位的交互可能比较困难。
-一方面，眼睛的移动速度非常快，你需要小心地使用眼睛眼睛，因为否则用户可能会发现体验太多或分散注意力。 另一方面，你还可以创建真正的神奇体验，将激发你的用户！ 若要帮助你了解关键优势、挑战和设计建议，了解如何进行 [交互](eye-gaze-interaction.md)。 
+一方面，眼睛移动得非常快，因此你需要小心如何使用眼睛凝视输入，因为否则用户可能会发现体验令人难以承受或分散注意力。 另一方面，还可以创建真正激发用户体验的体验！ 为了帮助你，请查看有关重要优势、挑战的概述，以及针对交互的眼睛凝视 [的设计建议](eye-gaze-interaction.md)。 
  
-## <a name="fallback-solutions-when-eye-tracking-isnt-available"></a>目视跟踪不可用时的回退解决方案
+## <a name="fallback-solutions-when-eye-tracking-isnt-available"></a>眼动跟踪不可用时回退解决方案
 
-在极少数情况下，目视跟踪数据可能不可用。
-这可能是由于下面列出了最常见的原因：
-* 系统未能 [校准用户](/hololens/hololens-calibration)。
+在极少数情况下，眼动跟踪数据可能不可用。
+原因可能是下面列出了最常见的原因：
+* 系统无法 [校准用户](/hololens/hololens-calibration)。
 * 用户跳过了 [校准](/hololens/hololens-calibration)。   
-* 用户进行了校准，但决定不向应用程序授予使用其眼睛跟踪数据的权限。    
-* 用户具有唯一的眼镜或系统尚不支持的一些目视的情况。 
-* 外部因素抑制了一种可靠的眼睛跟踪，如在眼睛前面的头发的情况下，在 HoloLens 面板上出现污迹、眼镜、强烈直接阳光和 occlusions。
+* 用户已校准，但决定不向应用授予使用眼动跟踪数据的权限。    
+* 用户具有唯一的眼镜或系统尚不支持的某种眼部条件。 
+* 外部因素会阻止可靠的眼动跟踪，例如 HoloLens 视口或眼镜上的闪烁、密集直接吸收，以及由于眼睛前面有发而遮挡。
 
-开发人员应确保为这些用户提供适当的后备支持。 在 " [DirectX 中的目视跟踪](../develop/native/gaze-in-directx.md#fallback-when-eye-tracking-isnt-available) " 页上，我们介绍了检测目视跟踪数据是否可用所需的 api。 
+开发人员应确保为这些用户提供适当的回退支持。 在 [DirectX 中的眼动跟踪页上](../develop/native/gaze-in-directx.md#fallback-when-eye-tracking-isnt-available) ，我们介绍了检测眼动跟踪数据是否可用所需的 API。 
 
-尽管某些用户可能已特意决定撤消、访问其眼睛跟踪数据，并且可以在不提供对其眼睛跟踪数据的访问权限的情况下权衡用户体验令人满意的体验，但在某些情况下，这可能是不可能的。 如果你的应用程序使用目视跟踪，并且这是体验的重要部分，我们建议你清楚地将此信息传递给用户。   
+虽然一些用户可能有意决定撤销，但访问其眼动跟踪数据，并且对于不提供眼动跟踪数据访问权限的隐私的牺牲性用户体验是正常，但在某些情况下，这可能是无意的。 如果应用使用眼动跟踪，并且这是体验的重要组成部分，我们建议清楚地向用户传达这一信息。   
 
-请通知用户，目视跟踪对于您的应用程序而言是至关重要的， (甚至可能列出一些增强的功能) 若要充分利用您的应用程序，可以帮助用户更好地了解他们所放弃的内容。 帮助用户根据上述检查确定眼动跟踪 (的原因，并提供一) 建议以快速排查潜在问题。 
+请告知用户眼动跟踪为何对应用程序至关重要 (甚至列出一些增强的功能) 以体验应用程序的全部潜力，可帮助用户更好地了解他们放弃的功能。 帮助用户根据上述检查确定眼动跟踪 (的原因，并提供一) 建议以快速排查潜在问题。 
 
 例如，如果检测到系统支持眼动跟踪，则用户已校准，甚至已授予其权限，但尚未收到任何眼动跟踪数据，则这可能指向一些其他问题，例如闪烁或眼睛被遮挡。 
 
@@ -169,14 +169,14 @@ Microsoft 致力于推动创新，同时确保用户对其眼睛跟踪信息的�
 
 <br>
 
-本页希望能够提供一个很好的概述，让你开始了解眼动跟踪和眼睛凝视输入HoloLens 2。 若要开始开发，请查看我们的信息，了解如何 [与全息影像交互](eye-gaze-interaction.md)、 [在 Unity 中目视](https://aka.ms/mrtk-eyes) 看，以及如何 [在 DirectX 中观看眼](../develop/native/gaze-in-directx.md)。
+本页希望能够提供一个很好的概述，让你开始了解眼动跟踪和眼睛凝视输入HoloLens 2。 若要开始开发，请查看有关眼睛凝视与全息影像交互[](eye-gaze-interaction.md)[、Unity](https://aka.ms/mrtk-eyes)中眼睛凝视和 DirectX 中眼睛[凝视的作用的信息](../develop/native/gaze-in-directx.md)。
 
 ## <a name="see-also"></a>另请参阅
 
 * [校准](/hololens/hololens-calibration)
 * [舒适](comfort.md)
 * [基于眼睛凝视的交互](eye-gaze-interaction.md)
-* [目视观察 DirectX](../develop/native/gaze-in-directx.md)
-* [眼睛 (混合现实工具包) ](https://aka.ms/mrtk-eyes)
+* [DirectX 中的眼睛凝视](../develop/native/gaze-in-directx.md)
+* [Unity 中的眼睛凝视 (混合现实工具包) ](https://aka.ms/mrtk-eyes)
 * [凝视和提交](gaze-and-commit.md)
 * [语音输入](../out-of-scope/voice-design.md)

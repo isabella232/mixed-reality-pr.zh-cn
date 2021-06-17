@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/06/2019
 ms.topic: article
 keywords: 混合现实， 控件， 交互， 提示， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包， 音频
-ms.openlocfilehash: 8a68006d68b985f8d26a3d1a11e4d52fcfb5acb5
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: b25c25a6dd48bcc85a556787099734d147d18df2
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600436"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110219"
 ---
 # <a name="interactable-object"></a>可交互对象
 
@@ -135,7 +135,7 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 
 ---
 
-图标 [上的HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) 是如何可视化不同输入交互状态的示例：
+图标 [上的HoloLens 2](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button) 是如何可视化不同输入交互状态的示例：
 
 :::row:::
     :::column:::

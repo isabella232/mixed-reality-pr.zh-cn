@@ -8,12 +8,12 @@ ms.topic: article
 keywords: 全息影像，稳定性，hololens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，帧速率，渲染，reprojection，颜色分离
 appliesto:
 - HoloLens
-ms.openlocfilehash: 064e42f771391e77874796e91ea8e4d563c08ec2
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 560b1551b153f1735b0106869c6a82c977693968
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582887"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110102"
 ---
 # <a name="hologram-stability"></a>全息影像稳定性
 
@@ -91,15 +91,15 @@ HoloLens 提供先进的硬件辅助全息稳定技术（称为 reprojection）�
 应用程序需要执行特定操作才能启用不同类型的 reprojection
 * **深度 Reprojection：** 应用程序将每个呈现的帧的深度缓冲区提交给系统。  在 Unity 上，在 " **XR 插件管理**" 下的 " **Windows Mixed Reality 设置**" 窗格中，通过 "**共享深度缓冲区**" 选项完成深度 Reprojection。  DirectX 应用调用 CommitDirect3D11DepthBuffer。  应用程序不应调用 SetFocusPoint。
 * **平面 Reprojection：** 在每个帧上，应用程序会告诉系统要稳定的平面位置。  Unity 应用程序调用 SetFocusPointForFrame，并应禁用 **共享深度缓冲** 。  DirectX 应用调用 SetFocusPoint，不应调用 CommitDirect3D11DepthBuffer。
-* **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。 使用混合现实工具包 (MRTK) 的应用可以将 [照相机设置提供程序](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) 配置为使用 AutoPlanar Reprojection。 本机应用应将 `DepthReprojectionMode` [HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) 中的设置为 `AutoPlanar` 每个框架。 对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
+* **自动平面 Reprojection：** 若要启用，应用程序需要将其深度缓冲区提交给系统，因为它们的深度 Reprojection。 使用混合现实工具包 (MRTK) 的应用可以将 [照相机设置提供程序](/windows/mixed-reality/mrtk-unity/features/camera-system/windows-mixed-reality-camera-settings#hololens-2-reprojection-method) 配置为使用 AutoPlanar Reprojection。 本机应用应将 `DepthReprojectionMode` [HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) 中的设置为 `AutoPlanar` 每个框架。 对于 HoloLens 第1代，应用程序不应调用 SetFocusPoint。
 
 ### <a name="choosing-reprojection-technique"></a>选择 Reprojection 技术
 
-稳定类型 |    沉浸式耳机 |    HoloLens 第1代 | HoloLens 2
+稳定类型 |    沉浸式头戴显示设备 |    HoloLens 第1代 | HoloLens 2
 --- | --- | --- | ---
-深度 Reprojection |    建议 |   不适用 |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
-自动平面 Reprojection | 不适用 |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
-平面 Reprojection |   不建议 |   如果自动平面未提供最佳结果，建议使用 | 如果两个深度选项都不能获得所需的结果，请使用    
+深度 Reprojection |    建议 |   空值 |   建议<br/><br/>Unity 应用程序必须使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。 否则，请使用自动平面 Reprojection。
+自动平面 Reprojection | 空值 |   建议默认值 |   如果深度 Reprojection 未提供最佳结果，建议使用<br/><br/>建议 unity 应用程序使用 Unity 2018.4.12 或更高版本或 Unity 2019.3 或更高版本。  以前的 Unity 版本将使用略微降级的 reprojection 结果。
+平面 Reprojection |   不建议使用 |   如果自动平面未提供最佳结果，建议使用 | 如果两个深度选项都不能获得所需的结果，请使用    
 
 ### <a name="verifying-depth-is-set-correctly"></a>验证深度设置正确
             
@@ -118,7 +118,7 @@ HoloLens 2 有一个可视化工具，用于显示深度的位置和未设置，
 
 ![三维对象的稳定平面](images/stab-plane-500px.jpg)
 
-设备将自动尝试选择此平面，但应用程序应通过选择场景中的焦点来提供帮助。 在 HoloLens 上运行的 Unity 应用应根据场景选择最佳关注点，并将其传递到 [SetFocusPoint ( # B1 ](../unity/focus-point-in-unity.md)。 默认的旋转多维数据集模板中包含了在 DirectX 中设置焦点的示例。
+设备将自动尝试选择此平面，但应用程序应通过选择场景中的焦点来提供帮助。 在 HoloLens 上运行的 Unity 应用应根据场景选择最佳关注点，并将其传递到 [SetFocusPoint () ](../unity/focus-point-in-unity.md)。 默认的旋转多维数据集模板中包含了在 DirectX 中设置焦点的示例。
 
 当你在连接到台式计算机的沉浸式耳机上运行应用时，Unity 将向 Windows 提交深度缓冲区以启用每像素 reprojection，这可提供更好的图像质量，无需应用显式工作。 仅当应用程序在 HoloLens 上运行时，才应提供焦点，否则会重写每像素 reprojection。
 
@@ -185,4 +185,4 @@ renderingParameters.SetFocusPoint(
 * [了解混合现实的性能](understanding-performance-for-mixed-reality.md)
 * [颜色、光线和材料](../../design/color-light-and-materials.md)
 * [本能交互](../../design/interaction-fundamentals.md)
-* [MRTK 全息影像稳定性](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html)
+* [MRTK 全息影像稳定性](/windows/mixed-reality/mrtk-unity/performance/hologram-stabilization)

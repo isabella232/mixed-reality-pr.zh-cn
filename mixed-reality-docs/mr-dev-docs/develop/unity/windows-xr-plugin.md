@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 03/26/2021
 ms.topic: article
 keywords: Unity， 混合现实， 开发， 入门， 新项目， Windows Mixed Reality， UWP， XR， 性能， 旧版， mrtk， 窗口
-ms.openlocfilehash: 44de6b418995b75d9e199f03922f89016b76c5cd
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: c9733d58236d97db370ce4f58dc1760bdf4eda86
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743646"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110236"
 ---
 # <a name="using-windows-xr-plugin"></a>使用 Windows XR 插件
 
 对于面向 Unity 2020 的开发人员，Windows XR 插件允许访问 HoloLens 2 和 Windows Mixed Reality 头戴显示设备上的混合现实功能。  Unity 2019 也支持此插件，尽管在此版本上使用此插件时，Azure 空间定位点存在一些已知的不兼容。
 
-虽然 Microsoft 和社区已创建开源工具（如混合现实工具包 [ (MRTK) ） ](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html) 来自动设置 WMR 环境，但许多开发人员希望从头构建自己的体验。  以下文档将演示如何正确设置混合现实开发项目，无论你是否使用 MRTK。  需要更改的设置分为两类：每项目设置和按场景设置。
+虽然 Microsoft 和社区已创建开源工具（如混合现实工具包 [ (MRTK) ） ](/windows/mixed-reality/mrtk-unity/configuration/usingupm) 来自动设置 WMR 环境，但许多开发人员希望从头构建自己的体验。  以下文档将演示如何正确设置混合现实开发项目，无论你是否使用 MRTK。  需要更改的设置分为两类：每项目设置和按场景设置。
 
 ## <a name="setting-up-your-project-with-mrtk"></a>使用 MRTK 设置项目
 

@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 10/21/2019
 ms.topic: article
 keywords: 混合现实、开发、开发、设计、HoloLens、Azure 服务、新闻、HoloLens 2
-ms.openlocfilehash: d0955d85c3f7496c28f858657cafeebbb7dbb146
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 8fc2f7c54cdc941150558aac59dd240ee293d1f8
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91675866"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110084"
 ---
 # <a name="mixed-reality-news-and-notes"></a>混合现实新闻和笔记
 
@@ -32,13 +32,13 @@ ms.locfileid: "91675866"
 <tr>
 <td><b>移植指南</b> <br>1. 从 HoloToolKit (HTK)/混合现实工具包 (MRTK) 到 MRTK 版本 2
 <br>2. 从 HoloLens（第 1 代）到 HoloLens 2（x86 到 ARM、交互和设计建议）
-</td></td><td>2019 年 5 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrtk-porting-guide>让现有应用程序准备好使用 HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>从 HoloToolKit 移植到 MRTK API</a></td>
+</td></td><td>2019 年 5 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrtk-porting-guide>让现有应用程序准备好使用 HoloLens 2</a><li><a href=/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide>从 HoloToolKit 移植到 MRTK API</a></td>
 </tr>
 <tr>
 <td>每月的开源开发人员模块（教程/示例应用）</td><td>2019 年 6 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-base-ch1>MR 学习基础模块</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1>Azure 空间定位点教程</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-speechsdk-ch1>Azure 语音服务教程</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-sharing(photon)-ch1>多用户功能教程</a></td>
 </tr>
 <tr>
-<td>适用于 HoloLens 2 的 MRTK</td><td>2019 年 10 月</td><td> <ul><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html>MRTK 文档</a><li><a href=https://github.com/Microsoft/MixedRealityToolkit-Unity/releases>MRTK release 2.1。0</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrtk-getting-started>Getting started with MRTK v2</a>（MRTK v2 入门）</td>
+<td>适用于 HoloLens 2 的 MRTK</td><td>2019 年 10 月</td><td> <ul><li><a href=/windows/mixed-reality/mrtk-unity>MRTK 文档</a><li><a href=https://github.com/Microsoft/MixedRealityToolkit-Unity/releases>MRTK release 2.1。0</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrtk-getting-started>Getting started with MRTK v2</a>（MRTK v2 入门）</td>
 </tr>
 <tr>
 <td>多用户应用实用工具</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/spectator-view>用于演示的 SpectatorView</a><li><a href=https://github.com/microsoft/MixedReality-WebRTC>针对 HoloLens 优化的 WebRTC</a>></td>

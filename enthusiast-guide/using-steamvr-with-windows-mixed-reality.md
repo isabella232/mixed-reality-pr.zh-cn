@@ -1,119 +1,128 @@
 ---
-title: 将 SteamVR 与 Windows Mixed Reality 一起使用
-description: 了解如何在 Windows Mixed Reality 耳机和控制器上安装和播放 SteamVR 游戏以及兼容的电脑。
+title: 将 SteamVR 与 Windows Mixed Reality
+description: 了解如何在具有兼容电脑的 Windows Mixed Reality和控制器上设置和播放 SteamVR 游戏。
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，游戏，SteamVR，流，系统要求
-ms.openlocfilehash: 641f2b7db890229b88c0614b6b2bc2e3e88ec309
-ms.sourcegitcommit: 65f58055c831d58a3d38fb333f09b323ee2ac9b7
+keywords: Windows Mixed Reality、混合现实、虚拟现实、VR、MR、游戏、SteamVR、流、系统要求
+ms.openlocfilehash: 0d79b0c2079875b32387d616e77c5f497ab4aa59
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112064113"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110149"
 ---
-# <a name="using-steamvr-with-windows-mixed-reality"></a>将 SteamVR 与 Windows Mixed Reality 一起使用
+# <a name="using-steamvr-with-windows-mixed-reality"></a>将 SteamVR 与 Windows Mixed Reality
 
-适用于 SteamVR 的 windows Mixed Reality 允许用户在 Windows Mixed Reality 沉浸式耳机上运行 SteamVR 体验。 安装适用于 SteamVR 的 Windows Mixed Reality 后，用户可以从其桌面或流库中启动他们最喜爱的 SteamVR 应用程序，并直接在其 Windows 耳机上播放它们。
+Windows Mixed Reality使用 SteamVR，用户可以在沉浸式头戴显示设备Windows Mixed Reality SteamVR 体验。 安装适用于 SteamVR Windows Mixed Reality后，用户可以从桌面或 Steam 库启动其最喜欢的 SteamVR 应用程序，并直接在 Windows 头戴显示设备上播放它们。
 
-## <a name="get-your-pc-ready"></a>准备好你的电脑
+## <a name="get-your-pc-ready"></a>准备好电脑
 
-* 请确保没有挂起的更新：选择 " **启动 > 设置" > Update & Security > Windows 更新**"。 如果有可用更新，请选择 " **立即安装**"。 如果没有可用的更新，请选择 " **检查更新**"，然后安装任何新更新。
-* 电脑要求对于流上的应用和内容有所不同。 请参阅每个标题的最低要求。 使用 GTX 1070 图形卡 (或等效) 并且 Intel®内核™ i7 处理器的电脑应为广泛的头衔提供良好的体验。
-* 设置 [Windows Mixed Reality](set-up-windows-mixed-reality.md) （如果尚未这样做）。 
+* 确保没有挂起的更新：选择"启动">"设置 **>"&"> Windows 更新"。** 如果更新可用，请选择"**立即安装"。** 如果没有可用的更新，请选择 **"检查更新"，** 然后安装任何新更新。
+* Pc 要求因 Steam 上的应用和内容而异。 请参阅每个标题的最低要求。 具有 GTX 1070 图形卡 (或等效) 和 Intel® Core™ i7 处理器的电脑应为各种标题提供良好的体验。
+* 设置 [Windows Mixed Reality（](set-up-windows-mixed-reality.md) 如果尚未设置）。 
 
-## <a name="set-up-windows-mixed-reality-for-steamvr"></a>为 SteamVR 设置 Windows Mixed Reality
+## <a name="set-up-windows-mixed-reality-for-steamvr"></a>为 SteamVR Windows Mixed Reality设置服务
 
 1. [下载并安装 SteamVR。](https://steamcdn-a.akamaihd.net/client/installer/SteamWindowsMRInstaller.exe)
-2. 准备就绪后，启动 SteamVR。 SteamVR 教程应该会自动启动。
+2. 准备就绪后，启动 SteamVR。 SteamVR 教程应会自动启动。
 
-> **注意：** 若要对 SteamVR 设置进行高级故障排除，请确保已安装以下软件组件：
-> 1. 安装 [流](http://store.steampowered.com/about/) 并 **登录** ，或 **创建新帐户。**
-> 2. 安装 [SteamVR](https://store.steampowered.com/app/250820/SteamVR/)。 戴上耳机后，启动流，你会看到一个对话框，提示你安装 SteamVR。 按照对话框中的提示安装该对话框。
-    * 如果看不到弹出窗口，请通过导航到 *库* 的 "*工具*" 部分来安装 SteamVR。 在列表中找到 "SteamVR"，然后右键单击并选择 " *安装游戏*"。
-> 3. 安装 [适用于 SteamVR 的 Windows Mixed Reality](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/)。
+> **注意：** 对于 SteamVR 设置的高级故障排除，请确保已安装以下软件组件：
+> 1. 安装 [Steam](http://store.steampowered.com/about/) **并登录****或创建新帐户。**
+> 2. 安装 [SteamVR](https://store.steampowered.com/app/250820/SteamVR/)。 插入头戴显示设备后，启动"Steam"，应会看到一个提示你安装 SteamVR 的对话框。 按照对话框中的提示进行安装。
+    * 如果看不到弹出窗口，请导航到库 的"工具"部分来安装 *SteamVR。* 在列表中找到"SteamVR"，然后右键单击并选择"*安装游戏"。*
+> 3. 安装[Windows Mixed Reality适用于 SteamVR 的 。](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/)
 
-## <a name="set-up-windows-mixed-reality-for-steamvr-in-an-environment-without-internet-access"></a>在无 internet 访问权限的环境中为 SteamVR 设置 Windows Mixed Reality
+## <a name="set-up-windows-mixed-reality-for-steamvr-in-an-environment-without-internet-access"></a>在Windows Mixed Reality Internet 访问的环境中为 SteamVR 设置连接
 
-**在便携式存储设备上存储所需的媒体**
-1. 使用具有完全 internet 访问权限的 PC 上的[流](http://store.steampowered.com/about/)，安装[SteamVR](https://store.steampowered.com/app/250820/SteamVR/)和[Windows Mixed Reality for SteamVR](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/) 。
-2. 在 "流" 中，打开 "库" 部分，并找到标签为 "工具" 的部件。
-3. 安装 SteamVR 后，右键单击 "SteamVR" 条目，然后在生成的弹出菜单中单击 "属性" 条目。
-4. 将打开一个具有多个选项卡的新窗口。 选择选项卡 "本地文件"，然后单击标记为 "浏览本地文件" 的按钮。
-5. 将打开包含 SteamVR 运行时的目录。 将名为 SteamVR)  (的整个目录复制到所选的便携式介质上 (例如，USB 拇指驱动器) 。
-6. 对 SteamVR 的 Windows Mixed Reality 以及要在目标电脑上安装的任何与 SteamVR 兼容的应用程序执行相同的操作。
+**在可移植存储设备上存储必要的介质**
+1. 按照 [上述Windows Mixed Reality](https://store.steampowered.com/app/250820/SteamVR/) 在具有完全 Internet 访问权限的电脑上使用 SteamVR 安装 [SteamVR](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/) 和适用于 [SteamVR](http://store.steampowered.com/about/) 的客户端。
+2. 在"Steam"中，打开"库"部分，找到标记为"工具"的部分。
+3. 安装 SteamVR 后，右键单击条目"SteamVR"，在生成的弹出菜单中，单击条目"属性"。
+4. 将打开包含多个选项卡的新窗口。 选择选项卡"本地文件"，然后单击标记为"浏览本地文件"的按钮。
+5. 将打开包含 SteamVR 运行时的目录。 将名为"SteamVR ("的整个) 复制到你选择的可移植介质上 (例如 USB u 盘) 。
+6. 对于 SteamVR Windows Mixed Reality，以及要安装在目标电脑上的任何与 SteamVR 兼容的应用，请执行相同的操作。
 
 **在目标电脑上运行 SteamVR**
-1. 将便携式存储设备插入目标 PC 后，将 SteamVR、MixedRealityVRDriver 和其他文件夹移动到目标 PC 上的一个便利位置。
-2. 确保 SteamVR 和 MixedRealityVRDriver 位于同一文件夹中，将 [steamvr-add-wmr-driver.bat](scripts/steamvr-add-wmr-driver.bat) 下载到包含文件夹，并双击它。 这将允许运行时在自定义安装中查找 SteamVR 驱动程序的 Windows Mixed Reality。
-![目标电脑上安装的 SteamVR 的 SteamVR 和 Windows Mixed Reality](images/steamvr-install-files.png)
-3. 若要运行 SteamVR，应双击位于 *SteamVR\bin\win64\vrstartup.exe* 的文件 "vrstartup.exe"，或在目标 PC 运行32位版本的 Windows 时，双击该文件 *SteamVR\bin\win32\vrstartup.exe* 。
+1. 将便携式存储设备插入目标电脑后，将 SteamVR、MixedRealityVRDriver 和其他文件夹移到目标电脑上的方便位置。
+![在目标电脑上Windows Mixed Reality的 SteamVR 和适用于 SteamVR 的流](images/steamvr-install-files.png)
 
-[有关详细信息和故障排除，请参阅 Steamworks 文档页](https://partner.steamgames.com/doc/features/steamvr/enterprise#2)。
+2. 确保 SteamVR 和 MixedRealityVRDriver 在同一文件夹中，打开命令提示符。 对于此示例，我们假设包含文件夹位于 *C：\SteamVRInstall*。 在这种情况下，应在命令提示符下运行：
+```powershell
+chdir "C:\SteamVRInstall"
+.\SteamVR\bin\win64\vrpathreg.exe adddriver "C:\SteamVRInstall\MixedRealityVRDriver"
+```
+ (请注意，如果运行的是 32 位版本的 Windows，则上述路径的部分 `win64` `win32` 应为 。) 
 
-## <a name="play-steamvr-games"></a>玩 SteamVR 游戏
+这将允许运行时在自定义Windows Mixed Reality中查找适用于 SteamVR 驱动程序的驱动程序。
 
-1. 将耳机连接到电脑，并打开运动控制器。
-2. 加载 Windows Mixed Reality 主页并显示控制器后，请在桌面上打开流应用。
-3. 使用流应用从您的流库中启动 SteamVR 游戏。
+4. 若要运行 SteamVR，应双击位于SteamVR\bin\win64\vrstartup.exe的文件 *"vrstartup.exe";* 如果目标电脑运行的是 32 位版本的 *Windows，* 则双击SteamVR\bin\win32\vrstartup.exe。
 
-**提示**：若要在不停用耳机的情况下启动 SteamVR 游戏，请使用桌面应用 (**启动 > 桌面**) ，在 Windows MIXED Reality 内查看 PC 桌面并与其交互。
+有关详细信息 [和故障排除，请参阅 Steamworks 文档页](https://partner.steamgames.com/doc/features/steamvr/enterprise#2)。
 
-## <a name="using-motion-controllers-with-steamvr"></a>将运动控制器用于 SteamVR
+## <a name="play-steamvr-games"></a>播放 SteamVR 游戏
 
-不同游戏中的运动控制器使用方式有所不同。 下面是一些可帮助你入门的基础知识：
+1. 将头戴显示设备连接到电脑并打开运动控制器。
+2. 加载Windows Mixed Reality控制器后，在桌面上打开 Steam 应用。
+3. 使用 Steam 应用从 Steam 库启动 SteamVR 游戏。
 
-* 若要打开 "流" 仪表板，请在左或右操纵杆上按向下。
-* 若要退出 SteamVR 游戏并返回到 Windows Mixed Reality 主页，请按 Windows 按钮。
+**提示**：若要在不关闭头戴显示设备的情况下启动 SteamVR 游戏，请使用桌面应用 (**启动 > Desktop**) 在 Windows Mixed Reality 中查看电脑桌面并与之Windows Mixed Reality。
+
+## <a name="using-motion-controllers-with-steamvr"></a>将运动控制器与 SteamVR 一起使用
+
+你将在不同的游戏中以不同方式使用运动控制器。 下面是一些可帮助你入门的基础知识：
+
+* 若要打开"流"仪表板，请直接按下左侧或右侧滚动块。
+* 若要退出 SteamVR 游戏并返回到Windows Mixed Reality，请按 Windows 按钮。
 
 ## <a name="changing-the-resolution"></a>更改分辨率
 
-如果要以更高的分辨率玩游戏，可以随时在 "SteamVR-> 设置-> 应用程序" 窗口中调整应用程序分辨率滑块。 * * 当使用较高的分辨率乘数时，您会希望游戏对您的 PC 造成更大的压力。 如果增加乘数并查看性能下降，请将滑块重新调整为默认级别，并重新启动游戏以确保更改生效。![调整应用程序分辨率](images/SteamVR_Settings_Applications.png)
+如果希望以更高的分辨率播放游戏，随时可以在"SteamVR"->"设置"->"应用程序"窗口中调整"应用程序解析"滑块。 **使用分辨率更高的乘数时，可以预期游戏对电脑造成更大压力。 如果增加乘数并看到性能下降，请重新将滑块调整为默认级别，然后重启游戏以确保更改生效。![调整应用程序分辨率](images/SteamVR_Settings_Applications.png)
 
-## <a name="using-multiple-headsets"></a>使用多个耳机
+## <a name="using-multiple-headsets"></a>使用多个头戴显示设备
 
-如果你是一位 VR 发烧，你可能会定期在同一台电脑上使用多个 VR 耳机。 如果是这样，请注意，当插入 Windows Mixed Reality 耳机时，SteamVR 游戏将始终启动 Windows Mixed Reality 耳机。 如果要在另一个耳机上启动 SteamVR 游戏，请先拔下 Windows Mixed Reality 耳机，然后再继续。
+如果你是 VR 运动家，可以定期在同一电脑上使用多个 VR 头戴显示设备。 如果是这种情况，请注意，当插入 Windows Mixed Reality头戴显示设备时，SteamVR 游戏将始终启动到 Windows Mixed Reality头戴显示设备。 如果要在另一个头戴显示设备上启动 SteamVR 游戏，请确保在继续操作Windows Mixed Reality头戴显示设备。
 
-## <a name="preview-programs"></a>预览计划
+## <a name="preview-programs"></a>预览程序
 
-我们发布了定期更新，以提高在 Windows Mixed Reality 沉浸式耳机上使用 SteamVR 的性能、可靠性和总体体验。 尽管这些预览程序都不是必需的，但如果想要更快地 (更新，并向我们提供有关这些更新的反馈，则建议你加入这些程序！ ) 。
+我们发布定期更新，以提高在沉浸式头戴显示设备上使用 SteamVR Windows Mixed Reality可靠性和整体体验。 尽管这些预览计划都不需要，但如果希望更快、更频繁地获取更新，我们建议你加入它们 (并提供有关这些更新的反馈！) 。
 
-### <a name="windows-mixed-reality-for-steamvr-beta"></a>适用于 SteamVR Beta 的 Windows Mixed Reality
+### <a name="windows-mixed-reality-for-steamvr-beta"></a>Windows Mixed Reality SteamVR Beta 版本
 
-适用于 SteamVR 的 Windows Mixed Reality 是从流应用商店中安装的组件，可使 SteamVR 与 Windows Mixed Reality 耳机一起工作。  我们会定期将更新发布到此 "桥"，然后自动将其安装。
+Windows Mixed Reality适用于 SteamVR 的组件是从 Steam Store 安装的组件，使 SteamVR 能够与 Windows Mixed Reality头戴显示设备一起工作。  我们会定期发布对此"网桥"的更新，而 Steam 会自动安装更新。
 
-如果您想要更频繁地获取更新，我们鼓励您加入我们的公共 Beta。  更新首先会转向我们的测试人员，并在将更新发布给所有用户之前，使用他们的反馈来确保更新质量高。  如果你不在我们的 Beta 版计划中，你最终会获得所有相同的修补程序和功能，但在我们的 Beta 用户进行测试后即可。
+如果希望更频繁地获取更新，我们建议你加入我们的公共 Beta 版本。  更新首先会转到 Beta 受众，我们会使用他们的反馈确保更新是高质量的，然后再将其发布到所有用户。  如果你不在我们的 Beta 计划中，最终会获得所有相同的修补程序和功能，但在 Beta 用户测试它们之后。
 
-加入：
+若要联接：：
 
-  1. 在 "流" 中，使用 " **库** " 菜单下的下拉箭头来筛选 **软件**。
-  2. 在列表中，右键单击 " **SteamVR 的 Windows Mixed Reality** "，然后选择 " **属性**"。
-  3. 选择 " **测试** 版" 选项卡。
-  4. 选择 **"beta-公共 beta"** 并选择 " **关闭** " 以确认。 "Beta 访问代码" 字段应留空。
+  1. 在"流"中，使用"库"菜单 **下的** 下拉列表筛选为"**软件"。**
+  2. 在列表中，右键单击 **"Windows Mixed Reality"，然后选择**"属性 **"。**
+  3. 选择 **"Betas"** 选项卡。
+  4. 选择加入 **"beta - 公共 beta 版本"，然后选择** " **关闭"** 以确认。 beta 访问代码字段应留空。
   
 ### <a name="steamvr-beta"></a>SteamVR Beta
 
-SteamVR 是由阀门构建和发布的，在所有 SteamVR 耳机上都是通用的。  它遵循在发布到所有用户之前发布 Beta 成员更新的类似模型。
+SteamVR 由"流"生成和释放，在所有 SteamVR 头戴显示设备中很常见。  它遵循类似的模型，在向所有用户发布 Beta 成员之前发布更新。
 
-加入：
+若要联接：：
 
-  1. 在 "流" 中，使用 " **库** " 菜单下的下拉箭头来筛选 **工具**。
-  2. 在列表中，右键单击 **SteamVR** ，然后选择 " **属性**"。
-  3. 选择 " **测试** 版" 选项卡。
-  4. 选择 **"beta-公共 beta"** 并选择 " **关闭** " 以确认。  "Beta 访问代码" 字段应留空。 ![切换到 SteamVR 的 "属性" 对话框中的 "SteamVR beta"。](images/steamvr-beta.png)
+  1. 在"流"中，使用"库"菜单 **下的** 下拉列表筛选为"**工具"。**
+  2. 在列表中，右键单击 **"SteamVR"，** 然后选择"属性 **"。**
+  3. 选择 **"Betas"** 选项卡。
+  4. 选择加入 **"beta - 公共 beta 版本"，然后选择** " **关闭"** 以确认。  beta 访问代码字段应留空。 ![在 SteamVR 的属性对话框中切换到 SteamVR beta 版本](images/steamvr-beta.png)
 
 ### <a name="windows-insider-program"></a>Windows 预览体验计划
 
-Windows Mixed Reality 是 Windows 10 的一部分。  影响 SteamVR 用户的许多修补程序和功能都包含 Windows 操作系统。  如果要尝试最新的 Windows 10 预览版，我们建议加入 [Windows 预览体验计划](https://insider.windows.com)。
+Windows Mixed Reality是 Windows 10 的一Windows 10。  影响 SteamVR 用户的许多修补程序和功能都随 Windows OS 一起提供。  若要试用最新的预览Windows 10版本，建议加入[Windows 预览体验计划。](https://insider.windows.com)
 
-## <a name="enabling-motion-reprojection-for-steamvr-apps"></a>为 SteamVR 应用启用运动 reprojection
+## <a name="enabling-motion-reprojection-for-steamvr-apps"></a>为 SteamVR 应用启用运动重新项目
 
-适用于 SteamVR 的 Windows Mixed Reality 具有试验性运动 reprojection 功能，使 90 FPS reprojection 更平稳。
+Windows Mixed Reality的流式处理具有实验性运动重现功能，使 90 FPS 重新保护更流畅。
 
-启用动作 reprojection 后，所有流的 VR 游戏将以1/2 帧速率呈现通常 (45 fps，而不是 90 FPS) ，而 SteamVR 的 Windows Mixed Reality 使用 GPU 生成的运动向量来推断下一帧。 对于在给定的 PC 上可靠地命中 60 FPS + 的 SteamVR 游戏，这应该会在保持舒适的体验的同时，偶尔产生稳定的 90 FPS 体验。
+启用运动重新项目时，所有 Steam VR 游戏在名义上以 1/2 帧速率呈现 (45 fps 而不是 90 FPS) ，而 Windows Mixed Reality for SteamVR 使用 GPU 生成的运动矢量来推断下一帧。 对于在给定电脑上可靠地达到 60 FPS+ 的 SteamVR 游戏，这应该可以带来可靠的 90 FPS 体验，偶尔出现项目，同时保持舒适体验。
 
-可用的运动 reprojection 模式如下所示：
+可用的运动重现模式如下所示：
 
-* **SteamVR 每个应用设置**：允许通过 STEAMVR 设置 UI 控制运动 reprojection。 然后，可以打开 SteamVR 设置，Per-Application 视频设置中转到视频 >，并选择 "运动平滑处理" 选项。
-* **自动**：当游戏呈现速度太慢而无法维护 90 FPS 时，使运动 reprojection 自动打开。 当游戏开始维护 90 FPS 或在小于 45 FPS 时开始呈现时，运动 reprojection 将关闭。 异步旋转 reprojection 始终处于启用状态。
+* **SteamVR 每应用设置**：允许通过"SteamVR 设置"UI 控制运动重新项目。 然后，可以打开"SteamVR 设置"，转到"视频> Per-Application视频设置"，然后选择"运动平滑处理"选项。
+* **自动**：使运动重现能够在游戏呈现速度过慢而维持 90 FPS 时自动打开。 当游戏开始保持 90 FPS 或以小于 45 FPS 开始渲染时，运动重新保护将关闭。 始终启用异步旋转重新项目。
 * **运动向量**：强制应用程序始终以半帧速率运行，并重排运动矢量。
 * **无**：禁用运动重新项目。
 

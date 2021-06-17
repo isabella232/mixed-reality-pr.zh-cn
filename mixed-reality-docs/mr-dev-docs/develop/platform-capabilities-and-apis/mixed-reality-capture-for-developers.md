@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc、照片、视频、捕获、照相机
-ms.openlocfilehash: 2539c8e2a6f26ba1f36cd28502bf8d0f50803657
-ms.sourcegitcommit: bd9b2734903652b106db86686428c03acf104707
+ms.openlocfilehash: ec1a53d2f623a8047c2ee1973d8d6f20458ade88
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98763719"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110242"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>面向开发人员的混合现实捕获
 
@@ -86,7 +86,7 @@ if (view != null)
 > [!NOTE]
 > 如果使用的是 Unity 2018，则需要使用 **unity 2018.4.13 f1** 或更高版本。 如果使用的是 Unity 2019，则需要 **unity 2019.4** 或更高版本。
 
-若要在使用 [混合现实工具包](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)时选择使用 pv 相机进行呈现，请启用 [Windows Mixed reality 相机设置](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html) 提供程序，并 **通过 PV 相机检查 Render**。
+若要在使用 [混合现实工具包](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)时选择使用 pv 相机进行呈现，请启用 [Windows Mixed reality 相机设置](/windows/mixed-reality/mrtk-unity/features/camera-system/windows-mixed-reality-camera-settings) 提供程序，并 **通过 PV 相机检查 Render**。
 
 如果使用的不是混合现实工具包，则可以使用组件 [手动选择启用](#enable-the-photovideocamera-holographicviewconfiguration-in-directx) DirectX。
 
@@ -176,7 +176,7 @@ if (view != null)
 **解决方案**；
 * 将显示为不透明黑色的任何内容更改为 alpha 值0。
 * 确保应用清除为透明黑色。
-* Unity 默认使用 MixedRealityToolkit 自动清除，但如果它是非 Unity 应用，应修改与 ID3D11DeiceContext：： ClearRenderTargetView 一起使用的颜色 ( # A1。 您需要确保清除透明的黑色 (0，0，0，0，0) 而不是不透明的黑色 (0，0，0，1) 。
+* Unity 默认使用 MixedRealityToolkit 自动清除，但如果它是非 Unity 应用，应修改与 ID3D11DeiceContext：： ClearRenderTargetView () 一起使用的颜色。 您需要确保清除透明的黑色 (0，0，0，0，0) 而不是不透明的黑色 (0，0，0，1) 。
 
 你现在可以根据需要调整资产的 alpha 值，但通常不需要这样做。 大多数情况下，MRCs 将看起来不错。 MRC 假设预乘 alpha。 Alpha 值仅影响 MRC 捕获。
 
@@ -213,22 +213,22 @@ Unity 应用程序应看到属性 [Locatable_camera_in_Unity](../unity/locatable
 其他应用程序可以通过使用 [Windows 媒体捕获 api](/uwp/api/Windows.Media.Capture.MediaCapture) 控制相机并添加 MRC 视频和音频效果来包括静止图像和视频中的虚拟全息影像和应用程序音频，来实现此目的。
 
 应用程序有两个选项可添加效果：
-* 旧的 API： [MediaCapture. AddEffectAsync ( # B1 ](/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* 新的 Microsoft 推荐 API (将返回一个对象，从而能够操作) ： MediaCapture # B5 [ ( # B3 ](/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)  /  [ ( # B5](/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync)的动态属性，这需要应用程序创建自己的[IVideoEffectDefinition](/uwp/api/Windows.Media.Effects.IVideoEffectDefinition)和[IAudioEffectDefinition](/uwp/api/windows.media.effects.iaudioeffectdefinition)实现。 有关示例，请参阅 [MRC 示例应用](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/HolographicMixedRealityCapture) 。
+* 旧的 API： [MediaCapture. AddEffectAsync () ](/uwp/api/windows.media.capture.mediacapture.addeffectasync)
+* 新的 Microsoft 推荐 API (将返回一个对象，这使你能够操作) ： MediaCapture 的动态属性[ () ](/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)：  /  [ () ](/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) ，这需要应用程序创建自己的[IVideoEffectDefinition](/uwp/api/Windows.Media.Effects.IVideoEffectDefinition)和[IAudioEffectDefinition](/uwp/api/windows.media.effects.iaudioeffectdefinition)实现。 有关示例，请参阅 [MRC 示例应用](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/HolographicMixedRealityCapture) 。
 
 >[!NOTE]
 > Visual Studio 将无法识别 MixedRealityCapture 命名空间，但字符串仍然有效。
 
 MRC 视频效果 (**MixedRealityCaptureVideoEffect**) 
 
-|  属性名  |  类型  |  默认值  |  说明 |
+|  属性名称  |  类型  |  默认值  |  说明 |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([mediastreamtype.video](/uwp/api/Windows.Media.Capture.MediaStreamType))   |  1 (VideoRecord)   |  描述此影响所使用的捕获流。 音频不可用。 |
 |  HologramCompositionEnabled  |  boolean  |  TRUE  |  用于在视频捕获中启用或禁用全息影像的标志。 |
 |  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  用于在全息影像捕获期间启用或禁用录制指示器的标志。 |
 |  VideoStabilizationEnabled  |  boolean  |  FALSE  |  用于启用或禁用由 HoloLens 跟踪器支持的视频稳定的标志。 |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  设置视频抖动使用的历史帧数。 从电源和性能的角度来看，0从0到延迟，几乎是 "免费"。 15对于最高质量 (建议使用15帧延迟和内存) 。 |
-|  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
+|  GlobalOpacityCoefficient  |  FLOAT  |  0.9 (HoloLens) 1.0 (沉浸式耳机)   |  将范围从 0.0 (完全透明) 到 (1.0 的全局不透明度系数设置为完全不透明) 。 |
 |  BlankOnProtectedContent  |  boolean  |  FALSE  |  用于启用或禁用在有显示受保护内容的 2d UWP 应用时返回空帧的标志。 如果此标志为 false，并且二维 UWP 应用显示受保护的内容，则在耳机和混合现实捕获中，二维 UWP 应用将替换为受保护的内容纹理。 |
 |  ShowHiddenMesh  |  boolean  |  FALSE  |  用于启用或禁用显示全息相机隐藏区域网格和相邻内容的标志。 |
 | OutputSize | 大小 | 0, 0 | 在裁剪视频稳定性后设置所需的输出大小。 如果指定了0或指定了无效的输出大小，则选择默认裁剪大小。 |
@@ -241,11 +241,11 @@ MRC 视频效果 (**MixedRealityCaptureVideoEffect**)
 
  (**MixedRealityCaptureAudioEffect) 的** MRC 音频效果
 
-| 属性名 | 类型 | 默认值 | 说明 |
+| 属性名称 | 类型 | 默认值 | 说明 |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (麦克风和系统音频)  | 用于指示应使用的音频源的枚举： 0 (Mic 音频) ，1 (系统音频仅) ，2 (Mic 和系统音频)  |
-| LoopbackGain | float | Windows 设备门户中的 **应用音频增益** 设置 | 适用于系统音频音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
-| MicrophoneGain | float | Windows 设备门户中的 **Mic 音频增益** 设置 | 适用于麦克风音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
+| LoopbackGain | FLOAT | Windows 设备门户中的 **应用音频增益** 设置 | 适用于系统音频音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
+| MicrophoneGain | FLOAT | Windows 设备门户中的 **Mic 音频增益** 设置 | 适用于麦克风音量的增益。 范围为0.0 到5.0。 仅在 HoloLens 2 上受支持 |
 
 >[!NOTE]
 > 可以通过转到 [混合现实捕获页面](using-the-windows-device-portal.md#mixed-reality-capture)并调整其各自设置旁的滑块来更改 Windows 设备门户中 **LoopbackGain** 或 **MicrophoneGain** 的默认值。 这两个设置默认为 **1.0**，但可以设置为 **0.0** 和 **5.0** 之间的任何值。
