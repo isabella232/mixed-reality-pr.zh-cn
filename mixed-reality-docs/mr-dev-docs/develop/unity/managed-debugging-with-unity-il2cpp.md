@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: unity，visual studio，调试，il2cpp，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，UWP
-ms.openlocfilehash: 8e3967971220fa453f4e60639bd08f2554a8dd7e
-ms.sourcegitcommit: 5617575cf550dd03fba0bfd5263e97972dcc646b
+ms.openlocfilehash: 48f5fbd4b2ac217a3f840117595aa36fb3d7c10e
+ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547078"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394501"
 ---
 # <a name="managed-debugging-with-unity"></a>通过 Unity 进行托管调试
 
@@ -41,3 +41,7 @@ ms.locfileid: "111547078"
 10. 在列表中选择你的设备，然后单击 "确定" 以附加。
 
     ![设备列表](images/il2cpp-debugging-machines.png)
+
+## <a name="see-also"></a>另请参阅 
+
+* [C # 调试](/visualstudio/get-started/csharp/tutorial-debugger)

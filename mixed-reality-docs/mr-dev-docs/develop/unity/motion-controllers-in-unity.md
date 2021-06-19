@@ -1,78 +1,78 @@
 ---
 title: Unity 中的运动控制器
-description: 了解如何使用 XR 和常用按钮和轴 API 通过运动控制器输入在 Unity 中对凝视采取措施。
+description: 了解如何使用 XR 和通用按钮和轴 Api 在 Unity 中通过运动控制器输入采取措施。
 author: hferrone
 ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
-keywords: 运动控制器， unity， 输入， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， MRTK， 混合现实工具包
-ms.openlocfilehash: ff1eedcc337edd2d7edfe8d961bb88bcb859cd23
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+keywords: 运动控制器，unity，输入，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
+ms.openlocfilehash: d8f9ce292c0ab1cfa89faf58f0e5b90322192b35
+ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743487"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394511"
 ---
 # <a name="motion-controllers-in-unity"></a>Unity 中的运动控制器
 
-在 Unity 中，有两种对凝视采取措施的关键[](../../design/gaze-and-commit.md#composite-gestures)方法[：HoloLens](gaze-in-unity.md)和沉浸式 HMD 中的手势和运动控制器。 [](../../design/motion-controllers.md) 可以通过 Unity 中的相同 API 访问两个空间输入源的数据。
+您可以通过两种主要方式在您的 [HMD 中进行](gaze-in-unity.md)操作，在 HoloLens 和沉浸式的中的 [手势](../../design/gaze-and-commit.md#composite-gestures) 和 [运动控制器](../../design/motion-controllers.md) 。 可以通过 Unity 中的相同 Api 访问空间输入的两个源的数据。
 
-Unity 提供两种主要方法来访问空间输入数据Windows Mixed Reality。 常见的 *Input.GetButton/Input.GetAxis* API 可跨多个 Unity XR SDK 工作，而特定于 Windows Mixed Reality 的 *InteractionManager/GestureRecognizer* API 则公开一组完整的空间输入数据。
+Unity 提供了两种主要方法来访问 Windows Mixed Reality 的空间输入数据。 常见的 *GetButton/GetAxis* api 跨多个 Unity XR sdk 工作，而特定于 Windows Mixed Reality 的 *InteractionManager/GestureRecognizer* api 会公开一组完整的空间输入数据。
 
-## <a name="unity-xr-input-apis"></a>Unity XR 输入 API
+## <a name="unity-xr-input-apis"></a>Unity XR 输入 Api
 
-对于新项目，我们建议从头开始使用新的 XR 输入 API。 
+对于新项目，建议从头开始使用新的 XR 输入 Api。 
 
-可在此处找到 [有关 XR API 详细信息](https://docs.unity3d.com/Manual/xr_input.html)。
+可在此处找到有关 [XR api](https://docs.unity3d.com/Manual/xr_input.html)的详细信息。
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Unity 按钮/轴映射表
 
-用于运动控制器的 Unity Windows Mixed Reality通过 *Input.GetButton/GetAxis* API 支持下面列出的按钮和轴 ID。 "特定于 Windows MR"列是指 *InteractionSourceState* 类型中可用的属性。 以下各部分详细介绍了其中每个 API。
+适用于 Windows Mixed Reality 运动控制器的 Unity 输入管理器支持通过 *GetButton/GetAxis* api 在下面列出的按钮和轴 id。 "Windows MR 特定" 列是指 *InteractionSourceState* 类型可用的属性。 以下各节将详细介绍其中的每个 Api。
 
-按钮/轴 ID 映射通常Windows Mixed Reality Oculus 按钮/轴 ID 匹配。
+Windows Mixed Reality 的按钮/轴 ID 映射通常与 Oculus 按钮/轴 Id 匹配。
 
-用于存储的按钮/轴 ID Windows Mixed Reality两个方面与 OpenVR 的映射不同：
-1. 映射使用与 thumbstick 不同的触摸板 ID 来支持具有指纹和触摸板的控制器。
-2. 映射可避免重载菜单按钮的 A 和 X 按钮 ID，使它们可用于物理 ABXY 按钮。
+Windows Mixed Reality 的按钮/轴 ID 映射在以下两个方面不同于 OpenVR 的映射：
+1. 该映射使用不同于操纵杆的触摸板 Id，以支持同时具有 thumbsticks 和触摸板的控制器。
+2. 映射避免了对菜单按钮的 A 和 X 按钮 Id 进行重载，以使它们可用于物理 ABXY 按钮。
 
 <table>
 <tr>
-<th rowspan="2">输入 </th><th colspan="2"><a href="motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">通用 Unity API</a><br /> (Input.GetButton/GetAxis)  </th><th rowspan="2"><a href="motion-controllers-in-unity.md#windows-specific-apis-xrwsainput">特定于 Windows MR 的输入 API</a><br /> (XR。Wsa。输入) </th>
+<th rowspan="2">输入 </th><th colspan="2"><a href="motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">通用 Unity API</a><br /> (GetButton/GetAxis)  </th><th rowspan="2"><a href="motion-controllers-in-unity.md#windows-specific-apis-xrwsainput">Windows MR 专用输入 API</a><br /> (XR。WSA.输入) </th>
 </tr><tr>
-<th> 左侧 </th><th> 右侧</th>
+<th> 左手 </th><th> 右手</th>
 </tr><tr>
-<td> 选择按下的触发器 </td><td> 轴 9 = 1.0 </td><td> 轴 10 = 1.0 </td><td> selectPressed</td>
+<td> 选择触发按下 </td><td> 轴 9 = 1。0 </td><td> 轴 10 = 1。0 </td><td> selectPressed</td>
 </tr><tr>
-<td> 选择触发器模拟值 </td><td> 轴 9 </td><td> 轴 10 </td><td> selectPressedAmount</td>
+<td> 选择触发器模拟值 </td><td> 轴9 </td><td> 轴10 </td><td> selectPressedAmount</td>
 </tr><tr>
-<td> 选择部分按下的触发器 </td><td> 按钮 14 <i> (游戏板) </i> </td><td> 游戏板<i> (按钮</i>15)  </td><td> selectPressedAmount &gt; 0.0</td>
+<td> 选择触发器部分按下 </td><td> 按钮 14 <i> (游戏板兼容) </i> </td><td> 按钮 15 <i> (游戏板兼容) </i> </td><td> selectPressedAmount &gt; 0。0</td>
 </tr><tr>
-<td> 按下菜单按钮 </td><td> 按钮 6* </td><td> 按钮 7* </td><td> menuPressed</td>
+<td> 按下菜单按钮 </td><td> 按钮 6 * </td><td> 按钮 7 * </td><td> menuPressed</td>
 </tr><tr>
-<td> 按下手柄按钮 </td><td> 轴 11 = 1.0 (无模拟) <br />按钮 4 <i> (游戏板) </i> </td><td> 轴 12 = 1.0 (无模拟) <br />按钮 5 <i> (游戏板) </i> </td><td> 抓住</td>
+<td> 按下手柄按钮 </td><td> Axis 11 = 1.0 (没有模拟值) <br />按钮 4 <i> (游戏板兼容) </i> </td><td> 轴 12 = 1.0 (没有模拟值) <br />按钮 5 <i> (游戏板兼容) </i> </td><td> grasped</td>
 </tr><tr>
-<td> Thumbstick X <i> (左侧：-1.0、右侧：1.0) </i> </td><td> 轴 1 </td><td> 轴 4 </td><td> thumbstickPosition.x</td>
+<td> 操纵杆 X <i> (左：-1.0，right： 1.0) </i> </td><td> 轴1 </td><td> 轴4 </td><td> thumbstickPosition</td>
 </tr><tr>
-<td> Thumbstick Y <i> (top： -1.0， bottom： 1.0) </i> </td><td> 轴 2 </td><td> 轴 5 </td><td> thumbstickPosition.y</td>
+<td> 操纵杆 Y <i> (顶部：-1.0、底部： 1.0) </i> </td><td> 轴2 </td><td> 轴5 </td><td> thumbstickPosition</td>
 </tr><tr>
-<td> 已按下 Thumbstick </td><td> 按钮 8 </td><td> 按钮 9 </td><td> thumbstickPressed</td>
+<td> 已按下操纵杆 </td><td> 按钮8 </td><td> 按钮9 </td><td> thumbstickPressed</td>
 </tr><tr>
-<td> Touchpad X <i> (左侧：-1.0、右侧：1.0) </i> </td><td> 轴 17* </td><td> 轴 19* </td><td> touchpadPosition.x</td>
+<td> 触摸板 X <i> (左：-1.0，右： 1.0) </i> </td><td> 轴 17 * </td><td> 轴 19 * </td><td> touchpadPosition</td>
 </tr><tr>
-<td> 触控板 Y <i> (顶部：-1.0，底部：1.0) </i> </td><td> 轴 18* </td><td> 轴 20* </td><td> touchpadPosition.y</td>
+<td> 触摸板 Y <i> (顶部：-1.0、底部： 1.0) </i> </td><td> Axis 18 * </td><td> 轴 20 * </td><td> touchpadPosition</td>
 </tr><tr>
-<td> 触摸的触摸板 </td><td> 按钮 18* </td><td> 按钮 19* </td><td> touchpadTouched</td>
+<td> 接触触摸板 </td><td> 按钮 18 * </td><td> 按钮 19 * </td><td> touchpadTouched</td>
 </tr><tr>
-<td> 已按下触摸板 </td><td> 按钮 16* </td><td> 按钮 17* </td><td> touchpadPressed</td>
+<td> 已按触摸板 </td><td> 按钮 16 * </td><td> 按钮 17 * </td><td> touchpadPressed</td>
 </tr><tr>
-<td> 6DoF 手柄姿势或指针姿势 </td><td colspan="2"> <i>仅</i> 手柄姿势 <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">：XR。InputTracking.GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR。InputTracking.GetLocalRotation</a></td><td> 将 <i>手柄</i> 或 <i>指针作为</i> 参数传递：sourceState.sourcePose.TryGetPosition<br />sourceState.sourcePose.TryGetRotation<br /></td>
+<td> 6DoF 手柄姿势或指针姿势 </td><td colspan="2"> 仅限<i>抓握</i>： <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR。InputTracking. GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR.InputTracking.GetLocalRotation</a></td><td> Pass <i>手柄</i> 或 <i>指针</i> 作为参数： SourceState. sourcePose. TryGetPosition<br />sourceState.sourcePose.TryGetRotation<br /></td>
 </tr><tr>
-<td> 跟踪状态 </td><td colspan="2"> <i>位置准确性和源丢失风险仅通过特定于 MR 的 API 提供</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState.sourcePose.positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceState.properties.sourceLossRisk</a></td>
+<td> 跟踪状态 </td><td colspan="2"> <i>位置准确性和源丢失风险仅通过 MR 专用 API 提供</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState.sourcePose.positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceState. sourceLossRisk</a></td>
 </tr>
 </table>
 
 >[!NOTE]
->由于游戏板、Oculus Touch 和 OpenVR 使用的映射发生冲突，这些按钮/轴的ID 不同于 Unity 用于 OpenVR 的ID。
+>这些按钮/轴 Id 不同于 Unity 用于 OpenVR 的 Id，因为 gamepads、Oculus 触控和 OpenVR 所使用的映射中出现冲突。
 
 <!-- ### Using HP Reverb G2 controllers
 
@@ -101,6 +101,23 @@ If you're using the HP Reverb G2 controllers, refer to the table below for butto
 </tr>
 </table> -->
 
+### <a name="openxr"></a>OpenXR
+
+若要了解有关 Unity 中混合现实交互的基础知识，请访问 unity [手动 For UNITY XR Input](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html)。 此 Unity 文档介绍了从特定于控制器的输入到更可归纳的 **InputFeatureUsage** 的映射，如何识别和分类可用的 XR 输入，如何从这些输入中读取数据等。
+
+Mixed Reality OpenXR 插件提供附加的输入交互配置文件，这些配置文件映射到标准 **InputFeatureUsage**，如下所述：
+
+| InputFeatureUsage | HP 回音 G2 控制器 (OpenXR)  | HoloLens 手型 (OpenXR)  |
+| ---- | ---- | ---- |
+| primary2DAxis | 操纵杆 | |
+| primary2DAxisClick | 游戏杆-单击 | |
+| 触发器 | 触发器  | |
+| 调整 | 握 | 敲击或敲击 |
+| primaryButton | [X/A] - 按 | 隔空敲击 |
+| secondaryButton | [Y/B] - 按 | |
+| gripButton | 手柄 - 按 | |
+| triggerButton | 触发器 - 按 | |
+| menuButton | 菜单 | |
 
 ## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指向姿势
 
@@ -130,6 +147,27 @@ Windows Mixed Reality支持各种外形因素中的运动控制器。 每个控�
 
 目前，指针姿势仅在 Unity 中通过特定于 Windows MR 的 API *sourceState.sourcePose.TryGetPosition/Rotation* 提供，并作为参数传递 *InteractionSourceNode.Pointer。*
 
+### <a name="openxr"></a>OpenXR 
+
+可以通过 OpenXR 输入交互访问两组姿势：
+
+* 手柄为在手中呈现对象而造成
+* 目的是指向世界。
+
+有关此设计以及两种姿势之间的差异，请参阅 [OpenXR 规范 - 输入子路径](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#semantic-path-input)。
+
+InputFeatureUsages  DevicePosition、DeviceRotation、DeviceVelocity和 **DeviceAngularVelocity** 提供的姿势均表示 OpenXR 手柄姿势。   与手柄姿势相关的 InputFeatureUsages 在 Unity [的 CommonUsages 中定义](https://docs.unity3d.com/2020.2/Documentation/ScriptReference/XR.CommonUsages.html)。
+
+InputFeatureUsages  PointerPosition、PointerRotation、PointerVelocity和 **PointerAngularVelocity** 提供的姿势均表示 OpenXR 目标姿势。   这些 InputFeatureUsages 未在任何包含的 C# 文件中定义，因此需要定义自己的 InputFeatureUsages，如下所示：
+
+``` cs
+public static readonly InputFeatureUsage<Vector3> PointerPosition = new InputFeatureUsage<Vector3>("PointerPosition");
+```
+
+## <a name="haptics"></a>Haptics
+
+有关在 Unity 的 XR 输入系统中使用 haptics 的信息，请参阅 Unity Manual [for Unity XR Input - Haptics （Unity XR 输入 - Haptics](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html#Haptics)的 Unity 手册）。
+
 ## <a name="controller-tracking-state"></a>控制器跟踪状态
 
 与头戴显示设备一样，Windows Mixed Reality控制器不需要设置外部跟踪传感器。 相反，控制器由头戴显示设备本身的传感器进行跟踪。
@@ -152,11 +190,11 @@ Windows Mixed Reality支持各种外形因素中的运动控制器。 每个控�
 <tr>
 <th> 跟踪状态 </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>准确度高</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>准确度高</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>高准确度 (有丢失数据) </b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>高准确度 (有丢失数据) </b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>近似准确度</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>近似准确度</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>无位置</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
 </tr>

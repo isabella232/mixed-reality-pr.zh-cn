@@ -6,12 +6,12 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: JavaScript，WebXR，WinMR，WebAR，WebVR，WindowsMixedReality，HoloLens，windows mixed reality，web vr，web xr，web mr，web ar，360，360视频，360视频，360照片，360照片，360内容，沉浸式 web，沉浸式 web，IW，immersiveweb
-ms.openlocfilehash: 051c6079da939224c88d6414978b2b4b0e67f87c
-ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
+ms.openlocfilehash: 311241d9dec6f5d086a45766c040b1b2b9eb4128
+ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104909007"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394341"
 ---
 # <a name="javascript-development-overview"></a>JavaScript 开发概述
 
