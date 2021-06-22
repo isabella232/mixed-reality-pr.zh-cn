@@ -5,12 +5,12 @@ author: MaxWang-MS
 ms.author: wangmax
 ms.date: 05/27/2021
 keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 场景理解
-ms.openlocfilehash: 1ed6f93216fc90e7c6332f2b9c40911d25d96d2a
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: 67a8b99a281b6deecd621edb5600578806812d8a
+ms.sourcegitcommit: 86fafb3a7ac6a5f60340ae5041619e488223f4f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743557"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112449746"
 ---
 # <a name="scene-understanding"></a>场景理解
 
@@ -69,7 +69,7 @@ ms.locfileid: "110743557"
 ::: moniker range="= mrtkunity-2021-05"
 
 > [!NOTE] 
-> 由于初始化/线程执行 `There is no active AsyncCoroutineRunner when an action is posted.` 顺序，示例场景在某些情况下记录警告。 如果可以确认组件已附加到"演示控制器 `AsyncCoroutineRunner` "GameObject，并且组件/GameObject 在场景中保持启用/活动状态 (默认) ，可以放心忽略警告。
+> 由于初始化/线程执行 `There is no active AsyncCoroutineRunner when an action is posted.` 顺序，示例场景在某些情况下记录警告。 如果可以确认组件已附加到"演示控制器 `AsyncCoroutineRunner` "GameObject，并且组件/GameObject 在场景中保持启用/活动状态 (默认) ，可以放心忽略警告。 **但是，使用场景理解创建新场景时，请确保在根目录创建空 GameObject 并将脚本附加到该场景，否则场景理解 `AsyncCoroutineRunner` 可能无法正常运行。**
 ::: moniker-end
 
 #### <a name="configuring-the-observer-service"></a>配置观察程序服务

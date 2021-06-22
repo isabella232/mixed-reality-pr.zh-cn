@@ -1,22 +1,22 @@
 ---
-title: 'Android 和 iOS MRTK 配置 (ARFoundation) '
+title: 通过 AR Foundation 生成并部署到 Android 和 iOS
 description: 用于在 unity 中为 Android 和 iOS (ARFoundation) 配置 MRTK 的文档
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，AR Core，AR 工具包，iOS，IOS，Android，AR Foundation
-ms.openlocfilehash: 9f621008db76e3f8e443545b795db442d7c17dda
-ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
+ms.openlocfilehash: 352afbbc11c7cc6fcd2557395c5dd36d956f396d
+ms.sourcegitcommit: 86fafb3a7ac6a5f60340ae5041619e488223f4f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110345130"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112449736"
 ---
-# <a name="how-to-configure-mrtk-for-ios-and-android-experimental"></a>如何配置适用于 iOS 和 Android 的 MRTK [实验]
+# <a name="building-and-deploying-to-android-and-ios-via-ar-foundation-experimental"></a>通过 AR Foundation 生成并部署到 Android 和 iOS [实验]
 
 ## <a name="install-required-packages"></a>安装所需程序包
 
-1. 从 [GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.3.0)或 [Unity 包管理器](../configuration/usingupm.md)下载并导入 **MixedReality** 包
+1. 从 [GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/)或 [Unity 包管理器](../configuration/usingupm.md)下载并导入 **MixedReality** 包
 
 1. 在 Unity 包管理器 (UPM) 中，安装以下包：
 
@@ -34,12 +34,12 @@ ms.locfileid: "110345130"
     | AR Foundation  <br/> 版本：2.1。8 |  AR Foundation  <br/> 版本：2.1。8 |
     | ARCore XR 插件 <br/> 版本：2.1.11 | ARKit XR 插件 <br/> 版本：2.1。9 |
 
-    **目前尚不支持 Unity 2020.1 (，仅包含在信息中)**
+    **Unity 2020。3**
 
     | **Android** | **iOS** |
     | --- | --- |
-    | AR Foundation  <br/> 版本：3.1。3 |  AR Foundation  <br/> 版本：3.1。3 |
-    | ARCore XR 插件 <br/> 版本：3.1。4 | ARKit XR 插件 <br/> 版本：3.1。3 |
+    | AR Foundation  <br/> 版本：3.1。3 |  AR Foundation  <br/> 版本：4.0.12 |
+    | ARCore XR 插件 <br/> 版本：3.1。4 | ARKit XR 插件 <br/> 版本：4.1。7 |
 
 1. 通过调用菜单项来更新 MRTK UnityAR 脚本定义： **混合现实 > 工具包 > 实用工具 > UnityAR > 更新脚本定义**
 

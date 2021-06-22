@@ -1,53 +1,53 @@
 ---
 title: 场景理解 SDK
-description: 了解如何在混合现实应用中安装和使用场景理解 SDK （包括组件、网格和对象）。
+description: 了解如何安装和使用场景理解 SDK，包括混合现实应用中的组件、网格和对象。
 author: szymons
 ms.author: szymons
 ms.date: 12/14/2020
 ms.topic: article
-keywords: 场景了解，空间映射，Windows Mixed Reality，Unity
-ms.openlocfilehash: 2f6e0c9d0370caed2b2bc01399b9e4fc00836556
-ms.sourcegitcommit: 0c717ed0043c7a65e2caf1452eb0f49059cdf154
+keywords: 场景理解、空间映射、Windows Mixed Reality、Unity
+ms.openlocfilehash: dee561e49a9457aa35c44037f4573caaefd00f2a
+ms.sourcegitcommit: 86fafb3a7ac6a5f60340ae5041619e488223f4f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108644833"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112449726"
 ---
 # <a name="scene-understanding-sdk-overview"></a>场景理解 SDK 概述
 
-场景理解转换混合现实设备捕获的非结构化环境传感器数据，并将其转换为强大的抽象表示形式。 SDK 充当应用程序和场景了解运行时之间的通信层。 它旨在模拟现有的标准构造，如3D 表示形式的三维场景图形，以及2D 应用程序的2D 矩形和面板。 尽管构造场景了解模拟会映射到具体框架，但通常情况下，SceneUnderstanding 是框架不可知的，这使得与它交互的可变框架之间具有互操作性。 随着场景理解演变，SDK 的作用是确保新的表示形式和功能继续在统一框架内公开。 在本文档中，我们将首先介绍高级概念，这些概念将帮助你熟悉开发环境/用法，并为特定的类和构造提供更详细的文档。
+场景理解可转换混合现实设备捕获的非结构化环境传感器数据，并将其转换为功能强大的抽象表示形式。 SDK 充当应用程序与场景理解运行时之间的通信层。 它旨在模拟现有标准构造，例如用于 3D 表示的 3D 场景图，以及 2D 应用程序的 2D 矩形和面板。 虽然场景理解模拟的构造将映射到具体框架，但一般情况下，SceneUnderunder 与框架无关，允许与其交互的不同框架之间的互操作性。 随着场景理解的发展，SDK 的作用是确保在统一框架中继续公开新的表示形式和功能。 本文档首先介绍有助于熟悉开发环境/使用情况的高级别概念，然后提供有关特定类和构造的更详细文档。
 
-## <a name="where-do-i-get-the-sdk"></a>在何处获取 SDK？
+## <a name="where-do-i-get-the-sdk"></a>在哪里获取 SDK？
 
-SceneUnderstanding SDK 可通过 [混合现实功能工具](../unity/welcome-to-mr-feature-tool.md)下载。
+可通过混合现实功能工具 下载 SceneUnderunder [sdk。](../unity/welcome-to-mr-feature-tool.md)
 
-**注意：** 最新版本依赖于预览包，你需要启用预发布包才能查看。
+**注意** ：最新版本取决于预览包，需要启用预发行包才能看到它。
 
-对于版本 0.5.2022-rc 和更高版本，场景理解支持适用于 c # 和 c + + 的语言投影，使应用程序可以为 Win32 或 UWP 平台开发应用程序。 在此版本中，SceneUnderstanding 支持 unity 的编辑器中的支持，该支持仅用于与 HoloLens2 通信。 
+对于版本 0.5.2022-rc 及更高版本，场景理解支持 C# 和 C++ 的语言投影，使应用程序能够开发适用于 Win32 或 UWP 平台的应用程序。 从此版本开始，SceneUnderunder 支持 unity 编辑器内支持阻止 SceneObserver，它仅用于与 HoloLens2 通信。 
 
-SceneUnderstanding 需要 Windows SDK 版本18362或更高版本。 
+SceneUnderunder 需要Windows SDK 18362 或更高版本。 
 
 ## <a name="conceptual-overview"></a>概念概述
 
 ### <a name="the-scene"></a>场景
 
-混合现实设备会不断集成有关它在你的环境中看到的内容的信息。 场景了解漏斗图所有这些数据源，并生成一个统一的抽象抽象。 场景理解会生成场景，这些场景是 [SceneObjects](scene-understanding-SDK.md#sceneobjects) 的组成部分，表示单个事物的实例 (，如墙壁/天花板/楼层。 ) 场景对象本身是 [SceneComponents 的组合，表示构成此 SceneObject 的更精细的部分。 组件的示例包括四边形和网格，但将来可能表示边界框、冲突网格、元数据等。
+混合现实设备不断集成有关它在环境中看到的信息。 场景理解会漏斗所有这些数据源，并生成一个单一的内聚抽象。 场景理解生成 [SceneObjects](scene-understanding-SDK.md#sceneobjects) 的组合，这些场景对象表示单个对象的实例 (例如，墙/上限/楼层。) 场景对象本身是 [SceneComponents，表示组成此 SceneObject 的更精细部分的组合。 组件的示例包括四边形和网格，但将来可以表示边界框、冲突网格、元数据等。
 
-将原始传感器数据转换为场景的过程是一项可能消耗大量资源的操作， (~ 10x10m) 到几分钟用于大空间 (~ 50x50m) ，因此没有应用程序请求的设备不会进行计算。 相反，应用程序会按需触发场景生成。 SceneObserver 类具有可计算或反序列化场景的静态方法，然后可以使用该场景进行枚举/交互。 "计算" 操作按需执行并在 CPU 上执行，但在单独的进程中 (混合现实驱动程序) 。 但是，虽然我们在另一个进程中进行计算，但生成的场景数据会存储在应用程序的场景对象中并进行维护。 
+将原始传感器数据转换为场景的过程可能很昂贵，对于中型空间 (大约 10x10m) 到分钟，对于大型空间 (~50x50m) ，可能需要几秒钟时间，因此设备无需应用程序请求即可计算这些数据。 相反，场景生成由应用程序按需触发。 SceneObserver 类具有静态方法，这些方法可以计算或反流化场景，然后可以枚举/交互。 "计算"操作按需执行，在 CPU 上执行，但在混合现实驱动程序 (单独的进程中) 。 但是，当我们在另一个进程中进行计算时，生成的场景数据在 Scene 对象中的应用程序中存储和维护。 
 
-下面的关系图演示了此流程，并显示了两个应用程序与场景理解运行时交互的示例。 
+下图演示了此过程流，并显示了两个应用程序与场景理解运行时交互的示例。 
 
 ![流程图](images/SU-ProcessFlow.png)
 
-左侧是混合现实运行时的关系图，它在自己的进程中始终处于打开和运行状态。 此运行时负责执行设备跟踪、空间映射和其他操作，场景了解使用它来理解和解决世界的相关原因。 在关系图的右侧，我们将显示两个使用场景理解的理论应用程序。 第一个使用 MRTK 的应用程序接口，该应用程序在内部使用场景理解 SDK，第二个应用程序计算并使用两个单独的场景实例。 此关系图中的所有三个场景都生成不同场景的不同实例，驱动程序无法跟踪在一个场景中的应用程序和场景对象之间共享的全局状态。 场景理解确实提供了一种在一段时间内进行跟踪的机制，但这是使用 SDK 实现的。 跟踪代码已在应用程序的进程中的 SDK 中运行。
+左侧是混合现实运行时的关系图，该运行时始终在其自己的进程中运行。 此运行时负责执行设备跟踪、空间映射和其他操作，场景理解使用这些操作来了解和推理你周围的世界。 在关系图右侧，我们演示了利用场景理解的两个理论应用程序。 第一个应用程序与 MRTK 交互，该接口在内部使用场景理解 SDK，第二个应用计算并使用两个单独的场景实例。 此图中的所有三个场景都会生成不同的场景实例，驱动程序不会跟踪在应用程序之间共享的全局状态，而一个场景中的场景对象在另一个场景中找不到。 场景理解确实提供了一种机制来跟踪一段时间，但这是使用 SDK 完成。 跟踪代码已在应用进程中的 SDK 中运行。
 
-由于每个场景会将其数据存储在应用程序的内存空间中，因此，你可以假定场景对象的所有功能或它的内部数据始终在应用程序的进程中执行。
+由于每个场景都将数据存储在应用程序的内存空间中，因此你可以假设 Scene 对象的所有函数或它的内部数据始终在应用程序进程中执行。
 
 ### <a name="layout"></a>Layout
 
-若要使用场景理解，了解并了解运行时如何以逻辑方式和物理方式表示组件可能会很有价值。 场景表示具有特定布局的数据，其中选择了简单的布局，同时保持基础结构 pliable，而无需进行重大修改。 场景将通过以下方式实现此目标：将所有组件存储在简单列表中) 的所有场景对象 (构建基块，并通过引用（其中特定组件引用其他组件）定义层次结构和组合。
+若要使用场景理解，了解和了解运行时在逻辑和物理上如何表示组件可能很有价值。 场景表示具有特定布局的数据，该布局选择简单，同时维护一个符合未来要求的基础结构，而无需进行重大修订。 为此，场景将所有场景对象 (构建基块存储在平面列表中) 定义层次结构和组合，其中特定组件引用其他组件。
 
-下面的示例展示了结构的平面和逻辑形式。
+下面，我们演示了结构平面和逻辑形式的示例。
 
 <table>
 <tr><th>逻辑布局</th><th>物理布局</th></tr>
@@ -91,34 +91,34 @@ SceneUnderstanding 需要 Windows SDK 版本18362或更高版本。
 </tr>
 </table>
 
-此图重点介绍场景的物理布局和逻辑布局之间的差异。 在左侧，我们将看到您的应用程序在枚举场景时看到的数据的分层布局。 在右侧，我们看到场景由12个不同的组件组成，如有必要，可单独访问。 处理新场景时，我们希望应用程序以逻辑方式对此层次结构进行遍历，但当在场景更新之间进行跟踪时，某些应用程序可能只对在两个场景之间共享的特定组件感兴趣。
+此图突出显示了场景的物理布局和逻辑布局的区别。 在左侧，可以看到应用程序在枚举场景时看到的数据的分层布局。 在右侧，我们看到场景由 12 个不同的组件组成，如有必要，可单独访问这些组件。 处理新场景时，我们希望应用程序以逻辑方式演练此层次结构，但是，在场景更新之间跟踪时，某些应用程序可能只希望以两个场景之间共享的特定组件为目标。
 
 ## <a name="api-overview"></a>API 概述
 
-以下部分提供对场景理解中的构造的高级概述。 阅读本部分后，你将了解如何表达场景以及各种组件的用途/用途。 下一节将提供具体的代码示例以及在本概述中 glossed 的其他详细信息。
+以下部分简要概述了场景理解中的构造。 阅读本部分将让你了解场景的表示方式，以及各种组件执行/用于哪些操作。 下一部分将提供具体代码示例和本概述中概述的其他详细信息。
 
-下面所述的所有类型都驻留在 `Microsoft.MixedReality.SceneUnderstanding` 命名空间中。
+下面介绍的所有类型都驻留在 `Microsoft.MixedReality.SceneUnderstanding` 命名空间中。
 
 ### <a name="scenecomponents"></a>SceneComponents
 
-现在，您已经了解了幕后的逻辑布局，接下来可以展示 SceneComponents 的概念，以及如何使用它们来组成层次结构。 SceneComponents 是 SceneUnderstanding 中最精细的分解，表示单个核心事物，例如，一个网格或四个边界框。 SceneComponents 是可以独立更新并可由其他 SceneComponents 引用的项，因此，它们具有一个唯一 ID 的单一全局属性，该属性允许此类跟踪/引用机制。 Id 用于场景层次结构的逻辑组合以及对象持久性 (相对于另一场景更新一个场景的操作。 )  
+了解场景的逻辑布局后，我们现在可以呈现 SceneComponents 的概念，以及如何使用它们来组合层次结构。 SceneComponents 是 SceneUnderunder 中最精细的分解，表示单个核心事物，例如网格、四边形或边界框。 SceneComponents 是可独立更新且可由其他 SceneComponents 引用的项，因此它们具有单个全局属性的唯一 ID，允许这种类型的跟踪/引用机制。 ID 用于场景层次结构的逻辑组合，以及对象持久性 (更新一个场景相对于另一个场景的行为。)  
 
-如果要将每个新计算的场景视为不同的场景，只需枚举其中的所有数据，Id 就会对您很有透明度。 但是，如果你打算跟踪多个更新上的组件，则将使用 Id 在场景对象之间建立索引和查找 SceneComponents。
+如果要将每个新计算的场景视为不同的场景，并且只是枚举其中的所有数据，则 ID 对用户而言在很大程度上是透明的。 但是，如果计划跟踪多个更新中的组件，将使用 ID 为 Scene 对象之间的 SceneComponent 编制索引并查找它们。
 
 ### <a name="sceneobjects"></a>SceneObjects
 
-SceneObject 是一个 SceneComponent，它表示 "事物" 的实例，例如墙壁、楼层、天花板等。用其 Kind 属性表示。 SceneObjects 是几何，因此具有在空间中表示其位置的函数和属性，但不包含任何几何或逻辑结构。 相反，SceneObjects 引用其他 SceneComponents，特别是 SceneQuads 和 SceneMeshes，它们提供系统支持的各种表示形式。 计算新场景时，应用程序很可能会枚举场景的 SceneObjects，以处理其感兴趣的内容。
+SceneObject 是一个 SceneComponent，它表示"事物"的实例，例如墙、楼层、上限等。用其 Kind 属性表示。 SceneObject 是几何的，因此具有表示它们在空间中的位置的函数和属性，但是它们不包含任何几何或逻辑结构。 相反，SceneObjects 引用其他 SceneComponents，特别是 SceneQuads 和 SceneMeshes，它们提供系统支持的不同表示形式。 计算新场景时，应用程序很可能枚举场景的 SceneObject，以处理其感兴趣的内容。
 
-SceneObjects 可以包含以下任一项：
+SceneObject 可以具有以下任一项：
 
 <table>
 <tr>
 <th>SceneObjectKind</th> <th>说明</th>
 </tr>
-<tr><td>背景</td><td>已知 SceneObject <b>不</b> 是其他已识别的场景对象类型之一。 此类不应与 Unknown 混淆，其中背景已知不是墙壁/楼层/天花板，等等 .。。虽然未知还未分类。</b></td></tr>
-<tr><td>壁</td><td>物理墙。 墙壁被认为是可移动的环境结构。</td></tr>
-<tr><td>Floor</td><td>楼层是可以进行审核的任何表面。 注意：楼梯不是楼层。 另请注意，该楼层假设有任何不可表面，因此没有明确的假设。 多层结构，斜坡等 .。。应将所有分类为楼层。</td></tr>
-<tr><td>Ceiling</td><td>房间的上部面。</td></tr>
+<tr><td>背景</td><td>SceneObject 已知 <b>不是其他</b> 可识别的场景对象类型之一。 此类不应与"未知"混淆，其中"背景"已知不是墙/楼层/上限等。而未知尚未分类。</b></td></tr>
+<tr><td>Wall</td><td>物理墙。 假定墙是不可移动的环境结构。</td></tr>
+<tr><td>Floor</td><td>楼层是可在其中进行演练的任何表面。 注意：不为楼层。 另请注意，楼层假定任何可走面，因此没有明确假设单一楼层。 多层结构、渐变等...应全部分类为楼层。</td></tr>
+<tr><td>Ceiling</td><td>房间的上表面。</td></tr>
 <tr><td>平台</td><td>一个大平面，可以在其上放置全息影像。 它们倾向于表示表、countertops 和其他大型水平曲面。</td></tr>
 <tr><td>World</td><td>标记不可知的几何数据的保留标签。 通过设置 EnableWorldMesh 更新标志生成的网格将归为 "世界"。</td></tr>
 <tr><td>Unknown</td><td>尚未对此场景对象进行分类并为其分配一种类型。 这不应与背景混淆，因为此对象可能是任何内容，而系统刚刚没有提供足够强大的分类。</td></tr>
@@ -144,6 +144,9 @@ SceneQuad 是一个 SceneComponent，它表示占据三维世界的2d 面。 Sce
 SceneQuads 在2d 中定义边界矩形图面。 但是，SceneQuads 表示具有任意和可能复杂的形状的图面 (例如，环形形状的表。 ) 表示四个部分的复杂形状，可以使用 GetSurfaceMask API 将图面上的形状呈现到提供的图像缓冲区。 如果具有四部分的 SceneObject 还具有网格，则网格三角形应等效于此呈现的图像，它们都表示图面的实面（以2d 或3d 坐标表示）。
 
 ## <a name="scene-understanding-sdk-details-and-reference"></a>场景理解 SDK 详细信息和参考
+
+> [!NOTE] 
+> 当使用 MRTK 时，请注意您将与 MRTK 交互， [`WindowsSceneUnderstandingObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsSceneUnderstanding.Experimental.WindowsSceneUnderstandingObserver) 因此在大多数情况下可能会跳过此部分。 有关详细信息，请参阅 [MRTK 场景了解文档](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/scene-understanding) 。
 
 以下部分将帮助你熟悉 SceneUnderstanding 的基础知识。 本部分应为你提供基础知识，此时你应该具有足够的上下文来浏览示例应用程序，以了解如何整体使用 SceneUnderstanding。
 
