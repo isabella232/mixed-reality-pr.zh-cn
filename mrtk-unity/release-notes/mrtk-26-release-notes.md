@@ -4,13 +4,13 @@ description: MRTK 版本 2.6 的发行说明
 author: polar-kev
 ms.author: kesemple
 ms.date: 05/27/2021
-keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 4ac82f7e07135e840886fef810844ff00ef1ac1e
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK，
+ms.openlocfilehash: c172e5d071bba22626e9c35b2b4318f1ff779335
+ms.sourcegitcommit: f7839221c9549e60a2c3ac2dbd39f07a6851dcd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647195"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112562507"
 ---
 # <a name="microsoft-mixed-reality-toolkit-26-release-notes"></a>Microsoft Mixed Reality Toolkit 2.6 发行说明
 
@@ -40,6 +40,7 @@ ms.locfileid: "110647195"
 更新对话示例场景以正确描述当前对话方案。
 
 ## <a name="whats-new-in-260"></a>2.6.0 中的新增功能
+
 <iframe width="940" height="530" src="https://www.youtube.com/embed/qfONlUCSWdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 
@@ -66,7 +67,7 @@ Interactive 元素是 MRTK 输入系统的简化集中入口点。 它包含状�
 
 ![InteractiveElementAddCoreState](../features/images/interactive-element/InEditor/Gifs/InspectorHighlightEditor.gif)
 
-状态可视化工具是依赖于 Interactive 元素的动画组件。  此组件创建动画剪辑、设置关键帧并生成动画器状态机。 有关详细信息，请参阅 [状态可视化工具文档](../features/experimental/interactive-element.md#state-visualizer-experimental)
+状态可视化工具是依赖于 Interactive 元素的动画组件。 此组件创建动画剪辑、设置关键帧并生成动画器状态机。 有关详细信息，请参阅 [状态可视化工具文档](../features/experimental/interactive-element.md#state-visualizer-experimental)
 
 ![StateVisualizerColorChangeOnFocus](../features/images/interactive-element/InEditor/Gifs/FocusColorChange.gif)
 
@@ -74,7 +75,7 @@ Interactive 元素是 MRTK 输入系统的简化集中入口点。 它包含状�
 
 用户现在可以使用远程端口手势跨所有平台移动其播放空间。 若要在具有默认配置的 MR 设备上通过控制器进行远程传送，请使用指纹。 若要使用可表达的手进行远程传送，请用手指朝上手势，同时将索引和滚动块朝外，通过卷起手指完成视区。 若要使用输入模拟进行远程传送，请参阅更新 [后的输入模拟服务文档](../features/input-simulation/input-simulation-service.md)。
 
-  ![远程端口手势](../features/images/teleport/handteleport.gif)
+![远程端口手势](../features/images/teleport/handteleport.gif)
 
 ### <a name="scene-understanding-now-available-in-mrtk-as-an-experimental-spatial-awareness-observer"></a>场景理解现在以实验性空间感知观察器的身份在 MRTK 中提供
 
@@ -86,7 +87,7 @@ MRTK 2.6 [中引入了](/windows/mixed-reality/scene-understanding) 对场景理
 > 此功能需要场景理解包，该包现在可通过混合现实 [功能工具 获得](https://aka.ms/MRFeatureTool)。
 > 使用混合现实功能工具或通过 UPM 导入时，请在导入实验性 - 场景了解示例之前导入 Demos - SpatialAwareness 示例，因为存在依赖项问题。 有关详细信息 [，请参阅此 GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9431) 问题。
 
-  ![场景理解](images/SceneUnderstanding.gif)
+![场景理解](images/SceneUnderstanding.gif)
 
 ### <a name="runtime-profile-switching-support"></a>运行时配置文件切换支持
 
@@ -96,18 +97,19 @@ MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文�
 
 两个新的求解器已准备好与主线 MRTK 一起使用。
 
-  ![方向指示器求解器](images/DirectionalIndicatorExampleScene.gif)
+![方向指示器求解器](images/DirectionalIndicatorExampleScene.gif)
 
 ### <a name="hand-coach-graduated-from-experimental"></a>手部教练从实验阶段中训练
 
 手部指导功能现已准备好与主线 MRTK 一起使用。
-  ![手部教练示例](/windows/mixed-reality/design/images/handcoach/airtap.gif)
+
+![手部教练示例](/windows/mixed-reality/design/images/handcoach/airtap.gif)
 
 ### <a name="dialog-controls-graduated-from-experimental"></a>从实验性中开始的对话控件
 
 对话框控件现已准备好与主线 MRTK 一起使用。
 
-  ![对话框控件](https://user-images.githubusercontent.com/13754172/101927792-3326e200-3c18-11eb-88d3-44b4b50c7f7d.png)
+![对话框控件](https://user-images.githubusercontent.com/13754172/101927792-3326e200-3c18-11eb-88d3-44b4b50c7f7d.png)
 
 ### <a name="pulse-shader-graduated-from-experimental"></a>从实验性中培养的脉冲着色器
 
@@ -123,13 +125,13 @@ MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文�
 
 添加了对读取[模式的支持，HoloLens 2。](/hololens/hololens2-display#what-improvements-are-coming-that-will-improve-hololens-2-image-quality) 读取模式可减少系统的视场，但消除了 Unity 输出的缩放。 Unity 呈现的像素将对应于项目上HoloLens 2。 应用程序作者应该对多个人员进行测试，以确保这是他们希望在应用中进行权衡。
 
-  ![Windows Mixed Reality读取模式](images/WMRReadingMode.gif)
+![Windows Mixed Reality读取模式](images/WMRReadingMode.gif)
 
 ### <a name="support-for-3d-app-launchers-on-uwp"></a>支持 UWP 上的 3D 应用启动器
 
 添加了为 UWP 设置 [3D](/windows/mixed-reality/distribute/3d-app-launcher-design-guidance) 应用启动器的能力。 此设置在"MRTK 生成窗口"和"MRTK 项目设置"下的"生成设置"中公开。 在 Unity 中生成期间，它会自动写入项目。
 
-  ![生成设置](images/ProjectBuildSettings.png)
+![生成设置](images/ProjectBuildSettings.png)
 
 ## <a name="breaking-changes"></a>中断性变更
 
@@ -150,7 +152,7 @@ MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文�
 ### <a name="openxr"></a>OpenXR
 
 全息远程处理和 OpenXR 当前存在一个已知问题，其中手部无法一致地可用。
-此外，眼动跟踪示例场景当前不兼容，尽管眼动跟踪 *确实* 可以正常工作。
+此外，眼动跟踪示例场景当前不兼容，尽管眼动跟踪 _确实_ 可以正常工作。
 
 ### <a name="some-mixed-reality-toolkit-standard-shader-features-require-the-foundation-package"></a>某些混合现实工具包标准着色器功能需要 Foundation 包
 
@@ -189,7 +191,7 @@ MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文�
 
 ### <a name="oculus-quest"></a>Oculus Quest
 
-在面向独立平台 时，当前存在将 [Oculus XR 插件与 一起使用的已知问题](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)。  有关更新，请查看 Oculus bug 跟踪器/论坛/发行说明。
+在面向独立平台 时，当前存在将 [Oculus XR 插件与 一起使用的已知问题](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)。 有关更新，请查看 Oculus bug 跟踪器/论坛/发行说明。
 
 此 bug 由以下 3 个错误集表示：
 
