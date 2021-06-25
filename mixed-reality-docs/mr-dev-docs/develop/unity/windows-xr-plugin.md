@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/26/2021
 ms.topic: article
 keywords: Unity， 混合现实， 开发， 入门， 新项目， Windows Mixed Reality， UWP， XR， 性能， 旧版， mrtk， 窗口
-ms.openlocfilehash: c9733d58236d97db370ce4f58dc1760bdf4eda86
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+ms.openlocfilehash: 5d2d27a7ac5ea30515907a08eab6f6bfe70e6686
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110236"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906953"
 ---
 # <a name="using-windows-xr-plugin"></a>使用 Windows XR 插件
 
@@ -60,10 +60,10 @@ ms.locfileid: "112110236"
 
 4. 展开 **"XR 插件管理"部分，** 然后选择 **"Univeral Windows 平台设置"** 选项卡
 5. 如果使用的是 Unity 2020 或更高版本，则会看到用于检查 **OpenXR** 或 **Windows Mixed Reality。** 
-    * 可以选择任一运行时。  如果你专门针对 HoloLens 2 或 HP Reverb G2 进行开发，并决定试用 **OpenXR，** 请选择 OpenXR 框，查看使用适用于 Unity 的混合现实 [OpenXR](openxr-getting-started.md) 插件指南，在返回到本教程之前，请正确设置这些设备
+    * 可以选择任一运行时。  如果你专门针对 HoloLens 2 或 HP Reverb G2 进行开发，并决定试用 **OpenXR，** 请选择 OpenXR 框，查看使用适用于 Unity 的混合现实 [OpenXR](./xr-project-setup.md) 插件指南，在返回到本教程之前，请正确设置这些设备
 
 > [!NOTE]
-> 从 Unity 2020 LTS 开始，Microsoft 将采用 OpenXR 开发。  迁移到此路径时，在 Unity 2021.1 中，Windows XR 插件将在 2021.2 中弃用并删除，使 OpenXR 成为唯一受支持的路径。 有关详细信息，请参阅 [使用混合现实 OpenXR 插件](openxr-getting-started.md)。
+> 从 Unity 2020 LTS 开始，Microsoft 将采用 OpenXR 开发。  迁移到此路径时，在 Unity 2021.1 中，Windows XR 插件将在 2021.2 中弃用并删除，使 OpenXR 成为唯一受支持的路径。 有关详细信息，请参阅 [使用混合现实 OpenXR 插件](./xr-project-setup.md)。
 
 6. 如果决定选择"深度提交 **Windows Mixed Reality，** 请选中所有框，将"深度提交模式"设置为"深度 **16 位"**
 

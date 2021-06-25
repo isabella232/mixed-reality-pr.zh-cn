@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 04/22/2021
 ms.topic: article
 keywords: mixedrealitytoolkit，mixedrealitytoolkit，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity
-ms.openlocfilehash: df7c5039c6cdcfa1e39dc96f0829611dd5209772
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: d265725caf95379dfa01baa6dad1b7927fbeca5c
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394561"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906934"
 ---
 # <a name="setting-up-your-xr-configuration"></a>设置 XR 配置
 
@@ -27,7 +27,7 @@ ms.locfileid: "112394561"
 用于 Unity 的 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。 MRTK 版本 2 旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序开发。 该项目旨在降低准入门槛、创建混合现实应用程序，并随着我们的共同成长回馈社区。
 
 > [!div class="nextstepaction"]
-> [试用我们的 MRTK 教程](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=winxr)
+> [试用我们的 MRTK 教程](./tutorials/mr-learning-base-02.md?tabs=winxr)
 
 有关更多功能的详细信息，请参阅[关于 MRTK 的文档](/windows/mixed-reality/mrtk-unity)。
 
