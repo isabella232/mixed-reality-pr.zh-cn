@@ -1,62 +1,52 @@
 ---
 title: 移植概述
-description: 概述用于使现有应用程序混合现实和 VR 的各种移植选项。
+description: 概述用于将现有应用程序引入 HoloLens 和 VR 混合现实的各种移植选项。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
-keywords: 移植，unity，中间件，引擎，UWP，Win32
-ms.openlocfilehash: 9b056bd81a725fea23c1e7f3bfcd9844680086c6
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 移植， unity， 中间件， 引擎， UWP， Win32
+ms.openlocfilehash: 167559d69cc4e65f971a8970b56e41e6e3ca8b22
+ms.sourcegitcommit: 12ea3fb2df4664c5efd07dcbb9040c2ff173afb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600496"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113042268"
 ---
 # <a name="porting-overview"></a>移植概述
 
-当涉及到迁移或升级现有项目以满足混合现实的需要时，移植旅程取决于你的应用程序是通过 Unity 还是 Unreal 引擎生成的，并面向 HoloLens (第一代) 或 HoloLens 2 或 SteamVR。 此概述页面包含我们针对每个平台和设备的当前建议-请务必检查，因为这些过程始终会更改。
+在移植或升级混合现实的现有项目时，移植过程取决于应用是使用 Unity 还是 Unreal Engine 构建的，并且面向 HoloLens (第一代) 或 HoloLens 2 或 SteamVR。 此概述页包含我们针对每个平台和设备的当前建议 - 请务必返回查看，因为这些流程始终在变化。
 
-首先，根据我们的 [Unity](#unity) 和 [Unreal](#unreal) 建议设置项目目标，然后执行一个或多个移植方案：
+首先，根据 [Unity](#unity) 和 [Unreal](#unreal) 建议设置项目目标，然后遵循一个或多个移植方案：
 
-- [HoloLens (第一代) 到 HoloLens 2](#hololens-1st-gen-unity-apps-to-hololens-2)
-- [Windows Mixed Reality 头戴显示设备](#windows-mixed-reality-headsets)
-- [SteamVR 应用](#steamvr-applications)
+- [HoloLens (第一代) HoloLens 2](#hololens-1st-gen-unity-apps-to-hololens-2)
+- [沉浸式 VR 头戴显示设备](#immersive-vr-headsets)
 - [2D UWP 应用](#2d-universal-windows-applications)
 
-## <a name="recommended-project-targets"></a>推荐的项目目标
+## <a name="recommended-project-targets"></a>建议的项目目标
 
-无论你将应用程序移植到另一台目标设备，都要使你的项目保持最新状态，这一点很重要。 有关我们当前的建议，请参阅下面列出的基于引擎的资源。
+无论将应用移植到另一个目标设备，都保持项目最新状态非常重要。 请参阅下面列出的基于引擎的资源，了解我们当前的建议。
 
 ### <a name="unity"></a>Unity
 
-我们当前对混合现实的 Unity 开发建议是 **使用旧 XR 包的 unity 2019 LTS**。 如果你的项目使用混合现实工具包，请仔细检查是否正在使用最新版本，即当前为 **MRTK 2.5**。
-
-> [!CAUTION]
-> 尽管此版本的 Unity 提供了 XR SDK，但 Azure 空间锚不与此安装程序兼容。 将使用适用于 Unity 的 Azure 空间定位包的未来版本更新此建议。
-> 
-> * 如果不需要 Azure 空间锚，可以 [配置适用于 XR 的 Unity 项目](https://docs.unity3d.com/Manual/configuring-project-for-xr.html) 并 [开始 MRTK 和 XR SDK](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk)。
-> 
-> * 如果你当前使用的是项目中的 XR SDK，并且想要使用 Azure 空间锚，请卸载 XR SDK，并重新安装旧版 XR 包以恢复你的项目设置。
+有关 [建议的 Unity 和](../unity/choosing-unity-version.md) MRTK 版本最新指南，请参阅选择 Unity 版本页。
 
 ### <a name="unreal"></a>Unreal
 
-我们当前对混合现实的 Unreal 开发建议是 **Unreal 引擎 4.26**。 如果你的项目使用混合现实工具包 UX 工具，请确保使用最新版本，该版本目前为 **UXT 0.10**。
+有关 [建议的 Unreal](../unreal/unreal-project-setup.md) 和 MRTK 版本最新指南，请参阅设置 Unreal 项目页。
 
 ## <a name="porting-scenarios"></a>移植方案
 
-### <a name="hololens-1st-gen-unity-apps-to-hololens-2"></a>HoloLens (第一代) Unity 应用到 HoloLens 2
+### <a name="hololens-1st-gen-unity-apps-to-hololens-2"></a>HoloLens (第一代) Unity 应用HoloLens 2
 
-如果你有一个现有的 HoloLens (第一代) Unity 应用程序，你想要将其移植到 HoloLens 2，请按照 [HoloLens 移植一文](./porting-hl1-hl2.md)中的说明进行操作。
+如果要移植到 HoloLens 2 的现有 HoloLens (第一代) Unity 应用程序，请按照 [HoloLens](./porting-hl1-hl2.md)移植文章中的说明进行操作。
 
-### <a name="windows-mixed-reality-headsets"></a>Windows Mixed Reality 头戴显示设备
+### <a name="immersive-vr-headsets"></a>沉浸式 VR 头戴显示设备
 
-如果为其他设备（如 Oculus Rift 或 HP 回音 G2）生成了内容，则需要重定特定于供应商的 VR Sdk 和可能的输入映射 Api。 可以在我们的 [沉浸式应用移植指南](porting-guides.md)中查找 Unity 和 Unreal 移植方案的相关信息。
+如果为其他 VR 设备生成了内容，则需要重定任何供应商特定的 VR SDK 和可能的输入映射 API。 可以在沉浸式应用移植指南 中查找 Unity 和 Unreal 移植 [方案的信息](porting-guides.md)。
 
-### <a name="steamvr-applications"></a>SteamVR 应用程序
-
-对于要为 Windows Mixed Reality 耳机更新的任何 SteamVR 体验，请参阅我们的 [SteamVR 更新指南](updating-your-steamvr-application-for-windows-mixed-reality.md)。
+有关要针对头戴显示设备更新的 SteamVR Windows Mixed Reality，请参阅 [我们的 SteamVR 更新指南](updating-your-steamvr-application-for-windows-mixed-reality.md)。
 
 ### <a name="2d-universal-windows-applications"></a>2D 通用 Windows 应用程序
 
-如果你想要将现有的 2D UWP 应用程序移植到 Windows Mixed Reality 沉浸式耳机或 HoloLens，请遵循我们 [的移植 2D uwp apps For Windows Mixed reality](building-2d-apps.md) 说明。
+如果要移植到 Windows Mixed Reality 沉浸式头戴显示设备或 HoloLens 的现有 2D UWP 应用，请按照移植 [2D UWP](building-2d-apps.md) 应用了解 Windows Mixed Reality 说明。

@@ -1,18 +1,18 @@
 ---
-title: 部署到 Hololens 和 WMR 头戴显示设备
+title: 部署到 HoloLens 和 WMR 头戴显示设备
 description: 介绍生成应用并将其部署到各种设备中的文档。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Visual Studio
-ms.openlocfilehash: 1547f0630d307e9e87505890adef4cad366d6c00
-ms.sourcegitcommit: 4c1dd5c22af69eeb192425118c2bfb95344b8dd9
+keywords: Unity、HoloLens、HoloLens 2、混合现实、开发、MRTK、Visual Studio
+ms.openlocfilehash: 12384c3d3c0c2208d86a9a946580d0311f8a8955
+ms.sourcegitcommit: 12ea3fb2df4664c5efd07dcbb9040c2ff173afb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110441153"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113042298"
 ---
-# <a name="deploying-to-hololens-and-wmr-headsets"></a>部署到 Hololens 和 WMR 头戴显示设备
+# <a name="deploying-to-hololens-and-wmr-headsets"></a>部署到 HoloLens 和 WMR 头戴显示设备
 
 有两种方法将使用 MRTK 构建的应用程序部署到 Windows 设备：Univeral Windows Platform (UWP) 和独立平台。 为 HoloLens 1 或 HoloLens 2的应用程序必须面向 UWP，而为 WMR 头戴显示设备构建的应用程序可能面向 UWP 或独立设备。
 
@@ -37,17 +37,17 @@ ms.locfileid: "110441153"
 
 确保“目标 SDK 版本”下拉列表包含“10.0.18362.0”选项 - 如果没有此选项，则需要安装[最新版的 Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)。
 
-### <a name="unity-20193-and-hololens"></a>Unity 2019.3 和 HoloLens
+### <a name="unity-20192020-and-hololens"></a>Unity 2019/2020 和 HoloLens
 
-如果某个 HoloLens 应用在设备上显示为 2D 面板，请确保在部署 UWP 应用之前，已在 Unity 2019.3.x 中配置以下设置：
+如果 HoloLens 应用在设备上显示为 2D 面板，请确保在部署 UWP 应用之前，已在 Unity 中配置以下设置：
 
-如果使用的是旧版 XR：
+如果使用旧版内置 XR 支持， (Unity 2019) ：
 
 1. 导航到“编辑”>“项目设置，播放器”
 1. 在 UWP 选项卡的“XR 设置”下，确保已启用“支持的虚拟现实”且已在 SDK 中添加 Windows Mixed Reality SDK  。
 1. 在 Visual Studio 中生成和部署
 
-如果使用的是 XR 插件：
+如果使用 OpenXR 或 Windows XR 插件：
 
 1. 按照在 [XRSDK 入门](../configuration/getting-started-with-mrtk-and-xrsdk.md)中找到的步骤操作
 1. 确保配置文件是 DefaultXRSDKConfigurationProfile
@@ -55,9 +55,11 @@ ms.locfileid: "110441153"
 1. 在 Visual Studio 中生成和部署
 
 >[!IMPORTANT]
-> 如果使用的是 Unity 2019.3.x，请在 Visual Studio 中选择 ARM64（而不是 ARM）作为生成体系结构 。 使用 Unity 2019.3.x 中的默认 Unity 设置时，如果由于 Unity bug 而选择了 ARM，则 Unity 应用将不会部署到 HoloLens。 可在 [Unity 的问题跟踪器](https://issuetracker.unity3d.com/issues/enabling-graphics-jobs-in-2019-dot-3-x-results-in-a-crash-or-nothing-rendering-on-hololens-2)上跟踪此问题。
+> 如果使用的是 Unity 2019.3.x，请在 Visual Studio 中选择 ARM64（而不是 ARM）作为生成体系结构 。 使用 Unity 2019.3.x 中的默认 Unity 设置时，如果由于 Unity bug 而选择了 ARM，则 Unity 应用将不会部署到 HoloLens。
 >
 > 如果需要使用 ARM 体系结构，请导航到“编辑”>“项目设置，播放器”，然后在“其他设置”菜单下，禁用“图形作业”  。 如果禁用“图形作业”，那么应用将能够对 Unity 2019.3.x 使用 ARM 生成体系结构进行部署，但建议使用 ARM64。
+>
+> 此问题在 Unity 2019.4 和 Unity 2020.3 中已修复。
 
 ## <a name="building-and-deploying-mrtk-to-wmr-headsets-standalone"></a>构建 MRTK 并部署到 WMR 头戴显示设备 (独立) 
 
