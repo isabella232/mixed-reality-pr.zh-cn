@@ -1,31 +1,31 @@
 ---
 title: 核心系统
-description: MRTK 中的输入系统、设备管理器和数据提供程序
+description: MRTK 中的输入系统、设备管理器和数据访问接口
 author: cDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 事件
-ms.openlocfilehash: 12719a6c749a03648d4f75e9e6461b85cc9ab275
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，事件
+ms.openlocfilehash: 79ebd3855cd991db168233f00058ab5d42f87d83
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144298"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121595"
 ---
 # <a name="core-system"></a>核心系统
 
-输入系统的核心是 [InputSystem，](../features/input/overview.md)这是一项服务，负责初始化和操作与 MRTK 关联的所有输入相关功能。
+输入系统的核心是 [InputSystem](../features/input/overview.md)，这是一个服务，负责初始化和操作与 MRTK 关联的所有与输入相关的功能。
 
 > [!NOTE]
-> 假定读者已阅读并基本了解 [术语部分](terminology.md) 。
+> 假设读者已经阅读并大致了解 [术语](terminology.md) 部分。
 
 此服务负责：
 
 - 读取 [输入系统配置文件](../configuration/mixed-reality-configuration-guide.md#input-system-settings)
-- 启动已配置 [的数据提供程序 (](../features/input/input-providers.md) 例如 `Windows Mixed Reality Device Manager` `OpenVR Device Manager` ，) 。
-- [GazeProvider](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGazeProvider)实例化，该组件负责提供 HoloLens (第一代) 样式头部凝视信息以及 HoloLens 2 样式眼睛凝视信息。
-- [FocusProvider](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusProvider)实例化，这是一个组件，负责确定具有焦点的对象。 本文档的指针 [和焦点部分](controllers-pointers-and-focus.md#pointers-and-focus) 对此进行了更深入的介绍。
-- 提供所有输入事件的注册点 (全局[侦听器) 。](#global-listeners)
+- 例如，启动配置的 [数据提供程序](../features/input/input-providers.md) (， `Windows Mixed Reality Device Manager` 并 `OpenVR Device Manager`) 。
+- [GazeProvider](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGazeProvider)的实例化，它是一个组件，该组件负责提供 hololens (第一代) 样式的打印头眼睛，还包括 hololens 2 样式眼睛信息。
+- [FocusProvider](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusProvider)的实例化，它是负责确定具有焦点的对象的组件。 文档的 [指针和焦点](controllers-pointers-and-focus.md#pointers-and-focus) 部分更深入地介绍了这种情况。
+- 为所有输入事件提供注册点， (作为 [全局侦听器](#global-listeners)) 。
 - 为这些输入事件提供事件调度功能。
 
 ## <a name="input-events"></a>输入事件
@@ -34,10 +34,10 @@ ms.locfileid: "110144298"
 
 ### <a name="objects-in-focus"></a>焦点对象
 
-可以直接将事件发送到具有焦点的 GameObject。 例如，对象可能有实现 的脚本 [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) 。
-当焦点位于它附近的手上时，此对象将获取触摸事件。 这些类型的事件会"向上"进入 GameObject 层次结构，直到找到能够处理事件的 GameObject。
+事件可以直接发送到具有焦点的 GameObject。 例如，对象可能具有实现的脚本 [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) 。
+当焦点在其附近时，此对象将获得触控事件。 这些类型的事件将 "向上" GameObject 层次结构，直到找到能够处理事件的 GameObject。
 
-这是通过使用默认输入系统实现中的 [ExecuteHierarchy](https://docs.unity3d.com/ScriptReference/EventSystems.ExecuteEvents.ExecuteHierarchy.html) 完成。
+这是通过从默认输入系统实现中使用 [ExecuteHierarchy](https://docs.unity3d.com/ScriptReference/EventSystems.ExecuteEvents.ExecuteHierarchy.html) 来完成的。
 
 ### <a name="global-listeners"></a>全局侦听器
 

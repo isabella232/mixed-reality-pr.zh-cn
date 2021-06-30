@@ -1,16 +1,16 @@
 ---
 title: 单元测试
-description: Run-unittests 检查可靠性的 MRTK。
+description: 用于检查 MRTK 的可靠性的单元测试。
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，UnitTest，
-ms.openlocfilehash: 76d246634cf190787fcfd78c849a0bd6da3a2135
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: a915b005a69de1864a5674bbb0363f18d1c74b19
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144715"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121345"
 ---
 # <a name="writing-and-running-tests-in-mrtk"></a>在 MRTK 中编写和运行测试
 
@@ -50,7 +50,7 @@ MRTK 使用 [Unity 测试运行](https://docs.unity3d.com/Manual/testing-editort
 .\run_playmode_tests.ps1 H:\mrtk.dev -unityExePath = "C:\Program Files\Unity\Hub\Editor\2018.4.26f1\Editor\Unity.exe" -outFolder "C:\playmode_test_out\"
 ```
 
-还可以通过脚本多次运行 playmode 测试 `run_repeat_tests.ps1` 。 中使用的所有参数 `run_playmode_tests.ps1` 都可能会使用。
+还可以通过脚本多次运行 playmode 测试 `run_repeat_tests.ps1` 。 可以使用在中使用的所有参数 `run_playmode_tests.ps1` 。
 
 ```ps
 .\run_repeat_tests.ps1 -Times 5
@@ -58,17 +58,17 @@ MRTK 使用 [Unity 测试运行](https://docs.unity3d.com/Manual/testing-editort
 
 ### <a name="pull-request-validation"></a>拉取请求验证
 
-MRTK 的 CI 将在所有配置中生成 MRTK，并运行所有编辑和播放模式测试。 如果用户有足够的权限，可以通过在 github PR 上发布注释 `/azp run mrtk_pr` 来触发 CI。 可以在 PR 的"检查"选项卡中查看 CI 运行。
+MRTK 的 CI 将在所有配置中生成 MRTK，并运行所有编辑和播放模式测试。 如果用户拥有足够的权限，则可以通过在 github PR 上发布注释来触发 CI `/azp run mrtk_pr` 。 可以在 PR 的 "检查" 选项卡中查看 CI 运行。
 
-只有在所有测试都成功完成后，PR 才能合并到 main 中。
+只有在成功通过所有测试后，才能将 PR 合并到 main。
 
 ### <a name="stress-tests--bulk-tests"></a>压力测试/批量测试
 
-有时，测试偶尔会失败，调试可能会让人感到沮丧。
+有时，测试仅会失败，这可能会使调试更加沮丧。
 
-若要在本地运行多个测试，请修改相应的测试脚本。 以下 python 脚本应使此方案更方便。
+若要在本地运行多个测试，请修改按测试脚本。 以下 python 脚本应该使此方案更方便。
 
-运行 Python 脚本的先决条件是安装[Python 3.X。](https://www.python.org/downloads/)
+运行 python 脚本的先决条件是 [安装了 python](https://www.python.org/downloads/)3.x。
 
 对于需要多次执行的单个测试：
 
@@ -77,7 +77,7 @@ MRTK 的 CI 将在所有配置中生成 MRTK，并运行所有编辑和播放模
 public IEnumerator MyTest() {...}
 ```
 
-从命令行运行以下 ([建议使用 PowerShell](/powershell/scripting/install/installing-powershell?preserve-view=true&view=powershell-6#powershell-core)) 
+在建议的命令行中运行以下命令 ([PowerShell](/powershell/scripting/install/installing-powershell?preserve-view=true&view=powershell-6#powershell-core)) 
 
 ```powershell
 cd scripts\tests
@@ -85,7 +85,7 @@ cd scripts\tests
 python .\generate_repeat_tests.py -n 5 -t MyTest
 ```
 
-将输出复制并粘贴到测试文件中。 以下脚本用于按顺序运行多个测试：
+将输出复制并粘贴到测试文件中。 下面的脚本用于按顺序运行多个测试：
 
 ```powershell
 cd scripts\tests
@@ -112,7 +112,7 @@ public IEnumerator MyTest() {...}
 
 ## <a name="writing-tests"></a>编写测试
 
-可以针对新代码添加两种类型的测试
+可以为新代码添加两种类型的测试
 
 * 播放模式测试
 * 编辑模式测试
@@ -285,20 +285,20 @@ Test: Assets/MRTK/Tests/EditModeTests/Core/Utilities/InterestingUtilityClassTest
 
 添加新测试时，请修改脚本以使其具有正确的 MRTK 图标。 有一个简单的 MRTK 工具可以实现此目的：
 
-1. 转到"混合现实工具包"菜单项
-1. 单击"实用工具"，然后单击"更新"，然后单击"图标"
-1. 单击"测试"，更新程序将自动运行，更新缺少其图标的任何测试脚本
+1. 中转到混合现实工具包菜单项
+1. 依次单击 "实用程序"、"更新" 和图标
+1. 单击 "测试"，更新程序将自动运行，更新所有缺少图标的测试脚本
 
 ### <a name="mrtk-utility-methods"></a>MRTK 实用工具方法
 
-本部分介绍编写 MRTK 测试时常用的一些代码片段/方法。
+本部分介绍了编写 MRTK 的测试时使用的一些常用代码片段/方法。
 
-有两个实用工具类可帮助设置 MRTK 并测试与 MRTK 中组件的交互
+有两个实用工具类可帮助设置 MRTK 和测试与 MRTK 中的组件的交互
 
 * [`TestUtilities`](xref:Microsoft.MixedReality.Toolkit.Tests.TestUtilities)
 * [`PlayModeTestUtilities`](xref:Microsoft.MixedReality.Toolkit.Tests.PlayModeTestUtilities)
 
-TestUtilities 提供以下方法来设置 MRTK 场景和 GameObjects：
+TestUtilities 提供以下方法来设置 MRTK 场景和 Gameobject：
 
 ```c#
 /// creates the mrtk GameObject and sets the default profile if passed param is true
@@ -314,4 +314,4 @@ TestUtilities.InitializePlayspace();
 TestUtilities.ShutdownMixedRealityToolkit();
 ```
 
-请参阅 和 的 API 文档，了解这些 util 类的更多方法，因为它们在将新测试添加到 [`TestUtilities`](xref:Microsoft.MixedReality.Toolkit.Tests.TestUtilities) [`PlayModeTestUtilities`](xref:Microsoft.MixedReality.Toolkit.Tests.PlayModeTestUtilities) MRTK 时会定期扩展。
+请参阅和的 API 文档 [`TestUtilities`](xref:Microsoft.MixedReality.Toolkit.Tests.TestUtilities) ，以 [`PlayModeTestUtilities`](xref:Microsoft.MixedReality.Toolkit.Tests.PlayModeTestUtilities) 获取这些 util 类的更多方法，因为它们是定期扩展的，而新的测试则添加到 MRTK 中。

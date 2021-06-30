@@ -1,16 +1,16 @@
 ---
-title: 照相机系统概述
+title: 相机系统概述
 description: MRTK 中相机系统的登陆页
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 相机，
-ms.openlocfilehash: 1dc5328f2a6390246918063b6564837f150d28d8
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: e3b7caacaa9baa67fd81f6d32f3fd8c9f123e66d
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144473"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121285"
 ---
 # <a name="camera-system"></a>相机系统
 
@@ -42,42 +42,42 @@ ms.locfileid: "110144473"
 
 ### <a name="settings-providers"></a>设置提供程序
 
-![照相机设置提供程序](../images/camera-system/CameraSettingsProviders.png)
+![相机设置提供程序](../images/camera-system/CameraSettingsProviders.png)
 
-照相机设置提供程序启用相机的平台特定配置。 这些设置可能包括自定义配置步骤和/或组件。
+相机设置提供程序启用相机的平台特定配置。 这些设置可能包括自定义配置步骤和/或组件。
 
-可以通过单击 " **添加照相机设置提供程序** " 按钮添加提供程序。 可以通过单击 **-** 提供程序名称右侧的按钮来删除它们。
+可以通过单击"添加相机设置提供程序 **"按钮来添加** 提供程序。 可以通过单击提供程序名称右边的按钮 **-** 来删除它们。
 
 > [!Note]
-> 并非所有平台都需要照相机设置提供程序。 如果没有与运行应用程序的平台兼容的提供程序，则 Microsoft Mixed Reality 工具包将应用基本默认值。
+> 并非所有平台都需要相机设置提供程序。 如果没有与运行应用程序的平台兼容的提供程序，Microsoft Mixed Reality Toolkit 将应用基本默认值。
 
 ### <a name="display-settings"></a>显示设置
 
 ![相机显示设置](../images/camera-system/CameraDisplaySettings.png)
 
-显示设置是为不透明 (（例如：虚拟现实) 和透明 (，例如： Microsoft HoloLens) 显示）指定的。 照相机是在运行时使用这些设置配置的。
+为不透明对象指定显示 (例如：虚拟现实) 和 (显示Microsoft HoloLens) 设置。 相机是使用这些设置运行时配置的。
 
-**附近的剪辑**
+**近剪辑**
 
-近剪裁平面是指虚拟对象可以指向相机并仍呈现的最近的距离（以米为单位）。 为了使用户舒适，建议将此值设为大于零。 上图包含的值在各种设备上都非常熟悉。
+近剪贴平面最接近虚拟对象与相机的距离（以米为单位）并且仍可呈现。 为获得最大的用户舒适感，建议将此值大于零。 上图包含各种设备上已发现的舒适值。
 
-**远剪辑**
+**Far Clip**
 
-最远的剪辑平面是一个虚拟对象可以到相机并仍呈现的最大距离（以米为单位）。 对于透明设备，建议此值相对接近于现实世界空间，并打破应用程序的沉浸式质量。
+最远的剪辑平面是虚拟对象可以到达相机且仍可呈现的最远（以米为单位）。 对于透明设备，建议此值相对接近，因为不要过度超过现实世界空间，并破坏应用程序的沉浸式质量。
 
 **清除标志**
 
-清除标志值指示在绘制时如何清除显示。 对于虚拟现实体验，此值最常设置为 Skybox。 对于透明显示，建议将此设置为彩色。
+清除标志值指示绘制显示器时如何清除显示。 对于虚拟现实体验，此值通常设置为 Skybox。 对于透明显示，建议将此选项设置为"颜色"。
 
 **背景色**
 
-如果 clear 标志未设置为 Skybox，则将显示 "背景颜色" 属性。
+如果未将清除标志设置为 Skybox，将显示背景色属性。
 
 **质量设置**
 
-质量设置值指示 Unity 在呈现场景时应使用的图形质量。 质量级别为项目级别设置，不特定于任何一个相机。 有关详细信息，请参阅 Unity 文档中的 [优质](https://docs.unity3d.com/Manual/class-QualitySettings.html) 文章。
+质量设置值指示 Unity 在呈现场景时应该使用的图形质量。 质量级别是项目级别设置，并不特定于任何一个相机。 有关详细信息，请参阅 Unity [文档中的质量](https://docs.unity3d.com/Manual/class-QualitySettings.html) 文章。
 
 ## <a name="see-also"></a>另请参阅
 
-- [照相机系统 API 文档](xref:Microsoft.MixedReality.Toolkit.CameraSystem)
-- [创建照相机设置提供程序](create-settings-provider.md)
+- [相机系统 API 文档](xref:Microsoft.MixedReality.Toolkit.CameraSystem)
+- [创建相机设置提供程序](create-settings-provider.md)

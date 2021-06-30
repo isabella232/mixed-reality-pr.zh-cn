@@ -1,16 +1,16 @@
 ---
-title: 边界系统入门
+title: 边界系统概述
 description: MRTK 中边界系统的登陆页
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 边界系统，
-ms.openlocfilehash: 2858b770fb49a44d1e2d704e8d3a81affe74d272
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 405a2d06be5d929d5c276fc8cd7ab36b6b3cf68c
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144731"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121355"
 ---
 # <a name="boundary-system"></a>边界系统
 
@@ -49,23 +49,23 @@ ms.locfileid: "110144731"
 
 ## <a name="configure-boundary-visualization"></a>配置边界可视化
 
-[边界系统使用配置文件](configuring-boundary-visualization.md)来指定要显示的边界组件并配置其外观。
+[边界系统使用配置文件来](configuring-boundary-visualization.md)指定要显示的边界组件并配置其外观。
 
 ![边界可视化选项](../images/boundary/BoundaryVisualizationProfile.png)
 
 > [!NOTE]
-> 默认配置文件 `DefaultMixedRealityBoundaryVisualizationProfile` (资产/MRTK/SDK/配置文件) 的用户会将边界系统预配置为显示楼面平面、播放区域和跟踪区域。
+> 默认配置文件 `DefaultMixedRealityBoundaryVisualizationProfile` （ (Assets/MRTK/SDK/Profiles) ）的用户将预先配置边界系统以显示楼层平面、播放区域以及跟踪区域。
 
 ## <a name="build-and-deploy"></a>生成并部署
 
-为边界系统配置所需的可视化选项后，可以将项目部署到目标平台。
+使用所需的可视化选项配置边界系统后，可以将项目部署到目标平台。
 
 > [!NOTE]
-> Unity 播放模式启用配置边界的编辑器内可视化。 此功能可实现快速开发和测试，而无需执行生成和部署步骤。 请确保使用在目标硬件和平台上运行的应用程序的构建和部署版本执行最终的验收测试。
+> Unity 播放模式启用已配置边界的编辑器内可视化。 此功能可实现快速开发和测试，而无需生成和部署步骤。 请确保使用在目标硬件和平台上运行的生成和部署的应用程序版本执行最终验收测试。
 
 ## <a name="accessing-boundary-system-via-code"></a>通过代码访问边界系统
 
-如果启用并配置，则可以通过 CoreServices 静态帮助程序类访问边界系统。 然后，可以使用该引用动态更改边界参数，并访问由系统管理的相关 Gameobject。
+如果启用并配置了边界系统，则可以通过 CoreServices 静态帮助程序类访问边界系统。 然后，可以使用引用动态更改边界参数，并访问由系统管理的相关 GameObject。
 
 ```c#
 // Hide Boundary Walls at runtime
@@ -78,4 +78,4 @@ GameObject floorVisual = CoreServices.BoundarySystem.GetFloorVisualization();
 ## <a name="see-also"></a>另请参阅
 
 - [边界 API 文档](xref:Microsoft.MixedReality.Toolkit.Boundary)
-- [配置边界可视化](configuring-boundary-visualization.md)
+- [配置边界可视化效果](configuring-boundary-visualization.md)

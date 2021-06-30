@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 2ff761baa728017eb011cb9105cf203e6e3a72e4
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 211ee2ed06ba9b13bd90169bcc7ee50da4594034
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144173"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121795"
 ---
 # <a name="configuring-the-diagnostics-system"></a>配置诊断系统
 
@@ -48,19 +48,19 @@ ms.locfileid: "110144173"
 
 ### <a name="window-offset"></a>窗口偏移量
 
-从视图端口中心偏移的偏移量，用于放置视觉探查器。 偏移量将按 *窗口定位点* 属性的方向进行。
+从视图端口中心放置 Visual Profiler 的偏移量。 偏移量将相对于 Window Anchor *属性* 的方向。
 
 ### <a name="window-scale"></a>窗口缩放
 
-应用于探查器窗口的大小乘数。 例如，将值设置为2会使窗口大小加倍。
+应用于探查器窗口的大小乘数。 例如，将值设置为 2 将窗口大小翻倍。
 
-### <a name="window-follow-speed"></a>窗口跟进速度
+### <a name="window-follow-speed"></a>窗口跟随速度
 
-事件探查器窗口的移动速度，以保持视图端口中的可见性。
+移动探查器窗口以保持视图端口内的可见性的速度。
 
 ## <a name="programmatically-controlling-the-diagnostics-system"></a>以编程方式控制诊断系统
 
-还可以在运行时切换诊断系统和探查器的可见性。 例如，以下代码将隐藏诊断系统和探查器。
+还可以在运行时切换诊断系统和探查器可见性。 例如，下面的代码将隐藏诊断系统和探查器。
 
 ```c#
 CoreServices.DiagnosticsSystem.ShowDiagnostics = false;
@@ -71,4 +71,4 @@ CoreServices.DiagnosticsSystem.ShowProfiler = false;
 ## <a name="see-also"></a>另请参阅
 
 - [诊断系统](diagnostics-system-getting-started.md)
-- [使用可视化探查器](using-visual-profiler.md)
+- [使用 Visual Profiler](using-visual-profiler.md)

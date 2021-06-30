@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 6ec3fc1c88c1a32334cb2869ad1994863e55bf9a
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: d07b84c3cf550f9a235e58286b4cd239ac43b649
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144893"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121185"
 ---
 # <a name="creating-a-camera-settings-provider"></a>创建相机设置提供程序
 
@@ -51,23 +51,23 @@ ms.locfileid: "110144893"
 
 **命名空间**
 
-如果将照相机设置提供程序提交到 [混合现实工具包存储库](https://github.com/Microsoft/MixedRealityToolkit-Unity)，命名空间 **必须** 以 MixedReality 开头 (例如： *CameraSystem*) 。
+如果相机设置提供程序正在提交到混合现实工具包存储库 [](https://github.com/Microsoft/MixedRealityToolkit-Unity)，则命名空间必须以 Microsoft.MixedReality.Toolkit (开头，例如 *：Microsoft.MixedReality.Toolkit.CameraSystem*) 。 
 
 **文件夹结构**
 
-所有代码都必须位于 MRTK/Providers 下的文件夹中 (例如： MRTK/Providers/UnityAR) 。
+所有代码都必须位于 MRTK/Providers 文件夹下的文件夹中 (例如：MRTK/Providers/UnityAR) 。
 
 ## <a name="define-the-camera-settings-object"></a>定义相机设置对象
 
-创建照相机设置提供程序的第一步是确定数据类型 (例如：网格或平面将提供给应用程序) 。
+创建相机设置提供程序的第一步是确定数据类型 (例如：网格或平面) 应用程序提供的数据。
 
-所有空间数据对象必须实现 [`IMixedRealityCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider) 接口。
+所有空间数据对象都必须实现 [`IMixedRealityCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider) 接口。
 
 ## <a name="implement-the-settings-provider"></a>实现设置提供程序
 
 ### <a name="specify-interface-andor-base-class-inheritance"></a>指定接口和/或基类继承
 
-所有照相机设置提供程序必须实现 [`IMixedRealityCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider) 接口，该接口指定了照相机系统所需的最小功能。 MRTK foundation 包含类， [`BaseCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider) 该类提供所需功能的默认实现。
+所有相机设置提供程序都必须实现 接口，该接口指定相机系统 [`IMixedRealityCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider) 所需的最低功能。 MRTK 基础包括 [`BaseCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider) 类，该类提供所需功能的默认实现。
 
 ```c#
 namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
@@ -77,9 +77,9 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 }
 ```
 
-#### <a name="apply-the-mixedrealitydataprovider-attribute"></a>应用 MixedRealityDataProvider 特性
+#### <a name="apply-the-mixedrealitydataprovider-attribute"></a>应用 MixedRealityDataProvider 属性
 
-创建照相机设置提供程序的一个关键步骤是将属性应用于 [`MixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute) 类。 此步骤允许在照相机系统配置文件中选择默认配置文件和平台 () ，并在名称、文件夹路径等中进行选择。
+创建相机设置提供程序的一个关键步骤是将 [`MixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute) 属性应用于 类。 此步骤允许设置默认配置文件和平台 (在) 系统配置文件中选中时，以及名称、文件夹路径等。
 
 ```c#
     [MixedRealityDataProvider(
@@ -94,12 +94,12 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 
 ### <a name="implement-the-imixedrealitydataprovider-methods"></a>实现 IMixedRealityDataProvider 方法
 
-一旦定义了类，下一步就是提供接口的实现 [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) 。
+定义 类后，下一步是提供 接口的 [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) 实现。
 
 > [!NOTE]
-> [`BaseDataProvider`](xref:Microsoft.MixedReality.Toolkit.BaseDataProvider`1)类通过 [`BaseService`](xref:Microsoft.MixedReality.Toolkit.BaseService) 类为方法提供空实现 [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) 。 这些方法的详细信息通常是特定于数据访问接口的。
+> 类 [`BaseDataProvider`](xref:Microsoft.MixedReality.Toolkit.BaseDataProvider`1) 通过 类 [`BaseService`](xref:Microsoft.MixedReality.Toolkit.BaseService) 为方法提供空 [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) 实现。 这些方法的详细信息通常特定于数据提供程序。
 
-应由数据提供程序实现的方法如下：
+数据提供程序应实现的方法包括：
 
 - `Destroy()`
 - `Disable()`
@@ -109,9 +109,9 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 - `Update()`
 
 > [!NOTE]
-> 并非所有的设置提供程序都需要所有这些方法的实现。 强烈建议 `Destroy()` `Initialize()` 至少实现和。
+> 并非所有设置提供程序都需要所有这些方法的实现。 强烈建议至少实现 和 `Destroy()` `Initialize()` 。
 
-### <a name="implement-the-data-provider-logic"></a>实现数据访问接口逻辑
+### <a name="implement-the-data-provider-logic"></a>实现数据提供程序逻辑
 
 下一步是通过实现 添加设置提供程序的逻辑 [`IMixedRealityCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider) 。 数据提供程序的这一部分通常特定于相机配置。
 
@@ -191,27 +191,27 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 
 第一个程序集定义用于数据访问接口。 对于此示例，它将称为 ContosoCamera，并位于示例的 *ContosoCamera* 文件夹中。 此程序集定义必须指定对 Microsoft.MixedReality.Toolkit 及其依赖的其他任何程序集的依赖关系。
 
-ContosoCameraEditor 程序集定义将指定配置文件检查器以及任何特定于编辑器的代码。 此文件必须位于编辑器代码的根文件夹中。 在此示例中，该文件将位于 *ContosoCamera\Editor* 文件夹中。 此程序集定义将包含对 ContosoCamera 程序集的引用以及：
+ContosoCameraEditor 程序集定义将指定配置文件检查器以及任何特定于编辑器的代码。 此文件必须位于编辑器代码的根文件夹中。 此示例中的文件将位于 *ContosoCamera\Editor* 文件夹中。 此程序集定义将包含对 ContosoCamera 程序集的引用，以及：
 
-- MixedReality 工具包
-- MixedReality。检查器
-- MixedReality 实用程序。
+- Microsoft.MixedReality.Toolkit
+- Microsoft.MixedReality.Toolkit.Editor.Inspectors
+- Microsoft.MixedReality.Toolkit.Editor.Utilities
 
 ## <a name="register-the-data-provider"></a>注册数据提供程序
 
-创建后，可以向照相机系统注册数据提供程序，以便在应用程序中使用。
+创建后，可以将数据访问接口注册到相机系统，以在应用程序中使用。
 
 ![选择相机设置提供程序](../images/camera-system/SelectUnityArSettings.png)
 
 ## <a name="packaging-and-distribution"></a>打包和分发
 
-作为第三方组件分发的数据提供程序具有与开发人员首选项一起打包和分发的特定详细信息。 最常见的解决方案是生成 unitypackage，并通过 Unity 资产存储进行分发。
+作为第三方组件分发的数据提供程序具有开发人员偏好的打包和分发的特定详细信息。 最常见的解决方案可能是生成 .unitypackage，然后通过 Unity 资产存储进行分发。
 
-如果将数据访问接口作为 Microsoft Mixed Reality 工具包的一部分进行提交和接受，Microsoft MRTK 团队会将其打包并分发为 MRTK 服务的一部分。
+如果提交数据提供程序并将其作为 Microsoft Mixed Reality Toolkit 包的一部分接受，Microsoft MRTK 团队将打包并分发它作为 MRTK 产品/服务一部分。
 
 ## <a name="see-also"></a>另请参阅
 
 - [照相机系统概述](camera-system-overview.md)
 - [`BaseCameraSettingsProvider` 类](xref:Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider)
-- [`IMixedRealityCameraSettingsProvider` 交互](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider)
-- [`IMixedRealityDataProvider` 交互](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider)
+- [`IMixedRealityCameraSettingsProvider` 接口](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider)
+- [`IMixedRealityDataProvider` 接口](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider)

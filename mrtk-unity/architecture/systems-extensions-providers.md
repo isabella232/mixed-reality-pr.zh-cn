@@ -1,24 +1,24 @@
 ---
 title: 系统扩展提供程序
-description: MRTK 扩展插件和数据提供程序
+description: MRTK 扩展和数据提供程序
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 系统扩展，
-ms.openlocfilehash: add1f443edb687edfc387a316d83443779e079f9
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，系统扩展，
+ms.openlocfilehash: 358294702971b7d9e8de1b842d3bc1844e5dc9bf
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143503"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121465"
 ---
-# <a name="systems-extension-services-and-data-providers"></a>系统、扩展服务和数据访问者
+# <a name="systems-extension-services-and-data-providers"></a>系统、扩展服务和数据访问接口
 
-在混合现实工具包中，许多功能以服务的形式提供。 服务分为三个主要类别：系统、扩展服务和数据访问者。
+在混合现实工具包中，许多功能都以服务的形式提供。 服务分为三个主要类别：系统、扩展服务和数据访问接口。
 
 ## <a name="systems"></a>系统
 
-系统是提供混合现实工具包核心功能的服务。 所有系统都是 接口的 [`IMixedRealityService`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityService) 实现。
+系统是提供混合现实工具包的核心功能的服务。 所有系统都是接口的实现 [`IMixedRealityService`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityService) 。
 
 - [BoundarySystem](../features/boundary/boundary-system-getting-started.md)
 - [CameraSystem](../features/camera-system/camera-system-overview.md)
@@ -28,15 +28,15 @@ ms.locfileid: "110143503"
 - [SpatialAwarenessSystem](../features/spatial-awareness/spatial-awareness-getting-started.md)
 - [TeleportSystem](../features/teleport-system/teleport-system.md)
 
-列出的每个系统都显示于 MixedRealityToolkit 组件的配置文件 [中](../features/profiles/profiles.md)。
+列出的每个系统都出现在 MixedRealityToolkit 组件的配置 [文件](../features/profiles/profiles.md)中。
 
 ## <a name="extensions"></a>扩展
 
-扩展服务是扩展混合现实工具包功能的组件。 所有扩展服务都必须指定它们实现 [`IMixedRealityExtensionService`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityExtensionService) 接口。
+扩展服务是扩展混合现实工具包功能的组件。 所有扩展服务必须指定它们实现 [`IMixedRealityExtensionService`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityExtensionService) 接口。
 
-有关创建扩展服务的信息，请参阅扩展 [服务一](../features/extensions/extension-services.md) 文。
+有关创建扩展服务的信息，请参阅 [扩展服务](../features/extensions/extension-services.md) 一文。
 
-为了可供 MRTK 访问，使用 MixedRealityToolkit 组件的配置文件的"扩展"部分注册和配置扩展服务。
+为了可以 MRTK，可使用 MixedRealityToolkit 组件的配置文件的 Extensions 部分注册和配置扩展服务。
 
 ![配置扩展服务](../features/images/profiles/ConfiguredExtensionService.png)
 
@@ -121,7 +121,7 @@ if (dataProviderAccess != null)
 }
 ```
 
-使用帮助程序类还可以简化对核心空间感知系统的数据访问 `CoreServices` 接口的访问。
+通过使用 helper 类，还可以简化访问核心空间感知系统的数据提供程序 `CoreServices` 。
 
 ```c#
 var dataProvider = CoreServices.GetSpatialAwarenessSystemDataProvider<IMixedRealitySpatialAwarenessMeshObserver>();
@@ -132,15 +132,15 @@ if (dataProvider != null)
 ```
 
 > [!NOTE]
-> 空间感知系统仅返回运行应用程序的平台支持的数据提供程序。
+> 空间感知系统仅返回运行应用程序的平台支持的数据访问接口。
 
-有关为 MRTK 空间感知系统编写数据提供程序的信息，请参阅创建空间 [感知系统数据提供程序](../features/spatial-awareness/create-data-provider.md)。
+有关为 MRTK 空间感知系统编写数据提供程序的信息，请参阅 [创建空间感知系统数据提供程序](../features/spatial-awareness/create-data-provider.md)。
 
 ## <a name="see-also"></a>另请参阅
 
 - [扩展服务](../features/extensions/extension-services.md)
 - [创建输入系统数据提供程序](../features/input/create-data-provider.md)
-- [创建空间感知系统数据提供程序](../features/spatial-awareness/create-data-provider.md)
+- [创建空间感知系统系统数据提供程序](../features/spatial-awareness/create-data-provider.md)
 - [IMixedRealityService 接口](xref:Microsoft.MixedReality.Toolkit.IMixedRealityService)
 - [IMixedRealityDataProvider 接口](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider)
 - [IMixedRealityExtensionService 接口](xref:Microsoft.MixedReality.Toolkit.IMixedRealityExtensionService)

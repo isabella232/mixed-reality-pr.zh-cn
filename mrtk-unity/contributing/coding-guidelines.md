@@ -1,38 +1,38 @@
 ---
-title: 编码指导原则
-description: 编写 MRTK 时要遵循的编码原则和约定。
+title: 编码准则
+description: 参与 MRTK 时应遵循的编码原则和约定。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: 'Unity、HoloLens、HoloLens 2、混合现实、开发、MRTK、c #、'
-ms.openlocfilehash: 8887e248bd550bdd7a59f19c16df1ec3647ceff7
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， C#，
+ms.openlocfilehash: 122c51962c55796c037302c7b79cc4df643a47b7
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145247"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121435"
 ---
 # <a name="coding-guidelines"></a>编码准则
 
-本文档概述了在 MRTK 时要遵循的编码原则和约定。
+本文档概述了参与 MRTK 时应遵循的编码原则和约定。
 
 ---
 
-## <a name="philosophy"></a>理念
+## <a name="philosophy"></a>哲学
 
-### <a name="be-concise-and-strive-for-simplicity"></a>简单易用
+### <a name="be-concise-and-strive-for-simplicity"></a>简洁明了，为简单起见而努力
 
-最简单的解决方案通常是最好的做法。 这是这些准则的替代目标，应是所有编码活动的目标。 很简单的部分非常简单，并且与现有代码保持一致。 尝试使代码简单。
+最简单的解决方案通常是最佳解决方案。 这是这些指南的一个首要目标，应成为所有编码活动的目标。 简单一部分是简洁，并且与现有代码一致。 尝试使代码保持简单。
 
-读者应该只会遇到提供有用信息的项目。 例如，重述的注释会不提供额外的信息，也不会对信号比率增加干扰。
+读者只应遇到提供有用信息的项目。 例如，重新陈述明显情况的评论不会提供额外的信息，并增加干扰与信号比率。
 
-使代码逻辑保持简单。 请注意，这不是有关使用最少行数的语句，最大限度地减少标识符名称或大括号样式的大小，但要减少概念数量并通过熟悉的模式最大程度地实现这些概念的可见性。
+使代码逻辑保持简单。 请注意，这不是有关使用最小行数、最小化标识符名称或大括号样式大小的语句，而是关于减少概念数量并通过熟悉的模式最大化这些概念的可见性的语句。
 
-### <a name="produce-consistent-readable-code"></a>生成一致、可读的代码
+### <a name="produce-consistent-readable-code"></a>生成一致的可读代码
 
 代码可读性与低缺陷率相关。 努力创建易于阅读的代码。 努力创建具有简单逻辑的代码，并重新使用现有组件，因为它还有助于确保正确性。
 
-您生成的代码的所有详细信息，从正确性的最基本细节到一致的样式和格式设置。 使编码样式与已存在的内容保持一致，即使它不符合您的偏好。 这会提高总体代码库的可读性。
+从正确性的最基本细节到一致的样式和格式设置，所生成代码的所有详细信息都很重要。 保持编码样式与已存在的样式一致，即使它不符合你的偏好。 这提高了整体代码库的可读性。
 
 ### <a name="support-configuring-components-both-in-editor-and-at-run-time"></a>支持在编辑器和运行时配置组件
 
@@ -54,15 +54,15 @@ MRTK 支持一组不同的用户 - 喜欢在 Unity 编辑器中配置组件和�
 
 ### <a name="prioritize-writing-tests"></a>优先编写测试
 
-MRTK 是一个社区项目，由不同的一系列参与者修改。 这些参与者可能不知道 bug 修复/功能的详细信息，并且意外中断了功能。 MRTK 在完成每个拉取请求之前[运行持续集成测试](https://dev.azure.com/aipmr/MixedRealityToolkit-Unity-CI/_build?definitionId=16)。 无法签入中断测试的更改。 因此，测试是确保其他人不会中断您的功能的最佳方式。
+MRTK 是一个社区项目，由各种参与者修改。 这些参与者可能不知道 bug 修复/功能的详细信息，并意外中断了你的功能。 [MRTK 在完成每个拉取请求](https://dev.azure.com/aipmr/MixedRealityToolkit-Unity-CI/_build?definitionId=16) 之前运行持续集成测试。 无法签入中断测试的更改。 因此，测试是确保其他人不会破坏你的功能的最佳方法。
 
-修复 bug 后，编写测试，以确保它不会在将来回退。 如果添加功能，请编写验证功能的测试。 这对于所有 UX 功能（实验功能除外）都是必需的。
+修复 bug 时，编写测试以确保它将来不会回归。 如果添加功能，请编写验证功能是否正常工作的测试。 这是除实验性功能之外的所有 UX 功能所必需。
 
-## <a name="c-coding-conventions"></a>C # 编码约定
+## <a name="c-coding-conventions"></a>C# 编码约定
 
 ### <a name="script-license-information-headers"></a>脚本许可证信息标头
 
-所有发布新文件的 Microsoft 员工应该在任何新文件的顶部添加以下标准许可证标头，如下所示：
+所有提供新文件的 Microsoft 员工都应在任何新文件的顶部添加以下标准许可证标头，如下所示：
 
 ```c#
 // Copyright (c) Microsoft Corporation.
@@ -71,7 +71,7 @@ MRTK 是一个社区项目，由不同的一系列参与者修改。 这些参�
 
 ### <a name="function--method-summary-headers"></a>函数/方法摘要标头
 
-应将发布到 MRTK 的所有公共类、结构、枚举、函数、属性和字段描述为其用途和用法，如下所示：
+发布给 MRTK 的所有公共类、结构、枚举、函数、属性、字段都应描述为其用途和使用，如下所示：
 
 ```c#
 /// <summary>
@@ -86,34 +86,34 @@ public struct Controller
 }
 ```
 
-这可确保正确生成文档并传送所有类、方法和属性。
+这可确保正确生成文档，并针对所有类、方法和属性分发文档。
 
-将拒绝不带适当摘要标记提交的任何脚本文件。
+任何在没有正确摘要标记的情况下提交的脚本文件都将被拒绝。
 
 ### <a name="mrtk-namespace-rules"></a>MRTK 命名空间规则
 
-混合现实工具包使用基于功能的命名空间模型，所有基础命名空间以 "MixedReality" 开头。 通常，你不需要在命名空间中指定工具包层 (例如： Core、Providers、Services) 。
+混合现实工具包使用基于特征的命名空间模型，其中所有基础命名空间以"Microsoft.MixedReality.Toolkit"开头。 一般情况下，无需指定工具包层 (例如：命名空间中的 Core、提供程序) 服务层。
 
-当前定义的命名空间是：
+当前定义的命名空间包括：
 
-- MixedReality 工具包
-- MixedReality。
-- MixedReality 诊断
-- MixedReality。
-- MixedReality。输入
-- MixedReality. SpatialAwareness
-- MixedReality。
-- MixedReality。
+- Microsoft.MixedReality.Toolkit
+- Microsoft.MixedReality.Toolkit.Boundary
+- Microsoft.MixedReality.Toolkit.Diagnostics
+- Microsoft.MixedReality.Toolkit.Editor
+- Microsoft.MixedReality.Toolkit.Input
+- Microsoft.MixedReality.Toolkit.SpatialAwareness
+- Microsoft.MixedReality.Toolkit.Teleport
+- Microsoft.MixedReality.Toolkit.Utilities
 
-对于具有大量类型的命名空间，可以创建有限数量的子命名空间，以帮助范围使用。
+对于具有大量类型的命名空间，可以创建有限数量的子命名空间，帮助确定使用范围。
 
 省略接口、类或数据类型的命名空间将导致更改被阻止。
 
 ### <a name="adding-new-monobehaviour-scripts"></a>添加新的 MonoBehaviour 脚本
 
-使用拉取请求添加新的 MonoBehaviour 脚本时，请确保将该 [`AddComponentMenu`](https://docs.unity3d.com/ScriptReference/AddComponentMenu.html) 属性应用于所有适用的文件。 这可确保在编辑器中的 " *添加组件* " 按钮下容易发现组件。 如果组件不能在编辑器（如抽象类）中显示，则不需要使用属性标志。
+使用拉取请求添加新的 MonoBehaviour 脚本时，请确保将 属性 [`AddComponentMenu`](https://docs.unity3d.com/ScriptReference/AddComponentMenu.html) 应用于所有适用的文件。 这可确保组件在编辑器中的"添加组件"按钮下 *易于* 发现。 如果组件无法在编辑器（如抽象类）中显示，则不需要特性标志。
 
-在下面的示例中，应在 *此处填写包* 的包位置。 如果将项放入 *MRTK/SDK* 文件夹，包将为 *SDK*。
+在下面的示例中， *此处的"包* "应填充组件的包位置。 如果将项放在 *MRTK/SDK* 文件夹中，则包将为 *SDK*。
 
 ```c#
 [AddComponentMenu("Scripts/MRTK/{Package here}/MyNewComponent")]
@@ -122,9 +122,9 @@ public class MyNewComponent : MonoBehaviour
 
 ### <a name="adding-new-unity-inspector-scripts"></a>添加新的 Unity 检查器脚本
 
-一般情况下，请尽量避免为 MRTK 组件创建自定义检查器脚本。 它添加了可由 Unity 引擎处理的基本代码的额外开销和管理。
+通常，请尝试避免为 MRTK 组件创建自定义检查器脚本。 这会增加 Unity 引擎可以处理的代码库的额外开销和管理。
 
-如果检查器类是必需的，请尝试使用 Unity 的 [`DrawDefaultInspector()`](https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html) 。 这再次简化了检查器类，将大部分工作保留给 Unity。
+如果需要检查器类，请尝试使用 Unity 的 [`DrawDefaultInspector()`](https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html) 。 这再次简化了检查器类，将大部分工作保留给 Unity。
 
 ```c#
 public override void OnInspectorGUI()
@@ -199,25 +199,25 @@ public class MyNewProfile : ScriptableObject
 
 添加新功能或更新现有功能时，请考虑将 DebugUtilities.LogVerbose 日志添加到对将来调试有用的有趣代码。 此处在添加日志记录和添加的干扰与没有足够的日志记录之间做出权衡 (这会使诊断难以) 。
 
-一个有趣的示例，其中日志记录对 (以及相关的负载) 很有用：
+一个有趣的示例，其中日志记录对 (有效负载和有效负载) ：
 
 ```c#
 DebugUtilities.LogVerboseFormat("RaiseSourceDetected: Source ID: {0}, Source Type: {1}", source.SourceId, source.SourceType);
 ```
 
-这种类型的日志记录有助于捕获类似的问题 [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) ，这是由于检测到的源不匹配和源丢失事件引起的。
+这种类型的日志记录可以帮助捕获问题，如 ，这些问题是由检测到不匹配的源和 [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) 源丢失事件引起的。
 
-避免为每个帧上发生的数据和事件添加日志-理想的日志记录应涵盖由不同用户输入驱动的 "有趣的" 事件， (例如，用户的 "单击" 事件和来自的一组更改和事件，这些事件对于记录) 很感兴趣。 记录的 "用户仍在保持手势" 状态，每个帧都不感兴趣，并且日志会严重影响日志。
+避免添加每个帧上发生的数据和事件的日志 - 理想情况下，日志记录应涵盖由不同用户输入驱动的"有趣的"事件 (即用户"单击"，以及记录) 的来自的更改和事件集。 每帧记录的"用户仍在按住手势"的状态并不有趣，并且会使日志重负。
 
-请注意，默认情况下不启用此详细日志记录 (必须在 [诊断系统设置](../features/diagnostics/configuring-diagnostics.md#enable-verbose-logging) 中启用该日志记录) 
+请注意，默认情况下不会启用此详细日志记录 (必须在诊断系统设置设置中启用) [](../features/diagnostics/configuring-diagnostics.md#enable-verbose-logging)
 
 ### <a name="spaces-vs-tabs"></a>空格与制表符
 
-参与此项目时，请务必使用4个空格而不是选项卡。
+参与此项目时，请务必使用 4 个空格而不是制表符。
 
 ### <a name="spacing"></a>间距
 
-不要在方括号和圆括号之间添加其他空格：
+请勿在方括号和括号之间添加其他空格：
 
 #### <a name="dont"></a>不要
 
@@ -242,7 +242,7 @@ private Foo()
 
 ### <a name="naming-conventions"></a>命名约定
 
-始终 `PascalCase` 对属性使用。 `camelCase`对于大多数字段，使用 `PascalCase` `static readonly` 和 `const` 字段除外。 这种情况的唯一例外是对于需要通过序列化字段的数据结构 `JsonUtility` 。
+始终对 `PascalCase` 属性使用 。 用于 `camelCase` 大多数字段，但 `PascalCase` 和 `static readonly` 字段 `const` 除外。 唯一的例外是要求字段由 序列化的数据结构 `JsonUtility` 。
 
 #### <a name="dont"></a>不要
 
@@ -262,13 +262,13 @@ private string myField;
 
 ### <a name="access-modifiers"></a>访问修饰符
 
-始终为所有字段、属性和方法声明一个访问修饰符。
+始终声明所有字段、属性和方法的访问修饰符。
 
-- 所有 Unity API 方法应 `private` 默认为默认值，除非需要在派生类中重写这些方法。 在这种情况下， `protected` 应该使用。
+- 除非需要在派生类中重写所有 Unity API 方法，否则默认情况下所有 Unity API 方法 `private` 都应为 。 在这种情况下， `protected` 应使用 。
 
 - 字段应始终为 `private` ，具有 `public` 或 `protected` 属性访问器。
 
-- 尽可能使用[expression expression-bodied 成员](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#expression-bodied-function-members)和[auto 属性](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#auto-property-enhancements)
+- 尽可能 [使用 expression-bodied](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#expression-bodied-function-members) [成员和](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#auto-property-enhancements) 自动属性
 
 #### <a name="dont"></a>不要
 
@@ -296,7 +296,7 @@ protected virtual void FooBar() { }
 
 ### <a name="use-braces"></a>使用大括号
 
-每个语句块后始终使用大括号，并将它们放在下一行。
+请始终在每个语句块后使用大括号，将其放在下一行。
 
 #### <a name="dont"></a>禁止事项
 
@@ -335,9 +335,9 @@ private Foo()
 }
 ```
 
-### <a name="public-classes-structs-and-enums-should-all-go-in-their-own-files"></a>公共类、结构和枚举应全部位于各自的文件中
+### <a name="public-classes-structs-and-enums-should-all-go-in-their-own-files"></a>公共类、结构以及枚举都应进入其自己的文件中
 
-如果类、结构或枚举可以设为私有，则可以将其包含在同一文件中。  这样可以避免 Unity 的编译问题，并确保发生正确的代码抽象，还减少了代码需要更改时的冲突和中断性变更。
+如果类、结构或枚举可成为私有的，则可以包括在同一文件中。  这样可以避免 Unity 的编译问题，并确保发生正确的代码抽象，还减少了代码需要更改时的冲突和中断性变更。
 
 #### <a name="dont"></a>不要
 
@@ -532,14 +532,14 @@ string cleanedFilePath = Path.GetFullPath(unknownSourceFilePath);
 
 ## <a name="best-practices-including-unity-recommendations"></a>最佳做法，包括 Unity 建议
 
-此项目的一些目标平台需要考虑性能。 考虑到这一点，在严格更新循环或算法中频繁调用的代码中，通常会小心地分配内存。
+此项目的一些目标平台需要考虑性能。 请记住，在紧密更新循环或算法中频繁调用的代码中分配内存时，请始终小心。
 
 ### <a name="encapsulation"></a>封装
 
-如果需要从类或结构外部访问字段，请始终使用私有字段和公共属性。  请确保归置私有字段和公共属性。 这样一来，就可以更轻松地查看属性的作用，以及该字段可通过脚本进行修改。
+如果需要从类或结构外部访问字段，请始终使用私有字段和公共属性。  请确保共定位私有字段和公共属性。 这样一来，可以更轻松地一目了然地查看支持 属性和字段是否由脚本修改。
 
 > [!NOTE]
-> 这种情况的唯一例外是，对于需要对这些字段进行序列化的数据结构 `JsonUtility` ，需要一个数据类以使序列化的所有公共字段都能正常工作。
+> 唯一的例外是要求字段由 序列化的数据结构，其中数据类需要具有所有公共字段才能使序列化 `JsonUtility` 正常工作。
 
 #### <a name="dont"></a>不要
 
@@ -594,9 +594,9 @@ public float AbsMyValue
 }
 ```
 
-### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>尽可能缓存值并将其序列化到场景/prefab 中
+### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>缓存值，并尽可能在场景/预制中序列化这些值
 
-考虑到 HoloLens，最佳做法是在场景或 prefab 中优化性能和缓存引用，以限制运行时内存分配。
+考虑 HoloLens 后，最好优化场景中的性能和缓存引用，或预先设置以限制运行时内存分配。
 
 #### <a name="dont"></a>不要
 
@@ -628,9 +628,9 @@ private void Update()
 }
 ```
 
-### <a name="cache-references-to-materials-do-not-call-the-material-each-time"></a>缓存对材料的引用，请勿每次都调用 "材料"
+### <a name="cache-references-to-materials-do-not-call-the-material-each-time"></a>缓存对材料的引用，不要每次调用".material"
 
-每次使用 "材料" 时，Unity 都将创建新的材料，这会导致内存泄漏（如果未正确清理）。
+每次使用".material"时，Unity 都会创建新材料，如果未正确清理，则会导致内存泄漏。
 
 #### <a name="dont"></a>不要
 
@@ -671,34 +671,34 @@ public class MyClass
 ```
 
 > [!NOTE]
-> 或者，使用 Unity 的 "SharedMaterial" 属性，该属性在每次引用它时不会创建新的材料。
+> 或者，使用 Unity 的"SharedMaterial"属性，该属性不会每次引用材料时都创建新材料。
 
-### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>使用 [平台依赖编译](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) 来确保工具包不会将生成在另一个平台上中断
+### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>使用 [平台相关](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) 编译来确保工具包不会中断另一个平台上的生成
 
-- 使用 `WINDOWS_UWP` 来使用 UWP 特定的非 Unity api。 这会阻止它们尝试在编辑器中或不受支持的平台上运行。 这等效于 `UNITY_WSA && !UNITY_EDITOR` 并且应使用来取代。
-- 使用 `UNITY_WSA` 可以使用 UWP 特定的 Unity api，如 `UnityEngine.XR.WSA` 命名空间。 当平台设置为 UWP 时，以及在生成的 UWP 应用中，这将在编辑器中运行。
+- 使用 `WINDOWS_UWP` 以使用特定于 UWP 的非 Unity API。 这会阻止它们尝试在编辑器中或不受支持的平台中运行。 这等效于 `UNITY_WSA && !UNITY_EDITOR` ，应该用于支持 。
+- 使用 `UNITY_WSA` 使用特定于 UWP 的 Unity API，例如 `UnityEngine.XR.WSA` 命名空间。 当平台设置为 UWP 时，这将在编辑器中运行，在内置 UWP 应用中运行。
 
-此图表可帮助你根据 `#if` 自己的用例和所需的生成设置来决定要使用哪个版本。
+此图表可帮助你根据用例和预期生成设置决定 `#if` 使用哪个。
 
 |平台 | UWP IL2CPP | UWP .NET | 编辑器 |
 | --- | --- | --- | --- |
-| `UNITY_EDITOR` | False | False | True |
+| `UNITY_EDITOR` | 错误 | False | True |
 | `UNITY_WSA` | True | True | True |
 | `WINDOWS_UWP` | True | True | False |
 | `UNITY_WSA && !UNITY_EDITOR` | True | True | False |
-| `ENABLE_WINMD_SUPPORT` | True | True | False |
-| `NETFX_CORE` | False | True | False |
+| `ENABLE_WINMD_SUPPORT` | True | True | 错误 |
+| `NETFX_CORE` | False | True | 错误 |
 
 ### <a name="prefer-datetimeutcnow-over-datetimenow"></a>优先使用日期时间 UtcNow。当前
 
-DateTime.UtcNow 比 DateTime.Now 更快。 在以前的性能调查中，我们发现使用 DateTime.Now 会增加大量开销，尤其是在 Update () 循环中。 [另一些则出现相同的问题](https://stackoverflow.com/questions/1561791/optimizing-alternatives-to-datetime-now)。
+UtcNow 的速度比日期时间快。 在之前的性能调查中，我们发现使用日期时间。现在增加了大量开销，尤其是在更新 () 循环中使用时。 [其他人遇到了相同的问题](https://stackoverflow.com/questions/1561791/optimizing-alternatives-to-datetime-now)。
 
-首选使用 DateTime.UtcNow，除非实际需要本地化时间 (原因可能是你想要在用户的时区显示当前时间) 。 如果要处理相对时间 (即某些上次更新和现在) 之间的增量，则最好使用 DateTime.UtcNow 以避免执行时区转换的开销。
+首选使用 UtcNow，除非你实际需要本地化时间 (合理的原因可能是你想要在用户的时区) 中显示当前时间。 如果您处理的是相对时间 (即，一些最后一个更新与现在) 之间的差异，则最好使用 UtcNow 来避免执行时区转换的开销。
 
 ## <a name="powershell-coding-conventions"></a>PowerShell 编码约定
 
-MRTK 代码库的子集将 PowerShell 用于管道基础结构和各种脚本和实用程序。 新的 PowerShell 代码应遵循 [PoshCode 样式](https://poshcode.gitbooks.io/powershell-practice-and-style/)。
+MRTK 基本代码的子集为管道基础结构和各种脚本和实用工具使用 PowerShell。 新 PowerShell 代码应遵循 [PoshCode 样式](https://poshcode.gitbooks.io/powershell-practice-and-style/)。
 
 ## <a name="see-also"></a>另请参阅
 
- [MSDN 中的 C# 编码约定](/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+ [MSDN 中的 c # 编码约定](/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)

@@ -1,16 +1,16 @@
 ---
 title: 拉取请求
-description: 与拉取请求相关的详细信息。
+description: 与 GitHub 拉取请求相关的详细信息。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity,HoloLens, HoloLens 2, 混合现实, 开发, MRTK, PR,
-ms.openlocfilehash: 7fb0dea4616acbf91b0459397f4a05f05a167947
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 580a57972f3356143fa796ae6ff4b08db2eb447a
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144747"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121365"
 ---
 # <a name="pull-requests"></a>拉取请求
 

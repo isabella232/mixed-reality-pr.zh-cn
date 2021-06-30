@@ -1,42 +1,42 @@
 ---
-title: Unity AR 相机设置
-description: 在 MRTK 中使用 AR 相机的文档
+title: Unity AR 照相机设置
+description: 使用 MRTK 中的 AR 相机的文档
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， AR 相机，
-ms.openlocfilehash: baa54f4a7c6238b136a108cf5adcbddd29c3ee1b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity、HoloLens、HoloLens 2、混合现实、开发、MRTK、AR 相机、
+ms.openlocfilehash: e1c032805bc4b733cfcc51e1ceac5096c73715cf
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143466"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121195"
 ---
-# <a name="unity-ar-camera-settings-provider"></a>Unity AR 相机设置提供程序
+# <a name="unity-ar-camera-settings-provider"></a>Unity AR 照相机设置提供程序
 
-Unity AR 相机设置提供程序是一个试验性 MRTK 组件，使混合现实应用程序能够在 Android 和 iOS 设备上运行。
+Unity AR 照相机设置提供程序是一个试验性的 MRTK 组件，使混合现实应用程序能够在 Android 和 iOS 设备上运行。
 
-## <a name="unity-ar-camera-settings-provider-options"></a>Unity AR 相机设置提供程序选项
+## <a name="unity-ar-camera-settings-provider-options"></a>Unity AR 照相机设置提供程序选项
 
-![Unity AR 相机设置配置](../images/camera-system/UnityArSettingsConfiguration.png)
+![Unity AR 照相机设置配置](../images/camera-system/UnityArSettingsConfiguration.png)
 
-有关如何将提供程序添加到场景的指南：如何为 iOS 和 Android 配置 [MRTK](../../supported-devices/using-ar-foundation.md)
+有关如何将提供程序添加到场景中的指南： [如何为 iOS 和 Android 配置 MRTK](../../supported-devices/using-ar-foundation.md)
 
 ### <a name="tracking-settings"></a>跟踪设置
 
-Unity AR 相机设置提供程序允许配置如何执行跟踪的选项。 这些设置特定于 Unity AR 相机设置提供程序实现。
+Unity AR 照相机设置提供程序允许配置有关如何执行跟踪的选项。 这些设置特定于 Unity AR 相机设置提供程序实现。
 
 **姿势源**
 
-姿势源定义增强现实跟踪姿势的可用类型。 通常，这些值映射到运行应用程序的设备的组件。
+姿势源定义增加的现实跟踪姿势的可用类型。 通常，这些值映射到正在运行应用程序的设备的组件。
 
-下表描述了可用选项。
+下表介绍了可用的选项。
 
 | 选项 | 说明 |
 | --- | --- |
-| Center | 头装载设备的中心眼睛。 |
-| 彩色相机 | 移动设备的彩色相机。 |
-| 头 | 头部装载设备的头部眼睛，通常略高于中心眼睛。 |
+| Center | 头设备的中心眼。 |
+| 彩色照相机 | 移动设备的彩色相机。 |
+| 头 | 打印头上架的设备，通常略微大于中心眼。 |
 | 左眼 | 打印头装入设备的左侧。 |
 | 左姿势 | 左侧控制器的构成。 |
 | 右眼 | 头设备的正确使用。 |
@@ -67,12 +67,12 @@ Unity AR 相机设置提供程序允许配置如何执行跟踪的选项。 这�
 | 选项 | 说明 |
 | --- | --- |
 | 呈现之前 | 在呈现之前。 |
-| 更新 | 在帧的更新阶段。 |
-| 更新 和 呈现前 | 在更新阶段和呈现之前。 |
+| 更新 | 在框架的更新阶段。 |
+| 在呈现之前更新 | 在更新阶段和渲染之前。 |
 
-跟踪类型的默认值为"更新"和"呈现前 **"，** 以启用最低跟踪延迟。
+跟踪类型的默认值为 **Update 和 Render 之前**，以启用最小跟踪延迟。
 
 ## <a name="see-also"></a>另请参阅
 
 - [照相机系统概述](camera-system-overview.md)
-- [创建相机设置提供程序](create-settings-provider.md)
+- [创建照相机设置提供程序](create-settings-provider.md)
