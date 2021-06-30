@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/24/2021
 ms.topic: article
 keywords: mixedrealitytoolkit， mixedrealitytoolkit-unity， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， unity
-ms.openlocfilehash: 646a0ec3b3b332b038509cba39caa085c1590c1a
-ms.sourcegitcommit: 593e8f80297ac0b5eccb2488d3f333885eab9adf
+ms.openlocfilehash: 11f930f014ff579db1f8845d52b7a2d65dd85d6b
+ms.sourcegitcommit: 4ea9ba1ca1cde426b016111c4176a4b0a9c17553
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112921418"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113080694"
 ---
 # <a name="choosing-a-unity-version-and-xr-plugin"></a>选择 Unity 版本和 XR 插件
 
@@ -25,12 +25,9 @@ Microsoft 当前推荐的用于 HoloLens 2 Windows Mixed Reality 的 Unity 配�
 > Unity 2020 不支持将 HoloLens (第一代) 。 在 Unity 2019 LTS 的整个生命周期（到 2022 年年中）中，具有旧版内置 XR 的 **[Unity 2019 LTS](#unity-20194-lts)** 仍支持这些头戴显示设备。
 >
 > [!NOTE]
-> 某些包尚不与 Unity 2020 LTS 中的混合现实项目兼容：
-> 
-> * URP (URP) 10.5.0 或更旧版本的 URP 在设备上HoloLens 2性能问题。 _(URP 版本中修复了)_
-> * Azure 远程渲染尚未发布支持 Unity 2020 的更新版本。
+> Azure 远程渲染尚未发布支持 Unity 2020 的更新版本。
 >
-> 如果 Unity 项目使用通用呈现管道或Azure 远程渲染，建议在更新的包可用之前，继续将项目升级到 Unity 2020。
+> 如果 Unity 项目使用 Azure 远程渲染，建议在更新的包可用之前，继续将项目升级到 Unity 2020。
 
 最好通过 Unity Hub 安装和管理 Unity。 安装后，打开 Unity 中心：
 
