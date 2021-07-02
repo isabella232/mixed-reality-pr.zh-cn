@@ -1,20 +1,20 @@
 ---
-title: Teleport 系统概述
+title: Teleport 系统
 description: 在 MRTK 中启用和禁用 Teleport 系统的概述
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Teleport 系统，
-ms.openlocfilehash: a44ad1827597dd0b27bc88a9420a3b251f934afd
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 7a49b1fea36eb1809c57abee4cede1216c07d5bf
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144147"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176182"
 ---
-# <a name="teleport-system"></a>传送系统
+# <a name="teleport-system"></a>Teleport 系统
 
-远程端口系统是 MRTK 的一个子系统，在应用程序使用不透明显示器时处理用户远程传送。 对于 HOLoLens (等 AR 体验) ，远程传送系统不处于活动状态。 对于使用 OpenVR 的沉 (HMD 体验，) 启用 WMR 和远程端口系统。
+远程端口系统是 MRTK 的一个子系统，在应用程序使用不透明显示器时处理用户远程传送。 对于 AR (例如 HoloLens) ，远程传送系统不处于活动状态。 对于使用 OpenVR 的沉 (HMD 体验，) 启用 WMR 和远程端口系统。
 
 ## <a name="enabling-and-disabling"></a>启用和禁用
 

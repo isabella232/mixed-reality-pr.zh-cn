@@ -5,22 +5,22 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 边界系统，
-ms.openlocfilehash: 405a2d06be5d929d5c276fc8cd7ab36b6b3cf68c
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: fd70479e5183e9a7557de5c5a532cc87161be017
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121355"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177085"
 ---
-# <a name="boundary-system"></a>边界系统
+# <a name="boundary-system-overview"></a>边界系统概述
 
 边界系统支持在混合现实应用程序中可视化虚拟现实边界组件。 边界定义一个区域，用户可以在运动 VR 头戴显示设备时安全地四处移动。 边界是混合现实体验的一个重要组成部分，可帮助用户在接触 VR 头戴显示设备时避免意外的障碍。
 
-许多虚拟现实平台都提供自动显示，例如，当用户或控制器接近边界时，虚拟世界上叠加了白色轮廓。 混合现实工具包的边界系统扩展了此功能，以便显示跟踪区域、楼层平面和其他可用于为用户提供附加信息的功能的轮廓。
+许多虚拟现实平台都提供自动显示，例如，当用户或控制器接近边界时，虚拟世界上叠加了白色轮廓。 混合现实Toolkit边界系统扩展了此功能，以便显示跟踪区域、地平面和其他可用于为用户提供附加信息的功能的轮廓。
 
 ## <a name="getting-started"></a>入门
 
-添加对边界的支持需要混合现实工具包的两个关键组件：边界系统和配置有边界的虚拟现实平台。
+添加对边界的支持需要混合现实平台的两个关键Toolkit：边界系统和配置了边界的虚拟现实平台。
 
 1. [启用](#enable-boundary-system) 边界系统
 2. [配置](#configure-boundary-visualization) 边界可视化效果

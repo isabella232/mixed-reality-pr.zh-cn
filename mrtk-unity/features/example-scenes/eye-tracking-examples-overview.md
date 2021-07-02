@@ -5,14 +5,14 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，EyeTracking，
-ms.openlocfilehash: b5fd3ee35e54c54f2f6b21dc1ce53625c68f65b4
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 4cdeaa10725e00ac1a041c3692d64c1bd6488854
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144686"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175546"
 ---
-# <a name="eye-tracking-examples"></a>目视跟踪示例
+# <a name="eye-tracking-examples-overview"></a>目视跟踪示例概述
 
 本主题介绍了如何在 MRTK 中快速开始使用目视跟踪，方法是在 MRTK 眼跟踪示例 (资产/MRTK/示例/演示/EyeTracking) 上构建。
 这些示例可让你体验我们的新神奇输入功能： **目视跟踪**！
@@ -37,39 +37,39 @@ MRTK 目视跟踪演示场景已 [加载添加性地](https://docs.unity3d.com/S
 
 **摘要**：通过眼睛、语音和手写输入的组合来快速轻松地进行目标选择。
 
-### <a name="eye-supported-navigation"></a>[**眼睛支持的导航**](../input/eye-tracking/eye-tracking-navigation.md)
+### <a name="eye-supported-navigation"></a>[**目视支持的导航**](../input/eye-tracking/eye-tracking-navigation.md)
 
-假设你正在阅读有关远程显示器或电子阅读器的一些信息，当你到达所显示文本的末尾时，文本会自动向上滚动以显示更多内容。
-或者，如何直接将缩放到你正在查看的什么位置？
-以下是本教程中展示的一些有关眼支持导航的示例。
-此外，还有一个示例，通过使 3D 全息影像基于当前焦点自动旋转，从而进行免手旋转。
+Imagine 您正在阅读有关远处显示或您的电子读者的某些信息，并且到达显示文本的末尾时，文本会自动向上滚动以显示更多内容。
+或者怎样才能直接缩放到你所关注的位置呢？
+以下是本教程中有关目视支持的导航的一些示例展示。
+此外，还提供了一种无人参与的3D 全息旋转示例，使其根据当前焦点自动旋转。
 
-**摘要：** 使用眼睛、语音和手部输入的组合进行滚动、平移、缩放、3D 旋转。
+**摘要**：使用眼睛、声音和手写输入的组合进行滚动、平移、缩放、3d 旋转。
 
-### <a name="eye-supported-positioning"></a>[**眼睛支持的位置**](../input/eye-tracking/eye-tracking-eyes-and-hands.md)
+### <a name="eye-supported-positioning"></a>[**目视支持的定位**](../input/eye-tracking/eye-tracking-eyes-and-hands.md)
 
-本教程演示了一种名为 [Put-That-There](https://youtu.be/CbIn8p4_4CQ) 的输入方案，该场景在 20 世纪 80 年代早期通过 MIT 媒体实验室返回研究，并输入了眼睛、手部和语音。
-理念很简单：从眼睛中获益，快速选择和定位目标。
-只需查看全息影像并说"_放置此_"，查看要放置它的位置，然后说 _"there！"。_
-为了更精确地定位全息影像，可以使用手部、语音或控制器的其他输入。
+本教程展示了一种名为 "Put" 的输入方案 [-](https://youtu.be/CbIn8p4_4CQ) 在早期的1980年中，可以从 MIT Media Lab 可追溯到 "信息检索"。
+思路非常简单：从眼睛中获益，实现快速目标选择和定位。
+只需查看一个全息图，说 _"放置此"_，就可以在想要放置它的位置寻找 _"！"_。
+为了更精确地定位全息图，你可以使用手中的其他输入、声音或控制器。
 
-**摘要：** 使用眼睛、语音和手部输入来定位全息 (*拖放) 。* 使用眼睛 + 手的眼支持滑块。
+**摘要**：使用眼睛、语音和手写输入 (*拖放*) 来定位全息影像。 使用眼睛和双手的眼睛支持的滑块。
 
-### <a name="visualization-of-visual-attention"></a>**视觉关注可视化效果**
+### <a name="visualization-of-visual-attention"></a>**视觉对象视觉对象**
 
-基于用户外观的数据是一种功能非常强大的工具，用于评估设计的可用性，并确定高效工作流中的问题。
-本教程讨论不同的眼动跟踪可视化效果及其如何适应不同的需求。
-我们提供了日志记录和加载眼动跟踪数据的基本示例，以及如何可视化这些数据的示例。
+基于用户所在位置的数据使极具强大的工具可评估设计的可用性，并识别高效工作流中的问题。
+本教程介绍了不同的目视跟踪可视化效果，以及它们如何满足不同的需求。
+我们提供了用于记录和加载目视跟踪数据的基本示例，以及如何对其进行可视化的示例。
 
-**摘要：** 二维注意地图 (上) 热度地图。 录制&重放眼动跟踪数据。
+**摘要**：清单上 (热图) 的二维注意事项。 录制 & 重播目视跟踪数据。
 
-## <a name="setting-up-the-mrtk-eye-tracking-samples"></a>设置 MRTK 眼动跟踪示例
+## <a name="setting-up-the-mrtk-eye-tracking-samples"></a>设置 MRTK 目视跟踪示例
 
 ### <a name="prerequisites"></a>先决条件
 
-请注意，在设备上使用目视跟踪示例需要使用适用于包的 Appxmanifest.xml 上的 "注视输入" 功能生成的 HoloLens 2 和示例应用包。
+请注意，在设备上使用目视跟踪示例需要 HoloLens 2 和使用包的 appxmanifest.xml 上的 "注视输入" 功能生成的示例应用程序包。
 
-若要在设备上使用这些目视跟踪示例，请在 Visual Studio 中生成应用之前确保遵循 [这些步骤](../input/eye-tracking/eye-tracking-basic-setup.md#testing-your-unity-app-on-a-hololens-2) 。
+若要在设备上使用这些目视跟踪示例，请确保在 Visual Studio 中生成应用之前执行[以下步骤](../input/eye-tracking/eye-tracking-basic-setup.md#testing-your-unity-app-on-a-hololens-2)。
 
 ### <a name="1-load-eyetrackingdemo-00-rootsceneunity"></a>1. Load EyeTrackingDemo-00-RootScene
 
@@ -87,44 +87,44 @@ _MixedRealityBasicSceneSetup_ (参阅下面的屏幕截图) 包含一个脚本�
 
 ### <a name="2-adding-scenes-to-the-build-menu"></a>2. 将场景添加到 "生成" 菜单
 
-若要在运行时加载附加场景，必须先将这些场景添加到 _生成设置-在 "生成" 菜单中 > 场景_ 。
+若要在运行时加载附加场景，必须先将这些场景添加到 "生成" 菜单 _中设置 > "场景_。
 根场景在列表中显示为第一个场景，这一点很重要：
 
-![目视跟踪示例的 "生成设置" 场景菜单](../images/eye-tracking/mrtk_et_build_settings.jpg)
+![用于眼睛跟踪示例的 "构建设置场景" 菜单](../images/eye-tracking/mrtk_et_build_settings.jpg)
 
 ### <a name="3-play-the-eye-tracking-samples-in-the-unity-editor"></a>3. 在 Unity 编辑器中播放眼睛跟踪示例
 
-将眼睛跟踪场景添加到生成设置并加载 _EyeTrackingDemo-00-RootScene_ 后，最后一步需要检查：是否已启用附加到 _MixedRealityBasicSceneSetup_ GameObject 的 _"OnLoadStartScene"_ 脚本？ 这是为了让根场景知道要首先加载哪个演示场景。
+将眼睛跟踪场景添加到生成设置并加载 _EyeTrackingDemo-00-RootScene_ 后，你可能需要检查的最后一件事是：是否已启用附加到 _MixedRealityBasicSceneSetup_ GameObject 的 _"OnLoadStartScene"_ 脚本？ 这是为了让根场景知道要首先加载哪个演示场景。
 
 ![OnLoad_StartScene 脚本的示例](../images/eye-tracking/mrtk_et_onloadstartscene.jpg)
 
-让我们开始吧！ 点击 _"播放"！_
-应会看到多个 gem 出现，并且场景菜单位于顶部。
+让我们开始吧！ 点击 _"播放"_！
+此时会显示多个宝物，屏幕顶部会显示场景菜单。
 
-![ET 目标选择场景的示例屏幕截图](../images/eye-tracking/mrtk_et_targetselect.png)
+![ET 目标选择场景中的示例屏幕截图](../images/eye-tracking/mrtk_et_targetselect.png)
 
-还应注意到游戏视图中心有一个小的半透明圆圈。
-这充当模拟 (光标) 的指示器：只需按下鼠标右键并移动鼠标即可更改其位置。 
-当光标悬停在 gem 上时，你会注意到它将与当前查看的 gem 的中心对齐。
-这是测试在"查看&quot;目标时是否根据预期 _触发事件的一_ 种好方法。
-请注意 _，通过鼠标_ 控制进行模拟眼睛凝视是对快速和无意眼动的一种相当差的补充。
-但是，它非常适用于测试基本功能，然后再通过将其部署到设备来HoloLens 2设计。
-返回到眼动跟踪示例场景：只要查看 gem，就旋转，并且可以通过&quot;查看&quot;它和 ...来销毁它。
+你还应注意到游戏视图中心的小半透明圆圈。
+这作为 _模拟眼睛_ (光标) 的指示器：只需按下鼠标 _右键_ ，然后移动鼠标更改其位置。
+当光标悬停在 gem 上时，您会注意到它将与当前查看的 gem 的中心对齐。
+这是一种很好的方法，可用于测试在目标 _"查找&quot;_ 时是否按预期触发事件。
+请注意，通过鼠标控制的 _模拟眼睛_ 看不太太好了我们的快速和意外的眼睛运动。
+不过，它非常适合于测试基本功能，然后再通过将其部署到 HoloLens 2 设备来循环访问设计。
+返回到我们的眼睛跟踪示例场景：只要查看并可通过 &quot;查看&quot; 来销毁 gem，gem 就会旋转 .。。
 
-- 按 _Enter_ (模拟说&quot;select") 
-- 在 _麦克风中说"_ 选择"
-- 按 _空格_ 键显示模拟手部输入时，单击鼠标左键以执行模拟收缩
+- 按 _enter_ (模拟口述 &quot;select" ) 
+- 说 _"选择"_ 到麦克风
+- 按 _空格键_ 显示模拟手写输入时，请单击鼠标左键以执行模拟的挤压
 
-我们将在"眼睛支持的目标选择"教程中更详细地介绍如何实现 [**这些**](../input/eye-tracking/eye-tracking-target-selection.md) 交互。
+我们更详细地介绍了如何在 [**目视支持的目标选择**](../input/eye-tracking/eye-tracking-target-selection.md) 教程中实现这些交互。
 
-将光标向上移动到场景中的顶部菜单栏时，你会注意到当前悬停的项将小突出显示。
-可以使用上述提交方法之一选择当前突出显示的项，例如 (按 _Enter_) 。
-这样，就可以在不同的眼动跟踪示例场景之间切换。
+将光标上移到场景中的顶部菜单栏时，你会注意到当前悬停的项将会有变化。
+您可以使用以上所述的提交方法之一来选择当前突出显示的项 (例如，按 _enter_) 。
+这样，便可以在不同的目视跟踪示例场景之间切换。
 
-### <a name="4-how-to-test-specific-sub-scenes"></a>4.如何测试特定的子场景
+### <a name="4-how-to-test-specific-sub-scenes"></a>4. 如何测试特定的子场景
 
-处理特定方案时，你可能不希望每次都浏览场景菜单。
-相反，在按下"播放"按钮时，你可能希望直接从当前正在工作的 _场景中_ 启动。
+处理特定方案时，您可能不希望每次都浏览场景菜单。
+相反，你可能想要直接从当前正在处理的场景开始，按下 " _播放_ " 按钮。
 没问题！ 下面是你可以执行的操作：
 
 1. 加载 _根_ 场景
@@ -135,7 +135,7 @@ _MixedRealityBasicSceneSetup_ (参阅下面的屏幕截图) 包含一个脚本�
 
 4. 按下 _播放_
 
-请注意，加载此子场景的方式不是永久性的：这意味着，如果你将应用部署到 HoloLens 2 设备，则它将仅加载根场景， (假设它出现在) 的生成设置的顶部。
+请注意，加载这样的子场景不是永久性的：这意味着，如果将应用程序部署到 HoloLens 2 设备，则它将只加载根场景 (，因为它会出现在生成设置) 的顶部。
 此外，当你与他人共享你的项目时，不会自动加载子场景。
 
 ---

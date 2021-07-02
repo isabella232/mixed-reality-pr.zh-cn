@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， C#，
-ms.openlocfilehash: 122c51962c55796c037302c7b79cc4df643a47b7
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: c14f5f72d391c5474a01c798bfdaa5529700a509
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121435"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175331"
 ---
 # <a name="coding-guidelines"></a>编码准则
 
@@ -92,18 +92,18 @@ public struct Controller
 
 ### <a name="mrtk-namespace-rules"></a>MRTK 命名空间规则
 
-混合现实工具包使用基于特征的命名空间模型，其中所有基础命名空间以"Microsoft.MixedReality.Toolkit"开头。 一般情况下，无需指定工具包层 (例如：命名空间中的 Core、提供程序) 服务层。
+混合现实Toolkit使用基于特征的命名空间模型，其中所有基础命名空间以"Microsoft.MixedReality"开头。Toolkit"。 一般情况下，无需指定工具包层 (例如：命名空间中的 Core、提供程序) 服务层。
 
 当前定义的命名空间包括：
 
-- Microsoft.MixedReality.Toolkit
-- Microsoft.MixedReality.Toolkit.Boundary
-- Microsoft.MixedReality.Toolkit.Diagnostics
-- Microsoft.MixedReality.Toolkit.Editor
-- Microsoft.MixedReality.Toolkit.Input
-- Microsoft.MixedReality.Toolkit.SpatialAwareness
-- Microsoft.MixedReality.Toolkit.Teleport
-- Microsoft.MixedReality.Toolkit.Utilities
+- Microsoft.MixedReality。Toolkit
+- Microsoft.MixedReality。Toolkit。边界
+- Microsoft.MixedReality。Toolkit。诊断
+- Microsoft.MixedReality。Toolkit。编辑 器
+- Microsoft.MixedReality。Toolkit。输入
+- Microsoft.MixedReality。Toolkit。SpatialAwareness
+- Microsoft.MixedReality。Toolkit。传送
+- Microsoft.MixedReality。Toolkit。公用事业
 
 对于具有大量类型的命名空间，可以创建有限数量的子命名空间，帮助确定使用范围。
 
@@ -596,7 +596,7 @@ public float AbsMyValue
 
 ### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>缓存值，并尽可能在场景/预制中序列化这些值
 
-考虑 HoloLens 后，最好优化场景中的性能和缓存引用，或预先设置以限制运行时内存分配。
+考虑HoloLens时，最好优化场景中的性能和缓存引用，或预制项以限制运行时内存分配。
 
 #### <a name="dont"></a>不要
 
@@ -673,7 +673,7 @@ public class MyClass
 > [!NOTE]
 > 或者，使用 Unity 的"SharedMaterial"属性，该属性不会每次引用材料时都创建新材料。
 
-### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>使用 [平台相关](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) 编译来确保工具包不会中断另一个平台上的生成
+### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>使用[平台相关](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)编译来确保Toolkit不会中断其他平台上的生成
 
 - 使用 `WINDOWS_UWP` 以使用特定于 UWP 的非 Unity API。 这会阻止它们尝试在编辑器中或不受支持的平台中运行。 这等效于 `UNITY_WSA && !UNITY_EDITOR` ，应该用于支持 。
 - 使用 `UNITY_WSA` 使用特定于 UWP 的 Unity API，例如 `UnityEngine.XR.WSA` 命名空间。 当平台设置为 UWP 时，这将在编辑器中运行，在内置 UWP 应用中运行。
@@ -689,16 +689,16 @@ public class MyClass
 | `ENABLE_WINMD_SUPPORT` | True | True | 错误 |
 | `NETFX_CORE` | False | True | 错误 |
 
-### <a name="prefer-datetimeutcnow-over-datetimenow"></a>优先使用日期时间 UtcNow。当前
+### <a name="prefer-datetimeutcnow-over-datetimenow"></a>首选 DateTime.UtcNow，而首选 DateTime.Now
 
-UtcNow 的速度比日期时间快。 在之前的性能调查中，我们发现使用日期时间。现在增加了大量开销，尤其是在更新 () 循环中使用时。 [其他人遇到了相同的问题](https://stackoverflow.com/questions/1561791/optimizing-alternatives-to-datetime-now)。
+DateTime.UtcNow 比 DateTime.Now 更快。 在以前的性能调查中，我们发现使用 DateTime.Now 会增加大量开销，尤其是在 Update () 循环中。 [另一些则出现相同的问题](https://stackoverflow.com/questions/1561791/optimizing-alternatives-to-datetime-now)。
 
-首选使用 UtcNow，除非你实际需要本地化时间 (合理的原因可能是你想要在用户的时区) 中显示当前时间。 如果您处理的是相对时间 (即，一些最后一个更新与现在) 之间的差异，则最好使用 UtcNow 来避免执行时区转换的开销。
+首选使用 DateTime.UtcNow，除非实际需要本地化时间 (原因可能是你想要在用户的时区显示当前时间) 。 如果要处理相对时间 (即某些上次更新和现在) 之间的增量，则最好使用 DateTime.UtcNow 以避免执行时区转换的开销。
 
 ## <a name="powershell-coding-conventions"></a>PowerShell 编码约定
 
-MRTK 基本代码的子集为管道基础结构和各种脚本和实用工具使用 PowerShell。 新 PowerShell 代码应遵循 [PoshCode 样式](https://poshcode.gitbooks.io/powershell-practice-and-style/)。
+MRTK 代码库的子集将 PowerShell 用于管道基础结构和各种脚本和实用程序。 新的 PowerShell 代码应遵循 [PoshCode 样式](https://poshcode.gitbooks.io/powershell-practice-and-style/)。
 
 ## <a name="see-also"></a>另请参阅
 
- [MSDN 中的 c # 编码约定](/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+ [MSDN 中的 C# 编码约定](/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)

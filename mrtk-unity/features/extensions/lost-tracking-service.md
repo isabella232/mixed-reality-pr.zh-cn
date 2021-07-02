@@ -1,22 +1,22 @@
 ---
-title: 丢失跟踪服务
+title: 跟踪服务丢失
 description: MRTK 中的 LostTracking 服务概述
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 96090b05c60cfaa6ff5d8c5e1dc7a58cc2658b71
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 70274639326563b1f3c3a2061dcdbf824fd43709
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144528"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176226"
 ---
-# <a name="lost-tracking-visualization"></a>丢失跟踪可视化效果
+# <a name="lost-tracking-service"></a>跟踪服务丢失
 
 ![丢失跟踪](../images/lost-tracking/LostTrackingVisualization.jpg)
 
-丢失跟踪扩展服务为丢失的跟踪状态提供 HoloLens shell 样式的动画视觉对象。
+丢失跟踪扩展服务HoloLens跟踪状态提供 shell 样式的动画视觉对象。
 
 ## <a name="how-to-use-lost-tracking-extensions"></a>如何使用丢失的跟踪扩展
 

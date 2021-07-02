@@ -5,16 +5,16 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: c3238aed60f6bbf824c74c034ddf506f49f436c7
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 018d6bf2087b73697a1e1f43e206c96ae25e1f21
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121645"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177225"
 ---
 # <a name="using-the-visual-profiler"></a>使用可视化探查器
 
-VisualProfiler 提供了一个易于使用的应用程序内视图，用于查看混合现实应用程序的性能。 所有混合现实工具包平台都支持探查器，包括：
+VisualProfiler 提供了一个易于使用的应用程序内视图，用于查看混合现实应用程序的性能。 所有混合现实平台都支持探查器Toolkit平台，包括：
 
 - Microsoft HoloLens (第一代) 
 - Microsoft HoloLens 2
@@ -34,7 +34,7 @@ Visual Profiler 接口包括以下组件：
 
 - [帧速率](#frame-rate)
 - [帧时间](#frame-time)
-- [帧图](#frame-graph)
+- [帧Graph](#frame-graph)
 - [内存使用率](#memory-utilization)
 
 ### <a name="frame-rate"></a>帧速率
@@ -47,7 +47,7 @@ Visual Profiler 接口包括以下组件：
 - Windows Mixed Reality Ultra：90
 
 > [!NOTE]
-> 由于默认 MRC 处于活动状态时 [HoloLens](/windows/mixed-reality/mixed-reality-capture-for-developers#what-to-expect-when-mrc-is-enabled-on-hololens)上的帧速率限制，在捕获视频和照片时，可视化探查器会隐藏自身。 可以在诊断系统配置文件中重写此设置。
+> 由于[默认 MRC](/windows/mixed-reality/mixed-reality-capture-for-developers#what-to-expect-when-mrc-is-enabled-on-hololens)处于活动状态时HoloLens帧速率限制，因此在捕获视频和照片时，可视化探查器会隐藏自身。 可以在诊断系统配置文件中重写此设置。
 
 ### <a name="frame-time"></a>帧时间
 
@@ -62,7 +62,7 @@ Visual Profiler 接口包括以下组件：
 
 帧图提供应用程序帧速率历史记录的图形显示。
 
-![可视化探查器丢失帧图](../images/diagnostics/VisualProfilerMissedFrames.png)
+![视觉探查器丢失的帧Graph](../images/diagnostics/VisualProfilerMissedFrames.png)
 
 使用应用程序时，查找丢失的帧，这些帧指示应用程序未达到其目标帧速率，并且可能需要优化工作。
 
@@ -70,7 +70,7 @@ Visual Profiler 接口包括以下组件：
 
 通过内存利用率显示，可以轻松了解当前视图如何影响应用程序的内存消耗。
 
-![Visual Profiler Memory Graph](../images/diagnostics/VisualProfilerMemory.png)
+![Visual Profiler 内存Graph](../images/diagnostics/VisualProfilerMemory.png)
 
 使用应用程序时，请查找总内存使用量。 关键指标包括接近内存限制和使用量快速变化。
 

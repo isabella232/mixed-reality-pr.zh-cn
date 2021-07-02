@@ -1,18 +1,18 @@
 ---
 title: MRTK 配置对话框
-description: 在 Unity 项目中配置 MRTK
+description: 在 Unity Project 中配置 MRTK
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Unity
-ms.openlocfilehash: fd05f7f3b579522a1225e11b0411b255a43e1e3f
-ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
+keywords: unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Unity
+ms.openlocfilehash: 50a0f40723c05e96f79eefab933942044afb22f1
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110345090"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177335"
 ---
-# <a name="mrtk-project-configuration-dialog"></a>MRTK 项目配置对话框
+# <a name="mrtk-configuration-dialog"></a>MRTK 配置对话框
 
 当 Unity 加载项目并且确定一个或多个配置选项需要开发人员关注时，将显示 "MRTK 配置" 对话框。
 
@@ -21,7 +21,7 @@ ms.locfileid: "110345090"
 若要应用更改，请单击 " **应用** " 按钮。 **稍后** 按钮将延迟更改，直到在将来重新加载项目。
 
 > [!NOTE]
-> 如果未选中一个或多个建议的设置，则配置对话框将重新出现。 若要防止此情况发生，请应用所需的选项，然后通过 **混合现实工具包**  >  **实用工具**  >  **配置 Unity 项目** 并单击 "**忽略**" 来重新启动对话框。 这会阻止配置对话框自动再次出现。
+> 如果未选中一个或多个建议的设置，则配置对话框将重新出现。 若要防止此情况发生，请应用所需的选项，然后通过 **混合现实** 重新启动对话框 Toolkit  >  **实用程序**  >  **配置 Unity Project** 并单击 "**忽略**"。 这会阻止配置对话框自动再次出现。
 
 ## <a name="common-settings"></a>通用设置
 
@@ -37,11 +37,11 @@ ms.locfileid: "110345090"
 
 **Unity 2018**
 
-在 **播放机设置**  >  **XR 设置** 中配置支持的虚拟现实和虚拟现实 SDK 选项。
+在 **播放机** 中配置虚拟现实支持的虚拟机和虚拟现实 SDK 选项设置  >  **XR 设置**。
 
 ### <a name="set-single-pass-instanced-rendering-path"></a>设置单一传递实例呈现路径
 
-将 **播放机设置**  >  **XR 设置**  >  **立体声渲染模式** 配置为 **单一传递实例**。
+将 **播放机设置**  >  **XR 设置**  >  **立体声渲染模式** 配置为 **单步实例**。
 
 ### <a name="set-default-spatial-awareness-layer"></a>设置默认空间感知层
 
@@ -58,15 +58,15 @@ ms.locfileid: "110345090"
 
 - Microsoft Spatializer
 
-Microsoft 提供的 spatializer 支持在 HoloLens 2 上利用硬件加速。
+Microsoft 提供的 spatializer 支持 HoloLens 2 上的硬件加速。
 
-此 spatializer 通过 [NuGet](https://www.nuget.org/packages/Microsoft.SpatialAudio.Spatializer.Unity/) 和 [GitHub](https://github.com/microsoft/spatialaudio-unity)提供。
+此 spatializer 通过[NuGet](https://www.nuget.org/packages/Microsoft.SpatialAudio.Spatializer.Unity/)和[GitHub](https://github.com/microsoft/spatialaudio-unity)提供。
 
 有关 Microsoft Spatializer 的更多详细信息，请参阅 [空间音效文档](/windows/mixed-reality/spatial-sound-in-unity)。
 
 - MS HRTF Spatializer
 
-由 Unity 作为 Windows Mixed Reality 和 Windows XR Platform 包的一部分提供的 Microsoft Windows spatializer。
+Microsoft Windows spatializer，由 Unity 作为 Windows Mixed Reality 和 Windows XR 平台包的一部分提供。
 
 - Resonance 音频
 
@@ -105,7 +105,7 @@ Microsoft 提供的 spatializer 支持在 HoloLens 2 上利用硬件加速。
 **Unity 2019.3 和更高版本**
 
 在最新版本的 Unity 2019 中，当启用 "图形作业" 时，应用将在部署到 HoloLens 2 时崩溃。
-默认情况下，在 Unity 中启用此设置-尽管存在此 bug (请参阅 [Unity bug](https://issuetracker.unity3d.com/issues/enabling-graphics-jobs-in-2019-dot-3-x-results-in-a-crash-or-nothing-rendering-on-hololens-2)) ，配置器将默认设置为 "false" 的图形作业 (因此允许部署到 HoloLens 2 的应用不会崩溃) 。
+默认情况下，在 Unity 中启用此设置-尽管存在此 bug (请参阅[Unity bug](https://issuetracker.unity3d.com/issues/enabling-graphics-jobs-in-2019-dot-3-x-results-in-a-crash-or-nothing-rendering-on-hololens-2)) ，配置器将默认设置为 "false" 的图形作业 (因此，可以允许部署到 HoloLens 2 不会崩溃) 的应用。
 
 ## <a name="android-settings"></a>Android 设置
 
@@ -115,11 +115,11 @@ Microsoft 提供的 spatializer 支持在 HoloLens 2 上利用硬件加速。
 
 ### <a name="disable-multi-threaded-rendering"></a>禁用多线程呈现
 
-禁用 **播放机设置**  >  **其他设置**  >  Android 的 AR 支持所需的 **多线程呈现**。
+禁用 **播放器设置**  >  **其他设置**  >  **多线程呈现**，如 Android 的 AR 支持的要求。
 
 ### <a name="set-minimum-api-level"></a>设置最低 API 级别
 
-设置 "**播放机设置**" "  >  **其他设置**" "  >  **最小 API 级别**" 的值，以强制执行 AR 应用程序的操作系统要求。
+将 Player 的值设置 **设置**  >  **其他设置**  >  **最低 API 级别**，以强制执行 AR 应用程序的操作系统要求。
 
 ## <a name="ios-settings"></a>iOS 设置
 
@@ -129,12 +129,12 @@ Microsoft 提供的 spatializer 支持在 HoloLens 2 上利用硬件加速。
 
 ### <a name="set-required-os-version"></a>设置所需的 OS 版本
 
-设置 "**播放机设置**" 的值 "  >  **其他设置**"  >  **定位最低 iOS 版本** 以强制执行 AR 应用程序的操作系统要求。
+设置 **设置**  >  **其他设置**  >  **目标最低 iOS 版本** 的播放机的值，以强制执行 AR 应用程序的操作系统要求。
 
 ### <a name="set-required-architecture"></a>设置所需的体系结构
 
-设置 "**播放机设置**"  >  **其他设置**  >  **结构** 的值，以强制执行 AR 应用程序的平台要求。
+设置 **设置**  >  **其他设置** 体系结构的播放机的值  >   ，以强制执行 AR 应用程序的平台要求。
 
 ### <a name="set-camera-usage-descriptions"></a>设置相机使用说明
 
-设置 **播放机设置** 的值  >  **其他设置**  >  **相机使用说明**，用于请求使用设备相机的权限。
+设置 **播放机的值设置**  >  **其他设置**  >  **相机使用情况说明**，用于请求使用设备相机的权限。

@@ -1,22 +1,22 @@
 ---
-title: 悬停灯光
+title: 悬停灯
 description: 有关 MRTK 中具有示例的 HoverLight 的文档
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 悬停光，
-ms.openlocfilehash: b98dff0dd3ff0312f6ce607a5fb8a26f94959ff2
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: ed45d3345931376283cfca2372ac57459c777f6e
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145177"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176728"
 ---
-# <a name="hover-light"></a>悬停灯光
+# <a name="hover-light"></a>悬停灯
 
-是 [`HoverLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) 一[种Fluent Design System](https://www.microsoft.com/design/fluent/)范例，它模拟在对象表面[](https://docs.unity3d.com/Manual/Lighting.html)附近悬停的点光。 通常用于远地交互，应用程序可以通过 组件控制悬停灯 [`HoverLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) 的属性。
+是 [`HoverLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) 一[种Fluent Design System](https://www.microsoft.com/design/fluent/)范例，它模拟在对象表面附近[](https://docs.unity3d.com/Manual/Lighting.html)悬停的点光。 通常用于远地交互，应用程序可以通过 组件控制悬停灯 [`HoverLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) 的属性。
 
-若要使材料受混合现实工具包/标准着色器的影响，必须启用 [`HoverLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) *悬停光* 属性。 
+对于受混合现实环境/标准着色器Toolkit材料，必须启用 [`HoverLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) *悬* 停光属性。 
 
 > [!Note]
 > 默认情况下，MRTK/标准着色器最多支持两个，但会缩放以支持四个，然后支持 10 个，因为向场景中添加了更多 [`HoverLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.HoverLight) 光。

@@ -1,20 +1,20 @@
 ---
 title: 使用 Unity 包管理器
-description: 在 Unity 包管理器中使用 MRTK
+description: 在 Unity 程序包管理器中使用 MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK 包，
-ms.openlocfilehash: e3e7a2d06cd38d7a9e8daf579f1a312904a86280
-ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK 包，
+ms.openlocfilehash: 524783c48b82722aec26648ea54477a6c7bcd4ae
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110345070"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177320"
 ---
-# <a name="mixed-reality-toolkit-and-unity-package-manager"></a>混合现实工具包和 Unity 包管理器
+# <a name="using-the-unity-package-manager"></a>使用 Unity 包管理器
 
-从版本2.5.0 开始，使用 [混合现实功能工具](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)，在使用 unity 2019.4 和更高版本时，Microsoft Mixed reality 工具包与 Unity 包管理器 (UPM) 集成。
+从版本2.5.0 开始，使用[混合现实功能工具](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)，在使用 unity 2019.4 和更高版本时，Microsoft Mixed reality Toolkit 与 unity 程序包管理器 (UPM) 集成。
 
 ## <a name="using-the-mixed-reality-feature-tool"></a>使用混合现实功能工具
 
@@ -35,16 +35,16 @@ ms.locfileid: "110345070"
 
 ![必需的依赖项](../features/images/packaging/RequiredDependencies.png)
 
-## <a name="managing-mixed-reality-features-with-the-unity-package-manager"></a>通过 Unity 包管理器管理混合现实功能
+## <a name="managing-mixed-reality-features-with-the-unity-package-manager"></a>通过 Unity 程序包管理器管理混合现实功能
 
-将混合现实工具包包添加到包清单后，可以使用 Unity 包管理器用户界面对其进行管理。
+一旦将混合现实 Toolkit 程序包添加到了包清单中，就可以使用 Unity 程序包管理器用户界面对其进行管理。
 
 ![MRTK Foundation UPM 包](../features/images/packaging/MRTK_FoundationUPM.png)
 
 > [!NOTE]
-> 如果使用 Unity 包管理器删除混合现实工具包包，则必须使用 [上述步骤](#using-the-mixed-reality-feature-tool)重新添加。
+> 如果使用 Unity 程序包管理器删除混合现实 Toolkit 包，则必须使用[前面介绍的步骤](#using-the-mixed-reality-feature-tool)重新添加此包。
 
-### <a name="using-mixed-reality-toolkit-examples"></a>使用混合现实工具包示例
+### <a name="using-mixed-reality-toolkit-examples"></a>使用混合现实 Toolkit 示例
 
 与使用资产包时 () 文件不同， `com.microsoft.mixedreality.toolkit.examples` `com.microsoft.mixedreality.toolkit.handphysicsservice` 不会自动导入示例场景和资产。
 
@@ -64,4 +64,4 @@ ms.locfileid: "110345070"
 
 ## <a name="see-also"></a>另请参阅
 
-- [混合现实工具包包](../packages/mrtk-packages.md)
+- [混合现实 Toolkit 包](../packages/mrtk-packages.md)

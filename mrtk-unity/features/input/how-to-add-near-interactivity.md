@@ -1,42 +1,42 @@
 ---
-title: 如何添加靠近交互
-description: 有关 MRTK 中的近交互的文档
+title: 如何添加近乎交互
+description: MRTK 中有关近交互的文档
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 近交互，
-ms.openlocfilehash: fc0d6d4013392db74e5c8637574c258bee857865
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，近交互，
+ms.openlocfilehash: 241425f0c158d684cad6dad8c88c8d692cbec42f
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144183"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176876"
 ---
-# <a name="how-to-add-near-interaction-in-mrtk"></a>如何在 MRTK 中添加近交互
+# <a name="how-to-add-near-interactivity"></a>如何添加近乎交互
 
-近处交互以触摸和抓取的形式提供。 Touch 和 grab 事件分别由数据线和[SpherePointer](pointers.md#pokepointer)引发[](pointers.md#spherepointer)为指针事件。
+近交互采用触摸和获取的形式。 触控和抓取事件分别由 [PokePointer](pointers.md#pokepointer) 和 [SpherePointer](pointers.md#spherepointer)的指针事件引发。
 
-若要侦听特定 GameObject 上的触摸和/或抓取输入事件，需要执行三个关键步骤。
+需要使用三个关键步骤来侦听特定 GameObject 上的触摸和/或获取输入事件。
 
-1. 确保在主 [MRTK](../../configuration/mixed-reality-configuration-guide.md)配置文件 中注册相关指针。
-1. 确保所需的 GameObject 具有适当的[抓取或](#add-grab-interactions)[触摸](#add-touch-interactions)脚本组件 和 [`Unity Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) 。
-1. 在附加到所需 GameObject 的脚本上实现输入处理程序接口，以侦听 [抓取](#grab-code-example) 或 [触摸](#touch-code-example) 事件。
+1. 确保在主 [MRTK 配置文件](../../configuration/mixed-reality-configuration-guide.md)中注册相关指针。
+1. 确保所需的 GameObject 具有适当的 [获取](#add-grab-interactions) 或 [触摸](#add-touch-interactions) 脚本组件和 [`Unity Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) 。
+1. 将附加脚本上的输入处理程序接口实现到所需的 GameObject 以侦听 [抓取](#grab-code-example) 或 [触摸](#touch-code-example) 事件。
 
 ## <a name="add-grab-interactions"></a>添加抓取交互
 
-1. 确保在 *MRTK* 指针配置文件 中注册 [SpherePointer。](pointers.md#spherepointer)
+1. 确保在 *MRTK 指针配置文件* 中注册了 [SpherePointer](pointers.md#spherepointer) 。
 
-    默认 MRTK 配置文件和默认 HoloLens 2配置文件已包含 *SpherePointer*。 可以通过选择 MRTK 配置文件并导航到"输入指针指针选项"来确认将创建  >    >  **SpherePointer。** 应列出默认预制 `GrabPointer` (Assets/MRTK/SDK/Features/UX/Prefabs/Pointers) ，其控制器类型应为"表达手 *"。*  只要自定义预制项实现 类，就可以使用 [`SpherePointer`](xref:Microsoft.MixedReality.Toolkit.Input.SpherePointer) 自定义预制。
+    默认的 MRTK 配置文件和默认 HoloLens 2 配置文件已经包含一个 *SpherePointer*。 可以通过选择 MRTK 配置文件并导航到 **输入**  >  **指针**  >  **指针选项** 来确认将创建的 SpherePointer。 默认的 `GrabPointer` prefab (资产/MRTK/SDK/功能/UX/prototyping/指针) 应列在 *控制器类型* 中。  只要实现了类，就可以使用自定义 prefab [`SpherePointer`](xref:Microsoft.MixedReality.Toolkit.Input.SpherePointer) 。
 
     ![抓取指针配置文件示例](../images/input/Pointers/GrabPointer_MRTKProfile.png)
 
-    默认抓取指针查询抓取点周围圆环中的附近对象，以匹配默认的 Hololens 2 接口。
+    默认的抓取指针将在抓取点周围的锥形中查询附近的对象，以匹配默认的 Hololens 2 接口。
 
-    ![圆条抓取指针](https://user-images.githubusercontent.com/39840334/82500569-72d58300-9aa8-11ea-8102-ec9a62832d4e.png)
+    ![圆锥抓取指针](https://user-images.githubusercontent.com/39840334/82500569-72d58300-9aa8-11ea-8102-ec9a62832d4e.png)
 
-1. 在应可抓取的 GameObject 上，添加 以及 [`NearInteractionGrabbable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable) 碰撞体。
+1. 在应为 grabbable 的 GameObject 上，添加一个 [`NearInteractionGrabbable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable) ，以及一个碰撞器。
 
-    确保 GameObject 的层位于可抓取层上。 默认情况下，所有层（ *空间感知* 和 *忽略 Raycasts* ）都是 grabbable。 检查 *GrabPointer* prefab 中的 *抓取层掩码*，查看哪些层是 grabbable 的。
+    确保 GameObject 的层位于 grabbable 层上。 默认情况下，所有层（ *空间感知* 和 *忽略 Raycasts* ）都是 grabbable。 检查 *GrabPointer* prefab 中的 *抓取层掩码*，查看哪些层是 grabbable 的。
 
 1. 在 GameObject 或其任一上级上，添加一个实现接口的脚本组件 [`IMixedRealityPointerHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler) 。 对象的任何上级 [`NearInteractionGrabbable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable) 都将能够接收指针事件。
 
@@ -71,44 +71,44 @@ public class PrintPointerEvents : MonoBehaviour, IMixedRealityPointerHandler
 
 不过，对于 **这两种** 类型的 UX 元素，请确保在 *MRTK 指针配置文件* 中注册了 [PokePointer](pointers.md#pokepointer) 。
 
-默认的 MRTK 配置文件和默认的 HoloLens 2 配置文件已包含一个 *PokePointer*。 可以通过选择 MRTK 配置文件并导航到 "**输入**  >  **指针**  >  **指针" 选项** 来确认将创建的 PokePointer。 默认 `PokePointer` (资产/MRTK/SDK/功能/UX/prototyping/指针) prefab 应列在 *控制器类型* 中。  只要实现了类，就可以使用自定义 prefab [`PokePointer`](xref:Microsoft.MixedReality.Toolkit.Input.PokePointer) 。
+默认的 MRTK 配置文件和默认 HoloLens 2 配置文件已经包含一个 *PokePointer*。 可以通过选择 MRTK 配置文件并导航到 "**输入**  >  **指针**  >  **指针" 选项** 来确认将创建的 PokePointer。 默认 `PokePointer` (资产/MRTK/SDK/功能/UX/prototyping/指针) prefab 应列在 *控制器类型* 中。  只要实现了类，就可以使用自定义 prefab [`PokePointer`](xref:Microsoft.MixedReality.Toolkit.Input.PokePointer) 。
 
 !["文件" 指针配置文件示例](../images/input/Pointers/PokePointer_MRTKProfile.png)
 
 ### <a name="3d-gameobjects"></a>三维 Gameobject
 
 可以通过两种不同的方式向 3D Gameobject 添加触摸交互，具体取决于你的3d 对象应仅具有单个可触摸平面，还是应基于其整个碰撞器进行可触摸。
-第一种方法通常是在具有 BoxColliders 的对象上，只需将碰撞器的单个面用于触控事件。 另一种是适用于需要根据碰撞体从任何方向接触的对象。
+第一种方法通常是在具有 BoxColliders 的对象上，只需将碰撞器的单个面用于触控事件。 另一种是对于需要根据其碰撞器从任何方向可触摸的对象。
 
-### <a name="single-face-touch"></a>单面触摸
+### <a name="single-face-touch"></a>单一面部触控
 
-这可用于启用只需要接触单个人脸的情况。 此选项假定游戏对象具有 BoxCollider。 可以将其与非 BoxCollider 对象一起使用，在这种情况下，需要手动设置"边界"和"本地中心"属性来配置可触摸平面 (即边界应设置为非零零值) 。
+这对于启用只有单个人脸需要可触摸的情况非常有用。 此选项假设游戏对象具有 BoxCollider。 可以将它与非 BoxCollider 对象一起使用，在这种情况下，"边界" 和 "本地中心" 属性很大程度上是手动设置的，以便配置可触摸平面 (即应将界限设置为非零零值) 。
 
-1. 在应可触摸的 GameObject 上，添加 BoxCollider 和 [ `NearInteractionTouchable` ] (xref：Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable) 组件。
+1. 在可触摸的 GameObject 中，添加 BoxCollider 和 [ `NearInteractionTouchable` ] (x： Toolkit MixedReality。NearInteractionTouchable) 组件。
 
-    1. 如果在下面的组件脚本中使用[ ] `IMixedRealityTouchHandler` (xref：Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) 接口，将"事件"设置为"接收"。
+    1. 如果使用 [] (x： Toolkit MixedReality，*请设置要* 接收的事件 `IMixedRealityTouchHandler` 。IMixedRealityTouchHandler 在以下组件脚本中) 接口。
 
-    1. 单击 **"修复边界"和****"修复中心"**
+    1. 单击 "**修复边界** 和 **修复中心**"
 
     ![NearInteractionTouchable 安装程序](../images/input/Pointers/NearInteractionTouchableSetup.gif)
 
-1. 在该对象或它的上级之一上，添加实现 的脚本组件 [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
-   接口。 具有 [ ] (`NearInteractionTouchable` xref：Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable) 的对象的任何上级也将能够接收指针事件。
+1. 在该对象或其上级之一上，添加一个实现的脚本组件 [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
+   交互. 具有 [ `NearInteractionTouchable` ] (x： Toolkit MixedReality 的对象的任何上级。NearInteractionTouchable) 也可以接收指针事件。
 
 > [!NOTE]
-> 在选择了 *NearInteractionTouchable* GameObject 的编辑器场景视图中，请注意白色边框正方形和箭头。 箭头指向可触摸的"正面"。 只能从该方向接触可碰撞对象。 若要使碰撞体从所有方向接触，请参阅有关任意碰撞体触摸 [的部分](#arbitrary-collider-touch)。
+> 在选择了 *NearInteractionTouchable* GameObject 的编辑器场景视图中，请注意一个白色的边框正方形和箭头。 箭头指向可触摸的 "front"。 Collidable 将仅从该方向可触摸。 若要使碰撞器可触摸所有方向，请参阅 [任意碰撞器触摸](#arbitrary-collider-touch)的部分。
 > ![NearInteractionTouchable Gizmos ](../images/input/Pointers/NearInteractionTouchableGizmos.png)
 
-### <a name="arbitrary-collider-touch"></a>任意碰撞体触摸
+### <a name="arbitrary-collider-touch"></a>任意碰撞器触控
 
-这可用于启用需要沿着整个碰撞体人脸接触游戏对象的情况。 例如，这可用于为具有 SphereCollider 的对象启用触摸交互，其中整个碰撞体需要可触摸。
+这对于启用游戏对象需要沿其整个碰撞面可触摸的情况非常有用。 例如，这可用于为具有 SphereCollider 的对象启用触摸交互，在这种情况下，整个碰撞器都需要为可触摸。
 
-1. 在应可触摸的 GameObject 上，添加一个碰撞器和 [ `NearInteractionTouchableVolume` ] (x： MixedReality) 组件。
+1. 在应可触摸的 GameObject 上，添加一个碰撞器和 [ `NearInteractionTouchableVolume` ] (x： Toolkit MixedReality。NearInteractionTouchableVolume) 组件。
 
-    1. *如果* 在下面的组件脚本中使用 [] (x： MixedReality) 接口，请设置要 **接收的事件** `IMixedRealityTouchHandler` 。
+    1. 如果使用 [] (x： Toolkit MixedReality，*请设置要* 接收的事件 `IMixedRealityTouchHandler` 。IMixedRealityTouchHandler 在以下组件脚本中) 接口。
 
 1. 在该对象或其上级之一上，添加一个实现的脚本组件 [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
-   交互. 具有 [ `NearInteractionTouchable` ] (x： MixedReality. NearInteractionTouchable) 的对象的任何上级也将能够接收指针事件。
+   交互. 具有 [ `NearInteractionTouchable` ] (x： Toolkit MixedReality 的对象的任何上级。NearInteractionTouchable) 也可以接收指针事件。
 
 ### <a name="unity-ui"></a>Unity UI
 
@@ -166,7 +166,7 @@ public static void MakeChangeColorOnTouch(GameObject target)
 
 ### <a name="grab-events"></a>获取事件
 
-下面的示例演示如何使 GameObject 可拖动。 假设游戏对象上具有碰撞体。
+下面的示例演示如何使 GameObject 可拖动。 假定游戏对象上有一个碰撞器。
 
 ```c#
 public static void MakeNearDraggable(GameObject target)

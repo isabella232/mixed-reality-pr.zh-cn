@@ -1,16 +1,16 @@
 ---
-title: README_HandCoach
+title: 手部指导
 description: 手部教练的说明和示例。
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 8b4069f25692c4058c912ccd06ae678d67882fcd
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.openlocfilehash: f6042fce7c95c106de9c72adc854e2b7112da63c
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489267"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177152"
 ---
 # <a name="hand-coach"></a>手部指导
 
@@ -33,36 +33,36 @@ ms.locfileid: "109489267"
 
 可以在 **HandCoachExample** 场景下找到示例 [：MixedRealityToolkit.Examples/Experimental/HandCoach/Scene](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach/Scenes)
 
-## <a name="hand-3d-assets"></a>手动三维资产
+## <a name="hand-3d-assets"></a>手部 3D 资产
 
-可以在以下资源中找到资产： [MixedRealityToolkit/实验/HandCoach](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach)
+可以在以下项下找到资产 [：MixedRealityToolkit.SDK/Experimental/HandCoach](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach)
 
 ## <a name="quality"></a>质量
 
-如果注意到 skinned 网格上的扭曲，需要确保项目使用的是正确的联接量。
-请参阅 Unity 的编辑 > 项目设置 > Quality > 其他 > Blend 权重。 请确保选择 "4 骨骼" 以查看平滑联接。
-![项目设置](../images/hand-coach/MRTK_ProjectSettings.png)
+如果注意到外观网格上的扭曲，则需要确保项目使用适当数量的连接。
+转到 Unity 的编辑> Project 设置 >质量>其他>混合权重。 确保已选择"4 个关节"，以查看平滑联合。
+![Project设置](../images/hand-coach/MRTK_ProjectSettings.png)
 
 ## <a name="scripts"></a>脚本
 
 ### <a name="interaction-hint"></a>交互提示
 
-该 `InteractionHint.cs` 脚本提供了用于触发动画的包装功能，并为手型工作机组淡化。
+该 `InteractionHint.cs` 脚本提供包装器功能，用于触发手部工具的动画和淡入淡出。
 
 #### <a name="how-to-set-up-an-interaction-hint"></a>如何设置交互提示
 
-若要设置交互提示，建议使用提供的 prototyping StaticHandCoachRoot_L "prefab" 和 StaticHandCoachRoot_R "prefab"。 此 prefab 包含 InteractionHint 脚本和手写工作装置以及适当的层次结构，以确保所提供的提示动画按预期方式工作。
-否则，你将需要使用 animator 将该脚本放在 gameObject 的父级别上。
+若要设置交互提示，建议使用提供的预制项"StaticHandCoachRoot_L.prefab"和"StaticHandCoachRoot_R.prefab"。 此预制项包含 InteractionHint 脚本和手部工具以及适当的层次结构，以确保提供的提示动画符合预期。
+否则，需要将脚本放在 gameObject 上，使用动画器从手部工具向上放置一个父级别。
 
 #### <a name="inspector-properties"></a>检查器属性
 
-- **HideIfHandTracked** 此布尔值指定在跟踪用户的手时是否应使用手动跟踪状态隐藏视觉对象。 如果将此属性设置为 false，则只使用脚本属性 "customShouldHideVisuals" 来确定是否隐藏提示。
+- **HideIfHandTracked** 此布尔值指定在跟踪用户的手时，是否应当使用手部跟踪状态来隐藏视觉对象。 如果设置为 false，则仅脚本属性"customShouldHideVisuals"用于确定是否隐藏提示。
 
-- **MinDelay** 此属性指定显示视觉对象的最小延迟。 默认情况下，如果未跟踪用户的手，则手形的视觉对象将显示在这几秒钟后。
+- **MinDelay** 此属性指定显示视觉对象的最小延迟。 默认情况下，如果未跟踪用户的手，则手部视觉对象将在此秒后显示。
 
-- **MaxDelay** 此属性指定显示视觉对象的最大延迟。 默认情况下，即使正在跟踪用户的手，该手形的视觉对象也会在数秒后出现。
+- **MaxDelay** 此属性指定显示视觉对象的最大延迟。 默认情况下，即使跟踪用户的手，手部视觉对象也会在此秒后显示。
 
-- **UseMaxTimer** 如果将此布尔值设置为 "false"，则它将禁用最大计时器，并只允许在用户退出查看时显示手形提示，或自定义条件返回 false。
+- **UseMaxTimer** 如果此布尔值设置为 false，它将禁用最大计时器，并且仅允许用户在手部无法查看或自定义条件返回 false 时显示手部提示。
 
 - **重复** 此属性控制在最小或最大计时器通过时提示动画播放次数。 然后，提示将隐藏并再次等待延迟。
 
@@ -83,24 +83,24 @@ ms.locfileid: "109489267"
 
 提供的默认淡入和淡出状态Fade_In，Fade_Out通过更改第二个关键帧的时间戳来设置淡入淡出长度来调整其淡入和淡出状态。
 
-动画器和脚本的设置方式应使设置尽可能简单。 若要添加新的动画状态，只需导入 fbx，确保使用不同的名称设置动画名称，然后将动画拖到 animator 中。
+动画器和脚本的设置方式应使设置尽可能简单。 若要添加新动画状态，只需导入 fbx，确保动画名称设置有一个不同的名称，然后将该动画拖动到动画器中。
 
 ### <a name="movetotarget"></a>MoveToTarget
 
-MoveToTarget 脚本提供将手形提示从跟踪位置移动到目标位置的功能。
+MoveToTarget.cs 脚本提供了一些功能，可随着时间的推移将手部提示从跟踪位置移动到目标位置。
 
 #### <a name="how-to-set-up-movetotarget"></a>如何设置 MoveToTarget
 
-提供的 prototyping MovingHandCoachRoot_L "prefab" 和 MovingHandCoachRoot_R "prefab" 在其层次结构中包含 MoveToTarget。 如果要在自己的设置中使用此脚本，则需要将其放在包含远程测试机组 Animator 的根 gameobject 上。
+提供的预制项"MovingHandCoachRoot_L.prefab"和"MovingHandCoachRoot_R.prefab"在层次结构中包含 MoveToTarget。 如果要在你自己的设置中使用此脚本，则需要将脚本放在根 gameobject 上，其中包含用于你的钻器的动画器。
 
 #### <a name="inspector-properties"></a>检查器属性
 
-- **TrackingObject** 将此设置为你希望远程测试在开始运动之前应遵循的对象。 建议创建一个空的 GameObject，并将其移至特定位置以帮助你确定跟踪。
-- **TargetObject** 将此设置为你希望远程测试在其运动期间移动到的对象。 建议创建一个空的 GameObject，并将其移至特定位置以帮助你确定跟踪。
-- **RootObject** 将此项设置为跟踪和目标对象之间的共享父级，以便可以正确计算相对位置。 包含的 prefab 在其层次结构中同时具有跟踪和目标对象，但你可以将目标对象设置为 prefab 外的 gameObject，并将根对象更改为共享父级。
-- **持续时间** 在几秒内从 TrackingObject 移动到 TargetObject 所需的时间量 () 。
-- **TargetOffset** 用于获取 GameObject 到达适当目标位置的可调偏移量。 如果动画中的动画包含位置偏移量，则此方法非常有用。
-- **AnimationCurve** 这是默认情况下的线性曲线，但您可以在启动和停止运动路径时更改曲线以提供缓动。
+- **TrackingObject** 在设备开始其运动之前，将此选项设置为希望其遵循的对象。 建议创建一个空 GameObject，并移动到特定位置，以帮助你查明跟踪。
+- **TargetObject** 将此选项设置为要在其运动过程中将钻设备移动到的对象。 建议创建一个空 GameObject，并移动到特定位置，以帮助你查明跟踪。
+- **RootObject** 将此选项设置为跟踪对象和目标对象之间的共享父级，以便可以正确计算相对位置。 包含的预制件在其层次结构中同时具有跟踪对象和目标对象，但可以将目标对象设置为预制件外部的 gameObject，将根对象更改为共享父级。
+- **持续时间** 从 TrackingObject (TargetObject) 秒的时间。
+- **TargetOffset** 可调整的偏移量，使 GameObject 到达正确的目标位置。 如果动画在动画期间包含位置偏移量，则这很有用。
+- **AnimationCurve** 这默认为线性曲线，但可以更改曲线，在启动和停止运动路径时提供缓动。
 
 #### <a name="controlling-movetotarget-via-script"></a>通过脚本控制 MoveToTarget
 
@@ -129,7 +129,7 @@ RotateAroundPoint.cs 脚本提供了在一段时间围绕透视点旋转手提�
 
 #### <a name="controlling-rotatearoundpoint-via-script"></a>通过脚本控制 RotateAroundPoint
 
-在自定义脚本中，当你希望在 CenteredParent 上开始旋转时，请调用 RotateToTarget () 。 如果希望将位置重置为原始 PivotPosition，请调用 ResetAndDeterminePivot () 。
+在自定义脚本中，在希望手部 () 在 CenteredParent 周围开始旋转时，调用 RotateToTarget 参数。 若要将位置重置为原始 PivotPosition，请调用 ResetAndDeterminePivot () 。
 
 #### <a name="controlling-rotatearoundpoint-via-animations"></a>通过动画控制 RotateAroundPoint
 

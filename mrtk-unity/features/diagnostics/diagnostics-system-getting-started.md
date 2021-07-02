@@ -5,16 +5,16 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 0de7b904a48453d6021cf7aed5835412c19b7884
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: a31b88f661c141941cae2d0b01668b26c0bed7d7
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121775"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177247"
 ---
-# <a name="diagnostic-system"></a>诊断系统
+# <a name="diagnostics-system-overview"></a>诊断系统概述
 
-混合现实工具包诊断系统提供在应用程序中运行的诊断工具，用于分析应用程序问题。
+混合现实Toolkit诊断系统提供在应用程序中运行的诊断工具，用于分析应用程序问题。
 
 诊断系统的第一个版本包含 [Visual Profiler，](using-visual-profiler.md) 用于分析使用应用程序时的性能问题。
 

@@ -1,18 +1,18 @@
 ---
-title: 更新
+title: 从早期版本更新
 description: 从较低版本的 MRTK 进行迁移的文档。
 author: polar-kev
 ms.author: kesemple
 ms.date: 04/19/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 97f45328bc8f9b811e815da0240138790db699c6
-ms.sourcegitcommit: 0b09536c16f6802acc120a973d720aec7e30f617
+ms.openlocfilehash: 5a914d6408d346dac0bf6c683f401564e875f4d8
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "107742233"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175101"
 ---
-# <a name="updating-the-microsoft-mixed-reality-toolkit"></a>更新 Microsoft Mixed Reality 工具包
+# <a name="updating-from-earlier-versions"></a>从早期版本更新
 
 - [升级到新版本的 MRTK](#upgrading-to-a-new-version-of-mrtk)
 - [2.3.0 到2.4。0](#updating-230-to-240)
@@ -26,12 +26,12 @@ ms.locfileid: "107742233"
 按照以下说明来确定当前正在使用的 MRTK 版本：
 
 1. 在 Unity 中打开 MRTK 项目
-2. 在项目窗口中导航到 "MixedRealityToolkit" 文件夹
+2. 在 Project 窗口中导航到 "MixedRealityToolkit" 文件夹
 3. 打开名为 "Version" 的文件
 
 如果上面的文件和文件夹不存在，则是 MRTK 的较新版本。 在这种情况下，请尝试以下操作：
 
-1. 导航到 "混合现实工具包 Foundation" 文件夹
+1. 导航到 "Mixed Reality Toolkit Foundation" 文件夹
 2. 单击 "package.js打开" 以查看 Unity 中的预览或使用文本编辑器打开该预览版
 3. 查找包含单词 "version：" 的行 
 
@@ -81,10 +81,10 @@ ms.locfileid: "107742233"
     - 从层次结构中删除 **MixedRealityToolkit** 和 **MixedRealityPlayspace**（如果存在）。 这将删除主摄像机，但会在下一步中重新创建它。 如果已手动更改了主相机的任何属性，则在创建新相机后，必须手动重新应用这些属性。
     - 选择 **MixedRealityToolkit-> 添加到场景并配置**
     - 选择 **MixedRealityToolkit-> 公用事业-> Update-> 控制器映射配置文件** (仅需执行一次) -这将用更新的轴和数据更新任何自定义控制器映射配置文件，同时使自定义分配的输入操作保持不变
-1. 运行 [迁移工具](../features/tools/migration-window.md) 并在 *整个项目* 上运行该工具，以确保将所有代码更新到最新版本。
+1. 运行 [迁移工具](../features/tools/migration-window.md)并在 *完整 Project* 上运行该工具，以确保将所有代码更新到最新版本。
    迁移窗口包含多个不同的迁移处理程序，这些处理程序必须各自运行。 此步骤涉及：
    - 从 " **迁移处理程序选择** " 下拉列表中选择第一个迁移处理程序。
-   - 单击 "完全项目" 按钮。
+   - 单击 "完全 Project" 按钮。
    - 单击 "添加用于迁移的完整项目" 按钮 (这将扫描要迁移的对象的整个项目) 。
    - 单击 "迁移" 按钮，如果找到任何 migrateable 对象，应启用该按钮。
    - 为下拉列表中的每个迁移处理程序重复前面三个步骤。
@@ -120,7 +120,7 @@ ms.locfileid: "107742233"
     > 某些 Unity 工具（如 Unity Collab）将配置信息保存到库文件夹。 如果使用这样的工具，请首先从库中复制该工具的数据文件夹，然后再删除，然后在库重新生成后将其还原。
 1. 重新打开 Unity 中的项目
 
-执行前面的步骤后，请运行 [混合现实功能工具](#mixed-reality-feature-tool) ，并导入所需的混合现实工具包版本。
+执行前面的步骤后，运行[混合现实功能工具](#mixed-reality-feature-tool)，并导入所需的混合现实 Toolkit 版本。
 
 ## <a name="updating-230-to-240"></a>将2.3.0 更新为2.4。0
 
@@ -206,7 +206,7 @@ if (CoreServices.InputSystem.GazeProvider is GazeProvider gazeProvider)
 
 以前的自定义按钮图标需要将新材料分配给按钮的四个呈现器。 这不再是必需的，我们建议将自定义图标纹理移到 IconSet。 保留现有的自定义材料和图标。 但在升级之前，它们将不太好。
 若要将项目中所有按钮上的资产升级为新建议的格式，请使用 ButtonConfigHelperMigrationHandler。
- (混合现实工具包-> 实用工具-> 迁移窗口-> 迁移处理程序选择-> ButtonConfigHelperMigrationHandler) 
+ (混合现实 Toolkit-> 实用工具-> 迁移窗口-> 迁移处理程序选择-> MixedReality。Toolkit。ButtonConfigHelperMigrationHandler) 
 
 ![升级窗口对话框](https://user-images.githubusercontent.com/39840334/82096923-bd28bf80-96b6-11ea-93a9-ceafcb822242.png)
 
@@ -226,13 +226,13 @@ Private ControllerPoseSynchronizer. 左右手使用习惯字段已标记为过�
 
 已 ([#7012](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/7012)) 中删除 Public ControllerPoseSynchronizer 左右手使用习惯属性的 setter。
 
-**用于 Unity 的 MSBuild**
+**Unity 的 MSBuild**
 
-此版本的 MRTK 对 Unity 使用比以前版本更高的 MSBuild 版本。 在项目加载期间，如果 "Unity 包管理器" 清单中列出了较旧的版本，则会出现 "配置" 对话框，并选中 "启用 MSBuild for Unity" 选项。 应用将执行升级。
+此版本的 MRTK 使用比以前版本更高的 Unity MSBuild 版本。 在项目加载期间，如果 "Unity 包管理器" 清单中列出了较旧的版本，则会出现 "配置" 对话框，并选中 "启用 MSBuild for Unity" 选项。 应用将执行升级。
 
 **ScriptingUtilities**
 
-ScriptingUtilities 类已标记为过时，并已替换为 ScriptUtilities 中的 MixedReality 程序集。 新类将改进以前的行为并添加对删除脚本定义的支持。
+ScriptingUtilities 类已标记为过时，并已被 ScriptUtilities 替换为 MixedReality。Toolkit。编辑器实用工具程序集。 新类将改进以前的行为并添加对删除脚本定义的支持。
 
 尽管现有代码将继续在版本2.3.0 中运行，但建议将更新为新类。
 
@@ -269,27 +269,27 @@ ShellHandRayPointer 类的 lineRendererSelected 和 lineRendererNoTarget 成员�
 
 **WindowsMixedRealityUtilities 命名空间**
 
-WindowsMixedRealityUtilities 的命名空间已从 WindowsMixedReality 更改为 MixedReality [#6863](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989)) 的。 WindowsMixedReality (。
+WindowsMixedRealityUtilities 的命名空间从 Microsoft.MixedReality 更改。Toolkit。WindowsMixedReality.Input 到 Microsoft.MixedReality。Toolkit。WindowsMixedReality [ (#6863) 。](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989)
 
-请更新 #using 语句以解决编译错误。
+请更新#using语句以解决编译错误。
 
-## <a name="updating-210-to-220"></a>将2.1.0 更新为2.2。0
+## <a name="updating-210-to-220"></a>将 2.1.0 更新到 2.2.0
 
 - [API 更改](#api-changes-in-220)
 
 ### <a name="api-changes-in-220"></a>2.2.0 中的 API 更改
 
-**IMixedRealityBoundarySystem。包含**
+**IMixedRealityBoundarySystem.Contains**
 
-之前，此方法采用特定的 Unity 定义试验性枚举。 它现在采用与 Unity 枚举相同的 MRTK 定义枚举。 此更改有助于为 Unity 未来的边界 Api 准备 MRTK。
+此方法以前采用特定的 Unity 定义的实验性枚举。 它现在采用与 Unity 枚举相同的 MRTK 定义的枚举。 此更改有助于为 Unity 的未来边界 API 准备 MRTK。
 
 **MixedRealityServiceProfileAttribute**
 
-为了更好地描述支持配置文件的要求，MixedRealityServiceProfileAttribute 已更新为添加可选的排除类型集合。 作为此更改的一部分，ServiceType 属性已从类型更改为类型 []，并已重命名为 RequiredTypes。
+为了更好地描述支持配置文件的要求，已更新 MixedRealityServiceProfileAttribute 以添加排除类型的可选集合。 作为此更改的一部分，ServiceType 属性从 Type 更改为 Type[]，并重命名为 RequiredTypes。
 
-还添加了另一个属性 ExcludedTypes。
+还添加了第二个属性 ExcludedTypes。
 
-## <a name="updating-200-to-210"></a>将2.0.0 更新为2.1。0
+## <a name="updating-200-to-210"></a>将 2.0.0 更新到 2.1.0
 
 - [API 更改](#api-changes-in-210)
 - [配置文件更改](#profile-changes-in-210)
@@ -298,30 +298,30 @@ WindowsMixedRealityUtilities 的命名空间已从 WindowsMixedReality 更改为
 
 **BaseNearInteractionTouchable**
 
-已将 `BaseNearInteractionTouchable` 修改为将方法标记 `OnValidate` 为虚拟。 扩展 `BaseNearInteractionTouchable` (ex：) 的类已 `NearInteractionTouchableUnityUI` 更新，以反映此更改。
+`BaseNearInteractionTouchable`已修改 以将方法 `OnValidate` 标记为虚拟。 扩展类 `BaseNearInteractionTouchable` (例如：) `NearInteractionTouchableUnityUI` 更新以反映此更改。
 
 **ColliderNearInteractionTouchable**
 
-`ColliderNearInteractionTouchable` 类已弃用。 请更新要使用的代码引用 `BaseNearInteractionTouchable` 。
+`ColliderNearInteractionTouchable` 类已弃用。 请更新代码引用以使用 `BaseNearInteractionTouchable` 。
 
 **IMixedRealityMouseDeviceManager**
 
-**_已_**
+**_添加_**
 
-`IMixedRealityMouseDeviceManager` 添加了 `CursorSpeed` 和 `WheelSpeed` 属性。 这些属性允许应用程序指定一个乘数值，通过该值，可分别缩放光标和滚轮的速度。
+`IMixedRealityMouseDeviceManager` 已添加 `CursorSpeed` 和 `WheelSpeed` 属性。 这些属性允许应用程序指定一个乘数值，通过该值可以分别缩放光标和滚轮的速度。
 
-这是一项重大更改，需要修改现有的鼠标设备管理器实现。
+这是一项中断性变更，需要修改现有的鼠标设备管理器实现。
 
 >[!NOTE]
->此更改与版本2.0.0 不向后兼容。
+>此更改与版本 2.0.0 不兼容。
 
-**_弃用_**
+**_已放弃_**
 
-该 `MouseInputProfile` 属性已标记为过时，并将从 Microsoft 混合现实工具包的未来版本中删除。 建议应用程序代码不再使用此属性。
+`MouseInputProfile`属性已标记为已过时，将从 Microsoft Mixed Reality Toolkit 的未来版本中删除。 建议应用程序代码不再使用此属性。
 
 **可交互**
 
-以下方法和属性已弃用，并将从 Microsoft 混合现实工具包的未来版本中删除。 建议按过时属性中包含的指南更新应用程序代码，并将其显示在控制台中。
+以下方法和属性已弃用，将从 Microsoft Mixed Reality Toolkit 的未来版本中删除。 建议根据"已过时"属性中包含的指南更新应用程序代码，并显示在控制台中。
 
 - `public bool Enabled`
 - `public bool FocusEnabled`
@@ -352,26 +352,26 @@ WindowsMixedRealityUtilities 的命名空间已从 WindowsMixedReality 更改为
 
 **NearInteractionTouchableSurface**
 
-`NearInteractionTouchableSurface`类已添加，现在用作和的基类 `NearInteractionTouchable` `NearInteractionTouchableUnityUI` 。
+`NearInteractionTouchableSurface`类已添加，现在用作 和 的 `NearInteractionTouchable` 基类 `NearInteractionTouchableUnityUI` 。
 
 ### <a name="profile-changes-in-210"></a>2.1.0 中的配置文件更改
 
-**手动跟踪配置文件**
+**手部跟踪配置文件**
 
-手写网格和联合可视化效果现在具有单独的编辑器和播放机设置。 手动跟踪配置文件已更新为允许将这些可视化效果设置为;所有内容、编辑器或播放机。
+手部网格和联合可视化效果现在具有单独的编辑器和播放器设置。 手动跟踪配置文件已更新，允许将这些可视化效果设置为 ;Nothing、Everything、Editor 或 Player。
 
-![手动可视化模式](../release-notes/images/HandTrackingVisualizationModes.png)
+![手部可视化模式](../release-notes/images/HandTrackingVisualizationModes.png)
 
-自定义手动跟踪配置文件可能需要更新才能在版本2.1.0 中正常工作。
+可能需要更新自定义手部跟踪配置文件，以正确使用版本 2.1.0。
 
 >[!NOTE]
->此更改与版本2.0.0 不向后兼容。
+>此更改与版本 2.0.0 不兼容。
 
 **输入模拟配置文件**
 
-已升级输入模拟系统，这将更改输入模拟配置文件中的几个设置。 某些更改不能自动迁移，用户可能会发现配置文件正在使用默认值。
+输入模拟系统已升级，这将更改输入模拟配置文件中的一些设置。 某些更改无法自动迁移，用户可能会发现配置文件正在使用默认值。
 
-1. 配置文件中的所有 KeyCode 和鼠标按钮绑定都已替换为泛型 `KeyBinding` 结构，该结构存储 (键或鼠标) 的绑定类型，以及分别)  (KeyCode 或鼠标按钮号的实际绑定代码。 结构具有自己的检查器，它允许统一显示，并提供 "自动绑定" 工具，通过按相应的键来快速设置键绑定，而不是从大下拉列表中进行选择。
+1. 配置文件中所有 KeyCode 和鼠标按钮绑定已替换为泛型结构，该结构分别存储绑定 (键或鼠标) 的类型，以及实际绑定代码 (KeyCode 或鼠标按钮 `KeyBinding`) 。 结构具有其自己的检查器，该检查器允许统一显示，并提供"自动绑定"工具，通过按相应的键（而不是从大型下拉列表中选择）来快速设置键绑定。
 
     - FastControlKey
     - ToggleLeftHandKey
@@ -379,41 +379,41 @@ WindowsMixedRealityUtilities 的命名空间已从 WindowsMixedReality 更改为
     - LeftHandManipulationKey
     - RightHandManipulationKey
 
-1. `MouseLookToggle` 先前作为枚举包含在中 `MouseLookButton` `InputSimulationMouseButton.Focused` ，它现在是一个单独的选项。 启用后，照相机会在松开按钮后一直旋转鼠标，直到按下 esc 键。
-1. `HandDepthMultiplier` 从0.1 到0.03 的默认值已降低，可适应对输入模拟进行的某些更改。 如果在滚动时相机移动速度太快，请尝试降低此值。
-1. 旋转的键已被移除，手动旋转现在也由鼠标控制。 按住 `HandRotateButton` (Ctrl) ，同时 (LShift/Space) 将启用手写旋转。
-1. 已将新的 "UpDown" 轴引入到输入轴列表。 这会控制垂直方向的相机运动，默认值为 Q/E 键以及控制器触发器按钮。
+1. `MouseLookToggle` 以前作为 包含在 `MouseLookButton` 枚举中 `InputSimulationMouseButton.Focused` ，现在它是一个单独的选项。 启用后，在松开按钮后，相机将继续使用鼠标旋转，直到按下转义键。
+1. `HandDepthMultiplier` 默认值从 0.1 降低至 0.03，以适应对输入模拟的一些更改。 如果相机在滚动时移动过快，请尝试降低此值。
+1. 用于旋转手的键已删除，手部旋转现在也由鼠标控制。 按住 `HandRotateButton` (Ctrl 键) 左/右操作键 (LShift/Space) 将启用手部旋转。
+1. 输入轴列表中引入了新轴"UpDown"。 这可控制照相机垂直移动，默认为"Q/E"键以及控制器触发器按钮。
 
-有关这些更改的详细信息，请参阅 [输入模拟服务](../features/input-simulation/input-simulation-service.md) 一文。
+有关这些更改详细信息，请参阅输入 [模拟服务一](../features/input-simulation/input-simulation-service.md) 文。
 
-**鼠标数据提供程序配置文件**
+**鼠标数据访问接口配置文件**
 
-已更新鼠标数据提供程序配置文件，以公开新的 `CursorSpeed` 和 `WheelSpeed` 属性。 现有的自定义配置文件将自动提供默认值。 保存配置文件时，将保留这些新值。
+已更新鼠标数据提供程序配置文件，以公开新的 `CursorSpeed` 和 `WheelSpeed` 属性。 现有的自定义配置文件将自动提供默认值。 保存配置文件后，将保留这些新值。
 
 **控制器映射配置文件**
 
-某些轴和输入类型在2.1.0 中进行了更新，尤其是围绕 OpenVR 平台。 请确保在升级时选择 **MixedRealityToolkit-> 公用事业-> 更新 > 控制器映射配置文件** 。 这会更新包含更新的轴和数据的任何自定义控制器映射配置文件，同时使自定义分配的输入操作保持不变。
+某些轴和输入类型已在 2.1.0 中更新，尤其是在 OpenVR 平台周围。 升级时，请务必选择 **"MixedRealityToolkit "-> Utilities -> Update -> Controller Mapping Profiles"。** 这将使用更新的轴和数据更新任何自定义控制器映射配置文件，同时保留自定义分配的输入操作不变。
 
-## <a name="updating-rc2-to-200"></a>将 RC2 更新到2.0。0
+## <a name="updating-rc2-to-200"></a>将 RC2 更新到 2.0.0
 
-Microsoft Mixed Reality 工具包的 RC2 版本和2.0.0 版本之间发生了更改，可能会影响现有项目。 本文档介绍这些更改，以及如何将项目更新到2.0.0 版本。
+在 Microsoft Mixed Reality Toolkit RC2 和 2.0.0 版本之间，进行了可能会影响现有项目的更改。 本文档介绍这些更改以及如何将项目更新到 2.0.0 版本。
 
 - [API 更改](#api-changes-in-200)
 - [程序集名称更改](#assembly-name-changes-in-200)
 
 ### <a name="api-changes-in-200"></a>2.0.0 中的 API 更改
 
-从版本 RC2 开始，有许多 API 更改，其中一些可能会破坏现有项目。 以下各节介绍了 RC2 和2.0.0 版本之间发生的更改。
+自 RC2 发布以来，发生了许多 API 更改，其中包括一些可能会中断现有项目的更改。 以下部分介绍 RC2 和 2.0.0 版本之间发生的更改。
 
 **MixedRealityToolkit**
 
 MixedRealityToolkit 对象上的以下公共属性已弃用。
 
-- `RegisteredMixedRealityServices` 不再包含注册的扩展服务和数据提供程序的集合。
+- `RegisteredMixedRealityServices` 不再包含已注册的扩展服务和数据提供程序的集合。
 
-若要访问扩展服务，请使用 `MixedRealityServiceRegistry.TryGetService<T>` 。 若要访问数据访问接口，请将服务实例强制转换为 [`IMixedRealityDataProviderAccess`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProviderAccess) 并使用 `GetDataProvider<T>` 。
+若要访问扩展服务，请使用 `MixedRealityServiceRegistry.TryGetService<T>` 。 若要访问数据访问提供程序，将服务实例强制转换到 [`IMixedRealityDataProviderAccess`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProviderAccess) 并使用 `GetDataProvider<T>` 。
 
-使用 [`MixedRealityServiceRegistry`](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry) 或 [`CoreServices`](xref:Microsoft.MixedReality.Toolkit.CoreServices) 而不是已弃用的以下属性
+将 [`MixedRealityServiceRegistry`](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry) [`CoreServices`](xref:Microsoft.MixedReality.Toolkit.CoreServices) 或 用于以下已弃用的属性
 
 - `ActiveSystems`
 - `InputSystem`
@@ -426,10 +426,10 @@ MixedRealityToolkit 对象上的以下公共属性已弃用。
 
 **CoreServices**
 
-[`CoreServices`](xref:Microsoft.MixedReality.Toolkit.CoreServices)类是在对象中找到的静态系统访问器 (例如： BoundarySystem) 的替换 `MixedRealityToolkit` 。
+类 [`CoreServices`](xref:Microsoft.MixedReality.Toolkit.CoreServices) 是静态系统访问器 (，例如：在 对象) BoundarySystem `MixedRealityToolkit` 访问器。
 
 >[!IMPORTANT]
->`MixedRealityToolkit`版本2.0.0 中已弃用系统访问器，将在 MRTK 的未来版本中将其删除。
+>`MixedRealityToolkit`系统访问器已在版本 2.0.0 中弃用，并且将在 MRTK 的未来版本中删除。
 
 下面的代码示例演示了旧模式和新模式。
 
@@ -441,22 +441,22 @@ GameObject playAreaVisualization = MixedRealityToolkit.BoundarySystem?.GetPlayAr
 GameObject playAreaVisualization = CoreServices.BoundarySystem?.GetPlayAreaVisualization();
 ```
 
-如果将应用程序更改为使用不同的服务注册机构 (例如：某个试验性服务经理) ，则使用 new CoreSystem 类将确保应用程序代码不需要更新。
+如果更改应用程序以使用不同的服务注册机构，则使用新的 CoreSystem 类可确保应用程序代码不需要更新 (例如：其中一个试验性服务管理器) 。
 
 **IMixedRealityRaycastProvider**
 
-如果添加了 IMixedRealityRaycastProvider，则会更改输入系统配置文件。 如果有自定义配置文件，则在运行应用程序时，可能会收到下图中的错误。
+添加 IMixedRealityRaycastProvider 后，输入系统配置文件已更改。 如果有自定义配置文件，则运行应用程序时可能会收到下图中的错误。
 
-![选择 Raycast 提供程序1](../release-notes/images/UnableToRegisterRaycastProvider.png)
+![选择 Raycast 提供程序 1](../release-notes/images/UnableToRegisterRaycastProvider.png)
 
 若要解决这些问题，请将 IMixedRealityRaycastProvider 实例添加到输入系统配置文件。
 
-![选择 Raycast provider 2](../release-notes/images/SelectRaycastProvider.png)
+![选择 Raycast 提供程序 2](../release-notes/images/SelectRaycastProvider.png)
 
 **事件系统**
 
-- `IMixedRealityEventSystem`旧的 API 方法 `Register` 和已 `Unregister` 标记为过时。 保留它们是为了向后兼容。
-- `InputSystemGlobalListener` 已标记为过时。 其功能未发生更改。
+- 旧的 `IMixedRealityEventSystem` API 方法和 `Register` `Unregister` 已标记为已过时。 保留它们是为了保持向后兼容性。
+- `InputSystemGlobalListener` 已标记为已过时。 其功能未发生更改。
 - `BaseInputHandler` 基类已从更改 `InputSystemGlobalListener` 为 `InputSystemGlobalHandlerListener` 。 这是的任何后代的重大更改 `BaseInputHandler` 。
 
 **_变化背后的动机_**
@@ -627,7 +627,7 @@ HoloLens clicker 的控制器映射已从 unhanded 更改 [`WindowsMixedRealityC
 
 **InteractableHighlight**
 
-`InteractableHighlight` 类已弃用。 `InteractableOnFocus` `FocusInteractableStates` 应改用类和资产。 若要为创建新 `Theme` 资产 `InteractableOnFocus` ，请在项目窗口中右键单击，然后选择 "*创建*  >  *混合现实工具包*  >  *种不可交互*  >  *主题*"。
+`InteractableHighlight` 类已弃用。 `InteractableOnFocus` `FocusInteractableStates` 应改用类和资产。 若要为创建新 `Theme` 资产 `InteractableOnFocus` ，请在项目窗口中右键单击，然后选择 "*创建*  >  *混合现实 Toolkit*  >  *种不可交互*"  >  *主题*。
 
 **HandInteractionPanZoom**
 
@@ -635,7 +635,7 @@ HoloLens clicker 的控制器映射已从 unhanded 更改 [`WindowsMixedRealityC
 
 ### <a name="assembly-name-changes-in-200"></a>2.0.0 中的程序集名称更改
 
-在2.0.0 版本中，所有官方混合现实工具包程序集名称及其关联的程序集定义 (。 asmdef) 文件已更新为适合以下模式。
+在2.0.0 版本中，所有官方混合现实 Toolkit 程序集名称及其关联的程序集定义 () 文件已更新为适合以下模式。
 
 ```c#
 Microsoft.MixedReality.Toolkit[.<name>]
@@ -649,54 +649,54 @@ Microsoft.MixedReality.Toolkit[.<name>]
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit.asmdef | MixedReality. asmdef |
-| MixedRealityToolkit. BuildAndDeploy. asmdef | MixedReality. BuildAndDeploy. asmdef |
-| MixedRealityToolkit. asmdef。 | 删除，请使用 MixedReality. asmdef |
-| MixedRealityToolkit. EditorClassExtensions. asmdef | MixedReality. ClassExtensions. asmdef
-| MixedRealityToolkit. asmdef | MixedReality. 检查器 asmdef |
-| MixedRealityToolkit. ServiceInspectors. asmdef | MixedReality. ServiceInspectors. asmdef |
-| MixedRealityToolkit. UtilitiesAsync. asmdef | MixedReality. asmdef。 |
-| MixedRealityToolkit. asmdef。 | MixedReality. asmdef 中的 |
-| MixedRealityToolkit. Gltf. asmdef | MixedReality. Gltf. asmdef |
-| MixedRealityToolkit. Gltf. asmdef | MixedReality. Gltf. asmdef |
+| MixedRealityToolkit.asmdef | MixedReality。Toolkit. asmdef |
+| MixedRealityToolkit. BuildAndDeploy. asmdef | MixedReality。Toolkit。BuildAndDeploy. asmdef |
+| MixedRealityToolkit. asmdef。 | 删除，请使用 MixedReality。Toolkit。Asmdef |
+| MixedRealityToolkit. EditorClassExtensions. asmdef | MixedReality。Toolkit。ClassExtensions. asmdef
+| MixedRealityToolkit. asmdef | MixedReality。Toolkit。Asmdef |
+| MixedRealityToolkit. ServiceInspectors. asmdef | MixedReality。Toolkit。ServiceInspectors. asmdef |
+| MixedRealityToolkit. UtilitiesAsync. asmdef | MixedReality。Toolkit。Asmdef |
+| MixedRealityToolkit. asmdef。 | MixedReality。Toolkit。Asmdef |
+| MixedRealityToolkit. Gltf. asmdef | MixedReality。Toolkit。Gltf.asmdef |
+| MixedRealityToolkit. Gltf. asmdef | MixedReality。Toolkit。Gltf. asmdef |
 
 **MixedRealityToolkit 提供程序**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit. OpenVR. asmdef | MixedReality. OpenVR. asmdef |
-| MixedRealityToolkit. WindowsMixedReality. asmdef | MixedReality. WindowsMixedReality. asmdef |
-| MixedRealityToolkit. WindowsVoiceInput. asmdef | MixedReality. WindowsVoiceInput. asmdef |
+| MixedRealityToolkit. OpenVR. asmdef | MixedReality。Toolkit。OpenVR. asmdef |
+| MixedRealityToolkit. WindowsMixedReality. asmdef | MixedReality。Toolkit。WindowsMixedReality. asmdef |
+| MixedRealityToolkit. WindowsVoiceInput. asmdef | MixedReality。Toolkit。WindowsVoiceInput. asmdef |
 
 **MixedRealityToolkit**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit. BoundarySystem. asmdef | MixedReality. BoundarySystem. asmdef |
-| MixedRealityToolkit. CameraSystem. asmdef | MixedReality. CameraSystem. asmdef |
-| MixedRealityToolkit. DiagnosticsSystem. asmdef | MixedReality. DiagnosticsSystem. asmdef |
-| MixedRealityToolkit. InputSimulation. asmdef | MixedReality. InputSimulation. asmdef |
-| MixedRealityToolkit. InputSimulation. asmdef | MixedReality. InputSimulation. asmdef。 |
-| MixedRealityToolkit. InputSystem. asmdef | MixedReality. InputSystem. asmdef |
-| MixedRealityToolkit. asmdef | MixedReality. InputSystem. asmdef。 |
-| MixedRealityToolkit. SceneSystem. asmdef | MixedReality. SceneSystem. asmdef |
-| MixedRealityToolkit. SpatialAwarenessSystem. asmdef | MixedReality. SpatialAwarenessSystem. asmdef |
-| MixedRealityToolkit. TeleportSystem. asmdef | MixedReality. TeleportSystem. asmdef |
+| MixedRealityToolkit. BoundarySystem. asmdef | MixedReality。Toolkit。BoundarySystem. asmdef |
+| MixedRealityToolkit. CameraSystem. asmdef | MixedReality。Toolkit。CameraSystem. asmdef |
+| MixedRealityToolkit. DiagnosticsSystem. asmdef | MixedReality。Toolkit。DiagnosticsSystem. asmdef |
+| MixedRealityToolkit. InputSimulation. asmdef | MixedReality。Toolkit。InputSimulation. asmdef |
+| MixedRealityToolkit. InputSimulation. asmdef | MixedReality。Toolkit。InputSimulation. asmdef |
+| MixedRealityToolkit. InputSystem. asmdef | MixedReality。Toolkit。InputSystem. asmdef |
+| MixedRealityToolkit. asmdef | MixedReality。Toolkit。InputSystem. asmdef |
+| MixedRealityToolkit. SceneSystem. asmdef | MixedReality。Toolkit。SceneSystem. asmdef |
+| MixedRealityToolkit. SpatialAwarenessSystem. asmdef | MixedReality。Toolkit。SpatialAwarenessSystem. asmdef |
+| MixedRealityToolkit. TeleportSystem. asmdef | MixedReality。Toolkit。TeleportSystem. asmdef |
 
 **MixedRealityToolkit**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit. asmdef | MixedReality. asmdef。 |
-| MixedRealityToolkit. asmdef | MixedReality.. asmdef。 |
+| MixedRealityToolkit. asmdef | MixedReality。Toolkit。Asmdef |
+| MixedRealityToolkit. asmdef | MixedReality。Toolkit。SDK.Asmdef |
 
 **MixedRealityToolkit 示例**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit. asmdef | MixedReality. asmdef。 |
-| MixedRealityToolkit. Gltf. asmdef | MixedReality. Gltf. asmdef |
-| MixedRealityToolkit. StandardShader. asmdef | MixedReality. StandardShader asmdef。 |
-| MixedRealityToolkit. InspectorFields. asmdef | MixedReality. InspectorFields. asmdef |
-| MixedRealityToolkit. InspectorFields. asmdef。 | MixedReality. InspectorFields asmdef。 |
-| MixedRealityToolkit. Interactables. asmdef | MixedReality. asmdef. Interactables。 |
+| MixedRealityToolkit. asmdef | MixedReality。Toolkit。示例。 asmdef |
+| MixedRealityToolkit. Gltf. asmdef | MixedReality。Toolkit。Gltf. asmdef |
+| MixedRealityToolkit. StandardShader. asmdef | MixedReality。Toolkit。StandardShader. asmdef |
+| MixedRealityToolkit. InspectorFields. asmdef | MixedReality。Toolkit。InspectorFields. asmdef |
+| MixedRealityToolkit. InspectorFields. asmdef。 | MixedReality。Toolkit。InspectorFields. asmdef |
+| MixedRealityToolkit. Interactables. asmdef | MixedReality。Toolkit。Interactables. asmdef |

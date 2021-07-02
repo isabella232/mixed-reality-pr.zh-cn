@@ -5,14 +5,14 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 0f2d3d3eb07d8b631f3f11a8b497a22a028a2f24
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 413d2a3105294411f9c08f4a2add9365389ea783
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145014"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176122"
 ---
-# <a name="inputfeatureusage-tool"></a>InputFeatureUsage 工具
+# <a name="input-feature-usage-tool"></a>输入功能使用情况工具
 
 InputFeatureUsage 工具是设备上的运行时 (，或在编辑器) 工具中，它使开发人员能够快速确定检测到的输入源的可用 Unity InputFeatureUsages， (例如，运动控制器或有向清楚表述的) 手写内容。
 
@@ -35,7 +35,7 @@ InputFeatureUsage 工具是设备上的运行时 (，或在编辑器) 工具中�
 - 更新控制器的输入系统数据提供程序中的控件映射
 
 > [!NOTE]
-> InputFeatureUsage 工具不使用 Microsoft 混合现实工具包组件。 它直接与 Unity 通信，以确定和显示功能使用情况。
+> InputFeatureUsage 工具不会将 Microsoft Mixed Reality Toolkit 组件使用。 它直接与 Unity 通信，以确定和显示功能使用情况。
 
 ### <a name="panels"></a>面板
 

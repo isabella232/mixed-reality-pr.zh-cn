@@ -1,18 +1,18 @@
 ---
-title: 眼动跟踪眼睛和手
+title: 眼睛和手
 description: 如何在 MRTK 中结合使用眼部定位作为主指针和手部运动
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， EyeTracking，
-ms.openlocfilehash: c9d5f23610d821aa1e50a3217a4be736601dc14d
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: ff464c6f2381a9df020a9ccf807672d4463d662c
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143998"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175108"
 ---
-# <a name="eyes--hand-interaction"></a>眼睛 + 手部交互
+# <a name="eyes-and-hands"></a>眼睛和手
 
 ## <a name="how-to-support-_look--hand-motions_-eye-gaze--hand-gestures"></a>如何支持 _眼睛凝_ 视和 (运动&手势) 
 
@@ -38,7 +38,7 @@ ms.locfileid: "110143998"
 
 ### <a name="how-to-keep-gaze-pointer-always-on"></a>如何使凝视指针始终打开
 
-若要避免在检测到手后，会自动抑制 head 或眼睛眼睛指针， [`PointerBehavior`](xref:Microsoft.MixedReality.Toolkit.Input.PointerBehavior) 可以指定注视来控制其是打开还是关闭。
+为了避免在检测到手部后自动抑制头部或眼睛凝视指针，可指定凝视以控制它是打开还是 [`PointerBehavior`](xref:Microsoft.MixedReality.Toolkit.Input.PointerBehavior) 关闭。
 
 ```c#
 // Turn on gaze pointer
@@ -48,4 +48,4 @@ PointerUtils.SetGazePointerBehavior(PointerBehavior.AlwaysOn);
 请参阅 [`Controllers Pointers and Focus`](../../../architecture/controllers-pointers-and-focus.md)
 
 ---
-[返回 "MixedRealityToolkit" 中的眼睛跟踪](eye-tracking-main.md)
+[返回到"MixedRealityToolkit 中的眼动跟踪"](eye-tracking-main.md)

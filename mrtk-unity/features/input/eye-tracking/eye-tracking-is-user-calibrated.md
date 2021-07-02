@@ -1,16 +1,16 @@
 ---
-title: 目视校准
+title: 眼部校准
 description: 如何在 MRTK 中设置用户眼校准
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， EyeTracking， 校准，
-ms.openlocfilehash: d7ae9885b77798b44b3d63bb7f92283658e05411
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: a2023a2d7f6a0254e8fef32f4faf09def956e94f
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143999"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177199"
 ---
 # <a name="eye-calibration"></a>眼部校准
 
@@ -42,21 +42,21 @@ MRTK 中的眼动跟踪配置是通过 接口 [`IMixedRealityEyeGazeProvider`](x
 2. 加载 _EyeTrackingDemo-00-RootScene.unity_ 场景
 
 3. 查看 _EyeCalibrationChecker：_
-   - 在此场景中，我们已经有了一个示例，用于检测是否在 *_EyeCalibrationChecker_ 游戏对象* 下校准了当前用户。
-它只是父级几个文本网格，还有一些附加触发器，用于将通知混合入和移出。这包括缓慢增加其大小和激活时的不透明度。
-一旦通知被消除，它会慢慢地降低其大小并淡出。
+   - 在此场景中，我们已有一个检测当前用户是否在 *_EyeCalibrationChecker_* 游戏对象 下校准的示例。
+它仅作为一些文本网格的父对象，并且具有一些用于将通知混合在一起的其他触发器。这包括在激活时逐渐增加其大小和不透明度。
+关闭通知后，它会逐渐减小其大小并淡出。
 
-   - 附加到 *_EyeCalibrationChecker_ 游戏对象* 是公开两个 Unity 事件的 [EyeCalibrationChecker](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.EyeCalibrationChecker)脚本：
+   - 附加到 *_EyeCalibrationChecker_ 游戏对象的* 是 [EyeCalibrationChecker](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.EyeCalibrationChecker) 脚本，该脚本公开两个 Unity 事件：
       - `OnEyeCalibrationDetected()`
       - `OnNoEyeCalibrationDetected()`
 
-   - 仅当校准状态发生更改时，才会触发这些事件。 因此，如果用户选择取消通知，则通知将不再显示，直到
-      - 应用重新启动
-      - 已检测到有效的用户，然后一个新的 uncalibrated 用户已将该设备置于
+   - 这些事件仅在校准状态更改时触发。 因此，如果用户选择关闭通知，则通知不会再次显示，直到
+      - 重启应用
+      - 检测到有效的用户，然后新的未校准用户将设备置于
 
-   - 为测试是否正确触发了动画和事件，EyeCalibrationChecker 脚本拥有一个 `bool editorTestUserIsCalibrated` 标志。 例如，在 Unity 编辑器中运行时，可以测试：
-      1. 校准状态从 true 变为 false 后是否自动弹出通知
-      1. 当状态从 false 更改为 true 时，是否再次自动消除通知。
+   - 为了测试动画和事件是否已正确触发，EyeCalibrationChecker 脚本拥有 `bool editorTestUserIsCalibrated` 标志。 例如，在 Unity 编辑器中运行时，可以测试：
+      1. 校准状态从 true 更改为 false 后，通知是否自动弹出
+      1. 在状态从 false 更改为 true 后，是否自动再次关闭通知。
 
 ```c#
     private bool? prevCalibrationStatus = null;
@@ -89,7 +89,7 @@ MRTK 中的眼动跟踪配置是通过 接口 [`IMixedRealityEyeGazeProvider`](x
 
 ## <a name="see-also"></a>另请参阅
 
-- [MRTK 目视跟踪概述](eye-tracking-main.md)
-- [MRTK 目视跟踪设置](eye-tracking-basic-setup.md)
-- [通过代码 MRTK 目视跟踪](eye-tracking-eye-gaze-provider.md)
-- [HoloLens 2 目视跟踪文档](/windows/mixed-reality/eye-tracking)
+- [MRTK 眼动跟踪概述](eye-tracking-main.md)
+- [MRTK 眼动跟踪设置](eye-tracking-basic-setup.md)
+- [通过代码进行 MRTK 眼动跟踪](eye-tracking-eye-gaze-provider.md)
+- [HoloLens 2眼动跟踪文档](/windows/mixed-reality/eye-tracking)

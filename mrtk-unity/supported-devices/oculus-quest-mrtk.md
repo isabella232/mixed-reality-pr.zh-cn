@@ -1,18 +1,18 @@
 ---
-title: 生成并部署到 Oculus 的寻找
+title: 部署到 Oculus Quest
 description: 用于在 MRTK 中配置 Oculus 寻找的文档
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Oculus 寻找
-ms.openlocfilehash: 96b4b5b8a68c3b61d54b6796ba01c9e2516ba959
-ms.sourcegitcommit: 86fafb3a7ac6a5f60340ae5041619e488223f4f0
+ms.openlocfilehash: d910f26374b21be26377bd40b9be0d45872e007a
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "112449756"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177452"
 ---
-# <a name="building-and-deploying-to-oculus-quest-using-the-xr-sdk-pipeline"></a>使用 XR SDK 管道生成并部署到 Oculus 的情况
+# <a name="deploying-to-oculus-quest"></a>部署到 Oculus Quest
 
 需要 [Oculus](https://www.oculus.com/quest/) 请求。
 
@@ -31,11 +31,11 @@ MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管�
 
 ## <a name="setting-up-the-xr-sdk-pipeline-for-oculus-quest"></a>设置用于 Oculus 的 XR SDK 管道
 
-1. 确保 **OCULUS XR 插件** 安装在 " **> 包管理器" 窗口** 中
+1. 确保 **Oculus XR 插件** 安装在 " **> 程序包管理器" 窗口** 中
 
     ![Oculus XR 插件包](../images/cross-platform/oculus-quest/OculusXRPluginPackage.png)
 
-1. 转到 "**编辑 > 项目设置--> XR 插件" "> 插件提供程序**，确保项目中包含 Oculus 插件提供程序
+1. 请确保在项目中包括 Oculus 插件提供程序，方法是转到 "**编辑"--> Project 设置--> XR 插件 "" > 插件提供程序**
 
     ![Oculus 插件提供程序](../images/cross-platform/oculus-quest/OculusPluginProvider.png)
 
@@ -43,7 +43,7 @@ MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管�
 
 1. 从 Unity 资产存储中下载并导入 [Oculus 集成](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) 。 已测试的最新版本为20.0.0。 可以从此 [存档](https://developer.oculus.com/downloads/package/unity-integration-archive/)中找到旧版本。
 
-1. 导航到混合现实工具包 > 实用程序 > Oculus > 集成 Oculus Integration Unity 模块。 执行此操作将更新 asmdefs，其中包含相关 Oculus 获取代码运行所需的定义和引用。 它还将更新 csc 文件，以筛选出 Oculus 集成资产生成的过时警告。 MRTK 存储库包含将警告转换为错误的 csc 文件，此转换会暂停 MRTK-Quest 配置过程。
+1. > Oculus > 集成 Oculus Integration Unity 模块，导航到混合现实 Toolkit > 实用工具。 执行此操作将更新 asmdefs，其中包含相关 Oculus 获取代码运行所需的定义和引用。 它还将更新 csc 文件，以筛选出 Oculus 集成资产生成的过时警告。 MRTK 存储库包含将警告转换为错误的 csc 文件，此转换会暂停 MRTK-Quest 配置过程。
 
     ![Oculus Integration Asmdef](../images/cross-platform/oculus-quest/OculusIntegrationAsmdef.png)
 
@@ -54,7 +54,7 @@ MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管�
 ## <a name="setting-up-the-scene"></a>设置场景
 
 1. 创建新的 Unity 场景或打开预先存在的场景（如 HandInteractionExamples）。
-1. 通过导航到 **混合现实工具包**  >  **添加到场景并进行配置，** 将 MRTK 添加到场景中。
+1. 通过导航到 **混合现实 Toolkit** 添加到场景  >  **并配置，** 将 MRTK 添加到场景中。
 
 ## <a name="using-the-oculus-xr-sdk-data-provider"></a>使用 Oculus XR SDK 数据提供程序
 
@@ -77,7 +77,7 @@ MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管�
 
         ![克隆输入系统配置文件](../images/cross-platform/CloneInputSystemProfile.png)
 
-        - 打开 " **输入数据提供程序** " 部分，选择顶部的 " **添加数据提供程序** "，新的数据访问接口将添加到列表的末尾。  打开新的数据提供程序并将 **类型** 设置为 **MixedReality。 Oculus > OculusXRSDKDeviceManager**。
+        - 打开 " **输入数据提供程序** " 部分，选择顶部的 " **添加数据提供程序** "，新的数据访问接口将添加到列表的末尾。  打开新的数据提供程序并将 **类型** 设置为 " **Toolkit MixedReality"。XRSDK.Oculus > OculusXRSDKDeviceManager**。
 
         ![Oculus 添加 XRSDK 数据提供程序](../images/cross-platform/oculus-quest/OculusAddDataXRSDKProvider.png)
 ::: moniker-end
@@ -100,7 +100,7 @@ MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管�
 
         ![克隆输入系统配置文件](../images/cross-platform/CloneInputSystemProfile.png)
 
-        - 打开 " **输入数据提供程序** " 部分，选择顶部的 " **添加数据提供程序** "，新的数据访问接口将添加到列表的末尾。  打开新的数据提供程序并将 **类型** 设置为 **MixedReality。 Oculus > OculusXRSDKDeviceManager**。
+        - 打开 " **输入数据提供程序** " 部分，选择顶部的 " **添加数据提供程序** "，新的数据访问接口将添加到列表的末尾。  打开新的数据提供程序并将 **类型** 设置为 " **Toolkit MixedReality"。XRSDK.Oculus > OculusXRSDKDeviceManager**。
 
         ![Oculus 添加 XRSDK 数据提供程序](../images/cross-platform/oculus-quest/OculusAddDataXRSDKProvider.png)
 ::: moniker-end
@@ -124,10 +124,10 @@ MRTK 对 Oculus 的寻找支持通过两个不同的源： Unity 的 XR SDK 管�
 1. 接受来自接收内部的 " _允许 USB 调试_ " 提示
 1. 查看 Oculus 的内部场景
 
-## <a name="removing-oculus-integration-from-the-project"></a>从项目中删除 Oculus 集成
+## <a name="removing-oculus-integration-from-the-project"></a>从 Project 删除 Oculus 集成
 
-1. 导航到混合现实工具包 > Oculus > 单独的 Oculus 集成 Unity 模块  ![ Oculus 隔离 Asmdef](../images/cross-platform/oculus-quest/OculusSeparationAsmdef.png)
-1. 允许 Unity 刷新为 MixedReality 中的引用，并在此步骤中修改其他文件
+1. 导航到混合现实 Toolkit > Oculus > 单独的 Oculus Integration Unity 模块 ![ Oculus 隔离 Asmdef](../images/cross-platform/oculus-quest/OculusSeparationAsmdef.png)
+1. 让 Unity 刷新为 MixedReality 中的引用。Toolkit。在此步骤中修改 Oculus. asmdef 和其他文件
 1. 关闭 Unity
 1. 关闭 Visual Studio （如果它已打开）
 1. 打开文件资源管理器并导航到 MRTK Unity 项目的根目录

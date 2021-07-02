@@ -1,18 +1,18 @@
 ---
-title: 手部物理服务概述
+title: 手部物理服务
 description: 文档：在 MRTK 中使用手部物理扩展服务
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 751aec148d3a40da4728d2fdd60a60402b59a4de
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: af7ea753d52b5e478c54ca19d6d8e391401eea6d
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145083"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176257"
 ---
-# <a name="hand-physics-extension-service"></a>手部物理扩展服务
+# <a name="hand-physics-service"></a>手部物理服务
 
 ![手部物理扩展服务](../images/hand-physics/MRTK_UX_HandPhysics_Main.jpg)
 
@@ -38,18 +38,18 @@ ms.locfileid: "110145083"
 - 碰撞体
 - `JointKinematicBody` 组件
 
-### <a name="use-palm-kinematic-body"></a>使用掌运动主体
+### <a name="use-palm-kinematic-body"></a>使用手部运动体
 
-控制服务是否将尝试实例化 palm 接点上的 prefab。
+控制服务是否尝试实例化手部上的预制。
 
-### <a name="palm-kinematic-body-prefab"></a>掌运动正文 prefab
+### <a name="palm-kinematic-body-prefab"></a>手部运动人体预制
 
-`UsePalmKinematicBody`启用后，这就是它将实例化的 prefab。 就像 `FingerTipKinematicBodyPrefab` 这样，此 prefab 需要：
+启用 `UsePalmKinematicBody` 后，这是它将实例化的预制。 与 `FingerTipKinematicBodyPrefab` 一样，此预制需要：
 
-- 启用了 isKinematic 的刚体组件
-- 碰撞器
+- 已启用 isKinematic 的刚体组件
+- 碰撞体
 - `JointKinematicBody` 组件
 
 ## <a name="how-to-use-the-service"></a>如何使用服务
 
-启用后，如果启用了) ，请使用任何碰撞器的 `IsTrigger` 属性接收来自所有10位数的冲突事件 (和不要。
+启用后，使用碰撞体的任何 属性接收来自所有 10 位数字的碰撞事件 (（如果它们已启用 `IsTrigger`) ）。

@@ -1,16 +1,16 @@
 ---
-title: 大型项目
-description: 适用于具有大型项目的 MRTK 使用者的提示。
+title: 在大型项目中使用 MRTK
+description: 使用技巧大型项目的 MRTK 使用者。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 5db750048cf996b10062e638572b578ba383d5ee
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 28ba272a48b0a0c524185ac7114a09cf8e0e91f8
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144554"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177125"
 ---
 # <a name="using-mrtk-in-large-projects"></a>在大型项目中使用 MRTK
 
@@ -101,7 +101,7 @@ crashlytics-build.properties
 
 ## <a name="projectpreferencesasset-file"></a>ProjectPreferences.asset 文件
 
-项目范围的 MRTK 设置可在"编辑"->"项目设置"-">混合现实工具包"位置找到。 这些设置将保存到"资产"文件夹中此位置的文件中：
+Project混合现实"位置的"编辑 -> Project 设置 ->"下找到Toolkit MRTK 设置。 这些设置将保存到"资产"文件夹中此位置的文件中：
 
 ```
 Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset
@@ -111,6 +111,6 @@ Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset
 
 **锁定 SDK 配置文件** - 如果禁用此选项，则默认 MRTK 配置文件将全局可编辑，这会使 MRTK 升级具有挑战性 (因为它可能会导致框架本身冲突) 
 
-**忽略 MRTK 项目配置** 器 - 如果禁用此选项，则项目配置器将显示当前 MRTK 设置是否与 MRTK 建议的默认值不匹配。 由于项目可能明确选择不启用某些设置，因此选中此设置将阻止其他协作者无意中看到此对话框更改的设置。 这些设置应由设置项目的人员配置，并被其他协作者忽略。
+**忽略 MRTK 项目配置** 器 - 如果禁用此选项，则项目配置器将显示当前 MRTK 设置是否与 MRTK 建议的默认值不匹配。 由于项目可能明确选择不启用某些设置，因此选中此设置将阻止其他协作者无意中看到此对话框更改的设置。 这些设置应该由设置项目的人配置，然后由其他协作者忽略。
 
-**自动启用 UWP 功能** -如果此功能处于禁用状态，则某些功能 (例如，目视跟踪) 在部署到设备时可能会以静默方式失败，因为 Unity 不会自动将所需的运行时功能添加到应用程序清单。 选中此设置可以保护应用程序的部署体验，从此类问题中解决。
+自动 **启用 UWP** 功能 - 如果禁用此功能，某些功能 (例如，眼动跟踪) 在部署到设备时可能会以静默方式失败，因为 Unity 不会自动将所需的运行时功能添加到应用程序清单。 选中此设置将保护应用程序部署体验，防止此类问题。

@@ -1,18 +1,18 @@
 ---
-title: MRTK 中的控制器
+title: 检测 MRTK 中的控制器
 description: 有关将各种控制器与 MRTK 一起使用的文档
 author: RogPodge
 ms.author: roliu
 ms.date: 05/13/2021
-keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，控制器，HP 回音，Oculus，HTC Naopak，动手
-ms.openlocfilehash: 111ebf2b1eb26bbef8cde16832f780acfa758595
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，控制器，HP 回音，Oculus，HTC naopak，动手
+ms.openlocfilehash: 2bb749f4e2f6294c4feb74f97af55ecb857d5f76
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743584"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175591"
 ---
-# <a name="controllers-in-mrtk"></a>MRTK 中的控制器
+# <a name="detecting-controllers-in-mrtk"></a>检测 MRTK 中的控制器
 
 MRTK 支持许多不同的控制器。 当使用 MRTK 构建的应用程序在兼容的设备上启动时，许多控制器（例如 HTC Naopak Knuckles 和 HTC Naopak Wands）都将在本机工作。 其他控制器（如 Oculus 请求和 HP 回音 G2 控制器上的明确说明）在 MRTK 识别它们之前需要额外的包。
 

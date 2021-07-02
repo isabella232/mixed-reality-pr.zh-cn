@@ -1,20 +1,20 @@
 ---
-title: 混合现实服务注册表和 IMixedRealityServiceRegistrar
+title: 混合现实服务注册表
 description: MixedRealityServiceRegistry 和 IMixedRealityServiceRegistrar 上的文档
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 09b20537824af42d241b6c33496cedcb4f530bc7
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 061e4233d61de817b1aaed7faaa6d461427d6f07
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145236"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176707"
 ---
-# <a name="what-are-the-mixedrealityserviceregistry-and-imixedrealityserviceregistrar"></a>什么是 MixedRealityServiceRegistry 和 IMixedRealityServiceRegistrar？
+# <a name="mixed-reality-service-registry"></a>混合现实服务注册表
 
-混合现实工具包具有两个非常相似的命名组件，它们执行相关任务： MixedRealityServiceRegistry 和 IMixedRealityServiceRegistrar。
+混合现实 Toolkit 有两个非常相似的命名组件，它们执行相关任务： MixedRealityServiceRegistry 和 IMixedRealityServiceRegistrar。
 
 ## <a name="mixedrealityserviceregistry"></a>MixedRealityServiceRegistry
 
@@ -51,11 +51,11 @@ if (!MixedRealityServiceRegistry.TryGetService<IMixedRealityInputSystem>(out inp
 - [SpatialAwarenessSystemManager](xref:Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSystemManager)
 - [TeleportSystemManager](xref:Microsoft.MixedReality.Toolkit.Experimental.Teleport.TeleportSystemManager)
 
-上述每个组件（InputSystemManager 除外）负责管理单个服务类型的注册和状态。 InputSystem 需要一些额外的支持服务 (例如：FocusProvider) 由 InputSystemManager 管理。
+上述每个组件（InputSystemManager 除外）都负责管理一种服务类型的注册和状态。 InputSystem 需要一些额外的支持服务 (例如： FocusProvider) ，这些服务也由 InputSystemManager 进行管理。
 
-一般情况下，由 IMixedRealityServiceRegist分定义的方法由服务管理组件在内部调用，或者由需要其他服务组件正常运行的服务调用。 通常，应用程序代码不应调用这些方法，因为这样做可能会导致应用程序的行为不 (例如：缓存的服务实例可能会变得) 。
+通常，由服务管理组件在内部调用 IMixedRealityServiceRegistrar 定义的方法，或由需要其他服务组件来正常工作的服务调用。 通常情况下，应用程序代码不会调用这些方法，因为这样做可能会导致应用程序的行为不能预料 (例如：缓存服务实例可能会) 无效。
 
 ## <a name="see-also"></a>另请参阅
 
-- [IMixedRealityServiceRegistmix API 文档](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar)
+- [IMixedRealityServiceRegistrar API 文档](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar)
 - [MixedRealityServiceRegistry API 文档](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry)

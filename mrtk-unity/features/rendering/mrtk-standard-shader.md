@@ -1,44 +1,44 @@
 ---
 title: MRTK 标准着色器
-description: MRTKStandardShader 的文档
+description: MRTKStandardShader 文档
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 材料着色器
-ms.openlocfilehash: 8b570ebb023305cecbeca16b32832417a3f57cce
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，材料着色器
+ms.openlocfilehash: 0a92388bc9be7c11967501709031f559f17f8966
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145109"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176441"
 ---
 # <a name="mrtk-standard-shader"></a>MRTK 标准着色器
 
 ![标准着色器示例](../images/mrtk-standard-shader/MRTK_StandardShader.jpg)
 
-MRTK 标准着色系统利用单个灵活的着色器，该着色器可以实现类似于 Unity 标准着色器、实现 [Fluent Design System](https://www.microsoft.com/design/fluent/) 原则的视觉对象，并可在混合现实设备上保持性能。
+MRTK 标准着色系统利用单个灵活的着色器，它可以实现类似于 Unity 的标准着色器的视觉对象，实现[Fluent Design System](https://www.microsoft.com/design/fluent/)原则，并使混合现实设备保持高性能。
 
 ## <a name="example-scenes"></a>示例场景
 
-可以在 下的 **MaterialGallery** 场景中找到着色器材料示例 `MRTK/Examples/Demos/StandardShader/Scenes/` 。 此场景中的所有材料都使用 MRTK/标准着色器。
+可以在下的 **MaterialGallery** 场景中找到着色器材料示例 `MRTK/Examples/Demos/StandardShader/Scenes/` 。 此场景中的所有材料都使用 MRTK/Standard 着色器。
 
 ![材料库](../images/mrtk-standard-shader/MRTK_MaterialGallery.jpg)
 
-可以在 下的 **StandardMaterialComparison** 场景中找到比较场景，以针对 Unity/标准着色器示例比较和测试 MRTK/Standard 着色器 `MRTK/Examples/Demos/StandardShader/Scenes/` 。
+在下的 **StandardMaterialComparison** 场景中，可以找到比较场景来比较和测试 MRTK/standard 着色器示例 `MRTK/Examples/Demos/StandardShader/Scenes/` 。
 
 ![材料比较](../images/mrtk-standard-shader/MRTK_StandardMaterialComparison.gif)
 
 ## <a name="architecture"></a>体系结构
 
-MRTK/标准着色系统是一种"uber 着色器"，它使用 Unity 的着色器程序 [变体](https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html) 功能基于材料属性自动生成最佳着色器代码。 当用户在材料检查器中选择材料属性时，他们只会对已启用的功能产生性能成本。
+MRTK/Standard 着色系统是一个 "uber 着色器"，它使用 [Unity 的着色器的 "着色器" 程序变体功能](https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html) 根据材料属性自动生成最佳着色器代码。 当用户在 "材料检查器" 中选择 "材料" 属性时，它们只会对已启用的功能产生性能开销。
 
 ## <a name="material-inspector"></a>材料检查器
 
-对于名为 的 MRTK/标准着色器，存在自定义材料检查器 [`MixedRealityStandardShaderGUI.cs`](xref:Microsoft.MixedReality.Toolkit.Editor.MixedRealityStandardShaderGUI) 。 检查器根据用户选择自动启用/禁用着色器功能，并有助于设置呈现状态。 有关每项功能的信息，请将鼠标悬停在 Unity 编辑器中每个属性 **上，获取工具提示。**
+已调用 MRTK/Standard 着色器的自定义材料检查器 [`MixedRealityStandardShaderGUI.cs`](xref:Microsoft.MixedReality.Toolkit.Editor.MixedRealityStandardShaderGUI) 。 检查器自动启用/禁用着色器功能，基于用户选择和设置渲染状态 aides。 有关每个功能的详细信息， **请将鼠标悬停在 Unity 编辑器中的每个属性上，以获取工具提示。**
 
 ![材料检查器](../images/mrtk-standard-shader/MRTK_MaterialInspector.jpg)
 
-检查器的第一部分控制材料的呈现状态。 *呈现模式* 确定何时以及如何呈现材料。 MRTK/标准着色器的目标是镜像 [Unity/标准](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html)着色器 中的呈现模式。 MRTK/标准着色器还包括加法呈现模式和 *自定义呈现模式*，用于完成用户控制。
+检查器的第一个部分控制材料的渲染状态。 *渲染模式* 可确定何时以及如何呈现材料。 MRTK/Standard 着色器的目标是镜像 [在 Unity/标准着色器中找到的呈现模式](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html)。 MRTK/Standard 着色器还包括一个用于完成用户控制的 *附加* 渲染模式和 *自定义* 呈现模式。
 
 | 呈现模式 |         说明                                                       |
 |----------------|---------------------------------------------------------------------------|
@@ -55,11 +55,11 @@ MRTK/标准着色系统是一种"uber 着色器"，它使用 Unity 的着色器�
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 关       | 禁用面部剔除。 如果需要双面网格，则只能将剔除设置为 Off。                                                                                        |
 | Front     | 启用正面剔除。                                                                                                                                                        |
-| 返回      |  (默认) 启用 [后退人脸剔除](https://en.wikipedia.org/wiki/Back-face_culling)。 应尽可能经常启用背面剔除以提高呈现性能。 |
+| 返回      |  (默认) 启用 [背面剔除](https://en.wikipedia.org/wiki/Back-face_culling)。 应尽可能频繁地启用背面剔除以提高呈现性能。 |
 
 ## <a name="performance"></a>性能
 
-在 Unity 标准着色器上使用 MRTK 标准着色器的主要优势之一是性能。 MRTK 标准着色器可扩展，仅利用启用的功能。 但是，还编写 MRTK 标准着色器，以提供与 Unity 标准着色器相当的美观效果，但成本要低得多。 比较着色器性能的一种简单方法是通过需要在 GPU 上执行的操作数。 当然，计算量可能会因启用的功能和其他呈现配置而波动。 但一般情况下，MRTK 标准着色器执行的计算比 Unity 标准着色器要少得多。
+通过 Unity 标准着色器使用 MRTK 标准着色器的主要优点之一是性能。 MRTK 标准着色器可扩展，只利用启用的功能。 不过，MRTK 标准着色器也已经编写，以将相当美观的结果作为 Unity 标准着色器提供，但成本要低得多。 比较着色器性能的一种简单方法是通过 GPU 上需要执行的操作的数量。 当然，根据启用的功能和其他呈现配置，计算量可能会波动。 但一般情况下，MRTK 标准着色器比 Unity 标准着色器执行的计算要少得多。
 
 Unity 标准着色器统计信息示例
 
@@ -70,17 +70,17 @@ MRTK 标准着色器统计信息示例
 ![MRTK 标准着色器统计信息](../images/performance/MRTKStandardShader-Stats.PNG)
 
 > [!NOTE]
-> 可以通过在 Unity 检查器中选择和查看 [](https://docs.unity3d.com/Manual/class-Shader.html)着色器资产，然后单击"编译和显示代码"按钮来 *生成* 这些结果。
+> 可以通过在 Unity 检查器中选择和查看 [着色器资产](https://docs.unity3d.com/Manual/class-Shader.html) ，然后单击 " *编译并显示代码* " 按钮，从而生成这些结果。
 
 ## <a name="lighting"></a>照明
 
-MRTK/Standard 对照明使用简单的近似值。 由于此着色器不会计算物理正确性和能量消耗，因此它可以快速高效地呈现。 Blinn-Phong是主要照明技术，与 Fresnel 和基于图像的照明混合，以近似基于物理的照明。 着色器支持以下照明技术：
+MRTK/Standard 使用简单的近似值。 由于此着色器不计算物理正确性和能源节省，因此它能够快速有效地呈现。 Blinn-Phong 是一种主要照明技术，它与菲涅尔衰减和基于图像的照明相混合，以使基于物理的照明接近。 着色器支持以下照明技术：
 
 ### <a name="directional-light"></a>定向光
 
-如果启用，着色器将遵守场景中第一个 Unity 方向光的方向、颜色和 (强度) 。 动态点光、点光或其他任何 Unity 光不会在实时照明中考虑。
+着色器将遵循场景中第一个 Unity 方向光的方向、颜色和强度， (如果启用了) 。 不会将动态点光、污点光源或任何其他 Unity 光源视为实时照明。
 
-### <a name="spherical-harmonics"></a>球状球状
+### <a name="spherical-harmonics"></a>球形谐波
 
 着色器使用 [球状谐波](https://docs.unity3d.com/Manual/LightProbes-TechnicalInformation.html)（如果已启用），将使用光源探测来估算场景中的灯。 球形谐波计算按顶点执行以降低计算成本。
 
@@ -100,7 +100,7 @@ MRTK/Standard 对照明使用简单的近似值。 由于此着色器不会计�
 
 MRTK 包含一个升级路径，使开发人员能够使用 MRTK 着色器 (LWRP) 使用 Unity 的轻型可编写脚本呈现管道。 在 Unity 2019.1.1 f1 和轻型 RP 5.7.2 包中进行了测试。 有关 LWRP 入门的说明，请参阅 [此页](https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@5.10/manual/getting-started-with-lwrp.html)。
 
-若要执行 MRTK 升级，请选择： **混合现实工具包-> 实用程序-> UPGRADE MRTK Standard 着色器**
+若要执行 MRTK 升级，请选择： **Mixed Reality Toolkit > 实用工具-> upgrade MRTK Standard 着色器**
 
 ![lwrp 升级](../images/mrtk-standard-shader/MRTK_LWRPUpgrade.jpg)
 
@@ -108,34 +108,34 @@ MRTK 包含一个升级路径，使开发人员能够使用 MRTK 着色器 (LWRP
 
 ## <a name="ugui-support"></a>UGUI 支持
 
-MRTK 标准着色系统与 Unity 内置的 [UI 系统](https://docs.unity3d.com/Manual/UISystem.html)一起工作。 在 Unity UI 组件上，unity_ObjectToWorld 矩阵不是图形组件所在的本地转换的转换矩阵，而是它的父画布的转换矩阵。 许多 MRTK/标准着色器效果都需要了解对象规模。 若要解决此问题， 将在 UI 网格构造期间将缩放信息存储 [`ScaleMeshEffect.cs`](xref:Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect) 到 UV 通道属性中。
+MRTK 标准着色系统与 Unity 内置的 [UI 系统](https://docs.unity3d.com/Manual/UISystem.html)一起工作。 在 Unity UI 组件上，unity_ObjectToWorld 矩阵不是图形组件所在的本地转换的转换矩阵，而是它的父画布的转换矩阵。 许多 MRTK/标准着色器效果需要知道对象范围。 若要解决此问题， [`ScaleMeshEffect.cs`](xref:Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect) 将在 UI 网格构造过程中将缩放信息存储到 UV 通道特性中。
 
-请注意，使用 Unity 图像组件时，建议为源图像指定"无 (子画面) "，以防止 Unity UI 生成额外的顶点。
+请注意，在使用 Unity 图像组件时，建议为源映像指定 "None (Sprite) "，以防止 Unity UI 生成额外顶点。
 
-当需要时，MRTK 中的画布将提示添加 [`ScaleMeshEffect.cs`](xref:Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect) ：
+如果需要，MRTK 中的画布会提示添加一个 [`ScaleMeshEffect.cs`](xref:Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect) ：
 
 ![缩放网格效果](../images/mrtk-standard-shader/MRTK_ScaleMeshEffect.jpg)
 
 ## <a name="texture-combiner"></a>纹理合并器
 
-若要提高与 Unity Standard 着色器每像素金属的奇偶校验，可通过通道封装 控制平滑度、半透明性和遮 [挡性值](http://wiki.polycount.com/wiki/ChannelPacking)。 例如：
+若要提高与 Unity 标准着色器每像素金属、平滑度、放射和封闭值的奇偶校验，可以通过 [通道封装](http://wiki.polycount.com/wiki/ChannelPacking)来控制。 例如：
 
 ![通道映射示例](../images/mrtk-standard-shader/MRTK_ChannelMap.gif)
 
-使用通道打包时，只需对一个纹理采样并加载到内存中，而不是四个单独的纹理。 在 Program 或 Photoshop 等程序中编写纹理贴图时，可以手动打包它们，如下所示：
+使用通道打包时，只需将一个纹理采样并加载到内存中，而不是使用四个单独的纹理。 当您在某个程序（如物质或 Photoshop）中编写纹理地图时，可以按如下所示对其进行打包：
 
 | 通道 | 属性             |
 |---------|----------------------|
-| Red     | 金属             |
+| Red     | 银色             |
 | 绿色   | 封闭            |
-| 蓝色    | 灰 (辐射)  |
-| Alpha   | 平滑           |
+| 蓝色    |  (灰度) 发射 |
+| Alpha   | 平滑度           |
 
-或者，可以使用 MRTK 纹理合并器工具。 若要打开该工具，请选择：混合现实工具包 **-> 实用工具 ->纹理** 合并器，这将打开以下窗口：
+或者，可以使用 MRTK 纹理合并器工具。 若要打开该工具，请选择： **Mixed Reality Toolkit > 公用事业-> 纹理合并器**，这将打开以下窗口：
 
 ![纹理合并器示例](../images/mrtk-standard-shader/MRTK_TextureCombiner.jpg)
 
-可以通过选择 Unity 标准着色器并单击"从标准材料自动填充"来自动填充此窗口。 或者，可以为每个红色、 (、蓝色) alpha 通道手动指定纹理值或常数值。 纹理组合是 GPU 加速的，不需要输入纹理可供 CPU 访问。
+可以通过选择 Unity 标准着色器并单击 "从标准材料自动填充数据" 来自动填充此窗口。 或者，您可以手动指定纹理 (或常量值) 每个红色、绿色、蓝色或 alpha 通道。 纹理组合为 GPU 加速，无需输入纹理即可对 CPU 进行访问。
 
 ## <a name="additional-feature-documentation"></a>其他功能文档
 
@@ -163,34 +163,34 @@ MRTK 标准着色系统与 Unity 内置的 [UI 系统](https://docs.unity3d.com/
 2. 顶点延伸-需要启用才能呈现轮廓。
 3. 使用平滑法线-对于某些网格，此设置是可选的。 在沿顶点法线移动顶点时进行延伸，某些网格沿默认的法线凸出会导致中断。 若要修复这些中断，可以选中此框，以使用由生成的另一组平滑法 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother)
 
-[`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 是一个组件，可用于在网格上自动生成平滑的法线。 此方法对共享空间中相同位置的网格中的顶点进行分组，然后计算这些顶点的法线平均值。 此过程会创建基础网格的副本，应仅在需要时使用。
+[`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 是一个组件，可用于在网格上自动生成平滑的法线。 此方法对在空间中共享同一位置的网格中的顶点进行分组，然后将这些顶点的法线取平均值。 此过程将创建基础网格的副本，并且应仅在需要时使用。
 
 <img src="../images/mrtk-standard-shader/MRTK_SmoothNormals.jpg" width="450" alt="Smooth Normals Outline">
 
-1. 通过 生成的平滑法线 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 。
-2. 使用的默认法线，请注意围绕立方体角的项目。
+1. 通过生成的平滑法线 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 。
+2. 使用默认的法线，请注意多维数据集拐角周围的项目。
 
 ### <a name="stencil-testing"></a>模具测试
 
-内置可配置模具测试支持，以实现各种效果。 例如门户：
+内置可配置的模具测试支持，可实现各种效果。 例如门户：
 
 ![模具测试](../images/mrtk-standard-shader/MRTK_StencilTest.gif)
 
 ### <a name="instanced-color-support"></a>实例颜色支持
 
-实例颜色支持，为数千个 GPU 实例网格提供唯一的材料属性：
+实例颜色支持为数千个 GPU 实例网格提供唯一的材料属性：
 
 ![实例属性](../images/mrtk-standard-shader/MRTK_InstancedProperties.gif)
 
-### <a name="triplanar-mapping"></a>行程映射
+### <a name="triplanar-mapping"></a>Triplanar 映射
 
-三边形映射是一种以编程方式对网格进行纹理处理的技术。 通常用于地形、没有 UV 的网格或难以解包形状。 此实现支持世界或本地空间投影、混合平滑度规范以及普通地图支持。 请注意，使用的每个纹理都需要 3 个纹理样本，因此在性能关键的情况下请谨慎使用。
+Triplanar 映射是一种以编程方式为网格纹理的技术。 通常在地形中使用，无需 Uv-11 或难以解包的网格。 此实现支持世界或本地空间投影、混合平滑度的规范和普通地图支持。 请注意，使用的每个纹理都需要3个纹理样本，因此在性能方面非常严重。
 
 ![triplanar](../images/mrtk-standard-shader/MRTK_TriplanarMapping.gif)
 
-### <a name="vertex-extrusion"></a>顶点外泄
+### <a name="vertex-extrusion"></a>顶点延伸
 
-世界空间中的顶点外泄。 用于可视化外向边界卷或内/出网格的转换。
+世界空间中的顶点延伸。 用于可视化拉伸的边界卷或转换为/out 网格。
 
 ![普通地图比例1](../images/mrtk-standard-shader/MRTK_VertexExtrusion.gif)
 

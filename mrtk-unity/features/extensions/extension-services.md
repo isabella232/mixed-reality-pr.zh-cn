@@ -5,21 +5,21 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: a39616a091a3f6800c429dc797ec2f3130e96f40
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: f8f7b8dbac0355c226e4bbfae39246e5c1c58f69
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144548"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176276"
 ---
 # <a name="extension-services"></a>扩展服务
 
-扩展服务是扩展混合现实工具包功能的组件。 这些服务可能由 MRTK 或其他方提供。
+扩展服务是扩展混合现实服务功能的组件Toolkit。 这些服务可能由 MRTK 或其他方提供。
 
 ## <a name="creating-an-extension-service"></a>创建扩展服务
 
 创建扩展服务的最高效方法就是使用扩展 [服务创建向导](../tools/extension-service-creation-wizard.md)。
-若要启动扩展服务创建向导，请选择"创建扩展服务 **>实用工具>混合现实工具包"。**
+若要启动扩展服务创建向导，请选择"创建扩展服务 **Toolkit >实用工具>混合现实"**。
 
 ![扩展服务创建向导](../images/extension-wizard/ExtensionServiceCreationWizard.png)
 
@@ -34,25 +34,25 @@ ms.locfileid: "110144548"
 
 ## <a name="registering-an-extension-service"></a>注册扩展服务
 
-若要由应用程序访问，需要向混合现实工具包注册新的扩展服务。
+若要由应用程序访问，需要将新的扩展服务注册到混合现实Toolkit。
 
 扩展服务创建向导可用于注册服务。
 
 ![扩展服务创建向导注册](../images/extension-wizard/ExtensionServiceWizardRegister.png)
 
-也可使用混合现实工具包配置检查器手动注册该服务。
+也可使用混合现实配置检查器手动注册Toolkit服务。
 
 ![手动扩展服务注册](../images/profiles/RegisterExtensionService.png)
 
 如果扩展服务使用配置文件，请确保在检查器中指定该配置文件。
 
-![已配置扩展服务](../images/profiles/ConfiguredExtensionService.png)
+![配置的扩展服务](../images/profiles/ConfiguredExtensionService.png)
 
 还可以调整组件名称和优先级。
 
 ## <a name="accessing-an-extension-service"></a>访问扩展服务
 
-扩展服务是使用代码中的来访问的， [`MixedRealityServiceRegistry`](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry) 如以下示例中所示。
+在代码中，使用 访问扩展服务， [`MixedRealityServiceRegistry`](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry) 如以下示例所示。
 
 ```c#
 INewService service = null;
@@ -64,7 +64,7 @@ if (MixedRealityServiceRegistry.TryGetService<INewService>(out service))
 
 ## <a name="see-also"></a>另请参阅
 
-- [系统、扩展服务和数据访问接口](../../architecture/systems-extensions-providers.md)
+- [系统、扩展服务和数据访问者](../../architecture/systems-extensions-providers.md)
 - [扩展服务创建向导](../tools/extension-service-creation-wizard.md)
 - [IMixedRealityExtensionService](xref:Microsoft.MixedReality.Toolkit.IMixedRealityExtensionService)
 - [MixedRealityServiceRegistry](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry)

@@ -1,25 +1,25 @@
 ---
 title: 材料实例
-description: 有关材料实例及其在 MRTK 中的用法的文档
+description: 有关材料实例及其在 MRTK 中的使用的文档
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， MaterialInstance，
-ms.openlocfilehash: 216fa72af6bb6caaf47e30c156f7caf1b1dab71e
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，MaterialInstance，
+ms.openlocfilehash: ecd8f9e14564cbd03cb6faa848b06ca55a024207
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145213"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176726"
 ---
 # <a name="material-instance"></a>材料实例
 
-该 [`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance) 行为有助于跟踪实例材料生存期，并自动销毁用户的实例材料。 此实用工具组件可用于替换 [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-material.html) 或 [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-materials.html)。
+[`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance)行为 aides 跟踪实例材料生存期，并自动销毁用户的实例材料。 此实用程序组件可用于替代[呈现器。材料](https://docs.unity3d.com/ScriptReference/Renderer-material.html)或呈现器[。](https://docs.unity3d.com/ScriptReference/Renderer-materials.html)
 
 > [!NOTE]
-> [MaterialPropertyBlocks](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html) 比材料实例化更可取，但并非在所有方案中始终可用。
+> [MaterialPropertyBlocks](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html) 优于材料实例，但并不是在所有方案中始终可用。
 
-为什么使用 [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-material.html) 是一个问题？ 如果将以下代码添加到 Unity 场景并点击播放内存使用量将继续增加和减少：
+为什么使用 [呈现](https://docs.unity3d.com/ScriptReference/Renderer-material.html) 器可能会遇到问题？ 如果将下面的代码添加到 Unity 场景，则命中播放内存使用将继续进行顺和顺操作：
 
 ```c#
 public class Leak : MonoBehaviour
@@ -36,7 +36,7 @@ public class Leak : MonoBehaviour
 ```
 
 > [!NOTE]
-> 如果运行时间 **过长，上述** 泄漏行为将崩溃 Unity！
+> 如果运行的时间太长，上述泄漏行为 **会使 Unity 崩溃** ！
 
 作为替代方法，请尝试使用 [`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance) 行为：
 
@@ -56,9 +56,9 @@ public class NoLeak : MonoBehaviour
 
 ## <a name="usage"></a>使用情况
 
-在调用 Unity 的 [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-material.html) (时) Unity 会自动实例化新的材料。 当不再需要材料或游戏对象被销毁时，调用方负责销毁材料。 该 [`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance) 行为有助于避免材料泄漏，并保持材料分配路径在编辑和运行时保持一致。
+当调用 Unity 的 [呈现](https://docs.unity3d.com/ScriptReference/Renderer-material.html) 器)  (时，unity 会自动实例化新材料。 当不再需要材料或销毁游戏对象时，调用方负责销毁材料。 此 [`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance) 行为有助于避免材料泄漏，并使材料分配路径在编辑和运行时保持一致。
 
-当 [无法使用 MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html) 并且必须实例化材料时，可以使用 [`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance) ，如下所示：
+当无法使用 [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html) 并且必须实例化材料时， [`MaterialInstance`](xref:Microsoft.MixedReality.Toolkit.Rendering.MaterialInstance) 可按如下所示使用：
 
 ```c#
 public class MyBehaviour : MonoBehaviour
@@ -75,7 +75,7 @@ public class MyBehaviour : MonoBehaviour
 }
 ```
 
-如果多个对象需要材料实例的所有权，则最好使用显式所有权进行引用跟踪。  (ownership 的 aide 存在名为 的可选接口 [`IMaterialInstanceOwner`](xref:Microsoft.MixedReality.Toolkit.Rendering.IMaterialInstanceOwner) ) 下面是用法示例：
+如果多个对象需要材料实例的所有权，则最好将显式所有权用于引用跟踪。  (名 [`IMaterialInstanceOwner`](xref:Microsoft.MixedReality.Toolkit.Rendering.IMaterialInstanceOwner) 为的可选接口 ) 具有所有权的助手。下面的示例用法：
 
 ```c#
 public class MyBehaviour : MonoBehaviour,  IMaterialInstanceOwner
@@ -103,7 +103,7 @@ public class MyBehaviour : MonoBehaviour,  IMaterialInstanceOwner
 }
 ```
 
-有关详细信息，请参阅行为中演示的示例 [`ClippingPrimitive`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive) 用法。
+有关详细信息，请参阅行为中演示的示例用法 [`ClippingPrimitive`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive) 。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,22 +1,22 @@
 ---
-title: 邻近感应灯
+title: 邻近感应
 description: 有关 MRTK 中示例的邻近感应的文档
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 1adf4d1d70313c917d63224b91a14d995d1888c1
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 6e57a76d54d0f3f63ce8dcb80582e178effa39d9
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145007"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176385"
 ---
-# <a name="proximity-light"></a>邻近感应灯
+# <a name="proximity-light"></a>邻近感应
 
-[`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight)是一个[熟知的设计系统](https://www.microsoft.com/design/fluent/)模式，它模拟悬停在对象表面附近的 "渐变反点光"。 应用程序通常用于接近交互，应用程序可以通过组件控制近程灯光的属性 [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) 。
+[`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight)是一个[Fluent Design System](https://www.microsoft.com/design/fluent/)模式，它模拟悬停在对象表面附近的 "渐变反点光"。 应用程序通常用于接近交互，应用程序可以通过组件控制近程灯光的属性 [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) 。
 
-若要使需要受 [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) *混合现实工具包/标准* 着色器 *影响的材料* ，必须启用该属性。
+对于受 [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) *混合现实影响 Toolkit* 的材料，必须使用/标准着色器，并且必须启用 *近程光* 属性。
 
 > [!NOTE]
 > [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight)默认情况下支持最多两个。

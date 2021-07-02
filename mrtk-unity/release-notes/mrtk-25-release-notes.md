@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK，
-ms.openlocfilehash: 536a37b56b4c7de9875ce1e1642922bd363fecb1
-ms.sourcegitcommit: f7839221c9549e60a2c3ac2dbd39f07a6851dcd2
+ms.openlocfilehash: c9458e5236cc7de18eb27c3c3e13221a366c89a4
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "112562487"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177512"
 ---
 # <a name="microsoft-mixed-reality-toolkit-25-release-notes"></a>Microsoft Mixed Reality Toolkit 2.5 发行说明
 
@@ -47,15 +47,15 @@ ms.locfileid: "112562487"
 
 现在，边界可视化效果（如楼层或墙）将正确配置，并在运行时根据边界配置文件可见。
 
-### <a name="msbuild-for-unity-support"></a>MSBuild for Unity 支持
+### <a name="msbuild-for-unity-support"></a>MSBuild Unity 支持
 
-从 2.5.2 版开始，已移除对适用于 Unity 的 MSBuild 的支持，以与 Unity 的新包 [指南保持一致](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)。
+从 2.5.2 MSBuild开始，对 Unity 的包的支持已被删除，以与[Unity 的新包指南保持一致](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)。
 
 ## <a name="whats-new-in-251"></a>2.5.1 中的新增功能
 
 ### <a name="package-dependency-errors-fixed"></a>修复了包依赖项错误
 
-此版本修复了不正确的包间文件 (，例如：标准资产中的文件不再错误地引用 Foundation) 。 版本 2.5.1 还添加了对文本网格 Pro 的显式依赖项。
+此版本修复了不正确的包间文件 (，例如：标准资产中的文件不再错误地引用 Foundation) 。 版本 2.5.1 还添加了对文本网格网格的显式Pro。
 
 ### <a name="standard-assets-package-shaders-copied-to-assetsmrtkshaders"></a>复制到 Assets/MRTK/Shaders 的标准资产包着色器
 
@@ -69,12 +69,12 @@ ms.locfileid: "112562487"
 
 ### <a name="unity-package-manager-upm-support"></a>Unity 程序包管理器 (UPM) 支持
 
-现在可以使用 Unity 工具管理混合现实程序包管理器。
+现在可以使用 Unity Toolkit 管理混合现实程序包管理器。
 
 ![MRTK Foundation UPM 包](../features/images/packaging/MRTK_FoundationUPM.png)
 
 > [!NOTE]
-> 导入 MRTK UPM 包需要一些手动步骤。 有关详细信息， [请查看混合现实工具包和 Unity](../configuration/usingupm.md) 程序包管理器。
+> 导入 MRTK UPM 包需要一些手动步骤。 有关详细信息，请查看[混合Toolkit和 Unity 程序包管理器。](../configuration/usingupm.md)
 
 ### <a name="oculus-quest-xr-sdk-support"></a>Oculus Quest XR SDK 支持
 
@@ -118,7 +118,7 @@ HandInteractionExamples 场景现在具有可配置的快捷方式，用于显�
 
 ### <a name="testutilities-package"></a>TestUtilities 包
 
-现在有一个包 (Microsoft.MixedReality.Toolkit.Unity.TestUtilities.2.5.0.unitypackage) ，其中包含 MRTK 用于创建端到端测试的 PlayMode 和 TestMode 测试基础结构。 对于 MRTK 团队本身来说，此基础结构非常方便，我们很高兴让使用者使用此基础结构将测试覆盖率添加到自己的项目。
+现在，Microsoft.MixedReality (包。Toolkit。Unity.TestUtilities.2.5.0.unitypackage) ，其中包含 MRTK 用于创建端到端测试的 PlayMode 和 TestMode 测试基础结构。 对于 MRTK 团队本身来说，此基础结构非常方便，我们很高兴让使用者使用此基础结构将测试覆盖率添加到自己的项目。
 
 下面的代码演示如何创建测试手，在特定位置显示它，移动它，然后收缩并打开。
 
@@ -154,8 +154,8 @@ yield return leftHand.SetGesture(ArticulatedHandPose.GestureId.Open);
 
 ### <a name="unity-20193-mrtk-configuration-dialog-no-longer-attempts-to-enable-legacy-xr-support"></a>Unity 2019.3+：MRTK 配置对话框不再尝试启用旧版 XR 支持
 
-为了避免在使用 Unity 的 XR 平台时出现潜在冲突，从 MRTK 配置对话框中删除了启用旧版 XR 支持的选项。 如果需要，可以启用旧版 XR 支持，在 Unity 2019中，使用"编辑项目设置  >    >
- **播放器**  >  **XR 设置**  >  **""支持虚拟现实"。**
+为了避免在使用 Unity 的 XR 平台时出现潜在冲突，从 MRTK 配置对话框中删除了启用旧版 XR 支持的选项。 如果需要，可以在 Unity 2019 中启用旧版 XR 支持，使用"编辑"Project 设置  >    >
+ **Player**  >  **XR** 设置  >  **支持"。**
 
 ### <a name="reduction-in-initializeonload-overhead"></a>减少 InitializeOnLoad 开销
 
@@ -166,7 +166,7 @@ yield return leftHand.SetGesture(ArticulatedHandPose.GestureId.Open);
 - 有关 [额外的集成步骤，](../supported-devices/leap-motion-mrtk.md) 请参阅 Leap Motion Hand Tracking Configuration。
 - 对于使用 ARFoundation 的人，现在在其入门步骤中还有一个额外的手动步骤。
   有关新步骤，请参阅 [ARFoundation](../supported-devices/using-ar-foundation.md#install-required-packages) 。
-- 对于将在 HoloLens 2 上将使用 [全息远程处理与旧版 XR 管道](../features/tools/holographic-remoting.md#legacy-xr-setup-instructions) 的用户，现在可以执行 [手动步骤](../features/tools/holographic-remoting.md#dotnetwinrt_present-define-written-into-player-settings) 。
+- 对于将使用[全息远程处理 HoloLens 2 上的旧版 XR 管道](../features/tools/holographic-remoting.md#legacy-xr-setup-instructions)的用户，现在可以执行[手动步骤](../features/tools/holographic-remoting.md#dotnetwinrt_present-define-written-into-player-settings)。
 
 ### <a name="bounds-control-graduated"></a>边界控制渐变
 
@@ -211,7 +211,7 @@ yield return leftHand.SetGesture(ArticulatedHandPose.GestureId.Open);
 
 ### <a name="spatial-mesh-visualization---pulse-on-air-tap"></a>空间网格可视化-轻按的脉冲
 
-更新了用于匹配 HoloLens 2 的外壳行为的空间网格的脉冲着色器示例。
+更新了用于匹配 HoloLens 2 shell 行为的空间网格的脉冲着色器示例。
 
 ![无线点击脉冲](https://user-images.githubusercontent.com/13754172/90310153-d0536180-df29-11ea-939a-e9572d4f5670.gif)
 
@@ -219,7 +219,7 @@ yield return leftHand.SetGesture(ArticulatedHandPose.GestureId.Open);
 
 ![弹性 System2](../features/images/elastics/Elastics_Main.gif)
 
-MRTK 现在附带了一个 [弹性模拟系统](../features/elastics/elastic-system.md) ，该系统包含各种可扩展和灵活的子类，为四维四元数弹簧、三维量弹簧和简单线性弹簧系统提供绑定。
+MRTK 现在附带了一个 [弹性模拟系统](../features/experimental/elastic-system.md) ，该系统包含各种可扩展和灵活的子类，为四维四元数弹簧、三维量弹簧和简单线性弹簧系统提供绑定。
 
 目前，支持 [池中弹性 manager](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager) 的以下 MRTK 组件可以利用池中弹性功能：
 
@@ -277,7 +277,7 @@ DevicePortal.UseSSL = true
 
 ### <a name="linkxml"></a>Link.xml
 
-如果某个应用程序以前使用了 MRTK 的 NuGet 分发版，则该 `link.xml` 文件已从基础包中删除。 若要还原代码保存规则，请在 Unity 中打开项目一次，将在中创建一个默认 `link.xml` 文件 `Assets/MixedRealityToolkit.Generated` 。 建议将此文件 (，并 `link.xml.meta` 将) 添加到源代码管理中。
+如果以前使用 MRTK 的 NuGet 分发应用程序，则该文件已 `link.xml` 从基础包中删除。 若要还原代码保存规则，请在 Unity 中打开项目一次，将在中创建一个默认 `link.xml` 文件 `Assets/MixedRealityToolkit.Generated` 。 建议将此文件 (，并 `link.xml.meta` 将) 添加到源代码管理中。
 
 ### <a name="transform-constraint-changes"></a>转换约束更改
 
@@ -309,9 +309,9 @@ TargetTransform 属性已标记为过时，因为它不被约束系统使用。 
 
 在某些情况下 (例如，在 Unity 编辑器中使用 LeapMotion 提供程序时) ，CameraCache 可以在关闭时重新创建 MainCamera。 有关详细信息，请参阅 [此问题](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8459) 。
 
-### <a name="filenotfoundexception-when-examples-are-imported-via-unity-package-manager"></a>通过 Unity 包管理器导入示例时的 System.io.filenotfoundexception
+### <a name="filenotfoundexception-when-examples-are-imported-via-unity-package-manager"></a>通过 Unity 导入示例时的 system.io.filenotfoundexception 程序包管理器
 
-根据项目路径的长度，通过 Unity 包管理器导入示例可能会在 Unity 控制台中生成 System.io.filenotfoundexception 消息。 导致这种情况的原因是，"丢失" 文件的路径超过了 MAX_PATH (256) 的字符。 若要解决此问题，请缩短项目路径的长度。
+根据项目路径的长度，通过 unity 导入示例程序包管理器可能会在 Unity 控制台中生成 system.io.filenotfoundexception 消息。 导致这种情况的原因是，"丢失" 文件的路径超过了 MAX_PATH (256) 的字符。 若要解决此问题，请缩短项目路径的长度。
 
 ### <a name="no-spatializer-was-specified-the-application-will-not-support-spatial-sound"></a>未指定 spatializer。 应用程序将不支持空间音效
 
@@ -319,35 +319,35 @@ TargetTransform 属性已标记为过时，因为它不被约束系统使用。 
 
 若要解决此问题，请确保：
 
-- **窗口**  > **程序包管理器** 已安装一个或多个 XR 包
-- **混合现实工具包**  > **实用工具**  > **配置 Unity 项目**，并针对音频空间 **化程序进行选择**
+- **窗口**  > **程序包管理器** 安装了一个或多个 XR 包
+- **混合现实 Toolkit**  > **实用工具**  > **配置 Unity Project** 并为 **音频 Spatializer** 进行选择
 
-  ![选择"音频空间化程序"](images/SpatializerSelection.png)
+  ![选择音频 Spatializer](images/SpatializerSelection.png)
 
-### <a name="nullreferenceexception-object-reference-not-set-to-an-instance-of-an-object-scenetransitionserviceinitialize"></a>NullReferenceException：对象引用未设置为实例化 (SceneTransitionService.Ini实例) 
+### <a name="nullreferenceexception-object-reference-not-set-to-an-instance-of-an-object-scenetransitionserviceinitialize"></a>NullReferenceException：对象引用未设置为对象的实例 (SceneTransitionService.Initialize) 
 
-在某些情况下，打开 `EyeTrackingDemo-00-RootScene` 可能会导致 SceneTransitionService 类的 Initialize 方法中出现 NullReferenceException。
+在某些情况下，打开 `EyeTrackingDemo-00-RootScene` 可能会导致 SceneTransitionService 类的 Initialize 方法 NullReferenceException。
 此错误是由于未设置场景转换服务的配置文件。 若要解决此问题，请使用以下步骤：
 
-- 导航到 `MixedRealityToolkit` 层次结构中的 对象
-- 在"检查器"窗口中，选择 `Extensions`
-- 如果未展开，则展开 `Scene Transition Service`
-- 将 的值设置为 `Configuration Profile` **MRTKExamplesHubSceneTransitionServiceProfile**
+- 导航到 `MixedRealityToolkit` 层次结构中的对象
+- 在检查器窗口中，选择 `Extensions`
+- 如果未展开，请展开 `Scene Transition Service`
+- 将的值设置 `Configuration Profile` 为 **MRTKExamplesHubSceneTransitionServiceProfile**
 
-![修复场景转换](images/FixSceneTransitionProfile.png)
+![修复场景过渡](images/FixSceneTransitionProfile.png)
 
 ### <a name="oculus-quest"></a>Oculus Quest
 
-在面向独立平台 时，当前存在将 [Oculus XR 插件与 一起使用的已知问题](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)。 有关更新，请查看 Oculus bug 跟踪器/论坛/发行说明。
+当前有一个已知问题，即 [在面向独立平台时，使用 OCULUS XR 插件](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)。 查看 Oculus bug 跟踪器/论坛/发行说明，了解更新。
 
-此 bug 由以下 3 个错误集表示：
+此错误是用这一组3个错误表示的：
 
 ![Oculus XR 插件错误](https://forum.unity.com/attachments/erori-unity-png.644204/)
 
 ### <a name="unityui-and-textmeshpro"></a>UnityUI 和 TextMeshPro
 
-较新版本的 TextMeshPro (1.5.0+ 或 2.1.1+) 存在已知问题，其中下拉列表的默认字号和粗体字体字符间距已更改。
+TextMeshPro 的较新版本 (1.5.0 + 或 2.1.1 +) 存在一个已知问题，其中 dropdown 和粗体字字符间距的默认字体大小已更改。
 
 ![TMP 映像](https://user-images.githubusercontent.com/68253937/93158069-4d582f00-f6c0-11ea-87ad-94d0ba3ba6e5.png)
 
-可以通过降级到早期版本的 TextMeshPro 来这样做。 有关详细信息 [，#8556](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8556) 问题说明。
+可以通过降级到早期版本的 TextMeshPro 来解决此情况。 有关更多详细信息，请参阅 [问题 #8556](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8556) 。

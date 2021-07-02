@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，手动跟踪
-ms.openlocfilehash: 6cd55bc76d9fba42640954bcbf50e62f66454a94
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 68e936cb4121027008f37aae72496fe59445b636
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143357"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176892"
 ---
 # <a name="hand-tracking"></a>手部跟踪
 
@@ -43,28 +43,28 @@ _手动跟踪配置文件_ 位于 _输入系统配置文件_ 下。 它包含用
 
 ## <a name="hand-visualization-settings"></a>手动可视化设置
 
-手动网格和手部联合可视化效果可以分别通过"手部网格可视化模式"设置和"手部联合可视化模式"来关闭 *或* 打开。 这些设置特定于应用程序模式，这意味着在编辑器 (中查看与编辑器内模拟的连接时，可以打开某些功能，例如) 同时在播放器内部版本) 中部署到设备 (时关闭相同的功能。
+可以通过 " *手工网格可视化模式* " 设置和 "手动转换" *可视化模式* 来关闭或打开手写网格和手动接点。 这些设置是特定于应用程序模式的，这意味着可以在编辑器中打开某些功能 (以查看与编辑器内模拟的联接，例如) ，同时在播放) 机中部署到设备 (时禁用相同的功能。
 
-请注意，通常建议在编辑器 (中启用手部联合可视化效果，以便编辑器内模拟显示手部连接位置) ，在播放器 (中同时关闭手部联合可视化效果和手部网格可视化效果，因为它们会导致性能下降) 。
+请注意，我们通常建议在编辑器中打开手动联合可视化 (，以便编辑器内模拟将显示) 的位置，并在播放机 (中同时关闭手联合可视化和手写图形可视化效果，因为它们会导致) 性能下降。
 
 ## <a name="scripting"></a>脚本编写
 
-可以从输入系统请求每个手部作为 的位置和旋转 [`MixedRealityPose`](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose) 。
+可以从输入系统中为每个单独的局请求定位和旋转 [`MixedRealityPose`](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose) 。
 
-或者，系统允许访问跟随联合的[GameObject。](https://docs.unity3d.com/ScriptReference/GameObject.html) 如果另一个 GameObject 应持续跟踪联合，这非常有用。
+此外，系统还允许访问跟随 [gameobject](https://docs.unity3d.com/ScriptReference/GameObject.html) 的访问。 如果另一个 GameObject 应连续跟踪接头，这会很有用。
 
-枚举中列出了可用 [`TrackedHandJoint`](xref:Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint) 联合。
+可用接头在枚举中列出 [`TrackedHandJoint`](xref:Microsoft.MixedReality.Toolkit.Utilities.TrackedHandJoint) 。
 
 > [!NOTE]
-> 手部跟踪丢失时，会销毁联合对象！ 请确保使用联合对象的任何脚本都妥善处理 `null` 案例以避免错误！
+> 当手动跟踪丢失时，接点对象会被销毁！ 请确保任何使用该接点对象的脚本都 `null` 可以适当地处理这种情况，以免出现错误！
 
-### <a name="accessing-a-given-hand-controller"></a>访问给定的手部控制器
+### <a name="accessing-a-given-hand-controller"></a>访问给定的手形控制器
 
-特定的手部控制器通常可用，例如处理输入事件时。 在这种情况下，可以使用 接口直接从设备请求联合 [`IMixedRealityHand`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand) 数据。
+在处理输入事件时，可以使用特定的手动控制器。 在这种情况下，可以使用接口直接从设备请求联合数据 [`IMixedRealityHand`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand) 。
 
-#### <a name="polling-joint-pose-from-controller"></a>从控制器轮询联合姿势
+#### <a name="polling-joint-pose-from-controller"></a>轮询控制器的接点姿势
 
-如果 [`TryGetJoint`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.TryGetJoint*) 请求 `false` 的联合因某种原因不可用，则函数返回 。 在这种情况下，生成的姿势将为 [`MixedRealityPose.ZeroIdentity`](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.ZeroIdentity) 。
+[`TryGetJoint`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand.TryGetJoint*) `false` 如果由于某种原因而导致请求的联合不可用，则该函数将返回。 在这种情况下，生成的姿势将为 [`MixedRealityPose.ZeroIdentity`](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose.ZeroIdentity) 。
 
 ```c#
 public void OnSourceDetected(SourceStateEventData eventData)
@@ -80,9 +80,9 @@ public void OnSourceDetected(SourceStateEventData eventData)
 }
 ```
 
-#### <a name="joint-transform-from-hand-visualizer"></a>从手部可视化工具进行联合转换
+#### <a name="joint-transform-from-hand-visualizer"></a>手动可视化工具的联合转换
 
-可以从控制器可视化工具 请求 [联合对象](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.Visualizer)。
+可以从 [控制器可视化工具](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityController.Visualizer)请求联合对象。
 
 ```c#
 public void OnSourceDetected(SourceStateEventData eventData)
@@ -100,7 +100,7 @@ public void OnSourceDetected(SourceStateEventData eventData)
 
 ### <a name="simplified-joint-data-access"></a>简化的联合数据访问
 
-如果未提供特定控制器，则提供实用工具类，方便访问手部联合数据。 这些函数从当前跟踪的第一个可用手部设备请求联合数据。
+如果未提供任何特定控制器，则提供实用工具类以方便访问手动联合数据。 这些函数请求当前跟踪的第一个可用设备的联合数据。
 
 #### <a name="polling-joint-pose-from-handjointutils"></a>轮询来自 HandJointUtils 的接头姿势
 
@@ -189,7 +189,7 @@ public class MyHandMeshEventHandler : IMixedRealityHandMeshHandler
 
 使用 .NET 后端时，主版本目前有一个已知问题。 在 .NET Native 中， `IInspectable` 无法使用将指针从本机封送到托管代码 `Marshal.GetObjectForIUnknown` 。 MRTK 使用此来获取，以便 `SpatialCoordinateSystem` 从平台接收手写数据。
 
-在 [本机混合现实工具包](https://github.com/microsoft/MixedRealityToolkit/tree/master/DotNetNativeWorkaround)存储库中，我们提供了 DLL 源作为此问题的解决方法。 请按照自述文件中的说明进行操作，并将生成的二进制文件复制到 Unity 资产的插件文件夹中。 之后，MRTK 中提供的 WindowsMixedRealityUtilities 脚本将解决此问题。
+在[本机混合现实 Toolkit](https://github.com/microsoft/MixedRealityToolkit/tree/master/DotNetNativeWorkaround)存储库中，我们提供了 DLL 源作为此问题的解决方法。 请按照自述文件中的说明进行操作，并将生成的二进制文件复制到 Unity 资产的插件文件夹中。 之后，MRTK 中提供的 WindowsMixedRealityUtilities 脚本将解决此问题。
 
 如果要创建自己的 DLL 或在现有 DLL 中包含此解决方法，解决方法的核心是：
 

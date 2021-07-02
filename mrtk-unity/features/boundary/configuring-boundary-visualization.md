@@ -5,14 +5,14 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，边界系统，
-ms.openlocfilehash: 0f1a9edd9f9a31e7ba20f630406b299909a4864c
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 77bdaedb60700bac27643ae718c795c02e5ee7e7
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121245"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177091"
 ---
-# <a name="configuring-the-boundary-visualization"></a>配置边界可视化
+# <a name="configuring-boundary-visualization"></a>配置边界可视化
 
 *边界可视化配置文件* 提供了为边界系统配置视觉美观和其他相关参数的选项。 边界可视化效果连接到场景中的 Mixed Reality Playspace 对象，并与用户一起传送。
 
@@ -26,7 +26,7 @@ ms.locfileid: "113121245"
 
 ## <a name="floor-settings"></a>楼层设置
 
-![边界视觉对象设置](../images/boundary/BoundaryVisualizationFloorSettings.png)
+![边界可视化楼层设置](../images/boundary/BoundaryVisualizationFloorSettings.png)
 
 **显示**
 

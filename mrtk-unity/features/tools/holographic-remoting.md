@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 196bbb7027389ea75ddc577e4efc397ca779d550
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: 0fbde863185a9f51b53192a338e9403dc79248db
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647186"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176645"
 ---
 # <a name="holographic-remoting"></a>全息远程处理
 
@@ -20,27 +20,27 @@ ms.locfileid: "110647186"
 
 ## <a name="initial-setup"></a>初始设置
 
-若要启用到 HoloLens 的远程处理，必须确保项目使用最新的远程处理组件。
+若要启用远程处理HoloLens，必须确保项目使用最新的远程处理组件。
 
 1. 打开 **窗口> 程序包管理器**
     - 如果使用旧版 XR：验证是否安装了最新版本 **Windows Mixed Reality** 包。
-    - 如果使用 XR SDK：验证是否安装了最新版本的 **Windows XR 插件** 包。
-1. 确保 HoloLens 上已安装最新的全息远程处理应用程序，Microsoft Store。
+    - 如果使用 XR SDK：验证是否安装了最新版本 **Windows XR 插件** 包。
+1. 确保最新的全息远程处理应用程序已安装在 HoloLens 上，通过 Microsoft Store。
 
 请继续阅读 [旧版 XR 设置说明](#legacy-xr-setup-instructions) 或 [XR SDK](#xr-sdk-setup-instructions) 安装说明，具体取决于项目中使用的管道。
 
 ## <a name="legacy-xr-setup-instructions"></a>旧版 XR 安装说明
 
-以下说明仅适用于使用远程处理HoloLens 2。 如果仅使用 HoloLens (第一代) 执行远程处理，请跳到使用[Wi-Fi 连接到 HoloLens。](#connecting-to-the-hololens-with-wi-fi)
+以下说明仅适用于使用远程处理HoloLens 2。 如果仅使用第一代 HoloLens (执行远程) ，请跳到使用[Wi-Fi HoloLens远程处理](#connecting-to-the-hololens-with-wi-fi)。
 
 使用远程HoloLens 2，MRTK 中添加了对远程处理手部和眼动跟踪数据的支持。 若要启用这些功能，请按照将 [DotNetWinRT](#import-dotnetwinrt-into-the-project)导入项目 中记录的步骤操作。
 
-导入后，下一步是选择"混合 **现实** 工具包实用工具Windows Mixed Reality  >    >    >    >  **检查配置"。** 此步骤添加启用 DotNetWinRT 依赖项的脚本定义。
+导入后，下一步是 **选择"混合** 现实Toolkit  >    >  **实用工具Windows Mixed Reality**  >    >  **检查配置"。** 此步骤添加启用 DotNetWinRT 依赖项的脚本定义。
 
 > [!NOTE]
 > 使用 Unity 2019.4 及更高版本时，不需要运行"检查配置"实用工具。
 
-若要启用手部眼部跟踪和眼动跟踪，请遵循调试HoloLens 2 **Unity** 包导入和相关部分进行远程处理的步骤。
+若要启用手部眼部跟踪和眼动跟踪，请按照通过 **Unity** 包导入HoloLens 2远程处理调试"部分中的步骤操作。
 
 ### <a name="debugging-hololens-2-remoting-via-unity-package-import"></a>调试HoloLens 2 Unity 包导入进行远程处理
 
@@ -61,12 +61,12 @@ ms.locfileid: "110647186"
 #### <a name="dotnetwinrt_present-define-written-into-player-settings"></a>DOTNETWINRT_PRESENT定义写入播放器设置
 
 > [!NOTE]
-> 使用 Unity 2019.4 及更高版本时，DOTNETWINRT_PRESENT定义包含在相应的 .asmdef 文件中，而不是 Unity Player 设置中。 "检查配置"步骤不是必需的。
+> 使用 Unity 2019.4 及更高版本时，DOTNETWINRT_PRESENT定义包含在相应的 .asmdef 文件中，而不是包含在 Unity Player 设置。 "检查配置"步骤不是必需的。
 
-从 MRTK 版本 2.5.0 开始，出于性能原因，#define自动设置此版本。 若要启用此标志，请使用"混合现实工具包实用工具  >    >  **"Windows Mixed Reality"**  >  **检查配置"** 菜单项。
+从 MRTK 版本 2.5.0 开始，出于性能原因，#define自动设置此版本。 若要启用此标志，请使用"混合现实Toolkit  >  **实用工具**  >  **"Windows Mixed Reality"**  >  **检查配置"** 菜单项。
 
 > [!Note]
-> "检查配置"项不显示确认。 若要确认已设置定义，请导航到 Unity 播放器设置。 在"UWP"选项卡下，选中"脚本定义符号的其他设置"下。 请确保DOTNETWINRT_PRESENT正确写入该列表。 如果存在，则此步骤成功。
+> "检查配置"项不显示确认。 若要确认已设置定义，请导航到 Unity Player 设置。 然后，在"UWP"选项卡下，在"其他设置"下查看"脚本定义符号"。 请确保DOTNETWINRT_PRESENT正确写入该列表。 如果存在，则此步骤成功。
 
 ![DotNetWinRT 存在](../images/tools/remoting/DotNetWinRTPresent.png)
 
@@ -76,15 +76,15 @@ ms.locfileid: "110647186"
 
 ## <a name="xr-sdk-setup-instructions"></a>XR SDK 安装说明
 
-按照 [Windows Mixed Reality MRTK](../../configuration/getting-started-with-mrtk-and-xrsdk.md#windows-mixed-reality) 和 XR SDK 入门"页上的说明进行操作，并确保执行编辑器中 HoloLens 远程处理所需的步骤。
+按照[Windows Mixed Reality MRTK](../../configuration/getting-started-with-mrtk-and-xrsdk.md#windows-mixed-reality)和 XR SDK 入门"页上的说明进行操作，并确保执行编辑器内远程处理HoloLens步骤。
 
-## <a name="connecting-to-the-hololens-with-wi-fi"></a>使用设备连接到 HoloLens Wi-Fi
+## <a name="connecting-to-the-hololens-with-wi-fi"></a>使用 HoloLens 连接到Wi-Fi
 
-配置项目后，可以与 HoloLens 建立连接。
+配置项目后，可以建立与项目HoloLens。
 
-1. 在 **">生成设置**"中，确保项目生成类型 **设置为通用 Windows 平台**
-1. 在 HoloLens 上，启动 **全息远程处理** 应用程序。
-1. 在 Unity 中，如果使用的是旧版 **XR) /Windows XR** 插件远程处理 (，请选择"Windows > XR > 全息仿真 ("（如果使用 XR SDK) ）。
+1. 在 **">生成设置** 中，确保项目生成类型设置为"通用Windows **平台"**
+1. 在HoloLens，启动 **全息远程处理** 应用程序。
+1. 在 Unity 中，如果使用的是旧版 **XR) /Windows XR** 插件远程 (，请选择"窗口"> XR >全息仿真 (（如果使用 XR SDK) ）。
 
     ![启动全息仿真](../images/tools/remoting/StartHolographicEmulation.png)
 
@@ -105,13 +105,13 @@ ms.locfileid: "110647186"
 > [!NOTE]
 > 如果无法连接，请确保HoloLens 2连接到电脑并重启 Unity。
 
-## <a name="connecting-to-the-hololens-with-usb-cable"></a>使用 USB 电缆连接到 HoloLens
+## <a name="connecting-to-the-hololens-with-usb-cable"></a>使用 USB HoloLens连接到设备
 
-USB 电缆连接提供更好的渲染质量和稳定性。 若要使用 USB 电缆连接，请从 HoloLens 设置Wi-Fi HoloLens 中的 HoloLens 断开连接，并启动全息远程播放器应用。 它将显示以 169 开头的 IP 地址。 在 Unity 的全息仿真设置中使用此 IP 地址进行连接。 识别 USB 电缆的 IP 地址后，可以安全地将 HoloLens 连接到Wi-Fi连接。
+USB 电缆连接提供更好的渲染质量和稳定性。 若要使用 USB 电缆连接，请从 HoloLens Wi-Fi HoloLens 中设置全息远程播放器应用。 它将显示以 169 开头的 IP 地址。 在 Unity 的全息仿真设置中使用此 IP 地址进行连接。 识别 USB 电缆的 IP 地址后，可以安全地将 USB 电缆HoloLensWi-Fi连接。
 
 ## <a name="starting-a-remoting-session"></a>启动远程处理会话
 
-将 Unity 连接到 HoloLens 后，在编辑器中进入播放模式。
+将 Unity 连接到 HoloLens，在编辑器中进入播放模式。
 
 会话完成后，退出播放模式。
 
