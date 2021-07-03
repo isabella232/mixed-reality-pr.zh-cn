@@ -8,29 +8,29 @@
   href: mr-learning-overview.md
 - name: 扩展设计过程
   href: case-study-expanding-the-design-process-for-mixed-reality.md
-- name: 运行 MRTK 示例中心
-  href: 'https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/running-examples-hub'
 - name: 设计全息影像
   href: designing-holograms.md
 - name: 案例研究概述
   href: case-studies-overview.md
-- name: HoloLens 硬件
+- name: 硬件
   items:
-    - name: HoloLens 2 硬件详细信息
-      href: /hololens/hololens2-hardware
-    - name: HoloLens（第 1 代）硬件详细信息
-      href: /hololens/hololens1-hardware
-- name: 沉浸式头戴显示设备
-  items:
-    - name: 沉浸式头戴显示设备硬件详细信息
-      href: immersive-headset-hardware-details.md
-    - name: 导航 Windows Mixed Reality 主页
-      href: navigating-the-windows-mixed-reality-home.md
-    - name: VR 发烧友指南
-      href: /windows/mixed-reality/enthusiast-guide/
-    - name: 基于位置的娱乐
-      href: location-based-experiences.md
+    - name: HoloLens
+      items:
+        - name: HoloLens 2 硬件详细信息
+          href: /hololens/hololens2-hardware
+        - name: HoloLens（第 1 代）硬件详细信息
+          href: /hololens/hololens1-hardware
+    - name: 沉浸式头戴显示设备
+      items:
+        - name: 沉浸式头戴显示设备硬件详细信息
+          href: immersive-headset-hardware-details.md
+        - name: 导航 Windows Mixed Reality 主页
+          href: navigating-the-windows-mixed-reality-home.md
+        - name: VR 发烧友指南
+          href: /windows/mixed-reality/enthusiast-guide/
+        - name: 基于位置的娱乐
+          href: location-based-experiences.md
+    - name: Accessories
+      href: hardware-accessories.md
 - name: 社区资源
   href: community.md
-- name: 硬件配件
-  href: hardware-accessories.md

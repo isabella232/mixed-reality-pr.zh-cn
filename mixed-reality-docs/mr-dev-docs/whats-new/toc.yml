@@ -5,7 +5,7 @@
 - name: 了解 Azure 混合现实云服务
   href: ../develop/mixed-reality-cloud-services.md
 - name: Unity 中的 OpenXR 入门
-  href: ../develop/unity/openxr-getting-started.md
+  href: ../develop/unity/xr-project-setup.md
 - name: 使用新的 HP Reverb G2 手柄
   items:
     - name: Unity
