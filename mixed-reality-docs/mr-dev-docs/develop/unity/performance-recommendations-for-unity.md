@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 图形, cpu, gpu, 渲染, 垃圾回收, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2ff766c3fb2c9f8a91c3c8cc81bb21adae9956e8
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 7d672af0c9309e4dd2965cc3cb315671a720a58a
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300152"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743436"
 ---
 # <a name="performance-recommendations-for-unity"></a>针对 Unity 的性能建议
 
@@ -309,7 +309,7 @@ Unity 中的[实时全局照明](https://docs.unity3d.com/Manual/GIIntro.html)�
 
 #### <a name="unity-standard-shader-alternatives"></a>Unity 标准着色器替代技术
 
-不要使用基于物理学的渲染 (PBR) 或其他优质着色器，而是寻求利用更高性能且更经济的着色器。 [混合现实工具包](https://github.com/Microsoft/MixedRealityToolkit-Unity)提供针对混合现实项目进行优化的 [MRTK 标准着色器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)。
+不要使用基于物理学的渲染 (PBR) 或其他优质着色器，而是寻求利用更高性能且更经济的着色器。 [混合现实工具包](https://github.com/Microsoft/MixedRealityToolkit-Unity)提供针对混合现实项目进行优化的 [MRTK 标准着色器](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)。
 
 与 Unity 标准着色器相比，Unity 还提供不发光、顶点发亮、漫射和其他简化的着色器选项。 有关更多详细信息，请参阅[内置着色器的用法和性能](https://docs.unity3d.com/Manual/shader-Performance.html)。
 
