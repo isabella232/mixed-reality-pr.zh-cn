@@ -2,7 +2,7 @@
   href: usingupm.md
 - name: MRTK 配置对话框
   href: mrtk-configuration-dialog.md
-- name: MRTK 与 XRSDK 入门
+- name: MRTK 和 XR SDK 入门
   href: getting-started-with-mrtk-and-xrsdk.md
-- name: 混合现实配置指南
+- name: MRTK 配置文件配置指南
   href: mixed-reality-configuration-guide.md

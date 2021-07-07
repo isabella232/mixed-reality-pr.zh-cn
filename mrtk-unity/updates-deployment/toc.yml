@@ -1,6 +1,6 @@
 - name: 从 HTK 升级
   href: htk-to-mrtk-porting-guide.md
-- name: MRTK 和托管代码剥离
+- name: MRTK 和托管代码条带化
   href: mrtk-and-managed-code-stripping.md
 - name: 从早期版本更新
   href: updating.md

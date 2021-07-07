@@ -1,6 +1,8 @@
-- name: 供稿概述
+- name: Authors
+  href: authors.md
+- name: 参与概述
   href: contributing.md
-- name: 编码指导原则
+- name: 编码准则
   href: coding-guidelines.md
 - name: 编写和运行测试
   href: unit-tests.md

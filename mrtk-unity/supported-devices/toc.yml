@@ -2,11 +2,11 @@
   href: wmr-mrtk.md
 - name: 部署到 Oculus Quest
   href: oculus-quest-mrtk.md
+- name: 部署到 Android 和 iOS (AR Foundation)
+  href: using-ar-foundation.md
 - name: 使用 Leap Motion
   href: leap-motion-mrtk.md
 - name: 检测 MRTK 中的控制器
   href: controllers-mrtk.md
-- name: 使用 AR Foundation
-  href: using-ar-foundation.md
 - name: 检测平台功能
   href: detecting-platform-capabilities.md

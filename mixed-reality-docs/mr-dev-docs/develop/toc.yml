@@ -1,11 +1,15 @@
 - name: 混合现实开发简介
-  href: development.md
+  items:
+    - name: 入门
+      href: development.md
+    - name: 安装工具
+      href: install-the-tools.md
+    - name: 选择引擎
+      href: choosing-an-engine.md
 - name: Azure 混合现实云服务概述
   href: mixed-reality-cloud-services.md
 - name: 示例和功能应用
   href: features-and-samples.md
-- name: 安装工具
-  href: install-the-tools.md
 - name: 移植应用
   items:
     - name: 移植概述
@@ -156,7 +160,7 @@
                   href: unity/tutorials/mr-azure-307.md
                 - name: HoloLens（第一代）和 Azure 308 - 跨设备通知
                   href: unity/tutorials/mr-azure-308.md
-                - name: HoloLens（第一代）和 Azure 30 9- 应用程序见解
+                - name: HoloLens（第一代）和 Azure 309 - 应用程序见解
                   href: unity/tutorials/mr-azure-309.md
                 - name: HoloLens（第一代）和 Azure 310 - 物体检测
                   href: unity/tutorials/mr-azure-310.md
@@ -170,14 +174,8 @@
       items:
         - name: 选择 Unity 版本和 XR 插件
           href: unity/choosing-unity-version.md
-        - name: 使用旧的内置 XR 支持
-          href: unity/legacy-xr-support.md
-        - name: 使用 Windows XR 插件
-          href: unity/windows-xr-plugin.md
-        - name: 使用 OpenXR 插件
-          href: unity/openxr-getting-started.md
-        - name: OpenXR 插件支持的功能
-          href: unity/openxr-supported-features.md
+        - name: 设置 XR 配置
+          href: unity/xr-project-setup.md
         - name: 混合现实功能工具
           items:
             - name: 欢迎使用 MR 功能工具
@@ -234,7 +232,7 @@
           href: unity/udp-packets-in-unity.md
         - name: 将 Windows 命名空间与 Unity 应用配合用于 HoloLens
           href: unity/using-the-windows-namespace-with-unity-apps-for-hololens.md
-        - name: 混合现实原生对象
+        - name: Unity 中的混合现实本机互操作
           href: unity/unity-xrdevice-advanced.md
         - name: 使用 Vuforia
           href: unity/vuforia-development-overview.md
@@ -262,7 +260,7 @@
               href: unity/lunar-module.md
     - name: 调试和性能
       items:
-        - name: 使用 Unity IL2CPP 进行托管调试
+        - name: 使用 Unity 进行托管调试
           href: unity/managed-debugging-with-unity-il2cpp.md
         - name: 建议用于 Unity 的设置
           href: unity/recommended-settings-for-unity.md
@@ -274,12 +272,18 @@
           href: unity/exporting-and-building-a-unity-visual-studio-solution.md
         - name: 使用 Unity 和 Visual Studio 的最佳做法
           href: unity/best-practices-for-working-with-unity-and-visual-studio.md
+    - name: 发行说明
+      items:
+        - name: 混合现实 OpenXR 插件
+          href: unity/openxr-release-notes.md
 - name: Unreal
   items:
     - name: Unreal 开发概述
       href: unreal/unreal-development-overview.md
     - name: MRTK 简介
       href: unreal/unreal-mrtk-introduction.md
+    - name: 设置项目
+      href: unreal/unreal-project-setup.md
     - name: 在 Unreal 中升级项目
       href: unreal/unreal-porting.md
     - name: 快速入门
@@ -361,12 +365,10 @@
 - name: JavaScript
   items:
     - name: JavaScript 开发概述
-      href: javascript/javascript-development-overview.md
-    - name: WebXR
       href: javascript/webxr-overview.md
     - name: 教程
       items:
-        - name: 使用 BabylonJS 创建 Hello World 程序
+        - name: 使用 BabylonJS 创建 VR Hello World
           items:
             - name: 1. 简介
               href: javascript/tutorials/babylonjs-webxr-helloworld/introduction-01.md
@@ -374,9 +376,9 @@
               href: javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02.md
             - name: 3. 与 3D 对象交互
               href: javascript/tutorials/babylonjs-webxr-helloworld/interact-03.md
-- name: 本机
+- name: 自定义引擎
   items:
-    - name: 原生开发概述
+    - name: 自定义引擎开发概述
       href: native/directx-development-overview.md
     - name: OpenXR
       items:
@@ -469,9 +471,9 @@
         - name: 全息远程处理软件许可条款
           href: /legal/mixed-reality/microsoft-holographic-remoting-software-license-terms
         - name: HoloLens（第 1 代）的全息远程处理
-          href: null
-        - name: 添加全息远程处理
-          href: platform-capabilities-and-apis/add-holographic-remoting.md
+          items:
+            - name: 添加全息远程处理
+              href: platform-capabilities-and-apis/add-holographic-remoting.md
     - name: 应用质量和测试
       items:
         - name: 应用质量标准

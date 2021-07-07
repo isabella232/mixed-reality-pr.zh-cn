@@ -1,6 +1,6 @@
 - name: 配置诊断
   href: configuring-diagnostics.md
-- name: 诊断系统入门
+- name: 诊断系统概述
   href: diagnostics-system-getting-started.md
-- name: 使用可视探查器
+- name: 使用可视化探查器
   href: using-visual-profiler.md
