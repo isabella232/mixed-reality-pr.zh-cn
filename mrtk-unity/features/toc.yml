@@ -6,6 +6,8 @@
   href: diagnostics/toc.yml
 - name: 示例场景
   href: example-scenes/toc.yml
+- name: 体验设置
+  href: experience-settings/toc.yml
 - name: 实验
   href: experimental/toc.yml
 - name: Extensions

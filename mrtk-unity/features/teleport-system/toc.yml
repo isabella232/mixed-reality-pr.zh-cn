@@ -1,2 +1,4 @@
 - name: 传送系统
   href: teleport-system.md
+- name: 传送热点
+  href: teleport-hotspot.md

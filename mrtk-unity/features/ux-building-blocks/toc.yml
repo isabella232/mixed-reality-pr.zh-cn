@@ -10,7 +10,9 @@
   href: constraint-manager.md
 - name: 对话框
   href: dialog.md
-- name: 手尖可视化
+- name: 停留
+  href: dwell.md
+- name: 指尖可视化
   href: fingertip-visualization.md
 - name: 手部指导
   href: hand-coach.md
@@ -40,9 +42,9 @@
   href: toolbox.md
 - name: 工具提示
   href: tooltip.md
-- name: 文本 Prefab
+- name: 文本预制件
   href: text-prefab.md
-- name: 可视主题
+- name: 视觉主题
   href: visual-themes.md
 - name: 求解器
   href: solvers/toc.yml

@@ -6,12 +6,12 @@ ms.author: kesemple
 ms.date: 03/03/2021
 ms.localizationpriority: high
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK
-ms.openlocfilehash: cef4bcf671caaaf8d5cb7cdc639446c6c6e91fa0
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: cf2aa536087af659abe7d124a4dd35ff0175de49
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109850433"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177366"
 ---
 # <a name="what-is-the-mixed-reality-toolkit"></a>混合现实工具包指的是什么
 
@@ -19,7 +19,7 @@ ms.locfileid: "109850433"
 
 <br>
 
-<iframe width="940" height="530" src="https://www.youtube.com/embed/qfONlUCSWdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWyXHW]
 
 MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功能来加速 Unity 中的跨平台 MR 应用开发。 以下是它的一些功能：
 
@@ -28,18 +28,30 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 * 作为可扩展的框架运行，使开发人员能够交换出核心组件。
 * 支持一系列广泛的平台：
 
+::: moniker range=">= mrtkunity-2021-05"
 | 平台 | 支持的设备 |
 |---|---|
-| OpenXR（Unity 2020.2 或更高版本） | Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备 |
+| OpenXR (Unity 2020.3.8+) | Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备 |
 | Windows Mixed Reality | Microsoft HoloLens <br> Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备  |
 | Oculus（Unity 2019.3 或更高版本） | Oculus Quest |
 | OpenVR |  Windows Mixed Reality 头戴显示设备 <br> HTC Vive <br> Oculus Rift |
 | Ultraleap 手部跟踪 | Ultraleap Leap 运动控制器 |
 | 移动型 | iOS 和 Android |
+::: moniker-end
+::: moniker range="< mrtkunity-2021-05"
+| 平台 | 支持的设备 |
+|---|---|
+| OpenXR（在 MRTK 2.6、Unity 2020.3.8+ 中为预览版） | Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备 |
+| Windows Mixed Reality | Microsoft HoloLens <br> Microsoft HoloLens 2 <br> Windows Mixed Reality 头戴显示设备  |
+| Oculus（Unity 2019.3 或更高版本） | Oculus Quest |
+| OpenVR |  Windows Mixed Reality 头戴显示设备 <br> HTC Vive <br> Oculus Rift |
+| Ultraleap 手部跟踪 | Ultraleap Leap 运动控制器 |
+| 移动型 | iOS 和 Android |
+::: moniker-end
 
 ## <a name="getting-started-with-mrtk"></a>MRTK 入门
 
-如果你不熟悉 Unity 中的 MRTK 或混合现实开发，我们建议在设备或模拟器上安装并浏览 MRTK 示例中心示例应用程序。 
+如果你不熟悉 Unity 中的 MRTK 或混合现实开发，建议在设备或[模拟器](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-hololens-emulator)上安装并浏览 MRTK 示例中心示例应用程序。 
 
 > [!div class="nextstepaction"]
 > [下载 MRTK 示例中心应用](running-examples-hub.md)
@@ -58,7 +70,7 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 
 ## <a name="documentation"></a>文档
 
-| [![发行说明](features/images/MRTK_Icon_ReleaseNotes.png)](release-notes/mrtk-26-release-notes.md)<br/>[发行说明](release-notes/mrtk-26-release-notes.md)| [![MRTK 概述](features/images/MRTK_Icon_ArchitectureOverview.png)](architecture/overview.md)<br/>[MRTK 概述](architecture/overview.md)|[![API 参考](features/images/MRTK_Icon_APIReference.png)](/dotnet/api/Microsoft.MixedReality.Toolkit)<br/>[API 参考](/dotnet/api/Microsoft.MixedReality.Toolkit)|
+| [![发行说明](features/images/MRTK_Icon_ReleaseNotes.png)](release-notes/mrtk-27-release-notes.md)<br/>[发行说明](release-notes/mrtk-26-release-notes.md)| [![MRTK 概述](features/images/MRTK_Icon_ArchitectureOverview.png)](architecture/overview.md)<br/>[MRTK 概述](architecture/overview.md)|[![API 参考](features/images/MRTK_Icon_APIReference.png)](/dotnet/api/Microsoft.MixedReality.Toolkit)<br/>[API 参考](/dotnet/api/Microsoft.MixedReality.Toolkit)|
 |:---|:---|:---|
 
 ## <a name="build-status"></a>生成状态
@@ -252,7 +264,7 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 
 :::row:::
     :::column:::
-       [![手部物理服务](features/images/hand-physics/MRTK_UX_HandPhysics_Main.jpg)](features/experimental/hand-physics-service.md) [手部物理服务 [实验性]](features/experimental/hand-physics-service.md)<br>
+       [![手部物理服务](features/images/hand-physics/MRTK_UX_HandPhysics_Main.jpg)](features/extensions/hand-physics-service.md) [手部物理服务 [实验性]](features/extensions/hand-physics-service.md)<br>
         通过手部物理服务，可实现刚体碰撞事件和与关节式手部的交互
     :::column-end:::
     :::column:::
@@ -282,19 +294,19 @@ MRTK-Unity 是由 Microsoft 驱动的项目，它提供了一系列组件和功�
 
 ## <a name="tools"></a>工具
 
-|  [![优化窗口](features/images/MRTK_Icon_OptimizeWindow.png)](features/tools/optimize-window.md) [优化窗口](features/tools/optimize-window.md) | [![依赖关系窗口](features/images/MRTK_Icon_DependencyWindow.png)](features/tools/dependency-window.md) [依赖关系窗口](features/tools/dependency-window.md) | ![“生成”窗口](features/images/MRTK_Icon_BuildWindow.png) “生成”窗口 | [![输入记录](features/images/MRTK_Icon_InputRecording.png)](features/input-simulation/input-animation-recording.md) [输入记录](features/input-simulation/input-animation-recording.md) |
+|  [![优化窗口](features/images/MRTK_Icon_OptimizeWindow.png)](features/tools/optimize-window.md) [优化窗口](features/tools/optimize-window.md) | [![依赖关系窗口](features/images/MRTK_Icon_DependencyWindow.png)](features/tools/dependency-window.md) [依赖关系窗口](features/tools/dependency-window.md) | [![生成窗口](features/images/MRTK_Icon_BuildWindow.png)](features/tools/build-window.md) [生成窗口](features/tools/build-window.md) | [![输入记录](features/images/MRTK_Icon_InputRecording.png)](features/input-simulation/input-animation-recording.md) [输入记录](features/input-simulation/input-animation-recording.md) |
 |:--- | :--- | :--- | :--- |
 | 自动配置混合现实项目来优化性能 | 分析资产之间的依赖关系并确定未使用的资产 |  为混合现实应用程序配置和执行端到端生成进程 | 在编辑器中记录和播放头部移动和手部跟踪数据 |
 
 ## <a name="example-scenes"></a>示例场景
 
-在 [此示例场景](features/example-scenes/hand-interaction-examples.md)中，了解 MRTK 各种类型的交互和 UI 控件。
+MRTK 提供了示例场景来演示如何使用 MRTK 的功能。 可在 Assets/MRTK/Examples/Demos 文件夹下找到示例场景。 请阅读[示例场景](running-example-scenes.md)页面，了解如何获取和运行示例场景。 通过[手部交互示例场景](features/example-scenes/hand-interaction-examples.md)，可开始体验用于交互和 UI 的 MRTK 构建基块。
 
 [![示例场景 2](features/images/MRTK_Examples.png)](features/example-scenes/hand-interaction-examples.md)
 
 ## <a name="mrtk-examples-hub"></a>MRTK 示例中心
 
-通过 MRTK 示例中心，可在 MRTK 中尝试各种示例场景。
+通过 MRTK 示例中心，无需构建和部署各种示例场景即可在 MRTK 中试用它们。
 可在 [MR 功能工具](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)中选择“混合现实工具包示例”包，为 HoloLens (x86)、HoloLens 2 (ARM) 和 Windows Mixed Reality 沉浸式头戴显示设备 (x64) 下载预生成的应用包。 请务必[使用 Windows 设备门户在 HoloLens（第一代）上安装应用](/hololens/hololens-install-apps#use-the-windows-device-portal-to-install-apps-on-hololens)。 在 HoloLens 2 上，可通过 Microsoft Store 应用下载和安装 [MRTK 示例中心](https://www.microsoft.com/p/mrtk-examples-hub/9mv8c39l2sj4)。
 
 请查看[示例中心 README 页面](features/example-scenes/example-hub.md)，详细了解如何使用 MRTK 的场景系统和场景过渡服务创建多场景中心。

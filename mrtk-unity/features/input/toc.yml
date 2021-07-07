@@ -14,7 +14,7 @@
   href: how-to-add-near-interactivity.md
 - name: 输入操作
   href: input-actions.md
-- name: 输入事件数
+- name: 输入事件
   href: input-events.md
 - name: 输入提供者
   href: input-providers.md

@@ -1,7 +1,7 @@
 - name: 靠接
   href: dock.md
-- name: 手部物理服务
-  href: hand-physics-service.md
+- name: 弹性系统
+  href: elastic-system.md
 - name: 交互元素
   href: interactive-element.md
 - name: 混合现实键盘
