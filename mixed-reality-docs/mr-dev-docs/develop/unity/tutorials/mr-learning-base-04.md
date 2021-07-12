@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器, 网格对象集合
 ms.localizationpriority: high
-ms.openlocfilehash: 28cebe871e1046e8668a079affabf6167632cfa4
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: d5d10893ba8274139c6e09b8cd426d58a0b3a0cb
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105983004"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175468"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4.定位场景中的对象
 
@@ -24,6 +24,37 @@ ms.locfileid: "105983004"
 
 * 了解如何定位场景中的对象
 * 了解如何使用 MRTK 的网格对象集合功能
+
+## <a name="importing-the-textmeshpro-essential-resources"></a>导入 TextMeshPro 基本资源
+MRTK 的 UI 元素需要 TextMeshPro 基本资源。 在 Unity 菜单中，选择“窗口” > “TextMeshPro” > “导入 TMP 基本资源”以打开“导入 Unity 包”窗口  ：
+
+![Unity 导入 TMP 基本资源菜单路径](images/mr-learning-base/base-02-section3-step1-1.png)
+
+在“导入 Unity 包”窗口中单击“全部”按钮，确保选择所有资产，然后单击“导入”按钮以导入资产：
+
+![Unity TMP 基本资源导入窗口](images/mr-learning-base/base-02-section3-step1-2.png)
+
+## <a name="importing-the-tutorial-assets"></a>导入教程资产
+
+下载以下 Unity 自定义包。 此包中含有我们将在本教程中使用的 3D 资产，例如 Mars Rover。
+
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.5.0.1.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.5.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.5.0.1.unitypackage)
+
+若要导入 Unity 自定义包，在 Unity 菜单中选择“资产” > “导入包” > “自定义包...”，打开“导入包...”窗口：  
+
+![导入自定义包](images/mr-learning-base/base-02-section7-step1-1.png)
+
+在“导入包…”窗口中，选择下载的 MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.5.0.1.unitypackage，然后单击“打开”按钮：
+
+![选择资产包](images/mr-learning-base/base-02-section7-step1-2.png)
+
+在“导入 Unity 包”窗口中单击“全部”按钮，确保选择所有资产，然后单击“导入”按钮以导入资产：
+
+![选择要导入的所有资产](images/mr-learning-base/base-02-section7-step1-3.png)
+
+导入教程资产后，“项目”窗口应如下所示：
+
+![导入资产后的 Unity 项目窗口](images/mr-learning-base/base-02-section7-step1-4.png)
 
 ## <a name="creating-the-parent-object"></a>创建父对象
 

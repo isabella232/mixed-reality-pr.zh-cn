@@ -3,16 +3,16 @@ title: 示例和功能应用
 description: 跟进了解所有可用于 HoloLens 的 Microsoft 示例和混合现实功能应用。
 author: hferrone
 ms.author: jemccull
-ms.date: 12/3/2020
+ms.date: 6/7/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 了解, 示例, MRTK, 研究模式, HoloLens 2, qr 码, WebRTC, 混合现实捕获, 全息远程处理, UX Tools
 ms.localizationpriority: high
-ms.openlocfilehash: 78cfc726bdffdb461a83bd1e9805d8f0e64b0f01
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 78a9e343fde4a6cbc23268f0be353577498d67b6
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583198"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906893"
 ---
 # <a name="samples-and-feature-apps"></a>示例和功能应用
 
@@ -27,6 +27,17 @@ ms.locfileid: "98583198"
 ## <a name="feature-samples"></a>功能示例
 
 下面列出的功能示例与我们的文档中介绍的特定实现相对应，并涵盖了一系列开发平台和硬件设备。
+
+### <a name="openxr"></a>OpenXR
+
+对于使用 Unity 2020 生成 HoloLens 2 或混合现实应用程序的开发人员，可以使用 OpenXR 插件来代替 WindowsXR 插件，以更好地实现跨平台兼容性。 混合现实 OpenXR 插件还适用于最新的混合现实工具包 2.7。
+
+<br>
+
+| 参考文章 | 示例 |
+| --- | --- |
+| [使用 OpenXR 插件](./unity/xr-project-setup.md) | [混合现实 OpenXR 与 Unity 示例](https://github.com/microsoft/OpenXR-Unity-MixedReality-Samples) |
+| 空值 | [OpenXR MRTK Base Unity 项目](https://github.com/microsoft/UnityOpenXRMRTKBase) |
 
 ### <a name="research-mode"></a>研究模式
 
@@ -47,7 +58,17 @@ HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在�
 
 | 参考文章 | 示例 |
 | --- | --- |
-| [QR 码](platform-capabilities-and-apis/qr-code-tracking.md) | [Unity 中的 QR 码跟踪](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes) |
+| [QR 码](platform-capabilities-and-apis/qr-code-tracking.md) | [Unity 中的 QR 码跟踪](https://github.com/microsoft/MixedReality-QRCode-Sample) |
+
+### <a name="scene-understanding"></a>场景理解
+
+场景理解为混合现实开发人员提供了结构化的高级别环境表示，旨在直观地为环境感知型应用程序进行开发。 场景理解通过组合现有混合现实运行时（如高度准确但结构化空间映射较少的运行时）和新的 AI 驱动运行时的功能来实现这一点。
+
+<br>
+
+| 参考文章 | 示例 |
+| --- | --- |
+| [场景理解](../design/scene-understanding.md) | [混合现实场景理解示例](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples) |
 
 ### <a name="webrtc"></a>WebRTC
 

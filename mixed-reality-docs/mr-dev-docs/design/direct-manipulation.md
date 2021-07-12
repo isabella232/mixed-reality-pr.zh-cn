@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计, 手动近距, HoloLens, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, MRTK, 混合现实工具包, 按钮, 碰撞体, 边界框, 2D, 本能手势
-ms.openlocfilehash: 555b27764d077332a2d8618672e6aed7def1dd3f
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 7a689f887bfd358b0d6e0826d41ef409bf887042
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300092"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600466"
 ---
 # <a name="direct-manipulation-with-hands"></a>用手直接操作
 
@@ -50,6 +50,14 @@ ms.locfileid: "107300092"
 <br>
 
 ---
+
+## <a name="basic-hand-tracking-and-instinctual-interactions-demo"></a>基本手部跟踪和本能交互演示
+
+若要了解头部和眼动跟踪设计概念的运行情况，请查看下面的“设计全息影像 - 头部跟踪和眼动跟踪”视频演示。 完成后，请继续详细了解特定主题。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Hand-Tracking-Chapter/player]
+
+此视频来自于“设计全息影像”HoloLens 2 应用。在[此处](https://aka.ms/dhapp)下载并享受完整体验。
 
 ## <a name="collidable-fingertip"></a>可碰撞指尖
 
@@ -327,7 +335,7 @@ HoloLens 2 可让用户将边界框应用到每个 3D 对象，以便用手引�
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 的 MRTK（混合现实工具包）中的操作
 有了 [MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)，便可使用脚本 ObjectManipulator 轻松实现常见的操作行为 。 借助 ObjectManipulator，可以直接使用手或手部射线抓取和移动对象。 它还支持使用双手操作来缩放和旋转对象。
 
-* [MRTK - 操作](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-manipulator)
+* [MRTK - 操作](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-manipulator)
 
 ---
 

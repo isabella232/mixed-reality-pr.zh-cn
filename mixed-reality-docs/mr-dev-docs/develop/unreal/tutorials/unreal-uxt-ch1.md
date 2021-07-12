@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: a46b9fef96f75f3d80b9ebbd5cbd724730374b41
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: efa0bc210fc20b9e639954a06e97eb78661d87e5
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98580567"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712576"
 ---
 # <a name="1-getting-started"></a>1.入门
 
@@ -32,7 +32,7 @@ ms.locfileid: "98580567"
 在开始之前，请确保已安装以下项：
 * Windows 10 1809 或更高版本
 * Windows 10 SDK 10.0.18362.0 或更高版本
-* [Unreal Engine](https://www.unrealengine.com/en-US/get-now) 4.25 或更高版本
+* [Unreal Engine](https://www.unrealengine.com/en-US/get-now) 4.26 或更高版本
 * [针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 Microsoft HoloLens 2 设备，或[仿真器](../../platform-capabilities-and-apis/using-the-hololens-emulator.md#hololens-2-emulator-overview)
 * 具有以下工作负载的 Visual Studio 2019
 

@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 空间感知
 ms.localizationpriority: high
-ms.openlocfilehash: f6c17dc361846808ec10f1d94932e3089072e642
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: dc30997bbb43b29bf2495aa98be392af6885f6b8
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300452"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112907003"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3.配置 MRTK 配置文件
 
@@ -44,7 +44,67 @@ ms.locfileid: "107300452"
 > [!NOTE]
 > 默认情况下，MRTK 配置文件不可编辑。 这是一些默认的配置文件模板，必须先克隆它们，然后才能对其进行编辑。 配置文件有多个嵌套层。 因此，在配置一个或多个设置时，常见的做法是克隆然后编辑多个配置文件。
 
+### <a name="1-clone-the-default-configuration-profile"></a>1.克隆默认的配置配置文件
+
+> [!NOTE]
+> 配置配置文件是顶级配置文件。 因此，若要编辑任何其他配置文件，必须先克隆配置配置文件。
+
+在“层次结构”窗口中，选择 MixedRealityToolkit 对象，然后在检查器窗口中将“MixedRealityToolkit”配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”：
+
+![选中 DefaultHoloLens2ConfigurationProfile 的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step1-1.png)
+
+在仍选中了“MixedRealityToolkit”对象的情况下，在“检查器”窗口中单击“克隆”按钮打开“克隆配置文件”窗口： 
+
+![Unity MixedRealityToolkit 组件的“复制和自定义”按钮](images/mr-learning-base/base-03-section1-step1-2.png)
+
+在“克隆配置文件”窗口中，输入合适的配置文件名（例如 GettingStarted_HoloLens2ConfigurationProfile），然后单击“克隆”按钮，创建“DefaultHololens2ConfigurationProfile”的可编辑副本 ：
+
+![Unity MixedRealityToolkit 的“克隆配置文件”弹出窗口](images/mr-learning-base/base-03-section1-step1-3.png)
+
+新建的配置配置文件现已分配为场景中的配置配置文件：
+
+![应用了新创建的自定义 HoloLens2ConfigurationProfile 的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step1-4.png)
+
+在 Unity 菜单中，选择“文件” > “保存”以保存场景。 
+
+> [!TIP]
+> 在学习整篇教程的过程中，请记得保存自己的工作。
+
+### <a name="2-enable-the-spatial-awareness-system"></a>2.启用空间感知系统
+
+在“层次结构”窗口中，选择 MixedRealityToolkit 对象，接下来在检查器窗口中，选择“空间感知”选项卡，然后选中“启用空间感知系统”复选框：  
+
+![启用了空间感知系统的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step2-1.png)
+
+> [!NOTE]
+> 在未来的项目中，如果你的应用无需响应环境或与环境交互，则建议关闭空间感知来减少性能成本。
+
+### <a name="3-clone-the-default-spatial-awareness-system-profile"></a>3.克隆默认的空间感知系统配置文件
+
+在“空间感知”选项卡中，单击“克隆”按钮打开“克隆配置文件”窗口： 
+
+![选中“空间感知”选项卡的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step3-1.png)
+
+在“克隆配置文件”窗口中，输入合适的配置文件名（例如 GettingStarted_MixedRealitySpatialAwarenessSystemProfile），然后单击“克隆”按钮，创建“DefaultMixedRealitySpatialAwarenessSystemProfile”的可编辑副本 ：
+
+![Unity MixedRealityToolkit 的“克隆空间感知系统配置文件”弹出窗口](images/mr-learning-base/base-03-section1-step3-2.png)
+
+新建的空间感知系统配置文件现已自动分配到你的配置配置文件：
+
+![应用了新创建的自定义 MixedRealitySpatialAwarenessSystemProfile 的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step3-3.png)
+
 [!INCLUDE[](includes/configuring-profile.md)]
+
+### <a name="5-change-the-visibility-of-the-spatial-awareness-mesh"></a>5.更改空间感知网格的可见性
+
+在“空间网格观察程序设置”中，将“显示选项”更改为“遮挡”，使空间映射网格在隐藏状态下正常运行：  
+
+![空间网格观察程序显示选项设置为“遮挡”的 Unity MixedRealityToolkit 组件](images/mr-learning-base/base-03-section1-step5-1.png)
+
+> [!NOTE]
+> 尽管空间映射网格不可见，但它依然存在且可正常运行。 例如，空间映射网格后面的任何全息影像（如真实墙壁后面的全息影像）将不可见。
+
+你已了解如何修改 MRTK 配置文件中的设置。 可以看到，若要自定义 MRTK 设置，首先需要创建默认配置文件的副本。 由于默认配置文件不可编辑，因此，应始终保留这些配置文件，以便在还原为默认设置时参考。 若要详细了解 MRTK 配置文件及其体系结构，可参阅 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity)中的 [MRTK 配置文件配置指南](/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide)。
 
 ## <a name="congratulations"></a>祝贺
 

@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: 4b81ed3a78cc47f4ad0463cab085621102060dc8
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 2b925457128989933615686ee45ffa6eaa7d20ef
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982760"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175423"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2.设置 Photon Unity Networking
 
@@ -28,14 +28,13 @@ ms.locfileid: "105982760"
 
 在本部分，你将创建一个新的 Unity 项目，并使其准备好用于 MRTK 开发。
 
-首先，请按照[初始化项目和部署第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)说明；其中操作包括以下步骤：
+首先，请按照[初始化项目和部署第一个应用程序](mr-learning-base-02.md)进行操作，但请忽略[向项目添加手交互](mr-learning-base-02.md#adding-hand-interaction-to-an-object)和[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)说明；其中操作包括以下步骤：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
 2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
-3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-6. [创建和配置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供适当的名称，例如 MultiUserCapabilities
+3. [导入 TextMeshPro 基本资源](mr-learning-base-04.md#importing-the-textmeshpro-essential-resources)
+4. [导入混合现实工具包和配置 Unity 项目](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
+5. [创建场景和配置 MRTK](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk)，并为场景提供适当的名称，例如 MultiUserCapabilities
 
 然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)中的说明执行以下操作：
 
@@ -82,7 +81,7 @@ ms.locfileid: "105982760"
 ![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-sharing/sharing-02-section4-step1-1.png)
 
 > [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-02.md#importing-the-tutorial-assets)说明。
+> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-04.md#importing-the-tutorial-assets)说明。
 
 > [!NOTE]
 > 导入 MultiUserCapabilities 教程资产包后，会在控制台窗口中看到几个 [CS0246](/dotnet/csharp/language-reference/compiler-messages/cs0246) 错误，指出缺少类型或命名空间。 这符合预期，并且会在下一部分中（当你导入 PUN 资产时）解决。

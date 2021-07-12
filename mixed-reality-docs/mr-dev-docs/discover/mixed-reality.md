@@ -1,18 +1,18 @@
 ---
 title: 什么是混合现实？
-description: 本文定义了混合现实，并演示了 AR 和 VR 设备在混合现实范围内的位置。
+description: 探讨混合现实，展示如何在混合现实范围内使用 AR 和 VR 设备。
 author: brandonbray
 ms.author: branbray
 ms.date: 08/26/2020
 ms.topic: article
 keywords: 混合现实, 全息, AR, VR, MR, XR, 增强现实, 虚拟现实, 说明, 案例研究, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实
 ms.localizationpriority: high
-ms.openlocfilehash: 2eac20b85ceeb9413dfc0b6820cceda2ddf335c5
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: e524312b2e479b1c3d05039403aba10de864ae18
+ms.sourcegitcommit: 5603dc9f6511707cb8b215f20f6c6485ef480538
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583014"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "112230209"
 ---
 # <a name="what-is-mixed-reality"></a>什么是混合现实？
 

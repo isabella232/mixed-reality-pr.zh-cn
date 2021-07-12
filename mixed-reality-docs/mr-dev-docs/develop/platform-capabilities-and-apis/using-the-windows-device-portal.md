@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 83bc2183d40f9dbfb00799475522606ff59ccfa0
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: d772175683208ac0e3ed4b3163ca561da416c1cf
+ms.sourcegitcommit: 593e8f80297ac0b5eccb2488d3f333885eab9adf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102117641"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112919808"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
@@ -49,8 +49,9 @@ ms.locfileid: "102117641"
 
 1. [将 HoloLens 连接到 Wi-Fi](/hololens/hololens-network)。
 2. 通过以下任一方法查找设备的 IP 地址：
-   * 依次转到“设置”>“网络和 Internet”>“Wi-Fi”>“高级选项”。
-   * 转到“设置”>“网络和 Internet”，然后选择“硬件属性” 。
+  * 依次转到“设置”>“网络和 Internet”>“Wi-Fi”>“高级选项”。
+  * 转到“设置”>“网络和 Internet”，然后选择“硬件属性” 。
+  * 使用“我的 IP 地址是什么？” 语音命令。
 
 ![HoloLens 2 设置](images/using-windows-portal-img-02.jpg)
 
@@ -59,13 +60,30 @@ ms.locfileid: "102117641"
 
 ## <a name="connecting-over-usb"></a>通过 USB 进行连接
 
-1. [安装所需的工具](../install-the-tools.md)，确保电脑上安装了带有 Windows 10 开发人员工具的 Visual Studio，以启用 USB 连接。
-
 > [!IMPORTANT]
-> 如果在 USB 连接方面遇到问题，请再次检查 USB 设备连接可选组件是否已作为 [Visual Studio工具包](../install-the-tools.md#installation-checklist)的一部分安装。
+> 根据新的浏览器标准，不再建议使用 IpOverUsb，因为它需要使用端口 10080。 如果仍希望使用 IpOverUsb，请在 Visual Studio 安装期间选中“USB 设备连接”框，默认情况下不会选中此复选框。 相反，我们建议使用 UsbNcm 进行连接，默认情况下，HoloLens 2 支持这个连接选项。 如果您使用 HoloLens 1，建议使用 WiFi 连接到电脑。
 
-2. 使用适用于 HoloLens（第一代）的 micro-USB 数据线或适用于 HoloLens 2 的 USB-C 数据线将 HoloLens 连接到电脑。
-3. 在电脑上的 Web 浏览器中，转到 [http://127.0.0.1:10080](http://127.0.0.1:10080)。
+1. 如果 HoloLens 2 运行的是 Windows Holographic 版本 21H1 或更高版本，请转到“设置”应用中的“适用于开发人员”，并确保“设备发现”已打开。 
+2. 使用 USB-C 线缆将 HoloLens 2 连接到电脑。
+3. 查找 UsbNcm IP。 可通过多种方式进行查找：
+  * 在设备上的“设置”应用中（此方法仅适用于运行 Windows Holographic 版本 21H1 或更高版本的 HoloLenses，并且打开了“设备发现”）。
+    1. 转到设备上的“设置”应用。
+    2. 前往“更新和安全”>“适用于开发人员”。 这里也可以启用设备门户。
+    3. 在页面底部，复制“以太网”IP 地址。 这是 UsbNcm IP。 
+    ![HoloLens 2 设置 - UsbNcm IP](images/deviceportal_usbncm_ipaddress.jpg)
+
+  * 在设备门户中 
+    1. 在设备上，使用 HoloLens 的 WiFi 地址打开设备门户。 如果您不知道 HoloLens WiFi 地址，可以使用语音命令“我的 IP 地址是什么？”
+    2. 前往“设置”>“网络”
+    3. 在页面最右侧“IP 配置”面板中，找到以“说明：UsbNcm 功能”开头的部分。
+    4. UsbNcm IP 位于“IPv4 地址”行中。 可以复制地址或单击该地址 - 这是一个超链接，它将使用 UsbNcm IP 重新打开设备门户。
+  
+  * 在命令提示符中
+    1. 在任何命令提示符中，导航到安装了 Windows 10 SDK 的 bin\<SDK version>\x86 文件夹，如 C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86。
+    2. 键入“winappdeploycmd devices”并按 Enter。
+    3. 在输出中，查找“模型/名称”列显示 HoloLens 设备名称的条目，例如 HOLOLENS-xxxxxx。 UsbNcm IP 位于此行的开头，显示为 169.254.x.x 格式的自动私有 IP 地址。 复制此地址。 
+ 
+4. 如果您复制了 UsbNcm IP，请使用电脑上的 Web 浏览器转到 https:// 后跟 UsbNcm IP。
 
 ### <a name="moving-files-over-usb"></a>通过 USB 移动文件
 
@@ -381,6 +399,8 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 允许你记录和播放用于测试的输入数据。
 * **捕获房间**：用于下载模拟房间文件，该文件包含用户周围环境的空间映射网格。 命名该房间，然后单击“捕获”以在电脑上将该数据保存为 .xef 文件。 此房间文件可以加载到 HoloLens 仿真器中。
 * **录制**：选中要录制的流、为录制内容命名，然后单击或敲击“录制”开始录制。 使用你的 HoloLens 执行操作，然后单击“停止”以在电脑上将该数据保存为 .xef 文件。 可以在 HoloLens 仿真器或设备上加载此文件。
+  >[!NOTE]
+  >“录制”功能目前仅在第一代 HoloLens 上可用。 HoloLens 2 目前尚不支持录制功能，但支持播放现有的录制内容。
 * **播放**：单击或敲击“上传录制内容”可从电脑中选择 xef 文件，然后将数据发送到 HoloLens。
 * **控制模式**：在 HoloLens 上，从下拉列表中选择“默认”或“模拟”，然后单击或敲击“设置”按钮选中该模式。   相反，选择“模拟”会禁用 HoloLens 上的真实传感器，并使用已上载的模拟数据。 如果切换到“模拟”，HoloLens 将不会响应真实用户，除非切换回“默认”。
 

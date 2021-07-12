@@ -7,18 +7,18 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 空间映射, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: ba68c3d74f58fc43af3de039e5eba1712d195cc0
-ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
+ms.openlocfilehash: b6d8d44851813f340997c41b2f25104b51dee2fa
+ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107528739"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394291"
 ---
 # <a name="unity-development-for-hololens"></a>针对 HoloLens 的 Unity 开发
 
 ![Unity 横幅徽标](../images/unity_logo_banner.png)
 
-在 [Unity](https://unity.com) 中生成 HoloLens [混合现实应用](../../design/app-views.md)的最快途径是使用混合现实工具包。 如果你尚不熟悉 Unity，我们建议你先在 Unity Learn 平台上浏览初学者级别[教程](https://unity3d.com/learn/tutorials)，然后再继续操作。 访问综合性的 [Asset Store](https://assetstore.unity.com) 和 [Unity 混合现实论坛](https://forum.unity3d.com/forums/hololens.102/)，与在线社区一起生成混合现实应用程序也是一个好主意。 你永远都不知道你可能会在未知领域发现什么样的绝佳资产或解决方案。 准备好开始使用 MRTK 时，请前往下面的开发检查点！
+Unity 是市面上领先的实时开发平台之一，其中基础运行时代码采用 C++ 编写，所有开发脚本设置均在 C# 中完成。 无论你是想创建游戏、电影和动画，还是想在虚拟世界中呈现建筑或工程概念，Unity 都有提供支持的基础结构。 准备好开始时，请前往下面的开发检查点！
 
 > [!IMPORTANT]
 > 如果你有一个想要引入到 HoloLens 2 的现有 Unity 项目，请查看 **[移植指南](../porting-apps/porting-overview.md)** 。 我们有指南针对正在使用 HTK、MRTK v1 或 SteamVR 的项目。
@@ -83,11 +83,15 @@ ms.locfileid: "107528739"
 
 ## <a name="5-adding-services"></a>5.添加服务
 
-在开发历程中的这个阶段，你可能希望添加服务或寻求商业部署方面的帮助。 将 [Azure 云服务](../mixed-reality-cloud-services.md) 与 Dynamics 365 功能集成可以在很大程度上提高项目的水平。 我们已编译了几个入门点，用于探索和扩展你的混合现实知识。
+在开发历程中的这个阶段，你可能希望添加服务或寻求商业部署方面的帮助。 集成 [Azure 云服务](../mixed-reality-cloud-services.md)可以在很大程度上提高项目的水平。 我们已编译了几个入门点，用于探索和扩展你的混合现实知识。
 
 [!INCLUDE[](../includes/unity-cloud-services-d365.md)]
 
 我们还提供了一个[针对其他 Azure 服务的支持文档的完整列表](../mixed-reality-cloud-services.md#standalone-unity-services)，你可以自行将这些服务添加到 Unity 项目中。
+
+## <a name="6-low-code-alternatives"></a>6. 低代码备选方法
+
+[!INCLUDE[](../includes/unity-low-code.md)]
 
 ## <a name="whats-next"></a>下一步操作
 
@@ -113,9 +117,9 @@ ms.locfileid: "107528739"
 
 |  主题  |  说明  |
 | --- | --- |
-| [MRTK 体系结构概述](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/architecture/overview) | 更深入地了解 MRTK SDK 在项目中的工作方式 |
-| [设置和性能](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/performance/perf-getting-started) | 分析你的应用、更新 Unity 设置并实现最佳的全息影像稳定性能 |
-| [MRTK + XR 入门](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk) | 转到 Unity 提供的替代 XR 管道 |
+| [MRTK 体系结构概述](/windows/mixed-reality/mrtk-unity/architecture/overview) | 更深入地了解 MRTK SDK 在项目中的工作方式 |
+| [设置和性能](/windows/mixed-reality/mrtk-unity/performance/perf-getting-started) | 分析你的应用、更新 Unity 设置并实现最佳的全息影像稳定性能 |
+| [MRTK + XR 入门](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk) | 转到 Unity 提供的替代 XR 管道 |
 
 ### <a name="unity-resources"></a>Unity 资源
 
@@ -137,7 +141,7 @@ ms.locfileid: "107528739"
 * Windows Mixed Reality
 * OpenXR
 * XRSDK
-* 旧版 XR 
+* 旧版 XR
 
 ## <a name="see-also"></a>另请参阅
 

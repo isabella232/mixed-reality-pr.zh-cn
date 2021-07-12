@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, 工具提示, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: 3c564c28485ca7e0595b9fd438af961dc5bc5986
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 05831ff19a998bd5e99ab5d20c3fb045a09c55e9
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982960"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175429"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1.电脑全息远程处理入门
 
@@ -34,13 +34,12 @@ ms.locfileid: "105982960"
 * 一台 Windows 10 电脑，其中已[安装](../../install-the-tools.md)并配置正确的工具
 * 基本 C# 编程知识
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已装载 Unity 2019 LTS 且已添加通用 Windows 平台生成支持模块
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已装载 Unity 2020/2019 LTS 且已添加通用 Windows 平台生成支持模块
 
 继续学习之前，强烈建议完成[入门](mr-learning-base-01.md)教程系列，或者具备一些使用 Unity 和 MRTK 的基本经验。
 
 > [!IMPORTANT]
-> * 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的所有 Unity 版本要求或建议。
-> * 只能在旧版 XR 中将全息远程用于 MRTK 项目。 目前不支持 XR SDK。
+> * 本教程系列支持 Unity 2020 LTS（当前版本 2020.3.x）（如果您使用 Open XR）和 Unity 2019 LTS（当前版本 2019.4.x）（如果您使用旧版 WSA）。这会取代上文必备条件链接中所述的任何 Unity 版本要求。
 
 ## <a name="creating-and-preparing-the-unity-project"></a>创建和准备 Unity 项目
 
@@ -49,29 +48,16 @@ ms.locfileid: "105982960"
 为此，请先执行[初始化项目和第一个应用程序](mr-learning-base-02.md)中的以下步骤，但请忽略有关[在设备上生成应用程序](mr-learning-base-02.md#building-your-application-to-your-hololens-2)的说明：
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
-
 2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
-
-3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-
-4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-
-5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-
-6. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如“电脑全息远程处理”
+3. [导入 TextMeshPro 基本资源](mr-learning-base-04.md#importing-the-textmeshpro-essential-resources)
+4. [导入混合现实工具包和配置 Unity 项目](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
+5. [创建和设置场景](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk)，并为场景提供一个合适的名称，例如“电脑全息远程处理”
 
 然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)的说明，将场景的 MRTK 配置配置文件更改为“DefaultHoloLens2ConfigurationProfile”。 将空间感知网格的显示选项更改为“遮挡”。
 
 ## <a name="importing-the-tutorial-assets"></a>导入教程资产
 
-下载并导入 [MRTK.Tutorials.PCHolographicRemoting.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/pc-holographic-remoting-v2.4.0/MRTK.Tutorials.PCHolographicRemoting.unitypackage)。
-
->[!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-02.md#importing-the-tutorial-assets)说明。
-
-导入教程资产后，项目窗口应如下所示：
-
-![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mrlearning-pc-holographic-remoting/Tutorial1-Section2-Step1-1.png)
+[!INCLUDE[](includes/importing-tutorial-assets-pc-holographic-remoting.md)]
 
 ## <a name="configuring-and-preparing-the-scene"></a>配置和准备场景
 

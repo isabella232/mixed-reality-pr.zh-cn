@@ -7,18 +7,18 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式处理, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, OpenXR
-ms.openlocfilehash: 99540b9cd3473097896d847943b9736300000305
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 1225c507ec46c6f42c2fc10582a7920802860ad0
+ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99421416"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394311"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 
 ![Unreal 横幅徽标](../images/unreal_logo_banner.png)
 
-开始使用<a href="https://docs.microsoft.com/windows/mixed-reality" target="_blank" title="混合现实文档">混合现实应用程序</a>是一个重大任务。 新概念、平台和前沿硬件看似都障碍重重。 但是，如果你是 Unreal 的开发人员，那么你很幸运。 Unreal Engine 4 具有对 <a href="https://www.microsoft.com/windows/windows-mixed-reality" target="_blank" title="Windows Mixed Reality 文档">Windows Mixed Reality</a> (VR) 和 <a href="https://www.microsoft.com/hololens/hardware" target="_blank" title="HoloLens 2 文档">HoloLens 2</a> (AR) 设备的完全支持。
+开始使用<a href="/windows/mixed-reality" target="_blank" title="混合现实文档">混合现实应用程序</a>是一个重大任务。 新概念、平台和前沿硬件看似都障碍重重。 但是，如果你是 Unreal 的开发人员，那么你很幸运。 Unreal Engine 4 具有对 <a href="https://www.microsoft.com/windows/windows-mixed-reality" target="_blank" title="Windows Mixed Reality 文档">Windows Mixed Reality</a> (VR) 和 <a href="https://www.microsoft.com/hololens/hardware" target="_blank" title="HoloLens 2 文档">HoloLens 2</a> (AR) 设备的完全支持。
 
 [!INCLUDE[](includes/tabs-unreal-features.md)]
 
@@ -38,9 +38,10 @@ ms.locfileid: "99421416"
 |  Checkpoint  |  业务成效  |
 | --- | --- |
 | [安装最新工具](../install-the-tools.md) | 下载并安装最新版 Unreal Engine，并为你的项目设置混合现实 |
+| [设置项目](unreal-project-setup.md) | 获取最新版 Unreal Engine 和 MRTK |
 | [创建第一个 HoloLens Unreal 应用程序](unreal-quickstart.md) | 通过构建一个基本的混合现实应用程序，开始 Unreal 和 HoloLens 开发旅程 |
 | [HoloLens 2 教程系列](tutorials/unreal-uxt-ch1.md) | 在 Unreal 中设置混合现实开发，使用 MRTK 构建首款应用，然后将该应用部署到 HoloLens 2 |
-| （可选）在 Unreal 中开始使用 [OpenXR](../native/openxr.md) | 如果要在 Unreal 中构建 OpenXR 应用，则应禁用以下引擎插件：<ul><li>Windows Mixed Reality</li></ul><br>从 GitHub 下载以下插件并在项目中启用它们：<ul><li> [Microsoft OpenXR](https://github.com/microsoft/Microsoft-OpenXR-Unreal)</li></ul><br>[下面](#supported-features)是 OpenXR 当前支持的功能的完整列表。|
+| Unreal 中的 [OpenXR](../native/openxr.md) 入门 | 从 Unreal Engine Marketplace 安装并启用以下插件：<ul><li> [Microsoft OpenXR](https://www.unrealengine.com/marketplace/en-US/product/ef8930ca860148c498b46887da196239)</li></ul>确保 Microsoft Windows Mixed Reality 插件已禁用。<br><br>[下面](#supported-features)是 OpenXR 当前支持的功能的完整列表。|
 
 ### <a name="2-core-building-blocks"></a>2.核心构建基块
 
@@ -75,9 +76,13 @@ ms.locfileid: "99421416"
 
 ### <a name="5-adding-services"></a>5.添加服务
 
-在开发历程中的这个阶段，你可能希望添加服务或寻求商业部署方面的帮助。 将 [Azure 云服务](../mixed-reality-cloud-services.md) 与 Dynamics 365 功能集成可以在很大程度上提高项目的水平。 我们已编译了几个入门点，用于探索和扩展你的混合现实知识。
+在开发历程中的这个阶段，你可能希望添加服务或寻求商业部署方面的帮助。 集成 [Azure 云服务](../mixed-reality-cloud-services.md)可以在很大程度上提高项目的水平。 我们已编译了几个入门点，用于探索和扩展你的混合现实知识。
 
 [!INCLUDE[](../includes/unreal-cloud-services-d365.md)]
+
+### <a name="6-low-code-alternatives"></a>6. 低代码备选方法
+
+[!INCLUDE[](../includes/unreal-low-code.md)]
 
 ## <a name="whats-next"></a>下一步操作
 
@@ -93,7 +98,7 @@ ms.locfileid: "99421416"
 
 ## <a name="supported-features"></a>支持的功能
 
-| HoloLens 2 功能 | 最早支持的 Unreal Engine 版本 | 在 OpenXR 中受支持 (4.26) |
+| HoloLens 2 功能 | 最早支持的 Unreal Engine 版本 | 在 OpenXR 中受支持 (4.26+) |
 | ----------- | ----------- | ----------- |
 | ARM64 支持 | 4.23 | ✔️ |
 | 从电脑进行流式传输 | 4.23 | ✔️ |
@@ -102,21 +107,21 @@ ms.locfileid: "99421416"
 | 眼动跟踪 | 4.23 | ✔️ |
 | 语音输入 | 4.23 | ✔️ |
 | 空间定位点 | 4.23 | ✔️ |
-| 摄像头访问 | 4.23 |
+| 摄像头访问 | 4.23 | ✔️ |
 | QR 码 | 4.23 | ✔️ |
 | 空间音频 | 4.23 | ✔️ |
 | Spectator Screen 支持流式传输 | 4.24 |
 | 通过流式传输的平面 LSR | 4.24 |
 | [示例应用](../features-and-samples.md) | 4.24 | ✔️ |
 | 移动多视图：性能达到 60 fps | 4.25 | ✔️ |
-| 第三人称摄像机渲染 | 4.25 |
+| 第三人称摄像机渲染 | 4.25 | ✔️ |
 | 从打包的桌面应用进行流式传输 | 4.25.1 | ✔️ |
-| 面向 HoloLens 2 的 Azure 空间定位点 (beta) | 4.25 |
+| 面向 HoloLens 2 的 Azure 空间定位点 | 4.25 | ✔️ |
 | 混合现实 UX Tools 支持 | 4.25 | ✔️ |
 | 开发人员文档和教程 | 4.25 | ✔️ |
 | 系统键盘 | 4.26 | ✔️ |
 | HoloLens Media Player 插件 | 4.26 | ✔️ |
-| 适用于 iOS 和 Android 的 Azure 空间定位点（beta 版） | 4.26 |
+| 适用于 iOS 和 Android 的 Azure 空间定位点 | 4.26 |
 | 具有 Microsoft 供应商特定 OpenXR 扩展的 Microsoft OpenXR 插件 | 4.26 | ✔️ |
 | 从 Azure 流式传输到 HoloLens 2 | 4.26 | ✔️ |
 | 适用于打包应用的 Windows 应用认证工具包合规性 | 4.26 | ✔️ |

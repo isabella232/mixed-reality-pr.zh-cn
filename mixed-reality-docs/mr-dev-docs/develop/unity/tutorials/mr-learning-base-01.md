@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, 求解器, 眼动跟踪, 语音命令
 ms.localizationpriority: high
-ms.openlocfilehash: 8bae8b821e7ffe67b745bbbab763193612a58485
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: abee2163c3b92897396ea35cc43ae025e8e7b804
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590409"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175486"
 ---
 # <a name="1-introduction-to-the-mrtk-tutorials"></a>1.MRTK 教程简介
 
@@ -43,13 +43,24 @@ ms.locfileid: "99590409"
 * [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/) 10.0.18362.0 或更高版本
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
 
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> 并装有 Unity 2020.3 LTS 或 Unity 2019.4 LTS（OpenXR 要求使用 2020.3.8 或更高版本以防发生错误）
 
-> [!CAUTION]
-> 建议用于本系列教程的 MRTK 版本是 MRTK 2.5.3。
+安装 Unity 时，请务必在“平台”下检查以下组件。
 
-> [!CAUTION]
-> 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求。
+* **通用 Windows 平台生成支持**
+* **Windows 生成支持 (IL2CPP)**
+
+<img src="../../../develop/images/Unity_Install_Option_UWP.png" alt="Unity Universal Windows Platform Build Support option" width="600px">
+
+如果安装 Unity 时未使用这些选项，可以通过 Unity Hub 中的“添加模块”菜单添加它们。
+
+<img src="../../../develop/images/Unity_Install_Option_UWP2.png" alt="Unity Hub - Add Module" width="600px">
+
+> [!Important]
+> 建议用于本系列教程的 MRTK 版本是 MRTK 2.7.2
+
+> [!Important]
+> 本系列教程支持 Unity 2020 LTS（当前版本 2020.3.x）（如果您使用 Open XR 或 Windows XR 插件）以及 Unity 2019 LTS（当前版本 2019.4.x）（如果您使用旧版 WSA 或 Windows XR 插件）。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求。
 
 > [!div class="nextstepaction"]
 > [下一教程：2.初始化项目并部署第一个应用程序](mr-learning-base-02.md)

@@ -7,12 +7,12 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 混合现实, 开发, 入门, 新项目, 移植, 功能, 相机, 模拟, 仿真, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语音输入, 可定位相机, 仿真器, Azure, 教程
-ms.openlocfilehash: 50300ff08dd06c5fc250bc93979d537e10b38044
-ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
+ms.openlocfilehash: 074f42fd077d888523c2cf0a7da5bcafcfadb0f0
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107528712"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906963"
 ---
 # <a name="unity-development-for-vr-and-windows-mixed-reality"></a>针对 VR 和 Windows Mixed Reality 的 Unity 开发
 
@@ -25,7 +25,7 @@ ms.locfileid: "107528712"
 
 ## <a name="development-checkpoints"></a>开发检查点
 
-使用以下检查点，将 Unity 游戏和应用程序带入混合现实的世界。 
+使用以下检查点，将 Unity 游戏和应用程序带入混合现实的世界。
 
 ### <a name="1-getting-started"></a>1.入门
 
@@ -34,7 +34,7 @@ ms.locfileid: "107528712"
 |  Checkpoint  |  业务成效  |
 | --- | --- |
 | [安装最新工具](../install-the-tools.md) | 下载并安装最新 Unity 包，并为混合现实设置你的项目 |
-| [针对 WMR 配置项目](windows-xr-plugin.md) | 了解如何构建在全息和 VR 显示设备上呈现数字内容的应用程序 |
+| [为 VR 和 Windows Mixed Reality 头戴显示设备配置项目](./xr-project-setup.md?tabs=openxr) | 了解如何构建在全息和 VR 显示设备上呈现数字内容的应用程序 |
 
 > [!IMPORTANT]
 > 若要详细了解如何设置项目，请查看我们的 Unity 项目[配置指南](choosing-unity-version.md)。

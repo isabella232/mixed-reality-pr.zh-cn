@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, android, ios, MRTK, 混合现实工具包, UWP, Azure 空间定位点, AR Foundation, ARCore, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 699c7689fcd23543f4d4b0e86f64cdbf98debc1f
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 67bda33f8d2d0711c83791be2e76d91b53ff934f
+ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590709"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111403405"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5.适用于 Android 和 iOS 的 Azure 空间定位点
 
@@ -25,24 +25,7 @@ ms.locfileid: "99590709"
 
 ## <a name="installing-inbuilt-unity-packages"></a>安装内置 Unity 包
 
-在本部分中，你将升级并安装以下内置包：
-
-* AR Foundation 3.1.3
-* XR 旧版 Input Helpers 2.1.6
-* 适用于 Android 的 ARCore XR 插件 3.1.3 支持
-* 适用于 iOS 的 ARKit XR 插件 3.1.3 支持
-
-> [!CAUTION]
-> 并非所有版本都与 MRTK 兼容，只有某些版本可协同工作，因此请确保安装的是上述版本。
-
-在 Unity 菜单中，选择“窗口” > “包管理器”来打开“包管理器”窗口，然后选择“AR Foundation” > “3.1.3”，再单击“更新到 3.1.3”按钮来更新包    ：
-
-![选中了“AR Foundation”的 Unity 包管理器](images/mr-learning-asa/asa-05-section1-step1-1.png)
-
-根据需要按照相同的过程导入其余的包。
-
-> [!NOTE]
-> 如果你要为 Android 开发此项目，则无需安装 ARKit XR 插件包。 同样，如果你要为 iOS 开发此项目，则无需安装 ARCore XR 插件。
+[!INCLUDE[](includes/installing-inbuilt-unity-packages-for-asa-android-and-ios.md)]
 
 ## <a name="configure-mrtk-for-ar-foundation-camera"></a>为 AR Foundation 摄像头配置 MRTK
 
@@ -55,27 +38,19 @@ ms.locfileid: "99590709"
 > [!TIP]
 > 要通过提示了解如何克隆 MRTK 配置文件的提示，可参阅[配置混合现实工具包配置文件](mr-learning-base-03.md)中的说明。
 
-在检查器窗口中仍选中“摄像头”选项卡的情况下，展开“摄像头设置提供程序”，单击“+添加摄像头设置提供程序”按钮，然后展开新添加的“新数据提供程序 1”   ：
+在“检查器”窗口中仍选中“相机”选项卡的情况下，展开“相机设置提供程序”，然后单击“-”以删除“Windows Mixed Reality相机设置”或“XR SDK Windows Mixed Reality 相机设置”：   
 
-![添加了新数据提供程序的 Unity ARCameraProfile](images/mr-learning-asa/asa-05-section2-step1-2.png)
+![添加了新数据提供程序的 Unity ARCameraProfile ](images/mr-learning-asa/asa-05-section2-step1-2.png)
+
+然后单击“+ 添加相机设置提供程序”按钮，然后展开新添加的“新数据提供程序”： 
+
+![为 Android 添加了 AR 相机](images/mr-learning-asa/asa-05-section2-step1-3.png)
 
 使用“类型”下拉列表将类型更改为“Microsoft.MixedReality.Toolkit.Experimental.UnityAR” > “UnityARCameraSettings”  ：
 
-![具有指向数据提供程序类型选择的路径的 Unity ARCameraProfile](images/mr-learning-asa/asa-05-section2-step1-3.png)
+![具有指向数据提供程序类型选择的路径的 Unity ARCameraProfile](images/mr-learning-asa/asa-05-section2-step1-4.png)
 
-在“层次结构”窗口中仍选中 MixedRealityToolkit 对象的情况下，使用检查器窗口中的“添加组件”按钮添加以下组件 ：
-
-* AR 空间点管理器(脚本)
-* DisableDiagnosticsSystem (脚本)
-
-![添加了 AR 定位点管理器和 DisableDiagnosticsSystem 组件的 Unity MixedRealityToolkit 对象 ](images/mr-learning-asa/asa-05-section2-step1-4.png)
-
-> [!NOTE]
-> 添加“AR 引用点管理器(脚本)”组件时，会自动添加“AR 会话来源(脚本)”组件，因为它是“AR 引用点管理器(脚本)”组件所必需的。
-
-
-
-通过调用菜单项来更新 MRTK UnityAR 脚本定义：“混合现实工具包” > “实用工具” > “UnityAR”>“更新脚本定义”  
+通过调用以下菜单项来更新 MRTK UnityAR 脚本定义：“混合现实” > “工具包” > “实用工具” > “UnityAR”>“更新脚本定义”
 
 ## <a name="building-your-application-to-your-android-device"></a>将应用程序生成到 Android 设备
 
@@ -90,19 +65,15 @@ ms.locfileid: "99590709"
 
 关闭“生成设置”窗口。
 
-在 Unity 菜单中，选择“混合现实工具包” > “实用程序” > “配置 Unity 项目”来打开“MRTK 项目配置器”窗口，确保所有选项都已选中，然后单击“应用”按钮来应用设置    ：
+在 Unity 菜单中，选择“混合现实” > “工具包” > “实用程序” > “为 MRTK 配置项目”来打开“MRTK 项目配置器”窗口，确保所有选项都已选中，然后单击“应用”按钮来应用设置     ：
 
-![Unity“MRTK 项目配置器”窗口 Android](images/mr-learning-asa/asa-05-section3-step1-2.png)
+![Unity MRTK 项目配置器 1](images/mr-learning-asa/asa-05-section3-step1-2.png)
 
 在 Unity 菜单中，选择“编辑” > “项目设置…”来打开播放器设置窗口，然后找到“播放器” >  “其他设置”部分，选择“Vulkan”，然后单击“-”符号将其删除：     
 
 ![选中了 Vulcan 的 Unity“其他设置”](images/mr-learning-asa/asa-05-section3-step1-3.png)
 
-在 Unity 菜单中，选择“编辑” > “项目设置...” >“播放器”> “XR 设置”，确保使用的是 Android 平台，勾选“支持的虚拟现实”复选框，然后单击“+”图标并选择“无”     ：
-
-![Unity“MRTK 项目配置器”窗口 Android](images/mr-learning-asa/asa-05-section3-step1-2-1.png)
-
-关闭“播放器设置”窗口，再次打开“生成设置”窗口。
+[!INCLUDE[](includes/project-setting-for-asa-android.md)]
 
 在“生成设置”窗口中，单击“添加打开的场景”按钮，将当前场景添加到“生成中的场景”列表中 。 然后，使用 USB 线缆将 Android 设备连接到计算机，再从“运行设备”下拉列表中将它选中：
 
@@ -118,7 +89,7 @@ ms.locfileid: "99590709"
 ![具有“保存”提示窗口 Android 的 Unity“生成设置”窗口](images/mr-learning-asa/asa-05-section3-step1-5.png)
 
 > [!NOTE]
-如果在 Unity 控制台窗口中收到任何与 Android SDK、NDK 或 JDK 模块相关的错误，则需要打开 Unity Hub 并安装相关的 Android 生成支持模块。
+> 如果在 Unity 控制台窗口中收到任何与 Android SDK、NDK 或 JDK 模块相关的错误，则需要打开 Unity Hub 并安装相关的 Android 生成支持模块。
 
 生成过程完成后，应用应会在 Android 设备上自动加载。
 
@@ -135,9 +106,11 @@ ms.locfileid: "99590709"
 
 关闭“生成设置”窗口。
 
-在 Unity 菜单中，选择“混合现实工具包” > “实用程序” > “配置 Unity 项目”来打开“MRTK 项目配置器”窗口，确保所有选项都已选中，然后单击“应用”按钮来应用设置    ：
+在 Unity 菜单中，选择“混合现实” > “工具包” > “实用程序” > “为 MRTK 配置项目”来打开“MRTK 项目配置器”窗口，确保所有选项都已选中，然后单击“应用”按钮来应用设置     ：
 
 ![Unity“MRTK 项目配置器”窗口 iOS](images/mr-learning-asa/asa-05-section4-step1-2.png)
+
+[!INCLUDE[](includes/project-setting-for-asa-ios.md)]
 
 在 Unity 菜单中，选择“编辑” > “项目设置…”来打开播放器设置窗口，然后找到“播放器” >  “其他设置”部分，取消选中“剪裁引擎代码”复选框来禁用它    ：
 

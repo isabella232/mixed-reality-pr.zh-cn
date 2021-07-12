@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 预制件, 全息影像, 工具提示
 ms.localizationpriority: high
-ms.openlocfilehash: 4400ce669863b719b409e11076ceb5689e21893e
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 0abfb4ea2fac3a2e50837c219a465c4ab002e69d
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982970"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110273"
 ---
 # <a name="6-creating-user-interfaces"></a>6.创建用户界面
 
@@ -67,7 +67,7 @@ ms.locfileid: "105982970"
 ![配置了“提示”按钮对象 OnClick 事件的 Unity](images/mr-learning-base/base-06-section1-step1-5.png)
 
 > [!TIP]
-> 可交互组件是一体式的容器，它使所有对象都能轻松交互并响应输入。 “可交互”用作各种类型的输入的一个笼统术语，包括触摸、手射线和语音等等，它将这些交互传送到事件和视觉主题响应中。 若要了解如何为不同的输入类型配置它，以及如何自定义它的视觉主题，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[可交互](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)指南。
+> 可交互组件是一体式的容器，它使所有对象都能轻松交互并响应输入。 “可交互”用作各种类型的输入的一个笼统术语，包括触摸、手射线和语音等等，它将这些交互传送到事件和视觉主题响应中。 若要了解如何为不同的输入类型配置它，以及如何自定义它的视觉主题，可参阅 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity/)中的[可交互](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable)指南。
 
 在“层次结构”窗口中，选择“分解”按钮对象，然后在“检查器”窗口中配置 Interactable.OnClick () 事件，如下所示 ：
 
@@ -116,6 +116,9 @@ ms.locfileid: "105982970"
 
 > [!NOTE]
 > 现在，当应用程序启动时，会默认禁用 V 形指示器，并且可以通过按“指标器”按钮来启用。
+
+> [!NOTE]
+> “方向指示器控制器(脚本)”并不是 MRTK 的一部分，而是属于本教程的资源。
 
 将第二个按钮重命名为“TapToPlace”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件，如下所示 ：
 
@@ -175,7 +178,7 @@ ms.locfileid: "105982970"
 
 ![选中了所有探测器部件对象、添加和配置了 ToolTipSpawner 组件的 Unity](images/mr-learning-base/base-06-section4-step1-2.png)
 
-在“层次结构”窗口中选择第一个探测器部件，“RoverParts”>“Camera_Part”，并按如下所述配置“ToolTipSpawner”组件 ：
+在“层次结构”窗口中选择“Camera_Part”、“RoverParts”>“Camera_Part”，并按如下所述配置“ToolTipSpawner”组件 ：
 
 * 更改“工具提示文本”以反映部件的名称，即“照相机” 
 
@@ -197,4 +200,4 @@ ms.locfileid: "105982970"
 在本教程中，你了解了如何使用 MRTK 提供的按钮和菜单预制件以及 Unity 的 TextMeshPro 组件来创建简单的用户界面，以及如何配置按钮以在按下按钮时触发事件。 还了解了如何添加动态工具提示 UI 元素以向用户提供其他信息。
 
 > [!div class="nextstepaction"]
->[下一教程：7.与 3D 对象交互](mr-learning-base-07.md)
+> [下一教程：7.与 3D 对象交互](mr-learning-base-07.md)

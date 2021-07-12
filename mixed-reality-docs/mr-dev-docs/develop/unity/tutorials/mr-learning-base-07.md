@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界控件
 ms.localizationpriority: high
-ms.openlocfilehash: c2cca67afe19665ea899eb56140011bd9c756a7f
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: cbf2bbf78a34cfdd4856b7b8d192e4ac7c2f0154
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982860"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110268"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 
@@ -88,7 +88,7 @@ ms.locfileid: "105982860"
 
 ![选中了所有探测器部件并添加和配置了“音频源”组件的 Unity](images/mr-learning-base/base-07-section1-step1-4.png)
 
-在“层次结构”窗口中，展开“RoverAssembly”>“RoverModel_PlacementHints_XRay”>“Parts_PlacementHints”对象以显示所有放置提示对象，然后选择第一个探测器部件，“RoverParts”>“Camera_Part”，并配置“部件程序集控制器(脚本)”组件，如下所示  ：
+在“层次结构”窗口中，展开“RoverAssembly”>“RoverModel_PlacementHints_XRay”>“Parts_PlacementHints”对象以显示所有放置提示对象，然后选择 Camera_part 部件，“RoverParts”>“Camera_Part”，并配置“部件程序集控制器(脚本)”组件，如下所示  ：
 
 * 将“Camera_PlacementHint”对象分配到“定位位置”字段 
 
@@ -113,7 +113,7 @@ ms.locfileid: "105982860"
 
 ![显示正在按下“重置”按钮的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section1-step1-7.png)
 
-若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[对象操控器](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)指南。
+若要详细了解“对象操控器”组件及其相关属性，可参阅 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity/)中的[对象操控器](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-manipulator)指南。
 
 ## <a name="adding-bounds-control"></a>添加边界控件
 
@@ -134,7 +134,7 @@ ms.locfileid: "105982860"
 > 边界控件可视化效果是在运行时创建的，因此在进入“游戏”模式之前不可见。
 
 > [!NOTE]
->对象操控器（脚本）自动添加约束管理器（脚本）
+> 对象操控器（脚本）自动添加约束管理器（脚本）
 
 在“层次结构”窗口中展开“菜单”>“ButtonCollection”对象以显示第四个按钮，并将第三个按钮重命名为“BoundsControl_Enable”，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”，如下所示  ：
 
@@ -168,7 +168,7 @@ ms.locfileid: "105982860"
 
 ![显示正在操作边界控件的 Unity“播放”模式分屏视图](images/mr-learning-base/base-07-section2-step1-4.png)
 
-若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[边界控件](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html)指南。
+若要详细了解“边界控件”组件及其相关属性，可以访问 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity/)中的[边界控件](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounds-control)指南。
 
 ## <a name="congratulations"></a>祝贺
 

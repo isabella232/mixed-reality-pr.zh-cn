@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, 混合现实, Mixed Reality, 调试, 部署
-ms.openlocfilehash: 2ab89311163a48ee3c14511446a1498ce883a232
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 5510646c058f683babff5e9e34dd296f88cd06c3
+ms.sourcegitcommit: b4bdac2c4d7315902712ce74fd909fb8383d4bfd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "100496086"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110543223"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>使用 Visual Studio 进行部署和调试
 
@@ -37,7 +37,7 @@ ms.locfileid: "100496086"
 3. 选择“设置”  磁贴，以在你的环境中启动应用。
 4. 选择“更新”  菜单项。
 5. 选择“面向开发人员”  菜单项。
-6. 启用“开发人员模式”，将应用从 Visual Studio 部署到 HoloLens。
+6. 启用“使用开发人员功能”，将应用从 Visual Studio 部署到 HoloLens。 如果设备在 Windows Holographic 版本 21H1 或更高版本上运行，则还要启用“设备发现”。
 7. 可选：向下滚动，并启用设备门户，以便从 Web 浏览器连接到 HoloLens 上的 [Windows 设备门户](using-the-windows-device-portal.md)。
 
 ### <a name="windows-pc"></a>Windows 电脑

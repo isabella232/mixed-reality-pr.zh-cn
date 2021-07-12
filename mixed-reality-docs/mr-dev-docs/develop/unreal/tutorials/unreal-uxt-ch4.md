@@ -7,12 +7,12 @@ ms.date: 11/18/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 2ceb16d31c793629e93c3dca00cb215fcbe38c6a
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 771dd4028adfacb27544e632aa0f355d3bc91c66
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237148"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712590"
 ---
 # <a name="4-making-your-scene-interactive"></a>4.使场景具有交互性
 
@@ -20,26 +20,28 @@ ms.locfileid: "102237148"
 
 ## <a name="objectives"></a>目标
 
-* 从 GitHub 安装混合现实 UX Tools 插件
+* 安装混合现实 UX Tools 插件
 * 将手势交互 Actor 添加到指尖
 * 创建操控器并将其添加到场景中的对象
 * 使用输入模拟来验证项目
 
 ## <a name="downloading-the-mixed-reality-ux-tools-plugin"></a>下载混合现实 UX Tools 插件
-在开始使用用户输入之前，需要将插件添加到项目。
+在开始使用用户输入之前，需要将混合现实 UX Tools 插件添加到项目。 若要了解有关 UX Tools 的详细信息，可以在 [GitHub](https://aka.ms/uxt-unreal) 上查看该项目。
 
-1. 在 GitHub 上的混合现实 UX Tools [发布页](https://github.com/microsoft/MixedReality-UXTools-Unreal/releases)上，导航到适用于 Unreal 的 UX Tools v0.10.0 版本并下载 UXTools.0.10.0.zip。 解压缩文件。
+1. 打开 Epic Games Launcher。 导航到 Unreal Engine Marketplace 并搜索“[Mixed Reality UX Tools](https://www.unrealengine.com/marketplace/en-US/product/mixed-reality-ux-tools)”。 将插件安装到引擎。
 
-2.  在项目的根文件夹中，创建一个名为“插件”的新文件夹。 将解压缩的 UXTools 插件复制到此文件夹中，然后重新启动 Unreal 编辑器。
+![Unreal Marketplace](images/unreal-uxt/2-uxt-plugin.PNG)
 
-![创建项目插件文件夹](images/unreal-uxt/4-plugins.PNG)
+2. 返回到 Unreal 编辑器，前往“项目设置” > “插件”，然后搜索“混合现实 UX Tools”。 请确保已启用该插件，并在出现提示时重新启动编辑器。
 
-3.  UXTools 插件具有一个“内容”文件夹（带有组件子文件夹，包括“按钮”、“输入模拟”和“指针”），以及一个包含额外代码的“C++ 类”文件夹  。  
+![启用混合现实 UX Tools 插件](images/unreal-uxt/2-enable-uxt.PNG)
+
+3.  UXTools 插件具有一个“内容”文件夹（带有组件子文件夹，包括“按钮”、“XR 模拟”和“指针”），以及一个包含额外代码的“C++ 类”文件夹  。  
 
 > [!NOTE]
-> 如果在“内容浏览器”中看不到“UXTools 内容”部分，请单击“视图选项”>“显示插件内容”  。
+> 如果在“内容浏览器”中看不到“UXTools 内容”部分，请单击“视图选项”>“显示引擎内容”  。
 
-![显示插件内容](images/unreal-uxt/4-showplugincontent.PNG)
+![显示引擎内容](images/unreal-uxt/4-showenginecontent.PNG)
 
 可以在混合现实 UX Tools GitHub [存储库](https://aka.ms/uxt-unreal)中找到其他插件文档。
 

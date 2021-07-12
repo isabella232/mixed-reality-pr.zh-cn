@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 222c70882826e61d2b60e104c460156687f8b5df
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: e3c30429109de367993357701092154741ca571b
+ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583353"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111403378"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 
@@ -20,35 +20,12 @@ ms.locfileid: "98583353"
 
 混合现实生态系统是物理与数字交互领域中的新兴事物，其发展潜力只受限于人类的想象力。 无论你是经验丰富的开发人员还是毫无经验的新手，我们都建议使用下列资源开启你的“混合现实”之旅。 接下来我们还将介绍许多新内容，让我们开始吧！ 
 
-## <a name="choose-your-track"></a>选择你的路径
-
-如果知道自己想了解混合现实的哪一个领域，请随时跳转到下方的任意路径。 但请将此页面保留在书签中，以便后续参考基本的概念内容。
-
-:::row:::
-    :::column:::
-       [![我不熟悉混合现实](images/Tile-New.jpg)](#understand-the-basics)<br>
-        **[我不熟悉混合现实](#understand-the-basics)**<br>
-        了解基础知识
-    :::column-end:::
-    :::column:::
-       [![我是设计人员](images/Tile-Create.jpg)](../design/design.md)<br>
-        **[我是设计人员](../design/design.md)**<br>
-        开始设计和原型制作
-    :::column-end:::
-    :::column:::
-       [![我是开发人员](images/Tile-Develop.jpg)](../develop/development.md)<br>
-        **[我是开发人员](../develop/development.md)**<br>
-        了解工具和体系结构
-    :::column-end:::
-:::row-end:::
-
-<br>
-
----
-
 ## <a name="understand-the-basics"></a>了解基础知识
 
-如果你是首次接触混合现实，请务必从头开始，逐步了解其核心概念、体验和功能。 我们创建了一系列内容丰富的教程，可帮助你为在“混合现实”中设计和形成自己的创意奠定坚实基础。
+如果你是首次接触混合现实，请务必从头开始，逐步了解其核心概念、体验和功能。 您有两个选项：我们针对 Microsoft Learn 有一个重点模块，可帮助您快速学习，您也可以根据需要探索下面已经编撰好的说明。 这两种途径都可以帮助您打下坚实的基础，让您在混合现实中构思和形成自己的创意。
+
+> [!div class="nextstepaction"]
+> [混合现实简介模块](/learn/modules/intro-to-mixed-reality)
 
 ### <a name="what-is-mixed-reality"></a>什么是混合现实？
 
@@ -154,16 +131,17 @@ ms.locfileid: "98583353"
 | [HoloLens 硬件](https://www.microsoft.com//hololens/hardware) | HoloLens 2 提供最舒适的沉浸式混合现实体验，其行业领先的解决方案可以在数分钟内让你感受到其价值 — 这一切由 Microsoft 推出的云和 AI 服务所特有的可靠性、安全性和可伸缩性来增强 |
 | [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | 了解可通过 Dynamics 365 为员工助力并优化运营的一系列产品，包括[远程协助](/dynamics365/mixed-reality/remote-assist/ra-overview)、[布局和[指南](/dynamics365/mixed-reality/guides/)。 有意义的见解源于从事实际工作、使用实际设备，以及对话真实用户 |
 | [Azure 云服务](../develop/mixed-reality-cloud-services.md) | 通过添加空间感知、空间锚点和复杂的 3D 模型渲染，在不同平台上生成具有吸引力的沉浸式体验 |
+| [Microsoft Mesh](/mesh/overview) | Mesh 使用户能够连接到状态，跨空间共享，通过支持 Mesh 的混合现实体验并与世界各地的其他用户进行协作。 借助 Mesh，您可以增强虚拟会议、召开虚拟设计会议、远程帮助其他人以及主持虚拟网络会议 |
 
 ## <a name="what-would-you-like-to-do-next"></a>接下来，你想做什么？
 
 :::row:::
     :::column:::
-        [![成为创建者](images/icon-design.png)](../design/design.md)<br>
-        **[成为创建者](../design/design.md)**<br>
+        [![开始设计](images/icon-design.png)](../design/design.md)<br>
+        **[开始设计](../design/design.md)**<br>
         了解开始设计和原型制作所需的基本概念。
     :::column-end:::
-        :::column:::
+    :::column:::
         [![开始开发](images/icon-developer.png)](../develop/development.md)<br>
         **[开始开发](../develop/development.md)**<br>
         根据技能水平、工作风格或平台兴趣选择开发路径。
@@ -174,9 +152,6 @@ ms.locfileid: "98583353"
         查看硬件并获取动手教程，以便创建第一个 HoloLens 2 应用程序。
     :::column-end:::
 :::row-end:::
-
-
-<br>
 
 <br>
 

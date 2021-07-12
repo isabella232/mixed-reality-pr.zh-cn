@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10, LUIS, LUIS 门户, 意图, 实体, 言语, 自然语言理解
 ms.localizationpriority: high
-ms.openlocfilehash: 49e2b44000add22e924d9552f60b63ac1ac30288
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: ab9c1db7ca90a59e4ef688a8faa3d294e433cff6
+ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590359"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111403458"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4.设置意向和自然语言理解
 
@@ -27,18 +27,18 @@ ms.locfileid: "99590359"
 
 在“层次结构”窗口中选择“Lunarcom”对象，然后在“检查器”窗口中，使用“添加组件”按钮将“Lunarcom 意向识别器(脚本)”组件添加到 Lunarcom 对象中：   
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-1.png)
+![mrlearning-speech 1](images/mrlearning-speech/tutorial4-section1-step1-1.png)
 
 在“项目”窗口中导航到“资产” > “MRTK.Tutorials.GettingStarted” > “预制件” > “RocketLauncher”文件夹，将“RocketLauncher_Complete”预制件拖放到“层次结构”窗口中，并将其放在相机前面的适当位置，例如：     
 
 * 变换 **位置** X = 0，Y = -0.4，Z = 1
 * 变换 **位置** X = 0，Y = 90，Z = 0
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-2.png)
+![mrlearning-speech 2](images/mrlearning-speech/tutorial4-section1-step1-2.png)
 
 在“层次结构”窗口中再次选择“Lunarcom”对象，展开“RocketLauncher_Complete” > “Button”对象，并将“Button”对象的每个子对象分配到相应的“Lunar Launcher 按钮”字段中：     
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-3.png)
+![mrlearning-speech 3](images/mrlearning-speech/tutorial4-section1-step1-3.png)
 
 ## <a name="creating-the-azure-language-understanding-resource"></a>创建 Azure 语言理解资源
 
@@ -46,18 +46,18 @@ ms.locfileid: "99590359"
 
 登录到 <a href="https://portal.azure.com" target="_blank">Azure</a> 并单击“创建资源”。  然后搜索并选择“语言理解”： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-1.png)
+![mrlearning-speech 4](images/mrlearning-speech/tutorial4-section2-step1-1.png)
 
 单击“创建”按钮创建此服务的实例： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-2.png)
+![mrlearning-speech 5](images/mrlearning-speech/tutorial4-section2-step1-2.png)
 
 在“创建”页上，单击“预测”选项并输入以下值： 
 
 * 对于“订阅”，如果你有试用版订阅，请选择“免费试用”，否则请选择其他订阅之一  
 * 对于“资源组”，请单击“新建”链接，输入适当的名称（例如 MRKT-Tutorials），然后单击“确定” 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-3.png)
+![mrlearning-speech 6](images/mrlearning-speech/tutorial4-section2-step1-3.png)
 
 > [!NOTE]
 > 截至编写本文时，无需创建创作资源，因为在下一部分创建语言理解智能服务 (LUIS) 时，系统会在 LUIS 中自动生成一个创作试用密钥。
@@ -71,18 +71,18 @@ ms.locfileid: "99590359"
 * 对于“预测位置”，请选择与应用用户的实际位置靠近的位置，例如“(美国)美国西部”  
 * 对于“预测定价层”，根据本教程的目的，请选择“F0 (每秒 5 次调用，每月 1 万次调用)”  
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-4.png)
+![mrlearning-speech 7](images/mrlearning-speech/tutorial4-section2-step1-4.png)
 
 接下来，单击“查看 + 创建”选项卡，复查详细信息，然后单击页面底部的“创建”按钮，以创建资源和新资源组（如果配置为创建资源组） ：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-5.png)
+![mrlearning-speech 8](images/mrlearning-speech/tutorial4-section2-step1-5.png)
 
 > [!NOTE]
 > 单击“创建”按钮后，必须等待服务创建完成，这可能需要几分钟时间。
 
 资源创建过程完成后，将看到消息“部署完成”： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-6.png)
+![mrlearning-speech 9](images/mrlearning-speech/tutorial4-section2-step1-6.png)
 
 ## <a name="creating-the-language-understanding-intelligent-service-luis"></a>创建语言理解智能服务 (LUIS)
 
@@ -118,11 +118,11 @@ ms.locfileid: "99590359"
 
 然后单击“完成”按钮创建新应用： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step1-1.png)
+![mrlearning-speech 10](images/mrlearning-speech/tutorial4-section3-step1-1.png)
 
 创建新应用后，你将转到该应用的“仪表板”页： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step1-2.png)
+![mrlearning-speech 11](images/mrlearning-speech/tutorial4-section3-step1-2.png)
 
 ### <a name="2-create-intents"></a>2.创建意向
 
@@ -132,14 +132,14 @@ ms.locfileid: "99590359"
 
 然后单击“完成”按钮创建新意向： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step2-1.png)
+![mrlearning-speech 12](images/mrlearning-speech/tutorial4-section3-step2-1.png)
 
 > [!CAUTION]
 > 在本教程中，Unity 项目将按名称（即“PressButton”）引用此意向。 因此，为意向指定完全相同的名称极其重要。
 
 创建新意向后，你将转到该意向的页面：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step2-2.png)
+![mrlearning-speech 14](images/mrlearning-speech/tutorial4-section3-step2-2.png)
 
 ### <a name="3-create-example-utterances"></a>3.创建示例言语
 
@@ -158,7 +158,7 @@ ms.locfileid: "99590359"
 
 添加所有示例言语后，PressButton 意向页应如下所示：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step3-1.png)
+![mrlearning-speech 15](images/mrlearning-speech/tutorial4-section3-step3-1.png)
 
 > [!CAUTION]
 > 在本教程中，Unity 项目将引用词语“提示”、“重置”和“发射”。 因此，以完全相同的方式拼写这些词语极其重要。
@@ -172,11 +172,11 @@ ms.locfileid: "99590359"
 
 然后，单击“创建”按钮来创建新的实体：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step4-1.png)
+![mrlearning-speech 16](images/mrlearning-speech/tutorial4-section3-step4-1.png)
 
 **重复** 上述步骤创建名为 **Target** 的另一个实体，因此现在有名为 Action 和 Target 的两个实体：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step4-2.png)
+![mrlearning-speech 17](images/mrlearning-speech/tutorial4-section3-step4-2.png)
 
 > [!CAUTION]
 > 在本教程中，Unity 项目将按名称（即“Action”和“Target”）引用这些实体。 因此，为实体指定完全相同的名称极其重要。
@@ -187,22 +187,22 @@ ms.locfileid: "99590359"
 
 返回到 PressButton 意向页后，依次单击单词“继”和“续”，然后从上下文弹出菜单中选择“Action (简单)”，将“继续”标记为 **Action** 实体值：    
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-1.png)
+![mrlearning-speech 18](images/mrlearning-speech/tutorial4-section3-step5-1.png)
 
 短语“继续”现在定义为 **Action** 实体值。  现在，你可以看到“继续”一词下方的操作实体值：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-2.png)
+![mrlearning-speech 19](images/mrlearning-speech/tutorial4-section3-step5-2.png)
 
 > [!NOTE]
 > 上图中标签下方的红线表示尚未预测实体值，在下一部分训练模型时将解决此问题。
 
 接下来单击词语“发射”，然后从上下文弹出菜单中选择“Target (简单)”，将“发射”标记为 **Target** 实体值：   
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-3.png)
+![mrlearning-speech 20](images/mrlearning-speech/tutorial4-section3-step5-3.png)
 
 现将“启动”一词定义为目标实体值。你可以看到“启动”一词下方的目标实体值 ：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-4.png)
+![mrlearning-speech 21](images/mrlearning-speech/tutorial4-section3-step5-4.png)
 
 PressButton 意向示例言语“继续发射火箭”现已配置为按如下所示进行预测：
 
@@ -219,20 +219,20 @@ PressButton 意向示例言语“继续发射火箭”现已配置为按如下�
 
 标记所有示例言语后，PressButton 意向页应如下所示：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-5.png)
+![mrlearning-speech 22](images/mrlearning-speech/tutorial4-section3-step5-5.png)
 
 ### <a name="6-train-test-and-publish-the-app"></a>6.训练、测试并发布应用
 
 若要训练应用，请单击“训练”按钮并等待训练过程完成： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-1.png)
+![mrlearning-speech 23](images/mrlearning-speech/tutorial4-section3-step6-1.png)
 
 > [!NOTE]
 > 在上图中可以发现，所有标签下面的红线都已删除，这表示已预测所有实体值。 另外可以看到，“训练”按钮左侧的状态图标颜色已从红色变为绿色。
 
 处理完训练后，单击“测试”按钮，然后键入“继续发射火箭”并按 Enter 键：  
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-2.png)
+![mrlearning-speech 24](images/mrlearning-speech/tutorial4-section3-step6-2.png)
 
 处理测试言语后，单击“检查”以查看测试结果： 
 
@@ -240,41 +240,41 @@ PressButton 意向示例言语“继续发射火箭”现已配置为按如下�
 * Action 实体：继续
 * Target 实体：发射
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-3.png)
+![mrlearning-speech 25](images/mrlearning-speech/tutorial4-section3-step6-3.png)
 
 若要发布应用，请单击右上方的“发布”按钮，然后在“选择发布槽和设置”弹出窗口中，选择“生产”并单击“完成”按钮   ：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-4.png)
+![mrlearning-speech 26](images/mrlearning-speech/tutorial4-section3-step6-4.png)
 
 等待发布过程完成：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-5.png)
+![mrlearning-speech 27](images/mrlearning-speech/tutorial4-section3-step6-5.png)
 
 导航到“管理”>“应用程序设置”>“Azure 资源”页，“Azure 资源”页应如下所示：
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-6.png)
+![mrlearning-speech 28](images/mrlearning-speech/tutorial4-section3-step6-6.png)
 
 ## <a name="connecting-the-unity-project-to-the-luis-app"></a>将 Unity 项目连接到 LUIS 应用
 
 在“管理”>“应用程序设置”>“Azure 资源”页上，单击“复制”图标复制“示例查询”：   
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section4-step1-1.png)
+![mrlearning-speech 29](images/mrlearning-speech/tutorial4-section4-step1-1.png)
 
 返回到 Unity 项目，在“层次结构”窗口中选择“Lunarcom”对象，然后在“检查器”窗口中，找到“Lunarcom 意向识别器(脚本)”组件，并按如下所述对其进行配置：  
 
 * 在“LUIS 终结点”字段中，粘贴在上一步骤中复制的“示例查询”：  
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section4-step1-2.png)
+![mrlearning-speech 30](images/mrlearning-speech/tutorial4-section4-step1-2.png)
 
 ## <a name="testing-and-improving-the-intent-recognition"></a>测试和改善意向识别
 
 若要在 Unity 编辑器中直接使用意向识别，必须允许开发计算机使用听写。 若要验证此设置，请打开 Windows 的“设置”，然后选择“隐私” > “语音”，并确保启用“在线语音识别”：    
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-1.png)
+![mrlearning-speech 31](images/mrlearning-speech/tutorial4-section5-step1-1.png)
 
 如果现在进入“游戏”模式，可以先按火箭按钮来测试意向识别。 假设计算机上配备了麦克风，当你讲出第一个示例言语“继续发射火箭”时，将会看到 LunarModule 发射到了太空： 
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-2.png)
+![mrlearning-speech 32](images/mrlearning-speech/tutorial4-section5-step1-2.png)
 
 尝试所有 **示例言语**，然后尝试 **示例言语的一些变体**，以及一些 **随机言语**。
 
@@ -286,7 +286,7 @@ PressButton 意向示例言语“继续发射火箭”现已配置为按如下�
 
 检查所需数目的言语后，单击“训练”按钮以重新训练模型，然后单击“发布”按钮重新发布更新的应用：  
 
-![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-3.png)
+![mrlearning-speech 33](images/mrlearning-speech/tutorial4-section5-step1-3.png)
 
 > [!NOTE]
 > 如果某个终结点言语与 PressButton 意向不一致，但你希望模型知道该言语不包含意向，可将“对齐的意向”更改为“无”。

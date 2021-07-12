@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计, hololens, MMR, 多模式, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens
-ms.openlocfilehash: 37ac7475172977c8741c17817568cc9b5ad2a4e5
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 55e23ac2fb802af599fb9cc7d771d89d6ba36c47
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "97847289"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110196412"
 ---
 # <a name="introducing-instinctual-interactions"></a>本能交互简介
 
@@ -28,6 +28,14 @@ ms.locfileid: "97847289"
 * 围绕三个主要交互模型以及每个模型所需的组件和模式的特定指南。
 * 有关平台提供的其他优势的补充指南。
 * 常规指南，用于选择适合开发方案的交互模型。
+
+## <a name="basic-hand-tracking-and-instinctual-interactions-demo"></a>基本手部跟踪和本能交互演示
+
+请查看下面的“设计全息影像 - 头部跟踪和眼动跟踪”视频演示，然后继续了解更具体的主题：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Hand-Tracking-Chapter/player]
+
+此视频来自于“设计全息影像”HoloLens 2 应用。在[此处](https://aka.ms/dhapp)下载并享受完整体验。
 
 ## <a name="multimodal-interaction-models"></a>多模式交互模型
 

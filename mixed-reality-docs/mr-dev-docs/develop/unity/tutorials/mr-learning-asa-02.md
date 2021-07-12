@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 5f16d3c12e6dbb977ecedc1598a28073cfb39222
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: eddde9b827dcf2a2f054f48a50f38946e5d98533
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105983140"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175572"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2.Azure 空间定位点入门
 
@@ -31,43 +31,15 @@ ms.locfileid: "105983140"
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如“MRTK 教程”
 2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
-3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-6. [创建和设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如 AzureSpatialAnchors
+3. [导入 TextMeshPro 基本资源](mr-learning-base-04.md#importing-the-textmeshpro-essential-resources)
+4. [导入混合现实工具包和配置 Unity 项目](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
+5. [创建和设置场景](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk)，并为场景提供一个合适的名称，例如 AzureSpatialAnchors
 
-然后，按照[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)中的说明执行以下操作：
+然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明，确保场景的 MRTK 配置配置文件为“DefaultHoloLens2ConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
 
-1. 将 MRTK 配置配置文件更改为 DefaultHoloLens2ConfigurationProfile 
-1. 将空间感知网格显示选项更改为“遮挡” 。
+## <a name="installing-inbuilt-unity-packages-and-importing-the-tutorial-assets"></a>安装内置 Unity 包和导入教程资产
 
-## <a name="installing-inbuilt-unity-packages"></a>安装内置 Unity 包
-
-在 Unity 菜单中，选择“窗口” > “包管理器”打开“包管理器”窗口，然后选择“AR Foundation”并单击“安装”按钮以安装包   ：
-
-![选中 AR Foundation 的 Unity 包管理器](images/mr-learning-asa/asa-02-section2-step1-1.png)
-
-> [!NOTE]
-> 你要安装 AR Foundation 包，因为在下一部分中导入 Azure 空间定位点 SDK 时必须使用它。
-
-## <a name="importing-the-tutorial-assets"></a>导入教程资产
-
-将 AzurespatialAnchors SDK V2.7.1 添加到 unity 项目，若要添加包，请遵循此[教程](/azure/spatial-anchors/how-tos/setup-unity-project?tabs=UPMPackage)
-
-下载以下 Unity 自定义包，并 **按其列出顺序** 将其 **导入**：
-
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.5.3/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage)
-
-导入教程资产后，“项目”窗口应如下所示：
-
-![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-asa/asa-02-section3-step1-1.png)
-
-> [!NOTE]
-> 如果看到任何有关“WorldAnchor.SetNativeSpatialAnchorPtr(IntPtr) 已过时”的 CS0618 警告，则可以忽略这些警告。
-
-> [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-02.md#importing-the-tutorial-assets)说明。
+[!INCLUDE[](includes/installing-packages-for-asa.md)]
 
 ## <a name="preparing-the-scene"></a>准备场景
 
@@ -84,6 +56,20 @@ ms.locfileid: "105983140"
 
 > [!TIP]
 > 如果在场景中看到很大的图标（例如，框住的“T”图标会分散注意力），可以通过<a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">将调节器 (Gizmos) 切换</a>到关闭位置来隐藏这些图标，如上图所示。
+
+在“层次结构”窗口中选择“MixedRealityToolkit”对象，使用检查器窗口中的“添加组件”按钮添加以下组件 ：
+
+* AR 空间点管理器(脚本)
+* DisableDiagnosticsSystem (脚本)
+
+![添加了 AR 定位点管理器和 DisableDiagnosticsSystem 组件的 Unity MixedRealityToolkit 对象 ](images/mr-learning-asa/asa-02-section4-step1-2.PNG)
+
+> [!WARNING]
+> ASA v2.9.0 和 v2.10.0-preview.1 存在一个已知问题，需要在场景中放置两个额外对象。 请使用检查器窗口中的“添加组件”按钮向“MixedRealityToolkit”对象添加“AR 摄像头管理器（脚本）”和“AR 会话（脚本）”。 请务必取消选中检查器窗口中“摄像头”对象旁边的复选框，以禁用在添加“AR 摄像头管理器（脚本）”时自动创建的摄像头。 此问题将在 ASA v 2.10.0 的完整版本中得到解决。
+> 
+
+> [!NOTE]
+> 添加“AR 空间点管理器（脚本）”组件时，会自动添加“AR 会话原点（脚本）”组件，因为它是“AR 空间点管理器（脚本）”所必需的。
 
 ## <a name="configuring-the-buttons-to-operate-the-scene"></a>配置按钮以操作场景
 
@@ -153,15 +139,15 @@ Azure 空间定位点不能在 Unity 中运行，因此，若要测试 Azure 空
 当应用在设备上运行时，请按照“Azure 空间定位点教程说明”面板上显示的屏幕说明进行操作：
 
 1. 将多维数据集移动至其他位置
-1. 启动 Azure 会话
-1. 创建 Azure 定位点（在多维数据集的位置创建定位点）。
-1. 停止 Azure 会话
-1. 删除本地定位点（允许用户移动多维数据集）
-1. 将多维数据集移动至其他位置
-1. 启动 Azure 会话
-1. 查找 Azure 定位点（将多维数据集定位到步骤 3 所述的位置）
-1. 删除 Azure 定位点
-1. 停止 Azure 会话
+2. 启动 Azure 会话
+3. 创建 Azure 定位点（在多维数据集的位置创建定位点）。
+4. 停止 Azure 会话
+5. 删除本地定位点（允许用户移动多维数据集）
+6. 将多维数据集移动至其他位置
+7. 启动 Azure 会话
+8. 查找 Azure 定位点（将多维数据集定位到步骤 3 所述的位置）
+9. 删除 Azure 定位点
+10. 停止 Azure 会话
 
 ![选中 Instructions 对象的 Unity](images/mr-learning-asa/asa-02-section7-step1-1.png)
 

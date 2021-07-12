@@ -3,16 +3,16 @@ title: 欢迎使用混合现实功能工具
 description: 了解面向 HoloLens 和 VR 开发的混合现实功能工具的基础知识。
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 01/27/2021
+ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: 0aad81ddd625467dd9159232d590b1a4bf68d06b
-ms.sourcegitcommit: d9f87635c87627adba7db37834e4627c149f9a28
+ms.openlocfilehash: 4e822f2dda2a314ce06bc394a4d92b1aa6953af3
+ms.sourcegitcommit: 943489923c69c3a28bc152f1cb516dcdcea2880a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99570250"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111772410"
 ---
 # <a name="welcome-to-the-mixed-reality-feature-tool"></a>欢迎使用混合现实功能工具
 
@@ -33,13 +33,31 @@ ms.locfileid: "99570250"
 > [!NOTE]
 > 混合现实功能工具目前仅可在 Windows 上运行，但即将推出 MacOS 支持！
 
-## <a name="download"></a>下载 
+## <a name="download"></a>下载
 
 设置环境后：
 
 * 请从 Microsoft 下载中心[下载混合现实功能工具的最新版本](https://aka.ms/MRFeatureTool)。
 * 下载完成后，解压缩文件并将其保存到桌面
     * 建议创建可执行文件的快捷方式，以便更快地进行访问
+
+> [!NOTE]
+> 如果您是刚开始使用 Unity 包管理器，请遵循我们的 [UPM 说明](/windows/mixed-reality/mrtk-unity/configuration/usingupm#managing-mixed-reality-features-with-the-unity-package-manager)。
+
+## <a name="changes-in-this-release"></a>此版本中的更改
+
+版本 1.0.2103 Beta 包含以下修补程序：
+
+* 改进了下载错误检测。
+* 更新了如何编写清单以避免无法正确更新。
+* 已从项目清单中的文件路径中删除 Escpaing。
+
+此版本中添加了以下功能：
+
+* 功能目录现在会缓存。 若要检查新功能和更新，请使用“发现”中的刷新按钮。
+* 将项目选择从“导入”步骤移动到“发现”之前。
+* 可用包按项目的指定 Unity 版本进行筛选。
+* 发现视图现在会显示当前安装的包。
 
 ## <a name="1-getting-started"></a>1.入门
 
@@ -53,26 +71,43 @@ ms.locfileid: "99570250"
 * 使用问号按钮启动默认 web 浏览器并显示文档
 * 选择“开始”，开始发现功能包
 
-## <a name="2-discovering-and-acquiring-feature-packages"></a>2.发现并获取功能包
+## <a name="2-selecting-your-unity-project"></a>2. 选择 Unity 项目
 
-按下“开始”之后，即会检索功能包目录。 功能按类别分组，方便查找。 例如，“混合现实工具包”类别具有几个可供选择的功能：
+为了确保您项目的 Unity 版本支持所有发现的功能，第一步是使用省略号按钮（位于项目路径字段右侧）将混合现实功能工具指向您的项目。
+
+![选择 Unity 项目](images/FeatureToolSelectUnityProject.png)
+
+> [!NOTE]
+> 浏览 Unity 项目文件夹时显示的对话框包含“_”作为文件名。 文件名必须有一个值才能使文件夹被选中。
+
+找到项目的文件夹后，单击“打开”按钮返回到混合现实功能工具。
+
+> [!IMPORTANT]
+> 混合现实功能工具执行验证以确保它已定向到 Unity 项目文件夹。 该文件夹必须包含 `Assets`、`Packages` 和 `Project Settings` 文件夹。
+
+## <a name="3-discovering-and-acquiring-feature-packages"></a>3. 发现并获取功能包
+
+> [!NOTE]
+> 版本 1.0.2103 Beta 现在每次访问服务器时都会缓存功能目录内容。 通过此更改，可以快速访问可用功能，但却只能显示绝对最新的数据。 若要更新目录，请使用“刷新”按钮。
+
+功能按类别分组，方便查找。 例如，“混合现实工具包”类别具有几个可供选择的功能：
 
 ![发现和获取](images/FeatureToolDiscovery.png)
 
+当混合现实功能工具识别到以前导入的功能时，它针对每个功能显示一条通知消息。
+
+![已导入功能的通知](images/feature-tool-imported-note.png)
+
+
 做出选择后，选择“获取功能”，从目录中获取所有所需的包。 有关详细信息，请参阅[发现并获取功能](discovering-features.md)。
 
-## <a name="3-importing-feature-packages"></a>3.导入功能包
+## <a name="4-importing-feature-packages"></a>4. 导入功能包
 
 获取完毕后，将显示完整的包集，以及所需依赖项的列表。 如果需要更改任何功能或包选择，则可以执行以下操作：
 
 ![导入程序包](images/FeatureToolImport.png)
 
 强烈建议使用“验证”按钮，确保 Unity 项目可以成功导入所选功能。 验证完成后，你将看到一个弹出对话框，其中包含一条成功消息或已识别出的问题的列表。
-
-还需要在导入之前设置目标 Unity 项目的位置。 使用项目路径左侧的省略号按钮进行浏览。 完成文件系统导航后，打开包含目标 Unity 项目的文件夹。
-
-> [!NOTE]
-> 浏览 Unity 项目文件夹时显示的对话框包含“_”作为文件名。 文件名必须有一个值才能使文件夹被选中。
 
 选择“导入”继续。
 
@@ -81,7 +116,7 @@ ms.locfileid: "99570250"
 
 有关详细信息，请参阅[导入功能](importing-features.md)。
 
-## <a name="4-reviewing-and-approving-project-changes"></a>4.查看和批准项目更改
+## <a name="5-reviewing-and-approving-project-changes"></a>5. 查看和批准项目更改
 
 最后一步是检查并批准对清单和项目文件的建议更改：
 
@@ -93,9 +128,9 @@ ms.locfileid: "99570250"
 
 有关详细信息，请参阅[查看和批准项目修改](reviewing-changes.md)。
 
-## <a name="5-project-updated"></a>5.已更新项目
+## <a name="6-project-updated"></a>6. 已更新项目
 
-更改建议获得批准后，会更新目标 Unity 项目以引用所选的混合现实功能：
+更改建议获得批准后，目标 Unity 项目会进行相应更新以引用所选的混合现实功能。
 
 ![已更新项目](images/FeatureToolProjectUpdated.png)
 

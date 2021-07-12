@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 求解器
 ms.localizationpriority: high
-ms.openlocfilehash: b2d23601419c36f2a79a0c6e19d06eda6dc54d09
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 8398c4d6fdc69801beff1b7c6de5e4c3847dd5e4
+ms.sourcegitcommit: adbe3baa6b1c284ed1c4fd796d8b5612c3ca3f42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300392"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112270422"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5.使用求解器创建动态内容
 
@@ -30,7 +30,7 @@ ms.locfileid: "107300392"
 
 ![选中了 SOlvers 文件夹的 Unity“项目”窗口](images/mr-learning-base/base-05-section1-step1-1.png)
 
-本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver)指南。
+本教程将回顾方向指示器求解器和点击放置求解器的实现。 若要详细了解 MRTK 中提供的各个求解器，可以访问 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity)中的[求解器](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver)指南。
 
 > [!NOTE]
 > 方向指示器求解器不在上面所述的求解器文件夹中，而是在“包”>“混合现实工具包基础”>“SDK”>“实验性”>“功能”>“实用工具”文件夹，因为这是一项实验性功能。
@@ -44,15 +44,12 @@ ms.locfileid: "107300392"
 > [!TIP]
 > 如果在场景中发现相机或任何其他图标隐藏了对象或让人分心，则可以通过<a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">切换调节器</a>（切换到关闭位置）来隐藏这些图标，如下图所示。 若要详细了解调节器菜单以及如何使用它来优化场景视图，可以参阅 Unity 的<a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">调节器菜单</a>文档。
 
-重命名新添加的 V 形对象指示器，然后在“检查器”窗口中，使用“添加组件”按钮添加 DirectionalIndicator：  
+将新添加的 V 形对象重命名为“指示器”，然后在“检查器”窗口中，使用“添加组件”按钮添加 DirectionalIndicator：  
 
 ![添加了 DirectionalIndicator 求解器组件的 Unity](images/mr-learning-base/base-05-section2-step1-2.png)
 
 > [!NOTE]
 > 添加求解器（在本例中为 DirectionalIndicator 组件）时，系统会自动添加 SolverHandler 组件，因为求解器需要该组件。
-
-> [!NOTE]
-> “方向指示器控制器(脚本)”并不是 MRTK 的一部分，而是属于本教程的资源。
 
 按如下所示配置 DirectionalIndicator 和 SolverHandler 组件：
 
@@ -72,7 +69,7 @@ ms.locfileid: "107300392"
 > 如果在“场景”窗口中未看到相机光线，请确保已启用调节器菜单，如上图所示。
 
 > [!TIP]
-> 若要了解如何使用编辑器中的输入模拟功能，可以参考 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)中的[使用编辑器中的手写输入模拟来测试场景](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene)指南。
+> 若要了解如何使用编辑器中的输入模拟功能，可以参考 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity)中的[使用编辑器中的手写输入模拟来测试场景](/windows/mixed-reality/mrtk-unity/features/input-simulation/input-simulation-service)指南。
 
 > [!TIP]
 > 如果计算机有麦克风，你可以使用语音命令“切换诊断”轻松切换游戏窗口中显示的“诊断”面板的活动状态。 或者，你也可以在“MRTK 配置文件”>“诊断”>“启用诊断系统”中禁用它。 但是，我们通常建议你在开发过程中使诊断系统保持活动状态。
@@ -91,7 +88,7 @@ ms.locfileid: "107300392"
 > [!NOTE]
 > 磁性界面设置可确定放置对象时“点击放置(脚本)”组件可以检测的对象。 将设置更改为仅“空间感知”后，“点击放置(脚本)”组件将只能在名为“空间感知”的 Unity 层上放置对象的探测器，默认情况下，它是由 HoloLens 生成的空间感知网格。
 >
->若要了解有关层的详细信息，可以参考 Unity 的<a href="https://docs.unity3d.com/Manual/Layers.html" target="_blank">层</a>文档。
+> 若要了解有关层的详细信息，可以参考 Unity 的<a href="https://docs.unity3d.com/Manual/Layers.html" target="_blank">层</a>文档。
 
 > [!TIP]
 > 如果要在 HoloLens 上测试“点击放置”功能时查看空间感知网格，你可以暂时将空间网格观察程序的“显示”选项设置为“可见”。 有关如何更改“显示”选项的提醒，可参考[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明。
@@ -140,7 +137,7 @@ ms.locfileid: "107300392"
 
 在本教程中，你学习了如何使用 MRTK 的方向指示器求解器让 UI 元素直观地将用户定向到对象。 还了解了如何使用“点击放置”求解器轻松重新定位对象。
 
-若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/)中的[求解器](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver)指南。
+若要详细了解上述求解器以及 MRTK 中包含的其他求解器，可参阅 [MRTK 文档门户](/windows/mixed-reality/mrtk-unity/)中的[求解器](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver)指南。
 
 > [!div class="nextstepaction"]
->[下一教程：6.创建用户界面](mr-learning-base-06.md)
+> [下一教程：6.创建用户界面](mr-learning-base-06.md)

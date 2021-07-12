@@ -7,12 +7,12 @@ ms.date: 05/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 眼动跟踪, 混合现实, 输入, 眼睛凝视, 视线定位, HoloLens 2, 视线选择, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包, 凝视
-ms.openlocfilehash: 1f337d3cbc1f82b4f69194d4b903687be067f9d6
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 1dff0ded282678a695070feca2b578004610d2c7
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "97847874"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110196462"
 ---
 # <a name="eye-gaze-and-commit"></a>眼睛凝视和提交
 
@@ -26,8 +26,18 @@ _眼睛凝视和提交_ 是 [凝视和提交](gaze-and-commit.md)输入模型的
    - 语音命令（例如，“选择”）
    - 停留（即用户只是一直看着要选择的目标）
 
-然而，眼睛凝视在某些方面与头部凝视的行为方式不同，具有许多独特的挑战。 在[眼睛凝视设计指南](eye-tracking.md)中，我们总结了将眼动追踪作为全息应用的输入时的一般优势和挑战。 在本部分中，我们重点介绍眼睛凝视和提交的具体设计注意事项。 
+然而，眼睛凝视在某些方面与头部凝视的行为方式不同，具有许多独特的挑战。 
+
+在[眼睛凝视设计指南](eye-tracking.md)中，我们总结了将眼动追踪作为全息应用的输入时的一般优势和挑战。 在本部分中，我们重点介绍眼睛凝视和提交的具体设计注意事项。 
 首先，眼睛的运动速度非常快，非常善于在视野中快速定位。 眼睛凝视非常适合快速凝视和提交操作，特别是在与快速提交（例如隔空敲击或按按钮）结合使用时。
+
+## <a name="head-and-eye-tracking-design-concepts-demo"></a>头部和眼动跟踪设计概念演示
+
+若要了解头部和眼动跟踪设计概念的运行情况，请查看下面的“设计全息影像 - 头部跟踪和眼动跟踪”视频演示。 完成后，请继续详细了解特定主题。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
+
+此视频来自于“设计全息影像”HoloLens 2 应用。在[此处](https://aka.ms/dhapp)下载并享受完整体验。
    
 ## <a name="design-guidelines-for-eye-gaze-and-commit"></a>眼睛凝视和提交的设计指南
 

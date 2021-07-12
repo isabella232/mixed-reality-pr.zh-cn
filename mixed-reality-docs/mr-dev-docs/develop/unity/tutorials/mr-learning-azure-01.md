@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: azure, 混合现实, unity, 教程, hololens, hololens 2, azure blob 存储, azure 表存储, azure 空间定位点, azure bot framework, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: f82253ce4894038a8d8e34b06f5d699289fef691
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: c38f3102adfb5178a4d2b5429eeb24c0733db50a
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982910"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175532"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1.适用于 HoloLens 2 的 Azure 云服务
 
@@ -86,10 +86,9 @@ ms.locfileid: "105982910"
 
 1. [创建 Unity 项目](mr-learning-base-02.md#creating-the-unity-project)并为其指定适当的名称，例如 Azure 云教程
 2. [切换生成平台](mr-learning-base-02.md#switching-the-build-platform)
-3. [导入 TextMeshPro 基本资源](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-4. [导入混合现实工具包](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [配置 Unity 项目](mr-learning-base-02.md#configuring-the-unity-project)
-6. [创建并设置场景](mr-learning-base-02.md#creating-and-configuring-the-scene)，并为场景提供一个合适的名称，例如 AzureCloudServices
+3. [导入 TextMeshPro 基本资源](mr-learning-base-04.md#importing-the-textmeshpro-essential-resources)
+4. [导入混合现实工具包和配置 Unity 项目](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
+5. [创建并设置场景](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk)，并为场景提供一个合适的名称，例如 AzureCloudServices
 
 然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明，确保场景的 MRTK 配置配置文件为“DefaultXRSDKConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
 
@@ -112,7 +111,7 @@ ms.locfileid: "105982910"
 * [MRTK.Tutorials.AzureCloudServices.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-cloud-services-v2.4.0/MRTK.Tutorials.AzureCloudServices.unitypackage)
 
 > [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-02.md#importing-the-tutorial-assets)说明。
+> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-04.md#importing-the-tutorial-assets)说明。
 
 导入教程资产后，“项目”窗口应如下所示：
 

@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 7b706cf2a8685954ed916c825c3617ade190f1e0
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 7dbf72a477f376e338d346965b5276eba00ab543
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583649"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110711556"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6.打包并部署到设备或仿真器
 
@@ -34,7 +34,7 @@ ms.locfileid: "98583649"
 
 ![默认 RHI](../images/unreal/performance-recommendations-img-09.png)
 
-2.  返回到 Unreal 编辑器，转到“编辑”>“项目设置”，然后选中“全息远程处理”部分中的“启用远程处理”  。
+2.  返回到 Unreal 编辑器，转到“编辑”>“项目设置”，然后选中“Open XR 全息远程处理”部分中的“启用远程处理”  。
 
 3.  重启编辑器，然后输入设备的 IP 地址（如全息远程处理播放器应用中所示），然后单击“连接”。
 

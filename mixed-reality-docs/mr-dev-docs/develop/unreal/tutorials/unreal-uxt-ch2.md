@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 教程, 入门, mrtk, uxt, UX Tools, 文档, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 9e02ea6cb2710b4661e97dc8b0d5f4f48ab09fa7
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: f7cf43e8f1c040660b6a2688e234a271bc071b00
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583901"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712638"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2.初始化你的项目和第一个应用程序
 
@@ -52,22 +52,17 @@ ms.locfileid: "98583901"
 
 ## <a name="enabling-required-plugins"></a>启用所需插件
 
-你需要启用两个插件，然后才能开始向场景添加对象。
+为了使用通过 Microsoft 混合现实平台提供的功能，你首先需要安装并启用 Microsoft OpenXR 插件。 若要了解有关插件的详细信息，可以在 [GitHub](https://github.com/microsoft/Microsoft-OpenXR-Unreal) 上查看该项目。
 
-1. 打开“编辑”>“插件”，并从内置选项列表中选择“增强现实”。 
-    * 向下滚动到“HoloLens”并选中“已启用”。 
+1. 打开 Epic Games Launcher。 导航到 Unreal Engine Marketplace 并搜索“[Microsoft OpenXR](https://www.unrealengine.com/marketplace/product/ef8930ca860148c498b46887da196239)”。 将插件安装到引擎。
 
-![启用 HoloLens 插件](images/unreal-uxt/2-plugins.PNG)
+![Unreal Marketplace](images/unreal-uxt/2-openxr-plugin.PNG)
 
-2. 从内置选项列表中选择“虚拟现实”。 
-    * 向下滚动到“Microsoft Windows Mixed Reality”，选择“已启用”，然后重启编辑器 。 
+2. 返回到 Unreal 编辑器，前往“项目设置” > “插件”，然后搜索“Microsoft OpenXR”。 如果出现提示，请确保已启用该插件，并重新启动编辑器。
 
-![启用 Windows Mixed Reality 插件](images/unreal-uxt/2-virtual-reality-plugin.PNG)
+![启用 Microsoft OpenXR 插件](images/unreal-uxt/2-enable-plugin.PNG)
 
-> [!NOTE]
-> 这两个插件都是 HoloLens 2 开发所必需的。
-
-启用这些插件后，公司即可使用空关卡。
+启用 Microsoft OpenXR 插件将自动启用混合现实开发所需的所有其他插件。 请注意，必须禁用“Microsoft Windows Mixed Reality”插件才能使用 OpenXR。 
 
 ## <a name="creating-a-level"></a>创建关卡
 下一个任务是创建具有可供参考和缩放的起点和立方体的玩家设置。

@@ -7,16 +7,16 @@ ms.date: 01/08/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, 测试, 混合现实工具包, MRTK 版本 2, MRTK, 工具, SDK, HoloLens, HoloLens 2, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 跨平台
-ms.openlocfilehash: 4aa21cbee75c4c362abfd609add922ad9c922682
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 3d46b92dbf3182ca5a50a8e106d2b947e4f7120f
+ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98584713"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112394281"
 ---
 # <a name="introducing-mrtk-for-unreal"></a>适用于 Unreal 的 MRTK 简介
 
-![MRTK](../../design/images/MRTK_UX_Hero.png)
+![MRTK 横幅图像](../../design/images/MRTK_UX_Hero.png)
 
 ## <a name="what-is-mixed-reality-toolkit-mrtk"></a>混合现实工具包 (MRTK) 是什么？
 
@@ -25,10 +25,6 @@ MRTK 是一个很棒的开源工具包，自 HoloLens 首次发布以来就有�
 适用于 Unreal 的混合现实工具包 (MRTK-Unreal) 是一组组件，包含插件、示例和文档，旨在为使用 Unreal Engine 开发混合现实应用程序提供帮助。 目前，该工具包包含：
 * [适用于 Unreal 的 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)，可提供代码、蓝图和示例，用于实现 Hololens 2 应用程序的 UX 功能。
 * [适用于 Unreal 的 Graphics Tools](https://github.com/microsoft/MixedReality-GraphicsTools-Unreal)，有助于优化混合现实应用程序的视觉保真，同时不超出性能预算。
-
-<br>
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IkCG]
 
 查看 [GitHub 上的 MRTK 文档](https://microsoft.github.io/MixedReality-UXTools-Unreal/README.html)，并通过 [UX Tools](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/Installation.html) 或 [Graphics Tools](https://github.com/microsoft/MixedReality-GraphicsTools-Unreal/blob/main/Docs/Installation.md) 安装指南入门。
 
@@ -39,6 +35,11 @@ MRTK 是一个很棒的开源工具包，自 HoloLens 首次发布以来就有�
 ### <a name="performant"></a>高性能
 
 由于要使用移动平台，因此我们在构建 MRTK Unreal 时必须时时刻刻考虑到性能。 这相当重要，我们需要确保这些工具不会给你造成麻烦。
+
+## <a name="project-setup"></a>项目设置
+
+> [!div class="nextstepaction"]
+> [下载 Unreal Engine 和 MRTK](unreal-project-setup.md)
 
 ## <a name="see-also"></a>另请参阅
 

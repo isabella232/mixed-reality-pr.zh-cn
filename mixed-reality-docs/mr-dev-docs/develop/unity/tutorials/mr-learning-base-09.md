@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 语音命令, 语音输入
 ms.localizationpriority: high
-ms.openlocfilehash: 3aea23d5a259e555f47ca9ea41d77f345c977aeb
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 9422c16781af33fa3d68d7f6046e3a86c4b36b44
+ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982923"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111403368"
 ---
 # <a name="9-using-speech-commands"></a>9.使用语音命令
 
@@ -23,7 +23,14 @@ ms.locfileid: "105982923"
 * 了解如何创建语音命令
 * 了解如何在全局和本地控制语音命令
 
-[!INCLUDE[](includes/ensuring-microphone-capabality.md)]
+## <a name="ensuring-the-microphone-capability-is-enabled"></a>确保启用麦克风功能
+
+在 Unity 菜单中，选择“混合现实”>“工具包”>“实用工具”>“为 MRTK 配置项目”，打开“MRTK 项目配置器”窗口，然后在“UWP 功能”部分中，验证“启用麦克风功能”是否灰显   ：
+
+![启用麦克风功能](images/mr-learning-base/base-09-section1-step1-1.png)
+
+> [!NOTE]
+> 在本系列教程开头配置 Unity 项目时，在[应用 MRTK 项目配置器设置](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk)指令期间，应该已经启用了麦克风功能。 但如果未启用此功能，请确保立即启用。
 
 ## <a name="creating-speech-commands"></a>创建语音命令
 
@@ -137,6 +144,6 @@ ms.locfileid: "105982923"
 如果你遵循我们规划的 Unity 开发检查点历程，你的下一项任务就是熟悉混合现实应用的核心构建基块。
 
 > [!div class="nextstepaction"]
-> [基本交互](../../../out-of-scope/mrtk-101.md)
+> [基本交互](/windows/mixed-reality/mrtk-unity/)
 
 你可以随时返回到 [Unity 开发检查点](../unity-development-overview.md#1-getting-started)。

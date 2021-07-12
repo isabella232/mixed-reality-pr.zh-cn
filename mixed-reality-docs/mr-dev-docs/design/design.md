@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包
-ms.openlocfilehash: 36af6b1c439c47eef2126408d1185ecfe151cf8b
-ms.sourcegitcommit: e9a0ba97fd288479ad324cdaabee9b6abc9f4dc2
+ms.openlocfilehash: c4d9f9b4c4be1c5012ac8dc84fb55e6c5fa9eaee
+ms.sourcegitcommit: 85ba3af69ec2a9056f759bab7b66f79f09a016b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107221559"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111454760"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 
@@ -89,20 +89,20 @@ ms.locfileid: "107221559"
 
 :::row:::   
     :::column:::    
-       [![了解 Unity](images/logo-unity.png)](https://learn.unity.com/)<br>
+        [![MRTK Figma 工具包](images/74-13.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        **[Figma 工具包](figma-toolkit.md)**<br>   
+        Figma 工具包提供可用于 UI 构造和布局的资产。 所有 UI 控件都基于 MRTK 中可用的组件。
+    :::column-end:::        
+    :::column:::    
+       [![了解 Unity](../images/Final_unity_logo.png)](https://learn.unity.com/)<br>
         **[了解 Unity](https://learn.unity.com/)**<br>
         了解如何使用 Unity 创建交互式体验。 从头至尾从实践中学习。
     :::column-end:::    
     :::column:::    
         [![混合现实工具包 (MRTK)](images/74-12.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
-        **[混合现实工具包 (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
+        **[混合现实工具包 (MRTK)](/windows/mixed-reality/mrtk-unity/)**<br>  
         使用空间交互和 UI 构建基块，通过 Unity 立即开始混合现实设计和开发。   
     :::column-end:::
-    :::column:::    
-        [![混合现实设计实验室](images/74-13.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
-        **[混合现实设计实验室](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
-        获取示例应用，这些应用会演示如何使用 MRTK 的构建基块来创建美好的混合现实体验。
-    :::column-end:::        
     :::column:::    
         [![Microsoft Maquette](images/74-14.png)](https://www.maquette.ms/)<br>
         **[Microsoft Maquette](https://www.maquette.ms/)**<br>  

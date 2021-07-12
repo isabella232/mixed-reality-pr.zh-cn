@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 58ea52332485a3e0ca460322f6af60266b119ede
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 976593fd2f107d456da4f04da19621dd253f2ae1
+ms.sourcegitcommit: 943489923c69c3a28bc152f1cb516dcdcea2880a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590189"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111772420"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 
@@ -69,7 +69,7 @@ ms.locfileid: "99590189"
 
 ### <a name="2-create-the-avatar"></a>2.创建头像
 
-在“项目”窗口中，导航到“包” > “混合现实工具包基础” > “SDK” > “StandardAssets” > “材料”文件夹，找到 MRTK 材料    。
+在“项目”窗口中，导航到“包” > “混合现实工具包标准资产” > “材料”文件夹以找到 MRTK 材料。
 
 然后，在“层次结构”窗口中，右键单击 PhotonUser 对象，然后选择“3D 对象” > “球体”来创建一个球体对象作为 PhotonUser 对象的子项，并按如下所示对它进行配置  ：
 
