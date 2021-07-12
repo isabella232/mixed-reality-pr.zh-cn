@@ -1,55 +1,42 @@
 ---
 title: 设置 XR 配置
-description: 随时了解适用于 HoloLens 应用程序开发的最新 Unity XR 配置建议。
+description: 了解有关 HoloLens 应用程序开发的最新 Unity XR 配置建议。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 04/22/2021
 ms.topic: article
 keywords: mixedrealitytoolkit，mixedrealitytoolkit，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity
-ms.openlocfilehash: d265725caf95379dfa01baa6dad1b7927fbeca5c
-ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
+ms.openlocfilehash: d2904b9ea4771286b7091a8d5b7c599fcbd1244a
+ms.sourcegitcommit: e380d56f5504be4e4f069394a58cf0147eb33b66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112906934"
+ms.lasthandoff: 07/11/2021
+ms.locfileid: "113603703"
 ---
-# <a name="setting-up-your-xr-configuration"></a><span data-ttu-id="95545-104">设置 XR 配置</span><span class="sxs-lookup"><span data-stu-id="95545-104">Setting up your XR configuration</span></span>
+# <a name="setting-up-your-xr-configuration"></a><span data-ttu-id="93543-104">设置 XR 配置</span><span class="sxs-lookup"><span data-stu-id="93543-104">Setting up your XR configuration</span></span>
 
-<span data-ttu-id="95545-105">启动新的 Unity 项目时，可以使用三个不同的选项来处理 XR 需求：</span><span class="sxs-lookup"><span data-stu-id="95545-105">When you start a new Unity project, you have three different options for handling your XR needs:</span></span> 
-* <span data-ttu-id="95545-106">OpenXR 插件</span><span class="sxs-lookup"><span data-stu-id="95545-106">OpenXR plugin</span></span>
-* <span data-ttu-id="95545-107">Windows XR 插件</span><span class="sxs-lookup"><span data-stu-id="95545-107">Windows XR plugin</span></span>
-* <span data-ttu-id="95545-108">旧 XR 插件</span><span class="sxs-lookup"><span data-stu-id="95545-108">Legacy XR plugin</span></span>
+<span data-ttu-id="93543-105">[选择 Unity 版本](choosing-unity-version.md)后，下一步是选择用于构建混合现实应用的 XR 配置：</span><span class="sxs-lookup"><span data-stu-id="93543-105">Once you've [chosen a Unity version](choosing-unity-version.md), the next step is to select the XR configuration you'll use to build your mixed reality app:</span></span>
+
+## <a name="choosing-an-xr-configuration"></a><span data-ttu-id="93543-106">选择 XR 配置</span><span class="sxs-lookup"><span data-stu-id="93543-106">Choosing an XR configuration</span></span>
+
+<span data-ttu-id="93543-107">启动新的 Unity 项目时，可以选择多个 XR 配置：**混合现实 OpenXR 插件**、 **Windows XR 插件** 和 **旧内置 XR**。</span><span class="sxs-lookup"><span data-stu-id="93543-107">When you start a new Unity project, you have various XR configurations you can select from: the **Mixed Reality OpenXR plugin**, the **Windows XR plugin** and **Legacy Built-in XR**.</span></span>
 
 [!INCLUDE[](includes/xr/intro.md)]
 
-## <a name="setting-up-your-project-with-mrtk"></a><span data-ttu-id="95545-109">用 MRTK 设置项目</span><span class="sxs-lookup"><span data-stu-id="95545-109">Setting up your project with MRTK</span></span>
+## <a name="setting-up-your-project-with-mrtk"></a><span data-ttu-id="93543-108">用 MRTK 设置项目</span><span class="sxs-lookup"><span data-stu-id="93543-108">Setting up your project with MRTK</span></span>
 
-<span data-ttu-id="95545-110">用于 Unity 的 MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。</span><span class="sxs-lookup"><span data-stu-id="95545-110">MRTK for Unity provides a cross-platform input system, foundational components, and common building blocks for spatial interactions.</span></span> <span data-ttu-id="95545-111">MRTK 版本 2 旨在加快面向 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 头戴显示设备和 OpenVR 平台的应用程序开发。</span><span class="sxs-lookup"><span data-stu-id="95545-111">MRTK version 2 intends to speed up application development for Microsoft HoloLens, Windows Mixed Reality immersive (VR) headsets, and OpenVR platform.</span></span> <span data-ttu-id="95545-112">该项目旨在降低准入门槛、创建混合现实应用程序，并随着我们的共同成长回馈社区。</span><span class="sxs-lookup"><span data-stu-id="95545-112">The project is aimed at reducing barriers to entry, creating mixed reality applications, and contributing back to the community as we all grow.</span></span>
+<span data-ttu-id="93543-109">为混合现实设置 Unity 项目的最简单方法是将混合现实 Toolkit (MRTK) 。</span><span class="sxs-lookup"><span data-stu-id="93543-109">The easiest way to get your Unity project set up for mixed reality is with the Mixed Reality Toolkit (MRTK).</span></span>  <span data-ttu-id="93543-110">MRTK for Unity 是一个开源的跨平台开发工具包，旨在简化混合现实应用程序的构建。</span><span class="sxs-lookup"><span data-stu-id="93543-110">MRTK for Unity is an open-source, cross-platform development kit designed to make it easy to build amazing mixed reality applications.</span></span>
 
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="95545-113">试用我们的 MRTK 教程</span><span class="sxs-lookup"><span data-stu-id="95545-113">Try out our MRTK tutorials</span></span>](./tutorials/mr-learning-base-02.md?tabs=winxr)
+![MRTK](../../design/images/MRTK_UX_Hero.png)
 
-<span data-ttu-id="95545-114">有关更多功能的详细信息，请参阅[关于 MRTK 的文档](/windows/mixed-reality/mrtk-unity)。</span><span class="sxs-lookup"><span data-stu-id="95545-114">Take a look at [MRTK's documentation](/windows/mixed-reality/mrtk-unity) for more feature details.</span></span>
+<span data-ttu-id="93543-112">MRTK 提供跨平台的输入系统、基础组件以及用于空间交互的通用构建基块。</span><span class="sxs-lookup"><span data-stu-id="93543-112">MRTK provides a cross-platform input system, foundational components, and common building blocks for spatial interactions.</span></span>  <span data-ttu-id="93543-113">在 MRTK 版本2中，你可以加快应用程序开发 Microsoft HoloLens、Windows Mixed Reality 沉浸式 (VR) 耳机以及许多其他的 VR/AR 设备。</span><span class="sxs-lookup"><span data-stu-id="93543-113">With MRTK version 2, you can speed up your application development for Microsoft HoloLens, Windows Mixed Reality immersive (VR) headsets, and many other VR/AR devices.</span></span> <span data-ttu-id="93543-114">该项目旨在减少进入障碍，使每个人都可以构建混合现实应用程序，并在我们的所有增长时向社区提供反馈。</span><span class="sxs-lookup"><span data-stu-id="93543-114">The project is aimed at reducing barriers to entry, enabling everyone to build mixed reality applications and contribute back to the community as we all grow.</span></span>
 
-### <a name="using-mrtk-with-openxr-support"></a><span data-ttu-id="95545-115">结合使用 MRTK 与 OpenXR 支持</span><span class="sxs-lookup"><span data-stu-id="95545-115">Using MRTK with OpenXR support</span></span>
+[!INCLUDE[](includes/xr/mrtk-next-step.md)]
 
-<span data-ttu-id="95545-116">MRTK-Unity 2.7 版本为混合现实 OpenXR 插件提供更好的支持。</span><span class="sxs-lookup"><span data-stu-id="95545-116">MRTK-Unity 2.7 release provides better supports for the Mixed Reality OpenXR plugin.</span></span>
+<span data-ttu-id="93543-115">若要了解有关混合现实 Toolkit 的详细信息，请参阅[MRTK 文档](/windows/mixed-reality/mrtk-unity)。</span><span class="sxs-lookup"><span data-stu-id="93543-115">To learn more about the Mixed Reality Toolkit, check out the [MRTK documentation](/windows/mixed-reality/mrtk-unity).</span></span>
 
-<span data-ttu-id="95545-117">再次打开 [混合现实功能工具](welcome-to-mr-feature-tool.md) 以安装混合现实工具包（如果尚未安装）。</span><span class="sxs-lookup"><span data-stu-id="95545-117">Open the [Mixed Reality Feature Tool](welcome-to-mr-feature-tool.md) again to install the Mixed Reality Toolkit, if you haven't already.</span></span> <span data-ttu-id="95545-118">OpenXR 支持在 **基础** 包中提供。</span><span class="sxs-lookup"><span data-stu-id="95545-118">OpenXR support is in the **Foundation** package.</span></span>
+## <a name="manual-setup-without-mrtk"></a><span data-ttu-id="93543-116">无 MRTK 的手动设置</span><span class="sxs-lookup"><span data-stu-id="93543-116">Manual setup without MRTK</span></span>
 
-<span data-ttu-id="95545-119">有关 [迁移到 OpenXR 的更深入信息](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)，请参阅 MRTK 文档。</span><span class="sxs-lookup"><span data-stu-id="95545-119">See the MRTK documentation for [more in-depth information on migrating to OpenXR](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline).</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="95545-120">从早于 **2.5.3** 的 MRTK 的早期版本进行升级时，请确保 **资产/MixedRealityToolkit 和 link.xml** 文件中有以下行：</span><span class="sxs-lookup"><span data-stu-id="95545-120">When upgrading from a previous version of MRTK older than **2.5.3**, ensure the following line is in the **Assets/MixedRealityToolkit.Generated/link.xml** file:</span></span>
->
-> ```xml
-> <assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
-> ```
->
-> <span data-ttu-id="95545-121">如果开始使用 MRTK 2.5.4 或更高版本，则默认情况下会添加此行。</span><span class="sxs-lookup"><span data-stu-id="95545-121">This line will be added by default if you started with MRTK 2.5.4 or newer.</span></span>
-
-## <a name="manual-setup-without-mrtk"></a><span data-ttu-id="95545-122">无 MRTK 的手动设置</span><span class="sxs-lookup"><span data-stu-id="95545-122">Manual setup without MRTK</span></span>
-
-<span data-ttu-id="95545-123">尽管 Microsoft 和社区创建了开源工具，例如 [混合现实工具包 (MRTK) ](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html) 将自动设置 WMR 环境，但许多开发人员希望从根本上构建他们的经验。</span><span class="sxs-lookup"><span data-stu-id="95545-123">While Microsoft and the community have created opensource tools such as the [Mixed Reality Toolkit (MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html) that will automatically set up the WMR environment, many developers wish to build their experiences from the ground up.</span></span>
+<span data-ttu-id="93543-117">尽管 Microsoft 和社区创建了开源工具，例如[混合现实 Toolkit (MRTK) ](/windows/mixed-reality/mrtk-unity)自动为混合现实设置你的环境，但某些开发人员可能希望从头开始构建自己的体验。</span><span class="sxs-lookup"><span data-stu-id="93543-117">While Microsoft and the community have created open source tools such as the [Mixed Reality Toolkit (MRTK)](/windows/mixed-reality/mrtk-unity) that will automatically set up your environment for mixed reality, some developers may wish to build their experiences from the ground up.</span></span>
 
 [!INCLUDE[](includes/xr/manual-setup.md)]
