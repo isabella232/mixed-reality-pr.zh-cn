@@ -5,24 +5,24 @@ author: dongpark
 ms.author: dongpark
 ms.date: 03/29/2021
 ms.topic: article
-keywords: Figma，草绘，Adobe XD，设计，设计器，设计文件，UX 设计，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: a24f06b29accaa64a9095054f1e6f8df13a9162e
-ms.sourcegitcommit: 0c717ed0043c7a65e2caf1452eb0f49059cdf154
+keywords: Figma，草绘，Adobe XD，设计，设计器，设计文件，UX 设计，HoloLens，MRTK，混合现实 Toolkit
+ms.openlocfilehash: ef36e68e7340bc0a1500a9468db35d1e0b417ed6
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108644853"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224317"
 ---
 # <a name="figma-toolkit"></a>Figma 工具包
 
-> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Figma-Toolkit-MRTK/player]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGqke]
 
-Figma 工具包提供可用于草拟和布局 UI 的资产。 所有 UI 控件都基于 MRTK 中提供的组件。 
+MRTK Figma Toolkit 提供 HoloLens 2 样式 UI 控件的2d 版本，你可以在 MRTK for Unity 或 MRTK for Unreal 中找到这些控件。 您可以在设计过程中使用它来创建 UI 布局和情节提要。
 
 > [!div class="nextstepaction"]
-> [查看 Figma 工具包](https://www.figma.com/file/ltLag9SxjUIyLQFsp7NNE7/Mixed-Reality-Toolkit-for-Figma?node-id=116%3A4)
+> [查看 Figma Toolkit](https://www.figma.com/file/ltLag9SxjUIyLQFsp7NNE7/Figma-Toolkit-for-MRTK-%2F-HoloLens%2C-Windows-Mixed-Reality?node-id=116%3A4)
 
-## <a name="how-to-use-figma-toolkit"></a>如何使用 Figma 工具包
+## <a name="how-to-use-figma-toolkit"></a>如何使用 Figma Toolkit
 **在 "草稿**" 菜单中使用 "重复" 进行复制。
 
 <img src="images/UX_Figma_Use1.png" width="500px" alt="Menu duplicate 1"><br>
@@ -46,9 +46,12 @@ Figma 工具包提供可用于草拟和布局 UI 的资产。 所有 UI 控件�
 ## <a name="ui-gallery--components"></a>UI 库 & 组件
 "UI 库和组件" 页显示设计的所有可用组件。
 
-![Figma 工具包示例-菜单 UI 1](images/UX_FigmaToolkit_Components_Menu1.png)<br>
+![Figma Toolkit 示例-菜单 UI 1](images/UX_FigmaToolkit_Components_Menu1.png)<br>
 
-![Figma 工具包示例-菜单 UI 2](images/UX_FigmaToolkit_Components_Menu2.png)<br>
+![Figma Toolkit 示例-菜单 UI 2](images/UX_FigmaToolkit_Components_Menu2.png)<br>
+
+
+![Figma Toolkit 示例-菜单 UI 4](images/UX_FigmaToolkit_Components_Menu3a.png)<br>
 
 使用 " **资产** " 选项卡，可以浏览这些组件并将其拖到页面中。
 
@@ -57,14 +60,14 @@ Figma 工具包提供可用于草拟和布局 UI 的资产。 所有 UI 控件�
 
 ## <a name="examples"></a>示例
 
-Figma 工具包可用于草拟菜单 UI。 
+Figma Toolkit 可用于草拟菜单 UI。 
 
-![Figma 工具包示例-菜单 UI 3](images/UX_FigmaToolkit_Examples_Menu.png)<br>
+![Figma Toolkit 示例-Menu UI 5](images/UX_FigmaToolkit_Examples_Menu.png)<br>
 
 
 资产可用于情节提要。
 
-![Figma 工具包示例-情节提要](images/UX_FigmaToolkit_Examples_Storyboarding.png)<br>
+![Figma Toolkit 示例-情节提要](images/UX_FigmaToolkit_Examples_Storyboarding.png)<br>
 
 
 ## <a name="see-also"></a>另请参阅

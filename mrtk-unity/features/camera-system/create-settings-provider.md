@@ -1,16 +1,16 @@
 ---
-title: 创建设置提供程序
+title: 创建相机设置提供程序
 description: MRTK 中相机设置的数据访问接口
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: d07b84c3cf550f9a235e58286b4cd239ac43b649
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 2151887a6162239e993634d5d346065362f1c428
+ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121185"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114282031"
 ---
 # <a name="creating-a-camera-settings-provider"></a>创建相机设置提供程序
 
@@ -24,7 +24,7 @@ ms.locfileid: "113121185"
 可通过两种方式之一分发数据提供程序：
 
 1. 第三方加载项
-1. Microsoft Mixed Reality Toolkit 的一部分
+1. Microsoft Mixed Reality Toolkit
 
 向 MRTK 提交新数据提供程序的审批过程将因情况而异，将在初始建议时传达。 可以通过创建新的功能请求类型问题 [*来提交* 建议](https://github.com/microsoft/MixedRealityToolkit-Unity/issues)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "113121185"
 - 生成加载项的公司名称
 - 功能区域
 
-例如，Contoso 公司创建和发货的相机设置提供程序可能是 *"Contoso.MixedReality.Toolkit.Camera"。*
+例如，Contoso 公司创建和发货的相机设置提供程序可能是 *"Contoso.MixedReality.Toolkit。Camera"*。
 
 **文件夹结构**
 
@@ -51,7 +51,7 @@ ms.locfileid: "113121185"
 
 **命名空间**
 
-如果相机设置提供程序正在提交到混合现实工具包存储库 [](https://github.com/Microsoft/MixedRealityToolkit-Unity)，则命名空间必须以 Microsoft.MixedReality.Toolkit (开头，例如 *：Microsoft.MixedReality.Toolkit.CameraSystem*) 。 
+如果将相机设置提供程序提交到混合现实Toolkit [存储库](https://github.com/Microsoft/MixedRealityToolkit-Unity)，则命名空间 **必须以** Microsoft.MixedReality 开头。*Toolkit (：Microsoft.MixedReality.Toolkit。CameraSystem*) 。
 
 **文件夹结构**
 
@@ -117,7 +117,7 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 
 ## <a name="create-the-profile-and-inspector"></a>创建配置文件和检查器
 
-在混合现实工具包中，数据提供程序是使用配置文件 [配置的](../profiles/profiles.md)。
+在混合现实Toolkit中，数据提供程序是使用配置文件[配置的](../profiles/profiles.md)。
 
 ### <a name="define-the-profile"></a>定义配置文件
 
@@ -164,7 +164,7 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 }
 ```
 
-属性可应用于配置文件类，使客户能够使用"创建资产混合现实工具包配置文件"菜单 `CreateAssetMenu`   >    >  **创建**  >  **配置文件** 实例。
+属性可应用于配置文件类，使客户能够使用"创建资产""混合现实"Toolkit `CreateAssetMenu`   >    >    >  **配置文件"菜单创建配置文件** 实例。
 
 ### <a name="implement-the-inspector"></a>实现检查器
 
@@ -183,19 +183,19 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 
 ## <a name="create-assembly-definitions"></a>创建程序集 () 
 
-混合现实工具包使用程序集定义 ([.asmdef](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)) 文件来指定组件之间的依赖关系，以及帮助 Unity 减少编译时间。
+混合现实Toolkit使用程序集定义 ([.asmdef](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)) 文件来指定组件之间的依赖关系，以及帮助 Unity 减少编译时间。
 
 建议为所有数据提供程序及其编辑器组件创建程序集定义文件。
 
 使用 [前面示例中](#namespace-and-folder-structure) 的文件夹结构，ContosoCamera 数据提供程序有两个 .asmdef 文件。
 
-第一个程序集定义用于数据访问接口。 对于此示例，它将称为 ContosoCamera，并位于示例的 *ContosoCamera* 文件夹中。 此程序集定义必须指定对 Microsoft.MixedReality.Toolkit 及其依赖的其他任何程序集的依赖关系。
+第一个程序集定义用于数据访问接口。 对于此示例，它将称为 ContosoCamera，并位于示例的 *ContosoCamera* 文件夹中。 此程序集定义必须指定对 Microsoft.MixedReality 的依赖关系。Toolkit及其依赖的其他任何程序集。
 
 ContosoCameraEditor 程序集定义将指定配置文件检查器以及任何特定于编辑器的代码。 此文件必须位于编辑器代码的根文件夹中。 此示例中的文件将位于 *ContosoCamera\Editor* 文件夹中。 此程序集定义将包含对 ContosoCamera 程序集的引用，以及：
 
-- Microsoft.MixedReality.Toolkit
-- Microsoft.MixedReality.Toolkit.Editor.Inspectors
-- Microsoft.MixedReality.Toolkit.Editor.Utilities
+- Microsoft.MixedReality。Toolkit
+- Microsoft.MixedReality。Toolkit。Editor.Inspectors
+- Microsoft.MixedReality。Toolkit。Editor.Utilities
 
 ## <a name="register-the-data-provider"></a>注册数据提供程序
 
@@ -211,7 +211,7 @@ ContosoCameraEditor 程序集定义将指定配置文件检查器以及任何特
 
 ## <a name="see-also"></a>另请参阅
 
-- [照相机系统概述](camera-system-overview.md)
+- [相机系统概述](camera-system-overview.md)
 - [`BaseCameraSettingsProvider` 类](xref:Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider)
 - [`IMixedRealityCameraSettingsProvider` 接口](xref:Microsoft.MixedReality.Toolkit.CameraSystem.IMixedRealityCameraSettingsProvider)
 - [`IMixedRealityDataProvider` 接口](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider)

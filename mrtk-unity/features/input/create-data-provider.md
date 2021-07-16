@@ -1,20 +1,20 @@
 ---
-title: 创建输入数据提供程序
+title: 创建输入系统数据提供程序
 description: 用于在 MRTK 中创建输入系统和数据提供程序的文档
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: c164fa406ae6822f4d889aff3bf615cf7fa76337
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 0b6012871a4d4988fdb70336a3c33455f479bcac
+ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144072"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114281925"
 ---
 # <a name="creating-an-input-system-data-provider"></a>创建输入系统数据提供程序
 
-混合现实工具包输入系统是一个可扩展系统，可用于启用输入设备支持。 若要添加对新硬件平台的支持，可能需要自定义输入数据提供程序。
+混合现实 Toolkit 输入系统是一种可扩展的系统，用于启用输入设备支持。 若要添加对新硬件平台的支持，可能需要自定义输入数据提供程序。
 
 本文介绍如何为输入系统创建自定义数据访问接口（也称为设备管理器）。 此处所示的示例代码来自 [`WindowsMixedRealityDeviceManager`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityDeviceManager) 。
 
@@ -22,10 +22,10 @@ ms.locfileid: "110144072"
 
 ## <a name="namespace-and-folder-structure"></a>命名空间和文件夹结构
 
-数据访问接口可以作为第三方加载项分发，也可以作为 Microsoft 混合现实工具包的一部分进行分发。 向 MRTK 提交新数据提供程序的批准过程将根据具体情况发生变化，并将在初始提议时进行传达。
+数据访问接口可以作为第三方加载项分发，也可以作为 Microsoft Mixed Reality Toolkit 的一部分分发。 向 MRTK 提交新数据提供程序的批准过程将根据具体情况发生变化，并将在初始提议时进行传达。
 
 > [!Important]
-> 如果将输入系统数据提供程序提交到 [混合现实工具包存储库](https://github.com/Microsoft/MixedRealityToolkit-Unity)，命名空间 **必须** 以 MixedReality 开头 (例如： WindowsMixedReality) ，代码应位于 MRTK/provider 下的文件夹中 (Ex： MRTK/provider/WindowsMixedReality) 。
+> 如果将输入系统数据提供程序提交到 [混合现实 Toolkit 存储库](https://github.com/Microsoft/MixedRealityToolkit-Unity)，则命名空间 **必须** 以 MixedReality 开头。Toolkit (例如： MixedReality。Toolkit。WindowsMixedReality) ，代码应位于 MRTK/Providers 下的文件夹中 (例如： MRTK/Providers/WindowsMixedReality) 。
 
 ### <a name="namespace"></a>命名空间
 
@@ -34,7 +34,7 @@ ms.locfileid: "110144072"
 - 公司名称
 - 功能区域
 
-例如，Contoso 公司创建的输入数据提供程序可能是 "MixedReality"。
+例如，Contoso 公司创建的输入数据提供程序可能是 "MixedReality"。Toolkit。输入 "。
 
 ### <a name="recommended-folder-structure"></a>推荐的文件夹结构
 
@@ -45,16 +45,16 @@ ms.locfileid: "110144072"
 其中，ContosoInput 包含数据提供程序的实现，Editor 文件夹包含检查器 (和任何其他 Unity 编辑器特定代码) ，纹理文件夹包含受支持控制器的图像，而配置文件包含一个或多个预配置文件。
 
 > [!Note]
-> 可以在 MixedRealityToolkit\StandardAssets\Textures 文件夹中找到一些常见的控制器图像。
+> 可以在 MixedRealityToolkit\StandardAssets\Textures 文件夹中找到一些公共控制器映像。
 
-## <a name="implement-the-data-provider"></a>实现数据提供程序
+## <a name="implement-the-data-provider"></a>实现数据访问接口
 
 ### <a name="specify-interface-andor-base-class-inheritance"></a>指定接口和/或基类继承
 
-所有输入系统数据访问接口都必须实现 接口，该接口指定输入系统 [`IMixedRealityInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputDeviceManager) 所需的最低功能。 MRTK 基础包括 [`BaseInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager) 类，该类提供此所需功能的默认实现。 对于在 Unity 的 UInput 类上构建的设备， [`UnityJoystickManager`](xref:Microsoft.MixedReality.Toolkit.Input.UnityInput.UnityJoystickManager) 该类可以用作基类。
+所有输入系统数据提供程序必须实现 [`IMixedRealityInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputDeviceManager) 接口，该接口指定输入系统所需的最小功能。 MRTK foundation 包含 [`BaseInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager) 类，该类提供此所需功能的默认实现。 对于基于 Unity 的 UInput 类构建的设备， [`UnityJoystickManager`](xref:Microsoft.MixedReality.Toolkit.Input.UnityInput.UnityJoystickManager) 可以将类用作基类。
 
 > [!Note]
-> 和 `BaseInputDeviceManager` `UnityJoystickManager` 类提供所需的 `IMixedRealityInputDeviceManager` 实现。
+> `BaseInputDeviceManager`和 `UnityJoystickManager` 类提供所需的 `IMixedRealityInputDeviceManager` 实现。
 
 ```c#
 public class WindowsMixedRealityDeviceManager :
@@ -63,11 +63,11 @@ public class WindowsMixedRealityDeviceManager :
 { }
 ```
 
-> `IMixedRealityCapabilityCheck` 由 用于指示它为一组输入功能提供支持，具体而言，是表达手、 `WindowsMixedRealityDeviceManager` 凝视手势手和运动控制器。
+> `IMixedRealityCapabilityCheck` 由用 `WindowsMixedRealityDeviceManager` 来指示它为一组输入功能提供支持，具体而言，就是明确的手势，注视着声音和运动控制器。
 
-#### <a name="apply-the-mixedrealitydataprovider-attribute"></a>应用 MixedRealityDataProvider 属性
+#### <a name="apply-the-mixedrealitydataprovider-attribute"></a>应用 MixedRealityDataProvider 特性
 
-创建输入系统数据提供程序的一个关键步骤是将 [`MixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute) 属性应用于 类。 在输入系统配置文件中选中 (时，此步骤) 设置提供程序的默认配置文件和平台名称。
+创建输入系统数据提供程序的一个关键步骤是将属性应用于 [`MixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.MixedRealityDataProviderAttribute) 类。 此步骤允许在输入系统配置文件中选择提供程序时，设置该提供程序的默认配置文件和平台 () 。
 
 ```c#
 [MixedRealityDataProvider(
@@ -82,12 +82,12 @@ public class WindowsMixedRealityDeviceManager :
 
 ### <a name="implement-the-imixedrealitydataprovider-methods"></a>实现 IMixedRealityDataProvider 方法
 
-定义 类后，下一步是提供 接口的 [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) 实现。
+一旦定义了类，下一步就是提供接口的实现 [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) 。
 
 > [!Note]
-> 类 `BaseInputDeviceManager` 通过 类 `BaseService` 仅提供方法的空 `IMixedRealityDataProvider` 实现。 这些方法的详细信息通常特定于数据提供程序。
+> `BaseInputDeviceManager`类通过 `BaseService` 类只为方法提供空实现 `IMixedRealityDataProvider` 。 这些方法的详细信息通常是特定于数据访问接口的。
 
-数据提供程序应实现的方法包括：
+应由数据提供程序实现的方法如下：
 
 - `Destroy()`
 - `Disable()`
@@ -96,13 +96,13 @@ public class WindowsMixedRealityDeviceManager :
 - `Reset()`
 - `Update()`
 
-### <a name="implement-the-data-provider-logic"></a>实现数据提供程序逻辑
+### <a name="implement-the-data-provider-logic"></a>实现数据访问接口逻辑
 
 下一步是添加用于管理输入设备的逻辑，包括要支持的任何控制器。
 
 ### <a name="implement-the-controller-classes"></a>实现控制器类
 
- 的示例定义 `WindowsMixedRealityDeviceManager` 和实现以下控制器类。
+ 的示例 `WindowsMixedRealityDeviceManager` 定义并实现了以下控制器类。
 
 > 每个这些类的源代码可在 MRTK/Providers/WindowsMixedReality 文件夹中找到。
 
@@ -172,7 +172,7 @@ InputSystem?.RaisePositionInputChanged(InputSource, ControllerHandedness, intera
 
 ### <a name="add-unity-profiler-instrumentation"></a>添加 Unity 探查器检测
 
-性能在混合现实应用程序中非常重要。 每个组件都增加了应用程序必须考虑的一些开销。 为此，所有输入数据提供程序必须包含内部循环和经常使用的代码路径中的 Unity Profiler 检测。
+性能在混合现实应用程序中非常重要。 每个组件都增加了应用程序必须考虑的一些开销。 为此，必须确保所有输入数据提供程序在内部循环和经常使用的代码路径中包含 Unity 探查器检测。
 
 建议在检测自定义提供程序时实现 MRTK 使用的模式。
 
@@ -189,23 +189,23 @@ InputSystem?.RaisePositionInputChanged(InputSource, ControllerHandedness, intera
 ```
 
 > [!Note]
-> 用于标识探查器标记的名称是任意的。 MRTK 采用以下模式。
+> 用于标识探查器标记的名称是任意的。 MRTK 使用以下模式。
 >
-> "[product] className.methodName - 可选备注"
+> "[product] className. 方法名称-可选注释"
 >
-> 建议自定义数据提供程序遵循类似的模式，以帮助简化分析跟踪时特定组件和方法的标识。
+> 建议自定义数据访问接口遵循类似的模式，以帮助在分析跟踪时简化特定组件和方法的标识。
 
 ## <a name="create-the-profile-and-inspector"></a>创建配置文件和检查器
 
-在混合现实工具包中，数据提供程序是使用配置文件 [配置的](../profiles/profiles.md)。
+在混合现实 Toolkit 中，使用[配置文件](../profiles/profiles.md)配置数据访问接口。
 
-具有其他配置选项的数据提供程序 (例如 [：InputSimulationService](../input-simulation/input-simulation-service.md)) 应创建配置文件和检查器，以允许客户修改行为以最好地满足应用程序的需求。
+具有其他配置选项的数据提供程序 (ex： [InputSimulationService](../input-simulation/input-simulation-service.md)) 应创建配置文件和检查器，以允许客户修改行为，使其最适合应用程序的需求。
 
-> 可在 MRTK 中找到本部分中示例的完整代码。Services/InputSimulation 文件夹。
+> 本部分中的示例的完整代码可在 MRTK 中找到。Services/InputSimulation 文件夹。
 
 ### <a name="define-the-profile"></a>定义配置文件
 
-配置文件内容应镜像观察者的可访问属性 (例如：更新间隔) 。 每个接口中定义的所有用户可配置属性都应与配置文件一起包含。
+配置文件内容应反映观察程序的可访问属性， (例如：更新间隔) 。 每个接口中定义的所有用户可配置属性都应包含在配置文件中。
 
 ```c#
 [CreateAssetMenu(
@@ -216,11 +216,11 @@ public class MixedRealityInputSimulationProfile : BaseMixedRealityProfile
 { }
 ```
 
-可以将 属性应用于配置文件类，使客户能够使用"创建配置文件">">"混合现实工具包"> `CreateAssetMenu` **配置文件实例** 。
+`CreateAssetMenu`特性可应用到配置文件类，使客户能够使用 **> Mixed Reality Toolkit > 配置文件**"菜单创建 > 资产创建配置文件实例。
 
 ### <a name="implement-the-inspector"></a>实现检查器
 
-配置文件检查器是配置和查看配置文件内容的用户界面。 每个配置文件检查器都应扩展 ['BaseMixedRealityToolkitConfigurationProfileInspector](xref:Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector) 类。
+配置文件检查器是用于配置和查看配置文件内容的用户界面。 每个配置文件检查器应扩展 ["BaseMixedRealityToolkitConfigurationProfileInspector"](xref:Microsoft.MixedReality.Toolkit.Editor.BaseMixedRealityToolkitConfigurationProfileInspector) 类。
 
 ```c#
 [CustomEditor(typeof(MixedRealityInputSimulationProfile))]
@@ -228,24 +228,24 @@ public class MixedRealityInputSimulationProfileInspector : BaseMixedRealityToolk
 { }
 ```
 
-`CustomEditor`属性通知 Unity 检查器应用到的资产类型。
+`CustomEditor`属性向 Unity 通知该检查器应用到的资产类型。
 
-## <a name="create-assembly-definitions"></a>创建程序集 () 
+## <a name="create-assembly-definitions"></a>创建 () 的程序集定义
 
-混合现实工具包使用程序集定义 ([.asmdef](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)) 文件来指定组件之间的依赖关系，以及帮助 Unity 减少编译时间。
+混合现实 Toolkit 使用程序集定义 ([asmdef](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)) 文件指定组件之间的依赖关系，并协助 Unity 减少编译时间。
 
 建议为所有数据访问接口及其编辑器组件创建程序集定义文件。
 
 使用前面示例中的 [文件夹结构](#recommended-folder-structure) ，ContosoInput 数据提供程序有两个 asmdef 文件。
 
 第一个程序集定义适用于数据访问接口。 在此示例中，它将被称为 ContosoInput，并将位于该示例的 ContosoInput 文件夹中。
-此程序集定义必须指定对 MixedReality 以及它所依赖的任何其他程序集的依赖关系。
+此程序集定义必须指定对 MixedReality 的依赖关系。Toolkit 以及它所依赖的任何其他程序集。
 
 ContosoInputEditor 程序集定义将指定配置文件检查器和任何特定于编辑器的代码。 此文件必须位于编辑器代码的根文件夹中。 在此示例中，该文件将位于 ContosoInput\Editor 文件夹中。 此程序集定义将包含对 ContosoInput 程序集的引用以及：
 
-- MixedReality 工具包
-- MixedReality。检查器
-- MixedReality 实用程序。
+- MixedReality。Toolkit
+- MixedReality。Toolkit。编辑器. 检查器
+- MixedReality。Toolkit。编辑器。实用工具
 
 ## <a name="register-the-data-provider"></a>注册数据提供程序
 
@@ -255,9 +255,9 @@ ContosoInputEditor 程序集定义将指定配置文件检查器和任何特定�
 
 ## <a name="packaging-and-distribution"></a>打包和分发
 
-作为第三方组件分发的数据提供程序具有与开发人员首选项一起打包和分发的特定详细信息。 最常见的解决方案是生成 unitypackage，并通过 Unity 资产存储进行分发。
+作为第三方组件分发的数据提供程序具有与开发人员首选项一起打包和分发的特定详细信息。 最常见的解决方案可能是生成 .unitypackage，然后通过 Unity 资产存储进行分发。
 
-如果将数据访问接口作为 Microsoft Mixed Reality 工具包的一部分进行提交和接受，Microsoft MRTK 团队会将其打包并分发为 MRTK 服务的一部分。
+如果提交数据提供程序并将其作为 Microsoft Mixed Reality Toolkit 包的一部分接受，Microsoft MRTK 团队将打包并分发它作为 MRTK 产品/服务一部分。
 
 ## <a name="see-also"></a>另请参阅
 

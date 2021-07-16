@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 087806d48c7304d43f8383285cbaa2a12d8bf99a
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 0b26242d71bbe080e440f9c52a009e29000ab00b
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176316"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224205"
 ---
 # <a name="pulse-shader"></a>脉冲着色器
 
@@ -29,9 +29,9 @@ ms.locfileid: "113176316"
 
 ## <a name="prerequisites"></a>先决条件
 
-对于空间网格示例，请确保在 MRTK 下指定 MRTK_Pulse_ArticulatedHandMeshBlue 或 MRTK_Pulse_ArticulatedHandMeshPurple 设置-> 空间感知-> 显示设置可见的材料。
+对于空间网格示例，请确保在 MixedRealityToolkit 对象（> 空间感知配置文件设置 >）下分配 MRTK_Pulse_SpatialMeshBlue 的 MRTK_Pulse_SpatialMeshPurple。
 
-对于手写网格示例，请确保在 ArticulatedHandMesh 中分配 MRTK_Pulse_SpatialMeshBlue MRTK_Pulse_SpatialMeshPurple。 prefab，这本身应在 MRTK 设置-> 输入-> 手动跟踪-> 手写网格 Prefab 中分配。
+对于手写网格示例，请确保在 ArticulatedHandMesh 中分配 MRTK_Pulse_ArticulatedHandMeshBlue MRTK_Pulse_ArticulatedHandMeshPurple。 prefab，这本身应在 MRTK 设置-> 输入-> 手动跟踪-> 手写网格 Prefab 中分配。
 
 ## <a name="how-it-works"></a>工作原理
 

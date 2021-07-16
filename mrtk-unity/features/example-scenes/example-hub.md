@@ -1,20 +1,20 @@
 ---
-title: 示例中心
+title: MRTK 中心示例
 description: MRTK 中的示例场景概述
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 212fc6e1489a22995241368a9bf4db96d206c44a
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: b7a55e46b2c283b5a75395b9e99874af6020a171
+ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144756"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114282009"
 ---
-# <a name="mrtk-examples-hub"></a>MRTK 示例中心
+# <a name="mrtk-examples-hub"></a>MRTK 中心示例
 
-![MRTK 示例中心](../images/examples-hub/MRTK_ExamplesHub.png)
+![MRTK 中心示例](../images/examples-hub/MRTK_ExamplesHub.png)
 
 MRTK 示例中心是一个 Unity 场景，可让你轻松地体验多个场景。 它使用 MRTK 的场景系统加载 & 卸载场景。
 
@@ -22,7 +22,7 @@ MRTK 示例中心是一个 Unity 场景，可让你轻松地体验多个场景�
 
 ## <a name="prerequisite"></a>先决条件
 
-MRTK 示例中心使用 [场景转换服务](../extensions/scene-transition-service.md) 和相关脚本。 如果正在通过 Unity 包使用 MRTK，请导入作为 [发布包](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)的一部分的 MixedReality. x. x. x. x. x. x. x. x. x. x. x. x. x. x. **unitypackage** 。 如果通过存储库克隆使用 MRTK，则项目中应该已有 **MRTK/Extensions** 文件夹。
+MRTK 示例中心使用 [场景转换服务](../extensions/scene-transition-service.md) 和相关脚本。 如果通过 Unity 包使用 MRTK，请导入 **MixedReality. Toolkit。Unitypackage** 是 [发布包](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)的一部分的 Unity. x. x. x. x. x. x. x. x。 如果通过存储库克隆使用 MRTK，则项目中应该已有 **MRTK/Extensions** 文件夹。
 
 ## <a name="mrtkexampleshub-scene-and-the-scene-system"></a>MRTKExamplesHub 场景和场景系统
 
@@ -41,23 +41,23 @@ MRTK 示例中心使用 [场景转换服务](../extensions/scene-transition-serv
 
 ## <a name="running-the-scene"></a>运行场景
 
-场景在 Unity 的游戏模式和设备上均有效。 在 Unity **编辑器中运行 MRTKExamplesHub** 场景，并使用 MRTK 的输入模拟与场景内容进行交互。 若要生成和部署，只需使用场景系统列表中包含的其他场景生成 **MRTKExamplesHub** 场景。 检查器还可轻松将场景添加到"生成设置"。 在"生成设置"中，确保 **MRTKExamplesHub** 场景位于索引 0 列表的顶部。
+场景在 Unity 的游戏模式和设备上都有效。 在 Unity 编辑器中运行 **MRTKExamplesHub** 场景，并使用 MRTK 的输入模拟来与场景内容交互。 若要生成和部署，只需生成包含在场景系统列表中的其他场景的 **MRTKExamplesHub** 场景。 该检查器还可以轻松地向生成设置中添加场景。 在 "生成设置" 中，确保 **MRTKExamplesHub** 场景位于索引0处列表的顶部。
 
 <img src="../images/examples-hub/MRTK_ExamplesHub_BuildSettings.png" width="450" alt="Build settings">
 
 ## <a name="how-mrtkexampleshub-loads-a-scene"></a>MRTKExamplesHub 如何加载场景
 
-在 **MRTKExamplesHub** 场景中，可以找到 ``ExamplesHubButton`` 预制。
-预制 **条中包含 FrontPlate** 对象 ``Interactable`` 。
-使用 Interactable 的 和 事件，它会 ``OnClick()`` ``OnTouch()`` 触发 **LoadContentScene** 脚本的 **LoadContent ()** 函数。
+在 **MRTKExamplesHub** 场景中，可以找到 ``ExamplesHubButton`` prefab。
+Prefab 中有一个 **FrontPlate** 对象，其中包含 ``Interactable`` 。
+使用种不可交互的 ``OnClick()`` 和 ``OnTouch()`` 事件，将触发 **LoadContentScene** 脚本的 **LoadContent ()** 函数。
 在 **LoadContentScene** 脚本的检查器中，可以定义要加载的场景名称。
 
 <br/><br/><img src="../images/examples-hub/MRTK_ExamplesHub_SceneSystem6.png" alt="Scene system 6">
 <br/><br/><img src="../images/examples-hub/MRTK_ExamplesHub_SceneSystem8.png" width="450" alt="Scene System 8">
 <br/><br/><img src="../images/examples-hub/MRTK_ExamplesHub_SceneSystem7.png" width="450" alt="Scene System 7">
 
-该脚本使用场景系统的 LoadContent () 函数来加载场景。
-有关更多详细信息，请参阅 [场景](../scene-system/scene-system-getting-started.md) 系统页。
+脚本使用场景系统的 LoadContent () 函数加载场景。
+有关更多详细信息，请参阅 [场景系统](../scene-system/scene-system-getting-started.md) 页面。
 
 ```c#
 MixedRealityToolkit.SceneSystem.LoadContent(contentName, loadSceneMode);
@@ -65,7 +65,7 @@ MixedRealityToolkit.SceneSystem.LoadContent(contentName, loadSceneMode);
 
 ## <a name="returning-to-the-main-menu-scene"></a>返回到主菜单场景
 
-若要返回到 MRTKExamplesHubMainMenu (主菜单场景) ，可以使用同一场景系统 `LoadContent()` 方法。 **ToggleFeaturesPanelExamplesHub.prefab** 提供包含 **LoadContentScene** 脚本的"主页"按钮。 使用此预制组件或在每个场景中提供自定义主页按钮，允许用户返回到主场景。 可以将 **ToggleFeaturesPanelExamplesHub.prefab** 放在 **MRTKExamplesHub** 场景中，使其始终可见，因为 **MRTKExamplesHub** 是共享容器场景。 请确保在每个示例场景中隐藏/停用 **ToggleFeaturesPanel.prefab。**
+若要返回到主菜单场景 (MRTKExamplesHubMainMenu 场景) ，可以使用相同的场景系统 `LoadContent()` 方法。 **ToggleFeaturesPanelExamplesHub. prefab** 提供了包含 **LoadContentScene** 脚本的 "主页" 按钮。 使用此 prefab，或在每个场景中提供自定义主页按钮，以允许用户返回到主场景。 可以在 **MRTKExamplesHub** 场景中放置 **ToggleFeaturesPanelExamplesHub** ，以使其始终可见，因为 **MRTKExamplesHub** 是共享容器场景。 请确保在每个示例场景中隐藏/停用 **ToggleFeaturesPanel prefab** 。
 
 <img src="../images/examples-hub/MRTK_ExamplesHubToggleFeaturesPanel.png" alt="Toggle feature Panel">
 

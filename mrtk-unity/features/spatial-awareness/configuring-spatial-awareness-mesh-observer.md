@@ -1,20 +1,20 @@
 ---
-title: 配置空间感知网格观察程序
+title: 为设备配置网格观察程序
 description: 如何在 MRTK 中配置现用空间网格观察器
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 0d71a32d76624698e78b8123f427ddefc08f3d0b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: aba49e88d4fc555a88fe42e4b09858f1d2453ddc
+ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144968"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114281938"
 ---
 # <a name="configuring-mesh-observers-for-device"></a>为设备配置网格观察程序
 
-本指南将演练在 MRTK 中配置现成空间网格观察程序，该观察程序支持Windows Mixed Reality平台 (即 HoloLens) 。 混合现实工具包提供的默认实现是 [WindowsMixedRealitySpatialMeshObserver](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver) 类。 不过，本文中的许多属性适用于其他 [自定义观察者实现](create-data-provider.md)。
+本指南将演练在 MRTK 中配置现成空间网格观察程序，该观察程序支持Windows Mixed Reality平台 (，即 HoloLens) 。 混合现实应用程序提供的默认实现Toolkit [WindowsMixedRealitySpatialMeshObserver](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.SpatialAwareness.WindowsMixedRealitySpatialMeshObserver)类。 不过，本文中的许多属性适用于其他 [自定义观察者实现](create-data-provider.md)。
 
 ## <a name="profile-settings"></a>配置文件设置
 
@@ -45,23 +45,23 @@ ms.locfileid: "110144968"
 
 请求平台更新空间网格数据之间的时间（秒）。 典型值的范围为 0.1 和 5.0 秒。
 
-**为静止观察程序**
+**是固定观察者**
 
-指示观察者是保持静止还是与用户一起移动和更新。 如果为 true，则在启动时，具有由 *观察范围* 定义的卷的 *观察者形状* 将保持为源。 如果为 false，则观察者空间将跟随用户的头作为形状的原点。
+指示观察程序是保持静止状态，还是与用户一起移动和更新。 如果为 *true，则* 具有由观察区定义的卷的观察程序 *形状在启动时* 将保留在原点。 如果为 false，则观察者空间将跟随用户的头部作为形状的原点。
 
-将不会为这些属性所定义的观察者空间之外的任何物理区域计算网格数据： *是静止观察程序*、* 观察器形状 * * 和 *观察区*。
+对于观察器空间之外的任何物理区域，不会根据以下属性的定义计算网格数据：是固定观察者、*观察者形状**和观察 *区*。 
 
 **观察者形状**
 
-"观察者" 形状定义网格观察器在观察网格时将使用的卷的类型。 支持的选项包括：
+观察者形状定义网格观察器在观察网格时将使用的卷的类型。 支持的选项包括：
 
-* *轴对齐的多维数据集* -与世界坐标系统的轴对齐的矩形形状，在应用程序启动时确定。
-* *用户对齐的多维数据集* -旋转以与用户本地坐标系统对齐的矩形形状。
-* *球* -带有世界空间原点中心的球面体积。 " *观察范围* " 属性的 X 值将用作球的半径。
+* *轴对齐多维数据集* - 与世界坐标系统的轴保持一致的矩形形状，如应用程序启动时确定。
+* *用户对齐的多维数据集* - 旋转以与用户本地坐标系对齐的矩形形状。
+* *球体* - 球状体，其中心位于世界空间原点。 "观察区 *"* 属性的 X 值将用作球体的半径。
 
-**观察范围**
+**观察区**
 
-"观察范围" 定义观察到的网格的距离。
+观察区定义将观测网格的观察点的距离。
 
 ### <a name="physics-settings"></a>物理设置
 
@@ -69,48 +69,48 @@ ms.locfileid: "110144968"
 
 **物理层**
 
-将在其中放置空间网格对象以便与 Unity 物理学和 RayCast 系统交互的物理层。
+要与 Unity 物理和 RayCast 系统交互而放置空间网格对象的物理层。
 
 > [!NOTE]
-> 默认情况下，混合现实工具包保留 *第31层* 供空间感知观察程序使用。
+> 混合现实Toolkit默认保留 *第 31* 层供空间感知观察者使用。
 
 **重新计算法线**
 
-指定网格观察器是否将在观察后重新计算网格的法线。 此设置可用于确保应用程序在不使用网格返回它们的平台上接收包含有效的法线数据的网格。
+指定网格观察器是否会在观察后重新计算网格的法线。 此设置可用于确保应用程序在未通过网格返回这些网格的平台上接收包含有效法线数据的网格。
 
 ### <a name="level-of-detail-settings"></a>详细信息设置级别
 
-![网格观察程序级别的详细信息设置](../images/spatial-awareness/MeshObserverLevelOfDetailSettings.png)
+![网格观察器详细级别设置](../images/spatial-awareness/MeshObserverLevelOfDetailSettings.png)
 
 **详细信息级别**
 
-指定空间网格数据 (LOD) 的详细级别。 当前定义的值是粗、精细和自定义的。
+指定空间网格 (LOD) 的详细级别。 当前定义的值为"粗略"、"精细"和"自定义"。
 
-* *粗* -对应用程序性能的影响较小，并且是导航/平面查找的最佳选择。
+* *粗略* - 对应用程序性能的影响较小，是导航/平面查找的极佳选择。
 
-* "*中等* 平衡" 设置通常适用于对大型功能、地面和墙壁以及封闭详细信息持续扫描环境的体验。
+* *中等* - 均衡设置通常适用于持续扫描环境以寻找大型特征、楼层和墙面以及遮挡细节的体验。
 
-* *正常* 情况下，exacts 对应用程序性能的影响较高，对于封闭网格非常有用。
+* *精细* - 通常对应用程序性能的影响更大，是遮挡网格的一个很好的选择。
 
-* *自定义* -要求应用程序指定 *三角形/立方米计量* 属性，并使应用程序能够优化性能和对空间网格观察程序性能的影响。
+* *自定义* - 要求应用程序指定 *"三角形/* 三角形"属性，并允许应用程序优化空间网格观察程序的准确性和性能影响。
 
 > [!NOTE]
-> 不能保证所有的 *三角形/立方计量* 值都由所有平台所接受。 使用自定义 LOD 时，强烈建议使用试验和分析。
+> 不保证所有平台都遵守所有 *三角形/* 三角形计量值。 使用自定义 LOD 时，强烈建议进行试验和分析。
 
-**每个立方计量的三角形**
+**每个三角形（每三米）**
 
-使用 "**详细信息级别**" 属性的 "*自定义*" 设置并为空间网格指定三角形密度时有效。
+对"详细信息 *级别"* 属性使用"自定义"设置 **时** 有效，并指定空间网格的三角形密度。
 
 ### <a name="display-settings"></a>显示设置
 
-![网格观察程序显示设置](../images/spatial-awareness/MeshObserverDisplaySettings.png)
+![网格观察器显示设置](../images/spatial-awareness/MeshObserverDisplaySettings.png)
 
 **显示选项**
 
-指定观察者如何显示空间网格。 支持的值是：
+指定观察器如何显示空间网格。 支持的值是：
 
-* *无* -观察程序将不呈现网格
-* *可见的数据* 将使用 *可见材料* 显示
+* *无* - 观察者不会呈现网格
+* *可见* - 网格数据将通过使用可见 *材料可见*
 * *遮挡* - 网格数据将是场景中使用遮挡材料的 *遮挡项*
 
 ![选择空间感知系统实现](../images/spatial-awareness/MRTK_SpatialAwareness_DisplayOptions.jpg)
