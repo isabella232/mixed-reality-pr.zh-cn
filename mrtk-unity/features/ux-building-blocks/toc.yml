@@ -4,7 +4,7 @@
   href: bounding-box.md
 - name: 边界控制
   href: bounds-control.md
-- name: Button
+- name: 按钮
   href: button.md
 - name: 约束管理器
   href: constraint-manager.md
