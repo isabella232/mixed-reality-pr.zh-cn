@@ -1,4 +1,4 @@
-- name: 概述
+- name: 体系结构概述
   href: overview.md
 - name: 框架和运行时
   href: framework-and-runtime.md
