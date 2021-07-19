@@ -1,8 +1,8 @@
-- name: 部署到 HoloLens 和 WMR
+- name: 部署到 HoloLens 和 WMR 头戴显示设备
   href: wmr-mrtk.md
 - name: 部署到 Oculus Quest
   href: oculus-quest-mrtk.md
-- name: 部署到 Android 和 iOS (AR Foundation)
+- name: '部署到 Android 和 iOS (AR Foundation) [试验]'
   href: using-ar-foundation.md
 - name: 使用 Leap Motion
   href: leap-motion-mrtk.md

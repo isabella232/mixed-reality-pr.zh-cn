@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: a728e3520539723c4b38849eeb60524995e572eb
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 39eaa8a17d4616dc9c044f9bff7522dde41cffb7
+ms.sourcegitcommit: fd1964ec6c645e8088ec120661f73739bb7775a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175450"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113656628"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1.集成并使用语音识别和听录
 
@@ -166,4 +166,4 @@ ms.locfileid: "113175450"
 下一篇教程将介绍如何使用 Azure 语音识别执行命令。
 
 > [!div class="nextstepaction"]
-> [下一教程：2.使用语音识别执行命令](mrlearning-speechSDK-ch2.md)
+> [教程：2. 使用 Azure 语音识别执行命令](mrlearning-speechSDK-ch2.md)

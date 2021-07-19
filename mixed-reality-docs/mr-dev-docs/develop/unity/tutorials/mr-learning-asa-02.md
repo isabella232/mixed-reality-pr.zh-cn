@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: eddde9b827dcf2a2f054f48a50f38946e5d98533
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 9c3ae23c39bf4d0b32d8a5d82716f93fee48b6db
+ms.sourcegitcommit: fd1964ec6c645e8088ec120661f73739bb7775a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175572"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113656642"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2.Azure 空间定位点入门
 
@@ -66,7 +66,7 @@ ms.locfileid: "113175572"
 
 > [!WARNING]
 > ASA v2.9.0 和 v2.10.0-preview.1 存在一个已知问题，需要在场景中放置两个额外对象。 请使用检查器窗口中的“添加组件”按钮向“MixedRealityToolkit”对象添加“AR 摄像头管理器（脚本）”和“AR 会话（脚本）”。 请务必取消选中检查器窗口中“摄像头”对象旁边的复选框，以禁用在添加“AR 摄像头管理器（脚本）”时自动创建的摄像头。 此问题将在 ASA v 2.10.0 的完整版本中得到解决。
-> 
+>
 
 > [!NOTE]
 > 添加“AR 空间点管理器（脚本）”组件时，会自动添加“AR 会话原点（脚本）”组件，因为它是“AR 空间点管理器（脚本）”所必需的。
@@ -77,21 +77,21 @@ ms.locfileid: "113175572"
 
 在“层次结构”窗口中展开“ButtonParent”对象，然后选择名为“StartAzureSession”的第一个子对象，在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示   ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 将 ParentAnchor 对象指定为“On Click ()”事件的侦听器，具体方法是将该对象从“层次结构”窗口拖到“无(对象)”字段 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “StartAzureSession ()”，将此函数设置为触发事件时要执行的操作  
 
 ![配置了 StartAzureSession 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-1.png)
 
 在“层次结构”窗口中选择名为“StopAzureSession”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 将 ParentAnchor 对象指定为“On Click ()”事件的侦听器，具体方法是将该对象从“层次结构”窗口拖到“无(对象)”字段 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “StopAzureSession ()”将此函数设置为触发事件时要执行的操作  
 
 ![配置了 StopAzureSession 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-2.png)
 
 在“层次结构”窗口中选择名为“CreateAzureAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 将 ParentAnchor 对象指定为“On Click ()”事件的侦听器，具体方法是将该对象从“层次结构”窗口拖到“无(对象)”字段 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “CreateAzureAnchor ()”将此函数设置为触发事件时要执行的操作  
 * 将 ParentAnchor 对象分配到空的“无(游戏对象)”字段，使其成为 CreateAzureAnchor () 函数的参数 
 
@@ -99,7 +99,7 @@ ms.locfileid: "113175572"
 
 在“层次结构”窗口中选择名为“RemoveLocalAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 将 ParentAnchor 对象指定为“On Click ()”事件的侦听器，具体方法是将该对象从“层次结构”窗口拖到“无(对象)”字段 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “RemoveLocalAnchor ()”将此函数设置为触发事件时要执行的操作  
 * 将 ParentAnchor 对象分配到空的“无(游戏对象)”字段，使其成为 RemoveLocalAnchor () 函数的参数 
 
@@ -107,14 +107,14 @@ ms.locfileid: "113175572"
 
 在“层次结构”窗口中选择名为“FindAzureAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 将 ParentAnchor 对象指定为“On Click ()”事件的侦听器，具体方法是将该对象从“层次结构”窗口拖到“无(对象)”字段 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “FindAzureAnchor ()”将此函数设置为触发事件时要执行的操作  
 
 ![配置了 FindAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-5.png)
 
 在“层次结构”窗口中选择名为“DeleteAzureAnchor”的下一个按钮，然后在“检查器”窗口中配置“按钮配置帮助程序(脚本)”组件的“On Click ()”事件，如下所示  ：
 
-* 向“无(对象)”字段分配“ParentAnchor”对象 
+* 将 ParentAnchor 对象指定为“On Click ()”事件的侦听器，具体方法是将该对象从“层次结构”窗口拖到“无(对象)”字段 
 * 从“无函数”下拉列表中，选择“AnchorModuleScript” > “DeleteAzureAnchor ()”将此函数设置为触发事件时要执行的操作  
 
 ![配置了 DeleteAzureAnchor 按钮 OnClick 事件的 Unity](images/mr-learning-asa/asa-02-section5-step1-6.png)

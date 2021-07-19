@@ -1,20 +1,20 @@
 ---
-title: 为本地语音到文本翻译添加脱机模式
-description: 完成本课程可以了解如何在混合现实应用程序中为本地语音到文本翻译添加脱机模式。
+title: 使用 Azure 语音识别执行命令
+description: 完成本课程，了解如何在混合现实应用程序中使用 Azure 语音识别执行命令。
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 语音识别, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 2e7a48dc4bb64eb177e6fa290f4918345c3d642f
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 8d031896a1725c0121272b68578016edf38a36cf
+ms.sourcegitcommit: fd1964ec6c645e8088ec120661f73739bb7775a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590149"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113656619"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.为本地语音到文本翻译添加脱机模式
+# <a name="2-execute-commands-using-azure-speech-recognition"></a>2. 使用 Azure 语音识别执行命令
 
 在本教程中，你将添加使用 Azure 语音识别执行命令的功能，以便可以根据定义的单词或短语执行一些操作。
 
