@@ -1,6 +1,6 @@
 - name: Authors
   href: authors.md
-- name: 参与概述
+- name: 参与 MRTK 工作
   href: contributing.md
 - name: 编码准则
   href: coding-guidelines.md

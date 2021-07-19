@@ -1,4 +1,4 @@
-- name: 从 HTK 升级
+- name: 从 HoloToolkit 升级
   href: htk-to-mrtk-porting-guide.md
 - name: MRTK 和托管代码条带化
   href: mrtk-and-managed-code-stripping.md

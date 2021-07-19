@@ -1,6 +1,6 @@
 - name: 照相机系统概述
   href: camera-system-overview.md
-- name: 创建设置提供程序
+- name: 创建相机设置提供程序
   href: create-settings-provider.md
 - name: Unity AR 照相机设置
   href: unity-ar-camera-settings.md
