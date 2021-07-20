@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, 实用工具, 教程, hololens, hololens 2, azure 自定义视觉, azure 认知服务, azure 云服务, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: cb391aa2cdb7944234cdeede7dd05825c008d0d8
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 7624ed28c337f3621a29f15f1ab3b0e98aeb89db
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590569"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224219"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3.集成 Azure 自定义视觉
 
@@ -87,10 +87,6 @@ ObjectDetectionManager 预制件包含“ObjectDetectionManager(脚本)”组件
 > “ObjectDetectionManager(脚本)”会直接将拍摄的图像上传到自定义视觉服务。 作为一种替代方法，自定义视觉 API 接受图像 URL，你可以练习修改“ObjectDetectionManager(script)”，将图像上传到 Blob 存储。
 
 ## <a name="detect-objects"></a>检测对象
-
-在检测对象之前，必须更改 API 密钥，该密钥显示在已分配有自定义视觉密钥的项目设置下的 ObjectDetectionManager (脚本) 中。
-
-在 Azure 门户中查找并找到自定义视觉资源。单击“密钥和终结点”，检索 API 密钥，并替换为项目设置下的旧 API 密钥。
 
 现在，你可以测试训练后的模型，运行应用程序并从主菜单中单击“搜索对象”，然后键入相关的被跟踪对象的名称 。 随即将显示“对象卡片”，单击“自定义视觉”按钮 。 自此，ObjectDetectionManager 将开始在后台使用相机拍摄图像，菜单上将指示进度。 将相机指向你用于训练模型的对象，你将看到相机在一小段时间后会检测到对象。
 
