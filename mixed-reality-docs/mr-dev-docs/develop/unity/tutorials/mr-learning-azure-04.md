@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, Azure 空间定位点, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 0837ebd9d34ba12d660098fc765824da3c561d07
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: ab5bcfe92e5de2149e844fc02164f5079e215142
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590539"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224269"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4.集成 Azure 空间定位点
 
@@ -39,9 +39,16 @@ ms.locfileid: "99590539"
 
 本部分介绍如何配置场景并进行必要的更改。
 
+在“层次结构”窗口中选择“MixedRealityToolkit”对象，然后使用“检查器”窗口中的“添加组件”按钮添加“AR 定位点管理器(脚本)”  
+
+![添加了 AR 定位点管理器组件的 Unity MixedRealityToolkit 对象 ](images/mr-learning-azure/tutorial4-section1-step1-1.png)
+
+> [!NOTE]
+> 添加“AR 空间点管理器（脚本）”组件时，会自动添加“AR 会话原点（脚本）”组件，因为它是“AR 空间点管理器（脚本）”所必需的。
+
 在“项目”窗口中，依次导航至“资产”>“MRTK.Tutorials.AzureCloudServices”>“预制件”>“管理器”
 
-![选择了 AnchorManager 预制件的 Unity](images/mr-learning-azure/tutorial4-section1-step1-1.png)
+![选择了 AnchorManager 预制件的 Unity](images/mr-learning-azure/tutorial4-section1-step1-2.png)
 
 在“管理器”文件夹中，将预制件“定位点管理器”拖放到场景层次结构中 。
 

@@ -3,28 +3,33 @@ title: 全息远程处理版本历史记录
 description: 随时了解适用于 HoloLens 2 的全息远程处理功能的版本历史记录。
 author: florianbagarmicrosoft
 ms.author: flbagar
-ms.date: 06/10/2021
+ms.date: 07/20/2021
 ms.topic: article
-keywords: HoloLens， 远程处理， 全息远程处理， 版本历史记录， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
-ms.openlocfilehash: dae7bc0dac792cbe1a8472415d5e9fa34532e918
-ms.sourcegitcommit: 2f69fb62eb81f91e655d7b55306b0550a1162496
+keywords: HoloLens、远程处理、全息远程处理、版本历史记录、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备
+ms.openlocfilehash: ec810683a556bebfe92615e9085d26bf33cf7f2c
+ms.sourcegitcommit: ebc22c5adee0e785e45fb25fade83191e920f92b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111908220"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114585720"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
 > [!IMPORTANT]
 > 本指南特定于全息远程处理HoloLens 2。
 
+## <a name="version-261-july-20-2021"></a>版本 2.6.1 (2021 年 7 月 20 日) <a name="v2.6.1"></a>
+* 现在XR_MSFT_holographic_remoting_speech扩展允许在运行会话期间使用新参数重新初始化语音识别器。
+* 修复了通过多个连接降低语音识别可靠性的问题。
+* 各种 bug 修复和稳定性改进。
+
 ## <a name="version-260-june-10-2021"></a>版本 2.6.0 (2021 年 6 月 10 日) <a name="v2.6.0"></a>
 * 使用 OpenXR API 的全息远程处理现在支持：
   * 新的 XR_MSFT_holographic_remoting_speech 扩展，允许应用程序侦听各种语言的自定义语音命令。
   * XR_MSFT_scene_understanding扩展，为应用程序提供用户环境中平面、网格和对象的结构化高级表示形式，从而可以开发空间感知应用程序。 但是，请注意，XR_SCENE_COMPUTE_CONSISTENCY_OCCLUSION_OPTIMIZED_MSFT xrComputeNewSceneMSFT 支持的唯一一致性。
-  * 此XR_MSFT_spatial_graph_bridge扩展，允许应用程序创建 XrSpace 句柄，以跟踪设备平台库或 API Windows Mixed Reality空间图节点。 但是，请注意，XR_SPATIAL_GRAPH_NODE_TYPE_STATIC_MSFT xrCreateSpatialGraphNodeSpaceMSFT 支持的唯一节点类型。 
+  * 此XR_MSFT_spatial_graph_bridge扩展，允许应用程序创建 XrSpace 句柄来跟踪其他 Windows Mixed Reality 平台库或 API 的空间Graph节点。 但是，请注意，XR_SPATIAL_GRAPH_NODE_TYPE_STATIC_MSFT xrCreateSpatialGraphNodeSpaceMSFT 支持的唯一节点类型。 
 * 使用混合现实 API 的全息远程处理现在支持：
-  * SpatialGraphInteropPreview.CreateCoordinateSystemForNode 重载，使应用程序能够跟踪静态空间图形节点，以便用户可以推理其环境中的位置和事物。
+  * SpatialGraphInteropPreview.CreateCoordinateSystemForNode 重载，允许应用程序跟踪静态空间 Graph 节点，以便用户可以推理其环境中的位置和事物。
 * 使用 OpenXR 和混合现实 API 的全息远程处理现在支持：
   * Microsoft.MixedReality.SceneUnder一 SDK，它允许应用程序计算用户 (周围的场景的说明，如墙、楼层和表面) 提供四边形、网格和内容放置提示。
   * Microsoft.MixedReality.QR SDK，它允许应用程序跟踪检测到的 QR 码的位置、大小和内容。
@@ -47,7 +52,7 @@ ms.locfileid: "111908220"
 * 空间图面网格的优化传输，远程应用可通过 [SpatialSurfaceObserver](/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceobserver) 查询这些网格。
 * 修复了调用 SpatialAnchorManager 方法或释放定位点导致断开连接时出现异常的问题。
 * 修复了关闭 PlayerContext 或 RemoteContext 实例时导致崩溃的线程问题。
-* 桌面上的全息远程处理播放器：在未安装Windows Mixed Reality时显示错误消息，而不是以无提示方式关闭。
+* 桌面上的全息远程处理播放器：在未安装 Windows Mixed Reality而不是以无提示方式关闭时显示错误消息。
 * 其他许多 bug 修复和稳定性改进。
 
 ## <a name="version-241-january-22-2021"></a>版本 2.4.1 (2021 年 1 月 22 日) <a name="v2.4.1"></a>
@@ -76,14 +81,14 @@ ms.locfileid: "111908220"
 
 ## <a name="version-222-july-10-2020"></a>版本 2.2.2 (2020 年 7 月 10 日) <a name="v2.2.2"></a>
 
-* 修复了从头戴显示设备流式传输时 [HolographicCamera.LeftViewportParameters](/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters) 和 [HolographicCamera.RightViewportParameters](/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters) 不返回任何隐藏区域网格顶点Windows Mixed Reality的问题。
+* 修复了从头戴显示设备流式传输时[HolographicCamera.LeftViewportParameters](/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters)和[HolographicCamera.RightViewportParameters](/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters)不返回任何隐藏区域网格顶点Windows Mixed Reality的问题。
 * 修复了网络连接不佳时可能发生的故障。
 
 ## <a name="version-221-july-6-2020"></a>版本 2.2.1 (2020 年 7 月 6 日) <a name="v2.2.1"></a>
 
 > [!IMPORTANT]
-> [Windows 应用认证工具包](https://developer.microsoft.com/windows/downloads/app-certification-kit/) 版本 [2.2.0 的验证](holographic-remoting-version-history.md#v2.2.0) 将失败。 如果你使用版本 [2.2.0，](holographic-remoting-version-history.md#v2.2.0) 并且想要将应用程序提交到更新到至少版本 2.2.1 的 Microsoft store p 租约。
-* 修复 [Windows 应用认证工具包](https://developer.microsoft.com/windows/downloads/app-certification-kit/) 合规性问题。
+> [Windows](https://developer.microsoft.com/windows/downloads/app-certification-kit/) [2.2.0](holographic-remoting-version-history.md#v2.2.0)版的应用程序认证工具包验证将失败。 如果你使用版本 [2.2.0，](holographic-remoting-version-history.md#v2.2.0) 并且想要将应用程序提交到更新到至少版本 2.2.1 的 Microsoft store p 租约。
+* 修复[Windows认证工具包符合性](https://developer.microsoft.com/windows/downloads/app-certification-kit/)问题。
 
 ## <a name="version-220-july-1-2020"></a>版本 2.2.0 (2020 年 7 月 1 日) <a name="v2.2.0"></a>
 
@@ -141,7 +146,7 @@ ms.locfileid: "111908220"
 
 ## <a name="version-2010-october-10-2019"></a>版本 2.0.10 (2019 年 10 月 10 日) <a name="v2.0.10"></a>
 
-* 修复了使用 VR 控制器的触发器按钮时崩溃的问题。 全息远程处理不完全支持控制器，只有触发器按钮和 Windows 按钮与 HoloLens 2。
+* 修复了使用 VR 控制器的触发器按钮时崩溃的问题。 全息远程处理不完全支持控制器，如果与 Windows HoloLens 2 按钮配对，则只有触发器按钮和 Windows。
 
 ## <a name="version-209-september-19-2019"></a>版本 2.0.9 (2019 年 9 月 19 日) <a name="v2.0.9"></a>
 

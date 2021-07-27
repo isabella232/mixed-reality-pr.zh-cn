@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: azure, 混合现实, unity, 教程, hololens, hololens 2, azure blob 存储, azure 表存储, azure 空间定位点, azure bot framework, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: c38f3102adfb5178a4d2b5429eeb24c0733db50a
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 3c52384b118a72b1c2f2dfaa2205e4f890e2e5a7
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175532"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224360"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1.适用于 HoloLens 2 的 Azure 云服务
 
@@ -73,10 +73,10 @@ ms.locfileid: "113175532"
 * 一些基本的 C# 编程功能
 * 一个[针对开发配置](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 2 设备
 * 一个联网的摄像头（如果要通过 Unity 编辑器进行测试）
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2019 LTS 并添加了通用 Windows 平台生成支持模块
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>，其中已安装 Unity 2020/2019 LTS 并添加了通用 Windows 平台生成支持模块
 
-> [!CAUTION]
-> 建议对本系列教程使用 Unity 2019 LTS。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求或建议。
+> [!Important]
+> 本系列教程支持 Unity 2020 LTS（当前版本 2020.3.x）（如果您使用 Open XR 或 Windows XR 插件）以及 Unity 2019 LTS（当前版本 2019.4.x）（如果您使用旧版 WSA）。 这将取代上述链接的先决条件中所述的任何 Unity 版本要求。
 
 ## <a name="creating-and-preparing-the-unity-project"></a>创建和准备 Unity 项目
 
@@ -90,38 +90,13 @@ ms.locfileid: "113175532"
 4. [导入混合现实工具包和配置 Unity 项目](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
 5. [创建并设置场景](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk)，并为场景提供一个合适的名称，例如 AzureCloudServices
 
-然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明，确保场景的 MRTK 配置配置文件为“DefaultXRSDKConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
+然后，根据[更改空间感知显示选项](mr-learning-base-03.md#changing-the-spatial-awareness-display-option)说明，确保场景的 MRTK 配置配置文件为“DefaultHololens2ConfigurationProfile”，并将空间感知网格的显示选项更改为“遮挡” 。
 
-## <a name="installing-inbuilt-unity-packages"></a>安装内置 Unity 包
+## <a name="installing-inbuilt-unity-packages-and-importing-the-tutorial-assets"></a>安装内置 Unity 包和导入教程资产
 
-在 Unity 菜单中，选择“窗口” > “包管理器”打开“包管理器”窗口，然后选择“AR Foundation”并单击“安装”按钮以安装包   ：
-
-![已选择“AR Foundation”的 Unity 包管理器窗口](images/mr-learning-asa/asa-02-section2-step1-1.png)
-
-> [!NOTE]
-> 你要安装 AR Foundation 包，因为在下一部分中导入 Azure 空间定位点 SDK 时必须使用它。
-
-## <a name="importing-the-tutorial-assets"></a>导入教程资产
-
-将 AzurespatialAnchors SDK V2.7.1 添加到 unity 项目，若要添加包，请遵循此[教程](/azure/spatial-anchors/how-tos/setup-unity-project?tabs=UPMPackage)
-
-下载以下 Unity 自定义包，并 **按其列出顺序** 将其 **导入**：
-
-* [AzureStorageForUnity.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-cloud-services-v2.4.0/AzureStorageForUnity.unitypackage)
-* [MRTK.Tutorials.AzureCloudServices.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-cloud-services-v2.4.0/MRTK.Tutorials.AzureCloudServices.unitypackage)
-
-> [!TIP]
-> 有关如何导入 Unity 自定义包的提示，可参阅[导入教程资产](mr-learning-base-04.md#importing-the-tutorial-assets)说明。
-
-导入教程资产后，“项目”窗口应如下所示：
-
-![导入教程资产后的 Unity“层次结构”、“场景”和“项目”窗口](images/mr-learning-azure/tutorial1-section4-step1-1.png)
-
-> [!NOTE]
-> 如果看到任何有关“WorldAnchor.SetNativeSpatialAnchorPtr(IntPtr)”和“WorldAnchor.GetNativeSpatialAnchorPtr()”即将过时的 CS0618 警告，可忽略这些警告。
+[!INCLUDE[](includes/installing-packages-for-azure-cloud-services.md)]
 
 ## <a name="creating-and-preparing-the-scene"></a>创建和准备场景
-<!-- TODO: Consider renaming to 'Preparing the scene' -->
 
 在本部分，你将通过添加一些教程预制件来准备场景。
 
@@ -129,7 +104,7 @@ ms.locfileid: "113175532"
 
 ![已选中 SceneController、RootMenu 和 DataManager 预制件的 Unity](images/mr-learning-azure/tutorial1-section5-step1-1.png)
 
-SceneController (预制件)包含两个脚本：SceneController (脚本)和 UnityDispatcher (脚本)  。 “SceneController”脚本组件包含多个 UX 函数，并简化了照片捕获功能，而 UnityDispatcher 是一个帮助程序类，允许在 Unity 主线程上执行操作 。
+SceneController (预制件)包含两个脚本：SceneController (脚本)和 AppDispatcher (脚本)  。 “SceneController”脚本组件包含多个 UX 函数，并简化了照片捕获功能，而 AppDispatcher 是一个帮助程序类，允许在 Unity 主线程上执行操作 。
 
 “RootMenu (预制件)”是主要的 UI 预制件，它包含通过各种小型脚本组件相互连接的所有 UI 窗口，并控制应用程序的一般 UX 流程。
 
