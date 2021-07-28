@@ -7,12 +7,12 @@ ms.date: 05/11/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 仿真器
-ms.openlocfilehash: a9ecb121652dde39be0f91a24a4d57856a874071
-ms.sourcegitcommit: eb39526f9620f0459bd30e4484307892f4609334
+ms.openlocfilehash: 701cffbe576c64333874fc88c3cd6a6b821bc458
+ms.sourcegitcommit: 78746bef0e1ffe1480e89fed8cd30f6f8b389e8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114201628"
+ms.lasthandoff: 07/27/2021
+ms.locfileid: "114713585"
 ---
 # <a name="using-the-hololens-emulator"></a>使用 HoloLens 仿真器
 
@@ -283,20 +283,6 @@ HoloLens（第 1 代）上的光标可跟踪头部运动和旋转。 在 HoloLen
 
 如果仿真器启动时系统挂起，请对仿真器图形禁用硬件加速。
 * 在“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0”中创建名为“DisableGPU”的注册表 DWORD 值，并将其值设置为 1。
-
-## <a name="next-development-checkpoint"></a>下一个开发检查点
-
-如果你遵循我们规划的 Unity 开发检查点历程，则你就处于部署阶段之中。 从这里，你可以继续了解下一个主题：
-
-> [!div class="nextstepaction"]
-> [部署到 HoloLens 模拟器](using-the-hololens-emulator.md)
-
-或直接跳到添加高级服务：
-
-> [!div class="nextstepaction"]
-> [高级服务](../../develop/unity/unity-development-overview.md#5-adding-services)
-
-你可以随时返回到 [Unity 开发检查点](../../develop/unity/unity-development-overview.md#4-deploying-to-a-device-or-emulator)。
 
 ## <a name="see-also"></a>另请参阅
 * [高级 HoloLens 仿真器和混合现实模拟器输入](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
