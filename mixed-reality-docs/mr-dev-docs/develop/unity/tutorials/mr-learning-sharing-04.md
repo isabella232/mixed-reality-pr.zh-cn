@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: d4dc943c8ca57331b4916e40db67df3cd3d6d2e6
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 4be0fc30b6d1b401bf137be4060704f54515ceb1
+ms.sourcegitcommit: cf8df1720ddb8236207ab581bc149edcc76e6199
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590059"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114702475"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4.与多个用户共享对象运动
 
@@ -27,9 +27,17 @@ ms.locfileid: "99590059"
 
 在本部分，你将通过添加教程预制件来准备场景。
 
+在“层次结构”窗口中，展开“MixedRealityPlayspace”对象并选择“主照相机”子对象，然后在“检查器”窗口中，使用“添加组件”按钮将“AR 照相机管理器(脚本)”组件添加到“主照相机”对象    ：
+
+![配置了部分 AR 照相机管理器组件的 Unity](images/mr-learning-sharing/sharing-04-section1-step1-0.png)
+
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.MultiUserCapabilities” > “预制件”文件夹，然后将“TableAnchor”预制件拖动到“层次结构”窗口中“SharedPlayground”对象上，以将其作为 SharedPlayground 对象的子项添加到场景    ：
 
 ![选中新增的 TableAnchor 预制件的 Unity](images/mr-learning-sharing/sharing-04-section1-step1-1.png)
+
+在“层次结构”窗口中，确保“MixedRealityPlayspace”对象已展开，且已选择“TableAnchor”对象 。 将“主照相机”组件拖入 TableAnchor 的“AR 会话源”组件的“照相机”字段   ：
+
+![配置了 AR 会话源主照相机分配的 Unity](images/mr-learning-sharing/sharing-04-section1-step1-2.png)
 
 ## <a name="configuring-pun-to-instantiate-the-objects"></a>配置 PUN 以将对象实例化
 

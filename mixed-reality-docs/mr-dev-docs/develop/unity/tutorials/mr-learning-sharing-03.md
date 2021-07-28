@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 976593fd2f107d456da4f04da19621dd253f2ae1
-ms.sourcegitcommit: 943489923c69c3a28bc152f1cb516dcdcea2880a
+ms.openlocfilehash: 207c451ee616ee4065e948ca78c17ad59f7dd190
+ms.sourcegitcommit: cf8df1720ddb8236207ab581bc149edcc76e6199
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111772420"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114702472"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 
@@ -39,63 +39,9 @@ ms.locfileid: "111772420"
 
 ![选中了新增的 DebugWindow 预制件的 Unity](images/mr-learning-sharing/sharing-03-section1-step1-2.png)
 
-## <a name="creating-the-user-prefab"></a>创建用户预制件
-
-在本部分中，你将创建一个预制件，用于表示共享体验中的用户。
-
-### <a name="1-create-and-configure-the-user"></a>1.创建和配置用户
-
-在“层次结构”窗口中，右键单击空白区域，然后选择“创建空白项”将空对象添加到场景中，将该对象命名为“PhotonUser”，并按如下所示对其进行配置：
-
-* 请确保将变换位置设置为 X = 0，Y = 0，Z = 0：
-
-![选中了新创建的 PhotonUser 对象的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-1.png)
-
-在“层次结构”窗口中，选择“PhotonUser”对象，然后在检查器窗口中，使用“添加组件”按钮将“Photon 用户(脚本)”组件添加到 PhotonUser 对象：  
-
-![添加了 PhotonUser 组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-2.png)
-
-在检查器窗口中，使用“添加组件”按钮将“通用网络同步(脚本)”组件添加到 PhotonUser 对象，并按如下所示对其进行配置：
-
-* 选中“是用户”复选框
-
-![添加并配置了“通用网络同步”组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-3.png)
-
-在检查器窗口中，使用“添加组件”按钮将“Photon 视图(脚本)”组件添加到 PhotonUser 对象，并按如下所示对其进行配置：
-
-* 确保“观察到的组件”字段分配有“通用网络同步(脚本)”组件 
-
-![添加并配置了 Photon 视图组件的 Unity](images/mr-learning-sharing/sharing-03-section2-step1-4.png)
-
-### <a name="2-create-the-avatar"></a>2.创建头像
-
-在“项目”窗口中，导航到“包” > “混合现实工具包标准资产” > “材料”文件夹以找到 MRTK 材料。
-
-然后，在“层次结构”窗口中，右键单击 PhotonUser 对象，然后选择“3D 对象” > “球体”来创建一个球体对象作为 PhotonUser 对象的子项，并按如下所示对它进行配置  ：
-
-* 请确保将变换位置设置为 X = 0，Y = 0，Z = 0
-* 将变换标度更改为适当的大小，例如 X = 0.15，Y = 0.15，Z = 0.15
-* 在“MeshRenderer”>“材料”>“元素 0”字段中，指定 MRTK_Standard_White 材料 
-
-![具有新创建和新配置的头像球体的 Unity](images/mr-learning-sharing/sharing-03-section2-step2-1.png)
-
-### <a name="3-create-the-prefab"></a>3.创建预制件
-
-在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.MultiUserCapabilities” > “资源”文件夹：  
-
-![选中了“资源”文件夹的 Unity 项目窗口](images/mr-learning-sharing/sharing-03-section2-step3-1.png)
-
-在“资源”文件夹仍处于选定状态的情况下，单击“层次结构”窗口中的“PhotonUser”对象并将其拖动到“资源”文件夹，以使 PhotonUser 对象成为预制件：  
-
-![选中了新创建的 PhotonUser 预制件的 Unity](images/mr-learning-sharing/sharing-03-section2-step3-2.png)
-
-在“层次结构”窗口中，右键单击“PhotonUser”对象，然后选择“删除”将其从场景中删除：
-
-![从场景中删除了新创建的 PhotonUser 预制件的 Unity](images/mr-learning-sharing/sharing-03-section2-step3-3.png)
-
 ## <a name="configuring-pun-to-instantiate-the-user-prefab"></a>配置 PUN 以将用户预制件实例化
 
-在本部分中，你将配置项目以使用在上一部分中创建的 PhotonUser 预制件。
+在本部分中，配置项目以使用 PhotonUser 预制件。
 
 在“项目”窗口中，导航到“资产” > “MRTK.Tutorials.MultiUserCapabilities” > “资源”文件夹。  
 
