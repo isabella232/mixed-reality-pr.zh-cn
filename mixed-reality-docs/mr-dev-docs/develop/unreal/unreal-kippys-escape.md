@@ -1,40 +1,47 @@
 ---
 title: Kippy 的转义
-description: 按照我们的介绍，我们在 Unreal Engine 中探讨了 Kippy 的用于 HoloLens 2 的转义混合现实应用程序。
+description: 请与我们探讨，因为我们在 Unreal Engine 中探讨了 Kippy 的转义混合现实应用程序 HoloLens 2。
 author: sw5813
 ms.author: suwu
 ms.date: 9/4/2020
 ms.topic: article
-keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+keywords: Unreal，Unreal Engine 4，UE4，HoloLens，HoloLens 2，混合现实，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: eca0b12cd9ba4e3d5d4033790184ffd770b44280
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: 353df2f2f5bc9a1d70fc354fd3014f10c0ba95d9
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635395"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757106"
 ---
 # <a name="the-making-of-kippys-escape"></a>Kippy 的转义
+![Kippy 的转义英雄图像](images/KippysEscape_1920.jpg)
 
-自动唤醒机器人，使其 Kippy。 你需要放在你的问题解决 hat 上，以帮助它找到返回到其火箭的途径！ 通过你 Microsoft Store 的 HoloLens 2 附带的内容，从 GitHub [下载应用程序](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) 或从 GitHub 克隆 [存储库](https://github.com/microsoft/MixedReality-Unreal-KippysEscape) ，Kippy 主页安全！  
+自动唤醒机器人，使其 Kippy。 你需要放在你的问题解决 hat 上，以帮助它找到返回到其火箭的途径！ 带到 HoloLens 2 并从 Microsoft Store[下载应用](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd)，或者从 GitHub 克隆[存储库](https://github.com/microsoft/MixedReality-Unreal-KippysEscape)，并获得 Kippy 主页安全！  
 
 > [!IMPORTANT]
-> 如果要从 GitHub 存储库构建 Kippy 的转义，请确保使用的是 **Unreal Engine 4.25 或更高版本** 。
+> 如果要从 GitHub 存储库构建 Kippy 的转义，请确保使用的是 **Unreal Engine 4.25 或更高版本**。
 
-Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（适用于 Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)）生成的开源[HoloLens 2](/hololens/hololens2-hardware)示例应用。 在此文章中，我们将指导你完成从第一个原则和视觉设计到实现和优化体验的过程。 在 [Unreal 开发概述](unreal-development-overview.md)中，可以找到有关通过 MRTK UX 工具开发混合现实应用程序的详细信息。
+Kippy 的转义是使用 Unreal 引擎4和[混合现实 UX 工具（用于 Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)）生成的开源[HoloLens 2](/hololens/hololens2-hardware)示例应用。 在此文章中，我们将指导你完成从第一个原则和视觉设计到实现和优化体验的过程。 在 [Unreal 开发概述](unreal-development-overview.md)中，可以找到有关通过 MRTK UX 工具开发混合现实应用程序的详细信息。
+
+## <a name="download-app-from-microsoft-store-in-hololens-2"></a>从 HoloLens 2 中的 Microsoft Store 下载应用
+如果有 HoloLens 2 设备，则可以直接在设备中下载并安装应用。
+
+<a href='//www.microsoft.com/store/apps/9nbd7gl86vkd?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' width="284px" height="104px" style='width: 284px; height: 104px;'/></a>
+
 
 ## <a name="first-principles"></a>首要原则 
 
-在设置为创建 Kippy 的转义的过程中，我们的目标是创建一个可突出显示 [Unreal 引擎的 HoloLens 2 支持](https://docs.unrealengine.com/Platforms/AR/HoloLens2/index.html)、hololens 2 功能和混合现实工具包的体验。 我们想让开发人员想象一下他们可以通过 Unreal 和 HoloLens 2 创建的内容。  
+在设置为创建 Kippy 的转义的过程中，我们的目标是创建一个可突出显示[Unreal 引擎 HoloLens 2 支持](https://docs.unrealengine.com/Platforms/AR/HoloLens2/index.html)、HoloLens 2 功能和混合现实 Toolkit 的体验。 我们想让开发人员想象一下他们可以通过 Unreal 和 HoloLens 2 创建的内容。  
 
 我们提出了三个针对体验的指导原则：这是一项有趣的交互式工作，并面临进入的障碍。 我们希望经验非常直观，甚至首次混合现实用户都不需要教程。  
 
 ## <a name="designing-the-game"></a>设计游戏 
 
-HoloLens 2 可访问目前在游戏中的其他地方。 对象可以使用您的手直接推送或操作，也可以使用目视跟踪来进行操作。 这些关键功能在 Kippy 的转义中构建了一些有趣的时刻。  
+HoloLens 2 可以访问当前在游戏中的其他地方。 对象可以使用您的手直接推送或操作，也可以使用目视跟踪来进行操作。 这些关键功能在 Kippy 的转义中构建了一些有趣的时刻。  
 
-使用唯一的 HoloLens 2 功能作为游戏设计的指导，我们的作用域只是几个小环境方案。 孤岛非常有用，因为它们可以针对不同的播放机高度进行调整，并提供一些有趣的 bridge 创意。 我们着陆主题古文明与科幻技术相结合，这种想法表明有人通过刻录构建了一种奇怪的能源。 每个孤岛都具有自己的外观，这是一项有助于创建视觉对象的详细信息。 建模和纹理间的良好平衡会使绘图调用对呈现性能的消耗降低，因此，设计风格的外观就是用这一理念设计的。 
+使用独特的 HoloLens 2 功能作为游戏设计的指导，我们只是确定了几种小环境方案。 孤岛非常有用，因为它们可以针对不同的播放机高度进行调整，并提供一些有趣的 bridge 创意。 我们着陆主题古文明与科幻技术相结合，这种想法表明有人通过刻录构建了一种奇怪的能源。 每个孤岛都具有自己的外观，这是一项有助于创建视觉对象的详细信息。 建模和纹理间的良好平衡会使绘图调用对呈现性能的消耗降低，因此，设计风格的外观就是用这一理念设计的。 
 
 ![早期游戏设计 ](images/kippys-escape/kippys-escape-img-01.png)
  *将一些更早的草图作为经验*
@@ -80,13 +87,13 @@ Kippy 的转义很大程度上依赖于混合现实 UX 工具组件，以使游�
 
 ![滑块组件示例 gif](images/kippys-escape/kippys-escape-img-09.gif) 
 
-## <a name="optimizing-for-hololens-2"></a>针对 HoloLens 2 进行优化 
+## <a name="optimizing-for-hololens-2"></a>优化 HoloLens 2 
 
-对于在移动设备上运行的任何体验，请务必关注性能。 Unreal 4.25 包括一个用于支持移动多视图的主要更新，这大大减少了渲染开销并提升了帧速率。 建议在进行优化时，使用 Unreal 来查看适用于 HoloLens 2 的其他 [建议性能设置](performance-recommendations-for-unreal.md) 。  
+对于在移动设备上运行的任何体验，请务必关注性能。 Unreal 4.25 包括一个用于支持移动多视图的主要更新，这大大减少了渲染开销并提升了帧速率。 建议在 HoloLens 2 进行优化时，使用 Unreal 查看我们的其他[建议性能设置](performance-recommendations-for-unreal.md)。  
 
 物理学对象在性能方面仍会成本高昂，因此使用了一些巧妙的解决方法。 例如，第三个 "桥" 需要吹一些阻止方法的碎片。 炸弹引爆不会将石子影响为物理学对象，而是通过切换静态石子来实现分解粒子效果。 
 
-![针对 HoloLens 2 gif 优化的示例](images/kippys-escape/kippys-escape-img-10.gif) 
+![HoloLens 2 gif 的优化示例](images/kippys-escape/kippys-escape-img-10.gif) 
 
 我们还将我们的绘图调用从400减少到 ~ 260： 
 * 降低网格复杂性
@@ -97,7 +104,7 @@ Kippy 的转义很大程度上依赖于混合现实 UX 工具组件，以使游�
 
 ## <a name="try-it-out"></a>试试看！ 
 
-启动 HoloLens 2 并从 Microsoft Store [下载](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) 应用程序，或从 GitHub 克隆 [存储库](https://github.com/microsoft/MixedReality-Unreal-KippysEscape) 并自己生成应用！  
+启动 HoloLens 2 并从 Microsoft Store[下载](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd)应用，或者从 GitHub 克隆[存储库](https://github.com/microsoft/MixedReality-Unreal-KippysEscape)，并自行生成应用！  
 
 ## <a name="about-the-team"></a>关于团队
 

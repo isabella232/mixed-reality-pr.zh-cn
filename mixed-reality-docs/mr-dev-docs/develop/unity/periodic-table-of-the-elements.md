@@ -5,22 +5,25 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality， 设计， 示例应用， 控件， MRTK， 混合现实工具包， Unity， 示例应用， 示例应用， 开源， Microsoft Store， HoloLens， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
-ms.openlocfilehash: ed8c35fc6467322c25b92924b134f176fa4a9b47
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+keywords: Windows Mixed Reality、设计、示例应用、控件、MRTK、混合现实 Toolkit、Unity、示例应用、示例应用、开源、Microsoft Store、HoloLens、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备
+ms.openlocfilehash: 2856d9052f9e1d07b2f796cafeb96fb0cdef63e8
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743412"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757300"
 ---
 # <a name="periodic-table-of-the-elements"></a>元素周期表
+![Elements 应用的周期表](../images/MRDL_PeriodicTable_HL1.jpg)
 
 >[!NOTE]
 >本文讨论我们在混合现实设计实验室中创建的探索示例，我们在该实验室[](https://github.com/Microsoft/MRDesignLabs_Unity)中分享有关混合现实应用开发的学习和建议。 随着我们进行新的发现，与设计相关的文章和代码将不断发展。
 
-[元素周期表是](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) Microsoft 混合现实设计实验室提供的开源示例应用。 了解如何使用对象集合 在具有各种图面类型的 3D 空间中布局 **[对象的数组](../../design/object-collection.md)**。 另请了解如何创建可交互对象，以响应 HoloLens 中的标准输入。 可以使用此项目的组件创建自己的混合现实应用体验。
+>[!NOTE]
+>此示例应用专为第一代HoloLens设计。 有关[版本，请参阅 Elements 2.0](periodic-table-of-the-elements-2.md)的HoloLens 2表。
 
-![Elements 应用的周期表](images/640px-periodictable-hero.jpg)
+[元素周期表是](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) Microsoft 混合现实设计实验室提供的开源示例应用。 了解如何使用对象集合 在具有各种图面类型的 3D 空间中布局 **[对象的数组](../../design/object-collection.md)**。 另请了解如何创建可交互对象，以响应来自 HoloLens。 可以使用此项目的组件创建自己的混合现实应用体验。
+
 
 ## <a name="demo-video"></a>演示视频 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IkCF]
@@ -29,11 +32,11 @@ ms.locfileid: "110743412"
 
 ## <a name="about-the-app"></a>关于应用
 
-元素周期表将三维空间中化学元素及其每个属性可视化。 它结合了 HoloLens 的基本交互，例如凝视和敲击。 用户可以了解具有动画 3D 模型的元素。 它们可以直观地了解元素的电子外壳及其由质子和中子组成。
+元素周期表将三维空间中化学元素及其每个属性可视化。 它结合了凝视和HoloLens等设备的基本交互。 用户可以了解具有动画 3D 模型的元素。 它们可以直观地了解元素的电子外壳及其由质子和中子组成。
 
 ## <a name="background"></a>背景
 
-我第一次体验 HoloLens 后，知道我想在混合现实中试验定期表应用。 由于每个元素都有许多以文本显示的数据点，因此我认为在 3D 空间中浏览版式撰写是一个很好的主题。 为用户提供可视化元素电子模型的机会是此项目的另一个有趣部分。
+我第一次HoloLens后，知道我想在混合现实中试验定期表应用。 由于每个元素都有许多以文本显示的数据点，因此我认为在 3D 空间中浏览版式撰写是一个很好的主题。 为用户提供可视化元素电子模型的机会是此项目的另一个有趣部分。
 
 ## <a name="design"></a>设计
 
@@ -55,7 +58,7 @@ ms.locfileid: "110743412"
 
 ### <a name="interactable-object-button"></a>可交互对象 (按钮) 
 
-[可交互](../../design/interactable-object.md) 对象是一个对象，可以响应基本的 HoloLens 输入。 它作为预制/脚本提供，可轻松应用于任何对象。 例如，可以使场景中的咖啡杯交互，并响应凝视、敲击、导航和操作手势等输入。 [了解详细信息](../../design/interactable-object.md)
+[可交互](../../design/interactable-object.md)对象是一个对象，它可以响应基本HoloLens输入。 它作为预制/脚本提供，可轻松应用于任何对象。 例如，可以使场景中的咖啡杯交互，并响应凝视、敲击、导航和操作手势等输入。 [了解详细信息](../../design/interactable-object.md)
 
 ![nteractable 对象](images/640px-periodictable-interactableobject.jpg)
 
@@ -67,7 +70,7 @@ ms.locfileid: "110743412"
 
 ## <a name="technical-details"></a>技术详细信息
 
-可以在混合现实设计实验室 GitHub 上找到 Elements 应用的周期表的脚本和 [预制件](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable)。
+可以在混合现实设计实验室中查找 Elements 应用的定期表的脚本和[GitHub。](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable)
 
 ## <a name="porting-story-for-hololens-2"></a>移植适用于 HoloLens 2
 
@@ -83,7 +86,7 @@ ms.locfileid: "110743412"
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>Dong Yoon Park</b><br>用户体验设计师 @Microsoft</td>
+<td style="border-style: none"><a href="http://dongyoonpark.com" target="_blank"><b>Yoon Park</b></a><br>用户体验设计师 @Microsoft</td>
 </tr>
 </table>
 
@@ -91,5 +94,5 @@ ms.locfileid: "110743412"
 
 * [MRTK 示例中心](/windows/mixed-reality/mrtk-unity/features/example-scenes/example-hub) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
 * [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
-* [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [元素周期表 2.0](periodic-table-of-the-elements-2.md)
 * [星系探索者 2.0](galaxy-explorer-update.md)

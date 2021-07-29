@@ -1,42 +1,44 @@
 ---
 title: Ford GT40 体验
-description: 请参阅，了解如何将 Ford GT40 混合现实应用程序与 Unreal 中的 MRTK for HoloLens 2 一起工作。
+description: 请参阅，了解如何将 Ford GT40 混合现实应用程序与 Unreal 中的 MRTK for HoloLens 2 结合在一起。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 3/23/2021
 ms.topic: article
-keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，mixed reality，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+keywords: Unreal，Unreal Engine 4，UE4，HoloLens，HoloLens 2，混合现实，部署到设备，PC，文档，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ca577bdc5bc30aebf80c9888345eb0e2d5c3ce6d
-ms.sourcegitcommit: cc9d90b046a9fce792058fea25ae13a9186e43e7
+ms.openlocfilehash: e634d75af92509372209d8e7c0cde2833127c128
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105008922"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757190"
 ---
 # <a name="the-making-of-the-ford-gt40-experience"></a>Ford GT40 体验
+![Ford GT40 英雄图像](images/ford-gt40-hero_1920.jpg)
 
-*"MRTK，使用 Unreal 开发 HoloLens 2 的工作有点枯燥，因为所有空间交互都必须在 c + + 中手动编码。Unreal 的 MRTK 对这些任务进行了很多简单的操作。我估计它会缩短初始原型所需的时间。 "* -Rodriguez，软件开发人员
+*"预 MRTK，使用 Unreal 进行 HoloLens 2 开发有点枯燥，因为所有空间交互都必须手动编码。Unreal 的 MRTK 对这些任务进行了很多简单的操作。我估计它会缩短初始原型所需的时间。 "* -Rodriguez，软件开发人员
 
-*"Ford GT40 体验证明，高保真的 HoloLens 2 应用只需几个月就能完成，并且仍能提供高度的有影响力结果。"*  -Daniel Cheetham，首席创新官员，快乐
+*"Ford GT40 体验证明，高保真 HoloLens 2 应用只需几个月就能完成，但仍有一个适度的预算，但仍能提供高度的有影响力结果。"*  -Daniel Cheetham，首席创新官员，快乐
 
-使用混合现实工具包 (适用于 Unreal 的 MRTK) ，创造性生产公司满意度提供了一种在 Ford GT40 上的全新观点，即在 Le 传奇的24小时击败 Ferrari 的 Mans 赛车！
+使用混合现实 Toolkit (用于 Unreal 的 MRTK) ，创造性的生产公司会获得更好的 HoloLens 2 体验，在 Ford GT40 上提供了一种全新的观点，即在 Le 传奇的24小时击败 Ferrari 的 Mans 赛车！
 
 通过使用一系列自然和直观的空间交互，用户可以探索 GT40's 的美、性能和工程，这一切都以利用 Unreal 引擎提供的高视觉保真度的方式提供。 整个项目的软件开发已由一位开发人员在不到三个月的时间内完成，MRTK 适用于 Unreal 的 visual 脚本和设计环境。
 
-> [!div class="nextstepaction"]
-> [下载 Ford GT40 应用程序](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp)
+## <a name="download-app-from-microsoft-store-in-hololens-2"></a>从 HoloLens 2 中的 Microsoft Store 下载应用
+如果有 HoloLens 2 设备，则可以直接在设备中下载并安装应用。
 
-![Ford GT40 英雄图像](images/ford-gt40-hero.jpg)
+<a href='//www.microsoft.com/store/apps/9p4vllktfvfp?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' width="284px" height="104px" style='width: 284px; height: 104px;'/></a>
+
 
 ## <a name="the-ask"></a>Ask
 
 令人满意的是世界领先的创新生产公司之一，其中包含、Ford、Microsoft、佼佼者、Netflix、Vodafone 和其他家庭名称。 该公司将其作为一家高端照片润色机构开始，并将其分散到胶片和 CGI 中，然后使用三维空间设计和交互向沉浸式故事分享提供卓越的优势。
 
-在2020年，Microsoft 已完成生成演示应用程序，该应用程序可帮助展示新的混合现实工具包所启用的可能性 (Unreal 的 MRTK) ，这是基于 Unreal 引擎中的 HoloLens 2 支持。 此时，该公司已在其皮带下有两个成功的 Unreal 2 项目。 这两种方法都适用于全局识别的使用者品牌，此品牌为内部 R&D/B2B 销售工具选择了在 HoloLens 2 上的 Unreal，以实现更高的视觉保真。
+在2020年，Microsoft 已完成生成演示应用程序，该应用程序可帮助展示新的混合现实 Toolkit (MRTK) 对 Unreal 引擎中的 HoloLens 2 的支持。 此时，该公司已在其皮带下有两个成功的 HoloLens 2 Unreal 项目。 这两种方法都适用于全球公认的消费者品牌，这为内部 R&D/B2B 销售工具选择了 HoloLens 2 Unreal，以实现高视觉保真，以最大程度地展示客户自己的高端产品。
 
-尽管解决方案本身会成为一项令人满意的解决方案，但它必须满足几个关键指导原则。 首先，必须专注于一个企业方案，以说明 Unreal 在游戏行业外的 HoloLens 2 的实用程序。 其次，它必须只是设备，这意味着它可以作为独立的演示，无需网络连接和外部处理能力即可获得目标帧速率和视觉质量。 第三，它应将 MRTK 支持的直观交互的范围混合到无缝且自然的体验。 最后，提议的解决方案应展示 Unreal 引擎本身固有的视觉保真和其他优势，如着色器效率。 
+尽管解决方案本身会成为一项令人满意的解决方案，但它必须满足几个关键指导原则。 首先，必须专注于企业应用场景，以说明 Unreal 在游戏行业外 HoloLens 2 的实用程序。 其次，它必须只是设备，这意味着它可以作为独立的演示，无需网络连接和外部处理能力即可获得目标帧速率和视觉质量。 第三，它应将 MRTK 支持的直观交互的范围混合到无缝且自然的体验。 最后，提议的解决方案应展示 Unreal 引擎本身固有的视觉保真和其他优势，如着色器效率。 
 
 考虑到这些准则后，他们会开始顺利地集体讨论各种可能性，同时提供一种混合现实体验的理念，使用空间互动传达品牌名称、高价值产品的价值。 考虑到包含监视、照相机、汽车和私有 jets 的一系列对象之后，满意度最终决定了 Ford GT40，这是一个汽车图例，该图例实现了 Ford 在 Le Ferrari 的24小时内出名1966，如 2019 Mans 胶卷流行与 Ford 中所示。 
 
@@ -48,15 +50,15 @@ ms.locfileid: "105008922"
 
 创意主管 Alex 朗伯在预生产工作完成后进入了图片。 他通过观看 Ford 与 Ferrari 来开始，思考一下如何将围绕方案和交互的叙述融合在一起。 他还为 UI 艺术家收集了可视参考，如 GT40 仪表板的图像和 Le Mans racetrack 的视觉对象，以及为声音设计器提供的 GT40 的录制录音。
 
-在现有的叙述和优化的预生产资产的情况下，将登记兼职软件开发人员 Rodriguez。 Rodriguez 已在之前的两个 Unreal 的两个项目上完成，这些项目已经完成，MRTK Unreal 已发布。
+在现有的叙述和优化的预生产资产的情况下，将登记兼职软件开发人员 Rodriguez。 Rodriguez 在之前的两个 Unreal HoloLens 2 项目上，已经完成了的 MRTK，Unreal 的已发布。
 
 MRTK for Unreal 提供的值在初期就变得很明显，有助于 Rodriguez 在一周内传递初始原型。 他实现了三个独特的方案，每个方案分别针对朗伯标识的 GT40 的每个主要方面：其美、性能和工程。 对于每个方案，Rodriguez 使用 MRTK 将优化3D 资产从预生产阶段集成到一系列空间交互。 
 
 使用 MRTK for Unreal，Rodriguez 使用 visual Unreal 运动图形构建每个方案 (UMG) UI 设计器，而无需实现 c + + 中的所有操作。 [适用于 Unreal 的 Ux 工具](https://www.unrealengine.com/marketplace/product/mixed-reality-ux-tools)（包含 MRTK 内的 UX 构建基块和组件的插件）为用户提供了输入模拟、可视化脚本编写的表面交互、pressable 按钮、三维图像操作、表面磁性等的 [Unreal 蓝图](https://docs.unrealengine.com/ProgrammingAndScripting/Blueprints/index.html) ，这一切都在无代码、拖放设计环境中。
 
-"MRTK，使用 Unreal 开发 HoloLens 2 的工作有点枯燥，因为所有空间交互都必须手动编码，而在 c + + 中，" 表示 Rodriguez。 "MRTK for Unreal 对这些任务进行了很多简单的操作。 我估计它会缩短初始原型所需的时间。 "
+"预 MRTK，使用 Unreal 进行 HoloLens 2 开发有点枯燥，因为所有空间交互都必须手动编码，即" c + + "中的" Rodriguez "。 "MRTK for Unreal 对这些任务进行了很多简单的操作。 我估计它会缩短初始原型所需的时间。 "
 
-使用现有原型，团队开始每周迭代，以优化体验。 "这就是当混合现实捕获功能和 Windows 设备门户非常有用时，" 召回朗伯 "。 "我用它们来捕获设计评审，将我的反馈广播给其他人，并协作处理更改。 采用与此类工具相同的隔离方式。 "
+使用现有原型，团队开始每周迭代，以优化体验。 "这就是当混合现实捕获功能和 Windows 设备门户非常有用时，" 朗伯 "。 "我用它们来捕获设计评审，将我的反馈广播给其他人，并协作处理更改。 采用与此类工具相同的隔离方式。 "
 
 ![Unreal editor Ford GT40 应用程序运行时按顺序排列的色轮组件](images/ford-gt40-img-04.JPG)
 
@@ -66,7 +68,7 @@ Rodriguez 还通过生产就绪的所有开发工具的工作方式来召回深�
 
 ## <a name="the-final-build"></a>最终生成
 
-祝您在2020年7月28日完成了 HoloLens 2 的 Ford GT40 体验的完成生产，在传奇赛车上提供了全新的观点。 经验从 "欢迎" 屏幕开始，然后指导用户通过获取 Ford 徽标来设置定位点，并将其放置在平面表面上，如表或桌面。 
+祝您在2020年7月28日完成 HoloLens 2 的 Ford GT40 体验，在传奇赛车上提供全新的观点。 经验从 "欢迎" 屏幕开始，然后指导用户通过获取 Ford 徽标来设置定位点，并将其放置在平面表面上，如表或桌面。 
 
 ### <a name="beauty"></a>优点
 
@@ -88,21 +90,21 @@ Ford GT40 体验的 **工程** 细分展示了帮助 Ford 赢得竞赛的工程�
 
 ![在设备上运行的 GT40 工程体验的动画 GIF](images/ford-gt40-img-07.gif)
 
-可以 [从 Microsoft 应用商店下载](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp?activetab=pivot:overviewtab)Ford GT40 体验，并使具有 HoloLens 2 的任何人都能了解如何完成为传奇赛车提供全新的观点。
+Ford GT40 体验可[从 Microsoft 应用商店下载](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp?activetab=pivot:overviewtab)，使具有 HoloLens 2 的任何人都可以探索如何完成为传奇赛车提供全新的观点。
 
 ### <a name="getting-impressive-visual-fidelity"></a>获得深刻的视觉保真
 
 虽然 Ford GT40 体验支持的空间交互范围非常令人印象深刻，但体验的创造性和视觉保真确实使其成为了其亮点。 通过其3D 模型优化和 Unreal 自定义着色器的使用，每秒的最大值为60帧的目标，即使应用的性能段接近315000个多边形。 
 
-"我非常喜欢我们如何才能将一组流畅、直观的交互操作集中到一个连贯的和有吸引力的叙述中"。 "很明显，在 HoloLens 2 上 Unreal 引擎的强大功能可为您提供更惊人、令人兴奋的混合现实体验的新机会。 在 HoloLens 2 上，非最终的视觉保真并非始终是企业应用程序的最终目标，但在这种情况下，在 HoloLens 2 上对 Unreal 的支持变得非常宝贵。 "
+"我非常喜欢我们如何才能将一组流畅、直观的交互操作集中到一个连贯的和有吸引力的叙述中"。 "很明显，HoloLens 2 上的 Unreal 引擎的强大功能可为您提供更惊人、令人兴奋的混合现实体验的新机会。 对 HoloLens 2 上的企业应用程序而言，真正的视觉保真并非始终是最终目标，但在这种情况下，对 HoloLens 2 的支持 Unreal 变得非常宝贵。 "
 
 ### <a name="rapid-solution-delivery"></a>快速解决方案交付
 
 与最终用户的 Ford GT40 体验相比，最终用户的经验是如何迅速完成交付的，整个项目（从预生产到最终交付），只需在12周内完成即可完成。 总而言之，该项目消耗了1088小时的工作量，按以下方式分解：创造性总监 (80 小时) ，UX 设计器 (56 小时) ，UI 设计器 (40 小时数) ，的语音设计器 (40 小时) ，3D/技术艺术家 (328 小时) ，软件开发人员 (408 小时数) 
 
-"总之，我们已与最初的项目估算非常接近，" 说 Daniel Cheetham，首席创新官员的工作是公司的交互式部门。 "Ford GT40 体验证明，高保真的 HoloLens 2 应用只需几个月就能完成，并且仍能提供高度的有影响力结果。" 
+"总之，我们已与最初的项目估算非常接近，" 说 Daniel Cheetham，首席创新官员的工作是公司的交互式部门。 "Ford GT40 体验证明，高保真 HoloLens 2 应用只需几个月就能完成，但仍有一个适度的预算，但仍能提供高度的有影响力结果。" 
 
-从开发的角度来看，基于以前使用 Unreal on HoloLens 2 的经验，Rodriguez 估计 MRTK for Unreal 会将其部分的总时间和工作量降低一半。 他还说明了 MRTK 如何帮助从未开始使用 HoloLens 2 的开发人员。 "当其他开发人员说他们对混合现实感兴趣时，我鼓励他们只需进入，安装 HoloLens 2 开发堆栈和 MRTK，然后继续。 MRTK 使构建应用程序的速度变得快捷，Unreal 的视觉对象，甚至无需使用 HoloLens 2 设备即可开始使用。 这并不复杂，一切都是有效的。 "
+从开发的角度来看，基于其在 HoloLens 2 上的 Unreal，Rodriguez 估计 MRTK for Unreal 会缩短其部分所需的总时间和工作量。 他还说明了 MRTK 如何帮助从未开始使用 HoloLens 2 入门的开发人员。 "当其他开发人员说他们对混合现实感兴趣时，我鼓励他们只需进入，安装 HoloLens 2 开发堆栈和 MRTK，然后继续。 MRTK 使构建应用程序的速度变得简单简单，Unreal 的可视化编辑器的工作方式非常好，甚至不需要 HoloLens 2 设备即可开始使用。 这并不复杂，一切都是有效的。 "
 
 ### <a name="potential-azure-service-enhancements"></a>潜在的 Azure 服务增强功能
 
@@ -112,18 +114,18 @@ Ford GT40 体验的 **工程** 细分展示了帮助 Ford 赢得竞赛的工程�
 
 ### <a name="endless-new-possibilities"></a>全新的可能性
 
-那么，接下来要做什么呢？ Ford 对 Ford GT40 体验的反馈一直在充分，旨在进一步讨论未来的 HoloLens 2 项目的完成和 Ford。 在其与 Ford 的关系外部，满意的完成已在 HoloLens 2 上启动了一个新项目，其中 Unreal 的 MRTK 将是最适用于大多数用户体验的基础构建基块。 
+那么，接下来要做什么呢？ Ford 对 Ford GT40 体验的反馈一直在充分，旨在进一步讨论未来 HoloLens 2 项目的完成和 Ford。 在与 Ford 的关系外部，满意的完成已经开始 HoloLens 2 上的新项目，其中 MRTK for Unreal 将是最适用于大多数用户体验的基础构建基块。 
 
-"我们一直在为每个新项目维护一种技术无关的方法，建议哪种工具集最适合帮助客户端实现所需的结果。" Cheetham。 "这种情况下，HoloLens 2 已成为混合现实的实际黄金标准（尤其是在企业中），在这两个设备功能和支持生态系统普适性相的情况下，在所有其他选项上需要肩负。"
+"我们一直在为每个新项目维护一种技术无关的方法，建议哪种工具集最适合帮助客户端实现所需的结果。" Cheetham。 "这就是，HoloLens 2 已成为混合现实的现实标准（尤其是在企业中），在这两个设备功能和支持生态系统普适性相的情况下，在所有其他选项上需要肩负。"
 
-根据 Cheetham，全球流行病在潜在客户之间产生了沉浸式混合现实的巨大新兴趣。 "我们比以往任何时候都更忙，因为有大约50% 的潜在客户正在讨论一种混合现实选项，" 他说。 "关键是让人们来尝试一下。 你可以立即告诉他们有关混合现实的信息，但当你向他们提供了一个 HoloLens 2 的体验时，它们会立即获得游戏转换器。 在 HoloLens 2 中对 Unreal 引擎的支持仅增加了我们可以提供的价值，使我们能够提供视觉上令人惊叹的体验，从而确保甚至最苛刻的客户端。 "
+根据 Cheetham，全球流行病在潜在客户之间产生了沉浸式混合现实的巨大新兴趣。 "我们比以往任何时候都更忙，因为有大约50% 的潜在客户正在讨论一种混合现实选项，" 他说。 "关键是让人们来尝试一下。 你随时都可以告诉他们有关混合现实的信息，但当你向他们提供对自己的体验 HoloLens 2 时，它们会立即获得游戏转换器。 对 HoloLens 2 中的 Unreal 引擎的支持仅增加了我们可以提供的价值，使我们能够提供视觉上令人惊叹的体验，以确保甚至最苛刻的客户端。 "
 
 ## <a name="try-it-out"></a>试试看！
 
 > [!div class="nextstepaction"]
 > [下载 Ford GT40 应用程序](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp)
 
-请在 GitHub 上的 Unreal 上了解 [如何在 HoloLens 2](../development.md) 或 [MRTK for](https://github.com/microsoft/MixedRealityToolkit-Unreal) 上开发混合现实。
+请查看我们对 GitHub 上的 HoloLens 2 或[MRTK for Unreal 的](https://github.com/microsoft/MixedRealityToolkit-Unreal)[混合现实开发简介](../development.md)。
 
 <!-- ## About the team
 

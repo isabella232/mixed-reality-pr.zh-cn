@@ -5,22 +5,27 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
-keywords: Windows Mixed Reality， 设计， 示例应用， 控件， MRTK， 混合现实工具包， Unity， 示例应用， 示例应用， 开源， Microsoft Store， HoloLens， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
-ms.openlocfilehash: 28f8bc1e1f30573936067a83b1ad26133c23c5b8
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+keywords: Windows Mixed Reality、设计、示例应用、控件、MRTK、混合现实 Toolkit、Unity、示例应用、示例应用、开源、Microsoft Store、HoloLens、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备
+ms.openlocfilehash: a4259148926ec20bca53a23074a6d1ea285f0aa2
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743391"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114756996"
 ---
 # <a name="surfaces"></a>表面
+
+![表面](images/MRDL_Surfaces_1.jpg)
 
 >[!NOTE]
 >本文讨论我们在混合现实设计实验室中创建的探索示例，我们在该实验室[](https://github.com/Microsoft/MRDesignLabs_Unity)中分享有关混合现实应用开发的学习和建议。 随着我们进行新的发现，与设计相关的文章和代码将不断发展。
 
 [Surfaces](https://github.com/microsoft/MRDL_Unity_Surfaces)  是 Microsoft 混合现实设计实验室提供的开源示例应用。 它探索了如何使用视觉对象、音频和完全表达的手动跟踪创建触手部。
 
-![表面](images/MRDL_Surfaces_1.jpg)
+## <a name="download-app-from-microsoft-store-in-hololens-2"></a>从 Microsoft Store HoloLens 2
+如果有HoloLens 2，可以直接在设备中下载并安装应用。
+
+<a href='//www.microsoft.com/store/apps/9nvkpv3sk3x0?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' width="284px" height="104px" style='width: 284px; height: 104px;'/></a>
 
 ## <a name="demo-video"></a>演示视频 
 
@@ -30,7 +35,7 @@ ms.locfileid: "110743391"
 
 ## <a name="about-the-app"></a>关于应用
 
-Surfaces 演示如何使用混合现实工具包 (MRTK) 输入系统和构建基块来创建适用于 HoloLens 2 的应用体验。 在此项目中，可以找到以下示例：
+Surface 演示如何使用混合现实Toolkit (MRTK) 输入系统和构建基块来创建适用于 HoloLens 2 的应用体验。 在此项目中，可以找到以下示例：
 
 - 使用 MRTK 的 [输入系统](/windows/mixed-reality/mrtk-unity/features/input/overview)，特别是手部/联合跟踪。
 - 使用 MRTK 的标准 [着色器](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader) 进行性能图形处理。
@@ -43,22 +48,17 @@ Surfaces 演示如何使用混合现实工具包 (MRTK) 输入系统和构建基
 
 MRDL Surfaces 应用背后的高级设计人员 Lars Simkins 讨论应用的设计故事和技术亮点。
 
-## <a name="project-repository-on-github"></a>GitHub 上的项目存储库
+## <a name="project-repository-on-github"></a>Project上创建GitHub
 
 [https://github.com/microsoft/MRDL_Unity_Surfaces](https://github.com/microsoft/MRDL_Unity_Surfaces)
 
-## <a name="download-app-from-microsoft-store-in-hololens-2"></a>从 Microsoft Store HoloLens 2 下载应用
-
-https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0#activetab=pivot:overviewtab
-
- (应用仅在 HoloLens 2) 
 
 ## <a name="about-the-author"></a>关于作者
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>Dong Yoon Park</b><br>用户体验设计师 @Microsoft</td>
+<td style="border-style: none"><a href="http://dongyoonpark.com" target="_blank"><b>Yoon Park</b></a><br>用户体验设计师 @Microsoft</td>
 </tr>
 </table>
 

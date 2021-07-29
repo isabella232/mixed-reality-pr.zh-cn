@@ -1,29 +1,29 @@
 ---
 title: 登月舱
-description: 了解如何通过两个右手跟踪和 Xbox 控制器输入来扩展 HoloLens 的基本手势，创建反应对象并实现菜单系统。
+description: 了解如何扩展 HoloLens 的基本手势，其中包含两个用于跟踪和 Xbox 控制器的输入，创建反应对象并实现菜单系统。
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，示例应用，设计，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: ebac2c5680524b408d6dde8635d2585236fa0b08
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+keywords: Windows Mixed Reality，示例应用，设计，MRTK，混合现实 Toolkit，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 4a736990a94d7f5c97a1bfc2edf998e327071bcb
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743512"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757219"
 ---
 # <a name="lunar-module"></a>登月舱
 
 >[!NOTE]
 >本文讨论了我们在 [混合现实设计实验室](https://github.com/Microsoft/MRDesignLabs_Unity)中创建的探索示例，这是我们与混合现实应用开发的知识和建议。 我们设计相关的文章和代码将随着我们的新发现而发展。
 
-[阴历模块](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule) 是 Microsoft 混合现实设计实验室的开源示例应用。 了解如何通过两个右手跟踪和 Xbox controller 输入来扩展 HoloLens 的基本手势，创建被动于 surface 贴图和飞机查找并实现简单菜单系统的对象。 所有项目组件都可以在自己的混合现实应用体验中使用。
+[阴历模块](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule) 是 Microsoft 混合现实设计实验室的开源示例应用。 了解如何利用双向跟踪和 Xbox 控制器输入来扩展 HoloLens 的基本手势，创建被动于 surface 贴图和飞机查找并实现简单菜单系统的对象。 所有项目组件都可以在自己的混合现实应用体验中使用。
 
 ## <a name="demo-video"></a>演示视频 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IcIP]
 
-使用混合现实捕获记录了 HoloLens 2
+使用混合现实捕获 HoloLens 2 记录
 
 ## <a name="rethinking-classic-experiences-for-windows-mixed-reality"></a>Windows Mixed Reality 的反思经典体验
 
@@ -53,15 +53,15 @@ Tactile 浸入式是执行重复操作的传感器反馈。 在这种情况下�
 
 如何将 tactile 浸入式应用于已更新的容量耗尽脚步到 Atari 经典？ 在处理输入方案之前，需要对三维空间的游戏构造进行寻址。
 
-![在 HoloLens 中可视化 surface 映射](images/surfacemapping.png)<br>
-*在 HoloLens 中可视化空间映射*
+![HoloLens 中的可视化 surface 映射](images/surfacemapping.png)<br>
+*可视化 HoloLens 中的空间映射*
 
 通过利用用户的周围环境，我们为农历模块提供了无限地形的选项。 若要使游戏与原始标题最为相似，用户可能会在其环境中操作并将登录控制置于不同的难题。
 
 ![飞行农历模块](images/640px-lm-hero.jpg)<br>
 *飞行农历模块*
 
-要求用户了解输入方案，控制发运，并向土地提供小目标，这是一个需要考虑的事情。 成功的游戏体验具有挑战和回报的正确组合。 用户可以选择一种难易程度，最简单的模式就是要求用户成功地在由 HoloLens 扫描的图面上的用户定义区域中进行。 一旦用户进入了游戏的挂起状态，他们就可以曲柄，
+要求用户了解输入方案，控制发运，并向土地提供小目标，这是一个需要考虑的事情。 成功的游戏体验具有挑战和回报的正确组合。 用户可以选择一种难易程度，最简单的模式就是要求用户成功地在由 HoloLens 扫描的图面上的用户定义区域中进行土地。 一旦用户进入了游戏的挂起状态，他们就可以曲柄，
 
 ### <a name="adding-input-for-hand-gestures"></a>添加手势输入
 
@@ -84,7 +84,7 @@ HoloLens 基本输入只包含两个笔势： " [Air" 和 "布隆](../../design/
 
 ### <a name="adding-input-for-game-controllers"></a>添加游戏控制器的输入
 
-尽管 HoloLens 上的手势提供了 novel 的精细控制方法，但仍有特定的 tactile 反馈，那就是你从模拟控件中获得的反馈。 通过连接 Xbox 游戏控制器，我们可以 physicality 这种功能，同时利用控制杆来保持精细的控制。
+尽管 HoloLens 上的手势提供了精细控制的 novel 方法，但仍有特定的 tactile 反馈，那就是从模拟控件获取的反馈。 通过连接 Xbox 游戏控制器，我们可以 physicality 这种功能，同时利用控制杆来保持精细的控制。
 
 可以通过多种方式将相对直接的控件方案应用于 Xbox 控制器。 由于我们尝试尽可能接近原始拱廊类设置，因此最好将 **主旨是** 映射到触发器按钮。 这些按钮是模拟控件，这意味着它们的 *开启和关闭* 状态大于简单状态，它们实际上会响应施加的压力。 这为我们提供了类似于 **主旨是杠杆** 的结构。 与原始游戏和手手势不同，此控制会在用户停止对触发器的压力后，就会主旨是。 它仍为用户提供与原始拱廊类游戏相同的 finesse。
 
@@ -97,7 +97,7 @@ HoloLens 基本输入只包含两个笔势： " [Air" 和 "布隆](../../design/
 
 ## <a name="technical-details"></a>技术详细信息
 
-可以在混合现实设计实验室 GitHub 上找到登月舱示例 [应用的脚本和预制文件](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule)。
+可以在混合现实设计实验室上找到登月舱示例应用的脚本和[预制GitHub。](https://github.com/Microsoft/MRDesignLabs_Unity_LunarModule)
 
 ## <a name="about-the-author"></a>关于作者
 
@@ -112,5 +112,5 @@ HoloLens 基本输入只包含两个笔势： " [Air" 和 "布隆](../../design/
 
 * [MRTK 示例中心](/windows/mixed-reality/mrtk-unity/features/example-scenes/example-hub) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
 * [表面](sampleapp-surfaces.md) - [（从 HoloLens 2 中的 Microsoft Store 下载）](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
-* [元素周期表 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [元素周期表 2.0](periodic-table-of-the-elements-2.md)
 * [星系探索者 2.0](galaxy-explorer-update.md)

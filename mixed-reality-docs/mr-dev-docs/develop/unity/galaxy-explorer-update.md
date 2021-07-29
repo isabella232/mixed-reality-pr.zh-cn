@@ -1,45 +1,45 @@
 ---
-title: 针对 HoloLens 2 的 Galaxy 资源管理器创建
-description: 了解我们的团队如何在 GitHub 上更新 HoloLens 2 的 Galaxy 资源管理器开源项目。
+title: HoloLens 2 的 Galaxy 资源管理器的创建
+description: 了解我们的团队如何更新 GitHub HoloLens 2 上的 Galaxy 资源管理器开源项目。
 author: l-garrett
 ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
-keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 2d72e005bd955bbf2611f0724ba63b80c70f7dc1
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实 Toolkit，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 1e19f63f493eba2559cf60ef7c1224b7323ec825
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759813"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757066"
 ---
-# <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>针对 HoloLens 2 的 Galaxy 资源管理器创建
+# <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>HoloLens 2 的 Galaxy 资源管理器的创建
 
-欢迎使用适用于 HoloLens 2 应用程序的已更新 Galaxy 资源管理器！ [Galaxy 资源管理器](/windows/mixed-reality/galaxy-explorer "星系探索者") 最初是作为一种开源应用程序开发的， (第一代) 通过共享你的想法计划，这是许多人的第一种混合现实体验之一。 现在我们正在更新它，以获得 [HoloLens 2 的全新功能](https://www.microsoft.com/hololens/hardware)。
+![新建 Galaxy 资源管理器徽标](../images/GalaxyExplorer2.jpg)
+
+
+欢迎使用 HoloLens 2 应用程序的更新的 Galaxy 资源管理器！ [Galaxy 资源管理器](/windows/mixed-reality/galaxy-explorer "星系探索者")最初是作为开源应用程序开发的，它通过共享你的想法计划来 HoloLens (第一代) ，这是许多人的第一种混合现实体验之一。 现在我们正在更新它，以了解[HoloLens 2 的全新功能](https://www.microsoft.com/hololens/hardware)。
 
 作为 [Microsoft 混合现实工作室](galaxy-explorer-update.md#mixed-reality-studios)之一，我们通常会开发商业级解决方案，并在整个创意和开发过程中在目标平台上开发 & 测试。 我们将使用 (的框架和工具（例如) [MRTK](mrtk-getting-started.md) ）来着手此项目，并将其提供给我们和社区，我们想要将你带入。
 
-正如原始 Galaxy 资源管理器， [我们的团队](galaxy-explorer-update.md#meet-the-team) 将在 [GitHub 上提供项目](https://github.com/Microsoft/GalaxyExplorer) ，以确保社区具有完全访问权限。 我们还将在这里记录我们的旅程，以全面了解我们如何从 MRTK v1 迁移到 MRTK v2，使用 HoloLens 2 中提供的新功能增强了体验，并确保了 Galaxy 资源管理器保持了多平台体验。 无论你是在 HoloLens (第一代) 、HoloLens 2、Windows Mixed Reality 耳机还是 Windows 10 桌面上查看 Galaxy 资源管理器，我们都需要确保你充分利用我们的旅程！
+正如原始 Galaxy 资源管理器一样，[我们的团队](galaxy-explorer-update.md#meet-the-team)将在[GitHub 上寻找项目](https://github.com/Microsoft/GalaxyExplorer)，以确保社区具有完全访问权限。 我们还将在这里记录我们的旅程，以全面了解我们如何从 MRTK v1 迁移到 MRTK v2，通过 HoloLens 2 中提供的新功能增强了体验，并确保了 Galaxy 资源管理器保持了多平台体验。 无论你是在 HoloLens (第一代) 、HoloLens 2、Windows Mixed Reality 耳机还是 Windows 10 桌面上查看 Galaxy 资源管理器，我们都希望确保你喜欢的旅程非常好！
 
 此页将随着我们在项目中的进展而扩展，并提供指向更详细的文章、代码、设计项目和其他 MRTK 文档的链接，为你提供内幕的项目。
 
-## <a name="unveiling-the-new-logo"></a>揭示新徽标
+## <a name="download-app-from-microsoft-store-in-hololens-2"></a>从 HoloLens 2 中的 Microsoft Store 下载应用
+如果有 HoloLens 2 设备，则可以直接在设备中下载并安装应用。
 
-我们很高兴开始使用新的 Galaxy 资源管理器徽标的预览！ 通过采用银河的方式将献给支付给原始徽标，我们设计出了真实的可视化效果，并更新了版式以提供更新式的外观。 徽标中包含的抢先了解可查看其中一个新图标。
-
-![新建 Galaxy 资源管理器徽标](images/ge-update-app-icon.png)
-
-徽标的设计和版式将为用户界面元素的总体外观和感觉设置音调。 
+<a href='//www.microsoft.com/store/apps/9nblggh4q4jg?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' width="284px" height="104px" style='width: 284px; height: 104px;'/></a>
 
 ## <a name="thinking-about-interactions"></a>考虑交互
 
 作为一录音室，我们兴奋了将 Galaxy 资源管理器移植到 HoloLens 2 的权限。 我们知道，我们希望体验成为新设备的庆祝，并说明混合现实能力仅受想像的限制。
 
-HoloLens 2 使用户能够以自然的方式触摸、抓住和移动全息影像–它们的响应方式非常类似于真实的对象。 完全表述的手模型非常惊人，因为这样可以让用户看起来自然。 例如，每个人都以略有不同的方式挑选一个杯，而不是实施一种特殊的方式来实现此目的。
+HoloLens 2 使用户能够以自然的方式触摸、抓住和移动全息影像–它们的响应方式非常类似于真实的对象。 完全表述的手模型非常惊人，因为这样可以让用户看起来自然。 例如，每个人都可以略有不同的方式，而不是实施一种特殊的方式来执行此操作，HoloLens 2 使你能够以你的方式执行此操作。
 
 >[!VIDEO https://www.youtube.com/embed/wogJv5v9x-s]
 
-这是第一代 HoloLens 设备上基于 Air 的接口的重大更改。 用户现在可以 "关闭" 和 "个人"，而不是从距离交互。 将现有的体验移植到 HoloLens 2 或规划新的体验时，请务必熟悉全息影像的直接操作。
+这是第一代 HoloLens 设备上基于 Air 的接口的重大更改。 用户现在可以 "关闭" 和 "个人"，而不是从距离交互。 在将现有的体验迁移到 HoloLens 2 或规划新的体验时，请务必熟悉全息影像的直接操作。
 
 ### <a name="direct-manipulation-vs-the-vast-distances-in-space"></a>直接操作与空间中的远距离
 
@@ -49,11 +49,11 @@ HoloLens 2 使用户能够以自然的方式触摸、抓住和移动全息影像
 
 >[!VIDEO https://www.youtube.com/embed/Qol5OFNfN14]
 
-在 "Galaxy 资源管理器" 的原始版本中，用户将以 "注视" 光标为地球，然后单击 "空中" 将其调近。 将体验移植到 HoloLens 2 的最简单方法是采用这种行为，并使用手型来选择行星。 虽然这是正常运行的，但仍希望获得更多的功能。
+在 "Galaxy 资源管理器" 的原始版本中，用户将以 "注视" 光标为地球，然后单击 "空中" 将其调近。 将体验移植到 HoloLens 2 的最简单方法是采用此行为，并使用手型来选择行星。 虽然这是正常运行的，但仍希望获得更多的功能。
 
 ### <a name="back-to-the-drawing-board"></a>返回绘图板
 
-我们一起介绍了可在现有交互基础上构建的 ideate。 思维方式：尽管 HoloLens 2 允许用户以自然的方式与全息影像交互，但全息影像按定义不是真实的。 因此，只要用户的交互是变得合理的，就不会有可能与真正的对象进行交互，而是不是很重要。
+我们一起介绍了可在现有交互基础上构建的 ideate。 思维方式：尽管 HoloLens 2 允许用户以自然的方式与全息影像交互，但全息影像按定义并不真实。 因此，只要用户的交互是变得合理的，就不会有可能与真正的对象进行交互，而是不是很重要。
 
 我们研究的一个概念就是基于 telekinesis –处理对象的能力。 通常，在超大英雄电影中，一个人会与他们的想法联系起来，并将一个对象调入他们的手中。 我们将使用一种更多的方法进行介绍，并提供该概念如何工作的快速草图。
 
@@ -89,9 +89,9 @@ __*--- NEEDS TO BE UPLOADED (TO YOUTUBE?) AND LINKED ---*__
 
 ### <a name="adding-affordances-for-targeting"></a>为目标添加实用
 
-在 HoloLens 2 上 vspackage 时，我们发现，即使新的交互是自然而直观的，全息影像仍保持不变：无权重或 tactile sensations。 由于全息影像并不提供用户在与对象交互时接收的自然反馈，因此我们需要创建它们。
+在 HoloLens 2 上，我们发现，即使新的交互是自然且直观的，全息影像仍保持不变：无权重或 tactile sensations。 由于全息影像并不提供用户在与对象交互时接收的自然反馈，因此我们需要创建它们。
 
-我们考虑到了视觉对象和音频反馈，用户将为其交互的各个阶段提供这些反馈，因为强制获取机制是与 Galaxy 资源管理器进行交互的核心，所以我们做了很多迭代。 目标是为交互的每个阶段查找音频和视觉反馈的适当平衡：集中于预期对象，将其调用给用户，然后将其发布。 我们学到的是，与我们用于 HoloLens (第一代) 相比，需要更多的音频和视觉反馈来强化交互。
+我们考虑到了视觉对象和音频反馈，用户将为其交互的各个阶段提供这些反馈，因为强制获取机制是与 Galaxy 资源管理器进行交互的核心，所以我们做了很多迭代。 目标是为交互的每个阶段查找音频和视觉反馈的适当平衡：集中于预期对象，将其调用给用户，然后将其发布。 我们学到的是，更多的音频和视觉反馈比我们用于 (第一代) HoloLens。
 
 ![行星上的视觉对象实用](images/ge-update-planet-affordances.png)
 

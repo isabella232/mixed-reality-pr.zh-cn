@@ -8,14 +8,16 @@ ms.topic: article
 keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，Ultra，兼容，兼容性，系统要求，PC
 appliesto:
 - Windows 10
-ms.openlocfilehash: 754110c3fa0b5e98508f843d251c24c04b8c0a89
-ms.sourcegitcommit: 78746bef0e1ffe1480e89fed8cd30f6f8b389e8d
+ms.openlocfilehash: b7c2b4b84440e7cdd22c2c0cd7d5f9830d55625f
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2021
-ms.locfileid: "114713571"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757026"
 ---
 # <a name="windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines"></a>Windows Mixed Reality 最小 PC 硬件兼容性指南
+
+![PC 兼容性英雄图像](images/pc-comp-hero.png)
 
 ## <a name="features-and-experiences"></a>功能和体验
 
@@ -155,7 +157,7 @@ Windows 10 通过一组不同的 PC 硬件的各种耳机 Windows Mixed Reality 
 * 不同的耳机可能需要不同的硬件端口，因此请确保您的计算机具有正确的端口或 [必要的适配器](Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md) 以连接到您的耳机。
 
 >[!NOTE]
->不符合最低确认规格的离散和集成图形硬件尚未针对 Windows Mixed Reality 测试、确认或优化，它们可能无法正常运行。
+>不满足最低确认规格的离散和集成图形硬件尚未测试、确认或优化Windows Mixed Reality并且可能无法正常工作或完全无法正常工作。
 
 ## <a name="windows-mixed-reality-and-surface"></a>Windows Mixed Reality和 Surface
 
@@ -166,7 +168,7 @@ Windows 10 通过一组不同的 PC 硬件的各种耳机 Windows Mixed Reality 
 * Surface 产品要求驱动程序更新与 Windows Mixed Reality。 若要在 Surface 上安装这些驱动程序，可以设置 >更新和安全>**检查更新。**
 * Surface[产品需要视频](Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md)端口中的适配器 (微型 DisplayPort 或 USB-C，具体取决于 Surface PC) 到 WINDOWS MIXED REALITY 头戴显示设备。 最新版本的 Surface Mini-DisplayPort与适用于 Mini-DisplayPort AV 适配器兼容，但 (版本未安装) 。 同样 <a href="https://www.microsoft.com/en-us/store/d/surface-usb-c-to-hdmi-adapter/94chb2m80s54/4gj5">，Surface USB-C 到MIMI 适配器</a> 也与MIC 2.0 兼容。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [询问社区](https://answers.microsoft.com)
 * [联系我们获得支持](https://support.microsoft.com/contactus/)

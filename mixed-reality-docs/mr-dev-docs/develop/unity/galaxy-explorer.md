@@ -1,110 +1,112 @@
 ---
 title: 星系探索者
-description: 在构建混合现实应用 Galaxy 资源管理器时，请遵循我们的步骤，这是分享你的想法市场活动的获奖者。
+description: 随着我们构建混合现实应用 Galaxy Explorer（共享你的想法活动的获胜者）的一起操作。
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: galaxy 资源管理器，案例研究，项目，示例，MRTK，混合现实工具包，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 7ab439a1248895975c5ebff676862515ee79ecf0
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+keywords: galaxy explorer， 案例研究， 项目， 示例， MRTK， 混合现实 Toolkit， Unity， 示例应用， 示例应用， 开源， Microsoft Store， HoloLens， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
+ms.openlocfilehash: c1294a197878ecf0c6672b028284ad51eaef6955
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010298"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757330"
 ---
 # <a name="galaxy-explorer"></a>星系探索者
+![Galaxy Explorer](../images/HTK_GalaxyExplorer.jpg)
 
-**你分享了创意。我们正在共享代码。**
+**你分享了想法。我们正在共享代码。**
 
-星系探索者项目已准备就绪。 你已与社区分享你的想法，选择一个应用，对团队进行跟踪，然后你就可以获取源代码了。 如果你有一个设备，则可以从适用于 Microsoft HoloLens 的 Windows 应用商店下载 Galaxy 资源管理器项目。
+星系探索者项目已准备就绪。 你已与社区分享了想法，选择了一个应用，观看了团队生成它，现在你可以获取源代码。 如果有设备，可从 Windows Store 下载 Galaxy Project Explorer Microsoft HoloLens。
 
->[!TIP]
->[获取 GitHub 上的代码](https://github.com/Microsoft/GalaxyExplorer)
+>[!NOTE]
+>此示例应用专为第一代HoloLens设计。 有关[版本，请参阅 Galaxy Explorer 2.0](galaxy-explorer-update.md) HoloLens 2版本。
 
-设计人员、艺术家和开发人员的 HoloLens [开发团队](galaxy-explorer.md#meet-the-team) 构建了 Galaxy 资源管理器，并邀请了所有人参与这一旅程。 经过六周的核心开发和两周的优化后，此应用程序现已准备就绪！ 还可以按照以下视频系列中的整个过程进行操作。
+我们的HoloLens设计者、艺术家[](galaxy-explorer.md#meet-the-team)和开发人员的开发团队构建了 Galaxy Explorer，并邀请了你们全部加入此旅程。 经过六周的核心开发和两周优化后，此应用现已准备就绪！ 还可以按照我们整个旅程完成以下视频系列。
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
-## <a name="share-your-idea"></a>分享你的想法
+## <a name="share-your-idea"></a>分享想法
 
-Galaxy 资源管理器旅程以 "分享你的想法" 市场活动为起点。
+Galaxy Explorer 之旅从"分享想法"活动开始。
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/ZxGdW_ASrRc]
 
-对于全息计算如何转换我们的世界，Microsoft HoloLens 社区的工作方式非常多。 我们相信，最令人难以置信的 HoloLens 应用程序将会与你一起想象出来。
+在Microsoft HoloLens计算如何改变我们的世界方面，这个社区正在迸发着一些想法。 我们认为，最HoloLens应用将来自你共同想象的想法。
 
-您在几周内共享了超过5000的精彩创意！ 我们的开发团队已经回顾了最成功和可行的建议，并为构建了三大创意之一。
+在这几周内，你分享了 5000 多个令人惊叹的想法！ 我们的开发团队查看了最成功且可行的想法，并提供了构建前三个想法之一。
 
-在24小时的 Twitter 投票后，Galaxy 资源管理器是一种入选的主意！ 设计人员、艺术家和开发人员的 HoloLens 开发团队构建了 Galaxy 资源管理器，并邀请了所有人参与这一旅程。 你可以按照下面视频中的开发过程进行操作。
+在 24 小时的 Twitter 投票后，Galaxy Explorer 成为获胜者！ 我们的HoloLens设计者、艺术家和开发人员的开发团队构建了 Galaxy Explorer，并邀请了你们全部加入此旅程。 可以按照以下视频中的开发过程操作。
 
 ## <a name="ep-1-trust-the-process"></a>Ep 1：信任进程
 
 >[!VIDEO https://www.youtube.com/embed/rIX2XrRQgDg]
 
-在第1集，开发团队开始创作过程：灵感触发、concepting，并决定如何建立原型。
+在第 1 集中，开发团队开始进行创意过程：集中讨论、概念以及确定要原型制作什么。
 
-## <a name="ep-2-lets-do-this"></a>Ep 2：让我们执行此操作
+## <a name="ep-2-lets-do-this"></a>Ep 2：让我们这样做
 
 >[!VIDEO https://www.youtube.com/embed/q1ee8a-84Ro]
 
-在剧集2中，开发团队完成原型设计阶段–处理硬问题并找出要进一步进行的看法。
+在第 2 集中，开发团队完成了原型制作阶段 - 处理难题并找出要进一步探索的想法。
 
-## <a name="ep-3-laying-foundations"></a>Ep 3：设计基础
+## <a name="ep-3-laying-foundations"></a>Ep 3：布局基础
 
 >[!VIDEO https://www.youtube.com/embed/fUqni6C4nmo]
 
-在剧集3中，团队开始开发的第一周–创建计划、编写生产代码、创建艺术资产和查明用户界面。
+在第 3 集中，团队开始第一周的开发 - 创建计划、编写生产代码、创建艺术资产和找出用户界面。
 
-## <a name="ep-4-make-it-real"></a>Ep 4：使其成为现实
+## <a name="ep-4-make-it-real"></a>Ep 4：使其真实
 
 >[!VIDEO https://www.youtube.com/embed/ePA6hcaqoug]
 
-在剧集4中，团队深入更深入地进行开发–引入科学数据、优化渲染过程，并引入空间映射。
+在第 4 集中，团队深入探讨开发 - 引入科学数据、优化呈现过程并合并空间映射。
 
-## <a name="ep-5-see-what-happens"></a>Ep 5：了解发生的情况
+## <a name="ep-5-see-what-happens"></a>Ep 5：查看发生的情况
 
 >[!VIDEO https://www.youtube.com/embed/Up1EDRrCrho]
 
-在剧集5中，开发团队测试应用，搜索需要修复的 bug，并改进体验。
+在第 5 集中，开发团队测试应用，搜索需要修复的 bug，并优化体验。
 
-## <a name="ep-6-coming-to-life"></a>Ep 6：即将推出
+## <a name="ep-6-coming-to-life"></a>Ep 6：即将进入生命周期
 
 >[!VIDEO https://www.youtube.com/embed/sMuJFKbylY4]
 
-在剧集6中，团队完成了开发的最后一周，准备了两周的波兰工作，并反映了他们的进度
+在第 6 集中，团队完成了最后一周的开发，为两周的工作做好准备，并反映了他们取得的进度
 
 ## <a name="ep-7-the-final-product"></a>Ep 7：最终产品
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
-在剧集7中，团队完成项目并共享其代码。
+在第 7 集中，团队完成项目并共享其代码。
 
 ## <a name="case-study"></a>案例研究
 
-您可以通过阅读 ["在混合现实中创建 Galaxy" 案例研究](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)，从开发 Galaxy 资源管理器中找到更多见解和教训。
+有关开发 Galaxy Explorer 的更多见解和课程，可阅读"在混合现实中创建行星 ["案例研究](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)。
 
 ## <a name="meet-the-team"></a>认识团队
 
-![Galaxy 资源管理器开发团队](images/syiteampic.jpg)<br>
-*Galaxy 资源管理器开发团队*
+![Galaxy Explorer 开发团队](images/syiteampic.jpg)<br>
+*Galaxy Explorer 开发团队*
 
-我们了解到，构建正确的团队是我们可以做出的最重要的投资之一，并决定与您熟悉该开发模型的游戏工作室进行组织。 我们选择拥有11个核心团队成员来控制作用域，因为我们有一个固定时间范围 (在2016年3月30日（) 之前）创建一些很酷的内容。
+我们了解到，构建正确的团队是我们可以做出最重要的投资之一，并决定为熟悉该开发模型的人组织类似于游戏工作室。 我们选择有 11 个核心团队成员来控制范围，因为我们有一个固定的时间范围 (在 2016 年 3 月 30 日生成之前创建一些冷) 。
 
-对于此项目，我们从一个制造者开始，Jessica 负责规划、查看进度，并使每日运行时间保持不上。 她是带有粉色头发的人。 我们有一个设计总监 (吴建) ，一个高级设计人员 (Peter) 。 它们保持了 Galaxy 资源管理器的创造性愿景。 吴建是前面一行中眼镜的，Peter 是后面的第二个。
+对于此项目，我们从一位制作者（即执行规划、查看进度并保持日常运行）的 Producerca 开始。 她就是一头带红色发的。 我们有一位设计总监 (Jon) ，还有一位高级 (Peter) 。 他们具有对 Galaxy Explorer 的创意愿景。 Jon 是前行中的一个眼镜，Peter 是后排右侧的第二个。
 
-我们有三个开发人员–在吴建和 Jessica) 、Mike (第二 () 行 (第二行， 它们确定了认识到创造性构想所需的技术解决方案。
+我们有三个开发人员- BJ (Jon 和 Jessica) 、Mike (第二行（位于) ）和 Karim (第二行中间（位于 BJ) 旁边）。 他们找出了实现该创意愿景所需的技术解决方案。
 
-我们已开始使用四个艺术家，这是一项概念 (Jedd，从后) 中的第二个开始，建模者 (在后) 中的第三方、技术艺术家 (Alex (最右人员) # A7 和 animator (Steve () 。 其中的每个功能也不是这样，而是它们的主要职责。
+我们一开始有四位艺术家：一位概念艺术家 (Jedd，第二位是后向) ，第二位是建模者 (Andy，第三位是后向) 、技术艺术家 (Alex (最右的人) ) 和动画制作者 (Steve (最左侧的人) 。 其中每个任务也不止一个，但这是他们的主要职责。
 
-我们有一个全职测试人员– Lena –每天测试一次生成，设置我们的内部版本审查，并在其联机时查看这些功能。 不过，每个人都在不断进行测试，因为我们一直在寻找我们的版本。 Lena 是 leather jacket 的滚轮。
+我们有一个全时测试员 使用 且每天测试生成、设置生成评审，以及在线查看功能。 但是，每个人都不断进行测试，因为我们一直在查看我们的生成。 进行这种活动就是一种岩石。
 
-我们是 Microsoft (认为团队在非游戏开发) 中的一个大型工作室的组成部分。 还有很多其他人在人才，我们在整个项目中都经常称之为我们的艺术总监、音频工程师和工作室领导，但这些人与更广泛的团队的其他项目共享资源。
+在 Microsoft，我们都是一个更大的工作室的一部分 (非游戏开发团队) 。 还有一些其他人也参与 – 在整个项目中，我们经常要求我们的艺术总监、音频工程师和工作室领导，但这些人员与更广泛的团队拥有的其他项目共享资源。
 
 ## <a name="see-also"></a>另请参阅
-* [案例研究-在混合现实中创建 galaxy](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
-* [Galaxy 资源管理器 GitHub 存储库](https://github.com/Microsoft/GalaxyExplorer)
+* [案例研究 - 在混合现实中创建一个行星](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
+* [Galaxy Explorer GitHub存储库](https://github.com/Microsoft/GalaxyExplorer)
+* [星系探索者 2.0](galaxy-explorer-update.md)
