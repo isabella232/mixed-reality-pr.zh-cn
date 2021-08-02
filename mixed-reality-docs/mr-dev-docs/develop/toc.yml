@@ -222,8 +222,6 @@
       items:
         - name: Unity 中的照片/视频摄像头
           href: unity/locatable-camera-in-unity.md
-        - name: 桌面应用中的全息远程处理
-          href: unity/holographic-remoting-desktop.md
         - name: 焦点
           href: unity/focus-point-in-unity.md
         - name: 失跟
@@ -249,7 +247,7 @@
             - name: 表面
               href: unity/sampleapp-surfaces.md
             - name: 元素周期表 2.0
-              href: 'https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158'
+              href: unity/periodic-table-of-the-elements-2.md
             - name: 星系探索者 2.0
               href: unity/galaxy-explorer-update.md
             - name: Quality Fundamentals
@@ -268,8 +266,8 @@
           href: unity/managed-debugging-with-unity-il2cpp.md
         - name: 建议用于 Unity 的设置
           href: unity/recommended-settings-for-unity.md
-        - name: Unity 播放模式
-          href: unity/unity-play-mode.md
+        - name: 使用全息远程处理预览工作
+          href: unity/holographic-remoting-in-unity.md
     - name: Visual Studio 解决方案
       items:
         - name: 导出和构建 Unity Visual Studio 解决方案
@@ -454,7 +452,9 @@
           href: platform-capabilities-and-apis/installing-pix-hololens.md
     - name: 全息远程处理
       items:
-        - name: 全息远程播放器
+        - name: 概述
+          href: platform-capabilities-and-apis/holographic-remoting-overview.md
+        - name: 全息远程处理播放器
           href: platform-capabilities-and-apis/holographic-remoting-player.md
         - name: 编写全息远程处理远程应用
           items:
@@ -475,9 +475,7 @@
         - name: 全息远程处理软件许可条款
           href: /legal/mixed-reality/microsoft-holographic-remoting-software-license-terms
         - name: HoloLens（第 1 代）的全息远程处理
-          items:
-            - name: 添加全息远程处理
-              href: platform-capabilities-and-apis/add-holographic-remoting.md
+          href: platform-capabilities-and-apis/add-holographic-remoting.md
     - name: 应用质量和测试
       items:
         - name: 应用质量标准
