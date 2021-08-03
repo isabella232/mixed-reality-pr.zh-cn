@@ -7,16 +7,16 @@ ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: 最新, 工具, 入门, 基础, unity, visual studio, 工具包, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 安装, Windows, HoloLens, 仿真器, unreal, openxr
-ms.openlocfilehash: 4e822f2dda2a314ce06bc394a4d92b1aa6953af3
-ms.sourcegitcommit: 943489923c69c3a28bc152f1cb516dcdcea2880a
+ms.openlocfilehash: 1244f9cd4da0d6ae0b5c6f92698f87f0edd812e2
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111772410"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757086"
 ---
 # <a name="welcome-to-the-mixed-reality-feature-tool"></a>欢迎使用混合现实功能工具
 
-![混合现实功能工具横幅图像](images/feature-tool-banner.png)
+![混合现实功能工具横幅图像](images/feature-tool-banner.jpg)
 
 > [!IMPORTANT]
 > 混合现实功能工具目前仅适用于 Unity。 如果是在 Unreal 中进行开发，请参阅[工具安装](../install-the-tools.md)文档。
