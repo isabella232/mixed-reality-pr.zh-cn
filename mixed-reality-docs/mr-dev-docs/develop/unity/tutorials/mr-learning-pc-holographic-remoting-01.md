@@ -2,25 +2,27 @@
 title: 电脑全息远程处理入门
 description: 完成本课程可以了解如何将混合现实应用程序从电脑远程地流式传输到 HoloLens 2。
 author: jessemcculloch
-ms.author: jemccull
-ms.date: 02/05/2021
+ms.author: v-vtieto
+ms.date: 07/26/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 电脑全息远程处理, 工具提示, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: 05831ff19a998bd5e99ab5d20c3fb045a09c55e9
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 53ede3db405e6f6f4ccaa20ff35847ecc9081dca
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175429"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757349"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1.电脑全息远程处理入门
 
-欢迎学习 HoloLens 2 教程。 该系列由两部分组成，其中你将学习如何创建混合现实体验演示，并了解如何创建用于全息远程处理的电脑应用。
+欢迎学习 HoloLens 2 教程。 本系列由两个教程组成，你将学习如何创建混合现实体验演示以及如何创建用于全息远程处理的电脑应用。
+
+[了解全息远程处理的基础知识。](../../platform-capabilities-and-apis/holographic-remoting-overview.md)
 
 本教程介绍如何创建混合现实体验。 它将演示 UI 元素、3D 模型操作、模型剪辑和眼动跟踪功能。
 
-在[创建全息远程处理应用程序](mr-learning-pc-holographic-remoting-02.md)（第二篇教程）中，你将学习如何创建用于全息远程处理的电脑应用。 你还可随时连接到 HoloLens 2，从而在混合现实中直观呈现 3D 内容。
+在第二个教程[创建全息远程处理应用程序](mr-learning-pc-holographic-remoting-02.md)中，你将了解如何创建使用全息远程处理的电脑应用，以便可以将正在进行的工作流式传输到 HoloLens 并进行查看，而无需先生成。
 
 ## <a name="objectives"></a>目标
 
