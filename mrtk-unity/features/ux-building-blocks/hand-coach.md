@@ -1,135 +1,135 @@
 ---
 title: 手部指导
-description: 手部教练的说明和示例。
+description: 手动指导的说明和示例。
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: f6042fce7c95c106de9c72adc854e2b7112da63c
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 3e5a56f7498288e79963acea6fca223421fee2607004a9a2bae639f81441e0d9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177152"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209018"
 ---
 # <a name="hand-coach"></a>手部指导
 
-![手部指导菜单](../images/hand-coach/MRTK_UX_HandCoach_Main.jpg)
+![手动指导菜单](../images/hand-coach/MRTK_UX_HandCoach_Main.jpg)
 
-手部训练是 3D 建模手，当系统未检测到用户的手时，会触发手部训练。 这是作为"教学"组件实现的，可帮助在未教授手势时指导用户。 如果用户有一段时间没有完成指定的手势，手将循环并出现延迟。 手部指导可用于表示按下按钮或选取全息影像。
+手动指导是在系统未检测到用户的手时触发的3D 建模手。 这是作为 "教学" 组件实现的，该组件可帮助引导用户在未教授手势时进行引导。 如果用户未在某个时间段内完成指定的手势，则会循环一段时间。 手动指导可用于表示按下某个按钮或选择一个全息影像。
 
-当前交互模型表示各种手势控件，例如滚动、远点选择和近点击。 下面是现有手部教练示例的完整列表：
+当前交互模型表示各种手势控件，例如滚动、远选和点击显示。 下面是现有手动指导示例的完整列表：
 
-- 近点击 – 用于按钮或关闭可交互对象
-- 远选 – 用于远离的对象
-- 移动 – 用于在空间中移动全息影像
-- 旋转 – 用于显示如何旋转全息影像或对象
-- 缩放 - 用于显示如何操作放大或缩小全息影像
-- 手部翻转 - 用于打开 UI 启动面板或手部菜单
-- "开箱即用"– 用于在开箱即用体验中实现鸟鸟时刻。 另一个建议可能是启动 UI 启动面板
-- 滚动 – 用于滚动列表或长文档
+- 点击点击–用于按钮或关闭种不可交互对象
+- 选择–用于远离远处的对象
+- 移动–用于在空间中移动全息图
+- 旋转–用于演示如何旋转全息影像或对象
+- 规模-用于显示如何操作更大或更小的全息影像
+- 手动翻转–用于引入 UI 的 "开始" 面板或手菜单
+- 掌上–在全新体验中用于 hummingbird。 另一个建议是打开 UI 开始面板
+- 滚动-用于滚动列表或长文档
 
 ## <a name="example-scene"></a>示例场景
 
-可以在 **HandCoachExample** 场景下找到示例 [：MixedRealityToolkit.Examples/Experimental/HandCoach/Scene](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach/Scenes)
+可在以下主题中找到 **HandCoachExample** 场景中的示例： [MixedRealityToolkit/实验/HandCoach/场景](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach/Scenes)
 
-## <a name="hand-3d-assets"></a>手部 3D 资产
+## <a name="hand-3d-assets"></a>手动三维资产
 
-可以在以下项下找到资产 [：MixedRealityToolkit.SDK/Experimental/HandCoach](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach)
+可以在以下资源中找到资产： [MixedRealityToolkit/实验/HandCoach](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/Examples/Demos/HandCoach)
 
 ## <a name="quality"></a>质量
 
-如果注意到外观网格上的扭曲，则需要确保项目使用适当数量的连接。
-转到 Unity 的编辑> Project 设置 >质量>其他>混合权重。 确保已选择"4 个关节"，以查看平滑联合。
-![Project设置](../images/hand-coach/MRTK_ProjectSettings.png)
+如果注意到 skinned 网格上的扭曲，需要确保项目使用的是正确的联接量。
+中转到 Unity 的编辑 > Project 设置 > 质量 > 其他 > 混合权重。 请确保选择 "4 骨骼" 以查看平滑联接。
+![Project将](../images/hand-coach/MRTK_ProjectSettings.png)
 
 ## <a name="scripts"></a>脚本
 
 ### <a name="interaction-hint"></a>交互提示
 
-该 `InteractionHint.cs` 脚本提供包装器功能，用于触发手部工具的动画和淡入淡出。
+该 `InteractionHint.cs` 脚本提供了用于触发动画的包装功能，并为手型工作机组淡化。
 
 #### <a name="how-to-set-up-an-interaction-hint"></a>如何设置交互提示
 
-若要设置交互提示，建议使用提供的预制项"StaticHandCoachRoot_L.prefab"和"StaticHandCoachRoot_R.prefab"。 此预制项包含 InteractionHint 脚本和手部工具以及适当的层次结构，以确保提供的提示动画符合预期。
-否则，需要将脚本放在 gameObject 上，使用动画器从手部工具向上放置一个父级别。
+若要设置交互提示，建议使用提供的 prototyping StaticHandCoachRoot_L "prefab" 和 StaticHandCoachRoot_R "prefab"。 此 prefab 包含 InteractionHint 脚本和手写工作装置以及适当的层次结构，以确保所提供的提示动画按预期方式工作。
+否则，你将需要使用 animator 将该脚本放在 gameObject 的父级别上。
 
 #### <a name="inspector-properties"></a>检查器属性
 
-- **HideIfHandTracked** 此布尔值指定在跟踪用户的手时，是否应当使用手部跟踪状态来隐藏视觉对象。 如果设置为 false，则仅脚本属性"customShouldHideVisuals"用于确定是否隐藏提示。
+- **HideIfHandTracked** 此布尔值指定在跟踪用户的手时是否应使用手动跟踪状态隐藏视觉对象。 如果将此属性设置为 false，则只使用脚本属性 "customShouldHideVisuals" 来确定是否隐藏提示。
 
-- **MinDelay** 此属性指定显示视觉对象的最小延迟。 默认情况下，如果未跟踪用户的手，则手部视觉对象将在此秒后显示。
+- **MinDelay** 此属性指定显示视觉对象的最小延迟。 默认情况下，如果未跟踪用户的手，则手形的视觉对象将显示在这几秒钟后。
 
-- **MaxDelay** 此属性指定显示视觉对象的最大延迟。 默认情况下，即使跟踪用户的手，手部视觉对象也会在此秒后显示。
+- **MaxDelay** 此属性指定显示视觉对象的最大延迟。 默认情况下，即使正在跟踪用户的手，该手形的视觉对象也会在数秒后出现。
 
-- **UseMaxTimer** 如果此布尔值设置为 false，它将禁用最大计时器，并且仅允许用户在手部无法查看或自定义条件返回 false 时显示手部提示。
+- **UseMaxTimer** 如果将此布尔值设置为 "false"，则它将禁用最大计时器，并只允许在用户退出查看时显示手形提示，或自定义条件返回 false。
 
-- **重复** 此属性控制在最小或最大计时器通过时提示动画播放次数。 然后，提示将隐藏并再次等待延迟。
+- **重复** 此属性控制在达到最小或最大计时器时，提示动画的播放次数。 然后，提示将隐藏并再次等待延迟。
 
-- **AutoActivate** 当此布尔值设置为 true 时，当脚本的 GameObject 在层次结构中处于活动状态并启用脚本时，提示将自动通过计时器逻辑运行。 只有打算通过代码手动控制提示外观和消失时，才应设置为 false。
+- **AutoActivate** 如果将此布尔值设置为 true，则当脚本的 GameObject 在层次结构中处于活动状态且该脚本已启用时，提示将自动通过计时器逻辑运行。 如果要通过代码手动控制提示外观和消失，则此值应设置为 false。
 
-- **AnimationState** 提示处于活动状态时应播放的动画状态的名称。 如果在 OnEnable 期间选中了 AutoActivate， () StartHintLoop (调用 StartHintLoop 函数之前，必须设置) 。
+- **AnimationState** 提示处于活动状态时应播放的动画状态的名称。 如果) 检查 AutoActivate，则必须在 OnEnable 期间 (调用 StartHintLoop () 函数之前设置此设置。
 
 #### <a name="controlling-interactionhint-via-script"></a>通过脚本控制 InteractionHint
 
-- **StartHintLoop** 如果 AutoActivate 标志设置为 true，此函数将启动显示/隐藏循环，否则启动 OnEnable。
-- **StopHintLoop** 如果当前未播放，此函数将调用淡出动画状态，然后停用显示/隐藏循环，并设置层次结构中的手部不活动。
-- **AnimationState** 此字符串确定在循环期间播放的动画状态。 可以更改此字符串以更改播放的状态，但在调用 StopHintLoop 后必须这样做，并且必须在更改状态后再次调用 StartHintLoop。
-- **CustomShouldHideVisuals** 可以使用自己的函数对此进行设置，当想要隐藏手部视觉对象时，应返回 true (请记住 MinMaxTimer，特别是 max 参数) 
+- **StartHintLoop** 如果 AutoActivate 标志设置为 true，则此函数将启动 "显示/隐藏" 循环，否则会启动 OnEnable。
+- **StopHintLoop** 如果当前未播放，此函数将调用淡出动画状态，然后停用显示/隐藏循环，并在层次结构中设置不活动的手动装置。
+- **AnimationState** 此字符串确定循环中播放的动画状态。 你可以更改此字符串来更改播放的状态，但必须在调用 StopHintLoop 之后执行此操作，并且必须在更改状态后再次调用 StartHintLoop。
+- **CustomShouldHideVisuals** 你可以将此设置为你自己的函数，当你想要隐藏手视觉对象时，它应返回 true， (记住 MinMaxTimer，尤其是最大参数) 
 
 #### <a name="custom-animation-considerations"></a>自定义动画注意事项
 
-淡入淡入淡出默认为 0.5 秒，因此，为与钻台一起创建的任何自定义动画应至少为 1.5 秒，以便传达任何有意义的信息
+淡化的默认值为0.5 秒，因此，为与 rig 一起使用而创建的任何自定义动画应最少1.5 秒，以便传达任何有意义的信息
 
-提供的默认淡入和淡出状态Fade_In，Fade_Out通过更改第二个关键帧的时间戳来设置淡入淡出长度来调整其淡入和淡出状态。
+提供的默认淡入和淡出状态、Fade_In 和 Fade_Out 可以通过更改第二个关键帧的时间戳来进行调整，以设置淡化长度。
 
-动画器和脚本的设置方式应使设置尽可能简单。 若要添加新动画状态，只需导入 fbx，确保动画名称设置有一个不同的名称，然后将该动画拖动到动画器中。
+Animator 和脚本的设置方式使安装尽可能简单。 若要添加新的动画状态，只需导入 fbx，确保使用不同的名称设置动画名称，然后将动画拖到 animator 中。
 
 ### <a name="movetotarget"></a>MoveToTarget
 
-MoveToTarget.cs 脚本提供了一些功能，可随着时间的推移将手部提示从跟踪位置移动到目标位置。
+MoveToTarget 脚本提供将手形提示从跟踪位置移动到目标位置的功能。
 
 #### <a name="how-to-set-up-movetotarget"></a>如何设置 MoveToTarget
 
-提供的预制项"MovingHandCoachRoot_L.prefab"和"MovingHandCoachRoot_R.prefab"在层次结构中包含 MoveToTarget。 如果要在你自己的设置中使用此脚本，则需要将脚本放在根 gameobject 上，其中包含用于你的钻器的动画器。
+提供的 prototyping MovingHandCoachRoot_L "prefab" 和 MovingHandCoachRoot_R "prefab" 在其层次结构中包含 MoveToTarget。 如果要在自己的设置中使用此脚本，则需要将其放在包含远程测试机组 Animator 的根 gameobject 上。
 
 #### <a name="inspector-properties"></a>检查器属性
 
-- **TrackingObject** 在设备开始其运动之前，将此选项设置为希望其遵循的对象。 建议创建一个空 GameObject，并移动到特定位置，以帮助你查明跟踪。
-- **TargetObject** 将此选项设置为要在其运动过程中将钻设备移动到的对象。 建议创建一个空 GameObject，并移动到特定位置，以帮助你查明跟踪。
-- **RootObject** 将此选项设置为跟踪对象和目标对象之间的共享父级，以便可以正确计算相对位置。 包含的预制件在其层次结构中同时具有跟踪对象和目标对象，但可以将目标对象设置为预制件外部的 gameObject，将根对象更改为共享父级。
-- **持续时间** 从 TrackingObject (TargetObject) 秒的时间。
-- **TargetOffset** 可调整的偏移量，使 GameObject 到达正确的目标位置。 如果动画在动画期间包含位置偏移量，则这很有用。
-- **AnimationCurve** 这默认为线性曲线，但可以更改曲线，在启动和停止运动路径时提供缓动。
+- **TrackingObject** 将此设置为你希望远程测试在开始运动之前应遵循的对象。 建议创建一个空的 GameObject，并将其移至特定位置以帮助你确定跟踪。
+- **TargetObject** 将此设置为你希望远程测试在其运动期间移动到的对象。 建议创建一个空的 GameObject，并将其移至特定位置以帮助你确定跟踪。
+- **RootObject** 将此项设置为跟踪和目标对象之间的共享父级，以便可以正确计算相对位置。 包含的 prefab 在其层次结构中同时具有跟踪和目标对象，但你可以将目标对象设置为 prefab 外的 gameObject，并将根对象更改为共享父级。
+- **持续时间** 在几秒内从 TrackingObject 移动到 TargetObject 所需的时间量 () 。
+- **TargetOffset** 用于获取 GameObject 到达适当目标位置的可调偏移量。 如果动画中的动画包含位置偏移量，则此方法非常有用。
+- **AnimationCurve** 这是默认情况下的线性曲线，但您可以在启动和停止运动路径时更改曲线以提供缓动。
 
 #### <a name="controlling-movetotarget-via-script"></a>通过脚本控制 MoveToTarget
 
-在自定义脚本中，在希望手部工具跟随 TrackingObject 时调用"跟踪 () "，然后在希望手部工具开始向 TargetObject 移动时调用 MoveToTargetPosition () 。
+在自定义脚本中，调用以下 () ，同时想要在 TrackingObject 时使用该手型装置，然后调用 MoveToTargetPosition () ，以使其开始将其移动到 TargetObject。
 
 #### <a name="controlling-movetotarget-via-animations"></a>通过动画控制 MoveToTarget
 
-在需要移动的动画中，设置两个事件：一个事件调用 Follow () ，另一个事件调用 MoveToTargetPosition () 。 应在第一个关键帧上设置"关注"，因为它会导致手部工具跟随 TrackingObject。 应在希望设备开始移动到目标的关键帧上设置 MoveToTargetPosition。 这是脚本功能在提供的预制组件中的使用方式。
+在需要移动的动画中，设置两个事件：一个事件调用追随 () ，另一个事件调用 MoveToTargetPosition () 。 应在第一个关键帧上设置 "跟随"，因为它会导致手型装置按照 TrackingObject。 应在希望远程测试机组开始移动到目标的关键帧上设置 MoveToTargetPosition。 这就是在提供的 prototyping 中使用脚本功能的方式。
 
-### <a name="rotatearoundpoint"></a>Rotate按UndPoint
+### <a name="rotatearoundpoint"></a>RotateAroundPoint
 
-RotateAroundPoint.cs 脚本提供了在一段时间围绕透视点旋转手提示的功能。
+RotateAroundPoint 脚本可提供一段时间来围绕一个数据透视点旋转手形提示。
 
 #### <a name="how-to-set-up-rotatearoundpoint"></a>如何设置 RotateAroundPoint
 
-提供的预制件"RotatingHandCoachRoot_L.prefab"和"RotatingHandCoachRoot_R.prefab"在层次结构中包含 Rotate且undPoint。 如果要在你自己的设置中使用此脚本，则需要将脚本放在根 gameobject 上，其中包含用于你的钻器的动画器。
+提供的 prototyping RotatingHandCoachRoot_L "prefab" 和 RotatingHandCoachRoot_R "prefab" 在其层次结构中包含 RotateAroundPoint。 如果要在自己的设置中使用此脚本，则需要将其放在包含远程测试机组 Animator 的根 gameobject 上。
 
 #### <a name="inspector-properties"></a>检查器属性
 
-- **CenteredParent** 将此选项设置为希望设备四处透视的父对象。
-- **InverseParent** 将此选项与父级一起设置为"反向旋转"到"居中""参数"，以保持手部方向不变。 一般情况下，这将是其上具有 InteractionHint 脚本的父对象。
-- **PivotPosition** 将此选项设置为希望提示开始移动的点。
-- **持续时间** 围绕 CenteredParent 旋转 (需要) 秒。
-- **AnimationCurve** 这默认为线性曲线，但可以更改曲线，在启动和停止运动路径时提供缓动。
+- **CenteredParent** 将此项设置为你希望远程测试机组绕过的父对象。
+- **InverseParent** 将此项设置为父项，以将其反向旋转到 centeredParent，以使手写方向相同。 通常，这是包含 InteractionHint 脚本的父对象。
+- **PivotPosition** 将此设置为想要在其中开始移动的点。
+- **持续时间**) 绕 CenteredParent 旋转所需的时间量 (，以秒为单位。
+- **AnimationCurve** 这是默认情况下的线性曲线，但您可以在启动和停止运动路径时更改曲线以提供缓动。
 - **RotationVector** 沿每个轴旋转的度数。
 
 #### <a name="controlling-rotatearoundpoint-via-script"></a>通过脚本控制 RotateAroundPoint
 
-在自定义脚本中，在希望手部 () 在 CenteredParent 周围开始旋转时，调用 RotateToTarget 参数。 若要将位置重置为原始 PivotPosition，请调用 ResetAndDeterminePivot () 。
+在自定义脚本中，当你希望在 CenteredParent 上开始旋转时，请调用 RotateToTarget () 。 如果希望将位置重置为原始 PivotPosition，请调用 ResetAndDeterminePivot () 。
 
 #### <a name="controlling-rotatearoundpoint-via-animations"></a>通过动画控制 RotateAroundPoint
 

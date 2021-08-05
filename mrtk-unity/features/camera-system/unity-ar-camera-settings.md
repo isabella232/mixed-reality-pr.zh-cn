@@ -4,13 +4,13 @@ description: 使用 MRTK 中的 AR 相机的文档
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity、HoloLens、HoloLens 2、混合现实、开发、MRTK、AR 相机、
-ms.openlocfilehash: e1c032805bc4b733cfcc51e1ceac5096c73715cf
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，AR 摄像机，
+ms.openlocfilehash: a2d145823557b473bd7d34170b283e782151c24277b8f16586516ffe78f8e735
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121195"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210058"
 ---
 # <a name="unity-ar-camera-settings-provider"></a>Unity AR 照相机设置提供程序
 
@@ -75,4 +75,4 @@ Unity AR 照相机设置提供程序允许配置有关如何执行跟踪的选�
 ## <a name="see-also"></a>另请参阅
 
 - [照相机系统概述](camera-system-overview.md)
-- [创建照相机设置提供程序](create-settings-provider.md)
+- [设置提供程序创建照相机](create-settings-provider.md)

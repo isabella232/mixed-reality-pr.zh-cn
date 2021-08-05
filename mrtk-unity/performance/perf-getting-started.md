@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 6c8e060af585d7994774ea0bb575b6e5172b9558
-ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
+ms.openlocfilehash: 50128100d058b5ec3bca7eac523c78287ce657925c3ac116e4336174e34e75c8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114281760"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211171"
 ---
 # <a name="performance"></a>性能
 
@@ -155,25 +155,25 @@ Unity [提供预设来控制每个](https://docs.unity3d.com/Manual/class-Qualit
 1. 顶点着色器将网格顶点转换为屏幕空间中的坐标 (即 每个顶点所执行) 
 2. 像素着色器计算给定像素和网格片段绘制的颜色 (即 代码按像素执行) 
 
-在性能优化方面，通常更希望专注于优化像素着色器中的操作。 应用程序可能只需要绘制一个只有 8 个顶点的立方体。 但是，多维数据集占用的屏幕空间可能为数百万像素。 因此，如果像素着色器比顶点着色器减少，则通过使用10个操作降低着色器代码可以节省更多的工作。
+在性能优化方面，通常更希望专注于优化像素着色器中的操作。 应用程序可能只需要绘制一个只有 8 个顶点的立方体。 但是，多维数据集占用的屏幕空间可能为数百万像素。 因此，如果在像素着色器上减少比顶点着色器少 10 个操作，减少着色器代码可以显著节省更多工作。
 
-这是利用 [MRTK 标准着色器](../features/rendering/mrtk-standard-shader.md) 的主要原因之一，因为在此着色器中，此着色器 & 顶点与 Unity 标准着色器相比，在实现可比较的美观结果时，通常会执行更少的指令。
+这是利用 [MRTK](../features/rendering/mrtk-standard-shader.md) 标准着色器的主要原因之一，因为与 Unity 标准着色器相比，此着色器执行每个像素 & 顶点的指令通常更少，同时获得类似的美观结果。
 
 |    CPU 优化      |             GPU 优化              |
 |---------------------------|--------------------------------------------|
 | 应用模拟逻辑      | 呈现操作 |
-| 简化物理学          | 减少光照计算 |
-| 简化动画       | 减少绘制对象的 & # 数量 |
-| 管理垃圾回收 | 减少透明对象的数目 |
-| 缓存引用          | 避免处理后/全屏效果  |
+| 简化物理          | 减少照明计算 |
+| 简化动画       | 减少多边形计数&可绘制对象数 |
+| 管理垃圾回收 | 减少透明对象数 |
+| 缓存引用          | 避免后处理/全屏效果  |
 
 ### <a name="draw-call-instancing"></a>绘制调用实例化
 
-Unity 中最常见的错误之一就是在运行时克隆材料。 如果 Gameobject 共享相同的材料和/或相同的网格，则可以通过诸如 *[静态批处理](https://docs.unity3d.com/Manual/DrawCallBatching.html)*、 *[动态批处理](https://docs.unity3d.com/Manual/DrawCallBatching.html)* 和 *[GPU 实例](https://docs.unity3d.com/Manual/GPUInstancing.html)* 化之类的技术将其优化成单个绘图调用。 但是，如果开发人员在运行时修改 [呈现器材料](https://docs.unity3d.com/ScriptReference/Renderer-material.html) 的属性，则 Unity 将创建分配的材料的克隆副本。
+Unity 中降低性能的最常见错误之一是在运行时克隆材料。 如果 GameObject 共享相同的材料且/或网格相同，则可以通过静态批处理、动态批处理和 *[GPU](https://docs.unity3d.com/Manual/GPUInstancing.html)* 实例化等 *[](https://docs.unity3d.com/Manual/DrawCallBatching.html)* 技术，将 *[](https://docs.unity3d.com/Manual/DrawCallBatching.html)* GameObject 优化为单个绘图调用。 但是，如果开发人员在运行时修改呈现器材料的属性[](https://docs.unity3d.com/ScriptReference/Renderer-material.html)，Unity 将创建所分配材料的克隆副本。
 
-例如，如果一个场景中有一个100的多维数据集，则开发人员可能需要在运行时为每个多维数据集分配一种独特的颜色。 C # 中的 [*呈现*](https://docs.unity3d.com/ScriptReference/Material-color.html) 器的访问权限将使 Unity 在内存中为此特定呈现器/GameObject 创建一个新材料。 每个100多维数据集都有其自己的材料，因此它们不能合并为一个绘图调用，而是会成为100，将来自 CPU 的调用请求绘制到 GPU。
+例如，如果场景中有 100 个立方体，开发人员可能希望在运行时为每个立方体分配唯一的颜色。 访问 C# [*中的 renderer.material.color*](https://docs.unity3d.com/ScriptReference/Material-color.html) 将使 Unity 在内存中为此特定呈现器/GameObject 创建新的材料。 100 个立方体中每个都有其自己的材料，因此它们不能合并到一个绘图调用中，而是变成从 CPU 到 GPU 的 100 个绘图调用请求。
 
-为了克服这一障碍，并为每个多维数据集分配唯一的颜色，开发人员应利用 [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html)。
+若要克服此障碍，并仍然为每个立方体分配唯一的颜色，开发人员应利用 [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html)。
 
 ```c#
 private PropertyBlock m_PropertyBlock ;
@@ -200,26 +200,26 @@ private void ChangeColor()
 
 ## <a name="unity-performance-tools"></a>Unity 性能工具
 
-Unity 提供了编辑器中内置的极佳性能工具。
+Unity 提供内置于编辑器中的出色性能工具。
 
-- [Unity 探查器](https://docs.unity3d.com/Manual//Profiler.html)
-- [Unity 框架调试器](https://docs.unity3d.com/Manual/FrameDebugger.html)
+- [Unity Profiler](https://docs.unity3d.com/Manual//Profiler.html)
+- [Unity 帧调试器](https://docs.unity3d.com/Manual/FrameDebugger.html)
 
-如果估计一个着色器与另一个着色器之间的粗略性能折衷，则编译每个着色器并查看每个着色器阶段的操作数很有用。 为此，可以选择 [着色器资产](https://docs.unity3d.com/Manual/class-Shader.html) ，并单击 " *编译和显示代码* " 按钮。 这将编译所有着色器变体，并打开 visual studio 并显示结果。 注意：生成的统计信息结果可能因使用给定着色器对材料启用的功能而异。 Unity 只会编译当前项目中直接使用的着色器变体。
+如果估计一个着色器与另一个着色器之间的大致性能权衡，则编译每个着色器并查看每个着色器阶段的操作数非常有用。 这可以通过选择 [着色器资产](https://docs.unity3d.com/Manual/class-Shader.html) 并单击"编译和显示代码 *"按钮* 完成。 这会编译所有着色器变体，并打开具有结果的 Visual Studio。 注意：生成的统计信息结果可能会有所不同，具体取决于已使用给定着色器对材料启用了哪些功能。 Unity 将仅编译当前项目中直接使用的着色器变体。
 
 Unity 标准着色器统计信息示例
 
-![Unity 标准着色器统计信息1](../features/images/performance/UnityStandardShader-Stats.PNG)
+![Unity 标准着色器统计信息 1](../features/images/performance/UnityStandardShader-Stats.PNG)
 
 MRTK 标准着色器统计信息示例
 
-![MRTK 标准着色器统计信息2](../features/images/performance/MRTKStandardShader-Stats.PNG)
+![MRTK 标准着色器统计信息 2](../features/images/performance/MRTKStandardShader-Stats.PNG)
 
 ## <a name="see-also"></a>另请参阅
 
 ### <a name="unity"></a>Unity
 
-- [适用于初学者的 Unity 性能优化](https://www.youtube.com/watch?v=1e5WY2qf600)
+- [适合初学者的 Unity 性能优化](https://www.youtube.com/watch?v=1e5WY2qf600)
 - [Unity 性能优化教程](https://unity3d.com/learn/tutorials/topics/performance-optimization)
 - [Unity 优化最佳做法](https://docs.unity3d.com/Documentation/Manual/BestPracticeUnderstandingPerformanceInUnity.html)
 - [优化图形性能](https://docs.unity3d.com/Manual/OptimizingGraphicsPerformance.html)
@@ -227,10 +227,10 @@ MRTK 标准着色器统计信息示例
 
 ### <a name="windows-mixed-reality"></a>Windows Mixed Reality
 
-- [适用于 Unity 的建议设置](/windows/mixed-reality/recommended-settings-for-unity)
+- [建议设置 Unity 的推荐方法](/windows/mixed-reality/recommended-settings-for-unity)
 - [了解混合现实的性能](/windows/mixed-reality/understanding-performance-for-mixed-reality)
 - [针对 Unity 的性能建议](/windows/mixed-reality/performance-recommendations-for-unity)
-- [Windows Unity 指南的事件跟踪](https://docs.unity3d.com/uploads/ExpertGuides/Analyzing_your_game_performance_using_Event_Tracing_for_Windows.pdf)
+- [适用于 Windows Unity 的事件跟踪指南](https://docs.unity3d.com/uploads/ExpertGuides/Analyzing_your_game_performance_using_Event_Tracing_for_Windows.pdf)
 
 ### <a name="oculus"></a>Oculus
 
@@ -239,5 +239,5 @@ MRTK 标准着色器统计信息示例
 
 ### <a name="mesh-optimization"></a>网格优化
 
-- [优化3D 模型](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
-- [转换和优化实时3D 模型的最佳做法](/dynamics365/mixed-reality/import-tool/best-practices)
+- [优化三维模型](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [转换和优化实时 3D 模型最佳做法](/dynamics365/mixed-reality/import-tool/best-practices)

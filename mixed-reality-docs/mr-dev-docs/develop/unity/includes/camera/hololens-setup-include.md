@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 6e751f5376110ddc6ae92c75b4182fba8240a356
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: 78596197af6c2e7c329e7a7c99281f8debee13b973a212709f5be1ec34e04eea
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748536"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212232"
 ---
 # <a name="mrtk"></a>[MRTK](#tab/mrtk)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
 
-按照此 [分步教程](../../tutorials/mr-learning-base-01.md) 在 Unity 项目中添加和自动配置混合现实工具包。 还可以直接使用 MRTK for Unity 中的 [MixedRealityPlayspace](/dotnet/api/microsoft.mixedreality.toolkit.mixedrealityplayspace) 类，并将 **目标规模** 设置为 **World**：
+按照此[分步教程](../../tutorials/mr-learning-base-01.md)在 Unity 项目中添加和自动配置混合现实 Toolkit。 还可以直接使用 MRTK for Unity 中的 [MixedRealityPlayspace](/dotnet/api/microsoft.mixedreality.toolkit.mixedrealityplayspace) 类，并将 **目标规模** 设置为 **World**：
 
 ![MRTK 设置窗口](../../images/mrtk-target-scale.png)
 
@@ -30,7 +30,7 @@ xrInputSubsystem.TrySetTrackingOriginMode(TrackingOriginModeFlags.Device);
 xrInputSubsystem.TrySetTrackingOriginMode(TrackingOriginModeFlags.Unbounded); // Recommendation for OpenXR
 ```
 
-可以将 [ARSession](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.1/manual/index.html#installing-ar-foundation) 用于 HoloLens 应用程序，该应用程序可以更好地使用定位点和 ARKit/ARCore。
+可以将[ARSession](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.1/manual/index.html#installing-ar-foundation)用于 HoloLens 应用程序，这更适用于定位点和 ARKit/ARCore。
 
 ![层次结构中的 AR 会话](../../images/xrsdk-arsession.png)
 
@@ -56,8 +56,8 @@ xrInputSubsystem.TrySetTrackingOriginMode(TrackingOriginModeFlags.Unbounded); //
    ![Unity 中的 "检查器" 窗格中的照相机](../../images/maincamera-350px.png)  
    *Unity 中的 "检查器" 窗格中的照相机*
 
-1. 请参阅 **Windows 应用商店播放机设置** 中的 "**其他设置**" 部分
-1. 选择 **Windows Mixed Reality** 作为设备，在较旧版本的 Unity 中，它可能作为 **Windows 全息** 列出
+1. 中转到 **Windows Store Player** 的 **其他设置** 部分设置
+1. 选择 " **Windows Mixed Reality** " 作为设备，在较旧版本的 Unity 中，该设备可能会列为 **Windows 全息**
 1. 选择 **支持的虚拟现实**
 
 由于主相机对象会自动标记为相机，因此 Unity 会支持移动和平移。

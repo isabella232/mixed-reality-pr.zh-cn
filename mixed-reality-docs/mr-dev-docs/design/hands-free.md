@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 04/20/2019
 ms.topic: article
-keywords: 混合现实，无人参与，注视，注视目标，交互，设计，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，语音输入，可用性
-ms.openlocfilehash: 2864e58fdd8a29ae8f981b42f50735eb13a50869
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+keywords: 混合现实，无人参与，注视，注视目标，交互，设计，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，语音输入，可用性
+ms.openlocfilehash: 725d8886d21b42ee4643680c0dc91c1d29c25f8409b0ed0828256564dde7545c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847684"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213531"
 ---
 # <a name="hands-free"></a>免手动
 
@@ -47,7 +47,7 @@ ms.locfileid: "97847684"
 如果目标用户需要自行从手切换到无人参与，则必须考虑以下原则。
 
 ### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>假设用户已处于要切换到的模式
-例如，如果用户在工厂地面上，观看其 HoloLens 上的视频参考，并决定提起扳手开始工作，则她很可能会开始免费工作，而无需将扳手按下按钮。 她可以使用语音命令调用语音会话，停留在已可见的 UI 上，开始停留，或说 "select" 一词。
+例如，如果用户在工厂地面上，观看她 HoloLens 上的视频参考，并决定选择扳手开始工作，则她很可能会开始免费工作，而无需将扳手按下按钮。 她可以使用语音命令调用语音会话，停留在已可见的 UI 上，开始停留，或说 "select" 一词。
 
 用户可以： 
 * 在无人参与的情况下切换到无人参与

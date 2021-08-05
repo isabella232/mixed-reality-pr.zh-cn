@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，SceneTransition，
-ms.openlocfilehash: b645012a055f693fdac794b79e24fd20154fdb65
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: a66922f1c9d58018ee856c3054aa71f5213ec690c5f4780b32fd735eb59f2ac7
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176213"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189229"
 ---
 # <a name="scene-transition-service"></a>场景转换服务
 
@@ -42,7 +42,7 @@ ms.locfileid: "113176213"
 
 设置 | 目标照相机
 --- | --- | ---
-主要 | 将淡化效果应用于主摄像机。
+Main | 将淡化效果应用于主摄像机。
 UI | 对 UI 层上的照相机应用淡化效果。  (不会影响覆盖用户界面) 
 All | 适用于主相机和 UI 照相机。
 自定义 | 适用于通过提供的一组自定义相机 `SetCustomFadeTargetCameras`

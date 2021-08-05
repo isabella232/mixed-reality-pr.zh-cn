@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 61fe8754192c1fbd0634fd9d1e1994327599321b
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: 47dfba0fe2b64e3b7e03ae62af3de1e1e24bd70b8b1e7e6b2cb40995428dbda2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748544"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212242"
 ---
 # <a name="mrtk"></a>[MRTK](#tab/mrtk)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
@@ -36,8 +36,8 @@ xrInputSubsystem.TrySetTrackingOriginMode(TrackingOriginModeFlags.Floor);
 # <a name="legacy-wsa"></a>[旧 WSA](#tab/wsa)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
 
-1. 转到 Windows **应用商店播放器** 设置 **的其他设置部分**
-2. 选择 **Windows Mixed Reality** 作为设备，在旧版 Unity 中可能会列为 **Windows Holographic**
+1. 转到 **设置** Store Player Windows **的"其他设置**
+2. 选择 **Windows Mixed Reality** 作为设备，在旧版 Unity 中，Windows **作为 Holographic** 设备列出
 3. 选择 **"支持的虚拟现实"**
 
 由于主相机对象自动标记为照相机，Unity 支持所有移动和转换。

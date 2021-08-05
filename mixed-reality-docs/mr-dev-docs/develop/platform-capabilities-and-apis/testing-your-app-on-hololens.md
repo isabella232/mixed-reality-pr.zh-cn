@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens，测试
-ms.openlocfilehash: b6f1c6bcff9f9db1a1fb7f5b3ea9d2c4c2be969a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2f423560191fea8b516db80d533898b5a1f15973442e7bb6cd8878d486e0ffba
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583766"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212087"
 ---
 # <a name="testing-your-app-on-hololens"></a>在 HoloLens 上测试应用
 
@@ -56,7 +56,7 @@ ms.locfileid: "98583766"
 
 ### <a name="custom-voice-commands"></a>自定义语音命令
 
-[语音输入](../../design/voice-input.md) 是一种自然的交互方式。 用户体验可能会神奇或混淆，具体取决于你选择的命令以及如何公开它们。 通常，不应将系统语音命令（如 "Select" 或 "你好 Cortana"）用作自定义命令。 下面是几个需要注意的要点：
+[语音输入](../../design/voice-input.md) 是一种自然的交互方式。 用户体验可能会神奇或混淆，具体取决于你选择的命令以及如何公开它们。 通常，不应使用系统语音命令，如 "Select" 或 "你好 Cortana" 作为自定义命令。 下面是几个需要注意的要点：
 1. **避免使用类似的命令。** 可能会触发错误的命令。
 2. **尽可能选择发音丰富的字词。** 最小化和/或避免错误激活。
 
@@ -88,31 +88,31 @@ ms.locfileid: "98583766"
 
 ## <a name="telemetry"></a>遥测
 
-使用遥测和分析指导你。 将分析集成到你的应用可帮助你从 Beta 测试人员和最终用户那里获取有关应用的见解。 此数据可用于在提交到应用商店之前优化你的应用，并用于将来的更新。 这里有许多分析选项。 如果你不确定从何处开始，请查看 [App Insights](https://www.visualstudio.com/products/application-insights-vs.aspx)。
+使用遥测和分析指导你。 将分析集成到应用中有助于从 Beta 测试人员和最终用户获取有关应用的见解。 此数据可用于帮助在提交到 Store 之前优化应用，以及用于将来的更新。 有许多分析选项。 如果不确定从何处开始，请查看应用[Insights。](https://www.visualstudio.com/products/application-insights-vs.aspx)
 
 要考虑的问题：
 1. 用户如何使用空间？
-2. 应用在世界中放置对象的方式-能否检测问题？
-3. 它们在应用程序的不同阶段花费了多少时间？
-4. 在应用程序中花费了多少时间？
-5. 用户尝试使用的最常见使用路径是什么？
-6. 用户是否遇到意外状态或错误？
+2. 应用如何将对象放置在世界上 - 可以检测问题吗？
+3. 他们在应用程序的不同阶段花费了多少时间？
+4. 他们在应用中花费了多少时间？
+5. 用户尝试的最常见的使用路径是什么？
+6. 用户是否达到意外状态或错误？
 
-## <a name="emulator-and-simulated-input"></a>模拟器和模拟输入
+## <a name="emulator-and-simulated-input"></a>Emulator和模拟输入
 
-[HoloLens 模拟器](using-the-hololens-emulator.md)是一种有效的方式，可以使用不同种类的模拟用户特征和空间来有效地测试全息应用。 下面是一些建议，用于有效地使用模拟器来测试应用程序：
-1. **使用模拟器的虚拟房间展开测试。** 模拟器附带一组虚拟房间，可用于在更多环境中测试应用。
-2. **使用模拟器，查看所有角度的应用。** PageUp/PageDn 键会使模拟用户更高或更短。
-3. **使用真实的 HoloLens 测试应用。** HoloLens 模拟器是一种很好的工具，可帮助你快速地循环访问应用并捕获新的 bug，但请确保在提交到 Windows 应用商店之前，还需在物理 HoloLens 上进行测试。 这一点非常重要，可确保性能和体验在真实硬件上非常重要。
+使用[HoloLens仿真](using-the-hololens-emulator.md)器是使用不同类型的模拟用户特征和空间高效测试全息应用的重要方法。 下面是有效使用模拟器测试应用的一些建议：
+1. **使用模拟器的虚拟房间来扩展测试。** 模拟器附带一组虚拟房间，可用于在更多环境中测试应用。
+2. **使用模拟器从所有角度查看应用。** PageUp/PageDn 键会使模拟用户更高或更短。
+3. **使用真实应用测试HoloLens。** HoloLens Emulator是一个很好的工具，可帮助你快速访问应用并捕获新的 bug，但请确保在提交到 Windows Store 之前，还要在物理HoloLens进行测试。 这一点对于确保性能和体验在真实硬件上是出色的非常重要。
 
-## <a name="automated-testing-with-perception-simulation"></a>通过感知模拟进行自动测试
+## <a name="automated-testing-with-perception-simulation"></a>使用感知模拟进行自动测试
 
-某些应用程序开发人员可能希望自动测试其应用程序。 除了简单的单元测试以外，你还可以使用 HoloLens 中的 [感知模拟](perception-simulation.md) 堆栈自动输入应用。 感知模拟 API 可以向 HoloLens 模拟器或物理 HoloLens 发送模拟输入。
+某些应用开发人员可能希望自动测试其应用。 除了简单的单元测试之外，还可以在应用中使用感知[模拟](perception-simulation.md)堆栈HoloLens自动化对应用的人类和世界输入。 感知模拟 API 可以将模拟输入发送到HoloLens仿真器或物理HoloLens。
 
 ## <a name="windows-app-certification-kit"></a>Windows 应用认证工具包
 
-若要为你的应用程序提供在 [Windows 应用商店上发布](../../distribute/submitting-an-app-to-the-microsoft-store.md)的最大机会，请在提交该应用程序进行认证之前，在本地对其进行验证和测试。 如果你的应用面向 Windows 全息设备家族， [Windows 应用程序认证工具包](/windows/uwp/debug-test-perf/windows-app-certification-kit) 将仅在你的电脑上运行本地静态分析测试。 不会在 HoloLens 上运行任何测试。
+若要使应用有机会在 Windows Store 上[发布](../../distribute/submitting-an-app-to-the-microsoft-store.md)，请在本地验证并测试它，然后再提交该应用进行认证。 如果应用面向 Windows。全息设备系列[，Windows认证工具包](/windows/uwp/debug-test-perf/windows-app-certification-kit)只会在电脑上运行本地静态分析测试。 不会在应用程序上运行HoloLens。
 
 ## <a name="see-also"></a>另请参阅
 
-* [向 Windows 应用商店提交应用程序](../../distribute/submitting-an-app-to-the-microsoft-store.md)
+* [将应用提交到 Windows Store](../../distribute/submitting-an-app-to-the-microsoft-store.md)

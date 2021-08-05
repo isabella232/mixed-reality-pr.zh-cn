@@ -1,17 +1,17 @@
 ---
-title: Windows Mixed Reality 疑难解答
-description: 使用最新的 Windows Mixed Reality 故障排除，这超出了标准使用者支持文档的范围。
+title: 疑难解答 Windows Mixed Reality
+description: Windows Mixed Reality 故障排除，使其不超过标准使用者支持文档。
 ms.topic: article
 ms.author: rajhawar
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持
-ms.openlocfilehash: 24120e9c1bb34b8b32c00e2b677f530c4ba563ab
-ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，故障排除，错误，帮助，支持
+ms.openlocfilehash: 2610ab12e19bd7011cba171b5acdaeed6a7834c358e9c4bae3ded301aa452353
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110345080"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212455"
 ---
-# <a name="troubleshooting-in-windows-mixed-reality"></a>Windows Mixed Reality 疑难解答
+# <a name="troubleshooting-in-windows-mixed-reality"></a>Windows Mixed Reality 中的故障排除
 
 ![标题徽标疑难解答](images/1050px-Mixedrealityportal.png)
 
@@ -25,7 +25,7 @@ ms.locfileid: "110345080"
 - [获取社区帮助选项](#community-help-options)
 - [获取自助帮助选项](#troubleshooting-topics)
 
-## <a name="community-help-options"></a>社区帮助选项
+## <a name="community-help-options"></a>Community 帮助选项
 
 有关社区开发者生态系统的开发人员问题的解答，请在 Stack Overflow 或 Reddit 上提问。
 
@@ -49,7 +49,7 @@ ms.locfileid: "110345080"
 
 ### <a name="installation-and-setup-issues"></a>安装和设置问题
 
-对于安装、运行 Windows Mixed Reality、安装错误、最小 PC 要求或管理员权限的问题，请查看以下两个常见问题解答：
+对于安装、运行 Windows Mixed Reality、安装程序错误、最小 PC 要求或管理员权限方面的问题，请查看以下两个常见问题解答：
 
 - [安装错误](installation_errors.md)
 - [安装程序相关问题](wmr-setup-faq.yml)
@@ -72,7 +72,7 @@ ms.locfileid: "110345080"
 
 ### <a name="vr-experience-issues"></a>VR 体验问题
 
-如果遇到 SteamVR 游戏问题、安装 Windows 开发人员模式，或在浏览器中查看 WebVR 内容，以下文章是：
+如果在 SteamVR 游戏中遇到问题，请安装 Windows 开发人员模式，或在浏览器中查看 WebVR 内容，以下文章是：
 
 - [支持 SteamVR](steamvr-questions.md)
 - [支持 WebVR](webvr-questions.md)

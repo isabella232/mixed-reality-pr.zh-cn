@@ -5,21 +5,21 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，边界
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，故障排除，错误，帮助，支持，边界
 appliesto:
 - Windows 10
-ms.openlocfilehash: 8dba6ebb5f74b229cea4ea2d5e1ac0a5e70a3f57
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: c1d6a10ae6ed50f7b9088b26c78cde4ccf8386ea0603c39e107ed23910db9308
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725278"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187967"
 ---
 # <a name="boundary-faqs"></a>边界常见问题解答
 
 ## <a name="whats-a-boundary-and-why-should-i-create-one"></a>什么是边界，为何要创建它？
 
-边界定义了在戴上 Windows Mixed Reality 耳机的同时，您可以四处移动的区域。 务必创建一个边界，以帮助避免在耳机中无法看到的障碍。 边界看起来就像混合现实中的白色轮廓，并在接近它时出现。 当你看到此情况时，会减慢移动速度，并避免超出边界或扩展粗枝。
+边界定义了在戴 Windows Mixed Reality 耳机时可以在中四处移动的区域。 务必创建一个边界，以帮助避免在耳机中无法看到的障碍。 边界看起来就像混合现实中的白色轮廓，并在接近它时出现。 当你看到此情况时，会减慢移动速度，并避免超出边界或扩展粗枝。
 
 边界内的区域应该无家具、低悬挂光装置、天花板风扇等，因此不会出现任何东西。 [了解 Windows Mixed Reality 中的运行状况和安全性](wmr-health-safety-comfort.md)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "97725278"
 
 ## <a name="the-system-is-presenting-me-with-ui-that-asks-me-to-choose-setup-for-all-experiences-or-seatedstanding-and-i-see-my-bounds"></a>系统向我提供 UI，要求我为所有体验或已安装/所有体验选择设置，并看到我的边界
 
-设备查找界限所用的时间太长。 你可以通过选择 "使用边界" 选项跳过此消息，并将你的边界显示在 Windows Mixed Reality 主页上。
+设备查找界限所用的时间太长。 你可以通过选择 "使用边界" 选项跳过此消息，并且你将转到你的边界存在的 Windows Mixed Reality home。
 
 ## <a name="i-often-see-a-message-saying-ive-lost-my-bounds"></a>我经常会看到一条消息，指出 "我已经失去界限"
 

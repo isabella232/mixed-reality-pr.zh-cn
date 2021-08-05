@@ -1,51 +1,51 @@
 ---
 title: 将 VR 应用移植到 Windows Mixed Reality
-description: 介绍如何将现有沉浸式应用程序移植到 Windows Mixed Reality 的分步演练。
+description: 分步演练，说明如何将现有沉浸式应用程序移植到Windows Mixed Reality。
 author: JBrentJ
 ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
-keywords: 端口，unity，unreal，中间件，引擎，UWP，Win32，移植，HoloLens 第一代，混合现实耳机，windows mixed reality 耳机，迁移，Windows 10，输入映射，
-ms.openlocfilehash: bb76325c0a2d10150cff6604e29c7ead8a97df8e
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+keywords: port， unity， unreal， 中间件， 引擎， UWP， Win32， 移植， HoloLens 第一代， 混合现实头戴显示设备， windows 混合现实头戴显示设备， 迁移， Windows 10， 输入映射，
+ms.openlocfilehash: c8f0ed76fc7288ed406e2044eb2f3edb8982865b5c956f460d2bc1b815e503df
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394461"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213503"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>将 VR 应用移植到 Windows Mixed Reality
 
-Windows 10 支持沉浸式和全息耳机。 如果为其他设备（如 Oculus Rift 或 HTC Naopak）生成了内容，则它们依赖于操作系统的平台 API 之上的库。 将现有的 Win32 Unity VR 应用引入 Windows Mixed Reality 涉及到重定目标使用特定于供应商的 VR Sdk 到 Unity 的跨供应商 VR Api。
+Windows 10支持沉浸式和全息头戴显示设备。 如果已针对其他设备（如 Oculus Rift 或）。这些设备依赖于位于操作系统平台 API 上方的库。 将现有的 Win32 Unity VR 应用Windows Mixed Reality涉及将供应商特定的 VR SDK 重新定向到 Unity 的跨供应商 VR API。
 
 ## <a name="porting-requirements"></a>移植要求
 
-在高级别上，迁移现有内容涉及以下步骤：
-1. **请确保你的电脑正在运行 Windows 10 秋季创意者更新 (16299) 。** 我们不再建议从有问必答向后跳环接收预览版，因为这些版本对于混合现实开发不是最稳定的。
-2. **升级到最新版本的图形或游戏引擎。** 游戏引擎需要支持 Windows 10 SDK 版本 10.0.15063.0 (于2017年4月) 或更高版本发布。
-3. **升级任何中间件、插件或组件。** 如果你的应用程序包含任何组件，则最好升级到最新版本。
-4. **删除重复的 sdk 依赖项**。 根据你的内容面向哪个设备，你将需要删除或有条件地编译该 SDK，以便可以改为面向 Windows Api。 这种情况的一个示例是 SteamVR。
-5. **处理生成问题。** 此时，迁移练习特定于您的应用程序、您的引擎和您拥有的组件依赖项。
+从较高层面来说，移植现有内容涉及以下步骤：
+1. **确保电脑运行 16299 Windows 10 Fall Creators Update (16299) 。** 我们不再建议从 Insider Skip Ahead 环接收预览版本，因为对于混合现实开发，这些生成不是最稳定的。
+2. **升级到最新版本的图形或游戏引擎。** 游戏引擎需要支持 Windows 10 SDK 版本 10.0.15063.0 (2017 年 4 月发布的) 或更高版本。
+3. **升级任何中间件、插件或组件。** 如果应用包含任何组件，则建议升级到最新版本。
+4. **删除重复 SDK 的依赖项**。 根据内容的目标设备，需要删除或有条件地编译出该 SDK，以便可以改为面向Windows API。 这种情况的一个示例是 SteamVR。
+5. **解决生成问题。** 此时，移植练习特定于应用、引擎以及你拥有的组件依赖项。
 
-## <a name="common-porting-steps"></a>常见的移植步骤
+## <a name="common-porting-steps"></a>常见移植步骤
 
-### <a name="1-make-sure-you-have-the-right-development-hardware"></a>1. 确保拥有正确的开发硬件
+### <a name="1-make-sure-you-have-the-right-development-hardware"></a>1.确保具有正确的开发硬件
 
-" [VR 发烧友指南](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines) " 页列出了建议的开发硬件。
+[VR 友元指南](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)页列出了推荐的开发硬件。
 
-### <a name="2-upgrade-to-the-latest-flight-of-windows-10"></a>2. 升级到 Windows 10 的最新航班
+### <a name="2-upgrade-to-the-latest-flight-of-windows-10"></a>2.升级到最新航班Windows 10
 
-Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Windows 预览体验计划](https://insider.windows.com/) ，以访问 "Windows 有问必答 Fast" 航班。
-1. 安装 [Windows 10 创意者更新](https://www.microsoft.com/software-download/windows10)
-2. [加入](https://insider.windows.com/) Windows 预览体验计划。
+Windows Mixed Reality平台仍处于积极开发阶段。 建议[加入 Windows 会员计划](https://insider.windows.com/)以访问"Windows 预览体验成员 - 快"航班。
+1. 安装[Windows 10 创意者更新](https://www.microsoft.com/software-download/windows10)
+2. [联接](https://insider.windows.com/)Windows 会员计划。
 3. 启用 [开发人员模式](/windows/uwp/get-started/enable-your-device-for-development)
-4. 通过 "**设置" > 更新 & 安全 "部分**，切换到 [Windows 预览体验快速航班](/archive/blogs/uktechnet/joining-insider-preview)
+4. 通过"更新 [Windows 预览体验成员 - 快安全](/archive/blogs/uktechnet/joining-insider-preview)**设置 >切换到&航班**
 
-### <a name="3-upgrade-to-the-most-recent-build-of-visual-studio"></a>3. 升级到最新版本的 Visual Studio
-* 如果使用的是 Visual Studio，请升级到最新版本
-* 请参阅 Visual Studio 2019 下 [的安装工具](../install-the-tools.md#installation-checklist) 页面
+### <a name="3-upgrade-to-the-most-recent-build-of-visual-studio"></a>3.升级到最新版Visual Studio
+* 如果使用的是 Visual Studio，请升级到最新的内部版本
+* 请参阅[](../install-the-tools.md#installation-checklist)2019 Visual Studio下的工具页
 
-### <a name="4-choose-the-correct-adapter"></a>4. 选择正确的适配器
-* 在包含两个 Gpu 的笔记本系统中， [针对正确的适配器](../native/rendering-in-directx.md#hybrid-graphics-pcs-and-mixed-reality-applications)。 这适用于 Unity 和本机 DirectX 应用，其中 ID3D11Device 是显式或隐式 (为其功能媒体基础) 创建的。
+### <a name="4-choose-the-correct-adapter"></a>4.选择正确的适配器
+* 在具有两个 GPU 的笔记本等系统中， [以正确的适配器 为目标](../native/rendering-in-directx.md#hybrid-graphics-pcs-and-mixed-reality-applications)。 这适用于 Unity 和本机 DirectX 应用，其中显式或隐式创建 ID3D11Device (媒体基础) ，用于实现其功能。
 
 ## <a name="unity-porting-guidance"></a>Unity 移植指南
 
@@ -54,14 +54,14 @@ Windows Mixed Reality 平台仍处于积极开发阶段。 建议 [加入 Window
 ## <a name="unreal-porting-guidance"></a>Unreal 移植指南
 
 > [!IMPORTANT]
-> 如果你使用的是 HP 回音 G2 控制器，请参阅 [此文](../unreal/unreal-reverb-g2-controllers.md) ，了解更多输入映射说明。
+> 如果使用的是 HP Reverb G2 控制器，请参阅此 [文](../unreal/unreal-reverb-g2-controllers.md) ，获得其他输入映射说明。
 
 ## <a name="see-also"></a>另请参阅
-* [Windows Mixed Reality 最小电脑硬件兼容性指南](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
+* [Windows Mixed Reality电脑硬件兼容性指南](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [了解混合现实的性能](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
-* [Unity 性能建议](../unity/performance-recommendations-for-unity.md)
+* [Unity 推荐性能](../unity/performance-recommendations-for-unity.md)
 * [运动控制器](../../design/motion-controllers.md)
 * [Unity 中的运动控制器](../unity/motion-controllers-in-unity.md)
-* [UnityEngine. XR](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
-* [UnityEngine. XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
+* [UnityEngine.XR.WSA.Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
+* [UnityEngine.XR.InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
 * [移植指南](porting-guides.md)

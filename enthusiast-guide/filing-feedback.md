@@ -1,19 +1,19 @@
 ---
 title: 提交 bug 和反馈
-description: 通过在反馈中心应用中使用正确的类别来归档反馈，帮助我们使 Windows Mixed Reality 更好。
+description: 通过在反馈中心应用中使用正确的类别来归档反馈，帮助我们改进 Windows Mixed Reality。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 9237a9e4d537a15ffe4369d589e1fd80e3881891
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: b4ba5cf16aec84fa6c34ae2454ebfefa56512a04e4845dee0c3c894c4976cc53
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725688"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188934"
 ---
 # <a name="filing-bugs-and-feedback"></a>提交 bug 和反馈
 
@@ -25,13 +25,13 @@ ms.locfileid: "97725688"
 
 请确保将你的电脑设置为提供完整的反馈和诊断数据。 下面介绍如何在你的电脑上仔细检查设置，然后再申报反馈：
 
-1. 打开 Windows " **设置** " 应用。
+1. 打开 Windows **设置** 应用。
 2. 选择 " **隐私**"。
-3. 在左侧窗格中，请参阅 **反馈 & 诊断** ，已将其重命名为 windows 的最新 windows 内部版本中的 **诊断 & 反馈** 。
+3. 在左侧窗格中，请参阅 **反馈 & 诊断**，已将其重命名为 "**诊断" &** 最新 Windows 内部版本 Windows 的反馈。
 4. 在 " **选择要发送给 Microsoft 的数据量**" 下，选择 " **完整** " （如果尚未选择）。
 5. 请确保重新启动你的电脑，并重复这些步骤，以便在申报反馈之前重现你的问题。
 
-## <a name="how-to-file-feedback-for-windows-mixed-reality-immersive-headsets-on-pc"></a>如何为 Windows Mixed Reality 沉浸式耳机提供反馈
+## <a name="how-to-file-feedback-for-windows-mixed-reality-immersive-headsets-on-pc"></a>如何为电脑上 Windows Mixed Reality 沉浸式耳机提供反馈
 
 1. 确保已将沉浸式头戴式耳机连接到您的 PC。
 2. 在桌面上启动 **反馈中心** ，并连接 HMD。
@@ -47,7 +47,7 @@ ms.locfileid: "97725688"
    | 应用             | 特定应用程序的问题。                                                   |
    | 开发人员        | 为混合现实创作/运行应用程序时遇到的问题。                               |
    | 设备           | HMD 本身的问题。                                                           |
-   | 家庭体验  | 你的 VR 环境问题：与 Windows Mixed Reality 主页的交互。    |
+   | 家庭体验  | 你的 VR 环境问题：与 Windows Mixed Reality Home 的交互。    |
    | 输入            | 输入法的问题：动作控制器、语音、游戏板或鼠标和键盘。|
    | 设置           | 阻止你设置设备的任何内容。                           |
    | 所有其他问题 | 别的东西。                                                                        |

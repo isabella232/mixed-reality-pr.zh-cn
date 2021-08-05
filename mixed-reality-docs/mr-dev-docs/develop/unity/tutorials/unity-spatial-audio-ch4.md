@@ -5,19 +5,19 @@ author: kegodin
 ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
-keywords: 混合现实， unity， 教程， hololens2， 空间音频， MRTK， 混合现实工具包， UWP， Windows 10， HRTF， 与头部相关的传输函数， 混响， Microsoft 空间化程序
-ms.openlocfilehash: 9d0fa432f2e653cdd6820cb6c779cc1acc5c4b15
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+keywords: 混合现实， unity， 教程， hololens2， 空间音频， MRTK， 混合现实工具包， UWP， Windows 10， HRTF， 头部相关的传输函数， 混响， Microsoft 空间化程序
+ms.openlocfilehash: 2599e2f360afa4518102ab9535608e9d378264ae87f84a36823d460f934d6a05
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110712740"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213209"
 ---
 # <a name="4-enabling-and-disabling-spatialization-at-run-time"></a>4.运行时启用和禁用空间化
 
 ## <a name="overview"></a>概述
 
-本教程介绍如何运行时启用和禁用空间化，以及如何在 unity 编辑器和HoloLens 2。
+在本教程中，你将了解如何运行时启用和禁用空间化，以及如何在 unity 编辑器和 HoloLens 2。
 
 ## <a name="objectives"></a>目标
 
@@ -26,11 +26,11 @@ ms.locfileid: "110712740"
 
 ## <a name="add-spatialization-control-script"></a>添加空间化控制脚本
 
- 在"项目"窗口中右键单击，然后选择"创建 C# 脚本"以创建新的 C# 脚本，输入脚本的合适名称，  >  例如 _SpatializeOnOff_：
+ 右键单击"Project"，然后选择"创建C# 脚本"以创建新的 C# 脚本，输入脚本的合适名称，例如  >  _SpatializeOnOff_：
 
 ![创建脚本](images/spatial-audio/spatial-audio-04-section1-step1-1.PNG)
 
-双击"项目"窗口中的脚本，在"项目"窗口中Visual Studio。 将默认脚本内容替换为以下内容：
+双击"脚本"窗口中的Project，以在Visual Studio。 将默认脚本内容替换为以下内容：
 
 > [!NOTE]
 > 脚本的几个行被注释掉。下一章：使用混响添加空间音频 的距离中 [将取消注释这些行](unity-spatial-audio-ch5.md)。
@@ -118,7 +118,7 @@ public class SpatializeOnOff : MonoBehaviour
 
 ## <a name="congratulations"></a>祝贺
 
-在本教程中，你已了解如何在运行时启用和禁用空间化，以及如何在应用HoloLens 2 Unity 编辑器中测试应用。 在应用中，现在可以单击按钮来激活和停用音频的空间化。
+本教程介绍了如何启用和禁用运行时空间化，以及如何在 HoloLens 2 Unity 编辑器中测试应用。 在应用中，现在可以单击按钮来激活和停用音频的空间化。
 
 下一教程将添加混响效果，使声音具有距离感。
 

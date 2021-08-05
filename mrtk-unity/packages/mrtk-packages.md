@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Unity 程序包管理器，
-ms.openlocfilehash: 3c2a11dd4036a78ccb96aa2c640ef8324181c1e0
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 13f18c0a43d8b0cf6cc8eb66949b506c51ca9bbaa733e74cd38de110f70d8ee1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176501"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212558"
 ---
 # <a name="mrtk-packages"></a>MRTK 包
 
@@ -43,7 +43,7 @@ MRTK 作为资产[包](#asset-packages) (.unitypackage) 通过[Unity](#unity-pac
 
 可用的包包括：
 
-- [基础](#foundation-package)
+- [Foundation](#foundation-package)
 - [扩展](#extensions-package)
 - [工具](#tools-package)
 - [测试实用工具](#test-utilities-package)
@@ -102,98 +102,98 @@ MRTK Foundation 包包含以下内容。
 
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
-| MRTK/Extensions | |
-| | [HandPhysicsService](../features/extensions/hand-physics-service.md) | 将物理支持添加到明确表述的服务。 |
-| | LostTrackingService | 简化 Microsoft HoloLens 设备上跟踪丢失处理的服务。 |
-| | [SceneTransitionService](../features/extensions/scene-transition-service.md) | 简化场景过渡的简化。 |
+| MRTK/扩展 | |
+| | [HandPhysicsService](../features/extensions/hand-physics-service.md) | 向手部添加物理支持的服务。 |
+| | LostTrackingService | 简化在设备上处理跟踪丢失Microsoft HoloLens的服务。 |
+| | [SceneTransitionService](../features/extensions/scene-transition-service.md) | 可简化平滑场景转换添加的服务。 |
 
 ### <a name="tools-package"></a>工具包
 
-可选的 MixedRealityToolkit 包包含有用的工具，可使用 Microsoft Mixed Reality Toolkit 增强混合现实开发体验。
-这些工具位于 Unity 编辑器中的 "**混合现实 Toolkit > 实用工具**" 菜单中。
+可选的 Microsoft.MixedRealityToolkit.Unity.Tools 包包含有用的工具，这些工具使用 Microsoft Mixed Reality Toolkit。
+这些工具位于 Unity 编辑器中的"混合现实 **Toolkit >实用工具**"菜单中。
 
 > [!NOTE]
-> 工具包中需要 MixedRealityToolkit 的。
+> 工具包需要 Microsoft.MixedRealityToolkit.Unity.Foundation。
 
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
-| MRTK/Tools | |
-| | BuildWindow | 有助于简化生成和部署 UWP 应用程序的过程的工具。 |
-| | [DependencyWindow](../features/tools/dependency-window.md) | 用于创建项目中资产的依赖项关系图的工具。 |
-| | [ExtensionServiceCreator](../features/tools/extension-service-creation-wizard.md) | 用于帮助创建扩展服务的向导。 |
-| | [MigrationWindow](../features/tools/migration-window.md) | 有助于更新使用不推荐使用的 MRTK 组件的代码的工具。  |
-| | [OptimizeWindow](../features/tools/optimize-window.md) | 用于帮助自动配置混合现实项目以获得 Unity 中最佳性能的实用程序。 |
-| | ReserializeAssetsUtility | 提供对 reserializing 特定 Unity 文件的支持。 |
-| | [RuntimeTools/Tools/ControllerMappingTool](../features/tools/controller-mapping-tool.md) | 实用工具，使开发人员能够快速确定硬件控制器的 Unity 映射。 |
-| | ScreenshotUtility | 启用在 Unity 编辑器中捕获应用程序映像。 |
-| | TextureCombinerWindow | 用于合并图形纹理的实用程序。 |
-| | [工具箱](../features/ux-building-blocks/toolbox.md) | 使用户能够轻松发现和使用 MRTK UX 组件的 UI。 |
+| MRTK/工具 | |
+| | BuildWindow | 有助于简化 UWP 应用程序的生成和部署过程的工具。 |
+| | [DependencyWindow](../features/tools/dependency-window.md) | 在项目中创建资产依赖项关系图的工具。 |
+| | [ExtensionServiceCreator](../features/tools/extension-service-creation-wizard.md) | 帮助创建扩展服务的向导。 |
+| | [MigrationWindow](../features/tools/migration-window.md) | 可帮助更新使用已弃用 MRTK 组件的代码的工具。  |
+| | [OptimizeWindow](../features/tools/optimize-window.md) | 可帮助自动配置混合现实项目的实用工具，以在 Unity 中实现最佳性能。 |
+| | ReserializeAssetsUtility | 提供对重新初始化特定 Unity 文件的支持。 |
+| | [RuntimeTools/Tools/ControllerMappingTool](../features/tools/controller-mapping-tool.md) | 使开发人员能够快速确定硬件控制器的 Unity 映射的实用工具。 |
+| | ScreenshotUtility | 在 Unity 编辑器中启用捕获应用程序映像。 |
+| | TextureCombinerWindow | 用于组合图形纹理的实用工具。 |
+| | [工具箱](../features/ux-building-blocks/toolbox.md) | UI，可轻松发现和使用 MRTK UX 组件。 |
 
 ### <a name="test-utilities-package"></a>测试实用工具包
 
-可选的 MixedRealityToolkit 包是帮助器脚本的集合，可让开发人员轻松 [创建播放模式测试](../contributing/unit-tests.md#play-mode-tests)。 对于创建 MRTK 组件的开发人员而言，这些实用工具特别有用。
+可选的 Microsoft.MixedRealityToolkit.TestUtilities 包是帮助程序脚本的集合，开发人员可以轻松地 [创建播放模式测试](../contributing/unit-tests.md#play-mode-tests)。 这些实用工具对于创建 MRTK 组件的开发人员特别有用。
 
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
 | MRTK/测试 | |
-| | TestUtilities | 用于简化播放模式测试（包括手动模拟实用程序）的创建的方法。 |
+| | TestUtilities | 简化播放模式测试创建的方法，包括手动模拟实用工具。 |
 
 ### <a name="examples-package"></a>示例包
 
-示例包包含演练基础包中的功能的演示、示例脚本和示例场景。 此包包含 [HandInteractionExample 场景](../features/example-scenes/hand-interaction-examples.md) (如下图所示) ，其中包含对各种类型的手写输入（ (清晰的和无表述的) ）做出响应的示例对象。
+示例包包含演示、示例脚本和在基础包中练习功能的示例场景。 此包包含 [handInteractionExample](../features/example-scenes/hand-interaction-examples.md) 场景 (如下图) 其中包含响应各种手动输入的示例对象，这些对象 (表达和非) 。
 
 ![HandInteractionExample 场景](../features/images/MRTK_Examples.png)
 
-此包还包含目视跟踪演示，[此处记录](../features/example-scenes/eye-tracking-examples-overview.md)了这些演示
+此包还包含眼动跟踪演示， [此处记录了这些演示](../features/example-scenes/eye-tracking-examples-overview.md)
 
-更常见的是，MRTK 中的任何新功能应在示例包中包含相应的示例，大致遵循相同的文件夹结构和位置。
+更一般而言，MRTK 中任何新功能都应包含示例包中的相应示例，大致遵循相同的文件夹结构和位置。
 
 > [!NOTE]
-> 示例包中需要 MixedRealityToolkit。
+> 示例包需要 Microsoft.MixedRealityToolkit.Unity.Foundation。
 
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
 | MRTK/示例 | | |
-| | 演示 | 说明一个或两个相关功能的简单场景。 |
-| | 实验 | 阐释试验性功能的演示场景。 |
-| | StandardAssets | 多个演示场景共享的常见资产。 |
+| | 演示 | 演示一个或两个相关功能的简单场景。 |
+| | 实验 | 演示实验性功能的演示场景。 |
+| | StandardAssets | 由多个演示场景共享的常见资产。 |
 
 ## <a name="unity-package-manager"></a>Unity 程序包管理器
 
-对于使用 unity 2019.4 和更高版本创建的体验，可通过[Unity 程序包管理器](https://docs.unity3d.com/Manual/Packages.html)获取 MRTK。
+对于使用 Unity 2019.4 及更高版本创建的体验，MRTK 可通过[Unity](https://docs.unity3d.com/Manual/Packages.html)程序包管理器。
 
-使用资产包的一些优点包括：
+使用资产包的一些好处包括：
 
-- 小型项目
-  - 清理 Visual Studio 解决方案
-  - 要签入的文件更少 (MRTK 是文件中的一个简单引用 `Packages/manifest.json`) 
-- 更快编译
-  - 在生成过程中，Unity 不需要重新编译 MRTK
+- 较小的项目
+  - 更Visual Studio解决方案
+  - 在 MRTK (签入的文件更少是文件中简单的 `Packages/manifest.json`) 
+- 更快的编译速度
+  - Unity 无需在生成期间重新编译 MRTK
 - 依赖项解析
-  - 指定包含依赖项的包时，将自动安装所需的 MRTK 包
+  - 指定具有依赖项的包时，会自动安装所需的 MRTK 包
 - 轻松更新到新的 MRTK 版本
-  - 更改文件中的版本 `Packages/manifest.json`
+  - 更改文件中 `Packages/manifest.json` 的版本
 
 下面是一些难点：
 
-- MRTK 不可变
-  - 无法进行更改，因为在包解析过程中没有删除它们
-- MRTK 不支持包含 Unity 2018.4 的 UPM 包
+- MRTK 是不可变的
+  - 无法在包解析过程中删除更改
+- MRTK 不支持 Unity 2018.4 的 UPM 包
 
-### <a name="foundation-package"></a>Foundation 包
+### <a name="foundation-package"></a>基础包
 
- (的基础包 `com.microsoft.mixedreality.toolkit.foundation`) 构成混合现实 Toolkit 的基础。
+基础包 `com.microsoft.mixedreality.toolkit.foundation` () 混合现实解决方案的基础Toolkit。
 
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
 | MRTK/Core | | 接口和类型定义、基类、标准着色器。 |
-| MRTK/核心/提供程序 | | 平台不可知数据提供程序 |
-| | 经验 | 用于手动跟踪的基类支持和服务。 |
-| | [InputAnimation](../features/input-simulation/input-animation-recording.md) | 支持记录磁头移动和手动跟踪数据。 |
-| | [InputSimulation](../features/input-simulation/input-simulation-service.md) | 支持手动模拟手写和目视输入。 |
-| | [ObjectMeshObserver](../features/spatial-awareness/spatial-object-mesh-observer.md) | 使用三维模型作为数据的空间感知观察程序。 |
-| | UnityInput | 公共输入设备 (操纵杆、鼠标等 ) 通过 Unity 的输入 API 实现。 |
-| MRTK/提供程序 | | 平台特定的数据提供程序 |
+| MRTK/核心/提供程序 | | 与平台无关的数据访问者 |
+| | 手 | 用于手部跟踪的基类支持和服务。 |
+| | [InputAnimation](../features/input-simulation/input-animation-recording.md) | 支持记录头部移动和手部跟踪数据。 |
+| | [InputSimulation](../features/input-simulation/input-simulation-service.md) | 支持手动和眼睛输入的编辑器内模拟。 |
+| | [ObjectMeshObserver](../features/spatial-awareness/spatial-object-mesh-observer.md) | 空间感知观察程序使用三维模型作为数据。 |
+| | UnityInput | 常见的输入设备 (、鼠标等) Unity 的输入 API 实现。 |
+| MRTK/提供程序 | | 特定于平台的数据提供程序 |
 | | LeapMotion | 对 UltraLeap Leap 运动控制器的支持。 |
 | | OpenVR | 支持 OpenVR 设备。 |
 | | Oculus | 支持 Oculus 设备，如寻找。 |
@@ -282,31 +282,31 @@ MRTK Foundation 包包含以下内容。
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
 | MRTK/测试 | |
-| | TestUtilities | 用于简化播放模式测试（包括手动模拟实用程序）的创建的方法。 |
+| | TestUtilities | 简化播放模式测试创建的方法，包括手动模拟实用工具。 |
 
 依赖项：
 
-- Foundation (`com.microsoft.mixedreality.toolkit.foundation`) 
+- 基础 `com.microsoft.mixedreality.toolkit.foundation` () 
 
 ### <a name="examples-package"></a>示例包
 
-示例包 (`com.microsoft.mixedreality.toolkit.examples`) ，旨在允许开发人员只导入感兴趣的示例。
+示例包 `com.microsoft.mixedreality.toolkit.examples` () ，其结构允许开发人员仅导入感兴趣的示例。
 
-有关使用包含示例项目的包的过程的更多详细信息，可在[混合现实 Toolkit 和 Unity 程序包管理器](../configuration/usingupm.md#using-mixed-reality-toolkit-examples)一文中找到。
+有关使用包含示例项目的包的过程的更多详细信息，请参阅混合现实和 Unity Toolkit一[程序包管理器。](../configuration/usingupm.md#using-mixed-reality-toolkit-examples)
 
 | 文件夹 | 组件 | 说明 |
 | --- | --- | --- |
 | MRTK/示例 | | |
-| | 示例 ~ | Unity 编辑器中的隐藏 () 包含样本场景和资产的文件夹。 |
-| | StandardAssets | 多个演示场景共享的常见资产。 |
+| | 示例~ | Unity 编辑器 (隐藏) 包含示例场景和资产的文件夹中。 |
+| | StandardAssets | 由多个演示场景共享的常见资产。 |
 
 依赖项：
 
-- Foundation (`com.microsoft.mixedreality.toolkit.foundation`) 
+- 基础 `com.microsoft.mixedreality.toolkit.foundation` () 
 - 扩展 (`com.microsoft.mixedreality.toolkit.extensions`)
 
 ## <a name="see-also"></a>另请参阅
 
 - [体系结构概述](../architecture/overview.md)
 - [系统、扩展服务和数据提供程序](../architecture/systems-extensions-providers.md)
-- [混合现实 Toolkit 和 Unity 程序包管理器](../configuration/usingupm.md)
+- [混合现实Toolkit Unity 程序包管理器](../configuration/usingupm.md)

@@ -1,31 +1,31 @@
 ---
 title: 滑块
-description: 了解如何使用滑杆 UI 组件通过混合现实工具包移动轨道上的旋钮或杠杆来设置值。
+description: 了解如何使用滑块 UI 组件通过混合现实设备在轨迹上移动手柄或手柄来设置Toolkit。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，滑杆，MRTK，混合现实工具包
-ms.openlocfilehash: c1619a90b7df1a34fa1541663a3f521ba5e75662
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 混合现实， 控件， 交互， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， 滑块， MRTK， 混合现实Toolkit
+ms.openlocfilehash: 5d07960566630afac0addd10585d885f33a80b46613c1a9f19374c9afa71bd7e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600156"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115186908"
 ---
 # <a name="slider"></a>Slider
 
 ![Slider](images/UX_Hero_Slider.jpg)
 
-滑块是用于设置值的 UI 组件。 它提供可调整内容的直观指示以及内容总数的当前设置。 它显示为一侧带有选项的轨道。 将旋钮或杠杆拖动到另一端，并将其拖动到另一端进行选择，这表示当前值。 可以通过直接或距离方向直接抓取滑块来移动挤压滑块。 滑块使用各种输入类型，如注视和气和运动控制器。
+滑块是一个 UI 组件，用于设置值。 它提供可调整内容的可视指示，以及内容总范围中的当前设置。 它显示为一个轨迹，其中任一侧有选项。 将一个手柄或手柄拖动到一端或另一端以做出选择，指示当前值。 可以通过直接或以距离直接抓取滑块来移动收缩滑块。 滑块可处理各种输入类型，例如凝视、敲击和运动控制器。
 
 <br>
 
 ---
 
-## <a name="slider-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的滑块 (混合现实工具包) 适用于 Unity
+## <a name="slider-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的 MRTK (Mixed Reality Toolkit) 滑块
 
-* [MRTK 滑块](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/sliders)
+* [MRTK - 滑块](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/sliders)
 
 <br>
 

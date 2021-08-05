@@ -1,106 +1,106 @@
 ---
-title: 在 Windows Mixed Reality
-description: 了解如何使用语音输入来控制应用程序应用中的命令、3D 对象Windows Mixed Reality听写。
+title: 在 Windows Mixed Reality 中使用语音
+description: 了解如何使用语音输入在 Windows Mixed Reality 应用中控制命令、3d 对象和听写。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/16/2020
 ms.topic: article
-keywords: Windows Mixed Reality， 混合现实， 虚拟现实， VR， MR， 反馈， 反馈中心， bug
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 23e3ea9014612d5df8935552d7b767454b9eefa7
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: bda846e1e54d34824c0461b92506408264d5cf06b0101cf7bbbcce9e4fa7fa61
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647019"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115190149"
 ---
-# <a name="using-speech-in-windows-mixed-reality"></a>在 Windows Mixed Reality
+# <a name="using-speech-in-windows-mixed-reality"></a>在 Windows Mixed Reality 中使用语音
 
-可以使用语音更快地Windows Mixed Reality。 拍摄快速照片、打开应用，甚至不带控制器的远程传送都一字不掉。 若要轻松键入，请在混合现实键盘上尝试听写模式。 
+您可以使用语音来更快地 Windows Mixed Reality。 拍摄快速照片、打开应用，甚至在没有控制器的情况下都是 teleporting 的。 若要快速键入，请在混合现实键盘上尝试使用听写模式。 
 
-使用语音时遇到问题？ [获取帮助](using-wmr-faq.yml#speech-commands-aren-t-working)
+语音出现问题了吗？ [获取帮助](using-wmr-faq.yml#speech-commands-aren-t-working)
 
 <!-- NEED VIDEO: https://support.microsoft.com/en-us/help/4041322/windows-10-speech-in-windows-mixed-reality -->
 
 > [!NOTE]
-> * 启用语音后，Windows Mixed Reality始终在侦听。 连接到 Internet 时，我们会将你讲的所有内容发送到云中，以便 Microsoft 语音服务能够识别更多命令。
-> * 并非所有语言都支持语音命令。 了解详细信息
-> * 设备不支持蓝牙头戴显示设备Windows Mixed Reality。
+> * 打开语音时，Windows Mixed Reality 始终处于侦听状态。 当你连接到 Internet 时，我们会将你说的一切发送到云，以便 Microsoft speech services 可以识别更多命令。
+> * 并非所有语言都支持语音命令。 了解更多
+> * Windows Mixed Reality 不支持蓝牙耳机和扬声器。
 
 ## <a name="see-it-say-it"></a>看到它，说出来
 
-在Windows Mixed Reality中，如果看到单词，通常可以用作语音命令。 例如，只需说一个按钮的名称即可选择它。 如果看不到名称，将运动控制器指向按钮，找出要说出什么。 对于 Xbox 游戏板，将视线停留在按钮上。
+在 Windows Mixed Reality home 中，如果看到一个词，通常可以将其用作语音命令。 例如，只需说一个按钮的名称即可。 如果看不到名称，请将运动控制器指向按钮，以找出所说的内容。 对于 Xbox gamepads，请将其停留在按钮上。
 
-## <a name="general-speech-commands"></a>常规语音命令
+## <a name="general-speech-commands"></a>一般语音命令
 
-在整个过程中使用以下语音Windows Mixed Reality更快地完成操作。 某些命令使用凝视光标，你将通过说"选择"来显示它。
+在 Windows Mixed Reality 中使用以下语音命令可以更快地解决。 某些命令使用注视光标，并显示 "select"。
 
 | 要执行此操作 | 说出的内容 |
 | --- | --- |
-| Select | 说"选择"以打开凝视光标。 然后，将光标置于要选择的东西上，然后再次说"选择"。 |
+| 选择 | 说 "选择" 以显示注视光标。 然后，转动头部，将光标放在你想要选择的内容上，然后再次说“选择”。 |
 | 打开“开始”菜单 | 转到“开始”菜单 |
-| 保留沉浸式应用 | 说"去开始菜单"打开快速操作菜单，然后说"混合现实主页"。 |
-| 打开/关闭闪光灯 | 打开/关闭闪光灯 |
-| 传送 | 将头转向要前往的位置，然后说"teleport"。  (更精确的目标，请首先说"选择"来打开凝视光标，然后说"teleport"。)  |
-| 向左或向右翻 | 向左/向右转 |
-| 旋转 180 度 | 转身 |
-| 向前移动 | 向前移动/向前移动 |
-| 备份 | 后退/后退 |
+| 离开沉浸式应用 | 说 "转到开始" 以打开 "快速操作" 菜单，然后说 "混合现实主页"。 |
+| 打开/关闭闪光灯 | 闪光灯开启/闪光灯关闭 |
+| 过去 | 将你的头转到你想要转到的位置，然后说 "传送"。  (为获得更精确的目标，首先说 "选择" 以显示注视光标，然后说 "传送"。)  |
+| 向左或向右旋转 | 左移或右移 |
+| 旋转180度 | 转身 |
+| 向前移动 | 向前或向后移动 |
+| 备份 | 向后移动/返回 |
 | 向左移动 | 向左移动/向左移动 |
 | 向右移动 | 向右移动/向右移动 |
 
 ## <a name="3d-object-commands"></a>3D 对象命令
 
-凝视 3D 对象、全息影像或应用窗口以使用以下命令：
+注视3D 对象、全息图或应用窗口以使用以下命令：
 
 | 要执行此操作 | 说出的内容 |
 | --- | --- |
-| 使其更大 | 大 |
-| 缩小 | 较小 |
-| 将其打开以面向你 | 正面朝我 |
-| 准备好移动 - 它会跟随你的凝视 | 移动此项 |
-| 移动完成后放置它 | 位置 |
+| 使其变大 | 更 |
+| 使其变小 | 较小 |
+| 将其变成正面 | 面部 |
+| 准备好进行移动-它会跟随你的注视 | 移动此 |
+| 完成移动后，将其放置 | 位置 |
 
-## <a name="app-bar-commands"></a>应用栏命令
+## <a name="app-bar-commands"></a>应用程序栏命令
 
-凝视应用窗口或 3D 对象以使用以下命令：
+在应用程序窗口或3D 对象上注视以下命令：
 
 | 要执行此操作 | 说出的内容 |
 | --- | --- |
-| 关闭应用或 3D 对象 | 关闭 |
-| 调整 (大小或移动)  | Adjust |
+| 关闭应用或三维对象 | 关闭 |
+| 调整大小或移动)  ( | Adjust |
 | 停止调整 | 完成 |
-| 隐藏 3D 对象上的应用栏 | 隐藏菜单 |
-| 显示 3D 对象上的应用栏 | 显示菜单 |
-| 返回到应用中具有"返回"按钮的上一屏幕或页面  | 返回 |
-| 在要查看的应用中，将 Xbox 控制器用作游戏板，而不是混合现实控制器 | 进入手柄模式 |
-| 将 Xbox 控制器用作混合现实控制器 (将 Xbox 控制器用作游戏板)  | 使用凝视 |
+| 隐藏三维对象上的应用栏 | 隐藏菜单 |
+| 在三维对象上显示应用栏 | 显示菜单 |
+| 返回到应用中具有 "返回" 按钮的上一个屏幕或页面  | 返回 |
+| 在您要查看的应用程序中使用 Xbox 控制器作为游戏板，而不是混合现实控制器 | 用作游戏板 |
+| 将 Xbox 控制器用作游戏板时，请使用 Xbox 控制器 (混合现实控制器)  | 与注视一起使用 |
 
-## <a name="start-menu-commands"></a>“开始”菜单命令
+## <a name="start-menu-commands"></a>"开始"菜单命令
 
-凝视“开始”菜单使用以下命令：
+注视 "开始"菜单，使用以下命令：
 
 | 要执行此操作 | 说出的内容 |
 | --- | --- |
-| 转到"所有应用"列表 | 所有应用 |
-| 在"启动"或"所有应用"上向上或向下移动 | 向上/向下翻页 |
-| 从"所有“开始”菜单返回到"应用" | 返回 |
+| 中转到 "所有应用" 列表 | 所有应用 |
+| 开始或所有应用时向上或向下移动 | 向上/向下翻页 |
+| 返回到所有应用的 "开始"菜单 | 返回 |
 | 拍照 | 照相机 |
-| 观看视频 | 视频 |
-| 在桌面上以混合现实门户显示头戴显示设备视图 | 预览 |
-| 在"开始"上打开音量控件 | 更改音量 |
+| 拍摄视频 | 视频 |
+| 在桌面上的混合现实门户中显示耳机视图 | 预览 |
+| 开始时打开卷控件 | 更改音量 |
 | 静音 | 静音 |
 | 取消静音 | 取消静音 |
-| 关闭“开始”菜单 | 关闭或取消 |
+| 关闭"开始"菜单 | 关闭或取消 |
 
-## <a name="hey-cortana-commands"></a>你好 Cortana 命令
+## <a name="hey-cortana-commands"></a>你好Cortana命令
 
-说"你好 Cortana"，然后使用以下命令之一：
+说"你好Cortana"，然后使用以下命令之一：
 
 | 要执行此操作 | 说出的内容 |
 | --- | --- |
-| 了解你可以对 Cortana 说什么 | 我可以说什么？ |
+| 了解可以说哪些Cortana | 我可以说什么？ |
 | 增加/减少量 | 向上/向下打开卷 |
 | 静音/取消静音 | 静音/取消静音 |
 | 启动应用 | 启动 [应用名称] |
@@ -109,21 +109,21 @@ ms.locfileid: "110647019"
 | 开始录制视频 | 开始录制 |
 | 停止录制视频 | 停止录制 |
 | 显示时间 | 现在 几点钟？ |
-| 打开“开始”菜单 | 打开“开始”菜单 |
+| 打开“开始”菜单 | 打开"开始"菜单 |
 | 设置计时器 | 设置计时器 |
 | 设置提醒 | 设置提醒 |
 
 > [!NOTE]
-> * Cortana 并非在所有地区和语言中都可用。 [了解详细信息](https://support.microsoft.com/help/4026948)。
-> * 如果 Cortana 未响应"你好 Cortana"，请选择"设置">隐私 **>语音** "，并启用"联机语音识别"。
-> * 如果关闭 Cortana，"你好 Cortana"语音命令将不可用，但仍可以使用其他命令 (如"select"和"teleport") 
+> * Cortana并非在所有地区和语言中都可用。 [了解详细信息](https://support.microsoft.com/help/4026948)。
+> * 如果Cortana"你好Cortana"，请选择"隐私"设置 >**语音>启用**"联机语音识别"。
+> * 如果Cortana，"你好Cortana"语音命令将不可用，但仍可以使用其他命令 (如"select"和"teleport") 
 
 ## <a name="keyboard-dictation"></a>键盘听写
 
 只要键盘处于活动状态，即可切换到听写模式，以轻松键入。 在键盘上选择麦克风（或只说"开始听写"即可开始操作）。
 
 > [!NOTE]
-> 混合现实键盘仅以英语提供，但可以使用任何受支持的语言Windows Mixed Reality [听写](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)。
+> 混合现实键盘仅以英语提供，但可以在任何受支持的语言Windows Mixed Reality[听写](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)。
 
 ### <a name="keyboard-dictation-commands"></a>键盘听写命令
 

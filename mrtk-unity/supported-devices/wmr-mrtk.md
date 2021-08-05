@@ -1,18 +1,18 @@
 ---
-title: 部署到 HoloLens 和 WMR 耳机
+title: 部署到 HoloLens 和 WMR 头戴显示设备
 description: 介绍生成应用并将其部署到各种设备中的文档。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Visual Studio
-ms.openlocfilehash: 137e1b699e9a0cda1e8a454a6c3219b581fa71b4
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 622c7ca4b9c527630b5677fe377d1d3108bdfe08c9dc616bfd4d3256b83b9ab0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176376"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209463"
 ---
-# <a name="deploying-to-hololens-and-wmr-headsets"></a>部署到 HoloLens 和 WMR 耳机
+# <a name="deploying-to-hololens-and-wmr-headsets"></a>部署到 HoloLens 和 WMR 头戴显示设备
 
 可以通过两种方式将用 MRTK 构建的应用程序部署到 windows 设备、通用 Windows 平台 (UWP) 和独立平台。 为 HoloLens 1 或 HoloLens 2 生成的应用程序必须以 uwp 为目标，而为 WMR 耳机构建的应用程序可能面向 uwp 或独立。
 

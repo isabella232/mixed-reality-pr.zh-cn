@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK， XRSDK， XR SDK
-ms.openlocfilehash: bc2924f8e080b0c202f7c3e394a5382cf306431c
-ms.sourcegitcommit: e380d56f5504be4e4f069394a58cf0147eb33b66
+ms.openlocfilehash: 1560188d1a69f0083940a37da8c378691ee75a9d569c2c5088e0e3f614a44858
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2021
-ms.locfileid: "113603688"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188226"
 ---
 # <a name="getting-started-with-mrtk-and-xr-sdk"></a>MRTK 和 XR SDK 入门
 
@@ -104,7 +104,7 @@ XR SDK 管道目前支持 3 个平台：Windows Mixed Reality、Oculus 和 OpenX
 
 ![旧版相机设置](../features/images/xrsdk/CameraSystemLegacy.png)
 
-设置为
+to
 ::: moniker-end
 
 ::: moniker range=">= mrtkunity-2021-05"
@@ -132,7 +132,7 @@ XR SDK 管道目前支持 3 个平台：Windows Mixed Reality、Oculus 和 OpenX
 
 ![旧输入设置](../features/images/xrsdk/InputSystemWMRLegacy.png)
 
-设置为
+to
 ::: moniker-end
 
 | OpenXR 插件 | WindowsXR 插件 |
@@ -157,7 +157,7 @@ __Windows Mixed Reality：__
 
 ![旧边界设置](../features/images/xrsdk/BoundarySystemLegacy.png)
 
-设置为
+to
 ::: moniker-end
 
 | OpenXR 插件 | WindowsXR 插件 |
@@ -176,7 +176,7 @@ __Windows Mixed Reality：__
 
 ![旧版空间感知设置](../features/images/xrsdk/SpatialAwarenessLegacy.png)
 
-设置为
+to
 ::: moniker-end
 
 ::: moniker range=">= mrtkunity-2021-05"

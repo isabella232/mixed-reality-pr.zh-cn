@@ -1,31 +1,31 @@
 ---
-title: 键盘
-description: 了解如何使用混合现实工具包调用和使用系统键盘。
+title: Keyboard
+description: 了解如何使用混合现实工具调用和使用系统Toolkit。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实，控件，交互，ui，ux，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，键盘，MRTK，混合现实工具包
-ms.openlocfilehash: 096a408a8106ec5ee6a820865e158c3cd019f702
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 混合现实， 控件， 交互， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， 键盘， MRTK， 混合现实Toolkit
+ms.openlocfilehash: f0045f6008384f5ed709597d625dc4526723921df51a6a1c6d25641ac95f0b34
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600136"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208340"
 ---
 # <a name="keyboard"></a>键盘
 
 ![键盘](images/UX_Hero_Keyboard.jpg)
 
-混合现实应用程序可以随时调用系统键盘，这将根据目标平台的功能进行。 例如，HoloLens 2 上的键盘支持直接交互，而 HoloLens (第一代) 键盘支持注视和分流。
+混合现实应用程序可以随时调用系统键盘，这根据目标平台的功能运行。 例如，HoloLens 2键盘支持直接手部交互，而HoloLens (第一代) 键盘支持凝视和敲击。
 
 <br>
 
 ---
 
-## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的系统键盘 (混合现实工具包) 适用于 Unity
+## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的 MRTK (Mixed Reality Toolkit) 中的系统键盘
 
-* [MRTK 键盘](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/system-keyboard)
+* [MRTK - 系统键盘](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/system-keyboard)
 
 <br>
 
@@ -33,10 +33,10 @@ ms.locfileid: "110600136"
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发旅程，下一个任务就是将应用程序部署到设备或仿真程序。
+如果你遵循我们部署的 Unity 开发过程，下一个任务是将应用程序部署到设备或仿真器。
 
 > [!div class="nextstepaction"]
-> [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../develop/platform-capabilities-and-apis/using-visual-studio.md)
+> [部署到HoloLens或Windows Mixed Reality沉浸式头戴显示设备](../develop/platform-capabilities-and-apis/using-visual-studio.md)
 
 ## <a name="see-also"></a>另请参阅
 

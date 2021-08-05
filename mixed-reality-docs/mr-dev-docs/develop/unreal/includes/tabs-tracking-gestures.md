@@ -1,31 +1,31 @@
 ---
-ms.openlocfilehash: 6b9223481ed909961dbb88d03e4b55ef68448525
-ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
+ms.openlocfilehash: fa21b1a5c3c89cf3c1c63c7ed8ebbdc3d8547661443853987ee3713e50c50e5c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97717737"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187259"
 ---
 # <a name="426"></a>[4.26](#tab/426)
 
 ### <a name="windows-mixed-reality"></a>Windows Mixed Reality
 
-![已连接到 "配置笔势" 功能的事件开始播放蓝图](../images/unreal-hand-tracking-img-09.png)
+![连接到配置笔势函数的事件开始播放的蓝图](../images/unreal-hand-tracking-img-09.png)
 
-然后，你应该添加代码以订阅以下事件：
+然后，应添加代码以订阅以下事件：
 
-![Windows 空间输入保留、点击和左操作笔势的蓝图 ](../images/unreal/key-events.png)
- ![ "详细信息" 面板中的 windows 空间输入点击手势选项的屏幕截图](../images/unreal/key-events2.png)
+![空间Windows按住、点击和左操作手势的蓝图 详细信息面板Windows空间输入 ](../images/unreal/key-events.png)
+ ![ 点击手势选项的屏幕截图](../images/unreal/key-events2.png)
 
 ### <a name="openxr"></a>OpenXR
 
-在 OpenXR 中，通过输入管道跟踪笔势事件。 使用手动交互，设备可以自动识别分流和保持手势，而不能识别其他手势。 它们被命名为 OpenXRMsftHandInteraction Select 并抓住映射。 不需要启用订阅，你应该在项目设置/引擎/输入中声明事件，就像下面这样：
+在 OpenXR 中，手势事件通过输入管道进行跟踪。 使用手势交互，设备可以自动识别点击和按住手势，但不能识别其他手势。 它们命名为 OpenXRMsftHandInteraction Select 和手柄映射。 无需启用订阅，应在 Project 设置/Engine/Input 中声明事件，如下所示：
 
 ![OpenXR 操作映射的屏幕截图](../images/unreal-hand-tracking-img-12.png)
 
 # <a name="425"></a>[4.25](#tab/425)
 
-您可以在 " **Windows Mixed Reality 空间输入**" 下查找蓝图函数，并通过 `WindowsMixedRealitySpatialInputFunctionLibrary.h` 在调用代码文件中添加来查找 c + + 函数。
+可以通过在调用代码文件中添加 ，在 Windows Mixed Reality **输入** 和 C++ 函数下 `WindowsMixedRealitySpatialInputFunctionLibrary.h` 找到 Blueprint 函数。
 
 ![捕获手势](../images/unreal/capture-gestures.png)
 
@@ -33,9 +33,9 @@ ms.locfileid: "97717737"
 <!-- Deprecated
 The `ESPatialInputAxisGestureType` enum describes spatial axis gestures and are [fully documented](../../out-of-scope/deprecated/holograms-211.md).
 -->
-建立
+蓝图：
 
-![手势类型](../images/unreal/gesture-type.png)
+![笔势类型](../images/unreal/gesture-type.png)
 
 C++：
 ```cpp
@@ -49,11 +49,11 @@ enum class ESpatialInputAxisGestureType : uint8
 ```
 
 ### <a name="function"></a>函数
-您可以使用函数启用和禁用手势捕获 `CaptureGestures` 。 当启用的笔势激发输入事件时， `true` 如果手势捕获成功，则函数返回 `false` ; 如果出现错误，则返回。
+可以使用 函数启用和禁用笔势 `CaptureGestures` 捕获。 当启用的笔势触发输入事件时，如果笔势捕获成功，并且出现错误，则函数 `true` `false` 将返回 。
 
-建立
+蓝图：
 
-![捕获手势最佳实践](../images/unreal/capture-gestures-bp.png)
+![捕获手势 BP](../images/unreal/capture-gestures-bp.png)
 
 C++：
 ```cpp
@@ -66,9 +66,9 @@ static bool UWindowsMixedRealitySpatialInputFunctionLibrary::CaptureGestures(
     bool NavigationAxisZ = true);
 ```
 
-下面是关键事件，可在蓝图和 c + +： ![ 键事件中找到](../images/unreal/key-events.png)
+以下是可在蓝图和 C++ 中查找的关键事件： ![ 密钥事件](../images/unreal/key-events.png)
 
-![关键事件2](../images/unreal/key-events2.png)
+![关键事件 2](../images/unreal/key-events2.png)
 ```cpp
 const FKey FSpatialInputKeys::TapGesture(TapGestureName);
 const FKey FSpatialInputKeys::DoubleTapGesture(DoubleTapGestureName);

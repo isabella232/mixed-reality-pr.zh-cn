@@ -5,19 +5,19 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: a44e5f32cda2803091e27ae1a2c30a1976385a2f
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: f2391ab0c67880c8902092be6fcecefcf30f008c7f31ea76879d399e35e1491b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121605"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212668"
 ---
 # <a name="framework-and-runtime"></a>框架和运行时
 
 ## <a name="changes-to-the-scene"></a>对场景的更改
 
 若要使用工具包，MixedRealityToolkit 脚本的实例必须在你的场景中。
-若要添加一个，请使用菜单选项：混合现实工具包 ->添加到场景和配置。 此实例负责注册、更新和拆收服务。 这也是选择配置文件的地方。
+若要添加一个，请使用菜单选项：混合现实Toolkit ->添加到场景和配置。 此实例负责注册、更新和拆收服务。 这也是选择配置文件的地方。
 
 除了将 MRTK GameObject 添加到场景中外，菜单选项还将：
 

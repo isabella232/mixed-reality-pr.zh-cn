@@ -1,94 +1,94 @@
 ---
 title: Unreal 中的材料建议
-description: Unreal 引擎中的资料概述。
+description: Unreal 引擎中的材料概述。
 author: hferrone
 ms.author: safarooq
 ms.date: 09/18/2020
 ms.topic: article
-keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，开发，材料，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: bfe70e730c5fbd6e5d103737b03e76bfd0ab65f6
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Unreal， Unreal Engine 4， UE4， HoloLens， HoloLens 2， 开发， 材料， 文档， 指南， 功能， 全息影像， 游戏开发， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
+ms.openlocfilehash: d5ce702495c95e8ca6d07a0209a4bc7d02f5d4d682415b028d63995e8910a7e6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580797"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187689"
 ---
 # <a name="material-recommendations-in-unreal"></a>Unreal 中的材料建议
 
-你使用的材料可以直接影响你的项目在 Unreal 引擎中的运行情况。 此页面作为基本设置的快速入门，你应该使用这些设置来获得混合现实应用程序的最佳性能。
+使用的材料直接影响项目在 Unreal Engine 中的运行性能。 本页充当基本设置的快速入门，你应该使用这些设置从混合现实应用程序中获得最佳性能。
 
-## <a name="using-customizeduvs"></a>使用 CustomizedUVs
+## <a name="using-customizeduvs"></a>使用自定义的UV
 
-如果需要对材料提供 UV 拼贴，请使用 CustomizedUVs，而不是直接修改纹理节点的 UV。 CustomizedUVs 使你可以在顶点着色器而不是像素着色器中操作 Uv-11。
+如果需要在材料上提供 UV 平铺，请使用 CustomizedUV，而不是直接修改纹理节点的 UV。 自定义的 UV 允许操作顶点着色器中的 UV，而不是像素着色器。
 
 ![Unreal 中的材料设置](images/unreal-materials-img-01c.png)
 
-可以在以下屏幕截图中的 [Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html) 和最佳做法示例中找到材料详细信息：
+可以在 [Unreal Engine](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html) 文档和最佳做法示例中找到具体的详细信息，如以下屏幕截图所示：
 
-建议[ ![ 在 Unreal ](images/unreal-materials-img-01.png) 中设置的材料设置](images/unreal-materials-img-01.png#lightbox) 
- 
+[ ![ Unreal 推荐材料设置 ](images/unreal-materials-img-01.png) ](images/unreal-materials-img-01.png#lightbox) 
+ *中推荐的材料设置*
 
-不建议[ ![ 的材料设置 Unreal ](images/unreal-materials-img-01b.png) ](images/unreal-materials-img-01b.png#lightbox) 
- *不推荐的材料* 设置
+[ ![ ](images/unreal-materials-img-01b.png) Unreal 非推荐](images/unreal-materials-img-01b.png#lightbox)材料设置 
+ *中的非推荐材料设置*
 
 ## <a name="changing-blend-mode"></a>更改混合模式
 
-除非有很强的理由，否则我们建议将混合模式设置为不透明。 屏蔽和半透明的材料速度缓慢。 有关详细信息，请 [参阅 Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)。
+建议将混合模式设置为不透明，除非有一个强烈的理由需要这样做。 屏蔽和半透明材料速度缓慢。 有关材料的详细信息，请参阅 [Unreal Engine 文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)。
 
 ![更改混合模式](images/unreal-materials-img-02.jpg)
 
-## <a name="updating-lighting-for-mobile"></a>更新移动的照明
+## <a name="updating-lighting-for-mobile"></a>更新移动设备的照明
 
-应关闭完全精度。 可以通过翻方向信息来拔下 Lightmap 照明。 禁用后，lightmaps 中的照明将是平面但更便宜。
+应关闭完全精度。 可以通过打开方向信息来向下拨号光图照明。 禁用后，光图的照明将平缓，但成本会更便宜。
 
 ![Unreal 中的移动材料设置](images/unreal-materials-img-03.jpg)
 
-## <a name="adjusting-forward-shading"></a>调整前向底纹
+## <a name="adjusting-forward-shading"></a>调整向前着色
 
-这些选项以性能为代价提高视觉保真。 为了获得最佳性能，应关闭它们。
+这些选项以性能成本提高视觉保真度。 应将其关闭，以提高性能。
 
-![Unreal 中的前向底纹材料设置](images/unreal-materials-img-04.jpg)
+![Unreal 中的前向着色材料设置](images/unreal-materials-img-04.jpg)
 
-## <a name="setting-material-translucency"></a>设置材料半透明度
+## <a name="setting-material-translucency"></a>设置材料半透明性
 
-指示半透明材料应不受布隆或 DOF 影响。 由于这两种影响都非常罕见，因此默认情况下此设置应处于启用状态。
+指示半透明材料不应受 bloom 或 DOF 的影响。 由于这两种效果在 MR 中很少见，因此默认情况下应启用此设置。
 
-![Unreal 中的移动单独半透明度设置](images/unreal-materials-img-05.jpg)
+![Unreal 中的移动单独半透明设置](images/unreal-materials-img-05.jpg)
 
 ## <a name="optional-settings"></a>可选设置
 
-以下设置可能会提高性能，但请注意，它们会禁用某些功能。 仅当你确定不需要使用这些功能时才使用这些设置。
+以下设置可能会提高性能，但请注意，它们禁用了某些功能。 仅当你确定不需要使用这些功能时才使用这些设置。
 
 ![Unreal 中的可选材料设置](images/unreal-materials-img-06.jpg)
 
-如果材料不需要反射或闪光，则设置此选项可显著提高性能。 在内部测试中，它的速度与 "unlit" 的速度一样快，同时提供照明信息。
+如果材料不需要反射或光照，则设置此选项可以极大地提高性能。 在内部测试中，它的速度与"未处理"一样快，同时提供照明信息。
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
-下面的 "设置" 不是与材料相关的最佳实践。
+下面的设置与材料相关的最佳做法不同。
 
-创建参数时，最好尽可能使用 "静态参数"。 静态开关可用于删除内容的整个分支，而不会产生运行时开销。 实例可以具有不同的值，从而使模板化着色器设置为无性能损失。 缺点是创建了多个将导致重新编译着色器的排列。 尝试最大程度地减少材料中的静态参数数量以及这些静态参数的排列数。 在 [Unreal 引擎文档](https://docs.unrealengine.com/Engine/Rendering/Materials/ExpressionReference/Parameters/index.html#staticswitchparameter)中，可以找到有关呈现材料参数的更多详细信息。
+创建参数时，最好尽可能使用"静态参数"。 静态开关可用于删除材料的整个分支，无需运行时成本。 实例可以具有不同的值，因此可以设置模板着色器，而不会降低性能。 缺点是创建了多个会导致着色器重新编译的排列。 尝试最大程度地减少材料中的静态参数数以及所使用的这些静态参数的排列数。 有关呈现材料参数的更多详细信息，请参阅 [Unreal Engine 文档](https://docs.unrealengine.com/Engine/Rendering/Materials/ExpressionReference/Parameters/index.html#staticswitchparameter)。
 
-![材料设置最佳方案](images/unreal-materials-img-07.jpg)
+![材料设置最佳做法](images/unreal-materials-img-07.jpg)
 
-创建材料实例时，应将首选项指定为在 "材料实例动态" 上的 " **材料实例常量** "。 "**材料实例常量**" 是一种在运行时之前只计算一次的实例材料。
+创建材料实例时，应优先选择"材料实例 **常量"，而** "材料实例动态"。 **材料实例常量** 是一种实例化材料，在运行时之前只计算一次。
 
-通过 "内容浏览器" 创建的材料实例 (**右键单击 > 创建材料实例** ，) 是一个材料实例常量。 通过代码创建 "材料实例动态"。 有关详细信息，请 [参阅 Unreal 引擎文档](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html)。
+通过内容浏览器创建的材料实例 (右键单击> **创建**) 实例常量。 材料实例动态是通过代码创建的。 有关材料实例的更多详细信息，请参阅 [Unreal Engine 文档](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html)。
 
 ![在 Unreal 中创建材料实例](images/unreal-materials-img-08.png)
 
-密切关注材料/着色器的复杂性。 可以通过单击 "平台统计信息" 图标来查看各种平台上的材料成本。 你还可以在 [Unreal 引擎文档](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)中找到有关材料的更多详细信息。
+关注材料/着色器的复杂性。 可以通过单击"平台统计信息"图标来查看各种平台上的材料成本。 还可以在 [Unreal Engine](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)文档中找到有关材料的详细信息。
 
 ![在 Unreal 中创建材料实例动态设置](images/unreal-materials-img-09.png)
 
-您可以通过着色器复杂性 [视图模式](https://docs.unrealengine.com/Engine/UI/LevelEditor/Viewports/ViewModes/index.html)来快速了解着色器的相对复杂性。
+可以通过着色器复杂性视图模式 快速了解着色器的相对 [复杂性](https://docs.unrealengine.com/Engine/UI/LevelEditor/Viewports/ViewModes/index.html)。
 
-* 查看模式热键： Alt + 8
-* 控制台命令： viewmode shadercomplexity
+* 视图模式热键：Alt + 8
+* 控制台命令：viewmode shadercomplexity
 
 ![Unreal 中的材料复杂性](images/unreal-materials-img-10.png)
 
 ## <a name="see-also"></a>另请参阅
 * [移动材料](https://docs.unrealengine.com/Platforms/Mobile/Materials/index.html)
-* [查看模式](https://docs.unrealengine.com/Engine/UI/LevelEditor/Viewports/ViewModes/index.html)
+* [视图模式](https://docs.unrealengine.com/Engine/UI/LevelEditor/Viewports/ViewModes/index.html)
 * [材料实例](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html)

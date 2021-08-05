@@ -5,17 +5,17 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
-keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 415a0773586ab232e925fd0f18a3a8e6f8217e88
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+keywords: Windows Mixed Reality，手动跟踪，Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，混合现实，开发，功能，文档，指南，全息影像，游戏开发，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 4c3b86c842fc875ebedbdf2527bf962fd8afd4d19cef90d168293cc85b664f70
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104695795"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187144"
 ---
 # <a name="hand-tracking-in-unreal"></a>Unreal 中的手部跟踪
 
-手写跟踪系统使用用户的不要和手指作为输入。 每个手指的位置和旋转数据都可用。 从 Unreal 4.26 开始，手动跟踪基于 Unreal HeadMountedDisplay 插件，并在所有 XR 平台和设备上使用公共 API。 对于 Windows Mixed Reality 和 OpenXR 系统，功能是相同的。
+手写跟踪系统使用用户的不要和手指作为输入。 每个手指的位置和旋转数据都可用。 从 Unreal 4.26 开始，手动跟踪基于 Unreal HeadMountedDisplay 插件，并在所有 XR 平台和设备上使用公共 API。 Windows Mixed Reality 和 OpenXR 系统的功能相同。
 
 ## <a name="hand-pose"></a>举手
 
@@ -30,9 +30,9 @@ ms.locfileid: "104695795"
 
 使用 [实时链接插件](https://docs.unrealengine.com/Engine/Animation/LiveLinkPlugin/index.html)向动画显示手姿势。
 
-如果启用了 Windows Mixed Reality 和 Live Link 插件：
+如果 Windows Mixed Reality 和 Live Link 插件已启用：
 1. 选择 " **窗口 >" 实时链接** "，打开" 实时链接编辑器 "窗口。
-2. 选择 **源** 并启用 **Windows Mixed Reality 手动跟踪源**
+2. 选择 **源** 并启用 **Windows Mixed Reality 手跟踪源**
 
 ![实时链接源](images/unreal/live-link-source.png)
 
@@ -67,7 +67,7 @@ ms.locfileid: "104695795"
 ![手写网格](images/unreal/hand-mesh.png)
 
 在可以访问手写网格数据之前，你需要：
-- 选择 **ARSessionConfig** 资产，展开 " **AR 设置->** " "世界" 映射设置，然后选中 " **根据跟踪的几何生成网格数据**"。
+- 选择 **ARSessionConfig** 资产，展开 " **AR 设置"-> "世界" 映射** 设置，然后选中 "**根据跟踪的几何生成网格数据**"。
 
 下面是默认的网格参数：
 
@@ -124,7 +124,7 @@ UMRMeshComponent* UARTrackedGeometry::GetUnderlyingMesh()
 
 ![ARTrackable 通知2](images/unreal/ar-trackable-notify2.png)
 
-3. 添加/更新/删除跟踪的几何图形时覆盖事件图中的以下节点：
+3. 添加/更新/删除跟踪的几何图形时，在事件 Graph 中的以下节点覆盖：
 
 ![在 ARTrackable 通知上](images/unreal/on-artrackable-notify.png)
 
@@ -157,7 +157,7 @@ UMRMeshComponent* UARTrackedGeometry::GetUnderlyingMesh()
 
 ## <a name="gestures"></a>笔势
 
-HoloLens 2 跟踪空间手势，这意味着您可以将这些手势捕获为输入。 手势跟踪基于订阅模型。 应使用 "配置手势" 功能告诉设备要跟踪的手势。 可以在 [HoloLens 2 基本使用](/hololens/hololens2-basic-usage) 文档中找到有关手势的更多详细信息。
+HoloLens 2 跟踪空间手势，这意味着可以将这些手势捕获为输入。 手势跟踪基于订阅模型。 应使用 "配置手势" 功能告诉设备要跟踪的手势。 可以在 " [HoloLens 2 基本使用情况](/hololens/hololens2-basic-usage)" 文档中找到有关手势的更多详细信息。
 
 [!INCLUDE[](includes/tabs-tracking-gestures.md)]
 

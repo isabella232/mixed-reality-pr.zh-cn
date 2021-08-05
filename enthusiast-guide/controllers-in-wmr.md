@@ -1,31 +1,31 @@
 ---
 title: Windows Mixed Reality 中的控制器
-description: 了解如何设置、配对、使用和排查 Windows Mixed Reality 中控制器的常见问题。
+description: 了解如何在 Windows Mixed Reality 中设置、配对、使用和排查控制器的常见问题。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，反馈，反馈中心，bug
 appliesto:
 - Windows 10
-ms.openlocfilehash: 66b352696016577ab121520102dd766b030ccf0e
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: bc5983706d75d6c66bb8de375b38f2ebe0d3f0aba0d90be5ef1e39d5a6949743
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944628"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187979"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Windows Mixed Reality 中的运动控制器
 
 运动控制器是允许用户在混合现实中交互的硬件附件。 动作控制器优于手势的优势在于，控制器在空间中具有精确的位置，允许与数字对象进行精细的交互。 对于 Windows Mixed Reality 沉浸式耳机，运动控制器是用户在其世界中采取措施的主要方式。
 
-Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的视图现场提供精确且响应迅速的移动跟踪。 不需要在空间的墙壁上安装硬件。 这些运动控制器将提供与 Windows Mixed Reality 沉浸式耳机相同的设置和可移植性。
+Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的视图中提供精确的响应性移动跟踪。 不需要在空间的墙壁上安装硬件。 这些运动控制器的设置和可移植性与 Windows Mixed Reality 沉浸式耳机相同。
 
 你还可以使用 Xbox 控制器、鼠标和键盘，或 [仅使用你的语音](using-speech-in-wmr.md)进行浏览。
 
 ## <a name="motion-controller-setup"></a>运动控制器设置
 
-大多数耳机都直接与耳机直接配对，但某些提前耳机要求运动控制器与蓝牙4.0 配对。 首次连接沉浸式头戴式耳机时，将在安装过程中遍历移动控制器。 但如果以后需要重新配对，请参阅以下内容：
+大多数耳机都直接与耳机直接配对，但某些提前耳机要求运动控制器与蓝牙4.0 的 PC 配对。 首次连接沉浸式头戴式耳机时，将在安装过程中遍历移动控制器。 但如果以后需要重新配对，请参阅以下内容：
 
 1. 启动 **混合现实门户** 并连接手机网络。  
 2. 在左下角，选择 "..." **> 设置控制器**。
@@ -34,14 +34,14 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 
 > [!NOTE]
 > * 对于直接与电脑配对的控制器，需要将它们打开并按下电池隔离舱内的 "配对" 按钮，将其置于配对模式，直至指示灯开始闪烁。
-> * 运动控制器仅支持一次配对到一台 PC。 如果需要将它们用于不同的耳机，则需要完成配对过程。 请参阅 [设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
+> * 运动控制器仅支持一次配对到一台 PC。 如果需要将它们用于不同的耳机，则需要完成配对过程。 请参阅[设置 Windows Mixed Reality](set-up-windows-mixed-reality.md)
 
 [获取帮助连接](wmr-setup-faq.yml#my-motion-controllers-aren-t-working)
 
 > [!IMPORTANT]
 > **已获取 Xbox 控制器？**
 > 
-> 如果你有蓝牙 Xbox 控制器，请将其与你的电脑配对，以将其与你的耳机一起使用。
+> 如果有蓝牙 Xbox 控制器，请将其与你的电脑配对，以便将其与耳机一起使用。
 > 
 > 如果有有线 Xbox 控制器，请将其插入 PC。
 > 
@@ -53,7 +53,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 
 ### <a name="pair-motion-controllers-to-hmd"></a>将运动控制器配对到 HMD
 
-按下 Windows 按钮2秒钟，使控制器通电，直至 Led 亮起。
+按下 "Windows" 按钮，使控制器通电，直至 led 亮起。
 
 从控制器中取出电池盖，并找到控制器边缘的小型配对按钮。 按下此按钮可与电脑配对。
     ![运动控制器配对](images/connect_controller.png)
@@ -75,10 +75,10 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 
 ### <a name="common-issues"></a>常见问题
 
-* 验证计算机上是否只有一个蓝牙无线电处于活动状态。 如果有多个蓝牙收音机，则需要禁用 Device Manager 中的其他无线电。
-* 将你的蓝牙转换器放置在一个端口中，该端口对你的控制器具有清晰的视觉位置，并已插入 USB 3.0 设备。 已知 USB 3.0 与蓝牙的射频干扰 (从 Intel 阅读 [本文](https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/usb3-frequency-interference-paper.pdf) ，了解更多详细信息) 。 USB 2.0 端口可能更适用于蓝牙转换器。
-* 确保你的蓝牙转换器未插入 HMD 的 USB 电缆旁边的 USB 端口。 已知道耳机电缆可能会干扰蓝牙转换器。 将该转换器插到电脑上的前 USB 端口，以获得最佳结果。
-* 对于笔记本，请确保 WiFi 连接到 5 GHz 波段以获得最佳体验。 选择 "无线网络" 图标右下送纸盒，然后选择要使用的网络的 "属性"。 为了共享 2.4 GHz 天线进行蓝牙和 WiFi 连接而设计的笔记本会出现数据拥塞，导致网络速度缓慢或移动控制器跟踪性能不佳。
+* 验证计算机上是否只有一个蓝牙的无线电活动。 如果有多个蓝牙收音机，则需要禁用 Device Manager 中的其他无线电。
+* 将蓝牙的转换器放置在对控制器有清楚线路的端口中，并将其放入 USB 3.0 设备。 已知 USB 3.0 与蓝牙的射频干扰 (从 Intel 阅读[这篇文章](https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/usb3-frequency-interference-paper.pdf)以获取) 详细信息。 USB 2.0 端口可能更适用于蓝牙的转换器。
+* 请确保蓝牙的转换器未插入 HMD 的 USB 电缆旁边的 USB 端口。 已知道耳机电缆可能会干扰蓝牙连接器。 将该转换器插到电脑上的前 USB 端口，以获得最佳结果。
+* 对于笔记本，请确保 WiFi 连接到 5 GHz 波段以获得最佳体验。 选择 "无线网络" 图标右下送纸盒，然后选择要使用的网络的 "属性"。 为了共享 2.4 GHz 天线进行蓝牙和 WiFi 连接而设计的笔记本将看到数据拥塞，导致网络速度缓慢或移动控制器跟踪性能不佳。
 * 你的动作控制器会定期从 Microsoft 接收新的软件更新。 当控制器接收到这些新的软件更新时，控制器将显示闪烁的闪烁模式。 这是一般警报。 等待软件升级完成，然后再使用控制器。 控制器将振动，并在操作完成后将替换为闪烁的模式。
 * 在控制器完成更新过程之前，您可能会被告知 "戴上耳机并使用操纵杆进行传送"。 更新完成之前，控制器不可见或不可用。 大多数更新在两分钟内发生，但更新可能需要10分钟或更长时间。 等待更新完成，然后再继续下一步。
 
@@ -95,8 +95,8 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 | --- | --- | --- | --- |
 | 过去 | 向前按操纵杆，然后将控制器指向你要转到的位置。 释放操纵杆。 | 向前按左操纵杆，然后查看要转到的位置。 释放操纵杆。 | 选择并按住鼠标右键，然后将鼠标指向要移到的位置。 释放该按钮。 |
 | 选择 | 指向控制器，然后拉取触发器或使用触摸板。 | 注视目标，然后按。 | 指向鼠标，然后单击鼠标左键。 |
-| 打开“开始”菜单 | 按 **Windows** 按钮。 | 按 **Xbox** 按钮。 | 按 **Windows 徽标键**。 |
-| 离开沉浸式应用 | 按 **Windows** 按钮。 然后，在 "快速操作" 菜单中选择 " **混合现实主页** "。 | 按 **Xbox** 按钮。 然后选择 "快速操作" 菜单上的 " **混合现实主页** " 按钮。 | 按下 "Windows 徽标键"。 然后在显示的 "快速操作" 菜单上选择 " **混合现实" 主页** 按钮。 |
+| 打开“开始”菜单 | 按 " **Windows** " 按钮。 | 按 **Xbox** 按钮。 | 按 **Windows 徽标密钥**。 |
+| 离开沉浸式应用 | 按 " **Windows** " 按钮。 然后，在 "快速操作" 菜单中选择 " **混合现实主页** "。 | 按 **Xbox** 按钮。 然后选择 "快速操作" 菜单上的 " **混合现实主页** " 按钮。 | 按 * * Windows 徽标密钥。 然后在显示的 "快速操作" 菜单上选择 " **混合现实" 主页** 按钮。 |
 | 旋转 | 向左或向右移动操纵杆。 | 向左或向右移动右摇杆。 | 不可用。 |
 | 备份 | 向后移动操纵杆。 | 将左摇杆向后移动。 | 不可用。 |
 | 步行 | 直接向下推送操纵杆，并按你要走的方向按下。 | 将左摇杆向下直接推送，并按你要走的方向按下。 | 不可用。 |
@@ -127,7 +127,7 @@ Windows Mixed Reality 运动控制器通过沉浸式耳机传感器，在你的�
 ## <a name="updating-motion-controllers-firmware"></a>更新运动控制器固件
 
 * 如果沉浸式耳机连接到您的 PC，并且有新的控制器固件可用，则该固件将在下一次打开时自动推送到运动控制器。
-* 控制器固件更新以循环动作的一种模式显示，并需要1-2 分钟。 有时，固件更新可能需要更长的时间，长达10分钟，这可能表示 Bluetooth 连接或无线电干扰较差。
+* 控制器固件更新以循环动作的一种模式显示，并需要1-2 分钟。 有时，固件更新可能需要更长的时间，长达10分钟，这可能表明蓝牙连接性或无线电干扰较差。
 * 如果固件更新中断 (控制器断电或电池) ，则在下一次开机时将再次尝试。
 * 固件更新完成后，控制器将重新启动并重新连接。
 * 这两个控制器现在都应连接。 导航到混合现实门户以检查控制器的状态。

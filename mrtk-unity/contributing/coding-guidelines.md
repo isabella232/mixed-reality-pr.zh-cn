@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， C#，
-ms.openlocfilehash: c14f5f72d391c5474a01c798bfdaa5529700a509
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: fe54a9fe1f906a31ac7ed0417dd3a57fee167314b4b2db29eadcd1eaa22f97b7
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175331"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210733"
 ---
 # <a name="coding-guidelines"></a>编码准则
 
@@ -197,27 +197,27 @@ public class MyNewProfile : ScriptableObject
 
 ### <a name="logging"></a>Logging
 
-添加新功能或更新现有功能时，请考虑将 DebugUtilities.LogVerbose 日志添加到对将来调试有用的有趣代码。 此处在添加日志记录和添加的干扰与没有足够的日志记录之间做出权衡 (这会使诊断难以) 。
+添加新功能或更新现有功能时，请考虑将 LogVerbose 日志添加到感兴趣的代码，这些代码可能有助于将来进行调试。 在添加日志记录和添加的噪音之间有一种折衷，并且日志记录 (使诊断难以) 。
 
-一个有趣的示例，其中日志记录对 (有效负载和有效负载) ：
+一个有趣的示例，其中日志记录对 (以及相关的负载) 很有用：
 
 ```c#
 DebugUtilities.LogVerboseFormat("RaiseSourceDetected: Source ID: {0}, Source Type: {1}", source.SourceId, source.SourceType);
 ```
 
-这种类型的日志记录可以帮助捕获问题，如 ，这些问题是由检测到不匹配的源和 [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) 源丢失事件引起的。
+这种类型的日志记录有助于捕获类似的问题 [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) ，这是由于检测到的源不匹配和源丢失事件引起的。
 
-避免添加每个帧上发生的数据和事件的日志 - 理想情况下，日志记录应涵盖由不同用户输入驱动的"有趣的"事件 (即用户"单击"，以及记录) 的来自的更改和事件集。 每帧记录的"用户仍在按住手势"的状态并不有趣，并且会使日志重负。
+避免为每个帧上发生的数据和事件添加日志-理想的日志记录应涵盖由不同用户输入驱动的 "有趣的" 事件， (例如，用户的 "单击" 事件和来自的一组更改和事件，这些事件对于记录) 很感兴趣。 记录的 "用户仍在保持手势" 状态，每个帧都不感兴趣，并且日志会严重影响日志。
 
-请注意，默认情况下不会启用此详细日志记录 (必须在诊断系统设置设置中启用) [](../features/diagnostics/configuring-diagnostics.md#enable-verbose-logging)
+请注意，默认情况下不启用此详细日志记录 (必须在 [诊断系统设置](../features/diagnostics/configuring-diagnostics.md#enable-verbose-logging) 中启用该日志记录) 
 
 ### <a name="spaces-vs-tabs"></a>空格与制表符
 
-参与此项目时，请务必使用 4 个空格而不是制表符。
+参与此项目时，请务必使用4个空格而不是选项卡。
 
 ### <a name="spacing"></a>间距
 
-请勿在方括号和括号之间添加其他空格：
+不要在方括号和圆括号之间添加其他空格：
 
 #### <a name="dont"></a>不要
 
@@ -242,7 +242,7 @@ private Foo()
 
 ### <a name="naming-conventions"></a>命名约定
 
-始终对 `PascalCase` 属性使用 。 用于 `camelCase` 大多数字段，但 `PascalCase` 和 `static readonly` 字段 `const` 除外。 唯一的例外是要求字段由 序列化的数据结构 `JsonUtility` 。
+始终 `PascalCase` 对属性使用。 `camelCase`对于大多数字段，使用 `PascalCase` `static readonly` 和 `const` 字段除外。 这种情况的唯一例外是对于需要通过序列化字段的数据结构 `JsonUtility` 。
 
 #### <a name="dont"></a>不要
 
@@ -262,13 +262,13 @@ private string myField;
 
 ### <a name="access-modifiers"></a>访问修饰符
 
-始终声明所有字段、属性和方法的访问修饰符。
+始终为所有字段、属性和方法声明一个访问修饰符。
 
-- 除非需要在派生类中重写所有 Unity API 方法，否则默认情况下所有 Unity API 方法 `private` 都应为 。 在这种情况下， `protected` 应使用 。
+- 所有 Unity API 方法应 `private` 默认为默认值，除非需要在派生类中重写这些方法。 在这种情况下， `protected` 应该使用。
 
 - 字段应始终为 `private` ，具有 `public` 或 `protected` 属性访问器。
 
-- 尽可能 [使用 expression-bodied](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#expression-bodied-function-members) [成员和](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#auto-property-enhancements) 自动属性
+- 尽可能使用[expression expression-bodied 成员](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#expression-bodied-function-members)和[auto 属性](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6#auto-property-enhancements)
 
 #### <a name="dont"></a>不要
 
@@ -296,7 +296,7 @@ protected virtual void FooBar() { }
 
 ### <a name="use-braces"></a>使用大括号
 
-请始终在每个语句块后使用大括号，将其放在下一行。
+每个语句块后始终使用大括号，并将它们放在下一行。
 
 #### <a name="dont"></a>禁止事项
 
@@ -335,9 +335,9 @@ private Foo()
 }
 ```
 
-### <a name="public-classes-structs-and-enums-should-all-go-in-their-own-files"></a>公共类、结构以及枚举都应进入其自己的文件中
+### <a name="public-classes-structs-and-enums-should-all-go-in-their-own-files"></a>公共类、结构和枚举应全部位于各自的文件中
 
-如果类、结构或枚举可成为私有的，则可以包括在同一文件中。  这样可以避免 Unity 的编译问题，并确保发生正确的代码抽象，还减少了代码需要更改时的冲突和中断性变更。
+如果类、结构或枚举可以设为私有，则可以将其包含在同一文件中。  这可以避免与 Unity 的编译问题，并确保发生了正确的代码抽象，还可以在代码需要更改时减少冲突和重大更改。
 
 #### <a name="dont"></a>不要
 
@@ -364,7 +364,7 @@ public class MyClass
 
 #### <a name="do"></a>应做事项
 
-MyStruct.cs
+Mystruct>) 
 
 ```c#
 // Public Struct / Enum definitions for use in your class.  Try to make them generic for reuse.
@@ -375,7 +375,7 @@ public struct MyStruct
 }
 ```
 
-MyEnumType.cs
+MyEnumType
 
 ```c#
 public enum MuEnumType
@@ -385,7 +385,7 @@ public enum MuEnumType
 }
 ```
 
-MyClass.cs
+MyClass .cs
 
 ```c#
 public class MyClass
@@ -397,7 +397,7 @@ public class MyClass
 
 ### <a name="initialize-enums"></a>初始化枚举
 
-为了确保从 0 开始正确初始化所有枚举，.NET 提供了一个整洁的快捷方式，只需将第一个 (起始值) 枚举。  (值 1 = 0 剩余值不是必需的) 
+若要确保所有枚举从0开始正确初始化，.NET 提供了一个整齐的快捷方式，通过只添加第一个 (起始) 值来自动初始化枚举。  (（例如，值 1 = 0）不需要剩余值) 
 
 #### <a name="dont"></a>不要
 
@@ -421,9 +421,9 @@ public enum ValueType
 }
 ```
 
-### <a name="order-enums-for-appropriate-extension"></a>相应扩展的订单枚举
+### <a name="order-enums-for-appropriate-extension"></a>适当扩展的顺序枚举
 
-如果将来可能会扩展枚举，以便对枚举顶部的默认值排序，这可以确保枚举索引不受新增功能的影响，这一点至关重要。
+如果将来可能会延长某个枚举，以便在枚举的顶部对默认值进行排序，这一点非常重要，这可以确保枚举索引不会受到新添加内容的影响。
 
 #### <a name="dont"></a>不要
 
@@ -470,11 +470,11 @@ public enum SDKType
 }
 ```
 
-### <a name="review-enum-use-for-bitfields"></a>查看位域的枚举用途
+### <a name="review-enum-use-for-bitfields"></a>查看位域的枚举使用情况
 
-如果枚举可能需要多个状态作为值，例如，"手部 = 左&右"。 然后，需使用 BitFlag 正确修饰枚举，才能正确使用枚举
+如果有可能需要将多个状态作为一个值，例如左右手使用习惯 = Left & Right。 然后，需要使用 BitFlags 正确地修饰枚举，以使其正确使用
 
-Handedness.cs 文件对此有一个具体实现
+左右手使用习惯文件具有此的具体实现
 
 ### <a name="dont"></a>不要
 
@@ -500,14 +500,14 @@ public enum Handedness
 }
 ```
 
-### <a name="hard-coded-file-paths"></a>硬编码的文件路径
+### <a name="hard-coded-file-paths"></a>硬编码文件路径
 
-生成字符串文件路径（尤其是编写硬编码的字符串路径）时，执行以下操作：
+生成字符串文件路径时，尤其是编写硬编码字符串路径，请执行以下操作：
 
-1. 尽可能使用[ `Path` C# 的 API，](/dotnet/api/system.io.path?preserve-view=true&view=netframework-4.8)例如 `Path.Combine` 或 `Path.GetFullPath` 。
-1. 使用 / 或 [`Path.DirectorySeparatorChar`](/dotnet/api/system.io.path.directoryseparatorchar?preserve-view=true&view=netframework-4.8) ，而不是 \ 或 \\ \\ 。
+1. 尽可能使用 c # [ `Path` api](/dotnet/api/system.io.path?preserve-view=true&view=netframework-4.8) ，如 `Path.Combine` 或 `Path.GetFullPath` 。
+1. 使用/或 [`Path.DirectorySeparatorChar`](/dotnet/api/system.io.path.directoryseparatorchar?preserve-view=true&view=netframework-4.8) 而不是 \ 或 \\ \\ 。
 
-这些步骤可确保 MRTK 在基于 Windows 和 Unix 的系统上均有效。
+这些步骤可确保 MRTK 在基于 Windows 和 Unix 的系统上工作。
 
 ### <a name="dont"></a>不要
 
@@ -530,16 +530,16 @@ string filePath = Path.Combine(myVarRootPath,myRelativePath);
 string cleanedFilePath = Path.GetFullPath(unknownSourceFilePath);
 ```
 
-## <a name="best-practices-including-unity-recommendations"></a>最佳做法，包括 Unity 建议
+## <a name="best-practices-including-unity-recommendations"></a>最佳实践，包括 Unity 建议
 
-此项目的一些目标平台需要考虑性能。 请记住，在紧密更新循环或算法中频繁调用的代码中分配内存时，请始终小心。
+此项目的某些目标平台需要考虑性能。 考虑到这一点，在严格更新循环或算法中频繁调用的代码中，通常会小心地分配内存。
 
 ### <a name="encapsulation"></a>封装
 
-如果需要从类或结构外部访问字段，请始终使用私有字段和公共属性。  请确保共定位私有字段和公共属性。 这样一来，可以更轻松地一目了然地查看支持 属性和字段是否由脚本修改。
+如果需要从类或结构外部访问字段，请始终使用私有字段和公共属性。  请确保归置私有字段和公共属性。 这样一来，就可以更轻松地查看属性的作用，以及该字段可通过脚本进行修改。
 
 > [!NOTE]
-> 唯一的例外是要求字段由 序列化的数据结构，其中数据类需要具有所有公共字段才能使序列化 `JsonUtility` 正常工作。
+> 这种情况的唯一例外是，对于需要对这些字段进行序列化的数据结构 `JsonUtility` ，需要一个数据类以使序列化的所有公共字段都能正常工作。
 
 #### <a name="dont"></a>不要
 
@@ -594,9 +594,9 @@ public float AbsMyValue
 }
 ```
 
-### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>缓存值，并尽可能在场景/预制中序列化这些值
+### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>尽可能缓存值并将其序列化到场景/prefab 中
 
-考虑HoloLens时，最好优化场景中的性能和缓存引用，或预制项以限制运行时内存分配。
+考虑到 HoloLens，最佳做法是在场景或 prefab 中优化性能和缓存引用，以限制运行时内存分配。
 
 #### <a name="dont"></a>不要
 
@@ -628,9 +628,9 @@ private void Update()
 }
 ```
 
-### <a name="cache-references-to-materials-do-not-call-the-material-each-time"></a>缓存对材料的引用，不要每次调用".material"
+### <a name="cache-references-to-materials-do-not-call-the-material-each-time"></a>缓存对材料的引用，请勿每次都调用 "材料"
 
-每次使用".material"时，Unity 都会创建新材料，如果未正确清理，则会导致内存泄漏。
+每次使用 "材料" 时，Unity 都将创建新的材料，这会导致内存泄漏（如果未正确清理）。
 
 #### <a name="dont"></a>不要
 
@@ -671,34 +671,34 @@ public class MyClass
 ```
 
 > [!NOTE]
-> 或者，使用 Unity 的"SharedMaterial"属性，该属性不会每次引用材料时都创建新材料。
+> 或者，使用 Unity 的 "SharedMaterial" 属性，该属性在每次引用它时不会创建新的材料。
 
-### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>使用[平台相关](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)编译来确保Toolkit不会中断其他平台上的生成
+### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>使用[平台依赖编译](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)来确保 Toolkit 不会在另一个平台上中断生成
 
-- 使用 `WINDOWS_UWP` 以使用特定于 UWP 的非 Unity API。 这会阻止它们尝试在编辑器中或不受支持的平台中运行。 这等效于 `UNITY_WSA && !UNITY_EDITOR` ，应该用于支持 。
-- 使用 `UNITY_WSA` 使用特定于 UWP 的 Unity API，例如 `UnityEngine.XR.WSA` 命名空间。 当平台设置为 UWP 时，这将在编辑器中运行，在内置 UWP 应用中运行。
+- 使用 `WINDOWS_UWP` 来使用 UWP 特定的非 Unity api。 这会阻止它们尝试在编辑器中或不受支持的平台上运行。 这等效于 `UNITY_WSA && !UNITY_EDITOR` 并且应使用来取代。
+- 使用 `UNITY_WSA` 可以使用 UWP 特定的 Unity api，如 `UnityEngine.XR.WSA` 命名空间。 当平台设置为 UWP 时，以及在生成的 UWP 应用中，这将在编辑器中运行。
 
-此图表可帮助你根据用例和预期生成设置决定 `#if` 使用哪个。
+此图表可帮助你根据 `#if` 自己的用例和所需的生成设置来决定要使用哪个版本。
 
 |平台 | UWP IL2CPP | UWP .NET | 编辑器 |
 | --- | --- | --- | --- |
-| `UNITY_EDITOR` | 错误 | False | True |
+| `UNITY_EDITOR` | False | False | True |
 | `UNITY_WSA` | True | True | True |
 | `WINDOWS_UWP` | True | True | False |
 | `UNITY_WSA && !UNITY_EDITOR` | True | True | False |
-| `ENABLE_WINMD_SUPPORT` | True | True | 错误 |
-| `NETFX_CORE` | False | True | 错误 |
+| `ENABLE_WINMD_SUPPORT` | True | True | False |
+| `NETFX_CORE` | False | True | False |
 
-### <a name="prefer-datetimeutcnow-over-datetimenow"></a>首选 DateTime.UtcNow，而首选 DateTime.Now
+### <a name="prefer-datetimeutcnow-over-datetimenow"></a>优先使用日期时间 UtcNow。当前
 
-DateTime.UtcNow 比 DateTime.Now 更快。 在以前的性能调查中，我们发现使用 DateTime.Now 会增加大量开销，尤其是在 Update () 循环中。 [另一些则出现相同的问题](https://stackoverflow.com/questions/1561791/optimizing-alternatives-to-datetime-now)。
+UtcNow 的速度比日期时间快。 在之前的性能调查中，我们发现使用日期时间。现在增加了大量开销，尤其是在更新 () 循环中使用时。 [其他人遇到了相同的问题](https://stackoverflow.com/questions/1561791/optimizing-alternatives-to-datetime-now)。
 
-首选使用 DateTime.UtcNow，除非实际需要本地化时间 (原因可能是你想要在用户的时区显示当前时间) 。 如果要处理相对时间 (即某些上次更新和现在) 之间的增量，则最好使用 DateTime.UtcNow 以避免执行时区转换的开销。
+首选使用 UtcNow，除非你实际需要本地化时间 (合理的原因可能是你想要在用户的时区) 中显示当前时间。 如果您处理的是相对时间 (即，一些最后一个更新与现在) 之间的差异，则最好使用 UtcNow 来避免执行时区转换的开销。
 
 ## <a name="powershell-coding-conventions"></a>PowerShell 编码约定
 
-MRTK 代码库的子集将 PowerShell 用于管道基础结构和各种脚本和实用程序。 新的 PowerShell 代码应遵循 [PoshCode 样式](https://poshcode.gitbooks.io/powershell-practice-and-style/)。
+MRTK 基本代码的子集为管道基础结构和各种脚本和实用工具使用 PowerShell。 新 PowerShell 代码应遵循 [PoshCode 样式](https://poshcode.gitbooks.io/powershell-practice-and-style/)。
 
 ## <a name="see-also"></a>另请参阅
 
- [MSDN 中的 C# 编码约定](/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+ [MSDN 中的 c # 编码约定](/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)

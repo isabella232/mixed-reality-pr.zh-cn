@@ -6,12 +6,12 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: JavaScript，WebXR，WinMR，WebAR，WebVR，WindowsMixedReality，HoloLens，windows mixed reality，web vr，web xr，web mr，web ar，360，360视频，360视频，360照片，360照片，360内容，沉浸式 web，沉浸式 web，IW，immersiveweb
-ms.openlocfilehash: 311241d9dec6f5d086a45766c040b1b2b9eb4128
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: de6314b5651740eca23a9078d4b05e1d92344d1742ea433d7b924cbde4457b8c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394341"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210491"
 ---
 # <a name="javascript-development-overview"></a>JavaScript 开发概述
 
@@ -19,7 +19,7 @@ JavaScript 是世界上最常用的编程语言之一！ 它在 web 上简单、
 
 ## <a name="mixed-reality-applications-on-the-web"></a>Web 上的混合现实应用程序
 
-混合现实功能在 web 上可通过使用 [WebXR](webxr-overview.md)来使用。 你可以查看虚拟现实 (VR) 并在已启用兼容 WebXR 的浏览器中 (AR) 内容，而无需安装任何其他软件或插件。 可以将该浏览器与与 HoloLens 2 类似的物理设备一起使用。 有关更多详细信息，请查看我们的 [WebXR](webxr-overview.md) 文档。
+混合现实功能在 web 上可通过使用 [WebXR](webxr-overview.md)来使用。 你可以查看虚拟现实 (VR) 并在已启用兼容 WebXR 的浏览器中 (AR) 内容，而无需安装任何其他软件或插件。 可以将该浏览器与 HoloLens 2 等物理设备一起使用。 有关更多详细信息，请查看我们的 [WebXR](webxr-overview.md) 文档。
 
 > [!NOTE]
 > **WebVR** 已被弃用，并且在当前浏览器中不可用，因此不应将其用于任何新的开发。 需要将任何现有的 **WebVR** 实现迁移到 **WebXR**。

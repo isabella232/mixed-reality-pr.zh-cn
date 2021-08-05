@@ -1,135 +1,135 @@
 ---
 title: 手部指导
-description: 了解当系统未检测到要帮助帮助的用户时，如何使用手型指导触发3D 手势。
+description: 了解当系统检测不到用户手来帮助他们时，如何使用手部指导触发 3D 手部。
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
-keywords: Windows Mixed Reality，设计，手型指导，沉浸式耳机，MRTK，双手，帮助双手，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 0fe0d87e26d06838c0d1b7935573d9bd8ce258ee
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: Windows Mixed Reality、设计、手部指导、沉浸式头戴显示设备、MRTK、手部、帮助手、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、MRTK、混合现实Toolkit
+ms.openlocfilehash: baf1dab7d73f4e5fca9078717b43dab7b71632f4aa7c36dcac280c029b05d58b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600426"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208484"
 ---
 # <a name="hand-coach"></a>手部指导
 
-![示例：手型指导](images/HandCoach/MRTK_handCoach.jpg)<br>
+![示例：手部教练](images/HandCoach/MRTK_handCoach.jpg)<br>
 
-当系统未检测到用户的手时，手动指导会触发3D 建模。 此功能是一个 "教学" 组件，可帮助用户在未教授手势时引导用户。 如果用户没有在某个时间段完成指定的手势，则会循环一段时间。 手型指导可用于表示按下按钮或选取全息图标。  
+当系统检测不到用户的手时，手部教练会触发三维建模手部。 此功能是一个"教学"组件，可帮助在未教授手势时指导用户。 如果用户有一段时间未执行指定的手势，手会以延迟循环。 手部指导可用于表示按下按钮或选取全息影像。  
 
-## <a name="hand-coach-provided"></a>手写指导
+## <a name="hand-coach-provided"></a>提供手部指导
 
-当前交互模型表示各种手势控件，例如滚动、远选和点击显示。 下面是<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets"> MRTK</a>中提供的现有手型手势的完整列表：
+当前交互模型表示各种手势控件，例如滚动、远点选择和近点击。 下面是<a href="https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets"> MRTK</a>中提供的现有手势的完整列表：
 
 :::row:::
     :::column:::
-       ![接近选择的示例](images/HandCoach/NearSelect.gif)<br>
-       **接近选择使用的示例显示如何选择按钮或关闭种不可交互对象**<br>
+       ![Near Select 的示例](images/HandCoach/NearSelect.gif)<br>
+       **"近选 - 已用"示例显示如何选择按钮或关闭可交互对象**<br>
     :::column-end:::
     :::column:::
-       ![空中点击的示例](images/HandCoach/AirTap.gif)<br>
-        **空中点击的示例-用于显示如何选择远距离的对象**<br>
+       ![Air Tap 示例](images/HandCoach/AirTap.gif)<br>
+        **Air Tap 示例 - 用于显示如何选择远离的对象**<br>
     :::column-end:::
     :::column:::
        ![移动示例](images/HandCoach/Move.gif)<br>
-       **将对象移动到空间的示例-用于显示如何在空间中移动全息图**<br>
+       **在空间中移动对象的示例-用于显示如何在空间中移动全息影像**<br>
     :::column-end:::
     :::column:::
        ![旋转示例](images/HandCoach/Rotate.gif)<br>
-       **演示如何旋转全息影像或对象的 Rotate-Used 示例**<br>
+       **显示Rotate-Used全息影像或对象的示例**<br>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
        ![缩放示例](images/HandCoach/Scale.gif)<br>
-       **缩放示例-用于显示如何操作更大或更小的全息影像**<br>
+       **缩放示例 - 用于显示如何操作放大或缩小全息影像**<br>
     :::column-end:::
     :::column:::
-       ![手掌的示例](images/HandCoach/PalmUp.gif)<br>
-        **掌上-建议使用的示例，用于引入手菜单**<br>
+       ![Palm Up 示例](images/HandCoach/PalmUp.gif)<br>
+        **Hand up 示例 - 建议用于显示手部菜单**<br>
     :::column-end:::
     :::column:::
-       ![HandFlip 的示例](images/HandCoach/HandFlip.gif)<br>
-       **示例-用于打开手形菜单的另一种方式**<br>
+       ![HandFlip 示例](images/HandCoach/HandFlip.gif)<br>
+       **手部翻转图 – 显示手部菜单的另一种方法**<br>
     :::column-end:::
     :::column:::
-       ![滚动示例](images/HandCoach/Scoll.gif)<br>
-       **滚动示例–用于滚动列表或长文档**<br>
+       ![Scroll 示例](images/HandCoach/Scoll.gif)<br>
+       **滚动示例 - 用于滚动列表或长文档**<br>
     :::column-end:::
 :::row-end:::
 
 ## <a name="design-concepts"></a>设计概念
 
-对于 Hololens2，我们基于 instinctual 和自然手势设计出了手动交互。 我们认为这对于大多数用户来说是直观的，因此我们不会创建专用的手势学习时间。 相反，我们创建了手形指导，帮助用户了解有关这些手势的问题，或者不熟悉全息图交互。 如果没有学习，我们认为向用户展示如何执行操作，这是最佳选择。 我们发现用户能够找出手势，但需要一些指导。 如果检测到用户不能在某个时间段内与对象交互，则会触发一则手指导，演示正确的抓手和 finger 位置。 
+对于 Hololens2，我们基于感觉和自然手势设计出手部交互。 我们认为这些对大多数用户都是直观的，因此我们没有创建专用的手势学习时刻。 相反，我们创建了手部指导，以帮助用户了解这些手势（如果用户停滞或不熟悉全息影像交互）。 如果没有学习时间，我们认为向用户展示如何通过演示操作来执行此操作是最佳选择。 我们发现用户能够找出手势，但需要一些指导。 如果检测到用户在一段时间内未与对象交互，则手部指导将触发演示正确的手部和手指放置。 
 
 ### <a name="intuitive"></a>直观
 
-动画处理时，应该很明显，不会造成任何混淆。 手型动画是尝试提示用户理解的手势的表示形式。 
+对手进行动画效果时，它应该是明显的，不应引起任何混淆。 手部动画是尝试提示用户理解的手势的表示形式。 
 
-例如，如果希望用户按下某个按钮，则会触发按下按钮的一只手。
+例如，如果希望用户按下按钮，将触发按下按钮的手动操作。
 
-![示例：点击点击](images/HandCoach/NearSelect_unity.gif)<br>
-*演示附近点击 Gem 的指导*  
+![示例：手部教练近点击](images/HandCoach/NearSelect_unity.gif)<br>
+*手部指导演示接近点击 Gem*  
 
 ### <a name="hand-scale"></a>手动缩放
 
-我们使用 UI 菜单测试了各种手大小，并感觉到，如果想要调整规模，就会 menacing。 如果它们太小，则很难查看和理解手势。 
+我们使用 UI 菜单测试了各种手部大小，并认为如果手的大小正确，则它会提供一种感觉。 如果它们太小，很难看到和理解手势。 
 
-**语音和手**
+**语音和手部**
 
-不要指望用户可以通过语音来侦听一组说明，并通过手动指导观看不同说明。 序列化说明，帮助用户专注于争用，从而减少传感器的过载。
+不要期望用户可以通过语音呼叫来侦听一组说明，通过手部指导观看不同的说明。 对说明进行排序，以帮助用户专注于减少传感器过载，而不是吸引他们的注意。
 
 
-## <a name="can-i-create-my-own"></a>我能创建自己的吗？
+## <a name="can-i-create-my-own"></a>我可以创建自己的吗？
 
-会！ 我们鼓励你为游戏创建自己的独特手势，并向社区提供反馈！
-我们提供了一个可用于你的应用的 Rigged 的 Maya 文件，可在此处下载 <a href="files/HandCoach_MRTK.zip"> HandCoach_MRTK.zip </a>
+是！ 我们鼓励你为游戏创建自己的独特手势，并返回社区！
+我们提供了一个可用于应用的"伪造手"Maya 文件，可在此处下载：下载HandCoach_MRTK.zip <a href="files/HandCoach_MRTK.zip"></a>
 
-![在 Maya 中进行动画处理的示例](images/HandCoach/MayaSelect_Gif.gif)<br>
-*Maya 中闲逛的动画手形的示例*
+![Maya 中动画手的示例](images/HandCoach/MayaSelect_Gif.gif)<br>
+*Maya 中对框进行动画处理的示例*
 
 
 **推荐的创作工具**
 
-在三维音乐家之间，很多选择使用 [Autodesk 的 Maya，它可以使用 HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) 来转换资产的创建方式。 提供的免提文件是一个 Maya 二进制文件，因此建议使用 Maya 来动画和导出手。 如果希望使用其他三维程序，请参阅 <b>。FBX</b>： <a href="files/HandCoachMRTK_FBX.zip"> 下载 HandCoachMRTK_FBX.zip </a> 来创建自己的控制器设置。 
+在 3D 艺术家中，许多选择使用 Autodesk 的[Maya，](https://www.youtube.com/watch?v=q0K3n0Gf8mA)这可以使用 HoloLens来转换资产的创建方式。 提供的手部文件是 Maya 二进制文件，因此建议使用 Maya 对手进行动画处理和导出。 如果希望使用另一个 3D 程序，下面是一个<b>。FBX：</b><a href="files/HandCoachMRTK_FBX.zip">下载HandCoachMRTK_FBX.zip</a>以创建自己的控制器设置。 
 
-如果使用提供的可下载 maya 手型文件，则建议将 unity 向下扩展到0.6。
+如果使用提供的可下载 maya 手动文件，建议将 Unity 中的手缩小到 0.6。
 
-![示例： Maya 中的手型指导远程测试机组](images/HandCoach/MayaExample.png)<br>
-*Rigged*
+![示例：Maya 中的手部教练平台](images/HandCoach/MayaExample.png)<br>
+*被操纵的手*
 
-### <a name="technical-specs"></a>技术规格
+### <a name="technical-specs"></a>技术规范
 
-*   Maya Ascii 格式提供两个文件
-*    Right 和左手提供 Maya 二进制格式
+*   两手文件以 Maya Ascii 格式提供
+*    右侧和左侧以 Maya 二进制格式提供
 *   将 Maya 文件设置为 24 FPS
-*   在该文件中，有一个左手的右手，可用于两个右手或单面手势。 仅在默认情况下，才会显示右手。
-*   建议在开始和结束时留出大约10帧的缓冲区来淡化
-*   如果对具有指定目标的对象进行动画处理，则其最佳方案为动态到默认框或 Null。
-*   如果要对物理对象（例如 box）进行动画处理，最佳做法是不在 Maya 中对转换进行动画处理，而是等待在 Unity 中或代码中对其进行动画处理。
-*   对于要传达的任何有意义的信息，可见动画应为1.5 秒
-*   如果你对动画感到满意：
-    *   选择所有接头和制作关键帧
-    *   删除控制器，选择接头和网格，并将其导出为 FBX
-    *  如果有多个动画，可以使用 Maya 的内置游戏导出程序： https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
+*   在 文件中，有一个左右手，可用于两个手势或单手手势。 默认情况下，只有右侧可见。
+*   建议在渐变的开头和结尾保留大约 10 帧的缓冲区
+*   如果对具有指定目标的对象进行动画处理，最佳做法是动画处理为"默认"框或 Null。
+*   如果手对物理对象（如框）进行动画处理，最佳做法是在 Maya 中不对翻译进行动画处理，而是等待在 Unity 或 Code 中对其进行动画处理。
+*   可见动画应为 1.5 秒，才能传达任何有意义的信息
+*   对动画感到满意时：
+    *   选择所有连接和烘焙关键帧
+    *   删除控制器，选择连接和网格，并导出为 FBX
+    *  如果有多个动画，可以使用 Maya 的内置游戏导出器： https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
 
 ## <a name="exporting-from-maya"></a>从 Maya 导出
 
-对动画满意后
-* 选择所有接头：选择 > 层次结构
+对动画感到满意后
+* 选择所有连接：选择>层次结构
 
      ![示例：菜单中的层次结构](images/HandCoach/Hierarchy.png)<br>
-* 制作动画：切换到动画 > 键 > 制作动画
+* 烘焙动画：切换到"动画">">制作动画"
 
-     ![示例：制作动画菜单位置](images/HandCoach/BakeAnimation.png)<br>
-* 删除控制器远程测试机组： Outliner > MainR_Grp 或 MainL_Grp
+     ![示例：烘培动画菜单位置](images/HandCoach/BakeAnimation.png)<br>
+* 删除控制器控制程序：大纲> MainR_Grp或MainL_Grp
 
-     ![示例：控制器 Rig 菜单位置](images/HandCoach/ControllerRig.png)<br>
+     ![示例：控制器设备菜单位置](images/HandCoach/ControllerRig.png)<br>
 
-* 导出为 FBX：选择 .JNT + 网格： File > 导出所选内容 (选项框) > 导出选定内容
+* 导出为 FBX：选择"JNT + 网格：文件>导出选定内容 (选项框) >导出选择"
 
      ![示例：导出选择菜单位置](images/HandCoach/OptionBox.png)<br>
 
@@ -138,47 +138,47 @@ ms.locfileid: "110600426"
      ![示例：导出选项菜单位置](images/HandCoach/FBXSelection.png)<br>
 
 
- 导出为 FBX 并将其放入 Unity 时，将指针向下缩放到0.6。 我们发现这非常适合显示手。 
+ 导出为 FBX 并导入 Unity 时，将手缩小到 0.6。 我们发现，这非常适合用于显示手部。 
 
-![示例： Unity 设置](images/HandCoach/HandHintScale.png)<br>
-*在 MRTK 中找到 HandCoach_R prefab 的 Unity 设置*
+![示例：Unity 设置](images/HandCoach/HandHintScale.png)<br>
+*在 MRTK 设置中HandCoach_R预制的 Unity HandCoach_R*
 
 
-## <a name="implementing-hands-into-your-unity-project"></a>实现对 Unity 项目的动手
+## <a name="implementing-hands-into-your-unity-project"></a>将手部实现到 Unity 项目中
 
 ### <a name="best-practices"></a>最佳实践
 
-* 建议将 unity 向下扩展到0。6
-* 应播放两次，如果未完成，则连续循环，直到手势完成。 应循环访问两次，以确保用户有时间注册并查看手势。 指针应在循环之间淡入和淡出。 
- *  如果用户的手在 HL2 摄像头中可见，但用户不会进行所需的交互，则会在10秒后出现。
-*   如果 HL2 照相机看不到用户的手，则会在5秒后出现指针。  
-*   如果动画中间的 HL2 相机明显跟踪用户的手，动画将完成并淡出。
-*   如果要包括语音，则建议将其对应于手的手势。
-*   如果已教手至少一次，则仅在检测到用户卡住时重复手势。
-*   如果特定手指/手部位置至关重要，请确保用户可以清楚地了解动画中的这些细微差别。 尝试将手放在一起，使最重要的部分清晰可见。 
-* 如果发现手部扭曲，则需要转到 Unity 的"质量"设置，增加双手的数量。 
- 转到 Unity 的"编辑">项目设置>"质量>其他>"混合权重"。 确保已选择"4 个关节"，以查看平滑联合。
+* 建议将 Unity 中的手缩小到 0.6
+* 手应播放两次，如果未完成，则持续循环，直到手势完成。 手应循环两次，以确保用户有时间来注册并查看手势。 手应在循环之间淡入和淡出。 
+ *  如果用户的手在 HL2 相机中可见，但用户没有执行所需的交互，则手将在 10 秒后出现。
+*   如果用户的手在 HL2 相机中不可见，则手将在 5 秒后显示。  
+*   如果动画中间的 HL2 相机可明显跟踪用户的手部，则动画将完成并淡出。
+*   如果要包括语音呼叫，建议它对应于手部手势。
+*   如果你至少已经教授了一次，则只会在其检测到用户停滞时重复手势。
+*   如果特定的 finger 位置是关键的，请确保用户可以清楚地查看动画中的这些差异。 尝试右倾，以清楚地显示最重要的部分。 
+* 如果你注意到了手上的扭曲，则需要中转到 Unity 的质量设置以增加骨骼数量。 
+ 中转到 Unity 的编辑 > Project 设置 > 质量 > 其他 > 混合权重。 请确保选择 "4 骨骼" 以查看平滑联接。
 
-   ![示例："项目设置"窗口](images/HandCoach/ProjectSettings.png)<br>
+   ![示例： Project 设置 "窗口](images/HandCoach/ProjectSettings.png)<br>
 
 
 ### <a name="what-to-avoid"></a>要避免的内容
 
-* 缩放手部太大
-* 将手放在离用户太近
-* 手只应教授一次。 过度教学可能会导致混淆和混乱
-* 将 MRTK 引入 Unity，请在此处下载最新的 MRTK： https://github.com/microsoft/MixedRealityToolkit-Unity
-  * 材料：Teaching_Hand2
-  * 脚本：请参阅 MRTK 手 <a href= "/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-coach"> 部指导的 MRTK 指南 </a>
+* 将指针放大太大
+* 将指针放在靠近用户的附近
+* 只需教授一次。 优于教授会导致混淆和麻烦
+* 将它引入 Unity，在此处下载最新的 MRTK： https://github.com/microsoft/MixedRealityToolkit-Unity
+  * 材料： Teaching_Hand2
+  * 脚本：请参阅<a href= "/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-coach">MRTK 手型指导</a>的 MRTK 准则
   * 每项目设置
-    * 场景设置为 UWP：可以在配置 [Unity Project for](../develop/unity/Configure-Unity-Project.md) Windows Mixed Reality
+    * 场景设置为 UWP：说明可在[配置 Unity Project](../develop/unity/Configure-Unity-Project.md)上找到 Windows Mixed Reality
 
 ## <a name="see-also"></a>另请参阅
 
-* [交互基础](interaction-fundamentals.md)
+* [交互-基础](interaction-fundamentals.md)
 * [资产创建过程](asset-creation-process.md)
 * [笔势](./interaction-fundamentals.md)
 * [安装工具](../develop/install-the-tools.md)
-* [配置 Unity 项目](../develop/unity/Configure-Unity-Project.md)
+* [配置 Unity Project](../develop/unity/Configure-Unity-Project.md)
 * [Unity 开发概述](../develop/unity/unity-development-overview.md)
 * [MRTK 101](/windows/mixed-reality/mrtk-unity/)

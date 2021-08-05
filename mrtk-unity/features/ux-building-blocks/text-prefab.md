@@ -1,18 +1,18 @@
 ---
-title: 文本预制
+title: 文本预制件
 description: MRTK 中的 TextPrefab 概述
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， TMP，
-ms.openlocfilehash: 1839109043cfad9a20697c5d6526b349fd7ea2e4
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1969bc9e3054fec509e9f7d536cbfe4b97e43563e26ba5476601e78e65ad24f9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175645"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209043"
 ---
-# <a name="text-prefab"></a>文本预制
+# <a name="text-prefab"></a>文本预制件
 
 这些预制器针对图像中的呈现质量进行了Windows Mixed Reality。 有关详细信息，请阅读 Microsoft Windows 开发人员中心 上的[Unity](/windows/mixed-reality/text-in-unity)中的文本。
 

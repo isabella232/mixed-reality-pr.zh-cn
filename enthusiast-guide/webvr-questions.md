@@ -2,13 +2,13 @@
 title: WebVR 常见问题
 description: 对于超出了标准使用者支持文档的 web 应用程序，请保持最新的混合现实故障排除。
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，WebVR
-ms.openlocfilehash: dc7a0b28e19f4f1fc029489aae2ea375e43b8d3b
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，故障排除，错误，帮助，支持，WebVR
+ms.openlocfilehash: d0f91af9cf14d8019707e504a9f8bc076bbe39db566895f17e1e56d6b906336d
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008657"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211089"
 ---
 # <a name="webvr-faqs"></a>WebVR 常见问题
 
@@ -18,7 +18,7 @@ ms.locfileid: "98008657"
 
 ## <a name="why-cant-i-use-the-mouse-in-an-immersive-webvr-view"></a>为什么无法在沉浸式 WebVR 视图中使用鼠标
 
-使用鼠标是 WebVR 规范的一项可选功能。 并非所有浏览器都支持此功能，并且并不是所有的 WebVR 内容都是为了支持鼠标输入而编写的。 WebVR 允许内容开发人员支持不同类型的输入，例如鼠标、键盘、游戏控制器或运动控制器。 鼠标输入行为因浏览器而异。 在 Microsoft Edge 中，网站作者必须确保在向耳机提供时使用 "pointerlock" 才能正常工作。
+使用鼠标是 WebVR 规范的一项可选功能。 并非所有浏览器都支持此功能，并且并不是所有的 WebVR 内容都是为了支持鼠标输入而编写的。 WebVR 允许内容开发人员支持不同类型的输入，例如鼠标、键盘、游戏控制器或运动控制器。 鼠标输入行为因浏览器而异。 在 Microsoft Edge 中，网站作者必须确保在向耳机提供时，他们需要使用 "pointerlock" 才能正常工作。
 
 ## <a name="why-cant-i-view-360-degree-videos-from-youtubefacebookvimeothe-guardian-etc-from-edge-in-vr"></a>为什么无法查看来自 Youtube/Facebook/Vimeo/监护人的360学位视频，等等
 
@@ -26,7 +26,7 @@ WebVR 规范可让网站直接从浏览器中启动 VR 体验。 这些网站的
 
 ## <a name="why-cant-i-enter-vr-from-firefox-or-chrome"></a>为什么无法通过 Firefox 或 Chrome 进入 VR
 
-目前，Windows Mixed Reality 设备目前仅支持 WebVR。
+WebVR 仅在边缘 Windows Mixed Reality 设备支持。
 
 ## <a name="when-i-enter-vr-from-a-website-why-do-i-see-a-blank-screen-in-my-headset"></a>当我从网站输入 "VR" 时，为什么我在我的耳机中看到了空白屏幕
 
@@ -41,14 +41,14 @@ WebVR 规范可让网站直接从浏览器中启动 VR 体验。 这些网站的
 
 ## <a name="can-i-use-webvr-on-the-hololens"></a>能否在 HoloLens 上使用 WebVR
 
-Microsoft 目前还没有在 HoloLens 上公布有关 WebVR 的任何信息。
+Microsoft 此时未公布 HoloLens 上有关 WebVR 的任何信息。
 
 ## <a name="why-is-my-view-at-floor-level-when-viewing-webvr-content-from-edge"></a>从边缘查看 WebVR 内容时，为什么我的视图处于地面级别
 
-网站未正确支持 Windows Mixed Reality 耳机。 要解决此问题：
+网站无法正确支持 Windows Mixed Reality 耳机。 要解决此问题：
 
 1. 将耳机置于空间的基底。
-2. 使用 Microsoft Edge 在桌面上导航到 WebVR 页面， (不在混合现实) 内。
+2. 使用桌面上的 Microsoft Edge 导航到 WebVR 页面， (不在混合现实) 内。
 3. 选择 "Enter VR"。
 4. 等待5到10秒，以完全进入沉浸式模式。
 5. 戴上耳机。
@@ -66,10 +66,10 @@ Microsoft 目前还没有在 HoloLens 上公布有关 WebVR 的任何信息。
 
 ## <a name="why-cant-i-hear-audio-on-a-particular-webvr-experience"></a>为什么无法在特定的 WebVR 体验中听到音频
 
-网站可能使用的是 Microsoft Edge 当前不支持的 OGG 音频文件格式。
+网站可能使用的是 OGG 音频文件格式，Microsoft Edge 当前不支持此格式。
 
-你可以在 [问题跟踪](https://developer.microsoft.com/microsoft-edge/platform/issues/)程序中直接向 Microsoft Edge 浏览器团队报告断开的网站，也可以通过 twitter 使用 [#EdgeBug 井号标签](https://blogs.windows.com/msedgedev/2016/08/11/edgebug-twitter/)来向其报告。
+您可以在[问题跟踪](https://developer.microsoft.com/microsoft-edge/platform/issues/)程序中直接向 Microsoft Edge browser 团队报告已断开的站点，或使用[#EdgeBug 井号标签](https://blogs.windows.com/msedgedev/2016/08/11/edgebug-twitter/)向 twitter 报告。
 
 ## <a name="why-does-haptic-feedback-not-work-in-webvr-with-motion-controllers"></a>为什么 haptic 反馈在 WebVR 中不能与运动控制器一起使用
 
-Microsoft Edge 目前不支持 WebVR 游戏板 API 扩展上的 haptics。
+Microsoft Edge 当前不支持 WebVR 游戏板 API 扩展上的 haptics。

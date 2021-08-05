@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 3f65fa90279e9a10c1aad9bd46f02233808936b8
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: 97ef4f466355f39e01ce0b916b4d0f45fb4c40f3fd6f0cb001b1bcccb35740eb
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647008"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188017"
 ---
 ![虚拟蜂鸟与人手](mixed-reality-docs/mr-dev-docs/discover/images/01_MixedReality.png)
 
 欢迎使用混合现实文档，这是 Microsoft 中所有 MR、VR 和 AR 内容的地方！
 
-## <a name="contributing"></a>供稿
+## <a name="contributing"></a>贡献
 
 如果要参与或更新文档内容，请确保拉取请求面向正确的子文档集 (mr-dev-docs、mr-dev-guide 等) 。 新参与者应查看每个子设置的详细贡献准则：
 
@@ -19,13 +19,13 @@ ms.locfileid: "110647008"
 
 对于与文档相关的问题，请使用每个文档底部的页脚，或直接提交 [到 MicrosoftDocs/mixed-reality/issues](https://github.com/MicrosoftDocs/mixed-reality/issues)。
 
-请随意通过 Teams 或电子邮件将有关贡献策略或流程的任何问题发送给用户（即用户）或 Sean Kerawala。 
+请随意通过电子邮件或电子邮件将有关贡献策略或流程的任何问题发送到用户或 Sean Kerawala Teams。 
 
 ## <a name="getting-started"></a>入门 
 
 我们文档的每一条路径都有一个策展之旅，可帮助你找到你的家。 无论是设计、开发还是将应用分发到全球，我们都已介绍你。 
 
-### <a name="mixed-reality-for-hololens"></a>HoloLens 混合现实
+### <a name="mixed-reality-for-hololens"></a>混合现实HoloLens
 
 建议从混合 **现实基础知识开始，** 然后从以下位置继续：
 

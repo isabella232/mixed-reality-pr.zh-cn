@@ -1,33 +1,33 @@
 ---
 title: 凝视和停留
-description: 大致概述混合现实应用程序的眼睛和头盔输入模型。
+description: 大致了解混合现实应用程序的眼睛和头部凝视和停留输入模型。
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: Mixed Reality，注视，停留，交互，设计，眼睛跟踪，头跟踪，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: aa4fceeb8875da89fd7f84c3709ff6db07fd96f4
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: 混合现实， 凝视， 停留， 交互， 设计， 眼动跟踪， 头部跟踪， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实 Toolkit
+ms.openlocfilehash: c65c13b06df70ed5471b283ad349dd72e1575018a98913177983d7a13571d666
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582129"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213671"
 ---
 # <a name="gaze-and-dwell"></a>凝视和停留
 
 手拿工具和零件，手势可能是没有意义或无法实现。
-在某些上下文中，语音命令也可能不可靠，例如在过大的情况下。
-注视和停留提供了一种熟悉且易于掌握的机制，用于在 HoloLens 上完成工作和无人参与。
-此外，注视和停留是一个很好的回退，这与操作环境中的干扰干扰或静默约束无关。
-我们区分 _注视和停留_ 区的两个变体： [打印头和](gaze-and-dwell-head.md) 停留区， [注视眼睛和停留](gaze-and-dwell-eyes.md)区。
+在某些上下文中，语音命令也不可靠，例如，在过于朗读的情况下。
+凝视和停留提供了一种熟悉且易于掌握的机制，用于进行头部启动和HoloLens。
+此外，凝视和停留是一种很好的回退，与操作环境中干扰或静音约束无关。
+我们区分凝视和停留的两种 _变体_： [头部凝](gaze-and-dwell-head.md) 视和停留 [以及眼睛凝视和停留](gaze-and-dwell-eyes.md)。
 
 ## <a name="scenarios"></a>方案
 
-注视和停留在某个人的 transact-sql 与其他任务繁忙的情况下，以及因环境或社交限制而导致的语音不是100%。
+在一个人手正忙于执行其他任务，并且由于环境或社会约束，语音并非 100% 可靠或可用的情况下，凝视和停留功能非常出色。
 一个很好的例子是穿戴 HoloLens 的人在修理汽车发动机时获取参考信息。
 倚靠在发动机舱内时，他们的手拿着工具或支撑着身体。
 车库空间很大，工具不断敲打声和嘈杂声，难以使用语音命令。
-注视和停留允许使用 HoloLens 的人员自信地浏览其参考材料，而不会中断工作流。
+凝视和停留可让使用HoloLens人员自信地导航其参考资料，而不会中断其工作流。
 
 ## <a name="device-support"></a>设备支持
 

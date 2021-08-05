@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/24/2021
 ms.topic: article
 keywords: mixedrealitytoolkit，mixedrealitytoolkit，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity
-ms.openlocfilehash: c69576e991f3fe32ae69fce10069ecdae65b3f9a
-ms.sourcegitcommit: e380d56f5504be4e4f069394a58cf0147eb33b66
+ms.openlocfilehash: 7d22ccee301345352ae384f8b237415f925bbd254e0923197130caf48540c171
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2021
-ms.locfileid: "113603678"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210852"
 ---
 # <a name="choosing-a-unity-version-and-xr-plugin"></a>选择 Unity 版本和 XR 插件
 

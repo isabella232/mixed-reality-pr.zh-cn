@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21c29b2c8d540378259200cc834f7a36065f8ab3
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: ec1246085989b4b157504e9b8551694d6116e6f08789fa669200e5425ef75cc6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581099"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187260"
 ---
 # <a name="426"></a>[4.26](#tab/426)
 
@@ -57,11 +57,11 @@ enum class EWMRHandKeypoint : uint8
 };
 ```
 
-您可以在 [HandJointKind](/uwp/api/windows.perception.people.handjointkind) 表中找到每个枚举用例的数值。
+可以在 Windows 中查找每个枚举用例的数值[。HandJointKind](/uwp/api/windows.perception.people.handjointkind)表。
 
 ### <a name="supporting-hand-tracking"></a>支持手动跟踪
 
-可以通过在 **Windows Mixed Reality > 手动** 跟踪中添加 **支持手动** 跟踪，在蓝图中使用手动跟踪：
+可以通过在 **Windows Mixed Reality** 中添加 > 的手动 **跟踪，** 在蓝图中使用手动跟踪：
 
 ![手动跟踪最佳实践](../images/unreal/hand-tracking-bp.png)
 

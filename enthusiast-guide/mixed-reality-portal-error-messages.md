@@ -1,51 +1,51 @@
 ---
 title: 混合现实门户错误消息
-description: 高级 Windows Mixed Reality 门户消息疑难解答，超出了标准使用者支持文档的范围。
+description: 高级Windows Mixed Reality门户消息故障排除，超出了标准使用者支持文档。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，混合现实门户
+keywords: Windows Mixed Reality， 混合现实， 虚拟现实， VR， MR， 故障排除， 错误， 帮助， 支持， 混合现实门户
 appliesto:
 - Windows 10
-ms.openlocfilehash: 2beb063afb3aea5f44be116e6cb906312447dbd8
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: c85030da129d90bb0a150ad50a6990e30b68c21bc7a3899c4182e87acd4b4fa5
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726038"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115186867"
 ---
 # <a name="mixed-reality-portal-error-messages"></a>混合现实门户错误消息
 
-## <a name="i-got-a-something-went-wrong-error-message-or-im-having-problems-in-the-mixed-reality-portal"></a>我收到 "出现错误" 的错误消息，或在混合现实门户中遇到问题。
+## <a name="i-got-a-something-went-wrong-error-message-or-im-having-problems-in-the-mixed-reality-portal"></a>我收到"出错"错误消息，或者遇到问题混合现实门户。
 
-重启 Windows Mixed Reality：
-1. 从电脑拔下耳机电缆。
+重启Windows Mixed Reality：
+1. 将两条头戴显示设备电缆与电脑断开连接。
 2. 重启你的电脑。
-3. 重新连接耳机。
+3. 重新连接头戴显示设备。
 
-如果这不起作用，请确保电脑识别你的耳机：
+如果不起作用，请确保电脑识别头戴显示设备：
 1. 选择“启动”。
-2. 在搜索框中键入 "设备管理器"，并在列表中选择它。 
-3. 展开 "Mixed reality 设备"，并查看是否列出了你的耳机。 
+2. 在搜索框中键入"设备管理器"，在列表中选择它。 
+3. 展开"混合现实设备"，查看是否列出了头戴显示设备。 
 
 如果未列出：
-1. 将耳机插入电脑上的不同端口（如果可用）。
-2. 查看 Windows 更新中的最新软件更新。
-3. 卸载并重新安装 Windows Mixed Reality：
-    1. 从电脑拔下耳机电缆。
-    2. 选择 " **设置" > 混合现实 > 卸载**"。
-    3. 选择 " **设置" > 设备 > 蓝牙 & "其他设备** " 以取消配对运动控制器。 选择每个控制器，然后选择 "删除设备"。
-    4. 将您的耳机插回您的 PC 上，重新安装 Windows Mixed Reality。
+1. 将头戴显示设备插入电脑上的不同端口（如果可用）。
+2. 检查更新中的最新Windows更新。
+3. 卸载并重新安装Windows Mixed Reality：
+    1. 将两条头戴显示设备电缆与电脑断开连接。
+    2. 选择 **"设置 >混合现实>卸载"。**
+    3. 选择 **设置 >设备> 蓝牙 &其他设备** 来配对运动控制器。 选择每个控制器，然后选择"删除设备"。
+    4. 将头戴显示设备插入电脑，重新安装Windows Mixed Reality。
     
-## <a name="im-getting-a-check-your-usb-cable-error-message"></a>我收到 "检查 USB 电缆" 错误消息。
+## <a name="im-getting-a-check-your-usb-cable-error-message"></a>我收到"检查 USB 电缆"错误消息。
 
-将耳机连接到不同的 USB 端口 (，并确保它是 SuperSpeed USB 3.0) 。 同时，尝试删除耳机与计算机之间的所有扩展器或集线器。
+连接头戴显示设备连接到不同的 USB 端口 (并确保它是超速 USB 3.0) 。 此外，请尝试删除头戴显示设备与计算机之间的任何扩展程序或集线器。
 
-## <a name="im-getting-a-check-your-display-cable-error-message"></a>我收到 "检查显示电缆" 错误消息。
+## <a name="im-getting-a-check-your-display-cable-error-message"></a>我收到"检查显示电缆"错误消息。
 
-使用以下步骤解决此问题：
-* 将耳机连接到 DisplayPort 1.2 或更高版本，1.4 或者连接到或更高版本。 确保端口与电脑上最先进的图形卡相对应。
-* 如果使用的是适配器，请确保支持4K。
-* 尝试使用不同的 HDMI 端口。
-* 如果将外部监视器连接到 HDMI 端口，请尝试将其插入 DisplayPort，并将 HDMI 端口用于耳机。
+使用以下步骤排查问题：
+* 连接头戴显示设备连接到 DisplayPort 1.2 或更高版本，或将头戴显示设备连接到 1.4 或更高版本。 请确保端口与电脑上的最先进的图形卡相对应。
+* 如果使用的是适配器，请确保其支持 4K。
+* 请尝试使用不同的MIDMI 端口。
+* 如果已将外部监视器插入了一个适用于该端口的外部监视器，请尝试改为将其插入 DisplayPort，然后使用适用于头戴显示设备的外部监视器。

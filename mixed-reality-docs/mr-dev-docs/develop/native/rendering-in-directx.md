@@ -1,43 +1,43 @@
 ---
 title: 在 DirectX 中渲染
-description: 了解如何在适用于 Windows Mixed Reality 的 DirectX 应用程序中更新和呈现内容。
+description: 了解如何在 DirectX 应用程序中更新和呈现内容，Windows Mixed Reality。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
-keywords: Windows Mixed Reality，全息影像，呈现，3D 图形，HolographicFrame，render 循环，更新循环，演练，示例代码，Direct3D
-ms.openlocfilehash: f62df75f8febc3f3ee6e7c98f2c8fd91082a4466
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Windows Mixed Reality、全息影像、渲染、3D 图形、全息帧、呈现循环、更新循环、演练、示例代码、Direct3D
+ms.openlocfilehash: 2c3dd32f5782d6096c6560ec6db55ef1cc7bb533dddb0a4b5fe87cd91bb2f81b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583782"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209445"
 ---
 # <a name="rendering-in-directx"></a>在 DirectX 中渲染
 
 > [!NOTE]
-> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
+> 本文与旧版 WinRT 本机 API 相关。  对于新的本机应用项目，建议使用 **[OpenXR API](openxr-getting-started.md)**。
 
-Windows Mixed Reality 建立在 DirectX 之上，为用户生成丰富的3D 图形体验。 呈现抽象只是在 DirectX 之上，这使应用程序可以考虑到系统预测的全息屏幕观察器的位置和方向。 然后，开发人员可以基于每个照相机查找其全息影像，让应用在用户四处移动时在各种空间坐标系统中呈现这些全息影像。
+Windows Mixed Reality在 DirectX 上构建，为用户生成丰富的 3D 图形体验。 渲染抽象位于 DirectX 的正上方，使应用能够思考系统预测的全息场景观察程序的位置和方向。 然后，开发人员可以基于每个相机定位其全息影像，让用户在用户四处移动时，在各种空间坐标系中渲染这些全息影像。
 
-注意：本演练介绍 Direct3D 11 中的全息着色。 Direct3D 12 Windows Mixed Reality 应用模板还随混合现实应用程序模板扩展一起提供。
+注意：本演练介绍 Direct3D 11 中的全息渲染。 Direct3D 12 Windows Mixed Reality应用模板也随混合现实应用模板扩展一起提供。
 
 ## <a name="update-for-the-current-frame"></a>更新当前帧
 
-若要更新全息影像的应用程序状态，每帧一次，应用将：
-* 从显示管理系统中获取 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 。
-* 将场景更新为当前预测，即在完成呈现时相机视图将在何处。 请注意，全息场景可以有多个相机。
+若要更新全息影像的应用程序状态，每个帧一次，应用将：
+* 从<a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">显示管理系统获取 HolographicFrame。</a>
+* 使用渲染完成后相机视图位置的当前预测更新场景。 请注意，全息场景可以有多个相机。
 
-若要呈现到全息相机视图，每帧一次，应用将：
-* 对于每个照相机，使用系统中的相机视图和投影矩阵呈现当前帧的场景。
+若要呈现到全息相机视图，应用将按帧呈现一次：
+* 对于每个相机，使用系统的相机视图和投影矩阵呈现当前帧的场景。
 
 ### <a name="create-a-new-holographic-frame-and-get-its-prediction"></a>创建新的全息帧并获取其预测
 
-<a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>包含应用程序更新和呈现当前帧所需的信息。 应用通过调用 **CreateNextFrame** 方法，开始每个新帧。 调用此方法时，将使用可用的最新传感器数据，并将其封装在 **CurrentPrediction** 对象中。
+<a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>包含应用更新和呈现当前帧所需的信息。 应用通过调用 **CreateNextFrame** 方法开始每个新帧。 调用此方法时，使用可用的最新传感器数据进行预测，并封装在 **CurrentPrediction** 对象中。
 
-对于每个呈现的帧，都必须使用新的帧对象，因为它仅对即时时间有效。 **CurrentPrediction** 属性包含照相机位置等信息。 该信息将被推入到帧应向用户显示的确切时刻。
+必须针对每个呈现的帧使用新的帧对象，因为它仅在一定的时间内有效。 **CurrentPrediction** 属性包含照相机位置等信息。 此信息被推断为预期用户可以看到帧的确切时刻。
 
-下面的代码从 **AppMain：： Update** 摘录内容：
+以下代码摘自 **AppMain：：Update**：
 
 ```cpp
 // The HolographicFrame has information that the app needs in order
@@ -50,17 +50,17 @@ HolographicFrame holographicFrame = m_holographicSpace.CreateNextFrame();
 HolographicFramePrediction prediction = holographicFrame.CurrentPrediction();
 ```
 
-### <a name="process-camera-updates"></a>处理照相机更新
+### <a name="process-camera-updates"></a>处理相机更新
 
-后台缓冲区可以从帧更改为帧。 应用需要验证每个照相机的后台缓冲区，并根据需要释放并重新创建资源视图和深度缓冲区。 请注意，预测中的姿势集是当前帧中所使用的相机的权威列表。 通常，使用此列表来循环访问相机集。
+后端缓冲区可以从帧更改为帧。 应用需要验证每个相机的后缓冲区，并根据需要释放并重新创建资源视图和深度缓冲区。 请注意，预测中的一组姿势是当前帧中使用的相机的权威列表。 通常，可以使用此列表来访问一组相机。
 
-From **AppMain：： Update**：
+从 **AppMain：：Update**：
 
 ```cpp
 m_deviceResources->EnsureCameraResources(holographicFrame, prediction);
 ```
 
-From **DeviceResources：： EnsureCameraResources**：
+从 **DeviceResources：：EnsureCameraResources**：
 
 ```cpp
 for (HolographicCameraPose const& cameraPose : prediction.CameraPoses())
@@ -71,20 +71,20 @@ for (HolographicCameraPose const& cameraPose : prediction.CameraPoses())
 }
 ```
 
-### <a name="get-the-coordinate-system-to-use-as-a-basis-for-rendering"></a>获取坐标系统作为渲染的基础
+### <a name="get-the-coordinate-system-to-use-as-a-basis-for-rendering"></a>获取要用作呈现基础的坐标系
 
-Windows Mixed Reality 使你的应用能够创建各种 [坐标系统](coordinate-systems-in-directx.md)，如用于跟踪物理世界中的位置的附加和固定参考框架。 然后，你的应用程序可以使用这些坐标系统来考虑在何处呈现每个帧的全息影像。 从 API 请求坐标时，始终会传入要在其中表示这些坐标的 <a href="/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a> 。
+Windows Mixed Reality允许应用创建各种[坐标系](coordinate-systems-in-directx.md)，例如用于跟踪物理世界位置的附加和固定参考帧。 然后，应用可以使用这些坐标系来了解每个帧的全息影像呈现位置。 从 API 请求坐标时，始终会传递要表示这些坐标的<a href="/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem。</a>
 
-From **AppMain：： Update**：
+从 **AppMain：：Update**：
 
 ```cpp
 pose = SpatialPointerPose::TryGetAtTimestamp(
     m_stationaryReferenceFrame.CoordinateSystem(), prediction.Timestamp());
 ```
 
-然后，可以使用这些坐标系统在场景中呈现内容时生成立体声视图矩阵。
+然后，这些坐标系可用于在场景中呈现内容时生成立体声视图矩阵。
 
-From **CameraResources：： UpdateViewProjectionBuffer**：
+从 **CameraResources：：UpdateViewProjectionBuffer**：
 
 ```cpp
 // Get a container object with the view and projection matrices for the given
@@ -92,18 +92,18 @@ From **CameraResources：： UpdateViewProjectionBuffer**：
 auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 ```
 
-### <a name="process-gaze-and-gesture-input"></a>处理注视和手势输入
+### <a name="process-gaze-and-gesture-input"></a>处理凝视和手势输入
 
-[注视](gaze-in-directx.md) 和 [手写](hands-and-motion-controllers-in-directx.md) 输入不基于时间，无需在 **StepTimer** 函数中更新。 但是，此输入是应用程序需要查看每个帧的内容。
+[凝](gaze-in-directx.md)[视](hands-and-motion-controllers-in-directx.md)和手部输入不是基于时间，不需要在 **StepTimer** 函数中更新。 但是，此输入是应用需要查看每个帧的一部分。
 
 ### <a name="process-time-based-updates"></a>处理基于时间的更新
 
-任何实时渲染应用程序都需要某种方式来处理基于时间的更新-Windows 全息应用程序模板使用 **StepTimer** 实现，类似于 DIRECTX 11 UWP 应用模板中提供的 StepTimer。 此 StepTimer 示例 helper 类可以提供固定的时间步长更新、可变的时间更新，默认模式为可变时间步骤。
+任何实时渲染应用都需要某种方法处理基于时间的更新 - Windows 全息应用模板使用 **StepTimer** 实现，类似于 DirectX 11 UWP 应用模板中提供的 StepTimer。 此 StepTimer 示例帮助程序类可以提供固定的时间步长更新、可变时间步长更新，默认模式为可变时间步长。
 
-对于全息渲染，我们选择了不将过多的计时器功能，因为你可以将其配置为固定时间的步骤。 对于某些帧，可能会多次调用此方法，对于某些帧，可能会多次调用此方法，并且每个帧都应该发生一次全息数据更新。
+对于全息渲染，我们选择不要将太多内容放入计时器函数，因为你可以将其配置为固定时间步长。 对于某些帧，每个帧可能会多次调用它，或者完全不调用它，并且全息数据更新应针对每个帧进行一次。
 
 
-From **AppMain：： Update**：
+从 **AppMain：：Update**：
 
 ```cpp
 m_timer.Tick([this]()
@@ -112,11 +112,11 @@ m_timer.Tick([this]()
 });
 ```
 
-### <a name="position-and-rotate-holograms-in-your-coordinate-system"></a>在坐标系统中定位和旋转全息影像
+### <a name="position-and-rotate-holograms-in-your-coordinate-system"></a>在坐标系中定位和旋转全息影像
 
-如果是在单个坐标系中操作，则在使用 **SpatialStationaryReferenceFrame** 时，此过程与在3d 图形中使用的过程不同。 在这里，我们将根据固定坐标系统中的位置旋转多维数据集并设置模型矩阵。
+如果在单个坐标系中操作，如模板对 **SpatialStationaryReferenceFrame** 的操作一样，此过程与在 3D 图形中用于其他操作的过程相同。 在这里，我们将旋转立方体，并基于固定坐标系中的位置设置模型矩阵。
 
-From **SpinningCubeRenderer：： Update**：
+从 **SpinningCubeRenderer：：Update**：
 
 ```cpp
 // Rotate the cube.
@@ -141,13 +141,13 @@ const XMMATRIX modelTransform = XMMatrixMultiply(modelRotation, modelTranslation
 XMStoreFloat4x4(&m_modelConstantBufferData.model, XMMatrixTranspose(modelTransform));
 ```
 
-**有关高级方案的说明：** 旋转多维数据集是一个简单的示例，说明如何在单个引用框架中放置全息图。 还可以同时在同一个呈现的帧中 [使用多个 SpatialCoordinateSystems](coordinate-systems-in-directx.md) 。
+**有关高级方案，请注意：** 旋转立方体是如何在单个参考帧中定位全息影像的简单示例。 还可以在同一渲染帧中同时使用多个[SpatialCoordinateSystems。](coordinate-systems-in-directx.md)
 
 ### <a name="update-constant-buffer-data"></a>更新常量缓冲区数据
 
-内容的模型转换照常更新。 现在，你将为要在中呈现的坐标系统计算有效转换。
+内容的模型转换将照常更新。 现在，你将为要呈现的坐标系计算有效的转换。
 
-From **SpinningCubeRenderer：： Update**：
+从 **SpinningCubeRenderer：：Update**：
 
 ```cpp
 // Update the model transform buffer for the hologram.
@@ -161,36 +161,36 @@ context->UpdateSubresource(
 );
 ```
 
-视图和投影转换是怎样的？ 为了获得最佳效果，我们要等待，直到我们为绘图调用做了准备。
+视图和投影转换呢？ 为了获得最佳结果，我们希望等到绘制调用准备就绪后，才能获取这些调用。
 
 ## <a name="render-the-current-frame"></a>呈现当前帧
 
-在 Windows Mixed Reality 上呈现并不太不同于在 2D mono 显示上呈现，但有一些区别：
-* 全息帧预测很重要。 对于帧显示后的预测越接近，全息影像的外观就越好。
-* Windows Mixed Reality 控制相机视图。 呈现给每个文件，因为全息帧以后会对其进行呈现。
-* 建议使用实例化绘图来进行立体声渲染，以呈现目标阵列。 全息应用模板使用推荐的方法将绘图转换为呈现目标数组，该数组使用呈现器目标视图到 **Texture2DArray**。
-* 如果要在不使用立体声实例的情况下进行呈现，则需要创建两个非数组 RenderTargetViews，每个眼睛一眼。 每个 RenderTargetViews 都引用系统中提供给应用程序的 **Texture2DArray** 中的两个切片之一。 不建议这样做，因为它的速度通常比使用实例化慢。
+在Windows Mixed Reality渲染与在 2D 单声道显示器上呈现没有太大区别，但有一些区别：
+* 全息帧预测非常重要。 预测越接近帧显示的时间，全息影像的外观就越好。
+* Windows Mixed Reality控制相机视图。 呈现到每个图像，因为全息帧稍后会呈现它们。
+* 建议使用实例绘图对呈现器目标数组执行立体声渲染。 全息应用模板使用对呈现器目标数组进行实例化绘制的建议方法，该方法在 **Texture2DArray** 上使用呈现器目标视图。
+* 如果要在无需使用立体声实例化的情况下呈现，则需要创建两个非数组 RenderTargetView，每个眼睛一个。 每个 RenderTargetViews 都引用从系统提供给应用的 **Texture2DArray** 中的两个切片之一。 不建议这样做，因为它通常比使用实例化慢。
 
-### <a name="get-an-updated-holographicframe-prediction"></a>获取更新的 HolographicFrame 预测
+### <a name="get-an-updated-holographicframe-prediction"></a>获取更新的全息帧预测
 
-更新帧预测可增强图像稳定性的有效性。 由于预测与帧对用户可见的时间更短，因此可以获得更准确的全息影像位置。 理想情况下，只需在呈现之前更新帧预测。
+更新帧预测可增强图像稳定性的有效性。 由于预测之间的时间较短，并且帧对用户可见，因此可以更精确地定位全息影像。 理想情况下，只需在呈现之前更新帧预测。
 
 ```cpp
 holographicFrame.UpdateCurrentPrediction();
 HolographicFramePrediction prediction = holographicFrame.CurrentPrediction();
 ```
 
-### <a name="render-to-each-camera"></a>呈现到每个照相机
+### <a name="render-to-each-camera"></a>渲染到每个相机
 
-循环中的一组照相机姿势，并呈现到此集中的每个照相机。
+循环访问预测中照相机的一组，并渲染到此集的每个相机。
 
-**设置呈现阶段**
+**设置渲染通道**
 
-Windows Mixed Reality 使用 stereoscopic 渲染来增强深度的错觉并渲染 stereoscopically，使左侧和右侧显示都处于活动状态。 对于 stereoscopic 渲染，两个显示器之间有一个偏移，大脑可将其与实际深度进行协调。 本部分介绍使用实例化的 stereoscopic 呈现，使用 Windows 全息应用程序模板中的代码。
+Windows Mixed Reality使用立体声渲染来增强深度的假象，并使用立体声渲染，使左侧和右侧显示器处于活动状态。 使用立体声渲染时，两个显示器之间存在偏移量，这两个显示器可以协调为实际深度。 本部分介绍使用实例化、使用全息应用模板中的代码Windows渲染。
 
-每个照相机都有其自己的呈现目标 (后台缓冲区) 以及查看和投影到全息空间。 您的应用程序将需要创建任何其他基于照相机的资源，例如，每个相机的深度缓冲区。 在 Windows 全息版应用程序模板中，我们提供了一个帮助器类，用于将这些资源捆绑到 DX：： CameraResources 中。 首先设置呈现目标视图：
+每个相机都有自己的渲染目标 (回缓冲区) ，以及全息空间的视图和投影矩阵。 应用需要基于每个相机创建任何其他基于相机的资源（例如深度缓冲区）。 在 Windows应用模板中，我们提供了一个帮助程序类，用于将这些资源捆绑在 DX：：CameraResources 中。 首先设置呈现器目标视图：
 
-From **AppMain：： Render**：
+从 **AppMain：：Render**：
 
 ```cpp
 // This represents the device-based resources for a HolographicCamera.
@@ -219,11 +219,11 @@ context->ClearDepthStencilView(
     depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 ```
 
-**使用预测获取照相机的视图和投影矩阵**
+**使用预测获取相机的视图和投影矩阵**
 
-每个全息相机的视图和投影矩阵将随每个帧发生变化。 刷新每个全息相机的常量缓冲区中的数据。 请在更新预测后以及对该照相机进行任何绘图调用之前执行此操作。
+每个全息相机的视图和投影矩阵将随帧变化。 刷新每个全息相机的常量缓冲区中的数据。 在更新预测后，以及针对该相机进行绘制调用之前，请执行此操作。
 
-From **AppMain：： Render**：
+从 **AppMain：：Render**：
 
 ```cpp
 // The view and projection matrices for each holographic camera will change
@@ -239,10 +239,10 @@ if (m_stationaryReferenceFrame)
 bool cameraActive = pCameraResources->AttachViewProjectionBuffer(m_deviceResources);
 ```
 
-在这里，我们将演示如何从照相机姿势获取矩阵。 在此过程中，我们还获取照相机的当前视区。 请注意我们是如何提供坐标系统的：这是我们用于了解注视的相同坐标系统，它与我们用于放置旋转多维数据集的坐标系统相同。
+在这里，我们将展示如何从相机姿势获取矩阵。 在此过程中，我们还获取相机的当前视区。 请注意我们如何提供坐标系：这是用于理解凝视的同一坐标系，也是用于定位旋转立方体的坐标系。
 
 
-From **CameraResources：： UpdateViewProjectionBuffer**：
+从 **CameraResources：：UpdateViewProjectionBuffer**：
 
 ```cpp
 // The system changes the viewport on a per-frame basis for system optimizations.
@@ -290,10 +290,10 @@ if (viewTransformAcquired)
 }
 ```
 
-应设置每个帧的视区。 至少) 的顶点着色器 (通常需要访问视图/投影数据。
+应设置每个帧的视区。 顶点着色器 () 通常需要访问视图/投影数据。
 
 
-From **CameraResources：： AttachViewProjectionBuffer**：
+从 **CameraResources：：AttachViewProjectionBuffer**：
 
 ```cpp
 // Set the viewport for this camera.
@@ -307,13 +307,13 @@ context->VSSetConstantBuffers(
 );
 ```
 
-**呈现到相机后台缓冲区，并提交深度缓冲区**：
+**呈现到相机后缓冲区并提交深度缓冲区**：
 
 最好检查 **TryGetViewTransform** 是否已成功，然后再尝试使用视图/投影数据，因为如果无法找到该坐标系统 (例如，跟踪被中断) 应用无法在该帧上为其呈现。 如果 **CameraResources** 类指示成功的更新，则模板仅对旋转多维数据集调用 **Render** 。
 
-Windows Mixed Reality 包含用于 [映像稳定性](../platform-capabilities-and-apis/hologram-stability.md) 的功能，可让你在开发人员或用户将其放在世界各地。 图像稳定性有助于隐藏渲染管道中固有的延迟，以确保用户获得最佳的全息体验。 为了进一步增强图像稳定性，还可以指定一个焦点点，或者可以提供深度缓冲区来实时计算优化的图像稳定性。
+Windows Mixed Reality 包含[图像稳定性](../platform-capabilities-and-apis/hologram-stability.md)功能，以使全息影像保持定位在开发人员或用户将其放入世界的位置。 图像稳定性有助于隐藏渲染管道中固有的延迟，以确保用户获得最佳的全息体验。 为了进一步增强图像稳定性，还可以指定一个焦点点，或者可以提供深度缓冲区来实时计算优化的图像稳定性。
 
-为了获得最佳结果，应用应使用 <a href="/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> API 提供深度缓冲区。 然后，Windows Mixed Reality 可以使用深度缓冲区中的几何信息来实时优化图像稳定性。 默认情况下，Windows 全息应用程序模板会提交应用的深度缓冲区，有助于优化全息影像稳定性。
+为了获得最佳结果，应用应使用 <a href="/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> API 提供深度缓冲区。 然后，Windows Mixed Reality 可以使用深度缓冲区中的几何信息来实时优化图像稳定性。 默认情况下，Windows 全息应用模板会提交应用的深度缓冲区，有助于优化全息影像稳定性。
 
 From **AppMain：： Render**：
 
@@ -379,7 +379,7 @@ winrt::check_hresult(
 
 **绘制全息内容**
 
-对于大小为2的 Texture2DArray，Windows 全息应用程序模板使用建议的方法将内容呈现为立体声。 让我们看看此部分的实例化部分以及它如何在 Windows Mixed Reality 上工作。
+"Windows 全息" 应用模板将使用将实例化几何的推荐技术呈现为大小为2的 Texture2DArray，以立体声形式呈现内容。 让我们看看此部分的实例化部分以及它如何在 Windows Mixed Reality 上工作。
 
 From **SpinningCubeRenderer：： Render**：
 
@@ -466,7 +466,7 @@ VertexShaderOutput main(VertexShaderInput input)
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>有关在 HoloLens 上渲染立体声内容的重要说明
 
-Windows Mixed Reality 支持从任何着色器阶段设置呈现目标数组索引。 通常，这是一项只能在几何着色器阶段完成的任务，这是因为为 Direct3D 11 定义语义的方式。 在这里，我们将演示如何设置仅具有顶点和像素着色器阶段集的渲染管道的完整示例。 着色器代码如上文所述。
+Windows Mixed Reality 支持从任何着色器阶段设置呈现目标数组索引的功能。 通常，这是一项只能在几何着色器阶段完成的任务，这是因为为 Direct3D 11 定义语义的方式。 在这里，我们将演示如何设置仅具有顶点和像素着色器阶段集的渲染管道的完整示例。 着色器代码如上文所述。
 
 From **SpinningCubeRenderer：： Render**：
 
@@ -523,9 +523,9 @@ context->DrawIndexedInstanced(
 
 ### <a name="important-note-about-rendering-on-non-hololens-devices"></a>有关在非 HoloLens 设备上呈现的重要说明
 
-在顶点着色器中设置呈现目标数组索引时，需要图形驱动程序支持 HoloLens 支持的可选 Direct3D 11.3 功能。 您的应用程序可以安全地仅实现呈现的这种方法，并满足所有要求，以便在 Microsoft HoloLens 上运行。
+在顶点着色器中设置呈现目标数组索引要求图形驱动程序支持可选的 Direct3D 11.3 功能，该功能 HoloLens 支持。 您的应用程序可以安全地仅实现呈现的这种方法，并满足在 Microsoft HoloLens 上运行的所有要求。
 
-这种情况可能是你还想要使用 HoloLens 模拟器，这是一个功能强大的用于全息应用的开发工具，并支持 Windows Mixed Reality 沉浸式耳机设备，这些设备附加到 Windows 10 电脑。 对于所有 Windows Mixed Reality，都支持非 HoloLens 呈现路径-也内置于 Windows 全息应用程序模板中。 在模板代码中，你将找到用于使全息应用在你的开发 PC 上的 GPU 上运行的代码。 下面是 **DeviceResources** 类检查此可选功能支持的方式。
+这种情况可能是你想要使用 HoloLens 模拟器，这是一个功能强大的开发工具，可用于全息式应用程序，并支持 Windows Mixed Reality 沉浸式耳机设备连接到 Windows 10 pc。 对于所有 Windows Mixed Reality，都支持非 HoloLens 呈现路径-也内置到 Windows 全息应用程序模板中。 在模板代码中，你将找到用于使全息应用在你的开发 PC 上的 GPU 上运行的代码。 下面是 **DeviceResources** 类检查此可选功能支持的方式。
 
 From **DeviceResources：： CreateDeviceResources**：
 
@@ -539,7 +539,7 @@ if (options.VPAndRTArrayIndexFromAnyShaderFeedingRasterizer)
 }
 ```
 
-若要在不使用此可选功能的情况下支持呈现，你的应用程序必须使用几何着色器来设置呈现目标数组索引。 此代码段将在 **VSSetConstantBuffers** 之后和在上一节中所示的代码示例中的 **PSSetShader** *之前* 添加，说明如何在 HoloLens 上呈现立体声。
+若要在不使用此可选功能的情况下支持呈现，你的应用程序必须使用几何着色器来设置呈现目标数组索引。 此代码段将添加到 **VSSetConstantBuffers***之后*，并在上一节中所示的代码示例 **PSSetShader** *之前*，说明如何在 HoloLens 上呈现立体声。
 
 From **SpinningCubeRenderer：： Render**：
 
@@ -600,7 +600,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 
 ### <a name="enable-the-holographic-frame-to-present-the-swap-chain"></a>启用全息帧以显示交换链
 
-对于 Windows Mixed Reality，系统控制交换链。 然后，系统会管理向每个全息相机呈现帧，以确保具有高质量的用户体验。 它还为每个照相机提供一个视区来更新每个帧，以优化系统的各个方面，例如图像稳定性或混合现实捕获。 因此，使用 DirectX 的全息版应用不会在 DXGI 交换链 **上调用。** 而是使用 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 类，在完成绘制帧后，为该帧提供所有交换链。
+在 Windows Mixed Reality 中，系统控制交换链。 然后，系统会管理向每个全息相机呈现帧，以确保具有高质量的用户体验。 它还为每个照相机提供一个视区来更新每个帧，以优化系统的各个方面，例如图像稳定性或混合现实捕获。 因此，使用 DirectX 的全息版应用不会在 DXGI 交换链 **上调用。** 而是使用 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 类，在完成绘制帧后，为该帧提供所有交换链。
 
 From **DeviceResources：:P 重发**：
 
@@ -637,11 +637,11 @@ m_holographicSpace.SetDirect3D11Device(m_d3dInteropDevice);
 
 ## <a name="hybrid-graphics-pcs-and-mixed-reality-applications"></a>混合图形 Pc 和混合现实应用程序
 
-Windows 10 创意者更新电脑可能 **配置了离散** 和集成的 gpu。 对于这种类型的计算机，Windows 将选择耳机连接的适配器。 应用程序必须确保它创建的 DirectX 设备使用同一个适配器。
+Windows 10 创意者更新可以 **为电脑配置离散和** 集成式 gpu。 对于这种类型的计算机，Windows 会选择耳机连接的适配器。 应用程序必须确保它创建的 DirectX 设备使用同一个适配器。
 
 最常见的 Direct3D 示例代码演示如何使用默认硬件适配器创建 DirectX 设备，该设备在混合系统上可能与用于耳机的设备不同。
 
-若要解决任何问题，请使用<a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>中的<a href="/uwp/api/windows.graphics.holographic.holographicadapterid" target="_blank">HolographicAdapterID</a> 。PrimaryAdapterId ( # A1 或<a href="/uwp/api/windows.graphics.holographic.holographicdisplay" target="_blank">HolographicDisplay</a>。AdapterId ( # A3。 然后，可以使用此 adapterId，使用 IDXGIFactory4 选择正确的 DXGIAdapter。
+若要解决任何问题，请使用<a href="/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>中的<a href="/uwp/api/windows.graphics.holographic.holographicadapterid" target="_blank">HolographicAdapterID</a> 。PrimaryAdapterId () 或<a href="/uwp/api/windows.graphics.holographic.holographicdisplay" target="_blank">HolographicDisplay</a>。AdapterId () 。 然后，可以使用此 adapterId，使用 IDXGIFactory4 选择正确的 DXGIAdapter。
 
 From **DeviceResources：： InitializeUsingHolographicSpace**：
 

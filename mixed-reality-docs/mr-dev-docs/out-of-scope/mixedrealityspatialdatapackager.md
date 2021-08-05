@@ -1,30 +1,30 @@
 ---
-title: 混合现实空间数据包装程序文档
-description: 现在已弃用混合现实空间数据包装器工具，在任何平台上都不再运行。 建议改为使用地图管理器工具。
+title: 混合现实空间数据打包器文档
+description: 混合现实空间数据打包器工具现已弃用，不再在任何平台上运行。 建议改为使用 Map Manager 工具。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 08/03/2020
 ms.topic: article
 keywords: lbe、MixedRealitySpatialDataPackager.exe、MixedRealitySpatialDataPackager
-ms.openlocfilehash: 93d598a6add8350850faadab241b254e9cb341aa
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 914e22c4e80385c93696ebd978000978e1e03f57706d466bdbb3cfcd5843f69e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583647"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213161"
 ---
-# <a name="mixed-reality-spatial-data-packager-documentation"></a>混合现实空间数据包装程序文档
+# <a name="mixed-reality-spatial-data-packager-documentation"></a>混合现实空间数据打包器文档
 
 >[!NOTE]
 > 已弃用 
 > 
-> 从8/1/2020 开始，此工具现在已弃用，在任何平台上不再起作用。 建议改为在设备门户中使用 " [映射管理器](../develop/platform-capabilities-and-apis/using-the-windows-device-portal.md#map-manager) " 工具。 
+> 从 2020/8/1 开始，此工具现已弃用，不再在任何平台上运行。 建议改为在映射 [管理器](../develop/platform-capabilities-and-apis/using-the-windows-device-portal.md#map-manager) 设备门户。 
 > 
-> 此工具及其操作按原样提供。 如果没有任何通知，它可能会更改，并且可能不会与未来的 Windows 或 Windows Mixed Reality HMD 版本兼容。 
+> 此工具及其操作是像现在一样提供的。 它可能会更改，无需任何通知，并且可能与将来的 HMD Windows版本Windows Mixed Reality兼容。 
 
 
 ## <a name="download"></a>下载
- [在此处下载 MixedRealitySpatialDataPackager](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
+ 在此处 [下载 MixedRealitySpatialDataPackager](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
 
 ## <a name="device-support"></a>设备支持
 
@@ -42,7 +42,7 @@ ms.locfileid: "98583647"
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
      <tr>
-        <td>混合现实空间数据包装器</td>
+        <td>混合现实空间数据打包器</td>
         <td>❌</td>
         <td>❌</td>
         <td>✔️</td>
@@ -51,31 +51,32 @@ ms.locfileid: "98583647"
 
 ## <a name="quickstart"></a>快速入门
 
-混合现实空间数据包装器工具通过两步导出和导入过程将目标应用的空间数据从一台 PC 复制到另一台 PC。 此工具必须以管理员权限运行，并在导入时删除现有空间数据。 导出会使现有的空间数据保持不变。
+混合现实空间数据打包器工具通过两步导出和导入过程，将目标应用的空间数据从一台电脑复制到另一台电脑。 该工具必须使用管理员权限运行，并删除导入时的现有空间数据。 导出使现有空间数据保持不变。
 
 关键要求和限制：
 
-1. 必须具有管理员权限才能运行工具 
-2. 运行该工具后，如果混合现实门户不稳定，可能需要重启电脑
-3. 当遇到空间数据版本不匹配或不兼容时，工具不会运行
-4. 工具将在导入时删除现有空间数据
-5. 如果导入进程失败，则无法还原以前的数据，除非已通过导出以前的数据进行了备份
-6. 针对空间映射数据的 "只读" 模式的导入功能的质量
+1. 必须使用管理员权限运行工具 
+2. 如果在运行该工具后混合现实门户不稳定，可能需要重启电脑
+3. 遇到空间数据版本不匹配或不兼容时，工具不会运行
+4. 工具将在导入时擦除现有空间数据
+5. 如果导入过程失败，将无法还原以前的数据，除非之前通过导出进行了备份
+6. 导入功能的质量取决于空间地图数据的"只读"模式
 ***
 
-## <a name="mapping-best-practices"></a>映射最佳实践
+## <a name="mapping-best-practices"></a>映射最佳做法
 
-1. 清除控制面板中的现有映射 (设置-> 混合现实 > 环境-> 明文环境数据) 
-2. 确保光线足以进行良好跟踪，如果正在运行锁定的映射模式，则尝试维持相同的照明
-3. 如果可能，请避免深色、阴影区域旁的高照明区域，使光照动态范围较低
-4. 最大程度地减少空白、textureless 的图面，例如，将一系列不同海报置于白名单上
-5. 在场景中映射不包含动态对象的空间，例如移动人员
-6. 在导入时锁定地图 (通过预览体验) 
-7. 当跟踪质量下降并且/或环境中的更改 (光源或对象布局中的更改时，解锁地图并重新扫描环境) * * _
+1. 从混合现实 -控制面板 (设置 -> 混合现实 -> 环境 ->清除环境数据映射) 
+2. 确保有足够的照明进行良好的跟踪，如果运行锁定的地图模式，请尝试保持相同的照明
+3. 如果可能，请避免深色阴影区域旁边的高照明区域，使照明动态范围保持较低
+4. 最小化空白无纹理表面，例如，将一系列不同的海报放在白色墙上
+5. 映射场景中没有动态对象的空间，例如移动人员
+6. 锁定通过 Insider Preview (提供的导入映射) 
+7. 解锁地图，在跟踪质量下降和/或环境中存在更改 (或对象布局更改时重新扫描) 
+***
 
-## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>运行带辅助脚本的混合现实空间数据包装器
+## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>使用助理脚本运行混合现实空间数据打包器
 
-我们提供了 MRSpatialPackagerHelperScript.ps1，它运行映射包装器工具。 
+我们提供了MRSpatialPackagerHelperScript.ps1工具的映射打包程序。 
 
 
 脚本参数定义如下：
@@ -106,7 +107,7 @@ ms.locfileid: "98583647"
 
 ### <a name="powershell-script-example-usage-and-output"></a>Powershell 脚本示例用法和输出
 
-.\MRSpatialPackagerHelperScript.ps1 AppName holoshell-UserName Administrator-Mode MapxPath D:\temp\-LockMap 0
+.\MRSpatialPackagerHelperScript.ps1 -AppName holoshell -UserName Administrator -Mode export -MapxPath D：\temp\ -LockMap 0
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -139,25 +140,25 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>如何使用 MixedRealitySpatialDataPackager.exe 导出
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>如何使用 MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
-从设备导出映射会生成两个 mapx 文件：获取 mapx 和 mapx。 在导出过程中，除了指定的应用和用户创建的边界 (，如果) 存在，则删除所有空间锚。 源包系列名称必须与现有的已安装应用匹配，否则 exe 将会失败。
+从设备导出地图会生成两个 mapx 文件：het.mapx 和 sa.mapx。 在导出过程中，将删除除指定的应用和用户创建的边界之外的所有空间定位点 (（如果存在) ）。 源包系列名称必须与现有的已安装应用匹配，否则 exe 将失败。
 
-### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>如何使用 MixedRealitySpatialDataPackager.exe 导入
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>如何使用 MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
-导入删除现有空间数据，并将其替换为指定目录中的数据。 应用名称输入指定要为其导入空间锚点的目标应用的包名称，而目标用户 SID 指定应该有权访问已导入的空间锚的用户。 目标包系列名称和用户 Sid 必须与电脑上的现有值匹配，否则 exe 将会失败。
+导入会删除现有空间数据，并将其替换为指定目录中的数据。 应用名称输入指定应导入的空间定位点等目标应用的包名称，目标用户 SID 指定应有权访问导入的空间定位点的用户。 目标包系列名称和用户 ID 必须与电脑上的现有值匹配，否则 exe 将失败。
 
 
-_**
+***
 ## <a name="error-messages"></a>错误消息
-此外，以下错误消息还将附带 HRESULT
+此外，以下故障的错误消息还将附带 HRESULT
 
-### <a name="if-there-was-an-error-invalid-arguments"></a>如果有错误的参数无效
+### <a name="if-there-was-an-error-invalid-arguments"></a>如果出现错误，参数无效
 ```
 Invalid command line parameters
 ```
@@ -183,24 +184,24 @@ Invalid command line parameters
 3. No spatial data is present on the current device please connect your Mixed Reality device to initialize spatial data. If the problem persists please restart your PC.
 ```
 
-### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a>验证为目标导入/导出应用提供的包系列名称时出错
+### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a>如果验证为目标导入/导出应用提供的包系列名称时出错
 ```
 The package family name does not correspond to an installed app
 ```
 
-### <a name="if-there-was-an-error-validating-the-user-sid"></a>验证用户 SID 时出错
+### <a name="if-there-was-an-error-validating-the-user-sid"></a>如果验证用户 SID 时出错
 ```
 Failed to find local user for passed in user SID
 ```
 
-### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a>如果存在与目标或源空间数据文件相关的错误
+### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a>如果发生与目标或源空间数据文件相关的错误
 ```
 1. Folder path to space store files doesn't exist 
 2. het.mapx or sa.mapx file doesn't exist in <PATH> for import
 3. Unable to create directory at <PATH> for export
 ```
 
-### <a name="if-there-was-an-error-related-to-starting-and-stopping-spectrumsharedrealitysvc"></a>如果存在与启动和停止频谱/SharedRealitySvc 相关的错误
+### <a name="if-there-was-an-error-related-to-starting-and-stopping-spectrumsharedrealitysvc"></a>如果发生与启动和停止 Spectrum/SharedRealitySvc 相关的错误
 ```
 1. Unable to open service manager <SERVICE>
 2. Timed out trying to start/stop <SERVICE>

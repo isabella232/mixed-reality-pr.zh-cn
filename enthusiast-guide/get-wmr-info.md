@@ -1,24 +1,24 @@
 ---
-title: 获取有关Windows Mixed Reality
-description: 查找有关资源的资源和有关Windows Mixed Reality。
+title: 获取关于 Windows Mixed Reality 的信息
+description: 查找有关 Windows Mixed Reality 的资源和有用信息。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 6/7/2021
 ms.topic: overview
-keywords: Windows Mixed Reality、混合现实、虚拟现实、VR、MR、
-ms.openlocfilehash: dbe140b8634583d910f8c076700aba57a648002f
-ms.sourcegitcommit: 1d8fa82b5ca6d17cf03a5cf11d0669f32a31e5d0
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，
+ms.openlocfilehash: da63ebe48f22635c9f8eb8e9a687c22f5c627354e483fcaca1eebe2fb8f57480
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2021
-ms.locfileid: "111579041"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189396"
 ---
-# <a name="get-info-about-windows-mixed-reality"></a>获取有关Windows Mixed Reality
+# <a name="get-info-about-windows-mixed-reality"></a>获取关于 Windows Mixed Reality 的信息
 
-如果你有一个Windows Mixed Reality头戴显示设备，并且正在寻求帮助，下面是一些可帮助你入门的资源：
+如果你有一个 Windows Mixed Reality 耳机，并且你正在寻求帮助，下面是一些可帮助你入门的资源：
 
-* [混合现实常规帮助](index.yml)
+* [混合现实的一般帮助](index.yml)
 * [了解如何设置](set-up-windows-mixed-reality.md)
-* [有关使用方法的提示Windows Mixed Reality](https://support.microsoft.com/tips/home)
+* [使用 Windows Mixed Reality 的使用技巧和技巧](https://support.microsoft.com/tips/home)
 
-想要购买沉浸式头戴显示设备？ 从 获取有关规范、应用程序等的[windows.com/mixedreality。](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)
+希望购买沉浸式耳机吗？ 在 [windows.com/mixedreality](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)上获取有关规范、应用程序等的内幕。

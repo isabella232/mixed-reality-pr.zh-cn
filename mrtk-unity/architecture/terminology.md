@@ -5,12 +5,12 @@ author: cDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 输入，
-ms.openlocfilehash: 33f423fba286e9e85e6d0bedac82bff0b7aae81f
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 8046501fdab0a7594800a75ad0306a131adaaa6924ffa870c299571cbd4d8e13
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121455"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211150"
 ---
 # <a name="input-system"></a>输入系统
 
@@ -25,7 +25,7 @@ ms.locfileid: "113121455"
 
 - **控制器**
 
-    物理控制器的表示形式 (无论它是 6 度自由控制器、具有手势支持的 HoloLens 1 样式手、完全表达的手势、闰运动控制器等) 。 控制器由设备管理器生成 (，即 WMR 设备管理器将生成一个控制器，并管理其生存期，当它看到一个明确手) 。
+    物理控制器的表示形式 (无论它是 6 度自由控制器、具有手势支持的 HoloLens 1 样式手、完全铰接式手、闰运动控制器等) 。 控制器由设备管理器生成 (，即 WMR 设备管理器将生成一个控制器，并管理其生存期，当它看到一个明确手) 。
 
 - **指针**
 
@@ -35,7 +35,7 @@ ms.locfileid: "113121455"
 
     请注意，控制器可以同时与许多不同的指针关联。 为了确保这不会进入混沌状态，有一个指针转换器控制允许哪些指针处于活动状态 (例如，当检测到近交互时，该) 。
 
-- **重点**
+- **焦点**
 
     指针事件将发送到焦点 **中的对象**。 焦点选择因指针类型而异;手部射线指针将使用光线广播，而手部指针将使用球体广播。 对象必须实现 IMixedRealityFocusHandler 以接收焦点。 可以全局注册对象以接收未筛选的指针事件，但不建议此方法。
 

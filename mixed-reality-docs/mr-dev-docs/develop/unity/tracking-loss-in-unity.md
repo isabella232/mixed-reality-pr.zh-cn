@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，跟踪丢失，跟踪丢失图像，轮询，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 39ce4e079886b27ed35c419a3b3913c6700e0d32
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: fe11c88bec60042901bd7ebb5c55116da97b6e28f0e44e889ef517a03d67245a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009847"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211349"
 ---
 # <a name="tracking-loss-in-unity"></a>Unity 中的失跟
 
@@ -21,11 +21,11 @@ ms.locfileid: "98009847"
 
 ## <a name="default-handling"></a>默认处理
 
-默认情况下，更新循环和所有消息和事件将在跟踪丢失期间停止。 同时，系统会向用户显示一个映像。 可以通过以下方式自定义此映像：转到 "编辑"->"设置->播放器"，单击 "闪屏"，然后设置 "全息跟踪丢失" 图像。
+默认情况下，更新循环和所有消息和事件将在跟踪丢失期间停止。 同时，系统会向用户显示一个映像。 可以通过以下方式自定义此映像：转到 "编辑"-">设置->播放机，单击" 闪屏 "，并设置" 全息跟踪丢失 "图像。
 
 ## <a name="manual-handling"></a>手动处理
 
-若要手动处理跟踪丢失情况，需要执行 "**编辑**  >  **项目设置**  >  **播放器**  >  "**通用 Windows 平台 "设置" 选项卡**，  >    >  然后选择 "跟踪丢失时暂停和显示图像"。 此后，需要处理跟踪更改和下面指定的 Api。
+若要手动处理跟踪丢失情况，需要执行 "**编辑**  >  **Project 设置**  >  **Player**  >  "**通用 Windows 平台设置 "选项卡**  >  上的" 设置 "选项卡 **启动图像**  >  **Windows 全息**，并取消选中" 跟踪丢失时暂停和显示图像 "。 此后，需要处理跟踪更改和下面指定的 Api。
 
 **命名空间：** *UnityEngine. XR*<br>
 **类型：** *WorldManager*

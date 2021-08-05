@@ -1,37 +1,37 @@
 ---
 title: Unity 中的混合现实原生对象
-description: 了解如何使用 XR 命名空间访问 Unity 中的基础全息本机对象。
+description: 了解如何使用 XR 命名空间在 Unity 中访问基础全息本机对象。
 author: vladkol
 ms.author: vladkol
 ms.date: 02/25/2021
 ms.topic: article
-keywords: unity，mixed reality，native，xrdevice，spatialcoordinatesystem，holographicframe，holographiccamera，ispatialcoordinatesystem，iholographicframe，iholographiccamera，getnativeptr，mixed reality 耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: c202c698fe55bcd3215850579166ebcb8d4b8910
-ms.sourcegitcommit: 441ef99e6090081c6cd3aa88ed21e13e941f0cc6
+keywords: unity， 混合现实， 本机， xrdevice， spatialcoordinatesystem， holographicframe， holographiccamera， ispatialcoordinatesystem， iholographicframe， iholographiccamera， getnativeptr， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
+ms.openlocfilehash: 63ee9c33a972cb918f141df3b4c1608a561b96dc5c37910deb77b089f7be69b8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102475067"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208395"
 ---
 # <a name="mixed-reality-native-interop-in-unity"></a>Unity 中的混合现实本机互操作
 
-每个混合现实应用都在开始接收相机数据和渲染帧之前 [获得 HolographicSpace](../native/getting-a-holographicspace.md) 。 在 Unity 中，引擎负责处理这些步骤，处理全息对象和内部更新作为其呈现循环的一部分。
+每个混合现实应用在开始接收相机数据和渲染帧之前，都会获得一个[HolographicSpace。](../native/getting-a-holographicspace.md) 在 Unity 中，引擎会处理这些步骤，处理全息对象，并在其呈现循环中内部更新。
 
-但是，在高级方案中，可能需要访问基础本机对象，例如 <a href="/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> 和 current <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>。
+但是，在高级方案中，可能需要访问基础本机对象，例如 <a href="/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> 和当前的 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>。
 
 [!INCLUDE[](includes/unity-native-ptrs.md)]
 
-### <a name="unmarshaling-native-pointers"></a>取消封送本机指针
+### <a name="unmarshaling-native-pointers"></a>取消引用本机指针
 
-`IntPtr`从上述其中一个方法获取 (不需要 MRTK) ，请使用以下代码段将它们封送到托管对象。
+从上述方法之一 (MRTK) ，使用以下代码片段将它们封送 `IntPtr` 到托管对象。
 
-如果你使用的是 [MixedReality](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT)，则可以使用方法从本机指针构造托管对象 `FromNativePtr()` ：
+如果使用[Microsoft.Windows。MixedReality.DotNetWinRT](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT)，可以使用 方法从本机指针构造 `FromNativePtr()` 托管对象：
 
 ```cs
 var worldOrigin = Microsoft.Windows.Perception.Spatial.SpatialCoordinateSystem.FromNativePtr(spatialCoordinateSystemPtr);
 ```
 
-否则，请使用 `Marshal.GetObjectForIUnknown()` 并强制转换为所需的类型：
+否则， `Marshal.GetObjectForIUnknown()` 请使用 并强制转换到想要的类型：
 
 ```cs
 #if ENABLE_WINMD_SUPPORT
@@ -39,9 +39,9 @@ var worldOrigin = Marshal.GetObjectForIUnknown(spatialCoordinateSystemPtr) as Wi
 #endif
 ```
 
-### <a name="converting-between-coordinate-systems"></a>坐标系统之间的转换
+### <a name="converting-between-coordinate-systems"></a>在坐标系统之间转换
 
-Unity 使用左手坐标系，而 Windows 感知 Api 使用右手坐标系。 若要在这两种约定之间进行转换，可以使用以下帮助器：
+Unity 使用左手坐标系，而Windows感知 API 使用右手坐标系。 若要在两个约定之间转换，可以使用以下帮助程序：
 
 ```cs
 namespace NumericsConversion
@@ -70,11 +70,11 @@ namespace NumericsConversion
 ### <a name="using-holographicframe-native-data"></a>使用 HolographicFrame 本机数据
 
 > [!NOTE]
-> 更改通过 HolographicFrameNativeData 接收的本机对象的状态可能会导致不可预知的行为和呈现项目，特别是当 Unity 也导致相同状态时。  例如，您不应调用 HolographicFrame. UpdateCurrentPrediction，否则 Unity 呈现与该框架的姿势预测将与 Windows 所需的姿势不同步，这将减少全息图的 [稳定性](../platform-capabilities-and-apis/hologram-stability.md)。
+> 更改通过 HolographicFrameNativeData 接收的本机对象的状态可能会导致不可预知的行为和呈现项目，尤其是在 Unity 也导致同一状态时。  例如，不应调用 HolographicFrame.UpdateCurrentPrediction，否则 Unity 使用该帧呈现的姿势预测将与 Windows 期望的姿势不同步，这将降低全息影像[的稳定性。](../platform-capabilities-and-apis/hologram-stability.md)
 
-如果需要访问本机接口以进行呈现或调试，请在本机插件或 c # 代码中使用 HolographicFrameNativeData 中的数据。
+如果需要访问本机接口进行呈现或调试，请使用本机插件或 C# 代码中 HolographicFrameNativeData 的数据。
 
-下面是一个示例，说明如何使用 HolographicFrameNativeData 通过 XR SDK 扩展获取当前帧预测的 photon 时间。
+以下示例演示了如何使用 HolographicFrameNativeData 通过 XR SDK 扩展获取当前帧对光子时间的预测。
 
 ```cs
 using System;

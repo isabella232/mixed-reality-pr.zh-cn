@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实， unity， 教程， hololens2， 空间音频， MRTK， 混合现实工具包， UWP， Windows 10， HRTF， 与头部相关的传输函数， 混响， Microsoft Spatializer， 预制器， 音量曲线
-ms.openlocfilehash: f3f2faf8220eaebcc674bcf02a45d99d58169076
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+ms.openlocfilehash: e0f916ecf8cd8da81e0738b082021c76c55a7f2031517a37b959575e1b21ce16
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110712792"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209823"
 ---
 # <a name="2-spatializing-button-interaction-sounds"></a>2.将按钮交互声音空间化
 
@@ -25,7 +25,7 @@ ms.locfileid: "110712792"
 
 ## <a name="add-a-button"></a>添加按钮
 
-若要添加按钮预制件，请在"项目"窗口中选择"包"，在搜索栏中键入"PressableButtonHoloLens2"。
+若要添加"按钮"预制件，请在"Project"窗口中选择"包"，然后键入搜索栏中的"PressableButtonHoloLens2"。 
 
 ![资产中的按钮预制](images/spatial-audio/spatial-audio-02-section1-step1-1.PNG)
 
@@ -43,20 +43,20 @@ ms.locfileid: "110712792"
 
 在此步骤中，将按钮的音频反馈空间化。 有关相关设计建议，请参阅 [空间音效设计](../../../design/spatial-sound-design.md)。
 
-在" **音频调音器** "窗口中，你将定义名为 **"调音** 器组"的目标，用于从音频源 **组件播放** 音频。
+在 **"音频Mixer** 窗口中，你将定义名为"Mixer **组"** 的目标，用于从音频源 **组件播放** 音频。
 
-若要打开音频 **调音器** 窗口，请在 Unity 菜单中选择"**窗口**  >  **音频**  >  **音频调** 音器： ![ 打开音频调音器窗口"](images/spatial-audio/spatial-audio-02-section2-step1-1.PNG)
+若要打开 **"音频Mixer** 窗口，请在 Unity 菜单中选择"窗口  >  **音频** 音频  >  "Mixer： ![ 打开音频Mixer窗口](images/spatial-audio/spatial-audio-02-section2-step1-1.PNG)
 
- 通过单击 **"调** 音器"旁边的"+"创建一个调音器，然后向"调音器"输入合适的名称，例如空间 _音频调音器_。 新的混合器将包含名为 **Master 的默认****组**。
+ 通过单击 **Mixer** 旁边的"+"创建一个流，并输入适当的名称Mixer例如，空间音频Mixer _。_ 新的混合器将包含名为 **Master 的默认****组**。
 
-![具有第一个调音器的调音器面板](images/spatial-audio/spatial-audio-02-section2-step1-2.PNG)
+![Mixer第一个调音器的面板](images/spatial-audio/spatial-audio-02-section2-step1-2.PNG)
 
 > [!NOTE]
 > 直到第 [5](unity-spatial-audio-ch5.md)章：使用混响向空间音频添加距离中启用混响之前，调音器音量计不会显示通过 Microsoft Spatializer 播放的声音的活动
 
 在"层次结构"窗口中，选择 **PressableButtonHoloLens2，** 然后在"检查器"窗口中找到"音频源"组件，并按如下所示配置"音频源"组件：
 
-1. 对于" **输出** "属性，单击选择器并选择 **创建的"调** 音器"。
+1. 对于 **"输出**"属性，单击选择器并选择 **Mixer** 创建的属性。
 2. 选中" **空间化"** 复选框。
 3. 将" **空间混合"** 滑块移动到 1 (3D) 。
 
@@ -71,7 +71,7 @@ ms.locfileid: "110712792"
 
 若要禁用此衰减，需要在音频源 **组件中调整****音量曲线。**
 
-在"层次结构"窗口中，选择 **"PressableButtonHoloLens2"，** 然后在"检查器"窗口中导航到"音频 **源**  >  **3D 声音** 设置"，并按如下所示进行配置：
+在"层次结构"窗口中，选择 **PressableButtonHoloLens2，** 然后在"检查器"窗口中导航到"音频源  >  **3D** 声音"设置并配置，如下所示：
 
 1. 将" **卷回滚"属性** 设置为"线性回滚"
 2. 将"卷"曲线上的终结点 (红色曲线) 从 y 轴上的"0"拖动到"1"

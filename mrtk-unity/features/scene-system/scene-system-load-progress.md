@@ -1,26 +1,26 @@
 ---
 title: 场景系统加载进度
-description: 有关 MRTK 中的场景内容加载的文档
+description: 有关 MRTK 中场景的内容加载的文档
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 51b5d4d00d65491a0476068bbdc256ffce67412b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 1d2382e11092b20aca5bf8480ade521ffb94a70a325540e70487d7f581e8cf15
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144402"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115186613"
 ---
 # <a name="monitoring-content-loading"></a>监视内容加载
 
 ## <a name="scene-operation-progress"></a>场景操作进度
 
-加载或卸载内容时， `SceneOperationInProgress` 属性将返回 true。 可以通过属性监视此操作的进度 `SceneOperationProgress` 。
+加载或卸载内容时， `SceneOperationInProgress` 属性将返回 true。 可以通过 属性监视此操作 `SceneOperationProgress` 的进度。
 
-`SceneOperationProgress`值是所有当前异步场景操作的平均数。 内容加载开始时， `SceneOperationProgress` 将为零。 完全完成后， `SceneOperationProgress` 将设置为1，并且在下一操作发生之前将保持为1。 请注意，只有内容场景操作会影响这些属性。
+`SceneOperationProgress`该值是当前所有异步场景操作的平均值。 在内容加载开始时， `SceneOperationProgress` 将为零。 完全完成后， `SceneOperationProgress` 将设置为 1，并保留为 1，直到发生下一个操作。 请注意，只有内容场景操作会影响这些属性。
 
-这些属性反映了从开始到完成的 *整个操作* 的状态，即使该操作包括多个步骤：
+这些属性反映整个操作 *从* 开始到结束的状态，即使该操作包含多个步骤：
 
 ```c#
 IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
@@ -41,7 +41,7 @@ sceneSystem.LoadContent("ContentScene2", LoadSceneMode.Single)
 
 ### <a name="progress-examples"></a>进度示例
 
-`SceneOperationInProgress` 如果在加载内容时应挂起活动，则会很有用：
+`SceneOperationInProgress` 如果在加载内容时应挂起活动，则非常有用：
 
 ```c#
 public class FooManager : MonoBehaviour
@@ -87,13 +87,13 @@ public class ProgressDialog : MonoBehaviour
 
 ---
 
-## <a name="monitoring-with-actions"></a>监视操作
+## <a name="monitoring-with-actions"></a>使用操作进行监视
 
-场景系统提供了若干操作，可让你在加载或卸载场景时了解这些操作。 每个操作都将对受影响场景的名称进行中继。
+场景系统提供了多个操作，用于告知何时加载或卸载场景。 每个操作中继受影响场景的名称。
 
-如果加载或卸载操作涉及多个场景，则会针对每个受影响的场景调用相关操作一次。 加载或卸载操作 *完全完成* 后，也会同时调用它们。 出于此原因，建议你使用 *OnWillUnload* 操作来检测 *将* 销毁的内容，而不是使用 *OnUnloaded* 操作在事实下检测已销毁的内容。
+如果加载或卸载操作涉及多个场景，则每个受影响的场景将调用相关操作一次。 加载或卸载操作完全完成时，也会一次调用 *它们。* 出于此原因，建议使用 *On WillUnload* 操作来检测将销毁的内容，而不是使用 *OnUnloaded* 操作在事实发生后检测销毁的内容。
 
-反向，因为仅当激活并完全加载所有场景时才会调用 *OnLoaded* 操作，而使用 *OnLoaded* 操作来检测和使用新内容是安全的。
+另一方面，由于 *OnLoaded* 操作仅在激活和完全加载所有场景时调用，因此使用 *OnLoaded* 操作来检测和使用新内容保证安全。
 
 操作 | 调用时 | 内容场景 | 照明场景 | 管理器场景
 --- | --- | --- | --- | --- | ---
@@ -161,7 +161,7 @@ public class ProgressDialog : MonoBehaviour
 
 ## <a name="controlling-scene-activation"></a>控制场景激活
 
-默认情况下，内容场景设置为在加载时激活。 如果要手动控制场景激活，则可以 `SceneActivationToken` 将传递到任何内容加载方法。 如果一个操作正在加载多个内容场景，此激活令牌将应用于所有场景。
+默认情况下，内容场景设置为在加载时激活。 如果要手动控制场景激活，可以将 传递给 `SceneActivationToken` 任何内容加载方法。 如果单个操作加载多个内容场景，则此激活令牌将应用于所有场景。
 
 ```c#
 IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
@@ -193,7 +193,7 @@ while (sceneSystem.SceneOperationInProgress)
 
 ## <a name="checking-which-content-is-loaded"></a>检查加载的内容
 
-`ContentSceneNames`属性按生成索引的顺序提供可用内容场景的数组。 可以通过检查是否已加载这些场景 `IsContentLoaded(string contentName)` 。
+`ContentSceneNames`属性按生成索引的顺序提供可用内容场景的数组。 可以检查这些场景是否通过 加载 `IsContentLoaded(string contentName)` 。
 
 ```c#
 IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();

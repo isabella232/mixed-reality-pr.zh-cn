@@ -5,13 +5,13 @@ author: kegodin
 ms.author: v-hferrone
 ms.date: 11/07/2019
 ms.topic: article
-keywords: 空间音效，环绕声，3d 音频，3d 声音，空间音频，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，案例研究，噪音
-ms.openlocfilehash: 335ff8acf036591bbbf9868f591ca2c3cef1386c
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: 空间音效，环绕声，3d 音频，3d 声音，空间音频，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，案例研究，噪音
+ms.openlocfilehash: 75b87098f90611140d2c43bb596e7c5d50dab9c47fc49426d5bcbbe0095c3847
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583252"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188817"
 ---
 # <a name="audio-in-mixed-reality"></a>混合现实中的音频
 
@@ -43,7 +43,7 @@ ms.locfileid: "98583252"
     </colgroup>
     <tr>
         <td><strong>功能</strong></td>
-        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (第一代) </strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>第一代 (HoloLens) </strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>沉浸式头戴显示设备</strong></a></td>
     </tr>
@@ -69,7 +69,7 @@ ms.locfileid: "98583252"
 
 HoloTour 几乎使用户能够在世界各地旅游和历史站点。 请参阅 HoloTour 案例研究的 [声音设计](case-study-spatial-sound-design-for-holotour.md) 。 使用特殊的麦克风和渲染设置来捕获使用者空间。
 
-RoboRaid 是一种射击的高能耗。 RoboRaid 案例研究的 [声音设计](case-study-using-spatial-sound-in-roboraid.md) 介绍了用于确保空间音频最大效果的设计选择。
+RoboRaid 是一种高能耗射击 HoloLens。 RoboRaid 案例研究的 [声音设计](case-study-using-spatial-sound-in-roboraid.md) 介绍了用于确保空间音频最大效果的设计选择。
 
 ## <a name="spatialization"></a>空间化
 
@@ -87,11 +87,11 @@ Spatialization 可以改进混合现实应用程序中的许多声音。 Spatial
 
 HRTFs 跨频率范围控制耳之间的级别和阶段差异。 它们基于物理模型和 torso 和 ear)  (pinnae 的度量。 我们大脑对这些差异做出了响应，以提供合理的声音方向。
 
-每个人都有独特的耳形状、头大小和耳位置。 因此，最佳 HRTFs 与你相符。 为了提高 spatialization 准确度，HoloLens 使用 pupilary 距离 (IPD) ，以调整头大小的 HRTFs。
+每个人都有独特的耳形状、头大小和耳位置。 因此，最佳 HRTFs 与你相符。 若要提高 spatialization 准确度，HoloLens 使用从头戴显示 (IPD) 之间的 pupilary 距离来调整头大小的 HRTFs。
 
 ### <a name="spatializer-platform-support"></a>Spatializer 平台支持
 
-Windows 通过 [ISPATIALAUDIOCLIENT API](/windows/win32/coreaudio/spatial-sound)提供 spatialization，包括 HRTFs。 此 API 向应用程序公开 HoloLens 2 HRTF 硬件加速。
+Windows 通过[ISpatialAudioClient API](/windows/win32/coreaudio/spatial-sound)提供 spatialization，包括 HRTFs。 此 API 向应用程序公开 HoloLens 2 HRTF 硬件加速。
 
 ### <a name="spatializer-middleware-support"></a>Spatializer 中间件支持
 
@@ -103,7 +103,7 @@ Windows 通过 [ISPATIALAUDIOCLIENT API](/windows/win32/coreaudio/spatial-sound)
 
 空间音频约为方向。 其他维度包括封闭、障碍、回音、portaling 和源建模。 这些维度统称为 " *噪声*"。 如果没有噪声，spatialized 声音就会缺少距离。
 
-噪声治疗范围从简单到复杂。 您可以使用任何音频引擎支持的回音，将 spatialized 的声音推送到侦听器的环境中。 诸如 [项目噪声](/gaming/acoustics/what-is-acoustics)  等噪声系统提供更丰富且更具吸引力的噪声处理。 项目噪声可以为声音上的墙壁、门和其他场景几何的效果建模。 这是一个有效的选项，适用于在开发时了解相关场景几何图形的情况。
+噪声治疗范围从简单到复杂。 您可以使用任何音频引擎支持的回音，将 spatialized 的声音推送到侦听器的环境中。 噪声系统（如[Project 噪声](/gaming/acoustics/what-is-acoustics)）提供更丰富且更具吸引力的噪声处理。 Project噪音可以为声音上墙壁、门和其他场景几何的效果建模。 这是一个有效的选项，适用于在开发时了解相关场景几何图形的情况。
 
 ## <a name="next-steps"></a>后续步骤
 

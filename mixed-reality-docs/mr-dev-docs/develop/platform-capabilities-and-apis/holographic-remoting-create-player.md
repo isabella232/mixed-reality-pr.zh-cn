@@ -6,32 +6,32 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，NuGet，应用清单，播放机上下文，远程应用，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 391650025398b4bdd89e30db1df7df5e3d6ab5f2
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+ms.openlocfilehash: b395f94f6c98b20f7c0c188f11a718e6da9394de5df3404e7c703558daf526f2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810127"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115190160"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>编写自定义全息远程处理播放器应用
 
 >[!IMPORTANT]
->本文档介绍了如何为 HoloLens 2 创建自定义播放器应用程序。 为 HoloLens 2 编写的自定义播放器与为 HoloLens 1 编写的远程应用程序不兼容。 这意味着两个应用程序必须使用 NuGet 包 **版本2.x。**
+>本文档介绍为 HoloLens 2 创建自定义播放器应用程序的过程。 为 HoloLens 2 编写的自定义播放器与为 HoloLens 1 编写的远程应用程序不兼容。 这意味着两个应用程序必须使用 **包版本 1.x NuGet。**
 
-通过创建自定义的全息远程处理播放器应用程序，你可以创建一个自定义应用程序，该应用程序能够在你的 HoloLens 2 上的远程计算机上显示 [沉浸式视图](../../design/app-views.md) 。 此页面上的所有代码和工作项目都可以在 " [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)" 中找到。
+通过创建自定义的全息远程处理播放器应用程序，你可以创建一个自定义应用程序，该应用程序能够在 HoloLens 2 上的远程计算机上显示[沉浸式视图](../../design/app-views.md)。 此页面上的所有代码和工作项目都可以在 " [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)" 中找到。
 
-使用全息远程处理播放机，你的应用可以显示桌面 PC 或 UWP 设备上 [呈现](rendering.md) 的全息内容，如 Xbox one，可以访问更多系统资源。 全息远程处理播放机应用将输入数据流式传输到全息远程处理远程应用程序，并将沉浸式视图作为视频和音频流接收回来。 使用标准 Wi-fi 建立连接。 若要创建播放机应用，请使用 NuGet 包将全息远程处理添加到 UWP 应用。 然后编写代码来处理连接并显示沉浸式视图。 
+使用全息远程处理播放机，你的应用程序可以显示桌面 PC 或 UWP 设备上[呈现](rendering.md)的全息内容（如 Xbox One 可以访问更多系统资源）。 全息远程处理播放机应用将输入数据流式传输到全息远程处理远程应用程序，并将沉浸式视图作为视频和音频流接收回来。 使用标准 Wi-fi 建立连接。 若要创建播放机应用，请使用 NuGet 包将全息远程处理添加到 UWP 应用。 然后编写代码来处理连接并显示沉浸式视图。 
 
 ## <a name="prerequisites"></a>先决条件
 
-很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息项目模板](../native/creating-a-holographic-directx-project.md) 是一个不错的开端。
+一个很好的起点是基于 DirectX 的基于 DirectX 的 UWP 应用，已经以 Windows Mixed Reality API 为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 如果你没有现成的应用程序，并且想要从头开始， [c + + 全息项目模板](../native/creating-a-holographic-directx-project.md) 是一个不错的开端。
 
 >[!IMPORTANT]
 >使用全息远程处理的任何应用都应该编写为使用 [多线程单元](/windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](/windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](/windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>获取全息远程处理 NuGet 包
 
-将 NuGet 包添加到 Visual Studio 中的项目时需要执行以下步骤。
+若要将 NuGet 包添加到 Visual Studio 中的项目，需要执行以下步骤。
 1. 在 Visual Studio 中打开项目。
 2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
 3. 在出现的面板中，选择 " **浏览** "，然后搜索 "全息远程处理"。
@@ -92,7 +92,7 @@ m_playerContext = winrt::Microsoft::Holographic::AppRemoting::PlayerContext::Cre
 ```
 
 >[!WARNING]
->全息远程处理的工作原理是通过使用远程处理特定运行时替换作为 Windows 一部分的 Windows Mixed Reality 运行时。 这是在创建播放机上下文的过程中完成的。 因此，在创建播放机上下文之前对任何 Windows Mixed Reality API 进行的任何调用都可能导致意外的行为。 推荐的方法是尽早创建播放机上下文，然后再与任何混合现实 API 交互。 永远不要混合通过任何 Windows Mixed Reality API 创建或检索的对象 ```PlayerContext::Create``` 。
+>全息远程处理的工作原理是替换作为 Windows 的一部分的 Windows Mixed Reality 运行时。 这是在创建播放机上下文的过程中完成的。 因此，在创建播放机上下文之前对任何 Windows Mixed Reality API 进行的任何调用都可能导致意外的行为。 推荐的方法是尽早创建播放机上下文，然后再与任何混合现实 API 交互。 永远不要混合在 ```PlayerContext::Create``` 使用对象创建或检索对象之前，通过任何 Windows Mixed Reality API 创建或检索的对象。
 
 接下来，可以通过调用 [CreateForCoreWindow](/uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow)创建 HolographicSpace。
 
@@ -105,8 +105,8 @@ m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::Cr
 播放机应用准备好呈现内容后，可以建立到远程应用的连接。
 
 可以通过以下方式之一建立连接：
-1) 在 HoloLens 2 上运行的播放机应用会连接到远程应用。
-2) 远程应用连接到在 HoloLens 2 上运行的播放机应用。
+1) HoloLens 2 上运行的播放机应用连接到远程应用。
+2) 远程应用连接到 HoloLens 2 上运行的播放机应用。
 
 若要从播放机应用连接到远程应用，请 ```Connect``` 在指定主机名和端口的播放机上下文上调用方法。 默认端口为 **8265**。
 
@@ -224,9 +224,9 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 
 ```PlayerContext::BlitRemoteFrameTimeout```如果未接收到新的远程帧，则属性指定重复使用远程帧的时间长度。 
 
-常见的用例是，如果在一段时间内没有收到新帧，BlitRemoteFrame 超时将显示空白屏幕。 启用时，方法的返回类型 ```BlitRemoteFrame``` 还可用于切换到本地呈现的回退内容。 
+常见的用例是，如果在一段时间内没有收到新帧，BlitRemoteFrame 超时将显示空白屏幕。 启用后，方法的返回类型还可用于 ```BlitRemoteFrame``` 切换到本地呈现的回退内容。 
 
-若要启用超时，请将属性值设置为等于或大于 100 ms 的持续时间。 若要禁用超时，请将属性设置为零。 如果在设置的持续时间内启用了超时并且未收到任何远程帧，则 BlitRemoteFrame 将失败并返回， ```Failed_RemoteFrameTooOld``` 直到接收到新的远程帧。
+若要启用超时，将 属性值设置为等于或大于 100 毫秒的持续时间。 若要禁用超时，将 属性设置为零持续时间。 如果超时处于启用状态，并且未在设置的持续时间内收到任何远程帧，则 BlitRemoteFrame 将失败并返回，直到收到新的 ```Failed_RemoteFrameTooOld``` 远程帧。
 
 ```cpp
 using namespace std::chrono_literals;
@@ -237,22 +237,22 @@ m_playerContext.BlitRemoteFrameTimeout(500ms);
 
 ## <a name="optional-get-statistics-about-the-last-remote-frame"></a>可选：获取有关最后一个远程帧的统计信息
 
-若要诊断性能或网络问题，可以通过属性检索有关最后一个远程帧的统计信息 ```PlayerContext::LastFrameStatistics``` 。 在调用 HolographicFrame 期间更新统计信息 [：:P resentusingcurrentprediction](/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction)。
+若要诊断性能或网络问题，可以通过 属性检索有关最后一个远程帧的 ```PlayerContext::LastFrameStatistics``` 统计信息。 统计信息在调用 [HolographicFrame：:P ResentUsingCurrentPrediction 期间更新](/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction)。
 
 ```cpp
 // Get statistics for the last presented frame.
 winrt::Microsoft::Holographic::AppRemoting::PlayerFrameStatistics statistics = m_playerContext.LastFrameStatistics();
 ```
 
-有关详细信息，请参阅 ```PlayerFrameStatistics``` 文件中的文档 ```Microsoft.Holographic.AppRemoting.idl``` [](#idl)。
+有关详细信息，请参阅 ```PlayerFrameStatistics``` 文件 中的 ```Microsoft.Holographic.AppRemoting.idl``` [文档](#idl)。
 
 ## <a name="optional-custom-data-channels"></a>可选：自定义数据通道
 
-自定义数据信道可用于通过已建立的远程处理连接发送用户数据。 有关详细信息，请参阅 [自定义数据通道](holographic-remoting-custom-data-channels.md) 。
+自定义数据通道可用于通过已建立的远程处理连接发送用户数据。 有关详细信息 [，请参阅](holographic-remoting-custom-data-channels.md) 自定义数据通道。
 
 ## <a name="see-also"></a>另请参阅
-* [使用 Windows Mixed Reality Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
-* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
+* [使用远程 API 编写全息远程Windows Mixed Reality应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR API 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [自定义全息远程处理数据通道](holographic-remoting-custom-data-channels.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)

@@ -1,18 +1,18 @@
 ---
-title: 手型接点 chaser
+title: 手部关节追踪器
 description: MRTK 中的 chaser
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 0beac2dae5aa12cf07f193dab9a6db7bc7ddf2e5
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 376dcd0e1ff01d6e9020aedf35ed2bb2b7b39fa8a119d125aa8c3a96bf0024fe
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175366"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189553"
 ---
-# <a name="hand-joint-chaser"></a>手型接点 chaser
+# <a name="hand-joint-chaser"></a>手部关节追踪器
 
 ![手型接点 chasers ](../images/hand-joint-chaser/MRTK_HandJointChaser_Main.jpg) 此示例场景演示了如何使用规划求解将对象附加到手。
 

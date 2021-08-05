@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，EyeTracking，
-ms.openlocfilehash: 229903e01c597aefbb3fc29de8a49d79cbbd42d0
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: aab2f35259db183f4f3edb4fffc2b3e7a066bccf9c69e492c90ee193388b8b7a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144194"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189585"
 ---
 # <a name="eye-supported-target-selection"></a>目视支持的目标选择
 
@@ -20,7 +20,7 @@ ms.locfileid: "110144194"
 
 - 查找 & 说 _"选择"_ (默认的语音命令) 
 - 查找 (自定义语音命令 & 说 _"分解"_ 或 _"Pop"_) 
-- "查看 & 蓝牙" 按钮
+- 查看 & 蓝牙按钮
 - 看看 & 挤压 (例如，在你的前方，将拇指和食指置于一起) 
   - 请注意，要使其正常工作， [需要禁用手写片](eye-tracking-eyes-and-hands.md#how-to-disable-the-hand-ray)
 
@@ -39,21 +39,21 @@ ms.locfileid: "110144194"
 作为开发人员，您希望提供一个灵活的解决方案，使用户能够在各种情况下实现此任务：
 
 - 转到按钮并浏览
-- 从一个距离中查看它，说"选择"
-- 使用手部射线并执行收缩将按钮作为目标。在这种情况下，最灵活的解决方案是使用主焦点处理程序，因为每当当前优先处理的主焦点指针触发事件时，它会通知你。 请注意，如果启用了手部射线，当手进入视场时，头部或眼睛凝视焦点指针就会被禁用。
+- 从远处观看，说 "选择"
+- 在这种情况下，使用手 ray 定位按钮并执行挤压，最灵活的解决方案是使用主焦点处理程序，因为当当前优先级优先顺序指针触发事件时，它会通知你。 请注意，如果启用了 "手写" 光线，则一旦进入查看，就会立即禁用 head 或眼睛视觉焦点指针。
 
 > [!IMPORTANT]
-> 请注意，如果启用了手部射线，当手进入视场时，头部或眼睛凝视焦点指针就会被禁用。 如果要支持"外观和收缩"[交互，则需要禁用手部射线](eye-tracking-eyes-and-hands.md#how-to-disable-the-hand-ray)。 在眼动跟踪示例场景中，我们禁用了手部射线，以允许使用眼睛 + 手部运动展示更丰富的交互 - 请参阅支持眼 [部定位的示例](eye-tracking-eyes-and-hands.md)。
+> 请注意，如果启用了 "手写" 光线，则一旦进入查看，就会立即禁用 head 或眼睛视觉焦点指针。 如果要支持 [ _"外观和挤压"_ 交互，则需要禁用该手型](eye-tracking-eyes-and-hands.md#how-to-disable-the-hand-ray)。 在我们的眼睛跟踪示例场景中，我们已禁用了 "手动" 光线，以允许使用眼睛 + 手动作展示更丰富的交互-请参阅示例 [目视支持的定位](eye-tracking-eyes-and-hands.md)。
 
-[**2.同时使用眼睛焦点和手部射线：**](#2-independent-eye-gaze-specific-eyetrackingtarget)
+[**2. 同时使用目视关注和手中光线：**](#2-independent-eye-gaze-specific-eyetrackingtarget)
 
-在某些情况下，你可能希望更具体地了解哪些焦点指针类型可以触发特定事件并允许同时使用多个远场交互技术。
+在某些情况下，你可能想要更具体地了解哪种类型的焦点指针可以触发某些事件，并允许同时使用多个远交互技术。
 
-例如：在应用中，用户可以使用远手射线来操作一些全息机械设置，例如，抓取并按住一些远程全息引擎部件并就地保存它们。 执行此操作时，用户必须浏览多个说明，并通过标记一些复选框来记录其进度。 如果用户手不忙，那么只需触摸复选框，或者使用手部射线选择它，就会很自然。 但是，如果用户手忙，就像我们的情况中，将一些全息引擎部件放在一起时，你想要让用户使用眼睛凝视无缝滚动说明，并直接查看复选框并说"检查！"。
+例如：在您的应用程序中，用户可以使用 "far" 光线来操纵一些全息机械设置-例如，抓住并保存一些较远的全息引擎部件，并将其固定到位。 这样做时，用户必须通过一系列说明，并通过标记一些复选框来记录她/他的进度。 如果用户的工作 _不忙_，只需触摸复选框或使用手 instinctual 选择它。 但是，如果用户有她/他的工作繁忙，则在我们的示例中，您需要让用户使用其眼睛无缝滚动说明，只需查看一个复选框，然后说 "检查！"。
 
-若要启用此功能，需要使用与核心 MRTK FocusHandlers 无关的特定于眼睛的 EyeTrackingTarget 脚本，并在下面进一步讨论。
+若要启用此项，需要使用独立于 core MRTK FocusHandlers 的眼睛特定的 EyeTrackingTarget 脚本，稍后将对此进行讨论。
 
-## <a name="1-use-generic-focus-and-pointer-handlers"></a>1.使用通用焦点和指针处理程序
+## <a name="1-use-generic-focus-and-pointer-handlers"></a>1. 使用一般焦点和指针处理程序
 
 如果正确设置了目视跟踪 (参阅 [基本 MRTK 安装程序以使用目视跟踪](eye-tracking-basic-setup.md)) ，使用户可以使用眼睛来选择全息影像，这与任何其他焦点输入 (例如，打印头或手 ray) 相同。这使你可以通过在 MRTK 输入指针配置文件中定义主焦点类型（这取决于用户的需求）来灵活地与全息影像交互，同时使代码保持不变。 这允许在打印头或眼睛眼睛之间切换，而无需更改代码行或将手形光线替换为远交互的目视目标。
 
@@ -118,15 +118,15 @@ public class ColorTap : MonoBehaviour, IMixedRealityFocusHandler, IMixedRealityP
 
 ### <a name="eye-gaze-specific-baseeyefocushandler"></a>眼睛特定的 BaseEyeFocusHandler
 
-鉴于眼睛凝视与其他指针输入可能非常不同，你可能希望确保仅在焦点输入为眼睛凝视且当前为主输入指针时做出反应。 
-为此，将使用特定于眼动跟踪的 以及 [`BaseEyeFocusHandler`](xref:Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler) 派生自 的 [`BaseFocusHandler`](xref:Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler) 。
-如前所述，只有当眼睛凝视目标当前是主要指针输入（即没有手部射线处于活动状态 (时，它才触发) 。 有关详细信息，请参阅 [如何支持眼睛凝视 + 手势](eye-tracking-eyes-and-hands.md)。
+如果眼睛看起来可能与其他指针输入非常不同，则你可能想要确保只在 _视觉_ 上输入时做出反应，并确保它当前是主输入指针。
+出于此目的，你将使用 [`BaseEyeFocusHandler`](xref:Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler) 特定于目视跟踪的，以及从派生的 [`BaseFocusHandler`](xref:Microsoft.MixedReality.Toolkit.Input.BaseFocusHandler) 。
+如前文所述，它仅在目视注视目标为主指针输入 (即，没有手) 处于活动状态时才触发。 有关详细信息，请参阅 [如何支持眼睛眼睛 + 手势](eye-tracking-eyes-and-hands.md)。
 
-下面是来自 (`EyeTrackingDemo-03-Navigation` Assets/MRTK/Examples/Demos/EyeTracking/Scenes) 。
-在此演示中，有两个 3D 全息影像将打开，具体取决于查看对象的哪个部分：如果用户查看全息影像的左侧，则该部分将缓慢地向面向用户的正面移动。
-如果查看右侧，则该部分将缓慢移动到前面。
-这是一种可能不希望一直处于活动状态的行为，也是不希望由手部射线或头部凝视意外触发的行为。
-附加 [`OnLookAtRotateByEyeGaze`](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.OnLookAtRotateByEyeGaze) 后，查看 GameObject 时将旋转。
+下面是 `EyeTrackingDemo-03-Navigation` (资产/MRTK/示例/演示/EyeTracking/场景) 的示例。
+在此演示中，有两个将根据对象的哪个部分进行检查的3D 全息影像：如果用户查看全息图的左侧，则该部件将慢慢地向正面朝用户方向移动。
+如果查看了右侧，那部分会慢慢地移至前面。
+这是一种可能不希望在任何时候都处于活动状态的行为，也可能不希望手中出现意外触发的情况。
+附加后 [`OnLookAtRotateByEyeGaze`](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.OnLookAtRotateByEyeGaze) ，GameObject 将在查看时旋转。
 
 ```c#
 public class OnLookAtRotateByEyeGaze : BaseEyeFocusHandler
@@ -155,18 +155,18 @@ public class OnLookAtRotateByEyeGaze : BaseEyeFocusHandler
 }
 ```
 
-有关 的可用事件的完整列表，请查看 API 文档 [`BaseEyeFocusHandler`](xref:Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler) ：
+有关可用事件的完整列表，请参阅 API 文档 [`BaseEyeFocusHandler`](xref:Microsoft.MixedReality.Toolkit.Input.BaseEyeFocusHandler) ：
 
-- **OnEyeFocusStart：** 当眼睛凝视射线 *开始与* 此目标的碰撞体相交时触发。
-- **OnEyeFocusStay：** 当 *眼睛* 凝视射线与此目标的碰撞体相交时触发。
-- **OnEyeFocusStop：** 当眼睛凝视射线 *停止与* 此目标的碰撞体相交时触发。
-- **OnEyeFocusDwell：** 在眼睛凝视射线与此目标的碰撞体相交一定时间后触发。
+- **OnEyeFocusStart：** 眼睛眼睛与此目标的碰撞 *器相交后* 触发。
+- **OnEyeFocusStay：** 眼睛眼睛与此目标的碰撞器相交 *时* 触发。
+- **OnEyeFocusStop：** 眼睛眼睛 *停止* 与此目标的碰撞器相交后触发。
+- **OnEyeFocusDwell：** 眼睛在指定的时间段内与此目标的碰撞器相交后触发。
 
-## <a name="2-independent-eye-gaze-specific-eyetrackingtarget"></a>2.独立眼睛凝视特定的 EyeTrackingTarget
+## <a name="2-independent-eye-gaze-specific-eyetrackingtarget"></a>2. 独立的眼睛-注视特定的 EyeTrackingTarget
 
-最后，我们提供了一个解决方案，让你通过脚本完全独立于其他焦点指针处理基于眼睛的 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 输入。
+最后，我们为您提供了一个解决方案，让您通过脚本将基于目视的输入完全独立于其他焦点指针 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 。
 
-这有三 _个优点_：
+这有三大 _优点_：
 
 - 可以确保只对用户的眼睛进行反应。
 - 这与当前活动的主输入无关。 因此，可以一次处理多个输入，例如，将快速目视定位与手势结合起来。
@@ -196,32 +196,32 @@ public class OnLookAtRotateByEyeGaze : BaseEyeFocusHandler
 - [`ChangeSize`](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.ChangeSize)
 - [`BlendOut`](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.BlendOut)
 
-此方法的优点是，各种事件可以重复使用相同的脚本。 例如，全息影像可能会基于语音命令或按下虚拟按钮后开始面向用户。 若要触发这些事件，只需引用应在附加到 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) GameObject 的脚本中执行的方法。
+此方法的优点是可以通过各种事件重用相同的脚本。 例如，全息图可能会根据声音命令或在按虚拟按钮后开始面向用户。 若要触发这些事件，只需引用应在附加到 GameObject 的脚本中执行的方法 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 。
 
-对于"智能智能手机通知 _"_ 的示例，会发生以下情况：
+对于 _"智能留心通知"_ 示例，会发生以下情况：
 
-- **OnLookAtStart () ：** 通知开始...
-  - *FaceUser.Engage：...* 向用户打开 。
-  - *ChangeSize.Engage：...* 大小增加 _(到指定的最大缩放) 。_
-  - *BlendOut.Engage：...* 在 处于更 (_空闲状态后，_ 开始混合使用) 。  
+- **OnLookAtStart ()**：通知开始到 .。。
+  - *FaceUser：* .。。向用户转。
+  - *ChangeSize：* .。。大小增加 _(最大为指定的最大刻度)_。
+  - *BlendOut：* .。。开始在更 _微妙的空闲状态) 之后_ 混合更多 (。  
 
-- **OnDwell () ：** 通知 _BlendOut_ 脚本通知通知已充分查看。
+- **OnDwell ()**：通知 _BlendOut_ 脚本已充分查看通知。
 
-- **OnLookAway () ：** 通知开始...
-  - *FaceUser.Disengage：...* 将 返回到其原始方向。
-  - *ChangeSize.Disengage：...* 减小回其原始大小。
-  - *BlendOut.Disengage：...* 开始混合 - _如果 OnDwell ()_ 触发，则完全混合并销毁，否则返回其空闲状态。
+- **OnLookAway ()**：通知开始到 .。。
+  - *FaceUser：* .。。返回到其原始方向。
+  - *ChangeSize：* .。。减小到其原始大小。
+  - *BlendOut：* .。。开始进行 blend-如果触发了 _OnDwell ()_ ，请完全和销毁，并将其恢复到其空闲状态。
 
-**设计注意事项：** 在这里，获得舒适体验的关键是仔细调整任何这些行为的速度，以避免由于一直对用户眼睛凝视反应过快而引起眼睛凝视。
+**设计注意事项：** 这种体验的关键是要认真调整任何这些行为的速度，以避免通过对用户的眼睛反应太快来导致 discomfort。
 否则，这很快就会让人感到难以承受。
 
 <img src="../../images/eye-tracking/mrtk_et_EyeTrackingTarget_Notification.jpg" width="750" alt="Target Notification">
 
 ### <a name="example-2-holographic-gem-rotates-slowly-when-looking-at-it"></a>示例#2：全息 gem 在查看时缓慢旋转
 
-与示例 #1 类似，我们可以轻松地为 (Assets/MRTK/Examples/Demos/EyeTracking/Scene) 场景中的全息 gem 创建悬停反馈，该场景在查看时以恒定方向和恒定速度 (缓慢旋转 (与上面) 中的旋转示例相反。 `EyeTrackingDemo-02-TargetSelection` 只需从 _EyeTrackingTarget_ 的 _WhileLookingAtTarget ()_ 事件触发全息 gem 的旋转。 以下是更多详细信息：
+与示例 #1 类似，我们可以轻松地为 (Assets/MRTK/Examples/Demos/EyeTracking/Scene) 场景中的全息 gem 创建悬停反馈，该场景在查看时以恒定方向和恒定速度 (缓慢旋转 (与上面) 中的旋转示例相反。 `EyeTrackingDemo-02-TargetSelection` 只需从 EyeTrackingTarget 的 _WhileLookingAtTarget_ 事件触发全息 () 旋转。  下面是一些更多详细信息：
 
-1. 创建一个泛型脚本，其中包含一个用于旋转其附加到的 GameObject 的公共函数。 下面是 _RotateWithConstSpeedDir_ 中的一个示例，可在其中通过 Unity 编辑器调整旋转方向和速度。
+1. 创建包含公共函数的通用脚本，以轮换它附加到的 GameObject。 下面是 _RotateWithConstSpeedDir.cs_ 中的示例，可在其中从 Unity 编辑器调整旋转方向和速度。
 
     ```c#
     using UnityEngine;
@@ -252,26 +252,26 @@ public class OnLookAtRotateByEyeGaze : BaseEyeFocusHandler
     }
     ```
 
-1. 将 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 脚本添加到目标 GameObject，并在 UnityEvent 触发器中引用 _RotateTarget ()_ 函数，如以下屏幕截图所示：
+1. 将 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 脚本添加到目标 GameObject， () UnityEvent 触发器中 _引用 RotateTarget_ () 函数，如以下屏幕截图所示：
 
     ![EyeTrackingTarget 示例](../../images/eye-tracking/mrtk_et_EyeTrackingTargetSample.jpg)
 
-### <a name="example-3-pop-those-gems-aka-_multi-modal-eye-gaze-supported-target-selection_"></a>示例 #3： Pop 这些 gem 又 _又称_
+### <a name="example-3-pop-those-gems-aka-_multi-modal-eye-gaze-supported-target-selection_"></a>示例#3：弹出这些 gem（也名多模式 _眼睛凝视支持的目标选择）_
 
-在上面的示例中，我们已展示了如何轻松地检测是否查看目标以及如何触发对该目标的反应。 接下来，让我们使用中的 _OnSelected ()_ 事件分解 gem [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 。 有趣的部分是 *如何* 触发选择。 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget)允许快速分配不同的方法来调用选择：
+在上一示例中，我们演示了检测是否查看目标以及触发对此的反应是多么容易。 接下来，让我们使用 中的 _OnSelected_ () 事件使 gem 分解 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 。 有趣的部分是 *如何* 触发选择。 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget)允许快速分配调用所选内容的不同方法：
 
-- _挤压手势_：将 "选择操作" 设置为 "select" 将使用默认的手动笔势来触发选择。
-这意味着用户只需抬起手并将其拇指和食指合并在一起以确认所做的选择。
+- _收缩手势_：将"选择操作"设置为"Select"使用默认手势来触发选择。
+这意味着，用户只需举手，将手指和手指合在一起以确认选择。
 
-- 说 _"选择"_：使用默认的语音命令 _"选择"_ 来选择全息影像。
+- 说 _"选择"：_ 使用默认语音命令 _"选择"_ 来选择全息影像。
 
-- 说 _"分解"_ 或 _"Pop"_：若要使用自定义语音命令，需要执行两个步骤：
-    1. 设置自定义操作，如 _"DestroyTarget"_
-        - 导航到 _MRTK-> 输入-> 输入操作_
-        - 单击 "添加新操作"
+- 说 _"分解"_ 或 _"Pop"：_ 若要使用自定义语音命令，需要执行两个步骤：
+    1. 设置自定义操作，例如 _"DestroyTarget"_
+        - 导航到 _MRTK ->输入 ->输入操作_
+        - 单击"添加新操作"
 
-    2. 设置触发此操作的语音命令，如 _"分解"_ 或 _"Pop"_
-        - 导航到 _MRTK-> 输入-> 语音_
+    2. 设置触发此操作的语音命令，例如" _分解"_ 或 _"Pop"_
+        - 导航到 _MRTK ->输入 ->语音_
         - 单击"添加新的语音命令"
             - 关联刚刚创建的操作
             - 分配 _KeyCode_ 以允许通过按下按钮触发操作
@@ -323,23 +323,23 @@ public class HitBehaviorDestroyOnSelect : MonoBehaviour
 手部射线优先于头部和眼睛凝视目标。 这意味着，如果启用手部射线，当手进入视图时，手部射线将充当主指针。
 但是，在某些情况下，你可能想要在仍然检测用户是否正在查看某个全息影像的同时使用手部射线。 简单！ 实质上，需要执行两个步骤：
 
-**1.启用手部射线：** 若要启用手部射线，请转到混合现实 _工具包 ->输入 ->指针_。
-在所有眼动跟踪演示场景配置混合现实工具包一次的 _EyeTrackingDemo-00-RootScene_ 中，应会看到 _EyeTrackingDemoPointerProfile_。
+**1.启用手部射线：** 若要启用手部射线，请转到混合现实Toolkit _->输入 ->指针_。
+在所有眼动跟踪演示场景配置混合现实 Toolkit 的 _EyeTrackingDemo-00-RootScene_ 中，应会看到 _EyeTrackingDemoPointerProfile_。
 可以从头开始 _创建新的输入配置文件_ ，也可以调整当前眼动跟踪配置文件：
 
 - **从头开始：** 在"_指针"_ 选项卡中，从上下文菜单中选择 _DefaultMixedRealityInputPointerProfile。_
 这是已启用手部射线的默认指针配置文件！
 若要更改默认光标 (不透明的白色) ，只需克隆配置文件并创建自己的自定义指针配置文件。
-然后将 _DefaultCursor_ 替换为 "_注视 Cursor Prefab_" 下的 " _EyeGazeCursor_ "。  
-- **基于现有的 _EyeTrackingDemoPointerProfile_：** 双击 _EyeTrackingDemoPointerProfile_ 并在 " _指针选项_" 下面添加以下项：
-  - **控制器类型：** "有向右" 的 "Windows Mixed Reality"
-  - **左右手使用习惯：** 随时
-  - **指针 Prefab：** DefaultControllerPointer
+然后将 _DefaultCursor_ 替换为"凝视光标预制"下的 _EyeGazeCursor。_   
+- **基于现有的 _EyeTrackingDemoPointerProfile：_** 双击 _EyeTrackingDemoPointerProfile，_ 在"指针选项"下 _添加以下条目_：
+  - **控制器类型：**"表达手部"，"Windows Mixed Reality"
+  - **手部：** 任何
+  - **指针预制：** DefaultControllerPointer
 
-**2. 检测是否会查看全息图：** 使用 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) 脚本来检测是否查看了全息图，如上所述。 你还可以查看 `FollowEyeGaze` 有关灵感的示例脚本，因为这会在眼睛下显示一个全息图， (例如，光标) 是否已启用手写光线。
+**2.检测** 是否正在查看全息影像：使用脚本启用检测是否正在查看全息影像 [`EyeTrackingTarget`](xref:Microsoft.MixedReality.Toolkit.Input.EyeTrackingTarget) ，如上所述。 还可以查看示例脚本以寻找灵感，因为此脚本在眼睛凝视后显示全息影像 (例如，光标) 是否启用手部射线。 `FollowEyeGaze`
 
-现在，当您开始眼睛跟踪演示场景时，您应该会看到一条来自手的射线。
-例如，在 "目视跟踪目标选择" 演示中，半透明圆圈仍位于眼睛眼睛的位置，并且 gem 将响应其是否处于查找状态，而顶部场景菜单按钮则使用主输入指针 (你) 改为使用。
+现在，启动眼动跟踪演示场景时，应该会看到来自手部的射线。
+例如，在眼动跟踪目标选择演示中，半透明圆圈仍在关注眼睛凝视，gem 会响应它们是否被查看，而顶部场景菜单按钮则使用主输入指针 (指针) 。
 
 ---
-[返回 "MixedRealityToolkit" 中的眼睛跟踪](eye-tracking-main.md)
+[返回到"MixedRealityToolkit 中的眼动跟踪"](eye-tracking-main.md)

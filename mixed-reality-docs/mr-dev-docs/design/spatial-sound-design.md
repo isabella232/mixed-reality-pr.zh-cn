@@ -5,13 +5,13 @@ author: kegodin
 ms.author: v-hferrone
 ms.date: 11/02/2019
 ms.topic: article
-keywords: Windows Mixed Reality，空间音质，设计，样式，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，手势，交互，衰减
-ms.openlocfilehash: d51fbdf16d7186c386f124c773f75dacc8c157fd
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+keywords: Windows Mixed Reality，空间音效，设计，样式，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，手势，交互，衰减
+ms.openlocfilehash: 687811f23e11cadf6e75129098c9feb0393009f819eb961cf2f55a3208cc5f96
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489207"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208957"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>如何在混合现实应用程序中使用声音
 
@@ -38,23 +38,23 @@ ms.locfileid: "109489207"
 * 当应用播放声音以通知用户时，请暂时减少其他声音的音量。
 * 对于按钮悬停声音 (查看以下信息) ，添加时间延迟以防止过多的声音触发。
 
-### <a name="dont-rely-solely-on-sounds"></a>不要仅依赖于声音
+### <a name="dont-rely-solely-on-sounds"></a>不要完全依赖于声音
 
-使用良好的声音对用户来说十分有价值。 但请确保即使声音关闭，应用程序也可用。
-* 用户可能有听力障碍。
-* 应用程序可以在一个声音很大的环境中使用。
-* 用户可能出于隐私考虑或其他原因禁用设备音频。
+使用良好的声音对于用户非常有用。 但请确保即使关闭声音，应用程序也能使用。
+* 用户可能会收到听力障碍。
+* 您的应用程序可能会在更高的环境中使用。
+* 用户可能会出于隐私目的或其他原因而禁用设备音频。
 
-## <a name="how-to-sonify-interactions"></a>如何组织交互
+## <a name="how-to-sonify-interactions"></a>如何 sonify 交互
 
-混合现实中的交互类型包括手势、直接操作和语音。 使用以下建议的特征为这些交互选择或设计声音。
+混合现实中的交互类型包括手势、直接操作和语音。 使用以下建议特征为这些交互选择或设计声音。
 
 ### <a name="gesture-interactions"></a>手势交互
 
-在混合现实中，用户可以使用鼠标与按钮进行交互。 按钮操作通常在用户释放时发生，而不是按按钮来让用户有机会取消交互。 使用声音来强化这些阶段。 若要帮助用户定位远距按钮，还请考虑使用指针悬停声音。
-* 按钮按下声音应该是一个简短的、触感为"单击"的声音。<br/>示例 [：MRTK_ButtonPress.wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* 按钮-"解压缩"声音应具有类似的触感。 高于按下声音的音高可增强完成感。<br/>示例 [：MRTK_ButtonUnpress.wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
-* 对于悬停声音，请考虑使用细微且无威胁的声音，例如低频率四下或凹凸。
+在混合现实中，用户可以通过使用鼠标与按钮交互。 通常，当用户释放而不是按下按钮时，按钮操作会让用户有机会取消交互。 使用声音来强化这些阶段。 若要协助用户以较远的按钮为目标，还应考虑使用指针悬停声音。
+* 按钮-按下声音应为简短的 tactile "单击"。<br/>示例： [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 按钮-"unpress" 声音应具有类似的 tactile 感觉。 比按下声音更高的跨度强调完成的意义。<br/>示例： [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* 对于 "悬停声音"，请考虑使用细小的和非威胁的声音，如低频率 thud 或凹凸。
 
 ### <a name="direct-manipulation"></a>直接操作
 
@@ -72,23 +72,23 @@ ms.locfileid: "109489207"
 
 ### <a name="voice-interactions"></a>语音交互
 
-语音交互通常具有细微的视觉元素。 使用声音强化交互阶段。 你可能想要使用更音调的声音来区分它们与手势和直接操作声音。
+语音交互通常具有微妙的视觉元素。 使用声音来强化交互阶段。 您可能想要使用更多的声音，将它们与手势和直接操作声音区分开来。
 
-* 使用正面声音进行语音命令 *确认*。 音调和主要音调间隔有效。
-* 对语音命令失败使用更短、不太正面的 *语调*。 避免负面声音。 请改为使用更具可自定义性的中性声音来传达应用程序正在从交互中继续。
-* 如果应用程序有唤醒词，则当设备开始侦听 时，请使用简短的 *音调*。 在应用程序侦听时，使用 *细微的循环* 声音。
+* 语音命令 *确认* 使用有正负音。 升高的声音和主要的音乐间隔都是有效的。
+* 对于语音命令 *失败*，请使用较短的、不太积极的音调。 避免出现负面声音。 相反，请使用更 percussive 的中性声音来传达应用程序正在交互的活动。
+* 如果你的应用程序具有唤醒字词，则在设备 *开始侦听* 时，请使用短暂的短暂音。 在 *应用程序侦听时使用* 细小循环声音。
 
 ### <a name="notifications"></a>通知
 
-通知指示用户未启动的应用程序状态更改和其他事件。 状态更改可能包括进程完成、消息和电话呼叫。
+通知通知应用程序状态更改和用户未启动的其他事件。 状态更改可能包括进程完成、消息和电话呼叫。
 
-在混合现实中，对象有时会从用户的视野中移开。 将移动 *的动画* 对象与空间化声音配对，具体取决于对象类型和运动速度。
-* 它有助于在动画末尾播放空间化的声音，以通知用户对象的新位置。
-* 对于逐步移动，移动过程中发出"whoosh"声音有助于用户跟踪对象。
+在混合现实中，对象有时会移出用户的视图字段。 使用依赖于对象类型和运动速度的 spatialized 声音进行配对移动 *动画对象* 。
+* 它有助于在动画结束时播放 spatialized 声音，以通知用户对象的新位置。
+* 对于逐步运动，移动过程中的 "whoosh" 声音有助于用户跟踪对象。
 
-*消息通知* 声音可能会重复出现，有时是快速连续的。 重要的是它们不突出或声音不小。 中范围正调音有效。
+*消息通知* 声音可能会反复听到，有时会迅速继续。 这一点很重要，它们不会显得不上或太恶劣。 中间的正面色调声音有效。
 
-* 传入呼叫声音应具有与手机音素类似的质量。 这些声音会循环播放音乐短语，直到用户应答呼叫。
+* 传入呼叫声音对于手机铃声应该具有相似的质量。 这些声音会循环播放音乐短语，直到用户应答呼叫。
 * 语音通信连接和断开连接应具有短暂的色调声音。 连接声音应为正片，指示连接成功。 断开连接声音应该是一种中性声音，指示调用完成。
 
 ## <a name="handle-spatialization"></a>处理 spatialization
@@ -109,20 +109,20 @@ Spatialization 有一定的 CPU 开销。 许多应用程序最多可以同时�
 
 ### <a name="when-and-how-to-apply-distance-based-attenuation"></a>何时以及如何应用基于距离的衰减
 
-在物理世界，距离较远的声音更静。 音频引擎可以基于源距离对此衰减进行建模。 在传达相关信息时，请使用基于距离的衰减。
+在现实生活中，远离远处的声音会更安静。 音频引擎可以根据源距离对此衰减建模。 在传达相关信息时，请使用基于距离的衰减。
 
-与视觉 *指示器、**动画全息* 影像和其他信息性声音之间的距离与用户相关。 使用基于距离的衰减直观地提供提示。
+与 *视觉对象指示器*、 *动画影像* 和其他信息性声音的距离与用户相关。 使用基于距离的衰减直观地提供提示。
 
-调整每个源的衰减曲线，以适应混合现实世界空间的大小。 音频引擎的默认曲线通常适用于高达 (半公里) 空间。
+调整每个源的衰减曲线，使其适应混合现实世界的空间大小。 音频引擎的默认曲线通常适用于大 () 空间 kilometer。
 
-强化按钮 *操作和其他交互* 的渐进阶段的声音不应应用衰减。 这些声音的增强效果比将距离与按钮通信更重要。 当连续听到许多按钮单击时，变体可能会分散注意力，尤其是在键盘上。
+强调按钮操作和其他交互的 *渐进式阶段* 的声音不应应用衰减。 这些声音的加强效果比与按钮通信的重要性更重要。 变体可能会分散注意力，尤其是在键盘上，很多按钮单击时可能会被连续听到。
 
-### <a name="which-spatialization-technology-to-use"></a>要使用哪种空间化技术
+### <a name="which-spatialization-technology-to-use"></a>使用哪种 spatialization 技术
 
-对于耳机或 HoloLens 扬声器，使用基于 HRTF (的) 相关传输函数。 这些技术为物理世界中的头部周围的声音传播建模。 即使声源位于头部远端，声音也传播到远端的声音，并出现一些衰减和延迟。 说话人平移仅依赖于衰减，当声音位于右侧时，在左声中应用总衰减，而从另一种方式进行平移。 对于"正常听声"侦听器，此方法可能会感到障碍，并且对于有一只听力障碍的侦听器不可访问。
+使用耳机或 HoloLens 扬声器，使用头相关传输功能 (基于) 的 spatialization 技术。 这些技术对现实世界内的声音的传播建模。 即使当某个声源位于一端时，声音仍会传播到远处的耳，同时出现一些衰减和延迟。 演讲者平移仅依赖于衰减，并在左侧的声音位于右侧，而另一种方式上应用总衰减。 对于在一条耳中听力有障碍的侦听器，此方法可能不适合 "正常听觉" 侦听器并且无法访问。
 
 ## <a name="next-steps"></a>后续步骤
 
-* [在 Unity 中使用空间声音](../develop/unity/spatial-sound-in-unity.md)
-* [Robor表示法的案例研究](case-study-using-spatial-sound-in-roboraid.md)
-* [HoloTour 案例研究](case-study-spatial-sound-design-for-holotour.md)
+* [在 Unity 中使用空间音效](../develop/unity/spatial-sound-in-unity.md)
+* [Roboraid 的案例研究](case-study-using-spatial-sound-in-roboraid.md)
+* [HoloTour 的案例研究](case-study-spatial-sound-design-for-holotour.md)

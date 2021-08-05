@@ -1,17 +1,17 @@
 ---
 title: 移植概述
-description: 概述用于将现有应用程序引入 HoloLens 和 VR 混合现实的各种移植选项。
+description: 概述用于将现有应用程序引入混合现实（适用于 HoloLens VR）的各种移植选项。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: 移植， unity， 中间件， 引擎， UWP， Win32
-ms.openlocfilehash: 167559d69cc4e65f971a8970b56e41e6e3ca8b22
-ms.sourcegitcommit: 12ea3fb2df4664c5efd07dcbb9040c2ff173afb6
+ms.openlocfilehash: 519dae088e689e0a6e617bf5e2b34f81cc2e265256c4844df7dd34e99172d536
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113042268"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189417"
 ---
 # <a name="porting-overview"></a>移植概述
 
@@ -39,14 +39,14 @@ ms.locfileid: "113042268"
 
 ### <a name="hololens-1st-gen-unity-apps-to-hololens-2"></a>HoloLens (第一代) Unity 应用HoloLens 2
 
-如果要移植到 HoloLens 2 的现有 HoloLens (第一代) Unity 应用程序，请按照 [HoloLens](./porting-hl1-hl2.md)移植文章中的说明进行操作。
+如果已有要HoloLens (移植到 HoloLens 2 的) 第一代) Unity 应用程序，请按照我们的 HoloLens[移植一](./porting-hl1-hl2.md)文的说明进行操作。
 
 ### <a name="immersive-vr-headsets"></a>沉浸式 VR 头戴显示设备
 
 如果为其他 VR 设备生成了内容，则需要重定任何供应商特定的 VR SDK 和可能的输入映射 API。 可以在沉浸式应用移植指南 中查找 Unity 和 Unreal 移植 [方案的信息](porting-guides.md)。
 
-有关要针对头戴显示设备更新的 SteamVR Windows Mixed Reality，请参阅 [我们的 SteamVR 更新指南](updating-your-steamvr-application-for-windows-mixed-reality.md)。
+有关要针对头戴显示设备更新的 SteamVR Windows Mixed Reality，请参阅[我们的 SteamVR 更新指南](updating-your-steamvr-application-for-windows-mixed-reality.md)。
 
-### <a name="2d-universal-windows-applications"></a>2D 通用 Windows 应用程序
+### <a name="2d-universal-windows-applications"></a>2D 通用Windows应用程序
 
-如果要移植到 Windows Mixed Reality 沉浸式头戴显示设备或 HoloLens 的现有 2D UWP 应用，请按照移植 [2D UWP](building-2d-apps.md) 应用了解 Windows Mixed Reality 说明。
+如果要移植到 Windows Mixed Reality 沉浸式头戴显示设备或 HoloLens 的现有 2D UWP 应用，请按照移植[2D UWP](building-2d-apps.md)应用了解 Windows Mixed Reality 说明。

@@ -5,12 +5,12 @@ author: RogPodge
 ms.author: roliu
 ms.date: 06/18/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，滑杆，
-ms.openlocfilehash: c8a2b6c377762918bfff79008ab34d3dfe4e20bb
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: de95201f381a148defe668ead03c16fac5b3ba4ff3674487057f9227cbe6efba
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177500"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209528"
 ---
 # <a name="sliders"></a>滑块
 
