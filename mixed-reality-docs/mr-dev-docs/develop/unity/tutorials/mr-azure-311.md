@@ -1,19 +1,19 @@
 ---
-title: HoloLens (第一代) 和 Azure 311-Microsoft Graph
+title: HoloLens（第一代）和 Azure 311 - Microsoft Graph
 description: 完成本课程，了解如何利用 Microsoft Graph，并在混合现实应用程序中连接到用于驱动工作效率的数据。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，microsoft graph，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 6afa1e8c5d2baa2d46652901558b2917c5c43d70
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 16fb7853d202c39399b48595a17e7e9b2edf224f18d5e315c5ddcf4a0054d8f7
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730244"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115215142"
 ---
-# <a name="hololens-1st-gen-and-azure-311---microsoft-graph"></a>HoloLens (第一代) 和 Azure 311-Microsoft Graph
+# <a name="hololens-1st-gen-and-azure-311---microsoft-graph"></a>HoloLens（第一代）和 Azure 311 - Microsoft Graph
 
 >[!NOTE]
 >混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
@@ -22,7 +22,7 @@ ms.locfileid: "104730244"
 
 ![](images/AzureLabs-Lab311-00.png)
 
-*Microsoft Graph* 是一组 api，旨在实现对许多 Microsoft 服务的访问。 Microsoft 将 Microsoft Graph 描述为一系列按关系连接的资源，这意味着，应用程序可以访问所有种类的已连接用户数据。 有关详细信息，请访问 [Microsoft Graph 页](https://developer.microsoft.com/graph)。
+*Microsoft Graph* 是一组 api，旨在实现对许多 Microsoft 服务的访问。 Microsoft 将 Microsoft Graph 描述为一系列按关系连接的资源，这意味着，应用程序可以访问所有种类的已连接用户数据。 有关详细信息，请访问[Microsoft Graph 页](https://developer.microsoft.com/graph)。
 
 开发过程中，将会创建一个应用程序，在该应用程序中，用户将会被指示到，然后点击一个球，这将提示用户安全登录到 Microsoft 帐户。 登录到帐户后，用户将能够看到一天计划的会议列表。
 
@@ -43,7 +43,7 @@ ms.locfileid: "104730244"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
@@ -51,11 +51,11 @@ ms.locfileid: "104730244"
 本课程建议采用以下硬件和软件：
 
 - 开发 PC
-- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](../../install-the-tools.md#installation-checklist)
+- [启用开发人员模式 Windows 10 Fall Creators Update (或更高版本) ](../../install-the-tools.md#installation-checklist)
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- 已启用开发人员模式的[Microsoft HoloLens](/hololens/hololens1-hardware)
+- 已启用开发人员模式[Microsoft HoloLens](/hololens/hololens1-hardware)
 - Azure 安装和 Microsoft Graph 数据检索的 Internet 访问
 -  (个人或工作/学校) 有效的 **Microsoft 帐户**
 - 使用同一个 Microsoft 帐户安排当天计划的几个会议
@@ -63,12 +63,12 @@ ms.locfileid: "104730244"
 ### <a name="before-you-start"></a>开始之前
 
 1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。 
+2.  设置并测试 HoloLens。 如果需要支持设置 HoloLens，请[确保访问 HoloLens 安装程序一文](/hololens/hololens-setup)。 
 3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
+有关校准的帮助信息，请访问[HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
+有关传感器优化的帮助，请访问[HoloLens 传感器优化文章](/hololens/hololens-updates)。
 
 ## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a>第1章-在应用程序注册门户中创建应用
 
@@ -97,7 +97,7 @@ ms.locfileid: "104730244"
 
     ![](images/AzureLabs-Lab311-05.png)
 
-6.  在同一页中向下滚动，并在 " **Microsoft Graph 权限** " 部分中向下滚动，你将需要为应用程序添加其他权限。 单击 "**委派权限**" 旁的 "**添加**"。
+6.  在同一页中向下滚动，并在 " **Microsoft Graph 权限**" 部分中向下滚动，你将需要为应用程序添加其他权限。 单击 "**委派权限**" 旁的 "**添加**"。
 
     ![](images/AzureLabs-Lab311-06.png)
 
@@ -123,15 +123,15 @@ ms.locfileid: "104730244"
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  当 Unity 处于打开状态时，有必要选中 "默认 **脚本编辑器** " 设置为 " **Visual Studio**"。 转到 "**编辑**  >  **首选项**"，然后在新窗口中导航到 "**外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
+3.  当 Unity 处于打开状态时，有必要检查默认 **脚本编辑器** 是否设置为 **Visual Studio**。 转到 "**编辑**  >  **首选项**"，然后在新窗口中导航到 "**外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  转到 "**文件**  >  **生成设置**" 并选择 "**通用 Windows 平台**"，然后单击 "**切换平台**" 按钮以应用所选内容。
+4.  转到 "**文件**  >  **生成" 设置**，选择 "**通用 Windows 平台**"，然后单击 "**切换平台**" 按钮以应用你的选择。
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  仍在 **文件**  >  **生成设置** 中时，请确保：
+5.  如果仍在 **文件**  >  **生成设置**，请确保：
 
     1. **目标设备** 设置为 **HoloLens**
     2. **生成类型** 设置为 **D3D**
@@ -155,15 +155,15 @@ ms.locfileid: "104730244"
             > [!IMPORTANT] 
             > 请注意，必须将 Unity 场景保存在 " *资产* " 文件夹中，因为它们必须与 Unity 项目相关联。 创建场景文件夹 (和其他类似文件夹) 是构建 Unity 项目的典型方式。
 
-    7.  现在，" *生成设置*" 中的其余设置应保留为默认值。
+    7.  默认情况下，*设置* 中的其余设置应保留为默认值。
 
-6.  在 " *生成设置* " 窗口中，单击 " **播放机设置** " 按钮，这会在 *检查器* 所在的空间中打开相关面板。 
+6.  在 "*生成设置*" 窗口中，单击 "**播放机" 设置** 按钮，这会在 *检查器* 所在的空间中打开相关面板。 
 
     ![](images/AzureLabs-Lab311-16.png)
 
 7. 在此面板中，需要验证几项设置：
 
-    1. 在 " **其他设置** " 选项卡中：
+    1. 在 **其他设置** 选项卡中：
 
         1.  **脚本****运行时版本** 应 ( .Net 4.6 等效) **试验**，这会触发重新启动编辑器的需要。
 
@@ -173,17 +173,17 @@ ms.locfileid: "104730244"
 
             ![](images/AzureLabs-Lab311-17.png)
 
-    2.  在 " **发布设置** " 选项卡的 " **功能**" 下，检查：
+    2.  在 "**发布设置**" 选项卡的 "**功能**" 下，检查：
 
         - **InternetClient**
 
             ![](images/AzureLabs-Lab311-18.png)
 
-    3.  在面板中，在 "**发布设置**") 下面 (找到 " **XR 设置**" 中，选中 "**支持的虚拟现实**"，确保已添加 **Windows Mixed reality SDK** 。
+    3.  在面板中，在 **XR 设置** (下面的 "**发布设置**") 中，检查 **支持的虚拟现实**，确保添加 **Windows Mixed Reality SDK** 。
 
         ![](images/AzureLabs-Lab311-19.png)
 
-8.  返回 *生成设置*， *Unity c # 项目* 不再灰显;选中此旁边的复选框。
+8.  返回 *生成设置* 中， *Unity c # 项目* 不再灰显;选中此旁边的复选框。
 
 9.  关闭“生成设置”窗口  。
 
@@ -194,7 +194,7 @@ ms.locfileid: "104730244"
 > [!IMPORTANT]
 > 如果要跳过本课程的 *Unity 设置* 组件，并继续直接进入代码，请随时下载此 [unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage)，将其作为 [**自定义包**](https://docs.unity3d.com/Manual/AssetPackages.html)导入项目，然后从 [第5章](#chapter-5---create-meetingsui-class)继续。
 
-若要在 Unity 内使用 *Microsoft Graph* ，需要 **使用 "** 不过，可以使用 Microsoft Graph SDK，因为在生成 Unity 项目后，它将需要添加 NuGet 包 (这意味着编辑项目后期生成) 。 将所需的 Dll 直接导入到 Unity 中是更简单的方法。
+若要在 Unity 内使用 *Microsoft Graph* ，需要 **使用 "** 不过，可以使用 Microsoft Graph SDK，因为在生成 Unity 项目后，它将要求添加 NuGet 包 (这意味着编辑项目后期生成) 。 将所需的 Dll 直接导入到 Unity 中是更简单的方法。
 
 > [!NOTE]
 > 当前 Unity 中存在一个已知问题，需要在导入后重新配置插件。 此部分中 (4-7 的这些步骤) 解决 bug 后不再需要这些步骤。
@@ -213,7 +213,7 @@ ms.locfileid: "104730244"
 
 3.  单击 " **导入** " 按钮，将项添加到项目。
 
-4.  在 "*项目" 面板* 中的 "**插件**" 下，单击 " **MSGraph** " 文件夹，然后选择名为 "" 的 **插件。**
+4.  在 *Project 面板* 中，在 "**插件**" 下，选择 " **MSGraph** " 文件夹，然后选择名为 "" 的 **插件。**
 
     ![](images/AzureLabs-Lab311-21.png)
 
@@ -222,7 +222,7 @@ ms.locfileid: "104730244"
     ![](images/AzureLabs-Lab311-22.png)
 
     > [!NOTE] 
-    > 标记这些插件会将它们配置为仅在 Unity 编辑器中使用。 在将项目从 Unity 导出为通用 Windows 应用程序之后，WSA 文件夹中将使用不同的 Dll 集。
+    > 标记这些插件会将它们配置为仅在 Unity 编辑器中使用。 在将项目从 Unity 导出为通用 Windows 应用程序之后，WSA 文件夹中有一组不同的 dll。
 
 6.  接下来，需要在 **MSGraph** 文件夹中打开 **WSA** 文件夹。 你将看到刚才配置的同一文件的副本。 选择该文件，然后在检查器中：
 
@@ -234,7 +234,7 @@ ms.locfileid: "104730244"
 
         ![](images/AzureLabs-Lab311-23.png)
 
-7.  单击“应用”。
+7.  单击 **“应用”** 。
 
 ## <a name="chapter-4---camera-setup"></a>第4章-照相机设置
 
@@ -266,7 +266,7 @@ ms.locfileid: "104730244"
 
 若要创建此类：
 
-1.  右键单击 "*项目" 面板* 中的 "**资产**" 文件夹，然后选择 "**创建**  >  **文件夹**"。 命名文件夹 **脚本**。
+1.  右键单击 " *Project" 面板* 中的 "**资产**" 文件夹，然后选择 "**创建**  >  **文件夹**"。 命名文件夹 **脚本**。
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
@@ -275,7 +275,7 @@ ms.locfileid: "104730244"
 
     ![](images/AzureLabs-Lab311-28.png)
 
-3.  双击新的 **MeetingsUI** 脚本以通过 *Visual Studio* 打开它。
+3.  双击新的 " **MeetingsUI** " 脚本，用 *Visual Studio* 打开它。
 
 4.  插入以下命名空间：
 
@@ -367,11 +367,11 @@ ms.locfileid: "104730244"
         }
     ```
 
-8. **删除** () 方法的 **更新** ，并在 Visual Studio 返回到 Unity 之前 **保存更改** 。 
+8. **删除** **()** 方法的更新，并在返回到 Unity 之前保存 Visual Studio 中 **所做的更改**。 
 
-## <a name="chapter-6---create-the-graph-class"></a>第6章-创建图形类
+## <a name="chapter-6---create-the-graph-class"></a>第6章-创建 Graph 类
 
-要创建的下一个脚本是 **图形** 脚本。 此脚本负责进行调用以对用户进行身份验证，并从用户日历中检索当天的计划会议。
+要创建的下一个脚本是 **Graph** 脚本。 此脚本负责进行调用以对用户进行身份验证，并从用户日历中检索当天的计划会议。
 
 若要创建此类：
 
@@ -379,7 +379,7 @@ ms.locfileid: "104730244"
 
 2.  右键单击 "**脚本**" 文件夹中，单击 "**创建**  >  **c # 脚本**"。 将脚本命名为 **Graph**。
 
-3.  双击脚本以通过 Visual Studio 打开它。
+3.  双击该脚本以 Visual Studio 打开它。
 
 4.  插入以下命名空间：
 
@@ -398,11 +398,11 @@ ms.locfileid: "104730244"
     ```
 
     > [!IMPORTANT]
-    > 你将注意到，此脚本中的部分代码围绕 [预编译指令](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)环绕，这是为了避免生成 Visual Studio 解决方案时库出现问题。
+    > 你将注意到此脚本中的部分代码围绕[预编译指令](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)环绕，这是为了避免生成 Visual Studio 解决方案时库出现问题。
 
 5.  删除 **开始 ()** 并 **更新 ()** 方法，因为它们不会被使用。
 
-6.  在 **图形** 类外部，插入以下对象，这些对象是反序列化表示每日计划会议的 JSON 对象所必需的：
+6.  在 **Graph** 类外部，插入以下对象，这些对象是对表示每日计划会议的 JSON 对象进行反序列化所必需的：
 
     ```csharp
     /// <summary>
@@ -449,7 +449,7 @@ ms.locfileid: "104730244"
     }
     ```
 
-7.  在 **图形** 类中，添加以下变量：
+7.  在 **Graph** 类中，添加以下变量：
 
     ```csharp    
         /// <summary>
@@ -614,7 +614,7 @@ ms.locfileid: "104730244"
         }
     ```
 
-10. 你现在已经完成了 **图形** 脚本。 在返回到 Unity 之前，在 Visual Studio 中 **保存更改**。
+10. 你现在已经完成了 **Graph** 脚本。 在返回到 Unity 之前，请 **将所做的更改保存** 在 Visual Studio 中。
 
 ## <a name="chapter-7---create-the-gazeinput-script"></a>第7章-创建 GazeInput 脚本
 
@@ -626,7 +626,7 @@ ms.locfileid: "104730244"
 
 2.  右键单击 "**脚本**" 文件夹中，单击 "**创建**  >  **c # 脚本**"。 将脚本命名为 **GazeInput**。
 
-3.  双击脚本以通过 Visual Studio 打开它。
+3.  双击该脚本以 Visual Studio 打开它。
 
 4.  更改命名空间代码以匹配下面的代码，并 **\[ \] 将 "GazeInput" 标记** 添加到你的类的上方，以便能够对其进行序列化：
 
@@ -677,7 +677,7 @@ ms.locfileid: "104730244"
         private Vector3 _gazeDirection;
     ```
 
-6.  将 **CreateCursor ()** 方法添加到场景中，并从 **Start ()** 方法调用方法：
+6.  将 **CreateCursor ()** 方法添加 HoloLens 到场景中，并从 **Start ()** 方法调用方法：
 
     ```csharp    
         /// <summary>
@@ -804,7 +804,7 @@ ms.locfileid: "104730244"
         }
     ```
 
-8.  在返回到 Unity 之前，在 Visual Studio 中 **保存更改**。
+8.  在返回到 Unity 之前，请 **将所做的更改保存** 在 Visual Studio 中。
 
 ## <a name="chapter-8---create-the-interactions-class"></a>第8章-创建交互类
 
@@ -820,7 +820,7 @@ ms.locfileid: "104730244"
 
 2.  右键单击 "**脚本**" 文件夹中，单击 "**创建**  >  **c # 脚本**"。 命名脚本 **交互**。
 
-3.  双击脚本以通过 Visual Studio 打开它。
+3.  双击该脚本以 Visual Studio 打开它。
 
 4.  插入以下命名空间：
 
@@ -905,13 +905,13 @@ ms.locfileid: "104730244"
         }
     ```
 
-10. **删除** () 方法的 **更新** ，然后在 Visual Studio 返回到 Unity 之前 **保存更改** 。
+10. **删除** **()** 方法的更新，然后在返回到 Unity 之前保存 Visual Studio 中 **所做的更改**。
 
 ## <a name="chapter-9---set-up-the-script-references"></a>第9章-设置脚本引用
 
 在本章中，需要将 **交互** 脚本放到 **主摄像机** 上。 然后，该脚本会处理需要的其他脚本。
 
--  从 "*项目" 面板* 的 "**脚本**" 文件夹中，将脚本 **交互** 拖动到 "**相机**" 对象，如下图所示。
+-  从 " *Project" 面板* 中的 "**脚本**" 文件夹中，将脚本 **交互** 拖动到 **相机的主** 对象，如下图所示。
 
     ![](images/AzureLabs-Lab311-29.png)
 
@@ -939,7 +939,7 @@ ms.locfileid: "104730244"
 
 此项目的 Unity 部分所需的所有内容现在均已完成，因此可以从 Unity 构建它。
 
-1.  导航到 " *生成设置* " ( "*文件* > * 生成设置 * * ) "。
+1.  导航到 "*生成" 设置* ( **文件*> "设置" ) 中的 "生成"。
 
     ![](images/AzureLabs-Lab311-33.png)
 
@@ -953,31 +953,31 @@ ms.locfileid: "104730244"
 
 ## <a name="chapter-12---deploy-to-hololens"></a>第12章-部署到 HoloLens
 
-在 HoloLens 上部署：
+若要在 HoloLens 上部署：
 
-1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式。** 要执行此操作：
+1.  你将需要用于远程部署) 的 HoloLens (的 IP 地址，并确保你的 HoloLens 处于 **开发人员模式。** 若要实现此目的，请执行以下操作：
 
-    1.  在戴上 HoloLens 的同时，请打开 **设置**。
+    1.  在戴 HoloLens 的同时，打开 **设置**。
 
     2.  中转到 **网络 & Internet**  >  **wi-fi**  >  **高级选项**
 
     3.  记下 **IPv4** 地址。
 
-    4.  接下来，导航回 "**设置**"，然后为  >  **开发人员** 更新 & 安全性
+    4.  接下来，导航回 **设置**，然后向开发 **人员更新 & 安全性**  >  
 
     5.  设置 **开发人员模式**。
 
-2.  导航到新的 Unity 生成 (**应用** 文件夹) 并通过 **Visual Studio** 打开解决方案文件。
+2.  导航到新的 Unity 生成 (**应用** 文件夹) ，然后用 **Visual Studio** 打开解决方案文件。
 
 3.  在 **解决方案配置** 中，选择 " **调试**"。
 
-4.  在 **解决方案平台** 中，选择 " **X86，远程计算机**"。 系统将提示你插入远程设备的 **IP 地址** (HoloLens，在本例中，你记) 。
+4.  在 **解决方案平台** 中，选择 " **X86，远程计算机**"。 系统将提示你插入远程设备的 **IP 地址** (HoloLens，在本例中，你记下了) 。
 
     ![](images/AzureLabs-Lab311-34.png)
 
-5.  中转到 " **生成** " 菜单，然后单击 " **部署解决方案** "，将应用程序旁加载到 HoloLens。
+5.  中转到 "**生成**" 菜单，然后单击 "**部署解决方案**"，将应用程序旁加载到 HoloLens。
 
-6.  应用现在应显示在你的 HoloLens 上已安装的应用列表中，可以启动了！
+6.  现在，你的应用程序应出现在你 HoloLens 上已安装的应用程序列表中，可以启动了！
 
 ## <a name="your-microsoft-graph-hololens-application"></a>Microsoft Graph HoloLens 应用程序
 

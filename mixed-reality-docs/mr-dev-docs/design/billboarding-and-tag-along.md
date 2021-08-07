@@ -5,13 +5,13 @@ author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，billboarding，标记和混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 0bd1ac2168284d714240c6775468a61ed3e665b8
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: Windows Mixed Reality、billboarding、标记和混合现实耳机、Windows mixed reality 耳机、虚拟现实耳机、HoloLens、MRTK、混合现实 Toolkit
+ms.openlocfilehash: 7ffcbe1d3401601e92eb1ac81dfd84f2af9e8e79eeea809b01a1e943a85f0db9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600336"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115214153"
 ---
 # <a name="billboarding-and-tag-along"></a>公告和尾随
 
@@ -24,7 +24,7 @@ ms.locfileid: "110600336"
 
 Billboarding 是一种可应用于混合现实中的对象的行为概念。 具有 billboarding 的对象始终向用户提供正面的定向。 文本和菜单系统是常见的用例，在此类情况下，用户在用户的环境中放置的静态对象 (全局锁定的) 在用户四处移动时可能会被遮住或不可读。
 
-启用了 billboarding 的对象可以在用户的环境中自由旋转。 它们还可以根据设计注意事项限制为单个轴。 请记住，billboarded 对象在放置到其他对象时或在 HoloLens 中太接近扫描面时，可以将其夹扣或遮蔽。 为避免出现这种情况，请考虑在为 billboarding 启用轴旋转时对象可能产生的总空间。
+启用了 billboarding 的对象可以在用户的环境中自由旋转。 它们还可以根据设计注意事项限制为单个轴。 请记住，billboarded 对象在放置到其他对象时，或在 HoloLens 中过于接近扫描图面时，可以将其夹扣或遮蔽。 为避免出现这种情况，请考虑在为 billboarding 启用轴旋转时对象可能产生的总空间。
 
 <br>
 
@@ -33,8 +33,8 @@ Billboarding 是一种可应用于混合现实中的对象的行为概念。 具
 
 标记-一起是可以添加到全息影像的行为概念。 标记靠后的对象试图停留在允许用户轻松交互的范围内。
 
-![HoloLens 引脚面板是如何在标签上表现出的一个很好的示例](images/tagalong-1000px.jpg)<br>
-*HoloLens "开始" 菜单是一个更好的标记和行为示例*
+!["HoloLens 引脚" 面板是有关标记的行为方式的很好示例。](images/tagalong-1000px.jpg)<br>
+*HoloLens "开始"菜单是一种很好的标记的示例*
 
 带标签的对象具有参数，可对其行为方式进行微调。 当用户在其环境中移动时，内容可以在用户的视觉上或传出。 随着您的移动，内容会通过向视图的边缘滑动来尝试停留在用户的绕中。 内容可能暂时不会显示，具体取决于用户的移动速度。 当用户 gazes 沿标记的对象时，它会更全面地进入视图。 将内容视为始终 "一目了然"，这样用户就不会忘记内容的方向。
 
@@ -46,7 +46,7 @@ Billboarding 是一种可应用于混合现实中的对象的行为概念。 具
 
 ---
 
-## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Billboarding 和标记 (混合现实工具包) 适用于 Unity
+## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Billboarding 和 MRTK (混合现实 Toolkit) 适用于 Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为 Billboarding 和标记的行为提供脚本。 将布告栏脚本分配到任何对象，以添加 billboarding 行为并使对象始终为你。 若要添加标记和行为，请使用 RadialView 脚本。 可以调整各种选项，如 lerping 时间、距离和角度。
 
 * [MRTK-径向视图规划求解](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#radialview)

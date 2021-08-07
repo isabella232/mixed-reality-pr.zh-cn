@@ -1,29 +1,29 @@
 ---
-title: Unity 中的 HP 回音 G2 控制器
+title: Unity 中的 HP Reverb G2 手柄
 description: 了解如何在 SteamVR 和 Windows Mixed Reality Unity 应用程序中设置和使用新的 HP 回音 G2 控制器。
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/14/2020
 ms.topic: article
 keywords: Unity，回音，回音 G2，HP 回音 G2，mixed reality，开发，运动控制器，用户输入，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发
-ms.openlocfilehash: 26435ef57c9baf59b1008fb4750aedd913a19814
-ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
+ms.openlocfilehash: 4e561cb1e46fe487f1b25ed526f0adeafc2de6c525835ffe3b1871d7516b233e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99421387"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115215614"
 ---
-# <a name="hp-reverb-g2-controllers-in-unity"></a>Unity 中的 HP 回音 G2 控制器
+# <a name="hp-reverb-g2-controllers-in-unity"></a>Unity 中的 HP Reverb G2 手柄
 
-HP 运动控制器是全新类型的 Windows Mixed Reality 控制器：所有相同的跟踪技术都具有一组略有不同的可用输入： 
+HP 运动控制器是一种全新的 Windows Mixed Reality 控制器类型：使用一组略有不同的可用输入的相同跟踪技术： 
 
 * 触摸板已替换为以下两个按钮： A 和 B （适用于右控制器）和 X 和 Y （适用于左侧控制器）。 
 * 抓住现在是一个触发器，用于发布介于0.0 和1.0 之间的值流，而不是使用按下但未按下的按钮。 
 
-由于不能通过现有的 Windows 和 Unity Api 访问新的输入，因此需要专用的 **MixedReality** UPM 包。 
+由于不能通过现有的 Windows 和 Unity api 访问新的输入，因此需要专用的 **MixedReality** UPM 包。 
 
 > [!IMPORTANT]
-> **此包中的类不会替换现有的 Windows 和 Unity Api，但对它们进行了补充。** 通常可用于经典 Windows Mixed Reality 控制器和 HP 运动控制器的功能可通过使用现有 Api 的相同代码路径进行访问。 只有新输入需要使用其他 MixedReality 包。 
+> **此包中的类不会替换现有的 Windows 和 Unity api，但对它们进行了补充。** 通常可以通过使用现有 api 的相同代码路径访问经典 Windows Mixed Reality 控制器和 HP 运动控制器均可使用的功能。 只有新输入需要使用其他 MixedReality 包。 
 
 ## <a name="hp-motion-controller-overview"></a>HP 运动控制器概述
 
@@ -33,7 +33,7 @@ HP 运动控制器是全新类型的 Windows Mixed Reality 控制器：所有相
 
 ## <a name="installing-microsoftmixedrealityinput-with-the-mixed-reality-feature-tool"></a>通过混合现实功能工具安装 MixedReality
 
-安装新的混合现实功能工具应用程序的 MixedReality 插件。 按照 [安装和使用说明](welcome-to-mr-feature-tool.md) 进行操作，并在混合现实工具包类别中选择 **混合现实输入** 包：
+安装新的混合现实功能工具应用程序的 MixedReality 插件。 按照 [安装和使用说明](welcome-to-mr-feature-tool.md)，在混合现实 Toolkit 类别中选择 **混合现实输入** 包：
 
 ![突出显示混合现实输入的混合现实功能工具包窗口](images/feature-tool-mrinput.png)
 
@@ -47,12 +47,12 @@ MotionController 可以公开两种输入：
     * 按下时，按钮只能返回 0.0 ( (按) 下时未按) 或1.0 时，触发器可以返回 0.0 (完全释放) 到 1.0 (完全按下) 的连续值。 
 * 操纵杆状态由其 X 和 Y 分量介于-1.0 和1.0 之间的 Vector2.y 表示。 
 
-可以使用 *MotionController. GetPressableInputs ( # B1* 返回一个输入列表，该列表返回按 (按钮和触发器) 或 *( MotionController # B5* 方法返回的输入，以返回返回2轴值的输入列表。 
+你可以使用 *MotionController. GetPressableInputs ()* 返回 (按钮和触发器) 返回按下值的输入列表，或 *() MotionController* 方法返回返回2轴值的输入列表。 
 
 MotionControllerReading 实例表示在给定时间的控制器状态： 
 
-* *GetPressedValue ( # B1* 检索按钮或触发器的状态。 
-* *GetXYValue ( # B1* 检索操纵杆的状态。 
+* *GetPressedValue ()* 检索按钮或触发器的状态。 
+* *GetXYValue ()* 检索操纵杆的状态。 
 
 ### <a name="creating-a-cache-to-maintain-a-collection-of-motioncontroller-instances-and-their-states"></a>创建缓存以维护 MotionController 实例及其状态的集合 
 
@@ -259,7 +259,7 @@ void Update()
 
 ### <a name="generating-events-from-the-new-inputs"></a>从新输入生成事件 
 
-您可以选择将所有状态变化作为事件来处理，而不是每个帧都轮询控制器的状态，这样您就可以更快地处理持久小于帧的操作。 为了使此方法生效，运动控制器的缓存需要处理控制器自最后一帧后发布的所有状态，可以通过存储从 MotionController 检索到的最后一个 MotionControllerReading 的时间戳并调用 *MotionController ( # B1*： 
+您可以选择将所有状态变化作为事件来处理，而不是每个帧都轮询控制器的状态，这样您就可以更快地处理持久小于帧的操作。 为了使此方法生效，运动控制器的缓存需要处理控制器自最后一帧后发布的所有状态，可以通过存储从 MotionController 检索到的最后一个 MotionControllerReading 的时间戳并调用 MotionController，来完成此操作 *。 TryGetReadingAfterTime ()*： 
 
 ```csharp
 private class MotionControllerState 
@@ -346,7 +346,7 @@ private class MotionControllerState
 } 
 ```
 
-更新缓存内部类后，MonoBehavior 类可以公开两个事件（按下并释放），并从更新 ( # A1 方法中引发它们： 
+更新缓存内部类后，MonoBehavior 类可以公开两个事件（按下并释放），并从其更新 () 方法中引发它们： 
 
 ```csharp
 /// <summary> 

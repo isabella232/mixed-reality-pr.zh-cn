@@ -5,17 +5,17 @@ author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 资产，创建，处理，预算，多边形，纹理，着色器，性能，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，资产
-ms.openlocfilehash: a5f4271de522111b0ef994869b9ecf4910582562
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: 资产，创建，处理，预算，多边形，纹理，着色器，性能，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，资产
+ms.openlocfilehash: 5c5dcdbe24a8028bb8a3c57e57b9d95079f9e832954d12aa31421dd75f1b6982
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009613"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115214102"
 ---
 # <a name="asset-creation-process"></a>资产创建过程
 
-Windows Mixed Reality 构建于 Microsoft 投入了 DirectX 的数十年中。 开发人员构建三维图形的所有经验和技能都将继续对 HoloLens 有价值。
+Windows Mixed Reality 在 Microsoft 投入了大量投资。 开发人员构建三维图形的所有经验和技能都将继续对 HoloLens 有价值。
 
 你为项目创建的资产分为多个形状和窗体。 它们可由一系列纹理/图像、音频、视频、3D 模型和动画组成。 我们无法开始涵盖可用于创建项目中使用的不同类型资产的所有工具。 对于本文，我们将重点介绍3D 资产创建方法。
 
@@ -60,7 +60,7 @@ Windows Mixed Reality 构建于 Microsoft 投入了 DirectX 的数十年中。 �
 
 **资产复杂性**
 * 三角形/多边形有多少？
-* 着色器的复杂程度如何？ 使用混合现实工具包时，建议使用 [混合现实工具包标准着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) 来降低着色器的复杂性。
+* 着色器的复杂程度如何？ 使用混合现实 Toolkit 时，建议使用[混合现实 Toolkit 标准着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)来降低着色器的复杂性。
 
 开发人员和艺术家都必须考虑设备和图形引擎的功能。 Microsoft HoloLens 包含内置于设备中的所有计算和图形。 它共享开发人员在移动平台上所能找到的功能。
 
@@ -77,10 +77,10 @@ Windows Mixed Reality 构建于 Microsoft 投入了 DirectX 的数十年中。 �
 ### <a name="creating-assets"></a>创建资产
 
 **创作工具**<br>
-首先，你可以通过几种不同的方式创建自己的资产。 3D 艺术家使用各种应用程序和工具来创建模型，其中包括 **网格**、 **纹理** 和 **材料**。 然后以文件格式保存该文件，应用程序使用的图形引擎可以导入或使用该格式，如 **。FBX** 或 **。OBJ**。 生成所选图形引擎支持的模型的任何工具将在 **HoloLens** 上运行。 在三维音乐家之间，很多选择使用 [Autodesk 的 Maya，因为它可以使用 HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) 来转换资产的创建方式。 如果你想要快速获得一些内容，也可以使用 Windows 附带的 [3D 生成器](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) 进行导出。要在应用程序中使用的 OBJ。
+首先，你可以通过几种不同的方式创建自己的资产。 3D 艺术家使用各种应用程序和工具来创建模型，其中包括 **网格**、 **纹理** 和 **材料**。 然后以文件格式保存该文件，应用程序使用的图形引擎可以导入或使用该格式，如 **。FBX** 或 **。OBJ**。 生成所选图形引擎支持的模型的任何工具将在 **HoloLens** 上工作。 在三维音乐家之间，很多选择使用[Autodesk 的 Maya，因为它可以使用 HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA)来转换资产的创建方式。 如果你想要快速获得一些东西，还可以使用 Windows 附带的[3d Builder](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources)进行导出。要在应用程序中使用的 OBJ。
 
 **对象捕获**<br>
-还可以选择以三维方式捕获对象。 在三维中捕获 inanimate 对象并通过数字内容创建软件对其进行编辑时，三维打印增加了。 使用 **Kinect 2** 传感器和 [3d 生成器](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) ，可以使用捕获功能从真实世界对象创建资产。 这也是一 [套工具](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) ，用于通过处理多个要装订在一起和网格和纹理的图像来对 **photogrammetry** 执行相同的操作。
+还可以选择以三维方式捕获对象。 在三维中捕获 inanimate 对象并通过数字内容创建软件对其进行编辑时，三维打印增加了。 使用 **Kinect 2** 传感器和 [3d 生成器](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources)，可以使用捕获功能从真实世界对象创建资产。 这也是一 [套工具](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) ，用于通过处理多个要装订在一起和网格和纹理的图像来对 **photogrammetry** 执行相同的操作。
 
 ### <a name="purchasing-assets"></a>采购资产
 
@@ -94,33 +94,33 @@ Windows Mixed Reality 构建于 Microsoft 投入了 DirectX 的数十年中。 �
 * **源文件可用吗？**
   * 不包含在 [Unity 资产存储区](https://www.assetstore.unity3d.com/) 中，但始终包含在 [TurboSquid](https://www.turbosquid.com/)等服务中。
   * 如果没有源文件，则无法修改资产。
-  * 请确保3D 工具可以导入提供的源文件。
-* **了解所获得的内容**
-  * 动画是否提供？
-  * 请确保检查要购买的资产的 "内容" 列表。
+  * 确保提供的源文件可通过 3D 工具导入。
+* **了解你获得什么**
+  * 是否提供动画？
+  * 请务必检查要购买的资产的内容列表。
 
 ### <a name="porting-assets"></a>移植资产
 
-在某些情况下，你将获得最初为其他设备和不同应用生成的现有资产。 在大多数情况下，可以将这些资产转换为与应用使用的图形引擎兼容的格式。
+在某些情况下，需要将最初为其他设备和不同应用构建的现有资产移交给你。 在大多数情况下，这些资产可以转换为与应用使用的图形引擎兼容的格式。
 
-在将资产移植到 HoloLens 应用程序中使用时，需要询问以下问题：
-* **能否直接导入或是否需要将其转换为另一种格式？** 使用正在使用的图形引擎检查要导入的格式。
-* **如果转换为兼容的格式，会丢失任何内容吗？** 有时，详细信息可能会丢失，或者导入可能会导致需要在三维创作工具中清除的项目。
-* **资产的三角形/多边形数是多少？** 根据你的应用程序的预算，你可以使用 [Simplygon](https://www.simplygon.com/) 或类似的工具来 decimate (过程，或手动缩减 poly 计数) 原始资产，使其适合应用程序预算。
+移植资产以在 HoloLens 应用程序中使用时，需要提出以下问题：
+* **可以直接导入还是需要转换为其他格式？** 使用使用的图形引擎检查要导入的格式。
+* **如果转换为兼容格式，是否丢失了任何内容？** 有时，详细信息可能会丢失，或者导入可能会导致需要在 3D 创作工具中清理的项目。
+* **资产的三角形/多边形计数是什么？** 根据应用程序的预算，可以使用 [Simplygon](https://www.simplygon.com/) 或类似工具按过程 (或手动减少原始资产中的) 计数，以适应应用程序预算。
 
 ### <a name="outsourcing-assets"></a>外包资产
 
-对于需要更多资产而不是团队创建的大型项目，另一个选项是将资产创建外包。 外包过程涉及到寻找适用于外包资产的正确工作室或机构。 这可能是成本最高的选项，但也是最灵活的选项。
-* **明确定义你请求的内容**
+对于需要比团队能够创建的资产更多的大型项目，另一种选择是外包资产创建。 外包过程涉及查找专门处理外包资产的合适工作室或机构。 这可以是开销最大的选项，但也是最灵活的选项。
+* **清楚地定义要请求什么**
   * 提供尽可能多的详细信息
-  * 正面、背面和背面概念图像
-  * 显示上下文中资产的参考资料
-  * 通常按厘米指定 (对象的规模) 
+  * Front、side 和 back 概念图像
+  * 在上下文中显示资产的参考图
+  * 对象刻度 (通常以厘米为单位) 
 * **提供预算**
   * Poly 计数范围
-  * 纹理数量
-  * 适用于 Unity 和 HoloLens 的着色器 (类型应始终默认为移动着色器) 
+  * 纹理数
+  * 对于 Unity 和 (着色器类型HoloLens应始终默认为移动着色器) 
 * **了解成本**
   * 更改请求的外包策略是什么？
 
-外包可以很好地根据你的项目时间线运行，但需要更多监督才能保证你首次获得所需的正确资产。
+根据项目时间线，外包可以很好地工作，但需要更多的监督，以确保你第一次获得所需的正确资产。

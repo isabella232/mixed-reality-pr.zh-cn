@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloSketch， HoloLens， Windows Mixed Reality， 草图， 应用
-ms.openlocfilehash: 24929d38f97a3c02946a28184d7702c151dc22b2
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 614572c91067399cc0235ef2570543aa81e2c24ab36a7b9e9bfa03b77e452420
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757319"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213800"
 ---
 # <a name="case-study---building-holosketch-a-spatial-layout-and-ux-sketching-app-for-hololens"></a>案例研究 - 生成 HoloSketch，一种空间布局和 UX 草图应用，HoloLens
 
@@ -154,14 +154,14 @@ HoloSketch 支持在 3D 软件中广泛使用的传统接口。 可以使用手�
 ![上下文菜单](images/holosketch-image-07.png)<br>
 *上下文菜单*
 
-**使用"工具带"菜单**
+**使用工具皮带菜单**
 
-"工具带"菜单中提供了移动、旋转、缩放、保存和加载场景。 
+可从 "工具" 菜单使用 "移动"、"旋转"、"缩放"、"保存" 和 "加载" 场景。 
 
-## <a name="using-keyboard-gestures-and-voice-commands"></a>使用键盘、手势和语音命令
+## <a name="using-keyboard-gestures-and-voice-commands"></a>使用键盘、笔势和语音命令
 
 ![键盘、手势和语音命令](images/holosketch-image-08-1000px.png)<br>
-*键盘、手势和语音命令*
+*键盘、笔势和语音命令*
 
 ## <a name="download-the-app"></a>下载应用
 
@@ -169,31 +169,31 @@ HoloSketch 支持在 3D 软件中广泛使用的传统接口。 可以使用手�
 <tr>
 <td style="border-style: none" width="60px"><img alt="HoloSketch app icon" width="60" height="60" src="images/holosketch-app-icon.png">
 </td>
-<td style="border-style: none"><a href="https://www.microsoft.com/store/p/holosketch/9p3br4t5m4tv">从客户端免费下载并安装 HoloSketch Microsoft Store</a>
+<td style="border-style: none"><a href="https://www.microsoft.com/store/p/holosketch/9p3br4t5m4tv">从 Microsoft Store 免费下载并安装 HoloSketch 应用</a>
 </td>
 </tr>
 </table>
 
 ## <a name="known-issues"></a>已知问题
-* Unity 版本 **5.4.5f1 目前支持创建资产捆绑包。**
-* 根据应用中数据量OneDrive，应用在加载内容时可能OneDrive停止
-* 目前，"保存和加载"功能仅支持基元对象
-* 上下文菜单上禁用了"文本"、"声音"菜单、"视频和照片"菜单
-* "工具带"菜单上的"播放"按钮可清除操作 gizmos
+* **Unity 版本第5.4.5 节 f1** 支持当前创建的资产包。
+* 根据 OneDrive 中的数据量，应用可能看起来好像在加载 OneDrive 内容时已停止
+* 目前，保存和加载功能仅支持基元对象
+* 在上下文菜单上禁用文本、声音、视频和照片菜单
+* 工具皮带菜单上的 "播放" 按钮将清除操作 gizmos
 
 ## <a name="sharing-your-sketches"></a>共享草图
 
-可以通过说"你好，HoloLens，开始/停止录制Cortana视频录制功能。 将音量向上/向下键一起按下，拍摄草图的图片。
+你可以通过说 "你好 Cortana，开始/停止记录"，在 HoloLens 中使用视频录制功能。 同时按向上键和向下键，拍摄草图的图片。
 
 ## <a name="about-the-authors"></a>关于作者
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><a href="http://dongyoonpark.com" target="_blank"><b>Yoon Park</b></a><br>用户体验设计师 @Microsoft</td>
+<td style="border-style: none"><a href="http://dongyoonpark.com" target="_blank"><b>Yoon 寄存</b></a><br>用户体验设计师 @Microsoft</td>
 </tr>
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Patrick Sebring" width="60" height="60" src="images/paseb-60px.jpg"></td>
-<td style="border-style: none"><b>Patrick Sebring</b><br>开发 人员 @Microsoft</td>
+<td style="border-style: none"><b>Sebring</b><br>开发 @Microsoft</td>
 </tr>
 </table> 
