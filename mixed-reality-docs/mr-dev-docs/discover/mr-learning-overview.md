@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, learn, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语言翻译, Azure, Azure 认知服务, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: e21f6245be5a47797c2b58fd8f57c4c6179b1751
-ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
+ms.openlocfilehash: 24584532fca0872a1ec62f6f2381e0aa076da5bb79eea765cb3a0a0f5736f36f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112906873"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115204393"
 ---
 # <a name="mixed-reality-learn-overview"></a>混合现实学习概述
 

@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, android, ios, MRTK, 混合现实工具包, UWP, Azure 空间定位点, AR Foundation, ARCore, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 67bda33f8d2d0711c83791be2e76d91b53ff934f
-ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
+ms.openlocfilehash: 6e9ae377a11d74fd9cdfca7ddb0379542d365e3365bdf07319bc8580b2e87420
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111403405"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115215762"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5.适用于 Android 和 iOS 的 Azure 空间定位点
 

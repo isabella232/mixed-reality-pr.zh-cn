@@ -1,27 +1,27 @@
 ---
 title: 手动菜单
-description: 手动菜单允许用户快速为常用函数获取手动连接的 UI。
+description: 手部菜单允许用户为常用函数快速启动手动附加的 UI。
 author: nbarragan23
 ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
-keywords: 手型，菜单，按钮，快速访问，布局，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: f007ada2d7a594f141d30a3619d4d80ac74621d8
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 手、菜单、按钮、快速访问、布局、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、MRTK、混合现实Toolkit
+ms.openlocfilehash: 76338f75250054c531560dc0b6cb18aa7130c09fe30a49b4afc3fd409f88fdc0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600326"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115201964"
 ---
 # <a name="hand-menu"></a>手动菜单
 
-![Ulnar 端位置](images/UX_Hero_HandMenu.jpg)
+![Ulnar 手部位置](images/UX_Hero_HandMenu.jpg)
 
-"手形" 菜单是 HoloLens 2 中最独特的 UX 模式之一。 它可让你快速打开手动连接的 UI。 由于可以随时访问它，并且可以轻松地显示和隐藏，因此对于快速操作非常有用。
+手部菜单是其中最独特的 UX 模式之HoloLens 2。 它允许你快速启动手动附加的 UI。 由于它可以随时访问，并且可以轻松显示和隐藏，因此它适用于快速操作。
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAg]
 
-你将在下面的列表中找到建议使用的最佳实践。 你还可以在 [MRTK](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)中找到演示菜单的示例场景。
+你将在下面的列表找到有关使用手部菜单的建议最佳做法。 还可以在 [MRTK](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)中查找演示手部菜单的示例场景。
 
 <br>
 
@@ -31,81 +31,81 @@ ms.locfileid: "110600326"
 
 **使按钮数保持较小** 
 
-由于手锁定菜单和眼睛之间的距离接近，用户在任何时候都专注于相对较小的视觉区域 (attentional 的视觉效果约为10度) ，我们建议将按钮数保持为小。 基于我们的探索，一列包含三个按钮的工作非常好，因为即使在用户将其) FOV 移动到 FOV 的中心时，也可以通过将视图的所有内容保留在 " (视图" 字段中。 
+由于手部锁定菜单和眼睛之间的距离非常近，并且用户随时都倾向于将焦点放在相对较小的可视区域 (因此视觉的注意圆锥大约是 10 度) ，因此建议将按钮数保持较小。 根据我们的探索，包含三个按钮的一列可以很好地将所有内容保留到 (FOV) 即使用户将手移到 FOV 中心。 
 
-**使用 "快速操作" 菜单** 
+**使用手部菜单快速操作** 
 
-提起 arm 并维持位置可能很容易导致 arm 疲劳。 对需要短交互的菜单使用手锁定的方法。 如果菜单非常复杂并且需要延长交互时间，请考虑改用世界锁定或正文锁定。 
+引发一个手部并维持该位置很容易导致手部感到。 对需要短时间交互的菜单使用手动锁定方法。 如果菜单很复杂，并且需要延长交互时间，请考虑改为使用世界锁定或正文锁定。 
 
 **按钮/面板角度**
 
-菜单应以与之相对的肩和中间的方式为布告栏：这允许自然的手移动与菜单之间的交互，并在触摸按钮时避免任何难或令人不安的位置。 
+菜单应向头部的相反中央和中间显示广告：这样，可以自然地移动手部，以与另一手交互，并避免触摸按钮时手部位置出现任何麻烦或手部姿势。 
 
-**考虑支持单向或无需操作**
+**考虑支持单手或免手操作**
 
-不要假设用户的手始终可用。 如果一项或两次操作都不可用，请考虑使用各种上下文，并确保你的设计帐户适用于这种情况。 若要支持右手菜单，可以尝试将菜单位置从 "手动锁定" 切换到 "全局锁定" （当手型翻转 (向下) 。 对于无需人工使用的方案，请考虑使用语音命令调用手形菜单。
+不要假定用户两手都始终可用。 当一只或两只手不可用时，请考虑各种上下文，并确保设计考虑到这些情况。 若要支持单手菜单，可以尝试在手部翻转时将菜单位置从手动锁定 (世界锁定) 。 对于免手方案，请考虑使用语音命令调用手部菜单。
 
-**避免在手腕 (系统 "主页按钮附近添加按钮)**
+**避免在系统主页按钮 (附近添加按钮)**
 
-如果将 "手形" 菜单按钮置于 "主页" 按钮附近，则可能会在与 "手形" 菜单交互时意外触发。
+如果手部菜单按钮放置得离主按钮太近，则与手部菜单交互时可能会意外触发。
 
 <br>
 
-## <a name="hand-menu-with-large-and-complex-ui-controls"></a>包含大型和复杂 UI 控件的菜单
+## <a name="hand-menu-with-large-and-complex-ui-controls"></a>包含大型复杂 UI 控件的手动菜单
 
 <img src="images/HandMenu_SizeExample.png" alt="HoloLens perspective of a menu system that always faces the user" width="940px">
-建议限制手动附加菜单上的按钮或 UI 控件的数目。 这是因为，与大量 UI 元素的扩展交互可能会导致 arm 疲劳。 如果你的体验需要大菜单，请为用户提供一种简单的方式来锁定菜单。 我们建议的一种方法是在离开或离开用户时，进行全球锁定后菜单。 第二种方法是允许用户直接抓住菜单。 当用户释放菜单时，菜单应为 "全局锁定"。 这样一来，用户就可以在很长一段时间内轻松且自信地与各种 UI 元素交互。 
+建议限制手动附加菜单上的按钮或 UI 控件的数量。 这是因为与大量 UI 元素的扩展交互可能会导致手部受累。 如果你的体验需要一个大型菜单，则为用户提供一种简单的方式来锁定菜单。 我们建议的一种技术是在手掉手或翻转离开用户时进行世界锁定，然后进行菜单控制。 第二种技术是允许用户使用另一手直接抓取菜单。 当用户释放菜单时，菜单应进行世界锁定。 这样一来，用户可以在一段长时间内轻松、自信地与各种 UI 元素进行交互。 
 
-当菜单处于全局锁定状态时，请确保提供移动菜单的方法，并在不再需要菜单时关闭菜单。 通过在菜单边或顶部提供控点，使菜单可移动。 添加 "关闭" 按钮以允许菜单关闭。 允许菜单在用户正面正面向用户重新附加。 此外，我们还建议要求用户随时注视，以防止错误激活 (参见下面) 。
+当菜单被世界锁定时，请确保提供一种移动菜单的方法，并关闭不再需要的菜单。 在菜单的两侧或顶部提供控点，使菜单可移动。 添加关闭按钮以允许菜单关闭。 允许用户在用户手部面向用户时将菜单重新附加在手上。 我们还建议要求用户凝视其手以防止误报 (请参阅下面的) 。
 
-**显示可用性问题的大菜单**
+**显示可用性问题的大型菜单**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AOPx]
 
-**现有的全球锁定菜单**
+**手动放置的"世界锁定"菜单**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AGZi]
 
-**手动抓取 & 拉取到世界上-锁定菜单**
+**手动抓取&拉取到世界锁定菜单**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAf]
 
-## <a name="how-to-prevent-false-activation"></a>如何防止错误激活
+## <a name="how-to-prevent-false-activation"></a>如何防止误报
 
-如果使用 "上滑作为事件来触发" 手形菜单，则在不需要它时可能会意外出现 (误报) ，因为人们会有意 (进行通信和对象操作) 。 若要减少错误激活，请添加除手掌事件外的附加步骤，以调用 (的手形菜单，如完全打开的手指或用户有意 gazing 的) 。
+如果只是使用"手部"作为事件来触发手部菜单，则当不需要手动菜单时，它可能会意外出现 (误报) ，因为人们有意移动手部 (以用于通信和对象操作) 和无意。 若要减少误报，请添加除"手部启动"事件外的额外步骤，以调用手部菜单 (例如完全打开手指或用户有意在手部) 。
 
-**需要单层掌**
+**需要平面手部**
 
-通过要求平整的张开手，可以防止在用户在环境中进行通信的过程中操作对象或手势时出现错误激活。 
+通过要求使用平面打开的手势，可以防止在用户操作对象或手势时在环境中通信时发生误报。 
 
-**需要注视**
+**需要凝视**
 
-通过要求用户通过眼睛眼睛或眼睛) 来 (注视，这会阻止错误激活，因为用户必须将其注意力视为辅助激活步骤 (，并使用可用于允许用户舒适) 的可调距离阈值。  
+通过要求用户使用眼睛凝视或头部凝视 (来凝视其手部) ，它可以防止误报，因为用户必须将焦点作为辅助激活步骤 (将焦点引导到手部，并设置可调整的距离阈值，以允许用户舒适) 。  
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4Asn4]
 
 ---
 
-## <a name="hand-menu-placement-best-practices"></a>手动菜单布局最佳实践
+## <a name="hand-menu-placement-best-practices"></a>手部菜单放置最佳做法
 
-在人剖析中，ulnar 勇气是在 ulna 骨骼附近运行的勇气。 Ulna 是在 forearm 中找到的一个长骨骼，该骨骼从弯头拉伸到最小手指。
+在人类剖析中，ulnar 下部是一种在 ulna 中附近运行的神经。 ulna 是在前群中发现的一个长根，从下部拉伸到最小手指。
 
 下面是基于探索的两个建议位置：
 
 :::row:::
     :::column:::
-        ![手掌内的 Ulnar 端位置](images/UlnarSideHandMenu.gif)<br>
-        **手掌内的 Ulnar**<br>
-        此位置是可靠的，因为不会相互重叠。 这对于准确的手动检测和跟踪至关重要。
+        ![Ulnar 手部在手部位置](images/UlnarSideHandMenu.gif)<br>
+        **A.ulnar 在手心内**<br>
+        此位置是可靠的，因为手不会相互重叠。 这对准确的手部检测和跟踪至关重要。
     :::column-end:::
     :::column:::
-        ![Ulnar 右侧位置](images/UlnarAboveHandMenu.gif)<br>
-        **B. Ulnar 以上的手势**<br>
-        此位置对用户非常熟悉，因为他们不需要将其扶手提高到与手形菜单的交互。 建议将菜单 **13 厘米** 置于掌上，并对齐 ulnar 掌中的按钮。 [阅读有关最佳按钮大小的详细信息](interactable-object.md)<br>
+        ![上手的 Ulnar 手部位置](images/UlnarAboveHandMenu.gif)<br>
+        **B.上面的 Ulnar**<br>
+        此位置对于用户来说很舒适，因为他们无需过多地提升手部即可与手部菜单交互。 建议将菜单放在 **手心上方 13 cm** 的位置，并对齐 ulnar 树中的按钮。 [详细了解最佳按钮大小](interactable-object.md)<br>
         <br>
-        出于技术原因，我们建议将此位置用于一个必需实现：一旦用户与之交互，开发人员将需要冻结该菜单。 这将避免 jitteriness 与指针重叠，还允许更快地定位按钮。<br>
+        出于技术原因，建议使用一个必需的实现来设置此位置：用户相反的手接近与之交互时，开发人员需要冻结菜单。 这样可以避免手部重叠时出现抖动，还可以更快地确定按钮的目标。<br>
         <br>
-        HoloLens 2 相机在彼此分开时可以精确地识别。 任何重叠的手势都可以导致手形菜单远离定位点位置。<br>
+        HoloLens 2相机在手彼此分离时准确识别手部。 任何重叠的手都可能导致手部菜单离开定位点位置。<br>
     :::column-end:::
 :::row-end:::
 
@@ -115,20 +115,20 @@ ms.locfileid: "110600326"
 
 ## <a name="menu-positions-that-arent-recommended"></a>不建议的菜单位置
 
-我们使用不同的菜单布局和位置完成了用户研究， **不建议** 使用以下菜单位置，查找下面每个研究的缺点：
+我们使用不同的菜单布局和位置完成了用户研究，不建议使用以下菜单位置，找到以下每项研究缺点：
 
 :::row:::
     :::column:::
-        ![上方 arm](images/AboveArm.gif)<br>
-        **Arm 之上**<br>
-        1-难以维护良好的手写跟踪<br>
-        2-由于非自然位置导致用户疲劳
+        ![arm 上方](images/AboveArm.gif)<br>
+        **在 arm 上方**<br>
+        1 - 难以维护良好的手部跟踪<br>
+        2 - 由于位置不自然，导致用户感到不自然
     :::column-end:::
     :::column:::
-        ![上手指](images/AboveFingers.gif)<br>
-        **上手指**<br>
-        1-疲劳，因为要长时间持有<br>
-        2-手动跟踪索引和中间指的问题
+        ![手指上方](images/AboveFingers.gif)<br>
+        **手指上方**<br>
+        1 - 手部因为长时间按住手部而感到手部减轻<br>
+        2 - 手部跟踪索引和中指问题
     :::column-end:::
 :::row-end:::
 
@@ -136,16 +136,16 @@ ms.locfileid: "110600326"
 
 :::row:::
     :::column:::
-        ![上方中心掌](images/handCenter.gif)<br>
-        **上方-中心掌托**<br>
-        1-由于指针重叠而发生的手动跟踪问题<br>
-        疲劳，因为需要长时间来与菜单交互
+        ![中心上方的线心](images/handCenter.gif)<br>
+        **上居中线**<br>
+        1 - 手部跟踪问题，因为手重叠<br>
+        2 - 手部因为长时间按住手与菜单交互而感到手部减轻
     :::column-end:::
     :::column:::
-        ![Top 手指 ](images/TopFingerTip.gif) **top 手指**<br>
-        1-手写跟踪问题<br>
-        2-疲劳在正常情况上保持手动<br>
-        3-由于手指间的空间有限，出现意外的按下按钮的问题
+        ![顶部指 ](images/TopFingerTip.gif) **指顶部手部**<br>
+        1 - 手部跟踪问题<br>
+        2 - 手部远离正常姿势<br>
+        3 - 由于手指之间的空间有限，意外地用其他手指按下按钮时问题
     :::column-end:::
 :::row-end:::
 
@@ -153,10 +153,10 @@ ms.locfileid: "110600326"
 
 :::row:::
     :::column:::
-        ![Arm 背面](images/BackOfTheArm.gif)<br>
-        **Arm 背面**<br>
-        1-可以意外触发主按钮<br>
-        2-不是自然或舒适的位置
+        ![Arm 的背面](images/BackOfTheArm.gif)<br>
+        **手部背面**<br>
+        1 - 可能会意外触发主页按钮<br>
+        2 - 不是自然或舒适位置
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -166,16 +166,16 @@ ms.locfileid: "110600326"
 
 ---
 
-## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的菜单 (混合现实工具包) 适用于 Unity
+## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的 MrTK (Mixed Reality Toolkit) 中的手动菜单
 
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为手形菜单提供脚本和示例场景。 HandConstraintPalmUp 求解器脚本允许您将任何对象附加到各种可配置选项。 MRTK 的手形菜单示例包含有用的选项，例如，用于防止错误激活的平面掌和注视要求。
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为手部菜单提供脚本和示例场景。 HandConstraintPalmUp 求解器脚本允许使用各种可配置选项将任何对象附加到手。 MRTK 的手动菜单示例包括一些有用的选项，例如平面手部和防止误报的凝视要求。
 
-* [手动菜单文档](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)
-* [手型菜单示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/main/Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity)
+* [手部菜单文档](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)
+* [手部菜单示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/main/Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity)
 
-可以在 HoloLens 2 中试用带有 MRTK 示例中心应用的菜单示例。
+可以使用 MRTK 示例中心应用HoloLens 2手动菜单示例。
 
-* [MRTK 示例中心中的手形菜单场景](https://www.microsoft.com/p/mrtk-examples-hub/9mv8c39l2sj4?activetab=pivot:overviewtab)
+* [MRTK 示例中心中的手动菜单场景](https://www.microsoft.com/p/mrtk-examples-hub/9mv8c39l2sj4?activetab=pivot:overviewtab)
 
 <br>
 

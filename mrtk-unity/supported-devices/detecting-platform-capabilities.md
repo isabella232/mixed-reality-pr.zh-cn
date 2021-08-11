@@ -4,36 +4,36 @@ description: MRTK 支持的不同功能的详细信息
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，功能，
-ms.openlocfilehash: 70d320e178f4635d74b5be6a1874eb4254801719
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， 功能，
+ms.openlocfilehash: 0a3ad248e418e10ad1a7105ca5f9ece3e02c62bd7679cfd22d9c4396016d09a7
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175519"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207605"
 ---
 # <a name="detecting-platform-capabilities"></a>检测平台功能
 
-MRTK 的一个常见问题是需要知道哪个特定设备 (ex： Microsoft HoloLens 2) 用于运行应用程序。 在不同的平台上确定确切的硬件可能会有挑战性。 相反，MRTK 提供了一种在运行时标识特定功能的方法， (例如，如果当前设备终结点支持明确) 的操作。
+MRTK 的常见问题涉及了解 (设备，例如Microsoft HoloLens 2) 运行应用程序。 确定确切的硬件在不同平台上可能很有挑战性。 相反，MRTK 提供了在运行时识别特定功能的方法， (例如，当前设备终结点是否支持手部) 。
 
 ## <a name="capabilities"></a>功能
 
-混合现实 Toolkit 提供 [`MixedRealityCapability`](xref:Microsoft.MixedReality.Toolkit.MixedRealityCapability) 枚举，用于定义应用程序可在运行时查询的一组功能。
+混合现实Toolkit提供 枚举，该枚举定义应用程序可在运行时查询的一 [`MixedRealityCapability`](xref:Microsoft.MixedReality.Toolkit.MixedRealityCapability) 组功能。
 
 ### <a name="input-system-capabilities"></a>输入系统功能
 
-默认的 MRTK 输入系统支持查询以下功能：
+默认 MRTK 输入系统支持查询以下功能：
 
 | 功能 | 说明 |
 |---|---|
-| ArticulatedHand | 明确表述的手写输入 |
-| EyeTracking | 眼睛定位 |
-| GGVHand | 注视手势-语音输入 |
+| HandHand | 表达手部输入 |
+| EyeTracking | 眼睛凝视目标 |
+| GGVHand | 凝视手势-语音手部输入 |
 | MotionController | 运动控制器输入 |
-| VoiceCommand | 使用应用定义关键字的语音命令 |
+| VoiceCommand | 使用应用定义的关键字的语音命令 |
 | VoiceDictation | 语音到文本听写 |
 
-下面的示例代码检查输入系统是否已加载数据提供程序，并支持有表述的指针。
+下面的示例代码检查输入系统是否加载了支持手部表达的数据访问接口。
 
 ```c#
 bool supportsArticulatedHands = false;
@@ -47,7 +47,7 @@ if (capabilityCheck != null)
 
 ### <a name="spatial-awareness-capabilities"></a>空间感知功能
 
-默认的 MRTK 空间感知系统支持查询以下功能：
+默认 MRTK 空间感知系统支持查询以下功能：
 
 | 功能 | 说明 |
 |---|---|
@@ -55,7 +55,7 @@ if (capabilityCheck != null)
 | SpatialAwarenessPlane | 空间平面 |
 | SpatialAwarenessPoint | 空间点 |
 
-此示例将检查空间感知系统是否已加载支持空间网格的数据访问接口。
+此示例检查空间感知系统是否加载了支持空间网格的数据提供程序。
 
 ```c#
 bool supportsSpatialMesh = false;

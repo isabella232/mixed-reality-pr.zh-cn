@@ -1,43 +1,43 @@
 ---
 title: MRTK 2.6 发行说明
-description: MRTK 版本 2.6 的发行说明
+description: MRTK 版本2.6 的发行说明
 author: polar-kev
 ms.author: kesemple
 ms.date: 05/27/2021
-keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK，
-ms.openlocfilehash: c172e5d071bba22626e9c35b2b4318f1ff779335
-ms.sourcegitcommit: f7839221c9549e60a2c3ac2dbd39f07a6851dcd2
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，
+ms.openlocfilehash: 452f0f352443620dea70b1680859bab4e2b3a0818de5f130accdb84c2798cfe0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "112562507"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115206689"
 ---
 # <a name="microsoft-mixed-reality-toolkit-26-release-notes"></a>Microsoft Mixed Reality Toolkit 2.6 发行说明
 
 > [!IMPORTANT]
-> 存在一个已知的编译器问题，该问题会影响使用 ARM64 为 Microsoft HoloLens 2 构建的应用程序。 此问题通过更新 2019 Visual Studio版本 16.8 或更高版本来修复。 如果无法更新Visual Studio，请 `com.microsoft.mixedreality.toolkit.tools` 导入包以应用解决方法。
+> 存在一个已知的编译器问题，它会影响使用 ARM64 为 Microsoft HoloLens 2 生成的应用程序。 此问题的解决方法是将 Visual Studio 2019 更新为16.8 或更高版本。 如果无法更新 Visual Studio，请导入 `com.microsoft.mixedreality.toolkit.tools` 包以应用解决方法。
 
 ## <a name="whats-new-in-262"></a>2.6.2 中的新增功能
 
-### <a name="corrects-parenting-of-the-spatial-mesh"></a>更正空间网格的父级设置
+### <a name="corrects-parenting-of-the-spatial-mesh"></a>纠正空间网格的父级
 
-修复了 [在](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/9819) 移动混合现实 Playspace 对象后空间网格未正确定位的问题 (例如：通过远程端口) 。
+修复了在将混合现实 Playspace 对象移 (（例如：通过中转) ）移动后空间网格无法正确定位的 [问题](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/9819) 。
 
 ## <a name="whats-new-in-261"></a>2.6.1 中的新增功能
 
-### <a name="fixes-openxr-not-running-on-hololens-2--uwp"></a>修复了 OpenXR 未在 HoloLens 2/UWP 上运行的问题
+### <a name="fixes-openxr-not-running-on-hololens-2--uwp"></a>修复 HoloLens 2/UWP 上未运行的 OpenXR
 
-修复了阻止 MRTK 的 OpenXR 支持在 UWP 上运行的回归。
+修复了一个回归，使 MRTK 的 OpenXR 支持无法在 UWP 上运行。
 
-### <a name="fixes-leap-motion-objectmanipulator-not-rotating"></a>修复了 Leap Motion ObjectManipulator 不旋转的问题
+### <a name="fixes-leap-motion-objectmanipulator-not-rotating"></a>修复 Leap 运动 ObjectManipulator 不旋转
 
 修复了 ObjectManipulator 脚本未考虑闰运动手旋转的回归。
 
 ### <a name="sample-scene-updates"></a>示例场景更新
 
-更新场景理解示例场景，以正确反映 Unity 插件的已发货状态。 此外，将示例更新为不再依赖于正在导入的空间感知示例场景。 在更新到 2.6.1 之前，应删除导入的场景理解和空间感知示例（如果它们存在于项目中）以避免可能出现的冲突。 如果未删除这些示例，并且确实在控制台中看到了与这些示例相关的冲突，请删除示例 (或文件夹) ，然后 `Assets/Samples/Mixed Reality Toolkit Examples` 重试导入。
+更新场景了解示例场景，以正确反映 Unity 插件的已发布状态。 还将更新示例，使其不再依赖于要导入的空间感知示例场景。 更新到2.6.1 之前，应删除已导入的场景了解和空间感知示例（如果它们存在于你的项目中）以避免可能的冲突。 如果你未删除这些示例，并且看不到与控制台中的这些示例相关的冲突，请)  (或文件夹中删除示例， `Assets/Samples/Mixed Reality Toolkit Examples` 然后重试导入。
 
-更新对话示例场景以正确描述当前对话方案。
+更新对话框示例场景，以正确描述当前的对话框方案。
 
 ## <a name="whats-new-in-260"></a>2.6.0 中的新增功能
 
@@ -46,115 +46,115 @@ ms.locfileid: "112562507"
 
 ### <a name="add-support-for-openxr"></a>添加对 OpenXR 的支持
 
-添加了对 Unity 的 OpenXR 预览包和 Microsoft 的混合现实 OpenXR 包的初始支持。 有关详细信息 [，请参阅 MRTK/XRSDK](../configuration/getting-started-with-mrtk-and-xrsdk.md)入门页 [、Unity](https://forum.unity.com/threads/unity-support-for-openxr-in-preview.1023613/)论坛文章或 [Microsoft](/windows/mixed-reality/develop/unity/openxr-getting-started) 文档。
+添加了对 Unity 的 OpenXR 预览版包和 Microsoft Mixed Reality OpenXR 包的初始支持。 有关详细信息，请参阅 [MRTK/XRSDK 入门页](../configuration/getting-started-with-mrtk-and-xrsdk.md)、 [Unity 的论坛文章](https://forum.unity.com/threads/unity-support-for-openxr-in-preview.1023613/)或 [Microsoft 的文档](/windows/mixed-reality/develop/unity/openxr-getting-started) 。
 
 > [!IMPORTANT]
-> Unity 中的 OpenXR 仅在 Unity 2020.2 及更高版本上受支持。
+> Unity 中的 OpenXR 仅在 Unity 2020.2 和更高版本上受支持。
 >
 > 目前，它还仅支持 x64 和 ARM64 生成。
 
 ### <a name="asset-swap-utility"></a>资产交换实用工具
 
-使用新的资产交换实用工具 交换 Unity 场景中 [的多个资产](../features/tools/asset-swap-utility.md)。
+使用新的 [资产交换实用工具](../features/tools/asset-swap-utility.md)在 Unity 场景中交换多个资产。
 
-### <a name="hp-motion-controllers-now-supported-with-mrtk"></a>MRTK 现在支持 HP 运动控制器
+### <a name="hp-motion-controllers-now-supported-with-mrtk"></a>现在 MRTK 支持 HP 运动控制器
 
-HP Reverb G2 的控制器现在本机与 MRTK 一起工作。
+HP 回音 G2 的控制器现在可以使用 MRTK 在本机上运行。
 
-### <a name="experimental-interactive-element--state-visualizer"></a>实验交互式元素 + 状态可视化工具
+### <a name="experimental-interactive-element--state-visualizer"></a>试验式交互式元素 + 状态可视化工具
 
-Interactive 元素是 MRTK 输入系统的简化集中入口点。 它包含状态管理方法、事件管理和核心交互状态的状态设置逻辑。 有关详细信息，请参阅 [Interactive 元素文档](../features/experimental/interactive-element.md)。
+Interactive 元素是 MRTK 输入系统的简化集中入口点。 它包含状态管理方法、事件管理和核心交互状态的状态设置逻辑。 有关详细信息，请参阅 [交互式元素文档](../features/experimental/interactive-element.md)。
 
 ![InteractiveElementAddCoreState](../features/images/interactive-element/InEditor/Gifs/InspectorHighlightEditor.gif)
 
-状态可视化工具是依赖于 Interactive 元素的动画组件。 此组件创建动画剪辑、设置关键帧并生成动画器状态机。 有关详细信息，请参阅 [状态可视化工具文档](../features/experimental/interactive-element.md#state-visualizer-experimental)
+状态可视化工具是依赖于交互式元素的动画组件。 此组件创建动画剪辑，设置关键帧并生成 Animator 状态机。 有关详细信息，请参阅 [状态可视化工具文档](../features/experimental/interactive-element.md#state-visualizer-experimental)
 
 ![StateVisualizerColorChangeOnFocus](../features/images/interactive-element/InEditor/Gifs/FocusColorChange.gif)
 
-### <a name="teleportation-with-the-teleport-gesture-now-supported-on-all-platforms"></a>所有平台上现在都支持使用远程端口手势进行远程传送
+### <a name="teleportation-with-the-teleport-gesture-now-supported-on-all-platforms"></a>现在，在所有平台上都支持带有传送手势的 Teleportation
 
-用户现在可以使用远程端口手势跨所有平台移动其播放空间。 若要在具有默认配置的 MR 设备上通过控制器进行远程传送，请使用指纹。 若要使用可表达的手进行远程传送，请用手指朝上手势，同时将索引和滚动块朝外，通过卷起手指完成视区。 若要使用输入模拟进行远程传送，请参阅更新 [后的输入模拟服务文档](../features/input-simulation/input-simulation-service.md)。
+用户现在可以使用 "传送" 手势在所有平台上四处移动其播放空间。 若要在具有默认配置的 MR 设备上传送控制器，请使用操纵杆。 若要传送有清晰的手势，请在掌上朝上，使用索引并拇指向外，通过运行食指完成传送。 若要传送输入模拟，请参阅更新的 [输入模拟服务文档](../features/input-simulation/input-simulation-service.md)。
 
-![远程端口手势](../features/images/teleport/handteleport.gif)
+![传送手势](../features/images/teleport/handteleport.gif)
 
-### <a name="scene-understanding-now-available-in-mrtk-as-an-experimental-spatial-awareness-observer"></a>场景理解现在以实验性空间感知观察器的身份在 MRTK 中提供
+### <a name="scene-understanding-now-available-in-mrtk-as-an-experimental-spatial-awareness-observer"></a>场景理解现在可在 MRTK 中作为实验性空间识别观察程序提供
 
-MRTK 2.6 [中引入了](/windows/mixed-reality/scene-understanding) 对场景理解的实验性支持。 用户可以在基于 MRTK 的项目中HoloLens 2空间感知观察器，将场景理解功能合并到一起。 有关详细信息， [请阅读场景理解](../features/spatial-awareness/scene-understanding.md) 文档。
+MRTK 2.6 中引入了对 [场景理解](/windows/mixed-reality/scene-understanding) 的实验性支持。 用户可以将 HoloLens 2 的场景理解功能合并为基于 MRTK 的项目中的空间感知观察程序。 有关详细信息，请阅读 [场景了解文档](../features/spatial-awareness/scene-understanding.md) 。
 
 > [!IMPORTANT]
-> 场景理解仅在 HoloLens 2 Unity 2019.4 及更高版本上受支持。
+> 仅 HoloLens 2 和 Unity 2019.4 及更高版本支持场景理解。
 >
-> 此功能需要场景理解包，该包现在可通过混合现实 [功能工具 获得](https://aka.ms/MRFeatureTool)。
-> 使用混合现实功能工具或通过 UPM 导入时，请在导入实验性 - 场景了解示例之前导入 Demos - SpatialAwareness 示例，因为存在依赖项问题。 有关详细信息 [，请参阅此 GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9431) 问题。
+> 此功能需要主题理解包，现可通过 [混合现实功能工具](https://aka.ms/MRFeatureTool)获得。
+> 使用混合现实功能工具或通过 UPM 导入时，请导入 SpatialAwareness 示例，然后导入 SceneUnderstanding 示例，因为存在依赖关系问题。 有关详细信息，请参阅[此 GitHub 问题](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9431)。
 
 ![场景理解](images/SceneUnderstanding.gif)
 
 ### <a name="runtime-profile-switching-support"></a>运行时配置文件切换支持
 
-MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文件开关) 之前）和在配置文件处于活动状态后（即活动配置文件开关) ）之前进行配置文件切换 (。 前一个开关可用于基于硬件的功能启用选择组件，而后者可用于在用户输入应用程序的子部分时修改体验。 有关详细信息和 [代码示例，请阅读](../configuration/mixed-reality-configuration-guide.md#changing-profiles-at-runtime) 有关配置文件切换的文档。
+MRTK 现在允许在初始化 MRTK 实例之前进行配置文件切换 (即，预 MRTK 初始化配置文件开关) ，并在配置文件处于活动状态后， (例如活动配置文件开关) 。 前者可用于基于硬件功能启用选择组件，而后者可用于在用户输入应用程序的细则时修改体验。 有关详细信息和代码示例，请阅读 [有关配置文件切换的文档](../configuration/mixed-reality-configuration-guide.md#changing-profiles-at-runtime) 。
 
-### <a name="directional-indicator-and-follow-solvers-graduated-from-experimental"></a>方向指示器和关注从实验阶段中学习的求解器
+### <a name="directional-indicator-and-follow-solvers-graduated-from-experimental"></a>方向指示器并遵循实验性的 solvers
 
-两个新的求解器已准备好与主线 MRTK 一起使用。
+两个新的 solvers 可以与主线 MRTK 一起使用。
 
-![方向指示器求解器](images/DirectionalIndicatorExampleScene.gif)
+![定向指示器求解器](images/DirectionalIndicatorExampleScene.gif)
 
-### <a name="hand-coach-graduated-from-experimental"></a>手部教练从实验阶段中训练
+### <a name="hand-coach-graduated-from-experimental"></a>从实验过渡的手势
 
-手部指导功能现已准备好与主线 MRTK 一起使用。
+"手形指导" 功能现已准备好用于主线 MRTK。
 
-![手部教练示例](/windows/mixed-reality/design/images/handcoach/airtap.gif)
+![手动指导示例](/windows/mixed-reality/design/images/handcoach/airtap.gif)
 
-### <a name="dialog-controls-graduated-from-experimental"></a>从实验性中开始的对话控件
+### <a name="dialog-controls-graduated-from-experimental"></a>从实验渐变的对话框控件
 
-对话框控件现已准备好与主线 MRTK 一起使用。
+对话框控件现在可与主线 MRTK 一起使用。
 
 ![对话框控件](https://user-images.githubusercontent.com/13754172/101927792-3326e200-3c18-11eb-88d3-44b4b50c7f7d.png)
 
-### <a name="pulse-shader-graduated-from-experimental"></a>从实验性中培养的脉冲着色器
+### <a name="pulse-shader-graduated-from-experimental"></a>从实验渐变的脉冲着色器
 
-脉冲着色器脚本从实验阶段开始。 有关详细信息，请参阅： [脉冲着色器文档](../features/rendering/pulse-shader.md)
+脉冲着色器脚本已从实验渐变。 有关详细信息，请参阅： [脉冲着色器文档](../features/rendering/pulse-shader.md)
 
 ![MRTK_SpatialMesh_Pulse](https://user-images.githubusercontent.com/13754172/68261851-3489e200-fff6-11e9-9f6c-5574a7dd8db7.gif)
 
-### <a name="input-recording-service-improvements"></a>输入录制服务改进
+### <a name="input-recording-service-improvements"></a>输入记录服务改进
 
-`InputRecordingService` 和 `InputPlaybackService` 现在可以录制和播放眼睛凝视输入。 录制经过优化，可确保在录制整个录制期间保持一致的帧速率，同时将文件大小和节省时间减少约 50%。 现在，可以异步执行录制文件的保存和加载。 请注意，此 MRTK 版本中记录的文件格式已更改，有关新版本 1.1 规范详细信息，请参阅此处。 [](../features/input-simulation/input-animation-file-format.md)
+`InputRecordingService``InputPlaybackService`现在，可以录制和播放眼睛眼睛输入。 记录已进行了优化，以确保在整个记录期间保持一致的帧速率，同时还会减少大约50% 的记录文件大小和节省时间。 现在可以异步执行记录文件的保存和加载。 注意此 MRTK 版本中记录的文件格式已更改，请参阅 [此处](../features/input-simulation/input-animation-file-format.md) ，了解有关新版1.1 规范的详细信息。
 
 ### <a name="reading-mode"></a>读取模式
 
-添加了对读取[模式的支持，HoloLens 2。](/hololens/hololens2-display#what-improvements-are-coming-that-will-improve-hololens-2-image-quality) 读取模式可减少系统的视场，但消除了 Unity 输出的缩放。 Unity 呈现的像素将对应于项目上HoloLens 2。 应用程序作者应该对多个人员进行测试，以确保这是他们希望在应用中进行权衡。
+添加了对 HoloLens 2 上[读取模式](/hololens/hololens2-display#what-improvements-are-coming-that-will-improve-hololens-2-image-quality)的支持。 读取模式缩小了系统的视图，但消除了 Unity 输出的缩放。 由 Unity 呈现的像素将与 HoloLens 2 上的投影像素相对应。 应用程序作者应该与多个用户进行测试，以确保在其应用中这一折衷。
 
-![Windows Mixed Reality读取模式](images/WMRReadingMode.gif)
+![Windows Mixed Reality 读取模式](images/WMRReadingMode.gif)
 
-### <a name="support-for-3d-app-launchers-on-uwp"></a>支持 UWP 上的 3D 应用启动器
+### <a name="support-for-3d-app-launchers-on-uwp"></a>对 UWP 上的3D 应用启动器的支持
 
-添加了为 UWP 设置 [3D](/windows/mixed-reality/distribute/3d-app-launcher-design-guidance) 应用启动器的能力。 此设置在"MRTK 生成窗口"和"MRTK 项目设置"下的"生成设置"中公开。 在 Unity 中生成期间，它会自动写入项目。
+添加了设置适用于 UWP 的 [3d 应用程序启动器](/windows/mixed-reality/distribute/3d-app-launcher-design-guidance) 的功能。 此设置在 "生成设置" 下的 "MRTK 生成" 窗口和 "MRTK Project" 设置中公开。 在 Unity 中生成的过程中，会自动将其写入项目。
 
 ![生成设置](images/ProjectBuildSettings.png)
 
 ## <a name="breaking-changes"></a>中断性变更
 
-### <a name="certain-fields-of-imported-gltf-objects-are-now-capitalized"></a>导入的 GLTF 对象的某些字段现已大写
+### <a name="certain-fields-of-imported-gltf-objects-are-now-capitalized"></a>导入的 GLTF 对象的某些字段现在为大写形式
 
-由于反序列化相关问题，导入的 GLTF 对象的某些字段现在以大写字母开始。 受影响的字段 (名称中 `ComponentType`) ：、、 `Path` `Interpolation` `Target` `Type` `Mode` `MagFilter` `MinFilter` `WrapS` `WrapT` 。
+由于与反序列化相关的问题，导入的 GLTF 对象的某些字段现在以大写字母开头。 受影响的字段在其新名称中 () ： `ComponentType` 、 `Path` 、 `Interpolation` 、 `Target` 、 `Type` `Mode` `MagFilter` `MinFilter` `WrapS` `WrapT` 、、、、和。
 
-### <a name="input-animation-binary-file-has-an-updated-version-11-format"></a>输入动画二进制文件具有更新版本 1.1 格式
+### <a name="input-animation-binary-file-has-an-updated-version-11-format"></a>输入动画二进制文件具有更新版本1.1 格式
 
-和 使用的输入动画二进制文件现在具有更新的文件格式，以启用对这两个 `InputRecordingService` `InputPlaybackService` 服务的优化。 有关 [新版本](../features/input-simulation/input-animation-file-format.md) 1.1 规范的信息，请参阅此处。
+使用和提供的输入动画二进制 `InputRecordingService` 文件 `InputPlaybackService` 现在具有更新的文件格式，以启用对这两个服务的优化。 有关新版1.1 规范的详细信息，请参阅 [此处](../features/input-simulation/input-animation-file-format.md) 。
 
-### <a name="msbuild-for-unity-support"></a>MSBuild for Unity 支持
+### <a name="msbuild-for-unity-support"></a>MSBuild 支持 Unity
 
-从 2.5.2 版开始，已移除对适用于 Unity 的 MSBuild 的支持，以与 Unity 的新包 [指南保持一致](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)。
+2.5.2 版本已删除对 unity 的 MSBuild 支持，以与[Unity 的新包指南](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)保持一致。
 
 ## <a name="known-issues"></a>已知问题
 
 ### <a name="openxr"></a>OpenXR
 
-全息远程处理和 OpenXR 当前存在一个已知问题，其中手部无法一致地可用。
+目前存在一个与全息远程处理和 OpenXR 有关的已知问题，其中的手形并不一致。
 此外，眼动跟踪示例场景当前不兼容，尽管眼动跟踪 _确实_ 可以正常工作。
 
-### <a name="some-mixed-reality-toolkit-standard-shader-features-require-the-foundation-package"></a>某些混合现实工具包标准着色器功能需要 Foundation 包
+### <a name="some-mixed-reality-toolkit-standard-shader-features-require-the-foundation-package"></a>某些混合现实Toolkit标准着色器功能需要 Foundation 包
 
 通过 Unity 程序包管理器 导入时，MRTK 标准着色器实用工具脚本 (例如：HoverLight.cs) 不会与标准资产包中的着色器共存。 若要访问此功能，应用程序需要导入 Foundation 包。
 
@@ -162,7 +162,7 @@ MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文�
 
 在某些情况下 (例如，在 Unity 编辑器) 中使用 LeapMotion 提供程序时，CameraCache 可能会关闭时重新创建 MainCamera。 有关详细信息 [，请参阅](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8459) 此问题。
 
-### <a name="filenotfoundexception-when-examples-are-imported-via-unity-package-manager"></a>通过 Unity 代码导入示例时，FileNotFoundException 程序包管理器
+### <a name="filenotfoundexception-when-examples-are-imported-via-unity-package-manager"></a>通过 Unity 代码导入示例时发生 FileNotFoundException 程序包管理器
 
 根据项目路径的长度，通过 Unity 命令导入示例程序包管理器 Unity 控制台中生成 FileNotFoundException 消息。 原因是"缺少"文件的路径超过 256 个字符MAX_PATH (256 个字符) 。 若要解决此问题，请缩短项目路径的长度。
 
@@ -173,7 +173,7 @@ MRTK 现在允许在 MRTK 实例初始化之前（即 MRT (K 初始化配置文�
 若要解决此问题，请确保：
 
 - **窗口**  > **程序包管理器** 已安装一个或多个 XR 包
-- **混合现实工具包**  > **实用工具**  > **配置 Unity 项目**，并针对音频空间 **化程序进行选择**
+- **混合现实Toolkit**  > **实用工具**  > **配置 Unity Project，** 并针对音频空间 **化程序进行选择**
 
   ![选择"音频空间化程序"](images/SpatializerSelection.png)
 

@@ -1,20 +1,20 @@
 ---
-title: 边界控件
+title: 边界控制
 description: MRTK 中的边界控制概述
 author: thalbern
 ms.author: bethalha
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，边界控制，
-ms.openlocfilehash: f5f5e1f463f741eb23f75c9826034b8974baf947
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 3abefd142753c34c9126d71cde77ebca0b40f1f9b7a81b5815777b9e938e172a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176462"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217171"
 ---
-# <a name="bounds-control"></a>边界控件
+# <a name="bounds-control"></a>边界控制
 
-![边界控件](../images/bounds-control/MRTK_BoundsControl_Main.png)
+![边界控制](../images/bounds-control/MRTK_BoundsControl_Main.png)
 
 *BoundsControl* 是先前在 *BoundingBox* 中找到的操作行为的新组件。 界限控制在安装中做出了大量改进和简化，并添加了新功能。 此组件替换为不推荐使用的边界框。
 
@@ -129,122 +129,122 @@ Box 配置负责呈现具有通过碰撞器大小和框填充定义的边界的�
 * **句柄大小**：句柄的大小。
 * **碰撞器填充**：要添加到控点碰撞器的填充。
 * **操作时绘制接入**：活动时，将从交互点开始到当前手或指针位置绘制接入线。
-* **句柄忽略碰撞体**：如果碰撞体在此处链接，则句柄将忽略与此碰撞体的任何冲突。
-* **处理预制碰撞体类型**：要与创建的句柄一起使用的碰撞体类型。
-* **显示 X 的句柄**：控制 X 轴句柄的可见性。
-* **显示 Y 的句柄**：控制 Y 轴句柄的可见性。
-* **显示 Z 的句柄**：控制 Z 轴句柄的可见性。
+* **处理忽略碰撞** 器：如果碰撞器在此处链接，则处理将忽略与此碰撞器的任何冲突。
+* **处理 prefab 碰撞器类型**：要与创建的句柄一起使用的碰撞器类型。
+* 显示 x 轴的句柄的 X：控件可见性的 **图柄**。
+* **显示 y** 轴控点的句柄。
+* **显示 z** 轴控点的显示手柄（z）：控件的可见性。
 
-### <a name="links-configuration-wireframe"></a>将配置 (线框) 
+### <a name="links-configuration-wireframe"></a>链接配置 (线框) 
 
-链接配置启用边界控件的线框功能。 可以配置以下属性：
+链接配置启用了边界控件的线框功能。 可以配置以下属性：
 
-* **线框材料**：应用于线框网格的材料。
+* **线框材料**：应用到线框网格的材料。
 * **线框边缘半径**：线框的粗细。
-* **线框形状**：线框的形状可以按三次方或圆条形。
-* **显示线框**：控制线框的可见性。
+* **线框形状**：线框或圆柱形可以是线框的形状。
+* **显示线框**：控件线框的可见性。
 
 ### <a name="proximity-effect-configuration"></a>邻近效果配置
 
-根据与手的距离，使用动画显示和隐藏句柄。 它具有两步缩放动画。 默认设置为HoloLens 2行为。
+显示和隐藏带有动画的带动画的图柄。 它具有两步缩放动画。 默认值设置为 HoloLens 2 样式行为。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Proximity.png" alt="Bounds control Proximity">
 
-* **邻近效果活动**：启用基于邻近的句柄激活
-* **对象中等邻近度**：第一步缩放的距离
-* **对象邻近度**：第二步缩放的距离
-* **远距**：手超过边界控制交互范围时，句柄资产的默认缩放值 ("处理中等邻近度"定义的距离。 默认情况下，使用 0 隐藏句柄) 
-* **中等比例**：当手在边界控件交互范围范围内时，句柄资产 ("句柄邻近度"定义的距离。 使用 1 显示正常大小) 
-* **关闭刻度**：当手在抓取交互范围范围内时，句柄资产 ("句柄邻近度"定义的距离。 使用 1.x 显示更大的) 
-* **远距增长速率**：手从中等到远距移动时，对邻近缩放对象缩放的速率。
-* **中等增长速率**：当手从中向近移动时，对邻近缩放对象进行缩放的速率。
-* **近距增长速率**：当手从靠近对象中心移动时，对邻近缩放的对象缩放速率进行速率。
+* **邻近效果活动**：启用基于近程的句柄激活
+* **对象中等** 距离：第一步缩放的距离
+* **对象近** 近：第二步缩放的距离
+* **远规模**：当手超出边界控制交互的范围时，句柄资产的默认缩放值 (按 "句柄中等距离" 定义的距离。 默认情况下，使用0隐藏句柄) 
+* **中** 度：当手位于边界控件交互范围内时，该手柄资产的缩放值 (按 "句柄接近接近" 定义的距离。 使用1显示正常大小) 
+* **关闭规模**：当手处于抓取交互范围内时，句柄资产的缩放值 (按 "句柄接近接近度" 定义的距离。 使用1.x 显示更大的) 
+* **远比特率**：向邻近缩放的对象在从中到远的邻近度移动时缩放。
+* **中度增长率**：向邻近缩放的对象在手中移动时可缩放。
+* **关闭增长速率**：当手从近到对象中心移动时，可缩放邻近缩放对象。
 
 ## <a name="constraint-system"></a>约束系统
 
-边界控件支持 [在使用边界](constraint-manager.md) 控件句柄时使用约束管理器来限制或修改转换、旋转或缩放行为。
+使用界限控制句柄时，界限控制支持使用 [约束管理器](constraint-manager.md) 来限制或修改翻译、旋转或缩放行为。
 
-属性检查器将在下拉列表中显示附加到同一游戏对象的所有可用约束管理器，并可以选择滚动并突出显示所选约束管理器。
+属性检查器将在下拉列表中显示附加到同一游戏对象的所有可用约束管理器以及用于滚动和突出显示所选约束管理器的选项。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Constraints.png" width="450" alt="Bounds control Constraints">
 
 ## <a name="events"></a>事件
 
-边界控件提供以下事件。 此示例使用这些事件播放音频反馈。
+界限控制提供以下事件。 此示例使用这些事件来播放音频反馈。
 
-* **旋转已启动**：旋转开始时触发。
-* **旋转已停止**：在旋转停止时触发。
-* **缩放已** 启动：缩放开始时触发。
-* **缩放已停止**：缩放停止时触发。
-* **翻译已启动**：翻译开始时触发。
-* **Translate Stopped：** 在转换停止时触发。
+* **旋转已开始**：旋转开始时激发。
+* **旋转停止**：旋转停止时激发。
+* **已开始缩放**：缩放开始时激发。
+* **缩放已停止**：缩放停止时激发。
+* **已开始翻译**：转换开始时激发。
+* **转换已停止**：转换停止时激发。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Events.png" width="450" alt="Bounds control Events">
 
-## <a name="elastics-experimental"></a>弹性 (实验) 
+## <a name="elastics-experimental"></a>池中弹性 (试验性) 
 
-通过边界控件操作对象时，可以使用弹性。 请注意， [弹性系统](../experimental/elastic-system.md) 仍处于试验状态。 若要启用弹性，请链接现有弹性管理器组件，或通过 按钮创建并链接新的弹性 `Add Elastics Manager` 管理器。
+在通过边界控件操作对象时，可以使用池中弹性。 请注意， [池中弹性系统](../experimental/elastic-system.md) 仍处于试验状态。 若要启用池中弹性，请链接现有的池中弹性 manager 组件或通过按钮创建和链接新的池中弹性管理器 `Add Elastics Manager` 。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Elastics.png" width="450" alt="Bounds control Elastics">
 
 ## <a name="handle-styles"></a>句柄样式
 
-默认情况下，当你仅分配脚本时，它将显示第一代HoloLens [`BoundsControl.cs`](xref:Microsoft.MixedReality.Toolkit.UI.BoundsControl) 句柄。 若要HoloLens 2样式句柄，需要分配适当的句柄预制和材料。
+默认情况下，当你只分配 [`BoundsControl.cs`](xref:Microsoft.MixedReality.Toolkit.UI.BoundsControl) 脚本时，它将显示 HoloLens 第一代样式的句柄。 若要使用 HoloLens 2 样式句柄，需要分配正确的句柄 prototyping 和材料。
 
-![边界控件句柄样式 2](../images/bounds-control/MRTK_BoundsControl_HandleStyles1.png)
+![边界控件句柄样式2](../images/bounds-control/MRTK_BoundsControl_HandleStyles1.png)
 
-下面是样式边界控件句柄的预制HoloLens 2和缩放值。 可以在场景中找到 `BoundsControlExamples` 此示例。
+下面是 HoloLens 2 样式边界控件句柄的 prototyping、材料和缩放值。 您可以在场景中找到此示例 `BoundsControlExamples` 。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_HandleStyles2.png" width="450" alt="Bounds control HandleStyles">
 
-### <a name="handles-setup-for-hololens-2-style"></a>处理 (样式设置HoloLens 2设置) 
+### <a name="handles-setup-for-hololens-2-style"></a>为 HoloLens 2 样式处理 (设置) 
 
-* **处理材料**：BoundingBoxHandleWhite.mat
-* **处理抓取材料**：BoundingBoxHandleBlueGrabbed.mat
-* **缩放句柄预制**：MRTK_BoundingBox_ScaleHandle.prefab
-* **缩放句柄 Slate 预制**：MRTK_BoundingBox_ScaleHandle_Slate.prefab
-* **缩放句柄大小**：0.016 (1.6cm) 
-* **缩放手柄碰撞体填充**：0.016 (使可抓取碰撞体略大于处理可视) 
-* **旋转句柄预制**：MRTK_BoundingBox_RotateHandle.prefab
-* **旋转句柄大小**：0.016
-* **旋转手柄碰撞体填充**：0.016 (使可抓取碰撞体稍微大于处理可视) 
+* **处理材料**： BoundingBoxHandleWhite
+* **处理抓取材料**： BoundingBoxHandleBlueGrabbed
+* **缩放句柄 Prefab**： MRTK_BoundingBox_ScaleHandle。 Prefab
+* **缩放句柄石板 Prefab**： MRTK_BoundingBox_ScaleHandle_Slate。 Prefab
+* **缩放句柄大小**： 0.016 (1.6 厘米) 
+* **刻度控点碰撞器填充**： 0.016 (使 grabbable 碰撞器略微大于处理视觉对象) 
+* **旋转控点 Prefab**： MRTK_BoundingBox_RotateHandle。 Prefab
+* **旋转控点大小**：0.016
+* **旋转控点碰撞边距**： 0.016 (使 grabbable 碰撞器略微大于处理视觉对象) 
 
-## <a name="transformation-changes-with-object-manipulator"></a>使用对象操控器进行转换更改
+## <a name="transformation-changes-with-object-manipulator"></a>对象操控器的转换更改
 
-边界控件可以与 结合使用， [`ObjectManipulator.cs`](object-manipulator.md) 以允许某些类型的操作，例如 (操作。 无需使用) 即可移动对象。 操作处理程序支持单手和双手交互。 [手部](../input/hand-tracking.md) 跟踪可用于与接近的对象交互。
+边界控件可以与结合使用 [`ObjectManipulator.cs`](object-manipulator.md) ，以允许某些类型的操作 (例如。 在不使用句柄的情况下移动对象) 。 操作处理程序支持一种和两方交互。 可以使用[手动跟踪](../input/hand-tracking.md)来与对象进行交互。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_ObjectManipulator.png" width="450" alt="Bounds control Object Manipulator">
 
-为了使边界控件边缘在使用 的远端交互移动它时的行为方式相同，建议将其 On [`ObjectManipulator`](object-manipulator.md) Manipulation Started On Manipulation On Manipulation *Started* On  /  *Manipulation 的* 事件分别连接到 ，如上面的屏幕截图 `BoundsControl.HighlightWires`  /  `BoundsControl.UnhighlightWires` 所示。
+为了使边界控件边缘在使用远距离交互进行移动时以相同的方式运行 [`ObjectManipulator`](object-manipulator.md) ，建议在操作结束时连接其事件以进行操作  /   `BoundsControl.HighlightWires`  /  `BoundsControl.UnhighlightWires` ，如以上屏幕截图所示。
 
-## <a name="how-to-add-and-configure-a-bounds-control-using-unity-inspector"></a>如何使用 Unity Inspector 添加和配置边界控件
+## <a name="how-to-add-and-configure-a-bounds-control-using-unity-inspector"></a>如何使用 Unity 检查器添加和配置绑定控件
 
-1. 将 Box 碰撞体添加到对象
+1. 向对象添加框碰撞器
 2. 将 `BoundsControl` 脚本分配给对象
-3. 配置选项，例如"激活"方法 ("检查器 [属性](#inspector-properties) "部分) 
-4.  (可选) 为样式边界HoloLens 2分配预制件和材料[ (请参阅下面的](#handle-styles)处理样式) 
+3. 配置选项，如 "激活" 方法 (参阅下面的 [检查器属性](#inspector-properties) 部分) 
+4.  (可选) 为 HoloLens 2 样式边界控件分配 prototyping 和材料 (参阅下面的 "[句柄样式](#handle-styles)" 部分) 
 
 > [!NOTE]
-> 使用 *检查器* 中的 *"* 目标对象"和"边界替代"字段，分配对象中具有多个子组件的特定对象和碰撞体。
+> 使用 "检查器" 中的 " *目标对象* " 和 " *边界替代* " 字段，可以在具有多个子组件的对象中分配特定对象和碰撞器。
 
 ![边界控制](../images/bounds-control/MRTK_BoundsControl_Assign.png)
 
 ## <a name="how-to-add-and-configure-a-bounds-control-in-the-code"></a>如何在代码中添加和配置边界控件
 
-1. 实例化多维数据集 GameObject
+1. 实例化 cube GameObject
 
     ```c#
     GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
     ```
 
-1. 使用 `BoundsControl` AddComponent 参数将脚本分配给具有碰撞体<> () 
+1. `BoundsControl`使用 AddComponent<>，将脚本分配给包含碰撞器的对象 () 
 
     ```c#
     private BoundsControl boundsControl;
     boundsControl = cube.AddComponent<BoundsControl>();
     ```
 
-1. 直接在控件上或通过其中一个可脚本配置配置选项[ (检查器](#inspector-properties)属性和[配置部分) ](#configuration-objects)
+1. 直接在控件上或通过一个可脚本化的配置配置选项 (参阅下面的 [检查器属性](#inspector-properties) 和 [配置](#configuration-objects) 部分) 
 
     ```c#
     // Change activation method
@@ -255,10 +255,10 @@ Box 配置负责呈现具有通过碰撞器大小和框填充定义的边界的�
     boundsControl.RotationHandlesConfig.ShowRotationHandleForX = false;
     ```
 
-1.  (可选) 为样式边界控件HoloLens 2预制件和材料。 这仍然需要通过检查器进行分配，因为应该动态加载材料与预制材料。
+1.  (可选) 为 HoloLens 2 样式边界控件分配 prototyping 和材料。 这仍需要通过检查器进行的分配，因为应该动态加载材料和 prototyping。
 
 > [!NOTE]
-> 不建议使用 Unity 的"资源"文件夹或 [Shader.Find]( https://docs.unity3d.com/ScriptReference/Shader.Find.html) 动态加载着色器，因为在运行时可能缺少着色器排列。
+> 使用 Unity 的 "资源" 文件夹或 [着色器。]( https://docs.unity3d.com/ScriptReference/Shader.Find.html) 不建议查找动态加载着色器，因为在运行时可能会缺少着色器排列。
 
 ```c#
 BoxDisplayConfiguration boxConfiguration = boundsControl.BoxDisplayConfig;
@@ -279,11 +279,11 @@ rotationHandleConfiguration.HandleSize = 0.016f;
 rotationHandleConfiguration.ColliderPadding = 0.016f;
 ```
 
-### <a name="example-set-minimum-maximum-bounds-control-scale-using-minmaxscaleconstraint"></a>示例：使用 MinMaxScaleConstraint 设置最小、最大边界控制规模
+### <a name="example-set-minimum-maximum-bounds-control-scale-using-minmaxscaleconstraint"></a>示例：使用 MinMaxScaleConstraint 设置最小值、最大边界控制比例
 
-若要设置最小和最大缩放，请将 [`MinMaxScaleConstraint`](xref:Microsoft.MixedReality.Toolkit.UI.MinMaxScaleConstraint) 附加到控件。 边界控件自动附加并激活约束管理器，因此 MinMaxScaleConstraint 会在附加和配置转换更改后自动应用于转换更改。
+若要设置最小和最大刻度，请将添加 [`MinMaxScaleConstraint`](xref:Microsoft.MixedReality.Toolkit.UI.MinMaxScaleConstraint) 到控件。 当边界控制自动附加和激活约束管理器时，MinMaxScaleConstraint 将自动应用于附加和配置后的转换更改。
 
-还可使用 MinMaxScaleConstraint 为 设置最小和最大缩放 [`ObjectManipulator`](xref:Microsoft.MixedReality.Toolkit.UI.ObjectManipulator) 。
+还可以使用 MinMaxScaleConstraint 设置的最小和最大刻度 [`ObjectManipulator`](xref:Microsoft.MixedReality.Toolkit.UI.ObjectManipulator) 。
 
 ```c#
 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -295,9 +295,9 @@ scaleConstraint.ScaleMinimum = 1f;
 scaleConstraint.ScaleMaximum = 2f;
 ```
 
-## <a name="example-add-bounds-control-around-a-game-object"></a>示例：在游戏对象周围添加边界控件
+## <a name="example-add-bounds-control-around-a-game-object"></a>示例：围绕游戏对象添加边界控件
 
-若要在对象周围添加边界控件，只需向该对象 `BoundsControl` 添加组件：
+若要在对象周围添加边界控件，只需向 `BoundsControl` 其添加一个组件：
 
 ```c#
 private void PutABoundsControlAroundIt(GameObject target)
@@ -308,9 +308,9 @@ private void PutABoundsControlAroundIt(GameObject target)
 
 ## <a name="migrating-from-bounding-box"></a>从边界框迁移
 
-使用边界框的现有预制件和实例[](bounding-box.md)可以通过作为 MRTK 工具包一部分的迁移窗口升级到[](../tools/migration-window.md)新的边界控件。
+使用 [范围框](bounding-box.md) 的现有 prototyping 和实例可以通过 [迁移窗口](../tools/migration-window.md) 升级到新的边界控件，该窗口是 MRTK 工具包的一部分。
 
-升级边界框的单个实例时，组件的属性检查器中还有一个迁移选项。
+对于升级边界框的单个实例，还会在组件的属性检查器中提供一个迁移选项。
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Migrate.png" width="450" alt="Bounds control Migrate">
 
@@ -319,4 +319,4 @@ private void PutABoundsControlAroundIt(GameObject target)
 * [对象操控器](object-manipulator.md)
 * [约束管理器](constraint-manager.md)
 * [迁移时限](../tools/migration-window.md)
-* [弹性系统 (实验) ](../experimental/elastic-system.md)
+* [池中弹性系统 (试验性) ](../experimental/elastic-system.md)

@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 46bb78bc4e2574fd4da14f19edf52624b7b301c2
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: bbe5b923ea7da965424e7fac98adca180c6f91d0c9b4c4ca7a0477e301c362f9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176717"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115204314"
 ---
 # <a name="spatial-awareness-getting-started"></a>空间感知入门
 
@@ -37,9 +37,9 @@ ms.locfileid: "113176717"
 
 | 配置文件 | 系统默认启用 |
 | --- | --- |
-| `DefaultHoloLens1ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens1)  | 错误 |
-| `DefaultHoloLens2ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens2)  | 错误 |
-| `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles)  | 正确 |
+| `DefaultHoloLens1ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens1)  | False |
+| `DefaultHoloLens2ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens2)  | False |
+| `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles)  | True |
 
 1. 选择场景层次结构中的 MixedRealityToolkit 对象，以在检查器面板中打开。
 

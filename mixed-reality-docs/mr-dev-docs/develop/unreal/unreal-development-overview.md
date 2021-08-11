@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式处理, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, OpenXR
-ms.openlocfilehash: 1225c507ec46c6f42c2fc10582a7920802860ad0
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: fd9eec18e865910ef4899dfda75661d1edb57eed25a55641cde3ca7ac3f0b3a8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394311"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203419"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 

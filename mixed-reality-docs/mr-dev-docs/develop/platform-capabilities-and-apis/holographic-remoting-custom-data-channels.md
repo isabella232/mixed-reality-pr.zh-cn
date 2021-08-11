@@ -5,26 +5,26 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
-keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，数据通道
-ms.openlocfilehash: ed9da4a21c2fe9b25ae29e9b2044d82438b19559
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+keywords: HoloLens、远程处理、全息远程处理、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、数据通道
+ms.openlocfilehash: 09fea161f9042d7afc59c16d3b5e8a6c69892e84b1de5e9ab4a4808733b4f171
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810096"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217083"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>自定义全息远程处理数据通道
 
 >[!NOTE]
->本指南特定于 HoloLens 2 上的全息远程处理。
+>本指南特定于全息远程处理HoloLens 2。
 
-使用自定义数据通道通过建立的远程处理连接发送自定义数据。
+使用自定义数据通道通过已建立的远程处理连接发送自定义数据。
 
 >[!IMPORTANT]
->自定义数据通道需要自定义远程应用和自定义播放器应用，因为它允许两个自定义应用之间的通信。
+>自定义数据通道需要自定义远程应用和自定义播放器应用，因为它允许在两个自定义应用之间通信。
 
 >[!TIP]
->可以在 [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)中的远程和播放器示例中找到简单的乒乓球示例。 在 ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` SampleRemoteMain/SamplePlayerMain 文件中取消注释，以启用示例代码。
+>可以在全息远程处理示例 [github](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)存储库 内的远程和播放器示例中找到一个简单的 ping-pong 示例。 取消注释 ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` SampleRemoteMain.h / SamplePlayerMain.h 文件以启用示例代码。
 
 
 ## <a name="create-a-custom-data-channel"></a>创建自定义数据通道
@@ -38,28 +38,28 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-成功建立连接后，你可以从远程端和/或播放机创建新的数据通道。 RemoteContext 和 PlayerContext 都提供 ```CreateDataChannel()``` 创建数据通道的方法。 第一个参数是用于在后续操作中标识数据通道的通道 ID。 第二个参数是优先级，它指定此通道的数据被传输到另一方的优先级。 远程端的有效通道 Id 是从0到，包括63和64，最127高可达。 有效优先级为 ```Low``` ```Medium``` (两侧的、或 ```High```) 。
+成功建立连接后，可以从远程端和/或播放器端创建新的数据通道。 RemoteContext 和 PlayerContext 都提供 ```CreateDataChannel()``` 用于创建数据通道的方法。 第一个参数是通道 ID，用于在后续操作中标识数据通道。 第二个参数是优先级，它指定此通道的数据传输到另一侧的优先级。 远程端的有效通道 ID 从 0 到 63（包括 63）到 64（包括播放器端 127）。 有效优先级为 ```Low``` ```Medium``` 、 ```High``` 或 (两侧) 。
 
-在 **远程** 端开始创建数据通道：
+若要开始在远程端创建数据 **通道，** 请执行以下操作：
 ```cpp
 // Valid channel ids for channels created on the remote side are 0 up to and including 63
 m_remoteContext.CreateDataChannel(0, DataChannelPriority::Low);
 ```
 
-若要开始在 **播放机** 端创建数据通道：
+若要开始在播放器端创建数据 **通道，** 请：
 ```cpp
 // Valid channel ids for channels created on the player side are 64 up to and including 127
 m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
 ```
 
 >[!NOTE]
->若要创建新的自定义数据通道，只需一方 (远程或玩家) 需要调用 ```CreateDataChannel``` 方法。
+>若要创建新的自定义数据通道，只需 (远程或播放器) 调用 ```CreateDataChannel``` 方法。
 
 ## <a name="handling-custom-data-channel-events"></a>处理自定义数据通道事件
 
-若要建立自定义数据通道， ```OnDataChannelCreated``` 需要在播放机和远程端)  (处理事件。 它在用户数据通道已由任一端创建时触发，并提供一个 ```IDataChannel``` 对象，该对象可用于通过此通道发送和接收数据。
+若要建立自定义数据通道，需要在播放器和远程 (上对事件 ```OnDataChannelCreated``` 进行处理) 。 当任一方创建用户数据通道并提供 对象时，它触发，该对象可用于通过此通道 ```IDataChannel``` 发送和接收数据。
 
-若要在事件上注册侦听器 ```OnDataChannelCreated``` ：
+若要在事件上注册侦听器 ```OnDataChannelCreated``` ，请：
 ```cpp
 m_onDataChannelCreatedEventRevoker = m_remoteContext.OnDataChannelCreated(winrt::auto_revoke,
     [this](const IDataChannel& dataChannel, uint8_t channelId)
@@ -71,7 +71,7 @@ m_onDataChannelCreatedEventRevoker = m_remoteContext.OnDataChannelCreated(winrt:
     });
 ```
 
-若要在收到数据时获得通知，请 ```OnDataReceived``` 在 ```IDataChannel``` 处理程序提供的对象上注册事件 ```OnDataChannelCreated``` 。 注册到 ```OnClosed``` 事件，以在数据通道关闭时获得通知。
+若要在接收到数据时收到通知，请在处理程序 ```OnDataReceived``` 提供的 ```IDataChannel``` 对象上注册 到 ```OnDataChannelCreated``` 事件。 注册到 ```OnClosed``` 事件，以在数据通道关闭时收到通知。
 
 ```cpp
 m_customChannelDataReceivedEventRevoker = m_customDataChannel.OnDataReceived(winrt::auto_revoke, 
@@ -95,10 +95,10 @@ m_customChannelClosedEventRevoker = m_customDataChannel.OnClosed(winrt::auto_rev
 
 ## <a name="sending-data"></a>发送数据
 
-若要通过自定义数据通道发送数据，请使用 ```IDataChannel::SendData()``` 方法。 第一个参数是 ```winrt::array_view<const uint8_t>``` 应发送的数据的。 第二个参数指定应重新发送数据的位置，直到另一方确认接收。 
+若要通过自定义数据通道发送数据，请使用 ```IDataChannel::SendData()``` 方法。 第一个参数 ```winrt::array_view<const uint8_t>``` 是应发送的数据的 。 第二个参数指定应在另一端确认接收之前重新发送数据的地方。 
 
 >[!IMPORTANT]
->如果网络条件不正确，则相同的数据包可能会到达一次以上。 接收代码必须能够处理这种情况。
+>如果网络状况不佳，同一数据包可能会多次到达。 接收代码必须能够处理这种情况。
 
 ```cpp
 uint8_t data[] = {1};
@@ -107,15 +107,15 @@ m_customDataChannel.SendData(data, true);
 
 ## <a name="closing-a-custom-data-channel"></a>关闭自定义数据通道
 
-若要关闭自定义数据通道，请使用 ```IDataChannel::Close()``` 方法。 ```OnClosed```自定义数据通道关闭后，事件会通知两端。
+若要关闭自定义数据通道，请使用 ```IDataChannel::Close()``` 方法。 自定义数据通道关闭后，事件会通知双方 ```OnClosed``` 。
 
 ```cpp
 m_customDataChannel.Close();
 ```
 
 ## <a name="see-also"></a>另请参阅
-* [使用 Windows Mixed Reality Api 编写全息远程处理远程应用](holographic-remoting-create-remote-wmr.md)
-* [使用 OpenXR Api 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
+* [使用远程 API 编写全息远程Windows Mixed Reality应用](holographic-remoting-create-remote-wmr.md)
+* [使用 OpenXR API 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)
 * [全息远程处理软件许可条款](/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

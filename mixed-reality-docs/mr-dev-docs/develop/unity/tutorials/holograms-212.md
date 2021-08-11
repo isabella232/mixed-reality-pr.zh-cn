@@ -1,22 +1,22 @@
 ---
 title: HoloLens（第一代）输入 212 - 语音
-description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解语音概念的详细信息。
+description: 遵循以下编码演练，使用 Unity，Visual Studio 和 HoloLens 了解语音概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，语音，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 8e36233ff4abd3ac91670dd7d04b6675bec045ff
-ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
+ms.openlocfilehash: 75a1d32ae72a07b68fc65c40035109c468adb1080070240827eeb253eb4a03f4
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106269923"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207363"
 ---
-# <a name="hololens-1st-gen-input-212-voice"></a>HoloLens (第一代) 输入212：语音
+# <a name="hololens-1st-gen-input-212-voice"></a>HoloLens 第一代 () 输入212：语音
 
 >[!IMPORTANT]
->混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
+>混合现实学院教程的设计目的是 HoloLens (一代) 、Unity 2017 和混合现实沉浸式耳机。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
 [语音输入](../../../design/voice-input.md) 提供了另一种与全息影像交互的方法。 语音命令的工作方式非常简单。 设计语音命令，以便：
 
@@ -29,7 +29,7 @@ ms.locfileid: "106269923"
 
 在 [先生/女士 101](../../../develop/unity/tutorials/holograms-101.md)中，我们使用 KeywordRecognizer 来构建两个简单的语音命令。 在 MR 输入212中，我们将深入探讨并了解如何：
 
-* 设计针对 HoloLens 语音引擎进行了优化的语音命令。
+* 设计适用于 HoloLens 语音引擎的语音命令。
 * 使用户了解可用的语音命令。
 * 确认我们听到了用户的语音命令。
 * 使用听写识别器了解用户所说的内容。
@@ -38,7 +38,7 @@ ms.locfileid: "106269923"
 在本课程中，我们将重新访问模型资源管理器，该资源管理器是在 [MR input 210](holograms-210.md) 和 [mr input 211](holograms-211.md)中构建的。
 
 >[!IMPORTANT]
->以下各章中嵌入的视频使用较旧版本的 Unity 和混合现实工具包记录。 虽然分步说明准确且最新，但你可能会看到处于过期状态的相应视频中的脚本和视觉对象。 视频仍包含在 posterity 中，因为涵盖的概念仍适用。
+>以下各章中嵌入的视频是使用旧版本的 Unity 记录的，混合现实 Toolkit。 虽然分步说明准确且最新，但你可能会看到处于过期状态的相应视频中的脚本和视觉对象。 视频仍包含在 posterity 中，因为涵盖的概念仍适用。
 
 
 ## <a name="device-support"></a>设备支持
@@ -55,12 +55,12 @@ ms.locfileid: "106269923"
 
 ### <a name="prerequisites"></a>必备条件
 
-* 配置了正确 [工具](../../../develop/install-the-tools.md)的 WINDOWS 10 电脑。
+* 使用安装了正确的[工具](../../../develop/install-the-tools.md)配置的 Windows 10 PC。
 * 一些基本 c # 编程能力。
 * 应已完成 [尊敬的基本知识 101](../../../develop/unity/tutorials/holograms-101.md)。
 * 应已完成 [MR 输入 210](holograms-210.md)。
 * 应已完成 [MR 输入 211](holograms-211.md)。
-* [为开发配置](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 设备。
+* [为开发配置](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)HoloLens 设备。
 
 ### <a name="project-files"></a>项目文件
 
@@ -68,11 +68,11 @@ ms.locfileid: "106269923"
 * 取消将文件存档到桌面或其他易于访问的位置。
 
 >[!NOTE]
->如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-212-Voice)找到。
+>如果要在下载之前查看源代码，[可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-212-Voice)查看。
 
 ### <a name="errata-and-notes"></a>勘误表和说明
 
-* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" (*取消选中*) ，以便在代码中命中断点。
+* 若要在代码中命中断点，请在 "工具->选项->调试" 下的 Visual Studio 中禁用 "启用仅我的代码" (*取消选中*) 。
 
 ## <a name="unity-setup"></a>Unity 设置
 
@@ -80,22 +80,22 @@ ms.locfileid: "106269923"
 
 1. 启动 Unity。
 2. 选择“打开”。
-3. 导航到之前未存档的 **HolographicAcademy-212** 文件夹。
+3. 导航到之前未存档的 **全息影像 HolographicAcademy-212** 文件夹。
 4. 查找并选择 "**启动** / **模型资源管理器**" 文件夹。
 5. 单击 " **选择文件夹** " 按钮。
-6. 在 " **项目** " 面板中，展开 " **场景** " 文件夹。
+6. 在 **Project** 面板中，展开 "**场景**" 文件夹。
 7. 双击 " **ModelExplorer** 场景" 将其加载到 Unity。
 
 ### <a name="building"></a>生成
 
-1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+1. 在 Unity 中，选择 "**文件 > 生成设置**"。
 2. 如果场景 **/ModelExplorer** 未列在 " **生成**" 中，请单击 " **添加打开的场景** " 添加场景。
-3. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
+3. 如果要为 HoloLens 专门进行开发，请将 "**目标设备**" 设置为 " **HoloLens**"。 否则，请将其留在 **任何设备** 上。
 4. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
 5. 单击“生成”。
 6. 创建名为 "App" 的 **新文件夹** 。
 7. 单击 **应用** 文件夹。
-8. 按 **选择文件夹** ，Unity 将开始为 Visual Studio 生成项目。
+8. 按 **选择文件夹**，Unity 将开始为 Visual Studio 生成项目。
 
 当 Unity 完成后，将显示文件资源管理器窗口。
 
@@ -104,15 +104,15 @@ ms.locfileid: "106269923"
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+1. 使用 Visual Studio 中的顶部工具栏将目标从 "调试" 更改为 "**发布**"，将 "从 ARM" 更改为 " **x86**"。
 2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+3. 输入 **HoloLens 设备 IP 地址**，并将身份验证模式设置为 **通用 (未加密的协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请查看 **设置 > 网络 & Internet > 高级选项**。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将[其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 5. 当应用程序已部署后，使用 **选择手势** 关闭 **Fitbox** 。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 "**发布**"，并将 "从 ARM 更改为 **x64**"。
 2. 确保将部署目标设置为 " **本地计算机**"。
 3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 4. 当应用程序已部署后，通过将触发器拖到运动控制器上来关闭 **Fitbox** 。
@@ -138,7 +138,7 @@ ms.locfileid: "106269923"
 
 * 创建简洁的命令。 您不想使用 *"播放当前选定的视频"*，因为该命令不是很简洁，用户将很容易忘记。 相反，您应该使用： *"播放视频"*，因为它很简洁并且具有多个音节。
 * 使用简单词汇。 始终尝试使用便于用户发现和记忆的常见字词和短语。 例如，如果您的应用程序具有可在视图中显示或隐藏的便笺对象，则不会使用命令 *"Show Placard"*，因为 "Placard" 是很少使用的术语。 相反，你将使用命令 *"显示便笺"* 来显示应用程序中的注释。
-* 保持一致。 语音命令应在应用程序中保持一致。 假设应用程序中有两个场景，并且两个场景都包含一个用于关闭应用程序的按钮。 如果第一场景使用命令 *"Exit"* 来触发按钮，但第二个场景使用命令 *"关闭应用"*，则用户会感到困惑。 如果相同的功能在多个场景中保持不变，则应使用相同的语音命令来触发它。
+* 保持一致。 语音命令应在应用程序中保持一致。 Imagine 在应用程序中有两个后台，并且两个场景都包含用于关闭应用程序的按钮。 如果第一场景使用命令 *"Exit"* 来触发按钮，但第二个场景使用命令 *"关闭应用"*，则用户会感到困惑。 如果相同的功能在多个场景中保持不变，则应使用相同的语音命令来触发它。
 
 #### <a name="dont"></a>不要
 
@@ -157,24 +157,24 @@ ms.locfileid: "106269923"
 * 在 Unity 的 " **层次结构** " 面板中，使用 "搜索" 工具查找 **holoComm_screen_mesh** 的对象。
 * 双击 **holoComm_screen_mesh** 对象以在 **场景** 中查看它。 这是 astronaut 的手表，它将响应我们的语音命令。
 * 在 " **检查器** " 面板中，找到 **(脚本) 组件的语音输入源** 。
-* 展开 **关键字** 部分，查看支持的语音命令： **打开 Communicator**。
+* 展开 "**关键字**" 部分，查看支持的语音命令：**打开 Communicator**。
 * 单击右侧的 "齿轮"，然后选择 " **编辑脚本**"。
 * 探索 **SpeechInputSource** ，了解它如何使用 **KeywordRecognizer** 添加语音命令。
 
 ### <a name="build-and-deploy"></a>生成和部署
 
-* 在 Unity 中，使用 **File > 生成设置** 重新生成应用程序。
+* 在 Unity 中，使用 **File > 生成设置** 来重新生成应用程序。
 * 打开 **应用程序** 文件夹。
 * 打开 **ModelExplorer Visual Studio 解决方案**。
 
- (如果在安装过程中已经在 Visual Studio 中生成了/部署了此项目，则可以打开 VS 的实例，并在出现) 提示时单击 "全部重新加载"。
+ (如果在安装过程中已在 Visual Studio 中生成/部署了此项目，则可以打开 VS 的实例，并在出现) 提示时单击 "全部重新加载"。
 
-* 在 Visual Studio 中，单击 " **调试"-> "无调试开始** " 或按 **Ctrl + F5**。
-* 在应用程序部署到 HoloLens 后，请使用 [轻攻敲击](../../../design/gaze-and-commit.md#composite-gestures) 手势关闭 "拟合" 框。
+* 在 Visual Studio 中，单击 "**调试"-> 启动而不调试**"或按 **Ctrl + F5**。
+* 在应用程序部署到 HoloLens 后，请使用[轻攻敲击](../../../design/gaze-and-commit.md#composite-gestures)手势关闭 "拟合" 框。
 * 观看 astronaut 的观看。
 * 当监视有焦点时，验证光标是否更改为麦克风。 这会提供应用程序侦听语音命令的反馈。
-* 验证是否在手表上显示工具提示。 这可以帮助用户发现 *"打开 Communicator"* 命令。
-* 当 gazing 时，说 *"打开 communicator"* 即可打开 communicator 面板。
+* 验证是否在手表上显示工具提示。 这有助于用户发现 *"打开 Communicator"* 命令。
+* gazing 在监视时，说 *"打开 Communicator"* 以打开 Communicator 面板。
 
 ## <a name="chapter-2---acknowledgement"></a>第2章-确认
 
@@ -188,7 +188,7 @@ ms.locfileid: "106269923"
 >[!NOTE]
 >必须为应用声明 **麦克风** 功能，才能从麦克风记录。 此操作已在 MR Input 212 中完成，但请记住你自己的项目。
 >
->1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player"，转到 "播放机" 设置
+>1. 在 Unity 编辑器中，导航到 "编辑 > Project 设置 > 播放机"，转到 "播放机" 设置。
 >2. 单击 "通用 Windows 平台" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
@@ -196,16 +196,16 @@ ms.locfileid: "106269923"
 
 * 在 Unity 的 " **层次结构** " 面板中，验证是否选择了 " **holoComm_screen_mesh** " 对象。
 * 在 " **检查器** " 面板中，找到 **Astronaut Watch (脚本)** 组件。
-* 单击设置为 " **Communicator Prefab** " 属性值的小型蓝色多维数据集。
-* 在 " **项目** " 面板中， **Communicator** prefab 现在应具有焦点。
-* 单击 "**项目**" 面板中的 **Communicator** Prefab，在 **检查器** 中查看其组件。
+* 单击设置为 " **Communicator Prefab** " 属性的值的小型蓝色多维数据集。
+* 在 **Project** 面板中， **Communicator** prefab 现在应具有焦点。
+* 单击 " **Project** " 面板中的 **Communicator** prefab，在 **检查器** 中查看其组件。
 * **(脚本) 组件中查看麦克风管理器**，这样我们就可以记录用户的声音。
-* 请注意， **Communicator** 对象有一个 **语音输入处理程序 (脚本)** 组件来响应 " **发送消息** " 命令。
-* 查看 **Communicator (脚本)** 组件，然后双击脚本，在 Visual Studio 中将其打开。
+* 请注意， **Communicator** 对象有一个 **语音输入处理程序 (脚本)** 组件来响应 **发送消息** 命令。
+* 查看 **Communicator (脚本)** 组件，然后双击脚本以在 Visual Studio 中将其打开。
 
-Communicator 负责在 communicator 设备上设置正确的按钮状态。 这将允许我们的用户记录消息，播放消息，并将消息发送到 astronaut。 它还将启动和停止动画波形窗体，以便向用户确认他们的声音被听到。
+Communicator .cs 负责在 Communicator 设备上设置正确的按钮状态。 这将允许我们的用户记录消息，播放消息，并将消息发送到 astronaut。 它还将启动和停止动画波形窗体，以便向用户确认他们的声音被听到。
 
-* 在 " **Communicator**" 中，从 **Start** 方法中删除以下行 (81 和 82) 。 这将启用 communicator 上的 "录制" 按钮。
+* 在 **Communicator** 中，从 **Start** 方法中删除 (81 和 82) 的以下行。 这将启用 communicator 上的 "录制" 按钮。
 
 ```cs
 // TODO: 2.a Delete the following two lines:
@@ -216,7 +216,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 ### <a name="build-and-deploy"></a>生成和部署
 
 * 在 Visual Studio 中，重新生成应用程序并将其部署到设备。
-* 看看 astronaut 的手表，说 *"打开 communicator"* 显示 Communicator。
+* 看看 astronaut 的手表，说 *"打开 Communicator"* 以显示 Communicator。
 * 按 " **录制** " 按钮 (麦克风) 开始录制 astronaut 的口头消息。
 * 开始讲话，并验证波形动画是否在 communicator 上播放，这向用户提供了他们的语音声音。
 * 按 " **停止** " 按钮 (左正方形) ，并验证波形动画是否停止运行。
@@ -244,7 +244,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 >[!NOTE]
 >必须为应用声明 **麦克风** 功能，才能从麦克风记录。 此操作已在 MR Input 212 中完成，但请记住你自己的项目。
 >
->1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player"，转到 "播放机" 设置
+>1. 在 Unity 编辑器中，导航到 "编辑 > Project 设置 > 播放机"，转到 "播放机" 设置。
 >2. 单击 "通用 Windows 平台" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
@@ -259,7 +259,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 5. 按下 " **停止" 按钮** ，或 mic 会话超时时， **停止 DictationRecognizer**。
 6. 重新启动 **KeywordRecognizer**，这将侦听 " **发送消息** " 命令。
 
-现在就开始吧。 完成 3. **MicrophoneManager** 中的所有编码练习，或复制并粘贴以下找到的已完成代码：
+让我们开始吧。 完成 3. **MicrophoneManager** 中的所有编码练习，或复制并粘贴以下找到的已完成代码：
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
@@ -449,7 +449,7 @@ namespace Academy
 
 ### <a name="build-and-deploy"></a>生成和部署
 
-* 在 Visual Studio 中重新生成并部署到设备。
+* 重新生成 Visual Studio 并部署到设备。
 * 使用 "气攻入点" 消除 "拟合" 框。
 * 看看 astronaut 的手表，说 *"打开 Communicator"*。
 * 选择 " **录制** " 按钮 (麦克风) 录制消息。
@@ -471,7 +471,7 @@ namespace Academy
 >[!NOTE]
 >必须为应用声明 **麦克风** 功能，才能从麦克风记录。 此操作已在 MR Input 212 中完成，但请记住你自己的项目。
 >
->1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player"，转到 "播放机" 设置
+>1. 在 Unity 编辑器中，导航到 "编辑 > Project 设置 > 播放机"，转到 "播放机" 设置。
 >2. 单击 "通用 Windows 平台" 选项卡
 >3. 在 "发布设置 > 功能" 部分中，检查 **麦克风** 功能
 
@@ -500,7 +500,7 @@ namespace Academy
 
 ## <a name="the-end"></a>结束
 
-祝贺你！ 你现在已经完成了 **MR 输入212： Voice**。
+恭喜！ 你现在已经完成了 **MR 输入212： Voice**。
 
 * 您知道语音命令的 Dos 和不确定。
 * 你了解了如何利用工具提示来使用户了解语音命令。

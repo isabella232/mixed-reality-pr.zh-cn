@@ -5,25 +5,25 @@ author: bstrukus
 ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，全息影像，稳定性，案例研究，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 85caee589a5f031f605417639eab2e980cb613c5
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: Windows Mixed Reality，全息影像，稳定性，案例研究，混合现实耳机，Windows Mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 4227be39c18e43ad712a14dd61217994a8fc761f41f9416b95b511be5396712a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006697"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202348"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>案例研究-使用稳定面减少全息 turbulence
 
-使用全息影像通常比较棘手。 四处移动空间，从所有不同角度查看全息影像，可提供一种在普通计算机屏幕上不可用的浸入式级别。 将这些全息影像置于适当位置并寻找现实，这是一项技术特征，由 Microsoft HoloLens 硬件和全息式应用程序的智能设计完成。
+使用全息影像通常比较棘手。 四处移动空间，从所有不同角度查看全息影像，可提供一种在普通计算机屏幕上不可用的浸入式级别。 将这些全息影像置于适当位置并真实地设计是由 Microsoft HoloLens 硬件和全息智能设计来实现的技术特征。
 
 ## <a name="the-tech"></a>技术人员
 
-为了使全息影像看起来像是实际与你共享空间，它们应该正确呈现，无需颜色分离。 这种情况是通过内置于 HoloLens 硬件的技术实现的，这使得全息影像定位在我们称为 " [稳定" 平面](hologram-stability.md#reprojection)上的部分。
+为了使全息影像看起来像是实际与你共享空间，它们应该正确呈现，无需颜色分离。 这是通过内置于 HoloLens 硬件的技术来实现的，该技术使全息影像定位在我们调用了一个稳定的[平面](hologram-stability.md#reprojection)上。
 
-平面由点和法线定义。 由于我们始终希望飞机面对相机，因此，我们要考虑设置飞机的点。 我们可以告诉 HoloLens 将其处理集中于哪个点，以使所有内容保持锚定和稳定。 但是，设置此焦点点是特定于应用的，并且可以根据内容创建或中断应用。
+平面由点和法线定义。 由于我们始终希望飞机面对相机，因此，我们要考虑设置飞机的点。 我们可以告诉 HoloLens 要将其处理集中于哪个点，以使所有内容保持锚定和稳定。 但是，设置此焦点点是特定于应用的，并且可以根据内容创建或中断应用。
 
-正确应用了稳定平面后，全息影像的工作效果最好，但实际的含义取决于要创建的应用程序的类型。 让我们看看一些当前可用于 HoloLens 的应用如何解决此问题。
+如果正确应用了稳定平面，则全息影像最有效，但实际的含义取决于要创建的应用程序的类型。 让我们看看当前提供的一些应用程序 HoloLens 如何解决此问题。
 
 ## <a name="behind-the-scenes"></a>幕后
 
@@ -35,13 +35,13 @@ ms.locfileid: "98006697"
 
 Galaxy 资源管理器的设计适合于使其保持稳定并降低颜色分离的效果。 鼓励用户浏览内容，而不是从一边移动内容，而是轨道缓慢，以致颜色分离并不明显。 此外，还保留了恒定的 60 FPS，这在防止颜色分离发生的情况下是一种很长的方式。
 
-若要亲自查看此问题，请在 [GitHub 上的 Galaxy 资源管理器代码](https://github.com/Microsoft/GalaxyExplorer/tree/master/Assets/Scripts/Utilities)中查找名为 LSRPlaneModifier.cs 的文件。
+若要亲自查看此问题，请在[GitHub 上的 Galaxy 资源管理器代码](https://github.com/Microsoft/GalaxyExplorer/tree/master/Assets/Scripts/Utilities)中查找名为 LSRPlaneModifier 的文件。
 
 ### <a name="holostudio-stationary-content-with-a-ui-focus"></a>HoloStudio：带有 UI 焦点的固定内容
 
 在 HoloStudio 中，大多数时候都在查看正在使用的同一模型。 如果你选择一个新工具或要浏览 UI，你的注视不会有很大的影响，因此，我们可以将平面设置逻辑保持简单。 查看 UI 时，平面将设置为您的 "注视" 对齐的任何 UI 元素。 查看模型时，平面是一组距离，与您与模型之间的默认距离相对应。
 
-!["HoloStudio" 中的 "稳定" 平面以用户在 "主页" 按钮上 gazes](images/holostudio-stabilization-plane-500px.png)
+![在用户 gazes "主页" 按钮上进行可视化处理的稳定平面 HoloStudio](images/holostudio-stabilization-plane-500px.png)
 
 ### <a name="holotour-and-3d-viewer-stationary-content-with-animation-and-movies"></a>HoloTour 和3D 查看器：包含动画和电影的静止内容
 
@@ -65,19 +65,19 @@ RoboRaid 设计为在设计时考虑到了稳定性。 Reticle，它将最大程
 
 ## <a name="do-it-yourself"></a>自制
 
-如果你有一个 HoloLens，并想要了解本文中的概念，你可以下载一个测试场景来尝试以下练习。 测试场景使用 Unity 的内置别出心裁 API 来帮助你直观显示你的平面的设置位置。 在此示例中，代码还用于捕获屏幕截图。
+如果你有 HoloLens 并且想要了解本文中的概念，你可以下载一个测试场景来尝试以下练习。 测试场景使用 Unity 的内置别出心裁 API 来帮助你直观显示你的平面的设置位置。 在此示例中，代码还用于捕获屏幕截图。
 1. 同步最新版本的 [MixedRealityToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)。
 2. 打开 [HoloToolkit-Examples/公用事业/场景/StabilizationPlaneSetting](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) 场景。
 3. 生成并配置生成的项目。
 4. 在设备上运行。
 
-### <a name="exercise-1"></a>练习1
+### <a name="exercise-1"></a>练习 1
 
 你将看到不同方向的几个白点。 在您之前，您将在不同的深度看到三个点。 点击以更改平面设置为的点。 对于本练习，在这两个过程中，在 gazing 点时移动空间。 向左、向右、向上、向下旋转。 从点更接近或更远地移动。 查看稳定性平面设置为不同目标时，如何做出反应。
 
-### <a name="exercise-2"></a>练习2
+### <a name="exercise-2"></a>练习 2
 
-现在，转到右侧，直到看到两个移动点、水平路径上的一个振荡和一个垂直路径上的一个。 同样，单击即可更改该平面设置为的点。 请注意颜色分离如何减少并显示在连接到平面的点上。 再次点击以在 "平面" 设置函数中使用点的速度。 此参数向 HoloLens 提供有关对象的预期运动的提示。 了解何时使用这一点非常重要，因为当在一个圆点上使用了速度时，另一个移动点将显示更大的颜色分隔。 在设计应用程序时请牢记这一点，这会使对象的运动产生内聚性，从而有助于防止出现项目。
+现在，转到右侧，直到看到两个移动点、水平路径上的一个振荡和一个垂直路径上的一个。 同样，单击即可更改该平面设置为的点。 请注意颜色分离如何减少并显示在连接到平面的点上。 再次点击以在 "平面" 设置函数中使用点的速度。 此参数可提供有关对象的预期运动 HoloLens 提示。 了解何时使用这一点非常重要，因为当在一个圆点上使用了速度时，另一个移动点将显示更大的颜色分隔。 在设计应用程序时请牢记这一点，这会使对象的运动产生内聚性，从而有助于防止出现项目。
 
 ### <a name="exercise-3"></a>练习3
 

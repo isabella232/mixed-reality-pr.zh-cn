@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 坐标系统，空间坐标系统，仅限方向，固定比例大规模，房间规模，世界规模，360度，固定的，房间，房间，世界，，规模，位置，方向，Unity，定位，空间锚，世界锚，世界锁定，世界锁定，身体锚，世界锁定，，跟踪丢失，locatability，界限，recenter，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 91b1adf6dcf1c54d0d29a02bfb97ac4674a87c88
-ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
+ms.openlocfilehash: 3372b9bd259202145fd658e225a36d2125f4a86d01eb90bc765b65918540db8b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107528751"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203579"
 ---
 # <a name="coordinate-systems-in-unity"></a>Unity 中的坐标系统
 
-Windows Mixed Reality 在各种经验范围内支持应用，从仅限方向和大规模应用，再到房间规模的应用。 在 HoloLens 上，你可以进一步构建全球规模的应用程序，让用户经历5米以上的工作，探索一座建筑的整个楼层。
+Windows Mixed Reality 通过会议室规模的应用，在各种经验范围内支持应用，从仅限方向和固定规模的应用。 在 HoloLens 上，您可以进一步并构建可让用户经历5米以上的全球规模应用程序，探索整个建筑的整个楼层。
 
 在 Unity 中构建混合现实体验的第一步是了解 [坐标系统，并选择应用将面向的体验扩展](../../design/coordinate-systems.md) 。
 
@@ -90,7 +90,7 @@ if (UnityEngine.Experimental.XR.Boundary.TryGetGeometry(vertices, Boundary.Type.
 **命名空间：** *UnityEngine. XR*<br>
 **类型：** *WorldAnchor*
 
-对于 HoloLens 上真正的 **全球规模体验** ，让用户游离5米以上，你将需要超出用于房间规模体验的新技术。 你将使用的一项关键方法是创建一个 [空间定位点](../../design/coordinate-systems.md#spatial-anchors) ，以便在物理世界中精确地锁定影像的分类，无论用户漫游到多远，然后 [在以后的会话中再次查找这些全息影像](../../design/coordinate-systems.md#spatial-anchor-persistence)。
+对于 HoloLens 上的真正 **世界规模的体验**，让用户游离5米以上，你将需要超出用于房间规模的体验的新技术。 你将使用的一项关键方法是创建一个 [空间定位点](../../design/coordinate-systems.md#spatial-anchors) ，以便在物理世界中精确地锁定影像的分类，无论用户漫游到多远，然后 [在以后的会话中再次查找这些全息影像](../../design/coordinate-systems.md#spatial-anchor-persistence)。
 
 在 Unity 中，可以通过将 **WorldAnchor** Unity 组件添加到 GameObject 来创建空间锚。
 
@@ -163,7 +163,7 @@ Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 
 ## <a name="sharing-anchors-across-devices"></a>跨设备共享锚
 
-使用 <a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a> ，从本地 WorldAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、IOS 和 Android 设备上找到它。  通过在多个设备之间共享公用空间定位点，每个用户都可以查看相对于同一物理位置中的定位点呈现的内容。  这可实现实时共享体验。
+使用<a href="/azure/spatial-anchors/overview" target="_blank">Azure 空间锚点</a>从本地 WorldAnchor 创建持久的云锚点，你的应用可以在多个 HoloLens、iOS 和 Android 设备中查找。  通过在多个设备之间共享公用空间定位点，每个用户都可以查看相对于同一物理位置中的定位点呈现的内容。  这可实现实时共享体验。
 
 若要开始在 Unity 中构建共享体验，请尝试执行5分钟的 <a href="/azure/spatial-anchors/unity-overview" target="_blank">Azure 空间锚点 Unity 快速入门</a>。
 

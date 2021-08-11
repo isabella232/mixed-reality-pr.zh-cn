@@ -1,33 +1,33 @@
 ---
 title: Unity 中的焦点
-description: 了解如何通过设置 HoloLens 和 Windows Mixed Reality 沉浸式耳机，手动优化 Unity 中的全息影像稳定性。
+description: 了解如何通过为 HoloLens 和 Windows Mixed Reality 沉浸式耳机设置焦点，在 Unity 中手动优化全息影像稳定性。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，焦点，焦点平面，稳定平面，稳定点，reprojection，LSR，深度缓冲区，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 16f359e1742b86c5f12c0c5965ac9e818ea76aee
-ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
+ms.openlocfilehash: 91fba310cf86f145174512c4c1e23d69907d2f57f48f3fe1992b417eb283235f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105636219"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203589"
 ---
 # <a name="focus-point-in-unity"></a>Unity 中的焦点
 
 **命名空间：** *UnityEngine. XR*<br>
 **类型**： *HolographicSettings*
 
-使用 [焦点](../platform-capabilities-and-apis/hologram-stability.md#reprojection) 向 HoloLens 提供有关如何最好地使当前正在显示的全息影像稳定的提示。
+使用[焦点](../platform-capabilities-and-apis/hologram-stability.md#reprojection)来向 HoloLens 提供有关如何最好地使当前显示的全息影像稳定的提示。
 
 如果要在 Unity 中设置焦点，则需要使用 *HolographicSettings. SetFocusPointForFrame ()* 设置每个框架。 如果未为帧设置焦点，则使用默认的稳定平面。
 
 > [!NOTE]
-> 默认情况下，新的 Unity 项目设置了 "启用深度缓冲共享" 选项。  使用此选项时，在沉浸式桌面耳机上运行的 Unity 应用或运行 Windows 10 4 月2018更新 (RS4) 或更高版本的应用程序将向 Windows 提交深度缓冲区以自动优化全息影像稳定性，无需应用指定焦点：
+> 默认情况下，新的 Unity 项目设置了 "启用深度缓冲共享" 选项。  使用此选项时，在沉浸式桌面耳机上运行的 Unity 应用 HoloLens 或运行 Windows 10 2018 年4月更新 (RS4) 或更高版本的应用程序将把深度缓冲区提交给 Windows 以自动优化全息影像稳定性，无需应用程序指定焦点：
 > * 在沉浸式桌面耳机上，这将启用基于像素深度的 reprojection。
-> * 在运行 Windows 10 4 月2018更新或更高版本的 HoloLens 上，这将分析深度缓冲区以自动选择最佳的稳定平面。
+> * 在运行 Windows 10 四月2018更新或更高版本的 HoloLens 上，这将分析深度缓冲区以自动选择最佳的稳定平面。
 >
-> 这两种方法都应该提供更好的图像质量，而无需由您的应用程序显式工作，从而为每个帧选择焦点。  请注意，如果你确实手动提供了焦点，这将替代上述自动行为，并且通常会降低全息图的稳定性。  通常，仅当你的应用在尚未更新到 Windows 10 4 2018 月版更新的 HoloLens 上运行时，才应指定手动焦点点。
+> 这两种方法都应该提供更好的图像质量，而无需由您的应用程序显式工作，从而为每个帧选择焦点。  请注意，如果你确实手动提供了焦点，这将替代上述自动行为，并且通常会降低全息图的稳定性。  通常，仅当你的应用在尚未更新 Windows 10 到2018年4月更新的 HoloLens 上运行时，才应指定手动焦点点。
 
 ### <a name="example"></a>示例
 

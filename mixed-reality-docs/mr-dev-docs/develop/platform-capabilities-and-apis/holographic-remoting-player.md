@@ -6,12 +6,12 @@ ms.author: v-vtieto
 ms.date: 07/27/2021
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，诊断，性能
-ms.openlocfilehash: f467b32ddab231286fc916916b0a40f210a66eb1
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 1e286612035a34c1bac174a620c350a91eb2b0fd59c3e808fe3a99368e03f43c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757015"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217135"
 ---
 # <a name="holographic-remoting-player"></a>全息远程播放器
 

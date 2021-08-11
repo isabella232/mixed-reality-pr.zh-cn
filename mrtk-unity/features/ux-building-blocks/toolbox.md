@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， MRTK ToolBox
-ms.openlocfilehash: 7f223d092caa546ffdb91d32ec28c4c9ef827d85
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: d66d943f4c6c512d6e7e755883fcea4400d848b5d1c205d7f0da48cc6217a5b8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175614"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115204019"
 ---
 # <a name="toolbox"></a>工具箱
 

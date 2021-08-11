@@ -1,30 +1,30 @@
 ---
 title: 着色器
-description: 了解混合现实工具包标准着色器如何提供各种类型的视觉效果，这些效果可用于混合现实应用中的全息影像。
+description: 了解混合现实 Toolkit 标准着色器如何提供各种类型的视觉效果，这些效果可用于混合现实应用中的全息影像。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实，控件，交互，ui，ux，着色器，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，视觉效果
-ms.openlocfilehash: 9a60c5065ddb5bcf410bb43b318575da50f7ccf8
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 混合现实，控件，交互，ui，ux，着色器，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，视觉效果
+ms.openlocfilehash: dcedd7ef0f41de2cbbad623a192abda63588b5691407397db229ef7796e6926e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600176"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207386"
 ---
 # <a name="shader"></a>着色器
 
 ![着色器](images/UX_Hero_StandardShader.jpg)
 
-由于全息对象与真实环境中的物理对象混合在一起，因此向用户提供视觉提示非常重要。 混合现实工具包标准着色器提供各种类型的视觉效果，可与全息影像一起使用。 着色系统使用单个灵活的着色器来实现类似于 Unity 的标准着色器的视觉对象。 着色器实现了 [熟知的设计系统原则](https://www.microsoft.com/design/fluent/#/) ，并在混合现实设备上保持高性能。
+由于全息对象与真实环境中的物理对象混合在一起，因此向用户提供视觉提示非常重要。 混合现实 Toolkit 标准着色器提供各种类型的视觉效果，可用于全息影像。 着色系统使用单个灵活的着色器来实现类似于 Unity 的标准着色器的视觉对象。 着色器实现[Fluent Design System 原则](https://www.microsoft.com/design/fluent/#/)，并在混合现实设备上保持高性能。
 <br>
 
-## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>使用 MRTK (混合现实工具包的视觉效果示例) 标准着色器 
+## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>使用 MRTK (混合现实 Toolkit 使用视觉效果的示例) 标准着色器 
 :::row:::
     :::column:::
        ![移动](images/UX_Button_Affordance_ProximityLight.jpg)<br>
-       **邻近感应**<br>
+       **邻近感应灯**<br>
     :::column-end:::
     :::column:::
        ![旋转](images/UX_Button_Affordance_FocusHighlight.jpg)<br>

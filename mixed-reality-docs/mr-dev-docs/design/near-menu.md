@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实， 控件， 交互， ui， ux， 菜单， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包
-ms.openlocfilehash: ecee6182d64ab1c843a9948984565d49ae313923
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 混合现实， 控件， 交互， ui， ux， 菜单， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实Toolkit
+ms.openlocfilehash: ab035c195824d987b397676e946633734b0f1af6a983bada4ea9145ff7d07b1e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600166"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115201760"
 ---
 # <a name="near-menu"></a>追踪菜单
 
@@ -23,7 +23,7 @@ ms.locfileid: "110600166"
 
 ---
 
-## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>用于 Unity 的混合现实工具包 (MRTK) 近菜单
+## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的 MRTK (Mixed Reality Toolkit) 近菜单
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 提供了各种近菜单预制示例。
 
 * [MRTK - 近菜单](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/near-menu)

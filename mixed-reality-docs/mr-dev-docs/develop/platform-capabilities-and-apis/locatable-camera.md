@@ -1,94 +1,94 @@
 ---
 title: 可定位相机
-description: 有关短期正面相机相机、工作原理以及开发人员可用的配置文件和分辨率的一般信息。
+description: 有关面向HoloLens相机、工作原理以及可供开发人员使用配置文件和分辨率的常规信息。
 author: cdedmonds
 ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
-keywords: 照相机，hololens，彩色相机，正面朝，hololens 2，cv，计算机视觉，基准，标记，qr 码，qr，照片，视频
-ms.openlocfilehash: f34973fee56f9469632b320a62dd441ed32e5805
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+keywords: camera， hololens， 彩色相机， 前置， hololens 2， cv， 计算机视觉， fiducial， 标记， qr 码， qr， 照片， 视频
+ms.openlocfilehash: 33faa4107c6b44041958f422329d8967958a666606a474949184628abcd12544
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810156"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217093"
 ---
 # <a name="locatable-camera"></a>可定位相机
 
-HoloLens 包含在设备前面安装的面向世界的相机，使应用能够查看用户看到的内容。 开发人员可以访问和控制照相机，就像在 smartphone、笔记本或台式机上的彩色照相机一样。 在 mobile 和 desktop 上工作的相同通用 windows [media capture](/uwp/api/Windows.Media.Capture.MediaCapture) 和 windows Media foundation Api 在 HoloLens 上工作。 Unity [已包装这些 Windows api](../unity/locatable-camera-in-unity.md) ，以便在 HoloLens 上抽象相机使用情况功能。 功能任务包括拍摄定期照片和视频 (有或不包含全息影像) 并定位相机在场景上的位置和透视。
+HoloLens包括安装在设备正面的面向世界相机，使应用能够查看用户看到的信息。 开发人员可以访问和控制相机，就像在智能手机、笔记本电脑或台式机上使用彩色相机一样。 在移动[和桌面上](/uwp/api/Windows.Media.Capture.MediaCapture)工作的相同通用 Windows 媒体捕获和 Windows 媒体基础 API HoloLens。 Unity[已包装这些 Windows API，](../unity/locatable-camera-in-unity.md)以在 HoloLens 上抽象相机使用HoloLens。 功能任务包括使用或 (全息影像拍摄常规) 以及定位相机在场景中的位置和透视。
 
-## <a name="device-camera-information"></a>设备照相机信息
+## <a name="device-camera-information"></a>设备相机信息
 
 ### <a name="hololens-first-generation"></a>HoloLens (第一代) 
 
-* 固定的照片/视频 (PV) 带有自动白平衡、自动曝光和完整图像处理管道的相机。
-* 当照相机处于活动状态时，面向世界的白色隐私 LED 将发亮
-* 摄像头支持以下模式 (所有模式均为16:9 纵横比) 为30、24、20、15和 5 fps：
+* 修复了具有自动 () 自动白平衡、自动曝光和完整图像处理管道的 PV 相机焦点照片/视频。
+* 每当摄像头处于活动状态时，面向全球的白色隐私 LED 都会亮起
+* 相机支持以下模式 (所有模式在 30、24、20、15 和 5 fps) 16：9 纵横比：
 
-  |  视频  |  预览  |  正常  |  视图的水平字段 (H-FOV)  |  建议的用法 | 
+  |  视频  |  预览  |  还  |  水平视场 (H-FOV)  |  建议的用法 | 
   |----------|----------|----------|----------|----------|
-  |  1280x720 |  1280x720 |  1280x720 |  45度  |  ) 视频抖动 (默认模式 | 
-  |  不适用 |  不适用 |  2048x1152 |  67度 |  最高分辨率静止图像 | 
-  |  1408x792 |  1408x792 |  1408x792 |  48度 |  Overscan (在视频稳定性之前填充) 分辨率 | 
-  |  1344x756 |  1344x756 |  1344x756 |  67度 |  带有 overscan 的大型 FOV 视频模式 | 
-  |  896x504 |  896x504 |  896x504 |  48度 |  图像处理任务的低功率/低分辨率模式 | 
+  |  1280x720 |  1280x720 |  1280x720 |  45 deg  |   (具有视频稳定功能的默认)  | 
+  |  不适用 |  不适用 |  2048x1152 |  67 deg |  最高分辨率的静止图像 | 
+  |  1408x792 |  1408x792 |  1408x792 |  48 deg |  在视频 (之前) 过度扫描填充) 分辨率 | 
+  |  1344x756 |  1344x756 |  1344x756 |  67 deg |  具有过度扫描的大型 FOV 视频模式 | 
+  |  896x504 |  896x504 |  896x504 |  48 deg |  图像处理任务的低功率/低分辨率模式 | 
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* 自动聚焦照片/视频 (PV) 带有自动白平衡、自动曝光和完整图像处理管道的相机。
-* 当照相机处于活动状态时，世界上的白色隐私 LED 将会亮起。
-* HoloLens 2 支持不同的相机配置文件。 了解如何 [发现和选择相机功能](/windows/uwp/audio-video-camera/camera-profiles)。
-* 摄像头支持以下配置文件和分辨率 (所有视频模式16:9 纵横比) ：
+* 自动聚焦照片/视频 (PV) 相机，具有自动白平衡、自动曝光和完整的图像处理管道。
+* 每当摄像头处于活动状态时，面向全球的白色隐私 LED 都会亮起。
+* HoloLens 2支持不同的相机配置文件。 了解如何发现 [和选择相机功能](/windows/uwp/audio-video-camera/camera-profiles)。
+* 相机支持以下配置文件和分辨率 (所有视频模式都为 16：9 纵横比) ：
   
-  | 配置文件                                         | 视频     | 预览   | 正常     | 帧速率 | 视图的水平字段 (H-FOV)  | 建议的用法                             |
+  | 配置文件                                         | 视频     | 预览   | 还     | 帧速率 | 水平视场 (H-FOV)  | 建议的用法                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
-  | 旧，0 BalancedVideoAndPhoto，100             | 2272x1278 | 2272x1278 |           | 15.30       | 64.69                            | 高质量视频录制                |
-  | 旧，0 BalancedVideoAndPhoto，100             | 896x504   | 896x504   |           | 15.30       | 64.69                            | 用于高质量照片捕获的预览流 |
-  | 旧，0 BalancedVideoAndPhoto，100             |           |           | 3904x2196 |             | 64.69                            | 优质照片捕获                  |
-  | BalancedVideoAndPhoto，120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15.30       | 64.69                            | 长持续时间方案                     |
-  | BalancedVideoAndPhoto，120                       | 1504x846  | 1504x846  |           | 15.30       | 64.69                            | 长持续时间方案                     |
-  | 视频会议，100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15、30、60    | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100                           | 1504x846  | 1504x846  |           | 5、15、30、60  | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 1920x1080 | 1920x1080 | 1920x1080 | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 1280x720  | 1280x720  | 1280x720  | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 1128x636  |           |           | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 960x540   |           |           | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 760x428   |           |           | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 640x360   |           |           | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 500x282   |           |           | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
-  | 视频会议，100 BalancedVideoAndPhoto，120 | 424x240   |           |           | 15、30       | 64.69                            | 视频会议，长持续时间方案 |
+  | Legacy，0 BalancedVideoAndPhoto，100             | 2272x1278 | 2272x1278 |           | 15.30       | 64.69                            | 高质量的视频录制                |
+  | Legacy，0 BalancedVideoAndPhoto，100             | 896x504   | 896x504   |           | 15.30       | 64.69                            | 用于高质量照片捕获的预览流 |
+  | Legacy，0 BalancedVideoAndPhoto，100             |           |           | 3904x2196 |             | 64.69                            | 高质量的照片捕获                  |
+  | BalancedVideoAndPhoto， 120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15.30       | 64.69                            | 长持续时间方案                     |
+  | BalancedVideoAndPhoto， 120                       | 1504x846  | 1504x846  |           | 15.30       | 64.69                            | 长持续时间方案                     |
+  | VideoConferencing，100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | 视频会议，持续时间长的方案 |
+  | 中国，100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 1128x636  |           |           | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 960x540   |           |           | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 760x428   |           |           | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 640x360   |           |           | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 500x282   |           |           | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
+  | 100 BalancedVideoAndPhoto，120 | 424x240   |           |           | 15,30       | 64.69                            | 视频会议，持续时间长的方案 |
 
 > [!NOTE]
-> 客户可以利用 [混合现实捕获](/hololens/holographic-photos-and-videos) 来获取应用的视频或照片，其中包括全息影像和视频抖动。
+> 客户可以利用 [混合现实捕获](/hololens/holographic-photos-and-videos) 来拍摄应用的视频或照片，包括全息影像和视频稳定。
 >
->作为开发人员，如果你希望在客户捕获内容时能够更好地显示你的应用程序，请考虑创建应用程序时应考虑的一些事项。 你还可以在应用中直接启用 (和自定义) 混合现实捕获。 在 [混合现实捕获](mixed-reality-capture-for-developers.md)中了解更多开发人员。
+>作为开发人员，如果希望应用在客户捕获内容时看起来尽可能好，则创建应用时应考虑一些注意事项。 还可以直接在 (中) 和自定义混合现实捕获。 在开发人员 [的混合现实捕获中了解有关详细信息](mixed-reality-capture-for-developers.md)。
 
-## <a name="locating-the-device-camera-in-the-world"></a>在世界各地查找设备照相机
+## <a name="locating-the-device-camera-in-the-world"></a>定位世界中的设备相机
 
-当 HoloLens 拍摄照片和视频时，捕获的帧包括世界上相机的位置和照相机的镜头型号。 这样，应用程序就可以在现实世界中为补充式的图像处理方案提供有关相机位置的原因。 开发人员可以使用他们最喜爱的图像处理或自定义计算机视觉库，创造性地滚动自己的方案。
+当HoloLens拍摄照片和视频时，捕获的帧包括相机在世界上的位置和相机的镜头模型。 这样，应用程序可以针对增强的图像处理方案来了解相机在现实世界中的位置。 开发人员可以使用他们最喜欢的图像处理或自定义计算机视觉库，以创意方式滚动自己的方案。
 
-HoloLens 文档中其他地方的 "照相机" 可能指的是应用呈现) 的 (的 "虚拟游戏摄像机"。 除非另有指示，否则，此页上的 "照相机" 指的是实际的 RGB 颜色相机。
+文档中其他位置HoloLens"相机"可引用应用呈现到 (的"虚拟游戏) 。 除非另有说明，否则此页上的"相机"是指真实的 RGB 彩色相机。
 
 ### <a name="using-unity"></a>使用 Unity
 
-若要从 "CameraIntrinsics" 和 "CameraCoordinateSystem" 中转到应用程序/全球坐标系统，请按照 [Unity 中](../unity/locatable-camera-in-unity.md) 的可定位照相机一文中的说明进行操作。  CameraToWorldMatrix 由 PhotoCaptureFrame 类自动提供，因此你无需担心下面讨论的 CameraCoordinateSystem 转换。
+若要从"CameraIntrinsics"和"CameraCoordinateSystem"转到应用程序/世界坐标系，请按照 [Unity](../unity/locatable-camera-in-unity.md) 中可定位相机一文的说明进行操作。  CameraToWorldMatrix 由 PhotoCaptureFrame 类自动提供，因此无需担心下面讨论的 CameraCoordinateSystem 转换。
 
 ### <a name="using-mediaframereference"></a>使用 MediaFrameReference
 
-如果 you'r 使用 [MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference) 类从照相机读取图像帧，则会应用这些说明。
+如果使用 [MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference) 类从相机读取图像帧，则这些说明适用。
 
-每个图像帧都 (照片或视频) 在捕获时是否包括位于照相机的[SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem) ，可使用[MediaFrameReference](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)的[坐标系](/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem)属性访问。 每个帧都包含对相机镜头型号的说明，可在 [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 属性中找到。 这些转换一起为每个像素定义了三维空间中的射线，表示生成像素的 photons 所采用的路径。 通过获取从帧的坐标系统到某个其他坐标 (系统的转换（例如，从 [固定的引用帧](../../design/coordinate-systems.md#stationary-frame-of-reference)) 进行转换，可以将这些光线与应用程序中的其他内容相关。 
+每个图像帧 (照片或视频) 是否包含捕获时位于相机的[SpatialCoordinateSystem，](/uwp/api/windows.perception.spatial.spatialcoordinatesystem)可以使用[MediaFrameReference](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)的[CoordinateSystem](/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem)属性访问该空间帧。 每个帧都包含相机镜头模型的说明，可在 [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 属性中找到。 这些转换共同为每个像素定义 3D 空间中表示生成像素的光子所拍摄路径的射线。 这些射线可以通过从框架的坐标系转换为其他坐标系 (例如，从固定参考框架获取) 。这些射线可以与应用中的其他[内容相关。](../../design/coordinate-systems.md#stationary-frame-of-reference) 
 
-每个图像框架提供以下内容：
-* 像素数据 (RGB/NV12/JPEG/等格式) 
-* 捕获位置的[SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem)
-* 包含照相机镜头模式的 [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 类
+每个图像帧提供以下内容：
+* 像素数据 (RGB/NV12/JPEG 等格式) 
+* 捕获[位置中的 SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem)
+* 包含 [相机的镜头模式的 CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 类
 
-[HolographicFaceTracking 示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)演示了查询照相机坐标系统和自己的应用程序坐标系统之间的转换的相当直接的方法。
+[HolographicFaceTracking 示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)演示了查询相机坐标系和你自己的应用程序坐标系之间的转换的非常简单的方法。
 
-### <a name="using-media-foundation"></a>使用媒体基础
+### <a name="using-media-foundation"></a>使用 媒体基础
 
-如果使用媒体基础直接从照相机读取图像帧，则可以使用每个帧的 [MFSampleExtension_CameraExtrinsics 属性](/windows/win32/medfound/mfsampleextension-cameraextrinsics) 和 [MFSampleExtension_PinholeCameraIntrinsics 特性](/windows/win32/medfound/mfsampleextension-pinholecameraintrinsics) 来相对于应用程序的其他坐标系统定位相机帧，如下面的示例代码所示：
+如果直接使用 媒体基础 从相机读取图像帧，可以使用每个帧的 [MFSampleExtension_CameraExtrinsics](/windows/win32/medfound/mfsampleextension-cameraextrinsics) 属性和 [MFSampleExtension_PinholeCameraIntrinsics](/windows/win32/medfound/mfsampleextension-pinholecameraintrinsics) 属性来查找相对于应用程序的其他坐标系的相机帧，如此示例代码所示：
 
 ```cpp
 #include <winrt/windows.perception.spatial.preview.h>
@@ -171,27 +171,27 @@ private:
 };
 ```
 
-### <a name="distortion-error"></a>失真错误
+### <a name="distortion-error"></a>扭曲错误
 
-在 HoloLens 上，视频和静态图像流在系统的图像处理管道中 undistorted，然后才能将帧提供给应用程序 (预览流包含) 的原始扭曲帧。 由于只有 CameraIntrinsics 可用，因此应用程序必须假定图像帧表示完美的 pinhole 相机。
+在HoloLens，在将帧提供给应用程序之前，视频和静止图像流不会在系统的图像处理管道中公开 (预览流包含原始的扭曲帧) 。 由于只有 CameraIntrinsics 可用，因此应用程序必须假设图像帧代表完美引脚相机。
 
-在 HoloLens (第一代) 上，在帧元数据中使用 CameraIntrinsics 时，图像处理器中的 undistortion 函数可能仍会导致最多10个像素的错误。 在许多用例中，此错误并不重要，但如果将全息影像与真实的海报/标记对齐，则会注意到 <10-px 的偏移量 (约为2米离开) 的全息影像的 11 mm，这可能导致此扭曲错误。 
+在HoloLens (第一代) ，在帧元数据中使用 CameraIntrinsics 时，图像处理器中的不存储函数仍可能会保留最多 10 像素的错误。 在许多用例中，此错误并不重要，但例如，如果将全息影像与现实世界的海报/标记对齐，并且你注意到定位在 2 米外) 的全息影像的 <10-px 偏移量 (约为 11 mm，则这种扭曲错误可能是原因。 
 
-## <a name="locatable-camera-usage-scenarios"></a>定位照相机使用方案
+## <a name="locatable-camera-usage-scenarios"></a>可定位相机使用方案
 
-### <a name="show-a-photo-or-video-in-the-world-where-it-was-captured"></a>在捕获照片或视频的世界中显示照片或视频
+### <a name="show-a-photo-or-video-in-the-world-where-it-was-captured"></a>在捕获照片或视频的世界上显示照片或视频
 
-设备照相机帧附带了 "相机到世界" 转换，可用于显示在拍摄映像时设备的确切位置。 例如，你可以将一个小全息图标放在此位置 (MultiplyPoint (System.numerics.vector2) # A3，甚至在相机的方向上绘制一个小箭头 (CameraToWorld (MultiplyVector) # A7。
+设备相机帧具有"相机到世界"转换，可用于准确显示拍摄图像时设备位置。 例如，你可以在此位置放置一个小全息图标 (CameraToWorld.MultiplyPoint (Vector3.0) ) ，甚至可以在相机面向 (CameraToWorld.MultiplyVector (Vector3.forward) ) 的方向绘制一个小箭头。
 
 ### <a name="tag--pattern--poster--object-tracking"></a>标记/模式/海报/对象跟踪
 
-许多混合现实应用程序使用可识别的图像或视觉模式在空间中创建以可跟踪点。 然后，使用该对象相对于该点呈现对象，或创建一个已知位置。 某些情况下，HoloLens 包括查找标有 fiducials 的现实世界对象 (例如，带有 QR 码的电视显示器) ，将全息影像置于 fiducials 上，并与已设置为通过 Wi-fi 与 HoloLens 通信的非 HoloLens 设备直观配对。
+许多混合现实应用程序使用可识别的图像或视觉模式在空间中创建可跟踪的点。 然后，它用于呈现相对于该点的对象或创建已知位置。 HoloLens 的一些用途包括查找标有 fiducials (的真实对象，例如带有 QR 码) 的电视监视器、将全息影像放置在 fiducial 上，以及以可视方式与非 HoloLens 设备（例如已设置为通过 Wi-Fi 与 HoloLens 通信的平板电脑）配对。
 
-你需要几个事项来识别视觉对象模式，并将对象放置在应用程序世界空间中：
-1. 图像模式识别工具包，如 QR 码、AR 标记、面部查找器、圆形跟踪器、OCR 等。
-2. 在运行时收集图像帧，并将其传递到识别层
-3. 将其图像位置 Unproject 为世界位置，或可能是世界光线。 
-4. 将虚拟模型放置在这些世界位置
+需要一些内容来识别视觉模式，将对象放在应用程序世界空间中：
+1. 图像模式识别工具包，例如 QR 码、AR 标记、人脸查找器、圆形跟踪器、OCR 等。
+2. 在运行时收集图像帧，并传递给识别层
+3. 将图像位置取消项目处理回世界位置，或者可能是世界射线。 
+4. 将虚拟模型定位到这些世界位置
 
 一些重要的图像处理链接：
 * [OpenCV](https://opencv.org/)
@@ -199,13 +199,13 @@ private:
 * [FaceSDK](https://research.microsoft.com/projects/facesdk/)
 * [Microsoft Translator](https://www.microsoft.com/translator/business)
 
-保持交互应用程序帧速率非常重要，尤其是在处理长时间运行的图像识别算法时。 出于此原因，我们通常使用以下模式：
-1. 主线程：管理照相机对象
-2. 主线程： (async) 请求新帧
-3. 主线程：将新帧传递到跟踪线程
-4. 跟踪线程：处理收集关键点的图像
-5. 主线程：移动虚拟模型以匹配找到的关键点
-6. 主线程：从步骤2重复
+保持交互式应用程序帧速率至关重要，尤其是在处理长时间运行的图像识别算法时。 因此，我们通常使用以下模式：
+1. 主线程：管理相机对象
+2. 主线程：请求异步 (新) 
+3. 主线程：将新帧传递给跟踪线程
+4. 跟踪线程：处理图像以收集关键点
+5. 主线程：移动虚拟模型以匹配找到的要点
+6. 主线程：从步骤 2 重复
 
 某些图像标记系统仅提供单个像素位置 (其他部分提供完全转换，在这种情况下，不需要此部分) ，这相当于可能的位置。 若要访问单个3d 位置，我们可以利用多个射线，并按大致交集查找最终结果。 为此需要：
 1. 获取正在收集多个照相机图像的循环

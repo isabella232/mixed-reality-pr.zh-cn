@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: fa7442bc968710a31ce3ca379c7fd73928e6e324
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 407813f52044d3405e5045f64817d87c4f3e4b59ddfd87308586ac2d81924674
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144412"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202565"
 ---
 # <a name="lighting-scene-operations"></a>光照场景操作
 
@@ -46,4 +46,4 @@ CrossFade | 当新的照明场景淡入时，上一个光照场景将淡出。 �
 --- | --- | ---
 Skybox | 否 | 否
 自定义反射 | 否 | 否
-浅色实时阴影 | 是 | 否
+Sun 轻型实时阴影 | 是 | 否

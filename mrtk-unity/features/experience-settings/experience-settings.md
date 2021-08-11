@@ -7,32 +7,32 @@ ms.date: 04/13/2021
 ms.localizationpriority: medium
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK
 monikerRange: '>= mrtkunity-2021-05'
-ms.openlocfilehash: ab3a449b064d4a1c8f2bf76154f7a25c688693e1
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 19d812ccfa9c0317e40dee2b7d03220848782cef955ba859a150b4f4adc8aa99
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177356"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203240"
 ---
 # <a name="experience-settings"></a>体验设置
 
-为混合现实创建 UI 的难题之一是跨不同体验。 通过 MRTK，你可以 `Target Experience Scale` 为场景设置和， `Content Offset` 将配置以下各项，以适合目标规模。
+为混合现实创建 UI 的其中一个难题是跨不同体验保持一致。 使用 MRTK，你可以为场景设置 和 ，将以下内容配置为适合 `Target Experience Scale` `Content Offset` 目标规模的行为。
 
 - 混合现实场景内容
 - 边界系统
 
-  ![MRTK 配置文件中的体验设置](../images/experience-settings/ExperienceSettings.png)
+  ![体验设置 MRTK 配置文件中的配置](../images/experience-settings/ExperienceSettings.png)
 
-## <a name="target-experience-scale"></a>目标体验规模
+## <a name="target-experience-scale"></a>目标体验缩放
 
-**目标体验规模** 指定了经验的设计环境。 它可以采用以下值。
+" **目标体验** 规模"指定设计体验的环境。 它可以接受以下值。
 
-* *OrientationOnly* -一种只利用耳机方向且重心对齐的体验。 坐标系统原点位于 head 级别。
-* 已 *就位设计，旨在* 实现现有用途。 坐标系统原点在楼层级。
-* 持续-为静止使用而 *设计的体验*。 坐标系统原点在楼层级。
-* *房间* -一种体验，旨在支持在房间内移动。 坐标系统原点在楼层级。
-* *世界* -一种经验，旨在利用和迁移到现实世界。 坐标系统原点位于 head 级别。
+* *OrientationOnly* - 一种仅利用头戴显示设备方向且与力对齐的体验。 坐标系统原点位于头级别。
+* *下* 级 - 专为自己使用而设计的体验。 坐标系原点在楼层级别。
+* *站* 式 - 专为固定固定使用而设计的体验。 坐标系原点在楼层级别。
+* *房间* - 旨在支持整个房间移动的体验。 坐标系原点在楼层级别。
+* *世界* - 旨在利用和移动物理世界的体验。 坐标系统原点位于头级别。
 
-## <a name="content-offset"></a>内容偏移
+## <a name="content-offset"></a>内容偏移量
 
-此参数指定当 **对齐类型** 设置为 **与体验规模一致** 时，将 [混合现实场景内容](scene-content.md)偏移的地面的高度
+当对齐类型设置为"与体验刻度对齐"时 [](scene-content.md)，此参数指定楼层上方的高度以偏移混合现实 **场景内容**

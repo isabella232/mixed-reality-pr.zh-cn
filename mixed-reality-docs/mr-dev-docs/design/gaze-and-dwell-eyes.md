@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 眼动跟踪, 混合现实, 输入, 眼睛凝视, 视线定位, HoloLens 2, 视线选择, 停留, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包, 设计
-ms.openlocfilehash: 78f8dcec3c8368128ec5904df36ce1391aa8b879
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: dfe74ee1fe304cc63bb0c547d01ebadeb0469b171caa806671887817c17f92ef
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98007707"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115201826"
 ---
 # <a name="eye-gaze-and-dwell"></a>眼睛凝视和停留
 

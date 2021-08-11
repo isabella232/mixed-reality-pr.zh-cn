@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 268d13d00bc0bcf1d522eaa6809dab9892624e11
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: b5147e5c592b80ab100a7cf7ce2487d971299832fec11f7ca57b1fdeef530900
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176571"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202577"
 ---
 # <a name="progress-indicator"></a>进度指示器
 
@@ -65,7 +65,7 @@ private async void OpenProgressIndicator()
 
 指示器的 `State` 属性确定哪些操作有效。 调用无效的方法通常会导致指示器报告错误，并且不采取措施。
 
-状态 | 有效操作
+州省/自治区/直辖市 | 有效操作
 --- | ---
 `ProgressIndicatorState.Opening` | `AwaitTransitionAsync()`
 `ProgressIndicatorState.Open` | `CloseAsync()`

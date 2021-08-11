@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, hololens 2, azure 机器人服务, luis, 自然语言, 对话机器人, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: bade124dff639e6f30fb67039debfddef54a22db
-ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
+ms.openlocfilehash: 109befea299ba2539e3ab8ee616d3321f89660cd30a831a6833e7bbf51029f98
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114224511"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115206482"
 ---
 # <a name="5-integrating-azure-bot-service"></a>5.集成 Azure 机器人服务
 

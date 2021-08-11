@@ -1,39 +1,39 @@
 ---
-ms.openlocfilehash: dbaace96246f28050ff6fb189d9b626be6b0ec9e
-ms.sourcegitcommit: e380d56f5504be4e4f069394a58cf0147eb33b66
+ms.openlocfilehash: 695db2d7e6765d3584c9e9a6459071ab537c1f003d13461ce5736481b98b7495
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2021
-ms.locfileid: "113603702"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202752"
 ---
 # <a name="openxr"></a>[OpenXR](#tab/openxr)
 
-若要使用 MRTK **开始使用新的 Unity** 项目，请从 MRTK 教程的步骤 2 开始：
+若要开始使用 MRTK 的 **新 Unity 项目** ，请从 MRTK 教程中的步骤2开始：
 
 > [!div class="nextstepaction"]
 > [使用 MRTK 设置新的 OpenXR 项目](../../tutorials/mr-learning-base-02.md?tabs=openxr)
 
-如果要将现有 MRTK 项目升级到 **OpenXR，** 首先需要将 MRTK-Unity 升级到最新版本 (2.7.2 或更高版本) ，以获得与混合现实 OpenXR 插件兼容的关键修补程序。  使用 [混合现实功能工具](../../welcome-to-mr-feature-tool.md) 升级到最新版本的 MRTK，然后按照下面的 [手动 OpenXR 设置步骤操作](#manual-setup-without-mrtk)。 有关将现有 MRTK 项目迁移到 OpenXR 的更深入的信息，请参阅 [MRTK 文档](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)。
+如果要将现有的 **MRTK 项目升级到 OpenXR**，则需要将 MRTK-Unity 升级到最新版本 (版本2.7.2 或更高版本，) 获取与混合现实 OpenXR 插件兼容的密钥修补程序。  使用 [混合现实功能工具](../../welcome-to-mr-feature-tool.md) 升级到最新版本的 MRTK，然后按照 [以下手动 OpenXR 设置步骤](#manual-setup-without-mrtk)操作。 有关 [将现有的 MRTK 项目迁移到 OpenXR 的更深入信息](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)，请参阅 MRTK 文档。
 
 > [!NOTE]
-> 从低于 **2.5.3** 的旧版 MRTK 升级时，请确保以下行位于 **Assets/MixedRealityToolkit.Generated/link.xml** 文件中：
+> 从早于 **2.5.3** 的 MRTK 的早期版本进行升级时，请确保 **资产/MixedRealityToolkit 和 link.xml** 文件中有以下行：
 >
 > ```xml
 > <assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
 > ```
 >
-> 如果从 MRTK 2.5.4 或更高版本开始，则默认情况下将添加此行。
+> 如果开始使用 MRTK 2.5.4 或更高版本，则默认情况下会添加此行。
 
 # <a name="windows-xr"></a>[WindowsXR](#tab/windowsxr)
 
-若要使用 MRTK **开始使用新的 Unity** 项目，请从 MRTK 教程的步骤 2 开始：
+若要开始使用 MRTK 的 **新 Unity 项目** ，请从 MRTK 教程中的步骤2开始：
 
 > [!div class="nextstepaction"]
-> [使用 MRTK Windows XR 项目](../../tutorials/mr-learning-base-02.md?tabs=winxr)
+> [使用 MRTK 设置新的 Windows XR 项目](../../tutorials/mr-learning-base-02.md?tabs=winxr)
 
 # <a name="legacy-xr"></a>[旧版 XR](#tab/legacy)
 
-若要使用 MRTK **开始使用新的 Unity** 项目，请从 MRTK 教程的步骤 2 开始：
+若要开始使用 MRTK 的 **新 Unity 项目** ，请从 MRTK 教程中的步骤2开始：
 
 > [!div class="nextstepaction"]
-> [使用 MRTK 设置新的旧版 XR 项目](../../tutorials/mr-learning-base-02.md?tabs=wsa)
+> [使用 MRTK 设置新的旧式 XR 项目](../../tutorials/mr-learning-base-02.md?tabs=wsa)

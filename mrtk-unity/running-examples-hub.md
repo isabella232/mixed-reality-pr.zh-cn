@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 01/14/2021
 ms.topic: article
 keywords: 混合现实工具包， MRTK， 示例， HoloLens， HoloLens 2， 着色器， 工具提示， 手部交互， 剪辑， 边界框， 按钮， 手部菜单， 盖板， 滑块
-ms.openlocfilehash: c748b0cc87e1f25ee3de62ef4f5c056f82db74ad
-ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
+ms.openlocfilehash: 724d9b2c4886d6a6f7de74c4393809f8075ca15e584336b89d339cb8c0bcd610
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114281903"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203280"
 ---
 # <a name="try-out-the-mrtk-examples-hub"></a>试用 MRTK 示例中心
 

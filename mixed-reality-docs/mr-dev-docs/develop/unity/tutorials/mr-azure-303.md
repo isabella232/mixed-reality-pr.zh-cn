@@ -1,44 +1,44 @@
 ---
-title: 'HoloLens (第一代) 和 Azure 303-自然语言理解 (LUIS) '
-description: 完成本课程，了解如何在混合现实应用程序中实现 Azure 语言理解智能服务 (LUIS) 。
+title: 'HoloLens (第一代) Azure 303 - LUIS (自然) '
+description: 完成本课程，了解如何在混合现实应用程序中语言理解 LUIS (Azure) 智能服务。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure，混合现实，学院，unity，教程，api，语言理解智能服务，luis，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 663ac44dbf15ce2db63d7ffe0ecc605d3555857f
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+keywords: azure， 混合现实， 学院， unity， 教程， api， 语言理解智能服务， luis， hololens， 沉浸式， vr， Windows 10， Visual Studio
+ms.openlocfilehash: 443b5f2c186fbbb0a3e979b48ccc20b4c3d3b4f0bd9c93950e27e1f86d610c07
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730554"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217962"
 ---
-# <a name="hololens-1st-gen-and-azure-303-natural-language-understanding-luis"></a>HoloLens (第一代) 和 Azure 303：自然语言理解 (LUIS) 
+# <a name="hololens-1st-gen-and-azure-303-natural-language-understanding-luis"></a>HoloLens (第一代) 和 Azure 303：LUIS (自然) 
 
 <br>
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来将发布一系列新的教程，演示如何针对 HoloLens 2。  发布这些教程时，此通知将更新为指向这些教程的链接。
 
 <br>
 
-在本课程中，你将了解如何使用 Azure 认知服务将语言理解集成到混合现实应用程序中，语言理解 API。
+本课程将学习如何使用 语言理解 API 将 Azure 认知服务 集成到混合现实语言理解应用程序中。
 
 ![实验室结果](images/AzureLabs-Lab3-000.png)
 
-*语言理解 (LUIS)* 是 Microsoft Azure 服务，它使应用程序能够从用户输入中代替用户输入，例如通过使用自己的字词提取用户可能需要的内容。 这是通过机器学习来实现的，它可以理解和学习输入信息，然后可以使用详细的相关信息进行回复。 有关详细信息，请访问 [Azure 语言理解 (LUIS) "页](https://azure.microsoft.com/services/cognitive-services/language-understanding-intelligent-service/)。
+*语言理解 (LUIS)* 是一种Microsoft Azure服务，它使应用程序能够使用用户输入来表达含义，例如，通过提取用户可能想要用自己的语言表达的含义。 这是通过机器学习实现的，机器学习了解和了解输入信息，然后可以使用详细、相关的信息进行回复。 有关详细信息，请访问 Azure [语言理解 (LUIS) 页](https://azure.microsoft.com/services/cognitive-services/language-understanding-intelligent-service/)。
 
-完成本课程后，你将拥有一个混合现实沉浸式耳机应用程序，该应用程序将能够执行以下操作：
+完成本课程后，你将拥有一个混合现实沉浸式头戴显示设备应用程序，该应用程序能够执行以下操作：
 
-1.  使用连接到沉浸式耳机的麦克风捕获用户输入语音。 
-2.  将捕获的听写发送到 *Azure 语言理解智能服务* (*LUIS*) 。 
-3.  让 LUIS 从发送信息中提取含义，将对其进行分析，并尝试确定用户请求的意图。
+1.  使用附加到沉浸式头戴显示设备麦克风捕获用户输入语音。 
+2.  将捕获的听写发送到 LUIS 语言理解 *Azure* (*服务*) 。 
+3.  让 LUIS 从发送信息中提取含义，这些信息将进行分析，并尝试确定将发出用户请求的意图。
 
-开发过程包括创建一个应用程序，用户可以使用该应用程序来更改场景中对象的大小和颜色。 不会覆盖运动控制器的使用。
+开发将包括创建一个应用，用户可以使用语音和/或凝视来更改场景中对象的大小和颜色。 不会涵盖运动控制器的使用。
 
-在您的应用程序中，您将由您来决定如何将结果与您的设计相集成。 本课程旨在向您介绍如何将 Azure 服务与 Unity 项目集成。 您可以使用您在本课程中获得的知识来增强混合现实应用程序的工作。
+在应用程序中，由你决定如何将结果与设计集成。 本课程旨在教授如何将 Azure 服务与 Unity Project。 你的工作是利用从本课程中获得的知识来增强混合现实应用程序。
 
-准备多次训练 LUIS，这将在第 [12 章](#chapter-12--improving-your-luis-service)中介绍。 更好的结果是训练 LUIS 的次数越多。
+准备多次训练 LUIS，第 [12 章中介绍了这一点](#chapter-12--improving-your-luis-service)。 LUIS 训练次数越多，结果就越好。
 
 ## <a name="device-support"></a>设备支持
 
@@ -46,99 +46,99 @@ ms.locfileid: "104730554"
 <tr>
 <th>课程</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">沉浸式头戴显示设备</a></th>
 </tr><tr>
-<td>MR 和 Azure 303：自然语言理解 (LUIS) </td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR 和 Azure 303：LUIS (的自然语言) </td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
-> 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。 使用 HoloLens 时，可能会在语音捕获过程中注意到某些回声。
+> 虽然本课程主要重点介绍Windows Mixed Reality VR () 头戴显示设备，但也可以将本课程中学习到Microsoft HoloLens。 随着课程的进行，你将看到有关支持此课程可能需要采用的任何更改HoloLens。 使用语音HoloLens，你可能会注意到在语音捕获期间有一些回显。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
-> 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
+> 本教程专为具有 Unity 和 C# 基本经验的开发人员设计。 另请注意，本文档中的先决条件和书面说明表示截至 2018 年 5 月 2018 年 5 月 (测试和验证的内容) 。 可以随意使用安装工具一文中列出的最新软件，但不应[](../../install-the-tools.md)假定本课程中的信息与下面列出的新软件中的信息完全匹配。
 
-本课程建议采用以下硬件和软件：
+对于本课程，我们建议使用以下硬件和软件：
 
-- [与 Windows Mixed Reality 兼容](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)的开发 PC，适用于沉浸式 (VR) 耳机开发
-- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](../../install-the-tools.md)
+- 一台开发电脑[，Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)沉浸式 (VR) 头戴显示设备开发
+- [Windows 10 Fall Creators Update (开发人员模式) 或更高版本](../../install-the-tools.md)
 - [最新的 Windows 10 SDK](../../install-the-tools.md)
-- [Unity 2017。4](../../install-the-tools.md)
+- [Unity 2017.4](../../install-the-tools.md)
 - [Visual Studio 2017](../../install-the-tools.md)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
-- 带有内置麦克风的一组耳机 (如果耳机没有内置麦克风和扬声器) 
-- Azure 安装和 LUIS 检索的 Internet 访问
+- 已启用[Windows Mixed Reality开发人员模式 (VR](../../../discover/immersive-headset-hardware-details.md)) 头戴显示设备[Microsoft HoloLens](/hololens/hololens1-hardware)沉浸式设备
+- 一组带内置麦克风的耳机 (如果头戴显示设备没有内置麦克风和扬声器，) 
+- 用于 Azure 设置和 LUIS 检索的 Internet 访问
 
 ## <a name="before-you-start"></a>开始之前
 
-1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。 
-2.  若要允许计算机启用听写，请转到 " **Windows 设置" > 隐私 > 语音 "、" 墨迹书写 & 键入** "和" **打开语音服务并键入建议**"按钮。
-3.  本教程中的代码将允许你从计算机上的 **默认麦克风设备** 设置进行录制。 请确保将默认麦克风设备设置为要用于捕获语音的设备。
-4.  如果耳机有内置麦克风，请确保在 *混合现实门户* 设置中启用 *"我戴上耳机，切换到耳机麦克风"* 选项。
+1.  为了避免在生成此项目时遇到问题，强烈建议在根文件夹或近根文件夹中创建本教程中提到的项目 (长文件夹路径可能会导致生成时) 。 
+2.  若要允许计算机启用听写，请转到 Windows 设置 > Privacy **> Speech， Inking & Typing，** 然后按按钮"打开语音服务并键入 **建议**"。
+3.  本教程中的代码允许你从计算机上设置的默认 **麦克风** 设备进行录制。 请确保将"默认麦克风设备"设置为想要用于捕获语音的设备。
+4.  如果头戴显示设备具有内置麦克风，请确保在设备设置中启用"当我戴头戴显示设备时，切换到头戴 *显示* 设备麦克风 *混合现实门户"* 。
 
-    ![设置沉浸式耳机](images/AzureLabs-Lab3-00.png)
+    ![设置沉浸式头戴显示设备](images/AzureLabs-Lab3-00.png)
 
-## <a name="chapter-1--setup-azure-portal"></a>第1章–设置 Azure 门户
+## <a name="chapter-1--setup-azure-portal"></a>第 1 章 - 设置 Azure 门户
 
-若要在 Azure 中使用 *语言理解* 服务，你将需要配置服务的实例，使其可用于你的应用程序。
+若要在 Azure *语言理解* 服务，需要将服务的实例配置为可供应用程序使用。
 
 1.  登录到 [Azure 门户](https://portal.azure.com)。
 
     > [!NOTE]
-    > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室中按照本教程进行学习，请咨询教师或 proctors，以获得设置新帐户的帮助。
+    > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室环境中遵循本教程，请询问讲师或其中一位讲师，以帮助设置新帐户。
 
-2.  登录后，单击左上角的 " **新建** "，搜索 " *语言理解*"，然后单击 " **Enter**"。 
+2.  登录后，单击左上角的"新建"，然后搜索 *语言理解，然后单击*  **Enter**。 
 
     ![创建 LUIS 资源](images/AzureLabs-Lab3-01.png)
 
     > [!NOTE]
-    > 在较新的门户中，可能已将 " **新建** " 一词替换为 " **创建资源**"。
+    > 在较 **新的** 门户中，"新建"一词可能已被替换为"创建资源"。
  
-3.  向右的新页将提供语言理解服务的说明。 在此页的左下角，选择 " **创建** " 按钮以创建此服务的实例。
+3.  右侧新页面将提供服务语言理解说明。 在此页左下角， **选择"创建** "按钮，创建此服务的实例。
 
-    ![创建 LUIS 服务-法律声明](images/AzureLabs-Lab3-02.png)
+    ![LUIS 服务创建 - 法律声明](images/AzureLabs-Lab3-02.png)
  
-4.  单击 "创建" 后：
+4.  单击"创建"后：
 
-    1. 为此服务实例插入所需的 **名称** 。
+    1. 为此服务 **实例插入** 所需的名称。
     2. 选择一个“订阅”  。
-    3. 选择适合于你的 **定价层** ，如果这是第一次创建 *LUIS 服务*，) 应提供 (名为 F0 的免费层。 对于本课程，免费分配应该已经足够。
-    4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。 
+    3. 选择 **适合你的** 定价层，如果这是首次创建 *LUIS* 服务， (名为 F0) 的免费层。 免费分配应足以满足本课程。
+    4. 选择一 **个资源组** 或创建一个新资源组。 资源组提供了一种方法来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议将与单个项目关联的所有 Azure 服务 (例如，这些课程) 位于公共资源组) 。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
+        > 若要详细了解 Azure 资源组，请访问 [资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
-    5. 如果要创建新的资源组) ，请确定资源组 (的 **位置** 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
-    6. 还需要确认是否已了解应用于此服务的条款和条件。
-    7. 选择“创建”。
+    5. 如果要 **创建新的** 资源组组 (，请确定资源组) 。 理想情况下，位置将位于应用程序将运行的区域。 某些 Azure 资产仅在某些区域可用。
+    6. 还需要确认你已了解适用于此服务的条款和条件。
+    7. 选择“创建”。 
 
-        ![创建 LUIS 服务-用户输入](images/AzureLabs-Lab3-03.png)
+        ![创建 LUIS 服务 - 用户输入](images/AzureLabs-Lab3-03.png)
  
-5.  单击 " **创建**" 后，需要等待创建服务，这可能需要一分钟时间。
-6.  创建服务实例后，门户中将显示一个通知。 
+5.  单击"创建 **"** 后，必须等待服务创建完成，这可能需要一分钟。
+6.  创建服务实例后，门户中会显示一条通知。 
  
     ![新的 Azure 通知映像](images/AzureLabs-Lab3-04.png)
 
-7.  单击通知以浏览新服务实例。
+7.  单击通知以浏览新的服务实例。
 
     ![成功创建资源通知](images/AzureLabs-Lab3-05.png)
  
-8.  单击通知中的 " **中转到资源** " 按钮以浏览新服务实例。 你将转到新的 LUIS 服务实例。 
+8.  单击 **通知中的"** 转到资源"按钮，浏览新的服务实例。 你将被带至新的 LUIS 服务实例。 
  
-    ![访问 LUIS 项](images/AzureLabs-Lab3-06.png)
+    ![访问 LUIS 密钥](images/AzureLabs-Lab3-06.png)
 
-9.  在本教程中，你的应用程序将需要调用你的服务，这是通过使用你的服务的订阅密钥来完成的。
-10. 在 *LUIS API* 服务的 "*快速启动*" 页上，导航到第一步，*获取你的密钥*，然后单击 "**密钥**" (你也可以通过单击位于 "服务" 导航菜单中的蓝色超链接项，) 来表示。 这会显示你的服务 *密钥*。
-11. 复制其中一个所显示的密钥，因为稍后会在项目中使用此密钥。 
-12. 在 " *服务* " 页上，单击 " *语言理解门户* " 以重定向到在 LUIS 应用中用于创建新服务的网页。 
+9.  在本教程中，应用程序需要调用服务，这通过使用服务的订阅密钥完成。
+10. 在 *LUIS API* 服务的"快速启动"页中，导航到第一步"获取密钥"，然后单击"**密钥" (** 也可以单击位于服务导航菜单中的蓝色超链接"密钥"（由密钥图标) 表示）来实现此目的。 这将显示 *服务密钥*。
+11. 请复制其中一个显示的密钥，因为稍后在项目中需要此密钥。 
+12. 在 *"服务*"语言理解，单击"门户"，重定向到将在 LUIS 应用中用于创建新服务的网页。 
 
-## <a name="chapter-2--the-language-understanding-portal"></a>第2章–语言理解门户
+## <a name="chapter-2--the-language-understanding-portal"></a>第 2 章 - 语言理解 门户
 
-在本部分中，你将了解如何在 LUIS 门户中创建 LUIS 应用程序。 
+本部分将了解如何在 LUIS 门户上创建 LUIS 应用。 
 
 > [!IMPORTANT]
-> 请注意，在本章中设置 *实体*、 *意向* 和 *最谈话* 只是构建 LUIS 服务的第一步：你还需要多次重新训练服务，以便使其更准确。 本课程的 [最后一章](#chapter-12--improving-your-luis-service) 介绍了重新训练你的服务，因此请确保完成此操作。
+> 请注意，在本章中设置 *实体*、意向和话语只是生成 LUIS服务的第一步：还需要多次重新训练该服务，以便使其更准确。 本课程的最后一章介绍了重新训练服务[](#chapter-12--improving-your-luis-service)，因此请确保完成。
 
-1.  进入 *语言理解门户* 后，你可能需要登录（如果尚未登录），其凭据与 Azure 门户相同。 
+1.  到达 *语言理解* 门户时，可能需要使用与门户相同的凭据登录（如果尚未Azure 门户。 
 
     ![LUIS 登录页](images/AzureLabs-Lab3-07.png)
  
@@ -317,83 +317,83 @@ change the color of this object to blue
 
     ![启动新的 Unity 项目。](images/AzureLabs-Lab3-24.png)
 
-2.  你现在需要提供 Unity 项目名称，插入 **MR_LUIS**。 请确保 "项目类型" 设置为 " **3d**"。 将位置设置为合适的 **位置** (记住，更接近根目录) 。 然后单击 " **创建项目**"。
+2.  你现在需要提供 Unity Project 名称，插入 **MR_LUIS**。 请确保 "项目类型" 设置为 " **3d**"。 将位置设置为合适的 **位置** (记住，更接近根目录) 。 然后单击 " **创建项目**"。
 
     ![提供新 Unity 项目的详细信息。](images/AzureLabs-Lab3-25.png)
  
-3.  当 Unity 处于打开状态时，有必要选中 "默认 **脚本编辑器** " 设置为 " **Visual Studio**"。 转到 "编辑 > 首选项"，然后在新窗口中导航到 " **外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
+3.  当 Unity 处于打开状态时，有必要检查默认 **脚本编辑器** 是否设置为 **Visual Studio**。 转到 "编辑 > 首选项"，然后在新窗口中导航到 " **外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
 
     ![更新脚本编辑器首选项。](images/AzureLabs-Lab3-26.png)
  
-4.  接下来，通过单击 "**切换平台**" 按钮转到 "**文件 > 生成设置**"，并将平台切换到 **通用 Windows 平台**。
+4.  接下来，通过单击 "**切换平台**" 按钮转到 "**文件 > 生成" 设置** 并将平台切换到 "**通用 Windows 平台**"。
 
-    ![生成设置窗口，将平台切换到 UWP。](images/AzureLabs-Lab3-27.png)
+    ![构建设置窗口，将平台切换到 UWP。](images/AzureLabs-Lab3-27.png)
  
-5.  请参阅 **文件 > 生成设置** ，并确保：
+5.  请参阅 **文件 > 生成设置**，并确保：
 
     1. **目标设备** 设置为 **任何设备**
 
-        > 对于 Microsoft HoloLens，将 " **目标设备** " 设置为 " *hololens*"。
+        > 对于 Microsoft HoloLens，请将 "**目标设备**" 设置为 " *HoloLens*"。
 
     2. **生成类型** 设置为 **D3D**
     3. **SDK** 设置为 "**最新安装**"
-    4. **Visual Studio 版本** 设置为 "**最新安装**"
-    5. "**生成并运行**" 设置为 "**本地计算机**"
-    6. 保存场景并将其添加到生成中。
+    4. **Visual Studio版本** 设置为"最新 **安装"**
+    5. **"生成和运行** "设置为" **本地计算机"**
+    6. 保存场景并将其添加到生成。
 
-        1. 通过选择 " **添加打开的场景**" 来执行此操作。 将显示 "保存" 窗口。
+        1. 为此，选择"**添加打开的场景"。** 将显示保存窗口。
         
-            ![单击 "添加打开的场景" 按钮](images/AzureLabs-Lab3-28.png)
+            ![单击"添加打开的场景"按钮](images/AzureLabs-Lab3-28.png)
 
-        2. 为此创建新文件夹，并为将来的任何场景创建一个新文件夹，然后选择 " **新建文件夹** " 按钮以创建新文件夹，将其命名为 **场景**。
+        2. 为此和任何将来的场景创建新文件夹，然后选择"新建文件夹"按钮，以创建新文件夹，将其命名为 **"场景"。**
 
-            !["创建新脚本" 文件夹](images/AzureLabs-Lab3-29.png)
+            ![创建新脚本文件夹](images/AzureLabs-Lab3-29.png)
 
-        3. 打开新创建的 **场景** 文件夹，然后 *在 "文件名：文本" 字段* 中，键入 **MR_LuisScene**，然后按 " **保存**"。
+        3. 打开新创建的 **"场景**"文件夹，然后在"文件名 *：* 文本"字段中，键入"MR_LuisScene"，**然后** 按"**保存"。**
 
-            ![为新场景指定名称。](images/AzureLabs-Lab3-30.png)
+            ![为新场景命名。](images/AzureLabs-Lab3-30.png)
 
-    7. 现在，" *生成设置*" 中的其余设置应保留为默认值。
+    7. 目前，"*生成设置中的* 其余设置应保留为默认值。
 
-6. 在 " *生成设置* " 窗口中，单击 " **播放机设置** " 按钮，这会在 *检查器* 所在的空间中打开相关面板。 
+6. 在"*生成设置* 窗口中，单击"播放器设置按钮，这将在 *检查* 器所在的空间中打开相关面板。 
 
-    ![打开播放机设置。](images/AzureLabs-Lab3-31.png) 
+    ![打开播放器设置。](images/AzureLabs-Lab3-31.png) 
  
-7. 在此面板中，需要验证几项设置：
+7. 在此面板中，需要验证一些设置：
 
-    1. 在 " **其他设置** " 选项卡中：
+    1. 在"**其他设置** 选项卡中：
 
-        1. **脚本运行时版本** 应 **稳定** ( .net 3.5 等效) 。
-        2. **脚本编写后端** 应为 **.net**
-        3. **API 兼容级别** 应为 **.net 4.6**
+        1. **脚本运行时版本****应稳定**（A0.NET 3.5 等效) 。
+        2. **脚本后端应为** **.NET**
+        3. **API 兼容性级别** 应为 **.NET 4.6**
 
             ![更新其他设置。](images/AzureLabs-Lab3-32.png)
       
-    2. 在 " **发布设置** " 选项卡的 " **功能**" 下，检查：
+    2. 在"**发布设置** 选项卡中的"**功能"下**，选中：
 
         1. **InternetClient**
         2. **麦克风**
 
-            ![正在更新发布设置。](images/AzureLabs-Lab3-33.png)
+            ![更新发布设置。](images/AzureLabs-Lab3-33.png)
 
-    3. 在面板中，在 " **XR 设置** " 中， () "发布设置" 下的 " **发布设置** " 下提供了 **支持**，请确保已添加 **Windows Mixed reality SDK** 。
+    3. 在面板的下方，在"发布 设置) "下找到的 **"XR** 设置 ("中，勾选"支持虚拟现实"，确保Windows Mixed Reality **SDK。** 
 
         ![更新 X R 设置。](images/AzureLabs-Lab3-34.png)
 
-8.  返回 *生成设置* _Unity c #_ 项目不再灰显;勾选此的旁边的复选框。 
+8.  返回到 *"生成设置* _Unity C#_ 项目不再灰度;勾选此 旁边的复选框。 
 9.  关闭“生成设置”窗口。
-10. 保存场景和项目 (**文件 > 保存场景/文件 > 保存项目**) 。
+10. 保存场景和Project (**文件>保存场景/文件>保存项目**) 。
 
-## <a name="chapter-4--create-the-scene"></a>第4章-创建场景
+## <a name="chapter-4--create-the-scene"></a>第 4 章 - 创建场景
 
 > [!IMPORTANT]
-> 如果希望跳过本课程的 *Unity 设置* 组件，并继续直接进入代码，可以下载 [unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20303%20-%20Natural%20language%20understanding/Azure-MR-303.unitypackage)，将其作为 [自定义包](https://docs.unity3d.com/Manual/AssetPackages.html)导入项目，然后从 [第5章](#chapter-5--create-the-microphonemanager-class)继续。 
+> 如果要跳过本课程 *的 Unity 设置* 组件，并直接继续编写代码，请随意下载 [此 .unitypackage，](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20303%20-%20Natural%20language%20understanding/Azure-MR-303.unitypackage)将其作为自定义包导入到项目中，然后继续学习 [](https://docs.unity3d.com/Manual/AssetPackages.html)第 [5](#chapter-5--create-the-microphonemanager-class)章 。 
 
-1.  右键单击 " *层次结构" 面板* 的空白区域中的 " **3d 对象**" 下的 "添加 **平面**"。
+1.  右键单击"层次结构面板"的空白区域，在 **"3D 对象**"下添加 **"平面"。**
 
     ![创建平面。](images/AzureLabs-Lab3-35.png)
 
-2.  请注意，在 *层次结构* 中再次右键单击以创建多个对象时，如果仍选择最后一个对象，则所选对象将是新对象的父对象。 避免在层次结构内的空白区域中左键单击，然后右键单击。
+2.  请注意，再次右键单击"层次结构"以创建更多对象时，如果仍选择了最后一个对象，则所选对象将是新对象的父级。 避免在层次结构中的空白区域进行此左键单击，然后右键单击。
 
 3.  重复上述过程以添加以下对象：
 
@@ -402,63 +402,63 @@ change the color of this object to blue
     3. *Cube*
     4. *3D 文本*
 
-4.  生成的场景 *层次结构* 应类似于下图所示：
+4.  生成的场景 *层次结构* 应如下图所示：
 
     ![场景层次结构设置。](images/AzureLabs-Lab3-36.png)
  
-5.  在 **摄像机** 上左键单击以选择它，查看 " *检查器" 面板* ，其中包含其所有组件。
-6.  单击位于 "*检查器" 面板* 底部的 "**添加组件**" 按钮。
+5.  左键单击 **"主相机"** 将其选中，查看检查器面板，你将看到"相机"对象及其所有组件。
+6.  单击" **检查器面板** "最底部的"添加组件 *"按钮*。
 
     ![添加音频源](images/AzureLabs-Lab3-37.png)
  
-7.  搜索名为 " *音频源*" 的组件，如上所示。
-8.  另外，请确保将摄像机的 *转换* 组件设置为 (0，0，0) ，这可以通过按下相机的 *转换* 组件旁边的 **齿轮** 图标，然后选择 "**重置**" 来完成。 *转换* 组件如下所示：
+7.  搜索名为"音频 *源"的组件*，如上所示。
+8.  此外，请确保主相机的"转换"组件设置为 (0，0，0) ，这可以通过按相机的"转换"组件旁边的齿轮图标并选择"重置 **"完成。**  转换 *组件* 应如下所示：
 
-    1.  *位置* 设置为 **0，0，0**。
-    2.  *旋转* 设置为 **0，0，0**。
+    1.  *位置* 设置为 **0、0、0。**
+    2.  *旋转* 设置为 **0、0、0。**
 
     > [!NOTE] 
-    > 对于 Microsoft HoloLens，你还需要更改以下内容，这是 **相机** 组件（位于你的 **主摄像机** 上）的一部分：
+    > 对于Microsoft HoloLens，还需要更改以下各项，这些组件是主相机上的 **Camera** 组件的 **一部分**：
     > - **清除标志：** 纯色。
-    > - **背景** "黑色，Alpha 0" –十六进制颜色： #00000000。
+    > - **背景** "Black， Alpha 0"– 十六进制颜色：#00000000。
 
-9.  在 **平面** 上单击以将其选中。 在 " *检查器" 面板* 中，用以下值设置 *转换* 组件：
+9.  左键单击 **"平面"** 将其选中。 在检查 *器面板* 中， *将"转换* "组件设置为以下值：
 
     |   X 轴    | Y 轴 |   Z 轴    |
     |:-----:|:----------------------:|:-----:|
     | 0     | -1                     | 0     |
 
 
-10. 左键单击 **球体** 将其选中。 在 " *检查器" 面板* 中，用以下值设置 *转换* 组件：
+10. 左键单击 **"Sphere"** 将其选中。 在检查 *器面板* 中， *将"转换* "组件设置为以下值：
 
     |   X 轴    | Y 轴 |   Z 轴    |
     |:-----:|:----------------------:|:-----:|
     | 2     | 1                      | 2     |
 
-11. 左键单击 **圆柱体** 以将其选中。 在 " *检查器" 面板* 中，用以下值设置 *转换* 组件：
+11. 左键单击 **"柱面"** 将其选中。 在检查 *器面板* 中， *将"转换* "组件设置为以下值：
 
     |   X 轴    | Y 轴 |   Z 轴    |
     |:-----:|:----------------------:|:-----:|
     | -2    | 1                      | 2     |
 
-12. 左键单击 **多维数据集** 以将其选中。 在 " *检查器" 面板* 中，用以下值设置 *转换* 组件：
+12. 左键单击 **"多维数据集"** 将其选中。 在检查 *器面板* 中， *将"转换* "组件设置为以下值：
 
-    |        | 转换 *位置* |       |  \| |       | 转换- *旋转* |       |
+    |        | 转换 - *位置* |       |  \| |       | 转换 - *旋转* |       |
     |:------:|:----------------------:|:-----:|:---:|:-----:|:----------------------:|:-----:|
     | **X** | **是**                   | **Z** |  \| | **X** | **是**                  | **Z** |
     | 0     | 1                       | 4     |  \| | 45    | 45                     | 0     | 
 
-13. 左键单击新的 **文本** 对象以将其选中。 在 " *检查器" 面板* 中，用以下值设置 *转换* 组件：
+13. 左键单击 **"新建文本"** 对象以将其选中。 在检查 *器面板* 中， *将"转换* "组件设置为以下值：
 
-    |       | 转换 *位置* |       |  \| |       | 转换- *缩放* |       |
+    |       | 转换 - *位置* |       |  \| |       | 转换 - *缩放* |       |
     |:-----:|:----------------------:|:-----:|:---:|:-----:|:-------------------:|:-----:|
     | **X** | **是**                  | **Z** |  \| | **X** | **是**               | **Z** |
     | -2    | 6                      | 9     |  \| | 0.1   | 0.1                 | 0.1   | 
 
-14. 在 **文本网格** 组件中将 **字体大小** 更改为 **50**。
-15. 将 **文本网格** 对象的 *名称* 更改为 "**听写文本**"。
+14. 将 **文本网格** 组件 **中的字** 号更改为 **50。**
+15. 将 *文本网格***对象的名称** 更改为 **听写文本**。
 
-    ![创建3D 文本对象](images/AzureLabs-Lab3-38.png)
+    ![创建三维文本对象](images/AzureLabs-Lab3-38.png)
  
 16. 层次结构面板结构现在应如下所示：
 
@@ -470,25 +470,25 @@ change the color of this object to blue
     ![场景视图。](images/AzureLabs-Lab3-39.png)
     
  
-## <a name="chapter-5--create-the-microphonemanager-class"></a>第5章–创建 MicrophoneManager 类
+## <a name="chapter-5--create-the-microphonemanager-class"></a>第 5 章 - 创建 MicrophoneManager 类
 
-要创建的第一个脚本是 *MicrophoneManager* 类。 接下来，您将创建 *LuisManager* 和 *行为* 类，最后一个 (就可以自由地创建所有 *这些类，* 尽管在每一章) 。
+要创建的第一个脚本是 *MicrophoneManager* 类。 然后，你将创建 *LuisManager、**行为* 类和最后一个 *"* 凝视"类 (现在可随意创建所有这些内容，不过，在到达每个章节) 时，将介绍所有这些内容。
 
 *MicrophoneManager* 类负责：
 
--   检测连接到耳机或计算机 (的记录设备（以默认) 为准）。
--   捕获音频 (语音) 并使用听写将其存储为字符串。
--   暂停语音后，将听写提交到 *LuisManager* 类。 
+-   检测连接到头戴显示设备或 (设备（以默认设备为准) ）。
+-   捕获语音 (语音) 听写以字符串形式存储。
+-   语音暂停后，将听写提交到 *LuisManager* 类。 
 
-若要创建此类： 
+若要创建此类，请： 
 
-1.  右键单击 " *项目" 面板*， **创建 > 文件夹**。 调用文件夹 **脚本**。 
+1.  右键单击 *"Project"，***创建>文件夹"**。 调用文件夹 **Scripts**。 
 
-    ![创建脚本文件夹。](images/AzureLabs-Lab3-40.png)
+    ![创建 Scripts 文件夹。](images/AzureLabs-Lab3-40.png)
  
-2.  创建 **脚本** 文件夹后，双击它以打开。 然后，在该文件夹中，右键单击， **创建 > c # 脚本**。 将脚本命名为 *MicrophoneManager*。 
+2.  创建 **"脚本"** 文件夹后，双击它以打开。 然后，在此文件夹中，右键单击"创建 **> C# 脚本"。** 将脚本 *"MicrophoneManager"命名*。 
 
-3.  双击 " *MicrophoneManager* " 以通过 *Visual Studio* 打开它。
+3.  双击 *"MicrophoneManager"，* 使用 *Visual Studio。*
 4.  将以下命名空间添加到文件顶部：
 
     ```csharp
@@ -504,7 +504,7 @@ change the color of this object to blue
         public TextMesh dictationText; //a UI object used to debug dictation result
     ``` 
 
-6.  现在需要添加 *唤醒 ()* 和 *启动 ()* 方法的代码。 当类初始化时，将调用以下内容：
+6.  现在需要 *()**唤醒 ()* 启动方法的代码。 当 类初始化时，将调用这些 ：
 
     ```csharp
         private void Awake()
@@ -523,7 +523,7 @@ change the color of this object to blue
         }
     ```
  
-7.  现在，你需要应用程序用来启动和停止语音捕获，并将其传递给 *LuisManager* 类的方法。 
+7.  现在，需要应用用于启动和停止语音捕获的方法，并传递给 *LuisManager* 类，你即将生成该方法。 
 
     ```csharp
         /// <summary>
@@ -557,7 +557,7 @@ change the color of this object to blue
         }
     ```
 
-8.  添加语音暂停时要调用的 *听写处理程序* 。 此方法会将听写文本传递给 *LuisManager* 类。
+8.  添加 *语音暂停时* 将调用的听写处理程序。 此方法将听写文本传递给 *LuisManager* 类。
 
     ```csharp
         /// <summary>
@@ -580,26 +580,26 @@ change the color of this object to blue
     ```
  
     > [!IMPORTANT]
-    > 删除 () 方法的 *更新* ，因为此类将不会使用它。
+    > 删除 *Update ()* 方法，因为此类不会使用它。
 
-9.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
+9.  在返回到 Unity 之前，请确保Visual Studio中的 *更改*。
 
     > [!NOTE]
-    > 此时，你会注意到在 *Unity 编辑器控制台面板* 中出现错误。 这是因为代码引用了将在下一章中创建的 *LuisManager* 类。
+    > 此时，你将注意到 Unity 编辑器控制台面板 *中出现一个错误*。 这是因为代码引用将在下一章创建的 *LuisManager* 类。
 
-## <a name="chapter-6--create-the-luismanager-class"></a>第6章–创建 LUISManager 类
+## <a name="chapter-6--create-the-luismanager-class"></a>第 6 章 - 创建 LUISManager 类
 
-你可以创建 *LuisManager* 类，它将调用 Azure LUIS 服务。 
+现在可以创建 *LuisManager* 类，该类将调用 Azure LUIS 服务。 
 
-此类的目的是接收来自 *MicrophoneManager* 类的听写文本，并将其发送到要分析的 *Azure 语言理解 API* 。
+此类的目的是接收 *来自 MicrophoneManager* 类的听写文本，并将其发送到 *Azure 语言理解 API* 进行分析。
 
-此类将反序列化 *JSON* 响应并调用 *行为* 类的适当方法来触发操作。
+此类将反初始化 *JSON* 响应，并调用 *行为类* 的适当方法来触发操作。
 
-若要创建此类： 
+若要创建此类，请： 
 
-1.  双击 " **脚本** " 文件夹以将其打开。 
-2.  右键单击 " **脚本** " 文件夹中，单击 " **创建 > c # 脚本**"。 将脚本命名为 *LuisManager*。 
-3.  双击脚本以通过 Visual Studio 打开它。
+1.  双击"脚本 **"** 文件夹，打开它。 
+2.  在"脚本"文件夹中 **右键** 单击，单击 **"> C# 脚本"。** 将脚本名称 *为 LuisManager*。 
+3.  双击该脚本，以使用 Visual Studio。
 4.  将以下命名空间添加到文件顶部：
 
     ```csharp
@@ -611,7 +611,7 @@ change the color of this object to blue
         using UnityEngine.Networking;
     ```
 
-5.  首先，在同一脚本文件中的 *LuisManager* 类中创建三 **个类 (** 在同一脚本文件中，该 *()*) 方法将表示来自 Azure 的反序列化 JSON 响应。
+5.  首先，在同一脚本文件的 *LuisManager* 类 (内创建三个类，这三个类位于 Start *()* 方法) 上，表示来自 Azure 的反初始化 JSON 响应。
 
     ```csharp
         [Serializable] //this class represents the LUIS response
@@ -643,7 +643,7 @@ change the color of this object to blue
         }
     ```
 
-6.  接下来，在 *LuisManager* 类中添加以下变量：
+6.  接下来，在 *LuisManager 类中添加以下* 变量：
  
     ```csharp
         public static LuisManager instance;
@@ -652,9 +652,9 @@ change the color of this object to blue
         string luisEndpoint = "https://westus.api.cognitive... add your endpoint from the Luis Portal";
     ```
 
-7.  请确保现在将 LUIS 终结点置于) 门户 (。
+7.  确保现在将 LUIS 终结点放在 (LUIS 门户门户中) 。
 
-8.  现在需要添加 *唤醒 ()* 方法的代码。 当类初始化时，将调用此方法：
+8.  现在 *需要 ()* 唤醒方法的代码。 当 类初始化时，将调用此方法：
 
     ```csharp
         private void Awake()
@@ -664,8 +664,8 @@ change the color of this object to blue
         }
     ```
 
-9.  现在，你需要此应用程序用来将 *MicrophoneManager* 类收到的听写发送到 *LUIS* 的方法，然后接收并反序列化响应。 
-10. 一旦确定了意向值和关联实体后，就会将这些值传递给 *行为* 类的实例，以触发预期的操作。
+9.  现在，需要此应用程序用于将 *从 MicrophoneManager* 类收到的听写发送到 *LUIS* 的方法，然后接收和反反初始化响应。 
+10. 确定"意向"和关联的"实体"的值后，这些实体将传递到 *"行为* "类的实例，以触发预期操作。
 
     ```csharp
         /// <summary>
@@ -705,7 +705,7 @@ change the color of this object to blue
         }
     ```
  
-11. 创建一个名为 *AnalyseResponseElements ()* 的新方法，该方法将读取生成的 *AnalysedQuery* 并确定实体。 确定这些实体后，它们将被传递到要在操作中使用的 *行为* 类的实例。
+11. 创建名为 *"分析""ResponseElements" () ，* 该方法将读取生成的 *"处理* "查询并确定"实体"。 确定这些实体后，这些实体将传递到 *行为类* 的实例，以在操作中使用。
 
     ```csharp
         private void AnalyseResponseElements(AnalysedQuery aQuery)
@@ -766,23 +766,23 @@ change the color of this object to blue
     ```
  
     > [!IMPORTANT]
-    > 删除 *开始 ()* 并 *更新 ()* 方法，因为此类将不会使用它们。
+    > 删除 *Start ()* Update *()* 方法，因为此类不会使用它们。
 
-12. 在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
+12. 在返回到 Unity 之前，请确保Visual Studio中的 *更改*。
 
 > [!NOTE]
-> 此时，你会注意到在 *Unity 编辑器控制台面板* 中出现了几个错误。 这是因为代码引用了将在下一章中创建的 *行为* 类。
+> 此时，你会注意到 Unity 编辑器控制台面板 中出现 *几个错误*。 这是因为代码引用将在下一章创建的 *"行为* "类。
 
-## <a name="chapter-7--create-the-behaviours-class"></a>第7章–创建行为类
+## <a name="chapter-7--create-the-behaviours-class"></a>第 7 章 - 创建行为类
 
-*行为* 类将使用 *LuisManager* 类提供的实体触发操作。
+*行为类* 使用 *LuisManager* 类提供的 Entities 触发操作。
 
-若要创建此类： 
+若要创建此类，请： 
 
-1.  双击 " **脚本** " 文件夹以将其打开。 
-2.  右键单击 " **脚本** " 文件夹中，单击 " **创建 > c # 脚本**"。 将脚本命名为 *行为*。 
-3.  双击脚本以通过 *Visual Studio* 打开它。
-4.  然后在 *行为* 类中添加以下变量：
+1.  双击"脚本 **"** 文件夹，打开它。 
+2.  在"脚本"文件夹中 **右键** 单击，单击 **"> C# 脚本"。** 将脚本 *名称为"行为"。* 
+3.  双击该脚本，以使用 *Visual Studio。*
+4.  然后在"行为"类中添加 *以下* 变量：
 
     ```csharp
         public static Behaviours instance;
@@ -794,7 +794,7 @@ change the color of this object to blue
         internal GameObject gazedTarget;
     ```
  
-5.  添加 *唤醒的 ()* 方法代码。 当类初始化时，将调用此方法：
+5.  添加 *"唤醒 ()* 方法代码。 当 类初始化时，将调用此方法：
 
     ```csharp
         void Awake()
@@ -804,7 +804,7 @@ change the color of this object to blue
         }
     ```
  
-6.  以下方法由之前创建的 *LuisManager* 类 (调用，) 确定哪个对象是查询的目标，然后触发相应的操作。
+6.  之前创建的 *LuisManager* (调用以下方法，) 确定哪个对象是查询的目标，然后触发相应的操作。
 
     ```csharp
         /// <summary>
@@ -866,7 +866,7 @@ change the color of this object to blue
         }
     ```
  
-7.  添加 *FindTarget ()* 方法，以确定哪一个 *Gameobject* 是当前意向的目标。 如果实体中未定义显式目标，则此方法默认为 "gazed" 的 *GameObject* 。
+7.  添加 *FindTarget ()* 确定 *哪个 GameObjects* 是当前意向的目标。 如果未在实体中定义显式目标，此方法默认将 *GameObject* 的目标设置为"已禁用"。
 
     ```csharp
         /// <summary>
@@ -905,20 +905,20 @@ change the color of this object to blue
     ```
  
     > [!IMPORTANT]
-    > 删除 *开始 ()* 并 *更新 ()* 方法，因为此类将不会使用它们。
+    > 删除 *Start ()* Update *()* 方法，因为此类不会使用它们。
 
-8.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
+8.  在返回到 Unity 之前，请确保Visual Studio中的 *更改*。
 
-## <a name="chapter-8--create-the-gaze-class"></a>第8章–创建注视类
+## <a name="chapter-8--create-the-gaze-class"></a>第 8 章 - 创建凝视类
 
-完成此应用需要完成的最后一个类是 " *注视* 类"。 此类将对当前用户视觉对象集中的 *GameObject* 的引用进行更新。
+完成此应用所需的最后一个类是 *"凝视"* 类。 此类更新对当前处于用户视觉焦点中的 *GameObject* 的引用。
 
-若要创建此类： 
+若要创建此类，请： 
 
-1.  双击 " **脚本** " 文件夹以将其打开。 
-2.  右键单击 " **脚本** " 文件夹中，单击 " **创建 > c # 脚本**"。 将脚本命名为 " *注视*"。 
-3.  双击脚本以通过 *Visual Studio* 打开它。
-4.  为此类插入以下代码：
+1.  双击"脚本 **"** 文件夹，打开它。 
+2.  在"脚本"文件夹中 **右键** 单击，单击 **"> C# 脚本"。** 将脚本命名"*凝视"。* 
+3.  双击该脚本，以使用 *Visual Studio。*
+4.  插入此类的以下代码：
 
     ```csharp
         using UnityEngine;
@@ -964,26 +964,26 @@ change the color of this object to blue
         }
     ```
  
-5.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
+5.  在返回到 Unity 之前，请确保Visual Studio中的 *更改*。
 
-## <a name="chapter-9--completing-the-scene-setup"></a>第9章-完成场景设置
+## <a name="chapter-9--completing-the-scene-setup"></a>第 9 章 - 完成场景设置
 
-1.  若要完成场景的设置，请将已创建的每个脚本从 "脚本" 文件夹拖到 "*层次结构" 面板* 中的 "**照相机**" 对象。
-2.  选择 **主摄像机** ，查看 *检查器面板*，您应该能够看到已附加的每个脚本，您会注意到每个脚本上都有一些参数还需要设置。
+1.  若要完成场景设置，请将创建的每个脚本从"脚本文件夹"拖动到"层次结构面板"中的"主 *相机"对象*。
+2.  选择 **主相机** 并查看检查器面板，应能够看到已附加的每个脚本，并且你会注意到每个脚本上都有参数尚未设置。
 
-    ![设置照相机引用目标。](images/AzureLabs-Lab3-41.png)
+    ![设置相机参考目标。](images/AzureLabs-Lab3-41.png)
 
-3.  若要正确设置这些参数，请遵循以下说明：
+3.  若要正确设置这些参数，请按照以下说明操作：
 
-    1. *MicrophoneManager*：
+    1. *MicrophoneManager：*
 
-        - 从 " *层次结构" 面板* 中，将 " **听写文本** " 对象拖到 " **听写文本** 参数值" 框中。
+        - 从" *层次结构面板"* 中，将 **听写文本** 对象拖到" **听写文本"** 参数值框中。
 
-    2. *行为*，从 " *层次结构" 面板*：
+    2. *行为，* 来自 *层次结构面板*：
 
-        - 将 **球体** 对象拖到 " *球* 引用目标" 框中。
-        - 将 **圆柱体** 拖到 " *圆柱形* 引用目标" 框中。
-        - 将 **多维数据集** 拖到 " *多维数据集* 引用目标" 框中。
+        - 将 **Sphere 对象** 拖到 *"Sphere* 引用目标"框中。
+        - 将" **柱面"** 拖动到 *"柱面* 引用目标"框中。
+        - 将" **多维数据集"** 拖到 *"多维数据集引用* 目标"框中。
 
     3. *注视*：
 
@@ -1032,7 +1032,7 @@ change the color of this object to blue
 3.  勾选称为 **Unity c # 项目** 的框， (在创建 UWP 项目后查看和调试代码非常有用。
 4.  单击 " **添加打开的场景**"，然后单击 " **生成**"。
 
-    !["生成设置" 窗口](images/AzureLabs-Lab3-43.png)
+    ![构建设置窗口](images/AzureLabs-Lab3-43.png)
 
 4.  系统将提示您选择要在其中生成解决方案的文件夹。 
 
@@ -1051,8 +1051,8 @@ change the color of this object to blue
 3.  在 **解决方案配置** 中，选择 " **调试**"。
 
     > 对于 Microsoft HoloLens，你可能会发现将其设置为 *远程计算机* 会更容易，因此你不会受限到计算机上。 不过，还需要执行以下操作：
-    > - 了解 HoloLens 的 **IP 地址** ，可在 " *设置" > 网络 & Internet > Wi-Fi "> 高级选项*" 中找到;IPv4 是应使用的地址。 
-    > - 确保 **开发人员模式** 已 **打开**;在 "设置" 中找到 *> 更新开发人员 & 安全 >*。
+    > - 知道 HoloLens 的 **IP 地址**，可在 *设置 > 网络 & Internet > Wi-Fi 高级选项* 中找到该地址;IPv4 是应使用的地址。 
+    > - 确保 **开发人员模式** 已 **打开**;*> 更新开发人员设置 & 安全 >*。
 
     ![部署应用](images/AzureLabs-Lab3-46.png)
  
