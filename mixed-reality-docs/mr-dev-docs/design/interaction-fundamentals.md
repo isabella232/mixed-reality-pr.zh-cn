@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 凝视, 设定凝视目标, 交互, 设计, hololens, MMR, 多模式, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens
-ms.openlocfilehash: 55e23ac2fb802af599fb9cc7d771d89d6ba36c47
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+ms.openlocfilehash: 6fddec8b0ed9b8f2230b963d1a795b7309473d7f91e32dd8382b747b6f3655da
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196412"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115222776"
 ---
 # <a name="introducing-instinctual-interactions"></a>本能交互简介
 

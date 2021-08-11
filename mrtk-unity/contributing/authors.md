@@ -4,110 +4,110 @@ description: MRTK 作者列表
 author: cadia
 ms.author: cadia
 ms.date: 05/27/2021
-keywords: Unity、HoloLens、HoloLens 2、混合现实、开发、MRTK、C#、参与者、Community
-ms.openlocfilehash: ae8cc8b1ab26a12188622a2c846dddd381491dc2
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+keywords: 'Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，c #，参与者，Community'
+ms.openlocfilehash: b80b61549d4780dcbc2dace411beba2d268caf94fc38939bbce39eadffc8077c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177292"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115228717"
 ---
 # <a name="authors"></a>Authors
 
-Microsoft Mixed Reality Toolkit是一个协作项目，其中包含来自世界各地的个人的贡献。 我们感谢所有拥有并继续做出贡献的人。
+Microsoft Mixed Reality Toolkit 是一个协作项目，其中包含来自世界各地的人的贡献。 我们忠诚的所有人都非常感谢您的参与。
 
 - achaperon
-- Adam） (AdamMitchell-ms) 
-- Addison Linville () 
+- Adam Mitchell (AdamMitchell-ms) 
+- Addison Linville (radicalad) 
 - ADP-JoNeff
 - afarchy
 - 针对闪电 (AgainstLightning) 
 - alandergrouse (alandergrouse) 
-- Alex Floyd (elbuantantasma) 
-- Andrew Hall (ryzngard) 
+- Alex Floyd (elbuhofantasma) 
+- Andrew 厅 (ryzngard) 
 - Anton Zachesov (googlan) 
 - Anuraag Puri (anuraag016) 
-- 将
-- Ben 一 (genbod) 
-- 主 (Thalhammer) 
-- Bertrand Oustri (BertrandOustriere) 
-- Blake Gross (blgrossMS) 
+- artsouflMS
+- Ben Godard (genbod) 
+- Bernadette Thalhammer (thalbern) 
+- Bertrand Oustrière (BertrandOustriere) 
+- Blake 毛 (blgrossMS) 
 - Brandon Furtwangler (brandf) 
 - Bryan Truong (bhtruong93) 
 - C. M. Barth (chrisfromwork) 
-- 其 (）和（) ）
+- Cameron (Cameron-Micka) 
 - cartwrightluke
-- Casey 管理 (ptc-进行) 
+- 凯西 Crabb (ptc-ccrabb) 
 - CDiaz-MS
 - cefoot
-- 系统
+- cellarmation
 - cihankurt98
-- CoP进行
+- CoPrez
 - Cristiano Carvalheiro (ccarvalheiro) 
-- Daniel Mann (danielmann-ms) 
+- Daniel Hofmann (danielhofmann-ms) 
 - David Evans (phosphoer) 
-- David） (dj一nsomsft) 
+- David Johnson (djohnsomsft) 
 - David Kline (davidkline-ms) 
 - deibich
 - deibu
 - Derek (derekfreed) 
-- Dino Fejzagi (FejZa) 
+- Dino Fejzagić (FejZa) 
 - Dirk Songür (DirkSonguer) 
-- DominicAglialgli
-- Eric） (Ecnassianer) 
+- DominicAglialoro
+- Eric Carter (Ecnassianer) 
 - Eric Fiscus (MRW-Eric) 
 - Eric O'Brien (ericob) 
-- Eric Provencher (provencher) 
-- et一nemargraff (meulta) 
-- Eusebeb分 (euseb进行) 
+- Eric Provencher (Provencher) 
+- etiennemargraff (meulta) 
+- Eusebiu Marcu (Eusebiu) 
 - Evan Tice (in2dair) 
 - Finn Sinclair (Zee2) 
 - Florian Jasche (FlorianJa) 
 - Forrest Trepte (ForrestTrepte) 
 - Francesco Clasadonte (klasaf) 
 - gauravb4
-- 将 Johnston (gejohnst) 
-- bdebdev (bdev) 
-- Grace Lee (grayclee) 
-- 该 () 
-- 其 () 
-- 将 Yu (和) 
+- George 约翰 (gejohnst) 
+- gilbdev (gilbdev) 
+- 宽限期 (grayclee) 
+- Graham 埋葬 (grbury) 
+- Harrison Ferrone (hferrone) 
+- Harrison Yu (harrisonyu) 
 - hybridherbst
-- Hyung-il (hyungil) 
-- Jack Yang (jackzzzzh) 
+- Hyung-il Kim (hyungilkim) 
+- 插座阳 (jackyangzzh) 
 - Jared Bienz [MSFT] (jbienzms) 
 - Jarod (Jarodshow) 
-- Jerome 的 (djee-ms) 
-- Jesse V进行 (的 JesseTheMighty) 
+- Jerome Humbert (djee-ms) 
+- Jesse Vander (FreakTheMighty) 
 - John (johnppella) 
-- Jon Palmer (一个 一) 
-- 使用 Nakda (Dana) 
-- 一名 (JPalmerDev) 
+- Jon Palmer (JonathanPalmerGD) 
+- Jonathan Dana (Nakda) 
+- Jonathan Palmer (JPalmerDev) 
 - Joost van Schaik (LocalJoost) 
 - Josh Wittner (jwittner) 
-- 一个
-- Julia Schwarz () 
-- 2012 年 1 月
-- JungJik Lee (fnwinter) 
-- Ken Jakubaku (KenJakub以) 
-- ） (1LG) 
-- Kevin） (KekeKennedy) 
-- Kevin Semple (polar-kev) 
-- chercher1
-- kiyasu (hol中) 
-- Kjakub一 (Kjakub以) 
-- Kurtis (keve一) 
+- julesra
+- Julia Schwarz (julenka) 
+- julianloehr
+- JungJik 先生 (fnwinter) 
+- Ken Jakubzak (KenJakubzak) 
+- Kent1 (Kent1LG) 
+- 古柯肯尼迪 (KevinKennedy) 
+- 古柯 Semple (极 kev) 
+- kircher1
+- kiyasu (holohiko) 
+- Kjakubzak (Kjakubzak) 
+- Kurtis (keveleigh) 
 - LaneMax
 - Lars Simkins (Railboy) 
 - Luis Valverde (luval-microsoft) 
-- Luis Valverde (luis-valverde-ms) 
+- Luis Valverde (Luis-Valverde) 
 - Lukas Tönne (lukastoenneMS) 
 - Maciej Borowik (macborow) 
 - Malcolm Tyrrell (MalcolmTyrrell) 
-- Marek St (marek-stoj) 
-- Mark Finch (fast-slow-still) 
-- Anio Valoriani (mvaloriani) 
-- 管理 (Matthejo) 
+- Marek Stój (Marek-stoj) 
+- 将 Finch 标记 (速度缓慢-仍然) 
+- Matteo Valoriani (mvaloriani) 
+- Matthew Johnson (matthejo) 
 - MaxWang-MS
 - mbeagley-MS
 - michael (insominx) 

@@ -1,27 +1,27 @@
 ---
-title: MRTK 和托管代码剥离
-description: MRTK 和 Unity 中的代码剥离
+title: MRTK 和托管代码条带化
+description: MRTK 和 Unity 中的代码去除
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 8b8e0f4488a6e955e599084c0b59d8c80f553a78
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 4348adf1d9cb2e7fc74cf5258e3272baaac96a5fc34565873cf35ae93225bdbe
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176291"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221867"
 ---
-# <a name="mrtk-and-managed-code-stripping"></a>MRTK 和托管代码剥离
+# <a name="mrtk-and-managed-code-stripping"></a>MRTK 和托管代码条带化
 
-使用 Unity 的 IL2CPP 脚本后端 (在 Unity 2018.4 中是可选的，在2019和更高版本中是必需的) ，则会发生 [托管代码剥离](https://docs.unity3d.com/Manual/ManagedCodeStripping.html) 。
-Unity 的链接器将执行此过程以减小二进制大小并减少生成时间。
+使用 Unity 的 IL2CPP 脚本后端 (Unity 2018.4 中是可选的（在 2019 和更高版本[](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)) 中是必需的）时，将发生托管代码去除。
+Unity 的链接器执行此过程以减少二进制大小并减少生成时间。
 
-混合现实 Toolkit 使用文件 `link.xml` 来影响 Unity 链接器如何处理 MRTK 程序集。 此文件（在 [Unity 的文档](https://docs.unity3d.com/Manual/ManagedCodeStripping.html#LinkXML)中进行了完整说明）为链接器提供了有关如何在无法推断代码时如何保留代码的说明 (ex：通过反射) 使用。
+混合现实Toolkit使用文件 来影响 Unity `link.xml` 的链接器处理 MRTK 程序集。 此文件在 [Unity](https://docs.unity3d.com/Manual/ManagedCodeStripping.html#LinkXML)文档中完整描述，为链接器提供有关在无法推断代码用法时如何保留代码的说明 (例如：通过反射) 。
 
-作为一个灵活且可自定义的平台， `link.xml` `Assets/MixedRealityToolkit.Generated` 如果发现该文件不存在，MRTK 将在导入时创建该文件。 不会覆盖预先存在的 link.xml 文件。 建议将 `link.xml` 和 `link.xml.meta` 添加到版本控制中。 开发人员应随意自定义 `Assets/MixedRealityToolkit.Generated/link.xml` 以满足项目需求。
+作为一个灵活且可自定义的平台，MRTK 在导入时在 中创建文件（如果发现 `link.xml` `Assets/MixedRealityToolkit.Generated` 该文件不存在）。 不会覆盖link.xml文件。 建议将 `link.xml` 和 `link.xml.meta` 添加到版本控制。 开发人员应随意进行自定义 `Assets/MixedRealityToolkit.Generated/link.xml` 以满足项目的需求。
 
-默认情况下，MRTK 创建的 link.xml 文件会保留以下数据中所示的完整程序集。
+默认情况下，MRTK link.xml文件将保留以下数据中所示的整个程序集。
 
 ``` xml
 <linker> 
@@ -61,9 +61,9 @@ Unity 的链接器将执行此过程以减小二进制大小并减少生成时�
 </linker>
 ```
 
-有关 link.xml 文件格式的详细信息，请参阅 Unity 文档。
+有关文件格式link.xml，请参阅 Unity 文档。
 
 ## <a name="see-also"></a>另请参阅
 
-- [Unity：托管代码剥离](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
+- [Unity：托管代码去除](https://docs.unity3d.com/Manual/ManagedCodeStripping.html)
 - [Unity：链接 XML 文件](https://docs.unity3d.com/Manual/ManagedCodeStripping.html#LinkXML)

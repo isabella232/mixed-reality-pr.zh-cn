@@ -5,12 +5,12 @@ author: vaoliva
 ms.author: vaolivaa
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，滚动对象
-ms.openlocfilehash: a724b9fb4a0f72910e16353a6c76b9e31005a76e
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: a97ea9919cf484cf5240dde027f38baca37ba9570588bca032bee9c116aed873
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176602"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221738"
 ---
 # <a name="scrolling-object-collection"></a>滚动对象集合
 
@@ -73,7 +73,7 @@ MRTK 滚动对象集合是一个 UX 组件，通过包含的可查看区域启�
 
 ### <a name="testing-the-scrolling-object-collection-in-the-editor"></a>在编辑器中测试滚动对象集合
 
-1. 按下 "播放" 并按住空格键以显示输入模拟手。
+1. 按“播放”并按住空格键以显示输入模拟手。
 1. 移动手直到滚动碰撞器或任何滚动交互内容处于焦点状态，并通过单击并上下拖动鼠标并触发滚动移动。
 
 ## <a name="controlling-the-scrolling-object-from-code"></a>从代码控制滚动对象
@@ -142,7 +142,7 @@ public class ScrollablePagination : MonoBehaviour
 
 ## <a name="scrolling-example-scene"></a>滚动示例场景
 
-**ScrollingObjectCollection.unity** 示例场景包含 3 个可滚动的示例，每个示例具有不同的速度回退配置。 示例场景包含用于显示默认情况下在层次结构中禁用的图面放置行为的墙。 可以在 文件夹下找到示例 ``MRTK/Examples/Demos/ScrollingObjectCollection/Scenes`` 场景。
+**ScrollingObjectCollection.unity** 示例场景包含 3 个可滚动的示例，每个示例具有不同的速度回退配置。 该示例场景包含墙壁，用于显示在层次结构中默认禁用的表面放置行为。 可以在 文件夹下找到示例 ``MRTK/Examples/Demos/ScrollingObjectCollection/Scenes`` 场景。
 
 ![滚动对象集合示例场景](../images/scrolling-collection/ScrollingObjectCollection_ExampleScene.png)
 

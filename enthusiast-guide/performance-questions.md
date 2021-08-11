@@ -1,53 +1,53 @@
 ---
 title: 性能常见问题解答
-description: 性能 Windows Mixed Reality 故障排除，超出了标准使用者支持文档的范围。
+description: 性能Windows Mixed Reality故障排除，超出了标准使用者支持文档。
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，故障排除，错误，帮助，支持，性能
+keywords: Windows Mixed Reality， 混合现实， 虚拟现实， VR， MR， 故障排除， 错误， 帮助， 支持， 性能
 appliesto:
 - Windows 10
-ms.openlocfilehash: dea2e81d53bfbb16a8803fc3f7c4e011741dfce6
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 6754923a07d4c75c6f0f44aad07c5d3c55c28ae4673900531d8a4af663d9e7c2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725998"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115219413"
 ---
 # <a name="performance-faqs"></a>性能常见问题解答
 
-## <a name="is-my-windows-mixed-reality-headset-rendering-at-60-hz-or-90-hz-framerate"></a>Windows Mixed Reality 耳机呈现速度为 60 Hz 或 90-Hz 帧
+## <a name="is-my-windows-mixed-reality-headset-rendering-at-60-hz-or-90-hz-framerate"></a>我的头戴显示Windows Mixed Reality 60 Hz 或 90-Hz 帧速率渲染
 
-如果有与 HDMI 2.0 端口的离散 GPU 和具有四个或更多物理内核的 CPU，则应该获得 90 Hz。 若要确认，请检查 **设备门户 > 性能** "选项卡。
+如果有一个离散的 GPU 和一个包含 4 个或多个物理核心的 GPU 和 2.0 端口，则应该获得 90 Hz。 若要确认，请查看 **"设备门户 >"** 选项卡。
 
-注意：如果 GPU 仅有 HDMI 1.4 输出，可以使用 DisplayPort 到 [HDMI 2.0 适配器](recommended-adapters-for-windows-mixed-reality-capable-pcs.md) 作为解决方法。
+注意：如果 GPU 只有一个按 1.4 输出的 GPU，可以使用 DisplayPort [toMI 2.0](recommended-adapters-for-windows-mixed-reality-capable-pcs.md) 适配器作为解决方法。
 
-注意： "耳机显示" 中的视觉质量设置只影响 Windows Mixed Reality 主页体验的呈现。
+注意："头戴显示"中的视觉质量设置仅影响Windows Mixed Reality呈现。
 
-## <a name="my-pc-is-running-slowly"></a>我的 PC 运行速度缓慢
+## <a name="my-pc-is-running-slowly"></a>我的电脑运行缓慢
 
-由于许多原因，系统的运行速度可能会很慢，通常只需几秒钟即可完成。 如果在很长一段时间内遇到此问题：
+由于多种原因，系统可能会变慢，通常只会持续几秒钟。 如果长时间遇到此问题：
 
 1. 关闭桌面上所有未使用的应用程序。
-2. 确保便携式计算机已插入电源。
-3. 请确保电脑未预热。
-4. 降低 Windows Mixed Reality 主页的视觉质量。
-5. 确保你具有适用于你的电脑的最新 [图形驱动程序](other-questions.md#my-graphics-driver-isnt-supported-im-getting-graphics-driver-failure-errors) 。
+2. 确保笔记本电脑已插入电源。
+3. 确保电脑未预热。
+4. 降低主页中的视觉Windows Mixed Reality质量。
+5. 确保拥有电脑 [的最新](other-questions.md#my-graphics-driver-isnt-supported-im-getting-graphics-driver-failure-errors) 图形驱动程序。
 
-## <a name="my-pc-is-warming-up-as-i-run-the-mixed-reality-experiences-how-do-i-keep-it-cool"></a>我的 PC 正在预热，因为我运行了混合现实体验。 如何实现使其很酷
+## <a name="my-pc-is-warming-up-as-i-run-the-mixed-reality-experiences-how-do-i-keep-it-cool"></a>运行混合现实体验时，我的电脑正在预热。 如何实现保持冷
 
-1. 检查电池是否已充电并接通电源。
-2. 请确保电脑风扇不会被阻止。
-3. 在相对较酷的环境中使用 PC。
-4. 请确保没有热源 (例如，sun 或热通风口) PC。
+1. 检查电池是否已充电且电源已接通电源。
+2. 确保未阻止电脑风扇。
+3. 在相对冷的环境中使用电脑。
+4. 请确保没有热源 (例如，在电脑上) 或热口。
 
-## <a name="my-visuals-are-choppy-load-slowly-or-dont-look-good"></a>我的视觉对象不连贯、负载缓慢或外观不佳
+## <a name="my-visuals-are-choppy-load-slowly-or-dont-look-good"></a>我的视觉对象很不稳定、加载速度缓慢，或者看起来不好
 
-* 请确保将耳机插入 PC 上的正确图形卡。 某些 Pc 同时具有集成显卡和离散显卡。 离散卡通常会提供最佳性能。 [了解有关 PC 硬件的详细信息](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)。
+* 确保头戴显示设备已插入电脑上的正确图形卡。 某些电脑具有集成和离散图形卡。 离散卡通常提供最佳性能。 [详细了解电脑硬件](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)。
 * 关闭桌面上未使用的应用程序。
-* 请确保你的头戴显示 snugly (向下移动它，或向左和向右移动，以调整) 。
-* **> 混合现实 > 耳机显示**，在 "设置" 中调整耳机的视觉设置。 如果 "视觉质量" 设置为 "自动"，则会自动选择电脑的混合现实体验。 有关更多视觉对象的详细信息，请将 "视觉质量" 设置为 "高"。 如果视觉对象不连贯，请选择较低的设置。
-* 调整耳机校准旋钮，确保重用功能区设置为瞳孔 (（称为 IPD) 之间的正确距离。 如果你不知道 IPD，optometrist 可以对其进行度量，或使用旨在度量 IPD 的网站。 如果耳机没有校准旋钮，请选择 " **设置" > 混合现实 > 耳机显示** 并调整 "校准控制"。
-* 如果使用的是 DisplayPort 或到 HDMI 适配器，请尝试其他适配器。 请参阅 [建议的适配器。](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
-* 断开可能连接到您的 PC 图形卡的任何其他显示器。
-* 尝试使用 Windows 应用商店中的一些不同的混合现实应用程序，某些应用程序可能更适合您的计算机设置。
+* 确保头戴显示设备适合 (或左右移动，以调整) 。
+* 在"混合现实"和"头戴显示设置 >**中>视觉设置**。 当"视觉质量"设置为"自动"时，将自动选择电脑的混合现实体验。 有关视觉对象的详细信息，将"视觉质量"设置为"高"。 如果视觉对象不稳定，请选择较低的设置。
+* 调整头戴显示设备校准手柄，确保将镜头设置为与名为 IPD (之间的正确) 。 如果不知道 IPD，optometrist 可以测量它，或使用旨在测量 IPD 的网站。 如果头戴显示设备没有校准手柄，请选择"设置 >头戴显示设备>混合现实 **"，并** 调整"校准控件"。
+* 如果使用的是 USB-C 或 DisplayPort 到MIC 适配器，请尝试其他适配器。 请参阅 [建议的适配器。](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+* 断开可能连接到电脑图形卡的任何额外监视器。
+* 尝试来自 Windows Store 的一些混合现实应用 - 某些应用可能更符合计算机设置要求。

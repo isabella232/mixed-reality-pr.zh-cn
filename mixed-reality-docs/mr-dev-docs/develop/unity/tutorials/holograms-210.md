@@ -1,24 +1,24 @@
 ---
 title: HoloLens（第一代）输入 210 - 注视
-description: 遵循以下编码演练，使用 Unity、Visual Studio 和 HoloLens 来了解注视概念的详细信息。
+description: 按照以下编码演练操作，使用 Unity，Visual Studio 和 HoloLens 了解注视概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，院校，教程，注视，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 7598e6f6822c86fa34ac526fbe7468d535f7fba7
-ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，注视，HoloLens，混合现实院校，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: e0d761c6292502f381618f8efa1bed9d26f0e6fbac8dbdafa8085e0bb41676ce
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106269963"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115220965"
 ---
-# <a name="hololens-1st-gen-input-210-gaze"></a>HoloLens (第一代) 输入210：注视
+# <a name="hololens-1st-gen-input-210-gaze"></a>HoloLens 第一代 () 输入210：注视
 
 >[!IMPORTANT]
->混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
+>混合现实学院教程的设计目的是 HoloLens (一代) 、Unity 2017 和混合现实沉浸式耳机。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
-"[注视](../../../design/gaze-and-commit.md)" 是输入的第一种形式，它显示用户的意图和认知。 MR Input 210 (亦称为 "项目资源管理器") 是深入了解 Windows Mixed Reality 的与注视相关的概念。 我们会将上下文感知添加到游标和全息影像，充分利用你的应用程序对用户外观的了解。
+"[注视](../../../design/gaze-and-commit.md)" 是输入的第一种形式，它显示用户的意图和认知。 MR Input 210 (亦 Project 资源管理器) 深入探讨了 Windows Mixed Reality 的与注视相关的概念。 我们会将上下文感知添加到游标和全息影像，充分利用你的应用程序对用户外观的了解。
 
 >[!VIDEO https://www.youtube.com/embed/yKAttGduVp0]
 
@@ -31,7 +31,7 @@ ms.locfileid: "106269963"
 * 我们将指导你在世界各地四处移动时，与用户一起使用全息影像。
 
 >[!IMPORTANT]
->以下各章中嵌入的视频使用较旧版本的 Unity 和混合现实工具包记录。 虽然分步说明准确且最新，但你可能会看到处于过期状态的相应视频中的脚本和视觉对象。 视频仍包含在 posterity 中，因为涵盖的概念仍适用。
+>以下各章中嵌入的视频是使用旧版本的 Unity 记录的，混合现实 Toolkit。 虽然分步说明准确且最新，但你可能会看到处于过期状态的相应视频中的脚本和视觉对象。 视频仍包含在 posterity 中，因为涵盖的概念仍适用。
 
 ## <a name="device-support"></a>设备支持
 
@@ -47,10 +47,10 @@ ms.locfileid: "106269963"
 
 ### <a name="prerequisites"></a>必备条件
 
-* 配置了正确 [工具](../../../develop/install-the-tools.md)的 WINDOWS 10 电脑。
+* 使用安装了正确的[工具](../../../develop/install-the-tools.md)配置的 Windows 10 PC。
 * 一些基本 c # 编程能力。
 * 应已完成 [尊敬的基本知识 101](../../../develop/unity/tutorials/holograms-101.md)。
-* [为开发配置](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 设备。
+* [为开发配置](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)HoloLens 设备。
 
 ### <a name="project-files"></a>项目文件
 
@@ -58,11 +58,11 @@ ms.locfileid: "106269963"
 * 取消将文件存档到桌面或其他易于访问的位置。
 
 >[!NOTE]
->如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze)找到。
+>如果要在下载之前查看源代码，[可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze)查看。
 
 ### <a name="errata-and-notes"></a>勘误表和说明
 
-* 在 Visual Studio 中，需要禁用 "工具->选项" 下 >的 "仅我的代码" (取消选中) ，以便在代码中命中断点。
+* 在 Visual Studio 中，需要禁用 "仅我的代码" ("工具->选项" 下的 "未选中) "，以便在代码中命中断点。
 
 ## <a name="chapter-1---unity-setup"></a>第1章-Unity 设置
 
@@ -85,29 +85,29 @@ ms.locfileid: "106269963"
 
 ### <a name="unity-settings-for-hololens"></a>HoloLens 的 Unity 设置
 
-我们需要让 Unity 知道我们要导出的应用程序应创建 [沉浸式视图](../../../design/app-views.md) 而不是2d 视图。 为此，我们添加了 HoloLens 作为虚拟现实设备。
+我们需要让 Unity 知道我们要导出的应用程序应创建 [沉浸式视图](../../../design/app-views.md) 而不是2d 视图。 为此，我们将 HoloLens 添加为虚拟现实设备。
 
-1. 请参阅 " **编辑 > 项目设置" > Player**"。
-2. 在 "播放器设置" 的 **检查器面板** 中，选择 " **Windows 应用商店** " 图标。
+1. 请参阅 **编辑 > Project 设置 > 播放机**。
+2. 在播放器设置的 "**检查器" 面板** 中，选择 " **Windows 存储**" 图标。
 3. 展开“XR 设置”组。
 4. 在“呈现”部分，选中“支持虚拟现实”复选框，添加新“虚拟现实 SDK 的”列表  。
 5. 验证列表中是否显示“Windows 混合现实”。 如果没有，请选择 **+** 列表底部的 "" 按钮，然后选择 " **Windows 全息**"。
 
 接下来，我们需要将脚本后端设置为 .NET。
 
-1. 请参阅 " **编辑 > 项目设置" > Player** " (你仍可以从上一步) 执行此操作。
-2. 在 "播放器设置" 的 **检查器面板** 中，选择 " **Windows 应用商店** " 图标。
-3. 在 "**其他设置**" "配置" 部分中，确保 "**脚本后端**" 设置为 " **.net** "
+1. 请参阅 **编辑 > Project 设置 > 播放机** (你仍可以从上一步) 来执行此操作。
+2. 在播放器设置的 "**检查器" 面板** 中，选择 " **Windows 存储**" 图标。
+3. 在 "**其他设置** 配置" 部分中，确保 "**脚本后端**" 设置为 " **.net** "
 
-最后，我们将更新质量设置，以便在 HoloLens 上实现更快的性能。
+最后，我们将更新质量设置以实现 HoloLens 的快速性能。
 
-1. 请参阅 **编辑 > 项目设置 > 质量**。
-2. 在 Windows 应用商店图标下，单击 **默认** 行中的向下箭头。
+1. 请参阅 **编辑 > Project 设置 > 质量**。
+2. 在 "Windows 存储" 图标下，单击 **默认** 行中的向下箭头。
 3. 对于 **Windows 应用商店应用**，请选择 "**非常低**"。
 
 ### <a name="import-project-assets"></a>导入项目资产
 
-1. 右键单击 "**项目**" 面板中的 "**资产**" 文件夹。
+1. 右键单击 " **Project** " 面板中的 "**资产**" 文件夹。
 2. 单击 " **导入包 > 自定义包**"。
 3. 导航到下载的项目文件，然后单击 " **ModelExplorer. unitypackage**"。
 4. 单击“打开”。
@@ -138,10 +138,10 @@ ms.locfileid: "106269963"
 
 ### <a name="build-the-project"></a>生成项目
 
-1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+1. 在 Unity 中，选择 "**文件 > 生成设置**"。
 2. 单击 " **添加打开的场景** " 添加场景。
 3. 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。
-4. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
+4. 如果要为 HoloLens 专门进行开发，请将 "**目标设备**" 设置为 " **HoloLens**"。 否则，请将其留在 **任何设备** 上。
 5. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
 6. 单击“生成”。
 7. 创建名为 "App" 的 **新文件夹** 。
@@ -155,15 +155,15 @@ ms.locfileid: "106269963"
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+1. 使用 Visual Studio 中的顶部工具栏将目标从 "调试" 更改为 "**发布**"，将 "从 ARM" 更改为 " **x86**"。
 2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+3. 输入 **HoloLens 设备 IP 地址**，并将身份验证模式设置为 **通用 (未加密的协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请查看 **设置 > 网络 & Internet > 高级选项**。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将[其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 5. 当应用程序已部署后，使用 **选择手势** 关闭 **Fitbox** 。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 "**发布**"，并将 "从 ARM 更改为 **x64**"。
 2. 确保将部署目标设置为 " **本地计算机**"。
 3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 4. 当应用程序已部署后，通过将触发器拖到运动控制器上来关闭 **Fitbox** 。
@@ -197,7 +197,7 @@ ms.locfileid: "106269963"
 
 ### <a name="build-and-deploy"></a>生成和部署
 
-1. 从 **文件 > 生成设置** 重新生成应用。
+1. **> Build 设置从文件** 重新生成应用。
 2. 打开 **应用程序文件夹**。
 3. 打开 **ModelExplorer Visual Studio 解决方案**。
 4. 单击 " **调试-> 启动但不调试** " 或按 **Ctrl + F5**。
@@ -206,8 +206,8 @@ ms.locfileid: "106269963"
 ### <a name="instructions"></a>说明
 
 1. 在 "**层次结构**" 面板中，展开 " **AstroMan** -> **GEO_G** -> **Back_Center** " 对象。
-2. 双击 " **Interactible** " 在 Visual Studio 中打开它。
-3. 取消注释 IFocusable 中的行 **OnFocusEnter ()** 和 IFocusable **中的** **()** 回调。 当焦点 (通过注视或控制器) 进入并退出特定 GameObject 的碰撞器时，混合现实工具包的 InputManager 将调用这些方法。
+2. 双击 " **Interactible** " 以 Visual Studio 中打开它。
+3. 取消注释 IFocusable 中的行 **OnFocusEnter ()** 和 IFocusable **中的** **()** 回调。 当焦点 (时，混合现实 Toolkit 的 InputManager 会调用这些类，) 进入和退出特定 GameObject 的碰撞器。
 
 ```cs
 /* TODO: DEVELOPER CODING EXERCISE 2.d */
@@ -232,11 +232,11 @@ void IFocusable.OnFocusExit()
 ```
 
 >[!NOTE]
->我们使用 `EnableKeyword` 和 `DisableKeyword` 更高版本。 若要在自己的应用程序中使用工具包的标准着色器来使用这些应用程序，需要遵循 [Unity 指导原则，通过脚本访问材料](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html)。 在这种情况下，我们已在 "资源" 文件夹中包含了所需的 [突出显示材料的三个变体](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) (查找姓名) 中突出显示的三个材料。
+>我们使用 `EnableKeyword` 和 `DisableKeyword` 更高版本。 若要使用 Toolkit 的标准着色器在自己的应用程序中使用这些应用程序，需要遵循[Unity 指导原则，通过脚本访问材料](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html)。 在这种情况下，我们已在 "资源" 文件夹中包含了所需的 [突出显示材料的三个变体](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) (查找姓名) 中突出显示的三个材料。
 
 ### <a name="build-and-deploy"></a>生成和部署
 
-1. 与之前一样，生成项目并将其部署到 HoloLens。
+1. 与之前一样，生成项目并部署到 HoloLens。
 2. 观察注视的目标是对象时，发生的情况。
 
 ## <a name="chapter-3---targeting-techniques"></a>第3章-目标技术
@@ -251,7 +251,7 @@ void IFocusable.OnFocusExit()
 ### <a name="instructions"></a>说明
 
 1. 在 " **层次结构** " 面板中，选择 " **InputManager** " 对象。
-2. 在 " **检查器** " 面板中，找到 " **注视" 稳定** 的脚本。 如果要查看，请单击它以在 Visual Studio 中打开。
+2. 在 " **检查器** " 面板中，找到 " **注视" 稳定** 的脚本。 单击它可在 Visual Studio 中打开（如果想要查看）。
     * 此脚本将循环访问 Raycast 数据的示例，并帮助使用户看得更稳定，以实现精确定位。
 3. 在 **检查器** 中，可以编辑 **存储的稳定性示例** 值。 此值表示稳定程序为计算稳定值而迭代的样本数。
 
@@ -271,14 +271,14 @@ void IFocusable.OnFocusExit()
 2. 如果用户在全息影像上 gazing，则隐藏方向指示器。
 3. 更新方向指示器以指向全息影像。
 
-现在就开始吧。
+让我们开始吧。
 
 1. 单击 "**层次结构**" 面板中的 **AstroMan** 对象，然后 **单击箭头** 将其展开。
 2. 在 "**层次结构**" 面板中，选择 " **AstroMan**" 下的 **DirectionalIndicator** 对象。
 3. 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
 4. 在菜单中，键入 "搜索框 **方向" 指示器**。 选择搜索结果。
 5. 在 "**层次结构**" 面板中，将 **cursor** 对象拖放到 **检查器** 的 **cursor** 属性上。
-6. 在 "**项目**" 面板中，将 " **DirectionalIndicator** **" 资产** 拖放到 **检查器** 的 "**方向指示器**" 属性中。
+6. 在 **Project** 面板的 **全息影像** 文件夹中，将 **DirectionalIndicator** 资产拖放到 **检查器** 的 "**方向指示器**" 属性上。
 7. 构建并部署应用。
 8. 观看方向指示器对象如何帮助您找到 astronaut。
 
@@ -339,15 +339,15 @@ if (interactibleAction != null)
 
 当点击全息影像时，与 **Interactible** 配对的 **InteractibleAction** 脚本将执行自定义操作。 在这种情况下，我们将专门用于标记。
 
-* 在 " **脚本** " 文件夹中，单击要在 Visual Studio 中打开的 **TagalongAction** 资产。
+* 在 "**脚本**" 文件夹中，单击要在 Visual Studio 中打开的 **TagalongAction** 资产。
 * 完成编码练习，或将其更改为：
   * 在 **层次结构** 的顶部，在搜索栏中键入 " **ChestButton_Center** "，然后选择结果。
   * 在 **检查器** 面板中，单击 " **添加组件** " 按钮。
   * 在菜单中，在 "搜索" 框中键入 " **Tagalong" 操作**。 选择搜索结果。
-  * 在 **全息影像** 文件夹中查找 **Tagalong** 资产。
-  * 选择 **层次结构** 中的 **ChestButton_Center** 对象。 将 **TagAlong** 对象从 " **项目** " 面板中拖放到 **"** **要 TagAlong 的对象** " 属性中。
+  * 在 **全息影像** 文件夹中，查找 **Tagalong** 资产。
+  * 选择 **层次结构** 中的 **ChestButton_Center** 对象。 将 **TagAlong** 对象从 **Project** 面板拖放到 "**检查器**" 中的 " **TagAlong** " 属性。
   * 将 **Tagalong 操作** 对象从 **检查器** 拖到 **Interactible** 脚本的 " **Interactible 操作**" 字段。
-* 双击 **TagalongAction** 脚本，在 Visual Studio 中将其打开。
+* 双击 " **TagalongAction** " 脚本，在 Visual Studio 中打开它。
 
 ![Interactible 设置](images/holograms210-interactible.png)
 

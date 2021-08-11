@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Windows 设备门户，HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: d772175683208ac0e3ed4b3163ca561da416c1cf
-ms.sourcegitcommit: 593e8f80297ac0b5eccb2488d3f333885eab9adf
+ms.openlocfilehash: edcd1796598b558f42232bf54ae3d40d3c509bb9515d8dcbe7f3cf9f2b7dfd62
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112919808"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221472"
 ---
 # <a name="using-the-windows-device-portal"></a>使用 Windows 设备门户
 
@@ -27,6 +27,8 @@ ms.locfileid: "112919808"
 使用适用于 HoloLens 的 Windows 设备门户可以通过 Wi-Fi 或 USB 远程配置和管理设备。 Device Portal 是 HoloLens 上的 Web 服务器，你可以从电脑上的 Web 浏览器连接到它。 设备门户包含许多工具，可帮助你管理 HoloLens 以及调试和优化应用。
 
 本文档专门介绍适用于 HoloLens 的 Windows 设备门户。 若要使用适用于桌面（包括 Windows Mixed Reality）的 Windows 设备门户，请参阅 [Windows 设备门户概述](/windows/uwp/debug-test-perf/device-portal)
+
+> [注意!] 建议不要对你部署到组织的 HoloLens 设备使用设备门户。
 
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>将 HoloLens 设置为使用 Windows 设备门户
 
@@ -175,6 +177,8 @@ ms.locfileid: "112919808"
 ![Microsoft HoloLens 上的 Windows 设备门户主页](images/using-windows-portal-img-04.png)<br>
 *Microsoft HoloLens 上的 Windows 设备门户主页*
 
+> [注意] 设备门户中配置的设备应用于整个设备并在重启后仍然存在。 建议仅在开发时使用设备门户，不在部署的设备上使用它。
+
 Device Portal 会话从主页开始。 可从主页的左侧导航栏访问其他页面。
 
 主页顶部的工具栏提供对常用状态和功能的访问。
@@ -241,6 +245,8 @@ Microsoft HoloLens 上 Windows 设备门户中的“地图管理器”页
 
 ![Microsoft HoloLens 上 Windows 设备门户中的“混合现实捕获”页](images/using-windows-portal-img-07.png)<br>
 *Microsoft HoloLens 上 Windows 设备门户中的“混合现实捕获”页*
+
+> [重要提示] 设备门户中配置的设备应用于整个设备并在重启后仍然存在。 设备门户中修改的任何设置都将应用于混合现实捕获和应用。 这些设置是持久的，因此建议仅在开发时使用设备门户，不在部署的设备上使用它。
 
 使用“混合现实捕获”页面可保存 HoloLens 中的媒体流。
 * **捕获设置**：通过检查以下设置来控制捕获的媒体流：

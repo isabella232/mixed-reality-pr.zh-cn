@@ -1,25 +1,25 @@
 ---
 title: 基于眼睛凝视的交互
-description: 了解 HoloLens 2 上的眼睛和目视交互，以及新级别的上下文和人工理解（如果在全息体验中获得）。
+description: 了解 HoloLens 2 上的眼睛和目视交互，以及新的上下文和人员理解（如果在全息体验中获得）。
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
-keywords: 目视跟踪，混合现实，输入，眼睛，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，设计，交互
-ms.openlocfilehash: 3067f5533dbe70d4decb6b5cf94a3f1c5029115a
-ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
+keywords: 眼睛跟踪，混合现实，输入，眼睛，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，设计，交互
+ms.openlocfilehash: aec41c6654ce10254648e90e08a09ff9adade75a3dc63af81a0953b67b95729f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112906863"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115220953"
 ---
-# <a name="eye-gaze-based-interaction-on-hololens-2"></a>HoloLens 2 上基于目视的目视交互
+# <a name="eye-gaze-based-interaction-on-hololens-2"></a>HoloLens 2 上的目视监视交互
 
 ![MRTK 中的眼睛跟踪演示](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [HoloLens 2](eye-tracking.md) " 页面上，我们提到了对每个用户进行 [校准](/hololens/hololens-calibration)的需求，提供了一些开发人员指南和突出跟踪的突出显示用例。 目视输入仍是一种新类型的用户输入，有很多东西需要学习。 
+HoloLens 2 的一项激动人心的新功能是目视跟踪。 在我们 HoloLens 2 页面上的[眼睛跟踪](eye-tracking.md)上，我们提到了需要每个用户完成[校准](/hololens/hololens-calibration)、开发人员指南和突出跟踪突出显示用例。 目视输入仍是一种新类型的用户输入，有很多东西需要学习。 
 
-尽管眼睛输入仅在板块的用户界面 (在您启动 HoloLens 2) 时看到的用户界面，但多个应用程序（例如 ["Hololens"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2)）的情况下显示了很好的示例，其中展示了目视输入如何添加到您的全息体验的神奇之处。
+尽管眼睛输入仅在您启动 HoloLens 2) 时看到的用户界面 (的用户界面中进行了细微的输入，但多个应用程序（如["HoloLens 板块"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2)）展示了如何将目视输入添加到您的全息体验的神奇示例。
 在此页上，我们将讨论集成眼睛输入以与全息版应用程序进行交互的设计注意事项。
 
 你将了解关键的优点，还会遇到一些与目视输入相关的独特挑战。 根据这些建议，我们提供了若干设计建议，以帮助你创建满足目视支持的用户界面。 
@@ -47,13 +47,13 @@ HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [H
 </tr>
 </table>
 
-## <a name="head-and-eye-tracking-design-concepts-demo"></a>标题和眼睛跟踪设计概念演示
+## <a name="head-and-eye-tracking-design-concepts-demo"></a>头部和眼动跟踪设计概念演示
 
-若要查看标题和目视跟踪的设计概念，请参阅下面的 **设计全息影像-打印头跟踪和眼睛跟踪** 视频演示。 完成后，请继续详细了解特定主题。
+若要了解头部和眼动跟踪设计概念的运行情况，请查看下面的“设计全息影像 - 头部跟踪和眼动跟踪”视频演示。 完成后，请继续详细了解特定主题。
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
 
-*此视频取自 "设计全息影像" HoloLens 2 应用。下载并在 [此处](https://aka.ms/dhapp)享受完全体验。*
+此视频来自于“设计全息影像”HoloLens 2 应用。在[此处](https://aka.ms/dhapp)下载并享受完整体验。
 
 ## <a name="eye-gaze-input-design-guidelines"></a>目视输入设计准则
 
@@ -83,7 +83,7 @@ HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [H
 此解决方案还允许使用一种模式，在该模式下，用户可以自由地查找，而不会因触发某些事情而 involuntarily。 当查看目标时设计视觉对象和听觉反馈时，还应考虑此问题。
 尝试不要使用户塞满即时弹出效果或悬停声音。 个很微妙为 key。 讨论 [设计建议](eye-gaze-interaction.md#design-recommendations)时，我们将在下面讨论一些最佳实践。
 
-- **观察与控制** 假设您想要在墙壁上精确地伸直照片。 你会参照它的边框和四周，检查它是否平齐。 现在，如果您想要使用眼睛作为输入来移动图片，则可以想象出如何实现此目的。 有点难度，对不对？ 这介绍了输入和控制需要时，眼睛的双重角色。 
+- **观察与控制** Imagine 你希望在墙壁上准确地拉伸照片。 你会参照它的边框和四周，检查它是否平齐。 现在，如果您想要使用眼睛作为输入来移动图片，则可以想象出如何实现此目的。 有点难度，对不对？ 这介绍了输入和控制需要时，眼睛的双重角色。 
 
 - **在单击前保留：** 对于快速目标选择，研究表明，用户的眼睛可以在结束手动单击 (例如，单击) 。 请特别注意，将速度缓慢的控制输入与慢速控制输入 (例如，语音、动手、控制器) 同步。
 
@@ -129,7 +129,7 @@ HoloLens 2 上令人兴奋的新功能之一是目视跟踪。 在我们的 " [H
 ## <a name="see-also"></a>另请参阅
 * [舒适](comfort.md)
 * [目视观察 DirectX](../develop/native/gaze-in-directx.md)
-* [眼睛 (混合现实工具包) ](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
+* [眼睛 (混合现实 Toolkit) ](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
 * [HoloLens 2 中的眼动跟踪](eye-tracking.md)
 * [凝视和提交](gaze-and-commit.md)
 * [凝视和停留](gaze-and-dwell.md)

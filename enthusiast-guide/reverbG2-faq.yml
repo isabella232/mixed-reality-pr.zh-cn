@@ -1,19 +1,19 @@
 ### YamlMime:FAQ
 metadata:
   title: HP 回音 G2 常见问题解答
-  description: 随时了解有关使用 HP 回音 G2 耳机和 Windows Mixed Reality 沉浸式耳机的最新问题。
+  description: 及时了解有关使用 HP 回音 G2 耳机与 Windows Mixed Reality 沉浸式耳机相关的常见问题。
   ms.author: v-hferrone
   ms.date: 09/15/2020
   ms.topic: article
   keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Troubleshoot, Errors, Help, Support, Performance
   appliesto:
   - Windows 10
-  ms.openlocfilehash: a15a29f36d4ad053f9f76016239c94365695d7c3
-  ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+  ms.openlocfilehash: 73c4761a35e679bccc8430ae7860aef71f015f25946ee709393980cf5f064148
+  ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/19/2021
-  ms.locfileid: "110143266"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "115219930"
 title: HP 回音
 summary: ''
 sections:
@@ -25,7 +25,7 @@ sections:
       HP 建议：
 
 
-      - 在连接到电脑或电源之前，先将6米电缆连接到耳机。
+      - 在连接到电脑或电源之前，先将6米缆线连接到耳机。
 
       - 初始安装后，使6米缆线连接到耳机。
 
@@ -47,18 +47,19 @@ sections:
       - 由于使用的是高级耳机设计，因此在启动设备时，可能会在一段很短的时间内启动设备，直到 Lcd 有机会预热。
   - question: >
       我接到耳机时出现 7-14 "出现错误" 错误
-    answer: "7-14 出现错误的代码意味着某些必需的 USB2 组件找不到。  由于 HP 回音 G2 需要额外的长电缆，因此 USB 信号的一些容差会更紧密。  这意味着计算机上一个端口可能比另一个端口更可靠。\n\n如果看到 7-14\"出错\"错误，请尝试以下步骤：\n\n- 请确保为头戴显示设备以及 USB 控制器安装了最新的驱动程序。\n- 请确保使用 Microsoft USB 驱动程序。 \"eXtensible Host Controller\"设备的名称中应存在\"Microsoft\"。\n- 尝试将电缆插入计算机上的其他 USB-3.0 端口。  (USB 类型 C 和类型 A 端口) \n- 使用包含的 USB C 到 A 适配器尝试不同的端口。\n- 尝试通过 USB 集线器将头戴显示设备插入计算机。\n\n> [!NOTE]\n> 如果无法连接设备，请联系 [HP 支持部门](https://support.hp.com/us-en)\n"
-  - question: "当电脑从休眠状态恢复为 S4 时，收到 13-14\"出现问题 (错误) \n"
-    answer: >
-      有时，在恢复过程中，视频卡无法建立连接，因此从电脑中拔下 USB 类型 C 并重新插入有助于建立连接。
+    answer: "7-14 出现错误的代码意味着某些必需的 USB2 组件找不到。  由于 HP 回音 G2 需要额外的长电缆，因此 USB 信号的一些容差会更紧密。  这意味着计算机上的一个端口的工作方式可能比另一个端口更可靠。\n\n如果看到 7-14 \"出现错误\" 错误，请尝试执行以下步骤：\n\n- 确保为耳机和 USB 控制器安装了最新驱动程序。\n- 请确保使用的是 Microsoft USB 驱动程序。 \"可扩展主机控制器\" 设备的名称中应该有 \"Microsoft\"。\n- 尝试将电缆插入到计算机上的另一个 USB-3.0 端口。  (尝试使用 USB 类型 C 和类型-端口) \n- 使用附带的 USB C 来尝试不同的端口。\n- 尝试通过 USB 集线器将耳机插入到计算机。\n\n> [!NOTE]\n> 如果无法连接到设备，请联系[HP 支持](https://support.hp.com/us-en)部门\n"
   - question: >
-      我的 HP 运动控制器手柄有时会卡在一侧
+      我的电脑从休眠状态 () S4 恢复时出现 13-14 "出现错误" 错误
     answer: >
-      此问题已通过完全放大该 <2>，直到它单击并自由移动来更正。
+      有时，在恢复过程中，视频卡不能建立连接，因此，从电脑中拔出 USB 类型 C 并将其重新插入可帮助建立连接。
   - question: >
-      其他状态：我声音很大，或者我的音频正在剪辑，而我在一些应用程序中使用麦克风
+      我的 HP 运动控制器操纵杆有时会坚持一侧
     answer: >
-      当 Windows 电脑首次识别 HP Reverb G2 麦克风时，输入音量级别会自动设置为 100%。 由于 Reverb G2 的高质量麦克风，输入敏感度远高于默认Windows 10设置。 建议将 Reverb G2 麦克风输入级别从 50% 开始，然后从该级别向上扩展。 最佳设置特定于用户，尤其是在使用没有"自动获取"麦克风设置的应用程序时。 具有"自动获取"的应用程序示例包括 Skype、Zoom、Teams 和 Cisco WebEx，但并非所有 VR 社交或广播应用程序都有此功能。
+      此问题的解决方法是，通过在游戏杆单击之前完全按下，它会自由移动。
+  - question: >
+      其他一些状态我很大或我的音频正在剪辑，而我将麦克风用于某些应用程序
+    answer: >
+      当 Windows PC 首次识别 HP 回音 G2 麦克风时，输入音量级别会自动设置为100%。 由于回音 G2's 高质量麦克风，因此输入敏感度比默认 Windows 10 设置要高得多。 我们建议将 "回音： G2" 麦克风输入级别设置为从50% 开始，并从该处向上缩放。 最佳设置是特定于用户的设置，尤其是在使用没有 "自动获取" 麦克风设置的应用程序时。 具有 "自动增益" 的应用程序的示例包括 Skype、缩放、Teams 和 Cisco WebEx，但并非所有的 VR 社交或广播应用程序都具有此功能。
   - question: >
       混合现实门户显示 "无法在此耳机上运行 Mixed Reality"，但这对于我以前的 WMR 耳机工作正常
     answer: >
@@ -84,7 +85,7 @@ sections:
   - question: >
       我的 SteamVR 游戏似乎无法与我的 HP 运动控制器一起正常工作
     answer: >
-      虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 对于 "SteamVR 的 Windows Mixed Reality" 已完全更新到版本1.2.444，当游戏运行时，应自动选取这些绑定。 但是，如果你目前的游戏并未注册操作，你可以使用 "SteamVR 设置" 菜单手动搜索自定义绑定配置文件。
+      虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 如果将 "Windows Mixed Reality for SteamVR" 完全更新到版本1.2.444，则在游戏运行时应自动选取这些绑定。 但是，如果你目前的游戏并未注册操作，你可以使用 SteamVR 设置菜单手动搜索自定义绑定配置文件。
 
       要执行此操作
 
@@ -115,6 +116,6 @@ sections:
   - question: >
       回音 G2 的显示图像更小，仅在左上角
     answer: >-
-      如果有 AMD power GPU，则需要禁用自动增加。 当耳机连接时，导航到 "设置"-> 混合现实-> 耳机 > 解决方案。
+      如果有 AMD power GPU，则需要禁用自动增加。 当耳机连接时，请导航到设置 > 混合现实 > 耳机-> 解决方法。
 
       在下拉菜单中，选择 "4320 x 2160 (最佳质量) " 选项。 如果选择了 "自动增加 (最佳性能) "，则可能会遇到显示问题。

@@ -4,40 +4,40 @@ description: InteractiveElement MRTK 文档
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 02/22/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， Interactive 元素， 可交互
-ms.openlocfilehash: 65f518c53414d68d3a9d2093cb427140cc65560b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，Interactive 元素，种不可交互
+ms.openlocfilehash: 6d8f36c4780844e991eb32943645402503fab8340c6843dbb607f1c11033d912
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144761"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115220318"
 ---
 # <a name="interactive-element-experimental"></a>Interactive 元素 [实验]
 
-MRTK 输入系统的简化集中入口点。 包含状态管理方法、事件管理和核心交互状态的状态设置逻辑。
+MRTK 输入系统的简化集中入口点。 包含核心交互状态的状态管理方法、事件管理和状态设置逻辑。
 
-Interactive Element 是 Unity 2019.3 及更新版中支持的实验性功能，因为它利用 Unity 2019.3 的新功能： [序列化引用](https://docs.unity3d.com/ScriptReference/SerializeReference.html)。
+Interactive 元素是 Unity 2019.3 中支持的实验性功能，因为它利用了 Unity 2019.3 的新功能： [序列化引用](https://docs.unity3d.com/ScriptReference/SerializeReference.html)。
 
-### <a name="interactive-element-inspector"></a>Interactive 元素检查器
+### <a name="interactive-element-inspector"></a>交互式元素检查器
 
-在播放模式下，Interactive Element 检查器提供可视反馈，指示当前状态是否处于活动状态。 如果状态处于活动状态，则以蓝绿色突出显示该状态。  如果状态不处于活动状态，则颜色不会更改。 检查器中状态旁边的数字是状态值，如果状态处于活动状态，则值为 1，如果状态不活动，则值为 0。
+在播放模式下，交互式元素检查器提供可视反馈，指示当前状态是否处于活动状态。 如果状态为 "活动"，则它将以青色突出显示。  如果状态不是活动状态，则不更改颜色。 检查器中状态旁边的数字是状态值，如果状态为 "活动"，则值为1，如果状态为 "非活动"，则值为0。
 
-![交互式元素与虚拟手部交互](../images/interactive-element/InEditor/Gifs/InspectorHighlightEditor.gif)
+![具有虚拟手交互的交互式元素](../images/interactive-element/InEditor/Gifs/InspectorHighlightEditor.gif)
 
 ## <a name="core-states"></a>核心状态
 
-Interactive 元素包含核心状态，并支持添加 [自定义状态](#custom-states)。  核心状态是已在 中定义状态设置逻辑的状态 `BaseInteractiveElement` 状态。 下面是当前输入驱动核心状态的列表： 
+Interactive 元素包含核心状态，并支持添加 [自定义状态](#custom-states)。  核心状态是已经具有中定义的状态设置逻辑的状态 `BaseInteractiveElement` 。 下面是当前的输入驱动核心状态的列表： 
 
 ### <a name="current-core-states"></a>当前核心状态
 
-- [默认值](#default-state) 
+- [默认](#default-state) 
 
-近近交互核心状态：
+近和远交互核心状态：
 - [焦点](#focus-state) 
 
 近交互核心状态：
 
-- [焦点附近](#focus-near-state)
+- [关注](#focus-near-state)
 - [触控](#touch-state)
 
 远交互核心状态：
@@ -182,17 +182,17 @@ focusEvents.OnFocusOff.AddListener((pointerEventData) =>
 
 #### <a name="focus-near-vs-focus-far-behavior"></a>专注于 vs 重心的行为 
 
-![使用虚拟手部交互进行近近和远焦点](../images/interactive-element/InEditor/Gifs/FocusNearFocusFar.gif)
+![利用虚拟手交互，接近和远地聚焦](../images/interactive-element/InEditor/Gifs/FocusNearFocusFar.gif)
 
-### <a name="focus-near-state"></a>焦点接近状态
+### <a name="focus-near-state"></a>关注状态
 
-当引发焦点事件且主指针为"开小马"指针（指示近交互）时，将设置"焦点附近"状态。 
+在引发焦点事件并且主指针为 "转到" 交互的情况下，将设置 "接近状态" 焦点。 
 
-**焦点接近状态行为** 
- ![通过虚拟手部交互将焦点放在接近状态](../images/interactive-element/InEditor/Gifs/FocusNearStateEditor.gif) 
+**专注于状态行为** 
+ ![通过虚拟手交互重点关注状态](../images/interactive-element/InEditor/Gifs/FocusNearStateEditor.gif) 
 
-**焦点近状态检查器** 
- ![检查器中靠近组件的焦点](../images/interactive-element/InEditor/FocusNearStateInspector.png)
+**专注于状态检查器** 
+ ![检查器中接近组件](../images/interactive-element/InEditor/FocusNearStateInspector.png)
 
 #### <a name="getting-focusnear-state-events&quot;></a>获取 FocusNear 状态事件
 
@@ -212,17 +212,17 @@ focusNearEvents.OnFocusOff.AddListener((pointerEventData) =>
 });
 ```
 
-### <a name="focus-far-state"></a>焦点远点状态
+### <a name="focus-far-state"></a>最远状态
 
-当主指针不是"焦点指针"时，将设置"焦点远"状态。  例如，默认控制器射线指针和 GGV (凝视、手势、语音) 指针被视为远交互指针。
+当主指针不是 "转到" 指针时，将设置 "焦点" 状态。  例如，默认控制器射线指针和 GGV (注视、手势、Voice) 指针被视为远交互指针。
 
-**焦点远状态行为** 
- ![与虚拟手部交互远的焦点状态](../images/interactive-element/InEditor/Gifs/FocusFarStateEditor.gif)
+**关注状态行为** 
+ ![通过虚拟手交互关注状态](../images/interactive-element/InEditor/Gifs/FocusFarStateEditor.gif)
 
-**焦点远状态检查器** 
- ![检查器中的焦点远部分](../images/interactive-element/InEditor/FocusFarStateInspector.png)
+**关注状态检查器** 
+ ![检查器中的焦点组件](../images/interactive-element/InEditor/FocusFarStateInspector.png)
 
-#### <a name="getting-focus-far-state-events&quot;></a>获取焦点远场状态事件
+#### <a name="getting-focus-far-state-events&quot;></a>获取焦点状态事件
 
 FocusFar 状态的事件配置类型： `FocusEvents`
 
@@ -244,15 +244,15 @@ focusFarEvents.OnFocusOff.AddListener((pointerEventData) =>
 
 触摸状态是一种近交互状态，当一个明确表达的手直接触摸对象时，将设置此状态。  直接触摸意味着铰接手的索引指非常接近对象的世界位置。 默认情况下，如果将 Touch 状态添加到状态列表，则组件将附加到 `NearInteractionTouchableVolume` 对象。  检测 Touch  `NearInteractionTouchableVolume` `NearInteractionTouchable` 事件需要存在 或 组件。  和 之间的区别在于，基于对象的碰撞体检测触摸，并检测平面 `NearInteractionTouchableVolume` `NearInteractionTouchable` `NearInteractionTouchableVolume` `NearInteractionTouchable` 的已定义区域中的触摸。
 
-**触摸状态行为** 
- ![具有虚拟手交互的触摸状态](../images/interactive-element/InEditor/Gifs/TouchStateEditor.gif)
+**触控状态行为** 
+ ![使用虚拟手部交互的触摸状态](../images/interactive-element/InEditor/Gifs/TouchStateEditor.gif)
 
 **触控状态检查器** 
  ![检查器中的触摸状态组件](../images/interactive-element/InEditor/TouchStateInspector.png)
 
-#### <a name="getting-touch-state-events&quot;></a>获取触摸状态事件
+#### <a name="getting-touch-state-events&quot;></a>获取触控状态事件
 
-触摸状态的事件配置类型： `TouchEvents`
+Touch 状态的事件配置类型： `TouchEvents`
 
 ```c#
 TouchEvents touchEvents = interactiveElement.GetStateEvents<TouchEvents>(&quot;Touch");
@@ -273,17 +273,17 @@ touchEvents.OnTouchUpdated.AddListener((touchData) =>
 });
 ```
 
-### <a name="select-far-state"></a>选择 Far 状态
+### <a name="select-far-state"></a>选择"远地状态"
 
-选择的状态为 "选择" `IMixedRealityPointerHandler` 。  此状态是一种远交互状态，检测到远交互单击 (轻点击) ，并通过使用 far 交互指针（例如，默认控制器射线指针或 GGV 指针）进行保存。  在事件配置 foldout 下，"选择最多" 状态具有一个选项 `Global` 。 如果 `Global` 为 true，则 `IMixedRealityPointerHandler` 将注册为全局输入处理程序。  如果处理程序注册为 global，则不需要将焦点放在对象上来触发输入系统事件。  例如，如果用户想要在无论焦点的对象是什么时候都需要知道无论哪个对象处于焦点，则将设置 `Global` 为 true。 
+"选择远"状态 `IMixedRealityPointerHandler` 已浮出。  此状态是一种远距离交互状态，它检测远部交互单击 () 并通过使用远交互指针（如默认控制器射线指针或 GGV 指针）来保持。  "选择远"状态在名为 的事件配置折叠下有一个选项 `Global` 。 如果 `Global` 为 true， `IMixedRealityPointerHandler` 则 注册为全局输入处理程序。  如果处理程序注册为全局处理程序，则无需关注对象，则无需触发输入系统事件。  例如，如果用户想要知道每当执行敲击/选择手势时，不考虑焦点中的对象，请 `Global` 设置为 true。 
 
-**选择 Far 状态行为** 
- ![选择 "与虚拟手交互"](../images/interactive-element/InEditor/Gifs/SelectFarStateEditor.gif)
+**选择"远州行为"** 
+ ![通过虚拟手部交互进行远点选择](../images/interactive-element/InEditor/Gifs/SelectFarStateEditor.gif)
 
-**选择 Far 状态检查器** 
- ![在检查器中选择 "远端" 组件](../images/interactive-element/InEditor/SelectFarStateInspector.png)
+**选择"Far State Inspector"** 
+ ![在检查器中选择 far 组件](../images/interactive-element/InEditor/SelectFarStateInspector.png)
 
-#### <a name="getting-select-far-state-events&quot;></a>获取选择远端状态事件
+#### <a name="getting-select-far-state-events&quot;></a>获取选择远地状态事件
 
 SelectFar 状态的事件配置类型： `SelectFarEvents`
 
@@ -311,15 +311,15 @@ selectFarEvents.OnSelectClicked.AddListener((pointerEventData) =>
 });
 ```
 
-### <a name="clicked-state"></a>单击状态
+### <a name="clicked-state"></a>单击的状态
 
-单击状态由远处交互，单击 (默认情况下) 选择 "远端状态"。  此状态在内部切换到 on，调用 OnClicked 事件，然后立即切换到 off。 
+默认情况下，单击"选择远方状态"按钮 (单击"选择远) 触发。  此状态在内部切换到 on，调用 OnClicked 事件，然后立即切换到关闭。 
 
 > [!NOTE]
-> 基于状态活动的检查器中的可视反馈对于已单击状态不存在，因为它会立即打开并关闭。 
+> 检查器中基于状态活动的可视反馈不存在于"已单击"状态，因为它已打开，然后立即关闭。 
 
-**单击状态行为** 
- ![处于虚拟手交互状态的已单击状态](../images/interactive-element/InEditor/Gifs/ClickedStateEditor.gif)
+**单击的状态行为** 
+ ![使用虚拟手部交互的单击状态](../images/interactive-element/InEditor/Gifs/ClickedStateEditor.gif)
 
 **单击的状态检查器** 
  ![单击检查器中的状态组件](../images/interactive-element/InEditor/ClickedStateInspector.png)
@@ -382,38 +382,38 @@ toggleOffEvent.OnToggleOff.AddListener(() =>
 
 ### <a name="speech-keyword-state"></a>语音关键字状态
 
-语音关键字状态侦听混合现实语音配置文件中定义的关键字。 在运行时之前，必须在语音命令配置文件中注册任何新的关键字 () 下面的步骤。 
+语音关键字状态侦听混合现实语音配置文件中定义的关键字。 任何新关键字都必须在语音命令配置文件中注册， (以下步骤) 。 
 
-**Speech 关键字状态行为** 
+**语音关键字状态行为** 
  ![具有虚拟交互的语音关键字](../images/interactive-element/InEditor/Gifs/SpeechKeywordStateEditor.gif)
 
-**Speech 关键字状态检查器** 
+**语音关键字状态检查器** 
  ![检查器中的语音关键字组件](../images/interactive-element/InEditor/SpeechKeywordStateInspector.png)
 
 > [!NOTE]
-> 通过按以上 gif 中的 F5 键，在编辑器中触发了语音关键字状态。 以下步骤概述了在编辑器中进行语音测试设置。 
+> 语音关键字状态是在编辑器中通过按上述 gif 中的 F5 键触发的。 下面概述了在编辑器测试中设置语音的步骤。 
 
 #### <a name="how-to-register-a-speech-commandkeyword"></a>如何注册语音命令/关键字
 
 1. 选择 **MixedRealityToolkit** 游戏对象
 
-1. 选择 " **复制并自定义** 当前配置文件"
+1. 选择 **"复制并自定义** 当前配置文件"
 
-1. 导航到 "输入" 部分，然后选择 " **克隆** " 以启用对输入配置文件的修改
+1. 导航到"输入"部分，然后选择" **克隆** "以启用对输入配置文件的修改
 
-1. 向下滚动到输入配置文件中的语音部分，并克隆语音配置文件
+1. 向下滚动到"输入配置文件"中的"语音"部分，然后克隆语音配置文件
 
     ![MRTK 游戏对象中的语音关键字配置文件](../images/interactive-element/InEditor/SpeechKeywordProfileClone.png) 
 
-1. 选择 "添加新语音命令"
+1. 选择"添加新语音命令"
 
     ![在 MRTK 配置文件中添加新的语音关键字](../images/interactive-element/InEditor/SpeechKeywordProfileAddKeyword.png) 
 
-1. 输入 new 关键字。 可选：将 KeyCode 更改为 F5 (或另一个 KeyCode) ，以允许在编辑器中进行测试。 
+1. 输入 new 关键字。 可选：将 KeyCode 更改为 F5 (或其他 KeyCode) 允许在编辑器中进行测试。 
 
-    ![在 MRTK 配置文件中配置 speech 关键字](../images/interactive-element/InEditor/SpeechKeywordProfileAddKeywordName.png) 
+    ![在 MRTK 配置文件中配置语音关键字](../images/interactive-element/InEditor/SpeechKeywordProfileAddKeywordName.png) 
 
-1. 返回到交互式元素的语音关键字状态检查器，然后选择 "**添加关键字**" 
+1. 返回到 Interactive Element Speech Keyword 状态检查器，然后选择" **添加关键字"** 
 
     ![向交互式元素组件添加关键字](../images/interactive-element/InEditor/SpeechKeywordAddKeyword.png) 
 
@@ -489,21 +489,21 @@ myNewStateEvents.OnStateOn.AddListener(() =>
 
 ### <a name="creating-a-custom-state-with-a-custom-event-configuration"></a>使用自定义事件配置创建自定义状态 
 
-名为 **键盘** 的自定义状态的示例文件位于此处： MRTK\SDK\Experimental\InteractiveElement\Examples\Scripts\CustomStateExample
+名为 Keyboard 的自定义状态 **的示例文件位于** ：MRTK\SDK\Experimental\InteractiveElement\Examples\Scripts\CustomStateExample
 
-以下步骤介绍了创建自定义状态事件配置和接收方文件的现有示例。
+以下步骤将演练创建自定义状态事件配置和接收方文件的现有示例。
 
-1. 考虑状态名称。  此名称必须唯一，并且不能与现有的核心状态相同。 出于本示例的目的，状态名称将是 **键盘**。
+1. 想一想状态名称。  此名称必须唯一，不能与现有的核心状态相同。 对于此示例，状态名称将是键盘 **。**
 
-1. 创建两个 .cs 文件，分别为 state name + "接收方" 和状态名称 + "事件"。 需要在内部考虑这些文件的命名，并且必须遵循状态名称 + 事件/接收方约定。 
+1. 创建两个名为 state name + "Receiver" 和 state name + "Events" 的 .cs 文件。 这些文件的命名在内部会考虑，并且必须遵循状态名称 + 事件/接收方约定。 
 
     ![键盘状态脚本](../images/interactive-element/InEditor/KeyboardStateFiles.png)
 
-1. 有关文件内容的更多详细信息，请参阅 KeyboardEvents 和 KeyboardReceiver 文件。 新的事件配置类必须从继承 `BaseInteractionEventConfiguration` ，而新的事件接收器类必须继承自 `BaseEventReceiver` 。  有关键盘状态的状态设置的示例位于 `CustomStateSettingExample.cs` 文件中。 
+1. 有关文件内容的更多详细信息，请参阅 KeyboardEvents.cs 和 KeyboardReceiver.cs 文件。 新事件配置类必须继承自 `BaseInteractionEventConfiguration` ，新的事件接收器类必须从 继承 `BaseEventReceiver` 。  有关键盘状态的状态设置的示例位于 `CustomStateSettingExample.cs` 文件中。 
 
-1. 使用状态名称将状态添加到 Interactive 元素，如果事件配置和事件接收器文件存在，则会识别状态名称。  自定义事件配置文件中的属性应显示在检查器中。
+1. 使用状态名称将状态添加到 Interactive Element，如果存在事件配置和事件接收器文件，则识别状态名称。  自定义事件配置文件中的属性应出现在检查器中。
 
-    ![向交互式元素添加自定义状态 ](../images/interactive-element/InEditor/AddKeyboardState.png) ![ 在交互式元素中识别的自定义状态](../images/interactive-element/InEditor/SetKeyboardStateName.png)
+    ![将自定义状态添加到交互元素 ](../images/interactive-element/InEditor/AddKeyboardState.png) ![ 中识别的交互式元素自定义状态](../images/interactive-element/InEditor/SetKeyboardStateName.png)
 
 
 1. 有关事件配置和事件接收器文件的更多示例，请参阅以下路径中的文件：    
@@ -512,27 +512,27 @@ myNewStateEvents.OnStateOn.AddListener(() =>
 
 ## <a name="example-scene"></a>示例场景 
 
-交互式元素 + 状态可视化工具的示例场景位于此处： MRTK\SDK\Experimental\InteractiveElement\Examples\InteractiveElementExampleScene.unity
+Interactive Element + State Visualizer 的示例场景位于：MRTK\SDK\Experimental\InteractiveElement\Examples\InteractiveElementExampleScene.unity
 
-![带有交互式元素和状态可视化工具的示例场景](../images/interactive-element/InEditor/ExampleScene.png)
+![使用 Interactive 元素和状态可视化工具的示例场景](../images/interactive-element/InEditor/ExampleScene.png)
 
-### <a name="compressable-button"></a>Compressable 按钮
+### <a name="compressable-button"></a>可压缩按钮
 
-示例场景包含名为和的 prototyping `CompressableButton` `CompressableButtonToggle` ，这些 prototyping 镜像 `PressableButtonHoloLens2` 使用交互式元素和状态可视化工具构造的按钮的行为。 `CompressableButton`组件当前将和的组合为 `PressableButton`  +  `PressableButtonHoloLens2` `BaseInteractiveElement` 作为基类。 
+示例场景包含名为 和 的预制件，这些预制件反映使用 Interactive 元素和状态可视化工具构造的按钮 `CompressableButton` `CompressableButtonToggle` `PressableButtonHoloLens2` 的行为。 组件 `CompressableButton` 当前与 作为基 `PressableButton`  +  `PressableButtonHoloLens2` `BaseInteractiveElement` 类的组合。 
 
 ## <a name="state-visualizer-experimental"></a>状态可视化工具 [实验]
 
-状态可视化工具组件根据链接的交互式元素组件中定义的状态将动画添加到对象。 此组件创建动画资产，将其放置在 MixedRealityToolkit 文件夹中，通过将动画处理属性添加到目标游戏对象，启用简化的动画关键帧设置。 若要在状态之间启用动画过渡，将创建 Animator 控制器资产，并使用关联的参数和任何状态转换生成默认的状态机。  可以在 Unity 的 Animator 窗口中查看状态机。
+状态可视化工具组件根据链接的 Interactive Element 组件中定义的状态向对象添加动画。 此组件创建动画资产，将其放在 MixedRealityToolkit.Generated 文件夹中，并通过将 Animatable 属性添加到目标游戏对象来启用简化的动画关键帧设置。 若要启用状态之间的动画转换，将创建一个动画控制器资产，并生成一个包含关联参数和任何状态转换的默认状态机。  可以在 Unity 的"动画器"窗口中查看状态机。
 
-### <a name="state-visualizer-and-unity-animation-system"></a>状态可视化工具和 Unity 动画系统
+### <a name="state-visualizer-and-unity-animation-system"></a>状态可视化工具与 Unity 动画系统
 
-状态可视化工具当前利用了 Unity 动画系统。 
+状态可视化工具当前利用 Unity 动画系统。 
 
-当按下状态可视化工具中的 " **生成新动画剪辑** " 按钮时，将基于交互元素中的状态名称生成新的动画剪辑资产，并将其放置在 MixedRealityToolkit 文件夹中。 每个状态容器中的动画剪辑属性都设置为关联的动画剪辑。
+按下状态可视化工具中的"生成新动画剪辑"按钮时，将基于 Interactive 元素中的状态名称生成新的动画剪辑资产，并放置在 MixedRealityToolkit.Generated 文件夹中。 每个状态容器中的"动画剪辑"属性都设置为关联的动画剪辑。
 
 ![状态可视化工具组件中的动画剪辑](../images/interactive-element/StateVisualizer/AnimationClips.png)
 
-还会生成 [Animator 状态机](https://docs.unity3d.com/Manual/AnimationOverview.html) 来管理动画剪辑间的平滑转换。  默认情况下，状态机利用 " [任何" 状态](https://docs.unity3d.com/Manual/class-State.html) 以允许交互式元素中任何状态之间的转换。 
+还会 [生成一个](https://docs.unity3d.com/Manual/AnimationOverview.html) 动画器状态机，用于管理动画剪辑之间的平滑转换。  默认情况下，状态机利用"任何 [状态](https://docs.unity3d.com/Manual/class-State.html) "允许在 Interactive Element 中的任意状态之间转换。 
 
 [还会针对每种状态生成](https://docs.unity3d.com/Manual/AnimationParameters.html) 在动画器中触发的状态可视化工具，在状态可视化工具中使用触发器参数来触发动画。
 
@@ -574,37 +574,37 @@ myNewStateEvents.OnStateOn.AddListener(() =>
 
     ![从色轮选择可视化工具颜色](../images/interactive-element/StateVisualizer/SetBlueColor.png)
 
-1. 按下播放并观察过渡颜色更改
+1. 按"播放"并观察过渡颜色变化
 
-    ![具有虚拟手交互的过渡颜色更改示例](../images/interactive-element/InEditor/Gifs/FocusColorChange.gif)
+    ![具有虚拟手部交互的过渡颜色更改示例](../images/interactive-element/InEditor/Gifs/FocusColorChange.gif)
 
-## <a name="animatable-properties"></a>动画处理属性
+## <a name="animatable-properties"></a>可动画处理的属性
 
-动画处理属性的主要目的是简化动画剪辑关键帧设置。  如果用户熟悉 Unity 动画系统并且希望直接在生成的动画剪辑上设置关键帧，则它们只需将动画处理属性添加到目标对象并在 Unity 的动画窗口中打开剪辑 (Windows > 动画 > 动画) 。 
+Animatable 属性的主要用途是简化动画剪辑关键帧设置。  如果用户熟悉 Unity 动画系统，并且希望直接在生成的动画剪辑上设置关键帧，则他们无法将 Animatable 属性添加到目标对象，在 Unity 的动画窗口 (Windows > Animation > Animation) 中打开该剪辑。 
 
-如果使用动画的动画处理属性，则曲线类型将设置为 EaseInOut。
+如果使用动画的 Animatable 属性，则曲线类型设置为 EaseInOut。
 
-**当前动画处理属性：**
-- [刻度偏移量](#scale-offset)
-- [位置偏移量](#position-offset)
+**当前动画属性：**
+- [缩放偏移量](#scale-offset)
+- [位置偏移](#position-offset)
 - [颜色](#color)
 - [着色器颜色](#shader-color)
-- [着色器浮动](#shader-float)
-- [着色器矢量](#shader-vector)
+- [着色器 Float](#shader-float)
+- [着色器向量](#shader-vector)
 
-### <a name="scale-offset"></a>刻度偏移量
+### <a name="scale-offset"></a>缩放偏移量
 
-Scale Offset 动画处理属性采用对象的当前小数位数，并添加定义的偏移量。
+Scale Offset Animatable 属性采用对象的当前小数位，并添加定义的偏移量。
 
-![与虚拟手交互的缩放偏移](../images/interactive-element/InEditor/Gifs/ScaleOffset.gif)
+![使用虚拟手部交互缩放偏移量](../images/interactive-element/InEditor/Gifs/ScaleOffset.gif)
 
-### <a name="position-offset"></a>位置偏移量
+### <a name="position-offset"></a>位置偏移
 
-Position Offset 动画处理属性采用对象的当前位置，并添加定义的偏移量。
+位置偏移 Animatable 属性采用对象的当前位置并添加定义的偏移量。
 
-![与虚拟手交互的位置偏移量](../images/interactive-element/InEditor/Gifs/PositionOffset.gif)
+![使用虚拟手部交互的位置偏移量](../images/interactive-element/InEditor/Gifs/PositionOffset.gif)
 
-### <a name="color"></a>Color
+### <a name="color"></a>颜色
 
 如果材料具有主颜色属性，则 Color Animatable 属性表示材料的主颜色。 此属性对 属性进行 `material._Color` 动画处理。
 
@@ -631,20 +631,20 @@ Position Offset 动画处理属性采用对象的当前位置，并添加定义�
 
 ### <a name="how-to-find-animatable-shader-property-names"></a>如何查找可着色器属性名称
 
-1. 导航到窗口 > 动画 > 动画
+1. 导航到"窗口>动画>动画"
 1. 确保在层次结构中选择了具有状态可视化工具的对象
-1. 在动画窗口中选择任何动画剪辑
-1. 选择 " **添加属性**"，打开网格呈现器 foldout 
+1. 在"动画"窗口中选择任何动画剪辑
+1. 选择 **"添加属性**"，打开网格呈现器折叠 
 
-    ![在 Animator 窗口中添加动画属性](../images/interactive-element/StateVisualizer/AnimationWindow.png)
+    ![在"动画器"窗口中添加动画属性](../images/interactive-element/StateVisualizer/AnimationWindow.png)
 
-1. 此列表包含所有动画处理属性名称的名称 
+1. 此列表包含所有 Animatable 属性名称的名称 
 
-    ![Animator 窗口中的网格呈现器动画属性](../images/interactive-element/StateVisualizer/MeshRendererProperties.png)
+    !["动画器"窗口中的网格呈现器动画属性](../images/interactive-element/StateVisualizer/MeshRendererProperties.png)
 
 ## <a name="see-also"></a>另请参阅
 
 - [**按钮**](../ux-building-blocks/button.md)
-- [**边界控制**](../ux-building-blocks/bounds-control.md)
+- [**边界控件**](../ux-building-blocks/bounds-control.md)
 - [**网格对象集合**](../ux-building-blocks/object-collection.md)
 - [**RadialView 求解器**](../ux-building-blocks/solvers/solver.md)

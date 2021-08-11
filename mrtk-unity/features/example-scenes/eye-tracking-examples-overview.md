@@ -1,18 +1,18 @@
 ---
-title: 目视跟踪示例概述
+title: 眼动跟踪示例概述
 description: 用于在 MRTK 中生成 eyetracking 的示例
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，EyeTracking，
-ms.openlocfilehash: 4cdeaa10725e00ac1a041c3692d64c1bd6488854
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 32ae64a470572dda71578948d5091887bea9e0e084d97ede7f2f14af596b5a6b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175546"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223204"
 ---
-# <a name="eye-tracking-examples-overview"></a>目视跟踪示例概述
+# <a name="eye-tracking-examples-overview"></a>眼动跟踪示例概述
 
 本主题介绍了如何在 MRTK 中快速开始使用目视跟踪，方法是在 MRTK 眼跟踪示例 (资产/MRTK/示例/演示/EyeTracking) 上构建。
 这些示例可让你体验我们的新神奇输入功能： **目视跟踪**！

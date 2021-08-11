@@ -1,84 +1,84 @@
 ---
 title: 颜色、光线和材料
-description: 为混合现实设计内容需要认真考虑所有视觉资产的颜色、照明和材料。
+description: 设计混合现实的内容需要仔细考虑所有视觉资产的颜色、照明和材料。
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，设计，颜色，浅色，材料，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 2e1626e72d49107c2a83bf1123b306d3ee5c8640
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: Windows Mixed Reality、设计、颜色、光线、材料、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、MRTK、混合现实Toolkit
+ms.openlocfilehash: 50789faa44e6786c0d9fd0b146daa84f459df451bedc52f06073e742ea8064a0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600356"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115219851"
 ---
 # <a name="color-light-and-materials"></a>颜色、光线和材料
 
 ![颜色、光线和材料](images/RemoteRendering.jpg)
 
-为混合现实设计内容需要认真考虑所有虚拟资产的颜色、照明和材料。 美观目的包括使用光线和材料来设置沉浸式环境的音调，而功能目的可以包括使用各种颜色来提醒用户即将发生的操作。 必须将每个决策与体验目标设备的机会和约束进行权衡。
+设计混合现实的内容需要仔细考虑所有虚拟资产的颜色、照明和材料。 美观目的可能包括使用光线和材料来设置沉浸式环境的声音，而功能目的可能包括使用颜色来提醒用户即将发生的操作。 每个决策都必须根据体验的目标设备的机会和约束进行权衡。
 
-下面是特定于在沉浸式耳机上呈现资产的准则。 其中的许多内容都与其他技术领域密切相关，并且可在本文末尾的 " [另请参阅](color-light-and-materials.md#see-also) " 一节中找到相关主题的列表。
+下面是在沉浸式和全息头戴显示设备上呈现资产的特定指南。 其中许多与其他技术领域密切相关，相关主题列表可在本文末尾的 ["另](color-light-and-materials.md#see-also) 请参阅"部分找到。
 
-## <a name="rendering-on-immersive-vs-holographic-devices"></a>在沉浸式与全息设备上渲染
+## <a name="rendering-on-immersive-vs-holographic-devices"></a>在沉浸式与全息设备上呈现
 
-与全息耳机中呈现的内容相比，在沉浸式耳机中呈现的内容看起来会有所不同。 虽然沉浸式耳机通常会像在二维屏幕上一样呈现内容，但使用彩色的全息耳机（如 HoloLens）可以呈现全息影像。
+与全息头戴显示设备中呈现的内容相比，沉浸式头戴显示设备中呈现的内容在视觉上会有所不同。 虽然沉浸式头戴显示设备通常像在 2D 屏幕上一样呈现内容，但全息头戴显示设备（如 HoloLens）使用颜色顺序、通配 RGB 显示器来呈现全息影像。
 
-在全息耳机上，请始终花时间测试您的全息体验。 即使是专门为全息设备构建内容，内容的外观也会有所不同，如辅助监视器、快照和 spectator 视图中所示。 请记住，在设备上进行测试，测试全息影像的照明，并从所有两侧 (以及从上方和) 下方观察内容呈现方式。 请确保使用设备上的一系列亮度设置进行测试。 所有用户不太可能共享假设的默认值，以及不同的照明条件集。
+始终花时间在全息头戴显示设备中测试全息体验。 内容的外观（即使它是专为全息设备构建的）也会与辅助监视器、快照和旁观视图中的外观不同。 请记得演练设备体验，测试全息影像的照明，并观察来自 (以及上面和下方的场景) 呈现内容。 请务必在设备上使用一系列亮度设置进行测试。 所有用户不太可能共享一个假定默认值和一组不同的照明条件。
 
-## <a name="fundamentals-of-rendering-on-holographic-devices"></a>全息设备上呈现的基本知识
+## <a name="fundamentals-of-rendering-on-holographic-devices"></a>全息设备上呈现的基础
 
-* **全息设备具有累加性显示器** –通过向现实世界中的灯光添加光源来创建全息影像–白色将显示为明亮，而黑色将显示为透明。
+* **全息设备具有累加显示** 全息影像通过向现实世界中的光添加光创建-白色将呈现为亮色，而黑色则显示为透明。
 
-* **颜色影响因用户的环境而异** –用户房间内有很多不同的照明条件。 创建具有适当的对比度级别的内容，以便清晰地提供帮助。
+* **颜色影响因用户环境而异** - 用户房间中有许多不同的照明条件。 创建具有适当对比度级别的内容，以帮助提高清晰度。
 
-* **避免动态照明** –在全息体验中均匀发亮的全息影像是最有效的。 使用 "高级" 时，动态照明可能会超出移动设备的功能。 需要动态照明时，建议使用 [混合现实工具包标准着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)。 
+* **避免动态照明**– 全息影像在全息体验中均匀照明的照明效果最高效。 使用高级动态照明可能会超过移动设备的功能。 如果需要动态照明，建议使用混合现实和标准Toolkit[着色器](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)。 
 
-## <a name="designing-with-color"></a>用 color 设计
+## <a name="designing-with-color"></a>使用颜色进行设计
 
-由于 "加法" 显示的性质，某些颜色在全息显示器上可能会有所不同。 某些颜色将在照明环境中弹出，而其他颜色显示的有影响力更少。 冷颜色通常会 recede 到背景中，而热颜色会跳到前台。 在浏览经验时，请考虑以下因素：
+由于累加显示的性质，某些颜色在全息显示器上可能有所不同。 某些颜色将在照明环境中弹出，而其他颜色则显示为影响较小。 当暖色跳转到前景时，冷颜色往往会重新进入背景。 在体验中浏览颜色时，请考虑以下因素：
 
-* **呈现浅色颜色** -白色显得非常明亮，应谨慎使用。 大多数情况下，请考虑有关 R 235 G 235 B 235 的空白值。 较大的亮点可能导致用户 discomfort。 对于 UI 窗口的 backplate，建议使用深色颜色。
+* **呈现浅色** - 白色显示亮色，应谨慎使用。 在大多数情况下，请考虑 R 235 G 235 B 235 周围的白色值。 较大的亮区域可能会导致用户感到不便。 对于 UI 窗口的底板，建议使用深色。
 
-* **呈现深色颜色** -由于 "加法" 显示的性质，深色颜色显示为透明。 实心黑色对象将与现实环境中的显示效果完全不同。 请参阅下面的 Alpha 通道。 若要使 "黑色" 的外观出现，请尝试使用非常深的灰色 RGB 值，例如16、16、16。
+* **呈现深色** - 由于附加显示的性质，深色颜色显示为透明。 纯黑色对象看起来与现实世界没有什么不同。 请参阅下面的 Alpha 通道。 若要提供"黑色"的外观，请尝试使用非常深的灰色 RGB 值，例如 16，16，16。
 
-* **颜色一致性** -通常，全息影像呈现得非常明亮，因此，无论背景如何，都可以保持颜色一致性。 大区域可能会变得 blotchy。 避免出现鲜艳、纯色的大型区域。
+* **颜色一** 致性 - 通常全息影像呈现得足够亮，以便无论背景如何，都保持颜色一致性。 较大区域可能会变得浮点。 避免使用亮色、纯色的大型区域。
 
-* 从一种颜色的 "宽范围" 中获益，从概念上讲类似于 Adobe RGB。 因此，某些颜色可以显示设备中的不同质量和表示形式。
+* **域**- HoloLens颜色"宽域"的好处，在概念上类似于 Adobe RGB。 因此，某些颜色可以在设备中显示不同的特性和表示形式。
 
-* **伽玛** -所呈现图像的亮度和对比度将因沉浸式和全息设备而异。 这些设备的差异经常会使颜色和阴影变暗，更亮或更不亮。
+* **Gamma** - 渲染图像的亮度和对比度因沉浸式和全息设备而异。 这些设备的差异通常会使颜色和阴影的深色区域更亮或更不亮。
 
-* **颜色分离** -也称为 "color 细分情况" 或 "color fringing"，当用户跟踪对象的眼睛时，最常发生颜色分离 (包括光标) 。
+* 颜色分离 **-** 也称为"颜色分解"或"颜色边"，在用户用眼睛跟踪对象时，最常见的是移动全息影像 (包括光标) 。
 
 ## <a name="technical-considerations"></a>技术注意事项
 
-* "**别名**"-深思熟虑后得出的，它是锯齿、锯齿或 "楼梯段" 的边缘与现实世界之间的边缘。 如果使用具有高细节的纹理，则会加剧此效果。 应映射和筛选已启用纹理。 请考虑在对象周围创建黑色边缘边框，以淡化全息影像边缘或添加纹理。 尽可能避免精简几何。
+* **别名** - 考虑使用别名、锯齿或"锯齿步骤"，其中全息影像几何图形的边缘符合现实世界。 使用具有较高细节的纹理可能会影响此效果。 应映射纹理并启用筛选。 请考虑将全息影像的边缘淡入淡出，或添加一个纹理，以在对象周围创建黑色边缘边框。 如果可能，请避免使用精简几何图形。
 
-* **Alpha 通道** -对于不呈现全息图的任何部分，必须清除 alpha 通道，使其完全透明。 在从设备或通过 Spectator 视图拍摄图像/视频时，使 alpha 不确定会导致视觉对象。
+* **Alpha 通道** - 对于未呈现全息影像的任何部分，必须清除 alpha 通道，使其完全透明。 保留 alpha 未定义会导致在从设备拍摄图像/视频时或使用旁观视图时产生可视项目。
 
-* **纹理软化** -由于浅是全息显示屏中的加法，因此最好避免较大的纯色区域，因为它们通常不会产生预期的视觉效果。
+* **纹理着色** - 由于光线在全息显示器中是累加的，因此最好避免使用较大的亮纯色区域，因为它们通常不会产生预期的视觉效果。
 
-## <a name="design-guidelines-for-holographic-display"></a>全息显示器的设计准则
+## <a name="design-guidelines-for-holographic-display"></a>全息显示设计准则
 
-![颜色和手封闭](images/color_handocclusion.jpg)
+![颜色和手部遮挡](images/color_handocclusion.jpg)
 
-设计全息显示器内容时，需要考虑几个元素来获得最佳体验。 有关指导原则和建议，请访问 [设计内容以提供全息显示器](designing-content-for-holographic-display.md) 。
+设计全息显示器的内容时，需要考虑几个元素来获得最佳体验。 有关 [指南和建议，请访问](designing-content-for-holographic-display.md) 设计全息显示内容。
 
-## <a name="storytelling-with-light-and-color"></a>带有浅和颜色的故事分享
+## <a name="storytelling-with-light-and-color"></a>浅色故事
 
-光源和颜色可帮助你在用户的环境中更自然地显示全息影像，并为用户提供指导和帮助。 对于全息体验，请在探索光照和颜色时考虑以下因素：
+浅色和颜色有助于使全息影像在用户环境中更加自然地显示，并为客户提供指导和帮助。 对于全息体验，在探索照明和颜色时，请考虑这些因素：
 
 :::row:::
     :::column:::
-* **Vignetting** -"vignette" 效果用于加深材料，有助于将用户的注意力集中在视图的中心。 这种效果会将全息图的材料从用户的注视向量变暗。 当用户从倾斜或 glancing 角度查看全息影像时，这也很有效。
+* **Vignetting** - 对材料进行"vignette"效果有助于将用户焦点放在视场的中心。 此效果会使全息影像的材料从用户凝视向量的某一半径内变暗。 当用户从倾斜或扫视角度查看全息影像时，此功能也有效。
 
-* **强调** ：通过对比颜色、亮度和照明来吸引对象或交互点。 若要详细了解故事分享中的照明方法，请参阅 [像素 Cinematography-适用于计算机图形的照明方法](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf)。<br>
+* **重点** - 通过对比颜色、亮度和照明来吸引对对象或交互点的注意。 有关故事讲述中照明方法的更详细介绍，请参阅 [像素像素](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf)图 - 计算机图形的照明方法。<br>
         <br>
-        *图像：使用 color 显示故事分享元素的强调，此处显示的内容位于 [片段](https://www.microsoft.com/p/fragments/9nblggh5ggm8)的场景中。*
+        *图像：使用颜色来显示故事讲述元素的强调，如"片段"中的场景 [所示](https://www.microsoft.com/p/fragments/9nblggh5ggm8)。*
     :::column-end:::
         :::column:::
-        ![使用 "颜色" 显示对故事分享元素的强调，此处显示在片段的场景中。](images/640px-fragments.jpg)<br>
+        ![使用颜色来显示故事讲述元素的强调，如片段场景中所示。](images/640px-fragments.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -86,13 +86,13 @@ ms.locfileid: "110600356"
 
 :::row:::
     :::column:::
-材料是用于制作真实全息影像的重要元素。 通过提供适当的视觉特征，你可以制作出引人注目的全息对象，这些对象可与物理环境完美融合。 材料对于为各种类型的用户输入交互提供可视反馈也很重要。  
+材料是制作真实全息影像的关键元素。 通过提供适当的视觉特征，你可以使引人注目的全息对象与物理环境很好地混合。 材料对于为各种类型的用户输入交互提供视觉反馈也很重要。  
 
-[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) 提供了一个 MRTK 标准着色器，其中包含可用于视觉反馈的各种视觉效果选项。 例如，当用户的手指接近对象的表面时，可以使用 "邻近感应" 属性来提供灯光效果。 了解有关[MRTK 标准着色器](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)的详细信息
+[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) 为 MRTK 标准着色器提供了各种视觉效果选项，可用于视觉反馈。 例如，可以使用"邻近光"属性在用户手指接近对象表面时提供照明效果。 详细了解 [MRTK 标准着色器](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
     :::column-end:::
         :::column:::
-    *视频循环：基于与边界框* 
-     ![ 的邻近的视觉反馈示例视觉对象反馈](images/HoloLens2_Proximity.gif)
+    *视频循环：基于边界框邻近性进行视觉反馈的示例* 
+     ![有关手部邻近感应的视觉反馈](images/HoloLens2_Proximity.gif)
 
     :::column-end:::
 :::row-end:::
@@ -104,5 +104,5 @@ ms.locfileid: "110600356"
 * [设计适用于全息显示器的内容](designing-content-for-holographic-display.md)
 * [颜色分离](../develop/platform-capabilities-and-apis/hologram-stability.md#color-separation)
 * [全息影像](../discover/hologram.md)
-* [Microsoft 设计语言-颜色](https://www.microsoft.com/design/color)
-* [通用 Windows 平台-颜色](/windows/uwp/style/color)
+* [Microsoft 设计语言 - 颜色](https://www.microsoft.com/design/color)
+* [通用Windows平台 - 颜色](/windows/uwp/style/color)

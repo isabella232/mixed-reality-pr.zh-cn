@@ -1,41 +1,41 @@
 ---
 title: DirectX 中的语音输入
-description: 介绍如何在适用于 Windows Mixed Reality 的 DirectX 应用程序中实现语音命令和短语识别。
+description: 说明如何在 DirectX 应用中实现语音命令和小短语和句子识别，Windows Mixed Reality。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
-keywords: 演练，语音命令，短语，识别，语音，directx，平台，cortana，windows mixed reality
-ms.openlocfilehash: 5f7ed587b474d147c0b13e4896a89f655f8dc30b
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: 演练， 语音命令， 短语， 识别， 语音， directx， 平台， cortana， windows 混合现实
+ms.openlocfilehash: e30d5c2101bed4b613111b6131a3e94d654c3ff5b1e913f4d8e275ffc1a2776a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583744"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221837"
 ---
 # <a name="voice-input-in-directx"></a>DirectX 中的语音输入
 
 > [!NOTE]
-> 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
+> 本文与旧版 WinRT 本机 API 相关。  对于新的本机应用项目，建议使用 **[OpenXR API](openxr-getting-started.md)**。
 
-本文介绍如何在适用于 Windows Mixed Reality 的 DirectX 应用程序中实现 [语音命令](../../design/voice-input.md) 和短语识别。
+本文介绍如何在 DirectX 应用中实现[语音命令](../../design/voice-input.md)以及小短语和句子识别，Windows Mixed Reality。
 
 >[!NOTE]
->本文中的代码片段使用 c + +/CX，而不是 C + + 17 兼容 c + +/WinRT，它用于 [c + + 全息项目模板](creating-a-holographic-directx-project.md)。  概念与 c + +/WinRT 项目等效，但你需要转换代码。
+>本文中的代码片段使用 C++/CX，而不是 C++17 兼容的 C++/WinRT，C++ 全息项目模板 [中使用的代码片段](creating-a-holographic-directx-project.md)。  这些概念等效于 C++/WinRT 项目，但你需要转换代码。
 
 ## <a name="use-speechrecognizer-for-continuous-speech-recognition"></a>使用 SpeechRecognizer 进行连续语音识别
 
-本部分介绍如何使用连续语音识别在应用中启用语音命令。 本演练使用 [HolographicVoiceInput](https://go.microsoft.com/fwlink/p/?LinkId=844964) 示例中的代码。 当示例运行时，请用一个已注册颜色命令的名称来更改旋转立方体的颜色。
+本部分介绍如何使用连续语音识别在应用中启用语音命令。 本演练使用 [HolographicVoiceInput 示例中的代码](https://go.microsoft.com/fwlink/p/?LinkId=844964) 。 运行示例时，请说出其中一个已注册颜色命令的名称，以更改旋转立方体的颜色。
 
-首先，创建一个新的 *Windows：： Media：： SpeechRecognition：： SpeechRecognizer* 实例。
+首先，创建一个新的 *Windows：：Media：：SpeechRecognition：：SpeechRecognizer* 实例。
 
-From *HolographicVoiceInputSampleMain：： CreateSpeechConstraintsForCurrentState*：
+从 *HolographicVoiceInputSampleMain：：CreateSpeechConstraintsForCurrentState*：
 
 ```
 m_speechRecognizer = ref new SpeechRecognizer();
 ```
 
-创建要侦听的识别器的语音命令的列表。 在这里，我们将构造一组命令来更改全息图的颜色。 为方便起见，我们还创建了以后用于命令的数据。
+为识别器创建要侦听的语音命令列表。 在这里，我们将构造一组命令来更改全息影像的颜色。 为方便起见，我们还创建稍后用于命令的数据。
 
 ```
 m_speechCommandList = ref new Platform::Collections::Vector<String^>();
@@ -60,7 +60,7 @@ m_speechCommandList = ref new Platform::Collections::Vector<String^>();
    m_speechCommandData.push_back(float4(1.f, 0.f, 1.f, 1.f));
 ```
 
-你可以使用不在字典中的拼音词来指定命令。
+可以使用字典中可能未包含的语音词来指定命令。
 
 ```
 m_speechCommandList->Append(StringReference(L"SpeechRecognizer"));
@@ -86,7 +86,7 @@ SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListCon
    });
 ```
 
-订阅语音识别器的[SpeechContinuousRecognitionSession](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)上的[ResultGenerated](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)事件。 此事件将在你已识别到你的某个命令时通知你的应用程序。
+订阅语音识别器[SpeechContinuousRecognitionSession](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)上的[ResultGenerated](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)事件。 当识别了其中一个命令时，此事件会通知应用。
 
 ```
 m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
@@ -95,9 +95,9 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
            );
 ```
 
-*OnResultGenerated* 事件处理程序接收 [SpeechContinuousRecognitionResultGeneratedEventArgs](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs)实例中的事件数据。 如果置信度大于你定义的阈值，应用应注意到事件发生。 保存事件数据，以便您可以在以后的更新循环中使用它。
+*OnResultGenerated* 事件处理程序在 [SpeechContinuousRecognitionResultGeneratedEventArgs](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs)实例中接收事件数据。 如果置信度大于定义的阈值，应用应会注意到事件发生。 保存事件数据，以便可以在以后的更新循环中使用它。
 
-从 *HolographicVoiceInputSampleMain*：
+从 *HolographicVoiceInputSampleMain.cpp*：
 
 ```
 // Change the cube color, if we get a valid result.
@@ -110,9 +110,9 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
    }
 ```
 
-在我们的示例代码中，我们将根据用户的命令更改旋转全息图多维数据集的颜色。
+在示例代码中，我们根据用户的 命令更改旋转全息影像立方体的颜色。
 
-From *HolographicVoiceInputSampleMain：： Update*：
+从 *HolographicVoiceInputSampleMain：：Update*：
 
 ```
 // Check for new speech input since the last frame.
@@ -135,17 +135,17 @@ From *HolographicVoiceInputSampleMain：： Update*：
    }
 ```
 
-## <a name="use-one-shot-recognition"></a>使用 "一次拍摄" 识别
+## <a name="use-one-shot-recognition"></a>使用"一次"识别
 
-你可以配置语音识别器来侦听用户讲述的短语或句子。 在这种情况下，我们将应用 *SpeechRecognitionTopicConstraint* ，告知语音识别器所需的输入类型。 下面是此方案的应用工作流：
-1. 你的应用程序将创建 SpeechRecognizer，提供 UI 提示，并开始侦听讲述命令。
-2. 用户讲述一个短语或句子。
-3. 用户的语音识别发生，并将结果返回到应用。 此时，你的应用程序应提供 UI 提示以指示已发生识别。
-4. 根据你想要响应的置信度和语音识别结果的置信度，你的应用程序可以处理结果并相应地做出响应。
+可以将语音识别器配置为侦听用户说话的短语或句子。 在这种情况下，我们将应用 *SpeechRecognitionTopicConstraint，* 告知语音识别器预期输入类型。 下面是此方案的应用工作流：
+1. 应用创建 SpeechRecognizer，提供 UI 提示，并开始侦听语音命令。
+2. 用户说短语或句子。
+3. 识别用户的语音，结果将返回到应用。 此时，应用应提供 UI 提示以指示已发生识别。
+4. 根据要响应的置信度以及语音识别结果的置信度，应用可以处理结果并根据需要做出响应。
 
 本部分介绍如何创建 SpeechRecognizer、编译约束和侦听语音输入。
 
-下面的代码编译主题约束，这种情况下，它针对 web 搜索进行了优化。
+以下代码编译主题约束，该约束在此例中针对 Web 搜索进行了优化。
 
 ```
 auto constraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::WebSearch, L"webSearch");
@@ -156,7 +156,7 @@ auto constraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScen
    {
 ```
 
-如果编译成功，则可以继续语音识别。
+如果编译成功，我们可以继续进行语音识别。
 
 ```
 try
@@ -171,7 +171,7 @@ try
                {
 ```
 
-然后，将结果返回到应用程序。 如果我们完全相信，我们可以处理该命令。 此代码示例处理至少具有中等置信度的结果。
+然后，结果将返回到应用。 如果我们对结果有足够的信心，我们可以处理 命令。 此代码示例至少以中等置信度处理结果。
 
 ```
 try
@@ -212,7 +212,7 @@ try
                    }
 ```
 
-使用语音识别时，请注意可能表明用户已在系统隐私设置中关闭麦克风的例外情况。 这可能发生在初始化或识别期间。
+每当使用语音识别时，请留意可能指示用户已关闭系统隐私设置中的麦克风的异常。 在初始化或识别期间可能会发生这种情况。
 
 ```
 catch (Exception^ exception)
@@ -256,7 +256,7 @@ catch (Exception^ exception)
 ```
 
 > [!NOTE]
-> 可使用多个预定义的 [SpeechRecognitionScenarios](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionScenario) 来优化语音识别。
+> 有几个预定义的 [SpeechRecognitionScenario 可用于](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionScenario) 优化语音识别。
 
 * 若要优化听写，请使用听写方案。<br/>
    ```
@@ -265,7 +265,7 @@ catch (Exception^ exception)
    m_speechRecognizer->Constraints->Append(dictationConstraint);
    ```
 
-* 对于语音 web 搜索，请使用以下特定于 web 的方案约束。
+* 对于语音 Web 搜索，请使用以下特定于 Web 的方案约束。
 
    ```
    // Add a web search topic constraint to the recognizer.
@@ -273,22 +273,22 @@ catch (Exception^ exception)
    speechRecognizer->Constraints->Append(webSearchConstraint);
    ```
 
-* 使用窗体约束填写表单。 在这种情况下，最好应用自己的语法，用于填写表单。
+* 使用窗体约束填充窗体。 在这种情况下，最好应用自己的已针对填写表单进行优化的语法。
 
    ```
    // Add a form constraint to the recognizer.
    auto formConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::FormFilling, "formFilling");
    speechRecognizer->Constraints->Append(formConstraint );
    ```
-* 您可以以 SRGS 格式提供自己的语法。
+* 可以使用 SRGS 格式提供自己的语法。
 
 ## <a name="use-continuous-recognition"></a>使用连续识别
 
-有关连续听写方案，请参阅 [Windows 10 UWP 语音代码示例](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cpp/Scenario_ContinuousDictation.xaml.cpp)。
+有关连续听写方案，请参阅 Windows 10 [UWP 语音代码示例](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cpp/Scenario_ContinuousDictation.xaml.cpp)。
 
-## <a name="handle-quality-degradation"></a>处理质量降级
+## <a name="handle-quality-degradation"></a>处理质量下降
 
-环境条件有时会干扰语音识别。 例如，房间可能太干扰，或者用户可能会说声音太大。 只要有可能，语音识别 API 就会提供导致质量降低的条件的相关信息。 此信息通过 WinRT 事件推送到应用。 下面的示例演示如何订阅此事件。
+环境条件有时会干扰语音识别。 例如，房间可能太杂乱，或者用户说话声音过大。 语音识别 API 会尽可能提供有关导致质量下降的条件的信息。 此信息通过 WinRT 事件推送到应用。 以下示例演示如何订阅此事件。
 
 ```
 m_speechRecognizer->RecognitionQualityDegrading +=
@@ -297,7 +297,7 @@ m_speechRecognizer->RecognitionQualityDegrading +=
            );
 ```
 
-在我们的代码示例中，我们将条件信息写入调试控制台。 应用可能需要通过 UI、语音合成和另一种方法向用户提供反馈。 或者，当语音被暂时降低质量的中断时，可能需要以不同的方式运行。
+在代码示例中，我们将条件信息写入调试控制台。 应用可能需要通过 UI、语音合成和其他方法为用户提供反馈。 或者，当语音因临时质量降低而中断时，它的行为可能有所不同。
 
 ```
 void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer^ recognizer, SpeechRecognitionQualityDegradingEventArgs^ args)
@@ -336,7 +336,7 @@ void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer
    }
 ```
 
-如果未使用 ref 类创建 DirectX 应用，则必须先取消订阅该事件，然后才能释放或重新创建语音识别器。 HolographicSpeechPromptSample 有一个例程，用于停止识别和取消订阅事件。
+如果不使用 ref 类来创建 DirectX 应用，则必须在发布或重新创建语音识别器之前取消订阅事件。 HolographicSpeechPromptSample 有一个例程，用于停止识别和取消订阅事件。
 
 ```
 Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizerIfExists()
@@ -363,11 +363,11 @@ Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizer
    }
 ```
 
-## <a name="use-speech-synthesis-to-provide-audible-prompts"></a>使用语音合成提供可听见的提示
+## <a name="use-speech-synthesis-to-provide-audible-prompts"></a>使用语音合成提供语音提示
 
-全息语音示例使用语音合成向用户提供可听见的指令。 本部分介绍如何创建合成语音样本，并通过 HRTF 音频 Api 将其播放回来。
+全息语音示例使用语音合成为用户提供有声说明。 本部分演示如何创建合成语音示例，然后通过 HRTF 音频 API 播放它。
 
-建议在请求短语输入时提供自己的语音提示。 提示还可以帮助指示何时可以为连续识别方案口述语音命令。 下面的示例演示如何使用语音合成器执行此操作。 你还可以使用预先录制的语音剪辑、视觉对象 UI 或另一个指示符，例如在提示不是动态的情况下。
+建议在请求短语输入时提供自己的语音提示。 提示还有助于指示何时可以针对连续识别方案说出语音命令。 下面的示例演示如何使用语音合成器来这样做。 还可以使用预录制的语音剪辑、可视化 UI 或其他要表达内容的指标，例如，在提示不动态的情况下。
 
 首先，创建 SpeechSynthesizer 对象。
 
@@ -382,7 +382,7 @@ auto speechSynthesizer = ref new Windows::Media::SpeechSynthesis::SpeechSynthesi
    StringReference voicePrompt = L"At the prompt: Say a phrase, asking me to change the cube to a specific color.";
 ```
 
-通过 SynthesizeTextToStreamAsync 以异步方式合成语音。 在这里，我们启动了一个异步任务来合成语音。
+语音通过 SynthesizeTextToStreamAsync 异步合成。 在这里，我们将启动一个异步任务来合成语音。
 
 ```
 create_task(speechSynthesizer->SynthesizeTextToStreamAsync(voicePrompt), task_continuation_context::use_current())
@@ -392,7 +392,7 @@ create_task(speechSynthesizer->SynthesizeTextToStreamAsync(voicePrompt), task_co
        {
 ```
 
-语音合成作为字节流发送。 我们可以使用该字节流来初始化 XAudio2 的声音。 对于我们的全息代码示例，我们将它作为 HRTF 音频效果播放。
+语音合成作为字节流发送。 我们可以使用该字节流来初始化 XAudio2 语音。 对于全息代码示例，我们将它播放为 HRTF 音频效果。
 
 ```
 Windows::Media::SpeechSynthesis::SpeechSynthesisStream^ stream = synthesisStreamTask.get();
@@ -414,7 +414,7 @@ Windows::Media::SpeechSynthesis::SpeechSynthesisStream^ stream = synthesisStream
        }
 ```
 
-与语音识别一样，如果出现问题，语音合成就会引发异常。
+与语音识别一样，如果出现问题，语音合成会引发异常。
 
 ```
 catch (Exception^ exception)

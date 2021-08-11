@@ -5,17 +5,17 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实工具包
-ms.openlocfilehash: fa571a13ce192b29b2a35033b55061f3ffb707da
-ms.sourcegitcommit: ec80ef1e496bf0b17a161735535517e87ffdd364
+keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实 Toolkit
+ms.openlocfilehash: 4c8d0598898b4717a624562340918f968bd26f1fcde72258907e4fce73bd8489
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110351775"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223091"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
-[空间映射](../../design/spatial-mapping.md) 使你可以检索表示 HoloLens 设备周围的表面的三角形网格。 你可以使用 "位置"、"封闭" 和 "房间" 分析的 surface data，为 Unity 项目提供浸入式的额外剂量。
+使用[空间映射](../../design/spatial-mapping.md)可以检索表示世界上的表面的三角形网格，这些网格围绕 HoloLens 设备。 你可以使用 "位置"、"封闭" 和 "房间" 分析的 surface data，为 Unity 项目提供浸入式的额外剂量。
 
 Unity 包含对空间映射的完全支持，可通过以下方式向开发人员公开：
 
@@ -26,7 +26,7 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 
 ## <a name="device-support"></a>设备支持
 
-| 功能 | [HoloLens (第一代) ](/hololens/hololens1-hardware) | [HoloLens 2](/hololens/hololens2-hardware) | [沉浸式头戴显示设备](../../discover/immersive-headset-hardware-details.md) |
+| 功能 | [第一代 (HoloLens) ](/hololens/hololens1-hardware) | [HoloLens 2](/hololens/hololens2-hardware) | [沉浸式头戴显示设备](../../discover/immersive-headset-hardware-details.md) |
 | ---- | ---- | ---- | ---- |
 | 空间映射 | ✔️ | ✔️ | ❌ |
 
@@ -36,12 +36,12 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 
 如何启用 SpatialPerception 功能：
 
-1. 在 Unity 编辑器中，打开 **"播放机设置"** 窗格， (> 播放机编辑 > 项目设置) 
-2. 选择 **"Windows 应用商店"** 选项卡
-3. 展开 **"发布设置"** ，然后在 **"功能"** 列表中检查 **"SpatialPerception"** 功能
+1. 在 Unity 编辑器中，打开 **"Player 设置"** 窗格 (编辑 > Project 设置 > 播放机) 
+2. 选择 **"Windows 存储"** 选项卡
+3. 展开 **"发布设置"** ，然后检查 **"功能"** 列表中的 **"SpatialPerception"** 功能
 
 > [!NOTE]
-> 如果已将 Unity 项目导出到 Visual Studio 解决方案，则需要导出到新文件夹或 [在 Visual studio 的 appxmanifest.xml 中手动设置此功能](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)。
+> 如果已将 Unity 项目导出到 Visual Studio 解决方案，则需要导出到新文件夹或在[Visual Studio 的 appxmanifest.xml 中手动设置此功能](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)。
 
 空间映射还需要至少10.0.10586.0 的 MaxVersionTested：
 
@@ -423,7 +423,7 @@ Solver_PlaceObject(
 
 ### <a name="room-scanning-process"></a>房间扫描过程
 
-虽然 HoloLens 提供的空间映射解决方案设计为能够满足整个范围的问题空间的通用需求，但却构建了空间理解模块来支持两个特定游戏的需求。 其解决方案是围绕特定过程和假设集构造的，如下所示。
+虽然 HoloLens 提供的空间映射解决方案设计为能够满足整个范围的问题空间的一般需求，但却构建了空间理解模块来支持两个特定游戏的需求。 其解决方案是围绕特定过程和假设集构造的，如下所示。
 
 ```txt
 Fixed size playspace – The user specifies the maximum playspace size in the init call.
@@ -473,16 +473,16 @@ Import_UnderstandingMesh –
 * 确保已设置 [SpatialPerception](#setting-the-spatialperception-capability) 功能
 * 跟踪丢失时，下一个 OnSurfaceChanged 事件将删除所有网格。
 
-## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>混合现实工具包中的空间映射
+## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>混合现实中的空间映射 Toolkit
 
-有关将空间映射用于混合现实工具包的详细信息，请参阅 MRTK 文档的 [空间感知部分](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started) 。
+有关在混合现实 Toolkit 中使用空间映射的详细信息，请参阅 MRTK 文档的[空间感知部分](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started)。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
 如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
-> [文本](text-in-unity.md)
+> [Text](text-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 
@@ -496,6 +496,6 @@ Import_UnderstandingMesh –
 * [坐标系统](../../design/coordinate-systems.md)
 * [Unity 中的坐标系统](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
-* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>
-* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine</a>

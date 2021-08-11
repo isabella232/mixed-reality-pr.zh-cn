@@ -5,32 +5,32 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 9d960d01e738736edd452a124db5c306b5d752ce
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 9e657e0b90f8087670b72c993ab1dcf78ae9e6680873139c6867d7c551a41895
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176133"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115220034"
 ---
 # <a name="migration-window"></a>迁移时限
 
-当 MRTK 发生变化时，某些组件可能会被弃用，并且会引入替换内容。
-"迁移" 窗口是一种工具，可帮助用户自动将这些不推荐使用的部分的子集迁移到新的替换项。
+当 MRTK 发生更改时，某些组件可能会弃用，并引入替换项。
+迁移窗口是一种工具，可帮助用户自动将部分已弃用的组件迁移到新的替换项。
 
 ![迁移时限](../images/migration-window/MRTK_Migration_Window.png)
 
 ## <a name="usage"></a>使用情况
 
-若要打开该窗口，请选择 "**混合现实**  >  **Toolkit**  >  **实用程序**  >  **迁移" 窗口**。 在迁移窗口打开后，可以通过选择迁移处理程序的特定于组件的实现来启用选择模式导航选项卡。  
+若要打开该窗口，请选择"**混合现实**  >  **Toolkit**  >  **实用工具**  >  **迁移窗口"。** 打开迁移窗口后，可以通过选择迁移处理程序的组件特定实现来启用选择模式导航选项卡。  
 
 ![迁移选择模式](../images/migration-window/MRTK_Migration_Modes.png)
 
 ### <a name="object-mode"></a>对象模式
 
-选择 "对象" 选项卡后，用户可以在其中将 "对象" 字段拖放到要迁移的项目文件夹中当前打开的场景或 prototyping 中的任何游戏对象。
-按所列对象右侧显示的 "删除 *( )* " 按钮将从选择列表中删除该对象。
+选择"对象"选项卡可启用对象"字段"，用户可以从当前打开的场景或预制件中拖放要迁移的项目文件夹中的任何 Game 对象。
+按 *()* 对象右侧显示的"删除"按钮会从选择列表中删除该对象。
 
-所有所需的对象都在列表中后，按 " *迁移* " 按钮会将所选迁移处理程序实现所需的更改应用于所选内容中与实现匹配的所有组件。
+所有所需对象都进入列表中后，按"迁移"按钮将所选迁移处理程序实现所需的更改应用到选择中与实现匹配的所有组件。
 
 ![选择迁移](../images/migration-window/MRTK_Object_Migration.png)
 
@@ -38,16 +38,16 @@ ms.locfileid: "113176133"
 
 允许用户拖放包含要迁移的对象的场景资产。
 
-![选择用于迁移的场景](../images/migration-window/MRTK_Scene_Selection.png)
+![选择要迁移的场景](../images/migration-window/MRTK_Scene_Selection.png)
 
-### <a name="project-mode"></a>Project 模式
+### <a name="project-mode"></a>Project模式
 
-按 " *迁移* " 按钮将为项目中的所有 prototyping 和场景更新迁移处理程序实现的目标组件。
+按 *"迁移* "按钮将更新项目内所有预制件和场景的迁移处理程序实现所面向的组件。
 
 ![迁移完整项目](../images/migration-window/MRTK_Project_Migration.png)
 
 ## <a name="see-also"></a>另请参阅
 
 - [从早期版本更新](../../updates-deployment/updating.md)
-- [Microsoft Mixed Reality Toolkit 版本](../../release-notes/mrtk-26-release-notes.md)
+- [Microsoft Mixed Reality Toolkit版本](../../release-notes/mrtk-26-release-notes.md)
 - [MRTK 路线图](../../roadmap.md)

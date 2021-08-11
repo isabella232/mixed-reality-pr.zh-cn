@@ -1,24 +1,24 @@
 ---
 title: 应用模型
-description: Windows Mixed Reality 使用通用 Windows 平台所提供的应用模型，该模型和环境适用于新式 Windows 应用。
+description: Windows Mixed Reality 使用通用 Windows 平台提供的应用模型，Windows 现代应用的模型和环境。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: UWP，应用模型，生命周期，暂停，恢复，磁贴，视图，合同，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 941c0f3f81596e8465157121462b4150cefd8ac2
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: UWP，应用模型，生命周期，暂停，恢复，磁贴，视图，合同，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit
+ms.openlocfilehash: 5f15f0a2516a21cd6432e7f09df7950f8d832acc77ac77056f5bf1382500024e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583210"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221891"
 ---
 # <a name="app-model"></a>应用模型
 
-Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 提供的应用模型 (UWP) ，这是新式 Windows 应用的模型和环境。 UWP 应用模型定义如何安全地安装、更新、版本化和删除应用。 它还控制应用程序的生命周期，即应用程序的执行、睡眠和停止，以及它们如何保持状态。 最后，应用程序模型涵盖与操作系统、文件和其他应用程序的集成和交互。
+Windows Mixed Reality 使用[通用 Windows 平台](/windows/uwp/get-started/) (UWP) 提供的应用模型，这是新式 Windows 应用的模型和环境。 UWP 应用模型定义如何安全地安装、更新、版本化和删除应用。 它还控制应用程序的生命周期，即应用程序的执行、睡眠和停止，以及它们如何保持状态。 最后，应用程序模型涵盖与操作系统、文件和其他应用程序的集成和交互。
 
-![在早餐区域中，在 Windows Mixed Reality 主页中安排的2D 应用](images/20160112-055908-hololens-500px.jpg)<br>
-*在 Windows Mixed Reality 主页中显示2D 视图的应用*
+![在早餐区域的 Windows Mixed Reality 主页中安排的2d 应用](images/20160112-055908-hololens-500px.jpg)<br>
+*具有2d 视图的应用程序 Windows Mixed Reality home*
 
 ## <a name="app-lifecycle"></a>应用生命周期
 
@@ -26,12 +26,12 @@ Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 
 
 ### <a name="placement-is-launch"></a>启动位置
 
-每个应用程序都通过将应用磁贴置于 windows [Mixed reality 主](../discover/navigating-the-windows-mixed-reality-home.md))  (仅[windows 辅助磁贴](/uwp/api/Windows.UI.StartScreen.SecondaryTile)，以混合现实的方式启动。 在放置时，这些应用磁贴会开始运行应用。 这些应用磁贴保留并停留在其放置位置，在任何时候想要返回到应用程序时都是如此。
+每个应用都是通过将应用磁贴放置在[Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)中) [Windows 辅助磁贴](/uwp/api/Windows.UI.StartScreen.SecondaryTile) (来以混合现实为起点。 在放置时，这些应用磁贴会开始运行应用。 这些应用磁贴保留并停留在其放置位置，在任何时候想要返回到应用程序时都是如此。
 
 ![放置将辅助磁贴置于世界中](images/slide1-600px.png)<br>
 *放置将辅助磁贴置于世界中*
 
-定位完成后 (除非将应用启动 [到应用](app-model.md#protocols) 启动) ，否则应用将开始启动。 Windows Mixed Reality 一次可以运行有限数量的应用。 一旦你开始应用并启动应用，其他活动的应用可能会挂起。 挂起的应用程序会在放置应用程序的任何位置上将应用程序的最后一条状态的屏幕截图保留在其中。 有关处理恢复和其他生命周期事件的详细信息，请参阅 [Windows 10 UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
+定位完成后 (除非将应用启动 [到应用](app-model.md#protocols) 启动) ，否则应用将开始启动。 Windows Mixed Reality 可以一次运行有限数量的应用。 一旦你开始应用并启动应用，其他活动的应用可能会挂起。 挂起的应用程序会在放置应用程序的任何位置上将应用程序的最后一条状态的屏幕截图保留在其中。 有关处理恢复和其他生命周期事件的详细信息，请参阅[Windows 10 UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ![放置磁贴后，应用将开始运行 ](images/slide2-500px.png) ![ 状态图，以使应用程序运行、挂起或未运行](images/ic576232-500px.png)<br>
 *Left：放置磁贴后，应用将开始运行。Right：应用正在运行、已挂起或未运行的状态图。*
@@ -42,19 +42,19 @@ Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 
 
 ### <a name="app-suspensiontermination"></a>应用挂起/终止
 
-在 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)中，用户可以通过从 "开始" 菜单启动应用程序并将应用磁贴置于世界中，为应用程序创建多个入口点。 每个应用磁贴表现为不同的入口点，并且在系统中有一个单独的磁贴实例。 针对每个应用实例的 [SecondaryTile](/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_FindAllAsync) 的查询将导致 **SecondaryTile** 。
+在[Windows Mixed Reality home](../discover/navigating-the-windows-mixed-reality-home.md)中，用户可以通过从 "开始"菜单启动应用并将应用磁贴置于世界中，为应用创建多个入口点。 每个应用磁贴表现为不同的入口点，并且在系统中有一个单独的磁贴实例。 针对每个应用实例的 [SecondaryTile](/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_FindAllAsync) 的查询将导致 **SecondaryTile** 。
 
 当 UWP 应用暂停时，将获取当前状态的屏幕截图。
 
 ![显示已挂起应用程序的屏幕截图](images/slide9-800px.png)<br>
 *显示已挂起应用程序的屏幕截图*
 
-与其他 Windows 10 shell 的一个关键区别在于，如何通过 [CoreApplication](/uwp/api/Windows.ApplicationModel.Core.CoreApplication#Windows_ApplicationModel_Core_CoreApplication_Resuming) 和 [CoreWindow](/uwp/api/windows.ui.core.corewindow#Windows_UI_Core_CoreWindow_Activated) 事件通知应用程序实例激活。
+与其他 Windows 10 shell 的一个关键区别在于，如何通过[CoreApplication](/uwp/api/Windows.ApplicationModel.Core.CoreApplication#Windows_ApplicationModel_Core_CoreApplication_Resuming)和[CoreWindow](/uwp/api/windows.ui.core.corewindow#Windows_UI_Core_CoreWindow_Activated)事件通知应用程序实例激活。
 
 |  方案 |  正在恢复  |  已激活 | 
 |----------|----------|----------|
-|  从 "开始" 菜单启动应用程序的新实例  |   |  使用新的 [TileId](/uwp/api/windows.ui.startscreen.secondarytile#Windows_UI_StartScreen_SecondaryTile_TileId) **激活** | 
-|  从 "开始" 菜单启动应用的第二个实例  |   |  使用新的 **TileId** **激活** | 
+|  启动 "开始"菜单的应用程序的新实例  |   |  使用新的 [TileId](/uwp/api/windows.ui.startscreen.secondarytile#Windows_UI_StartScreen_SecondaryTile_TileId) **激活** | 
+|  从 "开始"菜单启动应用的第二个实例  |   |  使用新的 **TileId** **激活** | 
 |  选择当前不处于活动状态的应用的实例  |   |  已通过与实例关联的 **TileId** **激活** | 
 |  选择其他应用，然后选择以前的活动实例  |  **继续** 引发  |  | 
 |  选择一个不同的应用，然后选择先前处于非活动状态的实例  |  **继续** 引发  |  然后通过与实例关联的 **TileId** **激活** | 
@@ -70,7 +70,7 @@ Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 
 
 当应用程序激活时，可以选择想要显示的视图类型。 对于应用的 **CoreApplication**，始终有一个主要 [应用视图](/uwp/api/Windows.UI.ViewManagement.ApplicationView) 以及要创建的任意数量的其他应用视图。 在桌面上，可以将应用视图视为窗口。 混合现实应用模板会创建一个 Unity 项目，其中主要应用视图是 [沉浸式](app-views.md)的。 
 
-你的应用可以使用类似于 XAML 的技术创建额外的2D 应用视图，以使用 Windows 10 功能，如应用内购买。 如果你的应用程序是作为其他 Windows 10 设备的 UWP 应用启动的，则主视图为2D。 不过，您可以通过添加另一个可沉浸显示体验 volumetrically 的应用程序视图，在混合现实中 "亮起"。 想象一下，在 XAML 中生成照片查看器应用程序，其中的 "幻灯片" 按钮切换到了一个沉浸式应用视图，可在世界各地的应用程序中星城照片。
+您的应用程序可以使用 XAML 之类的技术创建额外的2d 应用视图，以使用 Windows 10 功能，如应用内购买。 如果你的应用程序作为 UWP 应用启动，适用于其他 Windows 10 设备，则主要视图为2d。 不过，您可以通过添加另一个可沉浸显示体验 volumetrically 的应用程序视图，在混合现实中 "亮起"。 Imagine 在 XAML 中生成照片查看器应用程序，其中的 "幻灯片" 按钮切换到一个沉浸式应用视图，该视图在世界各地的应用程序中星城照片。
 
 ![正在运行的应用程序可以有2D 视图或沉浸式视图](images/slide3-800px.png)<br>
 *正在运行的应用程序可以有2D 视图或沉浸式视图*
@@ -86,7 +86,7 @@ Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 
 ![在沉浸式视图中运行的应用程序是唯一可见的](images/slide4-800px.png)<br>
 *在沉浸式视图中运行的应用程序是唯一可见的*
 
-### <a name="2d-view-in-the-windows-mixed-reality-home"></a>Windows Mixed Reality 主页中的2D 视图
+### <a name="2d-view-in-the-windows-mixed-reality-home"></a>Windows Mixed Reality home 的2d 视图
 
 沉浸式视图以外的任何内容都将呈现为世界上的2D 视图。
 
@@ -97,7 +97,7 @@ Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 
 
 ### <a name="placement-of-additional-app-tiles"></a>其他应用磁贴的位置
 
-您可以根据需要将任意数量的应用程序与 [辅助磁贴 api](/windows/uwp/design/shell/tiles-and-notifications/secondary-tiles)放在世界。 这些 "固定" 磁贴将显示为初始屏幕，用户必须在该屏幕中放置，然后可以使用该屏幕来启动应用。 Windows Mixed Reality 目前不支持将任何2D 磁贴内容呈现为动态磁贴。
+您可以根据需要将任意数量的应用程序与 [辅助磁贴 api](/windows/uwp/design/shell/tiles-and-notifications/secondary-tiles)放在世界。 这些 "固定" 磁贴将显示为初始屏幕，用户必须在该屏幕中放置，然后可以使用该屏幕来启动应用。 Windows Mixed Reality 当前不支持将任何2d 磁贴内容呈现为动态磁贴。
 
 ![应用可以有多个使用辅助磁贴的放置](images/slide6-800px.png)<br>
 *应用可以有多个使用辅助磁贴的放置*
@@ -136,20 +136,20 @@ Windows Mixed Reality 使用 [通用 Windows 平台](/windows/uwp/get-started/) 
 
 ## <a name="app-tiles"></a>应用磁贴
 
-"开始" 菜单将标准的小型磁贴和中型磁贴用于混合现实中的 "pin" 和 " **所有应用** " 列表。 
+该 "开始"菜单将标准的小型磁贴和中型磁贴用于混合现实中的 pin 和 **所有应用** 列表。 
 
-![Windows Mixed Reality 的 "开始" 菜单](images/start-500px.png)<br>
-*Windows Mixed Reality 的 "开始" 菜单*
+![Windows Mixed Reality 的 "开始"菜单](images/start-500px.png)<br>
+*Windows Mixed Reality 的 "开始"菜单*
 
 ## <a name="app-to-app-interactions"></a>应用到应用交互
 
-当你生成应用时，你可以访问 Windows 10 上提供的应用程序通信机制的丰富应用程序。 许多新的协议 Api 和文件注册在 HoloLens 上完美地工作，以实现应用程序的启动和通信。 
+构建应用时，可以通过 Windows 10 上提供的应用程序通信机制访问丰富的应用程序。 许多新的协议 api 和文件注册都可以在 HoloLens 上完美地工作，以实现应用程序的启动和通信。 
 
 对于桌面耳机，与给定文件扩展名或协议相关联的应用程序可能是一个 Win32 应用程序，只能在桌面监视器或桌面石板中出现。
 
 ### <a name="protocols"></a>协议
 
-HoloLens 支持通过Windows.System 启动应用程序 [ 。启动器 Api](/uwp/api/Windows.System.Launcher)。
+HoloLens 通过[Windows.System Launcher api](/uwp/api/Windows.System.Launcher)支持应用程序启动。
 
 启动其他应用程序时需要考虑以下事项：
 
@@ -157,24 +157,24 @@ HoloLens 支持通过Windows.System 启动应用程序 [ 。启动器 Api](/uwp/
 
 * 当执行模式启动（例如通过 [LaunchUriForResultsAsync](/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriForResultsAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_Windows_Foundation_Collections_ValueSet_)）时，将在窗口顶部放置模式应用。
 
-* Windows Mixed Reality 无法在排他视图之上覆盖应用程序。 为了显示已启动的应用程序，Windows 会使用户回到世界以显示应用程序。
+* Windows Mixed Reality 无法在排他视图之上覆盖应用程序。 若要显示已启动的应用程序，Windows 使用户回到世界以显示应用程序。
 
 ### <a name="file-pickers"></a>文件选取器
 
-HoloLens 同时支持 [FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 和 [FileSavePicker](/uwp/api/Windows.Storage.Pickers.FileSavePicker) 约定。 但是，没有预安装的应用可满足文件选取器协定。 例如，可以从 Microsoft Store 中安装这些应用-OneDrive。
+HoloLens 支持[FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker)和[FileSavePicker](/uwp/api/Windows.Storage.Pickers.FileSavePicker)约定。 但是，没有预安装的应用可满足文件选取器协定。 例如，可以从 Microsoft Store 安装这些应用 OneDrive。
 
 如果安装了多个文件选取器应用，则不会看到任何消除歧义 UI，因此无法选择要启动的应用。 相反，将选择第一个安装的文件选取器。 保存文件时，会生成包含时间戳的文件名。 用户无法对其进行更改。
 
 默认情况下，本地支持以下扩展插件：
 
-|  应用  |  扩展 | 
+|  应用  |  Extensions | 
 |----------|----------|
 |  照片  |  bmp、gif、jpg、png、avi、mov、.wmv、wmv | 
 |  Microsoft Edge  |  htm，html，pdf，svg，xml | 
 
 ### <a name="app-contracts-and-windows-mixed-reality-extensions"></a>应用协定和 Windows Mixed Reality 扩展
 
-应用协定和扩展点允许注册应用，以利用更深入的操作系统功能，例如处理文件扩展名或使用后台任务。 此列表列出了支持的和不支持的合同以及在 HoloLens 上的扩展点。
+应用协定和扩展点允许注册应用，以利用更深入的操作系统功能，例如处理文件扩展名或使用后台任务。 这是 HoloLens 上支持的和不支持的约定和扩展点的列表。
 
 |  协定或扩展  |  是否支持？ | 
 |----------|----------|
@@ -200,61 +200,61 @@ HoloLens 同时支持 [FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpen
 | [URI 激活 (扩展) ](/previous-versions/windows/apps/hh464906(v=win.10)#protocol_activation) | 支持 | 
 | [受限启动](/previous-versions/windows/apps/hh464906(v=win.10)#restricted_launch) | 不支持 | 
 | [搜索协定](/previous-versions/windows/apps/hh464906(v=win.10)#search_contract) | 不支持 | 
-| [设置约定](/previous-versions/windows/apps/hh464906(v=win.10)#settings_contract) | 不支持 | 
+| [设置合同](/previous-versions/windows/apps/hh464906(v=win.10)#settings_contract) | 不支持 | 
 | [共享协定](/previous-versions/windows/apps/hh464906(v=win.10)#share_contract) | 不支持 | 
 | [SSL/证书 (扩展) ](/previous-versions/windows/apps/hh464906(v=win.10)#ssl_certificates) | 支持 | 
 | [Web 帐户提供程序](/previous-versions/windows/apps/hh464906(v=win.10)#web_account_provider) | 支持 | 
 
 ## <a name="app-file-storage"></a>应用文件存储
 
-所有存储都通过 [Windows. 存储命名空间](/uwp/api/Windows.Storage)。 HoloLens 不支持应用存储同步/漫游。 有关详细信息，请查看以下文档：
+所有存储都通过[Windows.存储 命名空间 。](/uwp/api/Windows.Storage) HoloLens不支持应用存储同步/漫游。 有关详细信息，请查看以下文档：
 
 * [文件、文件夹和库](/windows/uwp/files/index)
 * [存储和检索设置以及其他应用数据](/windows/uwp/design/app-settings/store-and-retrieve-app-data)
 
 ### <a name="known-folders"></a>已知文件夹
 
-有关 UWP 应用的完整详细信息，请参阅 [knownfolders.h](/uwp/api/Windows.Storage.KnownFolders) 。
+有关 UWP 应用的完整详细信息，请参阅[KnownFolders。](/uwp/api/Windows.Storage.KnownFolders)
 
 <table>
 <tr>
-<th> properties</th><th> 在 HoloLens 上受支持</th><th> 沉浸式耳机支持</th><th> 说明</th>
+<th> 属性</th><th> 支持HoloLens</th><th> 在沉浸式头戴显示设备上受支持</th><th> 说明</th>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_AppCaptures">AppCaptures</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取应用捕获文件夹。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_AppCaptures">AppCaptures</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取"应用捕获"文件夹。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_CameraRoll">CameraRoll</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取照相机滚动文件夹。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_CameraRoll">CameraRoll</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取 Camera Roll 文件夹。</td>
 </tr><tr>
 <td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_DocumentsLibrary">DocumentsLibrary</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取文档库。 文档库不用于常规用途。</td>
 </tr><tr>
 <td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_MusicLibrary">MusicLibrary</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取音乐库。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_Objects3D">Objects3D</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取对象的三维文件夹。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_Objects3D">Objects3D</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取 Objects 3D 文件夹。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_PicturesLibrary">PicturesLibrary</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取图片库。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_PicturesLibrary">PicturesLibrary</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取 Pictures 库。</td>
 </tr><tr>
 <td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_Playlists">播放列表</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取播放列表文件夹。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_SavedPictures">SavedPictures</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取已保存的图片文件夹。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_SavedPictures">SavedPictures</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取"保存的图片"文件夹。</td>
 </tr><tr>
 <td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_VideosLibrary">VideosLibrary</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>获取视频库。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_HomeGroup">家庭组</a></td><td></td><td style="text-align: center;">✔️</td><td>获取家庭组文件夹。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_HomeGroup">家庭组</a></td><td></td><td style="text-align: center;">✔️</td><td>获取 HomeGroup 文件夹。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_MediaServerDevices">MediaServerDevices</a></td><td></td><td style="text-align: center;">✔️</td><td>获取媒体服务器的文件夹， (数字生活网络联盟 (DLNA) # A3 设备。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_MediaServerDevices">MediaServerDevices</a></td><td></td><td style="text-align: center;">✔️</td><td>获取 DLNA 设备 (数字 (网络联盟) ) 文件夹。</td>
 </tr><tr>
 <td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_RecordedCalls">RecordedCalls</a></td><td></td><td style="text-align: center;">✔️</td><td>获取记录的调用文件夹。</td>
 </tr><tr>
-<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_RemovableDevices">RemovableDevices</a></td><td></td><td style="text-align: center;">✔️</td><td>获取 "可移动设备" 文件夹。</td>
+<td><a href="/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_RemovableDevices">RemovableDevices</a></td><td></td><td style="text-align: center;">✔️</td><td>获取可移动设备文件夹。</td>
 </tr>
 </table>
 
 ## <a name="app-package"></a>应用包
 
-对于 Windows 10，您不再以操作系统为目标，而是将您的 [应用程序定位到一个或多个设备系列](/windows/uwp/get-started/universal-application-platform-guide#device-families)。 设备系列可标识在其中的设备上所需的 API、系统特性和行为。 它还决定了可通过 [Microsoft Store](../distribute/submitting-an-app-to-the-microsoft-store.md#specifying-target-device-families)安装应用的设备集。
+使用 Windows 10，你不再以操作系统为目标，而是将应用面向[一个或多个设备系列](/windows/uwp/get-started/universal-application-platform-guide#device-families)。 设备系列可标识在其中的设备上所需的 API、系统特性和行为。 它还确定应用可以在其上安装的设备集[，Microsoft Store。](../distribute/submitting-an-app-to-the-microsoft-store.md#specifying-target-device-families)
 
-* 若要以台式机耳机和 HoloLens 为目标，请将应用定位到 **Windows。通用** 设备系列。
-* 若要仅面向台式机耳机，请将应用定向到 **Windows desktop** 设备系列。
-* 若要仅面向 HoloLens，请将应用定位到 **Windows 全息** 设备系列。
+* 若要同时面向桌面头戴显示设备HoloLens，请将应用定向到 **Windows。通用** 设备系列。
+* 若要仅面向桌面头戴显示设备，请以应用为目标 **，Windows。桌面** 设备系列。
+* 若要仅HoloLens，请以应用为目标 **Windows。全息** 设备系列。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: e3c30429109de367993357701092154741ca571b
-ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
+ms.openlocfilehash: 7d875b1e4aa31c7131f8154b1d4a0d2027dbd022791d8daa06169aa0fcb51b55
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111403378"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115228772"
 ---
 # <a name="get-started-with-mixed-reality"></a>混合现实入门
 

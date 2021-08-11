@@ -1,52 +1,52 @@
 ---
-title: '编写全息远程处理远程应用 (WMR) '
-description: 了解如何使用 HolographicSpace 将远程计算机上呈现的远程内容流式传输到 HoloLens 2，并将其与全息远程应用进行流式处理。
+title: '将全息远程处理远程应用 (WMR) '
+description: 了解如何流式传输远程计算机上呈现的远程内容，HoloLens 2 HolographicSpace 使用全息远程处理应用。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
-keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，NuGet
-ms.openlocfilehash: 6884c2679b155c36a21bcf89352524e4957a9f20
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+keywords: HoloLens、远程处理、全息远程处理、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备NuGet
+ms.openlocfilehash: 0d8f7149533de7f3f095761b13feeb91c319cda711c99b9101a13300a591fc2c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810085"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115219211"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-holographicspace-api"></a>使用 HolographicSpace API 编写全息远程处理远程应用
 
 >[!IMPORTANT]
->本文档介绍了如何使用 [HOLOGRAPHICSPACE API](../native/getting-a-holographicspace.md)创建用于 HoloLens 2 的远程应用程序。 **HoloLens (第一代)** 的远程应用程序必须使用 NuGet **包版本1.x。** 这意味着，为 HoloLens 2 编写的远程应用程序与 HoloLens 1 不兼容，反之亦然。 可在 [此处](add-holographic-remoting.md)找到 HoloLens 1 的文档。
+>本文档介绍如何使用[HolographicSpace API](../native/getting-a-holographicspace.md)为 HoloLens 2远程应用程序。 第一代 **HoloLens (远程**) 必须使用NuGet **1.x.x 版**。 这意味着，为 HoloLens 2 编写的远程应用程序与 HoloLens 1 不兼容，反之亦然。 有关 HoloLens 1 的文档，可[在此处找到](add-holographic-remoting.md)。
 
-全息远程处理应用可将远程呈现的内容流式传输到 HoloLens 2 和 Windows Mixed Reality 沉浸式头。 你还可以访问更多系统资源，并将远程 [沉浸式视图](../../design/app-views.md) 集成到现有的台式计算机软件中。 远程应用从 HoloLens 2 接收输入数据流，在虚拟沉浸式视图中呈现内容，并将内容帧流式传输回 HoloLens 2。 使用标准 Wi-fi 建立连接。 全息远程处理通过 NuGet 数据包添加到桌面或 UWP 应用。 需要其他代码来处理连接并在沉浸式视图中呈现。 典型的远程处理连接的延迟最低为50毫秒。 播放机应用可以实时报告滞后时间。
+全息远程处理应用可以将远程渲染的内容流式HoloLens 2 Windows Mixed Reality沉浸式头戴显示设备。 还可以访问更多系统资源，并将远程 [沉浸式视图集成到](../../design/app-views.md) 现有的桌面电脑软件中。 远程应用从 HoloLens 2 接收输入数据流，在虚拟沉浸式视图中呈现内容，将内容帧流式传输回HoloLens 2。 使用标准 Wi-Fi 建立连接。 全息远程处理通过数据包添加到桌面或 UWP NuGet应用。 需要其他代码来处理连接，并呈现在沉浸式视图中。 典型的远程处理连接延迟最低为 50 毫秒。 播放器应用可以实时报告延迟。
 
-此页面上的所有代码和工作项目都可以在 " [全息远程处理示例 github 存储库](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)" 中找到。
+可在全息远程处理示例 [github](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)存储库 找到此页上的所有代码和工作项目。
 
 ## <a name="prerequisites"></a>先决条件
 
-一个很好的起点是基于 DirectX 的基于 DirectX 的桌面或 UWP 应用，以 [HOLOGRAPHICSPACE API](../native/getting-a-holographicspace.md)为目标。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 [C + + 全息版项目模板](../native/creating-a-holographic-directx-project.md)是一个很好的起点。
+一个很好的起点是基于 DirectX 的桌面或 UWP 应用，它面向 [HolographicSpace API](../native/getting-a-holographicspace.md)。 有关详细信息，请参阅 [DirectX 开发概述](../native/directx-development-overview.md)。 [C++ 全息项目模板](../native/creating-a-holographic-directx-project.md)是一个很好的起点。
 
 >[!IMPORTANT]
->使用全息远程处理的任何应用都应该编写为使用 [多线程单元](/windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](/windows/win32/com/single-threaded-apartments) ，但会导致在播放过程中出现欠最佳的性能，并且可能会断断续续。 使用 c + +/WinRT [WinRT：： init_apartment](/windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
+>任何使用全息远程处理的应用都应创作为使用多 [线程单元](/windows/win32/com/multithreaded-apartments)。 支持使用 [单线程单元](/windows/win32/com/single-threaded-apartments) ，但会导致性能降低，并且可能在播放期间造成异常。 使用 C++/WinRT [winrt：：init_apartment](/windows/uwp/cpp-and-winrt-apis/get-started) 多线程单元是默认值。
 
 
 
-## <a name="get-the-holographic-remoting-nuget-package"></a>获取全息远程处理 NuGet 包
+## <a name="get-the-holographic-remoting-nuget-package"></a>获取全息远程处理NuGet包
 
-将 NuGet 包添加到 Visual Studio 中的项目时需要执行以下步骤。
+若要将包添加到 NuGet 中的项目，需要执行Visual Studio。
 1. 在 Visual Studio 中打开项目。
-2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
-3. 在出现的面板中，选择 " **浏览** "，然后搜索 "全息远程处理"。
-4. 选择 " **Microsoft**"，并选择 "安装"，并选择 "**安装** **"。**
-5. 如果显示 " **预览** " 对话框，请选择 **"确定"**。
-6. 弹出 "许可协议" 对话框后，选择 " **我接受** "。
+2. 右键单击项目节点，然后选择"管理NuGet **包..."**
+3. 在出现的面板中，选择" **浏览"，** 然后搜索"全息远程处理"。
+4. 选择 **"Microsoft.Holographic.Remoting"，** 确保选择最新的 **2.x.x** 版本，然后选择"安装 **"。**
+5. 如果显示 **"预览"** 对话框，请选择"确定 **"。**
+6. 在 **弹出许可协议** 对话框时，选择"我接受"。
 
 >[!NOTE]
->NuGet 包的版本1.x 仍适用于想要面向 HoloLens **1 的开发** 人员。 有关详细信息，请参阅 [将全息远程处理 (HoloLens (第一代) # B3 ](add-holographic-remoting.md)。
+>版本 **1.x.x** 的 NuGet 仍适用于想要面向 1 HoloLens的开发人员。 有关详细信息，请参阅[添加全息远程处理 (HoloLens (第一代) ) 。 ](add-holographic-remoting.md)
 
 ## <a name="create-the-remote-context"></a>创建远程上下文
 
-第一步，应用程序应创建远程上下文。
+作为第一步，应用程序应创建远程上下文。
 
 ```cpp
 // class declaration
@@ -71,23 +71,23 @@ CreateRemoteContext(m_remoteContext, 20000, false, PreferredVideoCodec::Default)
 ```
 
 >[!WARNING]
->全息远程处理的工作原理是通过使用远程处理特定运行时替换作为 Windows 一部分的 Windows Mixed Reality 运行时。 这是在创建远程上下文的过程中完成的。 因此，在创建远程上下文之前对任何 Windows Mixed Reality API 进行的任何调用都可能导致意外的行为。 推荐的方法是尽早创建远程上下文，然后再与任何混合现实 API 交互。 永远不要混合在使用对象创建或检索到 CreateRemoteContext 之前，通过任何 Windows Mixed Reality API 创建或检索的对象。
+>全息远程处理的工作原理是Windows Mixed Reality远程处理特定运行时Windows的一部分。 此操作是在创建远程上下文期间完成。 因此，在创建远程上下文之前Windows Mixed Reality API 的任何调用都可能会导致意外行为。 建议的方法是在与任何混合现实 API 交互之前尽早创建远程上下文。 在调用 CreateRemoteContext 之前，切勿将通过任何 Windows Mixed Reality API 创建或检索的对象与之后创建或检索的对象混合使用。
 
-接下来，需要创建全息空间。 不需要指定 CoreWindow。 没有 CoreWindow 的桌面应用程序可以只传递一个 ```nullptr``` 。
+接下来需要创建全息空间。 不需要指定 CoreWindow。 没有 CoreWindow 的桌面应用只需传递 ```nullptr``` 。
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(nullptr);
 ```
 
-## <a name="connect-to-the-device"></a>连接到设备
+## <a name="connect-to-the-device"></a>连接设备
 
-当远程应用已准备好呈现内容时，可以建立与播放机设备的连接。
+当远程应用准备好呈现内容时，可以建立与播放器设备的连接。
 
-可以通过以下两种方式之一来完成连接。
-1) 远程应用连接到设备上运行的播放机。
-2) 设备上运行的播放机连接到远程应用。
+可以通过两种方式之一完成连接。
+1) 远程应用连接到设备上运行的播放器。
+2) 设备上运行的播放器连接到远程应用。
 
-若要建立从远程应用到播放机设备的连接，请 ```Connect``` 在远程上下文上调用方法，指定主机名和端口。 全息远程处理播放器使用的端口为 **8265**。
+若要建立从远程应用到播放器设备的连接，请对远程上下文调用 方法，指定 ```Connect``` 主机名和端口。 全息远程处理播放器使用的端口为 **8265。**
 
 ```cpp
 try
@@ -101,12 +101,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->与任何 c + +/WinRT API 一样， ```Connect``` 都可能引发需要处理的 WinRT：： hresult_error。
+>与任何 C++/WinRT API 一样，可能会引发 ```Connect``` winrt：：hresult_error需要处理。
 
 >[!TIP]
->若要避免使用 [c + +/WinRT](/windows/uwp/cpp-and-winrt-apis/) 语言投影， ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` 可以包含位于全息远程处理 NuGet 包内的文件。 它包含基础 COM 接口的声明。 不过，建议使用 c + +/WinRT。
+>若要避免使用[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)语言投影，可以包括全息远程处理包 ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` NuGet文件。 它包含基础 COM 接口的声明。 不过，建议使用 C++/WinRT。
 
-可以通过调用方法来侦听远程应用上的传入连接 ```Listen``` 。 在此调用过程中，可以同时指定握手端口和传输端口。 握手端口用于初始握手。 然后通过传输端口发送数据。 默认情况下，使用 **8265** 和 **8266** 。
+可以通过调用 方法在远程应用上侦听传入 ```Listen``` 连接。 在此调用过程中，可以同时指定握手端口和传输端口。 握手端口用于初始握手。 然后，通过传输端口发送数据。 默认使用 **8265** **和 8266。**
 
 ```cpp
 try
@@ -120,12 +120,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl```NuGet 包内部包含由全息远程处理公开的 API 的详细文档。
+>应用程序 ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` 包NuGet包含全息远程处理公开的 API 的详细文档。
 
-## <a name="handling-remoting-specific-events"></a>处理特定于远程处理的事件
+## <a name="handling-remoting-specific-events"></a>处理远程处理特定事件
 
-远程上下文公开三个事件，这对于监视连接状态很重要。
-1) OnConnected：成功建立到设备的连接后触发。
+远程上下文公开三个事件，这些事件对于监视连接状态非常重要。
+1) OnConnected：成功建立与设备的连接时触发。
 ```cpp
 winrt::weak_ref<winrt::Microsoft::Holographic::AppRemoting::IRemoteContext> remoteContextWeakRef = m_remoteContext;
 
@@ -162,7 +162,7 @@ m_onDisconnectedEventRevoker =
         }
     });
 ```
-3) OnListening：侦听传入连接时启动。
+3) OnListening：开始侦听传入连接时。
 ```cpp
 m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [this, remoteContextWeakRef]() {
     if (auto remoteContext = remoteContextWeakRef.get())
@@ -172,16 +172,16 @@ m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [thi
 });
 ```
 
-此外，还可以使用远程上下文中的属性查询连接状态 ```ConnectionState``` 。
+此外，可以使用远程上下文中的 属性 ```ConnectionState``` 查询连接状态。
 ```cpp
 auto connectionState = m_remoteContext.ConnectionState();
 ```
 
 ## <a name="handling-speech-events"></a>处理语音事件
 
-使用远程语音界面，可以向 HoloLens 2 注册语音触发器，并使其远程处理到远程应用程序。
+使用远程语音接口，可以注册语音触发器HoloLens 2远程应用程序。
 
-此附加成员是跟踪远程语音状态所必需的。
+需要此附加成员来跟踪远程语音的状态。
 
 ```cpp
 winrt::Microsoft::Holographic::AppRemoting::IRemoteSpeech::OnRecognizedSpeech_revoker m_onRecognizedSpeechRevoker;
@@ -197,7 +197,7 @@ if (auto remoteSpeech = m_remoteContext.GetRemoteSpeech())
 }
 ```
 
-使用异步帮助器方法，你可以初始化远程语音。 这应异步完成，因为初始化可能需要相当长的时间。 [带有 c + +/WinRT 的并发和异步操作](/windows/uwp/cpp-and-winrt-apis/concurrency) 介绍了如何通过 c + + 编写异步函数/WinRT。
+然后，可以使用异步帮助程序方法初始化远程语音。 这应该异步完成，因为初始化可能需要相当长的时间。 [使用 C++/WinRT 的并发和](/windows/uwp/cpp-and-winrt-apis/concurrency) 异步操作介绍了如何使用 C++/WinRT 创作异步函数。
 
 ```cpp
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile> LoadGrammarFileAsync()
@@ -233,9 +233,9 @@ winrt::fire_and_forget InitializeSpeechAsync(
 }
 ```
 
-可以通过两种方法来指定要识别的短语。
-1) 语音语法 xml 文件中的规范。 有关详细信息，请参阅 [如何创建基本 XML 语法](/previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) 。
-2) 通过将字典向量传入到来指定 ```ApplyParameters``` 。
+有两种方法可以指定要识别的短语。
+1) 语音语法 xml 文件内的规范。 有关详细信息 [，请参阅如何创建基本 XML](/previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) 语法。
+2) 通过将它们传递到 字典向量中来指定 ```ApplyParameters``` 。
 
 在 OnRecognizedSpeech 回调中，可以处理语音事件：
 
@@ -264,9 +264,9 @@ void SampleRemoteMain::OnRecognizedSpeech(const winrt::hstring& recognizedText)
 }
 ```
 
-## <a name="preview-streamed-content-locally"></a>在本地预览流式处理内容
+## <a name="preview-streamed-content-locally"></a>在本地预览流式处理的内容
 
-若要在发送到设备的远程应用中显示相同的内容， ```OnSendFrame``` 可以使用远程上下文的事件。 ```OnSendFrame```每次全息远程处理库将当前帧发送到远程设备时，都会触发事件。 这是获取内容并将其 array.blit 到桌面或 UWP 窗口的理想时机。
+若要在发送到设备的远程应用中显示相同的内容，可以使用远程 ```OnSendFrame``` 上下文的事件。 每次全息远程处理库将当前帧发送到远程设备时，都会 ```OnSendFrame``` 触发该事件。 这是将内容放入桌面或 UWP 窗口的理想时间。
 
 ```cpp
 #include <windows.graphics.directx.direct3d11.interop.h>
@@ -289,9 +289,9 @@ m_onSendFrameEventRevoker = m_remoteContext.OnSendFrame(
     });
 ```
 
-## <a name="depth-reprojection"></a>深度 Reprojection
+## <a name="depth-reprojection"></a>深度重现
 
-从版本 [2.1.0](holographic-remoting-version-history.md#v2.1.0)开始，全息远程处理支持 [深度 Reprojection](hologram-stability.md#reprojection)。 这需要将颜色缓冲区和深度缓冲区从远程应用程序流式传输到 HoloLens 2。 默认情况下，将启用深度缓冲区流式处理，并将其配置为使用一半分辨率的颜色缓冲区。 这可以按如下方式更改：
+从版本 [2.1.0](holographic-remoting-version-history.md#v2.1.0)开始，全息远程处理支持 [深度重新投影](hologram-stability.md#reprojection)。 这要求将颜色缓冲区和深度缓冲区从远程应用程序流式处理到HoloLens 2。 默认情况下，启用深度缓冲区流式处理，并配置为使用颜色缓冲区的一半分辨率。 这一点可更改，如下所示：
 
 ```cpp
 // class implementation
@@ -306,16 +306,16 @@ m_remoteContext.ConfigureDepthVideoStream(DepthBufferStreamResolution::Half_Reso
 
 ```
 
-请注意，如果不应使用默认值，则 ```ConfigureDepthVideoStream``` 必须在与 HoloLens 2 建立连接之前调用默认值。 最好的位置是创建远程上下文。 DepthBufferStreamResolution 的可能值为：
+请注意，如果不应使用默认值，则必须在建立与 HoloLens 2 ```ConfigureDepthVideoStream``` 的连接之前调用。 最佳位置是在创建远程上下文之后。 DepthBufferStreamResolution 的可能值为：
 
 * Full_Resolution
 * Half_Resolution
 * Quarter_Resolution
-* 已禁用 (使用版本 [2.1.3](holographic-remoting-version-history.md#v2.1.3) 添加，如果未使用，则不会创建其他深度视频流) 
+* 已禁用 ([版本 2.1.3，](holographic-remoting-version-history.md#v2.1.3) 如果使用，则不创建其他深度视频) 
 
-请记住，使用完全解析深度缓冲区还会影响带宽要求，并需要考虑到提供的最大带宽值 ```CreateRemoteContext``` 。
+请记住，使用全分辨率深度缓冲区也会影响带宽要求，需要在提供的最大带宽值中考虑到这一点 ```CreateRemoteContext``` 。
 
-在配置分辨率旁边，还必须通过 HolographicCameraRenderingParameters 提交深度缓冲区 [。 CommitDirect3D11DepthBuffer](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)。
+除了配置分辨率外，还必须通过 [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)提交深度缓冲区。
 
 ```cpp
 
@@ -351,7 +351,7 @@ void SampleRemoteMain::Render(HolographicFrame holographicFrame)
 
 ```
 
-若要验证 reprojection 在 HoloLens 2 上是否正常工作，可以通过设备门户启用深度可视化工具。 有关详细信息，请参阅 [验证深度是否已正确设置](hologram-stability.md#verifying-depth-is-set-correctly) 。
+若要验证深度重新保护是否HoloLens 2，可以通过以下工具启用深度可视化设备门户。 有关详细信息 [，请参阅验证深度是否已正确](hologram-stability.md#verifying-depth-is-set-correctly) 设置。
 
 ## <a name="optional-custom-data-channels"></a>可选：自定义数据通道
 
