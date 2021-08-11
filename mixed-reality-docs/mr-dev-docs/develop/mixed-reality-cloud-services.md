@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, 开发, HoloLens, 云服务, Azure, 远程渲染, 空间定位点, 认知服务, 认知, unity, 机器学习, 语音翻译, 计算机视觉 Microsoft Graph
-ms.openlocfilehash: 0c123c2bca412589086799c41b183eb6f9364d0c
-ms.sourcegitcommit: ece91dbba40981720fe7e1a7c3b93e8b75ff71ba
+ms.openlocfilehash: ac4ce3d1bef426682450da69e9c8ffcd9e317e2a7853365e1af082a1913e1ecc
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102547226"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188999"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Azure 混合现实云服务概述
 
@@ -27,7 +27,7 @@ ms.locfileid: "102547226"
 
 ### <a name="azure-remote-rendering"></a>Azure 远程渲染
 
-[Azure 远程渲染](https://docs.microsoft.com/azure/remote-rendering/)（也称为 ARR）是一项服务，可用于实时渲染高度复杂的 3D 模型并将其流式传输到设备。 ARR 目前为公共预览版，可将其添加到面向 HoloLens 2 或 Windows 桌面电脑的 Unity 或 Native C++ 项目中。
+[Azure 远程渲染](/azure/remote-rendering/)（也称为 ARR）是一项服务，可用于实时渲染高度复杂的 3D 模型并将其流式传输到设备。 ARR 现已正式发布，可将其添加到面向 HoloLens 2 或 Windows 桌面电脑的 Unity 或 Native C++ 项目中。
 
 <br>
 
@@ -47,7 +47,7 @@ ARR 不会限制可在应用中使用的用户界面类型，这是一个额外�
 
 ### <a name="azure-spatial-anchors"></a>Azure 空间定位点
 
-[Azure 空间定位点](https://docs.microsoft.com/azure/spatial-anchors/)是一项跨平台服务，可用于构建空间感知的混合现实应用程序。 借助 Azure 空间定位点，你可按真实世界的规模跨多台设备映射、保存和共享全息内容。 
+[Azure 空间定位点](/azure/spatial-anchors/)（又称为 ASA）是一项跨平台服务，可用于生成空间感知的混合现实应用程序。 借助 Azure 空间定位点，你可按真实世界的规模跨多台设备映射、保存和共享全息内容。 AOA 现为公共预览版，可在应用中进行试用。
 
 Azure 空间定位点是针对混合现实中常见用例特别定制的解决方案，其中包括：
 * 导视：可以连接两个或多个空间定位点以创建用户必须与之交互的任务列表或关注点。
@@ -65,6 +65,17 @@ Azure 空间定位点是针对混合现实中常见用例特别定制的解决�
 * 用于 HoloLens 的 C++/WinRT 和 DirectX
 * Xamarin for iOS
 * Xamarin for Android
+
+### <a name="azure-object-anchors"></a>Azure Object Anchors
+
+[Azure Object Anchors](/azure/object-anchors/) (AOA) 是一项混合现实服务，它将 3D 内容与物理对象自动对齐，帮助打造丰富的沉浸式体验。 无需标记或手动对齐，即可结合相关信息理解对象。 使用 Object Anchors 构建混合现实应用程序，从而大量减少触控操作、减少对齐错误，同时改进用户体验。
+
+Azure 对象定位点专门针对常见的混合现实用例定制，这些用例包括：
+* **培训**：打造适合工作人员的混合现实培训体验，无需放置标记或花时间手动调整全息图对齐方式。
+* **任务指**：使用混合现实时，可大大简化引导员工完成一组任务的过程。
+* **资产查找**：如果物理空间中已经有某个对象的 3D 模型，则可使用 Azure Object Anchors 在物理环境中查找和跟踪该对象的实例。
+
+![Azure 对象定位点在打开的汽车引擎上的虚拟叠加](images/aoa-img-01.png)
 
 ## <a name="cognitive-services"></a>认知服务
 

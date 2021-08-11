@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 10/26/2020
 ms.topic: article
-keywords: Windows Mixed Reality，Maquette，原型设计，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
-ms.openlocfilehash: e0c0b2f204aa32245cc13aff4c64fa641313de51
-ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+keywords: Windows Mixed Reality，Maquette，原型，混合现实，虚拟现实，VR，先生，反馈，反馈中心，bug
+ms.openlocfilehash: 290b1442c3cc7fed10b315f4beeebfe2eab4a775d4909d5411c651362e24d94e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94935418"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197397"
 ---
 # <a name="maquettescript-core-language-details"></a>MaquetteScript 核心语言详细信息
 
@@ -53,5 +53,5 @@ Maquette 中使用的 JavaScript 解释器基于 [Jint](https://github.com/sebas
 
 此扩展 `.mqjs` 用于将 Maquette javascript 文件与普通 javascript 区分开来。
 
-## <a name="see-also"></a>请参阅 
+## <a name="see-also"></a>另请参阅 
 <!-- TODO(Stefan): Add any additional JS related links that may help with troubleshooting or issues? -->

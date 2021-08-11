@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 对象交互, 边界控件
 ms.localizationpriority: high
-ms.openlocfilehash: cbf2bbf78a34cfdd4856b7b8d192e4ac7c2f0154
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+ms.openlocfilehash: d620e0150510bd7d882036786f90db8f74229e6d139a313dc6f026dc10be8047
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110268"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115191363"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7.与 3D 对象交互
 

@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: 混合现实, 发现, 分发, 索引, 登陆页, 设计, 开发, 教程, 示例应用, 基础知识, 案例研究, 资源, HoloLens 操作指南, 开源项目, 核心概念, 交互, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包
-ms.openlocfilehash: c4d9f9b4c4be1c5012ac8dc84fb55e6c5fa9eaee
-ms.sourcegitcommit: 85ba3af69ec2a9056f759bab7b66f79f09a016b2
+ms.openlocfilehash: d106b295b72a3087461ccbe8818a7cc23c311f46e3ae20a748c8ce22ec4f89b9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111454760"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213302"
 ---
 # <a name="start-designing-and-prototyping"></a>开始设计和原型制作
 

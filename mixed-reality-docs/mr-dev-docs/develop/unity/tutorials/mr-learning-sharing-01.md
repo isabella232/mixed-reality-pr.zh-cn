@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: dc8f495bc620eca3539b48f38fa15d089c0e28f4
-ms.sourcegitcommit: cf8df1720ddb8236207ab581bc149edcc76e6199
+ms.openlocfilehash: 3db488cc31d6ef7746aae67b3a84c42dc91985b586e907d2172346fe0952876f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114702462"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197691"
 ---
 # <a name="1-introduction-to-the-multi-user-capabilities-tutorials"></a>1.多用户功能教程简介
 

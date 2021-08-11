@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, 会话, 反馈元素
 ms.localizationpriority: high
-ms.openlocfilehash: f5f92d8b19da6a449b8630d7f87e0719e438b4ab
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 65a814019909ecacffdd454171075c68497dae1b2123804e07ced1d7e100fdd8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590669"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115215656"
 ---
 # <a name="4-displaying-feedback-from-azure-spatial-anchors"></a>4.显示来自 Azure 空间定位点的反馈
 

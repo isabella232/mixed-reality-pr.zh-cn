@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 语音命令, 语音输入
 ms.localizationpriority: high
-ms.openlocfilehash: 9422c16781af33fa3d68d7f6046e3a86c4b36b44
-ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
+ms.openlocfilehash: 448dafbbfdea7ebec26cdafe6c638c37333bcf01399a8272d5637730469ab579
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111403368"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115192243"
 ---
 # <a name="9-using-speech-commands"></a>9.使用语音命令
 

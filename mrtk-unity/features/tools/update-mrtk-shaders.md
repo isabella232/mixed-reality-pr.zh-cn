@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 1f943d8ac7050b8607ae3a85af0a377a7460eb3b
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: 9ed8a1e439b2bf911d8144a90259d99bf38b12e0404d9ad3365152bed633042c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647103"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197059"
 ---
 # <a name="updating-shaders"></a>更新着色器
 
@@ -23,10 +23,10 @@ ms.locfileid: "110647103"
 > [!IMPORTANT]
 > 覆盖着色器文件时，任何自定义修改都将丢失。 在升级之前，请务必备份任何已修改的着色器文件。
 >
-> 如果项目已配置为使用通用呈现管道 (URP) - 以前是轻型呈现管道 (LWRP) ，请重新运行混合现实工具包实用工具升级轻型呈现管道 >  >  >
->  **的 MRTK** 标准着色器。
+> 如果项目已配置为使用通用呈现管道 (URP) - 以前是轻型呈现管道 (LWRP) ，请重新运行混合现实Toolkit 实用工具升级轻型呈现管道的 >  >  >
+>  **MRTK** 标准着色器。
 
-还可以在 Unity 编辑器的菜单栏上随时使用混合现实工具包实用工具检查着色器更新检查着色器  >    >    >  更新。
+还可以在 Unity 编辑器的菜单栏上随时使用混合现实和实用工具检查着色器更新Toolkit检查着色器  >    >    >  更新。
 
 ![检查着色器更新](../images/tools/ShaderUpdateMenu.png)
 

@@ -7,12 +7,12 @@ ms.date: 05/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 眼动跟踪, 混合现实, 输入, 眼睛凝视, 视线定位, HoloLens 2, 视线选择, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, HoloLens, MRTK, 混合现实工具包, 凝视
-ms.openlocfilehash: 1dff0ded282678a695070feca2b578004610d2c7
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+ms.openlocfilehash: 12ffc24c39a9f8be329972516d42730dc98899d3ebba8359e9fea6ebbf6d02c2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196462"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197821"
 ---
 # <a name="eye-gaze-and-commit"></a>眼睛凝视和提交
 

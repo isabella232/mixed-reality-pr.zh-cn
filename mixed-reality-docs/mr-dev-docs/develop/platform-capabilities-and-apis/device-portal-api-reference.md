@@ -1,21 +1,21 @@
 ---
 title: 设备门户 API 参考
-description: 随时了解用于 HoloLens 开发的 Windows 设备门户 API。
+description: 随时了解 Windows 设备门户 API HoloLens 开发。
 author: hamalawi
 ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
-keywords: HoloLens，Windows 设备门户，API，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: cdbe9635fc51a0d19c978b72fdc8d5db6b8e8e01
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: HoloLens，Windows 设备门户，API，混合现实耳机，Windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 6b41c569917150c303da933a75d354f574fb579ba676dac281e9cde2bfc59818
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581250"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207835"
 ---
 # <a name="device-portal-api-reference"></a>设备门户 API 参考
 
-[Windows 设备门户](using-the-windows-device-portal.md)中的所有内容都是在 REST API 的基础之上构建的，你可以使用它以编程方式访问数据和控制设备。
+[Windows 设备门户](using-the-windows-device-portal.md)中的所有内容都是基于 REST API 的基础构建的，你可以使用它以编程方式访问数据和控制设备。
 
 ## <a name="app-deloyment"></a>应用常见问题
 
@@ -87,7 +87,7 @@ ms.locfileid: "98581250"
 * 文件名：转储文件名
 
 返回数据
-* 转储文件。 与 WinDbg 或 Visual Studio 一起检查
+* 转储文件。 用 WinDbg 或 Visual Studio 进行检查
 
 **/api/debug/dump/usermode/dumps (获取)**
 
@@ -116,7 +116,7 @@ ms.locfileid: "98581250"
 
 **/api/holographic/os/etw/customproviders (获取)**
 
-返回未向系统注册的 HoloLens 特定 ETW 提供程序的列表
+返回未向系统注册 HoloLens 特定 ETW 提供程序的列表
 
 **/api/holographic/os/services (获取)**
 
@@ -177,7 +177,7 @@ ms.locfileid: "98581250"
 
 获取当前用户的持久定位点的列表。 
 
-### <a name="downloaduploaddelete-files"></a>下载/上传/删除文件
+### <a name="downloaduploaddelete-files"></a>下载/Upload/delete 文件
 **/api/holographic/mapmanager/download (获取)**
 
 下载映射、定位点或空间重构数据库文件。 文件之前必须已上载或导出。
@@ -192,7 +192,7 @@ $.post("/api/holographic/mapmanager/download?FileName=" + spaceID)
 
 **/api/holographic/mapmanager/upload (POST)**
 
-上载映射、定位点或空间重构数据库文件。 文件上传后，以后可以导入该文件以供系统使用。
+上传地图、定位点或空间重建数据库文件。 上传文件后，可以将其导入系统使用。
 
 参数
 * file：要上传的文件的名称。
@@ -215,7 +215,7 @@ $.ajax({
 
 **/api/holographic/mapmanager/delete (POST)**
 
-删除映射、定位点或空间重构数据库文件。 文件之前必须已上载或导出。
+删除地图、定位点或空间重建数据库文件。 文件必须以前已上传或导出。
 
 参数
 * FileName：要删除的文件的名称。
@@ -245,14 +245,14 @@ $.post("/api/holographic/mapmanager/exportanchors")
 
 **/api/holographic/mapmanager/exportmapandanchors (POST)**
 
-导出系统当前使用的映射和定位点。 导出后，可以下载。 示例： 
+导出系统当前使用的地图和定位点。 导出后，可以下载它们。 示例： 
 ```
 $.post("/api/holographic/mapmanager/exportmapandanchors")
 ```
 
 **/api/holographic/mapmanager/exportmapandspatialmappingdb (POST)**
 
-导出系统当前使用的映射和空间重建数据库。 导出后，可以下载它们。 
+导出系统当前使用的地图和空间重建数据库。 导出后，可以下载它们。 
 
 示例： 
 ```
@@ -263,7 +263,7 @@ $.post("/api/holographic/mapmanager/exportmapandspatialmappingdb")
 
 **/api/holographic/mapmanager/import (POST)**
 
-向系统指示当前使用应使用的映射。 可对已导出或上载的文件调用。
+向系统指示当前应该使用哪个映射。 可以在已导出或上传的文件上调用 。
 
 参数
 * FileName：要使用的映射的名称。 
@@ -275,7 +275,7 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 
 **/api/holographic/mapmanager/importanchors (POST)**
 
-向系统指示当前使用的定位点。 可对已导出或上载的文件调用。
+向系统指示当前应该使用哪些定位点。 可以在已导出或上传的文件上调用 。
 
 参数
 * FileName：要使用的定位点的名称。 
@@ -287,10 +287,10 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 
 **/api/holographic/mapmanager/importspatialmappingdb (POST)**
 
-向系统指示当前使用的空间重建数据库。 可对已导出或上载的文件调用。
+向系统指示当前应该使用的空间重建数据库。 可以在已导出或上传的文件上调用 。
 
 参数
-* FileName：要使用的空间映射 db 的名称。 
+* FileName：要使用的空间映射数据库的名称。 
 
 示例： 
 ```
@@ -301,142 +301,142 @@ $.post("/api/holographic/mapmanager/import?FileName=" + spaceID, function() { al
 
 **/api/holographic/mapmanager/resetmapandanchorsandsrdb (POST)**
 
-重置系统地图、锚定和空间重建数据库。
+重置系统地图、定位点和空间重建数据库。
 
 示例： 
 ```
 $.post("/api/holographic/mapmanager/resetmapandanchorsandsrdb")
 ```
 
-**/api/holographic/mapmanager/status (获取)**
+**/api/holographic/mapmanager/status (GET)**
 
-获取系统的状态，包括上次导入的映射、定位点和空间重构数据库文件。 
+获取系统的状态，包括上次导入的地图、定位点和空间重建数据库文件。 
 
 
 ## <a name="mixed-reality-capture"></a>混合现实捕获
 
-**/api/holographic/mrc/file (获取)**
+**/api/holographic/mrc/file (GET)**
 
-从设备下载混合现实文件。 使用 op = stream query 参数进行流式处理。
-
-参数
-* filename：要获取的视频文件的名称、hex64 编码
-* op： stream
-
-**/api/holographic/mrc/file (删除)**
-
-从设备中删除混合现实记录。
+从设备下载混合现实文件。 使用 op=stream 查询参数进行流式处理。
 
 参数
-* filename：要删除的文件的名称，hex64 已编码
+* filename：要获取的视频文件的名称，十六进制 64 编码
+* op ： stream
 
-**/api/holographic/mrc/files (获取)**
+**/api/holographic/mrc/file (DELETE)**
 
-返回存储在设备上的混合现实文件的列表
+从设备中删除混合现实录制。
+
+参数
+* filename：要删除的文件的名称、十六进制 64 编码
+
+**/api/holographic/mrc/files (GET)**
+
+返回设备上存储的混合现实文件列表
 
 **/api/holographic/mrc/photo (POST)**
 
-采用混合现实照片，并在设备上创建文件
+拍摄混合现实照片，在设备上创建文件
 
 参数
-* holo：捕获全息影像： true 或 false (默认为 false) 
-* pv：捕获 PV 摄像机： true 或 false (默认为 false) 
-* RenderFromCamera： (HoloLens 2 仅) 照片/视频相机的透视中呈现： true 或 false (默认为 true) 
+* holo：捕获全息影像：true 或 false (默认值为 false) 
+* pv ：捕获 PV 相机：true 或 false (默认值为 false) 
+* RenderFromCamera： (HoloLens 2) /视频相机的角度进行渲染：true 或 false (默认值为 true) 
 
-**/api/holographic/mrc/settings (获取)**
+**/api/holographic/mrc/settings (GET)**
 
 获取默认的混合现实捕获设置
 
 **/api/holographic/mrc/settings (POST)**
 
-设置默认的混合现实捕获设置。  其中一些设置适用于系统的 MRC 照片和视频捕获。
+设置默认的混合现实捕获设置。  其中一些设置应用于系统的 MRC 照片和视频捕获。
 
-**/api/holographic/mrc/status (获取)**
+**/api/holographic/mrc/status (GET)**
 
-获取 Windows 设备门户内混合现实捕获的状态。
+获取混合现实捕获在 Windows 设备门户。
 
-**_响应_* _
+***响应***
 
-响应包含一个 JSON 属性，用于指示 Windows 设备门户是否正在录制视频。
+响应包含一个 JSON 属性，Windows 设备门户是否正在录制视频。
 
 ``` javascript
 {"IsRecording" : boolean}
 ```
 
-_ */api/holographic/mrc/thumbnail (获取)**
+**/api/holographic/mrc/thumbnail (GET)**
 
-获取指定文件的缩略图图像。
+获取指定文件的缩略图。
 
 参数
-* 文件名：要为其请求缩略图的文件的名称，hex64 已编码
+* filename：要请求缩略图的文件的名称（十六进制 64 编码）
 
 **/api/holographic/mrc/video/control/start (POST)**
 
-启动混合现实记录
+启动混合现实录制
 
 参数
-* holo：捕获全息影像： true 或 false (默认为 false) 
-* pv：捕获 PV 摄像机： true 或 false (默认为 false) 
-* mic：捕获麦克风： true 或 false (默认为 false) 
-* 环回：捕获应用音频： true 或 false (默认为 false) 
-* RenderFromCamera： (HoloLens 2 仅) 照片/视频相机的透视中呈现： true 或 false (默认为 true) 
-* vstab： (HoloLens 2 仅) 启用视频抖动： true 或 false (默认为 true) 
-* vstabbuffer： (HoloLens 2 仅) 视频稳定性缓冲区延迟：0到30帧 (默认为15帧) 
+* holo：捕获全息影像：true 或 false (默认值为 false) 
+* pv ：捕获 PV 相机：true 或 false (默认值为 false) 
+* 麦克风：捕获麦克风：true 或 false (默认值为 false) 
+* loopback ：捕获应用音频：true 或 false (默认值为 false) 
+* RenderFromCamera： (HoloLens 2) /视频相机的角度进行渲染：true 或 false (默认值为 true) 
+* vstab： (HoloLens 2) 视频稳定：true 或 false (默认值为 true) 
+* vst (HoloLens 2：) 视频稳定缓冲区延迟：0 到 30 帧 (默认为 15 帧) 
 
 **/api/holographic/mrc/video/control/stop (POST)**
 
-停止当前混合现实记录
+停止当前混合现实录制
 
 ## <a name="mixed-reality-streaming"></a>混合现实流式处理
 
 > [!CAUTION]
-> 由于环回隔离，无法从设备上的应用内部连接到混合现实流式处理。
+> 由于环回隔离，无法从设备的应用内部连接到混合现实流式处理。
 
-HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作方式。
+HoloLens分块下载分段 mp4，支持混合现实实时预览。
 
-混合现实流共享相同的参数集来控制捕获的内容：
-* holo：捕获全息影像： true 或 false
-* pv：捕获 PV 摄像机： true 或 false
-* mic：捕获麦克风： true 或 false
-* 环回：捕获应用音频： true 或 false
+混合现实流共享一组相同的参数来控制捕获内容：
+* holo：捕获全息影像：true 或 false
+* pv ：捕获 PV 相机：true 或 false
+* 麦克风：捕获麦克风：true 或 false
+* loopback ：捕获应用音频：true 或 false
 
-如果未指定任何内容：将捕获全息影像、照片/视频相机和应用音频<br>
-如果已指定任何参数：未指定的参数将默认为 false
+如果未指定其中任何一项：将捕获全息影像、照片/视频相机以及应用音频<br>
+如果指定了任何参数：未指定的参数将默认为 false
 
-可选参数 (仅限 HoloLens 2) 
-* RenderFromCamera：从照片/视频相机的角度呈现： true 或 false (默认为 true) 
-* vstab：启用视频抖动： true 或 false (默认为 false) 
-* vstabbuffer：视频稳定缓冲区延迟：0到30帧 (默认为15帧) 
+可选参数 (HoloLens 2参数) 
+* RenderFromCamera：从照片/视频相机的角度呈现：true 或 false (默认值为 true) 
+* vstab：启用视频稳定：true 或 false (默认值为 false) 
+* vst提示：视频稳定缓冲区延迟：0 到 30 帧 (默认为 15 帧) 
 
-**/api/holographic/stream/live.mp4 (获取)**
+**/api/holographic/stream/live.mp4 (GET)**
 
-1280x720p 30fps 5Mbit 流。
+1280x720p 30fps 5M 位流。
 
-**/api/holographic/stream/live_high.mp4 (获取)**
+**/api/holographic/stream/live_high.mp4 (GET)**
 
-1280x720p 30fps 5Mbit 流。
+1280x720p 30fps 5M 位流。
 
-**/api/holographic/stream/live_med.mp4 (获取)**
+**/api/holographic/stream/live_med.mp4 (GET)**
 
-854x480p 30fps 2.5 Mbit stream。
+854x480p 30fps 2.5M 位流。
 
-**/api/holographic/stream/live_low.mp4 (获取)**
+**/api/holographic/stream/live_low.mp4 (GET)**
 
-428x240p 15fps 0.6 Mbit stream。
+428x240p 15fps 0.6Mbit 流。
 
 ## <a name="networking"></a>网络
 
-**/api/networking/ipconfig (获取)**
+**/api/networking/ipconfig (GET)**
 
-获取当前 ip 配置
+获取当前 IP 配置
 
-## <a name="os-information"></a>操作系统信息
+## <a name="os-information"></a>OS 信息
 
-**/api/os/info (获取)**
+**/api/os/info (GET)**
 
 获取操作系统信息
 
-**/api/os/machinename (获取)**
+**/api/os/machinename (GET)**
 
 获取计算机名称
 
@@ -445,11 +445,11 @@ HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作�
 设置计算机名称
 
 参数
-* 名称：要设置为的新计算机名称，hex64 编码为
+* 名称：新计算机名称，十六进制 64 编码，设置为
 
 ## <a name="perception-simulation-control"></a>感知模拟控制
 
-**/api/holographic/simulation/control/mode (获取)**
+**/api/holographic/simulation/control/mode (GET)**
 
 获取模拟模式
 
@@ -458,105 +458,105 @@ HoloLens 支持混合现实的实时预览，通过块区下载零碎的工作�
 设置模拟模式
 
 参数
-* 模式：模拟模式：默认、模拟、远程、旧
+* mode ：模拟模式：default、simulation、remote、legacy
 
-**/api/holographic/simulation/control/stream (删除)**
+**/api/holographic/simulation/control/stream (DELETE)**
 
 删除控件流。
 
 **/api/holographic/simulation/control/stream (GET/WebSocket)**
 
-为控制流打开 web 套接字连接。
+打开控件流的 Web 套接字连接。
 
 **/api/holographic/simulation/control/stream (POST)**
 
-需要创建控制流 (优先级) 或将数据发送到创建的流 (streamId 必需的) 。 已发布的数据的类型应为 "application/八进制流"。
+创建控制流 (需要优先级) 或将数据发布到创建的流 (streamId) 。 发布的数据应为"application/octet-stream"类型。
 
 **/api/holographic/simulation/display/stream (GET/WebSocket)**
 
-请求模拟视频流，其中包含在处于 "模拟" 模式时呈现给系统的内容。  首先发送一个简单的格式说明符标头，然后再发送一个-264 编码的纹理，每个纹理前面都有一个标头，指示眼睛索引和纹理大小。
+请求一个模拟视频流，其中包含在"模拟"模式下呈现给系统显示的内容。  最初将发送一个简单的格式描述符标头，后跟 H.264 编码的纹理，每个纹理前面都有一个指示眼睛索引和纹理大小的标头。
 
-## <a name="perception-simulation-playback"></a>感知播放
+## <a name="perception-simulation-playback"></a>感知模拟播放
 
-**/api/holographic/simulation/playback/file (删除)**
+**/api/holographic/simulation/playback/file (DELETE)**
 
 删除记录。
 
 参数
-* 录制：要删除的记录的名称。
+* recording：要删除的录制的名称。
 
 **/api/holographic/simulation/playback/file (POST)**
 
-上传记录。
+Upload录制内容。
 
-**/api/holographic/simulation/playback/files (获取)**
+**/api/holographic/simulation/playback/files (GET)**
 
-获取所有记录。
+获取所有录制内容。
 
-**/api/holographic/simulation/playback/session (获取)**
+**/api/holographic/simulation/playback/session (GET)**
 
-获取记录的当前播放状态。
+获取录制的当前播放状态。
 
 参数
-* 记录：记录的名称。
+* recording：记录的名称。
 
-**/api/holographic/simulation/playback/session/file (删除)**
+**/api/holographic/simulation/playback/session/file (DELETE)**
 
 卸载记录。
 
 参数
-* 录制：要卸载的记录的名称。
+* recording：要卸载的录制的名称。
 
 **/api/holographic/simulation/playback/session/file (POST)**
 
 加载记录。
 
 参数
-* 录制：要加载的记录的名称。
+* recording：要加载的录制的名称。
 
-**/api/holographic/simulation/playback/session/files (获取)**
+**/api/holographic/simulation/playback/session/files (GET)**
 
-获取所有加载的记录。
+获取所有已加载的录制内容。
 
 **/api/holographic/simulation/playback/session/pause (POST)**
 
 暂停录制。
 
 参数
-* 记录：记录的名称。
+* recording：记录的名称。
 
 **/api/holographic/simulation/playback/session/play (POST)**
 
-播放录制。
+播放录制内容。
 
 参数
-* 记录：记录的名称。
+* recording：记录的名称。
 
 **/api/holographic/simulation/playback/session/stop (POST)**
 
 停止录制。
 
 参数
-* 记录：记录的名称。
+* recording：记录的名称。
 
-**/api/holographic/simulation/playback/session/types (获取)**
+**/api/holographic/simulation/playback/session/types (GET)**
 
-获取已加载记录中数据的类型。
+获取加载的记录中的数据类型。
 
 参数
-* 记录：记录的名称。
+* recording：记录的名称。
 
 ## <a name="perception-simulation-recording"></a>感知模拟记录
 
 **/api/holographic/simulation/recording/start (POST)**
 
-开始记录。 一次只能有一个记录处于活动状态。 必须设置 head、双手、spatialMapping 或环境之一。
+开始录制。 一次只能有一个记录处于活动状态。 必须设置头部、手部、spatialMapping 或环境之一。
 
 参数
-* head：设置为1以记录头数据。
-* 动手：设置为1以记录手型数据。
-* spatialMapping：设置为1以记录空间映射。
-* 环境：设置为1以记录环境数据。
+* head：设置为 1 以记录头数据。
+* hand：设置为 1 以记录手部数据。
+* spatialMapping：设置为 1 以记录空间映射。
+* environment：设置为 1 以记录环境数据。
 * name：记录的名称。
 * singleSpatialMappingFrame：设置为1将仅记录单个空间映射框架。
 

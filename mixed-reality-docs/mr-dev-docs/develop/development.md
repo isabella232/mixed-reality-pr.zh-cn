@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, HoloLens, unity, unreal, directx, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, 虚拟现实开发, 增强现实开发
-ms.openlocfilehash: b47970de15451ea3bd0c121edd7dc61438fa115c
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: 2020ceb898f6badaec56a599348c8633c4cb90ba22eaf53df0e097d4fc3e110e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394321"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115195950"
 ---
 # <a name="introduction-to-mixed-reality-development"></a>混合现实开发简介
 

@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, Azure 空间定位点, ios, android, Windows 10, ARCore, macOS, Android 生成支持, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 2d664c79c0e2d111dc4a0b7b449399682cda1f06
-ms.sourcegitcommit: b4fd969b9c2e6313aa728b0dbee4b25014668720
+ms.openlocfilehash: 4d753546fd8fd0779e7614ca11e4668e359d8f9dcdc8db9d62e95267747471db
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111403448"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197357"
 ---
 # <a name="1-introduction-to-the-azure-spatial-anchors-tutorials"></a>1.Azure 空间定位点教程简介
 

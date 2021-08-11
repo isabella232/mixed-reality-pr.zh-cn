@@ -1,27 +1,28 @@
 ---
-title: 传送系统
+title: TeleportSystemOverview
 description: 有关在 MRTK 中启用和禁用传送系统的概述
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，传送系统，
-ms.openlocfilehash: c46438ed30880029760b5155efb3e3cd1d571c81a03bfbf764b2010e2e232c53
+ms.localizationpriority: high
+keywords: Unity,HoloLens, HoloLens 2, 混合现实, 开发, MRTK, 传送系统,
+ms.openlocfilehash: ee56f62d6e0206249db62d8e7e93cf97cdf8bcc40c35ec0284ebae319870f8ee
 ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/05/2021
-ms.locfileid: "115197038"
+ms.locfileid: "115197637"
 ---
 # <a name="teleport-system"></a>传送系统
 
-"传送系统" 是 MRTK 的子系统，当应用程序使用不透明的显示时，它将处理 teleporting 的用户。 对于 AR (例如 HoloLens) ，teleportation 系统处于不活动状态。 对于沉浸式 HMD 体验 (OpenVR，WMR) 可以启用传送系统。
+传送系统是 MRTK 的子系统，可在应用程序使用不透明显示器时处理用户传送操作。 对于 AR 体验（例如 HoloLens），传送系统处于非活动状态。 对于沉浸式 HMD 体验（OpenVR、WMR），可启用传送系统。
 
 ## <a name="enabling-and-disabling"></a>启用和禁用
 
-可以通过在其配置文件中切换复选框来启用或禁用传送系统。
-为此，可以选择场景中的 MixedRealityToolkit 对象，然后单击 "传送"，然后切换 "启用传送系统" 复选框。
+可通过切换传送系统配置文件上的复选框来启用或禁用传送系统。
+为此，可在场景中选择 MixedRealityToolkit 对象，单击“传送”，然后切换“启用传送系统”复选框。
 
-此操作也可以在运行时执行：
+也可在运行时执行此操作：
 
 ```c#
 void DisableTeleportSystem()
@@ -37,14 +38,14 @@ void EnableTeleportSystem()
 
 ## <a name="events"></a>事件
 
-传送系统通过接口公开事件 [`IMixedRealityTeleportHandler`](xref:Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHandler) ，以便在传送操作开始、结束或取消时提供信号。
-有关事件的机制及其关联的有效负载的详细信息，请参阅链接 API 文档。
+传送系统通过 [`IMixedRealityTeleportHandler`](xref:Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHandler) 界面公开事件，以在传送操作开始、结束或被取消时提供信号。
+若要详细了解事件的机制及其关联的有效负载，请查看链接的 API 文档。
 
 ## <a name="usage"></a>使用情况
 
-### <a name="how-to-register-for-teleportation-events"></a>如何注册 teleportation 事件
+### <a name="how-to-register-for-teleportation-events"></a>如何注册传送事件
 
-下面的代码演示如何创建将侦听 teleportation 事件的 MonoBehaviour。 此代码假定已启用传送系统。
+下面的代码显示如何创建将侦听传送事件的 MonoBehaviour。 此代码假定已启用传送系统。
 
 ```c#
 using Microsoft.MixedReality.Toolkit;
@@ -88,9 +89,3 @@ public class TeleportHandlerExample : MonoBehaviour, IMixedRealityTeleportHandle
     }
 }
 ```
-
-## <a name="teleporting-on-mrtk"></a>MRTK 上的 Teleporting
-
-若要在具有默认配置的 MR 设备上传送控制器，请使用操纵杆。 若要传送有清晰的手势，请在掌上朝上，使用索引并拇指向外，通过运行食指完成传送。 若要传送输入模拟，请参阅更新的 [输入模拟服务文档](../input-simulation/input-simulation-service.md)。
-
-  ![传送手势](../images/teleport/handteleport.gif)

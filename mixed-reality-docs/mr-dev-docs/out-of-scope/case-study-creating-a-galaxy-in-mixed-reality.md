@@ -1,21 +1,21 @@
 ---
 title: 案例研究-在混合现实中创建 galaxy
-description: 了解 "Galaxy 资源管理器" 应用程序，并了解它是如何为 Microsft HoloLens 构建的，以及如何通过社区开发人员进行的24小时 Twitter 轮询。
+description: 了解 "Galaxy 资源管理器" 应用程序，并了解它是如何为 Microsft HoloLens 生成的，以及在由社区开发人员进行的24小时 Twitter 轮询之后。
 author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy 资源管理器，HoloLens，Windows Mixed Reality，分享你的想法，案例研究
-ms.openlocfilehash: ef97920d22df65a9d4fa5e630840759e58c80b53
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5891fbc052c52cd90176214d1eff8ef019a2bcfc80dbd5264489deced0fb1664
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583547"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208038"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>案例研究-在混合现实中创建 galaxy
 
-在发布 Microsoft HoloLens 之前，我们会询问开发人员社区要为新设备查看有经验的内部团队构建的应用类型。 共享了5000多个想法，在24小时的 Twitter 投票后，入选方是一个称为 [Galaxy 资源管理器](../develop/unity/galaxy-explorer.md)的概念。
+在 Microsoft HoloLens 发运之前，我们会询问开发人员社区要为新设备查看经验丰富的内部团队构建的应用类型。 共享了5000多个想法，在24小时的 Twitter 投票后，入选方是一个称为 [Galaxy 资源管理器](../develop/unity/galaxy-explorer.md)的概念。
 
 Zibits 是项目上的艺术线索，Karim Luccin，团队的图形工程师谈论的是在 "Galaxy 资源管理器" 中创建银河方法的精确、交互式表示形式的艺术与工程之间的协作工作。
 
@@ -23,11 +23,11 @@ Zibits 是项目上的艺术线索，Karim Luccin，团队的图形工程师谈�
 
 [我们的团队](../develop/unity/galaxy-explorer.md#meet-the-team) 组成了两个开发人员：三个开发人员、四个艺术家、一个制造者和一个测试人员-有六周时间来构建一个完全功能的应用程序，该应用程序允许用户了解并探索银河的 vastness 和美。
 
-我们想要充分利用 HoloLens 功能，以便在生活空间中直接呈现3D 对象，因此我们决定创建一个真实的 galaxy，用户可以在其中放大并查看单个星形，每个星都在各自的轨迹上。
+我们想要充分利用 HoloLens 在您的生活空间中直接呈现3d 对象的能力，因此我们决定创建一个真实的 galaxy，用户可以在其中放大并查看单个星形，每个都在各自的轨迹上。
 
 在开发的第一周，我们提出了几个目标来实现银河的工作方式： Galaxy：它需要具有深度、移动和感觉容量耗尽，这将有助于创建 Galaxy 的形状。
 
-创建具有数十亿星的动画 galaxy 的问题在于，每帧上需要更新的单个元素的数量可能会太大，而无法使用 CPU 进行动画处理。 我们的解决方案涉及复杂的艺术和科学组合。
+创建具有数十亿星的动画 galaxy 的问题在于，每帧需要更新的单个元素的数量可能会太大，因此 HoloLens 使用 CPU 进行动画处理。 我们的解决方案涉及复杂的艺术和科学组合。
 
 ## <a name="behind-the-scenes"></a>幕后
 
@@ -185,9 +185,9 @@ Left，其中 upscale 从 1/8 到完全解析;右，使用2的幂2进行 3 upsca
 
 ### <a name="more-to-explore"></a>了解更多
 
-我们已经为 Galaxy 资源管理器应用程序提供了公开代码，并使其在 [GitHub](https://github.com/Microsoft/GalaxyExplorer) 上可供开发人员使用。
+我们已经打开了 Galaxy 资源管理器应用程序的代码，并使其在[GitHub](https://github.com/Microsoft/GalaxyExplorer)上供开发人员使用。
 
-想要了解有关 Galaxy 资源管理器开发过程的详细信息？ 查看 [Microsoft HoloLens YouTube 频道](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)上的所有过去的项目更新。
+想要了解有关 Galaxy 资源管理器开发过程的详细信息？ 查看[Microsoft HoloLens YouTube 频道](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)上的所有过去的项目更新。
 
 ## <a name="about-the-authors"></a>关于作者
 

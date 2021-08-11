@@ -7,12 +7,12 @@ ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 移植, 升级
-ms.openlocfilehash: 27fb726bc0ca9c51b4e7b68ad28b76f89312262e
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 88b3f12bf32c81e39e622a7766119ca4d1b087f80cfc774148853926b6446dbc
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98010047"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197194"
 ---
 # <a name="upgrading-projects-in-unreal"></a>在 Unreal 中升级项目
 

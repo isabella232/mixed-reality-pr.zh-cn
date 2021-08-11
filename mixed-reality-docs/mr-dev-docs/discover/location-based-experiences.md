@@ -1,19 +1,19 @@
 ---
-title: 具有 Windows Mixed Reality 的基于位置的娱乐
-description: 了解基于位置娱乐的 Windows Mixed Reality-硬件、背包 Pc、跟踪、配置和支持。
+title: 与 Windows Mixed Reality 的位置娱乐
+description: 了解有关基于位置的娱乐（硬件、背包 pc、跟踪、配置和支持）的 Windows Mixed Reality。
 author: jessemcculloch
 ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
 keywords: mixed reality，vr，lbe，位置，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，硬件，HoloLens，多玩家，云服务，azure
-ms.openlocfilehash: 49e96b99d3f74bd24a4a0e71f212018108148ad2
-ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
+ms.openlocfilehash: e9cff1184ca60f4b64be5346a187666e7b401aab06fee87c179917e300aa07f3
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102236908"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196781"
 ---
-# <a name="location-based-entertainment-with-windows-mixed-reality"></a>具有 Windows Mixed Reality 的基于位置的娱乐
+# <a name="location-based-entertainment-with-windows-mixed-reality"></a>与 Windows Mixed Reality 的位置娱乐
 
 在过去几年中，我们在基于地点的娱乐类别中看到了惊人的增长和创新。 传统的会场（如主题公园和电影院）已开始提供沉浸式多玩家体验，作为现有搭乘和安装的免费体验。 新的操作员和会场为面向大众带来了独特的多 sensorial、多玩家体验。 所有这些经验都是通过推送信封来实现混合现实。
 
@@ -35,13 +35,13 @@ Samsung 太空 +： [详细信息](https://www.samsung.com/us/computing/hmd/wind
 
 Acer： [详细信息](https://www.acer.com/ac/en/US/content/model/VD.R05AP.002)
 
-如果你的位置专门使用 "查看" 耳机来实现混合或扩充的现实体验，请查看 Microsoft HoloLens 2。  
+如果你的位置专门使用 "查看耳机" 的混合或增加的现实体验，请查看 Microsoft HoloLens 2。  
 
-HoloLens 2： [订购利息](https://www.microsoft.com//hololens/buy)
+HoloLens 2：[前序兴趣](https://www.microsoft.com//hololens/buy)
 
-如果你正在试验使用高级计算机视觉、语音和正文跟踪的体验，Azure Kinect 深色的优点非常合适。  
+如果你正在试验使用高级计算机视觉、语音和正文跟踪的体验，Azure Kinect 深色是非常合适的。  
 
-Azure Kinect： [详细信息](https://azure.microsoft.com//services/kinect-dk/)
+Azure Kinect：[详细信息](https://azure.microsoft.com//services/kinect-dk/)
 
 **问：我可以使用哪些背包电脑组合来运行我的电脑-受限 VR 体验？**
 
@@ -58,7 +58,7 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 你可能会发现，你需要对混合现实门户进行更多的自定义，而不是通常通过用于将应用部署到展台或自定义体验的应用使用。 混合现实门户的最新7月更新支持多个高级设置，你可以通过配置文件进行设置：  
 
-允许故障系统检查–在完成安装程序之前，安装过程通常会检查 PC 与 Windows Mixed Reality 的兼容性。 如果存在兼容性问题，则在尝试运行 Windows Mixed Reality 时，绕过兼容性检查可能会导致问题。  
+允许故障系统检查–在完成安装之前，安装过程通常会检查计算机与 Windows Mixed Reality 的兼容性。 如果出现兼容性问题，则在尝试运行 Windows Mixed Reality 时，绕过兼容性检查可能会导致问题。  
 
 跳过设备辅助应用– DCA 提供制造商提供的耳机特定的设置步骤，并允许更新耳机固件。  
 
@@ -100,7 +100,7 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 答：配置 playspace 应像使用使用者安装体验一样完成。 房间设置过程还将允许您定义房间边界。 有关配置空间边界的详细信息，请参阅 [此处](/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)。
 
-如以上文档中所述，最大合理的单个坐标 playspace 是围绕5mx5m 的。 如果要获得更大的区域，可以使用 Windows 全息 API 堆栈中的空间锚功能。 使用此 API 需要在生成的体验中进行自定义工程。  
+如以上文档中所述，最大合理的单个坐标 playspace 是围绕5mx5m 的。 如果要获得更大的区域，可以在 Windows 全息 API 堆栈中使用空间锚功能。 使用此 API 需要在生成的体验中进行自定义工程。  
 
 可在 [此处](/windows/mixed-reality/coordinate-systems)阅读有关如何针对不同的空间大小优化内容的更多详细信息。
  
@@ -121,16 +121,16 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 ### <a name="multi-player-setup"></a>多玩家安装
 
-**问：我在我的场所部署了多玩家体验。Windows Mixed Reality 是否支持？**
+**问：我在我的场所部署了多玩家体验。Windows Mixed Reality 上是否支持？**
 
-答：如果你通过我们的预览体验计划选择加入 Windows 20H1 或更高版本，则可以访问用于地图共享的新接口。 此新功能可通过 Windows 设备门户的 " [映射管理器](../develop/platform-capabilities-and-apis/using-the-windows-device-portal.md#map-manager) " 界面获得。 若要使用此工具，请执行以下步骤：
+答：如果你通过我们的预览体验计划选择加入 Windows 20H1 或更高版本，则可以访问用于地图共享的新接口。 此新功能可通过 Windows 设备门户的 "[映射管理器](../develop/platform-capabilities-and-apis/using-the-windows-device-portal.md#map-manager)" 界面获得。 若要使用此工具，请执行以下步骤：
 * 请确保选择加入20H1 或更高版本（2019年9月之后），这意味着使用预览体验计划
-* 使用以下[说明](/windows/uwp/debug-test-perf/device-portal-desktop)启用 Windows 设备门户 (WDP) 
-* 插入想要从其下载现有映射的 Windows Mixed Reality HMD，或导入新的映射
+* 使用这些[说明](/windows/uwp/debug-test-perf/device-portal-desktop)启用 Windows 设备门户 (WDP) 
+* 插入想要从其下载现有地图的 Windows Mixed Reality HMD，或导入新地图
 * 使用在 "设置" 屏幕中提供的 URL，在所选浏览器中导航到 WDP。
     * 导航到 "Mixed Reality" 部分，然后选择 "映射管理器"。
     * 你现在可以使用 "下载" 按钮从计算机导出现有映射。
-    * 您可以使用 "上传地图文件" 按钮从上一个导出 (导入地图，) 。
+    * 您可以使用 "Upload map file" 按钮从上一导出 (导入地图，) 也可能不同。
     * 您可以使用 "导入" 使系统能够在此计算机上为此 HMD 使用该映射。
 
 > [!NOTE] 
@@ -162,44 +162,44 @@ HP 刚刚启动了其 HP VR 背包 G2，这是世界上最强大的可穿戴 PC 
 
 **问： Microsoft Azure 如何帮助我的业务规模？**
 
-答：基于 Azure 的现场和远程管理可帮助你的企业进行数据驱动，降低运营成本并在现有和新位置扩展部署。 Azure 云服务（例如 Azure 存储、Azure Functions、应用服务、Azure 网络和 IOT 中心）可帮助解决以下用例：  
+答：基于 Azure 的现场和远程管理可帮助你的企业进行数据驱动，降低运营成本并在现有和新位置扩展部署。 azure 云服务（例如 Azure 存储、Azure Functions、应用服务、Azure 网络和 IOT 中心）可帮助解决以下用例：  
 
-远程设备部署 & 管理 
+远程设备部署&管理 
 
-Real-Time 现场分析 
+Real-Time现场分析 
 
-智能适应性 LBE 游戏 
+智能自适应 LBE 游戏 
 
 LBE 内容流式处理和部署 
 
-LBE Player 首选项热度地图 
+LBE 播放器首选项热度地图 
 
-LBE 预订系统和预订系统 
+LBE 预留和预订系统 
 
-**问：我要开发一个空间 MMOG 来部署大量占用空间。有助于管理内容和对象持久性的任何服务？**
+**问：我正在开发空间 MMOG，以在大量占用空间上部署。任何可帮助我管理内容和对象持久性的服务？**
 
-答： Azure 空间锚点是一项新的混合现实服务，可实现通过 HoloLens、iOS 和 Android 设备的多用户、空间丰富的混合现实体验。 可在 [此处](https://azure.microsoft.com//services/spatial-anchors/)了解有关 Azure 空间定位点的详细信息。
+答：Azure 空间定位点是一种新的混合现实服务，可跨 HoloLens、iOS 和 Android 设备实现多用户、空间感知的混合现实体验。 可在此处详细了解 Azure 空间定位 [点](https://azure.microsoft.com//services/spatial-anchors/)。
 
-**：.我们的场地专用于多玩家体验，我想将开发时间集中在内容和前端开发上。是否有可帮助我启动或卸载后端开发的产品？**
+**问。我们的会场专门提供多玩家体验，我想将开发时间集中在内容和前端开发上。是否有产品/服务可帮助我启动或卸载后端开发？**
 
-答： Azure PlayFab 是适用于现场游戏的完整后端平台。 可在 [此处](https://playfab.com/)了解详细信息。
+答：Azure PlayFab 是一个完整的实时游戏后端平台。 可在此处详细了解 [它](https://playfab.com/)。
 
 ### <a name="misc"></a>杂项
 
-**问：我使用 SteamVR 来部署我的体验。Windows Mixed Reality 是否适用于 SteamVR？**
+**问：我使用 SteamVR 来部署体验。是否Windows Mixed Reality SteamVR？**
 
-答： SteamVR 的 Windows Mixed Reality 允许用户在 Windows Mixed Reality 沉浸式耳机上运行 SteamVR 体验。 [在此处](/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)了解有关 SteamVR 的详细信息。
+答：Windows Mixed Reality使用 SteamVR，用户可以在沉浸式头戴显示设备Windows Mixed Reality SteamVR 体验。 在此处详细了解使用 [WMR](/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)的 SteamVR。
 
 ### <a name="support-and-community"></a>支持和社区  
 
-我们提供了一些有用的资源，可帮助你在我们的团队中与行业专家进行合作，获取故障排除支持，并为更广泛的混合现实开发社区提供帮助。  
+我们提供了一些有用的资源，可帮助你与我们的团队中的主题专家联系、获取故障排除支持，并为更广泛的混合现实开发社区做出贡献。  
 
-如果遇到任何公开发布功能的问题，请使用反馈中心提交 bug。有关指南，请参阅此 [页](/windows/mixed-reality/enthusiast-guide/filing-feedback)。
+如果遇到任何公开发布的功能的问题，则使用 反馈中心 提交 bug。有关指导，请参阅 [此页](/windows/mixed-reality/enthusiast-guide/filing-feedback)。
 
-有关 WMR 的其他故障排除帮助，请向我们的客户支持团队提供 [支持请求](https://support.microsoft.com//supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782) 。
+有关 WMR 的其他故障排除帮助， [请向客户支持](https://support.microsoft.com//supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782) 团队提交支持请求。
 
-加入我们的 HoloDevelopers 时差通道，与混合现实开发人员和主题专家合作： [aka.ms/holodevelopers](https://aka.ms/holodevelopers)
+加入我们的 HoloDevelopers Slack 通道，与混合现实开发人员和主题专家互动 [：aka.ms/holodevelopers](https://aka.ms/holodevelopers)
 
-Twitter：关注混合现实开发人员关系团队以获取新闻、活动和更新 @MxdRealityDev 
+Twitter：关注我们的混合现实开发人员关系团队获取新闻、事件和更新 @MxdRealityDev 
 
-如果你的工作发生在旧金山或周围，则 Microsoft 反应器中始终会出现一些问题。 [此处](https://developer.microsoft.com//reactor/Location/San%20Francisco)可以看到我们的事件日历。
+如果碰巧位于旧金山或旧金山附近，Microsoft Reactor 中始终会发生一些情况。 可在此处查看事件 [日历](https://developer.microsoft.com//reactor/Location/San%20Francisco)。
