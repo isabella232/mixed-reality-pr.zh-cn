@@ -4,18 +4,18 @@ description: 停留交互
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 05/20/2021
-keywords: 停留，Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK
+keywords: 停留，Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK
 monikerRange: '>= mrtkunity-2021-05'
-ms.openlocfilehash: 18e69f001c8989234d1b75fb713796f079cacbdf
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: 8ac63ee723cdd524ee7abbad7fd2658b446156adbd5ddee06ae1795edb3b68d1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647751"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226894"
 ---
 # <a name="dwell"></a>停留
 
-![停留英雄](../images/dwell/MRTK_UX_Dwell.png)
+![停留功能主图](../images/dwell/MRTK_UX_Dwell.png)
 
 打印头和停留在某个人正忙于处理其他任务的情况下非常有用。 当语音不是100% 可靠或由于环境或社交限制而可用时，此功能也很有用。
 MRTK 的停留示例演示了具有可配置的响应时间和视觉反馈的不同类型的 UI 组件。
@@ -38,7 +38,7 @@ MRTK 的停留示例演示了具有可配置的响应时间和视觉反馈的不
 
 ## <a name="prefabs"></a>Prototyping
 
-这些 prototyping 是 HoloLens 2 样式 pressable 按钮 prototyping 的变体，它具有支持停留交互的附加组件。
+这些 prototyping 是 HoloLens 2 style pressable button prototyping 的变体，它具有支持停留交互的附加组件。
 
 - **PressableButtonHoloLens2_Dwell. prefab**
 - **PressableButtonHoloLens2_32x96_Dwell. prefab**

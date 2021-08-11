@@ -5,18 +5,18 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 66b79c14bbd0ea8c188aba684b9bd1034de31bf9
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: f329cceded5e510d3d4fc1a1c13b5a504f1f3669ad408b733267595e77dd15a6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176958"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115227571"
 ---
 # <a name="input-simulation-service"></a>输入模拟服务
 
 ![MRTK 输入模拟](../images/input-simulation/MRTK_InputSimulation_Hero.jpg)
 
-使用 MRTK 的输入模拟，可以在 Unity 编辑器中测试各种类型的交互，而无需生成和部署到设备。 这样，你可快速在设计和开发过程中访问想法。 使用键盘和鼠标组合来控制模拟输入。
+借助 MRTK 的输入模拟，你可以在 Unity 编辑器中测试各种类型的交互，而无需生成并部署到设备。 这使你可以在设计和开发过程中快速迭代你的想法。 使用键盘和鼠标组合来控制模拟输入。
 
 输入模拟服务模拟 Unity 编辑器中可能不可用的设备和平台的行为。 示例包括：
 
@@ -33,10 +33,10 @@ ms.locfileid: "113176958"
 
 在 MRTK 的配置文件中，默认启用输入模拟。 只需单击"播放 **"** 按钮即可运行支持输入模拟的场景。
 
-* 按 **W、A、S、D、Q、E** 键移动相机。
-* 按住 **鼠标右键** 并移动鼠标四周。
-* 若要启动模拟手部，请按空格键 (右键) 左 **移 (左移)**
-* 若要在视图中保留模拟手部，请按 **T** 或 **Y** 键
+* 按 W、A、S、D、Q、E 键可移动摄像头。
+* 在按住鼠标右键的同时移动鼠标可以四处浏览。
+* 按空格键（右手）或左 Shift 键（左手）以显示模拟的双手 
+* 按 T 或 Y 键以将模拟的双手保持在视野中 
 * 若要旋转模拟手部，请按住 **Ctrl 键** 并移动鼠标
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OYrm]

@@ -7,12 +7,12 @@ ms.date: 12/3/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 发布, 分发, Microsoft Store
-ms.openlocfilehash: 3a975d9c66e64f56919163e9d3aa65a3126d6379
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 2e0e628439c187d787fe64902cbb9a17d617559623d90830ef4a57f6c7b34338
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583592"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226250"
 ---
 # <a name="publishing-to-the-microsoft-store"></a>发布到 Microsoft Store
 

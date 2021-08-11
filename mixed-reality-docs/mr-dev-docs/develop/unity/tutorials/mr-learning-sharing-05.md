@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 4eb7470487a584ef820be82f651ed9bd16392395
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 9c542d9319d53af049f79222102ccfe5c9a7167600f237f327800946a3c62e60
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590219"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200857"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5.将 Azure 空间定位点集成到共享体验中
 

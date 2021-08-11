@@ -1,21 +1,21 @@
 ---
 title: 头部凝视和提交
-description: 开始处理打印头和提交输入模型，包括目标大小、位置和稳定。
+description: 开始使用头部凝视和提交输入模型，包括目标大小调整、放置和稳定。
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
-keywords: Mixed Reality，注视，注视目标，交互，设计，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，目标，焦点，平滑
-ms.openlocfilehash: 74f963a6b450d1fb7f1302886a01c12cf79ce28a
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+keywords: 混合现实， 凝视， 凝视目标， 交互， 设计， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实 Toolkit， 目标， 焦点， 平滑
+ms.openlocfilehash: 641e403df23b2559429ca80aa06f384c4845ee347518adca2cfde1b3dbe874dd
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196512"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223649"
 ---
 # <a name="head-gaze-and-commit"></a>头部凝视和提交
 
-"[注视](gaze-and-commit.md)" 和 "提交" 输入 _模型是一_ 种特殊情况，涉及到对象以用户头方向为目标。 您可以使用辅助输入来操作目标，例如，手型手势和 "选择" 语音命令。 
+_头部凝视和提交_ 是凝视和提交输入 [](gaze-and-commit.md)模型的一种特殊情况，涉及以具有用户头部方向的对象为目标。 可以使用辅助输入（例如手势敲击或"选择"语音命令）对目标操作。 
 
 ## <a name="device-support"></a>设备支持
 
@@ -42,20 +42,20 @@ ms.locfileid: "110196512"
 
 ---
 
-## <a name="head-and-eye-tracking-design-concepts-demo"></a>标题和眼睛跟踪设计概念演示
+## <a name="head-and-eye-tracking-design-concepts-demo"></a>头部和眼动跟踪设计概念演示
 
-若要查看标题和目视跟踪的设计概念，请参阅下面的 **设计全息影像-打印头跟踪和眼睛跟踪** 视频演示。 完成后，请继续详细了解特定主题。
+若要了解头部和眼动跟踪设计概念的运行情况，请查看下面的“设计全息影像 - 头部跟踪和眼动跟踪”视频演示。 完成后，请继续详细了解特定主题。
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
 
-*此视频取自 "设计全息影像" HoloLens 2 应用。下载并在 [此处](https://aka.ms/dhapp)享受完全体验。*
+此视频来自于“设计全息影像”HoloLens 2 应用。在[此处](https://aka.ms/dhapp)下载并享受完整体验。
 
 ## <a name="target-sizing-and-feedback"></a>目标大小调整和反馈
 
-一直看着头注视向量，可用于精细定位，但通常最适用于毛目标-获取更大的目标。 1度到1.5 度的最小目标大小允许成功的用户操作在大多数情况下，尽管目标为3度，但通常允许更高的速度。 用户的目标大小实际上是一个二维区域，即使对于3D 元素也是如此。 提供一些突出的提示，指出某个元素处于 "活动" 状态， (用户为其设定目标) 很有用。 这可能包括处理方式（如可见的 "悬停" 效果、音频突出显示或单击），或通过元素清晰显示光标。
+头部凝视向量已反复显示，可用于精细定位，但通常最适合用于总目标 -获取更大的目标。 1 度到 1.5 度的最小目标大小允许在大多数情况下成功执行用户操作，尽管目标 3 度通常允许更高的速度。 用户的目标大小实际上是 2D 区域，即使对于 3D 元素，无论面向 3D 元素的投影都应是目标区域。 提供一些突出的提示，指出某个元素是 ("活动"的提示，) 有用。 这可能包括可见"悬停"效果、音频突出显示或单击或光标与元素的清晰对齐等处理。
 
 ![2 米远处的最佳目标大小](images/gazetargeting-size-1000px.jpg)<br>
-*最佳目标大小，以2米到远处*
+*2 米距离的最佳目标大小*
 
 <br>
 
@@ -64,7 +64,7 @@ ms.locfileid: "110196512"
 
 ## <a name="target-placement"></a>目标位置
 
-用户经常无法在其视图字段中找到太高或较低的 UI 元素。 其中的大多数关注点在其主要关注点的周围，这大致在目视。 将大多数目标放在视平线位置附近的某个合理范围内可能有所帮助。 考虑到用户往往随时专注于相对较小的可视区域 (视觉的注意圆环大约是 10 度) ，在概念上将 UI 元素分组到相关程度后，当用户将视线移到某个区域时，可以使用从项到项的注意链接行为。 在设计 UI 时，请注意 HoloLens 和沉浸式头戴显示设备之间视野的巨大差异。
+用户通常找不到其视场中过高或低的 UI 元素。 他们大部分注意力都集中在主要焦点周围的区域，这大约在眼睛级别。 将大多数目标放在视平线位置附近的某个合理范围内可能有所帮助。 考虑到用户往往随时专注于相对较小的可视区域 (视觉的注意圆环大约是 10 度) ，在概念上将 UI 元素分组到相关程度后，当用户将视线移到某个区域时，可以使用从项到项的注意链接行为。 在设计 UI 时，请注意 HoloLens 和沉浸式头戴显示设备之间视野的巨大差异。
 
 ![在 Galaxy Explorer 中使用分组 UI 元素简化凝视目标设定的示例](images/gazetargeting-grouping-1000px.jpg)<br>
 *在 Galaxy Explorer 中使用分组 UI 元素简化凝视目标设定的示例*
@@ -95,7 +95,7 @@ ms.locfileid: "110196512"
 
 ### <a name="focus-stickiness"></a>焦点粘性
 
-确定要为其提供哪些邻近的交互式元素时，焦点到，焦点将为当前聚焦的元素提供偏移。 当在两个元素之间的中间点处浮动时，这有助于减少不稳定的焦点切换行为。
+在确定要向哪个附近交互元素提供焦点时，焦点粘性会向当前聚焦的元素提供偏差。 当在具有自然干扰的两个元素之间的中点浮动时，这有助于减少不稳定的焦点切换行为。
 
 ## <a name="see-also"></a>另请参阅
 

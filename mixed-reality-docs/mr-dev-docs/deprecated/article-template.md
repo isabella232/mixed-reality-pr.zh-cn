@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 无
-ms.openlocfilehash: 246e87ace1c0b3edf5e9f4829a5a0879cddf7279
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 4e08f015000fe214438879cd6433248d444f3d659b6338505495bebb76309a67
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583176"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115199518"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>标题 (尽可能具体，请使用人力条款)  
 
@@ -64,7 +64,7 @@ ms.locfileid: "98583176"
 *   使用常识。
 *   不要尝试有趣。
 *   使用 en-us (美国英语) 拼写和约定编写。
-*   **将句子大小写用于标题、节标题和 .。。一切。** 在句子中，唯一应该大写的单词是正确的名词 (就像你在语法学) 中学习的一样。 品牌名称 (例如，Microsoft HoloLens) 是正确的名词。 功能名称 (例如，空间映射) 不是正确的名词，除非它们是商标字的。
+*   **将句子大小写用于标题、节标题和 .。。一切。** 在句子中，唯一应该大写的单词是正确的名词 (就像你在语法学) 中学习的一样。 品牌名称 (例如 Microsoft HoloLens) 是正确名词。 功能名称 (例如，空间映射) 不是正确的名词，除非它们是商标字的。
 *   请勿写入 "有关详细信息， [请参阅"](../contributing.md)窗体的链接。 而是将链接 [根据上下文](../contributing.md) ，而不是将读者定向到其他地方。
 *   此文档是事实的来源。 信息必须准确且最新。
 

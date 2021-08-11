@@ -1,19 +1,19 @@
 ---
-title: 使用全息远程处理预览你的工作
+title: 使用全息远程处理预览工作
 description: 在不部署应用的情况下，在播放模式下使用全息远程处理在设备上预览应用程序更改。
 author: keveleigh
 ms.author: v-vtieto
 ms.date: 07/26/2021
 ms.topic: article
 keywords: Unity，远程处理，全息远程处理，全息远程处理播放器，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，unity 播放模式
-ms.openlocfilehash: 0c71791c80a5e84ee48241baa756064a800e5a41
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: cd9dca9d1ddf17b78e8c317fa3a58093c9b5837de379510148c6e645b31120ca
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757209"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226229"
 ---
-# <a name="preview-your-work-with-holographic-remoting"></a>使用全息远程处理预览你的工作
+# <a name="preview-your-work-with-holographic-remoting"></a>使用全息远程处理预览工作
 
 可以使用全息远程处理实时将全息内容流式传输到 HoloLens 2。 这是一种快速调试应用程序的绝佳方式，无需生成和部署完整项目。 
 

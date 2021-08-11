@@ -1,24 +1,24 @@
 ---
 title: 创建全息 DirectX 项目
-description: 了解如何创建新的基于 Windows Mixed Reality 应用模板的全息版 DirectX 应用。
+description: 了解如何基于 Windows Mixed Reality 应用程序模板创建新的全息版 DirectX 应用程序。
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
-keywords: Windows Mixed Reality，全息应用，新应用，UWP 应用，模板应用，全息影像，新建项目，演练，下载，示例代码，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: ffc0da73cc93214bb5bef9142797557c6142b479
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Windows Mixed Reality，全息应用，新应用，UWP 应用，模板应用，全息影像，新项目，演练，下载，示例代码，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: 7de7d73ec1e5fd8abde6d4822c86628e090fdf0cf89769fc9ef21311ff1aff15
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581052"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200139"
 ---
 # <a name="creating-a-holographic-directx-project"></a>创建全息 DirectX 项目
 
 > [!NOTE]
 > 本文与旧版 WinRT 本机 Api 相关。  对于新的本机应用项目，建议使用 **[OPENXR API](openxr-getting-started.md)**。
 
-为 HoloLens 创建的全息版应用将是 <a href="/windows/uwp/get-started/universal-application-platform-guide" target="_blank">通用 Windows 平台 (UWP) 应用</a>。  如果面向桌面 Windows Mixed Reality 耳机，则可以创建 UWP 应用或 Win32 应用。
+为 HoloLens 创建的全息应用将是<a href="/windows/uwp/get-started/universal-application-platform-guide" target="_blank"> (UWP) 应用的通用 Windows 平台</a>。  如果面向桌面 Windows Mixed Reality 耳机，则可以创建 UWP 应用或 Win32 应用。
 
 DirectX 11 全息 UWP 应用模板非常类似于 DirectX 11 UWP 应用模板。 该模板包括一个程序循环、一个用于管理 Direct3D 设备和上下文的 **DeviceResources** 类和一个简化的内容呈现器类。 它还有 <a href="/uwp/api/windows.applicationmodel.core.iframeworkview" target="_blank">IFrameworkView</a>，就像其他任何 UWP 应用一样。
 
@@ -30,7 +30,7 @@ DirectX 11 全息 UWP 应用模板非常类似于 DirectX 11 UWP 应用模板。
 
 ## <a name="how-do-i-get-started"></a>如何入门？
 
-按照下载 Visual Studio 2019 和 Windows Mixed Reality 应用模板中的说明，首先 [安装这些工具](../install-the-tools.md)。 混合现实应用模板在 Visual Studio marketplace 上可作为 [web 下载](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)，或通过 VISUAL studio UI 安装为扩展。
+请按照下载 Visual Studio 2019 和 Windows Mixed Reality 应用程序模板中的说明，先[安装这些工具](../install-the-tools.md)。 混合现实应用模板在 Visual Studio marketplace 上可作为[web 下载](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)，或通过 Visual Studio UI 将它们安装为扩展。
 
 现在，你已准备好创建 DirectX 11 Windows Mixed Reality 应用！ 请注意，若要删除示例内容，请在 *pch* 中注释掉 **DRAW_SAMPLE_CONTENT** 预处理器指令。
 
@@ -39,43 +39,43 @@ DirectX 11 全息 UWP 应用模板非常类似于 DirectX 11 UWP 应用模板。
 安装工具后，] (。/install-the-tools.md) 你可以创建一个全息的 DirectX UWP 项目。
 
 在 Visual Studio 2019 中创建新项目：
-1. 启动 **Visual Studio**。
-2. 在右侧的 " **入门** " 部分中，选择 " **创建新项目**"。
-3. 在 " **创建新项目** " 对话框的下拉菜单中，选择 " **c + +**"、" **Windows Mixed Reality**" 和 " **UWP**"。
-4. **(通用 Windows)  (c + +/WinRT) 中选择 "全息 DirectX 11 应用程序**"。
+1. 开始 **Visual Studio**。
+2. 在右侧的 "**入门**" 部分中，选择 "**创建新项目**"。
+3. 在 "**创建新项目**" 对话框的下拉菜单中，选择 " **c + +**"、" **Windows Mixed Reality**" 和 " **UWP**"。
+4. 选择 "**全息 DirectX 11 应用 (通用 Windows)  (c + +/WinRT)**。
    ![Visual Studio 2019 中全息版 DirectX 11 c + +/WinRT UWP 应用项目模板的屏幕截图](images/holographic-directx-app-cpp-new-project-2019.png)<br>
    *Visual Studio 2019 中的全息 DirectX 11 c + +/WinRT UWP 应用项目模板*
    >[!IMPORTANT]
-   >请确保项目模板的名称包含 " (c + +/WinRT) "。  如果没有，则已安装全息版项目模板。  若要获取最新的项目模板，请将 [其安装](../install-the-tools.md) 为 Visual Studio 2019 的扩展。
-5. 选择“**下一页**”。
-5. 填写 " **项目名称** " 和 " **位置** " 文本框，然后选择或点击 " **创建**"。 创建全息应用项目。
-6. 对于仅面向 HoloLens 2 的开发，请确保将 **目标版本** 和 **最低版本** 设置为 **Windows 10，版本 1903**。  如果你还面向 HoloLens (第一代) 或桌面 Windows Mixed Reality 耳机，则可以将 **最低版本** 设置为 **Windows 10，版本 1809**。 使用 HoloLens 2 的新功能时，这将要求在代码中进行某种 <a href="/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">版本自适应检查</a> 。
-   ![将 Windows 10 （版本1903）设置为目标和最小版本的屏幕截图](images/new-uwp-project.png)<br>
-   *将 **Windows 10 （版本1903）** 设置为目标和最低版本*
+   >请确保项目模板的名称包含 " (c + +/WinRT) "。  如果没有，则已安装全息版项目模板。  若要获取最新的项目模板，请将[它们安装](../install-the-tools.md)为 Visual Studio 2019 的扩展。
+5. 选择“下一步”  。
+5. 填写 " **Project 名称** 和 **位置**" 文本框，然后选择或点击 "**创建**"。 创建全息应用项目。
+6. 对于仅 HoloLens 2 开发目标，请确保将 **目标版本** 和 **最低版本** 设置为 **Windows 10 版本 1903**。  如果你还以 HoloLens (第一代) 或桌面 Windows Mixed Reality 耳机为目标，则可以将 **最低版本** 设置为 **Windows 10 版本 1809**。 当使用 HoloLens 2 的新功能时，这将要求在代码中进行某种<a href="/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">版本自适应检查</a>。
+   ![设置 Windows 10 的屏幕截图，版本1903作为目标和最低版本](images/new-uwp-project.png)<br>
+   *设置 **Windows 10 版本1903，** 作为目标和最低版本*
    >[!IMPORTANT]
-   >如果看不到 **windows 10 （版本 1903** ）作为选项，则不会安装最新的 WINDOWS 10 SDK。  若要使此选项显示，请 <a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk" target="_blank">安装10.0.18362.0 或更高版本的 Windows 10 SDK</a>。
+   >如果看不到 **Windows 10 版本 1903** 作为选项，则不会安装最新的 Windows 10 SDK。  若要使此选项显示，请<a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk" target="_blank">安装 Windows 10 SDK 的版本10.0.18362.0 或更高版本</a>。
 
 在 Visual Studio 2017 中创建新项目：
-1. 启动 **Visual Studio**。
-2. 在 " **文件** " 菜单上，指向 " **新建** "，然后从上下文菜单中选择 " **项目** "。 此时会打开“新建项目”对话框。 
+1. 开始 **Visual Studio**。
+2. 从 "**文件**" 菜单中，指向 "**新建**"，然后从上下文菜单中选择 " **Project** "。 此时会打开“新建项目”对话框。 
 3. 展开左侧的 " **已安装** "，然后展开 " **Visual C++** 语言" 节点。
-4. 导航到 " **Windows 通用 > 全息** 节点"，然后选择 " **)  (c + +/WinRT)  (通用 Windows 的全息 DirectX 11 应用**。
+4. 导航到 **Windows 通用 > 全息** 节点，并选择 " **(通用 Windows)  (c + +/WinRT) 中的" 全息 DirectX 11 应用**"。
    ![Visual Studio 2017 中全息版 DirectX 11 c + +/WinRT UWP 应用项目模板的屏幕截图](images/holographic-directx-app-cpp-new-project.png)<br>
    *Visual Studio 2017 中的全息 DirectX 11 c + +/WinRT UWP 应用项目模板*
    >[!IMPORTANT]
-   >请确保项目模板的名称包含 " (c + +/WinRT) "。  如果没有，则已安装全息版项目模板。  若要获取最新的项目模板，请将 [其安装](../install-the-tools.md) 为 Visual Studio 2017 的扩展。
+   >请确保项目模板的名称包含 " (c + +/WinRT) "。  如果没有，则已安装全息版项目模板。  若要获取最新的项目模板，请将[它们安装](../install-the-tools.md)为 Visual Studio 2017 的扩展。
 5. 填写 " **名称** " 和 " **位置** " 文本框，然后选择或点击 **"确定"**。 创建全息应用项目。
-6. 对于仅面向 HoloLens 2 的开发，请确保将 **目标版本** 和 **最低版本** 设置为 **Windows 10，版本 1903**。  如果你还面向 HoloLens (第一代) 或桌面 Windows Mixed Reality 耳机，则可以将 **最低版本** 设置为 **Windows 10，版本 1809**。 使用 HoloLens 2 的新功能时，这将要求在代码中进行某种 <a href="/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">版本自适应检查</a> 。
-   ![将 Windows 10 （版本1903）设置为目标和最小版本的屏幕截图](images/new-uwp-project.png)<br>
-   *将 **Windows 10 （版本1903）** 设置为目标和最低版本*
+6. 对于仅 HoloLens 2 开发目标，请确保将 **目标版本** 和 **最低版本** 设置为 **Windows 10 版本 1903**。  如果你还以 HoloLens (第一代) 或桌面 Windows Mixed Reality 耳机为目标，则可以将 **最低版本** 设置为 **Windows 10 版本 1809**。 当使用 HoloLens 2 的新功能时，这将要求在代码中进行某种<a href="/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">版本自适应检查</a>。
+   ![设置 Windows 10 的屏幕截图，版本1903作为目标和最低版本](images/new-uwp-project.png)<br>
+   *设置 **Windows 10 版本1903，** 作为目标和最低版本*
    >[!IMPORTANT]
-   >如果看不到 **windows 10 （版本 1903** ）作为选项，则不会安装最新的 WINDOWS 10 SDK。  若要使此选项显示，请 <a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk" target="_blank">安装10.0.18362.0 或更高版本的 Windows 10 SDK</a>。
+   >如果看不到 **Windows 10 版本 1903** 作为选项，则不会安装最新的 Windows 10 SDK。  若要使此选项显示，请<a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk" target="_blank">安装 Windows 10 SDK 的版本10.0.18362.0 或更高版本</a>。
 
-该模板将使用 <a href="/windows/uwp/cpp-and-winrt-apis/" target="_blank">c + +/WinRT</a>（一种 c + + 17 语言 Windows 运行时 api）生成项目，该项目支持任何符合标准的 c + + 17 编译器。  该项目演示了如何创建一个世界上锁定的多维数据集，该多维数据集是用户的2米。 用户 [可以按](../../design/gaze-and-commit.md#composite-gestures) 下或按下控制器上的按钮，将多维数据集置于用户 [注视](../../design/gaze-and-commit.md)指定的不同位置。 可以修改此项目来创建任何混合现实应用。
+该模板将使用<a href="/windows/uwp/cpp-and-winrt-apis/" target="_blank">c + +/WinRT</a>（一种 c + + 17 语言 Windows 运行时 api）生成项目，该项目支持任何符合标准的 c + + 17 编译器。  该项目演示了如何创建一个世界上锁定的多维数据集，该多维数据集是用户的2米。 用户 [可以按](../../design/gaze-and-commit.md#composite-gestures) 下或按下控制器上的按钮，将多维数据集置于用户 [注视](../../design/gaze-and-commit.md)指定的不同位置。 可以修改此项目来创建任何混合现实应用。
 
-你还可以使用 **Visual c #** 全息项目模板创建一个新项目，该模板基于 SharpDX。  如果你的全息 c # 项目不是从 Windows 全息应用程序模板开始，则需要从 Windows Mixed Reality c # 模板项目复制 fxcompile 文件并将其导入到 .csproj 文件中，以便编译添加到项目中的 HLSL 文件。 在 Visual Studio 的 Windows Mixed Reality 应用程序模板扩展中还提供了 Direct3D 12 模板。
+你还可以使用 **Visual c #** 全息项目模板创建一个新项目，该模板基于 SharpDX。  如果你的全息 c # 项目不是从 Windows 全息应用程序模板开始，则需要从 Windows Mixed Reality c # 模板项目复制 fxcompile 文件，然后将其导入到 .csproj 文件中，以便编译添加到项目中的 HLSL 文件。 Visual Studio 的 Windows Mixed Reality 应用程序模板扩展中还提供了 Direct3D 12 模板。
 
-请参阅 [使用 Visual Studio 进行部署和调试](../platform-capabilities-and-apis/using-visual-studio.md) ，获取有关如何生成和部署该示例并将其部署到 HoloLens、附加了沉浸式设备的 PC 或仿真程序的信息。
+查看[使用 Visual Studio 部署和调试](../platform-capabilities-and-apis/using-visual-studio.md)，获取有关如何生成和部署示例到 HoloLens、已连接沉浸式设备的 PC 或仿真程序的信息。
 
 下面的说明将假设你使用 c + + 生成应用。
 
@@ -95,13 +95,13 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 }
 ```
 
-从现在开始，AppView 类处理与 Windows 基本输入事件、CoreWindow 事件和消息等的交互。 它还将创建应用使用的 HolographicSpace。
+从现在开始，AppView 类处理与 Windows 基本输入事件、CoreWindow 事件和消息等之间的交互。 它还将创建应用使用的 HolographicSpace。
 
 ## <a name="creating-a-win32-project"></a>创建 Win32 项目
 
 开始构建 Win32 全息项目的最简单方法是修改 <a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/BasicHologram" target="_blank"> *BasicHologram* Win32 示例</a>。
 
-此 Win32 示例使用 <a href="/windows/uwp/cpp-and-winrt-apis/" target="_blank">c + +/WinRT</a>，它是支持任何符合标准的 c + + 17 编译器的 Windows 运行时 Api 的 c + + 17 语言投影。  该项目演示了如何创建一个世界上锁定的多维数据集，该多维数据集是用户的2米。 用户可以按控制器上的按钮，将多维数据集置于用户 [注视](../../design/gaze-and-commit.md)指定的不同位置。 可以修改此项目来创建任何混合现实应用。
+此 Win32 示例使用<a href="/windows/uwp/cpp-and-winrt-apis/" target="_blank">c + +/WinRT</a>，它是支持任何符合标准的 c + + 17 编译器的 Windows 运行时 api 的 c + + 17 语言投影。  该项目演示了如何创建一个世界上锁定的多维数据集，该多维数据集是用户的2米。 用户可以按控制器上的按钮，将多维数据集置于用户 [注视](../../design/gaze-and-commit.md)指定的不同位置。 可以修改此项目来创建任何混合现实应用。
 
 ### <a name="win32-app-entry-point"></a>Win32 应用程序入口点
 
@@ -177,9 +177,9 @@ int APIENTRY wWinMain(
 
 中的 **Render** 方法 `AppMain.cpp` 采用 <a href="/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> ，并根据当前应用和空间定位状态将当前帧呈现到每个全息相机。
 
-## <a name="notes"></a>说明
+## <a name="notes"></a>备注
 
-现在，Windows Mixed Reality 应用模板支持 (/Qspectre) 启用了 Spectre 缓解标志的编译。 在编译使用 Spectre 缓解功能的配置之前，请确保安装 Spectre (MSVC) 运行时库的 Microsoft Visual C++ 版本。 若要安装 Spectre 缓解的 c + + 库，请启动 Visual Studio 安装程序并选择 " **修改**"。 导航到 **各个组件** 并搜索 "spectre"。 选择与要为其编译 Spectre 的代码所需的目标平台和 MSVC 版本对应的框，然后单击 " **修改** " 开始安装。
+Windows Mixed Reality 应用模板现在支持在/Qspectre)  (启用了 Spectre 缓解标志的编译。 在编译启用了 Spectre 缓解功能的配置之前，请确保安装 Spectre 版本的 Microsoft Visual C++ (MSVC) 运行时库。 若要安装 Spectre 缓解的 c + + 库，请启动 Visual Studio 安装程序并选择 "**修改**"。 导航到 **各个组件** 并搜索 "spectre"。 选择与要为其编译 Spectre 的代码所需的目标平台和 MSVC 版本对应的框，然后单击 "**修改**" 开始安装。
 
 ## <a name="see-also"></a>另请参阅
 * [获取 HolographicSpace](getting-a-holographicspace.md)

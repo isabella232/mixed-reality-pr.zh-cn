@@ -1,21 +1,21 @@
 ---
 title: 案例研究-创建 HoloTour 的不可能透视
-description: 我们希望你在 HoloTour 中体验 Microsoft HoloLens，使其 unforgettable。 除了传统的旅游停止之外，我们还计划了一些 "无法透视"。
+description: 我们希望你在 HoloTour 中体验到 unforgettable 的 Microsoft HoloLens。 除了传统的旅游停止之外，我们还计划了一些 "无法透视"。
 author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour、HoloLens、Windows Mixed Reality
-ms.openlocfilehash: f3ca07dfab1e4477039481c268e418aac9034bc5
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: bf1f2b3c9c82e4b649a75efc0275a063ea5a2363dfa15b818c0159b947f6b515
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91678865"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115199901"
 ---
 # <a name="case-study---creating-impossible-perspectives-for-holotour"></a>案例研究-创建 HoloTour 的不可能透视
 
-我们希望你在 HoloTour 中体验 Microsoft HoloLens，使其 unforgettable。 除了传统的旅游停止之外，我们还计划了一些 "无法进行的工作"-时刻，在任何浏览中都不可能出现这种情况，但通过 HoloLens 中的技术，我们可能会直接转到客厅。 为这些体验创建内容需要一些不同于标准捕获过程的方法。
+我们希望你在 HoloTour 中体验到 unforgettable 的 Microsoft HoloLens。 除了传统的旅游停止之外，我们还计划了一些 "无法进行的工作"-时间，这是无法在任何教程上进行的，但通过 HoloLens 中的技术，我们可能会直接转到生活空间。 为这些体验创建内容需要一些不同于标准捕获过程的方法。
 
 ## <a name="the-content-challenge"></a>内容挑战
 
@@ -97,5 +97,5 @@ ms.locfileid: "91678865"
 </table>
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 * [视频： Microsoft HoloLens： HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

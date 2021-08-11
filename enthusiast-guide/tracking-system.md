@@ -1,14 +1,14 @@
 ---
 title: 由内而外跟踪的工作原理
-description: 有关在 Windows Mixed Reality 耳机中使用的基于照相机的内部跟踪系统的信息。
+description: Windows Mixed Reality 耳机中使用的基于照相机的内部跟踪系统的相关信息。
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，从内到外，内幕，跟踪，照相机
-ms.openlocfilehash: af7553b27bec63c2ae83bed390c17e1fcf006954
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，从内到外，内部，跟踪，照相机
+ms.openlocfilehash: 579ef23c1eca2c184d07878c4e71ce298c5ad9922255b5e43643458a256b61bf
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725868"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197860"
 ---
 # <a name="inside-out-tracking"></a>由内而外跟踪
 
@@ -18,14 +18,14 @@ ms.locfileid: "97725868"
 
 **更多详细信息：** 跟踪系统使用两个低分辨率黑色和白色的照相机来识别您的环境中的特征。 系统会根据观察到的功能三角化其位置，然后将高比特率 IMU 的数据融合在一起，为环境中的 HMD 生成连续的姿势估算。 这两个应用程序都使用姿势信息呈现场景和系统，以便针对时间和位置的任何错误预测更正此呈现。 你的电脑存储环境信息，因此跟踪系统可以召回特定于环境的数据，如房间边界物理位置。 如果在多个房间内使用您的设备，则可以在每个空间中设置不同的边界，并且跟踪系统可以召回特定房间的特定边界。
 
-由于在 Windows Mixed Reality 沉浸式耳机上进行跟踪的工作方式类似于在 [Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)上进行跟踪，你可能会发现此视频非常有用：
+由于 Windows Mixed Reality 沉浸式耳机上的跟踪工作方式类似于[Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)的跟踪，你可能会发现此视频很有用：
 
 >[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
 
 ## <a name="what-do-i-need-to-make-tracking-work-well"></a>要使跟踪工作良好，需要执行哪些操作？
 
 要解决这两个问题，以确保跟踪非常适合你：
-1. 确保你的电脑满足运行 Windows Mixed Reality 的要求。 如果你的电脑满足 Windows Mixed Reality 的最低要求，则跟踪将有足够的资源可在你的电脑上正常运行。
+1. 确保你的电脑满足 Windows Mixed Reality 运行的要求。 如果你的电脑满足 Windows Mixed Reality 的最低要求，则跟踪会有足够的资源可在你的电脑上正常运行。
 2. 确保你的环境适合于设备使用的视觉对象跟踪类型。 你应在具有足够光线的环境中使用该设备。 因为设备的工作原理是观察您的环境中的可见性，所以必须有足够的光线，才能观察到该环境。 还必须有足够的视觉功能 (换言之、装饰、对比度等) ，以便跟踪系统正常运行。
 
 ## <a name="how-much-light-is-enough-light"></a>光源有多少？
@@ -46,13 +46,13 @@ ms.locfileid: "97725868"
 
 ## <a name="what-is-the-difference-between-3dof-and-6dof"></a>3DOF 和6DOF 之间的区别是什么？
 
-首先，DOF 是 "自由度" 的简短。 讨论跟踪系统时，这意味着可检测到的移动的程度或类型。 这些变动分为两大类： "旋转" 和 "带转换的旋转"。 3DOF 指的是3度的自由度，表示每个轴的旋转。 简单地说，3DOF 跟踪使你可以向左或向右、向下或向下倾斜 (滚) 侧边。 无法在3DOF 中转换或向前/向后转换。 6DOF 的长度为6度。 它基于3DOF 的旋转，并添加到 it 翻译。 这意味着，可以向前/向后、向下 strafe 左/右和 crouch 并将其关闭。 三个 DOF 跟踪是你通常会在手机或移动版的 VR 产品上发现的跟踪类型，而6DOF 将在更强大的 VR 平台上找到。 一些经验定制为3DOF，只允许3DOF 运动 (旋转) ，即使设备支持6DOF 跟踪。 例如，在 Windows Mixed Reality 中观看360视频。 视频将允许你查看，但不允许你在你的环境中进行演练。
+首先，DOF 是 "自由度" 的简短。 讨论跟踪系统时，这意味着可检测到的移动的程度或类型。 这些变动分为两大类： "旋转" 和 "带转换的旋转"。 3DOF 指的是3度的自由度，表示每个轴的旋转。 简单地说，3DOF 跟踪使你可以向左或向右、向下或向下倾斜 (滚) 侧边。 无法在3DOF 中转换或向前/向后转换。 6DOF 的长度为6度。 它基于3DOF 的旋转，并添加到 it 翻译。 这意味着，可以向前/向后、向下 strafe 左/右和 crouch 并将其关闭。 三个 DOF 跟踪是你通常会在手机或移动版的 VR 产品上发现的跟踪类型，而6DOF 将在更强大的 VR 平台上找到。 一些经验定制为3DOF，只允许3DOF 运动 (旋转) ，即使设备支持6DOF 跟踪。 例如，在 Windows Mixed Reality 观看360视频。 视频将允许你查看，但不允许你在你的环境中进行演练。
 
 ## <a name="things-are-jittering-or-stuttering-in-my-headset-is-my-tracking-not-working"></a>我的耳机中 jittering 或断断续续。 我的跟踪是否不起作用？
 
 此类错误有几个源。 请务必将观察到的内容定义为正确的原因，以便解决问题。 请参阅 [故障排除](tracking.md) 部分，以帮助了解发生此问题的原因。
 
-## <a name="can-i-bring-my-own-tracking-technology-to-windows-mixed-reality"></a>我能否将我自己的跟踪技术引入 Windows Mixed Reality？
+## <a name="can-i-bring-my-own-tracking-technology-to-windows-mixed-reality"></a>我能否将我自己的跟踪技术用于 Windows Mixed Reality？
 
 当前不支持此功能。
 
@@ -68,7 +68,7 @@ Windows Mixed Reality 中的跟踪很容易使用，无需基础结构或设置�
 
 ## <a name="how-do-i-clear-tracking-and-environment-data"></a>如何实现清除跟踪和环境数据？
 
-跟踪系统存储某些环境数据，以使其能够回忆到实际的物理位置（如安全界限）。 此信息（包括安全边界）可随时删除。 如果删除此信息，系统将不再识别你的空间或撤回安全边界。 如果要在清除环境数据后使用安全边界，则必须重新设置它。 若要设置新边界，请参阅 [设置边界](set-up-windows-mixed-reality.md#set-up-your-room-boundary) 部分。 若要删除所有这些数据，请打开 "设置"，导航到 "Mixed Reality"，然后选择左侧菜单的 "环境" 部分。 选择标记为 "清除环境数据" 的按钮以删除所有环境和跟踪数据。
+跟踪系统存储某些环境数据，以使其能够回忆到实际的物理位置（如安全界限）。 此信息（包括安全边界）可随时删除。 如果删除此信息，系统将不再识别你的空间或撤回安全边界。 如果要在清除环境数据后使用安全边界，则必须重新设置它。 若要设置新边界，请参阅 [设置边界](set-up-windows-mixed-reality.md#set-up-your-room-boundary) 部分。 若要删除所有这些数据，请打开设置，导航到 "Mixed Reality"，然后选择左侧菜单的 "环境" 部分。 选择标记为 "清除环境数据" 的按钮以删除所有环境和跟踪数据。
 
 ## <a name="see-also"></a>另请参阅
 * [跟踪系统疑难解答](tracking.md)

@@ -1,17 +1,17 @@
 ---
-title: HoloLens (第一代) 和 Azure 306-流式处理视频
-description: 完成本课程，了解如何在混合现实应用程序中实现 Azure 媒体服务。
+title: HoloLens（第一代）和 Azure 306 - 流式传输视频
+description: 完成本课程以了解如何在混合现实应用程序中实现 Azure 媒体服务。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure，混合现实，学院，unity，教程，api，媒体服务，流视频，360，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: c6afedfd2dae9da3bcd6b044381a6dc20604ded8
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 3f3567c140c3162258475c28c2ef149039e3c40ed418ed2801ac8c40dda00a8f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730564"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115224134"
 ---
 # <a name="hololens-1st-gen-and-azure-306-streaming-video"></a>HoloLens (第一代) 和 Azure 306：流式处理视频
 
@@ -27,17 +27,17 @@ ms.locfileid: "104730564"
 
 在本课程中，你将了解如何将 Azure 媒体服务连接到 Windows Mixed Reality VR 体验，以允许在沉浸式耳机上播放流式传输360学位视频。 
 
-**Azure 媒体服务** 是一系列服务，为你提供了广播质量的视频流式处理服务，以便在当前最常见的移动设备上达到更大的受众。 有关详细信息，请访问 [Azure 媒体服务页](https://azure.microsoft.com/services/media-services)。
+**Azure 媒体服务** 是提供广播质量的视频流式处理服务的服务的集合，可让用户在当前最常见的移动设备上达到更大的受众。 有关详细信息，请访问[Azure 媒体服务页](https://azure.microsoft.com/services/media-services)。
 
 完成本课程后，你将拥有一个混合现实沉浸式耳机应用程序，该应用程序将能够执行以下操作：
 
-1. 通过 **Azure 媒体服务** 从 **azure 存储** 检索360度视频。
+1. 通过 **Azure 媒体服务** 从 **Azure 存储** 检索360度视频。
 
 2. 在 Unity 场景中显示检索到的360度视频。
 
 3. 在两个场景之间导航，具有两个不同的视频。
 
-在您的应用程序中，您将由您来决定如何将结果与您的设计相集成。 本课程旨在向您介绍如何将 Azure 服务与 Unity 项目集成。 您可以使用您在本课程中获得的知识来增强混合现实应用程序的工作。
+在您的应用程序中，您将由您来决定如何将结果与您的设计相集成。 本课程旨在向您介绍如何将 Azure 服务与 Unity Project 集成。 您可以使用您在本课程中获得的知识来增强混合现实应用程序的工作。
 
 ## <a name="device-support"></a>设备支持
 
@@ -49,15 +49,15 @@ ms.locfileid: "104730564"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
 > 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具一文](../../install-the-tools.md)中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
 
 本课程建议采用以下硬件和软件：
 
-- [与 Windows Mixed Reality 兼容](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)的开发 PC，适用于沉浸式 (VR) 耳机开发
-- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](../../install-the-tools.md#installation-checklist)
+- 与沉浸式 (VR) 耳机开发[Windows Mixed Reality 兼容](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)的开发 PC
+- [启用开发人员模式 Windows 10 Fall Creators Update (或更高版本) ](../../install-the-tools.md#installation-checklist)
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
 - [Unity 2017。4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
@@ -71,22 +71,22 @@ ms.locfileid: "104730564"
 2.  设置并测试混合现实沉浸式耳机。
 
     > [!NOTE]
-    > 本课程 **不** 需要移动控制器。 如果需要支持设置沉浸式耳机，请单击 ["有关如何设置 Windows Mixed Reality" 的链接](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)。
+    > 本课程 **不** 需要移动控制器。 如果需要支持设置沉浸式耳机，请单击["如何设置 Windows Mixed Reality 的链接](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)"。
 
 ## <a name="chapter-1---the-azure-portal-creating-the-azure-storage-account"></a>第1章-Azure 门户：创建 Azure 存储帐户
 
-若要使用 **Azure 存储服务**，你将需要在 Azure 门户中创建并配置一个 **存储帐户** 。
+若要使用 **Azure 存储服务**，你将需要在 Azure 门户中创建和配置 **存储帐户**。
 
 1.  登录到 [Azure 门户](https://portal.azure.com)。
 
     > [!NOTE]
     > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室中按照本教程进行学习，请咨询教师或 proctors，以获得设置新帐户的帮助。
 
-2.  登录后，单击左侧菜单中的 " **存储帐户** "。
+2.  登录后，单击左侧菜单中的 "**存储帐户**"。
 
     ![Azure 存储帐户设置](images/AzureLabs-Lab6-02.png)
 
-3.  在 " **存储帐户** " 选项卡上，单击 " **添加**"。
+3.  在 "**存储帐户**" 选项卡上，单击 "**添加**"。
 
     ![Azure 存储帐户设置](images/AzureLabs-Lab6-03.png)
 
@@ -96,7 +96,7 @@ ms.locfileid: "104730564"
 
     2.  对于 **部署模型，选择 "** **资源管理器**"。
 
-    3.  对于 " **帐户类型**"，请选择 " **存储 (常规用途 v1)**。
+    3.  对于 "**帐户类型**"，请选择 "**存储 (常规用途 v1)**"。
 
     4.  对于 " **性能**"，请选择 " **标准"。**
 
@@ -146,11 +146,11 @@ ms.locfileid: "104730564"
 
     4.  如果要创建新的资源组) ，请确定资源组 (的 **位置** 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
 
-    5.  对于 " **存储帐户** " 部分，单击 " **请选择 ...** " 部分，然后单击在上一章中创建的 **存储帐户** 。
+    5.  对于 "**存储帐户**" 部分，单击 "**请选择 ...** " 部分，然后单击在上一章中创建的 **存储帐户**。
 
     6.  还需要确认是否已了解应用于此服务的条款和条件。
 
-    7.  单击 **“创建”** 。
+    7.  单击“**创建**”。
 
         ![Azure 门户](images/AzureLabs-Lab6-08.png)
 
@@ -164,289 +164,289 @@ ms.locfileid: "104730564"
 
     ![Azure 门户](images/AzureLabs-Lab6-10.png)
 
-7.  单击通知中的 " **中转到资源** " 按钮以浏览新服务实例。
+7.  单击 **通知中的"** 转到资源"按钮，浏览新的服务实例。
 
-8.  在 "新建媒体服务" 页的左侧面板中，单击 " **资产** " 链接，这是大约的一半。
+8.  在新的"媒体服务"页的左侧面板中，单击"资产"链接，该链接大约位于半角。
 
-9.  在下一页上，在页面的左上角，单击 " **上载**"。
+9.  在页面左上角的下一页上，单击 **"Upload"。**
 
     ![Azure 门户](images/AzureLabs-Lab6-11.png)
 
-10. 单击 **文件夹** 图标浏览文件，并选择要流式传输的第一个360视频。 
+10. 单击" **文件夹"** 图标浏览文件，然后选择要流式传输的第一个 360 视频。 
     
-    > 可以通过以下 [链接下载示例视频](https://vimeo.com/214401712)。
+    > 可以单击此 [链接下载示例视频](https://vimeo.com/214401712)。
 
     ![Azure 门户](images/AzureLabs-Lab6-12.png)
 
 > [!WARNING]
-> 长文件名可能会导致编码器出现问题：为了确保视频不会出现问题，请考虑缩短视频文件名的长度。
+> 长文件名可能会导致编码器问题：因此，若要确保视频没有问题，请考虑缩短视频文件名的长度。
 
-11. 视频上传完成后，进度栏将变为绿色。
+11. 上传完视频后，进度栏将变成绿色。
 
     ![Azure 门户](images/AzureLabs-Lab6-13.png)
 
-12. 单击上面的文本 (**yourservicename** ") 返回到" **资产** "页。
+12. 单击上述文本 **， ("yourservicename - Assets")** 返回到"资产 **"** 页。
 
 13. 你会注意到你的视频已成功上传。 单击该磁贴。
 
     ![Azure 门户](images/AzureLabs-Lab6-14.png)
 
-14. 要重定向到的页面将显示有关视频的详细信息。 若要使用视频，需要对其进行编码，方法是单击页面左上角的 " **编码** " 按钮。
+14. 重定向到的页面将显示有关视频的详细信息。 若要能够使用视频，需要单击页面左上方的"编码"按钮进行编码。
 
     ![Azure 门户](images/AzureLabs-Lab6-15.png)
 
-15. 此时将在右侧显示一个新面板，您可以在其中设置文件的编码选项。 设置以下属性 (一些属性将默认设置) ：
+15. 右侧将显示一个新面板，可以在其中为文件设置编码选项。 设置以下属性 (某些属性默认已设置为) ：
 
-    1.  **媒体编码器名称 *Media Encoder Standard***
+    1.  **媒体编码器 *名称Media Encoder Standard***
 
-    2.  **编码预设的 *内容自适应多比特率***
+    2.  **编码预设 *内容自适应多比特率 MP4***
 
-    3.  ***Video1.mp4Media Encoder Standard 处理的* 作业名称**
+    3.  **作业名称 *Media Encoder Standard处理Video1.mp4***
 
-    4.  **输出媒体资产名称 *Video1.mp4--Media Encoder Standard 编码***
+    4.  **输出媒体资产名称 *Video1.mp4 -- Media Encoder Standard编码***
 
         ![Azure 门户](images/AzureLabs-Lab6-16.png)
 
-16. 单击“创建”  按钮。
+16. 单击“创建”按钮。
 
-17. 你将注意到添加了 **编码作业** 的栏，单击该栏，此时将显示一个面板，其中显示了编码进度。
+17. 你会注意到添加了编码 **作业的栏**，单击该栏，将显示一个面板，并显示"编码进度"。
 
     ![Azure 门户](images/AzureLabs-Lab6-17.png)
 
     ![Azure 门户](images/AzureLabs-Lab6-18.png)
 
-18. 等待作业完成。 完成后，可以随意关闭面板右上角的 "X" 面板。
+18. 等待作业完成。 完成后，请随意关闭面板，面板右上方有"X"。
 
     ![Azure 门户](images/AzureLabs-Lab6-19.png)
 
     ![Azure 门户](images/AzureLabs-Lab6-20.png)
 
     > [!IMPORTANT]
-    > 此操作所花的时间取决于视频文件的大小。 此过程可能需要一段时间。
+    > 此时间取决于视频的文件大小。 此过程可能需要很长时间。
 
-19. 现在，已创建视频的编码版本，你可以将其发布以使其可供访问。 为此，请单击蓝色链接 **资产** ，返回到 "资产" 页。
+19. 创建视频的编码版本后，可以发布该视频，使其可访问。 为此，请单击蓝色链接 **"资产** "返回到"资产"页。
 
     ![Azure 门户](images/AzureLabs-Lab6-21.png)
 
-20. 你将看到视频以及另一个，它属于 **资产类型 " _多比特率_**"。
+20. 你将看到视频以及另一个，即资产 **类型 _多比特率 MP4。_**
 
     ![Azure 门户](images/AzureLabs-Lab6-22.png)
 
     > [!NOTE] 
-    > 你可能会注意到，新资产与初始视频的结合 *未知*，并且其 **大小** 为 "0" 字节，只需刷新窗口以更新。
+    > 你可能会注意到，新资产与初始视频一起为"未知"，其大小为"0"字节，只需刷新窗口以进行更新。
 
 21. 单击此新资产。
 
     ![Azure 门户](images/AzureLabs-Lab6-23.png)
 
-22. 你将看到一个类似于你以前使用过的面板，这只是一个不同的资产。 单击页面顶部的 " **发布** " 按钮。
+22. 你将看到一个与之前使用的面板类似的面板，只是这是一个不同的资产。 单击 **页面** 顶部中心的"发布"按钮。
 
     ![Azure 门户](images/AzureLabs-Lab6-24.png)
 
-23. 系统将提示你将 **定位符**（即入口点）设置为资产中的文件。 对于你的方案，请设置以下属性：
+23. 系统将提示将 **定位** 符 （即入口点）设置为"资产"中的文件。 对于方案，请设置以下属性：
 
-    1.  **定位符类型**  > **渐进**。
+    1.  **定位符类型**  > **渐进式**。
 
-    2.  **日期** 和 **时间** 将设置为你（从当前日期算起），到未来 (100 年的时间) 。 保持原样，或将其更改为 "符合"。
+    2.  日期和时间 **将** 设置为从当前日期到未来 100 年 (，本例中) 。 保留为""或"更改"以适合。
 
     > [!NOTE]
-    > 有关定位符的详细信息以及可以选择的信息，请访问 [Azure 媒体服务文档](/azure/media-services/media-services-concepts)。
+    > 有关定位符以及可以选择哪些内容的详细信息，请访问 Azure 媒体服务[文档](/azure/media-services/media-services-concepts)。
 
-24. 在该面板的底部，单击 " **添加** " 按钮。
+24. 在面板底部，单击"添加 **"** 按钮。
 
     ![Azure 门户](images/AzureLabs-Lab6-25.png)
 
-25. 你的视频现在已发布，可以使用其终结点进行流式处理。 页面的后面是 **文件** 部分。 这是视频的不同编码版本的位置。 选择可能的最高分辨率 (在下图中，它是 ") 1920x960" 文件，然后会出现右侧的一个面板。 可在此处找到 **下载 URL**。 复制此 **终结点** ，因为你将在稍后的代码中使用它。
+25. 视频现已发布，可以使用其终结点进行流式传输。 页面的下部是"文件 **"** 部分。 这是视频的不同编码版本。 选择下图中可能 (分辨率为 1920x960) ，然后右侧会显示一个面板。 可在此处找到"下载 **URL"。** 复制 **此终结点** ，因为稍后将在代码中使用它。
 
     ![Azure 门户](images/AzureLabs-Lab6-26.png)    
 
     ![Azure 门户](images/AzureLabs-Lab6-27.png)
 
     > [!NOTE] 
-    > 还可以按 " **播放** " 按钮播放视频并对其进行测试。
+    > 还可以按"播放 **"** 按钮播放视频并进行测试。
 
-26. 你现在需要上传将在此实验室中使用的第二个视频。 按照上述步骤操作，为第二个视频重复相同的过程。 请确保同时复制第二个 **终结点** 。 使用以下 [链接下载第二个视频](https://vimeo.com/214402865)。
+26. 现在需要上传将在此实验室中使用的第二个视频。 按照上述步骤操作，为第二个视频重复相同的过程。 确保同时复制第二 **个** 终结点。 使用以下链接 [下载第二个视频](https://vimeo.com/214402865)。
 
-27. 一旦发布了这两个视频，就可以转到下一章。
+27. 发布这两个视频后，即可进入下一章。
 
-## <a name="chapter-3---setting-up-the-unity-project"></a>第3章-设置 Unity 项目
+## <a name="chapter-3---setting-up-the-unity-project"></a>第 3 章 - 设置 Unity Project
 
-下面是使用混合现实进行开发的典型设置，因此，这是其他项目的一个不错的模板。
+下面是使用混合现实进行开发的典型设置，因此，是其他项目的良好模板。
 
-1.  打开 **Unity** ，并单击 " **新建**"。 
+1.  打开 **Unity，** 然后单击"新建 **"。** 
 
     ![Azure 门户](images/AzureLabs-Lab6-28.png)
 
-2.  现在，你将需要提供 Unity 项目名称，插入 **MR \_ 360VideoStreaming。** 请确保 "项目类型" 设置为 " **3d**"。 将位置设置为合适的位置 (记住，更接近根目录) 。 然后单击 " **创建项目**"。
+2.  现在，需要提供 Unity Project，插入 **MR \_ 360VideoStreaming。** 确保项目类型设置为 **3D**。 将"位置"设置为适合你记住 (，越靠近根目录越好) 。 然后单击"创建 **项目"。**
 
     ![Azure 门户](images/AzureLabs-Lab6-29.png)
 
-3.  当 Unity 处于打开状态时，有必要选中 "默认 **脚本编辑器** " 设置为 " **Visual Studio"。** 转到 " **_编辑_*首选项*** "，然后在新窗口中导航到 "**外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
+3.  打开 Unity 后，值得检查 **默认脚本编辑器** 是否设置为 **Visual Studio。** 转到"**_编辑_*首选项"，*** 然后从新窗口导航到"**外部工具"。** 将 **"外部脚本编辑器"****更改为 Visual Studio 2017。** 关闭 **"首选项"** 窗口。
 
     ![Azure 门户](images/AzureLabs-Lab6-30.png)
 
-4.  接下来，转到 " ***文件**生成设置*** "，并通过单击 "**切换平台**" 按钮将平台切换到 **通用 Windows 平台**。
+4.  接下来，转到"***文件* 生成 *设置，*** 并单击"切换平台"按钮 **，将** 平台切换到"通用 Windows **平台**"。
 
-5.  另外，请确保：
+5.  另请确保：
 
-    1. "**目标设备**" 设置为 "**任何设备"。**
+    1. **目标设备** 设置为" **任何设备"。**
     
     2.  **生成类型** 设置为 **D3D。**
 
-    3.  **SDK** 设置为 " **最新安装"。**
+    3.  **SDK** 设置为"最新 **安装"。**
 
-    4.  **Visual Studio 版本** 设置为 " **最新安装"。**
+    4.  **Visual Studio版本** 设置为"最新 **安装"。**
 
-    5.  "**生成并运行**" 设置为 "**本地计算机"。**
+    5.  **"生成和运行** "设置为" **本地计算机"。**
 
-    6.  请不要担心现在设置 **场景** ，因为稍后会设置它们。
+    6.  请不要担心现在设置 **"场景** "，因为稍后会进行设置。
 
-    7.  其余设置应保留为默认值。
+    7.  其余设置现在应保留为默认值。
 
-        ![设置 Unity 项目](images/AzureLabs-Lab6-31.png)
+        ![设置 Unity Project](images/AzureLabs-Lab6-31.png)
 
-6.  在 " **生成设置** " 窗口中，单击 " **播放机设置** " 按钮，这会在 **检查器** 所在的空间中打开相关面板。 
+6.  在"**生成设置** 窗口中，单击"播放器设置按钮，这将在 **检查** 器所在的空间中打开相关面板。 
 
-7. 在此面板中，需要验证几项设置：
+7. 在此面板中，需要验证一些设置：
 
-    1.  在 " **其他设置** " 选项卡中：
+    1.  在"**其他设置** 选项卡中：
 
-        1.  **脚本****运行时版本** 应 **稳定** ( .net 3.5 等效) 。
+        1.  **脚本运行时****版本****应稳定**（A0.NET 3.5 等效) 。
 
-        2. **脚本编写后端** 应为 **.net。**
+        2. **脚本后端应为** **.NET。**
 
-        3. **API 兼容级别** 应为 **.net 4.6。**
+        3. **API 兼容性级别应为** **.NET 4.6。**
 
-            ![设置 Unity 项目](images/AzureLabs-Lab6-32.png)
+            ![设置 Unity Project](images/AzureLabs-Lab6-32.png)
 
-    2.  在面板中，在 " **XR 设置** " 中， () "发布设置" 下的 " **发布设置** " 下提供了 **支持**，请确保已添加 **Windows Mixed reality SDK** 。
+    2.  在面板的下方，在"发布 设置) "下找到的 **"XR** 设置 ("中，勾选"支持虚拟现实"，确保Windows Mixed Reality **SDK。** 
 
-        ![设置 Unity 项目](images/AzureLabs-Lab6-33.png)
+        ![设置 Unity Project](images/AzureLabs-Lab6-33.png)
 
-    3.  在 " **发布设置** " 选项卡的 " **功能**" 下，检查：
+    3.  在"**发布设置** 选项卡中的"**功能"下**，选中：
 
         - **InternetClient**
 
-            ![设置 Unity 项目](images/AzureLabs-Lab6-34.png)
+            ![设置 Unity Project](images/AzureLabs-Lab6-34.png)
 
-8.  进行这些更改后，请关闭 " **生成设置** " 窗口。
+8.  进行这些更改后，关闭"**生成设置窗口**。
 
-9.  保存项目 **文件* * 保存项目 * *。
+9.  保存Project **文件**保存Project**。
 
 
 
-## <a name="chapter-4---importing-the-insideoutsphere-unity-package"></a>第4章-导入 InsideOutSphere Unity 包
+## <a name="chapter-4---importing-the-insideoutsphere-unity-package"></a>第 4 章 - 导入 InsideOutSphere Unity 包
 
 > [!IMPORTANT]
-> 如果希望跳过本课程的 *Unity 设置* 组件，并继续直接进入代码，可以下载 [unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/Azure-MR-306.unitypackage)，将其作为 [**自定义包**](https://docs.unity3d.com/Manual/AssetPackages.html)导入项目，然后从 **第5章** 继续。 你仍需要创建一个 Unity 项目。
+> 如果要跳过本课程 *的 Unity 设置* 组件，并直接继续编写代码，请随意下载 [此 .unitypackage，](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/Azure-MR-306.unitypackage)将其作为自定义包导入到项目中，然后继续学习 [](https://docs.unity3d.com/Manual/AssetPackages.html)第 **5** 章 。 你仍然需要创建 Unity Project。
 
-在本课程中，你将需要下载名为 [**InsideOutSphere. unitypackage**](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/InsideOutSphere.unitypackage)的 Unity 资产包。
+对于本课程，需要下载名为 [**InsideOutSphere.unitypackage**](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20306%20-%20Streaming%20video/InsideOutSphere.unitypackage)的 Unity 资产包。
 
-如何导入 **unitypackage**：
+如何导入 **unitypackage：**
 
-1.  在您前面的 "Unity" 面板中，单击屏幕顶部菜单中的 " **资产** "，然后单击 " **导入包 > 自定义包**"。
+1.  在 Unity 仪表板的前面，单击屏幕顶部菜单中的"资产"，然后单击"导入包>**自定义包"。**
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-35.png)
 
-2.  使用文件选取器选择 **InsideOutSphere unitypackage** 包，并单击 " **打开**"。 此时将显示此资产的组件列表。 单击 " **导入**" 确认导入。
+2.  使用文件选取器选择 **InsideOutSphere.unitypackage** 包，然后单击"打开 **"。** 此时会显示此资产的组件列表。 单击"导入"确认 **导入**。
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-36.png)
 
-3.  导入完成后，你会发现三个新的文件夹、 **材料**、 **型号** 和 **Prototyping** 已添加到 " **资产** " 文件夹。 这种文件夹结构是 Unity 项目的典型类型。
+3.  导入完成后，你会注意到，"材料"、"模型"和"预制文件"这三个新文件夹已添加到 **"资产"** 文件夹。  此类文件夹结构对于 Unity 项目是典型的。
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-37.png)
 
-    1.  打开 " **模型** " 文件夹，你将看到已导入 **InsideOutSphere** 模型。
+    1.  打开 **Models** 文件夹，会看到 **InsideOutSphere** 模型已导入。
 
-    2.  在 " **材料** " 文件夹中，你将找到 **InsideOutSpheres** 材料  *lambert1*，以及一个名为 *ButtonMaterial* 的材料，你将很快就会看到它。
+    2.  在 **"材料** "文件夹中，可以找到 **InsideOutSpheres** 材料  *lambert1，* 以及一种名为 *ButtonMaterial* 的材料，由 GazeButton 使用，你很快就会看到它。
 
-    3.  **Prototyping** 文件夹包含 **InsideOutSphere** Prefab，其中包含 **InsideOutSphere** *模型* 和 *GazeButton*。
+    3.  **Prefabs** 文件夹包含 **InsideOutSphere** 预制项，其中包含 **InsideOutSphere** *模型* 和 *GazeButton*。
 
-    4.  **不包含任何代码**，你将按照此课程编写代码。
+    4.  **不包含任何代码**，你将按照本课程中的说明编写代码。
 
 
-4.  在 **层次结构** 中，选择 " **照相机** " 对象并更新以下组件：
+4.  在" **层次结构"中**，选择 **"主相机"** 对象，并更新以下组件：
 
     1.  **转换**
 
-        1.  Position = **X**：0， **Y**：0， **Z**：0。
+        1.  Position = **X**： 0， **Y**： 0， **Z**： 0。
 
-        2. 旋转 = **X**：0， **Y**：0， **Z**：0。
+        2. Rotation = **X**： 0， **Y**： 0， **Z**： 0。
 
-        3. Scale **X**：1， **Y**：1， **Z**：1。
+        3. Scale **X**：1， **Y**： 1， **Z**： 1.
 
     2.  **摄像头**
 
         1. **清除标志**：纯色。
 
-        2.  **剪辑平面**：接近：0.1，到目前为止：6。
+        2.  **裁剪平面：** 近：0.1，远：6。
 
             ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-38.png)
 
-5.  导航到 " **Prefab** " 文件夹，然后将 " **InsideOutSphere** " Prefab 拖到 " **层次结构** " 面板中。
+5.  导航到 **"Prefab"** 文件夹，然后将 **InsideOutSphere** 预制块拖到"层次结构 **面板"** 中。
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-39.png)
 
-6.  通过单击其旁边的小箭头，展开 **层次结构** 中的 **InsideOutSphere** 对象。 你将在其下看到一个名为 **GazeButton** 的 **子** 对象。 这将用于更改场景和视频。
+6.  单击"层次结构"旁边的小箭头，展开"层次结构"中的 **InsideOutSphere** 对象。 你将在它 **下面看到一个** 称为 **"GazeButton"的子对象**。 这将用于更改场景，从而更改视频。
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-40.png)
 
-7.  在检查器窗口中，单击 **InsideOutSphere** 的转换组件，确保设置以下属性：
+7.  在"检查器"窗口中，单击 **InsideOutSphere** 的"转换"组件，确保已设置以下属性：
 
-    |            |    转换位置   |           |
+    |            |    TRANSFORM - POSITION   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** 0          |  **Z** 0  |
 
-    |            |    转换-旋转   |           |
+    |            |    转换 - 旋转   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** -50        |  **Z** 0  |
 
-    |            |     转换-缩放     |           |
+    |            |     转换 - 缩放     |           |
     | :---------:| :-----------------------: | :--------:|
     |  **X** 1   |          **Y** 1          |  **Z** 1  |
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-41.png)
 
-8.  单击 **GazeButton** 子对象，并按如下所示设置其 **转换** ：
+8.  单击 **"GazeButton"** 子对象，并按如下所示 **设置其** "转换"：
 
-    |            |    转换位置   |           |
+    |            |    TRANSFORM - POSITION   |           |
     | :---------:| :-----------------------: | :--------:|
-    |   **X** 3。6|          **Y** 1。3        |  **Z** 0  |
+    |   **X** 3.6|          **Y** 1.3        |  **Z** 0  |
 
-    |            |    转换-旋转   |           |
+    |            |    转换 - 旋转   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** 0          |  **Z** 0  |
 
-    |            |     转换-缩放     |           |
+    |            |     转换 - 缩放     |           |
     | :---------:| :-----------------------: | :--------:|
     |  **X** 1   |          **Y** 1          |  **Z** 1  |
 
     ![导入 InsideOutSphere Unity 包](images/AzureLabs-Lab6-42.png)
 
 
-## <a name="chapter-5---create-the-videocontroller-class"></a>第5章-创建 VideoController 类
+## <a name="chapter-5---create-the-videocontroller-class"></a>第 5 章 - 创建 VideoController 类
 
-**VideoController** 类托管两个视频终结点，这些终结点将用于从 Azure 媒体服务流式传输内容。
+**VideoController** 类托管两个视频终结点，用于流式传输 Azure 媒体服务中的内容。
 
-若要创建此类：
+若要创建此类，请：
 
-1.  右键单击位于 "**项目**" 面板中的 "**资产" 文件夹**，然后单击 "**创建 > 文件夹**。 命名文件夹 **脚本**。
+1.  右键单击位于"**资产"** 面板中的"资产 **Project，然后单击**"**创建>文件夹"。** 将 **文件夹命名脚本**。
 
     ![创建 VideoController 类](images/AzureLabs-Lab6-43.png)
 
     ![创建 VideoController 类](images/AzureLabs-Lab6-44.png)
 
-2.  双击 " **脚本** " 文件夹将其打开。
+2.  双击"脚本 **"** 文件夹以打开它。
 
-3.  右键单击文件夹内，然后单击 " **创建 > C \# 脚本**"。 将脚本命名为 **VideoController**。
+3.  右键单击文件夹内，然后单击"**创建> C \# 脚本"。** 将脚本名称 **为 VideoController**。
 
     ![创建 VideoController 类](images/AzureLabs-Lab6-45.png)
 
-4.  双击新的 **VideoController** 脚本以通过 **Visual Studio 2017** 将其打开。
+4.  双击新的 **VideoController** 脚本，使用 Visual Studio **2017 打开它。**
 
     ![创建 VideoController 类](images/AzureLabs-Lab6-46.png)
 
-5.  在代码文件的顶部更新命名空间，如下所示：
+5.  更新代码文件顶部的命名空间，如下所示：
 
     ```csharp
     using System.Collections;
@@ -455,7 +455,7 @@ ms.locfileid: "104730564"
     using UnityEngine.Video;
     ```
 
-6.  在 **VideoController** 类中输入以下变量以及 **唤醒 ()** 方法：
+6.  在 **VideoController** 类中输入以下变量，以及 **"唤醒** () 方法：
 
     ```csharp
         /// <summary> 
@@ -499,16 +499,16 @@ ms.locfileid: "104730564"
         }
     ```
 
-7.  现在，可以从 Azure 媒体服务视频输入终结点：
+7.  现在，可以在 Azure 媒体服务视频中输入终结点：
 
-    1.  *Video1endpoint* 变量中的第一个。
+    1.  第一个输入 *video1endpoint* 变量。
     
-    2.  *Video2endpoint* 变量的第二个。
+    2.  *video2endpoint 变量中的第二* 个 。
 
     > [!WARNING]
-    > 在 Unity 内使用 *https* 时存在一个已知问题，版本2017.4.1 为 f1。 如果视频在播放时出现错误，请尝试改用 "http"。
+    > 在 Unity 内部使用 *https* 存在一个已知问题，版本为 2017.4.1f1。 如果视频在播放时出现错误，请尝试改为使用"http"。
 
-8.  接下来，需要编辑 **启动 ()** 方法。 每次用户切换场景时都会触发此方法， (通过查看 "注视" 按钮切换视频) 。
+8.  接下来， **需要 ()** Start () 方法。 每次用户切换场景时都会触发此方法 (通过查看"凝视"按钮) 切换视频。
 
     ```csharp
         // Use this for initialization
@@ -519,7 +519,7 @@ ms.locfileid: "104730564"
         }
     ```
 
-9.  在 " **开始 ()** 方法" 下，插入 **PlayVideo ()** *IEnumerator* 方法，该方法将用于无缝地启动视频 (因此) 无断断续续情况。
+9.  按照 **Start ()** 方法，插入 **PlayVideo ()** *IEnumerator* 方法，该方法将用于无缝启动视频 (因此) 。
 
     ```csharp
         private IEnumerator PlayVideo()
@@ -596,7 +596,7 @@ ms.locfileid: "104730564"
         }
     ```
 
-10. 此类需要的最后一种方法是 **ChangeScene ()** 方法，该方法将用于在场景间进行交换。
+10. 此类所需的最后一个方法是 **ChangeScene ()** 方法，该方法将用于在场景之间交换。
 
     ```csharp
         public void ChangeScene()
@@ -606,15 +606,15 @@ ms.locfileid: "104730564"
     ```
 
     > [!TIP] 
-    > **ChangeScene ()** 方法使用 \# 称为 "*条件运算符*" 的便利 C 功能。 这允许检查条件，然后在单个语句中检查基于检查结果返回的值。 请单击以下 [链接了解有关条件运算符的详细信息](/dotnet/csharp/language-reference/operators/conditional-operator)。
+    > **ChangeScene ()** 方法使用一种称为 \# 条件运算符 的便捷 C *功能*。 这允许检查条件，然后根据检查结果返回值，所有这些操作都位于单个语句中。 单击 [此链接可详细了解条件运算符](/dotnet/csharp/language-reference/operators/conditional-operator)。
 
-11. 在返回到 Unity 之前，在 Visual Studio 中保存更改。
+11. 在返回到 Unity 之前，Visual Studio中的更改。
 
-12. 返回 Unity 编辑器，在 "**层次结构**" 面板中单击 " **VideoController** " 类，并将其拖到 "**脚本**" 文件夹中的 **主相机** 对象。
+12. 返回到 Unity 编辑器中，单击 **VideoController** 类 [from]{.underline} 将 **Scripts** 文件夹拖动到"层次结构面板"中的 **Main Camera****对象。**
 
-13. 单击 **主摄像机** ，查看 **检查器面板**。 你会注意到，在新添加的脚本组件中，有一个值为空的字段。 这是一个引用字段，它以代码中的公共变量为目标。
+13. 单击主 **相机并** 查看检查 **器面板**。 你会注意到，在新添加的脚本组件中，有一个空值字段。 这是一个引用字段，它面向代码中的公共变量。
 
-14. 将 **InsideOutSphere** 对象从 " **层次结构" 面板** 拖动到 **球体** 槽，如下图所示。
+14. 将 **InsideOutSphere** 对象从"层次结构 **面板** "拖动到 **"Sphere"** 槽，如下图所示。
 
     ![创建 VideoController 类 ](images/AzureLabs-Lab6-47.png)
      ![ 创建 VideoController 类](images/AzureLabs-Lab6-48.png)
@@ -627,7 +627,7 @@ ms.locfileid: "104730564"
 
 1.  中转到前面创建的 " **脚本** " 文件夹。
 
-2.  右键单击 " **项目** " 面板中的 "*创建* * C \# 脚本"。 将脚本命名为 " **注视**"。
+2.  右键单击 " **Project** " 面板中的 "*创建** C \# 脚本"。 将脚本命名为 " **注视**"。
 
 3.  双击新的 * "**注视**" 脚本，用 _ *Visual Studio 2017* 打开它。*
 
@@ -729,7 +729,7 @@ ms.locfileid: "104730564"
         }
     ```
 
-8.  在返回到 Unity 之前，在 Visual Studio 中保存更改。
+8.  在返回到 Unity 之前，请将所做的更改保存在 Visual Studio 中。
 
 9.  单击 "脚本" 文件夹中的 " **注视** " 类并将其拖到 " **层次结构** " 面板中的主相机对象。
 
@@ -756,14 +756,14 @@ ms.locfileid: "104730564"
 
     >  应该有 **VideoScene1** 和 **VideoScene2**。
 
-7.  对于这两个场景，请参阅 **文件 > 生成设置**。 在 " **生成设置** " 窗口打开的情况下，将场景拖动到 "生成" 部分中的 " **场景** "。
+7.  对于这两个场景，请参阅 **文件 > 生成设置**。 在 "**生成设置**" 窗口打开的情况下，将场景拖动到 "生成" 部分中的 "**场景**"。
 
     ![第7章--设置两个 Unity 场景](images/AzureLabs-Lab6-50.png)
 
     > [!TIP] 
     > 您可以通过按住 **Ctrl** 按钮并单击每个场景，最后拖动两者，从 **场景** 文件夹中选择两个场景。
 
-8.  关闭 " **生成设置** " 窗口，然后双击 " **VideoScene2**"。
+8.  关闭 "**生成设置**" 窗口，然后双击 " **VideoScene2**"。
 
 9.  在第二个场景打开的情况下，单击 **InsideOutSphere** 的 **GazeButton** 子对象，并按如下所示设置其变换：
 
@@ -797,7 +797,7 @@ ms.locfileid: "104730564"
 
 14. 现在， **GazeButton** 已部分更新，但要看起来不同，但现在你将创建新的 **材料**，使其看起来完全不同，并且更容易识别为不同于第一个场景中的对象的对象。
 
-15. 导航到 "**项目" 面板** 中的 "**材料**" 文件夹。 复制 **ButtonMaterial** 材料 (按  +  键盘上的 Ctrl **D** 或左键单击 **材料**，然后从 "**编辑** 文件" 菜单选项中选择 "**复制**) "。
+15. 导航到 " **Project" 面板** 中的 "**材料**" 文件夹。 复制 **ButtonMaterial** 材料 (按  +  键盘上的 Ctrl **D** 或左键单击 **材料**，然后从 "**编辑** 文件" 菜单选项中选择 "**复制**) "。
 
     ![第7章-设置两个 Unity 场景 ](images/AzureLabs-Lab6-55.png)
      ![ 第7章-设置两个 unity 场景](images/AzureLabs-Lab6-56.png)
@@ -828,7 +828,7 @@ ms.locfileid: "104730564"
 
 2.  选中名为 " **Unity C \# 项目** (这一点很重要，因为它将允许您在完成生成后编辑类) 。
 
-3.  请参阅 **文件 > 生成设置**，单击 " **生成**"。
+3.  请参阅 **文件 > 生成设置**，单击 "**生成**"。
 
 4.  系统将提示您选择要在其中生成解决方案的文件夹。
 
@@ -843,7 +843,7 @@ ms.locfileid: "104730564"
 
 ## <a name="chapter-9---deploy-on-local-machine"></a>第9章-在本地计算机上部署
 
-完成生成后，" **文件资源管理器** " 窗口将出现在生成的位置。 打开名为的文件夹，然后双击该文件夹中的解决方案 ( .sln) 文件，以通过 Visual Studio 2017 打开解决方案。
+完成生成后，" **文件资源管理器** " 窗口将出现在生成的位置。 打开名为的文件夹，然后双击该文件夹中的解决方案 ( .sln) 文件，以 Visual Studio 2017 打开解决方案。
 
 唯一要做的事情就是将应用部署到计算机 (或 *本地计算机*) 。
 
@@ -857,23 +857,23 @@ ms.locfileid: "104730564"
 
     ![第9章--在本地计算机上部署](images/AzureLabs-Lab6-62.png)
 
-4.  你现在需要将任何包还原到你的解决方案中。 右键单击 **解决方案**，然后单击 "**还原解决方案的 NuGet 包 ...** "。
+4.  你现在需要将任何包还原到你的解决方案中。 右键单击 **解决方案**，然后单击 "**还原解决方案 NuGet 包**..."。
 
     > [!NOTE] 
     > 完成此操作的原因是，需要以 Unity 构建的目标来处理本地计算机引用。
 
-5.  中转到 " **生成" 菜单** ，然后单击 " **部署解决方案** "，将应用程序旁加载到计算机上。 Visual Studio 将首先生成并部署你的应用程序。
+5.  中转到 " **生成" 菜单** ，然后单击 " **部署解决方案** "，将应用程序旁加载到计算机上。 Visual Studio 将首先生成并部署应用程序。
 
 6.  应用现在应显示在已安装的应用列表中，可以启动。
 
-    ![第9章--在本地计算机上部署](images/AzureLabs-Lab6-63.png)
+    ![第 9 章 -- 在本地计算机上部署](images/AzureLabs-Lab6-63.png)
 
-运行混合现实应用程序时，会在应用中使用的 **InsideOutSphere** 模型中。 此球体会将视频流式传输到，同时提供360的传入视频 (，这种情况下，此类) filmed。 如果需要几秒钟时间来加载视频，请不要惊讶，你的应用程序将受到你的可用 Internet 速度的限制，因为需要获取并下载视频，以便流式传输到你的应用程序。
-准备就绪后，请通过 gazing 在红色球上来更改场景并打开第二个视频！ 然后，在第二个场景中使用蓝色立方体即可自由返回！
+运行混合现实应用程序时，你将位于 **在应用中使用的 InsideOutSphere** 模型中。 此球体是视频流式传输到的位置，提供传入视频视频的 360 度视图 (该视频是为此类型的透视视频) 。 如果视频加载需要几秒钟时间，则不要感到意外，因为需要提取并下载视频，以便流式传输到应用中，因此应用会受可用 Internet 速度影响。
+准备就绪后，更改场景并打开第二个视频，在红色球体上凝视！ 然后随意返回，使用第二个场景中的蓝色立方体！
 
 ## <a name="your-finished-azure-media-service-application"></a>已完成的 Azure 媒体服务应用程序
  
-恭喜，你构建了一个利用 Azure 媒体服务流式传输360视频的混合现实应用。
+恭喜，你构建了一个混合现实应用，该应用利用 Azure 媒体服务流式传输 360 个视频。
 
 ![实验室结果](images/AzureLabs-Lab6-00.png)
 
@@ -883,8 +883,8 @@ ms.locfileid: "104730564"
 
 **练习 1**
 
-在本教程中，完全可以仅使用一个场景来更改视频。 试验应用程序并将其放入一个场景！ 甚至可能将其他视频添加到组合。
+在本教程中，完全可以使用单个场景来更改视频。 对应用程序进行试验，使其进入单个场景！ 甚至可能向组合中添加另一个视频。
 
 **练习 2**
 
-试验 Azure 和 Unity，尝试实现此功能，使应用程序能够根据 Internet 连接的强度，自动选择不同文件大小的视频。
+试验 Azure 和 Unity，并尝试实现应用根据 Internet 连接强度自动选择文件大小不同的视频的能力。

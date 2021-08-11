@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 0fbde863185a9f51b53192a338e9403dc79248db
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: a0d8e695e23ed2b58a62511e8b061bede2c68d92fb0089c8dada1d336c2a09e5
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176645"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115224799"
 ---
 # <a name="holographic-remoting"></a>全息远程处理
 
@@ -100,7 +100,7 @@ ms.locfileid: "113176645"
 
     ![输入 IP 地址](../images/tools/remoting/EnterIPAddress.png)
 
-1. 单击“连接”。
+1. 单击“连接”  。
 
 > [!NOTE]
 > 如果无法连接，请确保HoloLens 2连接到电脑并重启 Unity。

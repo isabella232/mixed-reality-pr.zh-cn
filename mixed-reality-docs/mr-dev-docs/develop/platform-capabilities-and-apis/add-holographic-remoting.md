@@ -5,32 +5,32 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
-keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程全息影像，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 68c1dd43dac4830da061d4900ce768692057e781
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: Windows Mixed Reality，全息影像，全息远程处理，远程渲染，网络渲染，HoloLens，远程全息影像，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机
+ms.openlocfilehash: ecfc49477e202b08303160e54ce986577a9d79eb387dc1edb1bc33c63644615f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006667"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115198853"
 ---
-# <a name="add-holographic-remoting-hololens-first-gen"></a>添加全息远程处理 (HoloLens (第一代) # A3
+# <a name="add-holographic-remoting-hololens-first-gen"></a>添加全息远程处理 (HoloLens (第一代) ) 
 
 >[!IMPORTANT]
-> 本文档介绍了如何为 HoloLens 1 创建主机应用程序。 适用于 **HoloLens (第一代)** 的主机应用程序必须使用 NuGet **包版本1.x。** 这意味着，为 HoloLens 1 编写的主机应用程序与 HoloLens 2 不兼容，反之亦然。
+> 本文档介绍了如何为 HoloLens 1 创建主机应用程序。 用于 **HoloLens (第一代)** 的主机应用程序必须使用 NuGet 包版本 1.x. x. x. x. x. **x**。 这意味着，为 HoloLens 1 编写的主机应用程序与 HoloLens 2 不兼容，反之亦然。
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-使用全息远程处理的 HoloLens 开发人员需要更新其应用程序，使其与 HoloLens 2 兼容。 这需要全新版本的全息远程处理 NuGet 包。 连接到 HoloLens 2 上的全息远程处理播放机或连接失败时，请确保使用全息远程处理 NuGet 包的版本2.0.0.0 或更高版本。
+使用全息远程处理的 HoloLens 开发人员需要更新其应用程序，使其与 HoloLens 2 兼容。 这需要 NuGet 包的新版本的全息远程处理。 在连接到 HoloLens 2 上的全息远程处理播放机时，请确保使用 "NuGet" 或更高版本的全息远程处理包，否则连接将会失败。
 
 >[!NOTE]
-> 可在 [此处](holographic-remoting-create-remote-wmr.md)找到特定于 HoloLens 2 的指南。
+> 可在[此处](holographic-remoting-create-remote-wmr.md)找到特定于 HoloLens 2 的指南。
 
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>将全息远程处理添加到桌面或 UWP 应用
 
 本页介绍如何向桌面或 UWP 应用添加全息远程处理。
 
-使用全息远程处理，你的应用程序可以在台式计算机或 UWP 设备（如 Xbox 设备）上托管一台包含全息内容的 HoloLens。 你还可以访问更多的系统资源，使远程 [沉浸式视图](../../design/app-views.md) 可以集成到现有的台式计算机软件中。 远程处理主机应用从 HoloLens 接收输入数据流，在虚拟沉浸式视图中呈现内容，并将内容帧流式传输回 HoloLens。 使用标准 Wi-fi 建立连接。 若要使用远程处理，请使用 NuGet 包将全息远程处理添加到桌面或 UWP 应用，然后编写代码来处理连接并呈现沉浸式视图。 帮助程序库包括在代码示例中，用于简化设备连接的处理任务。
+使用全息远程处理，你的应用程序可以以台式计算机或 UWP 设备（如 Xbox One）上托管的全息内容为目标 HoloLens。 你还可以访问更多的系统资源，使远程 [沉浸式视图](../../design/app-views.md) 可以集成到现有的台式计算机软件中。 远程处理主机应用从 HoloLens 接收输入数据流，在虚拟沉浸式视图中呈现内容，并将内容帧流回 HoloLens。 使用标准 Wi-fi 建立连接。 若要使用远程处理，请使用 NuGet 包将全息远程处理添加到桌面或 UWP 应用，然后编写代码来处理连接并呈现沉浸式视图。 帮助程序库包括在代码示例中，用于简化设备连接的处理任务。
 
 典型的远程处理连接的延迟最低为50毫秒。 播放机应用可以实时报告滞后时间。
 
@@ -40,7 +40,7 @@ ms.locfileid: "98006667"
 ### <a name="get-the-remoting-nuget-packages"></a>获取远程处理 NuGet 包
 
 按照以下步骤获取用于全息远程处理的 NuGet 包，并从项目中添加引用：
-1. 在 Visual Studio 中中转到你的项目。
+1. 在 Visual Studio 中转到你的项目。
 2. 右键单击项目节点，然后选择 "**管理 NuGet 包 ...** "
 3. 在出现的面板中，selecct **浏览** 并搜索 "全息远程处理"。
 4. 选择 **"** selecct **安装**"。
@@ -58,7 +58,7 @@ ms.locfileid: "98006667"
        Microsoft::Holographic::HolographicStreamerHelpers^ m_streamerHelpers;
 ```
 
-还需要跟踪连接状态。 如果要呈现预览，则需要有要将其复制到的纹理。 还需要一些功能，如连接状态锁定、用于存储 HoloLens IP 地址等的方法。
+还需要跟踪连接状态。 如果要呈现预览，则需要有要将其复制到的纹理。 还需要一些功能，如连接状态锁定，某些存储 HoloLens 的 IP 地址等的方法。
 
 ```cpp
 private:
@@ -77,7 +77,7 @@ private:
 
 ### <a name="initialize-holographicstreamerhelpers-and-connect-to-hololens"></a>初始化 HolographicStreamerHelpers 并连接到 HoloLens
 
-若要连接到 HoloLens 设备，请创建 HolographicStreamerHelpers 的实例并连接到目标 IP 地址。 你需要设置视频帧大小以匹配 HoloLens 显示宽度和高度，因为全息远程处理库需要编码器和解码器解析完全匹配。
+若要连接到 HoloLens 设备，请创建 HolographicStreamerHelpers 的实例并连接到目标 IP 地址。 需要设置视频帧大小以匹配 HoloLens 显示宽度和高度，因为全息远程处理库要求编码器和解码器分辨率完全匹配。
 
 ```cpp
 m_streamerHelpers = ref new HolographicStreamerHelpers();
@@ -180,7 +180,7 @@ m_streamerHelpers->OnSendFrame += ref new SendFrameEvent(
 
 ### <a name="render-holographic-content"></a>呈现全息内容
 
-若要使用远程处理呈现内容，请在桌面或 UWP 应用中设置一个虚拟 IFrameworkView，并处理远程处理中的全息帧。 此视图使用的是所有的 Windows 全息 Api，但设置略有不同。
+若要使用远程处理呈现内容，请在桌面或 UWP 应用中设置一个虚拟 IFrameworkView，并处理远程处理中的全息帧。 此视图使用相同的方式来使用所有 Windows 全息 api，但设置略有不同。
 
 全息空间和语音组件来自 HolographicRemotingHelpers 类，而不是自行创建：
 
@@ -200,7 +200,7 @@ void DesktopWindow::Tick()
    }
 ```
 
-全息应用视图的 Tick ( # A1 方法完成更新、绘制、呈现循环的一次迭代。
+全息应用视图的 Tick () 方法完成更新、绘图、现有循环的一次迭代。
 
 ```cpp
 void AppView::Tick()
@@ -220,11 +220,11 @@ void AppView::Tick()
    }
 ```
 
-全息应用视图的更新、呈现和呈现循环与在 HoloLens 上运行时完全相同，只是你有权访问台式计算机上更多的系统资源。 您可以呈现更多的三角形，更多的绘图走刀，执行更多物理学，并使用 x64 进程加载需要 2 GB 以上 RAM 的内容。
+全息应用视图的更新、呈现和呈现循环与 HoloLens 上运行时的效果完全相同，但你有权访问台式计算机上更多的系统资源。 您可以呈现更多的三角形，更多的绘图走刀，执行更多物理学，并使用 x64 进程加载需要 2 GB 以上 RAM 的内容。
 
 ### <a name="disconnect-and-end-the-remote-session"></a>断开并结束远程会话
 
-要断开连接-例如，当用户单击 UI 按钮断开连接时，HolographicStreamerHelpers 上的断开连接 ( # A1，然后释放对象。
+断开连接-例如，当用户单击 UI 按钮断开连接时，HolographicStreamerHelpers 上的断开连接 () ，然后释放对象。
 
 ```cpp
 void DesktopWindow::DisconnectFromRemoteDevice()

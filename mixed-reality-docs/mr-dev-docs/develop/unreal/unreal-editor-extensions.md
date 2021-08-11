@@ -7,12 +7,12 @@ ms.date: 01/08/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, 编辑器扩展, Unreal 编辑器, UE4, HoloLens, HoloLens 2, 混合现实, 开发, 文档, 指南, 功能, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 移植, 升级
-ms.openlocfilehash: ee0ba5d1d60b83dc334204e12283c76a877b4ec8
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 91d9a84e4e19cb7f0f2bf54060b45da1767b8d50cdfeb5655f5e58a29d45a702
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98584734"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226619"
 ---
 # <a name="editor-extensions-in-unreal"></a>Unreal 中的编辑器扩展
 

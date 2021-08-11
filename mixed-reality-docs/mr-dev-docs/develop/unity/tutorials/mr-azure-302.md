@@ -1,42 +1,42 @@
 ---
-title: HoloLens (第一代) 和 Azure 302-计算机视觉
-description: 完成本课程，了解如何使用 Azure 计算机视觉在混合现实应用程序中识别所提供的映像中的视觉内容。
+title: HoloLens（第一代）和 Azure 302 - 计算机视觉
+description: 完成本课程，了解如何在混合现实应用程序中使用 Azure 计算机视觉识别提供的图像中的视觉内容。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure，混合现实，学院，unity，教程，api，计算机视觉对象，hololens，沉浸式，vr，Windows 10，Visual Studio
-ms.openlocfilehash: 119d83ec9fef97b4e4017b2226a9593404847a71
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+keywords: azure， 混合现实， 学院， unity， 教程， api， 计算机视觉， hololens， 沉浸式， vr， Windows 10， Visual Studio
+ms.openlocfilehash: 5cac40c2613187776ea9ec5ba1268f1422a084d32322e9c4aca6742ed75d05b2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730534"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115225918"
 ---
 # <a name="hololens-1st-gen-and-azure-302-computer-vision"></a>HoloLens (第一代) 和 Azure 302：计算机视觉
 
 <br>
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来将发布一系列新的教程，演示如何针对 HoloLens 2。  发布这些教程时，此通知将更新为指向这些教程的链接。
 
 <br>
 
-在本课程中，你将了解如何在混合现实应用程序中使用 Azure 计算机视觉功能识别所提供的映像中的视觉内容。
+本课程将学习如何在混合现实应用程序中使用 Azure 计算机视觉识别提供的图像中的视觉内容。
 
-识别结果将显示为描述性标记。 您可以使用此服务，无需训练机器学习模型。 如果实现需要训练机器学习模型，请参阅 [MR And Azure 302b](mr-azure-302b.md)。
+识别结果将显示为描述性标记。 无需训练机器学习模型即可使用此服务。 如果实现需要训练机器学习模型，请参阅 MR[和 Azure 302b。](mr-azure-302b.md)
 
 ![实验室结果](images/AzureLabs-Lab2-000.png)
 
-Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理和分析 (，并使用高级算法从云中) 的返回信息。 开发人员上传图像或图像 URL，Microsoft 计算机视觉 API 算法根据输入的内容分析视觉内容，该用户随后可以返回信息（包括、标识图像的类型和质量）、检测人脸 (返回其坐标) 和标记或分类图像。 有关详细信息，请访问 [Azure 计算机视觉 API 页](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
+Microsoft 计算机视觉是一组 API，旨在向开发人员提供图像处理和分析 (，以及使用高级) 从云返回信息。 开发人员上传图像或图像 URL，Microsoft 计算机视觉 API 算法根据所选用户的输入分析可视内容，然后可以返回信息，包括识别图像的类型和质量、检测人脸 (返回其坐标) 以及标记图像或对图像进行分类。 有关详细信息，请访问 Azure 计算机视觉 [API 页](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
 
-完成本课程后，你将拥有一个混合现实 HoloLens 应用程序，该应用程序将能够执行以下操作：
+完成本课程后，你将拥有一个混合现实HoloLens应用程序，它将能够执行以下操作：
 
-1.  使用点击手势，HoloLens 的照相机将捕获图像。
-2.  映像将发送到 Azure 计算机视觉 API 服务。 
-3.  识别的对象将在位于 Unity 场景中的一个简单 UI 组中列出。
+1.  使用点击手势，HoloLens相机将捕获图像。
+2.  该映像将发送到 Azure 计算机视觉 API 服务。 
+3.  识别的对象将列在 Unity 场景中定位的简单 UI 组中。
 
-在您的应用程序中，您将由您来决定如何将结果与您的设计相集成。 本课程旨在向您介绍如何将 Azure 服务与 Unity 项目集成。 您可以使用您在本课程中获得的知识来增强混合现实应用程序的工作。
+在应用程序中，由你决定如何将结果与设计集成。 本课程旨在教授如何将 Azure 服务与 Unity 项目集成。 你的工作是利用从本课程中获得的知识来增强混合现实应用程序。
 
 ## <a name="device-support"></a>设备支持
 
@@ -49,257 +49,257 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 </table>
 
 > [!NOTE]
-> 尽管本课程主要侧重于 HoloLens，但你也可以将本课程中学习的内容应用于 Windows Mixed Reality 沉浸式 (VR) 耳机。 由于沉浸式 (VR) 耳机没有可访问的相机，因此你需要连接到电脑的外置相机。 在本课程中，您将看到有关在支持沉浸式 (VR) 耳机时可能需要执行的任何更改的说明。
+> 虽然本课程主要重点介绍HoloLens，但也可以将本课程中学习到Windows Mixed Reality VR (头戴显示) 应用。 由于沉浸 (VR) 头戴显示设备没有可访问相机，因此需要将外部相机连接到电脑。 在学习本课程时，你将看到有关可能需要使用的任何更改来支持沉浸式 VR (头戴显示设备) 说明。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
-> 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
+> 本教程专为具有 Unity 和 C# 基本经验的开发人员设计。 另请注意，本文档中的先决条件和书面说明表示截至 2018 年 5 月 2018 年 5 月 (测试和验证的内容) 。 可以随意使用安装工具一文中列出的最新软件，但不应[](../../install-the-tools.md)假定本课程中的信息与下面列出的新软件中的信息完全匹配。
 
-本课程建议采用以下硬件和软件：
+对于本课程，我们建议使用以下硬件和软件：
 
-- [与 Windows Mixed Reality 兼容](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)的开发 PC，适用于沉浸式 (VR) 耳机开发
-- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](../../install-the-tools.md#installation-checklist)
+- 一台开发电脑[，Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)沉浸式 (VR) 头戴显示设备开发
+- [Windows 10 Fall Creators Update (开发人员模式) 或更高版本](../../install-the-tools.md#installation-checklist)
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
-- [Unity 2017。4](../../install-the-tools.md#installation-checklist)
+- [Unity 2017.4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
-- 连接到电脑的相机 (沉浸式耳机开发) 
-- Azure 安装和计算机视觉 API 检索的 Internet 访问
+- 已启用[Windows Mixed Reality开发人员模式 (VR](../../../discover/immersive-headset-hardware-details.md)) 头戴显示设备[Microsoft HoloLens](/hololens/hololens1-hardware)沉浸式设备
+- 连接到电脑摄像头的相机 (沉浸式头戴显示设备开发) 
+- Azure 设置和 API 计算机视觉的 Internet 访问
 
 ## <a name="before-you-start"></a>开始之前
 
-1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试你的 HoloLens。 如果需要支持设置 HoloLens，请 [确保访问 hololens 设置一文](/hololens/hololens-setup)。 
-3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
+1.  为了避免在生成此项目时遇到问题，强烈建议在根文件夹或近根文件夹中创建本教程中提到的项目 (长文件夹路径可能会导致生成时) 。
+2.  设置并测试HoloLens。 如果需要支持设置[HoloLens，请确保访问HoloLens设置一文](/hololens/hololens-setup)。 
+3.  在开始开发新的 HoloLens App (时，建议执行校准和传感器优化 (有时可以帮助为每个用户应用执行) 。 
 
-有关校准的帮助信息，请单击此链接，了解 [到 HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
+有关校准的帮助，请遵循[以下链接，HoloLens校准一文](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请单击 ["HoloLens 传感器优化" 一文](/hololens/hololens-updates)。
+有关传感器优化的帮助，请遵循此[链接，HoloLens传感器优化一文](/hololens/hololens-updates)。
 
-## <a name="chapter-1--the-azure-portal"></a>第1章-Azure 门户
+## <a name="chapter-1--the-azure-portal"></a>第 1 章 - Azure 门户
 
-若要在 Azure 中使用 *计算机视觉 API* 服务，你将需要配置服务的实例，使其可用于你的应用程序。
+若要在 Azure *计算机视觉 API* 服务，需要将服务的实例配置为可供应用程序使用。
 
-1.  首先，登录到 [Azure 门户](https://portal.azure.com)。 
+1.  首先，登录到 Azure [门户](https://portal.azure.com)。 
 
     > [!NOTE]
-    > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室中按照本教程进行学习，请咨询教师或 proctors，以获得设置新帐户的帮助。
+    > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室环境中遵循本教程，请询问讲师或其中一位讲师，以帮助设置新帐户。
 
-2.  登录后，单击左上角的 " **新建** "，搜索 " *计算机视觉 API*"，然后单击 " **Enter**"。
+2.  登录后，单击左上角的"新建"，搜索"计算机视觉 *API"，* 然后单击"**输入"。**
 
     ![在 Azure 中创建新资源](images/AzureLabs-Lab2-00.png)
 
     > [!NOTE]
-    > 在较新的门户中，可能已将 " **新建** " 一词替换为 " **创建资源**"。
+    > 在较 **新的** 门户中，"新建"一词可能已被替换为"创建资源"。
  
-3.  新页将提供 *计算机视觉 API* 服务的说明。 在此页的左下角，选择 " **创建** " 按钮以创建与此服务的关联。
+3.  新页面将提供 API 服务 *计算机视觉说明* 。 在此页左下角， **选择"创建** "按钮，创建与此服务的关联。
 
-    ![关于计算机视觉 api 服务](images/AzureLabs-Lab2-01.png)
+    ![关于计算机视觉 API 服务](images/AzureLabs-Lab2-01.png)
  
-4.  单击 " **创建**" 后：
+4.  单击"创建" **后**：
 
-    1. 为此服务实例插入所需的 **名称** 。
+    1. 为此服务 **实例插入** 所需的名称。
     2. 选择一个“订阅”  。
-    3. 选择适合于你的 **定价层** ，如果这是第一次创建 *计算机视觉 API* 服务，则 (名为 F0) 的免费层。
-    4. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
+    3. 选择 **适合你的** 定价层，如果这是第一次创建 *计算机视觉 API* 服务，则应该 (名为 F0) 的免费层。
+    4. 选择一 **个资源组** 或创建一个新资源组。 资源组提供了一种方法来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议将与单个项目关联的所有 Azure 服务 (例如，这些实验室) 位于公共资源组) 。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
+        > 若要详细了解 Azure 资源组，请访问 [资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
-    5. 如果要创建新的资源组) ，请确定资源组 (的位置。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
+    5. 如果要创建新的资源组组 (，请确定资源组) 。 理想情况下，位置将位于应用程序将运行的区域。 某些 Azure 资产仅在某些区域可用。
 
-    6. 还需要确认是否已了解应用于此服务的条款和条件。
+    6. 还需要确认你已了解适用于此服务的条款和条件。
     7. 单击“创建”。
 
         ![服务创建信息](images/AzureLabs-Lab2-02.png)
 
-5.  单击 " **创建**" 后，需要等待创建服务，这可能需要一分钟时间。
-6.  创建服务实例后，门户中将显示一个通知。
+5.  单击"创建 **"** 后，必须等待服务创建完成，这可能需要一分钟。
+6.  创建服务实例后，门户中会显示一条通知。
 
     ![查看新服务的新通知](images/AzureLabs-Lab2-03.png) 
  
-7.  单击通知以浏览新服务实例。 
+7.  单击通知以浏览新的服务实例。 
 
-    ![选择 "中转到资源" 按钮。](images/AzureLabs-Lab2-04.png)
+    ![选择"转到资源"按钮。](images/AzureLabs-Lab2-04.png)
  
-8. 单击通知中的 " **中转到资源** " 按钮以浏览新服务实例。 你将转到新的计算机视觉 API 服务实例。 
+8. 单击 **通知中的"** 转到资源"按钮，浏览新的服务实例。 你将被带至新的 计算机视觉 API 服务实例。 
 
-    ![新的计算机视觉 API 服务映像](images/AzureLabs-Lab2-05.png)
+    ![新的 计算机视觉 API 服务映像](images/AzureLabs-Lab2-05.png)
  
-9.  在本教程中，你的应用程序将需要调用你的服务，这是通过使用你的服务的订阅密钥来完成的。
-10. 在 *计算机视觉 API* 服务的 "*快速启动*" 页上，导航到第一步，*获取你的密钥*，然后单击 "**密钥**" (你还可以通过单击 "服务" 导航菜单中的 "蓝色" 超链接项（位于 "服务" 导航菜单中，由键图标) 表示）来实现此目的。 这会显示你的服务 *密钥*。
-11. 复制其中一个所显示的密钥，因为稍后会在项目中使用此密钥。 
+9.  在本教程中，应用程序需要调用服务，这通过使用服务的订阅密钥完成。
+10. 在 *计算机视觉 API* 服务的"快速启动"页中，导航到第一步"获取密钥"，然后单击"密钥 **" (** 也可以单击位于服务导航菜单中的蓝色超链接"密钥"（由密钥图标) 表示）来实现此目的。 这将显示 *服务密钥*。
+11. 请复制其中一个显示的密钥，因为稍后在项目中需要此密钥。 
 
-12. 返回到 " *快速启动* " 页，从该处获取终结点。 请注意，你可能会有所不同，具体取决于你所在的区域 (如果是，则你稍后需要对代码进行更改) 。 获取此终结点的副本供以后使用：
+12. 返回到"快速 *入门"* 页，然后从该页面提取终结点。 请注意，你的代码可能有所不同，具体取决于 (，如果需要，需要在以后对代码) 。 请复制此终结点，供稍后使用：
 
-    ![新的计算机视觉 API 服务](images/AzureLabs-Lab2-05-5.png)
+    ![新的 计算机视觉 API 服务](images/AzureLabs-Lab2-05-5.png)
 
     > [!TIP]
-    > 可在 [此处](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)检查各种终结点。 
+    > 可以在此处检查各种终结点[。](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) 
 
-## <a name="chapter-2--set-up-the-unity-project"></a>第2章–设置 Unity 项目
+## <a name="chapter-2--set-up-the-unity-project"></a>第 2 章 - 设置 Unity 项目
 
-下面是用于使用混合现实进行开发的典型设置，因此，这是其他项目的一个不错的模板。
+下面是使用混合现实进行开发的典型设置，因此，是其他项目的良好模板。
 
-1.  打开 *Unity* ，并单击 " **新建**"。 
+1.  打开 *Unity，* 然后单击"新建 **"。** 
 
     ![启动新的 Unity 项目。](images/AzureLabs-Lab2-06.png)
 
-2.  现在需要提供 Unity 项目名称。 插入 **MR_ComputerVision**。 请确保 "项目类型" 设置为 " **3d**"。 将位置设置为合适的 **位置** (记住，更接近根目录) 。 然后单击 " **创建项目**"。
+2.  现在需要提供 Unity Project名称。 插入 **MR_ComputerVision**。 确保项目类型设置为 **3D**。 将" **位置** "设置为适合你记住 (，越靠近根目录越好) 。 然后单击"创建 **项目"。**
 
     ![提供新 Unity 项目的详细信息。](images/AzureLabs-Lab2-07.png)
 
-3.  当 Unity 处于打开状态时，有必要选中 "默认 **脚本编辑器** " 设置为 " **Visual Studio**"。 转到 " **编辑 > 首选项** "，然后在新窗口中导航到 " **外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
+3.  打开 Unity 后，值得检查 **默认脚本编辑器** 是否设置为 **Visual Studio。** 转到"**编辑>首选项"，** 然后在新窗口中导航到"**外部工具"。** 将 **"外部脚本编辑器"****更改为 Visual Studio 2017。** 关闭 **"首选项"** 窗口。
 
     ![更新脚本编辑器首选项。](images/AzureLabs-Lab2-08.png)
 
-4.  接下来，转到 " **文件 > 生成设置** "，选择 " **通用 Windows 平台**"，然后单击 " **切换平台** " 按钮以应用所选内容。
+4.  接下来，转到"文件>**生成** 设置并选择"**通用平台Windows"，** 然后单击"切换平台"按钮应用选择。 
 
     ![生成设置窗口，将平台切换到 UWP。](images/AzureLabs-Lab2-10.png)
 
-5.  尽管仍处于 **文件 > 生成设置** ，但请确保：
+5.  仍在"文件 **>生成设置** 并确保：
 
-    1. **目标设备** 设置为 **HoloLens**
+    1. **目标设备****设置为"HoloLens**
 
-        > 对于沉浸式耳机，将 " **目标设备** " 设置为 " *任何设备*"。
+        > 对于沉浸式头戴显示设备，将 **"目标设备"设置为***"任何设备"。*
 
     2. **生成类型** 设置为 **D3D**
-    3. **SDK** 设置为 "**最新安装**"
-    4. **Visual Studio 版本** 设置为 "**最新安装**"
-    5. "**生成并运行**" 设置为 "**本地计算机**"
-    6. 保存场景并将其添加到生成中。
+    3. **SDK** 设置为"最新 **安装"**
+    4. **Visual Studio版本** 设置为"最新 **安装"**
+    5. **"生成和运行** "设置为" **本地计算机"**
+    6. 保存场景并将其添加到生成。
 
-        1. 通过选择 " **添加打开的场景**" 来执行此操作。 将显示 "保存" 窗口。
+        1. 为此，选择"**添加打开的场景"。** 将显示保存窗口。
         
-            ![单击 "添加打开的场景" 按钮](images/AzureLabs-Lab2-11.png)
+            ![单击"添加打开的场景"按钮](images/AzureLabs-Lab2-11.png)
 
-        2. 为此创建新文件夹，并为将来的任何场景创建一个新文件夹，然后选择 " **新建文件夹** " 按钮以创建新文件夹，将其命名为 **场景**。
+        2. 为此和任何将来的场景创建新文件夹，然后选择"新建文件夹"按钮，以创建新文件夹，将其命名为 **"场景"。**
 
-            !["创建新脚本" 文件夹](images/AzureLabs-Lab2-12.png)
+            ![创建新脚本文件夹](images/AzureLabs-Lab2-12.png)
 
-        3. 打开新创建的 **场景** 文件夹，然后 *在 "文件名：文本" 字段* 中，键入 **MR_ComputerVisionScene**，并单击 " **保存**"。
+        3. 打开新创建的 **"场景**"文件夹，然后在"文件名 *：* 文本"字段中，键入"MR_ComputerVisionScene"，然后单击"保存 **"。** 
 
-            ![为新场景指定名称。](images/AzureLabs-Lab2-13.png)
+            ![为新场景命名。](images/AzureLabs-Lab2-13.png)
 
-            > 请注意，必须将 Unity 场景保存在 " *资产* " 文件夹中，因为它们必须与 Unity 项目相关联。 创建场景文件夹 (和其他类似文件夹) 是构建 Unity 项目的典型方式。
+            > 请注意，必须将 Unity 场景保存在 *Assets* 文件夹中，因为它们必须与 Unity Project。 创建场景文件夹 (和其他类似文件夹) 是构建 Unity 项目的典型方法。
 
-    7. 现在，" *生成设置*" 中的其余设置应保留为默认值。
+    7. 目前，"*生成设置中的* 其余设置应保留为默认值。
 
-6. 在 " *生成设置* " 窗口中，单击 " **播放机设置** " 按钮，这会在 *检查器* 所在的空间中打开相关面板。 
+6. 在"*生成设置* 窗口中，单击"播放器设置按钮，这将在 *检查* 器所在的空间中打开相关面板。 
 
-    ![打开播放机设置。](images/AzureLabs-Lab2-14.png)
+    ![打开播放器设置。](images/AzureLabs-Lab2-14.png)
 
-7. 在此面板中，需要验证几项设置：
+7. 在此面板中，需要验证一些设置：
 
-    1. 在 " **其他设置** " 选项卡中：
+    1. 在"**其他设置** 选项卡中：
 
-        1. **脚本运行时版本** 应 **稳定** ( .net 3.5 等效) 。
-        2. **脚本编写后端** 应为 **.net**
-        3. **API 兼容级别** 应为 **.net 4.6**
+        1. **脚本运行时版本****应稳定**（A0.NET 3.5 等效) 。
+        2. **脚本后端应为** **.NET**
+        3. **API 兼容性级别** 应为 **.NET 4.6**
 
             ![更新其他设置。](images/AzureLabs-Lab2-15.png)
       
-    2. 在 " **发布设置** " 选项卡的 " **功能**" 下，检查：
+    2. 在"**发布设置** 选项卡中的"**功能"下**，选中：
 
         1. **InternetClient**
         2. **网络摄像头**
 
-            ![正在更新发布设置。](images/AzureLabs-Lab2-16.png)
+            ![更新发布设置。](images/AzureLabs-Lab2-16.png)
 
-    3. 在面板中，在 " **XR 设置** " 中， () "发布设置" 下的 " **发布设置** " 下提供了 **支持**，请确保已添加 **Windows Mixed reality SDK** 。
+    3. 在面板的下方，在"发布 设置) "下找到的 **"XR** 设置 ("中，勾选"支持虚拟现实"，确保Windows Mixed Reality **SDK。** 
 
         ![更新 X R 设置。](images/AzureLabs-Lab2-17.png)
 
-8.  返回 *生成设置* _Unity c #_ 项目不再灰显;勾选此的旁边的复选框。 
+8.  返回到 *"生成设置* _Unity C#_ 项目不再灰度;勾选此 旁边的复选框。 
 9.  关闭“生成设置”窗口。
-10. 保存场景和项目 (**文件 > 保存场景/文件 > 保存项目**) 。
+10. 保存场景和Project (**文件>保存场景/文件>保存项目**) 。
 
-## <a name="chapter-3--main-camera-setup"></a>第3章–照相机设置
+## <a name="chapter-3--main-camera-setup"></a>第 3 章 - 主相机设置
 
 > [!IMPORTANT]
-> 如果希望跳过本课程的 *Unity 设置* 组件，并继续直接进入代码，可以下载 [unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage)，将其作为 [自定义包](https://docs.unity3d.com/Manual/AssetPackages.html)导入项目，然后从 [第5章](#chapter-5--create-the-resultslabel-class)继续。
+> 如果要跳过本课程 *的 Unity 设置* 组件，并直接继续编写代码，请随意下载 [此 .unitypackage，](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage)将其作为自定义包导入到项目中，然后继续学习 [](https://docs.unity3d.com/Manual/AssetPackages.html)第 [5](#chapter-5--create-the-resultslabel-class)章 。
 
-1.  在 " *层次结构" 面板* 中，选择 " **摄像机**"。 
-2.  选择后，你将能够在 "*检查器" 面板* 中看到 **主相机** 的所有组件。
+1.  在"*层次结构面板"中*，选择 **"主相机"。** 
+2.  选择后，你将能够在检查器面板 中查看主相机 *的所有组件*。 
 
-    1. **照相机对象** 必须命名为 "**主相机**" (记下拼写！ ) 
-    2. 必须将主相机 **标记** 设置为 " **MainCamera** "， (记下拼写！ ) 
-    3. 请确保将 **转换位置** 设置为 **0，0，0**
-    4. 将 " **清除标志** " 设置为 **纯色** (为沉浸式头戴式耳机) 忽略此标志。
-    5. 将相机组件的 **背景** 色设置为 **黑色、Alpha 0 (十六进制代码： #00000000)** (为沉浸式耳机) 忽略此颜色。
+    1. Camera **对象必须** 命名为 **Main Camera， (** 拼写！) 
+    2. 主相机 **标记** 必须设置为 **MainCamera， (** 拼写！) 
+    3. 确保" **转换位置"** 设置为 **0、0、0**
+    4. 对于 **沉浸式** 头戴 **显示设备** (，将"清除标志"设置为"纯色") 。
+    5. 将相机 **组件的背景** 色设置为黑色 **、Alpha 0 (十六** 进制代码：#00000000)  (沉浸式头戴显示设备时忽略) 。
 
-        ![更新照相机组件。](images/AzureLabs-Lab2-18.png)
+        ![更新相机组件。](images/AzureLabs-Lab2-18.png)
  
-3.  接下来，必须创建一个附加到 **主相机** 的简单 "Cursor" 对象，这将帮助你在应用程序运行时定位图像分析输出。 此光标将确定相机焦点的中心点。
+3.  接下来，必须创建附加到主相机 的简单"Cursor"对象，这有助于在应用程序运行时定位图像分析输出。 此光标将确定相机焦点的中心点。
 
 创建游标：
 
-1.  在 " *层次结构" 面板* 中，右键单击 **主相机**。 在 " **3D 对象**" 下，单击 " **球面**"。
+1.  在" *层次结构面板"* 中，右键单击主 **相机**。 在 **"3D 对象"下**，单击 **"Sphere"。**
 
-    ![选择 Cursor 对象。](images/AzureLabs-Lab2-19.png)
+    ![选择"游标对象"。](images/AzureLabs-Lab2-19.png)
  
-2.  将 **球体** 重命名为 **光标** (双击光标对象或按下 "F2" 键盘按钮) 所选对象，并确保其位于 **主相机** 的子项。
+2.  将 **Sphere** 重命名为 **光标** (双击 Cursor 对象或按"F2"键盘按钮，其中对象已选择) ，并确保它作为主相机 的 **子级。**
 
-3.  在 " *层次结构" 面板* 中，左键单击 **光标**。 选择光标后，在 " *检查器" 面板* 中调整以下变量：
+3.  在" *层次结构面板"中*，左键单击 **光标**。 选中"光标"后，在检查器面板中调整 *以下变量*：
 
-    1. 将 *转换位置* 设置为 **0、0、5**
-    2. 将 *刻度* 设置为 **0.02、0.02、0.02**
+    1. 将" *转换位置"设置为* **0、0、5**
+    2. 将" *缩放"设置为* **0.02、0.02、0.02**
 
-        ![更新转换位置和缩放比例。](images/AzureLabs-Lab2-20.png)
+        ![更新转换位置和缩放。](images/AzureLabs-Lab2-20.png)
   
-## <a name="chapter-4--setup-the-label-system"></a>第4章–设置标签系统
+## <a name="chapter-4--setup-the-label-system"></a>第 4 章 - 设置标签系统
 
-使用 HoloLens 相机捕获映像后，该映像将发送到 *Azure 计算机视觉 API* 服务实例进行分析。 
+使用 HoloLens 相机捕获图像后，该图像将发送到 *Azure 计算机视觉 API* 服务实例进行分析。 
 
-此分析的结果将是被识别对象（称为 **标记**）的列表。 
+该分析结果将是名为 Tags 的已识别对象 **的列表**。 
 
-您将使用标签 (为世界空间中的3D 文本) 在拍摄照片的位置显示这些标记。
+你将使用"标签 (作为世界空间中 3D 文本) 在拍摄照片的位置显示这些标记。
 
-以下步骤将演示如何设置 **标签** 对象。
+以下步骤将展示如何设置 **Label** 对象。
 
-1.  右键单击 "层次结构" 面板中的任意位置 (此时位置并不重要) 在 " **三维对象**" 下，添加 **3d 文本**。 将其命名为 **LabelText**。
+1.  右键单击"层次结构面板"中的任意位置 (此时位置并不重要 **，) "3D** 对象"下添加一个 **3D 文本**。 将它命名 **LabelText**。
 
-    ![创建3D 文本对象。](images/AzureLabs-Lab2-21.png)
+    ![创建三维文本对象。](images/AzureLabs-Lab2-21.png)
  
-2.  在 " *层次结构" 面板* 中，单击 **LabelText**。 选择 **LabelText** 后，在 " *检查器" 面板* 中调整以下变量：
+2.  在"*层次结构面板"中*，左键单击 **"LabelText"。** 选中 **LabelText** 后，在检查器面板中调整 *以下变量*：
 
-    1. 将 **位置** 设置为 **0，0，0**
-    2. 将 **刻度** 设置为 **0.01、0.01、0.01**
-    3. 在组件 **文本网格** 中：
-    4. 将 **文本** 中的所有文本替换为 "..."        
-    5. 将 **定位点** 设置为 **中间中心**
-    6. 将 **对齐方式** 设置为 **居中**
-    7. 将 **选项卡大小** 设置为 **4**
-    8. 将 **字体大小** 设置为 **50**
-    9. 将 **颜色** 设置为 **#FFFFFFFF**
+    1. 将 **"位置"** 设置为 **0，0，0**
+    2. 将" **缩放"设置为** **0.01、0.01、0.01**
+    3. 在组件 **文本网格中**：
+    4. 将 Text 内的所有 **文本替换为**"..."        
+    5. 将定位 **点设置为****中间中心**
+    6. 将" **对齐方式"** 设置为 **"居中"**
+    7. 将选项卡 **大小设置为** **4**
+    8. 将 **"字号"设置为****"50"**
+    9. 将"**颜色"****设置为#FFFFFFFF**
 
     ![文本组件](images/AzureLabs-Lab2-21-5.png)
 
-3.  将 **LabelText** 从 " *层次结构" 面板* 中拖到 " *资源" 文件夹* 内的 " *项目" 面板* 中。 这会将 **LabelText** 设置为 Prefab，以便可以在代码中对其进行实例化。
+3.  将 **LabelText** 从"层次结构 *面板*"拖动到"资产文件夹"中的"Project *面板"* 中。 这会使 **LabelText** 成为预制件，以便可以在代码中实例化它。
 
-    ![创建 LabelText 对象的 prefab。](images/AzureLabs-Lab2-22.png)
+    ![创建 LabelText 对象的预制件。](images/AzureLabs-Lab2-22.png)
  
-4.  你应从 "*层次结构" 面板* 中删除 **LabelText** ，以使其不会在打开场景中显示。 由于它现在是一个 prefab，你将从资产文件夹中的单个实例上调用，无需将其保存在场景中。 
-5.  " *层次结构" 面板* 中的最后一个对象结构应类似于下图所示：
+4.  应从"层次结构面板"中删除 **LabelText，** 以便它不显示在打开的场景中。 由于现在是一个预制，你将从 Assets 文件夹对各个实例调用它，因此无需在场景中保留它。 
+5.  层次结构面板中的最终 *对象* 结构应如下图所示：
 
     ![层次结构面板的最终结构。](images/AzureLabs-Lab2-23.png)
 
-## <a name="chapter-5--create-the-resultslabel-class"></a>第5章–创建 ResultsLabel 类
+## <a name="chapter-5--create-the-resultslabel-class"></a>第 5 章 - 创建 ResultsLabel 类
 
-需要创建的第一个脚本是 *ResultsLabel* 类，该类负责以下操作： 
+需要创建的第一个脚本是 *ResultsLabel* 类，该类负责以下各项： 
 
 - 在适当的世界空间中创建标签，相对于照相机的位置。
 - 显示图像 Analysis 中的标记。
 
 若要创建此类： 
 
-1.  右键单击 " *项目" 面板*，然后 **创建 > 文件夹**。 命名文件夹 **脚本**。 
+1.  右键单击 " *Project" 面板*，然后 **创建 "> 文件夹**"。 命名文件夹 **脚本**。 
 
     ![创建脚本文件夹。](images/AzureLabs-Lab2-24.png)
 
 2.  在 " **脚本** " 文件夹中，双击以打开。 然后在该文件夹中，右键单击，然后选择 " **创建 >** 然后选择" **c # 脚本**"。 将脚本命名为 *ResultsLabel*。 
 
-3.  双击新的 *ResultsLabel* 脚本以通过 **Visual Studio** 打开它。
+3.  双击新的 " *ResultsLabel* " 脚本，用 **Visual Studio** 打开它。
 
 4.  在类中，在 *ResultsLabel* 类中插入以下代码：
 
@@ -359,14 +359,14 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
         }
     ```
 
-6.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
+6.  返回到 *Unity* 之前，请务必在 *Visual Studio* 中保存所做的更改。
 7.  返回 *Unity 编辑器*，单击 "**脚本**" 文件夹中的 *ResultsLabel* 类并将其拖到 "*层次结构" 面板* 中的 **主相机** 对象。
 8.  单击 **主摄像机** ，查看 *检查器面板*。
 
 你会注意到，从刚才拖到摄像机的脚本中，有两个字段： **Cursor** 和 **Label Prefab**。
 
 9.  将名为 **cursor** 的对象从 " *层次结构" 面板* 拖动到名为 " **cursor**" 的槽中，如下图所示。
-10. 将名为 **LabelText** 的对象从 "*项目" 面板* 中的 "*资产" 文件夹* 拖到名为 **Label Prefab** 的槽中，如下图所示。 
+10. 将名为 **LabelText** 的对象从 " *Project" 面板* 中的 "*资产" 文件夹* 拖到名为 **Label Prefab** 的槽中，如下图所示。 
 
     ![在 Unity 中设置引用目标。](images/AzureLabs-Lab2-25.png)
 
@@ -381,7 +381,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 
 1.  中转到前面创建的 " **脚本** " 文件夹。 
 2.  右键单击文件夹内部， **创建 > c # 脚本**。 调用脚本 *ImageCapture*。 
-3.  双击新的 *ImageCapture* 脚本以通过 **Visual Studio** 打开它。
+3.  双击新的 " *ImageCapture* " 脚本，用 **Visual Studio** 打开它。
 4.  将以下命名空间添加到文件顶部：
 
     ```csharp
@@ -534,7 +534,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 
 1.  双击 " **脚本** " 文件夹以将其打开。 
 2.  右键单击 " **脚本** " 文件夹中，单击 " **创建 > c # 脚本**"。 将脚本命名为 *VisionManager*。 
-3.  双击新脚本以通过 Visual Studio 打开它。
+3.  双击新脚本，用 Visual Studio 打开它。
 4.  在 *VisionManager* 类的顶部，将命名空间更新为与以下相同：
 
     ```csharp
@@ -678,7 +678,7 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
         }  
     ```
 
-9.  在返回到 *Unity* 之前，请务必保存 *Visual Studio* 中所做的更改。
+9.  返回到 *Unity* 之前，请务必在 *Visual Studio* 中保存所做的更改。
 10. 返回 Unity 编辑器，单击 "**脚本**" 文件夹中的 *VisionManager* 和 *ImageCapture* 类，然后将其拖到 *层次结构面板* 中的 **主相机** 对象。 
 
 ## <a name="chapter-8--before-building"></a>第8章–生成之前
@@ -695,8 +695,8 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>第9章–构建 UWP 解决方案并旁加载应用程序
 此项目的 Unity 部分所需的所有内容现在均已完成，因此可以从 Unity 构建它。
 
-1.  导航到 "*生成设置*"  -  **文件 > 生成设置 ...**
-2.  在 *生成设置* 窗口中，单击 " **生成**"。
+1.  导航到 "*生成" 设置*  -  **文件 > 生成设置 ...**
+2.  从 "*生成设置*" 窗口中，单击 "**生成**"。
 
     ![从 Unity 生成应用](images/AzureLabs-Lab2-26.png)
 
@@ -707,24 +707,24 @@ Microsoft 计算机视觉是一组 Api，旨在向开发人员提供图像处理
 
 ## <a name="chapter-10--deploy-to-hololens"></a>第10章–部署到 HoloLens
 
-在 HoloLens 上部署：
+若要在 HoloLens 上部署：
 
-1.  需要为远程部署) 提供 HoloLens (的 IP 地址，并确保 HoloLens 处于 **开发人员模式**。 要执行此操作：
+1.  你将需要用于远程部署) 的 HoloLens (的 IP 地址，并确保你的 HoloLens 处于 **开发人员模式**。 若要实现此目的，请执行以下操作：
 
-    1. 在戴上 HoloLens 的同时，请打开 **设置**。
+    1. 在戴 HoloLens 的同时，打开 **设置**。
     2. **Wi-Fi > 高级选项中转到网络 & Internet >**
     3. 记下 **IPv4** 地址。
-    4. 接下来，导航回 " **设置**"，然后为 **开发人员更新 & Security >** 
+    4. 接下来，向后导航到 **设置**，然后向 **开发人员更新 & 安全 >** 
     5. 设置开发人员模式。
 
-2.  导航到新的 Unity 生成 (*应用* 文件夹) 并通过 *Visual Studio* 打开解决方案文件。
+2.  导航到新的 Unity 生成 (*应用* 文件夹) ，然后用 *Visual Studio* 打开解决方案文件。
 3.  在解决方案配置中，选择 " **调试**"。
 4.  在解决方案平台中，选择 " **x86**， **远程计算机**"。 
 
     ![从 Visual Studio 部署解决方案。](images/AzureLabs-Lab2-27.png)
  
-5.  请在 " **生成" 菜单** 中，单击 " **部署解决方案**"，将应用程序旁加载到 HoloLens。
-6.  应用现在应显示在你的 HoloLens 上已安装的应用列表中，可以启动了！
+5.  请在 "**生成" 菜单** 中，单击 "**部署解决方案**"，将应用程序旁加载到 HoloLens。
+6.  现在，你的应用程序应出现在你 HoloLens 上已安装的应用程序列表中，可以启动了！
 
 > [!NOTE]
 > 若要部署到沉浸式耳机，请将 " **解决方案平台** " 设置为 " *本地计算机*"，并将 **配置** 设置为 " *调试*"，将 " *x86* " 设置为 **平台**。 然后，使用 " **生成" 菜单** 选择 " *部署解决方案*"，将部署到本地计算机。 

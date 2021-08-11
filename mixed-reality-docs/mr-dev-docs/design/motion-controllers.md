@@ -1,28 +1,28 @@
 ---
 title: 运动控制器
-description: 了解如何在应用程序中使用混合现实运动控制器设置、对和管理器输入交互。
+description: 了解如何在应用程序中使用混合现实运动控制器设置、配对和管理器输入交互。
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 6dof 控制器，运动控制器，配对，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，滚动，手柄，状态
-ms.openlocfilehash: 367c9d9e0179c82af05af3fded9341ff7960d19e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: 6dof 控制器、运动控制器、配对、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、滚动、手柄、状态
+ms.openlocfilehash: bced0115eee5e753ef01d129ae10910acdca2b7b91020117f53b2ebf8833a130
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583659"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115224870"
 ---
 # <a name="motion-controllers"></a>运动控制器
 
 :::row:::
     :::column:::
-        运动控制器是允许用户在混合现实中采取措施的 [硬件附件](../discover/hardware-accessories.md) 。 动作控制器优于 [手势](gaze-and-commit.md#composite-gestures) 的优势在于，控制器在空间中有精确的位置，允许与数字对象进行精细的交互。 对于 Windows Mixed Reality 沉浸式耳机，运动控制器是用户在其世界中采取措施的主要方式。<br>
+        运动控制器 [是允许用户](../discover/hardware-accessories.md) 在混合现实中采取措施的硬件附件。 运动 [控制器比手势](gaze-and-commit.md#composite-gestures) 的优点是控制器在空间中具有精确的位置，允许与数字对象进行精细交互。 对于Windows Mixed Reality沉浸式头戴显示设备，运动控制器是用户在自己世界内采取操作的主要方式。<br>
         <br>
-        *映像： Windows Mixed Reality 运动控制器*
+        *图像：Windows Mixed Reality运动控制器*
     :::column-end:::
         :::column:::
-       ![Windows Mixed Reality 运动控制器](images/winmr-ck-1080x1080-350px.jpg)<br> 
+       ![Windows Mixed Reality运动控制器](images/winmr-ck-1080x1080-350px.jpg)<br> 
     :::column-end:::
 :::row-end:::
 
@@ -57,7 +57,7 @@ ms.locfileid: "98583659"
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Windows Mixed Reality 运动控制器使用沉浸式耳机中的传感器在视图的字段中提供精确而快速的移动跟踪。 不需要在空间的墙壁上安装硬件。 这些运动控制器将提供与 Windows Mixed Reality 沉浸式耳机相同的设置和可移植性。 我们的设备合作伙伴计划投放市场并在零售货架上销售这些控制器。
+Windows Mixed Reality运动控制器使用沉浸式头戴显示设备中的传感器在视场中提供精确的响应式移动跟踪。 无需在空间的墙上安装硬件。 这些运动控制器提供与沉浸式头戴显示设备相同的易于设置Windows Mixed Reality可移植性。 我们的设备合作伙伴计划在此假日在零售架上销售这些控制器。
 
 ![了解控制器](images/controllerimage-750px.png)<br>
 *了解控制器*
@@ -65,221 +65,221 @@ Windows Mixed Reality 运动控制器使用沉浸式耳机中的传感器在视�
 **功能：**
 * 光学跟踪
 * 触发器
-* 抓取按钮
-* 控制
+* "抓取"按钮
+* Thumbstick
 * 触摸板
 
 ## <a name="setup"></a>设置
 
-### <a name="before-you-begin"></a>开始之前
+### <a name="before-you-begin"></a>在开始之前
 
 需要的软件：
-* 两个运动控制器的集合。
+* 一组两个运动控制器。
 * 四个 AA 电池。
-* 支持蓝牙4.0 的 PC。
+* 支持 4.0 蓝牙电脑。
 
-**检查 Windows、Unity 和驱动程序更新**
-* 若要进行混合现实开发，请参阅安装适用于 Windows、Unity 等的首选版本的 [工具](../develop/install-the-tools.md) 。
-* 请确保具有最新的 [耳机和运动控制器驱动程序](/windows/mixed-reality/enthusiast-guide/mixed-reality-software)。
+**检查Windows、Unity 和驱动程序更新**
+* 若要[进行混合现实](../develop/install-the-tools.md)开发，请访问安装适用于 Windows Unity 等的首选版本的工具。
+* 确保拥有最新的头戴显示设备 [驱动程序和运动控制器驱动程序](/windows/mixed-reality/enthusiast-guide/mixed-reality-software)。
 
 ### <a name="pairing-controllers"></a>配对控制器
 
-可以使用 Windows 设置（如任何其他蓝牙设备）将运动控制器绑定到主机。
+运动控制器可以使用与任何其他设备一样Windows设置与主机电脑蓝牙连接。
 
-1. 将两个 AA 电池插入控制器背面。 暂时停止电池护盖。
-2. 如果你使用的是外部 USB 蓝牙适配器而不是内置蓝牙收音机，请在继续操作之前查看 [蓝牙最佳实践](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) 。 对于带有内置收音机的桌面配置，请确保天线已连接。
-3. 打开 **Windows 设置**  ->  **设备**  ->  **添加 bluetooth 或其他设备**  ->  **蓝牙**，并删除任何早期的 "运动控制器–右侧" 和 "运动控制器–左侧" 实例。 查看列表底部的 "其他设备" 类别。
-4. 选择 " **添加蓝牙或其他设备** "，并查看它是否开始发现蓝牙设备。
-5. 按住控制器的 Windows 按钮，在 buzzes 后打开控制器。
-6. 按住 "电池" 舱中的 "配对" 按钮 ("选项卡) ，直至 Led 开始闪烁。
+1. 将两个 AA 电池插入控制器的背面。 将电池盖保持关闭状态。
+2. 如果使用的是外部 USB 蓝牙 适配器，而不是内置 蓝牙，请查看蓝牙[最佳做法](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices)，然后再继续。 对于具有内置无线电的桌面配置，请确保天线已连接。
+3. 打开 **Windows 设置"** 添加蓝牙或其他设备蓝牙并删除"运动控制器 – 右侧"和"运动控制器  ->    ->    ->  – 左"的任何早期版本实例。 另请查看列表底部的"其他设备"类别。
+4. 选择 **"蓝牙或其他设备"，** 并看到它开始发现蓝牙设备。
+5. 按住控制器的按钮Windows打开控制器，一旦它发出声，松开它。
+6. 按住电池隔离舱 (选项卡上的配对按钮) LED 开始脉冲。
 
 :::row:::
     :::column:::
-7. 等待 "运动控制器-左" 或 "运动控制器-右" 显示到列表的底部。 选择要配对。 控制器将在连接时振动一次。<br>
+7. 等待"运动控制器 - 左"或"运动控制器 - 右侧"显示在列表底部。 选择以配对。 控制器在连接时将振动一次。<br>
         <br>
-        *Image：选择要配对的 "运动控制器";如果有多个实例，请从列表底部选择一个实例*
+        *图像：选择要配对的"运动控制器";如果有多个实例，请从列表底部选择一个实例*
     :::column-end:::
         :::column:::
-       ![选择要配对的运动控制器，如果有多个实例，请从显示的列表底部选择一个](images/450px-bluetooth-add-a-device-300px.png)<br> 
+       ![选择"运动控制器"进行配对，如果多个实例从列表底部选择一个实例](images/450px-bluetooth-add-a-device-300px.png)<br> 
     :::column-end:::
 :::row-end:::
    
-8. 你会看到，控制器在 **"鼠标、键盘、& 笔" 类别** 下的 "蓝牙设置" 中显示为 " **已连接**"。 此时，你可能会收到固件更新–请参阅 [下一部分](motion-controllers.md#updating-controller-firmware)。
-9. 重新连接电池盖子。
-10. 对第二个控制器重复步骤1-9。
+8. 你将看到控制器显示在"鼠标、键盘蓝牙笔"类别下的"已连接&**设置****中**。 此时，可能会获得固件更新 – 请参阅下 [一部分](motion-controllers.md#updating-controller-firmware)。
+9. 重新附加电池盖。
+10. 为第二个控制器重复步骤 1-9。
 
 <br>
 
 :::row:::
     :::column:::
-        成功配对两个控制器后，设置应如下所示，在 **"鼠标，键盘，& 笔" 类别** 下 <br>
+        成功配对两个控制器后，设置应如下所示，在"鼠标、键盘 **&笔"类别下** <br>
         <br>
-        *图像：连接的运动控制器*
+        *图像：已连接运动控制器*
     :::column-end:::
         :::column:::
-       ![已连接动作控制器](images/450px-motion-controller-connected-300px.png)<br>
+       ![已连接运动控制器](images/450px-motion-controller-connected-300px.png)<br>
     :::column-end:::
 :::row-end:::
 
-如果在配对后关闭控制器，则其状态将显示为配对。 对于 "其他设备" 类别下的控制器，配对可能只有部分完成。 在这种情况下，请再次运行配对步骤，使控制器正常运行。
+如果控制器在配对后关闭，则其状态将显示为"配对"。 对于永久位于"其他设备"类别的控制器，配对可能只部分完成。 在这种情况下，请再次运行配对步骤，使控制器正常运行。
 
-### <a name="updating-controller-firmware"></a>正在更新控制器固件
+### <a name="updating-controller-firmware"></a>更新控制器固件
 
-* 如果沉浸式耳机连接到您的 PC，并提供新的控制器固件，则在您下次打开时，会自动将该固件推送到运动控制器。 控制器固件更新通过一种在循环动作中照亮 LED 象限的模式来表示，并且需要1-2 分钟。
+* 如果使用新的控制器固件将沉浸式头戴显示设备连接到电脑，则固件将在下次打开时自动推送到运动控制器。 控制器固件更新由循环运动中亮起 LED 象限的模式指示，需要 1-2 分钟。
 
 
 :::row:::
     :::column:::
-* 固件更新完成后，控制器将重新启动并重新连接。 这两个控制器现在都应连接。 <br>
+* 固件更新完成后，控制器将重新启动并重新连接。 现在应连接两个控制器。 <br>
         <br>
-        *映像：在蓝牙设置中连接的控制器*
+        *图像：在设置中蓝牙控制器*
     :::column-end:::
         :::column:::
-       ![已连接控制器](images/cyk-connected-300px.jpg)<br>
+       ![已连接的控制器](images/cyk-connected-300px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
 
 * 验证控制器是否正常工作：
-    1. 启动 **混合现实门户** ，并输入混合现实主页。
-    2. 移动控制器并验证跟踪、测试按钮并验证 [teleportation](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) 是否正常工作。 如果没有，请检查 [运动控制器故障排除](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers)。
+    1. 启动 **混合现实门户** 并输入混合现实主页。
+    2. 移动控制器并验证跟踪、测试按钮，并验证 [远程传送是否](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) 正常工作。 如果没有，请查看运动 [控制器故障排除](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers)。
 
-## <a name="gazing-and-pointing"></a>Gazing 和指向
+## <a name="gazing-and-pointing"></a>凝视和指向
 
-Windows Mixed Reality 支持两个用于交互的关键模型; **注视并提交** 和 **提交**：
-* 使用 " **注视" 和 "提交**"，用户可通过其 [注视](gaze-and-commit.md)来定位对象，并使用手接器、游戏板、clicker 或声音来选择对象。
-* 通过 **点和提交**，用户可以在目标对象上目标为支持指针的运动控制器，然后使用控制器的触发器选择对象。
+Windows Mixed Reality两个关键模型进行交互;**凝视和提交** 以及 **指向和提交**：
+* 通过 **凝视和** 提交，用户通过凝视将对象作为 [目标，然后](gaze-and-commit.md)使用手势敲击、游戏板、点击器或语音选择对象。
+* 借助 **点和** 提交，用户可以将支持指向的动作控制器指向目标对象，然后使用控制器的触发器选择对象。
 
-支持使用运动控制器的应用也应尽可能启用注视驱动的交互，使用户能够选择他们使用的输入设备。
+支持使用运动控制器指向的应用还应在可能的情况下启用凝视驱动交互，为用户提供使用哪些输入设备的选择。
 
-### <a name="managing-recoil-when-pointing"></a>在指向时管理 recoil
+### <a name="managing-recoil-when-pointing"></a>在指向时管理重新处理
 
-使用运动控制器进行指向和提交时，用户将通过拉取其触发器来使用控制器进行定位和交互。 请求触发器 vigorously 的用户最终可能会在其触发器拉取的末尾比预期的更高。
+使用运动控制器进行指向和提交时，用户将使用该控制器通过拉取其触发器来定向和交互。 意外拉取触发器的用户最终可能在触发器拉取结束时将控制器定目标到比预期更高的目标。
 
-若要管理用户拉取触发器时可能发生的任何此类 recoil，则当触发器的模拟轴值超过0.0 时，应用程序可以对齐其目标射线。 然后，只要在短时间窗口中最后一次按下时，就可以使用该目标射线来执行操作，然后将触发器值达到1.0。 使用较高级别的 [复合分流手势](gaze-and-commit.md#composite-gestures)时，Windows 将管理此目标光线捕获和超时。
+若要管理用户拉取触发器时可能会发生的任何此类重新扫描，应用可以在触发器的模拟轴值高于 0.0 时对齐其目标射线。 然后，可以在触发器值达到 1.0 后，使用该目标射线操作几帧，只要在短时间范围内发生最终按下。 使用更高级别的复合点击[手势](gaze-and-commit.md#composite-gestures)时，Windows将管理此目标射线捕获和超时。
 
-## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指针姿势
+## <a name="grip-pose-vs-pointing-pose"></a>手柄姿势与指向姿势
 
-Windows Mixed Reality 支持采用不同外形规格的运动控制器，其中每个控制器的设计在用户的手位置与应用程序在呈现控制器时应使用的自然 "转发" 方向不同。
+Windows Mixed Reality支持不同外形因素的动作控制器，每个控制器的设计在用户手部位置与应用在呈现控制器时应该用于指向的自然"向前"方向之间的关系有所不同。
 
-为了更好地表示这些控制器，可以针对每个交互源调查两种类型的姿势： **手柄姿势** 和 **指针构成**。
+为了更好地表示这些控制器，可以针对每个交互源调查两种类型的姿势：手柄 **姿势和****指针姿势**。
 
-### <a name="grip-pose"></a>抓握姿势
+### <a name="grip-pose"></a>手柄姿势
 
-**手柄姿势** 表示由 HoloLens 检测到的掌托的位置，或包含运动控制器的掌托的位置。
+手柄 **姿势** 表示手部由手部检测到的HoloLens或持有运动控制器的手部的位置。
 
-在沉浸式耳机上，手柄姿势最适合用于呈现 **用户的手** 或 **持有用户的对象**，例如剑或机枪。 可视化运动控制器时也使用手柄姿势，因为用于运动控制器的 Windows 提供的 **呈现模型** 使用手柄姿势作为原点和旋转中心。
+在沉浸式头戴显示设备中，手柄姿势最适合用于呈现用户手部或用户手部中持有的对象，例如手部或手部。 在可视化运动控制器时，也使用手柄姿势，因为运动控制器的Windows 提供的可呈现模型使用手柄姿势作为旋转的原点和中心。
 
 手柄姿势的定义具体如下：
-* **手柄位置**：在固定控制器时，掌上质心，向左或向右调整以使其在手柄内居中。 在 Windows Mixed Reality 运动控制器上，此位置通常与 "抓住" 按钮对齐。
-* **手柄方向的右轴**：当你完全打开手形成一个平面的五指形姿势时，与你的掌上的光线 (从右手掌向后) 
-* **手柄方向的正向轴**：当您关闭手中的部分 (时，就如同按住控制器) 一样，通过您的非拇指形来表示 "转发" 的射线。
-* **手柄方向的上轴**：向右和向后定义隐含的上轴。
+* 手柄 **位置**：自然按住控制器时，通过向左或向右调整以将手柄中的位置居中时，手心中心。 在Windows Mixed Reality控制器上，此位置通常与"抓取"按钮对齐。
+* 手柄 **方向的** 右轴：完全打开手形成平面五指姿势时，与手部正常的射线从左 (向前，从右手心向后) 
+* 手柄方向 **的** 向前轴：当你部分关闭手部 (就像按住控制器) 一样，指向"向前"的射线通过由非滚动手指组成的管道。
+* 手柄 **方向的上轴**：右侧和向前定义隐含的向上轴。
 
 ### <a name="pointer-pose"></a>指针姿势
 
-**指针姿势** 代表着控制器的末端。
+指针 **姿势** 表示指向向前的控制器的提示。
 
-系统提供的指针姿势最适合用于在 **呈现控制器模型本身** 时进行 raycast。 如果要渲染某个其他虚拟对象来替代控制器（如虚拟压力），则应指出该虚拟对象的最自然的光线，如沿应用定义的机枪模型的桶向下移动的射线。 由于用户可以看到虚拟对象，而不是物理控制器，因此，使用虚拟对象指向虚拟对象可能会更自然地使用应用。
+在呈现控制器模型本身时，系统提供的指针姿势最适合用于 **光线广播**。 如果要呈现一些其他虚拟对象（例如虚拟照片）来更换控制器，则应该指向该虚拟对象最自然的射线，例如沿应用定义的"手形"模型群移动的射线。 由于用户可以看到虚拟对象，而不是物理控制器，因此使用应用的用户可能更自然地指向虚拟对象。
 
 ## <a name="controller-tracking-state"></a>控制器跟踪状态
 
-与耳机一样，Windows Mixed Reality 运动控制器不需要外部跟踪传感器的设置。 相反，控制器由耳机本身中的传感器跟踪。
+与头戴显示设备Windows Mixed Reality，运动控制器不需要设置外部跟踪传感器。 相反，控制器由头戴显示设备本身的传感器进行跟踪。
 
-如果用户将控制器移出耳机的视图，则在大多数情况下，Windows 将继续推断控制器位置，并将其提供给应用。 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。
+如果用户将控制器移到头戴显示设备视场外，在大多数情况下，Windows继续推断控制器位置，并将它们提供给应用。 当控制器丢失视觉跟踪的时间足够长时，控制器的位置将下降至近似准确性位置。
 
-此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器指向和激活 UI 元素的应用程序可以正常运行，而无需用户注意。
+此时，系统会将控制器进行正文锁定，跟踪用户移动时的位置，同时仍使用其内部方向传感器公开控制器的真实方向。 许多使用控制器指向和激活 UI 元素的应用都可以正常运行，同时大致准确无误，而无需用户通知。
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/rkDpRllbLII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### <a name="reasoning-about-tracking-state-explicitly"></a>显式跟踪状态的推理
+### <a name="reasoning-about-tracking-state-explicitly"></a>有关显式跟踪状态的原因
 
-希望根据跟踪状态以不同方式对位置进行处理的应用可能会进一步检查控制器状态的属性，如 SourceLossRisk 和 PositionAccuracy：
+希望根据跟踪状态以不同方式处理位置的应用可能会进一步检查控制器状态的属性，例如 SourceLossRisk 和 PositionAccuracy：
 
 <table>
 <tr>
 <th> 跟踪状态 </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>高准确度</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>准确度高</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>高准确度 (丢失) 的风险 </b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>高准确度 (有丢失数据) </b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: green; color: white"> 高 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>近似准确度</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
+<td> <b>近似准确度</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: green; color: white"> 是</td>
 </tr><tr>
-<td> <b>无位置</b> </td><td style="background-color: orange"> = = 1。0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
+<td> <b>无位置</b> </td><td style="background-color: orange"> == 1.0 </td><td style="background-color: orange"> 近似 </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
 这些运动控制器跟踪状态的定义如下：
-* **高准确度：** 尽管运动控制器位于耳机的视图中，但它通常会根据视觉对象跟踪提供高准确性位置。 一种移动控制器，该控制器会暂时离开了耳机传感器， (例如，通过用户的另一种方式，) 会根据控制器本身的惯性跟踪，在短时间内继续返回高准确度姿势。
-* **高准确度 (丢失) 的风险：** 当用户将运动控制器移出耳机的视图边缘后，耳机不久就无法直观地跟踪控制器的位置。 此应用通过查看 **SourceLossRisk** 到1.0，来了解控制器何时到达此 FOV 边界。 此时，应用程序可以选择暂停需要稳定的高质量姿势流的控制器手势。
-* **近似准确性：** 如果控制器丢失了足够长时间的视觉跟踪，控制器的位置将降到近似准确性位置。 此时，系统会将控制器正文锁定到用户，在移动用户时跟踪用户的位置，同时仍然使用其内部方向传感器公开控制器的真正方向。 许多使用控制器指向和激活 UI 元素的应用程序可以正常运行，而无需用户注意。 对于输入要求较高的应用，可以通过检查 **PositionAccuracy** 属性，从 **高** 准确度到 **接近** 准确性，从而为用户提供更多的 hitbox。
-* **无位置：** 尽管控制器可以在很长时间内正常运行，但有时系统也知道，甚至在当前情况下，该位置都没有意义。 例如，已打开的控制器可能从未被可视化地观察到，或者用户可能会关闭控制器，然后由其他人选取。 在这种情况下，系统不会提供应用程序的任何位置，并且 **TryGetPosition** 将返回 false。
+* **高精度：** 虽然运动控制器位于头戴显示设备视场内，但它通常基于视觉跟踪提供高精度位置。 暂时离开视场或被头戴显示设备传感器短暂遮盖（例如 (由用户另一手遮挡）的移动控制器) 将基于控制器本身的惯性跟踪，在短时间内继续返回高精度姿势。
+* **高准确度 (有丢失数据) ：** 当用户将运动控制器移到头戴显示设备视场的边缘之后，头戴显示设备很快就会无法直观地跟踪控制器的位置。 应用通过看到 **SourceLossRisk** 达到 1.0，知道控制器何时到达此 FOV 边界。 此时，应用可以选择暂停需要稳定高质量手势流的控制器手势。
+* **近似准确度：** 当控制器丢失视觉跟踪的时间足够长时，控制器的位置将下降至近似准确性位置。 此时，系统会将控制器进行正文锁定，跟踪用户移动时的位置，同时仍使用其内部方向传感器公开控制器的真实方向。 许多使用控制器指向和激活 UI 元素的应用可以正常运行，同时大致准确，无需用户通知。 具有较重输入要求的应用可以选择通过检查 **PositionAccuracy** 属性来检测从"高准确度"到"近似准确度"的下降，例如，在此期间，在屏幕外目标上为用户提供更丰富的命中框。  
+* **无位置：** 虽然控制器可以长时间以近似精度运行，但有时系统知道，即使是人体锁定的位置目前也无意义。 例如，打开的控制器可能从未在视觉上观察到，或者用户可能会关闭随后由其他人选取的控制器。 此时，系统不会向应用提供任何位置 **，TryGetPosition** 将返回 false。
 
 ## <a name="interactions-low-level-spatial-input"></a>交互：低级别空间输入
 
-各种双手和运动控制器的核心交互是 **选择**、 **菜单**、 **抓住**、 **触摸板**、 **操纵杆** 和 **Home**。
-* **选择** "是"，这是用于激活全息影像的主要交互，其中包含一个按下的发布。 对于运动控制器，可以使用控制器的触发器执行 Select 按下。 通过 [语音命令](voice-input.md) "select" 执行选择的其他方法。 可以在任何应用中使用相同的选择交互。 请考虑选择作为鼠标单击的等效项;你一次学习的通用操作，然后应用于所有应用。
-* **菜单** 是用于对对象进行操作的辅助交互，用于获取上下文菜单或执行其他辅助操作。 使用运动控制器，可以使用控制器的 *菜单* 按钮执行菜单操作。  (即其上带有汉堡 "menu" 图标的按钮) 
-* **抓住** ，用户可以直接对对象执行操作，以便对其进行操作。 借助运动控制器，你可以通过紧密地挤压你的前来执行抓住操作。 运动控制器可以通过抓取按钮、棕榈触发器或其他传感器检测抓住。
-* **触摸板** 允许用户在运动控制器的触摸板图面上调整两个尺寸的操作，并通过单击触摸板上的 "向下" 来提交操作。 触摸板提供按下状态、接触状态和标准化的 XY 坐标。 X 和 Y 范围介于循环触摸板范围内的-1 到1之间，中心位于 (0，0) 。 对于 X，-1 位于左侧，1位于右侧。 对于 Y，-1 位于底部，1位于顶部。
-* 使用 **操纵杆**，用户可以通过在其循环范围内移动运动控制器的操纵杆，并通过单击操纵杆提交操作来调整两个尺寸的操作。 Thumbsticks 还提供按下状态和标准化的 XY 坐标。 X 和 Y 范围介于循环触摸板范围内的-1 到1之间，中心位于 (0，0) 。 对于 X，-1 位于左侧，1位于右侧。 对于 Y，-1 位于底部，1位于顶部。
-* **Home** 是一种特殊的系统操作，用于返回到 "开始" 菜单。 这类似于按键盘上的 Windows 键或 Xbox 控制器上的 Xbox 按钮。 可以通过按下动作控制器上的 "Windows" 按钮来回家。 请注意，你始终可以通过说 "你好 Cortana，回家" 开始。 应用无法专门对 Home 操作做出反应，因为这些操作由系统处理。
+手部和运动控制器之间的核心交互包括 **选择**、菜单、**抓取**、**触摸板****、Thumbstick** 和 **Home。**
+* **选择** 是激活全息影像的主要交互，包括按后发布。 对于运动控制器，使用控制器的触发器执行"按 Select"。 执行"选择"的其他方法有：说 [语音命令"选择](voice-input.md) "。 可以在任何应用中使用相同的选择交互。 将"选择"视为鼠标单击的等效项;一个通用操作，可学习一次，然后应用于所有应用。
+* **菜单** 是作用于 对象的辅助交互，用于拉取上下文菜单或执行其他一些辅助操作。 使用运动控制器，可以使用控制器的菜单按钮执行 *菜单* 操作。  (，即包含汉堡"菜单"图标的按钮) 
+* **掌握** 是用户直接对手下的对象采取措施来操作它们的方法。 使用运动控制器，可以通过紧密地抓取手部执行抓取操作。 运动控制器可能会检测到抓取按钮、手部触发器或其他传感器的抓取。
+* **触摸板** 允许用户沿运动控制器触摸板的图面调整两个维度的操作，通过单击触摸板向下提交操作。 触摸板提供按下状态、触摸状态和规范化 XY 坐标。 X 和 Y 在圆形触摸板范围内的范围为 -1 到 1，中心 (0，0) 。 对于 X，-1 在左侧，1 在右侧。 对于 Y，-1 位于底部，1 位于顶部。
+* **Thumbstick** 允许用户通过移动运动控制器的滚动块在其循环范围内来调整两个维度中的操作，通过单击滚动块来提交操作。 指纹还提供按下状态和规范化 XY 坐标。 X 和 Y 在圆形触摸板范围内的范围为 -1 到 1，中心 (0，0) 。 对于 X，-1 在左侧，1 在右侧。 对于 Y，-1 位于底部，1 位于顶部。
+* **"** 主页"是一个特殊的系统操作，用于返回到"开始"菜单。 这类似于按键盘上的Windows或 Xbox 控制器上的 Xbox 按钮。 可以通过按运动控制器上的Windows按钮转到"主页"。 请注意，始终可以返回"你好，Cortana，开始"。 应用无法专门对"主页"操作做出反应，因为操作由系统处理。
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>复合手势：高级空间输入
 
-可在一段时间内跟踪 [手手势](gaze-and-commit.md#composite-gestures) 和运动控制器以检测一组通用的高级 **[复合手势](gaze-and-commit.md#composite-gestures)**。 这使您的应用程序能够检测高级 **分流**、 **定格**、 **操作** 和 **导航** 手势，无论用户最终使用的是手还是控制器。
+[可以随着时间的推移跟踪](gaze-and-commit.md#composite-gestures)手势和运动控制器，以检测一组常见的高级 **[复合手势](gaze-and-commit.md#composite-gestures)**。 这使应用能够检测高级别 **点击、按住**、操作和 **导航** 手势，无论用户最终是使用手还是控制器。
 
 ## <a name="rendering-the-motion-controller-model"></a>呈现运动控制器模型
 
-**3d 控制器模型** Windows 可让应用程序在系统中当前处于活动状态的每个运动控制器呈现模型。 通过让应用在运行时动态加载和表述这些系统提供的控制器模型，你可以确保你的应用程序与将来的任何控制器设计兼容。
+**3D 控制器Windows** 为应用提供系统中当前处于活动状态的每个运动控制器的可呈现模型。 通过在运行时让应用动态加载并阐明这些系统提供的控制器模型，可以确保应用向前兼容任何将来的控制器设计。
 
-我们建议在控制器的 **手柄姿势** 上呈现所有呈现模型，因为模型的原点与物理世界中的这一点对齐。 如果要渲染控制器模型，则可能需要从 **指针姿势** raycast 到场景，这表示该控制器的物理设计需要点，这表示用户自然会想到的射线。
+我们建议在控制器手柄姿势处呈现所有可呈现模型，因为模型的来源与物理世界中的此点对齐。 如果要渲染控制器模型，则你可能希望从指针姿势 **（表示** 用户自然希望沿其指向的射线，给定该控制器的物理设计）将光线广播到场景中。
 
-有关如何在 Unity 中动态加载控制器模型的详细信息，请参阅在 [unity 中呈现运动控制器模型](../develop/unity/gestures-in-unity.md#rendering-the-motion-controller-model-in-unity) 部分。
+若要详细了解如何在 Unity 中动态加载控制器模型，请参阅在 Unity 中呈现 [运动控制器](../develop/unity/gestures-in-unity.md#rendering-the-motion-controller-model-in-unity) 模型部分。
 
-**2d 控制器线条** 图虽然我们建议将应用内控制器提示和命令附加到应用内控制器模型本身，但某些开发人员可能希望在平面 "教程" 或 "操作方法" UI 中使用运动控制器的2D 线条图表示形式。 对于这些开发人员，我们制作了。以下两种情况下均提供 png 运动控制器线条图形文件 (右键单击以保存) 。
+**2D 控制器线条图** 虽然我们建议将应用内控制器提示和命令附加到应用内控制器模型本身，但某些开发人员可能想要在平面"教程"或"操作说明"UI 中使用运动控制器的 2D 线条艺术表示形式。 对于这些开发人员，我们.png右键单击鼠标右键以保存运动控制器线条图 (，以保存) 。
 
-![运动控制器线条图预览](images/motioncontrollers-black-preview-300px.png)
+![运动控制器线条图条预览](images/motioncontrollers-black-preview-300px.png)
 
-["" 中的整分辨率运动控制器线条艺术](images/motioncontrollers-white.png)
+["'white'"中的全分辨率运动控制器线条图](images/motioncontrollers-white.png)
  
-["" 中的整分辨率动作控制器线条图黑色 ""](images/motioncontrollers-black.png)
+["'black'"中的全分辨率运动控制器线条图](images/motioncontrollers-black.png)
 
 ## <a name="faq"></a>常见问题解答
 
-### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>是否可以将运动控制器配对到多台电脑？
+### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>能否将运动控制器与多个电脑配对？
 
-运动控制器支持与单台 PC 配对。 按照 [动作控制器设置](motion-controllers.md#setup) 来配对控制器的说明进行操作。
+运动控制器支持与单个电脑配对。 按照运动控制器 [设置的说明对](motion-controllers.md#setup) 控制器进行配对。
 
 ### <a name="how-do-i-update-motion-controller-firmware"></a>如何实现更新运动控制器固件？
 
-运动控制器固件是耳机驱动程序的一部分，如有必要，它将在连接时自动更新。 固件更新通常需要1-2 分钟的时间，具体取决于蓝牙无线电和链接质量。 在极少数情况下，控制器固件更新可能需要长达10分钟的时间，这可能表示 Bluetooth 连接或无线电干扰较差。 请参阅 [发烧指南中的蓝牙最佳实践](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) ，以解决连接问题。 固件更新之后，控制器将重新启动并重新连接到主机计算机 (你可能会注意到，Led 对于跟踪) 会有所鲜。 如果固件更新被中断 (例如，控制器丢失了电源) ，则在下次打开控制器时，将再次尝试此固件。
+运动控制器固件是头戴显示设备驱动程序的一部分，必要时会在连接时自动更新。 固件更新通常需要 1-2 分钟，具体取决于蓝牙和链接质量。 在极少数情况下，控制器固件更新最多可能需要 10 分钟，这可能表示连接蓝牙或无线电干扰。 请参阅[蓝牙指南中的最佳实践来](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices)排查连接问题。 固件更新后，控制器将重新启动并重新连接到主机电脑 (你可能会注意到 LED 亮，用于跟踪) 。 如果固件更新因 (例如控制器断电而中断) ，则下次打开控制器时将再次尝试更新。
 
-### <a name="how-i-can-check-battery-level"></a>如何检查电池电量级别？
+### <a name="how-i-can-check-battery-level"></a>如何检查电池电量？
 
-在 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)中，您可以打开控制器以查看其在虚拟模型反面上的电量级别。 没有物理电池电量指标。
+在[Windows Mixed Reality中](../discover/navigating-the-windows-mixed-reality-home.md)，可以打开控制器，在虚拟模型的另一侧查看其电池电量。 没有物理电池电量指示器。
 
-### <a name="can-you-use-these-controllers-without-a-headset-just-for-the-joysticktriggeretc-input"></a>是否可以使用这些不带耳机的控制器？ 仅针对游戏杆/触发器/etc 输入？
+### <a name="can-you-use-these-controllers-without-a-headset-just-for-the-joysticktriggeretc-input"></a>能否在没有头戴显示设备的情况下使用这些控制器？ 只是为了进行游戏/触发器/等输入？
 
-不适用于通用 Windows 应用程序。
+不用于通用Windows应用程序。
 
 ## <a name="troubleshooting"></a>疑难解答
 
-请参阅发烧指南中的 [运动控制器故障排除](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) 。
+请参阅 [《友元指南》](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) 中的运动控制器故障排除。
 
-## <a name="filing-motion-controller-feedbackbugs"></a>存档运动控制器反馈/bug
+## <a name="filing-motion-controller-feedbackbugs"></a>提交运动控制器反馈/bug
 
-使用 "Mixed Reality-> 输入" 类别在反馈中心[向我们提供反馈](/hololens/hololens-feedback)。
+[使用"混合](/hololens/hololens-feedback) 现实 ->输入"类别，在 反馈中心 中提供反馈。
 
 ## <a name="see-also"></a>另请参阅
 
 * [Unity 中的运动控制器](../develop/unity/motion-controllers-in-unity.md)
 * [DirectX 中的手和运动控制器](../develop/native/hands-and-motion-controllers-in-directx.md)
 * [笔势](gaze-and-commit.md#composite-gestures)
-* [发烧本指南： Windows Mixed Reality 主页](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
-* [发烧本指南：在 Windows Mixed Reality 中使用游戏 & 应用](/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
+* [友元指南：Windows Mixed Reality主页](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
+* [友元指南：在&应用中使用Windows Mixed Reality](/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [由内而外跟踪的工作原理](/windows/mixed-reality/enthusiast-guide/tracking-system)

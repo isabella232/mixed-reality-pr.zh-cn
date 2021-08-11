@@ -5,12 +5,12 @@ author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，配置文件，
-ms.openlocfilehash: 785d402e924a534627dfd1d742d2019d9ce9dd5a
-ms.sourcegitcommit: 2f69fb62eb81f91e655d7b55306b0550a1162496
+ms.openlocfilehash: b3ba5aa9ac08dcfe0eecdb479db075b39b43a0e376239822432df872b0775d27
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111908240"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115225650"
 ---
 # <a name="profiles"></a>配置文件
 
@@ -27,7 +27,7 @@ ms.locfileid: "111908240"
 
 配置文件主要用于支持跨多个设备的特定方案，这些设备通过数据提供程序进行处理。 通过这种方式，可以将应用设计为设备 agnosticly，并让 MRTK 和配置文件的数据提供程序处理跨平台支持。
 
-还会围绕特定设备的输入功能构建一些配置文件，例如，默认为 GGV-样式交互的 HoloLens 1 配置文件。
+还有一些配置文件是围绕特定设备的输入功能构建的，例如 HoloLens 1 配置文件，默认 GGV 样式的交互。
 
 ## <a name="xr-sdk"></a>XR SDK
 
@@ -44,13 +44,13 @@ ms.locfileid: "111908240"
 
 ## <a name="default-profile"></a>默认配置文件
 
-MRTK 提供了一组默认配置文件，涵盖了 MRTK 支持的大多数平台和方案。 例如，当你选择 " `DefaultMixedRealityToolkitConfigurationProfile` (资产/MRTK/SDK/配置文件" 时) 你将能够在 "VR (OpenVR、WMR) 和 HoloLens (1" 和 "2) 上尝试方案。
+MRTK 提供了一组默认配置文件，涵盖了 MRTK 支持的大多数平台和方案。 例如，当你选择 " `DefaultMixedRealityToolkitConfigurationProfile` (资产/MRTK/SDK/配置文件" 时) 你将能够在 VR (OpenVR、WMR) 和 HoloLens (1 和 2) 上试用方案。
 
 请注意，由于这是一个常规的使用配置文件，因此不会针对任何特定用例进行优化。 如果希望具有更适合其他平台的高性能/特定设置，请参阅下面的其他配置文件，这些配置文件在各自的平台上稍微调整更好。
 
 ## <a name="hololens-2-profile"></a>HoloLens 2 配置文件
 
-MRTK 还提供了一个默认配置文件，该配置文件在 HoloLens 2： `DefaultHoloLens2ConfigurationProfile` (资产/MRTK/SDK/profile/HoloLens2) 上经过优化，可用于部署和测试。
+MRTK 还提供了一个默认配置文件，该配置文件针对 HoloLens 2 上的部署和测试进行了优化： `DefaultHoloLens2ConfigurationProfile` (资产/MRTK/SDK/配置文件/HoloLens2) 。
 
 当系统提示选择 MixedRealityToolkit 对象的配置文件时，请使用此配置文件而不是默认的所选配置文件。
 

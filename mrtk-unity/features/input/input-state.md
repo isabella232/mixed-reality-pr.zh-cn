@@ -1,26 +1,26 @@
 ---
 title: 输入状态
-description: 有关 MRTK 中的输入状态的文档
+description: MRTK 中的输入状态文档
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
-keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， InputState，
-ms.openlocfilehash: 4c1bd115c63e25decf73c082546e75b0f276a7ef
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，InputState，
+ms.openlocfilehash: 7d5e008ae3e43d227b90a563dd74e65a89527bd7ddf1720e26577042ce0d545f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145254"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115228357"
 ---
 # <a name="accessing-input-state-in-mrtk"></a>访问 MRTK 中的输入状态
 
-通过访问附加到输入源的控制器，可以直接查询 MRTK 中所有输入的状态。 MRTK 还提供了访问眼睛、手、头部和运动控制器的位置和旋转的便捷方法。
+通过循环访问附加到输入源的控制器，可以直接在 MRTK 中查询所有输入的状态。 MRTK 还提供了一种便捷方法，用于访问眼睛、双手、头和运动控制器的位置和旋转。
 
-有关通过访问控制器和使用 类查询输入的示例，请参阅 InputDataExample [`InputRayUtils`](xref:Microsoft.MixedReality.Toolkit.Input.InputRayUtils) 场景。
+请参阅 InputDataExample 场景，了解通过遍历控制器和使用类查询输入的示例 [`InputRayUtils`](xref:Microsoft.MixedReality.Toolkit.Input.InputRayUtils) 。
 
-## <a name="example-access-position-rotation-of-head-hands-eyes-in-mrtk"></a>示例：MRTK 中的访问位置、头部、手、眼睛的旋转
+## <a name="example-access-position-rotation-of-head-hands-eyes-in-mrtk"></a>示例： Access 位置、头 MRTK 的旋转、双手、眼睛
 
-MRTK 的 类提供了访问手部射线、头部射线、眼睛凝视射线和运动控制器射线 [`InputRayUtils`](xref:Microsoft.MixedReality.Toolkit.Input.InputRayUtils) 的便捷方法。
+MRTK 的 [`InputRayUtils`](xref:Microsoft.MixedReality.Toolkit.Input.InputRayUtils) 类提供用于访问手型、打印头、眼睛眼睛和运动控制器光线的便利方法。
 
 ```c#
 // Get the head ray
@@ -38,7 +38,7 @@ else
 }
 ```
 
-## <a name="example-access-position-rotation-of-all-6dof-controllers-active-in-scene"></a>示例：访问位置，场景中所有活动 6DOF 控制器的旋转
+## <a name="example-access-position-rotation-of-all-6dof-controllers-active-in-scene"></a>示例：访问位置，场景中处于活动状态的所有6DOF 控制器的旋转
 
 ```c#
 foreach(var controller in CoreServices.InputSystem.DetectedControllers)

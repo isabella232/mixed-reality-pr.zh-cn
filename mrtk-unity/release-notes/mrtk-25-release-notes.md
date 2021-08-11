@@ -1,126 +1,126 @@
 ---
 title: MRTK 2.5 发行说明
-description: MRTK 版本 2.5 的发行说明
+description: MRTK 版本2.5 的发行说明
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK，
-ms.openlocfilehash: c9458e5236cc7de18eb27c3c3e13221a366c89a4
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，
+ms.openlocfilehash: 7d3e158bc7e4b0125f264aa9abc8f369a6e825562266891b0528066d8b8b9b71
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177512"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115198109"
 ---
 # <a name="microsoft-mixed-reality-toolkit-25-release-notes"></a>Microsoft Mixed Reality Toolkit 2.5 发行说明
 
 > [!IMPORTANT]
-> 存在一个已知的编译器问题，该问题会影响使用 ARM64 为 Microsoft HoloLens 2 构建的应用程序。 此问题通过更新 2019 Visual Studio版本 16.8 或更高版本来修复。 如果无法更新Visual Studio，请 `com.microsoft.mixedreality.toolkit.tools` 导入包以应用解决方法。
+> 存在一个已知的编译器问题，它会影响使用 ARM64 为 Microsoft HoloLens 2 生成的应用程序。 此问题的解决方法是将 Visual Studio 2019 更新为16.8 或更高版本。 如果无法更新 Visual Studio，请导入 `com.microsoft.mixedreality.toolkit.tools` 包以应用解决方法。
 
 ## <a name="whats-new-in-254"></a>2.5.4 中的新增功能
 
-### <a name="fixes-a-bug-with-oculus-integration-when-using-upm"></a>修复了使用 UPM 时 Oculus 集成的 bug
+### <a name="fixes-a-bug-with-oculus-integration-when-using-upm"></a>使用 UPM 修复包含 Oculus 集成的 bug
 
-使用 UPM 时，OculusXRSDKDeviceManagerProfile 在启动时始终将预制项[设置为 None。](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9160) 此版本将 设备管理器 配置为在启动时指向一组工作预制。
+使用 UPM 时，OculusXRSDKDeviceManagerProfile 在启动时始终将其 [prototyping 设置为 "无](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9160)"。 此版本将 Device Manager 配置为在启动时指向 prototyping 的工作集。
 
-### <a name="fixes-an-issue-with-openxr-via-upm"></a>修复了通过 UPM 使用 OpenXR 时的问题
+### <a name="fixes-an-issue-with-openxr-via-upm"></a>解决 OpenXR via UPM 的问题
 
-修复了默认情况下未将 OpenXR 提供程序添加到 link.xml 的问题，该问题会导致新项目在通过 Unity 的 程序包管理器 使用 OpenXR 和 MRTK 时无法在设备上运行。 升级的现有项目仍然需要手动添加。
+修复了默认情况下，OpenXR 提供程序未添加到 link.xml 的问题，导致新项目在使用 OpenXR 和 MRTK 通过 Unity 的程序包管理器时无法在设备上运行。 升级的现有项目仍将需要手动添加。
 
 ## <a name="whats-new-in-253"></a>2.5.3 中的新增功能
 
-### <a name="fixes-a-regression-with-oculus-introduced-in-252"></a>修复了 2.5.2 中引入的 Oculus 回归
+### <a name="fixes-a-regression-with-oculus-introduced-in-252"></a>修复了2.5.2 中引入的 Oculus 的回归
 
-2.5.2 [集成 Oculus SDK](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9083)时引入了生成问题。 此版本可还原此问题。
+2.5.2 在 [集成 OCULUS SDK 时引入了生成问题](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9083)。 此版本恢复了该问题。
 
 ## <a name="whats-new-in-252"></a>2.5.2 中的新增功能
 
 ### <a name="add-support-for-openxr"></a>添加对 OpenXR 的支持
 
-添加了对 Unity 的 OpenXR 预览包和 Microsoft 的混合现实 OpenXR 包的初始支持。 有关详细信息 [，请参阅 MRTK/XRSDK](../configuration/getting-started-with-mrtk-and-xrsdk.md)入门页 [、Unity](https://forum.unity.com/threads/unity-support-for-openxr-in-preview.1023613/)论坛文章或 [Microsoft](/windows/mixed-reality/develop/unity/openxr-getting-started) 文档。
+添加了对 Unity 的 OpenXR 预览版包和 Microsoft Mixed Reality OpenXR 包的初始支持。 有关详细信息，请参阅 [MRTK/XRSDK 入门页](../configuration/getting-started-with-mrtk-and-xrsdk.md)、 [Unity 的论坛文章](https://forum.unity.com/threads/unity-support-for-openxr-in-preview.1023613/)或 [Microsoft 的文档](/windows/mixed-reality/develop/unity/openxr-getting-started) 。
 
 > [!IMPORTANT]
-> Unity 中的 OpenXR 仅在 Unity 2020.3 及更高版本上受支持。
+> Unity 中的 OpenXR 仅在 Unity 2020.3 和更高版本上受支持。
 > 它还仅支持 x64、ARM 和 ARM64 生成。
 
-### <a name="boundary-visualization-errors-fixed"></a>已修复的边界可视化错误
+### <a name="boundary-visualization-errors-fixed"></a>已修复边界可视化错误
 
-现在，边界可视化效果（如楼层或墙）将正确配置，并在运行时根据边界配置文件可见。
+现在，边界可视化效果（如地面或墙壁）将正确配置，并根据边界配置文件在运行时可见。
 
-### <a name="msbuild-for-unity-support"></a>MSBuild Unity 支持
+### <a name="msbuild-for-unity-support"></a>MSBuild 支持 Unity
 
-从 2.5.2 MSBuild开始，对 Unity 的包的支持已被删除，以与[Unity 的新包指南保持一致](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)。
+2.5.2 版本已删除对 unity 的 MSBuild 支持，以与[Unity 的新包指南](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)保持一致。
 
-## <a name="whats-new-in-251"></a>2.5.1 中的新增功能
+## <a name="whats-new-in-251"></a>2.5.1 的新增功能
 
-### <a name="package-dependency-errors-fixed"></a>修复了包依赖项错误
+### <a name="package-dependency-errors-fixed"></a>已修复包依赖关系错误
 
-此版本修复了不正确的包间文件 (，例如：标准资产中的文件不再错误地引用 Foundation) 。 版本 2.5.1 还添加了对文本网格网格的显式Pro。
+此版本修复了不正确的包间文件依赖关系 (ex：标准资产中的文件不再错误地引用 Foundation) 中的文件。 版本2.5.1 还在文本网格 Pro 上添加了显式依赖项。
 
-### <a name="standard-assets-package-shaders-copied-to-assetsmrtkshaders"></a>复制到 Assets/MRTK/Shaders 的标准资产包着色器
+### <a name="standard-assets-package-shaders-copied-to-assetsmrtkshaders"></a>已复制到资产/MRTK/着色器的标准资产包着色器
 
-通过 UPM 安装标准资产包时，着色器将复制到 Assets/MRTK/Shaders 文件夹，以便它们不再不可变。 这解决了在下次加载项目时 (URP) 还原旧行为的着色器的问题。
+通过 UPM 安装标准资产包时，着色器将被复制到 "资产/MRTK/着色器" 文件夹中，以使其不再是不可变的。 这解决了在下一次加载项目时 (URP) 还原旧行为而更新的通用呈现管道的着色问题。
 
-### <a name="fixed-teleport-cursor-sticking-to-hands"></a>修复了远程端口光标卡在手上的问题
+### <a name="fixed-teleport-cursor-sticking-to-hands"></a>固定的传送光标粘滞到了手
 
-此版本修复了 [远程](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8755) 端口目标光标可以停留在手部视觉对象上的问题。
+此版本修复了 "传送目标" 游标可以坚持使用视觉对象的 [问题](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8755) 。
 
 ## <a name="whats-new-in-250"></a>2.5.0 中的新增功能
 
 ### <a name="unity-package-manager-upm-support"></a>Unity 程序包管理器 (UPM) 支持
 
-现在可以使用 Unity Toolkit 管理混合现实程序包管理器。
+现在可以使用 Unity 程序包管理器管理混合现实 Toolkit。
 
 ![MRTK Foundation UPM 包](../features/images/packaging/MRTK_FoundationUPM.png)
 
 > [!NOTE]
-> 导入 MRTK UPM 包需要一些手动步骤。 有关详细信息，请查看[混合Toolkit和 Unity 程序包管理器。](../configuration/usingupm.md)
+> 导入 MRTK UPM 包需要执行一些手动步骤。 有关详细信息，请查看[混合现实 Toolkit 和 Unity 程序包管理器](../configuration/usingupm.md)。
 
-### <a name="oculus-quest-xr-sdk-support"></a>Oculus Quest XR SDK 支持
+### <a name="oculus-quest-xr-sdk-support"></a>Oculus 的 XR SDK 支持
 
-MRTK 现在支持使用本机 XR SDK 管道运行 Oculus Quest 头戴显示设备与控制器。 [Oculus Integration Unity](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)包也支持手部跟踪，感谢 Eric [Provencher](https://twitter.com/prvncher)在 MRTK-Quest 上的工作！
+MRTK 现在支持使用本机 XR SDK 管道运行 Oculus 寻找耳机和控制器。 [Oculus Integration Unity 包](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)还支持手动跟踪，这归功于[ERIC Provencher](https://twitter.com/prvncher)在 MRTK 上的工作！
 
-有关如何使用新管道在 Oculus Quest 上部署设备的说明，请参阅 [Oculus Quest 设置指南](../supported-devices/oculus-quest-mrtk.md)
+有关如何使用新管道在 Oculus 寻找设备上部署设备的说明，请参阅 [Oculus 寻找设置指南](../supported-devices/oculus-quest-mrtk.md)
 
 ### <a name="scrolling-object-collection"></a>滚动对象集合
 
-MRTK UX 组件已从实验性功能升级，为布局不同大小的 3D 内容提供了更多自由，并添加了对未附加碰撞体的对象的支持。 还添加了一个禁用内容掩码的新选项，使原型制作更容易。
+MRTK UX 组件已从实验功能升级，并为不同大小的布局3D 内容提供更大的自由度，并为未附加 colliders 的对象添加了支持。 此外还添加了用于禁用内容屏蔽的新选项，使原型更容易。
 
-有关详细信息 [，请参阅滚动](../features/ux-building-blocks/scrolling-object-collection.md) 对象集合。
+有关详细信息，请参阅 [滚动对象集合](../features/ux-building-blocks/scrolling-object-collection.md) 。
 
 ![滚动对象集合](https://user-images.githubusercontent.com/16922045/94465118-51537900-01b7-11eb-8f8b-bf864a8fee03.gif)
 
-### <a name="teleport-pointer-animation-handling-and-sound-improvements"></a>Teleport 指针动画、处理和声音改进
+### <a name="teleport-pointer-animation-handling-and-sound-improvements"></a>传送指针动画、处理和声音改进
 
-远程端口指针现在改进了动画和音频反馈。 我们还改进了对远程端口指针的处理，以便它在从指向附近表面转换到远离表面时处理更平滑。
+现在传送指针改进了动画和音频反馈。 此外，我们还改进了传送指针的处理，使其在从附近表面过渡到远离曲面时处理平滑。
 
 ### <a name="input-simulation-cheat-sheet"></a>输入模拟备忘单
 
-HandInteractionExamples 场景现在具有可配置的快捷方式，用于显示输入模拟的帮助页
+HandInteractionExamples 场景现在提供了一个可配置的快捷方式，用于显示输入模拟的帮助页
 
 ![输入模拟备忘单](https://user-images.githubusercontent.com/13754172/93232433-dea8cd80-f7b4-11ea-8500-eaee202f606f.png)
 
-### <a name="input-simulation-eye-gaze-with-mouse"></a>使用鼠标进行输入模拟眼睛凝视
+### <a name="input-simulation-eye-gaze-with-mouse"></a>带有鼠标的输入模拟眼睛
 
-用户现在可以使用鼠标来模拟眼动跟踪。 查看 `Eye Simulation Mode` 输入模拟配置文件中的字段，并设置为"鼠标"。 这将替换上一 `Simulate Eye Position` 个字段。
+用户现在可以使用鼠标来模拟眼睛跟踪。 查看 `Eye Simulation Mode` 输入模拟配置文件中的字段，并将其设置为 "鼠标"。 这将替换上一个 `Simulate Eye Position` 字段。
 
-![眼睛凝视鼠标](https://user-images.githubusercontent.com/39840334/87720928-892b5280-c76a-11ea-9411-73ab69fc756c.gif)
+![眼睛眼睛鼠标](https://user-images.githubusercontent.com/39840334/87720928-892b5280-c76a-11ea-9411-73ab69fc756c.gif)
 
 ### <a name="input-simulation-motion-controller-in-editor-play-mode"></a>编辑器播放模式下的输入模拟运动控制器
 
-用户现在可以像在编辑器播放模式下一样模拟运动控制器。 当前支持触发器、抓取按钮和菜单按钮。
+用户现在可以模拟运动控制器，就像在编辑器播放模式中一样。 当前支持触发器、抓取和菜单按钮。
 
-### <a name="conical-grab-pointer"></a>圆条抓取指针
+### <a name="conical-grab-pointer"></a>圆锥抓取指针
 
-现在可以将抓取指针配置为使用抓取点中的圆锥（而不是球体）查询附近的对象。 这更类似于默认HoloLens 2接口的行为，该接口使用圆锥查询附近的对象。 DefaultHoloLens2InputSystemProfile 也进行了调整以使用新的 `ConicalGrabPointer` 。
+现在可以将获取指针配置为使用来自抓取点（而不是球体）的锥形来查询附近的对象。 这与默认 HoloLens 2 接口中的行为更加相似，后者使用圆锥查询附近的对象。 DefaultHoloLens2InputSystemProfile 也已调整为使用新的 `ConicalGrabPointer` 。
 
-![圆条抓取指针](https://user-images.githubusercontent.com/39840334/82500569-72d58300-9aa8-11ea-8102-ec9a62832d4e.png)
+![圆锥抓取指针](https://user-images.githubusercontent.com/39840334/82500569-72d58300-9aa8-11ea-8102-ec9a62832d4e.png)
 
 ### <a name="testutilities-package"></a>TestUtilities 包
 
-现在，Microsoft.MixedReality (包。Toolkit。Unity.TestUtilities.2.5.0.unitypackage) ，其中包含 MRTK 用于创建端到端测试的 PlayMode 和 TestMode 测试基础结构。 对于 MRTK 团队本身来说，此基础结构非常方便，我们很高兴让使用者使用此基础结构将测试覆盖率添加到自己的项目。
+现在 (MixedReality 包。Toolkit。TestUtilities. 2.5.0. unitypackage) ，其中包含 TESTMODE 用于创建端到端测试的 PlayMode 和 MRTK 测试基础结构。 此基础结构对于 MRTK 团队本身非常有用，因此我们很高兴让使用者将测试覆盖率添加到其自己的项目中。
 
-下面的代码演示如何创建测试手，在特定位置显示它，移动它，然后收缩并打开。
+下面的代码演示如何创建一个测试局，在某个位置显示它，将其移到，然后将其移开。
 
 ```csharp
 TestHand leftHand = new TestHand(Handedness.Left);
@@ -130,47 +130,47 @@ yield return leftHand.Move(new Vector3(0.2f, 0.2f, 0));
 yield return leftHand.SetGesture(ArticulatedHandPose.GestureId.Open);
 ```
 
-有关如何使用这些 TestUtilities 编写测试的说明，请参阅有关编写测试 [的此部分](../contributing/unit-tests.md#writing-tests)。
+有关如何使用这些 TestUtilities 编写测试的说明，请参阅有关 [编写测试](../contributing/unit-tests.md#writing-tests)的此部分。
 
 有关使用此基础结构的现有测试的示例，请参阅 MRTK 的 [PlayModeTests](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Tests/PlayModeTests)。
 
-### <a name="support-for-the-leap-motion-451-unity-modules"></a>支持 Leap Motion 4.5.1 Unity 模块
+### <a name="support-for-the-leap-motion-451-unity-modules"></a>支持 Leap 运动 4.5.1 Unity 模块
 
-添加了对 Leap Motion Unity 模块版本 4.5.1 的支持，并删除了对 4.4.0 资产的支持。 Leap Motion Unity 模块的当前支持版本为 4.5.0 和 4.5.1。
+已添加对 Leap 运动 Unity 模块版本4.5.1 的支持，并已删除对4.4.0 资产的支持。 当前支持的 Leap 运动 Unity 模块的版本为4.5.0 和4.5.1。
 
-还有一个有关初始 Leap Motion 集成的附加步骤，请参阅 [How to Configure the Leap Motion Hand Tracking in MRTK（如何在 MRTK](../supported-devices/leap-motion-mrtk.md) 中配置 Leap Motion 手部跟踪）了解详细信息。
+初始 Leap 运动集成还有一个额外的步骤，有关详细信息，请参阅 [如何在 MRTK 中配置 Leap 运动手跟踪](../supported-devices/leap-motion-mrtk.md) 。
 
-### <a name="spatial-awareness-mesh-observer-better-handles-customization-of-materials"></a>空间感知网格观察器更好地处理材料自定义
+### <a name="spatial-awareness-mesh-observer-better-handles-customization-of-materials"></a>空间感知网格观察器更好地处理物料自定义
 
-在此版本中， `Windows Mixed Reality Spatial Mesh Observer` 和 `Generic XR SDK Spatial Mesh Observer` 组件改进了可视材料处理。 现在，当观察程序更新网格后，材料将保留，以前，这些网格已重置为配置文件中配置的默认 VisibleMaterial。
+在此版本中， `Windows Mixed Reality Spatial Mesh Observer` 和 `Generic XR SDK Spatial Mesh Observer` 组件改进了视觉对象处理。 现在，当网格已由观察者更新时（以前，在配置文件中配置的 VisibleMaterial 重置为默认值）时，将保留物料。
 
-这使开发人员能够更改网格材料，并且不会意外覆盖更改。
+这使开发人员可以更改网格材料，而不会意外覆盖更改。
 
-### <a name="linkxml-created-in-the-mixedrealitytoolkitgenerated-folder"></a>Link.xml MixedRealityToolkit.Generated 文件夹中创建
+### <a name="linkxml-created-in-the-mixedrealitytoolkitgenerated-folder"></a>Link.xml 在 MixedRealityToolkit 文件夹中创建
 
-随着 Unity 包管理器 MRTK 的引入，MRTK 现在会将文件写入文件夹 `link.xml` `Assets/MixedRealityToolkit.Generated` （如果不存在）。 建议将此文件添加到 () `link.xml.meta` 添加到源代码管理。 Link.xml用于影响 Unity [链接](https://docs.unity3d.com/Manual/ManagedCodeStripping.html#LinkXML) 器托管代码去除功能。
+随着 Unity 包管理器的 MRTK，MRTK 现在 `link.xml` 会将文件写入 `Assets/MixedRealityToolkit.Generated` 文件夹（如果没有）。 建议将此文件添加 (，并将 `link.xml.meta`) 添加到源代码管理中。 Link.xml 用于影响 Unity 链接器的 [托管代码去除](https://docs.unity3d.com/Manual/ManagedCodeStripping.html#LinkXML) 功能。
 
-有关 MRTK link.xml文件，请参阅 [MRTK 和托管代码去除一](../updates-deployment/mrtk-and-managed-code-stripping.md) 文。
+可在 [MRTK 和托管代码剥离](../updates-deployment/mrtk-and-managed-code-stripping.md) 一文中找到有关 MRTK link.xml 文件的详细信息。
 
-### <a name="unity-20193-mrtk-configuration-dialog-no-longer-attempts-to-enable-legacy-xr-support"></a>Unity 2019.3+：MRTK 配置对话框不再尝试启用旧版 XR 支持
+### <a name="unity-20193-mrtk-configuration-dialog-no-longer-attempts-to-enable-legacy-xr-support"></a>Unity 2019.3 +： MRTK 配置对话框不再尝试启用旧版 XR 支持
 
-为了避免在使用 Unity 的 XR 平台时出现潜在冲突，从 MRTK 配置对话框中删除了启用旧版 XR 支持的选项。 如果需要，可以在 Unity 2019 中启用旧版 XR 支持，使用"编辑"Project 设置  >    >
- **Player**  >  **XR** 设置  >  **支持"。**
+为了避免在使用 Unity 的 XR 平台时出现潜在的冲突，已从 MRTK 配置对话框中删除启用旧 XR 支持的选项。 如果需要，可以在 Unity Project 2019 中启用旧的 XR 支持，   >  **设置**  >
+ **Player**  >  **XR 设置**  >  **虚拟现实支持**。
 
-### <a name="reduction-in-initializeonload-overhead"></a>减少 InitializeOnLoad 开销
+### <a name="reduction-in-initializeonload-overhead"></a>降低 InitializeOnLoad 开销
 
-我们一直在努力减少 InitializeOnLoad 处理程序中运行的工作量，这应提高内部循环开发速度。 每次编译脚本、进入播放模式之前以及编辑器启动时，都会运行 InitializeOnLoad 处理程序。 这些处理程序现在以更少的情况运行，从而改进了常规 Unity 响应能力。
+我们一直在努力减少在 InitializeOnLoad 处理程序中运行的工作量，这会使内部循环开发速度得到改进。 InitializeOnLoad 处理程序在脚本每次编译、进入播放模式之前以及在编辑器启动时运行。 现在，这些处理程序在极少的情况下运行，从而使一般的 Unity 响应能力得以改善。
 
-在某些情况下，必须做出权衡：
+在某些情况下，需要进行权衡：
 
-- 有关 [额外的集成步骤，](../supported-devices/leap-motion-mrtk.md) 请参阅 Leap Motion Hand Tracking Configuration。
-- 对于使用 ARFoundation 的人，现在在其入门步骤中还有一个额外的手动步骤。
+- 请参阅 [Leap 动作手动跟踪配置](../supported-devices/leap-motion-mrtk.md) ，了解额外的集成步骤。
+- 对于使用 ARFoundation 的用户，现已在入门步骤中执行了其他手动步骤。
   有关新步骤，请参阅 [ARFoundation](../supported-devices/using-ar-foundation.md#install-required-packages) 。
 - 对于将使用[全息远程处理 HoloLens 2 上的旧版 XR 管道](../features/tools/holographic-remoting.md#legacy-xr-setup-instructions)的用户，现在可以执行[手动步骤](../features/tools/holographic-remoting.md#dotnetwinrt_present-define-written-into-player-settings)。
 
 ### <a name="bounds-control-graduated"></a>边界控制渐变
 
-![边界控件](../features/images/bounds-control/MRTK_BoundsControl_Main.png)
+![边界控制](../features/images/bounds-control/MRTK_BoundsControl_Main.png)
 
 [边界控制](../features/ux-building-blocks/bounds-control.md) 以实验性为依据，并附带一组新功能和大量 bug 修复。
 下面列出了此更新的要点：
@@ -223,7 +223,7 @@ MRTK 现在附带了一个 [弹性模拟系统](../features/experimental/elastic
 
 目前，支持 [池中弹性 manager](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager) 的以下 MRTK 组件可以利用池中弹性功能：
 
-- [边界控件](../features/ux-building-blocks/bounds-control.md#elastics-experimental)
+- [边界控制](../features/ux-building-blocks/bounds-control.md#elastics-experimental)
 - [对象操控器](../features/ux-building-blocks/object-manipulator.md#elastics-experimental)
 
 <img src="https://user-images.githubusercontent.com/5544935/88151572-568cba00-cbaf-11ea-91c2-d6b51829b638.gif" width="38%" alt="Expanding an elastic menu">
@@ -319,35 +319,35 @@ TargetTransform 属性已标记为过时，因为它不被约束系统使用。 
 
 若要解决此问题，请确保：
 
-- **窗口**  > **程序包管理器** 安装了一个或多个 XR 包
-- **混合现实 Toolkit**  > **实用工具**  > **配置 Unity Project** 并为 **音频 Spatializer** 进行选择
+- **窗口**  > **程序包管理器** 已安装一个或多个 XR 包
+- **混合现实Toolkit**  > **实用工具**  > **配置 Unity Project，** 并针对音频空间 **化程序进行选择**
 
-  ![选择音频 Spatializer](images/SpatializerSelection.png)
+  ![选择"音频空间化程序"](images/SpatializerSelection.png)
 
-### <a name="nullreferenceexception-object-reference-not-set-to-an-instance-of-an-object-scenetransitionserviceinitialize"></a>NullReferenceException：对象引用未设置为对象的实例 (SceneTransitionService.Initialize) 
+### <a name="nullreferenceexception-object-reference-not-set-to-an-instance-of-an-object-scenetransitionserviceinitialize"></a>NullReferenceException：对象引用未设置为实例化 (SceneTransitionService.Ini实例) 
 
-在某些情况下，打开 `EyeTrackingDemo-00-RootScene` 可能会导致 SceneTransitionService 类的 Initialize 方法 NullReferenceException。
+在某些情况下，打开 `EyeTrackingDemo-00-RootScene` 可能会导致 SceneTransitionService 类的 Initialize 方法中出现 NullReferenceException。
 此错误是由于未设置场景转换服务的配置文件。 若要解决此问题，请使用以下步骤：
 
-- 导航到 `MixedRealityToolkit` 层次结构中的对象
-- 在检查器窗口中，选择 `Extensions`
-- 如果未展开，请展开 `Scene Transition Service`
-- 将的值设置 `Configuration Profile` 为 **MRTKExamplesHubSceneTransitionServiceProfile**
+- 导航到 `MixedRealityToolkit` 层次结构中的 对象
+- 在"检查器"窗口中，选择 `Extensions`
+- 如果未展开，则展开 `Scene Transition Service`
+- 将 的值设置为 `Configuration Profile` **MRTKExamplesHubSceneTransitionServiceProfile**
 
-![修复场景过渡](images/FixSceneTransitionProfile.png)
+![修复场景转换](images/FixSceneTransitionProfile.png)
 
 ### <a name="oculus-quest"></a>Oculus Quest
 
-当前有一个已知问题，即 [在面向独立平台时，使用 OCULUS XR 插件](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)。 查看 Oculus bug 跟踪器/论坛/发行说明，了解更新。
+在面向独立平台 时，当前存在将 [Oculus XR 插件与 一起使用的已知问题](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)。 有关更新，请查看 Oculus bug 跟踪器/论坛/发行说明。
 
-此错误是用这一组3个错误表示的：
+此 bug 由以下 3 个错误集表示：
 
 ![Oculus XR 插件错误](https://forum.unity.com/attachments/erori-unity-png.644204/)
 
 ### <a name="unityui-and-textmeshpro"></a>UnityUI 和 TextMeshPro
 
-TextMeshPro 的较新版本 (1.5.0 + 或 2.1.1 +) 存在一个已知问题，其中 dropdown 和粗体字字符间距的默认字体大小已更改。
+较新版本的 TextMeshPro (1.5.0+ 或 2.1.1+) 存在已知问题，其中下拉列表的默认字号和粗体字体字符间距已更改。
 
 ![TMP 映像](https://user-images.githubusercontent.com/68253937/93158069-4d582f00-f6c0-11ea-87ad-94d0ba3ba6e5.png)
 
-可以通过降级到早期版本的 TextMeshPro 来解决此情况。 有关更多详细信息，请参阅 [问题 #8556](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8556) 。
+可以通过降级到早期版本的 TextMeshPro 来这样做。 有关详细信息 [，#8556](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8556) 问题说明。

@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality、设计、交互、语音
-ms.openlocfilehash: d027dd32e1d7ea0391d2d9262e164a671a57bd29
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2a988ad50a8b20a256b0d7208187785778447cc08109fbf55d4ae83e820a76ba
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582836"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115225358"
 ---
 # <a name="voice-commanding"></a>语音命令
 
@@ -47,7 +47,7 @@ ms.locfileid: "98582836"
 
 考虑为生成的任何体验添加语音命令。 语音是控制系统和应用程序的一种强大而方便的方式。 由于用户使用各种方言和口音说话，恰当选择语音关键字将确保用户的命令得到清晰的解释。
 
-### <a name="best-practices"></a>最佳做法
+### <a name="best-practices"></a>最佳实践
 
 以下是一些有助于流畅语音识别的做法。
 * **使用简明命令** - 如果可能的话，选择两个或更多音节的关键词。 不同口音的人说单音节词时倾向于使用不同的元音。 示例： "播放视频" 优于 "播放当前选定的视频"
@@ -102,7 +102,7 @@ Windows Mixed Reality 采用了“看到它，说出来”的语音模型，在�
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>在混合现实中，用户应该知道的关于“语音”的重要事项
 * 在将一个按钮设置为目标时，说“选择”（可以在任何位置使用这种方法来单击按钮）。
 * 可以在某些应用中通过说出应用栏按钮的标签名称来执行操作。 例如，在查看应用时，用户可以说“移除”命令以从现实中移除应用（这样可以节省用手单击按钮的时间）。
-* 说“你好小娜”可以启动 Cortana 侦听。 你可以询问她的问题 ( "你好 Cortana，Eiffel 塔有多高？") ，告诉她打开一个应用 ( "你好 Cortana，打开 Netflix" ) ，或者告诉她启动菜单 ( "你好 Cortana，请回家" ) 等。
+* 说“你好小娜”可以启动 Cortana 侦听。 你可以询问她的问题 ( "你好 Cortana，Eiffel 塔有多高？") ，告诉她打开应用 ( "你好 Cortana，打开 Netflix" ) ，或告诉她显示 "开始" 菜单 ( "你好 Cortana，请回家" ) 等。
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>用户对语音的常见问题和关注点
 * 我可以说什么？

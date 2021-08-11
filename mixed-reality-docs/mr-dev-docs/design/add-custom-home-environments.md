@@ -1,24 +1,24 @@
 ---
 title: 设计自己的沉浸式环境
-description: 了解如何创建自己的 Windows Mixed Reality 主环境。
+description: 了解如何创建你自己的 Windows Mixed Reality home 环境。
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
-keywords: Windows Mixed Reality，混合现实，虚拟现实，VR，先生，Home，自定义环境，地点，cliff 房子，skyloft，用户，创建，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包
-ms.openlocfilehash: 2a626b91b79eadb49c9da95c9d61f92a375015a0
-ms.sourcegitcommit: f74d33d50c1fbfebe8571695d631ce78dd599f74
+keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，Home，自定义环境，地点，cliff 房子，skyloft，用户，创建，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit
+ms.openlocfilehash: c0f006d3e05cb0892a0a9b2014a4d46a0668f628cf369e38c63c83756148d778
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104881214"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115198594"
 ---
 # <a name="design-your-own-immersive-environments"></a>设计自己的沉浸式环境
 
 >[!NOTE]
 >这是一项实验性功能。 试一试，并对它感兴趣，但如果所有内容均未按预期工作，则不会惊讶。 我们正在评估此功能的生存能力，并对使用它感兴趣，因此请告诉我们你的体验 (以及在 [开发人员论坛](https://forums.hololens.com/categories/custom-home-environments)中找到) 的任何 bug。
 
-从 [windows 10 4 月2018版更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)开始，我们启用了一个试验性功能，该功能使你能够将自定义环境添加到 "开始" 菜单上的 "位置选取器 (，) 用作 [Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)。 Windows Mixed Reality 提供两个默认环境： Cliff 房子和 Skyloft，你可以选择作为你的家庭。 创建自定义环境使你可以通过自己的创建来扩展列表。 我们正在使此功能在早期状态下提供，以便评估创建者和开发人员的兴趣。 了解你创建了哪些类型的世界，并了解如何使用不同的创作工具。
+从[Windows 10 2018 年4月的更新](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018)开始，我们启用了一个试验性功能，该功能使你能够将自定义环境添加到 "位置选取器" (上的 "位置" 选取器) "开始"菜单中，以用作[Windows Mixed Reality 主页](../discover/navigating-the-windows-mixed-reality-home.md)。 Windows Mixed Reality 有两个默认环境 Cliff 房子和 Skyloft，你可以选择作为你的家庭。 创建自定义环境使你可以通过自己的创建来扩展列表。 我们正在使此功能在早期状态下提供，以便评估创建者和开发人员的兴趣。 了解你创建了哪些类型的世界，并了解如何使用不同的创作工具。
 
 使用自定义环境时，您会注意到，teleporting、与应用程序的交互，并使全息影像的工作方式与在 Cliff 房子和 Skyloft 中的工作方式相同。 你可以在幻想环境中浏览 web，或使用全息影像来填充现在俨然
 
@@ -53,12 +53,12 @@ ms.locfileid: "104881214"
 2. 运行下载的 **Fantasy_Island.exe** 文件。
 
     > [!NOTE]
-    > 尝试运行从 web (下载的 .exe 文件时) ，可能会遇到 "受 Windows 保护的 PC" 弹出窗口。 若要从此弹出窗口中运行 Fantasy_Island.exe，请选择 " **详细信息** "，然后 **继续运行**。 此安全设置旨在防止您下载可能不想要信任的文件，因此，请仅当您信任文件的源时选择此选项。
+    > 尝试运行从 web (（如此) ）下载的 .exe 文件时，可能会出现 "Windows 保护 PC" 弹出窗口。 若要从此弹出窗口中运行 Fantasy_Island.exe，请选择 " **详细信息** "，然后 **继续运行**。 此安全设置旨在防止您下载可能不想要信任的文件，因此，请仅当您信任文件的源时选择此选项。
 
 3. 打开 **文件资源管理器** 并导航到 "环境" 文件夹，方法是在地址栏中粘贴以下文件位置： `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState` 。
 4. 将下载的示例环境复制到此文件夹。
 5. 重新启动 **混合现实门户** ，以便在 "位置" 选取器中刷新环境列表。
-6. 戴上耳机。 进入 home 后，使用 Windows 按钮打开 " **开始" 菜单** 。
+6. 戴上耳机。 进入家里后，请使用 "Windows" 按钮打开 **"开始"菜单**。
 7. 选择固定应用列表上方的 " **位置** " 图标以选择 home 环境。
 8. 你会发现你在位置列表中下载的幻想岛环境。 选择 " **幻想岛** " 输入新的自定义家庭环境！
 
@@ -78,7 +78,7 @@ ms.locfileid: "104881214"
 
 ### <a name="exporting-your-environment"></a>导出环境
 
-Windows Mixed Reality 依赖于二进制 glTF (. glb) 作为环境的资产传送格式。 glTF 是由 Khronos 组维护的用于3D 资产交付的版税免费开放标准。 Microsoft 对跨 Windows 应用和体验的格式的支持将随着 glTF 发展为可互操作的3D 内容的行业标准而发展。
+Windows Mixed Reality 依赖于二进制 glTF ( glb) 作为环境的资产传送格式。 glTF 是由 Khronos 组维护的用于3D 资产交付的版税免费开放标准。 Microsoft 对跨 Windows 应用和体验的格式的支持将随着 glTF 发展为可互操作的3d 内容的行业标准而发展。
 
 导出要用作自定义家庭环境的资产的第一步是生成 glTF 2.0 模型。 GlTF 工作组维护一 [系列受支持的导出程序和转换器](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) ，以创建 glTF 2.0 模型。 若要开始使用，请使用此页上列出的程序之一创建和导出 glTF 2.0 模型，或使用其中一个受支持的转换器转换现有的模型。
 
@@ -92,7 +92,7 @@ Windows Mixed Reality 依赖于二进制 glTF (. glb) 作为环境的资产传�
 
 Windows Mixed Reality 支持很多可显著减少环境加载时间的可选优化。 请特别注意具有大量纹理的环境，因为它们有时会在加载时超时。 通常，我们建议对所有资产执行此步骤，但是，具有少量或低分辨率纹理的小型环境不会始终需要此步骤。 
 
-为了使此过程更容易，我们已创建了 [在 GitHub 上可用的 Windows Mixed Reality 资产转换器 () ](https://github.com/Microsoft/glTF-Toolkit/releases) ，以便进行优化。 此工具使用 Microsoft glTF 工具包中提供的一组实用工具来优化任何标准 2.0 glTF 或 glb，方法是执行额外的纹理打包、压缩和分辨率下降。 
+为了使此过程更容易，我们已创建了[Windows Mixed Reality 资产转换器 (在 GitHub) 上提供](https://github.com/Microsoft/glTF-Toolkit/releases)，以便进行优化。 此工具使用 Microsoft glTF 工具包中提供的一组实用工具来优化任何标准 2.0 glTF 或 glb，方法是执行额外的纹理打包、压缩和分辨率下降。 
 
 转换器当前支持多个标志来调整优化的确切行为。 建议运行以下标志以获得最佳结果：
 
@@ -131,7 +131,7 @@ WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1
 
 ### <a name="i-spawn-into-a-blank-space"></a>我将生成空白空间
 
-Windows Mixed Reality [不支持超过 256 mb 的环境](#environment-limits)。 当某个环境超过此限制时，你将在不带任何型号的空天空中居住。
+Windows Mixed Reality[不支持超过 256 mb 的环境](#environment-limits)。 当某个环境超过此限制时，你将在不带任何型号的空天空中居住。
 
 ### <a name="it-takes-a-long-time-to-load-my-environment"></a>加载环境需要很长时间
 
@@ -139,7 +139,7 @@ Windows Mixed Reality [不支持超过 256 mb 的环境](#environment-limits)。
 
 ### <a name="the-scale-of-my-environment-is-incorrect"></a>我的环境规模不正确
 
-加载环境时，Windows Mixed Reality 会将 glTF 单位转换为1米。 如果你的环境加载了意外的规模，请仔细检查你的导出器，以确保按1计量规模进行建模。 
+加载环境时，Windows Mixed Reality 将 glTF 单位转换为1米。 如果你的环境加载了意外的规模，请仔细检查你的导出器，以确保按1计量规模进行建模。 
 
 ### <a name="the-spawn-location-in-my-environment-is-incorrect"></a>我的环境中的生成位置不正确
 
@@ -149,5 +149,5 @@ Windows Mixed Reality [不支持超过 256 mb 的环境](#environment-limits)。
 
 创建自定义环境时，它将使用与所创建的物理空间不匹配的噪声渲染模拟。 声音可能来自错误的方向，可能听起来 muffled。 
 
-## <a name="see-also"></a>请参阅
-* [GitHub 上的 Windows Mixed Reality 资产转换器 () ](https://github.com/Microsoft/glTF-Toolkit/releases)
+## <a name="see-also"></a>另请参阅
+* [Windows Mixed RealityGitHub 上的资产转换器 () ](https://github.com/Microsoft/glTF-Toolkit/releases)

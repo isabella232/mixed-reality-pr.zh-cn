@@ -1,19 +1,19 @@
 ---
 title: 混合现实新闻
-description: 我们非常高兴地与你共享混合现实新闻！ 我们期待收到你的反馈意见，并邀请你加入对话。
+description: 我们很高兴与你分享混合现实新闻！ 我们希望收到你的反馈，并邀请你加入对话。
 author: grbury
 ms.author: grbury
 ms.date: 10/21/2019
 ms.topic: article
-keywords: 混合现实、开发、开发、设计、HoloLens、Azure 服务、新闻、HoloLens 2
-ms.openlocfilehash: 8fc2f7c54cdc941150558aac59dd240ee293d1f8
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+keywords: 混合现实， 开发， 开发， 设计， HoloLens， Azure 服务， 新闻， HoloLens 2
+ms.openlocfilehash: 0144a4ed804dacf2f6120b1e93ee054a71dbadf3efe6689d19ded3f14233c31f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110084"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226210"
 ---
-# <a name="mixed-reality-news-and-notes"></a>混合现实新闻和笔记
+# <a name="mixed-reality-news-and-notes"></a>混合现实新闻和说明
 
 ## <a name="introducing-hololens-2"></a>HoloLens 2 简介
 
@@ -27,7 +27,7 @@ ms.locfileid: "112110084"
 
 <table>
 <tr>
-<th style="width: 400px; text-align:left;">Content</th><th style="width: 125px; text-align:left;">交付</th><th style="width: 125px; text-align:left;">现已开始！</th>
+<th style="width: 400px; text-align:left;">内容</th><th style="width: 125px; text-align:left;">交付</th><th style="width: 125px; text-align:left;">现已开始！</th>
 </tr> 
 <tr>
 <td><b>移植指南</b> <br>1. 从 HoloToolKit (HTK)/混合现实工具包 (MRTK) 到 MRTK 版本 2
@@ -38,18 +38,18 @@ ms.locfileid: "112110084"
 <td>每月的开源开发人员模块（教程/示例应用）</td><td>2019 年 6 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-base-ch1>MR 学习基础模块</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-asa-ch1>Azure 空间定位点教程</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-speechsdk-ch1>Azure 语音服务教程</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrlearning-sharing(photon)-ch1>多用户功能教程</a></td>
 </tr>
 <tr>
-<td>适用于 HoloLens 2 的 MRTK</td><td>2019 年 10 月</td><td> <ul><li><a href=/windows/mixed-reality/mrtk-unity>MRTK 文档</a><li><a href=https://github.com/Microsoft/MixedRealityToolkit-Unity/releases>MRTK release 2.1。0</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrtk-getting-started>Getting started with MRTK v2</a>（MRTK v2 入门）</td>
+<td>MRTK for HoloLens 2</td><td>2019 年 10 月</td><td> <ul><li><a href=/windows/mixed-reality/mrtk-unity>MRTK 文档</a><li><a href=https://github.com/Microsoft/MixedRealityToolkit-Unity/releases>MRTK 版本 2.1.0</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/mrtk-getting-started>Getting started with MRTK v2</a>（MRTK v2 入门）</td>
 </tr>
 <tr>
-<td>多用户应用实用工具</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/spectator-view>用于演示的 SpectatorView</a><li><a href=https://github.com/microsoft/MixedReality-WebRTC>针对 HoloLens 优化的 WebRTC</a>></td>
+<td>多用户应用实用工具</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/spectator-view>用于演示的ViewView</a><li><a href=https://github.com/microsoft/MixedReality-WebRTC>针对应用程序优化的 WebRTC HoloLens</a>></td>
 </tr>
 <tr>
-<td>HoloLens 2 设计和开发指南</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/>混合现实概述</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>设计和原型设计</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>开发人员工具和体系结构</a></td>
+<td>HoloLens 2 设计和开发指南</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/>混合现实概述</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>设计和原型制作</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>开发人员工具体系结构</a></td>
 </tr>
 <tr>
-  <td>Unreal 上的新信息</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Unreal 开发概述</a></td>
+  <td>Unreal 的新信息</td><td>2019 年 10 月</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Unreal 开发概述</a></td>
 </tr>
 <tr>
-  <td>Microsoft 熟知设计</td><td>2019 年 10 月</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>混合现实设计页</a></td>
+  <td>Microsoft Fluent 设计</td><td>2019 年 10 月</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>混合现实设计页</a></td>
 </tr>
 </table>

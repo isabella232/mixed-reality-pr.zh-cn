@@ -1,81 +1,81 @@
 ---
 title: 手动菜单
-description: MRTK 中的手形菜单示例场景
+description: MRTK 中的手动菜单示例场景
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，HandMenu，
-ms.openlocfilehash: 9bb0276c048912b4f463dd93d3303c9a3af8fe29
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， HandMenu，
+ms.openlocfilehash: ecf05b687c52dab68302b9b66b3890aca31b5635b803084abd6845f31de974e0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177527"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226457"
 ---
 # <a name="hand-menu"></a>手动菜单
 
-![手动菜单 UX 示例](../images/solver/MRTK_UX_HandMenu.png)
+![手部菜单 UX 示例](../images/solver/MRTK_UX_HandMenu.png)
 
-手动菜单允许用户快速为常用函数获取手动连接的 UI。 若要防止在与其他对象交互时出现错误激活，则可以使用 "上" 菜单提供 "需要平头" 和 "使用注视激活" 等选项。 建议使用这些选项以防止不必要的激活。
+手部菜单允许用户为常用函数快速启动手动附加的 UI。 为了防止与其他对象交互时出现误报，手部菜单提供了"需要平手"和"使用凝视激活"等选项。 建议使用这些选项来防止不需要的激活。
 
-## <a name="hand-menu-examples"></a>手动菜单示例
+## <a name="hand-menu-examples"></a>手部菜单示例
 
-**HandMenuExamples** 场景位于 ``MRTK/Examples/Demos/HandTracking/Scenes`` 文件夹下。 当它运行时，场景将仅激活当前选定的菜单类型。
+**HandMenuExamples.unity** 场景位于 ``MRTK/Examples/Demos/HandTracking/Scenes`` 文件夹下。 当场景运行时，场景将仅激活当前选定的菜单类型。
 <br/><img src="../images/hand-menu/MRTK_HandMenu_ExampleScene.png" width="600px" alt="HandMenu_ExampleScene">
 
-可以在 "文件夹" 下找到 prototyping ``MRTK/Examples/Demos/HandTracking/Prefabs`` 。
+可以在文件夹下找到这些手部菜单 ``MRTK/Examples/Demos/HandTracking/Prefabs`` 预制项。
 
 ### <a name="handmenu_small_hideonhanddrop-and-handmenu_medium_hideonhanddrop"></a>HandMenu_Small_HideOnHandDrop 和 HandMenu_Medium_HideOnHandDrop
 
-这两个示例只是激活和停用 MenuContent 对象，以便显示和隐藏 **OnFirstHandDetected ()** 和 **OnLastHandLost ()** 事件上的菜单。
+这两个示例只需激活和停用 MenuContent 对象即可在 **OnFirstHandDetected** () **和 OnLastHandLost () 事件上显示和隐藏** 菜单。
 <br/><img src="../images/hand-menu/MRTK_HandMenu_Example1.png" width="600" alt="HandMenu_ExampleScene 1">
 <br/><img src="../images/hand-menu/MRTK_HandMenu_Example2.png" width="600" alt="HandMenu_ExampleScene 2">
 
 ### <a name="handmenu_large_worldlock_on_grabandpull"></a>HandMenu_Large_WorldLock_On_GrabAndPull
 
-对于需要较长时间交互时间的更复杂菜单，建议使用全局锁定菜单。 在此示例中，除了激活和停用 **OnFirstHandDetected ()** 和 **OnLastHandLost ()** 事件外，用户还可以获取并拉取到全局锁定菜单。
+对于需要较长交互时间的复杂菜单，建议对菜单进行世界锁定。 此示例中，除了激活和停用 **OnFirstHandDetected ()** 和 **OnLastHandLost** () 事件上的 MenuContent 外，用户还可以抓取并拉取到世界锁定菜单。
 <br/><img src="../images/hand-menu/MRTK_HandMenu_Example3.png" width="600" alt="HandMenu_ExampleScene 3">
 
-Backplate `ManipulationHandler` 使其 grabbable 并可移动。 **在操作已启动时** ， **SolverHandler UpdateSolvers** 被停用，使其成为全局锁定菜单。 此外，它还会显示 " **关闭" 按钮** ，以允许用户在任务完成时关闭菜单。 **处理结束事件时** ，它会调用 **HandConstraintPalmUp** ，以允许用户通过引发和查看 palm 来返回菜单。
+反板使其 `ManipulationHandler` 可抓取且可移动。 **在操作启动** 事件上 **，将停用 SolverHandler.UpdateSolvers** 以对菜单进行世界锁定。 此外，它还显示 **"关闭** "按钮，允许用户在任务完成后关闭菜单。 **在"操作** 结束"事件上，它调用 **HandConstraintPalmUp.StartWorldLockReattachCheckCoroutine，** 允许用户通过引发并查看手部使菜单恢复为手。
 <br/><img src="../images/hand-menu/MRTK_HandMenu_Example4.png" width="600" alt="HandMenu_ExampleScene 4">
 
-"**关闭**" 按钮会重新激活 **SolverHandler UpdateSolvers** 并隐藏 **MenuContent**。
+**"关闭** "按钮重新激活 **SolverHandler.UpdateSolvers** 并隐藏 **MenuContent**。
 <br/><img src="../images/hand-menu/MRTK_HandMenu_Example5.png" alt="HandMenu_ExampleScene 5">
 
 ### <a name="handmenu_large_autoworldlock_on_handdrop"></a>HandMenu_Large_AutoWorldLock_On_HandDrop
 
-此示例类似于 HandMenu_Large_WorldLock_On_GrabAndPull。 唯一的区别是，菜单将自动放置时自动锁定。 只需隐藏 **OnLastHandLost ()** 事件上的 MenuContent 即可完成此操作。 抓取 & 拉取行为与 HandMenu_Large_WorldLock_On_GrabAndPull 示例相同。
+此示例类似于 HandMenu_Large_WorldLock_On_GrabAndPull。 唯一的区别是菜单将自动进行手动锁定。 完成此操作时，只需不隐藏 **OnLastHandLost** 上的 MenuContent () 事件。 抓取&行为与示例HandMenu_Large_WorldLock_On_GrabAndPull相同。
 
 ## <a name="scripts"></a>脚本
 
-此 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 行为提供了一个求解器，用于将跟踪的对象约束为适用于手写 (的区域，如手写用户 UI、菜单等) 。 保险箱区域被视为不与手相交的区域。 还包含一个名为的派生类， [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) [`HandConstraintPalmUp`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp) 以演示当 palm 面向用户时激活规划求解跟踪对象的常见行为。
+[`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 行为提供了一个求解器，该求解器将跟踪对象约束在确保可显示手部约束内容（如手部 UI、菜单等）的区域内。 安全区域是指不会与手部相交的区域。 还包含了一个名为 [`HandConstraintPalmUp`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp) 的 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 派生类，用于演示手掌朝向用户时激活求解器的常见行为。
 
-有关其他文档，请参阅可用于每个属性的工具提示 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 。 下面更详细地定义了几个属性。
+有关其他文档，请参阅每个 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 属性可用的工具提示。 下面更详细地定义了几个属性。
 
 <img src="../images/solver/MRTK_Solver_HandConstraintPalmUp.png" width="450" alt="HandMenu_ExampleScene Palm up">
 
-* **保险箱区域**：安全区域指定对内容进行约束的位置。 建议将内容放在 Ulnar 端，以避免与手和改善交互质量重叠。 保险箱区域的计算方法是：将双手方向投影到与相机的视图相对应的平面中，并 raycasting。 保险箱区域定义为使用， [`IMixedRealityHand`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand) 但也适用于其他控制器类型。 建议你了解每个安全区域在不同控制器类型上代表的内容。
+* **保险箱区域**：安全区域指定要约束内容的手动位置。 建议将内容放置在 Ulnar 端，以避免与手重叠并提高交互质量。 保险箱区域的计算方式为：将手部方向与相机视图正交到平面中，并针对手周围的边界框进行光线广播。 保险箱区域定义为使用 ， [`IMixedRealityHand`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHand) 但也适用于其他控制器类型。 建议浏览每个安全区域在不同控制器类型上表示什么。
 
-* **朝** 上的照相机在这种情况下，求解器将按照手型旋转，直至菜单与看起来充分对齐，此时它会给照相机旋转。 这可以通过将 HandConstraintSolver 中的 SolverRotationBehavior （从 LookAtTrackedObject 更改为 LookAtMainCamera）与 GazeAlignment 的角变化来实现。
+* **跟随手部直到面向摄像头** 在此活动状态下，求解器将跟随手部旋转，直到菜单与凝视完全对齐，此时它面向照相机。 此操作的工作原理是，将 HandConstraintSolver 中的 SolverRotationBehavior 从 LookAtTrackedObject 更改为 LookAtMainCamera，因为求解器的 GazeAlignment 角度会有所不同。
 
 <img src="../images/solver/MRTK_Solver_HandConstraintSafeZones.png" width="450" alt="HandMenu Safe Zones">
 
-* **激活事件**：目前 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 触发了四个激活事件。 可以在许多不同的组合中使用这些事件来创建独特 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 的行为， `MRTK/Examples/Demos/HandTracking/Scenes/` 有关这些行为的示例，请参阅下的 HandBasedMenuExample 场景。
+* **激活事件**：当前 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 触发四个激活事件。 这些事件可用于许多不同的组合来创建唯一行为，有关这些行为的示例，请参阅 [`HandConstraint`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraint) 下的 HandBasedMenuExample `MRTK/Examples/Demos/HandTracking/Scenes/` 场景。
 
-  * *OnHandActivate*：当手满足 IsHandActive 方法时触发。
-  * *OnHandDeactivate*： IsHandActive 方法不再满足时触发触发器。
-  * *OnFirstHandDetected*：手动跟踪状态从无干预视图更改为视图中的第一批时发生。
-  * *OnLastHandLost*：在从视图中的至少一个手更改手动跟踪状态时发生。
+  * *OnHandActivate：* 当手满足 IsHandActive 方法时触发。
+  * *OnHandDeactivate：* 当不再满足 IsHandActive 方法时触发。
+  * *OnFirstHandDetected*：当手部跟踪状态从"没有手部"视图更改到"第一手"视图时发生。
+  * *OnLastHandLost：* 当手部跟踪状态从视图中的至少一只手更改到没有手部时发生。
 
-* **规划求解激活/停用逻辑**：当前用于激活和停用逻辑的建议 [`HandConstraintPalmUp`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp) 是通过使用 SolverHandler 的 UpdateSolver 值来实现，而不是通过禁用/启用对象来实现。 在示例场景中，可以通过在附加菜单的 ManipulationHandler "OnManipulationStarted/结束" 事件后触发的基于编辑器的挂钩来查看。
+* **求解** 器激活/停用逻辑：目前，激活和停用逻辑的建议是通过使用 SolverHandler 的 UpdateSolver 值（而不是通过禁用/启用对象）来这样做。 [`HandConstraintPalmUp`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp) 可通过附加菜单的 ManipulationHandler"OnManipulationStarted/Ended"事件后触发的基于编辑器的挂钩在示例场景中看到此情况。
 
-  * *正在停止手动约束逻辑*：尝试将手动约束的对象设置为 "停止" (并且不运行激活/停用逻辑) 时，请将 UpdateSolver 设置为 False，而不是禁用 HandConstraintPalmUp。
-    * 如果你想要启用基于注视的 (甚至不是基于注视的) 重新附加逻辑，则随后将调用 StartWorldLockReattachCheckCoroutine () 函数。 这会触发一个协同程序，它会继续检查是否满足 "IsValidController" 条件，并将 UpdateSolver 设置为 True (或禁用对象) 
-  * *启动手动约束逻辑*：尝试将手动约束的对象设置为根据其是否满足激活) 条件 (再次开始后，请将 SolverHandler 的 UpdateSolver 设置为 true。
+  * 停止手部约束逻辑：尝试将手部约束对象设置为停止 (以及不运行激活/停用逻辑) 时，将 UpdateSolver 设置为 False，而不是禁用 HandConstraintPalmUp。
+    * 如果要启用基于凝视的 (甚至非基于凝视的) 重新附加逻辑，则随后调用 HandConstraintPalmUp.StartWorldLockReattachCheckCoroutine () 函数。 这将触发协同例程，然后继续检查是否满足"IsValidController"条件，并且将在 UpdateSolver 设置为 True 后 (或对象被禁用) 
+  * 启动手部约束逻辑：尝试将手部约束对象设置为根据 (是否满足激活条件) 再次开始跟踪手部约束对象时，将 SolverHandler 的 UpdateSolver 设置为 true。
 
-* 重新 **附加逻辑**：目前， [`HandConstraintPalmUp`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp) 无论 SolverHandler 的 UpdateSolver 是否为 True，都可以自动将目标对象重新附加到跟踪的点。 这是通过调用 HandConstraintPalmUp 的 StartWorldLockReattachCheckCoroutine () 函数来实现的，在这种情况下， (它会将 SolverHandler 的 UpdateSolver 有效地设置为 False) 。
+* **重新附加逻辑**：目前， 能够自动将目标对象重新附加到跟踪点，无论 [`HandConstraintPalmUp`](xref:Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp) SolverHandler 的 UpdateSolver 是否为 True。 这是通过调用 HandConstraintPalmUp 的 StartWorldLockReattachCheckCoroutine () 函数（在此例中为 (实际上将 SolverHandler 的 UpdateSolver 设置为 False) ）完成此操作。
 
 ## <a name="see-also"></a>另请参阅
 
 * [Button](button.md)
-* [邻近菜单](near-menu.md)
+* [近菜单](near-menu.md)

@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, 多用户功能, Photon, MRTK, 混合现实工具包, UWP, Azure 空间定位点
 ms.localizationpriority: high
-ms.openlocfilehash: 207c451ee616ee4065e948ca78c17ad59f7dd190
-ms.sourcegitcommit: cf8df1720ddb8236207ab581bc149edcc76e6199
+ms.openlocfilehash: ba8a29844489a9153f970f6e39ff2022701c845711ffd9abc232d8da8eeb2e32
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114702472"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200721"
 ---
 # <a name="3-connecting-multiple-users"></a>3.连接多个用户
 

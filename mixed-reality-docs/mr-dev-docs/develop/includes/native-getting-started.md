@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: 51c62468f0f13b390bf003e05d44cbe2e2f3be05
-ms.sourcegitcommit: c199872c11adae7de24929ed043ea90dea087b3e
+ms.openlocfilehash: a359bf0101c579bbad8a2671b84d019a6ac53a36a53679bcaff5774694901850
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903121"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200148"
 ---
 # <a name="openxr"></a>[OpenXR](#tab/openxr)
 
 |  Checkpoint  |  业务成效  |
 | --- | --- |
-| [什么是 OpenXR？](../native/openxr.md) | 通过熟悉 OpenXR 以及它所提供的功能，开始进行本机开发旅程 |
+| [什么是 OpenXR？](../native/openxr.md) | 通过熟悉 OpenXR 及其提供功能，开始本机开发之旅 |
 | [安装最新工具](../install-the-tools.md) | 下载并安装最新的本机开发工具 |
-| [为 HoloLens 2 设置](../native/openxr-getting-started.md#getting-started-with-openxr-for-hololens-2) | 为 HoloLens 2 开发配置设备和环境 |
-| [设置沉浸式耳机](../native/openxr-getting-started.md#getting-started-with-openxr-for-windows-mixed-reality-headsets) | 为 Windows Mixed Reality 开发配置设备和环境 |
-| [尝试示例应用](../native/openxr-getting-started.md#building-a-sample-openxr-app) | 在设备上浏览相同的基本 OpenXR 应用的 UWP 和 Win32 版本 |
-| [了解 OpenXR API](../native/openxr-getting-started.md#learning-the-openxr-api) | 观看60分钟演练视频，在 Visual Studio 中演示 OpenXR API 的所有关键组件 |
-| [添加 OpenXR 加载程序](../native/openxr-getting-started.md#integrate-the-openxr-loader-into-a-project) | 将 OpenXR 加载程序添加到现有本机项目，开始开发 |
+| [设置 HoloLens 2](../native/openxr-getting-started.md#getting-started-with-openxr-for-hololens-2) | 配置设备和环境以HoloLens 2开发 |
+| [为沉浸式头戴显示设备设置](../native/openxr-getting-started.md#getting-started-with-openxr-for-windows-mixed-reality-headsets) | 配置设备和环境以Windows Mixed Reality开发 |
+| [尝试示例应用](../native/openxr-getting-started.md#building-a-sample-openxr-app) | 浏览设备上相同基本 OpenXR 应用的 UWP 和 Win32 版本 |
+| [了解 OpenXR API](../native/openxr-getting-started.md#learning-the-openxr-api) | 观看 60 分钟的演练视频，其中演示了 OpenXR API 的所有关键Visual Studio |
+| [添加 OpenXR 加载程序](../native/openxr-getting-started.md#integrate-the-openxr-loader-into-a-project) | 将 OpenXR 加载程序添加到现有本机项目以开始开发 |
 
 <!--
 # [WinRT (Legacy)](#tab/winrt)

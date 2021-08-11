@@ -1,29 +1,29 @@
 ---
 title: Unity 中的凝视
-description: 了解如何将凝视输入用作用户以混合现实中应用创建的全息影像为目标的主要方式。
+description: 了解如何使用 "注视输入" 作为主要方式，使用户能够面向混合现实中的应用创建的全息影像。
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 眼睛凝视， 头部凝视， unity， 全息影像， 混合现实， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， MRTK， 混合现实工具包
-ms.openlocfilehash: f10079d36f737e5d8a2ee74a88ca0f8b2b3d791c
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 眼睛、打印头、unity、全息图、混合现实、混合现实耳机、windows mixed reality 耳机、虚拟现实耳机、MRTK、混合现实 Toolkit
+ms.openlocfilehash: c6a435e958a92adeed6cd965bebd0b8829e00da735bd193ca72a68acb9e0d6aa
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600146"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200107"
 ---
-# <a name="head-gaze-in-unity"></a>Unity 中的头部凝视
+# <a name="head-gaze-in-unity"></a>头-注视 Unity
 
-[凝](../../design/gaze-and-commit.md)视是用户定位应用在混合现实[](../../discover/hologram.md)中创建的全息[影像的主要方式](../../discover/mixed-reality.md)。
+[注视](../../design/gaze-and-commit.md)是用户在[混合现实](../../discover/mixed-reality.md)中以[影像](../../discover/hologram.md)为目标的主要方式。
 
-## <a name="implementing-head-gaze"></a>实现头部凝视
+## <a name="implementing-head-gaze"></a>实现机头
 
-从概念上讲 [，通过](../../design/gaze-and-commit.md) 从用户的头戴显示设备向前预测射线来查看其命中次数来确定头部凝视。 在 Unity 中，用户的头部位置和方向通过 [相机](camera-in-unity.md)（特别是 [UnityEngine.Camera.main）公开](https://docs.unity3d.com/ScriptReference/Camera-main.html)。[transform.forward](https://docs.unity3d.com/ScriptReference/Transform-forward.html) 和 [UnityEngine.Camera.main](https://docs.unity3d.com/ScriptReference/Camera-main.html)。[transform.position](https://docs.unity3d.com/ScriptReference/Transform-position.html)。
+从概念上讲，您通过从用户的耳机中向前投影一条射线 [来确定其](../../design/gaze-and-commit.md) 点击情况。 在 Unity 中，用户的头位置和方向通过 [相机](camera-in-unity.md)公开，特别是 [UnityEngine](https://docs.unity3d.com/ScriptReference/Camera-main.html)。[transform](https://docs.unity3d.com/ScriptReference/Transform-forward.html) 和 [UnityEngine](https://docs.unity3d.com/ScriptReference/Camera-main.html)。[转换。位置](https://docs.unity3d.com/ScriptReference/Transform-position.html)。
 
-调用 [Physics.RayCast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) 可为你提供一个 [RaycastHit，](https://docs.unity3d.com/ScriptReference/RaycastHit.html) 其中包含有关碰撞的信息，包括 3D 碰撞点和其他 GameObject 头部凝视射线命中。
+调用 [RayCast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) 可提供一个 [RaycastHit](https://docs.unity3d.com/ScriptReference/RaycastHit.html) ，其中包含有关冲突的信息，其中包括3d 冲突点，以及打印头看点的另一 GameObject。
 
-### <a name="example-implement-head-gaze"></a>示例：实现头部凝视
+### <a name="example-implement-head-gaze"></a>示例：实现机头
 
 ```cs
 void Update()
@@ -45,19 +45,19 @@ void Update()
 
 ### <a name="best-practices"></a>最佳实践
 
-虽然上面的示例从更新循环触发单个光线广播来查找用户头部的目标，但建议使用单个对象来管理所有头部凝视过程。 组合头部凝视逻辑可节省应用宝贵的处理能力，将光线广播限制为每个帧一个。
+尽管上面的示例从更新循环中触发了单个 raycast 以查找用户头所在的目标，但我们建议使用单个对象来管理所有的头节点。 将您的头看起来的逻辑结合起来可节省您的应用程序的宝贵处理能力，并将 raycasting 限制为每帧一次。
 
-## <a name="visualizing-head-gaze"></a>可视化头部凝视
+## <a name="visualizing-head-gaze"></a>形象注视
 
-就像在计算机上使用鼠标指针一样，应 [实现表示用户](../../design/cursors.md) 头部凝视的光标。 了解用户所面向的内容可增强用户对要与之交互的内容的置信度。
+就像在计算机上使用鼠标指针一样，你应该实现表示用户头看的 [光标](../../design/cursors.md) 。 了解用户的目标内容会对要与之交互的内容增加信心。
 
-## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>混合现实工具包中的头部凝视
+## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>头-注视混合现实 Toolkit
 
-可以从 MRTK 中的 [输入管理器访问](/windows/mixed-reality/mrtk-unity/features/input/overview) 头部凝视。
+可以通过 MRTK 中的 [输入管理器](/windows/mixed-reality/mrtk-unity/features/input/overview) 访问 head。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果你遵循我们布局的 Unity 开发旅程，则你正在探索 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
+如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
 > [运动控制器](motion-controllers-in-unity.md)

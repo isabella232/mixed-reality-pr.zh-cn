@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
-keywords: Mixed Reality，注视，停留，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实工具包，ux，指导原则，列表视图
-ms.openlocfilehash: e70536b7247153979b8650ba1f5bcbe1a7cd08af
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: mixed reality，注视，停留，交互，设计，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，ux，指导原则，列表视图
+ms.openlocfilehash: e069b0815f69848b7632cb7b1b85d85f328441b7156ae22ffe097fedc3ed6fc1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582202"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223610"
 ---
 # <a name="head-gaze-and-dwell"></a>头部凝视和停留
 
@@ -19,7 +19,7 @@ ms.locfileid: "98582202"
 
 ## <a name="scenarios"></a>方案
 
-在人的手忙于处理其他任务的情况下，打印头和停留非常有用。 当语音不是100% 可靠或由于环境或社交限制而可用时，此功能也很有用。 一个很好的例子是穿戴 HoloLens 的人在修理汽车发动机时获取参考信息。 倚靠在发动机舱内时，他们的手拿着工具或支撑着身体。 车库空间很大，工具不断敲打声和嘈杂声，难以使用语音命令。 通过打印头和停留，使用 HoloLens 的人员可以放心地浏览其参考材料，而不会中断工作流。 
+在人的手忙于处理其他任务的情况下，打印头和停留非常有用。 当语音不是100% 可靠或由于环境或社交限制而可用时，此功能也很有用。 一个很好的例子是穿戴 HoloLens 的人在修理汽车发动机时获取参考信息。 倚靠在发动机舱内时，他们的手拿着工具或支撑着身体。 车库空间很大，工具不断敲打声和嘈杂声，难以使用语音命令。 HoloLens 使用打印头和停留，用户可以放心地浏览其参考材料，而不会中断工作流。 
 
 ## <a name="device-support"></a>设备支持
 
@@ -106,10 +106,10 @@ s
   * 高频率按钮应该很大，更容易碰到打印头
   * 保持近眼睛，以避免人体工学。<br>
         <br>
-*图像： Microsoft Dynamics 365 "下一步" 按钮*
+*Image： Microsoft Dynamics 365 Guides "下一步" 按钮*
     :::column-end:::
         :::column:::
-       ![Microsoft Dynamics 365 "下一步" 按钮](images/GuideNextButton.png)<br>
+       ![Microsoft Dynamics 365 Guides "下一步" 按钮](images/GuideNextButton.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -139,10 +139,10 @@ s
   * 在选择内容突出显示的同时显示停留目标。
   * 对于辅助按钮，在头部凝视上显示停留目标。<br>
         <br>
-*映像： Microsoft Dynamics 365 指南确认对话框*
+*映像： Microsoft Dynamics 365 Guides 确认对话框*
     :::column-end:::
         :::column:::
-       ![Microsoft Dynamics 365 指南确认对话框](images/GuidesConfirmation.png)<br>
+       ![Microsoft Dynamics 365 Guides 确认对话框](images/GuidesConfirmation.png)<br>
     :::column-end:::
 :::row-end:::
         
@@ -171,10 +171,10 @@ s
   * 不要一次显示所有停留目标，以避免重复的 UI。
   * 尽可能频繁地重复使用同一模式，以建立 UX 熟悉。<br>
         <br>
-*映像： Microsoft Dynamics 365 指南列表*
+*映像： Microsoft Dynamics 365 Guides 列表*
     :::column-end:::
         :::column:::
-       ![Microsoft Dynamics 365 指南列表](images/GuidesListView.png)<br>
+       ![Microsoft Dynamics 365 Guides 列表](images/GuidesListView.png)<br>
     :::column-end:::
 :::row-end:::
 

@@ -1,24 +1,24 @@
 ---
 title: HoloLens（第一代）空间 220 - 空间音效
-description: 按照此编码演练操作，使用 Unity、Visual Studio 和 HoloLens 来了解空间音效概念的详细信息。
+description: 按照以下编码演练操作，使用 Unity、Visual Studio 和 HoloLens 了解空间声音概念的详细信息。
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间音效，HoloLens，混合现实学院，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
-ms.openlocfilehash: 789f4da924c00554042ad991cc5610d3e816f12d
-ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
+keywords: holotoolkit，mixedrealitytoolkit，mixedrealitytoolkit-unity，学院，教程，空间声音，HoloLens，混合现实院校，unity，混合现实耳机，windows Mixed reality 耳机，虚拟现实耳机，Windows 10
+ms.openlocfilehash: d53b449916405d8bf42bb8dd63cc1d3cb5d6127bbf9b2989ce7cb09c3762a6e6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106269993"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200363"
 ---
 # <a name="hololens-1st-gen-spatial-220-spatial-sound"></a>HoloLens (第一代) 空间220：空间音效
 
 >[!IMPORTANT]
->混合现实学院教程的设计与 HoloLens (第一代) 、Unity 2017 和混合现实沉浸式耳机一起设计。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或适用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
+>混合现实学院教程的设计目的是 HoloLens (一代) 、Unity 2017 和混合现实沉浸式耳机。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。 这些教程 **_不_** 会使用最新工具集或用于 HoloLens 2 的交互进行更新，可能与新版本的 Unity 不兼容。  我们将维护这些教程，使之持续适用于支持的设备。 已经为 HoloLens 2 发布了[一系列新教程](mrlearning-base.md)。
 
-[空间音效](../../../design/spatial-sound.md) breathes 影像，并使其在世界中存在。 全息影像同时包含光和声音，如果你发生丢失全息影像的情况，空间音效可以帮助你找到它们。 空间音效并不像您在广播上听到的典型声音，而是位于3D 空间中的声音。 利用空间音效，你可以制作出全息影像，就像你，甚至是你自己的背景上！ 在本课程中，你将：
+[空间音效](../../../design/spatial-sound.md) breathes 影像，并使其在世界中存在。 全息影像都由光线和声音组成，如果你碰巧丢失了全息影像，空间音效可以帮助你找到它们。 空间音效并不像您在广播上听到的典型声音，而是位于3D 空间中的声音。 利用空间音效，你可以制作出全息影像，就像你，甚至是你自己的背景上！ 在本课程中，你将：
 
 * 将你的开发环境配置为使用 Microsoft 空间音质。
 * 使用空间音效来增强交互。
@@ -40,10 +40,10 @@ ms.locfileid: "106269993"
 
 ### <a name="prerequisites"></a>必备条件
 
-* 配置了正确 [工具](../../../develop/install-the-tools.md)的 WINDOWS 10 电脑。
+* 使用安装了正确的[工具](../../../develop/install-the-tools.md)配置的 Windows 10 PC。
 * 一些基本 c # 编程能力。
 * 应已完成 [尊敬的基本知识 101](../../../develop/unity/tutorials/holograms-101.md)。
-* [为开发配置](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)的 HoloLens 设备。
+* [为开发配置](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)HoloLens 设备。
 
 ### <a name="project-files"></a>项目文件
 
@@ -54,11 +54,11 @@ ms.locfileid: "106269993"
 * 取消将文件存档到桌面或其他易于访问的位置。
 
 >[!NOTE]
->如果要在下载之前查看源代码， [可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-220-SpatialSound)找到。
+>如果要在下载之前查看源代码，[可在 GitHub 上](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-220-SpatialSound)查看。
 
 ### <a name="errata-and-notes"></a>勘误表和说明
 
-* 需要在 Visual Studio 的 "工具"-">选项->调试" 中禁用 "启用仅我的代码" (*取消选中*) ，以便在代码中命中断点。
+* 若要在代码中命中断点，请在 "工具->选项->调试" 下的 Visual Studio 中禁用 "启用仅我的代码" (*取消选中*) 。
 
 ## <a name="chapter-1---unity-setup"></a>第1章-Unity 设置
 
@@ -74,13 +74,13 @@ ms.locfileid: "106269993"
 * 导航到桌面并找到以前未存档的文件夹。
 * 单击 " **Starting\Decibel** " 文件夹，然后按 " **选择文件夹** " 按钮。
 * 等待项目在 Unity 中加载。
-* 在 " **项目** " 面板中，打开 **Scenes\Decibel.unity**。
+* 在 **Project** 面板中，打开 **Scenes\Decibel.unity**。
 * 在 " **层次结构** " 面板中，展开 " **HologramCollection** " 并选择 " **P0LY**"。
 * 在检查器中，展开 " **AudioSource** "，注意没有 " **Spatialize** " 复选框。
 
 默认情况下，Unity 不会加载 spatializer 插件。 以下步骤将在项目中启用空间音质。
 
-* 在 Unity 的顶部菜单中，参阅 **编辑 > 音频 > 项目设置**。
+* 在 Unity 顶部菜单中，请参阅 **编辑 > Project 设置 > 音频**。
 * 找到 **Spatializer 插件** 下拉列表，并选择 " **MS HRTF Spatializer**"。
 * 在 " **层次结构** " 面板中，选择 " **HologramCollection > P0LY**"。
 * 在 " **检查器** " 面板中，找到 " **音频源** " 组件。
@@ -89,10 +89,10 @@ ms.locfileid: "106269993"
 
 现在，我们将在 Unity 中生成项目，并在 Visual Studio 中配置该解决方案。
 
-1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+1. 在 Unity 中，选择 "**文件 > 生成设置**"。
 2. 单击 " **添加打开的场景** " 添加场景。
 3. 选择 "**平台**" 列表中的 "**通用 Windows 平台**"，然后单击 "**切换平台**"。
-4. 如果要专门针对 HoloLens 进行开发，请将 " **目标设备** " 设置为 " **hololens**"。 否则，请将其留在 **任何设备** 上。
+4. 如果要为 HoloLens 专门进行开发，请将 "**目标设备**" 设置为 " **HoloLens**"。 否则，请将其留在 **任何设备** 上。
 5. 确保将 " **生成类型** " 设置为 " **D3D** "，并将 " **Sdk** " 设置为 " **最新安装** 的 (，这应是 SDK 16299 或更高) 版本
 6. 单击“生成”。
 7. 创建名为 "App" 的 **新文件夹** 。
@@ -102,18 +102,18 @@ ms.locfileid: "106269993"
 当 Unity 完成后，将显示文件资源管理器窗口。
 
 1. 打开 **应用程序** 文件夹。
-2. 打开 " **分贝 Visual Studio 解决方案**"。
+2. 打开 **分贝 Visual Studio 解决方案**。
 
 如果部署到 HoloLens：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x86**"。
+1. 使用 Visual Studio 中的顶部工具栏将目标从 "调试" 更改为 "**发布**"，将 "从 ARM" 更改为 " **x86**"。
 2. 单击 "本地计算机" 按钮旁的下拉箭头，然后选择 " **远程计算机**"。
-3. 输入 **HoloLens 设备 IP 地址** ，并将身份验证模式设置为 **通用 (未加密协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请在 "设置" 中查找 " **> 网络 & Internet > 高级选项**"。
-4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将 [其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
+3. 输入 **HoloLens 设备 IP 地址**，并将身份验证模式设置为 **通用 (未加密的协议)**。 单击“选择”。 如果你不知道设备 IP 地址，请查看 **设置 > 网络 & Internet > 高级选项**。
+4. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。 如果这是首次部署到设备，则需要将[其与 Visual Studio 配对](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device)。
 
 如果要部署到沉浸式耳机：
 
-1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 " **发布** "，将 "从 ARM" 更改为 " **x64**"。
+1. 使用 Visual Studio 中的顶部工具栏，将目标从 "调试" 更改为 "**发布**"，并将 "从 ARM 更改为 **x64**"。
 2. 确保将部署目标设置为 " **本地计算机**"。
 3. 在顶部菜单栏中，单击 " **调试-> 启动而不调试** " 或按 **Ctrl + F5**。
 
@@ -142,9 +142,9 @@ ms.locfileid: "106269993"
 * 在 " **检查器** " 面板的 **AudioSource** 中，单击 " **AudioClip** " 旁边的圆圈，并从弹出窗口中选择 " **PolyHover** "。
 * 单击 " **输出** " 旁边的圆圈，并从弹出窗口中选择 " **SoundEffects** "。
 
-项目分贝使用 Unity **AudioMixer** 组件来启用调整声音组的音量级别。 通过以这种方式对声音进行分组，可以在保持每个声音的相对音量的同时调整总体音量。
+Project分贝使用 Unity **AudioMixer** 组件来启用为声音组调整声音级别。 通过以这种方式对声音进行分组，可以在保持每个声音的相对音量的同时调整总体音量。
 
-* 在 **AudioSource** 中，展开 " **三维声音设置**"。
+* 在 **AudioSource** 中，展开 "**三维声音设置**"。
 * 将 **Doppler 级别** 设置为 **0**。
 
 如果将 Doppler 级别设置为零，则将禁用由 (全息图或用户) 中的运动引起的螺距更改。 Doppler 的典型示例是一种快速移动的汽车。 当汽车接近固定的侦听器时，引擎的跨度会上升。 当它通过侦听程序时，间距会降低距离。
@@ -194,7 +194,7 @@ ms.locfileid: "106269993"
 
 #### <a name="build-and-deploy"></a>生成和部署
 
-1. 在 Unity 中，选择 " **文件 > 生成设置**"。
+1. 在 Unity 中，选择 "**文件 > 生成设置**"。
 2. 单击“生成”。
 3. 单击 **应用** 文件夹。
 4. 按 " **选择文件夹**"。
@@ -202,7 +202,7 @@ ms.locfileid: "106269993"
 检查工具栏是否显示 "发布"、"x86" 或 "x64"，以及 "远程设备"。 如果不是，则这是 Visual Studio 的代码实例。 可能需要从应用程序文件夹重新打开解决方案。
 
 * 如果系统提示，请重新加载项目文件。
-* 如前所述，从 Visual Studio 部署。
+* 与之前一样，从 Visual Studio 部署。
 
 部署应用程序后：
 
@@ -266,7 +266,7 @@ RaycastNonAlloc 方法用作性能优化，以限制分配和返回的结果数�
 * 对于遇到的每个 **IAudioInfluencer** ，将调用 **ApplyEffect** 方法。
 * 对于不再遇到的每个以前的 **IAudioInfluencer** ，请调用 **RemoveEffect** 方法。
 
-请注意，AudioEmitter 对人为时间刻度的更新，而不是每个框架的更新。 这样做是因为，人们通常不能以足够快的速度移动，因此，需要比每个季度或半秒钟的频率更频繁地进行更新。 从一个位置到另一个位置快速传送的全息影像可能会突破错觉。
+请注意，AudioEmitter 对人为时间刻度的更新，而不是每个框架的更新。 这样做是因为，人们通常不能以足够快的速度移动，因此，需要比每个季度或半秒钟的频率更频繁地进行更新。 全息影像可以从一个位置快速传送到另一个位置，这可能会破坏错觉。
 
 * 在 " **层次结构** " 面板中，展开 " **HologramCollection**"。
 * 展开 " **EnergyHub** " 并选择 " **BlobOutside**"。
@@ -311,7 +311,7 @@ RaycastNonAlloc 方法用作性能优化，以限制分配和返回的结果数�
 
 #### <a name="build-and-deploy"></a>生成和部署
 
-* 如前所述，在 Unity 中生成项目，并在 Visual Studio 中部署。
+* 与前面一样，在 Unity 中生成项目并在 Visual Studio 中进行部署。
 
 部署应用程序后：
 
@@ -377,11 +377,11 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 
 ### <a name="part-2---sound-mixing"></a>第2部分-混音
 
-#### <a name="target-your-mix-for-70-volume-on-the-hololens"></a>在 HoloLens 上将混合目标设定为70% 的卷
+#### <a name="target-your-mix-for-70-volume-on-the-hololens"></a>将你的组合定向到 HoloLens 上70% 的卷
 
 混合现实体验允许在现实世界中查看全息影像。 它们还应该允许听真实世界声音。 利用70% 的音量目标，用户可以在他们周围倾听世界，并获得你的体验。
 
-#### <a name="hololens-at-100-volume-should-drown-out-external-sounds"></a>100% 卷上的 HoloLens 应 drown 外部声音
+#### <a name="hololens-at-100-volume-should-drown-out-external-sounds"></a>100% 的卷 HoloLens 应 drown 外部声音
 
 100% 的卷级别与虚拟现实体验类似。 用户在视觉上传输到不同的世界。 相同的呼叫时应为 true。
 
@@ -425,10 +425,10 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 
 ### <a name="objectives"></a>目标
 
-* 将深度添加到 "幻窗口"。
+* 向 "幻 Windows" 添加深度。
 * 将用户带入虚拟世界。
 
-### <a name="magic-windows"></a>魔术窗口
+### <a name="magic-windows"></a>幻 Windows
 
 #### <a name="key-concepts"></a>关键概念
 
@@ -443,10 +443,10 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 
 **AudioSource** 组件将添加到 **VoiceSource** 中。
 
-* 在 **AudioSource** 中，将 " **输出** " 设置为 **UserVoice (混音器)**。
+* 在 **AudioSource** 中，将 "**输出**" 设置为 **UserVoice (Mixer)**。
 * 选中 " **Spatialize** " 复选框。
 * 将 **空间混合** 滑块一直拖到 **3d** 上，或在编辑框中输入 **1** 。
-* 展开 " **三维声音设置**"。
+* 展开 "**三维声音设置**。
 * 将 **Doppler 级别** 设置为 **0**。
 * 在 " **用户语音效果**" 中，将 **父对象** 从场景中设置为 **Underworld** 。
 * 将 **最大距离** 设置为 **1**。
@@ -493,7 +493,7 @@ HoloLens 是完全包含的 untethered 全息计算机。 你的用户可以在�
 
 #### <a name="build-and-deploy"></a>生成和部署
 
-* 如前所述，在 Unity 中生成项目，并在 Visual Studio 中部署。
+* 与前面一样，在 Unity 中生成项目并在 Visual Studio 中进行部署。
 
 部署应用程序后：
 
@@ -512,6 +512,6 @@ Underworld 将隐藏，并且以前隐藏的全息影像会重新出现。
 
 ## <a name="the-end"></a>结束
 
-祝贺你！ 你现在已经完成了 **MR 空间220：空间音质**。
+恭喜！ 你现在已经完成了 **MR 空间220：空间音质**。
 
 听世界，让你的体验生活生动！

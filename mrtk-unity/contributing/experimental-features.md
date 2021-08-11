@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 341ba0ee3e5900cc52f1ef715232f49064102309
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 9b7ef7564e0e4f84ba70c034b1bcc33a29498432620a002c8509de518dde479c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121375"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115228379"
 ---
 # <a name="experimental-features"></a>实验性功能
 
@@ -98,7 +98,7 @@ public static void MyCommand()
 
 使用组件不应中断按钮、ManipulationHandler、BoundingBox 或可交互。
 
-例如，在此 [ScrollableObjectCollection PR](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6001)中，添加 ScrollableObjectCollection 导致用户无法使用 HoloLens 按钮预制。 尽管这不是由 PR 代码中的 bug 引起的 (而是公开了现有的 bug) ，但它阻止了 PR 签入。
+例如，在此[ScrollableObjectCollection PR](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6001)中，添加 ScrollableObjectCollection 导致用户HoloLens按钮预制。 尽管这不是由 PR 代码中的 bug 引起的 (而是公开了现有的 bug) ，但它阻止了 PR 签入。
 
 ### <a name="provide-an-example-scene-that-demonstrates-how-to-use-the-feature"></a>提供演示如何使用该功能的示例场景
 

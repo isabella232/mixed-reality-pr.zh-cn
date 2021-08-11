@@ -5,13 +5,13 @@ author: radicalad
 ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
-keywords: Windows Mixed Reality、应用栏、边界框、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、MRTK、混合现实工具包
-ms.openlocfilehash: 5c437b303ec5462179a1ddf43687aa1653419b08
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+keywords: Windows Mixed Reality、应用栏、边界框、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、HoloLens、MRTK、混合现实Toolkit
+ms.openlocfilehash: d7cacdcffeb552595e4ffd5ea5d1a734efb0451e03c5b6d5d39e5ea8caf3bd94
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110098"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115198697"
 ---
 # <a name="bounding-box-and-app-bar"></a>边界框和应用栏
 ![边界是混合现实中对象操作的标准接口。](images/UX_Hero_BoundingBox.jpg)<br>
@@ -30,7 +30,7 @@ ms.locfileid: "112110098"
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![通过边界框缩放对象的 HoloLens 视图](images/HoloLens2_BoundingBox.gif)<br>
+       ![HoloLens边界框缩放对象的视图](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
 
@@ -45,7 +45,7 @@ ms.locfileid: "112110098"
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![通过边界框旋转对象的 HoloLens 视图](images/HoloLens2_BoundingBox_Rotate.gif)<br>
+       ![HoloLens边界框旋转对象的视图](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
 
@@ -66,7 +66,7 @@ ms.locfileid: "112110098"
 
 <br>
 
-**有关 Unity 应用开发，请参阅混合现实 [工具包 Unity 中的边界框。](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounding-box)**
+**有关 Unity 应用开发，请参阅混合现实 Toolkit [Unity 中的边界框。](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounding-box)**
 
 <br>
 
@@ -92,7 +92,7 @@ ms.locfileid: "112110098"
 <br>
 
 
-## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的混合现实工具包 (MRTK) 边界框
+## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的 MRTK (Mixed Reality Toolkit) 边界框
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 为边界框和应用栏提供脚本和预制。 可以通过将 BoundingBox.cs 脚本分配给任何对象来添加边界框。
 
 * [MRTK - 边界框](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounding-box)

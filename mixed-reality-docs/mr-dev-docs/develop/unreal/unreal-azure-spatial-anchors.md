@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure 开发, 空间定位点, 混合现实, 开发, 功能, 新项目, 仿真器, 文档, 指南, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备
-ms.openlocfilehash: 01d7217f038519d68eabfbf4f273c7ff8cbe7193
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: ed8062436bccb1fe818075bde626e2e50b13b7ae200580d0084521ca6dde5cff
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "100496187"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115227110"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Unreal 中的 Azure 空间定位点
 

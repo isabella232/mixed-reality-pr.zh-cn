@@ -6,16 +6,16 @@ ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 keywords: Unreal，Unreal 引擎4，UE4，HoloLens，HoloLens 2，流式处理，远程处理，混合现实，开发，入门，功能，新项目，模拟器，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，WinRT，DLL
-ms.openlocfilehash: f32b5b3ddbee2e24e61d08b0a1b887b7b06e6da4
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: b00886908f51804650220b6dbb7b3bfe4184cf33b505e3bd278327d1669c5067
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580409"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115198368"
 ---
 # <a name="winrt-in-unreal"></a>Unreal 中的 WinRT
 
-在 HoloLens 开发过程中，可能需要使用 WinRT 编写功能。 例如，在 HoloLens 应用程序中打开文件对话时，需要 winrt/FileSavePicker 头文件中的。 从版本4.26 开始，Unreal 的生成系统支持 WinRT。
+在 HoloLens 开发过程中，可能需要使用 WinRT 编写功能。 例如，在 HoloLens 应用程序中打开文件对话需要 winrt/Windows 中的 FileSavePicker。存储。选取器 .h 标头文件。 从版本4.26 开始，Unreal 的生成系统支持 WinRT。
 
 [!INCLUDE[](includes/tabs-winRT.md)]
 

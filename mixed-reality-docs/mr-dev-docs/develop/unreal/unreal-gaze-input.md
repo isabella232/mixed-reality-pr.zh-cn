@@ -1,52 +1,52 @@
 ---
-title: 在 Unreal 中注视输入
-description: 了解如何在 Unreal 中设置和使用适用于 HoloLens 的目视跟踪和打印头方向的目视输入。
+title: Unreal 中的凝视输入
+description: 了解如何在 Unreal 中为应用设置并使用视线输入和眼动HoloLens方向。
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
-keywords: Windows Mixed Reality，全息影像，HoloLens 2，眼睛跟踪，眼睛输入，head 装显示，Unreal 引擎，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 0c5191534313b94a5382d1065f5a5dd1a208bb49
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Windows Mixed Reality、全息影像、HoloLens 2、眼动跟踪、凝视输入、头部装入显示器、Unreal 引擎、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备
+ms.openlocfilehash: e423086e293629e3dfadb49b52a376c0b93f5e465328b93f47c2f1e3e0790b63
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98579987"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200662"
 ---
-# <a name="gaze-input"></a>注视输入
+# <a name="gaze-input"></a>凝视输入
 
-Mixed reality 应用中的 "注视输入" 就是找出用户正在寻找的内容。 当设备上的眼睛跟踪相机与 Unreal 世界空间中的光线匹配时，用户的视觉数据将变为可用。 看起来可以在蓝图和 c + + 中使用，它是对象交互、查找和照相机控件等机制的核心功能。
+混合现实应用中的凝视输入与了解用户正在查看的内容有关。 当设备上眼动跟踪相机与 Unreal 世界空间中的射线匹配时，用户的视线数据将变为可用。 凝视可以在蓝图和 C++ 中使用，是对象交互、方法查找和相机控件等机制的核心功能。
 
-## <a name="enabling-eye-tracking"></a>启用目视跟踪
+## <a name="enabling-eye-tracking"></a>启用眼动跟踪
 
-- 在 " **项目设置" > HoloLens** 中，启用 " **注视输入** " 功能：
+- 在 **Project 设置 > HoloLens** 中，启用 **凝视输入** 功能：
 
-![已突出显示 "注视" 输入的 HoloLens 项目设置功能的屏幕截图](images/unreal-gaze-img-01.png)
+![项目设置HoloLens屏幕截图，其中突出显示了凝视输入](images/unreal-gaze-img-01.png)
 
-- 创建新的执行组件，并将其添加到场景
+- 创建新的执行组件并将其添加到场景中
 
 > [!NOTE]
-> Unreal 中的 HoloLens 眼睛跟踪仅有两个眼睛的一眼。 不支持 Stereoscopic 跟踪，这需要两个射线。
+> HoloLens Unreal 中的眼动跟踪只有一条眼睛凝视射线。 不支持需要两条射线的立体声跟踪。
 
 ## <a name="using-eye-tracking"></a>使用眼动跟踪
 
-首先，检查设备是否支持通过 **IsEyeTrackerConnected** 函数进行目视跟踪。  如果该函数返回 true，则调用 **GetGazeData** 以查找用户眼睛在当前帧中的位置：
+首先，检查设备是否支持使用 **IsEyeTrackerConnected 函数进行眼** 动跟踪。  如果函数返回 true，请调用 **GetGazeData** 以查找用户眼睛在当前帧中正在查看的地方：
 
-![的蓝图为目视跟踪连接函数](images/unreal-gaze-img-02.png)
-
-> [!NOTE]
-> HoloLens 上不提供固定点和置信度值。
-
-在线条轨迹中使用 "注视原点" 和 "方向" 来找出用户正在寻找的内容。  "注视" 值为向量，从注视原点开始，沿原点结束，并沿线条轨迹的距离结束：
-
-![获取注视数据函数的蓝图](images/unreal-gaze-img-03.png)
-
-## <a name="getting-head-orientation"></a>获取打印头方向
-
-你还可以使用 Head 已装入显示 (HMD) 的旋转来表示用户的头的方向。 你可以在不启用 "注视输入" 功能的情况下获取用户头，但不会获得任何目视跟踪信息。  添加对蓝图的引用作为世界上下文，以获取正确的输出数据：
+![Is Eye Tracking Connected 函数的蓝图](images/unreal-gaze-img-02.png)
 
 > [!NOTE]
-> 获取 HMD 数据仅在 Unreal 4.26 和更高版本中可用。
+> 固定点和置信度值在 HoloLens。
+
+在行跟踪中，使用凝视原点和方向来精确确定用户正在查找的内容。  凝视值为矢量，从凝视原点开始，在原点处结束，凝视方向乘以直线跟踪距离：
+
+![获取凝视数据函数的蓝图](images/unreal-gaze-img-03.png)
+
+## <a name="getting-head-orientation"></a>获取头部方向
+
+还可使用 HMD (HMD) 头的旋转来表示用户头部的方向。 可以在不启用凝视输入功能的情况下获取用户头部方向，但无法获取任何眼动跟踪信息。  添加对蓝图的引用作为世界上下文，获取正确的输出数据：
+
+> [!NOTE]
+> 获取 HMD 数据仅在 Unreal 4.26 及之后提供。
 
 ![Get HMDData 函数的蓝图](images/unreal-gaze-img-04.png)
 
@@ -65,19 +65,19 @@ PublicDependencyModuleNames.AddRange(
 });
 ```
 
-- 在 "**文件/新 c + + 类**" 中，创建名为 **EyeTracker** 的新 c + + 参与者
-    - Visual Studio 解决方案将打开新的 EyeTracker 类。 生成并运行，以通过新的 EyeTracker 参与者打开 Unreal 游戏。  在 " **放置参与者** " 窗口中搜索 "EyeTracker"，并将类拖放到游戏窗口，以将其添加到项目中：
+- 在 **"文件/新建 C++ 类"** 中，创建名为 **EyeTracker 的新** C++ 执行组件
+    - 一Visual Studio解决方案将打开新的 EyeTracker 类。 生成并运行 ，以使用新的 EyeTracker 执行组件打开 Unreal 游戏。  在"放置执行组件"窗口中搜索"EyeTracker"，并将该类拖放到游戏窗口中以将其添加到项目： 
 
-![参与者窗口打开的参与者的屏幕截图](images/unreal-gaze-img-06.png)
+![角色的屏幕截图，其中位置执行组件窗口已打开](images/unreal-gaze-img-06.png)
 
-- 在 **EyeTracker** 中，添加 **EyeTrackerFunctionLibrary** 和 **DrawDebugHelpers** 的包含：
+- 在 **EyeTracker.cpp** 中，为 **EyeTrackerFunctionLibrary** 和 **DrawDebugHelpers 添加包含 ：**
 
 ```cpp
 #include "EyeTrackerFunctionLibrary.h"
 #include "DrawDebugHelpers.h"
 ```
 
-尝试获取任何目视的数据之前，请检查你的设备是否支持 **UEyeTrackerFunctionLibrary：： IsEyeTrackerConnected** 的目视跟踪。  如果支持目视跟踪，请从 **UEyeTrackerFunctionLibrary：： GetGazeData** 中查找线条跟踪的射线的起点和终点。 在该处，可以构造一个注视向量，并将其内容传递到 **LineTraceSingleByChannel** 以调试任何射线命中结果：
+在尝试获取任何凝视数据之前，请检查设备是否支持使用 **UEyeTrackerFunctionLibrary：：IsEyeTrackerConnected** 进行眼动跟踪。  如果支持眼动跟踪，请从 **UEyeTrackerFunctionLibrary：：GetGazeData** 查找线条跟踪的射线起点和终点。 可以在那里构造凝视向量，将其内容传递给 **LineTraceSingleByChannel** 以调试任何光线命中结果：
 
 ```cpp
 void AEyeTracker::Tick(float DeltaTime)

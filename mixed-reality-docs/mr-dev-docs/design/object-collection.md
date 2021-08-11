@@ -5,19 +5,19 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality，控制，设计，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，对象集合，二维，3D，MRTK，混合现实工具包
-ms.openlocfilehash: fd5629f58e092b33410c833885037582ba5ca4a1
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+keywords: Windows Mixed Reality，控制，设计，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，对象集合，2d，3d，MRTK，混合现实 Toolkit
+ms.openlocfilehash: be8f175ac58163eedfbf5fdee88c489f81abb90acbf4a9e04710be8443f070f0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110133"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115225714"
 ---
 # <a name="object-collection"></a>对象集合
 
 ![在元素应用的定期表中使用的对象集合](images/UX_Hero_ObjectCollection.jpg)<br>
 
-对象集合是一个布局控件，可帮助您在预定义的三维形状中布局对象的数组。 它支持各种表面样式-* * 平面、圆柱、球面和 **放射状**。 您可以调整对象的半径和大小以及它们之间的空间。 对象集合支持从 Unity （二维和三维）的任何对象。 在 **[混合现实工具包](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-collection)** 中，我们已创建了 Unity 脚本和示例，可帮助您创建对象集合。
+对象集合是一个布局控件，可帮助您在预定义的三维形状中布局对象的数组。 它支持各种表面样式-* * 平面、圆柱、球面和 **放射状**。 您可以调整对象的半径和大小以及它们之间的空间。 对象集合支持从 Unity （二维和三维）的任何对象。 在 **[混合现实 Toolkit](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-collection)** 中，我们已创建了 Unity 脚本和示例，可帮助你创建对象集合。
 
 ## <a name="object-collection-examples"></a>对象集合示例
 
@@ -46,7 +46,7 @@ ms.locfileid: "112110133"
 
 ---
 
-## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的对象集合 (适用于 Unity 的混合现实工具包) 
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的对象集合 (混合现实 Toolkit) 适用于 Unity
 
 * [MRTK-对象集合](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-collection)
 

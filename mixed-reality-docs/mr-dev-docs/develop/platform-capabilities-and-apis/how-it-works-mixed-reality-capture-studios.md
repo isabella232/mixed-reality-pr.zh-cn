@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 容量耗尽视频，全息视频，混合现实视频，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 83eba6e0dc3099c85a2db40512c9cae8f5e679c2
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: f8e6c158f3ae5f774e31574bed0c3b50e0e1a7084427a69373c14845d18e72e6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677816"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223588"
 ---
 # <a name="how-it-works---mixed-reality-capture-studios"></a>工作原理 - 混合现实捕获工作室
 

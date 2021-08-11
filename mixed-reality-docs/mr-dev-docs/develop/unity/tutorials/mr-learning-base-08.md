@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, MRTK, 混合现实工具包, UWP, 眼动跟踪
 ms.localizationpriority: high
-ms.openlocfilehash: a5b93b9e66ffb1e4e9f60251cdc146f48005ae8b
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+ms.openlocfilehash: 8a12bf37547466a07cd47e34d7fbc41e88ca87d345e2ef4fcd73b749bdfd0322
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110713736"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115227451"
 ---
 # <a name="8-using-eye-tracking"></a>8.使用眼动跟踪
 

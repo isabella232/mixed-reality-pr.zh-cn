@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: azure, 混合现实, unity, 教程, hololens, hololens 2, azure blob 存储, azure 表存储, azure 空间定位点, azure bot framework, azure 云服务, azure 自定义视觉, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 3c52384b118a72b1c2f2dfaa2205e4f890e2e5a7
-ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
+ms.openlocfilehash: 84eb1555d0020eebe9de440fcdbdd58ac17875ab417a209ea083664ab17fbfd8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114224360"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226972"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1.适用于 HoloLens 2 的 Azure 云服务
 

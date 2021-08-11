@@ -1,75 +1,75 @@
 ---
 title: 案例研究 - 看透现实中的洞
-description: 此案例研究介绍了 HoloLens 上的 "幻窗口" 效果实现，使用户能够看到墙壁、地面下和虚拟空缺。
+description: 此案例研究解释了在 HoloLens 上的"幻窗口"效果实现，允许用户在墙后、楼层下和虚拟门面中查看。
 author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
-keywords: Windows Mixed Reality，HoloLens，幻窗口，视差
-ms.openlocfilehash: 018e45a79d88cbc8e28204f023106fbe5dae39bc
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: Windows Mixed Reality、HoloLens、magic 窗口、视差
+ms.openlocfilehash: 0769d8a7bd2b5bdf1ef1fe50f1bbcd2f284b8503bf66b8fdb09b2206b716ea65
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010107"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115228167"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>案例研究 - 看透现实中的洞
 
-当人们考虑混合现实以及他们可以通过 Microsoft HoloLens 实现哪些功能时，他们通常会坚持 "我可以将哪些对象添加到我的聊天室？" 之类的问题。 或者 "我可以在我的空间之上分层什么？" 我想突出显示另一个可以考虑的领域，这是一种非常神奇的技巧，使用相同的技术来查找或通过围绕您的真实物理对象。
+当人们考虑混合现实以及他们可以使用Microsoft HoloLens时，他们通常会坚持"我可以将哪些对象添加到房间？" 或"我可以在空间顶层分层什么？" 我想重点介绍另一个可考虑的方面（实质上是一个万能技巧）使用同一技术来查看或浏览你周围的实际物理对象。
 
-## <a name="the-tech"></a>技术人员
+## <a name="the-tech"></a>技术
 
-如果已孜孜以求外星人，因为它们中断了 **[RoboRaid](https://www.youtube.com/watch?v=Hf9qkURqtbM)** 中的墙壁，解锁了 **[片段](case-study-creating-an-immersive-experience-in-fragments.md)** 中的墙安全功能，或者在 **[2015 的 E3 中](https://www.youtube.com/watch?v=QDw5QjDtFy8)** 有足够的时间来查看 hangar 的 根据您的想像，此视觉对象可用于在您的饰面中放置临时孔，或在松散 floorboard 下隐藏世界。
+如果你在它们从 **[RoboRaid](https://www.youtube.com/watch?v=Hf9qkURqtbM)** 中穿过墙时进行了努力，在 **[Fragments](case-study-creating-an-immersive-experience-in-fragments.md)** 中解锁了一个墙安全，或者对在 **[2015](https://www.youtube.com/watch?v=QDw5QjDtFy8)** 年 E3 的 Halo 5 体验中看到了 UNSC Infinity hangar 感到十分幸运的是，那么你已了解我所说的。 根据你的想象，此视觉技巧可用于在干墙中放入临时孔，或将世界隐藏在松散的地板下。
 
-![RoboRaid 将三维管道和其他结构添加到墙壁后面，只能通过创建为太空 break 的孔进行查看。](../develop/unity/images/roboraid-640px.png)
+![RoboRaid 在墙后面添加三维管道和其他结构，这些结构仅通过当比特器穿过时创建的孔可见。](../develop/unity/images/roboraid-640px.png)
 
-RoboRaid 将三维管道和其他结构添加到墙壁后面，只能通过创建为太空 break 的孔进行查看。
+RoboRaid 在墙后面添加三维管道和其他结构，这些结构仅通过当比特器穿过时创建的孔可见。
 
-在 HoloLens 上使用其中一个独特的全息影像，应用程序可以通过实际的窗口以真实表现的方式为你的墙壁或地面提供内容的错觉。 向左移动，您可以看到右侧的内容。 深入了解，你可以更深入地了解所有内容。 主要区别在于真实的洞能让你完成，而地面顽固地不会让你经过神奇全息内容。  (将任务添加到积压工作（backlog）。 ) 
+在 HoloLens 上使用这些独特的全息影像之一，应用可以像通过实际窗口呈现自身一样，在墙后面或楼层中提供内容的假象。 向左移动，可以看到右侧的任何信息。 更近一点，可以看到更多内容。 主要区别在于，实际孔允许通过，而楼层则不允许你进入到这个令人动听的全息内容。  (向 backlog.) 
 
 ## <a name="behind-the-scenes"></a>幕后
 
-这一技巧组合了两个效果。 首先，使用 "空间锚点" 将全息内容固定到世界。 使用定位点来使内容 "世界锁定" 意味着你要查看的内容不会在视觉上偏离其附近的物理对象，即使你移动或基础空间映射系统会更新其3D 模型。
+此技巧是两种效果的组合。 首先，全息内容使用"空间定位点"固定到世界。 使用定位点使该内容"被锁定"意味着你正在查看的内容不会在视觉上偏离它附近的物理对象，即使你移动或基础空间映射系统更新其房间的 3D 模型。
 
-其次，全息内容在外观上仅限于特定空间，因此，你只能在现实中看到该洞。 这封闭是需要通过逻辑洞、窗户或门口（销售这一墩）来进行的。 如果没有任何内容阻碍了视图，则将空间破解到机密 Jurassic 维度可能看起来就像是一个不良的分块。
+其次，全息内容在视觉上仅限于一个非常具体的空间，因此只能通过现实中的孔来查看。 这种遮挡是必需的，需要查看逻辑孔、窗口或门道，从而销售技巧。 如果不阻止大部分视图，机密 Jurassic 维度的空间破解可能只是看起来像一只放置不佳的恐龙。
 
-![这并不是实际的屏幕截图，而是说明来自 MR underworld 的机密如何101在 HoloLens 上的外观。 黑色机箱未显示，但你可以通过虚拟孔查看内容。  (查看实际设备时，地面似乎会消失，因为你的眼睛会显得更远一点，就好像它不会如此。 ) ](images/origamiholecomposited-640px.png)
+![这不是实际的屏幕截图，而是 MR Basics 101 中机密下部在HoloLens。 黑色机箱未显示，但可以通过虚拟孔查看内容。  (查看实际设备时，楼层似乎会消失更多，因为你的视线会聚焦在更远的距离，就像它甚至不存在一样。) ](images/origamiholecomposited-640px.png)
 
-这并不是实际的屏幕截图，而是对来自 [MR 基础知识 101](../develop/unity/tutorials/holograms-101.md) 的机密 underworld 的说明。 黑色机箱未显示，但你可以通过虚拟孔查看内容。  (查看实际设备时，地面似乎会消失，因为你的眼睛会显得更远一点，就好像它不会如此。 ) 
+这不是实际屏幕截图，而是[MR Basics 101](../develop/unity/tutorials/holograms-101.md)中机密下的显示HoloLens。 黑色机箱未显示，但可以通过虚拟孔查看内容。  (查看实际设备时，楼层似乎会消失更多，因为你的视线会聚焦在更远的距离，就像它甚至不存在一样。) 
 
-### <a name="world-locking-holographic-content"></a>全球锁定全息内容
+### <a name="world-locking-holographic-content"></a>世界锁定全息内容
 
-在 Unity 中，导致全息内容保持世界锁定状态与添加 WorldAnchor 组件一样简单：
+在 Unity 中，使全息内容保持世界锁定与添加 WorldAnchor 组件一样简单：
 
 ```
 myObject.AddComponent<WorldAnchor>();
 ```
 
-WorldAnchor 组件将不断调整其 GameObject (的位置和旋转，进而调整层次结构中该对象下的任何其他内容) ，以使其相对于附近的物理对象保持稳定。 创作你的内容时，请以这种方式创建你的对象的根透视，使其在此虚拟洞上居中。  (如果您的对象的透视在墙壁中是深度的，则其位置和旋转的轻微调整将更明显，并且该孔可能看起来不稳定。 ) 
+WorldAnchor 组件将不断调整 GameObject (的位置和旋转，从而调整层次结构中该对象下) 以相对于附近的物理对象保持稳定。 创作内容时，请创建内容，使对象的根透视以此虚拟孔为中心。  (如果对象的透视深度在墙中，则其位置和旋转的细微调整将更加明显，并且孔看起来可能不太稳定。) 
 
-### <a name="occluding-everything-but-the-virtual-hole"></a>Occluding 除虚拟洞以外的所有内容
+### <a name="occluding-everything-but-the-virtual-hole"></a>遮挡除了虚拟孔外的所有内容
 
-有多种方法可以有选择地阻止在墙壁中隐藏的内容。 最简单的一种方法是使用 HoloLens 使用加法显示这一事实，这意味着完全的黑色对象会显示为不可见。 您可以在 Unity 中执行此操作，而无需执行任何特殊着色器或材料技巧—只需创建黑色材料，并将其分配给内容中的框。 如果你不想进行3D 建模，只需使用少量的默认四个对象并略微重叠它们。 这种方法有很多缺点，但它是实现工作的最快方法，即使您怀疑以后可能需要重构它，也可以使用最快的概念证明。
+有多种方法可以选择性地阻止视图中隐藏在墙中。 最简单的方法利用这样一个事实：HoloLens加性显示，这意味着完全黑色对象看起来不可见。 可以在 Unity 中执行此操作，而无需执行任何特殊的着色器或材料技巧 - 只需创建黑色材料并将其分配给内容中框的对象即可。 如果不想进行 3D 建模，只需使用几个默认的四边形对象，并稍微重叠一下。 此方法存在许多缺点，但这是使某些内容正常工作的最快方法，并且即使怀疑稍后可能需要重构概念证明，获取低保真度的概念证明也很好。
 
-上面的 "黑箱" 方法的一个主要缺点是它没有太好的照片。 尽管你的效果可能会通过显示 HoloLens 看起来很完美，但你所做的任何屏幕截图都将显示较大的黑色对象，而不是墙或地面的内容。 导致这种情况的原因是物理硬件和屏幕截图的组合影像和实际情况有所不同。 让我们 detour 一些虚假的数学 .。。
+上述"黑盒"方法的一个主要缺点是，它无法很好地拍摄。 虽然效果可能通过显示HoloLens完美，但任何屏幕截图都会显示一个大型黑色对象，而不是墙或楼层的保留内容。 这是因为物理硬件和屏幕截图以不同方式复合全息影像和现实。 让我们暂时看看一些假数学...
 
-*伪数学警报！这些数字和公式旨在说明点，而不是任何种类的准确指标！*
+*假数学警报！这些数字和公式旨在说明一个点，而不是任何一种准确的指标！*
 
-通过 HoloLens 查看的内容：
+通过查看HoloLens：
 
 ```
 ( Reality * darkening_amount ) + Holograms
 ```
 
-在屏幕截图和视频中看到的内容：
+在屏幕截图和视频中看到：
 
 ```
 ( Reality * ( 1 - hologram_alpha ) ) + Holograms * hologram_alpha
 ```
 
-使用英语：通过 HoloLens 看到的内容是变暗现实的简单组合 (例如，通过太阳镜) 以及应用要显示的任何全息影像。 但在拍摄屏幕截图时，照相机的图像会根据每像素的透明度值与应用的全息影像混合。
+英语：通过英语HoloLens你所看到的是一种简单的混合现实 (例如通过) 以及应用想要显示的任何全息影像。 但是，当你拍摄屏幕截图时，相机的图像根据每像素透明度值与应用的全息影像混合。
 
-解决这种情况的一种方法是将 "黑色框" 材料改为仅写入深度缓冲区，并将所有其他的不透明材料进行排序。 有关这种情况的示例，请查看 [GitHub 上的 MixedRealityToolkit 中的 WindowOcclusion 文件](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader)。 相关行复制如下：
+要解决此问题，一个方法就是将"黑盒"材料更改为仅写入深度缓冲区，然后使用所有其他不透明材料进行排序。 有关这种情况的示例，请查看 上[MixedRealityToolkit 中的 WindowOcclusion.shader GitHub。](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader) 此处复制了相关行：
 
 ```
 "RenderType" = "Opaque"
@@ -77,27 +77,27 @@ WorldAnchor 组件将不断调整其 GameObject (的位置和旋转，进而调�
 ColorMask 0
 ```
 
- (注意，"偏移50，100" 行用于处理不相关的问题，因此，可能有必要将其退出。 ) 
+ (请注意，"偏移量 50， 100"行用于处理不相关的问题，因此，最好不要) 
 
-实现一种不可见的封闭材料，使您的应用程序能够绘制一个在显示和混合现实屏幕截图中显示正确的框。 对于附赠点，您可以尝试进一步提高此框的性能，方法是通过进行巧妙地绘制更少的不可见像素来更好地绘制，但这种方法实际上不是必需的。
+实现这样的不可见遮挡材料，使应用能够绘制一个在显示器和混合现实屏幕截图中看起来正确的框。 对于奖励点，可以通过执行更智能操作来绘制更少的不可见像素，以进一步提高该框的性能，但这确实可以进入无线，通常不需要。
 
-![下面是来自 MR 基础知识101的机密 underworld，因为 Unity 会绘制该机密，但 occluding 框的外部部分除外。 请注意，underworld 的透视是在该框的中心，这有助于使洞相对于实际楼层尽可能稳定。](images/underworld-occluded-640px.png)
+![下面是 MR Basics 101 中的机密，Unity 绘制它时，遮挡框的外部部分除外。 请注意，下层的透视位于框的中心，这有助于使孔相对于实际楼层尽可能稳定。](images/underworld-occluded-640px.png)
 
-下面是来自 [MR 基础知识 101](../develop/unity/tutorials/holograms-101.md) 的机密 underworld，因为 Unity 会绘制该机密，但 occluding 框的外部部分除外。 请注意，underworld 的透视是在该框的中心，这有助于使洞相对于实际楼层尽可能稳定。
+下面是 MR [Basics 101](../develop/unity/tutorials/holograms-101.md) 中的机密，Unity 绘制它时，遮挡框的外部部分除外。 请注意，下层的透视位于框的中心，这有助于使孔相对于实际楼层尽可能稳定。
 
 ## <a name="do-it-yourself"></a>自制
 
-有一个 HoloLens，想要亲自尝试自己的效果吗？  (无需编码即可执行的最简单操作) 是安装免费的3D 查看器应用，然后加载在 [GitHub 上提供的 fbx 文件](https://github.com/Microsoft/HolographicAcademy/tree/CaseStudy-MagicWindow/MagicWindow) 以在房间中查看花卉模式。 将其加载到 HoloLens 上，你可以看到工作的错觉。 在模型的前面，只能看到 "小" 洞面，其他所有内容都不可见。 从任何其他端查看模型，它将完全消失。 使用3D 查看器的移动、旋转和缩放控件，将虚拟孔洞定位到可以考虑生成某些创意的任何垂直表面上！
+有HoloLens并想要自己试用效果？ 无需编码 (最简单的) 是安装免费的 3D 查看器 应用，然后加载在 GitHub 上提供的下载[.fbx](https://github.com/Microsoft/HolographicAcademy/tree/CaseStudy-MagicWindow/MagicWindow)文件，以便查看房间中的花店模型。 在HoloLens加载它，可以看到工作上的假象。 当你位于模型前面时，只能看到小孔中，其他所有内容都是不可见的。 从任何其他端查看模型，它完全消失。 使用虚拟孔的移动、旋转和3D 查看器控件将虚拟孔定位到任何可想生成创意的垂直表面！
 
-![在 Unity 编辑器中查看此模型将在 flowerpot 周围显示大的黑色框。 在 HoloLens 上，此框消失，为神奇窗口效果提供。](images/magicwindowflowerpotineditor.png)
+![在 Unity 编辑器中查看此模型将在花体周围显示一个大型黑盒。 在HoloLens，框会消失，从而产生一种幻窗口效果。](images/magicwindowflowerpotineditor.png)
 
-在 Unity 编辑器中查看此模型将在 flowerpot 周围显示大的黑色框。 在 HoloLens 上，此框消失，为神奇窗口效果提供。
+在 Unity 编辑器中查看此模型将在花体周围显示一个大型黑盒。 在HoloLens，框会消失，从而产生一种幻窗口效果。
 
-如果要构建使用此技术的应用，请在[混合现实教程](../develop/unity/tutorials.md)中查看[MR 基本101教程](../develop/unity/tutorials/holograms-101.md)。 第7章结束了地面分离，其中显示了隐藏的 underworld (，如以上) 所示。 谁说教程必须是枯燥的呢？
+若要生成使用此技术的应用，请查看混合现实教程 中的 MR [基础知识 101](../develop/unity/tutorials/holograms-101.md) [教程](../develop/unity/tutorials.md)。 第 7 章以楼层中的一次爆炸结束，它显示了一个隐藏的 (，如上图) 。 Who教程必须让人感到不自在？
 
-下面是一些你可以在其中执行此操作的一些建议：
-* 考虑使虚拟洞内内容成为交互的方式。 让您的用户在其墙外产生一定的影响，可以真正提高此技巧可以提供的意义。
-* 考虑通过对象查看到已知区域的方法。 例如，如何在咖啡表中放入全息孔并查看其下的地面？
+下面是一些有关接下来可采取此想法的思路：
+* 考虑使虚拟孔内的内容交互的方法。 让用户在墙之外产生一些影响，可以真正提高这种技巧可以提供的怀疑感。
+* 考虑将对象查看回已知区域的方法。 例如，如何将全息孔放在咖啡表中，并在其下方看到楼层？
 
 ## <a name="about-the-author"></a>关于作者
 
