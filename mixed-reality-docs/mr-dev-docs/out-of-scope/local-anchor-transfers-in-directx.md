@@ -1,39 +1,39 @@
 ---
 title: DirectX 中的本地定位点传输
-description: 了解如何通过传输、导出和序列化空间锚点来同步两个 HoloLens 设备。
+description: 了解如何通过传输、HoloLens和序列化空间定位点来同步两个设备。
 author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens，同步，空间定位，传输，多人，查看，方案，演练，示例代码，传输，本地定位点传输，定位点导出，定位点导入
-ms.openlocfilehash: 5d539338a25657441ee07acac38a4edd6cd86e58
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: HoloLens、同步、空间定位点、传输、多人游戏、视图、方案、演练、示例代码、传输、本地定位点传输、定位点导出、定位点导入
+ms.openlocfilehash: df00e323267aa398ba45cfd7a7234c04ce8eca85f2ff3be9b6c9ddee67264085
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582801"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115195652"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>DirectX 中的本地定位点传输
 
-在不能使用 <a href="/azure/spatial-anchors" target="_blank">Azure 空间锚点</a>的情况下，本地定位点传输允许一台 hololens 设备导出要由第二个 hololens 设备导入的定位点。
+在无法使用<a href="/azure/spatial-anchors" target="_blank">Azure</a>空间定位点的情况下，本地定位点传输使一HoloLens设备能够导出要由第二个设备导入HoloLens定位点。
 
 >[!NOTE]
->与 <a href="/azure/spatial-anchors" target="_blank">Azure 空间定位</a>点相比，本地定位点传输提供的功能更低，并且不支持 IOS 和 Android 设备。
+>与 <a href="/azure/spatial-anchors" target="_blank">Azure</a>空间定位点相比，本地定位点传输提供更可靠的定位点召回，此方法不支持 iOS 和 Android 设备。
 
 >[!NOTE]
->本文中的代码片段当前演示了如何 [使用 c +](../develop/native/creating-a-holographic-directx-project.md)+/cx 中的 c + +/cx 而不是 c + + 17 兼容 c + +/WinRT。  概念与 c + +/WinRT 项目等效，但你将需要转换代码。
+>本文中的代码片段当前演示如何使用 C++/CX，而不是 C++17 兼容的 C++/WinRT，如 [C++](../develop/native/creating-a-holographic-directx-project.md)全息项目模板 中使用的。  这些概念等效于 C++/WinRT 项目，但需要转换代码。
 
-## <a name="transferring-spatial-anchors"></a>传输空间锚
+## <a name="transferring-spatial-anchors"></a>传输空间定位点
 
-可以使用 [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)在 Windows Mixed Reality 设备之间传输空间锚。 利用此 API，你可以将定位点与在世界上查找确切位置所需的所有支持的传感器数据捆绑在一起，然后将该捆绑导入另一台设备。 在第二台设备上的应用程序导入该定位点后，每个应用程序都可以使用该共享空间定位点的坐标系统呈现全息影像，然后该系统将出现在现实世界中的同一位置。
+可以使用[SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)Windows Mixed Reality设备之间传输空间定位点。 通过此 API，你可以将定位点与查找世界上的确切位置所需的所有支持传感器数据捆绑在一起，然后在另一台设备上导入该捆绑包。 第二台设备上的应用导入该定位点后，每个应用都可以使用该共享空间定位点的坐标系统呈现全息影像，该系统随后将出现在现实世界中的同一位置。
 
-请注意，空间锚不能在不同的设备类型之间传输，例如，可能无法使用沉浸式耳机定位 HoloLens 空间锚。  传输的定位点也与 iOS 或 Android 设备不兼容。
+请注意，空间定位点无法在不同设备类型之间传输，例如HoloLens沉浸式头戴显示设备可能无法定位空间定位点。  传输的定位点也与 iOS 或 Android 设备不兼容。
 
-## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>设置应用程序以使用 spatialPerception 功能
+## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>将应用设置为使用 spatialPerception 功能
 
-应用必须被授予使用 SpatialPerception 功能的权限，然后才能使用 [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)。 这是必需的，因为传输空间定位点涉及到共享在该定位点附近收集的传感器映像，其中可能包括敏感信息。
+必须先向应用授予使用 SpatialPerception 功能的权限，然后才能使用 [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)。 这是必需的，因为传输空间定位点涉及共享一段时间在定位点附近收集的传感器图像，这些图像可能包括敏感信息。
 
-在应用程序的 appxmanifest.xml 文件中声明此功能。 下面是一个示例：
+在应用的 package.appxmanifest 文件中声明此功能。 下面的示例说明：
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ ms.locfileid: "98582801"
 </Capabilities>
 ```
 
-此功能来自 **uap2** 命名空间。 若要在清单中获取此命名空间的访问权限，请将其包含为 &lt; 包> 元素中的 xlmns 属性。 下面是一个示例：
+此功能来自 **uap2** 命名空间。 若要在清单中访问此命名空间，请作为 *xlmns* 属性包括在 Package &lt;> 元素中。 下面的示例说明：
 
 ```
 <Package
@@ -53,11 +53,11 @@ ms.locfileid: "98582801"
     >
 ```
 
-**注意：** 应用需要在运行时请求功能，然后才能访问 SpatialAnchor 导出/导入 Api。 请参阅以下示例中的 [RequestAccessAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) 。
+**注意：** 应用需要在运行时请求该功能，然后才能访问 SpatialAnchor 导出/导入 API。 请参阅[以下示例中的 RequestAccessAsync。](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager)
 
-## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>通过使用 SpatialAnchorTransferManager 导出定位点数据来对其进行序列化
+## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>使用 SpatialAnchorTransferManager 导出定位点数据来序列化定位点数据
 
-代码示例中包含 helper 函数，用于导出 (序列化) [SpatialAnchor](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) 数据。 此导出 API 序列化键值对集合中的所有定位点，这些键值对将字符串与定位点相关联。
+代码示例中包含一个帮助程序函数，用于 ([SpatialAnchor) 序列化](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) 。 此导出 API 序列化将字符串与定位点关联的键值对集合中的所有定位点。
 
 ```
 // ExportAnchorDataAsync: Exports a byte buffer containing all of the anchors in the given collection.
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-首先，我们需要设置数据流。 这将允许我们 1. ) 使用 TryExportAnchorsAsync 将数据放置在应用所拥有的缓冲区中，并使用 2. ) 从导出的字节缓冲区流中读取数据，这是一个 WinRT 数据流（即 std：： vector &lt; byte>）。
+首先，我们需要设置数据流。 这将允许我们 1.) 使用 TryExportAnchorsAsync 将数据放在应用拥有的缓冲区中，2.) 从导出的字节缓冲区流（WinRT 数据流）读取数据，该缓冲区是 std：：vector 字节 &lt;>。
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -104,7 +104,7 @@ auto accessRequestedTask = create_taskSpatialAnchorTransferManager::RequestAcces
 });
 ```
 
-如果我们确实获取了权限并导出了定位点，则可以读取数据流。 在这里，我们还将演示如何创建用于读取数据的 DataReader 和 InputStream。
+如果我们获取了权限并导出了定位点，我们可以读取数据流。 在这里，我们还将展示如何创建用于读取数据的 DataReader 和 InputStream。
 
 ```
 // Get the input stream for the anchor byte stream.
@@ -129,7 +129,7 @@ return accessRequestedTask.then([anchorByteDataOut, stream, reader](bool nchorsE
     }
 ```
 
-从流中读取字节后，可以将它们保存到自己的数据缓冲区中，就像这样。
+从流中读取字节后，可以将它们保存到自己的数据缓冲区，如下所示。
 
 ```
 }).then([anchorByteDataOut, reader](size_t bytesRead)
@@ -148,9 +148,9 @@ return accessRequestedTask.then([anchorByteDataOut, stream, reader](bool nchorsE
 };
 ```
 
-## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>使用 SpatialAnchorTransferManager 将定位点数据导入系统，从而对其进行反序列化
+## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>通过使用 SpatialAnchorTransferManager 将定位点数据导入系统来反初始化定位点数据
 
-代码示例中包含 helper 函数以加载以前导出的数据。 此反序列化函数提供键值对的集合，类似于 SpatialAnchorStore 提供的内容，只不过我们从另一个源（如网络套接字）获取了此数据。 在将数据脱机存储之前，可以使用应用内内存或 (（如果适用) 应用的 SpatialAnchorStore）来处理和原因。
+代码示例中包含一个帮助程序函数，用于加载以前导出的数据。 此反序列化函数提供键值对的集合，类似于 SpatialAnchorStore 提供的集合 - 只不过我们从另一个源（例如网络套接字）获得了此数据。 可以在脱机存储、使用应用内内存或应用 SpatialAnchorStore (应用) 数据之前处理和推理这些数据。
 
 ```
 // ImportAnchorDataAsync: Imports anchors from a byte buffer that was previously exported.
@@ -166,7 +166,7 @@ task<bool> SpatialAnchorImportExportHelper::ImportAnchorDataAsync(
 {
 ```
 
-首先，我们需要创建流对象来访问定位点数据。 我们会将缓冲区中的数据写入系统缓冲区，因此，我们将创建一个写入内存中数据流的 DataWriter，以实现将字节缓冲区中的定位点作为 SpatialAnchors 获取到系统中的目标。
+首先，我们需要创建流对象来访问定位点数据。 我们将将数据从缓冲区写入系统缓冲区，因此，我们将创建一个写入内存中数据流的 DataWriter，以便实现将定位点从字节缓冲区作为 SpatialAnchors 放入系统的目标。
 
 ```
 // Create a random access stream for the anchor data.
@@ -177,7 +177,7 @@ IOutputStream^ outputStream = stream->GetOutputStreamAt(0);
 DataWriter^ writer = ref new DataWriter(outputStream);
 ```
 
-同样，我们需要确保该应用有权导出空间锚数据，其中可能包括有关用户环境的隐私信息。
+同样，我们需要确保应用有权导出空间定位点数据，其中可能包含有关用户环境的私有信息。
 
 ```
 // Request access to transfer spatial anchors.
@@ -189,7 +189,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
         // Access is allowed.
 ```
 
-如果允许访问，我们可以将字节从缓冲区写入系统数据流。
+如果允许访问，我们可以将缓冲区中的字节写入系统数据流。
 
 ```
 // Write the bytes to the stream.
@@ -206,7 +206,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
     }
 ```
 
-如果我们成功地在数据流中存储字节，则可以尝试使用 SpatialAnchorTransferManager 导入该数据。
+如果我们成功地在数据流中存储了字节，我们可以尝试使用 SpatialAnchorTransferManager 导入该数据。
 
 ```
 }).then([writer, stream](unsigned int bytesWritten)
@@ -235,7 +235,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
     }
 ```
 
-如果可以导入数据，我们将获得一个与定位点相关联的键值对的地图视图。 我们可以将其加载到自己的内存中数据集合中，并使用该集合来查找想要使用的定位点。
+如果能够导入数据，我们将获取将字符串与定位点关联的键值对的地图视图。 我们可以将这些数据加载到自己的内存中数据收集中，并使用该集合查找我们感兴趣的定位点。
 
 ```
 }).then([anchorMapOut](task<Windows::Foundation::Collections::IMapView<String^, SpatialAnchor^>^>  previousTask)
@@ -270,31 +270,31 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
 }
 ```
 
-**注意：** 由于可以导入定位点，因此不一定意味着可以立即使用它。 定位点可能位于不同的空间或其他物理位置;直到收到该定位点的设备具有与创建该定位点时所在的环境有关的可视化信息时，才会定位定位点，以还原定位点相对于已知当前环境的位置。 在继续尝试将定位点用于实时内容之前，客户端实现应尝试相对于您的本地坐标系统或引用框架定位定位点。 例如，尝试定期定位定位点，直到开始定位定位点。
+**注意：** 正如可以导入定位点一样，并不一定意味着可以将其用于。 定位点可能位于其他房间，或完全位于另一个物理位置;在接收定位点的设备具有有关创建定位点的环境的足够可视信息之前，定位点将找不到，以还原定位点相对于已知当前环境的位置。 在继续尝试将定位点用于实时内容之前，客户端实现应尝试定位相对于本地坐标系或引用框架的定位点。 例如，尝试定期定位相对于当前坐标系的定位点，直到定位点开始可定位。
 
-## <a name="special-considerations"></a>特别注意事项
+## <a name="special-considerations"></a>特殊注意事项
 
-[TryExportAnchorsAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) API 允许将多个[SpatialAnchors](/uwp/api/Windows.Perception.Spatial.SpatialAnchor)导出到同一个不透明二进制 blob。 不过，blob 将包含的数据有细微差别，这取决于单个 SpatialAnchor 或多个 SpatialAnchors 是否在单个调用中导出。
+[TryExportAnchorsAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) API 允许将多个[SpatialAnchors](/uwp/api/Windows.Perception.Spatial.SpatialAnchor)导出到同一不透明的二进制 blob 中。 但是，Blob 将包含哪些数据存在细微差异，具体取决于单个 SpatialAnchor 还是多个 SpatialAnchors 是在单个调用中导出的。
 
 ### <a name="export-of-a-single-spatialanchor"></a>导出单个 SpatialAnchor
 
-Blob 包含 SpatialAnchor 附近环境的表示形式，以便能够在导入 SpatialAnchor 的设备上识别环境。 导入完成后，新的 SpatialAnchor 将可供设备使用。 假设用户最近曾处于定位点附近，则会将其定位，并将影像附加到 SpatialAnchor。 这些全息影像将显示在导出 SpatialAnchor 的原始设备上的相同物理位置。
+Blob 在 SpatialAnchor 附近包含环境的表示形式，以便可以在导入 SpatialAnchor 的设备上识别环境。 导入完成后，新的 SpatialAnchor 将可供设备使用。 假设用户最近位于定位点附近，则定位点将可定位，并可以呈现附加到 SpatialAnchor 的全息影像。 这些全息影像会显示在导出 SpatialAnchor 的原始设备上相同的物理位置。
 
 ![导出单个 SpatialAnchor](images/singleanchor.png)
 
 ### <a name="export-of-multiple-spatialanchors"></a>导出多个 SpatialAnchors
 
-与导出单个 SpatialAnchor 一样，blob 在所有指定的 SpatialAnchors 附近都包含环境的表示形式。 此外，blob 还包含有关包含的 SpatialAnchors 之间的连接的信息（如果它们位于相同的物理空间中）。 这意味着，如果导入了两个附近的 SpatialAnchors，则即使该设备只识别 *第一个* SpatialAnchor 周围的环境，也会找到附加到 *第二个* SpatialAnchor 的全息影像，因为这两个 SpatialAnchors 之间的计算转换所包含的数据足以用于计算 blob。 如果两个 SpatialAnchors 分别导出 (两个对 TryExportSpatialAnchors 的单独调用) 则在 blob 中包含的数据可能不足以容纳第一个要定位的 SpatialAnchor。
+与导出单个 SpatialAnchor 一样，Blob 包含所有指定 SpatialAnchors 邻近的环境中的表示形式。 此外，如果包含的 SpatialAnchors 位于同一物理空间中，则 blob 包含有关它们之间的连接的信息。 这意味着，如果导入两个附近的 SpatialAnchors，则即使设备仅识别第一个 SpatialAnchor 周围的环境，也能够找到附加到第二个 SpatialAnchor 的全息影像，因为 Blob 中包含了足够的数据来计算两个 SpatialAnchors 之间的转换。 如果分别导出了两个 SpatialAnchors (对 TryExportSpatialAnchors) 的两次单独调用，则 blob 中可能没有足够的数据，因此附加到第二个 SpatialAnchor 的全息影像在找到第一个 SpatialAnchor 时可能没有足够的数据。
 
-![使用单个 TryExportAnchorsAsync 调用导出多个定位点](images/multipleanchors.png) ![为每个定位点使用单独的 TryExportAnchorsAsync 调用导出多个定位点](images/separateanchors.png)
+![使用单个 TryExportAnchorsAsync 调用导出的多个定位点](images/multipleanchors.png) ![使用单独的 TryExportAnchorsAsync 调用导出的多个定位点](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>示例：使用 Windows：：网络：： StreamSocket 发送定位点数据
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>示例：使用 Windows：：Networking：：StreamSocket 发送定位点数据
 
-在这里，我们提供了一个示例，说明如何通过 TCP 网络发送导出的定位点数据。 这来自 HolographicSpatialAnchorTransferSample。
+在这里，我们提供了一个示例，了解如何通过 TCP 网络发送导出的定位点数据来使用导出的定位点数据。 这来自 HolographicSpatialAnchorTransferSample。
 
-WinRT StreamSocket 类使用 PPL 任务库。 如果出现网络错误，将使用重新引发的异常将错误返回到链中的下一个任务。 异常包含一个指示错误状态的 HRESULT。
+WinRT StreamSocket 类使用 PPL 任务库。 如果发生网络错误，则使用重新引发的异常将错误返回到链中的下一个任务。 异常包含指示错误状态的 HRESULT。
 
-### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>使用带有 TCP 的 Windows：： data：： StreamSocketListener 发送导出的定位点数据
+### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>将 Windows：：Networking：：StreamSocketListener 与 TCP 一起用于发送导出的定位点数据
 
 创建侦听连接的服务器实例。
 
@@ -326,7 +326,7 @@ void SampleAnchorTcpServer::ListenForConnection()
 }
 ```
 
-接收到连接后，请使用客户端套接字连接发送定位点数据。
+收到连接后，使用客户端套接字连接发送定位点数据。
 
 ```
 void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener, StreamSocketListenerConnectionReceivedEventArgs^ args)
@@ -370,7 +370,7 @@ void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ 
 }
 ```
 
-我们必须首先发送标头数据包，然后才能发送流本身。 此标头数据包必须为固定长度，并且还必须指示作为定位点数据流的字节数组的长度。在此示例中，我们没有要发送的其他标头数据，因此我们的标头长度为4个字节，并且包含32位无符号整数。
+必须先发送标头数据包，然后才能发送流本身。 此标头数据包的长度必须为固定长度，并且还必须指示作为定位点数据流的可变字节数组的长度;对于本示例，我们没有要发送的其他标头数据，因此标头为 4 字节，包含 32 位无符号整数。
 
 ```
 Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataLengthMessage(size_t dataStreamLength)
@@ -413,7 +413,7 @@ Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataStreamIMap<String^,
         return task_from_result<bool>(false);
 ```
 
-将流长度（以字节为单位）发送到客户端后，可以继续将数据流本身写入套接字流。 这将导致将定位点存储字节发送到客户端。
+将流长度（以字节为单位）发送到客户端后，我们可以继续将数据流本身写入套接字流。 这会使定位点存储字节发送到客户端。
 
 ```
 }).then([this](bool dataLengthSent)
@@ -447,7 +447,7 @@ Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataStreamIMap<String^,
 }
 ```
 
-如本主题前面所述，必须准备处理包含网络错误状态消息的异常。 对于不需要的错误，我们可以将异常信息写入调试控制台，如。 如果我们的代码示例无法完成连接，或者无法完成发送定位点数据，就会向我们提供一个线索，告诉您发生了什么情况。
+如本主题前面所述，我们必须准备好处理包含网络错误状态消息的异常。 对于意外的错误，我们可以将异常信息写入调试控制台，如下所示。 这将为我们提供一个线索，了解如果代码示例无法完成连接或无法完成定位点数据的发送，将发生的情况。
 
 ```
 void SampleAnchorTcpServer::HandleException(Exception^ exception)
@@ -460,9 +460,9 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 }
 ```
 
-### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>使用带有 TCP 的 Windows：： data：： StreamSocket 接收导出的定位点数据
+### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>将 Windows：：Networking：：StreamSocket 与 TCP 一起用于接收导出的定位点数据
 
-首先，我们必须连接到服务器。 此代码示例演示如何创建和配置 StreamSocket，并创建可用于通过套接字连接获取网络数据的 DataReader。
+首先，我们必须连接到服务器。 此代码示例演示如何创建和配置 StreamSocket，以及创建可用于使用套接字连接获取网络数据的 DataReader。
 
 **注意：** 如果运行此示例代码，请确保在启动客户端之前配置并启动服务器。
 
@@ -530,9 +530,9 @@ task<bool> SampleAnchorTcpClient::ConnectToServer()
 }
 ```
 
-建立连接后，我们可以等待服务器发送数据。 为此，我们在流数据读取器上调用 LoadAsync。
+建立连接后，可以等待服务器发送数据。 为此，我们在流数据读取器上调用 LoadAsync。
 
-我们接收到的第一组字节应始终为标头数据包，这表示定位数据流字节长度，如前一部分中所述。
+我们收到的第一组字节应始终为标头数据包，它指示上一节中所述的定位点数据流字节长度。
 
 ```
 void SampleAnchorTcpClient::WaitForAnchorDataStream()
@@ -581,7 +581,7 @@ task<size_t> SampleAnchorTcpClient::ReceiveAnchorDataLengthMessage()
 }
 ```
 
-收到标头数据包后，我们知道应该会有多少个字节的定位数据。 我们可以继续从流中读取这些字节。
+收到标头数据包后，我们知道应期望的定位点数据字节数。 我们可以继续从流中读取这些字节。
 
 ```
 }).then([this](size_t dataStreamLength)
@@ -608,9 +608,9 @@ task<size_t> SampleAnchorTcpClient::ReceiveAnchorDataLengthMessage()
 }
 ```
 
-下面是用于接收定位流的代码。 同样，我们将首先从流中加载字节;此操作可能需要一段时间才能完成，因为 StreamSocket 会等待接收来自网络的字节量。
+下面是用于接收定位点数据流的代码。 同样，我们将首先从流加载字节;此操作可能需要一些时间才能完成，因为 StreamSocket 等待从网络接收该字节量。
 
-加载操作完成后，可以读取该字节数。 如果我们收到了定位流所需的字节数，可以继续导入定位数据;否则，必须有某种类型的错误。 例如，如果服务器实例在可以完成数据流发送之前终止，或者在客户端接收整个数据流之前网络出现故障，则可能会发生这种情况。
+加载操作完成后，我们可以读取该字节数。 如果收到定位点数据流预期字节数，可以继续导入定位点数据;如果不是，则一定存在某种错误。 例如，当服务器实例在可以完成发送数据流之前终止，或者网络在客户端可以接收整个数据流之前关闭时，可能会发生这种情况。
 
 ```
 task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
@@ -660,7 +660,7 @@ task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
 }
 ```
 
-同样，必须准备好处理未知的网络错误。
+同样，我们必须准备好处理未知的网络错误。
 
 ```
 void SampleAnchorTcpClient::HandleException(Exception^ exception)
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-就这么简单！ 现在，您应该具有足够的信息来尝试查找通过网络接收的定位点。 同样，请注意，客户端必须具有足够的可视化跟踪数据，空间才能成功定位定位点;如果它不能正常工作，请尝试一段时间。 如果仍不起作用，请让服务器发送更多的定位点，并使用网络通信来与适用于客户端的网络通信达成一致。 你可以通过下载 HolographicSpatialAnchorTransferSample、配置客户端和服务器 Ip 以及将其部署到客户端和服务器 HoloLens 设备来尝试此方法。
+就这么简单！ 现在，你应该有足够的信息来尝试找到通过网络收到的定位点。 同样，请注意，客户端必须具有足够的可视跟踪数据，使空间能够成功找到定位点;如果无法立即正常工作，请尝试四处移动一段时间。 如果仍然不起作用，请让服务器发送更多定位点，并使用网络通信来同意适用于客户端的定位点。 你可以通过下载 HolographicSpatialAnchorTransferSample、配置客户端和服务器 ip 以及将其部署到客户端和服务器 HoloLens 设备来尝试此方法。
 
 ## <a name="see-also"></a>另请参阅
 * [并行模式库 (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl)
-* [StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
-* [StreamSocketListener](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)
+* [Windows。StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
+* [Windows。StreamSocketListener](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)

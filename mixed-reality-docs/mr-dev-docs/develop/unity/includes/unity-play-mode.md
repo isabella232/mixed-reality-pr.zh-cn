@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f7a018d34ee17589ae2e12c2f50f744d736534e2
-ms.sourcegitcommit: 7160843723ccd6567490e2f4222219603f184d76
+ms.openlocfilehash: f579cb73389d23be5959d212d4243361f00a27b8475ce74a16acc2bffa7a192b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114339803"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115192167"
 ---
 # <a name="unity-2020--openxr"></a>[Unity 2020 + OpenXR](#tab/openxr)
 
@@ -53,5 +53,5 @@ ms.locfileid: "114339803"
 1. 将 **仿真模式** 设置为 **远程设备**。
 1. 如果使用的是第一代 HoloLens 或 HoloLens 2，请根据使用设置 **设备版本**。
 1. 对于 **远程计算机**，请输入 HOLOLENS 的 IP 地址。
-1. 选择“连接”。 应会看到 "**连接状态**" 更改为 "**已连接**"，并在 HoloLens 中看到屏幕显示为空白。
+1. 选择“连接”  。 应会看到 "**连接状态**" 更改为 "**已连接**"，并在 HoloLens 中看到屏幕显示为空白。
 1. 选择 "**播放**" 按钮以启动播放模式，并在 HoloLens 上体验应用。 若要在播放模式下调试 c # 脚本，请[将 Visual Studio 附加到 Unity](/visualstudio/gamedev/unity/get-started/using-visual-studio-tools-for-unity?pivots=windows)。

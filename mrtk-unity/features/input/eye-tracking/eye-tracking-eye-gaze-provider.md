@@ -1,41 +1,41 @@
 ---
 title: 眼动跟踪注视提供者
-description: MRTK 中的眼睛查看器文档
+description: MRTK 中眼睛凝视提供程序的文档
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
-keywords: Unity，HoloLens，HoloLens 2，Mixed Reality，开发，MRTK，EyeTracking，EyeGaze，
-ms.openlocfilehash: ef50a55d52a5dad9f424c8af8139565e02542b6c
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity，HoloLens， HoloLens 2， 混合现实， 开发， MRTK， EyeTracking， EyeGaze，
+ms.openlocfilehash: 9a62bdba0bc4bb2985e6c2ffc4e8e66a8f867681a5e51c9e5f235b29f3baaf50
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144024"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193189"
 ---
-# <a name="accessing-eye-tracking-data-in-your-unity-script"></a>在 Unity 脚本中访问目视跟踪数据
+# <a name="accessing-eye-tracking-data-in-your-unity-script"></a>在 Unity 脚本中访问眼动跟踪数据
 
-本文假设已了解如何在 MRTK 场景中设置目视跟踪 (参阅 [基本 MRTK 安装程序以使用目视跟踪](eye-tracking-basic-setup.md)) 。
-在 MonoBehaviour 脚本中访问眼睛跟踪数据非常简单！ 只需使用 *CoreServices. InputSystem. EyeGazeProvider*。
+本文假设用户已了解如何在 MRTK 场景中设置眼动跟踪 (请参阅基本 [MRTK](eye-tracking-basic-setup.md) 设置以使用眼动跟踪) 。
+在 MonoBehaviour 脚本中访问眼动跟踪数据非常简单！ 只需使用 *CoreServices.InputSystem.EyeGazeProvider*。
 
 ## <a name="imixedrealityeyegazeprovider"></a>IMixedRealityEyeGazeProvider
 
-MRTK 中的目视跟踪配置通过接口进行配置 [`IMixedRealityEyeGazeProvider`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityEyeGazeProvider) 。 使用 [CoreServices](eye-tracking-eye-gaze-provider.md) 可在运行时在工具包中注册默认的注视提供程序实现。
-的有用属性 `EyeGazeProvider` 如下所述。
+MRTK 中的眼动跟踪配置是通过 接口 [`IMixedRealityEyeGazeProvider`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityEyeGazeProvider) 配置的。 使用 [CoreServices.InputSystem.EyeGazeProvider](eye-tracking-eye-gaze-provider.md) 提供在运行时在工具包中注册的默认凝视提供程序实现。
+下面概述了 `EyeGazeProvider` 的有用属性。
 
-- **IsEyeTrackingEnabled**：如果用户已选择使用目视跟踪进行注视，则为 True。
+- **IsEyeTrackingEnabled：** 如果用户已选择使用眼动跟踪进行凝视，则返回 True。
 
-- **IsEyeCalibrationValid**：指示用户的目视跟踪校准是否有效。
-如果值尚未从目视跟踪系统收到数据，则返回 "null"。
-它可能无效，因为用户跳过了眼睛跟踪校准。
+- **IsEyeCalibrationValid：** 指示用户的眼动跟踪校准是否有效。
+如果值尚未从眼动跟踪系统接收数据，则返回"null"。
+它可能无效，因为用户跳过了眼动跟踪校准。
 
-- **IsEyeTrackingEnabledAndValid**：指示当前目视跟踪数据当前是否用于注视。
+- **IsEyeTrackingEnabledAndValid：** 指示当前眼动跟踪数据当前是否用于凝视。
 
-- **IsEyeTrackingDataValid**：如果目视跟踪数据可用，则为 True。
-由于超时 (应该会使用户处于稳定状态，但) 或缺少跟踪硬件或权限时，此功能可能会变得不可用。
-查看缺少的 [眼睛校准通知示例](eye-tracking-is-user-calibrated.md) ，该示例说明如何检测用户是否引人注目，并显示相应的通知。
+- **IsEyeTrackingDataValid：** 如果眼动跟踪数据可用，则返回 True。
+它可能由于超时超过而不可用， (用户闪烁时，它) 或缺少跟踪硬件或权限。
+请查看我们的 [缺失眼校准通知示例](eye-tracking-is-user-calibrated.md) ，该示例说明如何检测用户是否进行眼校准，以及显示适当的通知。
 
-- **GazeOrigin**： "注视" 射线的原点。
-请注意，如果 "IsEyeGazeValid" 为 false，则将返回 *打印头* 注视原点。
+- **GazeOrigin：** 凝视射线的来源。
+请注意，如果"IsEyeGazeValid"为 false，这将返回头部凝视原点。 
 
 - **GazeDirection：** 凝视射线的方向。
 如果"IsEyeGazeValid"为 false，这将返回头部凝视方向。 

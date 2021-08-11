@@ -1,44 +1,44 @@
 ---
-title: HoloLens (第一代) 和 Azure 305-功能和存储
-description: 完成本课程以了解如何在混合现实应用程序中实现 Azure 存储和功能。
+title: HoloLens（第一代）和 Azure 305 - 功能和存储
+description: 完成本课程，了解如何在混合Azure 存储应用程序中实现函数和函数。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure，混合现实，学院，unity，教程，api，函数，存储，hololens，沉浸，vr，Windows 10，Visual Studio
-ms.openlocfilehash: b55acaf003a1cdf50a5a78e48fdf05a9ab07d0d6
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+keywords: azure， 混合现实， 学院， unity， 教程， api， 函数， 存储， hololens， 沉浸式， vr， Windows 10， Visual Studio
+ms.openlocfilehash: 337b1d3fb23450325805237a6ba975861260760b7d37028b8d717bad99b9d233
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730544"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193824"
 ---
-# <a name="hololens-1st-gen-and-azure-305-functions-and-storage"></a>HoloLens (第一代) 和 Azure 305：函数和存储
+# <a name="hololens-1st-gen-and-azure-305-functions-and-storage"></a>HoloLens (第一代) Azure 305：函数和存储
 
 <br>
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来将发布一系列新的教程，演示如何针对 HoloLens 2。  发布这些教程时，此通知将更新为指向这些教程的链接。
 
 <br> 
 
-![最终产品-启动](images/AzureLabs-Lab5-00.png)
+![final product -start](images/AzureLabs-Lab5-00.png)
 
-在本课程中，你将了解如何在混合现实应用程序中创建和使用 Azure 存储资源 Azure Functions 和存储数据。
+本课程将学习如何在混合现实Azure Functions创建和使用数据Azure 存储存储数据。
 
-*Azure Functions* 是一项 Microsoft 服务，它允许开发人员在 Azure 中运行少量的代码 "函数"。 这提供了一种方法，可将工作委托给云，而不是本地应用程序，这可能有很多好处。 *Azure Functions* 支持多种开发语言，包括 C \# 、F \# 、Node.js、Java 和 PHP。 有关详细信息，请访问 [Azure Functions 文章](/azure/azure-functions/functions-overview)。
+*Azure Functions* 是一项 Microsoft 服务，可让开发人员在 Azure 中运行小段代码"函数"。 这提供了一种将工作委托给云（而不是本地应用程序）的方法，这可带来许多好处。 *Azure Functions* 多种开发语言，包括 \# \# C、F、Node.js、Java 和 PHP。 有关详细信息，请访问文章[Azure Functions 。](/azure/azure-functions/functions-overview)
 
-*Azure 存储* 是一种 Microsoft 云服务，可让开发人员存储数据，保证其高度可用、安全、持久、可缩放和冗余。 这意味着，Microsoft 将处理所有维护和关键问题。 有关详细信息，请访问 [Azure 存储一文](/azure/storage/common/storage-introduction)。
+*Azure 存储* 是一项 Microsoft 云服务，它允许开发人员存储数据，并保证数据高度可用、安全、持久、可缩放和冗余。 这意味着 Microsoft 将处理所有维护和关键问题。 有关详细信息，请访问 Azure 存储[文章](/azure/storage/common/storage-introduction)。
 
-完成本课程后，你将拥有一个混合现实沉浸式耳机应用程序，该应用程序将能够执行以下操作：
+完成本课程后，你将拥有一个混合现实沉浸式头戴显示设备应用程序，该应用程序能够执行以下操作：
 
-1.  允许用户浏览场景。
-2.  当用户 gazes 三维 "button" 时触发对象的生成。
-3.  生成的对象将由 Azure 函数选择。
-4.  生成每个对象时，应用程序会将对象类型存储在 azure *存储* 中的 *azure 文件* 中。
-5.  第二次加载时，将检索 *Azure 文件* 数据，并使用它来重播应用程序的上一个实例中的生成操作。
+1.  允许用户在场景周围凝视。
+2.  当用户凝视 3D"按钮"时，触发对象的生成。
+3.  生成的对象由 Azure 函数选择。
+4.  生成每个对象时，应用程序将对象类型存储在 *Azure 文件*（位于 *Azure 存储）。*
+5.  第二次加载时，将检索 *Azure* 文件数据，并用于重播来自应用程序的上一个实例的生成操作。
 
-在您的应用程序中，您将由您来决定如何将结果与您的设计相集成。 本课程旨在向您介绍如何将 Azure 服务与 Unity 项目集成。 您可以使用您在本课程中获得的知识来增强混合现实应用程序的工作。
+在应用程序中，由你决定如何将结果与设计集成。 本课程旨在教授如何将 Azure 服务与 Unity Project。 你的工作是利用从本课程中获得的知识来增强混合现实应用程序。
 
 ## <a name="device-support"></a>设备支持
 
@@ -51,162 +51,162 @@ ms.locfileid: "104730544"
 </table>
 
 > [!NOTE]
-> 尽管本课程主要侧重于 Windows Mixed Reality 沉浸式 (VR) 耳机，但你也可以将本课程中学习的内容应用于 Microsoft HoloLens。 在本课程中，你将看到有关支持 HoloLens 时可能需要执行的任何更改的说明。
+> 虽然本课程主要重点介绍Windows Mixed Reality VR () 头戴显示设备，但也可以将本课程中学习到Microsoft HoloLens。 随着课程的进行，你将看到有关支持此课程可能需要采用的任何更改HoloLens。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 > [!NOTE]
-> 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表明了编写 (2018) 时测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
+> 本教程专为具有 Unity 和 C# 基本经验的开发人员设计。 另请注意，本文档中的先决条件和书面说明表示截至 2018 年 5 月 2018 年 5 月 (测试和验证的内容) 。 可以随意使用安装工具一文中列出的最新软件，但不应[](../../install-the-tools.md)假定本课程中的信息与下面列出的新软件中的信息完全匹配。
 
-本课程建议采用以下硬件和软件：
+对于本课程，我们建议使用以下硬件和软件：
 
-- [与 Windows Mixed Reality 兼容](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)的开发 PC，适用于沉浸式 (VR) 耳机开发
-- [Windows 10 秋季创意者更新 (或更高版本启用了开发人员模式) ](../../install-the-tools.md#installation-checklist)
+- 一台开发电脑[，Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines)沉浸式 (VR) 头戴显示设备开发
+- [Windows 10 Fall Creators Update (开发人员模式) 或更高版本](../../install-the-tools.md#installation-checklist)
 - [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist)
-- [Unity 2017。4](../../install-the-tools.md#installation-checklist)
+- [Unity 2017.4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- [Windows Mixed Reality 沉浸式 (VR) 耳机](../../../discover/immersive-headset-hardware-details.md)或[Microsoft HoloLens](/hololens/hololens1-hardware) ，启用了开发人员模式
+- 已启用[Windows Mixed Reality开发人员模式 (VR](../../../discover/immersive-headset-hardware-details.md)) 头戴显示设备[Microsoft HoloLens](/hololens/hololens1-hardware)沉浸式设备
 - Azure 帐户的订阅，用于创建 Azure 资源
-- Azure 安装和数据检索的 Internet 访问
+- 用于 Azure 设置和数据检索的 Internet 访问
 
 ## <a name="before-you-start"></a>开始之前
 
-若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
+为了避免在生成此项目时遇到问题，强烈建议在根文件夹或近根文件夹中创建本教程中提到的项目 (长文件夹路径可能会导致生成时) 。
 
-## <a name="chapter-1---the-azure-portal"></a>第1章-Azure 门户
+## <a name="chapter-1---the-azure-portal"></a>第 1 章 - Azure 门户
 
-若要使用 **Azure 存储服务**，你将需要在 Azure 门户中创建并配置一个 **存储帐户** 。
+若要使用 **Azure 存储 服务**，需要在 Azure 门户 中创建和配置 **存储** 帐户。
 
-1.  登录到  [Azure 门户](https://portal.azure.com)。
+1.  登录到 Azure  [门户](https://portal.azure.com)。
 
     > [!NOTE]
-    > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室中按照本教程进行学习，请咨询教师或 proctors，以获得设置新帐户的帮助。
+    > 如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室环境中遵循本教程，请询问讲师或其中一位讲师，以帮助设置新帐户。
 
-2.  登录后，单击左上角的 " **新建** "，搜索 " *存储帐户*"，然后单击 " **输入**"。
+2.  登录后，单击左上角的"新建"，搜索"存储 *帐户"，* 然后单击"**输入"。**
 
     ![azure 存储搜索](images/AzureLabs-Lab5-01.png)
 
     > [!NOTE]
-    > 在较新的门户中，可能已将 " **新建** " 一词替换为 " **创建资源**"。
+    > 在较 **新的** 门户中，"新建"一词可能已被替换为"创建资源"。
 
-3.  新页面将提供 *Azure 存储帐户* 服务的说明。 在此提示符下，选择 " **创建** " 按钮以创建与此服务的关联。
+3.  新页面将提供帐户服务 *Azure 存储说明*。 在此提示的左下角， **选择"创建** "按钮，创建与此服务的关联。
 
     ![创建服务](images/AzureLabs-Lab5-02.png)
 
-4.  单击 " **创建**" 后：
+4.  单击"创建" **后**：
 
-    1.  插入帐户的 *名称* ，请注意，此字段仅接受数字和小写字母。
+    1.  插入 *帐户* 的名称，请注意，此字段仅接受数字和小写字母。
 
-    2.  对于 *部署模型*，选择 " **资源管理器**"。
+    2.  对于 *"部署模型"，* 请选择 **"资源管理器"。**
 
-    3.  对于 " *帐户类型*"，请选择 " **存储 (常规用途 v1)**。
+    3.  对于 *"帐户类型***"，存储 (常规用途 v1) 。**
 
-    4.  如果要创建新的资源组) ，请确定资源组 (的 *位置* 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。
+    4.  如果要 *创建新的* 资源组组 (，请确定资源组) 。 理想情况下，位置将位于应用程序将运行的区域。 某些 Azure 资产仅在某些区域可用。
 
-    5.  对于 *复制* ，请选择 " **读取-访问-异地冗余存储" (GRS)**。
+    5.  对于 *"复制***"，请选择"读取访问异地冗余存储 (RA-GRS) "**。
 
     6.  对于“性能”，请选择“标准”。
 
-    7.  使 *安全传输* 保持 **禁用状态**。
+    7.  将 *"需要安全传输"* 保留为 **"已禁用"。**
 
     8.  选择一个“订阅”  。
 
-    9. 选择一个 *资源组* ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
+    9. 选择一 *个资源组* 或创建一个新资源组。 资源组提供了一种方法来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议将与单个项目关联的所有 Azure 服务 (例如，这些实验室) 位于公共资源组) 。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
+        > 若要详细了解 Azure 资源组，请访问 [资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
-    10. 还需要确认是否已了解应用于此服务的条款和条件。
+    10. 还需要确认你已了解适用于此服务的条款和条件。
 
-    11. 选择“创建”。
+    11. 选择“创建”。 
 
         ![输入服务信息](images/AzureLabs-Lab5-03.png)
 
-5.  单击 " **创建**" 后，需要等待创建服务，这可能需要一分钟时间。
+5.  单击"创建 **"** 后，必须等待服务创建完成，这可能需要一分钟。
 
-6.  创建服务实例后，门户中将显示一个通知。
+6.  创建服务实例后，门户中会显示一条通知。
 
-    ![azure 门户中的新通知](images/AzureLabs-Lab5-04.png)
+    ![Azure 门户中的新通知](images/AzureLabs-Lab5-04.png)
 
-7.  单击通知以浏览新服务实例。
+7.  单击通知以浏览新的服务实例。
 
-    ![中转到资源](images/AzureLabs-Lab5-05.png)
+    ![转到资源](images/AzureLabs-Lab5-05.png)
 
-8.  单击通知中的 " **中转到资源** " 按钮以浏览新服务实例。 你将转到新的 *存储帐户* 服务实例。
+8.  单击 **通知中的"** 转到资源"按钮，浏览新的服务实例。 你将使用新的帐户存储 *实例*。
 
     ![访问密钥](images/AzureLabs-Lab5-06.png)
 
-9.  单击 " *访问密钥*"，以显示此云服务的终结点。 使用 *记事本* 或类似的，复制其中一个密钥供以后使用。 另外，请记下 *连接字符串* 值，因为它将用于稍后将创建的 *azure 服务* 类中。
+9.  单击 *"访问* 密钥"以显示此云服务的终结点。 使用 *记事本* 或类似项复制密钥之一，供以后使用。 另请注意 *"连接字符串* "值，因为它将在稍后创建的 *AzureServices* 类中使用。
 
     ![复制连接字符串](images/AzureLabs-Lab5-07.png)
 
-## <a name="chapter-2---setting-up-an-azure-function"></a>第2章-设置 Azure 函数
+## <a name="chapter-2---setting-up-an-azure-function"></a>第 2 章 - 设置 Azure 函数
 
-现在，你将在 Azure 服务中编写 **azure** **函数** 。
+现在，你将在 **Azure** **服务中** 编写 Azure 函数。
 
-你可以使用 **Azure 函数** 对你在代码中使用经典函数执行的任何操作，区别在于，具有访问 Azure 帐户的凭据的任何应用程序都可以访问此函数。
+可以使用 Azure **函数** 执行几乎与在代码中对经典函数执行的任何操作，不同之处在于，具有用于访问 Azure 帐户的凭据的任何应用程序都可以访问此函数。
 
-若要创建 Azure 函数：
+若要创建 Azure 函数，请执行：
 
-1.  在 *Azure 门户* 中，单击左上角的 " **新建** "，搜索 " *Function App*"，然后单击 " **Enter**"。
+1.  在 *Azure 门户中*，单击 **左上角的"** 新建"，搜索"*函数应用*"，然后单击"**输入"。**
 
     ![创建函数应用](images/AzureLabs-Lab5-08.png)
 
     > [!NOTE]
-    > 在较新的门户中，可能已将 " **新建** " 一词替换为 " **创建资源**"。
+    > 在较 **新的** 门户中，"新建"一词可能已被替换为"创建资源"。
 
-2.  新页面将提供 *Azure Function App* 服务的说明。 在此提示符下，选择 " **创建** " 按钮以创建与此服务的关联。
+2.  新页面将提供 *Azure Function App 服务* 的说明。 在此提示的左下角， **选择"创建** "按钮，创建与此服务的关联。
 
     ![函数应用信息](images/AzureLabs-Lab5-09.png)
 
-3.  单击 " **创建**" 后：
+3.  单击"创建" **后**：
 
-    1.  提供 *应用名称*。 此处只允许使用字母和数字 (大写或小写) 。
+    1.  提供应用 *名称*。 此处只能使用字母和数字 (大写或小写字母) 。
 
-    2.  选择首选 *订阅*。
+    2.  选择 *首选订阅*。
 
-    3. 选择一个 *资源组* ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些实验室) 在常见资源组) 下。 
+    3. 选择一 *个资源组* 或创建一个新资源组。 资源组提供了一种方法来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议将与单个项目关联的所有 Azure 服务 (例如，这些实验室) 位于公共资源组) 。 
 
-        > 若要了解有关 Azure 资源组的详细信息，请 [访问资源组一文](/azure/azure-resource-manager/resource-group-portal)。
+        > 若要详细了解 Azure 资源组，请访问 [资源组一文](/azure/azure-resource-manager/resource-group-portal)。
 
-    4.  对于本练习，请选择 " *Windows* " 作为所选 **操作系统**。
+    4.  对于本练习 *，请选择Windows* OS 作为所选 **OS。**
 
-    5.  为 **托管计划** 选择 *消耗计划*。
+    5.  为 *"托管* 计划 **"选择"消耗计划"。**
 
-    6.  如果要创建新的资源组) ，请确定资源组 (的 *位置* 。 此位置理想情况下会在应用程序运行所在的区域中。 某些 Azure 资产仅在特定区域提供。 为了获得最佳性能，请选择与存储帐户相同的区域。
+    6.  如果要 *创建新的* 资源组组 (，请确定资源组) 。 理想情况下，位置将位于应用程序将运行的区域。 某些 Azure 资产仅在某些区域可用。 为获得最佳性能，请选择与存储帐户相同的区域。
 
-    7.  对于 " *存储*"，请选择 " **使用现有**"，然后使用下拉菜单查找先前创建的存储。
+    7.  对于 *存储，* 请选择"**使用现有**"，然后使用下拉菜单找到以前创建的存储。
 
-    8.  对于本练习，请退出 *Application Insights* 。
+    8.  对于 *本Insights，* 请让"应用程序"保持关闭状态。
 
         ![输入函数应用详细信息](images/AzureLabs-Lab5-10.png)
 
-4.  单击“创建”  按钮。
+4.  单击“创建”按钮。
 
-5.  单击 " **创建**" 后，需要等待创建服务，这可能需要一分钟时间。
+5.  单击"创建 **"** 后，必须等待服务创建完成，这可能需要一分钟。
 
-6.  创建服务实例后，门户中将显示一个通知。
+6.  创建服务实例后，门户中会显示一条通知。
 
-    ![新的 azure 门户通知](images/AzureLabs-Lab5-11.png)
+    ![新的 Azure 门户通知](images/AzureLabs-Lab5-11.png)
 
-7.  单击通知以浏览新服务实例。 
+7.  单击通知以浏览新的服务实例。 
 
-    ![中转到资源函数应用](images/AzureLabs-Lab5-12.png)
+    ![转到资源函数应用](images/AzureLabs-Lab5-12.png)
 
-8.  单击通知中的 " **中转到资源** " 按钮以浏览新服务实例。 你将转到新的 *Function App* 服务实例。
+8.  单击 **通知中的"** 转到资源&quot;按钮，浏览新的服务实例。 你将被带至新的 *Function App 服务* 实例。
 
-9.  在 " *Function App* " 仪表板上，将鼠标悬停在左侧面板中的 " *函数*" 上方，并单击 **+ (加号)** 符号。
+9.  在 *&quot;函数应用&quot;* 仪表板上，将鼠标悬停在左侧面板中的&quot;函数&quot;上，然后单击 **&quot;+ (")** 符号。
 
     ![创建新函数](images/AzureLabs-Lab5-13.png)
 
-10. 在下一页上，确保已选择 " **Webhook + API** "，对于 *"选择语言"，* 请选择 " **CSharp**"，因为这将是本教程中使用的语言。 最后，单击 " **创建此函数** " 按钮。
+10. 下一页上，确保 **已选择"Webhook + API"，** 对于"选择语言"，请选择 **"CSharp"，** 因为这将是本教程使用的语言。  最后，单击" **创建此函数"** 按钮。
 
-    ![选择 web 挂钩 csharp](images/AzureLabs-Lab5-14.png)
+    ![选择 Web hook csharp](images/AzureLabs-Lab5-14.png)
 
-11. 应将 run.csx) 的代码页转到代码 (页，如果不是，则在左侧面板的 "函数" 列表中，单击新创建的函数。
+11. 应会访问 run.csx (的代码页，) ，请单击左侧面板中"函数"列表中的新创建函数。
 
     ![打开新函数](images/AzureLabs-Lab5-15.png)
 
-12. 将以下代码复制到函数中。 调用时，此函数将只返回0到2之间的随机整数。 不要担心现有代码，可以随意将其粘贴到其顶部。
+12. 将以下代码复制到函数中。 调用时，此函数将仅返回介于 0 和 2 之间的随机整数。 不必担心现有代码，可随意将其粘贴到顶部。
 
     ```csharp
         using System.Net;
@@ -225,107 +225,107 @@ ms.locfileid: "104730544"
         }
     ```
 
-13. 选择“保存”  。
+13. 选择“保存”。
 
-14. 结果应类似于下图。
+14. 结果应如下图所示。
 
-15. 单击 " **获取函数 URL** " 并记下显示的 *终结点* 。 你将需要将其插入到你稍后将在本课程中创建的 *azure 服务* 类中。
+15. 单击" **获取函数 URL"** 并记下 *显示的* 终结点。 需要将其插入到本课程稍后将创建的 *AzureServices* 类中。
 
     ![获取函数终结点](images/AzureLabs-Lab5-16.png)
 
     ![插入函数终结点](images/AzureLabs-Lab5-16-5.png)
 
-## <a name="chapter-3---setting-up-the-unity-project"></a>第3章-设置 Unity 项目
+## <a name="chapter-3---setting-up-the-unity-project"></a>第 3 章 - 设置 Unity 项目
 
-下面是用于使用混合现实进行开发的典型设置，因此，这是其他项目的一个不错的模板。
+以下是使用混合现实进行开发的典型设置，因此，是其他项目的良好模板。
 
-设置并测试混合现实沉浸式耳机。
+设置并测试混合现实沉浸式头戴显示设备。
 
 > [!NOTE]
-> 本课程 **不** 需要移动控制器。 如果需要支持设置沉浸式耳机，请 [访问混合现实设置一文](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)。
+> 本课程 **不需要** 运动控制器。 如果需要支持设置沉浸式头戴显示设备，请访问 [混合现实设置文章](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)。
 
-1.  打开 Unity，并单击 " **新建**"。
+1.  打开 Unity，然后单击"新建 **"。**
 
-    ![创建新的 unity 项目](images/AzureLabs-Lab5-17.png)
+    ![创建新的 Unity 项目](images/AzureLabs-Lab5-17.png)
 
-2.  现在需要提供 Unity 项目名称。 插入 **MR_Azure_Functions**。 请确保 "项目类型" 设置为 " **3d**"。 将位置设置为合适的 *位置* (记住，更接近根目录) 。 然后单击 " **创建项目**"。
+2.  现在需要提供 Unity Project名称。 插入 **MR_Azure_Functions**。 确保项目类型设置为 **3D**。 将" *位置* "设置为适合你记住 (，越靠近根目录越好) 。 然后单击"创建 **项目"。**
 
-    ![为新的 unity 项目命名](images/AzureLabs-Lab5-18.png)
+    ![为新的 Unity 项目命名](images/AzureLabs-Lab5-18.png)
 
-3.  当 Unity 处于打开状态时，有必要选中 "默认 **脚本编辑器** " 设置为 " **Visual Studio**"。 转到 "**编辑**  >  **首选项**"，然后在新窗口中导航到 "**外部工具**"。 将 **外部脚本编辑器** 更改为 **Visual Studio 2017**。 关闭 " **首选项** " 窗口。
+3.  打开 Unity 后，值得检查 **默认脚本编辑器** 是否设置为 **Visual Studio。** 转到"**编辑**  >  **首选项"，** 然后从新窗口导航到"**外部工具"。** 将 **"外部脚本编辑器"****更改为 Visual Studio 2017。** 关闭 **"首选项"** 窗口。
 
-    ![将 visual studio 设置为脚本编辑器](images/AzureLabs-Lab5-19.png)
+    ![将 Visual Studio 设置为脚本编辑器](images/AzureLabs-Lab5-19.png)
 
-4.  接下来，转到 "**文件**  >  **生成设置**"，并通过单击 "**切换平台**" 按钮将平台切换到 **通用 Windows 平台**。
+4.  接下来，单击"切换设置"按钮，转到"文件生成"Windows"平台"，将平台切换到"通用  >  **平台**"。 
 
     ![将平台切换到 uwp](images/AzureLabs-Lab5-20.png)
 
-5.  中转到 "**文件**" "  >  **生成设置**"，并确保：
+5.  转到 **"**  >  **文件生成设置** 并确保：
 
-    1. "**目标设备**" 设置为 "**任何设备**"。
+    1. **目标设备** 设置为"任何 **设备"。**
 
-        > 对于 Microsoft HoloLens，将 " **目标设备** " 设置为 " *hololens*"。
+        > 对于Microsoft HoloLens，将 **"目标设备"** 设置为 *HoloLens。*
 
     2. **生成类型** 设置为 **D3D**
 
-    3. **SDK** 设置为 "**最新安装**"
+    3. **SDK** 设置为"最新 **安装"**
 
-    4. **Visual Studio 版本** 设置为 "**最新安装**"
+    4. **Visual Studio版本** 设置为"最新 **安装"**
 
-    5. "**生成并运行**" 设置为 "**本地计算机**"
+    5. **"生成和运行** "设置为" **本地计算机"**
 
-    6. 保存场景并将其添加到生成中。
+    6. 保存场景并将其添加到生成。
 
-        1.  通过选择 " **添加打开的场景**" 来执行此操作。 将显示 "保存" 窗口。
+        1.  为此，选择"**添加打开的场景"。** 将显示保存窗口。
 
             ![添加打开的场景](images/AzureLabs-Lab5-21.png)
 
-        2.  为此创建新文件夹，并为将来的任何场景创建一个新文件夹，然后选择 " **新建文件夹** " 按钮以创建新文件夹，将其命名为 **场景**。
+        2.  为此和任何将来的场景创建新文件夹，然后选择"新建文件夹"按钮，以创建新文件夹，将其命名为 **"场景"。**
 
             ![创建场景文件夹](images/AzureLabs-Lab5-22.png)
 
-        3.  打开新创建的 **场景** 文件夹，然后在 "文件名 **：** 文本" 字段中，键入 **FunctionsScene**，然后按 " **保存**"。
+        3.  打开新创建的 **"场景**"文件夹，然后在"文件名 **：** 文本"字段中键入 **"FunctionsScene"，** 然后按"保存 **"。**
 
             ![保存函数场景](images/AzureLabs-Lab5-23.png)
 
-6.  现在，" **生成设置**" 中的其余设置应保留为默认值。
+6.  目前，"**生成设置中的** 其余设置应保留为默认值。
 
     ![保留默认生成设置](images/AzureLabs-Lab5-24.png)
 
-7.  在 " *生成设置* " 窗口中，单击 " **播放机设置** " 按钮，这会在 *检查器* 所在的空间中打开相关面板。
+7.  在"*生成设置* 窗口中，单击"播放器设置按钮，这将在 *检查* 器所在的空间中打开相关面板。
 
-    ![检查器中的播放机设置](images/AzureLabs-Lab5-25.png)
+    ![检查器中的播放器设置](images/AzureLabs-Lab5-25.png)
 
-8.  在此面板中，需要验证几项设置：
+8.  在此面板中，需要验证一些设置：
 
-    1.  在 " **其他设置** " 选项卡中：
+    1.  在"**其他设置** 选项卡中：
 
-        1.  **脚本运行时版本** 应 ( .Net 4.6 等效) **试验** ，这会触发重新启动编辑器的需要。
-        2.  **脚本编写后端** 应为 **.net**
-        3.  **API 兼容级别** 应为 **.net 4.6**
+        1.  **脚本运行时版本** 应为试验版 **(.NET** 4.6 等效) ，这将触发需要重启编辑器。
+        2.  **脚本后端应为** **.NET**
+        3.  **API 兼容性级别** 应为 **.NET 4.6**
 
-    2.  在 " **发布设置** " 选项卡的 " **功能**" 下，检查：
+    2.  在"**发布设置** 选项卡中的"**功能"下**，选中：
         
         -  **InternetClient**
 
             ![设置功能](images/AzureLabs-Lab5-26.png)
 
-    3.  在面板中，在 "**发布设置**") 下面 (找到的 **XR 设置** 中 **，请确保** 已添加 **Windows Mixed reality SDK** 。
+    3.  在面板的下方，在"发布 设置) "下找到的 **"XR** 设置 ("中，勾选"支持虚拟现实"，确保Windows Mixed Reality  **SDK。**
 
         ![设置 XR 设置](images/AzureLabs-Lab5-27.png)
 
-9.  返回 *生成设置* *Unity c # 项目* 不再灰显;勾选此的旁边的复选框。
+9.  返回到 *"生成设置* *Unity C#* 项目不再灰度;勾选此 旁边的复选框。
 
-    ![计时周期 c # 项目](images/AzureLabs-Lab5-28.png)
+    ![tick c# projects](images/AzureLabs-Lab5-28.png)
 
 10.  关闭“生成设置”窗口。
 
-11. 保存场景和项目 (**文件**  >  **保存场景/文件**  >  **保存项目**) 。
+11. 保存场景和Project (  >  **保存场景/文件**  >  **保存项目**) 。
 
-## <a name="chapter-4---setup-main-camera"></a>第4章-设置主摄像机
+## <a name="chapter-4---setup-main-camera"></a>第 4 章 - 设置主相机
 
 > [!IMPORTANT]
-> 如果要跳过 *Unity 设置* 本课程的组件，并继续直接进入代码，可以 [下载 unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)，并将其作为 [自定义包](https://docs.unity3d.com/Manual/AssetPackages.html)导入到项目中。 这还将包含下一章中的 Dll。 导入后，从 [第7章](#chapter-7---create-the-azureservices-class)继续。 
+> 如果要跳过 *Unity 设置* 本课程的组件，并继续直接编写代码，请随意下载 [此 .unitypackage，](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)并作为自定义包将其导入 [项目中](https://docs.unity3d.com/Manual/AssetPackages.html)。 这还将包含下一章中的 DLL。 导入后，从 [第7章](#chapter-7---create-the-azureservices-class)继续。 
 
 1.  在 " *层次结构" 面板* 中，你会看到一个名为 " **主相机**" 的对象，此对象表示你在应用程序中 "内部" 后的 "头" 点。
 
@@ -376,9 +376,9 @@ ms.locfileid: "104730544"
 
     ![平面的场景视图](images/AzureLabs-Lab5-33.png)
 
-3.  右键单击 " *层次结构" 面板* 的空白区域中的 " **三维对象**" 下的 "添加 **多维数据集**"。
+3.  右键单击 " *层次结构&quot; 面板* 的空白区域中的 &quot; **三维对象**&quot; 下的 &quot;添加 **多维数据集**&quot;。
 
-    1.  将多维数据集重命名为 **GazeButton** (选中多维数据集后，按 "F2" ) 。
+    1.  将多维数据集重命名为 **GazeButton** (选中多维数据集后，按 &quot;F2" ) 。
 
     2.  在 " *检查器" 面板* 中更改以下参数：
 
@@ -461,23 +461,23 @@ ms.locfileid: "104730544"
     ![场景视图中的文本网格](images/AzureLabs-Lab5-44.png)
 
 
-## <a name="chapter-6---import-azure-storage-for-unity"></a>第6章-导入适用于 Unity 的 Azure 存储
+## <a name="chapter-6---import-azure-storage-for-unity"></a>第6章-导入 Unity Azure 存储
 
-你将使用适用于 Unity (的 Azure 存储，该存储本身利用 .Net SDK for Azure) 。 有关详细信息，请参阅适用于 [Unity 的 Azure 存储一文](/sandbox/gamedev/unity/azure-storage-unity)。
+你将对 Unity 使用 Azure 存储， (这种自身利用 .net SDK for Azure) 。 有关详细信息，请参阅[Unity Azure 存储](/sandbox/gamedev/unity/azure-storage-unity)。
 
 当前 Unity 中存在一个已知问题，需要在导入后重新配置插件。 此部分中 (4-7 的这些步骤) 解决 bug 后不再需要这些步骤。
 
-若要将 SDK 导入到自己的项目中，请确保已从 GitHub 下载最新的 ["unitypackage"](https://aka.ms/azstorage-unitysdk)。 然后执行以下操作：
+若要将 SDK 导入到自己的项目中，请确保已从 GitHub 下载最新的["unitypackage"](https://aka.ms/azstorage-unitysdk)。 然后执行以下操作：
 
 1.  使用 "  **资产**  >  **导入包**  >  **自定义包**" 菜单选项将 unitypackage 文件添加到 Unity。
 
-2.  在弹出的 "**导入 Unity 包**" 框中，可以选择 "**插件**" "存储" 下的所有内容  >  。 取消选中所有其他内容，因为本课程不需要这样做。
+2.  在弹出的 "**导入 Unity 包**" 框中，可以选择 "**插件**" 存储下的所有内容  >  。 取消选中所有其他内容，因为本课程不需要这样做。
 
     ![导入到包](images/AzureLabs-Lab5-45.png)
 
 3.  单击 " **导入** " 按钮，将项添加到项目。
 
-4.  在 "项目" 视图中，在 "*插件*" 下，选择 "*存储*" 文件夹，并 *仅* 选择以下插件：
+4.  在 "*插件*" 下的 "*存储*" 文件夹中，在 "Project" 视图中，选择 "*仅* 以下插件"：
 
     -   Microsoft.Data.Edm
     -   Microsoft.Data.OData
@@ -494,13 +494,13 @@ ms.locfileid: "104730544"
     > [!NOTE]
     > 我们正在将这些特定插件标记为仅在 Unity 编辑器中使用。 这是因为在从 Unity 导出项目后，将使用 WSA 文件夹中的相同插件的不同版本。
 
-6.  在 *存储* 插件文件夹中，只选择：
+6.  在 *存储* 插件 "文件夹中，选择" 仅限 "：
 
     -   Microsoft.Data.Services.Client
 
         ![为 dll 设置不处理](images/AzureLabs-Lab5-48.png)
 
-7.  选中 "*平台设置*" 下的 "**不处理**" 框，并单击 "**应用**"。
+7.  选中 "*平台设置* 下的"**不处理**"框，然后单击"**应用**"。
 
     ![不应用处理](images/AzureLabs-Lab5-49.png)
 
@@ -517,11 +517,11 @@ ms.locfileid: "104730544"
 
 -   调用 Azure 应用函数。
 
--   在 Azure 云存储中上传和下载数据文件。
+-   在 Azure 云中存储上传和下载数据文件。
 
 若要创建此类：
 
-1.  右键单击 "*资产*" 文件夹，该文件夹位于 "项目" 面板中的 "**创建**  >  **文件夹**"。 命名文件夹 **脚本**。
+1.  右键单击 "*资产*" 文件夹，该文件夹位于 "Project" 面板中的 "**创建**  >  **文件夹**"。 命名文件夹 **脚本**。
 
     ![创建新文件夹](images/AzureLabs-Lab5-50.png)
 
@@ -531,7 +531,7 @@ ms.locfileid: "104730544"
 
 3.  右键单击文件夹内的 "**创建**  >  **c # 脚本**"。 调用脚本 *azure 服务*。
 
-4.  双击新的 *azure 服务* 类以通过 *Visual Studio* 打开它。
+4.  双击新的 *azure 服务* 类，以 *Visual Studio* 打开它。
 
 5.  将以下命名空间添加到 *azure 服务* 的顶部：
 
@@ -653,7 +653,7 @@ ms.locfileid: "104730544"
 
 ## <a name="chapter-8---create-the-shapefactory-class"></a>第8章-创建 ShapeFactory 类
 
-要创建的下一个脚本是 *ShapeFactory* 类。 此类的作用是在请求时创建一个新的形状，并保存在 *形状历史记录列表* 中创建的形状的历史记录。 每次创建形状时，都将在 *new-azureservice* 类中更新 *形状历史记录列表*，然后将其存储在 *Azure 存储* 中。 当应用程序启动时，如果在 *Azure 存储* 中找到存储的文件，则将检索和重播 *形状历史记录列表* ，其中包含的 **3d 文本** 对象用于提供生成的形状是来自存储还是新的。
+要创建的下一个脚本是 *ShapeFactory* 类。 此类的作用是在请求时创建一个新的形状，并保存在 *形状历史记录列表* 中创建的形状的历史记录。 每次创建形状时，都将在 *new-azureservice* 类中更新 *形状历史记录列表*，然后将其存储在 *Azure 存储* 中。 当应用程序启动时，如果在您的 *Azure 存储* 中找到存储文件，则将检索和重播 *形状历史记录列表*，其中包含提供生成的形状是来自存储还是新的 **3d 文本** 对象。
 
 若要创建此类：
 
@@ -661,7 +661,7 @@ ms.locfileid: "104730544"
 
 2.  右键单击文件夹内的 "**创建**  >  **c # 脚本**"。 调用脚本 *ShapeFactory*。
 
-3.  双击新的 *ShapeFactory* 脚本以通过 *Visual Studio* 打开它。
+3.  双击新的 " *ShapeFactory* " 脚本，用 *Visual Studio* 打开它。
 
 4.  确保 *ShapeFactory* 类包含以下命名空间：
 
@@ -751,7 +751,7 @@ ms.locfileid: "104730544"
         }
     ```
 
-7.  在返回到 Unity 之前，请务必保存 Visual Studio 中所做的更改。
+7.  返回到 Unity 之前，请务必在 Visual Studio 中保存所做的更改。
 
 8.  返回 Unity 编辑器，单击 "**脚本**" 文件夹中的 *ShapeFactory* 类并将其拖到 "*层次结构" 面板* 中的 **主相机** 对象。
 
@@ -769,9 +769,9 @@ ms.locfileid: "104730544"
 
 1.  中转到前面创建的 " **脚本** " 文件夹。
 
-2.  右键单击 "项目" 面板中的 "**创建**  >  **c # 脚本**"。 调用脚本 *注视*。
+2.  右键单击 "Project" 面板中的 "**创建**  >  **c # 脚本**"。 调用脚本 *注视*。
 
-3.  双击新的 "*注视*" 脚本以通过 *Visual Studio* 打开它。
+3.  双击新的 "*注视*" 脚本，用 Visual Studio 打开它 *。*
 
 4.  确保脚本顶部包含以下命名空间：
 
@@ -1027,7 +1027,7 @@ ms.locfileid: "104730544"
         }
     ```
 
-10.  在返回到 Unity 之前，在 Visual Studio 中保存更改。
+10.  在返回到 Unity 之前，请将所做的更改保存在 Visual Studio 中。
 
 11.  单击 "脚本" 文件夹中的 "*注视*" 类并将其拖到 "*层次结构" 面板* 中的 **主相机** 对象。
 
@@ -1039,7 +1039,7 @@ ms.locfileid: "104730544"
 
     > 此方法还会检查是否存在包含形状列表的以前存储的文件。
     >
-    > **如果找到该文件**，它将禁用用户 *注视*，并根据形状模式（存储在 **Azure 存储文件** 中）触发形状创建。 用户可以查看此内容，因为 **文本网格** 会根据形状原点提供显示 "存储" 或 "新建"。
+    > **如果找到该文件**，它将禁用用户 *注视*，并根据形状的模式（在 **Azure 存储文件** 中存储）触发形状创建。 用户可以查看此内容，因为 **文本网格** 会提供 "存储" 或 "新建"，具体取决于形状原点。
     >
     > **如果找不到文件**，它将启用 *注视*，使用户能够在查看场景中的 **GazeButton** 对象时创建形状。
 
@@ -1144,7 +1144,7 @@ ms.locfileid: "104730544"
         }
     ```
 
-4.  添加一个方法来创建字符串，方法是连接形状历史记录列表中存储的整数，并将其保存在 *Azure 存储文件* 中。
+4.  添加一个方法来创建字符串，方法是连接形状历史记录列表中存储的整数，然后将其保存到 *Azure 存储文件* 中。
 
     ```csharp
         /// <summary>
@@ -1159,7 +1159,7 @@ ms.locfileid: "104730544"
         }
     ```
 
-5.  添加一个方法，用于检索存储在位于 *Azure 存储文件文件* 中的文件中的文本，并将其 *反序列化为* 列表。
+5.  添加一个方法，用于检索存储在位于 *Azure 存储文件* 中的文件中的文本，并将其 *反序列化为* 列表。
 
 6.  完成此过程后，该方法将重新启用注视，使用户可以将更多形状添加到场景中。
 
@@ -1193,13 +1193,13 @@ ms.locfileid: "104730544"
         }
     ```
 
-7.  在返回到 Unity 之前，在 Visual Studio 中保存更改。
+7.  在返回到 Unity 之前，请将所做的更改保存在 Visual Studio 中。
 
 ## <a name="chapter-11---build-the-uwp-solution"></a>第11章-构建 UWP 解决方案
 
 开始生成过程：
 
-1.  中转到 "**文件**  >  **生成设置**"。
+1.  请参阅 **文件**  >  **生成设置**。
 
     ![构建应用程序](images/AzureLabs-Lab5-54.png)
 
@@ -1213,15 +1213,15 @@ ms.locfileid: "104730544"
 
 若要部署应用程序：
 
-1.  导航到在 [上一章](#chapter-11---build-the-uwp-solution)中创建的 *应用* 文件夹。 你将看到一个文件，其中包含你的应用程序名称，其中包含 ".sln" 扩展名，你应该双击该文件，以便在 *Visual Studio* 中将其打开。
+1.  导航到在 [上一章](#chapter-11---build-the-uwp-solution)中创建的 *应用* 文件夹。 你将看到一个文件，其中包含你的应用程序的名称，扩展名为 ".sln"，因此，要在 *Visual Studio* 中打开它。
 
 2.  在 **解决方案平台** 中，选择 " **X86，本地计算机**"。
 
 3.  在 **解决方案配置** 中，选择 " **调试**"。
 
     > 对于 Microsoft HoloLens，你可能会发现将其设置为 *远程计算机* 会更容易，因此你不会受限到计算机上。 不过，还需要执行以下操作：
-    > - 了解你的 HoloLens 的 **IP 地址**，该地址可在 "**设置**"  >  **网络 & Internet**  >  **wi-fi**  >  **高级选项**"中找到; IPv4 是你应使用的地址。 
-    > - 确保 **开发人员模式** 已 **打开**;在 "**设置** 更新" 中找到  >    >  **开发人员**& 安全性。
+    > - 知道 HoloLens 的 **IP 地址**，该地址可以在 **设置**  >  **网络 & Internet**  >  **wi-fi**  >  **高级选项** 中找到; IPv4 是应使用的地址。 
+    > - 确保 **开发人员模式** 已 **打开**;**设置**  >  **更新 &**  >  **为开发人员提供** 安全性。
 
     ![部署解决方案](images/AzureLabs-Lab5-55.png)
 
@@ -1243,4 +1243,4 @@ ms.locfileid: "104730544"
 
 ### <a name="exercise-2"></a>练习 2
 
-创建一种方法来重新启动应用程序，而不必每次都重新打开它。 **加载场景** 是一种很好的起点。 完成此操作后，创建一种方法来清除 *Azure 存储* 中存储的列表，以便可以轻松地从应用重置。
+创建一种方法来重新启动应用程序，而不必每次都重新打开它。 **加载场景** 是一种很好的起点。 完成此操作后，创建一种方法来清除 *Azure 存储* 中存储的列表，以便可以轻松地从应用程序重置。

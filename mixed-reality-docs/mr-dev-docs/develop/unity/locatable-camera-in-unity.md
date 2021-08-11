@@ -1,48 +1,48 @@
 ---
-title: Unity 中的照片视频摄像机
-description: 了解如何捕获照片到文件或 Texture2D，如何捕获照片并与原始字节交互，以及如何捕获视频。
+title: Unity 中的照片/视频摄像头
+description: 了解如何将照片捕获到文件或 Texture2D、如何捕获照片以及与原始字节交互，以及如何捕获视频。
 author: keveleigh
 ms.author: v-hferrone
 ms.date: 03/21/2021
 ms.topic: article
-keywords: 照片，视频，hololens，照相机，unity，定位，PVC，照片视频摄像机，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，网络摄像机，照片捕获，视频捕获
-ms.openlocfilehash: 1cae796a793036ed59c1d0805df76cb8ac143027
-ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
+keywords: 照片， 视频， hololens， 相机， unity， 可定位， PVC， 照片视频相机， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， 网络摄像头， 照片捕获， 视频捕获
+ms.openlocfilehash: 4fdf895e6b2b7ed1fc051b45b07ce49052f8a95587178caddfc71a0cfd364eee
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105636209"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193501"
 ---
-# <a name="photo-video-camera-in-unity"></a>Unity 中的照片视频摄像机
+# <a name="photo-video-camera-in-unity"></a>Unity 中的照片/视频摄像头
 
 ## <a name="enabling-the-capability-for-camera-access"></a>启用相机访问功能
 
-必须为应用声明 "网络摄像机" 功能，才能使用 [相机](../platform-capabilities-and-apis/locatable-camera.md)。
+必须为应用声明"WebCam"功能，以使用 [相机](../platform-capabilities-and-apis/locatable-camera.md)。
 
-1. 在 Unity 编辑器中，导航到 "编辑 > 项目设置 > Player" 页，转到 "播放机" 设置。
-2. 选择 "Windows 应用商店" 选项卡
-3. 在 "发布设置 > 功能" 部分中，检查 **网络摄像机** 和 **麦克风** 功能
+1. 在 Unity 编辑器中，导航到"编辑播放器> Project 设置 >播放器设置"
+2. 选择"Windows Store"选项卡
+3. 在"发布设置 >功能"部分中，检查 **WebCam** 和 **麦克风** 功能
 
-照相机一次只能出现一次操作。 可以 `UnityEngine.XR.WSA.WebCam.Mode` 在 unity 2018 和更早版本中，或 `UnityEngine.Windows.WebCam.Mode` 在 unity 2019 及更高版本中检查相机当前所处的模式。 可用模式有照片、视频或无。
+一次只能对相机执行一个操作。 可以在 Unity 2018 及更早版本或 `UnityEngine.XR.WSA.WebCam.Mode` Unity 2019 及更高版本中检查相机当前 `UnityEngine.Windows.WebCam.Mode` 处于哪种模式。 可用模式包括照片、视频或无模式。
 
 ## <a name="photo-capture"></a>照片捕获
 
-**在 Unity 2019) 之前 (命名空间：** *UnityEngine。 XR*<br>
-**命名空间 (Unity 2019 和更高版本) ：** *UnityEngine*<br>
-**类型：** *PhotoCapture*
+**Unity 2019 (** 的命名空间) ：UnityEngine.XR.WSA.WebCam <br>
+**Unity (2019 及更高版本** 的命名空间) *UnityEngine.Windows。WebCam*<br>
+**类型***：PhotoCapture*
 
-*PhotoCapture* 类型允许你使用照片摄像机拍摄照片。 使用 *PhotoCapture* 拍摄照片的一般模式如下所示：
+*PhotoCapture* 类型允许使用照片相机拍摄静止照片。 使用 *PhotoCapture* 拍摄照片的一般模式如下：
 
 1. 创建 *PhotoCapture* 对象
-2. 使用所需的设置创建 *CameraParameters* 对象
-3. 通过 *StartPhotoModeAsync* 启动照片模式
-4. 拍摄所需照片
-    *  (可选) 与该图片交互
+2. 使用 *想要的设置创建 CameraParameters* 对象
+3. 通过 *StartPhotoModeAsync 启动照片模式*
+4. 拍摄想要的照片
+    *  (可选) "与图片交互"
 5. 停止照片模式并清理资源
 
-### <a name="common-set-up-for-photocapture"></a>常见的 PhotoCapture 设置
+### <a name="common-set-up-for-photocapture"></a>PhotoCapture 的常见设置
 
-对于所有这三个用途，请从上述前三个步骤开始
+对于这三种用途，请从上述前三个步骤开始
 
 首先创建 *PhotoCapture* 对象
 
@@ -53,7 +53,7 @@ private void Start()
 }
 ```
 
-接下来，存储对象、设置参数和启动照片模式
+接下来，存储对象、设置参数并启动照片模式
 
 ```cs
 private PhotoCapture photoCaptureObject = null;
@@ -74,7 +74,7 @@ void OnPhotoCaptureCreated(PhotoCapture captureObject)
 }
 ```
 
-最后，你还将使用此处提供的相同清理代码
+最后，还将使用此处介绍的相同清理代码
 
 ```cs
 void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
@@ -84,13 +84,13 @@ void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
 }
 ```
 
-完成这些步骤后，你可以选择要捕获哪种类型的照片。
+执行这些步骤后，可以选择要捕获的照片类型。
 
 ### <a name="capture-a-photo-to-a-file"></a>将照片捕获到文件
 
-最简单的操作是将照片直接捕获到文件中。 照片可以保存为 JPG 或 PNG。
+最简单的操作是直接将照片捕获到文件。 照片可以保存为 JPG 或 PNG。
 
-如果已成功启动照片模式，拍摄照片并将其存储在磁盘上
+如果成功启动照片模式，请拍摄照片，并存储在磁盘上
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -126,11 +126,11 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
 }
 ```
 
-### <a name="capture-a-photo-to-a-texture2d-with-location"></a>使用位置捕获照片到 Texture2D
+### <a name="capture-a-photo-to-a-texture2d-with-location"></a>将照片捕获到具有位置的 Texture2D
 
 将数据捕获到 Texture2D 时，该过程类似于捕获到磁盘。
 
-按照上面的设置过程进行操作。
+按照上述安装过程操作。
 
 在 *OnPhotoModeStarted* 中，将帧捕获到内存。
 
@@ -148,7 +148,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
 }
 ```
 
-然后，将结果应用到纹理，并使用上面的常见清理代码。
+然后，将结果应用于纹理，并使用上述常见清理代码。
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -169,7 +169,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 #### <a name="locatable-camera"></a>可定位相机
 
-若要在场景中放置此纹理并使用可定位相机矩阵显示它，请在检查中将以下代码添加到 *OnCapturedPhotoToMemory* `result.success` ：
+若要将此纹理放在场景中，然后使用可定位的相机矩阵显示它，请在检查中将以下代码添加到 *OnCapturedPhotoToMemory：* `result.success`
 
 ```cs
 if (photoCaptureFrame.hasLocationData)
@@ -183,13 +183,13 @@ if (photoCaptureFrame.hasLocationData)
 }
 ```
 
-[Unity 提供](https://forum.unity.com/threads/holographic-photo-blending-with-photocapture.416023/?_ga=2.57872105.210548785.1614215615-862490274.1597860099) 了在其论坛上向特定着色器应用投影矩阵的示例代码。
+[Unity 提供了示例代码](https://forum.unity.com/threads/holographic-photo-blending-with-photocapture.416023/?_ga=2.57872105.210548785.1614215615-862490274.1597860099) ，用于将投影矩阵应用到其论坛上的特定着色器。
 
 ### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>捕获照片并与原始字节交互
 
-若要与内存中帧的原始字节交互，请按照与在 Texture2D 中捕获 *照片时相同* 的设置步骤进行操作。 不同之处在于，可在 *OnCapturedPhotoToMemory* 中获取原始字节并与其进行交互。
+若要与内存中帧的原始字节进行交互，请遵循与上面和 *OnPhotoModeStarted* 相同的设置步骤，如将照片捕获到 Texture2D 中一样。 不同之处在于 *OnCapturedPhotoToMemory，* 可在其中获取原始字节并与之交互。
 
-在此示例中，你将创建 *一个 <Color> 列表*，以通过 SetPixels 进一步处理或应用于纹理 *()*
+本示例将创建一个 *列表 <Color>*，用于通过 *SetPixels* () 
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -224,20 +224,20 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ## <a name="video-capture"></a>视频视频
 
-**在 Unity 2019) 之前 (命名空间：** *UnityEngine。 XR*<br>
-**命名空间 (Unity 2019 和更高版本) ：** *UnityEngine*<br>
-**类型：** *VideoCapture*
+**Unity 2019 (** 的命名空间) ：UnityEngine.XR.WSA.WebCam <br>
+**Unity (2019 及更高版本** 的命名空间) *UnityEngine.Windows。WebCam*<br>
+**类型***：VideoCapture*
 
-*VideoCapture* 函数类似于 *PhotoCapture*。 唯一的两个不同之处在于，每秒必须指定帧数 (FPS) 值，并且只能将磁盘直接保存为..。 使用 *VideoCapture* 的步骤如下所示：
+*VideoCapture* 函数类似于 *PhotoCapture*。 唯一的两个区别是，必须指定每秒帧数 (FPS) 值，并且只能直接保存到磁盘作为.mp4文件。 使用 *VideoCapture* 的步骤如下所示：
 
 1. 创建 *VideoCapture* 对象
-2. 使用所需的设置创建 *CameraParameters* 对象
-3. 通过 *StartVideoModeAsync* 启动视频模式
+2. 使用 *想要的设置创建 CameraParameters* 对象
+3. 通过 *StartVideoModeAsync 启动视频模式*
 4. 开始录制视频
 5. 停止录制视频
 6. 停止视频模式并清理资源
 
-首先，创建 *VideoCapture* 对象 *VideoCapture m_VideoCapture = null;*
+首先创建 *VideoCapture* 对象 *VideoCapture m_VideoCapture = null;*
 
 ```cs
 void Start ()
@@ -246,7 +246,7 @@ void Start ()
 }
 ```
 
-接下来，设置要用于记录和启动的参数。
+接下来，设置记录时需要的参数并启动。
 
 ```cs
 void OnVideoCaptureCreated(VideoCapture videoCapture)
@@ -276,7 +276,7 @@ void OnVideoCaptureCreated(VideoCapture videoCapture)
 }
 ```
 
-启动后，开始记录
+开始后，开始录制
 
 ```cs
 void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
@@ -291,7 +291,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
 }
 ```
 
-记录开始后，你可以更新你的 UI 或行为以启用停止。 在这里，你只需记录。
+开始录制后，可以更新 UI 或行为以启用停止。 在这里，只需记录。
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -301,7 +301,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
 }
 ```
 
-稍后，你将需要使用计时器或用户输入来停止记录，例如。
+例如，稍后需要使用计时器或用户输入来停止录制。
 
 ```cs
 // The user has indicated to stop recording
@@ -311,7 +311,7 @@ void StopRecordingVideo()
 }
 ```
 
-录制停止后，停止视频模式并清理资源。
+停止录制后，停止视频模式并清理资源。
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -329,12 +329,12 @@ void OnStoppedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
 
 ## <a name="troubleshooting"></a>疑难解答
 
-* 无可用解决方案
-  * 确保在项目中指定了 **网络摄像机** 功能。
+* 没有可用的解决方法
+  * 确保在项目中指定 **WebCam** 功能。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
-如果遵循我们所说的 Unity 开发检查点旅程，就是探索混合现实平台功能和 Api。 从这里，你可以继续了解下一个主题：
+如果你遵循我们布局的 Unity 开发检查点旅程，则你正在探索混合现实平台功能和 API。 从这里，你可以继续了解下一个主题：
 
 > [!div class="nextstepaction"]
 > [焦点](focus-point-in-unity.md)
@@ -342,7 +342,7 @@ void OnStoppedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
 或直接跳到在设备或模拟器上部署应用：
 
 > [!div class="nextstepaction"]
-> [部署到 HoloLens 或 Windows Mixed Reality 沉浸式耳机](../platform-capabilities-and-apis/using-visual-studio.md)
+> [部署到HoloLens或Windows Mixed Reality沉浸式头戴显示设备](../platform-capabilities-and-apis/using-visual-studio.md)
 
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#3-advanced-features)。
 

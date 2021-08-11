@@ -1,28 +1,28 @@
 ---
 title: 在大型项目中使用 MRTK
-description: 使用技巧大型项目的 MRTK 使用者。
+description: 使用技巧使用大型项目的 MRTK 的使用者。
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, 混合现实, 开发, MRTK,
-ms.openlocfilehash: 28ba272a48b0a0c524185ac7114a09cf8e0e91f8
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 9547b6bdcf4c0f4bc179dd266b14c853c1bf81a7e6531d2e68ca2e26188424c8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177125"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196091"
 ---
 # <a name="using-mrtk-in-large-projects"></a>在大型项目中使用 MRTK
 
-本页包含一些有用的提示，供 MRTK 使用者使用，这些提示将其拉取到现有大型项目中，或设置一些将进行源代码管理且具有多个开发人员的新功能。
+此页面包含 MRTK 的使用者的一些有用提示，这些提示将其拉取到现有的大型项目中，或设置将受源代码管理并具有多个开发人员的新内容。
 
-*建议阅读以下所有指南，遵循这些指南有助于避免处理大型代码库时出现一些棘手问题*
+*建议阅读下面的所有准则，遵循这些准则有助于避免在处理更大的基本代码时遇到的一些棘手问题*
 
 ## <a name="gitignore"></a>gitignore
 
-以下 .gitignore 文件是使用 MRTK 时建议拉取的基础文件 - MRTK 的某些部分用于创建本地状态，源代码管理可以放心地忽略该状态，否则会脏掉本地 git 状态。
+使用 MRTK 时，建议使用以下 .gitignore 文件进行拉取： MRTK 中的某些部分创建可被源代码管理安全忽略的本地状态，这会导致本地 git 状态变脏。
 
-请注意，此操作的开头部分取自默认 github Unity .gitignore，稍后会添加特定于 MRTK 的 。 另请注意，其中一些规则假定某些路径，并且可以基于 MRTK 在项目中的位置进行修改。
+请注意，此部分的开头部分是从默认的 github Unity .gitignore 中获取的，稍后将添加特定于 MRTK 的添加。 另请注意，其中的某些规则假定特定路径，并且可以根据 MRTK 在项目中的位置进行修改。
 
 ```
 # This .gitignore file should be placed at the root of your Unity project directory
@@ -99,18 +99,18 @@ crashlytics-build.properties
 !/scripts/Packaging/NuGetRestoreProject.csproj
 ```
 
-## <a name="projectpreferencesasset-file"></a>ProjectPreferences.asset 文件
+## <a name="projectpreferencesasset-file"></a>ProjectPreferences 文件
 
-Project混合现实"位置的"编辑 -> Project 设置 ->"下找到Toolkit MRTK 设置。 这些设置将保存到"资产"文件夹中此位置的文件中：
+可在 > Project 设置 > 混合现实 Toolkit 位置下找到 Project 范围内的 MRTK 设置。 这些设置将保存到以下位置的 "资产" 文件夹中的文件：
 
 ```
 Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset
 ```
 
-如果项目将有多个协作者，建议在初始设置 MRTK 设置后签入此资产文件。 具体而言，请考虑选中 **以下设置**：
+如果你的项目将具有多个协作者，则建议在执行 MRTK 设置的初始设置后签入此资产文件。 特别是，请考虑 **检查以下设置**：
 
-**锁定 SDK 配置文件** - 如果禁用此选项，则默认 MRTK 配置文件将全局可编辑，这会使 MRTK 升级具有挑战性 (因为它可能会导致框架本身冲突) 
+**锁定 SDK 配置文件** -如果此功能处于禁用状态，则默认的 MRTK 配置文件将是全局可编辑的，这会使 MRTK 升级变得挑战性 (它可能会导致框架自身的合并冲突) 
 
-**忽略 MRTK 项目配置** 器 - 如果禁用此选项，则项目配置器将显示当前 MRTK 设置是否与 MRTK 建议的默认值不匹配。 由于项目可能明确选择不启用某些设置，因此选中此设置将阻止其他协作者无意中看到此对话框更改的设置。 这些设置应该由设置项目的人配置，然后由其他协作者忽略。
+**忽略 MRTK 项目配置** 器-如果禁用此项，则项目配置器会显示当前 MRTK 设置是否与 MRTK 推荐默认值不匹配。 由于你的项目可能已显式选择不启用某些设置，因此选中此设置将阻止其他协作者无意中看到更改的设置。 这些设置应由设置项目的人员配置，并被其他协作者忽略。
 
-自动 **启用 UWP** 功能 - 如果禁用此功能，某些功能 (例如，眼动跟踪) 在部署到设备时可能会以静默方式失败，因为 Unity 不会自动将所需的运行时功能添加到应用程序清单。 选中此设置将保护应用程序部署体验，防止此类问题。
+**自动启用 UWP 功能** -如果此功能处于禁用状态，则某些功能 (例如，目视跟踪) 在部署到设备时可能会以静默方式失败，因为 Unity 不会自动将所需的运行时功能添加到应用程序清单。 选中此设置可以保护应用程序的部署体验，从此类问题中解决。

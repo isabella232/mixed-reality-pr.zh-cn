@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 01/21/2021
 ms.topic: article
 keywords: vr， lbe， 基于位置的娱乐， vr 如果， 沉浸式， qr， qr 码， hololens2
-ms.openlocfilehash: 9d3a5d9696fbf875b2e6a890ed837efc055a9e6e
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: f6d2f224b9f477cf78ba4f0a5b6ce362f629d06988e966d71ed03bc48eda41d9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394331"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193704"
 ---
 # <a name="qr-code-tracking"></a>QR 码跟踪
 
@@ -32,13 +32,13 @@ HoloLens 2 可以检测头戴显示设备周围环境中的 QR 码，从而在�
 
 ## <a name="getting-the-qr-package"></a>获取 QR 包
 
-可在此处下载用于 QR 代码检测的 NuGet [包](https://nuget.org/Packages/Microsoft.MixedReality.QR)。
+可在此处下载NuGet QR 码检测的[包](https://nuget.org/Packages/Microsoft.MixedReality.QR)。
 
 ## <a name="using-openxr"></a>使用 OpenXR
 
 使用 OpenXR 插件时，从[ `SpatialGraphNodeId` QR API](../platform-capabilities-and-apis/qr-code-tracking.md#qr-api-reference)获取 ，并使用 `Microsoft.MixedReality.OpenXR.SpatialGraphNode` API 查找 QR 代码。
 
-有关参考，我们在 GitHub 上提供了一个[QR](https://github.com/yl-msft/QRTracking)跟踪示例项目，并详细介绍[ `SpatialGraphNode` 了 API](https://github.com/yl-msft/QRTracking/blob/main/SampleQRCodes/Assets/Scripts/SpatialGraphNodeTracker.cs)的用法说明。
+有关参考，我们提供了一个[QR](https://github.com/yl-msft/QRTracking)跟踪示例项目GitHub API 提供了更详细的用法[ `SpatialGraphNode` 说明](https://github.com/yl-msft/QRTracking/blob/main/SampleQRCodes/Assets/Scripts/SpatialGraphNodeTracker.cs)。
 
 ## <a name="detecting-qr-codes"></a>检测 QR 码
 
@@ -64,7 +64,7 @@ co_await QRCodeWatcher.RequestAccessAsync();
 
 ### <a name="detecting-qr-codes-in-unity"></a>在 Unity 中检测 QR 代码
 
-通过使用 [NuGet for Unity](https://github.com/GlitchEnzo/NuGetForUnity)安装 NuGet 包，可以在 Unity 中使用 QR 代码检测 API，而无需导入 MRTK。 若要了解工作原理，请下载 [示例 Unity 应用](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes)。 示例应用提供了在 QR 码和关联数据（例如 GUID、物理大小、时间戳和解码数据）上显示全息正方形的示例。
+可以在 Unity 中使用 QR 代码检测 API，而无需导入 MRTK，NuGet适用于 Unity 的 NuGet[包](https://github.com/GlitchEnzo/NuGetForUnity)。 若要了解工作原理，请下载 [示例 Unity 应用](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes)。 示例应用提供了在 QR 码和关联数据（例如 GUID、物理大小、时间戳和解码数据）上显示全息正方形的示例。
 
 ### <a name="detecting-qr-codes-in-c"></a>在 C++ 中检测 QR 代码
 
@@ -229,7 +229,7 @@ Windows Mixed Reality设备在驱动程序的系统级别检测 QR 码。 重新
 建议将应用配置为忽略超过特定时间戳的 QR 码。 目前，API 不支持清除 QR 代码历史记录。
 
 ### <a name="qr-code-placement-in-a-space"></a>QR 码在空间中的位置
-有关放置 QR 码的位置和位置的建议，请参阅 [HoloLens](/hololens/hololens-environment-considerations)的环境注意事项。
+有关 QR 代码的放置位置和放置位置的建议，请参阅适用于 HoloLens 的环境[注意事项](/hololens/hololens-environment-considerations)。
 
 ## <a name="qr-api-reference"></a>QR API 参考
 

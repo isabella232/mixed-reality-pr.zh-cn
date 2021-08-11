@@ -5,41 +5,41 @@ author: pbarnettms
 ms.author: pbarnett
 ms.date: 05/12/2020
 ms.topic: article
-keywords: HoloLens，模拟，测试
-ms.openlocfilehash: 64028c3a1ad58cecfebc93aee325b73c3a6a649a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+keywords: HoloLens、模拟、测试
+ms.openlocfilehash: 8d2999868bfdcf67c1174209566e67fe937005946ef82dd50337d9098c1e1971
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530394"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193763"
 ---
 # <a name="perception-simulation"></a>感知模拟
 
 是否要为应用生成自动测试？ 是否希望你的测试超出组件级别的单元测试，并真正运用端到端应用？ 感知模拟是你要查找的内容。 感知模拟库将人类和世界输入数据发送到你的应用，因此你可以自动执行测试。 例如，可以模拟查找特定的可重复位置的人工输入，然后使用笔势或运动控制器。
 
-感知模拟可以将此类模拟输入发送到物理 HoloLens，HoloLens 模拟器 (第一代) 、HoloLens 2 模拟器或安装有混合现实门户的 PC。 感知模拟会绕过混合现实设备上的实时传感器，并将模拟输入发送到设备上运行的应用程序。 应用程序通过它们始终使用的相同 Api 来接收这些输入事件，无法判断运行与感知模拟之间的差异。 认知模拟是将模拟输入发送到 HoloLens 虚拟机所使用的一种技术。
+感知模拟可以将此类模拟输入发送到物理 HoloLens、HoloLens 模拟器 (第一代) 、HoloLens 2 Emulator 或安装有混合现实门户的 PC。 感知模拟会绕过混合现实设备上的实时传感器，并将模拟输入发送到设备上运行的应用程序。 应用程序通过它们始终使用的相同 Api 来接收这些输入事件，无法判断运行与感知模拟之间的差异。 感知模拟是 HoloLens 模拟器用来向 HoloLens 虚拟机发送模拟输入的一种技术。
 
 若要开始在代码中使用模拟，请首先创建 IPerceptionSimulationManager 对象。 在该对象中，可以发出命令来控制模拟 "人体" 的属性，包括头位置、手形位置和手势。 还可以启用和操作运动控制器。
 
-## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>设置用于感知模拟的 Visual Studio 项目
+## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>设置用于感知模拟的 Visual Studio Project
 1. 在开发电脑上[安装 HoloLens 模拟器](../install-the-tools.md)。 模拟器包含用于感知模拟的库。
-2. 创建新的 Visual Studio c # 桌面项目 (控制台项目非常适合) 入门。
-3. 将以下二进制文件添加到项目中，作为 (项目->添加 >引用 ... ) 中的引用。可以在% ProgramFiles (x86) % \ Microsoft XDE \\ () 版本中找到它们，例如，为 HoloLens 2 模拟器% **ProgramFiles (x86) % \ microsoft XDE \\ 10.0.18362.0** 。   (注意：尽管二进制文件是 HoloLens 2 模拟器的一部分，但它们也适用于桌面上的 Windows Mixed Reality。 ) 。 用于感知模拟的 PerceptionSimulationManager.Interop.dll 托管 c # 包装。
-    b. 用于设置到 HoloLens 或仿真程序的 web 套接字通信通道的 PerceptionSimulationRest.dll 库。
+2.  (控制台创建新的 Visual Studio c # 桌面项目 Project 非常适合入门) 。
+3. 将以下二进制文件作为引用添加到你的项目中， (Project >>引用 ... ) 。可以在% ProgramFiles (x86) % \ microsoft XDE \\ () 版本中找到它们，如 () HoloLens 2 **x86 Emulator% \ microsoft XDE \\ 10.0.18362.0** 。   (注意：尽管二进制文件是 HoloLens 2 Emulator 的一部分，但它们也适用于桌面上的 Windows Mixed Reality。 ) 。 用于感知模拟的 PerceptionSimulationManager.Interop.dll 托管 c # 包装。
+    b. 用于设置到 HoloLens 或仿真程序的 web 套接字通信通道 PerceptionSimulationRest.dll 库。
     c. 用于模拟 SimulationStream.Interop.dll 共享的类型。
-4. 将实现二进制 PerceptionSimulationManager.dll 添加到项目 a。 首先将它作为二进制添加到项目 (项目->添加 >的现有项 ... ) 。将其保存为链接，使其不会将其复制到项目源文件夹。 ![将 PerceptionSimulationManager.dll 作为链接 b 添加到项目 ](images/saveaslink.png) 。 然后，确保它在生成时复制到输出文件夹。 这位于二进制文件的属性表中。 ![将 PerceptionSimulationManager.dll 标记为复制到输出目录](images/copyalways.png)
+4. 将实现二进制 PerceptionSimulationManager.dll 添加到项目 a。 首先，将其作为二进制文件添加到项目中， (Project >>"现有项 ..." ) 。将其保存为链接，使其不会将其复制到项目源文件夹。 ![将 PerceptionSimulationManager.dll 作为链接 b 添加到项目 ](images/saveaslink.png) 。 然后，确保它在生成时复制到输出文件夹。 这位于二进制文件的属性表中。 ![将 PerceptionSimulationManager.dll 标记为复制到输出目录](images/copyalways.png)
 5. 将活动解决方案平台设置为 x64。   (使用 Configuration Manager 为 x64 创建平台项（如果尚不存在）。 ) 
 
 ## <a name="creating-an-iperceptionsimulation-manager-object"></a>创建 IPerceptionSimulation Manager 对象
 
 若要控制模拟，你将对从 IPerceptionSimulationManager 对象检索到的对象进行更新。 第一步是获取该对象，并将其连接到目标设备或仿真程序。 可以通过单击[工具栏](using-the-hololens-emulator.md)中的 "设备门户" 按钮来获取仿真程序的 IP 地址。
 
-![打开设备门户图标 ](images/emulator-deviceportal.png) **打开设备门户**：在模拟器中打开用于 HoloLens OS 的 Windows 设备门户。  对于 Windows Mixed Reality，可以在 "设置" 应用程序中的 "更新 & 安全性" 下检索此项，然后在 "启用设备门户" 下的 "连接使用：" 部分中的 "开发人员"。  请务必记下 IP 地址和端口。
+![打开设备门户图标 ](images/emulator-deviceportal.png) **打开设备门户**：在模拟器中打开 HoloLens OS 的 Windows 设备门户。  对于 Windows Mixed Reality，可以在 "更新 & 安全性" 下的设置应用程序中检索此项，然后在 "启用设备门户" 下 "连接 using：" 部分中的 "开发人员"。  请务必记下 IP 地址和端口。
 
-首先，调用 RestSimulationStreamSink 来获取 RestSimulationStreamSink 对象。 这是你将通过 http 连接控制的目标设备或仿真程序。 命令将传递到设备或模拟器上运行的 [Windows 设备门户](using-the-windows-device-portal.md) 并进行处理。 创建对象需要四个参数：
+首先，调用 RestSimulationStreamSink 来获取 RestSimulationStreamSink 对象。 这是你将通过 http 连接控制的目标设备或仿真程序。 你的命令将传递到设备或模拟器上运行[Windows 设备门户](using-the-windows-device-portal.md)并由其进行处理。 创建对象需要四个参数：
 * Uri uri-目标设备的 IP 地址 (例如，" https://123.123.123.123 " 或 " https://123.123.123.123:50080 " ) 
-* 系统 NetworkCredential 凭据-用于在目标设备或模拟器上连接到 [Windows 设备门户](using-the-windows-device-portal.md) 的用户名/密码。 如果是通过其本地地址连接到模拟器 (例如，168。*.*.* ) 在同一台计算机上，将接受任何凭据。
-* 布尔标准-对于普通优先级为 True，低优先级为 false。 通常，你需要将此值设置为 *true* ，以便测试方案允许你的测试进行控制。  仿真程序和 Windows Mixed Reality 模拟使用低优先级连接。  如果你的测试也使用低优先级连接，则最新建立的连接将处于控制之下。
+* 系统 NetworkCredential 凭据-用于连接到目标设备或模拟器上的[Windows 设备门户](using-the-windows-device-portal.md)的用户名/密码。 如果是通过其本地地址连接到模拟器 (例如，168。*.*.* ) 在同一台计算机上，将接受任何凭据。
+* 布尔标准-对于普通优先级为 True，低优先级为 false。 通常，你需要将此值设置为 *true* ，以便测试方案允许你的测试进行控制。  模拟器和 Windows Mixed Reality 模拟使用低优先级连接。  如果你的测试也使用低优先级连接，则最新建立的连接将处于控制之下。
 * CancellationToken 标记-用于取消异步操作的标记。
 
 其次，你将创建 IPerceptionSimulationManager。 这是用于控制模拟的对象。 还必须在异步方法中完成此操作。
@@ -218,8 +218,8 @@ namespace ConsoleApplication1
 
 ## <a name="note-on-6-dof-controllers"></a>DOF 控制器上的注意事项
 
-在模拟 DOF 控制器上调用方法的任何属性之前，必须激活控制器。  如果不这样做，将导致异常。  从 Windows 10 可能2019更新开始，可以通过将 ISimulatedSixDofController 对象的 Status 属性设置为 SimulatedSixDofControllerStatus，来安装和激活模拟的 DOF 控制器。
-在 Windows 10 2018 10 月版更新及更早版本中，必须先通过调用 \Windows\System32 文件夹中的 PerceptionSimulationDevice 工具单独安装模拟的 DOF 控制器。  此工具的用法如下所示：
+在模拟 DOF 控制器上调用方法的任何属性之前，必须激活控制器。  如果不这样做，将导致异常。  从 Windows 10 2019 年5月更新开始，可以通过将 ISimulatedSixDofController 对象的 Status 属性设置为 SimulatedSixDofControllerStatus，来安装和激活模拟 DOF 控制器。
+在 Windows 10 2018 年10月更新及更早版本中，必须先通过调用 \ Windows \System32 文件夹中的 PerceptionSimulationDevice 工具单独安装模拟 6 DOF 控制器。  此工具的用法如下所示：
 
 
 ```
@@ -243,7 +243,7 @@ namespace ConsoleApplication1
 
 该进程的退出代码将指示成功 (零返回值) 或 (非零返回值) 。  当使用 "q" 操作来查询控制器是否已安装时，如果未安装控制器，则返回值将为零 (0) 如果控制器已安装，则返回 (1) 。
 
-在 Windows 10 2018 10 月更新版或更早版本上删除控制器时，请先通过 API 将其状态设置为 Off，然后调用 PerceptionSimulationDevice 工具。
+删除 Windows 10 2018 年10月更新或更早版本上的控制器时，请先通过 API 将其状态设置为 Off，然后调用 PerceptionSimulationDevice 工具。
 
 必须以管理员身份运行此工具。
 
@@ -590,18 +590,18 @@ public struct Rotation3
 
 围绕 Z 轴旋转的滚动部分。
 
-**PerceptionSimulation (系统) 的 #ctor： single、system.object**
+**Microsoft.PerceptionSimulation.Rotation3.#ctor (System.Single，System.Single，System.Single)**
 
-构造一个新的 Rotation3。
+构造新的 Rotation3。
 
 参数
-* 螺距-旋转的螺距部分。
-* 偏航-旋转的偏航组件。
-* 滚动-旋转的滚动组件。
+* pitch - 旋转的间距部分。
+* yaw - 旋转的偏偏分量。
+* roll - 旋转的滚动组件。
 
-### <a name="microsoftperceptionsimulationsimulatedhandjointconfiguration"></a>PerceptionSimulation. SimulatedHandJointConfiguration
+### <a name="microsoftperceptionsimulationsimulatedhandjointconfiguration"></a>Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration
 
-描述模拟手上的接点配置。
+描述模拟手部联合的配置。
 
 ```
 public struct SimulatedHandJointConfiguration
@@ -612,22 +612,22 @@ public struct SimulatedHandJointConfiguration
 }
 ```
 
-**PerceptionSimulation. SimulatedHandJointConfiguration. 位置**
+**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.Position**
 
-接点的位置。
+联合的位置。
 
-**PerceptionSimulation. SimulatedHandJointConfiguration**
+**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.Rotation**
 
-接点的旋转。
+联合的旋转。
 
-**PerceptionSimulation. SimulatedHandJointConfiguration. TrackingAccuracy**
+**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.TrackingAccuracy**
 
 联合的跟踪准确性。
 
 
-### <a name="microsoftperceptionsimulationfrustum"></a>PerceptionSimulation
+### <a name="microsoftperceptionsimulationfrustum"></a>Microsoft.PerceptionSimulation.Frustum
 
-描述通常由相机使用的视图（如）。
+描述视图图面，如相机通常使用。
 
 ```
 public struct Frustum
@@ -639,25 +639,25 @@ public struct Frustum
 }
 ```
 
-**PerceptionSimulation。**
+**Microsoft.PerceptionSimulation.Frustum.Near**
 
-在锥上包含的最小距离。
+frustum 中包含的最小距离。
 
-**PerceptionSimulation. Far**
+**Microsoft.PerceptionSimulation.Frustum.Far**
 
-在锥中包含的最大距离。
+frustum 中包含的最大距离。
 
-**PerceptionSimulation. FieldOfView**
+**Microsoft.PerceptionSimulation.Frustum.FieldOfView**
 
-以弧度表示的（以弧度表示）的水平字段 (小于 PI) 。
+frustum 的水平视场（以弧度 (小于 PI) 。
 
-**PerceptionSimulation. AspectRatio**
+**Microsoft.PerceptionSimulation.Frustum.AspectRatio**
 
-视图的水平字段与视图的垂直字段的比率。
+视图水平字段与垂直视图字段的比率。
 
-### <a name="microsoftperceptionsimulationsimulateddisplayconfiguration"></a>PerceptionSimulation. SimulatedDisplayConfiguration
+### <a name="microsoftperceptionsimulationsimulateddisplayconfiguration"></a>Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration
 
-描述模拟耳机显示的配置。
+描述模拟头戴显示设备的配置。
 
 ```
 public struct SimulatedDisplayConfiguration
@@ -672,36 +672,36 @@ public struct SimulatedDisplayConfiguration
 }
 ```
 
-**PerceptionSimulation. SimulatedDisplayConfiguration. LeftEyePosition**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.LeftEyePosition**
 
-从头部中心到左边的转换是为了实现立体声渲染。
+从头部中心到左眼的转换，用于立体声渲染。
 
-**PerceptionSimulation. SimulatedDisplayConfiguration. LeftEyeRotation**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.LeftEyeRotation**
 
-用于立体声呈现的左侧方式的旋转。
+用于立体声渲染的左眼旋转。
 
-**PerceptionSimulation. SimulatedDisplayConfiguration. RightEyePosition**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.RightEyePosition**
 
-从头部中心到正确眼睛的转换是为了实现立体声渲染。
+从头部中心到右眼的转换，用于立体声渲染。
 
-**PerceptionSimulation. SimulatedDisplayConfiguration. RightEyeRotation**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.RightEyeRotation**
 
-为了实现立体声渲染，正确的眼睛旋转。
+用于立体声渲染的右眼旋转。
 
-**PerceptionSimulation. SimulatedDisplayConfiguration**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.Ipd**
 
-系统报告的 Ipd 值用于立体声渲染。
+系统出于立体声渲染目的报告的 Ipd 值。
 
-**PerceptionSimulation. SimulatedDisplayConfiguration. ApplyEyeTransforms**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.ApplyEyeTransforms**
 
-为左和右眼转换提供的值是否应视为有效且应用于正在运行的系统。
+为左眼和右眼转换提供的值是否被视为有效并应用于正在运行的系统。
 
-**PerceptionSimulation. SimulatedDisplayConfiguration. ApplyIpd**
+**Microsoft.PerceptionSimulation.SimulatedDisplayConfiguration.ApplyIpd**
 
-为 Ipd 提供的值是否应视为有效，并将其应用于正在运行的系统。
+为 Ipd 提供的值是否应当被视为有效并应用于正在运行的系统。
 
 
-### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>PerceptionSimulation. IPerceptionSimulationManager
+### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>Microsoft.PerceptionSimulation.IPerceptionSimulationManager
 
 用于生成用于控制设备的数据包的根。
 
@@ -714,21 +714,21 @@ public interface IPerceptionSimulationManager
 }
 ```
 
-**PerceptionSimulation. IPerceptionSimulationManager. 设备**
+**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Device**
 
-检索用于解释模拟人类和模拟世界的模拟设备对象。
+检索模拟设备对象，该对象解释模拟人类和模拟世界。
 
-**PerceptionSimulation. IPerceptionSimulationManager**
+**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Human**
 
-检索控制模拟人的对象。
+检索控制模拟人类的对象。
 
-**PerceptionSimulation. IPerceptionSimulationManager**
+**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Reset**
 
-将模拟重置为其默认状态。
+将模拟重置为默认状态。
 
-### <a name="microsoftperceptionsimulationisimulateddevice"></a>PerceptionSimulation. ISimulatedDevice
+### <a name="microsoftperceptionsimulationisimulateddevice"></a>Microsoft.PerceptionSimulation.ISimulatedDevice
 
-描述设备的接口，该设备解释模拟世界和模拟人类
+描述设备的接口，用于解释模拟世界和模拟人类
 
 ```
 public interface ISimulatedDevice
@@ -739,24 +739,24 @@ public interface ISimulatedDevice
 }
 ```
 
-**PerceptionSimulation. ISimulatedDevice. HeadTracker**
+**Microsoft.PerceptionSimulation.ISimulatedDevice.HeadTracker**
 
-从模拟设备检索 Head 跟踪器。
+从模拟设备检索头跟踪器。
 
-**PerceptionSimulation. ISimulatedDevice. HandTracker**
+**Microsoft.PerceptionSimulation.ISimulatedDevice.HandTracker**
 
-从模拟设备检索手动跟踪器。
+从模拟设备检索手部跟踪器。
 
-**PerceptionSimulation. ISimulatedDevice. SetSimulatedDeviceType (PerceptionSimulation)**
+**Microsoft.PerceptionSimulation.ISimulatedDevice.SetSimulatedDeviceType (Microsoft.PerceptionSimulation.SimulatedDeviceType)**
 
-设置模拟设备的属性，使其与所提供的设备类型相匹配。
+设置模拟设备的属性，以匹配所提供的设备类型。
 
 参数
-* 类型-新类型的模拟设备
+* type - 模拟设备的新类型
 
-### <a name="microsoftperceptionsimulationisimulateddevice2"></a>PerceptionSimulation. ISimulatedDevice2
+### <a name="microsoftperceptionsimulationisimulateddevice2"></a>Microsoft.PerceptionSimulation.ISimulatedDevice2
 
-可以通过将 ISimulatedDevice 转换为 ISimulatedDevice2 提供其他属性
+通过将 ISimulatedDevice 强制转换到 ISimulatedDevice2，可以使用其他属性
 
 ```
 public interface ISimulatedDevice2
@@ -767,17 +767,17 @@ public interface ISimulatedDevice2
 };
 ```
 
-**PerceptionSimulation. ISimulatedDevice2. IsUserPresent**
+**Microsoft.PerceptionSimulation.ISimulatedDevice2.IsUserPresent**
 
-检索或设置模拟人力是否正在积极地戴上耳机。
+检索或设置模拟人类是否正在主动戴着头戴显示设备。
 
-**PerceptionSimulation. ISimulatedDevice2. DisplayConfiguration**
+**Microsoft.PerceptionSimulation.ISimulatedDevice2.DisplayConfiguration**
 
-检索或设置模拟的显示的属性。
+检索或设置模拟显示的属性。
 
-### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>PerceptionSimulation. ISimulatedHeadTracker
+### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>Microsoft.PerceptionSimulation.ISimulatedHeadTracker
 
-描述模拟设备的部分的接口，该部分跟踪模拟人的头。
+描述模拟设备跟踪模拟人类头部的部分的接口。
 
 ```
 public interface ISimulatedHeadTracker
@@ -786,13 +786,13 @@ public interface ISimulatedHeadTracker
 };
 ```
 
-**PerceptionSimulation. ISimulatedHeadTracker. HeadTrackerMode**
+**Microsoft.PerceptionSimulation.ISimulatedHeadTracker.HeadTrackerMode**
 
-检索和设置当前 head 跟踪器模式。
+检索和设置当前头跟踪器模式。
 
-### <a name="microsoftperceptionsimulationisimulatedhandtracker"></a>PerceptionSimulation. ISimulatedHandTracker
+### <a name="microsoftperceptionsimulationisimulatedhandtracker"></a>Microsoft.PerceptionSimulation.ISimulatedHandTracker
 
-描述模拟设备的部分的接口，该部分跟踪模拟人的手
+描述模拟设备跟踪模拟人类手部部分的接口
 
 ```
 public interface ISimulatedHandTracker
@@ -805,29 +805,29 @@ public interface ISimulatedHandTracker
 }
 ```
 
-**PerceptionSimulation. ISimulatedHandTracker. WorldPosition**
+**Microsoft.PerceptionSimulation.ISimulatedHandTracker.WorldPosition**
 
-检索与世界相关的节点的位置（以米为单位）。
+检索节点相对于世界的位置（以米为单位）。
 
-**PerceptionSimulation. ISimulatedHandTracker. 位置**
+**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Position**
 
-检索和设置模拟手型跟踪器的位置（相对于打印头的中心）。
+检索并设置模拟手部跟踪器相对于头部中心的位置。
 
-**PerceptionSimulation. ISimulatedHandTracker**
+**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Pitch**
 
-检索和设置模拟手型跟踪器的下间距。
+检索并设置模拟手部跟踪器向下的间距。
 
-**PerceptionSimulation. ISimulatedHandTracker. FrustumIgnored**
+**Microsoft.PerceptionSimulation.ISimulatedHandTracker.FrustumIgnored**
 
-检索和设置是否忽略模拟手动跟踪器的 "截锥"。 如果忽略，则这两个指针始终可见。 当未被忽略时 (默认) 只是在 "手形跟踪器" 中的
+检索并设置是否忽略模拟手部跟踪器图面。 如果忽略，两手始终可见。 如果未 (，则) 指针仅在手部跟踪器图面内时可见。
 
-**PerceptionSimulation. ISimulatedHandTracker**
+**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Frustum**
 
-检索和设置用来确定是否对模拟手型跟踪器可见的被截锥属性。
+检索并设置用于确定手对模拟手部跟踪器是否可见的 frustum 属性。
 
-### <a name="microsoftperceptionsimulationisimulatedhuman"></a>PerceptionSimulation. ISimulatedHuman
+### <a name="microsoftperceptionsimulationisimulatedhuman"></a>Microsoft.PerceptionSimulation.ISimulatedHuman
 
-用于控制模拟人的顶级接口。
+用于控制模拟人类顶级接口。
 
 ```
 public interface ISimulatedHuman 
@@ -843,47 +843,47 @@ public interface ISimulatedHuman
 }
 ```
 
-**PerceptionSimulation. ISimulatedHuman. WorldPosition**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.WorldPosition**
 
-检索和设置与世界相关的节点的位置（以米为单位）。 此位置对应于人脚的中心点。
+检索并设置节点相对于世界的位置（以米为单位）。 该位置对应于位于人脚中心的点。
 
-**PerceptionSimulation. ISimulatedHuman。**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.Direction**
 
-检索和设置模拟人脸在世界中的方向。 0弧度朝下 Z 轴向下。 正弧度围绕 Y 轴顺时针旋转。
+检索并设置模拟人脸在世界上的方向。 0 弧度朝下负 Z 轴。 正弧度围绕 Y 轴顺时针旋转。
 
-**PerceptionSimulation. ISimulatedHuman**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.Height**
 
-检索和设置模拟人的高度（以米为单位）。
+检索并设置模拟人类的高度（以米为单位）。
 
-**PerceptionSimulation. ISimulatedHuman. LeftHand**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.LeftHand**
 
-检索模拟人的左侧。
+检索模拟人类左侧。
 
-**PerceptionSimulation. ISimulatedHuman. RightHand**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.RightHand**
 
-检索模拟人的右边。
+检索模拟人类右侧。
 
-**PerceptionSimulation. ISimulatedHuman**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.Head**
 
-检索模拟人的 head。
+检索模拟人类的头。
 
-**PerceptionSimulation (System.numerics.vector2) （ISimulatedHuman）**
+**Microsoft.PerceptionSimulation.ISimulatedHuman.Move (Microsoft.PerceptionSimulation.Vector3)**
 
-以米为单位移动模拟人工相对于其当前位置的位置。
-
-参数
-* 平移-要移动的转换，相对于当前位置。
-
-**PerceptionSimulation () 中的 ISimulatedHuman**
-
-围绕 Y 轴顺时针旋转模拟人工相对于其当前方向
+移动模拟人类相对于其当前位置（以米为单位）。
 
 参数
-* radians-绕 Y 轴旋转的量。
+* translation - 相对于当前位置要移动的翻译。
 
-### <a name="microsoftperceptionsimulationisimulatedhuman2"></a>PerceptionSimulation. ISimulatedHuman2
+**Microsoft.PerceptionSimulation.ISimulatedHuman.Rotate (System.Single)**
 
-可以通过将 ISimulatedHuman 转换为 ISimulatedHuman2 提供其他属性
+围绕 Y 轴顺时针旋转模拟人类相对于其当前方向
+
+参数
+* 弧度 - 围绕 Y 轴旋转的量。
+
+### <a name="microsoftperceptionsimulationisimulatedhuman2"></a>Microsoft.PerceptionSimulation.ISimulatedHuman2
+
+通过将 ISimulatedHuman 强制转换到 ISimulatedHuman2，可以使用其他属性
 
 ```
 public interface ISimulatedHuman2
@@ -894,18 +894,18 @@ public interface ISimulatedHuman2
 }
 ```
 
-**PerceptionSimulation. ISimulatedHuman2. LeftController**
+**Microsoft.PerceptionSimulation.ISimulatedHuman2.LeftController**
 
-检索左 6-DOF 控制器。
+检索左侧 6 DOF 控制器。
 
-**PerceptionSimulation. ISimulatedHuman2. RightController**
+**Microsoft.PerceptionSimulation.ISimulatedHuman2.RightController**
 
-检索正确的 DOF 控制器。
+检索正确的 6-DOF 控制器。
 
 
-### <a name="microsoftperceptionsimulationisimulatedhand"></a>PerceptionSimulation. ISimulatedHand
+### <a name="microsoftperceptionsimulationisimulatedhand"></a>Microsoft.PerceptionSimulation.ISimulatedHand
 
-描述模拟人类
+描述模拟人类手的界面
 
 ```
 public interface ISimulatedHand
@@ -920,43 +920,43 @@ public interface ISimulatedHand
 }
 ```
 
-**PerceptionSimulation. ISimulatedHand. WorldPosition**
+**Microsoft.PerceptionSimulation.ISimulatedHand.WorldPosition**
 
-检索与世界相关的节点的位置（以米为单位）。
+检索节点相对于世界的位置（以米为单位）。
 
-**PerceptionSimulation. ISimulatedHand. 位置**
+**Microsoft.PerceptionSimulation.ISimulatedHand.Position**
 
-检索和设置模拟手型相对于人类的位置（以米为单位）。
+检索并设置模拟手相对于人类的位置（以米为单位）。
 
-**PerceptionSimulation. ISimulatedHand. 已激活**
+**Microsoft.PerceptionSimulation.ISimulatedHand.Activated**
 
-检索和设置当前是否已激活该手型。
+检索并设置当前是否激活手部。
 
-**PerceptionSimulation. ISimulatedHand。**
+**Microsoft.PerceptionSimulation.ISimulatedHand.Visible**
 
-检索当前是否对 SimulatedDevice (可见，即，该手形是否位于 HandTracker) 检测到的位置。
+检索 Hand 当前是否对 SimulatedDevice (可见，即，手是否处于 HandTracker) 。
 
-**PerceptionSimulation. ISimulatedHand. Ensurevisible\**
+**Microsoft.PerceptionSimulation.ISimulatedHand.EnsureVisible**
 
-移动手使其对 SimulatedDevice 可见。
+移动手，使它对 SimulatedDevice 可见。
 
-**PerceptionSimulation (System.numerics.vector2) （ISimulatedHand）**
+**Microsoft.PerceptionSimulation.ISimulatedHand.Move (Microsoft.PerceptionSimulation.Vector3)**
 
-以米为单位移动模拟手型相对于其当前位置的位置。
-
-参数
-* 翻译-模拟手的平移量。
-
-**PerceptionSimulation. ISimulatedHand. PerformGesture (PerceptionSimulation)**
-
-使用模拟手执行手势。  只有在启用了该功能的情况，系统才会检测到它。
+移动模拟手相对于其当前位置的位置（以米为单位）。
 
 参数
-* 手势-要执行的手势。
+* translation - 要翻译模拟手的量。
 
-### <a name="microsoftperceptionsimulationisimulatedhand2"></a>PerceptionSimulation. ISimulatedHand2
+**Microsoft.PerceptionSimulation.ISimulatedHand.PerformGesture (Microsoft.PerceptionSimulation.SimulatedGesture)**
 
-可以通过将 ISimulatedHand 转换为 ISimulatedHand2 来获取其他属性。
+使用模拟手执行手势。  只有启用手部时，系统才能检测到它。
+
+参数
+* 笔势 - 要执行的操作笔势。
+
+### <a name="microsoftperceptionsimulationisimulatedhand2"></a>Microsoft.PerceptionSimulation.ISimulatedHand2
+
+通过强制将 ISimulatedHand 强制转换到 ISimulatedHand2，可以使用其他属性。
 ```
 public interface ISimulatedHand2
 {
@@ -965,13 +965,13 @@ public interface ISimulatedHand2
 }
 ```
 
-**PerceptionSimulation. ISimulatedHand2**
+**Microsoft.PerceptionSimulation.ISimulatedHand2.Orientation**
 
-检索或设置模拟手的旋转。  正弧度沿轴旋转时顺时针旋转。
+检索或设置模拟手的旋转。  沿轴查看时，正弧度沿顺时针旋转。
 
-### <a name="microsoftperceptionsimulationisimulatedhand3"></a>PerceptionSimulation. ISimulatedHand3
+### <a name="microsoftperceptionsimulationisimulatedhand3"></a>Microsoft.PerceptionSimulation.ISimulatedHand3
 
-可以通过将 ISimulatedHand 转换为 ISimulatedHand3 提供其他属性
+通过强制将 ISimulatedHand 强制转换到 ISimulatedHand3，可以使用其他属性
 ```
 public interface ISimulatedHand3
 {
@@ -982,22 +982,22 @@ public interface ISimulatedHand3
 }
 ```
 
-**PerceptionSimulation. ISimulatedHand3. GetJointConfiguration**
+**Microsoft.PerceptionSimulation.ISimulatedHand3.GetJointConfiguration**
 
-获取指定的联合的联合配置。
+获取指定联合的联合配置。
 
-**PerceptionSimulation. ISimulatedHand3. SetJointConfiguration**
+**Microsoft.PerceptionSimulation.ISimulatedHand3.SetJointConfiguration**
 
-设置指定的联合的联合配置。
+为指定的联合设置联合配置。
 
-**PerceptionSimulation. ISimulatedHand3. SetHandPose**
+**Microsoft.PerceptionSimulation.ISimulatedHand3.SetHandPose**
 
-使用可选的动画标志将手设置为已知姿势。  注意：动画效果不会立即反映其最终的联合配置。
+将手部设置为具有可选标志的已知姿势进行动画处理。  注意：进行动画处理不会立即反映其最终联合配置。
 
 
-### <a name="microsoftperceptionsimulationisimulatedhead"></a>PerceptionSimulation. ISimulatedHead
+### <a name="microsoftperceptionsimulationisimulatedhead"></a>Microsoft.PerceptionSimulation.ISimulatedHead
 
-描述模拟人的头的接口。
+描述模拟人类头部的接口。
 
 ```
 public interface ISimulatedHead
@@ -1009,28 +1009,28 @@ public interface ISimulatedHead
 }
 ```
 
-**PerceptionSimulation. ISimulatedHead. WorldPosition**
+**Microsoft.PerceptionSimulation.ISimulatedHead.WorldPosition**
 
-检索与世界相关的节点的位置（以米为单位）。
+检索节点相对于世界的位置（以米为单位）。
 
-**PerceptionSimulation. ISimulatedHead**
+**Microsoft.PerceptionSimulation.ISimulatedHead.Rotation**
 
-检索模拟头部的旋转。 正弧度沿轴旋转时顺时针旋转。
+检索模拟头部的旋转。 沿轴查看时，正弧度沿顺时针旋转。
 
-**PerceptionSimulation. ISimulatedHead**
+**Microsoft.PerceptionSimulation.ISimulatedHead.Diameter**
 
-检索模拟头直径。 此值用于确定 head 中心 (旋转点) 。
+检索模拟头部的孔。 此值用于确定头部的中心旋转点 (旋转) 。
 
-**PerceptionSimulation (Rotation3) （ISimulatedHead）**
+**Microsoft.PerceptionSimulation.ISimulatedHead.Rotate (Microsoft.PerceptionSimulation.Rotation3)**
 
-相对于当前旋转旋转模拟头。 正弧度沿轴旋转时顺时针旋转。
+相对于其当前旋转旋转模拟的头。 沿轴查看时，正弧度沿顺时针旋转。
 
 参数
-* 旋转-要旋转的量。
+* rotation - 要旋转的量。
 
-### <a name="microsoftperceptionsimulationisimulatedhead2"></a>PerceptionSimulation. ISimulatedHead2
+### <a name="microsoftperceptionsimulationisimulatedhead2"></a>Microsoft.PerceptionSimulation.ISimulatedHead2
 
-可以通过将 ISimulatedHead 转换为 ISimulatedHead2 提供其他属性
+通过强制将 ISimulatedHead 强制转换到 ISimulatedHead2，可以使用其他属性
 
 ```
 public interface ISimulatedHead2
@@ -1040,11 +1040,11 @@ public interface ISimulatedHead2
 }
 ```
 
-**PerceptionSimulation. ISimulatedHead2**
+**Microsoft.PerceptionSimulation.ISimulatedHead2.Eyes**
 
-检索模拟人的眼睛。
+检索模拟人类眼睛。
 
-### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller"></a>PerceptionSimulation. ISimulatedSixDofController
+### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller"></a>Microsoft.PerceptionSimulation.ISimulatedSixDofController
 
 描述与模拟人类关联的 6 DOF 控制器的接口。
 
@@ -1063,62 +1063,62 @@ public interface ISimulatedSixDofController
 }
 ```
 
-**PerceptionSimulation. ISimulatedSixDofController. WorldPosition**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.WorldPosition**
 
-检索与世界相关的节点的位置（以米为单位）。
+检索节点相对于世界的位置（以米为单位）。
 
-**PerceptionSimulation. ISimulatedSixDofController**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Status**
 
-检索或设置控制器的当前状态。  在移动、旋转或按下按钮的任何调用都将成功之前，控制器状态必须设置为 Off 以外的值。
+检索或设置控制器的当前状态。  控制器状态必须设置为"关闭"值，然后才能成功调用移动、旋转或按下按钮。
 
-**PerceptionSimulation. ISimulatedSixDofController. 位置**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Position**
 
 检索或设置模拟控制器相对于人类的位置（以米为单位）。
 
-**PerceptionSimulation. ISimulatedSixDofController**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Orientation**
 
 检索或设置模拟控制器的方向。
 
-**PerceptionSimulation (System.numerics.vector2) （ISimulatedSixDofController）**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Move (Microsoft.PerceptionSimulation.Vector3)**
 
 移动模拟控制器相对于其当前位置的位置（以米为单位）。
 
 参数
-* 翻译-模拟控制器的平移量。
+* translation - 要转换模拟控制器的数量。
 
-**PerceptionSimulation. ISimulatedSixDofController. PressButton (SimulatedSixDofControllerButton)**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.PressButton (SimulatedSixDofControllerButton)**
 
-按模拟控制器上的按钮。  仅当控制器已启用时，系统才会检测到该控制器。
-
-参数
-* 按钮-要按下的按钮。
-
-**PerceptionSimulation. ISimulatedSixDofController. ReleaseButton (SimulatedSixDofControllerButton)**
-
-释放模拟控制器上的按钮。  仅当控制器已启用时，系统才会检测到该控制器。
+按模拟控制器上的按钮。  只有启用控制器后，系统才能检测到它。
 
 参数
-* 按钮-要释放的按钮。
+* 按钮 - 要按下的按钮。
 
-**PerceptionSimulation. ISimulatedSixDofController. GetTouchpadPosition (out、out float)**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.ReleaseButton (SimulatedSixDofControllerButton)**
 
-获取模拟手指在模拟控制器的触摸板上的位置。
+释放模拟控制器上的按钮。  只有启用控制器后，系统才能检测到它。
 
 参数
-* x-手指的水平位置。
-* y-手指的垂直位置。
+* 按钮 - 要释放的按钮。
 
-**SetTouchpadPosition (float，float)**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.GetTouchpadPosition (float，out float)**
+
+获取模拟控制器触摸板上模拟手指的位置。
+
+参数
+* x - 手指的水平位置。
+* y - 手指的垂直位置。
+
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController.SetTouchpadPosition (float、float)**
 
 设置模拟手指在模拟控制器的触摸板上的位置。
 
 参数
-* x-手指的水平位置。
-* y-手指的垂直位置。
+* x - 手指的水平位置。
+* y - 手指的垂直位置。
 
-### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller2"></a>PerceptionSimulation. ISimulatedSixDofController2
+### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller2"></a>Microsoft.PerceptionSimulation.ISimulatedSixDofController2
 
-可以通过将 ISimulatedSixDofController 转换为 ISimulatedSixDofController2 来提供其他属性和方法。
+将 ISimulatedSixDofController 强制转换到 ISimulatedSixDofController2，可以使用其他属性和方法
 
 ```
 public interface ISimulatedSixDofController2
@@ -1130,30 +1130,30 @@ public interface ISimulatedSixDofController2
 }
 ```
 
-**PerceptionSimulation. ISimulatedSixDofController2. GetThumbstickPosition (out、out float)**
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.GetThumbstickPosition (float，out float)**
 
-获取模拟操纵杆在模拟控制器上的位置。
-
-参数
-* x-操纵杆的水平位置。
-* y-操纵杆的垂直位置。
-
-**SetThumbstickPosition (float，float)**
-
-设置模拟操纵杆在模拟控制器上的位置。
+获取模拟控制器上模拟指纹的位置。
 
 参数
-* x-操纵杆的水平位置。
-* y-操纵杆的垂直位置。
+* x - 滚动块的水平位置。
+* y - 滚动块的垂直位置。
+
+**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.SetThumbstickPosition (float、float)**
+
+设置模拟控制器上模拟指纹的位置。
+
+参数
+* x - 滚动块的水平位置。
+* y - 滚动块的垂直位置。
 
 **Microsoft.PerceptionSimulation.ISimulatedSixDofController2.BatteryLevel**
 
-检索或设置模拟控制器的电池电量级别。  该值必须大于0.0 且小于或等于100.0。
+检索或设置模拟控制器的电池电量。  该值必须大于 0.0 且小于或等于 100.0。
 
 
-### <a name="microsoftperceptionsimulationisimulatedeyes"></a>PerceptionSimulation. ISimulatedEyes
+### <a name="microsoftperceptionsimulationisimulatedeyes"></a>Microsoft.PerceptionSimulation.ISimulatedEyes
 
-描述模拟人力的眼睛的接口。
+描述模拟人类眼睛的界面。
 
 ```
 public interface ISimulatedEyes
@@ -1165,29 +1165,29 @@ public interface ISimulatedEyes
 }
 ```
 
-**PerceptionSimulation. ISimulatedEyes**
+**Microsoft.PerceptionSimulation.ISimulatedEyes.Rotation**
 
-检索模拟眼睛的旋转。 正弧度沿轴旋转时顺时针旋转。
+检索模拟眼睛的旋转。 沿轴查看时，正弧度沿顺时针旋转。
 
-**PerceptionSimulation (Rotation3) （ISimulatedEyes）**
+**Microsoft.PerceptionSimulation.ISimulatedEyes.Rotate (Microsoft.PerceptionSimulation.Rotation3)**
 
-相对于当前旋转旋转模拟眼睛。 正弧度沿轴旋转时顺时针旋转。
+相对于其当前旋转旋转模拟眼睛。 沿轴查看时，正弧度沿顺时针旋转。
 
 参数
-* 旋转-要旋转的量。
+* rotation - 要旋转的量。
 
-**PerceptionSimulation. ISimulatedEyes. CalibrationState**
+**Microsoft.PerceptionSimulation.ISimulatedEyes.CalibrationState**
 
 检索或设置模拟眼睛的校准状态。
 
-**PerceptionSimulation. ISimulatedEyes. WorldPosition**
+**Microsoft.PerceptionSimulation.ISimulatedEyes.WorldPosition**
 
-检索与世界相关的节点的位置（以米为单位）。
+检索节点相对于世界的位置（以米为单位）。
 
 
-### <a name="microsoftperceptionsimulationisimulationrecording"></a>PerceptionSimulation. ISimulationRecording
+### <a name="microsoftperceptionsimulationisimulationrecording"></a>Microsoft.PerceptionSimulation.ISimulationRecording
 
-用于与为播放加载的单个录制交互的接口。
+用于与加载用于播放的单个录制进行交互的接口。
 
 ```
 public interface ISimulationRecording
@@ -1201,36 +1201,36 @@ public interface ISimulationRecording
 };
 ```
 
-**PerceptionSimulation. ISimulationRecording**
+**Microsoft.PerceptionSimulation.ISimulationRecording.DataTypes**
 
-检索记录中数据类型的列表。
+检索记录中的数据类型列表。
 
-**PerceptionSimulation. ISimulationRecording**
+**Microsoft.PerceptionSimulation.ISimulationRecording.State**
 
-检索当前记录的状态。
+检索记录的当前状态。
 
-**PerceptionSimulation. ISimulationRecording**
+**Microsoft.PerceptionSimulation.ISimulationRecording.Play**
 
-开始播放。 如果记录已暂停，播放将从暂停位置恢复;如果停止，则将从开始处开始播放。 如果已播放，则忽略此调用。
+开始播放。 如果录制暂停，则播放会从暂停的位置恢复;如果停止，播放会从开头开始。 如果已在播放，则忽略此调用。
 
-**PerceptionSimulation. ISimulationRecording. 暂停**
+**Microsoft.PerceptionSimulation.ISimulationRecording.Pause**
 
-暂停播放当前位置。 如果记录已停止，则调用将被忽略。
+暂停当前位置的播放。 如果录制已停止，则忽略调用。
 
-**PerceptionSimulation () 中的 ISimulationRecording**
+**Microsoft.PerceptionSimulation.ISimulationRecording.Seek (System.UInt64)**
 
-将记录查找到指定时间 (以 100-纳秒为间隔，从开始) 到该位置暂停。 如果该时间超出了记录的结束时间，则会在最后一帧暂停该时间。
+以 100 纳秒 (以 100 纳秒为间隔查找到指定时间间隔的录制) 该位置暂停。 如果时间超出录制结束时间，则它会暂停到最后一帧。
 
 参数
-* 计时周期-要查找的时间。
+* 刻度 - 要查找的时间。
 
-**PerceptionSimulation. ISimulationRecording. Stop**
+**Microsoft.PerceptionSimulation.ISimulationRecording.Stop**
 
-停止播放并将位置重置为开始位置。
+停止播放，将位置重置为开头。
 
-### <a name="microsoftperceptionsimulationisimulationrecordingcallback"></a>PerceptionSimulation. ISimulationRecordingCallback
+### <a name="microsoftperceptionsimulationisimulationrecordingcallback"></a>Microsoft.PerceptionSimulation.ISimulationRecordingCallback
 
-用于在播放期间接收状态更改的接口。
+用于接收播放期间状态更改的接口。
 
 ```
 public interface ISimulationRecordingCallback
@@ -1239,14 +1239,14 @@ public interface ISimulationRecordingCallback
 };
 ```
 
-**PerceptionSimulation. ISimulationRecordingCallback. PlaybackStateChanged (PerceptionSimulation)**
+**Microsoft.PerceptionSimulation.ISimulationRecordingCallback.PlaybackStateChanged (Microsoft.PerceptionSimulation.PlaybackState)**
 
 当 ISimulationRecording 的播放状态发生更改时调用。
 
 参数
-* newState-记录的新状态。
+* newState - 记录的新状态。
 
-### <a name="microsoftperceptionsimulationperceptionsimulationmanager"></a>PerceptionSimulation. PerceptionSimulationManager
+### <a name="microsoftperceptionsimulationperceptionsimulationmanager"></a>Microsoft.PerceptionSimulation.PerceptionSimulationManager
 
 用于创建感知模拟对象的根对象。
 
@@ -1259,54 +1259,54 @@ public static class PerceptionSimulationManager
     public static ISimulationRecording LoadPerceptionSimulationRecording(string path, ISimulationStreamSinkFactory factory, ISimulationRecordingCallback callback);
 ```
 
-**PerceptionSimulation. PerceptionSimulationManager. CreatePerceptionSimulationManager (PerceptionSimulation)**
+**Microsoft.PerceptionSimulation.PerceptionSimulationManager.CreatePerceptionSimulationManager (Microsoft.PerceptionSimulation.ISimulationStreamSink)**
 
-针对生成模拟包并将其传送到所提供接收器的对象创建。
+在 对象上创建 ，用于生成模拟数据包，并传送它们到提供的接收器。
 
 参数
-* sink-接收所有生成的数据包的接收器。
+* sink - 将接收所有生成的数据包的接收器。
 
 返回值
 
 创建的管理器。
 
-**PerceptionSimulation. PerceptionSimulationManager. CreatePerceptionSimulationRecording ()**
+**Microsoft.PerceptionSimulation.PerceptionSimulationManager.CreatePerceptionSimulationRecording (System.String)**
 
-创建接收器，将所有接收的数据包存储在文件中的指定路径。
+创建接收器，该接收器将接收到的所有数据包存储在指定路径的文件中。
 
 参数
-* path-要创建的文件的路径。
+* path - 要创建的文件的路径。
 
 返回值
 
 创建的接收器。
 
-**PerceptionSimulation) LoadPerceptionSimulationRecording (PerceptionSimulation.. ISimulationStreamSinkFactory**
+**Microsoft.PerceptionSimulation.PerceptionSimulationManager.LoadPerceptionSimulationRecording (System.String，Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory)**
 
-从指定的文件加载记录。
+从指定文件加载记录。
 
 参数
-* path-要加载的文件的路径。
-* 工厂-记录用于在需要时创建 ISimulationStreamSink 的工厂。
+* path - 要加载的文件的路径。
+* factory - 记录用于创建 ISimulationStreamSink（如果需要）的工厂。
 
 返回值
 
 加载的记录。
 
-**LoadPerceptionSimulationRecording (PerceptionSimulation，PerceptionSimulation) ISimulationStreamSinkFactory，PerceptionSimulation，ISimulationRecordingCallback。的**
+**Microsoft.PerceptionSimulation.PerceptionSimulationManager.LoadPerceptionSimulationRecording (System.String，Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory，Microsoft.PerceptionSimulation.ISimulationRecordingCallback)**
 
-从指定的文件加载记录。
+从指定文件加载记录。
 
 参数
-* path-要加载的文件的路径。
-* 工厂-记录用于在需要时创建 ISimulationStreamSink 的工厂。
-* callback-回调，用于接收 regrading 记录状态的更新。
+* path - 要加载的文件的路径。
+* factory - 记录用于创建 ISimulationStreamSink（如果需要）的工厂。
+* callback - 一个回调，接收重新升级录制状态的更新。
 
 返回值
 
 加载的记录。
 
-### <a name="microsoftperceptionsimulationstreamdatatypes"></a>PerceptionSimulation. StreamDataTypes
+### <a name="microsoftperceptionsimulationstreamdatatypes"></a>Microsoft.PerceptionSimulation.StreamDataTypes
 
 描述不同类型的流数据。
 
@@ -1326,47 +1326,47 @@ public enum StreamDataTypes
 }
 ```
 
-**PerceptionSimulation. StreamDataTypes**
+**Microsoft.PerceptionSimulation.StreamDataTypes.None**
 
-用于指示没有流数据类型的 sentinel 值。
+用于指示无流数据类型的 sentinel 值。
 
-**PerceptionSimulation. StreamDataTypes**
+**Microsoft.PerceptionSimulation.StreamDataTypes.Head**
 
-数据流的位置和方向。
+头部位置和方向的数据流。
 
-**PerceptionSimulation. StreamDataTypes**
+**Microsoft.PerceptionSimulation.StreamDataTypes.Hands**
 
-用于指针位置和手势的数据流。
+手的位置和手势的数据流。
 
-**PerceptionSimulation. StreamDataTypes. SpatialMapping**
+**Microsoft.PerceptionSimulation.StreamDataTypes.SpatialMapping**
 
-环境的空间映射的数据流。
+用于环境的空间映射的数据流。
 
-**PerceptionSimulation. StreamDataTypes**
+**Microsoft.PerceptionSimulation.StreamDataTypes.Calibration**
 
-用于校准设备的数据流。 只有远程模式下的系统才会接受校准数据包。
+用于设备校准的数据流。 校准数据包仅由远程模式下的系统接受。
 
-**PerceptionSimulation. StreamDataTypes**
+**Microsoft.PerceptionSimulation.StreamDataTypes.Environment**
 
 设备环境的数据流。
 
-**PerceptionSimulation. StreamDataTypes. SixDofControllers**
+**Microsoft.PerceptionSimulation.StreamDataTypes.SixDofControllers**
 
 运动控制器的数据流。
 
-**PerceptionSimulation. StreamDataTypes**
+**Microsoft.PerceptionSimulation.StreamDataTypes.Eyes**
 
-具有模拟人力的眼睛的数据流。
+模拟人类眼睛的数据流。
 
-**PerceptionSimulation. StreamDataTypes. DisplayConfiguration**
+**Microsoft.PerceptionSimulation.StreamDataTypes.DisplayConfiguration**
 
-具有设备显示配置的数据流。
+具有设备的显示配置的数据流。
 
-**PerceptionSimulation. StreamDataTypes。**
+**Microsoft.PerceptionSimulation.StreamDataTypes.All**
 
-用于指示所有记录的数据类型的 sentinel 值。
+一个 sentinel 值，该值用于指示所有记录的数据类型。
 
-### <a name="microsoftperceptionsimulationisimulationstreamsink"></a>PerceptionSimulation. ISimulationStreamSink
+### <a name="microsoftperceptionsimulationisimulationstreamsink"></a>Microsoft.PerceptionSimulation.ISimulationStreamSink
 
 从模拟流接收数据包的对象。
 
@@ -1377,17 +1377,17 @@ public interface ISimulationStreamSink
 }
 ```
 
-**OnPacketReceived (uint length，byte [] packet)**
+**Microsoft.PerceptionSimulation.ISimulationStreamSink.OnPacketReceived (uint length， byte[] packet)**
 
-接收单个数据包，该数据包在内部键入并进行版本控制。
+接收单个数据包，该数据包在内部类型化且版本控制。
 
 参数
-* length-数据包的长度。
-* 数据包-包的数据。
+* length - 数据包的长度。
+* packet - 数据包的数据。
 
-### <a name="microsoftperceptionsimulationisimulationstreamsinkfactory"></a>PerceptionSimulation. ISimulationStreamSinkFactory
+### <a name="microsoftperceptionsimulationisimulationstreamsinkfactory"></a>Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory
 
-用于创建 ISimulationStreamSink 的对象。
+创建 ISimulationStreamSink 的对象。
 
 ```
 public interface ISimulationStreamSinkFactory
@@ -1396,7 +1396,7 @@ public interface ISimulationStreamSinkFactory
 }
 ```
 
-**PerceptionSimulation. ISimulationStreamSinkFactory. CreateSimulationStreamSink ( # B1**
+**Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory.CreateSimulationStreamSink ()**
 
 创建 ISimulationStreamSink 的单个实例。
 

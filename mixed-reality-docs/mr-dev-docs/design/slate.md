@@ -1,17 +1,17 @@
 ---
 title: 平板
-description: 了解平板电脑，这是一种精简窗口样式控件，用于使用混合现实工具包显示 2D 内容。
+description: 了解平板电脑，这是一种精简窗口样式控件，用于使用混合现实控件显示 2D Toolkit。
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: 混合现实， 控件， 交互， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， Slate， MRTK， 混合现实工具包
-ms.openlocfilehash: 2988419e44b21f6655a71d726dabd5091569f7ac
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: 混合现实， 控件， 交互， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， 平板电脑， MRTK， 混合现实Toolkit
+ms.openlocfilehash: 57a1e39528bb758b948f44ebea114798458591713b90e7b3db4bf0188969961f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600126"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193522"
 ---
 # <a name="slate"></a>平板
 
@@ -23,7 +23,7 @@ ms.locfileid: "110600126"
 
 ---
 
-## <a name="slate-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的 (Unity 混合现实工具包) 板
+## <a name="slate-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的 MRTK (Mixed Reality Toolkit) 板
 
 * [MRTK - 平板电脑](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/slate)
 

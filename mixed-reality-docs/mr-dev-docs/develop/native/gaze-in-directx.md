@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: 眼睛，眼睛，打印头，打印头跟踪，眼睛跟踪，directx，输入，全息影像，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 8b3c63ac7a7edba0ce3173e024139e29d49757ab
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+ms.openlocfilehash: 0e32c9f24b56d938b5c6f9cbdf28e9959b190abc22591a26d1dfcfa0af2f5f4d
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810178"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193200"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>DirectX 中的头盔和眼睛眼睛输入
 
@@ -107,7 +107,7 @@ requestAccessThread.detach();
 ```
 启动分离的线程只是一种用于处理异步调用的选项。 你还可以使用 c + +/WinRT. 支持的新 [co_await](/windows/uwp/cpp-and-winrt-apis/concurrency) 功能
 下面是要求用户提供权限的另一个示例：
--   EyesPose：： IsSupported ( # A1 允许应用程序仅在有目视跟踪器时才触发权限对话框。
+-   EyesPose：： IsSupported () 允许应用程序仅在有目视跟踪器时才触发权限对话框。
 -   GazeInputAccessStatus m_gazeInputAccessStatus;这是为了防止反复弹出权限提示。
 
 ```cpp
@@ -183,13 +183,13 @@ if (pointerPose)
 数据不可用的原因有多种：
 * 用户未校准
 * 用户已拒绝应用访问其目视跟踪数据
-* 临时 interferences，例如在 HoloLens 面板上涂抹，或 occluding 用户眼睛。 
+* 临时 interferences，例如 HoloLens 面板上的污迹或用户眼睛 occluding 的头发。 
 
 虽然本文档中已提到了某些 Api，但在下面的部分中，我们提供了有关如何检测目视跟踪是否可用作快速参考的摘要： 
 
-* 检查系统是否完全支持目视跟踪。 调用以下 *方法*： [EyesPose. IsSupported ( # B1](/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
+* 检查系统是否完全支持目视跟踪。 调用以下 *方法*： [Windows。EyesPose. IsSupported ()](/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
 
-* 检查是否校准了用户。 调用以下 *属性*： [EyesPose. IsCalibrationValid](/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)   
+* 检查是否校准了用户。 调用以下 *属性*： [Windows。EyesPose. IsCalibrationValid](/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)   
 
 * 检查用户是否已授予你的应用程序权限以使用其目视跟踪数据：检索当前的 _"GazeInputAccessStatus"_。 有关如何执行此操作的示例，请参阅 [请求访问注视输入](/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input)。 
 
@@ -202,18 +202,18 @@ if (pointerPose)
 
 有时，你可能会发现需要与过去的事件对应的 [SpatialPointerPose](/uwp/api/windows.ui.input.spatial.spatialpointerpose) 。 例如，如果用户进行一次点击，你的应用可能想要知道他们正在查看的内容。 出于此目的，只需将 [SpatialPointerPose：： TryGetAtTimestamp](/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) 与预测帧时间结合使用，因为系统输入处理和显示时间之间存在延迟。 此外，如果使用目视看来确定目标，则在完成提交操作之前，我们的眼睛往往会继续。 这不是简单地点击的问题，而是将长的语音命令与快速的目视运动组合在一起，这一点更重要。 处理这种情况的一种方法是，使用对应于输入事件的历史时间戳对  [SpatialPointerPose：： TryGetAtTimestamp](/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp)进行其他调用。  
 
-但对于通过 SpatialInteractionManager 进行路由的输入，有一种更简单的方法。 [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)有其自己的[TryGetAtTimestamp](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)函数。 调用将提供完全相关的 [SpatialPointerPose](/uwp/api/windows.ui.input.spatial.spatialpointerpose) ，而无需猜测。 有关使用 SpatialInteractionSourceStates 的详细信息，请参阅 DirectX 文档中的 [双手和运动控制器](hands-and-motion-controllers-in-directx.md) 。
+但对于通过 SpatialInteractionManager 进行路由的输入，有一种更简单的方法。 [SpatialInteractionSourceState](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)有其自己的[TryGetAtTimestamp](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)函数。 调用 将提供完全相关的 [SpatialPointerPose，](/uwp/api/windows.ui.input.spatial.spatialpointerpose) 而无需猜测。 有关使用 SpatialInteractionSourceStates 的信息，请参阅 DirectX 文档中的 [手部和](hands-and-motion-controllers-in-directx.md) 运动控制器。
 
 <br>
 
 ## <a name="calibration"></a>校准
 
-为了使目视跟踪能准确地工作，每个用户都需要经历 [跟踪用户校准](/hololens/hololens-calibration)。 这允许设备调整系统，以便为用户提供更舒适和更高的质量查看体验，并确保同时进行准确的目视跟踪。 开发人员无需执行任何操作即可管理用户校准。 系统将确保在以下情况下提示用户校准设备：
-* 用户第一次使用设备
-* 用户以前选择退出校准过程
-* 上次用户使用设备时，校准过程未成功
+若要准确运行眼动跟踪，每个用户都需要进行眼动 [跟踪用户校准](/hololens/hololens-calibration)。 这样，设备可以调整系统，为用户提供更舒适、更高质量的观看体验，并确保同时进行准确的眼动跟踪。 开发人员无需在自己端执行任何操作来管理用户校准。 系统将确保在下列情况下提示用户校准设备：
+* 用户首次使用设备
+* 用户之前选择退出校准过程
+* 用户上次使用设备时校准过程不成功
 
-开发人员应确保为用户提供对目视跟踪数据可能不可用的足够支持。 详细了解 [HoloLens 2 上的目视跟踪](../../design/eye-tracking.md)中的备用解决方案注意事项。
+开发人员应确保为可能不可用眼动跟踪数据的用户提供足够的支持。 若要详细了解回退解决方案的注意事项，请通过"眼[动跟踪"了解HoloLens 2。](../../design/eye-tracking.md)
 
 <br>
 
@@ -221,7 +221,7 @@ if (pointerPose)
 
 * [校准](/hololens/hololens-calibration)
 * [DirectX 中的坐标系统](coordinate-systems-in-directx.md)
-* [目视-注视 HoloLens 2](../../design/eye-tracking.md)
-* [注视并提交输入模型](../../design/gaze-and-commit.md)
+* [眼睛凝视HoloLens 2](../../design/eye-tracking.md)
+* [凝视和提交输入模型](../../design/gaze-and-commit.md)
 * [DirectX 中的手和运动控制器](hands-and-motion-controllers-in-directx.md)
 * [DirectX 中的语音输入](voice-input-in-directx.md)

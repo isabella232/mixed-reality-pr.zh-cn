@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity，HoloLens，HoloLens 2，混合现实，开发，MRTK，材料着色器
-ms.openlocfilehash: 0a92388bc9be7c11967501709031f559f17f8966
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: e740c1cb662f88f7ce925482de9ed758d5f18ee152363a663aa678056ba2825f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176441"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115191116"
 ---
 # <a name="mrtk-standard-shader"></a>MRTK 标准着色器
 
@@ -92,7 +92,7 @@ MRTK/Standard 使用简单的近似值。 由于此着色器不计算物理正�
 
 * 请参阅 [悬停灯光](hover-light.md)
 
-### <a name="proximity-light"></a>邻近感应
+### <a name="proximity-light"></a>邻近感应灯
 
 * 查看 [邻近感应](proximity-light.md)
 
@@ -112,34 +112,34 @@ MRTK 标准着色系统与 Unity 内置的 [UI 系统](https://docs.unity3d.com/
 
 请注意，在使用 Unity 图像组件时，建议为源映像指定 "None (Sprite) "，以防止 Unity UI 生成额外顶点。
 
-如果需要，MRTK 中的画布会提示添加一个 [`ScaleMeshEffect.cs`](xref:Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect) ：
+当需要时，MRTK 中的画布将提示添加 [`ScaleMeshEffect.cs`](xref:Microsoft.MixedReality.Toolkit.Input.Utilities.ScaleMeshEffect) ：
 
 ![缩放网格效果](../images/mrtk-standard-shader/MRTK_ScaleMeshEffect.jpg)
 
 ## <a name="texture-combiner"></a>纹理合并器
 
-若要提高与 Unity 标准着色器每像素金属、平滑度、放射和封闭值的奇偶校验，可以通过 [通道封装](http://wiki.polycount.com/wiki/ChannelPacking)来控制。 例如：
+若要提高与 Unity Standard 着色器每像素金属的奇偶校验，可通过通道封装 控制平滑度、半透明性和遮 [挡性值](http://wiki.polycount.com/wiki/ChannelPacking)。 例如：
 
 ![通道映射示例](../images/mrtk-standard-shader/MRTK_ChannelMap.gif)
 
-使用通道打包时，只需将一个纹理采样并加载到内存中，而不是使用四个单独的纹理。 当您在某个程序（如物质或 Photoshop）中编写纹理地图时，可以按如下所示对其进行打包：
+使用通道打包时，只需对一个纹理采样并加载到内存中，而不是四个单独的纹理。 在 Program 或 Photoshop 等程序中编写纹理贴图时，可以手动打包它们，如下所示：
 
 | 通道 | 属性             |
 |---------|----------------------|
-| Red     | 银色             |
+| Red     | 金属             |
 | 绿色   | 封闭            |
-| 蓝色    |  (灰度) 发射 |
-| Alpha   | 平滑度           |
+| 蓝色    | 灰 (辐射)  |
+| Alpha   | 平滑           |
 
-或者，可以使用 MRTK 纹理合并器工具。 若要打开该工具，请选择： **Mixed Reality Toolkit > 公用事业-> 纹理合并器**，这将打开以下窗口：
+或者，可以使用 MRTK 纹理合并器工具。 若要打开该工具，请选择：混合现实 **Toolkit -> Utilities -> 纹理** 合并器，这将打开以下窗口：
 
 ![纹理合并器示例](../images/mrtk-standard-shader/MRTK_TextureCombiner.jpg)
 
-可以通过选择 Unity 标准着色器并单击 "从标准材料自动填充数据" 来自动填充此窗口。 或者，您可以手动指定纹理 (或常量值) 每个红色、绿色、蓝色或 alpha 通道。 纹理组合为 GPU 加速，无需输入纹理即可对 CPU 进行访问。
+可以通过选择 Unity 标准着色器并单击"从标准材料自动填充"来自动填充此窗口。 或者，可以为每个红色、 (、蓝色) alpha 通道手动指定纹理值或常数值。 纹理组合是 GPU 加速的，不需要输入纹理可供 CPU 访问。
 
 ## <a name="additional-feature-documentation"></a>其他功能文档
 
-下面是 MRTK/Standard 着色器提供的一些功能详细信息的额外详细信息。
+下面是有关 MRTK/标准着色器提供的一些功能详细信息的额外详细信息。
 
 ### <a name="primitive-clipping"></a>基元剪辑
 
@@ -149,66 +149,66 @@ MRTK 标准着色系统与 Unity 内置的 [UI 系统](https://docs.unity3d.com/
 
 ### <a name="mesh-outlines"></a>网格轮廓
 
-许多网格大纲技术均使用 [post 处理](https://docs.unity3d.com/Manual/PostProcessingOverview.html) 技术完成。 Post 处理提供了很好的大纲，但在许多混合现实设备上可能会占用大量资源。 可以在下的  **OutlineExamples** 场景中找到演示网格轮廓用法的场景 `MRTK/Examples/Demos/StandardShader/Scenes/` 。
+许多网格大纲技术都是使用后处理 [技术](https://docs.unity3d.com/Manual/PostProcessingOverview.html) 完成。 后期处理提供高质量的大纲，但在许多混合现实设备上可能成本高昂。 可以在 下的"大纲""示例"场景中找到演示如何使用网格轮廓  **的场景** `MRTK/Examples/Demos/StandardShader/Scenes/` 。
 
 <img src="../images/mrtk-standard-shader/MRTK_MeshOutline.jpg" width="900" alt="Mesh Outline">
 
-[`MeshOutline.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshOutline) 和 [`MeshOutlineHierarchy.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshOutlineHierarchy) 可用于呈现围绕网格呈现器的轮廓。 启用此组件会引入所述对象的其他呈现处理过程，但设计用于在移动混合现实设备上运行之前，而不使用任何 post 过程。 这种效果的限制包括它不能很好地处理不是 (watertight 的对象，也不需要是两面) 并且在重叠对象上可能会出现深度排序问题。
+[`MeshOutline.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshOutline)[`MeshOutlineHierarchy.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshOutlineHierarchy)和 可用于围绕网格呈现器呈现轮廓。 启用此组件会引入所概述对象的附加呈现传递，但旨在以性能方式在移动混合现实设备上运行，并且不会利用任何发布进程。 此效果的限制包括，它无法很好地处理非 watertight 对象 (或需要是两个) 对象上可能会出现深度排序问题。
 
-大纲行为设计为与 MRTK/Standard 着色器结合使用。 大纲材料通常是一种可靠的 unlit 颜色，但可以配置为实现范围很大的效果。 大纲材料的默认配置如下所示：
+大纲行为旨在与 MRTK/标准着色器结合使用。 轮廓材料通常是纯色，但可以配置为实现各种效果。 大纲材料的默认配置如下：
 
 <img src="../images/mrtk-standard-shader/MRTK_OutlineMaterial.jpg" width="450" alt="Mesh Outline Material">
 
-1. 深度写入-应禁用轮廓材料，以确保轮廓不会阻止其他对象呈现。
-2. 顶点延伸-需要启用才能呈现轮廓。
-3. 使用平滑法线-对于某些网格，此设置是可选的。 在沿顶点法线移动顶点时进行延伸，某些网格沿默认的法线凸出会导致中断。 若要修复这些中断，可以选中此框，以使用由生成的另一组平滑法 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother)
+1. 深度写入 - 应禁用大纲材料，以确保轮廓不会阻止其他对象呈现。
+2. 顶点外泄 - 需要启用 以呈现轮廓。
+3. 使用平滑法线 - 此设置对于某些网格是可选的。 通过沿顶点法线移动顶点来发生外泄，在沿默认法线拉伸的一些网格上将导致轮廓中出现不连续。 若要修复这些不连续情况，可以选中此框，以使用由 生成的另一组平滑法线 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother)
 
-[`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 是一个组件，可用于在网格上自动生成平滑的法线。 此方法对在空间中共享同一位置的网格中的顶点进行分组，然后将这些顶点的法线取平均值。 此过程将创建基础网格的副本，并且应仅在需要时使用。
+[`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 是一个组件，可用于在网格上自动生成平滑法线。 此方法对共享空间中相同位置的网格中的顶点进行分组，然后计算这些顶点的法线平均值。 此过程会创建基础网格的副本，应仅在需要时使用。
 
 <img src="../images/mrtk-standard-shader/MRTK_SmoothNormals.jpg" width="450" alt="Smooth Normals Outline">
 
-1. 通过生成的平滑法线 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 。
-2. 使用默认的法线，请注意多维数据集拐角周围的项目。
+1. 通过 生成的平滑法线 [`MeshSmoother.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.MeshSmoother) 。
+2. 使用的默认法线，请注意围绕立方体角的项目。
 
 ### <a name="stencil-testing"></a>模具测试
 
-内置可配置的模具测试支持，可实现各种效果。 例如门户：
+内置可配置模具测试支持，以实现各种效果。 例如门户：
 
 ![模具测试](../images/mrtk-standard-shader/MRTK_StencilTest.gif)
 
 ### <a name="instanced-color-support"></a>实例颜色支持
 
-实例颜色支持为数千个 GPU 实例网格提供唯一的材料属性：
+实例颜色支持，为数千个 GPU 实例网格提供唯一的材料属性：
 
 ![实例属性](../images/mrtk-standard-shader/MRTK_InstancedProperties.gif)
 
-### <a name="triplanar-mapping"></a>Triplanar 映射
+### <a name="triplanar-mapping"></a>行程映射
 
-Triplanar 映射是一种以编程方式为网格纹理的技术。 通常在地形中使用，无需 Uv-11 或难以解包的网格。 此实现支持世界或本地空间投影、混合平滑度的规范和普通地图支持。 请注意，使用的每个纹理都需要3个纹理样本，因此在性能方面非常严重。
+三边形映射是一种以编程方式对网格进行纹理处理的技术。 通常用于地形、没有 UV 的网格或难以解包形状。 此实现支持世界或本地空间投影、混合平滑度规范以及普通地图支持。 请注意，使用的每个纹理都需要 3 个纹理样本，因此在性能关键的情况下请谨慎使用。
 
 ![triplanar](../images/mrtk-standard-shader/MRTK_TriplanarMapping.gif)
 
-### <a name="vertex-extrusion"></a>顶点延伸
+### <a name="vertex-extrusion"></a>顶点外泄
 
-世界空间中的顶点延伸。 用于可视化拉伸的边界卷或转换为/out 网格。
+世界空间中的顶点外泄。 用于可视化外向边界卷或内/出网格的转换。
 
-![普通地图比例1](../images/mrtk-standard-shader/MRTK_VertexExtrusion.gif)
+![法线地图刻度 1](../images/mrtk-standard-shader/MRTK_VertexExtrusion.gif)
 
 ### <a name="miscellaneous"></a>杂项
 
-用于控制 albedo 优化的复选框。 当未指定 albedo 纹理时，将禁用优化 albedo 操作。 这对于控制 [远程纹理加载](http://dotnetbyexample.blogspot.com/2018/10/workaround-remote-texture-loading-does.html)很有用。
+用于控制反转录优化的复选框。 当未指定反正比纹理时，将禁用优化反正比操作。 这可用于控制 [远程纹理加载](http://dotnetbyexample.blogspot.com/2018/10/workaround-remote-texture-loading-does.html)。
 
 只需选中此框：
 
-![albedo 分配](../images/mrtk-standard-shader/MRTK_AlbedoAssignment.jpg)
+![albedo 赋值](../images/mrtk-standard-shader/MRTK_AlbedoAssignment.jpg)
 
-每个像素剪辑纹理、基于本地边缘的抗锯齿和普通地图缩放都受支持。
+支持按像素剪辑纹理、基于本地边缘的抗锯齿和普通地图缩放。
 
-![普通地图比例2](../images/mrtk-standard-shader/MRTK_NormalMapScale.gif)
+![法线地图刻度 2](../images/mrtk-standard-shader/MRTK_NormalMapScale.gif)
 
 ## <a name="see-also"></a>另请参阅
 
 * [可交互](../ux-building-blocks/interactable.md)
-* [悬停灯光](hover-light.md)
-* [邻近感应灯](proximity-light.md)
+* [悬停灯](hover-light.md)
+* [邻近光](proximity-light.md)
 * [剪辑基元](clipping-primitive.md)

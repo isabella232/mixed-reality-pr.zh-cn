@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality，unity，教程，hololens2，空间音频，MRTK，混合现实工具包，UWP，Windows 10，HRTF，头相关传输函数，回音，Microsoft Spatializer，音频混合器，SFX 回音
-ms.openlocfilehash: 6f41fe904c21591915e0ef13b61dc6bff04527fe
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+ms.openlocfilehash: 8adc92eb96cb8ebd2cc5fff14d522bcfe72733cc5748183dd6db59d753e12a3e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110712672"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115192959"
 ---
 # <a name="5-using-reverb-to-add-distance-to-spatial-audio"></a>5.使用混响为空间音频添加距离感
 
@@ -26,7 +26,7 @@ ms.locfileid: "110712672"
 
 ## <a name="add-a-mixer-group-and-a-reverb-effect"></a>添加混音器组和回音效果
 
-在 [Spatializing button 交互声音教程](unity-spatial-audio-ch2.md)中，我们添加了一个混音器。 混音器默认包含一个名为 **Master** 的 **组**。 因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个组。 若要添加组，请在 **音频混合器** 中右键单击主组，选择 " **添加子组** " 并为 " _会议室效果_" 提供合适的名称：
+在 [Spatializing button 交互声音教程](unity-spatial-audio-ch2.md)中，我们添加了一个混音器。 混音器默认包含一个名为 **Master** 的 **组**。 因为我们只是想要将回音效果应用到一些声音，接下来要为这些声音添加另一个组。 若要添加组，请右键单击 "**音频" Mixer** 中的主组，选择 "**添加子组**" 并给出适当的名称（例如，_房间效果_：
 
 ![添加子组](images/spatial-audio/spatial-audio-05-section1-step1-1.PNG)
 
@@ -133,7 +133,7 @@ public class SpatializeOnOff : MonoBehaviour
 
 ## <a name="congratulations"></a>祝贺
 
-已完成适用于 Unity 的 HoloLens 2 空间音频教程。 试用 HoloLens 2 或 Unity 上的应用。 单击应用中的按钮以激活 spatialization 时，该脚本会将视频的音频路由到房间效果组以添加回音。 切换到立体声时，它会将音频路由到主组，并避免添加回音。
+已完成适用于 Unity 的 HoloLens 2 空间音频教程。 试用 HoloLens 2 或 Unity 上的应用程序。 单击应用中的按钮以激活 spatialization 时，该脚本会将视频的音频路由到房间效果组以添加回音。 切换到立体声时，它会将音频路由到主组，并避免添加回音。
 
 > [!TIP]
 > 要查看提示了解如何生成 Unity 项目并将其部署到 HoloLens 2，可参阅[在 HoloLens 2 上构建应用](mr-learning-base-02.md#building-your-application-to-your-hololens-2)中的说明。

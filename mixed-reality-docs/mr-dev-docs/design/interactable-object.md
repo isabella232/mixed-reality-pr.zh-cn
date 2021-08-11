@@ -1,62 +1,62 @@
 ---
 title: 可交互对象
-description: 了解如何触发事件、提供视觉提示以及与混合现实应用程序中的对象进行交互。
+description: 了解如何触发事件，提供视觉提示，以及与混合现实应用程序中的对象进行交互。
 author: cre8ivepark
 ms.author: v-hferrone
 ms.date: 06/06/2019
 ms.topic: article
-keywords: 混合现实， 控件， 交互， 提示， ui， ux， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备， HoloLens， MRTK， 混合现实工具包， 音频
-ms.openlocfilehash: b25c25a6dd48bcc85a556787099734d147d18df2
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+keywords: mixed reality，控件，交互，提示，ui，ux，混合现实耳机，windows mixed Reality 耳机，虚拟现实耳机，HoloLens，MRTK，混合现实 Toolkit，音频
+ms.openlocfilehash: 9ce682de7e400eba6ffbaccbca34065a1f09966f842cffd6853f3a064f146904
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110219"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115190710"
 ---
 # <a name="interactable-object"></a>可交互对象
 
-![可交互对象](images/UX_Hero_Interactable.jpg)
+![Interactible 对象](images/UX_Hero_Interactable.jpg)
 
-按钮一直是在 2D 抽象世界触发事件的一种暗念。 在三维混合现实世界，我们不必再局限于这个抽象世界。 任何内容都可以是 **触发事件的** 可交互对象。 可交互对象可以是任何内容，从表上的咖啡杯到中间的气球。 在某些情况下（例如，在对话框 UI 中）我们仍然使用传统按钮。 按钮的可视化表示形式取决于上下文。
+"Button" 是一种用于在二维抽象环境中触发事件的比喻。 在这三维混合现实世界中，我们不必再局限于这种抽象领域。 任何内容都可以是触发事件的 **种不可交互对象** 。 种不可交互对象可以是从表上的咖啡杯到 midair 中的气球的任何内容。 在某些情况下（例如，在对话框 UI 中），我们仍要使用传统按钮。 按钮的可视化表示形式取决于上下文。
 
 <br>
 
 ---
 
-## <a name="important-properties-of-the-interactable-object"></a>可交互对象的重要属性
+## <a name="important-properties-of-the-interactable-object"></a>种不可交互对象的重要属性
 
 ### <a name="visual-cues"></a>视觉提示
 
-视觉提示是来自光的传感器提示，由眼睛接收，在视觉感知期间由视觉系统处理。 由于视觉系统在许多种类（尤其是人类）中处于主导状态，因此视觉提示是了解世界方式的一大信息源。
+视觉提示是传感器的提示，由眼睛接收，由视觉对象系统在视觉对象中进行处理。 由于视觉对象系统在很多物种中是主导的，尤其是在人们看来，直观提示是了解世界上的信息。
 
-由于全息对象与混合现实中的真实环境混合在一起，因此可能很难理解可以交互的对象。 对于体验中任何可交互的对象，为每种输入状态提供不同的视觉提示非常重要。 这有助于用户了解你体验的哪个部分是可交互的，并且通过使用一致的交互方法使用户确信。
+由于全息对象与混合现实中的实际环境混合，因此很难理解您可以与哪些对象交互。 对于你的体验中的任何种不可交互对象，为每个输入状态提供不同的视觉提示非常重要。 这可以帮助用户了解你的体验的哪个部分是种不可交互的，并通过使用一致的交互方法使用户更自信。
 
 <br>
 
 ---
 
-### <a name="far-interactions"></a>远交互
+### <a name="far-interactions"></a>远距离交互
 
-对于用户可以与凝视、手部射线和运动控制器射线交互的任何对象，建议针对这三种输入状态使用不同的视觉提示：
+对于用户可与 "注视"、"手 ray" 和 "运动控制器" 射线交互的任何对象，我们建议为这三个输入状态提供不同的视觉提示：
 
 :::row:::
     :::column:::
-       ![具有默认状态可交互的对象](images/interactibleobject-states-default.jpg)<br>
+       ![具有默认状态的种不可交互对象](images/interactibleobject-states-default.jpg)<br>
        **默认 (观察) 状态**<br>
         对象的默认空闲状态。
-    光标不在 对象上。 未检测到手部。
+    光标不在对象上。 未检测到手写。
     :::column-end:::
     :::column:::
-       ![具有目标状态和悬停状态可交互的对象](images/interactibleobject-states-targeted.jpg)<br>
-        **目标 (将鼠标) 状态**<br>
-        当对象以凝视光标、手指邻近或运动控制器指针为目标时。
-    光标位于 对象上。 检测到手部，准备就绪。
+       ![具有目标和悬停状态的种不可交互对象](images/interactibleobject-states-targeted.jpg)<br>
+        **目标 (悬停) 状态**<br>
+        当对象面向注视光标时，指的是指邻近的或运动控制器的指针。
+    光标位于对象上。 已检测到手型，准备就绪。
     :::column-end:::
     :::column:::
-       ![具有按下状态可交互的对象](images/interactibleobject-states-pressed.jpg)<br>
+       ![具有按下状态的种不可交互对象](images/interactibleobject-states-pressed.jpg)<br>
        **按下状态**<br>
-        使用敲击手势按下对象时，按手指或运动控制器的"选择"按钮。
-    光标位于 对象上。 检测到手部，点击了空气。
+        如果按下了按压按钮，请按下或运动控制器的选择按钮。
+    光标位于对象上。 检测到手型，并攻丝。
     :::column-end:::
 :::row-end:::
 
@@ -64,21 +64,21 @@ ms.locfileid: "112110219"
 
 ---
 
-可以使用突出显示或缩放等技术为用户输入状态提供视觉提示。 在混合现实中，可以在应用栏按钮上找到可视化“开始”菜单输入状态的示例。 
+您可以使用诸如突出显示或缩放等方法为用户输入状态提供视觉提示。 在混合现实中，你可以在 ""开始"菜单和应用栏按钮中查找可视化不同输入状态的示例。 
 
-全息按钮上的这些状态 **如下所示**：
+下面是 **全息按钮** 上这些状态的外观：
 
 :::row:::
     :::column:::
-       ![默认状态下的全息按钮](images/MRTK_InteractableState-default.jpg)<br>
+       ![处于默认状态的全息按钮](images/MRTK_InteractableState-default.jpg)<br>
        **默认 (观察) 状态**<br>
     :::column-end:::
     :::column:::
-       ![处于"目标"和"悬停"状态中的全息按钮](images/MRTK_InteractableState-targeted.jpg)<br>
-        **目标 (将鼠标) 状态**<br>
+       ![目标和悬停状态的全息按钮](images/MRTK_InteractableState-targeted.jpg)<br>
+        **目标 (悬停) 状态**<br>
     :::column-end:::
     :::column:::
-       ![已按下的全息按钮](images/MRTK_InteractableState-pressed.jpg)<br>
+       ![处于按下状态的全息按钮](images/MRTK_InteractableState-pressed.jpg)<br>
        **按下状态**<br>
     :::column-end:::
 :::row-end:::
@@ -87,17 +87,17 @@ ms.locfileid: "112110219"
 
 ---
 
-### <a name="near-interactions-direct"></a>近 (直接)  
+### <a name="near-interactions-direct"></a>接近交互 (直接)  
 
-HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视觉反馈和完美深度感知，就很难判断手离对象有多远或者是否触摸了它。 必须提供足够的视觉提示来传达对象的状态，尤其是基于该对象的手的状态。
+HoloLens 2 支持已表述的手动跟踪输入，从而使你可以与对象进行交互。 如果没有 haptic 的反馈和完美的深度认识，则很难判断你手中的距离是从一个对象还是正在触摸。 务必提供足够的视觉提示来传达对象的状态，特别是根据对象的状态。
 
 使用视觉反馈传达以下状态：
-* **默认 (观察) ：** 对象的默认空闲状态。
-* **悬** 停：当手靠近全息影像时，更改视觉对象以传达以全息影像为目标的手。 
-* **距离和交互点**：当手接近全息影像时，设计反馈来传达预测的交互点，以及手指与对象的距离
-* **联系人开始**：更改视觉对象 (浅色) 来传达触摸已发生
-* **已抓取**：在 (时更改) 颜色颜色
-* **联系人结束**：在触摸 (更改视觉对象) 浅色、颜色或颜色
+* **默认 (观察)**：对象的默认空闲状态。
+* **悬停**：当手接近全息图时，请更改视觉对象，以便与全息图建立通信。 
+* **距离和交互点**：作为一种方法，即使用全息图，设计反馈来传达投影的交互点，以及从对象到手指的距离
+* **联系人开始**：更改视觉对象 (光源、颜色) ，传达触摸已发生的情况
+* **Grasped**：在 Grasped 对象时更改视觉对象 (光源、颜色) 
+* **联系人结束**：在触摸结束时，更改视觉对象 (光源、颜色) 
 
 <br>
 
@@ -105,14 +105,14 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 
 :::row:::
     :::column:::
-        ![将鼠标 (远) ](images/640px-interactibleobject-states-near-hover.jpg)<br>
-        **将鼠标 (远)**<br>
-        根据手的邻近度突出显示。
+        ![悬停 (远处) ](images/640px-interactibleobject-states-near-hover.jpg)<br>
+        **悬停 (远处)**<br>
+        根据手的邻近性突出显示。
     :::column-end:::
     :::column:::
-        ![将鼠标 (") ](images/640px-interactibleobject-states-near-hovernear.jpg)<br>
-        **将鼠标 (")**<br>
-        突出显示基于手部距离的大小更改。
+        ![悬停 (接近) ](images/640px-interactibleobject-states-near-hovernear.jpg)<br>
+        **悬停 (接近)**<br>
+        根据与手型的距离突出显示大小变化。
     :::column-end:::
 :::row-end:::
 
@@ -123,8 +123,8 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
         视觉对象和音频反馈。
     :::column-end:::
     :::column:::
-        ![把握](images/640px-interactibleobject-states-near-grasp.jpg)<br>
-        **把握**<br>
+        ![掌握](images/640px-interactibleobject-states-near-grasp.jpg)<br>
+        **掌握**<br>
         视觉对象和音频反馈。
     :::column-end:::
 :::row-end:::
@@ -135,7 +135,7 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 
 ---
 
-图标 [上的HoloLens 2](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button) 是如何可视化不同输入交互状态的示例：
+[HoloLens 2 上的按钮](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button)是如何可视化不同输入交互状态的示例：
 
 :::row:::
     :::column:::
@@ -145,7 +145,7 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
     :::column:::
         ![悬停](images/640px-interactibleobject-pressablebutton-hover.jpg)<br>
         **悬停**<br>
-        展示基于邻近感应的照明效果。
+        显示基于近程的照明效果。
     :::column-end:::
 :::row-end:::
 
@@ -157,8 +157,8 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
     :::column-end:::
     :::column:::
         ![请按](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
-        **按**<br>
-        移动前板。
+        **请按**<br>
+        移动前面板。
     :::column-end:::
 :::row-end:::
 
@@ -168,14 +168,14 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 
 :::row:::
     :::column:::
-        ### <a name="the-ring-visual-cue-on-hololens-2br"></a>上显示"环"视觉提示HoloLens 2<br>
-        在HoloLens 2，有一个额外的视觉提示，可帮助用户感知深度。 当手指靠近对象时，可显示一个靠近其手指的环并缩小。 当达到按下状态时，环最终会聚合为点。 此视觉视觉视觉元素可帮助用户了解它们与对象距离有多远。<br>
+        ### <a name="the-ring-visual-cue-on-hololens-2br"></a>HoloLens 2 上的 "环" 视觉提示<br>
+        HoloLens 2 上有一个额外的视觉提示，可帮助用户了解深度。 当手指更接近对象时，其手指附近的圆圈会显示并缩小。 当达到按下状态时，环最终汇聚为一个点。 此视觉对象 affordance 可帮助用户了解其在对象中的距离。<br>
         <br>
-        *视频循环：基于边界框邻近性进行视觉反馈的示例*
+        *视频循环：基于与边界框的邻近的视觉反馈示例*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![有关手部邻近感应的视觉反馈](images/HoloLens2_Proximity.gif)<br>
+       ![视觉对象反馈](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
 
@@ -187,11 +187,11 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 
 ### <a name="audio-cues"></a>音频提示
 
-对于直接手部交互，适当的音频反馈可以显著提高用户体验。 使用音频反馈传达以下提示：
-* **联系人开始**：触摸开始时播放声音
-* **接触端**：在触摸端播放声音
-* **抓取开始**：开始抓取时播放声音
-* **抓取端**：在抓取端播放声音
+对于直接交互，正确的音频反馈可显著改善用户体验。 使用音频反馈来传达以下提示：
+* **联系人开始**：触控开始时播放声音
+* **联系人结束**：在 touch 端上播放声音
+* **开始获取**：开始播放时播放声音
+* **抓取结束**：在抓取结束时播放声音
 
 <br>
 
@@ -200,9 +200,9 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 :::row:::
     :::column:::
         ### <a name="voice-commandingbr"></a>语音命令<br>
-        对于任何可交互对象，必须支持备用交互选项。 默认情况下，建议任何 [可交互](../out-of-scope/voice-design.md) 的对象都支持语音命令。 为了提高可发现性，还可以在悬停状态期间提供工具提示。<br>
+        对于任何种不可交互对象，支持替代交互选项非常重要。 默认情况下，我们建议为种不可交互的任何对象支持 [语音命令](../out-of-scope/voice-design.md) 。 若要改善可发现性，还可以在悬停状态中提供工具提示。<br>
         <br>
-        *图像：语音命令的工具提示*
+        *Image：语音命令的工具提示*
     :::column-end:::
         :::column:::
        ![语音命令](images/640px-interactibleobject-voicecommand.png)<br>
@@ -216,55 +216,55 @@ HoloLens 2支持手部跟踪输入，可用于与对象交互。 如果没有视
 
 ## <a name="sizing-recommendations"></a>重设大小建议
 
-为了确保可以轻松地接触所有种不可交互对象，我们建议确保种不可交互根据其从用户的距离来确定最小大小。 视觉角度通常以视觉弧的度数来度量。视觉角度基于用户眼睛与对象之间的距离并保持不变，而目标的物理大小可能会随用户更改的距离而更改。 若要根据用户的距离确定对象的必要物理大小，请尝试使用视觉角度计算器（如 [此](https://elvers.us/perception/visualAngle/)类）。
+为了确保可以轻松接触所有可交互对象，我们建议确保可交互对象满足基于其与用户的距离的最小大小。 可视角度通常以可视弧度度量。视觉角度基于用户眼睛与对象之间的距离并保持恒定，而目标的物理大小可能会随着用户距离的变化而更改。 若要根据与用户的距离确定对象的必要物理大小，请尝试使用如下可视角度 [计算器](https://elvers.us/perception/visualAngle/)。
 
-下面是有关种不可交互内容的最小大小建议。
+下面是有关可交互内容的最小大小的建议。
 
-### <a name="target-size-for-direct-hand-interaction"></a>直接手动交互的目标大小
+### <a name="target-size-for-direct-hand-interaction"></a>直接手部交互的目标大小
 
-| 距离 | 查看角度 | 大小 |
+| 距离 | 视角 | 大小 |
 |---------|---------|---------|
-| 45厘米  | 不小于2° | 1.6 x 1.6 厘米 |
+| 45 cm  | 不小于 2° | 1.6 x 1.6 cm |
 
-![直接手动交互的目标大小](images/TargetSizingNear.jpg)<br>
-*直接手动交互的目标大小*
+![直接手部交互的目标大小](images/TargetSizingNear.jpg)<br>
+*直接手部交互的目标大小*
 
 <br>
 
 ### <a name="target-size-for-buttons"></a>按钮的目标大小
 
-创建直接交互的按钮时，建议使用较大的最小 3.2 x 3.2 厘米，以确保有足够的空间来包含图标，并可能有一些文本。
+创建用于直接交互的按钮时，我们建议使用更大的最小大小 3.2 x 3.2 cm，以确保有足够的空间来包含图标和某些文本。
 
 | 距离 | 最小大小 |
 |---------|---------|
-| 45厘米  | 3.2 x 3.2 厘米 |
+| 45 cm  | 3.2 x 3.2 cm |
 
 ![按钮的目标大小](images/TargetSizingButtons.png)<br>
 *按钮的目标大小*
 
 <br>
 
-### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>手动 ray 或注视交互的目标大小
-| 距离 | 查看角度 | 大小 |
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>手部射线或凝视交互的目标大小
+| 距离 | 视角 | 大小 |
 |---------|---------|---------|
-| 2 m  | 不小于1° | 3.5 x 3.5 厘米 |
+| 2 m  | 不小于 1° | 3.5 x 3.5 cm |
 
-![手动 ray 或注视交互的目标大小](images/TargetSizingFar.jpg)<br>
-*手动 ray 或注视交互的目标大小*
+![手部射线或凝视交互的目标大小](images/TargetSizingFar.jpg)<br>
+*手部射线或凝视交互的目标大小*
 
 <br>
 
 ---
 
-## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK 中的种不可交互对象 (Unity 的混合现实工具包) 
+## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>适用于 Unity 的混合现实 (MRTK Toolkit) 对象
 
-在 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 中，可以使用脚本 [**种不可交互**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) 使对象对各种类型的输入交互状态进行响应。 它支持各种类型的主题，这些主题允许您通过控制对象属性（如颜色、大小、材料和着色器）来定义可视状态。
+在 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 中，可以使用脚本 [**Interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) 使对象响应各种类型的输入交互状态。 它支持各种类型的主题，这些主题允许通过控制对象属性（如颜色、大小、材料以及着色器）来定义视觉状态。
 
 * [可交互](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable)
 * [Button](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button)
-* [手动交互示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
+* [手部交互示例场景](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
-MixedRealityToolkit 的标准着色器提供了各种选项 **，例如，可** 帮助您创建视觉对象和音频提示。
+MixedRealityToolkit 的标准着色器提供了各种选项，例如邻近光，可帮助你创建视觉对象和音频提示。
 
 * [MRTK 标准着色器](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
 
