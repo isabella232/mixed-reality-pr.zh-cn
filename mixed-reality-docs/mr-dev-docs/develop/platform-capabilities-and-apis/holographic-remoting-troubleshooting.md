@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality、全息影像、全息远程处理、远程渲染、网络渲染、HoloLens、远程全息影像、故障排除、帮助、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备
-ms.openlocfilehash: fa984e89fb6eb770917d9a1d62ce7c1007d45fab7fbcb2723f9642ac81814054
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: d49f73f4cbe205e71cb2f76ab02769ddad5f3ed2
+ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115223567"
+ms.lasthandoff: 08/14/2021
+ms.locfileid: "122184608"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>全息远程处理故障排除
 
@@ -34,7 +34,7 @@ ms.locfileid: "115223567"
 
 ## <a name="limitations"></a>限制
 
-使用 Holographic Remoting for HoloLens 2目前不支持以下 API，除非另有说明，否则将 ```ERROR_NOT_SUPPORTED``` 引发错误：
+使用全息远程处理进行远程处理时，当前不支持以下 API HoloLens 2除非另有说明，否则将 ```ERROR_NOT_SUPPORTED``` 引发错误：
 
 [Windows.Graphics.Holographic](/uwp/api/windows.graphics.holographic)
 
@@ -104,6 +104,7 @@ ms.locfileid: "115223567"
 * [SpatialGraphInteropPreview.TryCreateFrameOfReference](/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.trycreateframeofreference)
 
 ## <a name="see-also"></a>另请参阅
+* [全息远程处理概述](holographic-remoting-overview.md)
 * [全息远程处理版本历史记录](holographic-remoting-version-history.md)
 * [使用远程 API 编写全息远程Windows Mixed Reality应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR API 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)

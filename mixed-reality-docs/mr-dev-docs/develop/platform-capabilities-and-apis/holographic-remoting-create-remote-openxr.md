@@ -1,28 +1,28 @@
 ---
-title: '使用 OpenXR (全息远程处理) '
+title: '使用 OpenXR (编写全息远程) '
 description: 了解如何流式传输远程计算机上呈现的远程内容，HoloLens 2 OpenXR 的全息远程处理应用。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens、远程处理、全息远程处理、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备NuGet
-ms.openlocfilehash: 6cf44bd031aec4b475d7496a999a3c7d4d40cae7cc921ff39cfe61698f3dd532
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 3fd210db1b179cbceff057e25bf451be0e7ca843
+ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115212065"
+ms.lasthandoff: 08/14/2021
+ms.locfileid: "122184588"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-openxr-api"></a>使用 OpenXR API 编写全息远程处理远程应用
 
 >[!IMPORTANT]
->本文档介绍如何使用[OpenXR API](../native/openxr.md)为 HoloLens 2 Windows Mixed Reality头戴显示设备创建远程应用程序。 第一代 **HoloLens (远程**) 必须使用NuGet **1.x.x 版**。 这意味着，为 HoloLens 2 编写的远程应用程序与 HoloLens 1 不兼容，反之亦然。 有关 HoloLens 1 的文档，可[在此处找到](add-holographic-remoting.md)。
+>本文档介绍如何使用[OpenXR API](../native/openxr.md)为 HoloLens 2 Windows Mixed Reality头戴显示设备创建远程应用程序。 第一代 **HoloLens (远程**) 必须使用NuGet **1.x.x 版**。 这意味着，为 HoloLens 2 编写的远程应用程序与 HoloLens 1 不兼容，反之亦然。 可在此处HoloLens 1[的文档](add-holographic-remoting.md)。
 
 全息远程处理应用可以将远程渲染的内容流式HoloLens 2 Windows Mixed Reality沉浸式头戴显示设备。 还可以访问更多系统资源，并将远程 [沉浸式视图集成到](../../design/app-views.md) 现有的桌面电脑软件中。 远程应用从 HoloLens 2 接收输入数据流，在虚拟沉浸式视图中呈现内容，将内容帧流式传输回HoloLens 2。 使用标准 Wi-Fi 建立连接。 全息远程处理通过数据包添加到桌面或 UWP NuGet应用。 需要其他代码来处理连接，并呈现在沉浸式视图中。 典型的远程处理连接延迟最低为 50 毫秒。 播放器应用可以实时报告延迟。
 
 可在全息远程处理示例 [github](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)存储库 找到此页上的所有代码和工作项目。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 一个很好的起点是基于 OpenXR 的桌面或 UWP 应用。 有关详细信息， [请参阅 OpenXR 入门](../native/openxr-getting-started.md)。
 
@@ -33,19 +33,19 @@ ms.locfileid: "115212065"
 
 若要将包添加到 NuGet 中的项目，需要执行Visual Studio。
 1. 在 Visual Studio 中打开项目。
-2. 右键单击项目节点，然后选择"管理NuGet **包..."**
+2. 右键单击项目节点，然后选择"**管理NuGet包..."**
 3. 在出现的面板中，选择" **浏览"，** 然后搜索"全息远程处理"。
 4. 选择 **"Microsoft.Holographic.Remoting.OpenXr"，** 确保选择最新的 **2.x.x** 版本，然后选择"安装 **"。**
 5. 如果显示 **"预览"** 对话框，请选择"确定 **"。**
 6. 在 **弹出许可协议** 对话框时，选择"我接受"。
-7. 针对以下包重复步骤 3 到 6 NuGet：OpenXR.Headers、OpenXR.Loader
+7. 针对以下包重复步骤 3 到 NuGet 6：OpenXR.Headers、OpenXR.Loader
 
 >[!NOTE]
->版本 **1.x.x** 的 NuGet 仍适用于想要面向 1 HoloLens的开发人员。 有关详细信息，请参阅[添加全息远程处理 (HoloLens (第一代) ) 。 ](add-holographic-remoting.md)
+>版本 **1.x.x** 的 NuGet 包仍可供想要面向 1 的开发人员HoloLens使用。 有关详细信息，请参阅[添加全息远程处理 (HoloLens (第一代) ) 。 ](add-holographic-remoting.md)
 
 ## <a name="select-the-holographic-remoting-openxr-runtime"></a>选择全息远程处理 OpenXR 运行时
 
-需要在远程应用中执行的第一步是选择全息远程处理 OpenXR 运行时，该运行时是 Microsoft.Holographic.Remoting.OpenXr NuGet包的一部分。 为此，可以将环境变量设置为应用内RemotingXR.js```XR_RUNTIME_JSON``` 文件的路径。 OpenXR 加载程序使用此环境变量来不使用系统默认 OpenXR 运行时，而是重定向到全息远程处理 OpenXR 运行时。 使用 Microsoft.Holographic.Remoting.OpenXr NuGet 包时，编译期间会自动将 RemotingXR.json 文件复制到输出文件夹，OpenXR 运行时选择通常如下所示。
+需要在远程应用中执行的第一步是选择全息远程处理 OpenXR 运行时，该运行时是 Microsoft.Holographic.Remoting.OpenXr NuGet包的一部分。 为此，可以将环境变量设置为应用内RemotingXR.js```XR_RUNTIME_JSON``` 文件的路径。 OpenXR 加载程序使用此环境变量来不使用系统默认 OpenXR 运行时，而是重定向到全息远程处理 OpenXR 运行时。 使用 Microsoft.Holographic.Remoting.OpenXr NuGet 包时，在编译期间会自动将 RemotingXR.json 文件复制到输出文件夹，OpenXR 运行时选择通常如下所示。
 
 ```cpp
 bool EnableRemotingXR() {
@@ -134,11 +134,11 @@ xrRemotingGetConnectionStateMSFT(m_instance.Get(), m_systemId, &connectionState,
 - XR_REMOTING_CONNECTION_STATE_CONNECTED_MSFT
 
 >[!IMPORTANT]
-> ```xrRemotingConnectMSFT``````xrRemotingListenMSFT```在尝试通过 xrCreateSession 创建 XrSession 之前，必须调用 或 。 如果在连接状态为 时尝试创建 XrSession，则会话创建将成功，但会话状态将立即转换为 ```XR_REMOTING_CONNECTION_STATE_DISCONNECTED_MSFT``` XR_SESSION_STATE_LOSS_PENDING。
+> ```xrRemotingConnectMSFT``````xrRemotingListenMSFT```在尝试通过 xrCreateSession 创建 XrSession 之前，必须调用 或 。 如果尝试在连接状态为 时创建 XrSession，则会话创建将成功，但会话状态将立即转换为 ```XR_REMOTING_CONNECTION_STATE_DISCONNECTED_MSFT``` XR_SESSION_STATE_LOSS_PENDING。
 
-全息远程处理的 实现 ```xrCreateSession``` 支持等待建立连接。 可以调用 ```xrRemotingConnectMSFT``` 或 ```xrRemotingListenMSFT``` ，然后立即调用 ，这将阻止并等待建立连接。 超时固定为 10 秒。 如果此时可以建立连接，则 XrSession 创建将成功，并且会话状态将转换为XR_SESSION_STATE_READY。 如果无法建立连接，则会话创建也会成功，但会立即转换为XR_SESSION_STATE_LOSS_PENDING。
+全息远程处理的 实现 ```xrCreateSession``` 支持等待建立连接。 可以调用 或 ，然后立即调用 ，这将阻止并等待 ```xrRemotingConnectMSFT``` ```xrRemotingListenMSFT``` 建立连接。 超时固定为 10 秒。 如果此时可以建立连接，则 XrSession 创建将成功，并且会话状态将转换为XR_SESSION_STATE_READY。 如果无法建立连接，则会话创建也会成功，但会立即转换为XR_SESSION_STATE_LOSS_PENDING。
 
-一般情况下，连接状态与 XrSession 状态是耦合的。 对连接状态的任何更改也会影响会话状态。 例如，如果连接状态从 切换到会话 `XR_REMOTING_CONNECTION_STATE_CONNECTED_MSFT` ```XR_REMOTING_CONNECTION_STATE_DISCONNECTED_MSFT``` 状态，则也会XR_SESSION_STATE_LOSS_PENDING转换。
+一般情况下，连接状态与 XrSession 状态是耦合的。 对连接状态的任何更改也会影响会话状态。 例如，如果连接状态从 切换到会话 `XR_REMOTING_CONNECTION_STATE_CONNECTED_MSFT` ```XR_REMOTING_CONNECTION_STATE_DISCONNECTED_MSFT``` 状态，则也将转换为XR_SESSION_STATE_LOSS_PENDING状态。
 
 ## <a name="handling-remoting-specific-events"></a>处理远程处理特定事件
 
@@ -181,7 +181,7 @@ while (pollEvent(eventData)) {
 
 ## <a name="preview-streamed-content-locally"></a>在本地预览流式处理的内容
 
-若要在发送到设备的远程应用中显示相同的内容， ```XR_MSFT_holographic_remoting_frame_mirroring``` 可以使用扩展。 使用此扩展，可以使用未链接至 XrFrameEndInfo 的 将纹理提交到 ```XrRemotingFrameMirrorImageInfoMSFT``` xrEndFrame，如下所示。
+若要在远程应用中显示发送到设备的相同内容， ```XR_MSFT_holographic_remoting_frame_mirroring``` 可以使用扩展。 使用此扩展，可以使用未链接至 XrFrameEndInfo 的 将纹理提交到 ```XrRemotingFrameMirrorImageInfoMSFT``` xrEndFrame，如下所示。
 
 ```cpp
 XrFrameEndInfo frameEndInfo{XR_TYPE_FRAME_END_INFO};
@@ -203,9 +203,10 @@ m_window->PresentSwapchain();
 ```
 
 上面的示例使用 DX11 交换链纹理，在调用 xrEndFrame 后立即显示窗口。 此用法不限于交换链纹理，也不需要额外的 GPU 同步。 有关用法和约束的详细信息，请查看扩展 [规范](https://htmlpreview.github.io/?https://github.com/microsoft/MixedReality-HolographicRemoting-Samples/blob/master/remote_openxr/specification.html#XR_MSFT_remoting_frame_mirroring)。
-如果远程应用使用的是 DX12，请使用 XrRemotingFrameMirrorImageD3D12MSFT，而不是 XrRemotingFrameMirrorImageD3D11MSFT。
+如果远程应用使用 DX12，请使用 XrRemotingFrameMirrorImageD3D12MSFT，而不是 XrRemotingFrameMirrorImageD3D11MSFT。
 
 ## <a name="see-also"></a>另请参阅
+* [全息远程处理概述](holographic-remoting-overview.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)
 * [使用全息远程处理建立安全连接](holographic-remoting-secure-connection.md)
 * [全息远程处理故障排除和限制](holographic-remoting-troubleshooting.md)

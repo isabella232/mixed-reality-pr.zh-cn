@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/29/2021
 ms.topic: article
 keywords: Figma、Sketch、Adobe XD、设计、设计器、设计文件、UX 设计、HoloLens、MRTK、混合现实Toolkit
-ms.openlocfilehash: e72dfece3252a35a8da2b1dc72a1476bbf174b36bf01b731b4f0be5af21f2a33
-ms.sourcegitcommit: 5977109661a1db4ee2be8ed532479342093303d5
+ms.openlocfilehash: e911f7b2c1675a8113592d13c01abc3b71238733
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "116862622"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905647"
 ---
 # <a name="mrtk-figma-toolkit"></a>MRTK Figma 工具包
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGqke]
 
-MRTK Figma Toolkit提供 2D 版本的 HoloLens 2 样式 UI 控件，可在适用于 Unity 的 MRTK 或适用于 Unreal 的 MRTK 中找到这些控件。 可以在设计过程中使用它来创建 UI 布局和情节提要。
+MRTK Figma Toolkit提供 2D 版本的 HoloLens 2 样式 UI 控件，可在 MRTK for Unity 或 MRTK for Unreal 中找到这些控件。 可以在设计过程中使用它来创建 UI 布局和情节提要。
 
 > [!div class="nextstepaction"]
 > [查看 MRTK Figma Toolkit](https://www.figma.com/file/zeGez3Phuzel9JrU1o20nn/Figma-Toolkit-for-MRTK-HoloLens-Windows-Mixed-Reality?node-id=116%3A4)
@@ -33,7 +33,7 @@ MRTK Figma Toolkit提供 2D 版本的 HoloLens 2 样式 UI 控件，可在适用
 
 <img src="images/UX_Figma_Use3.png" width="300px" alt="Menu duplicate 3"><br>
 
-若要在本地下载和工作，请使用"文件> **保存本地复制** 菜单。 使用右上角的"导入 (.fig) 将下载的文件导入 Figma。 
+若要在本地下载和工作，请使用"文件> **保存本地复制** 菜单。 使用右上角的"导入 (.fig) 文件导入 Figma。 
 
 <img src="images/UX_FigmaToolkit_Import.png" width="200px" alt="Import menu"><br>
 

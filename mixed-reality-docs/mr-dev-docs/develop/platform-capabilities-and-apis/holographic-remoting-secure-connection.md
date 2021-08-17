@@ -1,145 +1,145 @@
 ---
 title: 为全息远程处理启用连接安全性
-description: 本页介绍如何将全息远程处理配置为在播放器和远程应用之间使用加密和经过身份验证的连接。
+description: 本页介绍如何将全息远程处理配置为使用播放机与远程应用之间经过加密和经过身份验证的连接。
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
-keywords: HoloLens、远程处理、全息远程处理、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、安全性、身份验证、服务器到客户端
-ms.openlocfilehash: fa23994ff4ab49d313fe24a67974bf4d90454e511658e0663c61d7b129b10f9e
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+keywords: HoloLens，远程处理，全息远程处理，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，安全性，身份验证，服务器到客户端
+ms.openlocfilehash: 6ac5284bdf9e5984fcf091b6502fb62a494e4fe8
+ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115223577"
+ms.lasthandoff: 08/14/2021
+ms.locfileid: "122184644"
 ---
-# <a name="enabling-connection-security-for-holographic-remoting"></a>为全息远程处理启用连接安全性
+# <a name="enabling-connection-security-for-holographic-remoting-c"></a>为全息远程处理 (c + + 启用连接安全性) 
 
 >[!IMPORTANT]
->本指南特定于全息远程处理HoloLens 2。
+>本指南特定于 HoloLens 2 上的全息远程处理。
 
-本页概述了全息远程处理的网络安全性。 你将找到有关
+此页概述了用于全息远程处理的网络安全。 你将找到有关
 
-* 全息远程处理上下文中的安全性以及可能需要它的原因
+* 全息远程处理的上下文中的安全性以及可能需要它的原因
 * 基于不同用例的建议度量值
-* 在全息远程处理解决方案中实现安全性
+* 实现全息远程处理解决方案中的安全性
 
-## <a name="holographic-remoting-security"></a>全息远程处理安全性
+## <a name="holographic-remoting-security"></a>全息远程处理安全
 
-全息远程处理通过网络交换信息。 如果没有安全措施，则同一网络上攻击者可能会破坏通信的完整性或访问机密信息。
+全息远程处理通过网络交换信息。 如果没有合适的安全措施，则相同网络上的攻击者可能会危及通信的完整性或访问机密信息。
 
-示例应用和 Windows Store 中的全息远程处理播放器已禁用安全性。 这样做可使示例更易于理解。 它还可帮助你更快速地开始开发。
+Windows 存储中的示例应用程序和全息远程处理播放器已禁用安全。 这样做会使示例更易于理解。 它还可帮助你更快地开始进行开发。
 
-对于现场测试或生产，强烈建议在全息远程处理解决方案中启用安全性。
+对于现场测试或生产环境，我们强烈建议在全息远程处理解决方案中启用安全性。
 
-如果为用例正确设置了全息远程处理中的安全性，则提供以下保证：
+全息远程处理中的安全性在为用例设置正确时，可提供以下保证：
 
-* **真实性** ：播放器和远程应用都可以确保另一端是他们声称是谁
-* **保密性：** 没有任何第三方可以读取播放器和远程应用之间交换的信息
-* **完整性：** 播放器和远程设备可以检测其通信的任何传输中更改
+* **真品：** 播放机和远程应用可以确保另一方是他们宣称的身份
+* **机密性：** 任何第三方都无法读取播放机与远程应用之间交换的信息
+* **完整性：** 播放机和远程可检测任何正在传输的通信更改
 
 >[!IMPORTANT]
->若要使用安全功能，需要同时使用自定义[播放器](holographic-remoting-create-player.md)和自定义远程应用，Windows Mixed Reality [OpenXR](holographic-remoting-create-remote-openxr.md) API。 [](holographic-remoting-create-remote-wmr.md)
+>若要能够使用安全功能，需要使用[Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)或[OpenXR](holographic-remoting-create-remote-openxr.md) api 来实现[自定义播放器](holographic-remoting-create-player.md)和自定义远程应用。
 
 >[!NOTE]
-> 从版本 [2.4.0](holographic-remoting-version-history.md#v2.4.0) 开始，可以使用 [OpenXR API](../native/openxr.md) 创建远程应用。 下面概述了如何在 OpenXR 环境中建立安全 [连接](#secure-connection-using-the-openxr-api)。
+> 从版本 [2.4.0](holographic-remoting-version-history.md#v2.4.0) 开始，可以创建使用 [OpenXR API](../native/openxr.md) 的远程应用。 [下面](#secure-connection-using-the-openxr-api)是有关如何在 OpenXR 环境中建立安全连接的概述。
 
 ## <a name="planning-the-security-implementation"></a>规划安全实现
 
-在全息远程处理中启用安全性时，远程处理库将自动为通过网络交换的所有数据启用加密和完整性检查。
+当你在全息远程处理中启用安全性时，远程处理库将自动对通过网络交换的所有数据启用加密和完整性检查。
 
-但是，确保适当的身份验证需要一些额外的工作。 具体需要执行哪些操作取决于用例，本部分的余下内容是确定必要的步骤。
+不过，确保正确的身份验证需要额外的工作。 需要执行的具体操作取决于你的用例，本部分的其余部分介绍了如何查明必要的步骤。
 
 >[!IMPORTANT]
-> 本文只能提供一般指导。 如果不确定，请考虑咨询安全专家，该专家可针对用例提供相关指导。
+> 本文仅提供一般指导。 如果你不确定，请考虑咨询一个安全专家，它可以向你介绍特定于用例的指导。
 
-首先使用一些术语：描述网络连接时，将使用术语 _"客户端__"和_"服务器"。 服务器是侦听已知终结点地址上的传入连接的端，客户端是连接到服务器终结点的端。
+首先是一些术语：描述网络连接时，将使用术语 " _客户端_ " 和 " _服务器_ "。 服务器是在已知的终结点地址上侦听传入连接的端，而客户端是连接到服务器终结点的服务器。
 
 >[!NOTE]
-> 客户端和服务器角色不与应用是充当播放器还是远程角色有关。 虽然示例具有服务器角色中的播放器，但如果它们更适合你的用例，则很容易反转角色。
+> 客户端和和服务器角色不与应用程序是充当播放机还是作为远程角色关联。 尽管示例在服务器角色中具有播放器，但如果角色更适合你的用例，则可以很容易地反转角色。
 
 ### <a name="planning-the-server-to-client-authentication"></a>规划服务器到客户端身份验证
 
-服务器使用数字证书向客户端证明其身份。 客户端在连接握手阶段验证服务器的证书。 如果客户端不信任服务器，则此时将结束连接。
+服务器使用数字证书向客户端证明其身份。 客户端在连接握手阶段验证服务器的证书。 如果客户端不信任服务器，此时它将结束连接。
 
-客户端如何验证服务器证书以及可以使用哪些类型的服务器证书取决于用例。
+客户端如何验证服务器证书，以及可以使用的服务器证书种类取决于用例。
 
-**用例 1：** 服务器主机名未固定，或者服务器不按主机名寻址。
+**使用案例1：** 服务器主机名不是固定的，或者服务器没有按主机名进行寻址。
 
-在此用例中，不可行 (甚至) 服务器主机名颁发证书。 建议改为验证证书的指纹。 与人类指纹一样，指纹唯一标识证书。
+在此用例中， (或可能) 为服务器的主机名颁发证书是不切实际的。 建议改为验证证书的指纹。 与人为指纹一样，指纹会唯一标识证书。
 
-将指纹与带外客户端通信非常重要。 这意味着，无法通过用于远程处理的同一网络连接发送它。 相反，你可以手动在客户端的配置中输入它，或让客户端扫描 QR 码。
+很重要的一点是，将指纹传达给客户端带外。 也就是说，不能通过用于远程处理的同一网络连接发送它。 相反，您可以手动将它输入到客户端的配置中，或让客户端扫描 QR 代码。
 
-**用例 2：** 可以通过稳定的主机名访问服务器。
+**用例2：** 可以通过稳定的主机名来访问服务器。
 
-在此用例中，服务器具有特定的主机名，并且你知道此名称不太可能更改。 然后，可以使用颁发给服务器的主机名的证书。 将基于主机名和证书的信任链建立信任关系。
+在此用例中，服务器具有特定的主机名，并且你知道此名称不太可能更改。 然后，可以使用颁发给服务器的主机名的证书。 将基于主机名和证书的信任链来建立信任。
 
-如果选择此选项，客户端需要提前知道服务器的主机名和根证书。
+如果选择此选项，则客户端需要事先知道服务器的主机名和根证书。
 
-### <a name="planning-the-client-to-server-authentication"></a>规划客户端到服务器身份验证
+### <a name="planning-the-client-to-server-authentication"></a>规划客户端到服务器的身份验证
 
-客户端使用自由格式令牌对服务器进行身份验证。 此令牌应包含哪些内容将再次取决于用例：
+客户端使用自由格式的令牌对服务器进行身份验证。 此标记应该包含的内容将再次依赖于你的使用情况：
 
-**用例 1：** 只需验证客户端应用的标识。
+**使用案例1：** 仅需验证客户端应用的标识。
 
-在此用例中，共享机密就足够了。 此机密必须足够复杂，无法猜出。
+在此用例中，共享机密就足够了。 此机密必须足够复杂，才能被猜出。
 
-良好的共享机密是随机 GUID，在服务器的 和客户端的配置中手动输入。 例如，若要创建一个，可以在 `New-Guid` PowerShell 中使用 命令。
+良好的共享机密是一个随机 GUID，它是在服务器和客户端的配置中手动输入的。 例如，若要创建一个，可以 `New-Guid` 在 PowerShell 中使用命令。
 
-确保永远不会通过不安全的通道传达此共享机密。 远程处理库可确保共享机密始终以加密方式发送到受信任的对等方。
+请确保此共享机密永远不会通过不安全的通道进行通信。 远程处理库确保始终以加密的形式发送共享机密，并确保只发送到受信任的对等方。
 
-**用例 2：** 还需要验证客户端应用用户的标识。
+**用例2：** 还需要验证客户端应用程序的用户身份。
 
-共享机密不足以涵盖此用例。 相反，可以使用标识提供者创建的令牌。 使用标识提供者的身份验证工作流将如下所示：
+共享密钥不足以涵盖此用例。 相反，你可以使用标识提供程序创建的标记。 使用标识提供者的身份验证工作流如下所示：
 
-* 客户端对标识提供者授权并请求令牌
-* 标识提供者生成令牌并将其发送到客户端
+* 客户端向标识提供程序授权，并请求令牌
+* 标识提供程序生成一个令牌并将其发送到客户端
 * 客户端通过全息远程处理将此令牌发送到服务器
-* 服务器针对标识提供者验证客户端的令牌
+* 服务器根据标识提供程序验证客户端的令牌
 
-标识提供者的一个示例[是Microsoft 标识平台。](/azure/active-directory/develop/)
+[Microsoft 标识平台](/azure/active-directory/develop/)是标识提供程序的一个示例。
 
-与前面的用例一样，请确保这些令牌不会通过不安全的通道发送，或者不会以其他方式公开。
+与上一用例类似，请确保这些标记不通过不安全的通道发送或公开。
 
-## <a name="implementing-holographic-remoting-security"></a>实现全息远程处理安全性
+## <a name="implementing-holographic-remoting-security"></a>实现全息远程处理安全
 
-请记住，如果要启用连接安全性，则需要实现自定义远程和播放器应用。 可以使用提供的示例作为你自己的应用的起点。
+请记住，如果要启用连接安全性，则需要实现自定义远程和播放器应用。 你可以使用提供的示例作为你自己的应用的起点。
 
-若要启用安全性，请调用 而不是 `ListenSecure()` `Listen()` 和 `ConnectSecure()` 来 `Connect()` 建立远程处理连接。
+若要启用安全性，请调用 `ListenSecure()` 而不是 `Listen()` ，而 `ConnectSecure()` 不是 `Connect()` 建立远程处理连接。
 
-这些调用要求你提供某些接口的实现，以提供和验证安全相关信息：
+这些调用需要提供某些接口的实现，以便提供和验证与安全相关的信息：
 
 * 服务器需要实现证书提供程序和身份验证验证程序
 * 客户端需要实现身份验证提供程序和证书验证程序。
 
-所有接口都有一个函数，该函数请求你采取措施，该函数接收回调对象作为参数。 使用此对象可以轻松实现请求的异步处理。 保留对此 对象的引用，在异步操作完成时调用完成函数。 完成函数可能从任何线程调用。
+所有接口都有一个请求执行操作的函数，该函数接收回调对象作为参数。 使用此对象，可以轻松实现请求的异步处理。 保留对此对象的引用，并在异步操作完成时调用完成函数。 可以从任何线程调用完成函数。
 
 >[!TIP]
->使用 C++/WinRT 可以轻松实现 WinRT 接口。 使用 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis) 创作 API 一章对此进行详细介绍。
+>可使用 c + +/WinRT. 轻松实现 WinRT 接口 [带有 c + +/WinRT 的作者 api](/windows/uwp/cpp-and-winrt-apis/author-apis)一章将对此进行详细介绍。
 
 >[!IMPORTANT]
->包 `build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl` 内的 NuGet包含有关安全连接的相关 API 的详细文档。
+>`build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl`NuGet 包内的包含有关与安全连接相关的 API 的详细文档。
 
 ### <a name="implementing-a-certificate-provider"></a>实现证书提供程序
 
-证书提供程序为服务器应用程序提供使用的证书。 实现包括两个部分：
+证书提供程序为服务器应用程序提供要使用的证书。 实现由两部分组成：
 
-1) 实现 接口的证书 `ICertificate` 对象：
+1) 用于实现接口的证书对象 `ICertificate` ：
 
-    * `GetCertificatePfx()` 应返回证书存储的二 `PKCS#12` 进制内容。 `.pfx`文件包含 `PKCS#12` 数据，因此可以直接在此处使用其内容。
-    * `GetSubjectName()` 应返回标识要使用的证书的友好名称。 如果未为证书分配友好名称，则此函数应返回证书的主题名称。
-    * `GetPfxPassword()` 如果不需要密码，则 应返回打开证书存储 () 或空字符串。
+    * `GetCertificatePfx()` 应返回证书存储的二进制内容 `PKCS#12` 。 `.pfx`文件包含 `PKCS#12` 数据，因此可直接在此处使用其内容。
+    * `GetSubjectName()` 应返回标识要使用的证书的友好名称。 如果没有为证书指定友好名称，则此函数应返回证书的使用者名称。
+    * `GetPfxPassword()` 应返回 (打开证书存储区所需的密码，如果) 不需要密码，则返回空字符串。
 
-2) 实现 接口的证书 `ICertificateProvider` 提供程序：
-    * `GetCertificate()` 应构造证书对象，然后通过调用回调对象 `CertificateReceived()` 来返回它。
+2) 用于实现接口的证书提供程序 `ICertificateProvider` ：
+    * `GetCertificate()` 应构造一个证书对象并通过 `CertificateReceived()` 在回调对象上调用来返回该对象。
 
 ### <a name="implementing-an-authentication-validator"></a>实现身份验证验证程序
 
-身份验证验证程序接收客户端发送的身份验证令牌，并返回验证结果。
+身份验证验证程序接收客户端发送的身份验证令牌，并使用验证结果回复。
 
-按 `IAuthenticationReceiver` 如下所示实现 接口：
+实现该 `IAuthenticationReceiver` 接口，如下所示：
 
-* `GetRealm()` 应返回在远程处理连接握手期间 (HTTP 领域的身份验证领域) 。
+* `GetRealm()` 应返回 (在远程处理连接握手期间使用的 HTTP 领域的身份验证领域的名称) 。
 * `ValidateToken()` 应验证客户端身份验证令牌，并 `ValidationCompleted()` 调用具有验证结果的回调对象。
 
 ### <a name="implementing-an-authentication-provider"></a>实现身份验证提供程序
@@ -189,6 +189,7 @@ ms.locfileid: "115223577"
 此 API 类似于实现全息远程处理安全性中所述的基于 IDL[的 API。](#implementing-holographic-remoting-security) 但是，应该提供回调实现，而不是实现接口。 可以在 OpenXR 示例应用中 [找到详细示例](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)。
 
 ## <a name="see-also"></a>另请参阅
+* [全息远程处理概述](holographic-remoting-overview.md)
 * [使用远程 API 编写全息远程Windows Mixed Reality应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR API 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)

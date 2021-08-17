@@ -6,14 +6,14 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens、远程处理、全息远程处理、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、数据通道
-ms.openlocfilehash: 09fea161f9042d7afc59c16d3b5e8a6c69892e84b1de5e9ab4a4808733b4f171
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 1adda10aa7792eaeab0ac32cb37d73dcfd2b58e6
+ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115217083"
+ms.lasthandoff: 08/14/2021
+ms.locfileid: "122184708"
 ---
-# <a name="custom-holographic-remoting-data-channels"></a>自定义全息远程处理数据通道
+# <a name="custom-holographic-remoting-data-channels-c"></a>自定义全息远程处理数据通道 (C++) 
 
 >[!NOTE]
 >本指南特定于全息远程处理HoloLens 2。
@@ -46,7 +46,7 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_cus
 m_remoteContext.CreateDataChannel(0, DataChannelPriority::Low);
 ```
 
-若要开始在播放器端创建数据 **通道，** 请：
+若要开始在播放器端创建数据 **通道** ，请：
 ```cpp
 // Valid channel ids for channels created on the player side are 64 up to and including 127
 m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
@@ -57,7 +57,7 @@ m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
 
 ## <a name="handling-custom-data-channel-events"></a>处理自定义数据通道事件
 
-若要建立自定义数据通道，需要在播放器和远程 (上对事件 ```OnDataChannelCreated``` 进行处理) 。 当任一方创建用户数据通道并提供 对象时，它触发，该对象可用于通过此通道 ```IDataChannel``` 发送和接收数据。
+若要建立自定义数据通道，需要在播放器和远程 (上 ```OnDataChannelCreated``` 处理事件) 。 当任一方创建用户数据通道并提供 对象时，它触发，该对象可用于通过此通道 ```IDataChannel``` 发送和接收数据。
 
 若要在事件上注册侦听器 ```OnDataChannelCreated``` ，请：
 ```cpp
@@ -114,6 +114,7 @@ m_customDataChannel.Close();
 ```
 
 ## <a name="see-also"></a>另请参阅
+* [全息远程处理概述](holographic-remoting-overview.md)
 * [使用远程 API 编写全息远程Windows Mixed Reality应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR API 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)

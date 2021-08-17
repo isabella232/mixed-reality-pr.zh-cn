@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 07/27/2021
 ms.topic: article
 keywords: Windows Mixed Reality、设计、示例应用、控件、MRTK、混合现实 Toolkit、Unity、示例应用、示例应用、开源、Microsoft Store、HoloLens、混合现实头戴显示设备、Windows 混合现实头戴显示设备、虚拟现实头戴显示设备、OpenXR、Open XR、Unity
-ms.openlocfilehash: ccfd443bb103f6ac051de84d3a321f3ffd5be2f5bafdc6479e9f67a03771d386
-ms.sourcegitcommit: 5977109661a1db4ee2be8ed532479342093303d5
+ms.openlocfilehash: 1c9879872e80ebef3ea51cf3aa7dd4d349327cdf
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "116862592"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905694"
 ---
 # <a name="periodic-table-of-the-elements-20"></a>元素周期表 2.0
 ![Elements 应用的周期表](../images/MRDL_PeriodicTable.jpg)
 
 >[!NOTE]
->本文讨论我们在混合现实设计实验室中创建的探索示例，我们在该实验室[](https://github.com/Microsoft/MRDesignLabs_Unity)中分享有关混合现实应用开发的学习和建议。 随着我们进行新的发现，与设计相关的文章和代码将不断发展。
+>本文讨论我们在混合现实设计实验室中创建的探索示例，我们在该实验室[](https://github.com/Microsoft/MRDesignLabs_Unity)中分享有关混合现实应用开发的学习和建议。 随着我们做出新的发现，与设计相关的文章和代码将不断发展。
 
 [元素周期表是](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) Microsoft 混合现实设计实验室提供的开源示例应用。 该应用最初设计为HoloLens 2015 年的第一代沉浸式头戴显示设备，用于演示如何使用 MRTK 的构建基块创建端到端体验。 为了充分利用应用程序上新的手部跟踪和眼动跟踪HoloLens 2，已使用 MRTK v2 更新了该应用。 
 
@@ -30,10 +30,10 @@ ms.locfileid: "116862592"
 查看"<a href="https://github.com/microsoft/MRDL_Unity_PeriodicTable/releases" target="_blank">**发布"**</a>页上的GitHub。
 
 ## <a name="upgrading-the-project-for-hololens-2-with-mrtk"></a>使用 MRTK 升级HoloLens 2项目
-有关移植HoloLens 2，可阅读文章：使用 <a href="https://dongyoonpark.medium.com/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158" target="_blank">**MRTK v (2 HoloLens 2 2019**)</a>
+可以在 <a href="https://dongyoonpark.medium.com/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158" target="_blank">**2019 HoloLens 2 2019 HoloLens 2 MRTK v2** 中将元素应用的定期表引入 (一文)</a>
 
 ## <a name="openxr"></a>OpenXR 
-阅读有关将定期表项目更新到 Unity 2020 + OpenXR 管道：将 MRTK 混合现实 Project 更新到 <a href="https://dongyoonpark.medium.com/updating-mrtk-mixed-reality-project-to-openxr-unity-2020-periodic-table-of-the-elements-4cf55b0479a4" target="_blank">**OpenXR+Unity 2020：HoloLens 2 (2021** 年元素周期表)</a>
+阅读有关将定期表项目更新到 Unity 2020 + OpenXR 管道：将 MRTK 混合现实 Project 更新到 <a href="https://dongyoonpark.medium.com/updating-mrtk-mixed-reality-project-to-openxr-unity-2020-periodic-table-of-the-elements-4cf55b0479a4" target="_blank">**OpenXR+Unity 2020：HoloLens 2 (2021 年元素周期** 表)</a>
 
 ## <a name="design-story"></a>设计故事 
 查看元素应用的周期表： [**元素 1.0 的周期表的设计故事**](periodic-table-of-the-elements.md)

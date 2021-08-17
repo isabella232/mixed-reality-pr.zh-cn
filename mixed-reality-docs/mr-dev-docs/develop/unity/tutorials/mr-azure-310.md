@@ -1,49 +1,49 @@
 ---
 title: HoloLens（第一代）和 Azure 310 - 物体检测
-description: 完成本课程，了解如何定型和使用机器学习模型来识别相似对象及其在实际中的位置。
+description: 完成本课程，了解如何训练和使用机器学习模型来识别相似对象及其在现实世界中的位置。
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure，自定义视觉对象，对象检测，混合现实，学院，unity，教程，api，hololens，Windows 10，Visual Studio
-ms.openlocfilehash: 85a99b676f6765696524bc42adf257b3430c00cc955413b4c299ddb58502cefb
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+keywords: azure， 自定义视觉， 对象检测， 混合现实， academy， unity， 教程， api， hololens， Windows 10， Visual Studio
+ms.openlocfilehash: b152aaebbd3858140b79133a8f8e551aab06b4f3
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115216532"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905745"
 ---
-# <a name="hololens-1st-gen-and-azure-310-object-detection"></a>HoloLens (第一代) 和 Azure 310：对象检测
+# <a name="hololens-1st-gen-and-azure-310-object-detection"></a>HoloLens (第一代) Azure 310：对象检测
 
 >[!NOTE]
->混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来会发布一系列新教程，这些教程将演示如何针对 HoloLens 2 进行开发。  此通知将在发布时通过指向这些教程的链接进行更新。
+>混合现实学院教程在制作时考虑到了 HoloLens（第一代）和混合现实沉浸式头戴显示设备。  因此，对于仍在寻求这些设备的开发指导的开发人员而言，我们觉得很有必要保留这些教程。  我们 **不会** 在这些教程中更新 HoloLens 2 所用的最新工具集或集成相关的内容。  我们将维护这些教程，使之持续适用于支持的设备。 将来将发布一系列新的教程，演示如何针对 HoloLens 2。  发布这些教程时，此通知将更新为指向这些教程的链接。
 
 <br>
 
-在本课程中，你将了解如何在混合现实应用程序中使用 Azure 自定义视觉 "对象检测" 功能来识别所提供的映像中的自定义视觉对象内容及其空间位置。
+本课程将学习如何在混合现实应用程序中使用 Azure 自定义视觉"对象检测"功能识别自定义视觉对象内容及其在提供的图像中的空间位置。
 
-此服务允许你使用对象图像训练机器学习模型。 然后，您将使用训练的模型来识别类似对象并大致了解其在现实世界中的位置，如 Microsoft HoloLens 的照相机捕获提供，或照相机连接到用于沉浸式 (VR) 耳机的电脑。
+此服务允许你使用对象图像训练机器学习模型。 然后，你将使用经过训练的模型来识别类似的对象，并大致了解它们的实际位置，如 Microsoft HoloLens 的相机捕获或相机连接到电脑，用于沉浸式 (VR) 头戴显示设备。
 
 ![课程结果](images/AzureLabs-Lab310-00.png)
 
-**Azure 自定义视觉中，对象检测** 是一种 Microsoft 服务，它允许开发人员构建自定义映像分类器。 然后，可以将这些分类器用于新的图像，通过在图像本身中提供 **框边界** 来检测该新图像内的对象。 此服务提供简单易用的联机门户来简化此过程。 有关详细信息，请访问以下链接：
+**Azure 自定义视觉，对象检测** 是一项 Microsoft 服务，可让开发人员生成自定义图像分类器。 然后，可以通过在图像本身中提供 Box **边界** ，将这些分类器与新图像一起用于检测该新图像中的对象。 该服务提供了一个简单、易于使用的联机门户，用于简化此过程。 有关详细信息，请访问以下链接：
 
-* [Azure 自定义视觉页面](/azure/cognitive-services/custom-vision-service/home)
+* [Azure 自定义视觉 页](/azure/cognitive-services/custom-vision-service/home)
 * [限制和配额](/azure/cognitive-services/custom-vision-service/limits-and-quotas)
 
 完成本课程后，你将拥有一个混合现实应用程序，该应用程序将能够执行以下操作：
 
-1. 用户将可以 *注视* 使用 Azure 自定义影像服务、对象检测训练的对象。 
-2. 用户将使用 *点击* 手势来捕获所查看内容的图像。
-3. 应用会将映像发送到 Azure 自定义影像服务。
-4. 此时会显示服务的答复，该服务会将识别结果显示为世界空间文本。 这将通过利用 Microsoft HoloLens 的空间跟踪来实现，这是为了了解识别对象的世界位置，然后使用与在图像中检测到的内容关联的 *标记* 来提供标签文本。
+1. 用户将能够凝视一个对象，他们已使用 Azure 自定义视觉 服务的对象检测来训练该对象。
+2. 用户将使用 *点击手势捕获* 他们正在查看的内容的图像。
+3. 应用将映像发送到 Azure 自定义视觉 服务。
+4. 服务会提供一个答复，该回复将识别结果显示为世界空间文本。 这可以通过利用 Microsoft HoloLens 的空间跟踪（作为一种了解已识别对象的世界位置的方法）实现，然后使用与图像中检测到的内容关联的标记来提供标签文本。
 
-本课程还将介绍如何手动上传图像、创建标记和培训服务，通过在提交的图像中设置 *边界框* 来识别提供的) 示例中 (的不同对象。 
+本课程还将介绍手动上传图像、创建标记，以及训练服务以识别不同的对象 (在提供的示例中，通过设置提交的图像中的边界框) 一个) 来识别不同的对象。 
 
 > [!IMPORTANT]
-> 创建和使用应用后，开发人员应导航回 Azure 自定义影像服务，并确定该服务所进行的预测，并通过标记缺少的任何内容来确定其是否正确或未 (，并) 调整 *边界框* 。 然后，可以对服务进行重新训练，这会增加识别真实世界对象的可能性。
+> 创建和使用应用后，开发人员应导航回 Azure 自定义视觉 (服务，确定服务做出的预测，并通过标记服务遗漏的任何内容并调整边界框) 来确定预测是否正确。  然后，可以重新训练服务，这将增加它识别实际对象的可能性。
 
-本课程将介绍如何从 Azure 自定义影像服务、对象检测到基于 Unity 的示例应用程序中获取结果。 您可以将这些概念应用到您可能生成的自定义应用程序。
+本课程将指导你如何将 Azure 自定义视觉 服务对象检测的结果获取到基于 Unity 的示例应用程序中。 这些概念由你决定应用于你可能正在构建的自定义应用程序。
 
 ## <a name="device-support"></a>设备支持
 
@@ -55,118 +55,118 @@ ms.locfileid: "115216532"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 > [!NOTE]
-> 本教程专为具有 Unity 和 c # 基本经验的开发人员设计。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 你可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的内容完全匹配。
+> 本教程专为具有 Unity 和 C# 基本经验的开发人员设计。 另请注意，本文档中的先决条件和书面说明表示截至 2018 年 7 月 2018 年 7 月 (测试和验证的内容) 。 可以随意使用安装工具一文中列出的最新软件，但不应[](../../install-the-tools.md)假定本课程中的信息与下面列出的新软件中的信息完全匹配。
 
-本课程建议采用以下硬件和软件：
+对于本课程，我们建议使用以下硬件和软件：
 
-- 开发 PC
-- [启用开发人员模式 Windows 10 Fall Creators Update (或更高版本) ](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [最新的 Windows 10 SDK](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Unity 2017.4 LTS](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Visual Studio 2017](/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- 已启用开发人员模式[Microsoft HoloLens](/windows/mixed-reality/hololens-hardware-details)
-- Azure 安装和自定义影像服务检索的 Internet 访问
--  对于希望自定义视觉识别的每个对象) ，需要一系列至少15个 (15) 的图像。 如果需要，可以使用本课程提供的映像， [一系列 cup](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)) 。
+- 开发电脑
+- [Windows 10 Fall Creators Update (开发人员模式) 或更高版本](../../install-the-tools.md#installation-checklist-for-hololens)
+- [最新的 Windows 10 SDK](../../install-the-tools.md#installation-checklist-for-hololens)
+- [Unity 2017.4 LTS](../../install-the-tools.md#installation-checklist-for-hololens)
+- [Visual Studio 2017](../../install-the-tools.md#installation-checklist-for-hololens)
+- 启用了[Microsoft HoloLens](/windows/mixed-reality/hololens-hardware-details)模式的应用程序
+- Azure 设置和服务检索自定义视觉 Internet 访问
+-  对于要识别 (的每个) 对象) 至少需要 15 自定义视觉 15 个图像。 如果需要，可以使用本课程中已提供的图像，一系列) 。 [](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)
 
 ## <a name="before-you-start"></a>开始之前
 
-1.  若要避免在生成此项目时遇到问题，强烈建议你在根或近乎根文件夹中创建本教程中所述的项目 (长文件夹路径在生成时) 会导致问题。
-2.  设置并测试 HoloLens。 如果需要支持设置 HoloLens，请[确保访问 HoloLens 安装程序一文](/hololens/hololens-setup)。 
-3.  在开始开发新的 HoloLens 应用程序时，最好执行校准和传感器调整 (有时，它可以帮助为每个用户) 执行这些任务。 
+1.  为了避免在生成此项目时遇到问题，强烈建议在根文件夹或近根文件夹中创建本教程中提到的项目 (长文件夹路径可能会导致生成时) 。
+2.  设置并测试HoloLens。 如果需要对此的支持，[请访问安装HoloLens文章](/hololens/hololens-setup)。
+3.  在开始开发新的 HoloLens App (时，建议执行校准和传感器优化 (有时可以帮助为每个用户应用执行) 。
 
-有关校准的帮助信息，请访问[HoloLens 校准文章](/hololens/hololens-calibration#hololens-2)。
+有关校准的帮助，请遵循[以下链接，HoloLens校准一文](/hololens/hololens-calibration#hololens-2)。
 
-有关传感器优化的帮助，请访问[HoloLens 传感器优化文章](/hololens/hololens-updates)。
+有关传感器优化的帮助，请遵循此[链接，HoloLens传感器优化一文](/hololens/hololens-updates)。
 
-## <a name="chapter-1---the-custom-vision-portal"></a>第1章-自定义视觉门户
+## <a name="chapter-1---the-custom-vision-portal"></a>第 1 章 - 自定义视觉 门户
 
-若要使用 **Azure 自定义影像服务**，你将需要配置该应用程序的实例。
+若要使用 **Azure 自定义视觉** 服务，需要将其实例配置为可供应用程序使用。
 
-1.  导航 [到 **自定义影像服务** 主页](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/)。
+1.  导航 [到 **自定义视觉 服务** 主页](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/)。
 
-2.  单击 **入门**。
+2.  单击"入门"。 
 
     ![](images/AzureLabs-Lab310-01.png)
 
-3.  登录到自定义视觉门户。
+3.  登录到 自定义视觉 门户。
 
     ![](images/AzureLabs-Lab310-02.png)
 
-4.  如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室中按照本教程进行学习，请咨询教师或 proctors，以获得设置新帐户的帮助。
+4.  如果还没有 Azure 帐户，则需要创建一个。 如果在课堂或实验室环境中遵循本教程，请询问讲师或其中一位讲师，以帮助设置新帐户。
 
-5.  首次登录后，系统会提示 " *服务* " 面板。 单击复选框以 *同意条款*。 然后单击 " **我同意**"。
+5.  首次登录后，系统会提示你"服务 *条款"面板* 。 单击复选框以 *同意条款*。 然后单击"**我同意"。**
 
     ![](images/AzureLabs-Lab310-03.png)
 
-6.  如果同意这些条款，你现在已在 " *我的项目* " 部分。 单击 "**新建 Project**"。
+6.  同意条款后，你现在在"我的 *项目"部分* 。 单击"新建 **Project"。**
 
     ![](images/AzureLabs-Lab310-04.png)
 
-7.  右侧将显示一个选项卡，该选项卡将提示你为项目指定某些字段。
+7.  右侧将显示一个选项卡，这将提示你为项目指定某些字段。
 
     1.  插入项目的名称
 
-    2.  为项目插入说明 (**可选**) 
+    2.  插入项目说明 (**可选)**
 
-    3.  选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种监视、控制访问、预配和管理 Azure 资产集合的计费的方法。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
+    3.  选择一 **个资源组** 或创建一个新资源组。 资源组提供了一种方法来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议将与单个项目关联的所有 Azure 服务 (例如，这些课程) 位于公共资源组) 。
 
         ![](images/AzureLabs-Lab310-05.png)
 
         > [!NOTE]
-        > 若要 [阅读有关 Azure 资源组的详细信息，请导航到相关文档](/azure/azure-resource-manager/resource-group-portal)
+        > 若要详细了解 [Azure 资源组，请导航到关联的文档](/azure/azure-resource-manager/resource-group-portal)
 
-    4.  **(preview)** 将 **Project 类型** 设置为对象检测。
+    4.  将Project **类型设置为****对象检测 (预览) 。**
 
-8.  完成后，单击 " **创建项目**"，将重定向到 "自定义影像服务项目" 页面。
+8.  完成后，单击"创建 **项目**"，将重定向到"自定义视觉"项目页。
 
 
-## <a name="chapter-2---training-your-custom-vision-project"></a>第2章-培训自定义视觉项目
+## <a name="chapter-2---training-your-custom-vision-project"></a>第 2 章 - 训练自定义视觉项目
 
-在自定义视觉门户中，你的主要目标是训练你的项目以识别图像中的特定对象。
+进入 自定义视觉 门户后，你的主要目标是训练项目以识别图像中的特定对象。
 
-对于你希望应用程序识别的每个对象，你需要至少15个 (15) 映像。 您可以使用本课程附带的图像 ([一系列 cup](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)) 。
+对于希望应用程序 () 的每个对象，至少需要 15 个图像和 15 个图像。 可以使用本课程中提供的图像 ([一](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip) 系列) 。
 
-训练自定义视觉项目：
+若要训练自定义视觉项目：
 
-1.  单击 " **+** **标记**" 旁边的按钮。
+1.  单击"标记 **+** "旁边的 **按钮**。
 
     ![](images/AzureLabs-Lab310-06.png)
 
-2.  添加用于将图像与相关联的标记的 **名称** 。 在此示例中，我们将使用 cup 的图像进行识别，因此已为此、 **杯** 命名了标记。 完成后单击 " **保存** "。
+2.  添加 **将用于** 将图像与 关联的标记的名称。 本示例使用奖杯图像进行识别，因此已为此命名标记 **"Cup"。** 完成后 **，单击"** 保存"。
 
     ![](images/AzureLabs-Lab310-07.png)
 
-3.  你将注意到已添加 **标记** (你可能需要重新加载页面以使其) 显示。 
+3.  你会 **注意到标记已** 添加 (可能需要重新加载页面，这样它就会显示在) 。 
 
     ![](images/AzureLabs-Lab310-08.png)
 
-4.  单击页中心的 " **添加图像** "。
+4.  单击 **页面中心的** "添加图像"。
 
     ![](images/AzureLabs-Lab310-09.png)
 
-5.  单击 " **浏览本地文件**"，然后浏览到要为一个对象上传的图像，最小为十五 (15) 。
+5.  单击" **浏览本地文件"，** 并浏览到要上传的一个对象的图像，最小为 15 (15) 。
 
     > [!TIP]
-    >  你可以一次选择多个图像来上传。
+    >  一次可以选择多个图像进行上传。
 
     ![](images/AzureLabs-Lab310-10.png)
 
-6.  选择要对项目定型的所有映像后，按 **Upload 文件**。 文件将开始上传。 确认上传后，单击 " **完成**"。
+6.  选择 **Upload** 训练项目的所有图像后，按"创建文件"。 文件将开始上传。 确认上传后，单击"完成 **"。**
 
     ![](images/AzureLabs-Lab310-11.png)
 
-7.  此时，将上载映像，但不会对其进行标记。
+7.  此时，图像已上传，但没有标记。
 
     ![](images/AzureLabs-Lab310-12.png)
 
-8.  若要为图像标记，请使用鼠标。 当你将鼠标指针悬停在图像上时，选择突出显示将帮助你在对象周围自动绘制选定内容。 如果它不准确，可以自行绘制。 为此，请按住鼠标左键并拖动选择区域以包含您的对象。 
+8.  若要标记图像，请使用鼠标。 将鼠标悬停在图像上时，选择突出显示有助于自动围绕对象绘制选择。 如果不准确，可以绘制自己的 。 这是通过按住鼠标左键单击并拖动选择区域以包含对象完成的。 
 
     ![](images/AzureLabs-Lab310-13.png) 
 
-9. 在图像中选择对象后，一个小提示会要求你添加 *区域标记*。 选择前面创建的标记 ('Cup'，在以上示例中选择") "，或者如果要添加更多标记，请在 中键入该标记，然后单击 **"+ (+) "** 按钮。
+9. 在图像中选择对象后，一个小提示会要求你添加 *区域标记*。 选择前面创建的标记 ('Cup'，在以上示例中选择") "，或者如果要添加更多标记，请在 中键入该标记，然后单击 **"+ (+)** 按钮。
 
     ![](images/AzureLabs-Lab310-14.png) 
 
@@ -192,9 +192,9 @@ ms.locfileid: "115216532"
     ![](images/AzureLabs-Lab310-19.png)
 
     > [!NOTE] 
-    > 从此 提供的终结点设置为任何 *已标记为* 默认迭代的迭代。 因此，如果以后进行新的迭代并更新为默认值，则无需更改代码。
+    > 从此 提供的终结点设置为任何 *已标记为* 默认值的迭代。 因此，如果以后进行新的迭代并更新为默认值，则无需更改代码。
 
-14. 单击"预测 **URL"** 后，打开 *记事本，* 然后复制并粘贴 **URL** (也称为预测终结点 **)** 和服务 **预测** 密钥，以便稍后在代码中需要它时检索它。
+14. 单击"预测 **URL"** 后，打开 *记事本，* 复制并粘贴 **URL** (也称为预测终结点 **)** 和服务 **预测** 密钥，以便稍后在代码中需要它时检索它。
 
     ![](images/AzureLabs-Lab310-20.png)
 
@@ -206,15 +206,15 @@ ms.locfileid: "115216532"
 
     ![](images/AzureLabs-Lab310-21.png)
 
-2.  现在需要提供 Unity 项目名称。 插入 **CustomVisionObjDetection**。 请确保项目类型设置为 **3D**，并且将"位置"设置为适合你记住 (的位置，越接近根目录) 。 然后单击"创建 **项目"。**
+2.  现在需要提供 Unity 项目名称。 插入 **CustomVisionObjDetection**。 请确保项目类型设置为 **3D**，并且将"位置"设置为适合你记住 (的位置，越靠近根目录) 。 然后单击"创建 **项目"。**
 
     ![](images/AzureLabs-Lab310-22.png)
 
-3.  打开 Unity 后，值得检查 **默认脚本编辑器** 是否设置为 **Visual Studio。** 转到"**编辑*  >  *首选项"，** 然后从新窗口导航到"**外部工具"。** 将 **"外部脚本编辑器"****更改为Visual Studio。** 关闭 **"首选项"** 窗口。
+3.  打开 Unity 后，值得检查 **默认脚本编辑器** 是否设置为 **Visual Studio。** 转到"**编辑*  >  *首选项"，** 然后从新窗口导航到"**外部工具"。** 将 **"外部脚本编辑器"** 更改为 **Visual Studio。** 关闭 **"首选项"** 窗口。
 
     ![](images/AzureLabs-Lab310-23.png)
 
-4.  接下来，转到"文件 **>生成设置，** 将"平台"切换到"通用平台 *Windows"，* 然后单击"切换平台 **"** 按钮。
+4.  接下来，转到"文件 **>生成** 设置"，将"平台"切换到"通用Windows *平台*"，然后单击"切换平台 **"** 按钮。
 
     ![](images/AzureLabs-Lab310-24.png)
 
@@ -225,11 +225,11 @@ ms.locfileid: "115216532"
     3.  **SDK** 设置为"最新 **安装"**
     4.  **Visual Studio版本** 设置为"最新 **安装"**
     5.  **"生成和运行** "设置为" **本地计算机"**            
-    6.  目前，"**生成设置中的** 其余设置应保留为默认值。
+    6.  "生成 **"中的设置** 设置现在应保留为默认值。
 
         ![](images/AzureLabs-Lab310-25.png)
 
-6.  在同一"生成 **设置** 窗口中，单击"播放器设置按钮，这将在检查器所在的空间中 **打开相关面板**。
+6.  在同一"生成 **设置** 窗口中，单击"播放器设置按钮，这将在 **检查** 器所在的空间中打开相关面板。
 
 7. 在此面板中，需要验证一些设置：
 
@@ -253,7 +253,7 @@ ms.locfileid: "115216532"
 
             ![](images/AzureLabs-Lab310-27.png) ![](images/AzureLabs-Lab310-28.png)
 
-    3.  在面板的下方，在"发布 设置) "下面的 **"XR** 设置 ("中，勾选"支持虚拟现实"，Windows Mixed Reality  **SDK。**
+    3.  在面板的下方，在"发布 设置) "下找到的 **"XR** 设置 ("中，勾选"支持虚拟现实"，Windows Mixed Reality  **SDK。**
 
         ![](images/AzureLabs-Lab310-29.png)
 
@@ -265,7 +265,7 @@ ms.locfileid: "115216532"
 
     ![](images/AzureLabs-Lab310-30.png)
 
-11. 在检查 **器面板中***，设置"* 图形"面板。 向下滚动，直到看到名为 Always **Include 着色器 的数组**。 通过增加一个大小变量来添加槽 (此示例中，该变量为 8，因此我们将其) 。 将在数组的最后一个位置显示一个新槽，如下所示：
+11. 在检查 **器面板中***，设置* 打开图形面板。 向下滚动，直到看到名为 Always **Include 着色器 的数组**。 通过在此例中将 **Size** 变量增加一 (来添加槽，该变量为 8，因此将其) 。 将在数组的最后一个位置显示一个新槽，如下所示：
 
     ![](images/AzureLabs-Lab310-31.png)
 
@@ -305,7 +305,7 @@ ms.locfileid: "115216532"
 
     4.  " **场景** "文件夹，当前包含本课程的预建场景。
 
-4.  打开 **"场景**"文件夹，在Project面板中，双击 **ObjDetectionScene，** 加载用于本课程的场景。
+4.  打开"**场景**"文件夹，在Project面板中，双击 **ObjDetectionScene，** 加载用于本课程的场景。
 
     ![](images/AzureLabs-Lab310-36.png)
 
@@ -317,7 +317,7 @@ ms.locfileid: "115216532"
 此时，你已准备好编写一些代码。 你将从 **CustomVisionAnalyser 类** 开始。
 
 > [!NOTE]
-> 对 自定义视觉 **服务的** 调用（在如下所示的代码中进行）是使用 **自定义视觉 REST API。** 通过使用此功能，你将了解如何实现和利用此 API (了解如何在你自己的目标上实现) 。 请注意，Microsoft 提供了自定义视觉 **SDK，** 该 SDK 还可用于调用服务。 有关详细信息，请访问 自定义视觉 [SDK 一文](https://github.com/Microsoft/Cognitive-CustomVision-Windows/)。
+> 对 自定义视觉 **服务的** 调用（在如下所示的代码中进行）是使用 **自定义视觉 REST API。** 通过使用此功能，你将了解如何实现和利用此 API (了解如何在你自己的应用上实现) 。 请注意，Microsoft 提供了自定义视觉 **SDK，** 该 SDK 还可用于调用服务。 有关详细信息，请访问 自定义视觉 [SDK 一文](https://github.com/Microsoft/Cognitive-CustomVision-Windows/)。
 
 此类负责：
 
@@ -327,11 +327,11 @@ ms.locfileid: "115216532"
 
 - 以 JSON 字符串形式接收响应。
 
-- 反化响应，将生成的预测传递给 **SceneOrganiser** 类，该类将处理响应的显示方式。 
+- 反化响应，将生成的预测传递给 **SceneOrganiser** 类，该类将负责响应的显示方式。 
 
 若要创建此类，请：
 
-1.  右键单击位于"资产"**面板** 中的"资产 **Project"，** 然后单击"创建 **文件夹**  >  **"。** 调用文件夹 **Scripts**。
+1.  右键单击位于"资产"**面板** 中的"资产 **Project"，** 然后单击"**创建文件夹**  >  **"。** 调用文件夹 **Scripts**。
 
     ![](images/AzureLabs-Lab310-37.png)
 
@@ -376,7 +376,7 @@ ms.locfileid: "115216532"
     ```
 
     > [!NOTE]
-    > 请确保将服务 **Prediction-Key** 插入 **predictionKey** 变量，并将 **Prediction-Endpoint** 插入 **predictionEndpoint** 变量。 你之前在第[2 章记事本 14 中](#chapter-2---training-your-custom-vision-project)将这些文件复制到了其中。
+    > 请确保将服务 **Prediction-Key** 插入 **predictionKey** 变量，并将 **Prediction-Endpoint** 插入 **predictionEndpoint** 变量。 你之前在第 2 记事本[14 章中](#chapter-2---training-your-custom-vision-project)将这些文件复制到了其中。
 
 7.  现在 **需要 ()** 唤醒代码来初始化 Instance 变量：
 
@@ -391,7 +391,7 @@ ms.locfileid: "115216532"
         }
     ```
 
-8.  使用 (下面的静态 **GetImageAsByteArray ()** 方法添加协同例程) ，该方法将获取 **ImageCapture** 类捕获的图像分析结果。
+8.  使用 (的 **静态 GetImageAsByteArray ()** 方法添加协同例程) ，该方法将获取 **ImageCapture** 类捕获的图像分析结果。
 
     > [!NOTE]
     > 在 **"分析""映像""** 捕获协同例程"中，需要调用尚未创建的 **SceneOrganiser** 类。 因此，**请保留这些行的注释。**
@@ -457,7 +457,7 @@ ms.locfileid: "115216532"
 
 9. 删除 **"启动 ()****更新 ()** 方法，因为它们不会使用。 
 
-10.  在返回到 Unity **之前**，请务必Visual Studio 中的 **更改**。
+10.  在返回到 Unity 之前，请务必 **Visual Studio** 中的 **更改**。
 
 > [!IMPORTANT]
 > 如前所述，不必担心代码可能看起来有错误，因为很快会提供进一步的类，这将修复这些错误。
@@ -466,7 +466,7 @@ ms.locfileid: "115216532"
 
 现在将创建的类是 **CustomVisionObjects** 类。
 
-此脚本包含其他类用来序列化并反序列化对服务自定义视觉的对象。
+此脚本包含其他类用来序列化和反序列化对服务自定义视觉的对象。
 
 若要创建此类，请：
 
@@ -483,10 +483,10 @@ ms.locfileid: "115216532"
     using UnityEngine.Networking;
     ```
 
-4.  删除 **CustomVisionObjects** () **中的** Start **()** Update () 方法，此类现在应为空。
+4.  删除 **CustomVisionObjects** () **中的** Start **()** Update 方法，此类现在应为空。
 
     > [!WARNING]
-    > 必须仔细遵循下一条说明。 如果将新的类声明放在 **CustomVisionObjects** 类中，将在第 [10](#chapter-10---create-the-imagecapture-class)章中收到编译错误，指出 **找不到 AnalysisRootObject** 和 **BoundingBox。**
+    > 必须仔细遵循下一条说明。 如果将新的类声明放在 **CustomVisionObjects** 类中，将在第 [10](#chapter-10---create-the-imagecapture-class)章中收到编译错误，指出找不到 **AnalysisRootObject** 和 **BoundingBox。**
 
 5.  在 **CustomVisionObjects 类外部添加以下** 类。  **Newtonsoft** 库使用这些对象来序列化并反序列化响应数据：
 
@@ -618,7 +618,7 @@ ms.locfileid: "115216532"
     }
     ```
 
-6.  在返回到 Unity **之前**，请务必Visual Studio 中的 **更改**。
+6.  在返回到 Unity 之前，请务必 **Visual Studio** 中的 **更改**。
 
 ## <a name="chapter-7---create-the-spatialmapping-class"></a>第 7 章 - 创建 SpatialMapping 类
 
@@ -637,7 +637,7 @@ ms.locfileid: "115216532"
     using UnityEngine.XR.WSA;
     ```
 
-4.  然后，将以下变量添加到 **SpatialMapping** 类中的 Start **()** 方法上方：
+4.  然后，在 **SpatialMapping** 类中 Start () **变量：**
 
     ```csharp
         /// <summary>
@@ -694,7 +694,7 @@ ms.locfileid: "115216532"
 
 6.  删除 **Update ()** 方法。
 
-7.  在返回到 Unity **之前**，请务必Visual Studio 中的 **更改**。
+7.  在返回到 Unity 之前，请务必 **Visual Studio** 中的 **更改**。
 
 
 ## <a name="chapter-8---create-the-gazecursor-class"></a>第 8 章 - 创建 GazeCursor 类
@@ -775,7 +775,7 @@ ms.locfileid: "115216532"
     > [!NOTE]
     > 不必担心找不到 **SceneOrganiser** 类的错误，你将在下一章创建它。
 
-7. 在返回到 Unity **之前**，请务必Visual Studio 中的 **更改**。
+7. 在返回到 Unity 之前，请务必 **Visual Studio** 中的 **更改**。
 
 ## <a name="chapter-9---create-the-sceneorganiser-class"></a>第 9 章 - 创建 SceneOrganiser 类
 
@@ -799,7 +799,7 @@ ms.locfileid: "115216532"
     using UnityEngine;
     ```
 
-4.  然后在 Start () 方法的 **SceneOrganiser** **类中添加以下** 变量：
+4.  然后在 Start () 方法上方 **的 SceneOrganiser** **类中添加以下** 变量：
 
     ```csharp
         /// <summary>
@@ -909,7 +909,7 @@ ms.locfileid: "115216532"
 
     *   使用 *具有* 最高置信 *度的预测* 标记设置标签文本。
     *   调用四边形 *对象* 上边界框的计算（以前定位）并放置场景中的标签。
-    *   通过使用向边界框 方向的 Raycast 调整标签深度，该边界框应与现实世界中的对象发生冲突。
+    *   通过使用向边界框 方向的 Raycast 调整标签深度，该边界框应与现实世界中的 对象发生冲突。
     * 重置捕获进程以允许用户捕获另一个映像。
 
     ```csharp
@@ -961,7 +961,7 @@ ms.locfileid: "115216532"
         }
     ```
 
-9.  添加 **CalculateBoundingBoxPosition ()** 方法，该方法承载转换从服务检索到的 *Bounding Box* 坐标，并按比例在四边形上重新创建它们所需的大量计算。
+9.  添加 **CalculateBoundingBoxPosition ()** 方法，该方法承载转换从服务检索到的 *Bounding Box* 坐标以及按比例在四边形上重新创建它们所需的大量计算。
 
     ```csharp
         /// <summary>
@@ -988,7 +988,7 @@ ms.locfileid: "115216532"
         }
     ```
 
-10. 在返回到 Unity **之前**，请务必Visual Studio 中的 **更改**。
+10. 在返回到 Unity 之前，请务必 **Visual Studio** 中的 **更改**。
 
     > [!IMPORTANT]
     > 在继续之前，请打开 **CustomVisionAnalyser** 类，在 **"分析""LastImageCaptured" ()** 方法中，取消注释以下行：
@@ -1039,7 +1039,7 @@ ms.locfileid: "115216532"
     using UnityEngine.XR.WSA.WebCam;
     ```
 
-5.  然后将以下变量添加到 **ImageCapture** 类中的 Start **()** 方法上：
+5.  然后将以下变量添加到 **ImageCapture** 类中的 Start **()** 方法上方：
 
     ```csharp
         /// <summary>
@@ -1073,7 +1073,7 @@ ms.locfileid: "115216532"
         internal string filePath = string.Empty;
     ```
 
-6.  现在需要 **()****唤醒** () 启动方法的代码：
+6.  现在需要 **()****唤醒 () 启动** 方法的代码：
 
     ```csharp
         /// <summary>
@@ -1228,18 +1228,18 @@ ms.locfileid: "115216532"
         }
     ```
 
-10. 在返回到 Unity **之前**，请务必Visual Studio 中的 **更改**。
+10. 在返回到 Unity 之前，请务必 **Visual Studio** 中的 **更改**。
 
 ## <a name="chapter-11---setting-up-the-scripts-in-the-scene"></a>第 11 章 - 设置场景中的脚本
 
 现在，你已编写此项目所需的全部代码，现在可以在场景和预制器上设置脚本，使它们能够正常运行。
 
-1.  在 **Unity 编辑器的**"层次结构 **面板"中**，选择 **"主相机"。**
+1.  在 **Unity 编辑器的**"**层次结构面板"中**，选择 **"主相机"。**
 2.  在检查 **器面板中**，选中 **"主** 相机"后，单击 **"添加组件**"，然后搜索 **SceneOrganiser** 脚本并双击以添加它。
 
     ![](images/AzureLabs-Lab310-38.png)
 
-3.  在 Project 面板中，打开 **Prefabs** 文件夹，将标签预制块拖到刚添加到主相机的 **SceneOrganiser** 脚本中的"标签空引用目标输入区域"中，如下图所示： 
+3.  在Project 面板中，打开 **Prefabs** 文件夹，将标签预制块拖到刚添加到主相机的 **SceneOrganiser** 脚本中的"标签空引用目标输入区域"中，如下图所示：
 
     ![](images/AzureLabs-Lab310-39.png)
 
@@ -1282,13 +1282,13 @@ ms.locfileid: "115216532"
 
     ![](images/AzureLabs-Lab310-42.png)
 
-4.  单击“生成”。 Unity 将启动 *文件资源管理器* 窗口，你需要创建该窗口，然后选择要生成应用的文件夹。 现在创建该文件夹，并命名"应用 **"。** 然后选择"应用 **"文件夹** 后，单击"**选择文件夹"。**
+4.  单击“生成”。 Unity *将启动文件资源管理器* 窗口，你需要创建该窗口，然后选择要生成应用的文件夹。 现在创建该文件夹，并命名"应用 **"。** 然后选择"应用 **"文件夹** 后，单击"**选择文件夹"。**
 
 5.  Unity 将开始将项目生成到 **"应用"** 文件夹。
 
-6.  Unity 完成生成 (可能需要一些时间) ，它会在生成位置打开 **文件资源管理器** 窗口 (检查任务栏，因为它可能不会始终显示在窗口上方，但会通知你新窗口) 。
+6.  Unity 完成生成 (可能需要一些时间) ，它会在生成 **位置打开一** 个 文件资源管理器 窗口 (检查任务栏，因为它可能不会始终显示在窗口上方，但会通知你新窗口) 。
 
-7.  若要部署到 Microsoft HoloLens，需要该设备的 IP 地址 (远程部署) ，并确保 **它还设置了开发人员** 模式。 若要实现此目的，请执行以下操作：
+7.  若要部署到 Microsoft HoloLens，需要该设备的 IP 地址 (远程部署) ，并确保 **它还设置了开发人员** 模式。 要执行此操作：
 
     1.  一边HoloLens，一边 **打开设置。**
 
@@ -1304,7 +1304,7 @@ ms.locfileid: "115216532"
 
 9.  在"解决方案配置"中，选择"**调试"。**
 
-10. 在"解决方案平台"中，选择 **"x86，远程计算机"。** 此时，系统会提示你插入远程设备的 **IP** 地址 (Microsoft HoloLens，在这种情况下，你已) 。
+10. 在"解决方案平台"中，选择 **"x86，远程计算机"。** 系统会提示你插入远程设备的 **IP** 地址 (Microsoft HoloLens，本例中已) 。
 
     ![](images/AzureLabs-Lab310-43.png)
 
@@ -1314,18 +1314,18 @@ ms.locfileid: "115216532"
 
 ### <a name="to-use-the-application"></a>若要使用应用程序，请执行以下代码：
 
-* 查看一个对象，该对象已使用 Azure 自定义视觉 **服务、对象检测** 进行训练，并使用点击 **手势**。
+* 查看已使用 Azure 服务、对象自定义视觉 **训练** 的对象，并使用点击 **手势**。
 * 如果成功检测到该对象，则会出现一个带有标记名称的空格标签文本。
 
 > [!IMPORTANT]
 > 每次捕获照片并将其发送到服务时，都可以返回到"服务"页，然后使用新捕获的图像重新训练服务。 一开始，可能还需要更正边界框，以更准确并重新训练服务。
 
 > [!NOTE]
-> 当 Unity 中的 Microsoft HoloLens 传感器和/或 SpatialTrackingComponent 无法放置相对于实际对象的适当碰撞体时，放置的标签文本可能不会显示在对象附近。 如果情况如此，请尝试在不同的图面上使用该应用程序。
+> 当 Unity 中的 Microsoft HoloLens 传感器和/或 SpatialTrackingComponent 无法相对于实际对象放置适当的碰撞体时，放置的标签文本可能不会显示在对象附近。 如果情况如此，请尝试在不同的图面上使用该应用程序。
 
 ## <a name="your-custom-vision-object-detection-application"></a>你的自定义视觉对象检测应用程序
 
-祝贺你，你构建了一个混合现实应用，该应用利用 Azure 自定义视觉 对象检测 API，该应用可以从图像中识别对象，然后在 3D 空间中提供该对象的大致位置。
+恭喜，你构建了一个混合现实应用，该应用利用 Azure 自定义视觉 对象检测 API，该应用可以从图像中识别对象，然后在 3D 空间中提供该对象的大致位置。
 
 ![](images/AzureLabs-Lab310-00.png)
 

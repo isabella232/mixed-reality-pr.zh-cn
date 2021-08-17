@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 07/20/2021
 ms.topic: article
 keywords: HoloLens，远程处理，全息远程处理，版本历史记录，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
-ms.openlocfilehash: 21ba89e477872f5dfa41468f1a7f2d7507affd681556d79843c195d7d5839e7b
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: c474583aacf3872095eaf151f5ab47b617fe0252
+ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115223548"
+ms.lasthandoff: 08/14/2021
+ms.locfileid: "122184748"
 ---
 # <a name="holographic-remoting-version-history"></a>全息远程处理版本历史记录
 
@@ -127,7 +127,7 @@ ms.locfileid: "115223548"
 
 * 添加了对 [HolographicViewConfiguration 的支持](/uwp/api/windows.graphics.holographic.holographicviewconfiguration)
 * 修复了导致崩溃的各种 bug。
-* 修复了以下 bug：HolographicCamera 需要 HolographicSpace.CameraAdded 回调才能被接受，并作为已添加的相机显示在 HolographicFrame 中。
+* 修复了以下 bug：HolographicCamera 需要 HolographicSpace.CameraAdded 回调才能被接受，并作为添加的相机显示在 HolographicFrame 中。
 
 ## <a name="version-2016-november-11-2019"></a>版本 2.0.16 (2019 年 11 月 11 日) <a name="2.0.16"></a>
 
@@ -146,12 +146,12 @@ ms.locfileid: "115223548"
 
 ## <a name="version-2010-october-10-2019"></a>版本 2.0.10 (2019 年 10 月 10 日) <a name="v2.0.10"></a>
 
-* 修复了使用 VR 控制器的触发器按钮时崩溃的问题。 全息远程处理不完全支持控制器，如果与 Windows HoloLens 2 按钮配对，则只有触发器按钮和 Windows。
+* 修复了使用 VR 控制器的触发器按钮时崩溃的问题。 全息远程处理不完全支持控制器，只有触发器按钮和Windows按钮才能正常工作（如果与 HoloLens 2。
 
 ## <a name="version-209-september-19-2019"></a>版本 2.0.9 (2019 年 9 月 19 日) <a name="v2.0.9"></a>
 
 * 添加了对 [SpatialAnchorExporter 的支持](/uwp/api/windows.perception.spatial.spatialanchorexporter)
-* 添加了由 (```IPlayerContext2``` 实现的新 ```PlayerContext```) 提供以下成员：
+* 添加了由 ```IPlayerContext2``` (实现的新 ```PlayerContext```) 提供以下成员：
   - [BlitRemoteFrameTimeout](holographic-remoting-create-player.md#BlitRemoteFrameTimeout)  属性。
 * 向 ```Failed_RemoteFrameTooOld``` 添加了值 ```BlitResult```
 * 稳定性和可靠性改进
@@ -166,7 +166,7 @@ ms.locfileid: "115223548"
 * 适用于 HoloLens 2 的全息远程处理的第一个公共HoloLens 2。
 
 ## <a name="see-also"></a>另请参阅
-
+* [全息远程处理概述](holographic-remoting-overview.md)
 * [使用远程 API 编写全息远程Windows Mixed Reality应用](holographic-remoting-create-remote-wmr.md)
 * [使用 OpenXR API 编写全息远程处理远程应用](holographic-remoting-create-remote-openxr.md)
 * [编写自定义全息远程处理播放器应用](holographic-remoting-create-player.md)

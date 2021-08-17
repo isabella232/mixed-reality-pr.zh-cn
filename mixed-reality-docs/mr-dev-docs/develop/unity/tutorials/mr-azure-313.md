@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure，混合现实，学院，边缘，iot edge，教程，api，通知，函数，表，hololens，沉浸，vr，iot，虚拟机，ubuntu，python，Windows 10，Visual Studio
-ms.openlocfilehash: 0a9f1b7c42094b3c441bdb32082f6821f2fd43a1ce3339cf1f58e7bd0fcf8318
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: fbd793a5941a5fa1b236403672680aa7df375f8d
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115194756"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905767"
 ---
 # <a name="hololens-1st-gen-and-azure-313-iot-hub-service"></a>HoloLens (第一代) 和 Azure 313： IoT 中心服务
 
@@ -55,9 +55,9 @@ ms.locfileid: "115194756"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-有关利用混合现实进行开发的最新先决条件，包括在 Microsoft HoloLens 中，请访问[安装工具](/windows/mixed-reality/install-the-tools)一文。
+有关利用混合现实进行开发的最新先决条件，包括在 Microsoft HoloLens 中，请访问[安装工具](../../install-the-tools.md)一文。
 
 > [!NOTE]
 > 本教程适用于具有 Python 的基本经验的开发人员。 请注意，本文档中的先决条件和书面说明表示在) 2018 年7月 (撰写本文时已测试和验证的内容。 您可以随意使用最新的软件（如 [安装工具](../../install-the-tools.md) 一文中所述），但不应假定本课程中的信息将与下面列出的软件内容完全匹配。
@@ -197,7 +197,7 @@ ms.locfileid: "115194756"
 
     ![创建存储实例](images/AzureLabs-Lab313-12.png)
 
-6.  在此页中，选择定价和缩放 **层 (如果** 这是第一个 IoT 中心服务实例，则应该可以使用免费层) 。  
+6.  在此页中，选择定价层和缩放 **层 (如果** 这是第一个 IoT 中心服务实例，则应该可以使用免费层) 。  
 
 7.  单击"**查看 + 创建"。**
 
@@ -221,7 +221,7 @@ ms.locfileid: "115194756"
 
     ![创建存储实例](images/AzureLabs-Lab313-17.png)
 
-13. 你将导航回 *"IoT Edge设备* "部分，其中将列出新设备。 单击新设备， (下图中用红色) 。 
+13. 你将导航回"IoT Edge *设备"* 部分，其中将列出新设备。 单击新设备 (下图中用红色) 。 
 
     ![创建存储实例](images/AzureLabs-Lab313-18.png)
 
@@ -246,7 +246,7 @@ ms.locfileid: "115194756"
     [![下载适用于 Windows 的 docker](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
     > [!IMPORTANT]
-    > Docker *Windows 10 PRO* Enterprise *14393* 或 *Windows Server 2016 RTM）* 运行。 如果运行的是其他版本的 Windows 10，可以尝试使用 Docker 工具箱[安装 Docker。](https://docs.docker.com/toolbox/toolbox_install_windows/)
+    > Docker *要求Windows 10 PRO* Enterprise *14393* 或 Windows Server 2016 *RTM。* 如果运行的是其他版本的 Windows 10，可以尝试使用 Docker 工具箱[安装 Docker。](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
 2.  [Python 3.6。](https://www.python.org/downloads/)
 
@@ -269,7 +269,7 @@ ms.locfileid: "115194756"
 >   sudo docker \<option> \<command> \<argument>
 >   ```
 
-1.  打开 **Ubuntu 终端**，使用以下命令安装 **pip**：
+1.  打开 **Ubuntu 终端**，使用以下命令安装 **pip：**
 
     > [!提示] 可以使用键盘快捷方式 *轻松* 打开终端 **：Ctrl + Alt + T**。
 
@@ -285,7 +285,7 @@ ms.locfileid: "115194756"
         sudo apt install curl
     ```
 
-4.  安装 **pip** 和 **curl** 后，使用以下命令安装 IoT Edge 运行时 ，这是部署 **和控制** 开发板上的模块所必需的：
+4.  安装 **pip** 和 **curl** 后，使用以下命令安装 IoT Edge **运行时**，这是部署和控制开发板上的模块所必需的：
 
     ```bash
         curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > ./microsoft-prod.list
@@ -307,7 +307,7 @@ ms.locfileid: "115194756"
         sudo apt-get install iotedge
     ```
 
-5. 此时 (，在步骤 [14（](#chapter-3---the-iot-hub-service)第3 章）创建 **IoT** 中心服务 (时，系统会提示你打开运行时配置文件 ，以插入在 记事本) 中记下的设备连接字符串)  (。 在终端中运行以下行以打开该文件：
+5. 此时 (，在步骤 [14（](#chapter-3---the-iot-hub-service)第) 3 章）创建 **IoT** 中心服务 (时，系统会提示你打开运行时配置文件 ，以插入在 记事本) 中记下的设备连接字符串 (。 在终端中运行以下行以打开该文件：
 
     ```bash
         sudo nano /etc/iotedge/config.yaml
@@ -318,15 +318,15 @@ ms.locfileid: "115194756"
     > [!WARNING]
     > 此文件打开时，可能有点令人困惑。 你将在终端本身中编辑 *此文件的文本* 。 
 
-    1.  使用键盘上的箭头键向下滚动 (需要向下滚动一) 以到达包含"的行：
+    1.  使用键盘上的箭头键向下滚动 (需要向下滚动一点) 才能到达包含"的行：
 
         "**\<ADD DEVICE CONNECTION STRING HERE>**".
 
-    2. 用前面 **提到的设备** 连接字符串替换行（包括方括号）。
+    2. 将行 **（包括方括号**）替换为前面提到的 **设备连接** 字符串。
 
 7. 连接字符串就位后，在键盘上按 **Ctrl-X** 键保存文件。 它会要求你键入 **Y** 进行确认。然后，按 **Enter** 键进行确认。 将返回到 *常规终端*。 
 
-8. 这些命令成功运行后，你将已安装 IoT Edge **运行时**。 初始化后，每次启动设备时，运行时都将自行启动，并在后台等待模块从 **IoT 中心服务 部署**。
+8. 这些命令全部成功运行后，你将已安装 IoT Edge **运行时**。 初始化后，每次启动设备时，运行时都将自行启动，并在后台等待模块从 **IoT 中心服务 部署**。
 
 9.  运行以下命令行以初始化 IoT Edge *运行时*：
 
@@ -349,7 +349,7 @@ ms.locfileid: "115194756"
         sudo docker ps
     ```
 
-12. 应显示包含两 (2) 容器的列表。 这些是 IoT 中心服务自动创建的默认模块 (edgeAgent 和 edgeHub) 。 创建和部署自己的模块后，这些模块将显示在此列表的默认模块下方。
+12. 应显示一个 (2) 的列表。 这些是 IoT 中心服务自动创建的默认模块 (edgeAgent 和 edgeHub) 。 创建和部署自己的模块后，这些模块将显示在此列表的默认模块下方。
 
 ## <a name="chapter-6---install-the-extensions"></a>第 6 章 - 安装扩展
 
@@ -768,38 +768,38 @@ ms.locfileid: "115194756"
 
     ![创建部署](images/AzureLabs-Lab313-33b.png)
 
-7. 你将看到一个 *文件资源管理器* 提示，你可以在其中导航到 **config** 文件夹，然后选择 " **deployment.js** 文件。 选择该文件后，单击 " **选择边缘部署清单** " 按钮。
+7. 你将看到一个 *文件资源管理器* 提示，你可以在其中导航到 **config** 文件夹，然后选择 " **deployment.js** 文件。 选择该文件后，单击" **选择 Edge 部署清单"** 按钮。
 
     ![创建部署](images/AzureLabs-Lab313-34.png)
 
-8. 此时，你已为 **IoT 中心服务** 提供了一个清单，用于从 **Azure 容器注册表** 将容器（作为模块）部署到你的设备，并有效地将其部署到设备。
+8. 此时，你为 **IoT** 中心服务提供了清单，供其将容器作为模块从 Azure 容器注册表 部署，从而有效地将其部署到设备。
 
-9. 若要查看从设备发送到 IoT 中心的消息，请再次右键单击 " **Azure IoT 中心设备**" 部分中的设备名称，然后在 "**资源管理器**" 面板中单击 "**开始监视 D2C 消息**"。 设备发送的消息应显示在 VS 终端中。 请耐心等待，因为这可能需要一些时间。 请参阅下一章进行调试，并检查部署是否成功。
+9. 若要查看从设备发送到 IoT 中心的消息，请在 **"Azure IoT** 中心设备"部分中的"资源管理器"面板中再次右键单击设备名称，然后单击"开始监视 **D2C 消息"。** 从设备发送的消息应显示在 VS 终端中。 请耐心等待，因为这可能需要一些时间。 请参阅下一章进行调试，并检查部署是否成功。
 
-此模块现在将在 **images** 文件夹中的图像之间进行循环访问，并在每次迭代时进行分析。 这显然只是演示如何获取基本机器学习模型，以便在 IoT Edge 设备环境中工作。 
+此模块现在将在 images 文件夹中的图像之间循环访问，并按每次迭代对其进行分析。 这显然只是演示了如何让基本机器学习模型在IoT Edge环境中工作。 
 
-若要扩展此示例的功能，可以通过多种方式继续操作。 其中一种方法可能是在容器中包含某些代码，这些代码从连接到设备的网络摄像机捕获照片，并将图像保存到 images 文件夹中。 
+若要扩展此示例的功能，可以通过多种方式继续操作。 一种方法可能是在容器中包含一些代码，该代码从连接到设备的网络摄像头捕获照片，将图像保存在 images 文件夹中。 
 
-另一种方法是将映像从 IoT 设备复制到容器中。 实现此目的的一种可行方法是在 IoT 设备终端中运行以下命令，如果你希望自动执行此) 过程，则可能是小应用程序可以执行该作业 (。 可以通过从存储文件的文件夹位置手动运行此命令来对其进行测试：
+另一种方式可能是将映像从 IoT 设备复制到容器中。 为此，一种实用的方式是在 IoT 设备终端中运行以下命令 (如果你希望自动执行此过程，一个小应用可能会) 。 可以通过从存储文件的文件夹位置手动运行此命令来测试此命令：
 
 ```bash
     sudo docker cp <filename> <modulename>:/app/images/<a name of your choice>
 ```
 
-## <a name="chapter-10---debugging-the-iot-edge-runtime"></a>第10章-调试 IoT Edge 运行时
+## <a name="chapter-10---debugging-the-iot-edge-runtime"></a>第 10 章 - 调试 IoT Edge 运行时
 
-下面是命令行和提示的列表，可帮助你从 **Ubuntu 设备** 监视和调试 *IoT Edge 运行时* 的消息传递活动。 
+下面是一系列命令行和提示，可帮助你监视和调试 **Ubuntu** 设备中 *IoT Edge 运行时* 的消息传送活动。 
 
-- 通过运行以下命令行检查 *IoT Edge 运行时* 状态：
+- 通过 *IoT Edge命令行* 检查运行时状态：
 
     ```bash
         sudo systemctl status iotedge
     ```
 
     > [!NOTE]
-    > 请记得按 **Ctrl + C** 来完成状态的查看。
+    > 请记得按 **Ctrl + C** 完成查看状态。
 
-- 列出当前部署的容器。 如果 *IoT 中心服务* 成功部署了容器，则会通过运行以下命令行来显示它们：
+- 列出当前部署的容器。 如果 *IoT 中心服务* 已成功部署容器，则通过运行以下命令行来显示容器：
 
     ```bash
         sudo iotedge list
@@ -812,7 +812,7 @@ ms.locfileid: "115194756"
     ```
 
     > [!NOTE]
-    > 以上是检查模块是否已成功部署的好方法，因为它将出现在列表中;否则，你将 **只** 看到 *edgeHub* 和 *edgeAgent*。
+    > 以上是检查模块是否已成功部署的一个好方法，因为它将显示在列表中;否则只会 **看到** *edgeHub* 和 *edgeAgent*。
 
 - 若要显示容器的代码日志，请运行以下命令行：
 
@@ -820,7 +820,7 @@ ms.locfileid: "115194756"
         journalctl -u iotedge
     ```
 
-**用于管理 IoT Edge 运行时的有用命令：**
+**用于管理运行时IoT Edge命令：**
 
 -  删除主机中的所有容器：
 
@@ -834,122 +834,122 @@ ms.locfileid: "115194756"
         sudo systemctl stop iotedge
     ```
 
-## <a name="chapter-11---create-table-service"></a>第11章-创建表服务 
+## <a name="chapter-11---create-table-service"></a>第 11 章 - 创建表服务 
 
-导航回到 Azure 门户，在该门户中创建一个存储资源即可创建 Azure 表服务。
+导航回 Azure 门户，通过创建 Azure 表服务资源，在门户存储服务。
 
-1. 如果尚未登录，请登录到 [Azure 门户](https://portal.azure.com)。
+1. 如果尚未登录，请登录到 Azure [门户](https://portal.azure.com)。
 
-2. 登录后，单击左上角的 "**创建资源**"，搜索 **存储帐户**"，然后按 **enter** 键开始搜索。
+2. 登录后，单击左上角的"创建资源"，搜索存储帐户 ，然后按 **Enter** 键开始搜索。 
 
-3. 出现后，单击列表中 **存储 "帐户-blob、文件、表、队列**"。
+3. 出现后，从列表中存储 **Blob、文件、表、队列等** 帐户。
 
     ![搜索存储帐户](images/AzureLabs-Lab313-35.png)
 
-4. 新页将提供 **存储帐户** 服务的说明。 在此提示符的左下方，单击 " **创建** " 按钮以创建此服务的实例。
+4. 新页面将提供帐户服务 **存储说明**。 在此提示符的左下角，单击" **创建** "按钮，创建此服务的实例。
 
     ![创建存储实例](images/AzureLabs-Lab313-36.png)
 
-5. 单击 " **创建**" 后，将显示一个面板：
+5. 单击"创建" **后**，将显示一个面板：
 
-    1. 为此服务实例插入所需的 **名称** ， (*必须全部为小写*) 。
+    1. 插入此服务 **实例** 的所需名称 (*必须全部小写) 。*
 
-    2. 对于 **部署模型**，单击 " **资源管理器**"。
+    2. 对于 **"部署模型"，** 请单击 **"资源管理器"。**
 
-    3. 对于 "**帐户类型**"，请使用下拉菜单，单击 "**存储 (常规用途 v1)**"。
+    3. 对于 **"帐户类型**"，使用下拉菜单单击存储 (**常规用途 v1) 。**
 
-    4. 单击适当的 **位置**。
+    4. 单击相应的"**位置"。**
     
-    5. 对于 " **复制** " 下拉菜单，单击 " **读取-访问-异地冗余存储 (GRS)**"。
+    5. 对于" **复制"** 下拉菜单，单击 **RA-GRS** (读取访问异地冗余) 。
 
-    6. 对于 " **性能**"，请单击 " **标准**"。
+    6. 对于 **"性能"，** 请单击"**标准"。**
 
-    7. 在 " **需要安全传输** " 部分中，单击 " **禁用**"。
+    7. 在"**需要安全传输"部分中**，单击"**已禁用"。**
 
-    8. 从 " **订阅** " 下拉菜单中，单击相应的订阅。
+    8. 在" **订阅** "下拉菜单中，单击相应的订阅。
 
-    9. 选择一个 **资源组** ，或创建一个新的资源组。 资源组提供一种方式来监视、控制访问、预配和管理 Azure 资产集合的计费。 建议保留与单个项目关联的所有 Azure 服务 (例如，这些课程) 常用资源组) 下。
+    9. 选择一 **个资源组** 或创建一个新资源组。 资源组提供了一种监视、控制 Azure 资产集合的访问、预配和管理计费的方法。 建议将与单个项目关联的所有 Azure 服务 (例如，这些课程) 位于公共资源组) 。
 
-        > 如果希望了解有关 Azure 资源组的详细信息，请参阅此 [链接，了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
+        > 若要详细了解 Azure 资源组，请按照此 [链接了解如何管理资源组](/azure/azure-resource-manager/resource-group-portal)。
 
-    10. 如果这是一个选项，请将 **虚拟网络** 保留为 **禁用状态**。
+    10. 如果 **这是一** 个选项 **，** 将"虚拟网络"保留为"已禁用"。
 
-    11. 单击“**创建**”。
+    11. 单击“创建”。
 
         ![填写存储详细信息](images/AzureLabs-Lab313-37.png)
 
-6. 单击 " **创建**" 后，需要等待创建服务，这可能需要一分钟时间。
+6. 单击"创建 **"** 后，必须等待服务创建完成，这可能需要一分钟。
 
-7. 创建服务实例后，门户中将显示一个通知。 单击通知以浏览新服务实例。
+7. 创建服务实例后，门户中会显示一条通知。 单击通知以浏览新的服务实例。
 
     ![新存储通知](images/AzureLabs-Lab313-38.png)
 
-8. 单击通知中的 "**转到资源**" 按钮，将转到新的存储服务实例概述 "页。
+8. 单击 **通知中的**"转到资源"按钮，你将转到新的 存储 服务实例概述页。
 
-    ![中转到资源](images/AzureLabs-Lab313-39.png)
+    ![转到资源](images/AzureLabs-Lab313-39.png)
 
-9. 在 "概述" 页中，单击右侧的 " **表**"。
+9. 在概述页的右侧，单击"表 **"。**
     
     ![表](images/AzureLabs-Lab313-40.png)
 
-10. 右侧面板将更改为显示 **表服务** 信息，你需要添加一个新表。 单击左上角的 " **+ 表** " 按钮即可执行此操作。
+10. 右侧面板将更改为显示表 **服务信息，** 其中需要添加新表。 为此，单击左上角的 **"+** 表"按钮。
 
     ![打开表](images/AzureLabs-Lab313-41.png)
 
-11. 将显示一个新页，需要在其中输入 **表名称**。 这是你将用于在后面的章节中引用应用程序中的数据 (创建 Function App 和 Power BI) 的名称。 将 **IoTMessages** 作为名称插入 (你可以自行选择，只需记住它，稍后在本文档中使用) 然后单击 **"确定"**。 
+11. 将显示一个新页面，其中需要输入表 **名称**。 这是稍后的创建函数应用 (章节中引用应用程序中数据Power BI) 。 插入 **IoTMessages** 作为名称， (选择自己的名称，只需在本文档稍后使用时记住它，) 单击"确定 **"。** 
 
-12. 创建新表后，可在 " **表服务** " 页的底部)  (查看它。
+12. 创建新表后，可以在底部"表服务"页 (看到) 。 
 
-    ![已创建新表](images/AzureLabs-Lab313-42.png)  
+    ![新创建的表](images/AzureLabs-Lab313-42.png)  
 
-13. 现在，单击 "**访问密钥**"，并使用记事本) 复制 **存储帐户名称** 和 **密钥** (，你将在本课程中创建 **Azure Function App** 时使用这些值。
+13. 现在 **，单击**"访问密钥"，并使用 记事本) 获取 存储 帐户名和密钥 (的副本。本课程稍后将在创建 Azure Function App 时使用 **这些值**。
 
-    ![已创建新表](images/AzureLabs-Lab313-43.png) 
+    ![新创建的表](images/AzureLabs-Lab313-43.png) 
 
-14. 再次使用左侧的面板，滚动到 "*表服务*" 部分，单击 "**表**" " (" 或 "**浏览**" "表) **记事本 ()** "。 在本课程中，将表链接到 **Power BI** 应用程序时，将使用此值。
+14. 再次使用左侧的面板，滚动到"表服务"部分，然后单击"表" (或"浏览表"，在较新的门户) 中，使用 记事本) 复制表 **URL** (。  在本课程的稍后部分，将表链接到你的应用程序时，Power BI **此值。**
 
-    ![已创建新表](images/AzureLabs-Lab313-44.png)
+    ![新创建的表](images/AzureLabs-Lab313-44.png)
 
-## <a name="chapter-12---completing-the-azure-table"></a>第12章-完成 Azure 表
+## <a name="chapter-12---completing-the-azure-table"></a>第 12 章 - 完成 Azure 表
 
-由于已设置了 **表服务** 存储帐户，因此可以向其添加数据，这将用于存储和检索信息。 可以通过 **Visual Studio** 来编辑表。
+设置表 **服务** 存储帐户后，可以添加数据，用于存储和检索信息。 可以通过使用 来 **编辑Visual Studio。**
 
-1. 打开 **Visual Studio** (**不** Visual Studio Code) 。
+1. 打开 **Visual Studio ("Visual Studio Code) "** 。
 
-2. 从菜单中，单击 "**查看**  >  **Cloud Explorer**"。
+2. 在菜单中，单击"**查看**  >  Cloud Explorer"。
 
-    ![打开 cloud explorer](images/AzureLabs-Lab313-45.png)
+    ![打开云资源管理器](images/AzureLabs-Lab313-45.png)
 
-3. **Cloud Explorer** 将作为停靠项打开 (患者，因为加载可能需要一些时间) 。
+3. 该 **Cloud Explorer** 将作为停靠项打开， (患者，因为加载可能需要) 。
 
     > [!WARNING] 
-    > 如果用于创建 *存储帐户* 的订阅不可见，请确保具有： 
-    > - 已登录到与 Azure 门户一起使用的帐户。
-    > - 从 "帐户管理" 页中选择了你的订阅 (你可能需要从帐户设置) 应用筛选器：  
+    > 如果用于创建帐户的订阅存储 *帐户* 不可见，请确保： 
+    > - 登录到与用于 Azure 门户的帐户相同的帐户。
+    > - 从"帐户管理"页选择了订阅 (可能需要从帐户设置应用筛选器) ：  
     >
     >   ![查找订阅](images/AzureLabs-Lab313-46.png)
 
-4. 将显示你的 Azure 云服务。 找到 **存储帐户**，并单击其左侧的箭头以展开帐户。
+4. 将显示 Azure 云服务。 找到 **存储帐户**"，然后单击该帐户左侧的箭头以展开帐户。
 
     ![打开存储帐户](images/AzureLabs-Lab313-47.png)
 
-5. 展开后，新创建的 **存储帐户** 应该可用。 单击存储左侧的箭头，然后在展开后，查找 " **表** " 并单击该按钮旁边的箭头，以显示在上一章中创建的 **表** 。 双击 **表**。
+5. 扩展后，新存储 **帐户** 应可用。 单击存储左侧的箭头，展开该箭头后，找到"表"，然后单击该表旁边的箭头，以显示在上一章中创建的表。 双击表 **。**
 
-6. 你的表将在 Visual Studio 窗口的中心打开。 单击带有 **+** (加) 的表图标。
+6. 表将在窗口窗口的中心Visual Studio打开。 单击表图标， (**+** 上) 表图标。
 
     ![添加新表](images/AzureLabs-Lab313-48.png)
 
-7. 将显示一个窗口，提示你 *添加实体*。 您将只创建一个实体，但它将具有三个属性。 你会注意到已提供了 *PartitionKey* 和 *RowKey* ，因为表使用这些方法来查找数据。 
+7. 将显示一个窗口，提示你添加 *实体*。 你将仅创建一个实体，但它将具有三个属性。 你会注意到 *，PartitionKey* 和 RowKey 已提供，因为表使用这些分区键和 *RowKey* 来查找数据。 
 
-    ![分区和行键](images/AzureLabs-Lab313-49.png)
+    ![分区键和行键](images/AzureLabs-Lab313-49.png)
 
 8. 请更新以下值：
 
-    - 名称： **PartitionKey**，值： **PK_IoTMessages** 
+    - 名称 **：PartitionKey，** 值 **：PK_IoTMessages** 
 
-    - 名称： **RowKey**，值： **RK_1_IoTMessages** 
+    - 名称 **：RowKey，** 值 **：RK_1_IoTMessages** 
 
-9. 然后，单击 "*添加实体*" 窗口左下角的 "**添加属性**" () 并添加以下属性：
+9. 然后，**单击"添加 ("** 窗口左下角的"添加属性) 并添加以下属性：
 
     - **作为字符串的 MessageContent***将值* 留空。
 
@@ -972,7 +972,7 @@ ms.locfileid: "115194756"
 
     ![打开记事本](images/AzureLabs-Lab313-51.png)
 
-2.  打开记事本，将下面的 JSON 结构插入该结构。 完成操作后，将其保存为桌面上的project.js **上**。 此文件定义函数将使用的库。 如果已使用NuGet，则它看起来很熟悉。
+2.  打开记事本，将下面的 JSON 结构插入该结构。 完成操作后，将其保存为桌面上的project.js **上**。 此文件定义函数将使用的库。 如果已使用NuGet，它看起来会很熟悉。
     
     > [!WARNING]
     > 命名正确很重要;确保 **该文件没有.txt** 扩展名。 有关参考，请参阅下文：
@@ -1019,11 +1019,11 @@ ms.locfileid: "115194756"
 
     7. 选择 **"** 位置 (选择与在上一步骤中构建的存储相同的位置) 
 
-    8. 对于 **"存储"** 部分，必须选择在上一存储中创建 **的"服务"。**
+    8. 对于 **"存储"****部分，必须选择在上一存储中创建的"服务"。**
 
     9. 此应用中不需要 *应用程序Insights，* 因此请随意将应用程序保留 **为"关闭"。**
 
-    10. 单击“**创建**”。
+    10. 单击“创建”。
 
         ![创建新实例](images/AzureLabs-Lab313-55.png)
 
@@ -1055,11 +1055,11 @@ ms.locfileid: "115194756"
 
     ![自定义函数](images/AzureLabs-Lab313-61.png)
 
-15. 在出现的窗口中，确保 **已选择"IoT** 中心"，并且 *"IoT* 中心"字段的名称与之前在第 3 章第 8 章步骤 [8](#chapter-3---the-iot-hub-service)中创建的 *ioT* 中心服务 (的名称相对) 应。 然后单击"选择 **"** 按钮。
+15. 在出现的窗口中，确保 **已选择"IoT** 中心"，并且 *"IoT* 中心"字段的名称与之前在第 3 章第 8 章步骤 [8](#chapter-3---the-iot-hub-service)中创建的 *ioT* 中心服务 (的名称) 相对应。 然后单击"选择 **"** 按钮。
 
     ![自定义函数](images/AzureLabs-Lab313-62.png)
 
-16. 返回到 **"IoT 中心" (事件中心) 边栏** 选项卡，单击"创建 **"。**
+16. 返回到 **"IoT 中心" (事件中心) 边栏选项卡**，单击"创建 **"。**
 
     ![自定义函数](images/AzureLabs-Lab313-63.png)
 
@@ -1067,7 +1067,7 @@ ms.locfileid: "115194756"
 
     ![自定义函数](images/AzureLabs-Lab313-64.png)
 
-18. 删除它的所有代码，并将其替换为以下内容：
+18. 删除所有代码并将其替换为以下内容：
 
     ```csharp
     #r "Microsoft.WindowsAzure.Storage"
@@ -1132,24 +1132,24 @@ ms.locfileid: "115194756"
     }
     ```
 
-19. 更改以下变量，以便它们分别对应于 (帐户的第 1) 1章第 11 章第 11 章和步骤 [13](#chapter-11---create-table-service)中的相应值 (Table 和 存储 **存储 值**： 
+19. 更改以下变量，以便它们对应于第 11 章第 11章) 的步骤 [11 和 13](#chapter-11---create-table-service)中的相应值 (**Table** 和 存储 值，这些值将在 **存储 帐户中找到**：
 
-    - **tableName**，**其中表的名称** 位于存储 **帐户。**
+    - **tableName，****其中表的名称** 位于存储 **帐户 中**。
     - **tableURL，****其中表的** URL 位于存储帐户 **中**。
     - **storageAccountName**，其值的名称与帐户存储 **名称** 相对应。
-    - **storageAccountKey**，具有在之前创建的 存储 服务中获取的密钥。
+    - **storageAccountKey**，具有在之前创建的 存储服务中获取的密钥。
 
     ![自定义函数](images/AzureLabs-Lab313-65.png)
 
 20. 代码就位后，单击"保存 **"。**
 
-21. 接下来，单击 **\<** (右侧) 箭头图标。
+21. 接下来，单击 **\<** () 右侧箭头图标。
 
     ![自定义函数](images/AzureLabs-Lab313-66.png)
 
-22. 面板会从右侧滑入。 在面板中，单击 **"Upload"，** 将显示 *"文件浏览器*"。
+22. 面板会从右侧滑入。 在面板中，单击 **Upload，** 将显示 *"文件浏览器*"。
 
-23. 导航到之前在project.js中创建的 on 文件，记事本，然后单击"打开 **"** 按钮。 此文件定义函数将使用的库。
+23. 导航到并单击project.js之前在记事本中创建的 on **文件，** 然后单击"打开 **"** 按钮。 此文件定义函数将使用的库。
 
     ![自定义函数](images/AzureLabs-Lab313-67.png)
 
@@ -1157,13 +1157,13 @@ ms.locfileid: "115194756"
 
     ![自定义函数](images/AzureLabs-Lab313-68.png)
 
-25. 此时，测试函数在表 上存储消息的功能是个不错的 *选择*。 在窗口的右上方，单击"测试 **"。**
+25. 此时，测试函数在表 上存储消息的功能是 *个不错的选择*。 在窗口的右上方，单击"测试 **"。**
 
     ![自定义函数](images/AzureLabs-Lab313-69.png)
 
-26. 在"请求正文 **"上插入一条消息**，如上图所示，然后单击"运行 **"。** 
+26. 如上图所示 **，在**"请求正文"上插入一条消息，然后单击"运行 **"。** 
 
-27. 该函数将运行，显示结果状态， ("输出"窗口上方的绿色"状态 **202** 已接受"，这意味着它是成功调用) ： 
+27. 函数将运行，并显示结果状态 (你会注意到"输出"窗口上方的绿色"状态 **202** 已接受"，这意味着它是成功调用) ： 
 
     ![输出结果](images/AzureLabs-Lab313-70.png)
 
@@ -1173,14 +1173,14 @@ ms.locfileid: "115194756"
 
 ![自定义函数](images/AzureLabs-Lab313-71.png)
 
-表服务和函数应用就位后，Ubuntu 设备消息将显示在 *IoTMessages* 表中。 如果尚未运行，请再次启动设备，你将能够使用 Visual Studio Cloud Explorer 在表中查看来自设备和模块 *的结果消息*。
+表服务和函数应用就位后，Ubuntu 设备消息将显示在 *IoTMessages* 表中。 如果尚未运行，请再次启动设备，并且你将能够使用 Visual Studio Cloud Explorer 在表中查看来自设备和模块 *的结果Visual Studio。*
 
 ![可视化数据](images/AzureLabs-Lab313-72.png)
 
 
 ## <a name="chapter-15---power-bi-setup"></a>第 15 章 - Power BI设置
 
-若要可视化 IOT 设备的数据，需要设置Power BI (桌面) ，以从刚刚创建的表服务收集数据。   然后 *HoloLens* 版本的Power BI将使用该数据来可视化结果。
+若要可视化 IOT 设备的数据，需要设置Power BI (桌面) ，以从刚刚创建的表服务收集数据。  然后 *HoloLens* 版本Power BI将使用该数据可视化结果。
 
 1.  打开Windows 10 上的 Microsoft Store **并搜索** Power BI Desktop。
 
@@ -1206,15 +1206,15 @@ ms.locfileid: "115194756"
 
     ![Power BI](images/AzureLabs-Lab313-77.png)  
 
-8. 将显示 **"导航器面板**"，勾选"表"旁边的框，然后单击"加载 **"。**
+8. 将显示 **导航器面板**，勾选"表"旁边的框，然后单击"加载 **"。**
 
     ![Power BI](images/AzureLabs-Lab313-78.png)  
 
-9. 表现已加载到 Power BI，但它需要查询来显示表中的值。 为此，请右键单击位于屏幕右侧 **"字段** "面板中的表名称。 然后单击"编辑 **查询"。**
+9. 表现已加载到Power BI，但它需要查询来显示表中的值。 为此，请右键单击位于屏幕右侧 **"字段** "面板中的表名称。 然后单击"编辑 **查询"。**
 
     ![Power BI](images/AzureLabs-Lab313-79.png) 
 
-10. 一 **Power Query 编辑器**  将打开为一个新窗口，并显示表。 单击表的 **"内容** " *列中* 的"记录"一词，将存储的内容可视化。
+10. 一 **Power Query 编辑器**  会作为新窗口打开，并显示表。 单击表的 **"内容** " *列中* 的"记录"一词，将存储的内容可视化。
 
     ![Power BI](images/AzureLabs-Lab313-80.png)    
 
@@ -1241,11 +1241,11 @@ ms.locfileid: "115194756"
     ![Power BI](images/AzureLabs-Lab313-86.png)
 
 > [!WARNING]
-> 以下章节特定于HoloLens章节。 Power BI目前不作为沉浸式应用程序提供，但可以通过桌面应用在 Windows Mixed Reality 门户中运行桌面 (，悬崖小屋) 桌面版。
+> 以下章节特定于HoloLens章节。 Power BI目前不作为沉浸式应用程序提供，但可以通过桌面应用在 Windows Mixed Reality 门户 (悬崖小屋) 运行桌面版本。
 
 ## <a name="chapter-16---display-power-bi-data-on-hololens"></a>第 16 章 - 在Power BI上显示HoloLens
 
-1. 在HoloLens，通过点击应用程序列表中的Microsoft Store，登录到应用程序。
+1. 在HoloLens，通过点击应用程序Microsoft Store中的图标登录到应用程序。
 
     ![Power BIH l](images/AzureLabs-Lab313-87.png)
 
@@ -1263,7 +1263,7 @@ ms.locfileid: "115194756"
 
 ## <a name="your-finished-your-iot-hub-application"></a>已完成 IoT 中心应用程序
 
-祝贺你，你已成功使用模拟的 Virtual Machine Edge 设备创建了 IoT 中心服务。 设备可以将机器学习模型的结果传达给 Azure 表服务，由 Azure 函数应用提供方便，该函数应用可读入 Power BI，并在 Microsoft HoloLens。
+祝贺你，你已成功使用模拟的 Virtual Machine Edge 设备创建了 IoT 中心服务。 设备可以将机器学习模型的结果传达给 Azure 表服务，由 Azure 函数应用提供方便，该函数应用可读入 Power BI，并在 Microsoft HoloLens 中可视化。
  
 ![Power BI](images/AzureLabs-Lab313-00.png)
 

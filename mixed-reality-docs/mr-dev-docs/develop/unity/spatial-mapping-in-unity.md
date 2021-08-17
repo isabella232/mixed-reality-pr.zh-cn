@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity，空间映射，呈现器，碰撞器，网格，扫描，组件，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，MRTK，混合现实 Toolkit
-ms.openlocfilehash: 4c8d0598898b4717a624562340918f968bd26f1fcde72258907e4fce73bd8489
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 62e4c4fad725dbe58773035b0bb47f1911098217
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115223091"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905705"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity 中的空间映射
 
@@ -22,11 +22,11 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 1. MixedRealityToolkit 中提供了空间映射组件，可为空间映射入门提供方便快捷的路径
 2. 较低级别的空间映射 Api，提供完全控制并实现更复杂的特定于应用程序的自定义
 
-若要在应用中使用空间映射，需要在 Appxmanifest.xml 中设置 spatialPerception 功能。
+若要在应用中使用空间映射，需要在 Appxmanifest.xml 中设置 SpatialPerception 功能。
 
 ## <a name="device-support"></a>设备支持
 
-| 功能 | [第一代 (HoloLens) ](/hololens/hololens1-hardware) | [HoloLens 2](/hololens/hololens2-hardware) | [沉浸式头戴显示设备](../../discover/immersive-headset-hardware-details.md) |
+| 特征 | [第一代 (HoloLens) ](/hololens/hololens1-hardware) | [HoloLens 2](/hololens/hololens2-hardware) | [沉浸式头戴显示设备](../../discover/immersive-headset-hardware-details.md) |
 | ---- | ---- | ---- | ---- |
 | 空间映射 | ✔️ | ✔️ | ❌ |
 
@@ -49,159 +49,9 @@ Unity 包含对空间映射的完全支持，可通过以下方式向开发人�
 2. 查找指定 **y** 的行，并将 **MaxVersionTested = "10.0.10240.0"** 更改为 **MaxVersionTested = "10.0.10586.0"**
 3. **保存** appxmanifest.xml。
 
-## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Unity 内置空间映射组件入门
+## <a name="how-to-add-mapping-in-unity"></a>如何在 Unity 中添加映射
 
-Unity 提供了两个组件，可以轻松地将空间映射添加到应用、 **空间映射呈现** 器和 **空间映射碰撞** 器。
-
-### <a name="spatial-mapping-renderer"></a>空间映射呈现器
-
-空间映射呈现器允许对空间映射网格进行可视化。
-
-![Unity 中的空间映射呈现器](images/spatialmappingrenderer.png)
-
-### <a name="spatial-mapping-collider"></a>空间映射碰撞器
-
-空间映射碰撞器允许在空间映射网格中 (或字符) 交互（如物理学）的全息内容。
-
-![Unity 中的空间映射碰撞器](images/spatialmappingcollider.png)
-
-### <a name="using-the-built-in-spatial-mapping-components"></a>使用内置的空间映射组件
-
-如果要可视化和与物理表面交互，则可以将这两个组件添加到应用中。
-
-在 Unity 应用中使用这两个组件：
-
-1. 在要检测空间图面网格的区域的中心选择一个 GameObject。
-2. 在检查器窗口中，**添加组件**  >  **XR**  >  **空间映射碰撞** 器或 **空间映射呈现** 器。
-
-有关如何在 <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">Unity 文档网站</a>上使用这些组件的详细信息，请参阅。
-
-### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>超越内置的空间映射组件
-
-利用这些组件，您可以轻松地开始进行空间映射。  若要进一步了解，需要了解两个主要的路径：
-
-* 若要执行自己的低级网格处理，请参阅下面有关低级别空间映射脚本 API 的部分。
-* 若要执行更高级别的网格分析，请参阅以下部分，了解 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>中的 SpatialUnderstanding 库。
-
-## <a name="using-the-low-level-unity-spatial-mapping-api"></a>使用低级别 Unity 空间映射 API
-
-如果需要更多的控制，而不是空间映射呈现器和空间映射碰撞器组件产品/服务，请使用低级别空间映射 Api。
-
-**命名空间：** *UnityEngine. XR*<br>
-**类型**： *SurfaceObserver*、 *SurfaceChange*、 *SurfaceData*、 *SurfaceId*
-
-我们概括了使用以下部分中的空间映射 Api 的应用程序的建议流。
-
-### <a name="set-up-the-surfaceobservers"></a>设置 SurfaceObserver (s) 
-
-为需要空间映射数据的每个应用程序定义的空间区域实例化一个 SurfaceObserver 对象。
-
-```cs
-SurfaceObserver surfaceObserver;
-
-private void Start()
-{
-    surfaceObserver = new SurfaceObserver();
-}
-```
-
-通过调用 SetVolumeAsSphere、SetVolumeAsAxisAlignedBox、SetVolumeAsOrientedBox 或 SetVolumeAsFrustum，指定每个 SurfaceObserver 对象将为其提供数据的空间区域。 您可以重新定义将来的空间区域，只需再次调用其中一种方法即可。
-
-```cs
-private void Start()
-{
-    surfaceObserver.SetVolumeAsAxisAlignedBox(Vector3.zero, new Vector3(3, 3, 3));
-}
-```
-
-调用 SurfaceObserver () 时，必须为空间映射系统包含其新信息的 SurfaceObserver 区域中的每个空间图面提供一个处理程序。 对于一个空间图面，处理程序接收：
-
-```cs
-private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
-{
-    // see Handling Surface Changes
-}
-```
-
-### <a name="handling-surface-changes"></a>处理表面更改
-
-有几个用来处理-添加和更新的主要案例，它们可以使用相同的代码路径，并将其删除。
-
-* 在添加和更新的情况下，我们将从字典中添加或获取表示此网格的 GameObject，使用必要的组件创建 SurfaceData 结构，然后调用 RequestMeshDataAsync，用网格数据和场景中的位置来填充 GameObject。
-* 在已删除的示例中，我们从字典中删除表示此网格的 GameObject 并销毁它。
-
-```cs
-System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects =
-    new System.Collections.Generic.Dictionary<SurfaceId, GameObject>();
-
-private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
-{
-    switch (changeType)
-    {
-        case SurfaceChange.Added:
-        case SurfaceChange.Updated:
-            if (!spatialMeshObjects.ContainsKey(surfaceId))
-            {
-                spatialMeshObjects[surfaceId] = new GameObject("spatial-mapping-" + surfaceId);
-                spatialMeshObjects[surfaceId].transform.parent = this.transform;
-                spatialMeshObjects[surfaceId].AddComponent<MeshRenderer>();
-            }
-            GameObject target = spatialMeshObjects[surfaceId];
-            SurfaceData sd = new SurfaceData(
-                // the surface id returned from the system
-                surfaceId,
-                // the mesh filter that is populated with the spatial mapping data for this mesh
-                target.GetComponent<MeshFilter>() ?? target.AddComponent<MeshFilter>(),
-                // the world anchor used to position the spatial mapping mesh in the world
-                target.GetComponent<WorldAnchor>() ?? target.AddComponent<WorldAnchor>(),
-                // the mesh collider that is populated with collider data for this mesh, if true is passed to bakeMeshes below
-                target.GetComponent<MeshCollider>() ?? target.AddComponent<MeshCollider>(),
-                // triangles per cubic meter requested for this mesh
-                1000,
-                // bakeMeshes - if true, the mesh collider is populated, if false, the mesh collider is empty.
-                true
-            );
-
-            SurfaceObserver.RequestMeshAsync(sd, OnDataReady);
-            break;
-        case SurfaceChange.Removed:
-            var obj = spatialMeshObjects[surfaceId];
-            spatialMeshObjects.Remove(surfaceId);
-            if (obj != null)
-            {
-                GameObject.Destroy(obj);
-            }
-            break;
-        default:
-            break;
-    }
-}
-```
-
-### <a name="handling-data-ready"></a>处理数据准备就绪
-
-OnDataReady 处理程序接收 SurfaceData 对象。 "WorldAnchor"、"MeshFilter" 和 " (" （可选）) 其包含的 MeshCollider 对象反映关联空间图面的最新状态。 （可选）通过访问 MeshFilter 对象的网格成员来分析和/或 [处理](../../design/spatial-mapping.md#mesh-processing) 网格数据。 使用最新网格呈现空间图面，并 (（可选）) 将其用于物理学冲突和 raycasts。 务必确认 SurfaceData 的内容不为空。
-
-### <a name="start-processing-on-updates"></a>开始处理更新
-
-SurfaceObserver 应延迟，而不是每个帧调用更新 () 。
-
-```cs
-void Start ()
-{
-    StartCoroutine(UpdateLoop());
-}
-
-IEnumerator UpdateLoop()
-{
-    var wait = new WaitForSeconds(2.5f);
-    while(true)
-    {
-        surfaceObserver.Update(OnSurfaceChanged);
-        yield return wait;
-    }
-}
-```
+[!INCLUDE[](includes/unity-spatial-mapping.md)]
 
 ## <a name="higher-level-mesh-analysis-spatial-understanding"></a>更高级别的网格分析：空间理解
 
@@ -212,7 +62,7 @@ IEnumerator UpdateLoop()
 
 ### <a name="spatial-understanding"></a>空间理解
 
-在物理环境中放置全息影像时，通常需要超越空间映射的网格和面平面。 过程放置完成后，需要更高级别的环境理解。 这通常需要作出有关楼层、天花板和墙壁的决策。 您还可以根据一组放置约束进行优化，以确定最适合于全息对象的物理位置。
+在物理环境中放置全息影像时，通常需要超越空间映射的网格和面平面。 过程放置完成后，需要更高级别的环境理解。 这通常需要作出有关楼层、天花板和墙壁的决策。 您还可以根据一组放置约束进行优化，以确定全息对象的最佳物理位置。
 
 在 Conker 和片段的开发过程中，Asobo 工作室通过开发房间规划求解来面对此问题。 其中每个游戏都有特定于游戏的需求，但它们共享了核心空间理解技术。 HoloToolkit SpatialUnderstanding 库封装了这一技术，使你能够快速找到墙上的空白空间，将对象放置在天花板上，识别出要放置的字符，以及其他大量的空间理解查询。
 
@@ -482,7 +332,7 @@ Import_UnderstandingMesh –
 如果遵循我们所说的 Unity 开发旅程，就是在浏览 MRTK 核心构建基块。 从这里，你可以继续了解下一部分基础知识：
 
 > [!div class="nextstepaction"]
-> [Text](text-in-unity.md)
+> [文本](text-in-unity.md)
 
 或跳转到混合现实平台功能和 API：
 
@@ -491,7 +341,7 @@ Import_UnderstandingMesh –
 
 你可以随时返回到 [Unity 开发检查点](unity-development-overview.md#2-core-building-blocks)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [坐标系统](../../design/coordinate-systems.md)
 * [Unity 中的坐标系统](coordinate-systems-in-unity.md)

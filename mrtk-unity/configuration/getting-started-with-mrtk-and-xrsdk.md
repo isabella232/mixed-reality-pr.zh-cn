@@ -5,20 +5,20 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity， HoloLens， HoloLens 2， 混合现实， 开发， MRTK， XRSDK， XR SDK
-ms.openlocfilehash: 1560188d1a69f0083940a37da8c378691ee75a9d569c2c5088e0e3f614a44858
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 681352ff854598ab34bd9521b46ae9f4e6f42f02
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115188226"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905752"
 ---
 # <a name="getting-started-with-mrtk-and-xr-sdk"></a>MRTK 和 XR SDK 入门
 
 XR SDK 是 [Unity 2019.3](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/)及更新的 Unity XR 管道。 在 Unity 2019 中，它提供了现有 XR 管道的替代项。 在 Unity 2020 中，它是 Unity 中唯一的 XR 管道。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-若要开始使用混合现实Toolkit，请按照[提供的步骤](../install-the-tools.md#importing-the-mixed-reality-toolkit)将 MRTK 添加到项目。
+若要开始使用混合现实Toolkit，请按照[提供的步骤](/windows/mixed-reality/develop/install-the-tools#importing-the-mixed-reality-toolkit)将 MRTK 添加到项目。
 
 ## <a name="configuring-unity-for-the-xr-sdk-pipeline"></a>为 XR SDK 管道配置 Unity
 
@@ -34,10 +34,10 @@ XR SDK 管道目前支持 3 个平台：Windows Mixed Reality、Oculus 和 OpenX
    * XR 旧版输入帮助程序
 
 2. 转到“编辑”>“项目设置”。
-3. 单击"连接"窗口中的"XR 插件管理"Project 设置选项卡。
+3. 单击"扩展"窗口中的"XR 插件管理"Project 设置选项卡。
 4. 转到"通用Windows平台"设置，并确保Windows Mixed Reality插件提供程序下选中了"配置"。
 5. 确保选中"启动时初始化 XR"。
-6.  (**_编辑器中_** 远程处理HoloLens必需，否则为可选) 转到"独立"设置，并确保Windows Mixed Reality插件提供程序下选中了"设置"。 另请确保选中"启动时初始化 XR"。
+6.  (**_编辑器内_** 远程处理HoloLens必需，否则为可选) 转到"独立"设置，并确保Windows Mixed Reality插件提供程序下选中了" 另请确保选中"启动时初始化 XR"。
 
     ![选中"独立"选项卡的 XR 插件管理](images/xr-management-img-02.png)
 
@@ -59,10 +59,10 @@ XR SDK 管道目前支持 3 个平台：Windows Mixed Reality、Oculus 和 OpenX
    1. XR 插件管理
    1. OpenXR 插件
    1. 混合现实 OpenXR 插件
-1. 转到"编辑> Project 设置。
-1. 单击"连接"窗口中的"XR 插件管理"Project 设置选项卡。
+1. 转到"编辑> Project 设置" 。
+1. 单击"扩展"窗口中的"XR 插件管理"Project 设置选项卡。
 1. 确保选中"启动时初始化 XR"。
-1.  (**_可选_**) 如果面向 HoloLens 2，请确保你位于 UWP 平台上，并选择"Microsoft HoloLens功能集"
+1.  (**_可选_**) 如果面向 HoloLens 2，请确保你位于 UWP 平台上，然后选择"Microsoft HoloLens功能集"
 
 ![插件管理 OpenXR](../features/images/xrsdk/PluginManagementOpenXR.png)
 
@@ -72,7 +72,7 @@ XR SDK 管道目前支持 3 个平台：Windows Mixed Reality、Oculus 和 OpenX
 `<assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>`
 
 > [!NOTE]
-> 对于 MRTK 和 OpenXR 的初始版本，本机仅支持HoloLens 2手和Windows Mixed Reality运动控制器。 即将发布的版本中将添加对附加硬件的支持。
+> 对于 MRTK 和 OpenXR 的初始版本，本机仅HoloLens 2手和Windows Mixed Reality运动控制器。 即将发布的版本中将添加对其他硬件的支持。
 
 ## <a name="configuring-mrtk-for-the-xr-sdk-pipeline"></a>为 XR SDK 管道配置 MRTK
 
@@ -89,7 +89,7 @@ XR SDK 管道目前支持 3 个平台：Windows Mixed Reality、Oculus 和 OpenX
 
 若要将现有配置文件迁移到 XR SDK，应更新以下服务和数据访问提供程序。
 ::: moniker range=">= mrtkunity-2021-05"
-你将能够在 Unity 2019 的"XR SDK"选项卡下或 Unity 2020+的主/仅视图中看到新的数据访问提供程序，旧版 XR 不存在。
+你将能够在 Unity 2019 中的"XR SDK"选项卡下或 Unity 2020+的主/仅视图中看到新的数据访问提供程序，旧版 XR 不存在。
 
 !["XR SDK"选项卡](../features/images/xrsdk/XrsdkTabView.png)
 ::: moniker-end
@@ -195,9 +195,9 @@ to
 
 ### <a name="controller-mappings"></a>控制器映射
 
-如果使用自定义控制器映射配置文件，请打开其中一个，并运行混合现实 Toolkit -> 实用工具 -> 更新 -> 控制器映射配置文件菜单项，以确保定义新的 XR SDK 控制器类型。
+如果使用自定义控制器映射配置文件，请打开其中一个配置文件并运行混合现实 Toolkit -> 实用工具 -> 更新 -> 控制器映射配置文件菜单项，以确保定义新的 XR SDK 控制器类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [Unity 中的 AR 开发入门](https://docs.unity3d.com/Manual/AROverview.html)
 * [Unity 中的 VR 开发入门](https://docs.unity3d.com/Manual/VROverview.html)
