@@ -7,12 +7,12 @@ ms.date: 05/11/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 仿真器
-ms.openlocfilehash: 3fcf69c7f4e4e2bc92ef3c31dccbd1224ad3051e8a922666deb801dd6f40c4ab
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: e8bad509a4714d693c51682be73f1523bf05bd30
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115188678"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905652"
 ---
 # <a name="using-the-hololens-emulator"></a>使用 HoloLens 仿真器
 
@@ -28,7 +28,7 @@ HoloLens 仿真器包括 HoloLens 开发工具集，可让你在未配备物理 
 下载 HoloLens 仿真器。
 
 版本：
-* [HoloLens 2 仿真器（Windows 全息版 21H1，2021 年 7 月更新）](https://go.microsoft.com/fwlink/?linkid=2167725)。
+* [HoloLens 2 仿真器（Windows 全息版 21H1，2021 年 8 月更新）](https://go.microsoft.com/fwlink/?linkid=2169418)。
 * [HoloLens 仿真器（第 1 代）和全息项目模板](https://go.microsoft.com/fwlink/?linkid=2065980)。
 
 可以在 [HoloLens 仿真器存档](hololens-emulator-archive.md)页上找到 HoloLens 仿真器的发行说明和旧版本。
