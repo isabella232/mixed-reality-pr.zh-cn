@@ -220,7 +220,7 @@
           href: unity/spatial-sound-in-unity.md
     - name: 高级功能
       items:
-        - name: Unity 中的照片/视频摄像头
+        - name: 照片视频相机
           href: unity/locatable-camera-in-unity.md
         - name: 焦点
           href: unity/focus-point-in-unity.md
@@ -234,6 +234,8 @@
           href: unity/using-the-windows-namespace-with-unity-apps-for-hololens.md
         - name: Unity 中的混合现实本机互操作
           href: unity/unity-xrdevice-advanced.md
+        - name: 使用电脑资源来为应用提供支持
+          href: unity/use-pc-resources.md
         - name: 使用 Vuforia
           href: unity/vuforia-development-overview.md
     - name: 沉浸式 VR
@@ -266,8 +268,8 @@
           href: unity/managed-debugging-with-unity-il2cpp.md
         - name: 建议用于 Unity 的设置
           href: unity/recommended-settings-for-unity.md
-        - name: 使用全息远程处理预览工作
-          href: unity/holographic-remoting-in-unity.md
+        - name: 使用全息远程处理预览和调试应用
+          href: unity/preview-and-debug-your-app.md
     - name: Visual Studio 解决方案
       items:
         - name: 导出和构建 Unity Visual Studio 解决方案
@@ -452,21 +454,21 @@
           href: platform-capabilities-and-apis/installing-pix-hololens.md
     - name: 全息远程处理
       items:
-        - name: 概述
+        - name: 全息远程处理概述
           href: platform-capabilities-and-apis/holographic-remoting-overview.md
         - name: 全息远程处理播放器
           href: platform-capabilities-and-apis/holographic-remoting-player.md
-        - name: 编写全息远程处理远程应用
+        - name: 编写全息远程处理远程应用 (C++)
           items:
             - name: HolographicSpace API
               href: platform-capabilities-and-apis/holographic-remoting-create-remote-wmr.md
             - name: OpenXR API
               href: platform-capabilities-and-apis/holographic-remoting-create-remote-openxr.md
-        - name: 编写自定义全息远程处理播放器应用
+        - name: 编写自定义全息远程处理播放器应用 (C++)
           href: platform-capabilities-and-apis/holographic-remoting-create-player.md
-        - name: 自定义全息远程处理数据通道
+        - name: 自定义全息远程处理数据通道 (C++)
           href: platform-capabilities-and-apis/holographic-remoting-custom-data-channels.md
-        - name: 使用全息远程处理时建立安全连接
+        - name: 使用全息远程处理建立安全连接 (C++)
           href: platform-capabilities-and-apis/holographic-remoting-secure-connection.md
         - name: 故障排除和限制
           href: platform-capabilities-and-apis/holographic-remoting-troubleshooting.md
