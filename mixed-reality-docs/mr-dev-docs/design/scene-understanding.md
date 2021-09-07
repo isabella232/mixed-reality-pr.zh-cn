@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 场景了解，空间映射，Windows Mixed Reality，Unity，混合现实耳机，Windows Mixed Reality 耳机，虚拟现实耳机，HoloLens，封闭，SDK
-ms.openlocfilehash: 4dd5a2c96478e50b2e9eda35be22c15c1db07f88cfc4d25d753c4860a1283f55
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 6d950fca4211aef659b1f957ca5e7135ac9764ac
+ms.sourcegitcommit: 6b8ccb881fbbdaa5119841eac528e29d7b49bd04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115213454"
+ms.lasthandoff: 09/07/2021
+ms.locfileid: "123557314"
 ---
 # <a name="scene-understanding"></a>场景理解
 
@@ -33,7 +33,7 @@ ms.locfileid: "115213454"
 
 本文仅用于介绍运行时和概念的场景。 如果你正在查找有关如何通过场景理解进行开发的文档，你可能对以下文章感兴趣：
 
-[场景理解 SDK 概述](../develop/platform-capabilities-and-apis/scene-understanding-SDK.md)
+[场景理解 SDK 概述](../develop/unity/scene-understanding-SDK.md)
 
 可以从示例 GitHub 站点下载场景理解示例应用：
 
@@ -45,7 +45,7 @@ ms.locfileid: "115213454"
 
 ### <a name="sdk"></a>SDK 中 IsInRole 中的声明
 
-如果正在寻找有关通过场景理解进行开发的特定详细信息，请参阅 [场景了解 SDK 概述](../develop/platform-capabilities-and-apis/scene-understanding-SDK.md) 文档。
+如果正在寻找有关通过场景理解进行开发的特定详细信息，请参阅 [场景了解 SDK 概述](../develop/unity/scene-understanding-SDK.md) 文档。
 
 ### <a name="sample"></a>示例
 
@@ -101,7 +101,7 @@ ms.locfileid: "115213454"
 <br>
 
 
-如果你的应用程序想要将二维或3D 全息图放置在环境的严格结构上，最好是从 [空间映射](spatial-mapping.md) 网格计算此信息。 有关此主题的详细信息，请参阅 [场景了解 SDK 参考](../develop/platform-capabilities-and-apis/scene-understanding-SDK.md)
+如果你的应用程序想要将二维或3D 全息图放置在环境的严格结构上，最好是从 [空间映射](spatial-mapping.md) 网格计算此信息。 有关此主题的详细信息，请参阅 [场景了解 SDK 参考](../develop/unity/scene-understanding-SDK.md)
 
 **注意** 对于依赖于空间映射网格的传统放置代码，可以通过设置 EnableWorldMesh 设置与 SceneQuads 一起计算空间映射网格。 如果场景理解 API 不满足应用程序的延迟要求，我们建议继续使用 [空间映射 API](spatial-mapping.md#placement)。
 
@@ -129,5 +129,5 @@ ms.locfileid: "115213454"
 
 ### <a name="see-also"></a>另请参阅
 
-* [场景理解 SDK](../develop/platform-capabilities-and-apis/scene-understanding-SDK.md)
+* [场景理解 SDK](../develop/unity/scene-understanding-SDK.md)
 * [空间映射](spatial-mapping.md)
