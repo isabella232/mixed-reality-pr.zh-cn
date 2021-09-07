@@ -6,14 +6,14 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 呈现，全息影像
-ms.openlocfilehash: d01a5911ad8b479197bd38e8ed7825feef1f69dc51d2c2dc2f8e500e93880955
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 5bd06b9ca521e489a8944a1813b735a0fe1d60a5
+ms.sourcegitcommit: 6f3b3aa31cc3acefba5fa3ac3ba579d9868a4fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115193663"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "123244220"
 ---
-# <a name="rendering"></a>渲染
+# <a name="holographic-rendering"></a>全息渲染
 
 全息渲染使你的应用程序可以在世界各地的确切位置绘制一个全息影像，无论是精确地放入到物理领域还是在创建的虚拟领域内。 [全息影像](../../discover/hologram.md)是发出声音和光的对象。 呈现使应用程序能够添加光。
 

@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 04/7/2021
 ms.topic: article
 keywords: Unity，空间定位点，定位存储区，HoloLens，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机，世界锁定工具，全息影像
-ms.openlocfilehash: 34ef74ab968bff04188b1010eb4c863fd73d76ee6b1dd8a0bd89c7d4232a2be9
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 1de3571d0ad43308acad459021f2c2e9a1a6e1e7
+ms.sourcegitcommit: 6f3b3aa31cc3acefba5fa3ac3ba579d9868a4fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115208835"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "123244266"
 ---
 # <a name="world-locking-and-spatial-anchors-in-unity"></a>Unity 中的世界锁定和空间锚
 
@@ -33,12 +33,13 @@ ms.locfileid: "115208835"
 
 ## <a name="choosing-your-world-locking-approach"></a>选择您的全球锁定方法
 
-* **我们建议** 使用 **全球锁定工具** 来满足所有全息图定位需求。 
+* 建议你使用 **全球锁定工具** 来满足所有全息图定位需求。
     * 世界锁定工具提供了一个稳定的坐标系，可最大程度地减少虚拟和实际标记之间的明显不一致。 另一种方法是，它将整个场景与共享的锚池一起锁定，而不是使用该组自己的单独定位点锁定每组对象。
+    * 全局锁定工具会自动处理所有的空间锚点创建和管理。 不需要与 **ARAnchorManager** 或 **WorldAnchor** 进行交互，就能始终锁定全息影像。
 * **对于使用 OpenXR 或 Windows XR 插件的 Unity 2019/2020**，需要使用 **ARAnchorManager**
 * **对于较旧的 Unity 版本或 WSA** 项目，需要使用 **WorldAnchor**
 
-## <a name="setting-up-world-locking"></a>设置世界锁定 
+## <a name="setting-up-world-locking"></a>设置世界锁定
 
 [!INCLUDE[](includes/world-locking/world-locking-setup.md)]
 
@@ -51,11 +52,9 @@ ms.locfileid: "115208835"
 
 [!INCLUDE[](includes/world-locking/world-locking-persistence.md)]
 
-## <a name="sharing-coordinate-spaces"></a>共享坐标空间 
+## <a name="sharing-coordinate-spaces"></a>共享坐标空间
 
 如果要共享世界锁定的坐标空间，请查看我们的综合性 [共享体验文档](shared-experiences-in-unity.md)。
-
-请注意，世界锁定工具中尚不直接支持 Azure 空间锚点，因此共享体验将要求你手动创建空间锚。
 
 ## <a name="next-development-checkpoint"></a>下一个开发检查点
 
