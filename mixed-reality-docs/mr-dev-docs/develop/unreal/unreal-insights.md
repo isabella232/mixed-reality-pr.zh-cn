@@ -1,107 +1,98 @@
 ---
 title: 使用 Unreal Insights 进行分析
-description: 了解如何在 Insights 上HoloLens 2 Unreal HoloLens 2。
+description: 了解如何在 HoloLens 2 上使用 Unreal Insights。
 author: sajidfarooq
 ms.author: v-hferrone
 ms.date: 12/10/2020
 ms.topic: article
-keywords: Unreal， Unreal Engine 4， UE4， HoloLens， HoloLens 2， 开发， 亵渎， unreal 见解， 文档， 指南， 功能， 全息影像， 游戏开发， 混合现实头戴显示设备， Windows 混合现实头戴显示设备， 虚拟现实头戴显示设备
-ms.openlocfilehash: a13655f394b4d2531ab2ae99ee21ebe9185ebe227ef07a16e3ca54eae9375ee2
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+keywords: Unreal，Unreal Engine 4，UE4，HoloLens，HoloLens 2，开发，分析，Unreal insights，文档，指南，功能，全息影像，游戏开发，混合现实耳机，windows mixed reality 耳机，虚拟现实耳机
+ms.openlocfilehash: a77d7795cd7e8c281ebaa2ef89bb6bc9152f5f9c
+ms.sourcegitcommit: 5d13ff165f4d08a3b028935fb39539a45a30f7e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115228590"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "127779361"
 ---
-# <a name="profiling-with-unreal-insights"></a>使用 Unreal Insights 进行分析 
+# <a name="profiling-with-unreal-insights"></a>使用 Unreal Insights 进行分析
 
-[Unreal Insights](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/Overview/index.html)是一种分析系统，用于收集、分析和可视化 Unreal Engine 的数据。 分析系统可帮助你找到优化瓶颈以及应用性能可以使用提升的区域。 通常，你Insights编辑器中启用 Unreal，但HoloLens 2则需要使用命令行。  
+[Unreal Insights](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/Overview/index.html)是一种分析系统，用于从 Unreal 引擎收集、分析和可视化数据。 分析系统可以帮助你找到优化瓶颈，以及你的应用程序性能可以使用提升的区域。 通常情况下，你可以从编辑器 Insights 直接启用 Unreal，但对于 HoloLens 2，你将需要使用命令行。
 
 ## <a name="setup"></a>设置
 
-Unreal 允许你使用启用 Unreal HoloLens 的命令行参数在 HoloLens 启动器中创建和配置"自定义Insights。
+Unreal 使你能够使用启用 Unreal Insights 的命令行参数在 HoloLens 启动器中创建和配置 "自定义配置文件"。
 
-1.  在命令提示符下，使用 **ipconfig** 命令查找计算机的 IP 地址。 IP 地址是 ipconfig 列出的 IPv4 地址。 稍后在设置命令行参数时，请记住这一点。
-
-> [!IMPORTANT]
-> 如果支持 VPN，可能需要改为提供通过 VPN 提供的 IP 地址。
-
-![ipconfig 命令的命令行结果的屏幕截图](images/unreal-insights-img-01.png)
-
-2.  转到 Unreal Engine 面板的顶部，打开 **"设备管理器"** 按钮 **下的"启动"** 按钮：
-
-![启动选项的屏幕截图，其中突出显示了设备管理器](images/unreal-insights-img-02.png)
-
-3.  在"设备管理器"中 **，选择"添加未列出的设备"：**
-
-![Unreal 引擎中打开的设备管理器的屏幕截图](images/unreal-insights-img-03.png)
-
-4. 单击 **"选择平台"并选择****HoloLens：**
-
-!["添加未列出的设备"下拉列表的屏幕截图，其中突出显示了HoloLens设备](images/unreal-insights-img-04.png)
-
-5.  如果使用 IPoverUSB，请输入 127.0.0.1：10080 作为设备标识符。 在HoloLens字段中输入用户和密码，并 **按需要填写**"显示名称"。
+1. 在命令提示符下使用 **ipconfig** 命令查找计算机的 IP 地址。 IP 地址是由 ipconfig 列出的 IPv4 地址。 请记住，稍后在设置命令行参数时，请记住这一点。
 
 > [!IMPORTANT]
-> 设备标识符是在步骤 1 HoloLens运行 Unreal Insights计算机的 IP 地址。
+> 如果你使用的是 VPN，你可能需要提供通过 VPN 提供的 IP 地址。
 
-![设备管理器HoloLens设备详细信息的屏幕截图](images/unreal-insights-img-05.png)
+![Ipconfig 命令的命令行结果的屏幕截图](images/unreal-insights-img-01.png)
 
-6.  选择 **"** 添加HoloLens设备管理器的设备列表中应显示你的设备：
+2. 从主编辑器窗口中的 "编辑" 工具栏打开 **Project 设置**。
 
-![添加到HoloLens列表的屏幕截图](images/unreal-insights-img-06.png)
+![突出显示 Project 设置编辑下拉列表的屏幕截图](images/unreal-insights-img-15.png)
+
+3. 向下滚动左侧面板，直到找到 "**平台**" 标题并选择 " **HoloLens**"。
+
+![HoloLens 突出显示 Project 设置左面板中 "平台" 部分的屏幕截图](images/unreal-insights-img-15.png)
+
+4. 确认 " **功能** " 部分已选中 "internet 客户端"、"Internet 客户端服务器" 和 "专用网络客户端服务器"。
+
+![选择 Internet 客户端、Internet 客户端服务器和专用网络客户端服务器的功能选项的屏幕截图](images/unreal-insights-img-14.png)
 
 ## <a name="launch"></a>启动
 
-1. 在 **Project Launcher"** 按钮下的 UE4 面板 **中打开"启动"** 按钮：
+1. 从 "**启动**" 按钮下的 UE4 面板打开 **Project Launcher** ：
 
-![启动选项的屏幕截图，其中突出显示了项目启动器](images/unreal-insights-img-07.png)
+![突出显示项目启动器的启动选项的屏幕截图](images/unreal-insights-img-07.png)
 
-2. 选择按钮 **+** ，在"自定义启动配置文件" **下创建自定义配置文件**。 创建后，始终可以稍后编辑此配置文件：
+2. 选择 " **+** **自定义启动配置文件**" 下的按钮以创建自定义配置文件。 创建后，你始终可以在以后编辑此配置文件：
 
-![项目启动器屏幕截图，其中突出显示了自定义启动配置文件](images/unreal-insights-img-08.png)
+![突出显示自定义启动配置文件的项目启动器的屏幕截图](images/unreal-insights-img-08.png)
 
-3. 选择 **自定义启动** 配置文件上的HoloLens配置文件"按钮并配置：
-    * 选择 **"食谱****到书籍"** 以启用复制到设备
-    * 可能需要在"存档"部分查看"是否要存档？"，以保留生成的 .appxbundle，而不是删除 以节省磁盘空间。 指定 .appxbundle 的位置，并切换到开发版本（如果需要）
-
-![配置文件配置中食谱选项的屏幕截图，其中突出显示了书籍和HoloLens菜单](images/unreal-insights-img-09.png)
-
-4. 将 **"希望如何部署生成？"** 设置为"复制到 **设备"** 以激活 UI 的 **"** 启动"部分：
-
-![项目启动器屏幕截图，其中突出显示了"复制到设备"的部署选项](images/unreal-insights-img-10.png)
-
-5. 在 **"启动"部分设置** "其他 **命令行参数** "。 参数将写入到ue4commandline.txt文件中，打包到捆绑包中，在启动时使用。 
-    <!-- TODO: Need more detail on what this parameter does and where to find others. -->
-    * 尝试初学者 **：-tracehost=IP_OF_YOUR_PC -trace=Log，Bookmark，Frame，CPU，GPU，LoadTime，File，Net**
-    * 可以在[Unreal Insights文档中找到可用启动参数的完整列表](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/Reference/index.html)。
+3. 在 HoloLens 自定义启动配置文件上选择 "**编辑配置文件**" 按钮。 在 " **生成** " 部分中，选中 " **生成 UAT** " 并设置 **其他命令行参数**。
+   - 对于初学者，请尝试以下操作： **-tracehost = IP_OF_YOUR_PC 跟踪 = 日志、书签、框架、CPU、GPU、LoadTime、文件、网络**
+   - 可以在 " [Unreal Insights 参考" 文档](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/Reference/index.html)中找到可用启动参数的完整列表。
 
 > [!NOTE]
-> "IP_OF_YOUR_PC"是在步骤 1 中发现的 IP 地址。 这是运行 Unreal Insights 的计算机的 IP 地址，而不是 HoloLens。
+> "IP_OF_YOUR_PC" 是我们在步骤1中找到的 IP 地址。 这是运行 Unreal 的计算机的 ip 地址 Insights，而不是 HoloLens 的 ip 地址。
 
 > [!IMPORTANT]
-> 跟踪可能会非常快速地成为大型跟踪。 仅启用需要保持低跟踪大小的通道。
+> 跟踪可能会非常快。 只启用那些需要使跟踪大小保持较低的通道。
 
-![启动配置选项的屏幕截图](images/unreal-insights-img-11.png)
+![配置文件配置中的生成选项的屏幕截图](images/unreal-insights-img-17.png)
 
-6. 在应用Insights之前启动 Unreal，否则 Unreal Insights将无法在应用之前进行适当的初始化：
-    * Unreal Insights可执行文件存储在二进制文件引擎文件夹中，通常如下所示："C：\Program Files\Epic Games\UE_4.26\Engine\Binaries\Win64\UnrealInsights.exe"
+4. **通过书籍** 选择要复制到设备的 "**库**"。 请确保在 **加工地图** 中选择了映射。
 
-![正在运行的 unreal insights 可执行文件的屏幕截图](images/unreal-insights-img-12.png)
+![使用 "库" 的配置文件配置中的 "库" 选项的屏幕截图，并 HoloLens 突出显示](images/unreal-insights-img-09.png)
 
-6.  选择 **"** 返回"以返回到"**返回Project Launcher根**
-7.  返回编辑器，单击 **自定义启动** 配置文件上的"启动"
+5. 设置 **如何将生成打包** 到 **包 & 本地存储包**。 请记下所选的文件路径，因为稍后需要用到。
+
+![配置文件配置设置为在本地打包和存储的配置文件中的包选项的屏幕截图](images/unreal-insights-img-18.png)
+
+6. 设置 **你希望如何将生成部署到 "** 不 **部署**"。
+
+![部署设置为 "不部署" 的配置文件配置中部署选项的屏幕截图](images/unreal-insights-img-19.png)
+
+8. 选择 "**上一步**" 返回到 " **Project Launcher** " 对话框的根
+9. 返回编辑器中，单击自定义启动配置文件中的 " **启动** "
 
 ![自定义启动配置文件的屏幕截图](images/unreal-insights-img-13.png)
 
-8.  监视项目已打包、安装在设备上并启动
+10. 在生成项目时进行监视，然后将步骤 5) 的包路径中的 .appxbundle (部署到通过设备门户 HoloLens
+
+11. 启动 Unreal Insights。 Unreal Insights 可执行文件存储在二进制引擎文件夹中，通常如下所示： "C:\Program Files\Epic Games\UE_4.26\Engine\Binaries\Win64\UnrealInsights.exe"
+
+![运行的 unreal insights 可执行文件的屏幕截图](images/unreal-insights-img-12.png)
+
+12. 在 HoloLens 上启动应用。
 
 ## <a name="profiling"></a>分析
 
-返回到 Unreal Insights，**选择设备** 实时连接以开始分析
+返回到 Unreal Insights 中，选择要开始分析的设备的 **实时** 连接
 
-自定义配置文件在项目之间共享。 从此处开始，可以使用创建的自定义配置文件，而不必每次这样做。 每次启动 Unreal 时，只需重新创建与设备的连接，只需在安装部分中执行步骤 3 到[](#setup)6。
+自定义配置文件在项目之间共享。 从这里开始，你可以使用你创建的自定义配置文件，而不必每次都执行此操作。 每次启动 Unreal 时，你只需在 " [设置" 部分](#setup)中通过步骤3到步骤6重新创建与设备的连接。
 
 ## <a name="see-also"></a>另请参阅
-* [Unreal Insights 文档](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/index.html)
 
+- [Unreal Insights 文档](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/index.html)
