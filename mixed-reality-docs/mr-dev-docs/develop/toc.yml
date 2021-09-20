@@ -372,7 +372,7 @@
           href: unreal/unreal-publishing-to-store.md
 - name: JavaScript
   items:
-    - name: JavaScript 开发概述
+    - name: 使用 WebXR 的 JavaScript 开发
       href: javascript/webxr-overview.md
     - name: 教程
       items:
@@ -384,6 +384,14 @@
               href: javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02.md
             - name: 3. 与 3D 对象交互
               href: javascript/tutorials/babylonjs-webxr-helloworld/interact-03.md
+        - name: 使用 babylon.js 在 WebXR 中生成钢琴
+          items:
+            - name: 1. 简介
+              href: javascript/tutorials/babylonjs-webxr-piano/introduction-01.md
+            - name: 2. 生成 3D 钢琴模型
+              href: javascript/tutorials/babylonjs-webxr-piano/keyboard-model-02.md
+            - name: 3. 弹奏 3D 钢琴
+              href: javascript/tutorials/babylonjs-webxr-piano/keyboard-interaction-03.md
 - name: 自定义引擎
   items:
     - name: 自定义引擎开发概述
