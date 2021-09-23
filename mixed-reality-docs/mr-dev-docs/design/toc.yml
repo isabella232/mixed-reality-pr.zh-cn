@@ -150,5 +150,7 @@
       href: asset-creation-process.md
     - name: 设计自己的沉浸式环境
       href: add-custom-home-environments.md
-    - name: Figma 工具包
+    - name: MRTK Figma 工具包
       href: figma-toolkit.md
+    - name: Figma Bridge for Unity
+      href: figma-unity-bridge.md
