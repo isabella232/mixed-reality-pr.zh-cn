@@ -7,14 +7,19 @@ ms.date: 02/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 旁观视图, iPhone, iOS, iPad, OpenCV, 相机, ARKit, HoloLens, 混合现实, MixedRealityToolkit, 演示, 录制
-ms.openlocfilehash: 23f5dce85bdcd15e8950f5682814dec042bc604d7e983b17a5528949e51e844a
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: f30c745154056cda6b5ccf052efbbd0bb7f094ea
+ms.sourcegitcommit: 5d13ff165f4d08a3b028935fb39539a45a30f7e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115190499"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "127779458"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 和 HoloLens 2 的旁观视图
+
+> [!WARNING]
+> 由于旁观视图示例与该示例所依赖的 Azure 空间定位点 SDK 包的版本不兼容，Microsoft 将弃用该示例。 此外，随着客户迁移到受支持的 2019 LTS 版本，示例可能会因 Unity 环境中的其他更改而停止工作。
+>
+> 虽然 Microsoft 目前并未投入资源来解决上述问题，但可以从示例中删除 Azure 空间定位点功能，并依靠 QR 码等技术来实现对齐。   如果社区成员提交 PR 来解决这些问题，我们将暂时审查并接受它们。
 
 ![记号笔](images/SpecViewPhoneHero.jpg)
 
