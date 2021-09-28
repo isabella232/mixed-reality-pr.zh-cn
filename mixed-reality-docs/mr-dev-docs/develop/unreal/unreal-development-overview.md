@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 流式处理, 远程处理, 混合现实, 开发, 入门, 功能, 新项目, 仿真器, 文档, 指南, 功能, 全息影像, 游戏开发, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, OpenXR
-ms.openlocfilehash: fd9eec18e865910ef4899dfda75661d1edb57eed25a55641cde3ca7ac3f0b3a8
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 90dfb113008e6f8b1162c068ebfc967ed74fd6b4
+ms.sourcegitcommit: 71c2a4884bd83599e35dd894771a5e43e951b574
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115203419"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128184663"
 ---
 # <a name="unreal-development-overview"></a>Unreal 开发概述
 
@@ -110,11 +110,9 @@ ms.locfileid: "115203419"
 | 摄像头访问 | 4.23 | ✔️ |
 | QR 码 | 4.23 | ✔️ |
 | 空间音频 | 4.23 | ✔️ |
-| Spectator Screen 支持流式传输 | 4.24 |
 | 通过流式传输的平面 LSR | 4.24 |
 | [示例应用](../features-and-samples.md) | 4.24 | ✔️ |
 | 移动多视图：性能达到 60 fps | 4.25 | ✔️ |
-| 第三人称摄像机渲染 | 4.25 | ✔️ |
 | 从打包的桌面应用进行流式传输 | 4.25.1 | ✔️ |
 | 面向 HoloLens 2 的 Azure 空间定位点 | 4.25 | ✔️ |
 | 混合现实 UX Tools 支持 | 4.25 | ✔️ |
