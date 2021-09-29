@@ -10,12 +10,12 @@ keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 混合现实, 流�
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 77f32cafa84233654ad9e5754d0db9f7b6f9437a
-ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
+ms.openlocfilehash: 091f0876c37756fad47d2d78520adbd526aab24d
+ms.sourcegitcommit: 71c2a4884bd83599e35dd894771a5e43e951b574
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2021
-ms.locfileid: "122184630"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128184614"
 ---
 # <a name="streaming-in-unreal"></a>Unreal 中的流式传输
 
@@ -93,6 +93,9 @@ ms.locfileid: "122184630"
 
 > [!NOTE]
 > 项目设置中的应用程序名称应自动用于创建 Windows 包。 如果名称因某些原因而有所不同，请在命令提示符下使用 Windows 可执行文件名称。
+
+> [!NOTE]
+> 如果在从打包的可执行文件执行流式传输时眼动跟踪不起作用，请禁用任何其他带有电脑支持的眼动追踪仪（例如 Magic Leap）的插件，或从命令行使用相关眼动跟踪参数运行应用程序（请参阅[命令行选项](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unreal/unreal-streaming?tabs=wmr#command-line-options)）。
 
 按 Enter 键，随即将看到应用程序开始进行流式传输了！
 

@@ -2,17 +2,17 @@
 title: 混合现实学习模块概述
 description: 跟进了解托管在 Microsoft Learn 平台上的可用混合现实模块。
 author: hferrone
-ms.author: jemccull
-ms.date: 11/30/2020
+ms.author: v-vtieto
+ms.date: 9/27/2021
 ms.topic: article
 keywords: 混合现实, unity, 教程, hololens, learn, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, MRTK, 混合现实工具包, 语言翻译, Azure, Azure 认知服务, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: 24584532fca0872a1ec62f6f2381e0aa076da5bb79eea765cb3a0a0f5736f36f
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 595aad668e2ff2a1a91fc801981be1d004bc012f
+ms.sourcegitcommit: 3176df29fb0c9508751bd370f1211031d50d2c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115204393"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129148675"
 ---
 # <a name="mixed-reality-learn-overview"></a>混合现实学习概述
 
@@ -23,7 +23,7 @@ ms.locfileid: "115204393"
 我们的 Learn 模块可帮助你精通混合现实开发，它提供一种基于模块的结构，让你能够开始使用混合现实工具包、Unity 和 Azure 混合现实服务等重要工具。 了解基础知识从未如此简单清晰，这是因为我们布置好学习目标、先决条件，还设置了完成预期时间 - 所有内容都放在一个界面中。 
 
 > [!div class="nextstepaction"]
-> [混合现实学习路径入门](/learn/browse/?terms=mixed+reality)
+> [浏览混合现实学习模块](/learn/browse/?terms=mixed+reality)
 
 ## <a name="general-modules"></a>常规模块
 

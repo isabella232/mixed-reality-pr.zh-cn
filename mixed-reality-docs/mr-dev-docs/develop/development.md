@@ -1,18 +1,18 @@
 ---
 title: 了解工具和体系结构
 description: 了解要开始为 HoloLens 和沉浸式头戴显示设备创建应用而需要的混合现实开发工具。
-author: grbury
-ms.author: grbury
-ms.date: 12/9/2020
+author: vtieto
+ms.author: v-vtieto
+ms.date: 9/15/2021
 ms.topic: overview
 ms.localizationpriority: high
 keywords: 混合现实, 开发, HoloLens, unity, unreal, directx, 混合现实头戴显示设备, windows 混合现实头戴显示设备, 虚拟现实头戴显示设备, 什么是虚拟现实, 什么是增强现实, 虚拟现实开发, 增强现实开发
-ms.openlocfilehash: 2020ceb898f6badaec56a599348c8633c4cb90ba22eaf53df0e097d4fc3e110e
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: c6a246de87595be7047c7712a2db489c3d87ac39
+ms.sourcegitcommit: 18880591624caa888ade6d7c60bd2b2ee3eadaaa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115195950"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129016795"
 ---
 # <a name="introduction-to-mixed-reality-development"></a>混合现实开发简介
 
@@ -20,30 +20,28 @@ ms.locfileid: "115195950"
 
 混合现实涉及面非常广，在这里现实世界和虚拟世界发生碰撞。 可能性是无限的，从你开始。 选择你的引擎，下载你的工具，清理你的键盘。 欢迎来到混合现实生态系统 - 是时候该创建了。
 
-我们可以从三种可能的途径开始混合现实开发，以下相应部分分别描述了每一种方法：
-* [Microsoft Learn](#microsoft-learn)
-* [混合现实工具包教程系列](#mixed-reality-toolkit-tutorials)
-* [自我引导式探索](#self-guided-exploration)
+可以基于你目前在旅程中的位置，在下方选择一个起点。
 
-## <a name="microsoft-learn"></a>Microsoft Learn
+## <a name="new-to-mixed-reality-development"></a>刚接触混合现实开发开发？
 
-每个人都可以在 Microsoft Learn 学到知识。 发现新技能、查找认证，并通过交互式的动手学习路径在几分钟内增强专业能力、推动事业发展。
+### <a name="learn-the-concepts-products-and-services"></a>了解概念、产品和服务
 
-我们的 Learn 模块可帮助你精通混合现实开发，它提供一种基于模块的结构，让你能够开始使用混合现实工具包、Unity 和 Azure 混合现实服务等重要工具。 了解基础知识从未如此简单清晰，这是因为我们布置好学习目标、先决条件，还设置了完成预期时间 - 所有内容都放在一个界面中。
+首先大致了解什么是混合现实，以及它与虚拟现实和增强现实的区别。 了解 HoloLens、沉浸式头戴显示设备和全息影像。 探索基本设计和开发概念以及相关技术，例如 Azure 远程渲染。
 
 > [!div class="nextstepaction"]
-> [Microsoft Learn 上的混合现实简介](/learn/modules/intro-to-mixed-reality)
+> [Microsoft Learn 上的混合现实简介](/learn/modules/intro-to-mixed-reality/)
 
-## <a name="mixed-reality-toolkit-tutorials"></a>混合现实工具包教程
+### <a name="start-building-a-mixed-reality-experience"></a>开始构建混合现实体验
 
-如果你更偏向于实践学习方法，请查看我们的混合现实工具包 (MRTK) 教程系列。 你将构建一种混合现实体验，让用户探索在 NASA 的 Mars Curiosity Rover 之后建模的全息影像，并深入了解 MRTK 及其如何加快开发过程。
+如果你已熟悉基本概念并想要开始构建一些内容，请查看我们的“HoloLens 2 基础知识”教程系列。 你将构建一个混合现实体验，让用户可在其中浏览按 NASA 的“好奇号”火星探测器建模的全息影像。 这可让你深入了解 MRTK 及其如何加快开发过程。
 
 > [!div class="nextstepaction"]
-> [MRTK 教程](unity/tutorials/mr-learning-base-01.md)
+> [HoloLens 2 基础教程](/learn/paths/beginner-hololens-2-tutorials/)
 
-## <a name="self-guided-exploration"></a>自我引导式探索
-
-如果你是经验丰富的开发人员，并且想要立即访问我们的文档，请首先安装所需的工具。 从中选择 Unity 开发设置，遵循我们精心规划的 Unity 开发路径并使用 HoloLens 开始开发工作，或浏览我们的内容库。
+## <a name="choose-your-own-development-path"></a>选择你自己的开发路径
+你是已经具有一些混合现实、增强现实或虚拟现实经验的中高级开发人员吗？ 我们将帮助你选择合适的工具并根据需要进行设置，然后引导你浏览我们跨 Unity、Unreal、Native 或 Web 的特选开发路径。
 
 > [!div class="nextstepaction"]
 > [安装工具](install-the-tools.md)
+
+
