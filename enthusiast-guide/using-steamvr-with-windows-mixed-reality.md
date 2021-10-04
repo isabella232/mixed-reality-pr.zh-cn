@@ -1,14 +1,17 @@
 ---
 title: 在 Windows Mixed Reality 中使用 SteamVR
 description: 了解如何在 Windows Mixed Reality 耳机和控制器上安装和玩兼容 pc 的游戏。
+author: qianw211
+ms.author: v-qianwen
+ms.date: 9/23/2021
 ms.topic: article
 keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，游戏，SteamVR，流，系统要求
-ms.openlocfilehash: 42459f9b8d661bd01ce489460c5293333034612bc59becccf3d35e0ce506fddb
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: b06c5e0b9918a5277a2c31e391dbdbc1ef740110
+ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115221368"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129436709"
 ---
 # <a name="using-steamvr-with-windows-mixed-reality"></a>在 Windows Mixed Reality 中使用 SteamVR
 
@@ -111,7 +114,7 @@ SteamVR 是由阀门构建和发布的，在所有 SteamVR 耳机上都是通用
 
 ### <a name="windows-insider-program"></a>Windows 预览体验计划
 
-Windows Mixed Reality 是 Windows 10 的一部分。  影响 SteamVR 用户的许多修补程序和功能都带有 Windows 操作系统。  如果要尝试最新的 Windows 10 预览版，我们建议加入[Windows 有问必答计划](https://insider.windows.com)。
+Windows Mixed Reality 属于 Windows 10 并 Windows 11。  影响 SteamVR 用户的许多修补程序和功能都带有 Windows 操作系统。  如果要尝试最新 Windows 10 和 Windows 11 预览版，我们建议加入[Windows 预览体验计划](https://insider.windows.com)。
 
 ## <a name="enabling-motion-reprojection-for-steamvr-apps"></a>为 SteamVR 应用启用运动 reprojection
 
@@ -186,7 +189,7 @@ Red = 运动 reprojection 为 off，因为应用程序的运行时间不到半�
 
 如果你有任何疑问或意见要分享，你也可以通过我们的 [流论坛](http://steamcommunity.com/app/719950/discussions/)联系我们。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [SteamVR 与 Windows Mixed Reality 疑难解答](steamvr-questions.md)
 * [在 Windows Mixed Reality 中使用游戏和应用](using-games-and-apps-in-windows-mixed-reality.md)

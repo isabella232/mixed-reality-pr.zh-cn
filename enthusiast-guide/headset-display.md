@@ -1,19 +1,19 @@
 ---
 title: 耳机显示 Faq
 description: 显示针对耳机显示问题的 Windows Mixed Reality 故障排除，超出了标准消费者支持文档的范围。
-author: hferrone
-ms.author: v-hferrone
-ms.date: 09/15/2020
+author: qianw211
+ms.author: v-qianwen
+ms.date: 09/30/2020
 ms.topic: article
 keywords: Windows Mixed Reality，Mixed reality，虚拟现实，VR，先生，故障排除，错误，帮助，支持
 appliesto:
-- Windows 10
-ms.openlocfilehash: 811b5160c739c8b19fde737e7a61bcef84e0cf60a87927adbe21241e229f3f22
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+- Windows 10 and Windows 11
+ms.openlocfilehash: 5a7c7979c9d93d917633cbfed23dc82597368a43
+ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115189386"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129436675"
 ---
 # <a name="headset-display-faqs"></a>耳机显示 Faq
 
@@ -97,7 +97,7 @@ ms.locfileid: "115189386"
 
 ## <a name="im-getting-a-the-install-class-is-not-present-or-is-invalid-error-in-device-manager"></a>在 Device Manager 中收到 "安装类不存在或无效" 错误
 
-如果在 Device Manager 中看到 "HoloLens 传感器" 带有黄色惊叹号，请选择该设备了解更多详细信息。 如果看到一条消息，指出 "未安装此设备的驱动程序。  (代码 28) -安装类不存在或无效 "，这通常是因为你的电脑运行[Windows 10 N](https://support.microsoft.com/en-us/help/4039813/media-feature-pack-for-windows-10-n-october-2017)。N 版本的 Windows 10 不支持 Windows Mixed Reality，你将需要安装 Windows 10 的非 N 版本。
+如果在 Device Manager 中看到 "HoloLens 传感器" 带有黄色惊叹号，请选择该设备了解更多详细信息。 如果看到一条消息，指出 "未安装此设备的驱动程序。  (代码 28) -安装类不存在或无效 "，这通常是因为你的电脑运行[Windows 10 N](https://support.microsoft.com/en-us/help/4039813/media-feature-pack-for-windows-10-n-october-2017)。N 版本的 Windows 10 和 Windows 11 不支持 Windows Mixed Reality，你将需要安装 Windows 10 或 Windows 11 的非 N 版本。
 
 ## <a name="my-wmr-environment-is-jittery-or-stutters-when-i-move-my-head-and-displays-double-vision"></a>我的 WMR 环境在移动头时出现抖动或 stutters，并显示双重视觉
 
@@ -113,21 +113,21 @@ ms.locfileid: "115189386"
 
 如果头戴式耳机有调整校准的旋钮，请调整其校准设置。 否则，请 **设置 > 混合现实 > 视觉质量** 并调整其中的校准。 有关特定设备的校准的详细信息，请与耳机制造商联系。
 
-## <a name="i-frequently-see-a-black-border-around-the-view-in-the-headset-sometimes-its-like-im-looking-down-a-tunnel"></a>我经常会看到头戴显示在视图周围的黑色边框。 有时，这就像是向下一个隧道
+## <a name="i-frequently-see-a-black-border-around-the-view-in-the-headset-sometimes-its-like-im-looking-down-a-tunnel"></a>我经常会看到头戴显示在视图周围的黑色边框。 有时，就像我向下看隧道一样
 
-这意味着应用程序不能在电脑上击中帧速率，系统使用旧帧在耳机中呈现视图。 由于应用程序仅呈现您要查看的世界部分，因此，如果这些应用程序不一直达到帧速率，系统就会尝试从以前的观点来渲染世界，并使用黑色填充缺少的详细信息。 如果经常发生这种情况：
+这意味着应用程序无法达到电脑上的帧速率，并且系统正在使用旧帧在头戴显示设备中呈现视图。 由于应用程序只呈现你正在查看的部分世界，因此，如果它们不一致地达到其帧速率，系统将尝试从以前的角度呈现世界，并且会用黑色填充缺失的详细信息。 如果这种情况频繁发生：
 
 1. 关闭或停止所有不需要的程序以释放内存和 CPU。
 2. 减少应用程序中的详细信息设置。
-3. 请参阅 **设置 > 混合现实 > 耳机显示**，以减少 Windows Mixed Reality 主页中显示的详细信息量。
+3. 转到 **"设置 >混合现实>头** 戴显示"，以减少设备主页中显示的Windows Mixed Reality量。
 
-## <a name="the-view-in-the-headset-is-jittering-and-stuttering-a-lot"></a>耳机中的视图 jittering，断断续续
+## <a name="the-view-in-the-headset-is-jittering-and-stuttering-a-lot"></a>头戴显示设备中的视图非常抖动和抖动
 
-系统可能无法将内容呈现给耳机，或者跟踪系统可能遇到问题：
+系统可能无法向头戴显示设备呈现内容，或者跟踪系统可能遇到问题：
 
-1. 打开任务管理器，确保您的 PC 具有足够的计算资源。 你应具有80% 的 CPU 可用空间，400 MB RAM，磁盘 IO 应该低于80%。
-2. 请确保你具有适用于你的硬件的最新图形驱动程序。 请参阅 [图形驱动程序部分](before-you-start.md#make-sure-you-have-a-compatible-graphics-driver)。
-3. 请确保空间充足。
-4. 拔出设备，关闭 Windows Mixed Reality，并再次将其插入。
+1. 打开任务管理器，确保电脑有足够的计算资源。 应具有 80% 的可用 CPU、400 MB 的 RAM，磁盘 IO 应低于 80%。
+2. 确保具有适用于硬件的最新图形驱动程序。 请参阅图形 [驱动程序部分](before-you-start.md#make-sure-you-have-a-compatible-graphics-driver)。
+3. 确保房间有足够的光线。
+4. 拔下设备，Windows Mixed Reality，然后再次插入。
 5. 重启你的电脑。
-6. 如果问题仍然存在，请与 [客户支持](https://support.microsoft.com/)联系。
+6. 如果问题仍然存在，请联系 [客户支持](https://support.microsoft.com/)。

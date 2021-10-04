@@ -1,121 +1,142 @@
 ### YamlMime:FAQ
 metadata:
-  title: HP 回音 G2 常见问题解答
-  description: 及时了解有关使用 HP 回音 G2 耳机与 Windows Mixed Reality 沉浸式耳机相关的常见问题。
-  ms.author: v-hferrone
-  ms.date: 09/15/2020
+  title: HP Reverb G2 常见问题解答
+  description: 随时了解有关将 HP Reverb G2 头戴显示设备与沉浸式头戴显示设备Windows Mixed Reality常见问题。
+  author: qianwen
+  ms.author: v-qianwen
+  ms.date: 09/24/2021
   ms.topic: article
-  keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Troubleshoot, Errors, Help, Support, Performance
+  keywords: Windows Mixed Reality， 混合现实， 虚拟现实， VR， MR， 故障排除， 错误， 帮助， 支持， 性能
   appliesto:
   - Windows 10
-  ms.openlocfilehash: 73c4761a35e679bccc8430ae7860aef71f015f25946ee709393980cf5f064148
-  ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+  ms.openlocfilehash: e8ba390b255b0f364e36a4f366b0da427e39c8fb
+  ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "115219930"
-title: HP 回音
+  ms.lasthandoff: 10/04/2021
+  ms.locfileid: "129436811"
+title: HP Reverb G2 常见问题解答
 summary: ''
 sections:
 - name: 忽略
   questions:
   - question: >
-      将耳机电缆连接到电脑时，是否应遵循特定顺序
+      Is there a specific order I should follow to connect my headset cables to a PC
     answer: >
-      HP 建议：
+      HP Recommends:
 
 
-      - 在连接到电脑或电源之前，先将6米缆线连接到耳机。
+      - Connect the 6-meter cable to the headset first before connecting to the PC or power supply.
 
-      - 初始安装后，使6米缆线连接到耳机。
+      - Leave the 6-meter cable connected to the headset after initial installation.
 
-      - 当耳机未在使用时，将电源适配器从6米电缆断开连接。
+      - When the headset isn't in use, disconnect the power adapter from the 6-meter cable.
   - question: >
-      我应该怎么做才能获得更锐利的图像
+      What should I do to get a crisper image
     answer: >
-      如果你认为你的显示看起来有点模糊，可以尝试以下几项：
+      There are a few things you can try if you feel that your display looks a little blurry:
 
 
-      - 确保你的耳机正确地与你的眼睛中心在重用功能区上。
+      - Make sure that your headset is on your head correctly with your eyes centered to the lenses.
 
-      - 尝试调整 IPD (interpupillary 距离) 。 回音 G2 使用硬件 IPD。 若要进行更改，请在耳机上查找 IPD 调整。
+      - Try to adjust the IPD (interpupillary distance). Reverb G2 uses a hardware IPD. To change it, look for IPD adjustment on your headset.
 
-      - 如果需要眼镜或联系人，则在使用该设备时需要戴上这些人。
+      - If you need glasses or contacts, you'll need to wear them when using the device.
 
-      - 检查您的重用功能区是否 (仅 microfiber 抹布，无流体) 。
+      - Check that your lenses are clean (microfiber cloth only – no fluids).
 
-      - 由于使用的是高级耳机设计，因此在启动设备时，可能会在一段很短的时间内启动设备，直到 Lcd 有机会预热。
+      - Because of the advanced headset design, there may be some minor image ghosting in the first few minutes when starting the device while cold until the LCDs have the opportunity to warm up.
   - question: >
-      我接到耳机时出现 7-14 "出现错误" 错误
-    answer: "7-14 出现错误的代码意味着某些必需的 USB2 组件找不到。  由于 HP 回音 G2 需要额外的长电缆，因此 USB 信号的一些容差会更紧密。  这意味着计算机上的一个端口的工作方式可能比另一个端口更可靠。\n\n如果看到 7-14 \"出现错误\" 错误，请尝试执行以下步骤：\n\n- 确保为耳机和 USB 控制器安装了最新驱动程序。\n- 请确保使用的是 Microsoft USB 驱动程序。 \"可扩展主机控制器\" 设备的名称中应该有 \"Microsoft\"。\n- 尝试将电缆插入到计算机上的另一个 USB-3.0 端口。  (尝试使用 USB 类型 C 和类型-端口) \n- 使用附带的 USB C 来尝试不同的端口。\n- 尝试通过 USB 集线器将耳机插入到计算机。\n\n> [!NOTE]\n> 如果无法连接到设备，请联系[HP 支持](https://support.hp.com/us-en)部门\n"
-  - question: >
-      我的电脑从休眠状态 () S4 恢复时出现 13-14 "出现错误" 错误
+      I am getting a 7-14 “Something Went Wrong” error when I plug in my headset
     answer: >
-      有时，在恢复过程中，视频卡不能建立连接，因此，从电脑中拔出 USB 类型 C 并将其重新插入可帮助建立连接。
+      The 7-14 Something Went Wrong code means that some of the required USB2 components weren’t found.  Because of the extra-long cable of the HP Reverb G2, some of the tolerances for the USB signals are tighter.  This means that one port on your computer may work more reliably than another.
+
+
+      If you're seeing a 7-14 “something went wrong” error, try the following steps:
+
+
+      - Make sure that you have the most recent drivers installed for your headset and your USB controller.
+
+      - Make sure you're using a Microsoft USB driver. There should be a “Microsoft” in the name of the "eXtensible Host Controller" device.
+
+      - Try plugging the cable into a different USB-3.0 port on your computer. (Try USB Type-C and Type-A ports)
+
+      - Use the included USB C to A adapter to try different ports.
+
+      - Try plugging the headset in through a USB Hub to your computer.
+
+
+      > [!NOTE]
+
+      > If you are unable to connect your device, please contact [HP Support](https://support.hp.com/us-en)
   - question: >
-      我的 HP 运动控制器操纵杆有时会坚持一侧
+      I am getting a 13-14 “Something Went Wrong” error when my PC resumes from hibernate (S4)
     answer: >
-      此问题的解决方法是，通过在游戏杆单击之前完全按下，它会自由移动。
+      Sometimes during the resume process, the video card can't establish a connection, so unplugging the USB Type C from your PC and plugging it back in may help to establish a connection.
   - question: >
-      其他一些状态我很大或我的音频正在剪辑，而我将麦克风用于某些应用程序
+      My HP Motion Controller joystick will sometimes stick to one side
     answer: >
-      当 Windows PC 首次识别 HP 回音 G2 麦克风时，输入音量级别会自动设置为100%。 由于回音 G2's 高质量麦克风，因此输入敏感度比默认 Windows 10 设置要高得多。 我们建议将 "回音： G2" 麦克风输入级别设置为从50% 开始，并从该处向上缩放。 最佳设置是特定于用户的设置，尤其是在使用没有 "自动获取" 麦克风设置的应用程序时。 具有 "自动增益" 的应用程序的示例包括 Skype、缩放、Teams 和 Cisco WebEx，但并非所有的 VR 社交或广播应用程序都具有此功能。
+      This issue is corrected by fully depressing the joystick until it clicks and it will move freely.
   - question: >
-      混合现实门户显示 "无法在此耳机上运行 Mixed Reality"，但这对于我以前的 WMR 耳机工作正常
+      Others state I am loud or that my audio is clipping while I am using the microphone with some applications
     answer: >
-      出现这种情况的原因可能是 HP 回音 G2 需要更强大的 PC，以确保获得最佳体验。 有关详细信息，请查看最低 [计算机要求](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)
+      The input volume levels are automatically set to 100% when the HP Reverb G2 microphone is first recognized by a Windows PC. Because of the Reverb G2's high-quality microphones, input sensitivity is much higher than the default Windows 10 and Windows 11 settings expect. We recommend setting the Reverb G2 microphone input level starting at 50% and scale up from there. An optimal setting is specific to the user, especially when using applications that don't have an “auto-gain” microphone setting. Examples of applications that have “auto-gain” are Skype, Zoom, Teams, and Cisco WebEx, but not all VR social or broadcasting applications have this feature.
   - question: >
-      它看起来像是我的左显示内容，右侧显示的是离线和半黑
+      The Mixed Reality Portal says “Can't run mixed reality on this headset” but this worked fine with my previous WMR headset
     answer: >
-      如果头戴式耳机未以本机分辨率运行，则可能会发生这种情况。 由于 HP 回音 G2 HMD 中的高分辨率显示性质，并非所有系统都可以呈现本机分辨率。 将来的 Windows 更新会出现一个修补程序，它将解决当耳机不是本机分辨率时的呈现问题。
-
-
-      系统无法以本机分辨率呈现的原因有以下几个：
-
-
-      - 系统上的 DisplayPort 可能不兼容1.3，或它可能不支持所有四个车道。
-
-      - 如果你使用的是适配器，则它可能不支持 HBR3 兼容，或它可能不支持所有四个车道。
-
-      - 如果系统具有混合 GPU，则可能会限制可用于 DisplayPort 的带宽。
+      This may happen because your HP Reverb G2 requires a more powerful PC to ensure the best experience. For more information, please review the minimum [PC requirements](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)
   - question: >
-      为什么 HP 运动控制器型号在游戏中显示不正确
+      It looks like my left display is stretched, and the right display is off-centered and half black
     answer: >
-      虽然大多数游戏不显示控制器或使用驱动程序安装的模型，但某些游戏使用其自己的控制器型号版本来对它们进行自定义或显示有关可用输入的上下文帮助。 通常情况下，这不会阻止游戏的任何功能，但可能会导致混乱甚至视觉对象。 这只能在游戏本身的更新中修复。
+      This can happen when your headset isn't running at the native resolution. Because of the nature of the high-resolution displays in the HP Reverb G2 HMD, not all systems can render the native resolution. There's a fix coming in a future Windows Update that will address the rendering issue when the headset isn't at the native resolution.
+
+
+      There are a few reasons why your system isn't able to render at the native resolution:
+
+
+      - The DisplayPort on the system might not be 1.3 compatible, or it might not support all four lanes.
+
+      - If you're using an adapter, it might not support be HBR3 compatible, or it might not support all four lanes.
+
+      - If your system has a hybrid GPU, that might be limiting the bandwidth available to the DisplayPort.
   - question: >
-      我的 SteamVR 游戏似乎无法与我的 HP 运动控制器一起正常工作
+      Why are my HP Motion Controller models not showing up correctly in a game
     answer: >
-      虽然开发人员正在努力更新其游戏以实现 HP 运动控制器的兼容性，但我们为流上的许多最流行的游戏提供了自定义控制器绑定。 如果将 "Windows Mixed Reality for SteamVR" 完全更新到版本1.2.444，则在游戏运行时应自动选取这些绑定。 但是，如果你目前的游戏并未注册操作，你可以使用 SteamVR 设置菜单手动搜索自定义绑定配置文件。
-
-      要执行此操作
-
-
-      - 按下右运动控制器的菜单按钮打开 SteamVR 菜单
-
-      - 选择 SteamVR 菜单右下角的 "设置" 图标
-
-      - 选择 "控制器" 选项卡
-
-      - 选择 "管理控制器绑定" 选项
-
-
-      在此处，你可以将活动控制器绑定更改为 "自定义"，这将打开用于尝试社区共享游戏绑定的选项。
-
-      如果尚未为此游戏共享自定义游戏绑定 (或者你对已尝试) 的内容不完全满意，则还可以创建你自己的自定义游戏绑定，甚至还可以通过在几个游戏会话后共享他们来帮助其他人。
+      While most games don't display the controllers or use the models installed by the driver, some games use their own versions of the controller models, either to customize them or to display contextual help for the available inputs. Usually, this doesn't block any features of the games but might lead to confusion or even visual artifacts. This can only be fixed with an update of the game itself.
   - question: >
-      我已经将所有电缆连接到耳机和 PC，但它不会打开
+      My SteamVR games don't appear to work correctly with my HP Motion controllers
     answer: >
-      验证连接到耳机的电缆是否完全到位。 电缆顶部有一个小点，当耳机已完全插入时，会将其下边缘向下边缘对齐：
+      While developers are working to update their games for HP Motion Controller compatibility, we have provided custom controller bindings for many of the most popular games on Steam. With "Windows Mixed Reality for SteamVR" fully updated to version 1.2.444, these bindings should be picked up automatically when your game is running. However, if your game doesn't seem to register your actions at this time, you can manually search for custom binding profiles using the SteamVR Settings menu.
+
+      To do this
 
 
-      ![电缆顶部的小点](images/small-dot.jpg)
+      - Open the SteamVR menu by pressing the right motion controller's menu button
+
+      - Select the "Settings" icon in the bottom-right corner of the SteamVR menu
+
+      - Select the "Controllers" tab
+
+      - Select the "Manage Controller Bindings" option
+
+
+      From here, you can change your active controller binding to "Custom", which will open up the option to try community-shared game bindings.
+
+      If no custom game bindings have been shared for this game yet (or if you aren't fully satisfied with the ones you've tried), you can also create your own custom game bindings, and even help the rest of the community by sharing them after a few game sessions.
   - question: >
-      如何在仍使用电脑的同时关闭耳机
+      I have all cables connected to the headset and PC but it won’t turn on
     answer: >
-      从耳机电缆上的 "链接" 框中拔出交流连接适配器，以断开耳机的电源。
+      Verify the cable connected to the headset is fully seated. There is a small dot on the top of the cable that will line up next to the top edge of the headset when it has been fully inserted:
+
+
+      ![Small dot on the top of the cable](images/small-dot.jpg)
   - question: >
-      回音 G2 的显示图像更小，仅在左上角
+      How can I power down the headset while still using my PC
+    answer: >
+      Unplug the AC connection adapter from the link box on the headset cable to remove power to the headset.
+  - question: >
+      The image of the displays of the Reverb G2 is smaller and only in the upper left
     answer: >-
-      如果有 AMD power GPU，则需要禁用自动增加。 当耳机连接时，请导航到设置 > 混合现实 > 耳机-> 解决方法。
+      If you have an AMD power GPU, you'll need to disable the automatic upscaling. While your headset is connected, navigate to Settings -> Mixed Reality -> Headset -> Resolution.
 
-      在下拉菜单中，选择 "4320 x 2160 (最佳质量) " 选项。 如果选择了 "自动增加 (最佳性能) "，则可能会遇到显示问题。
+      In the drop down menu select  “4320 x 2160 (best quality)” option. When “Automatic upscaling (best performance)” is selected, you may experience the issue with display.
