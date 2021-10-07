@@ -6,12 +6,12 @@ ms.author: v-qianwen
 ms.date: 07/15/2021
 ms.topic: article
 keywords: 质量基础，案例研究，项目，示例，MRTK，混合现实 Toolkit，Unity，示例应用，示例应用，开源，Microsoft Store，HoloLens，混合现实耳机，windows Mixed Reality 耳机，虚拟现实耳机
-ms.openlocfilehash: a8189ca8cb161bb792ad298535c32eac1a47260d8d5559c2383e0322b2cbeb03
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 69c6a55b95937c0c6af4920f6ffe0929eebe76ee
+ms.sourcegitcommit: 82f7db75d8ecc7ac89c76b0db504126cbcb8f16d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115211943"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129647525"
 ---
 # <a name="quality-fundamentals"></a>Quality Fundamentals
 
@@ -60,7 +60,7 @@ HoloLens 性能可能会受到非常低或非常明亮的光源的负面影响�
 > * 使用 QR 代码在多个协作者之间共享空间锚。
 > * 空间中超大型对象的定位定位。
 
-有关详细信息，请参阅[混合现实](/windows/mixed-reality/design/spatial-anchors)文档中的[空间锚](/windows/mixed-reality/design/spatial-anchors)。
+有关详细信息，请参阅[混合现实](../../design/spatial-anchors.md)文档中的[空间锚](../../design/spatial-anchors.md)。
 
 ## <a name="stability-and-fidelity"></a>稳定性和保真度
 
@@ -80,7 +80,7 @@ HoloLens 性能可能会受到非常低或非常明亮的光源的负面影响�
 
 ![三角形计数优化](images\qf-triangle-count-optimization.png)
 
-有关详细信息，请参阅[全息图稳定性](/windows/mixed-reality/develop/platform-capabilities-and-apis/hologram-stability)一文中的[帧速率](/windows/mixed-reality/develop/platform-capabilities-and-apis/hologram-stability#frame-rate)。
+有关详细信息，请参阅[全息图稳定性](../platform-capabilities-and-apis/hologram-stability.md)一文中的[帧速率](../platform-capabilities-and-apis/hologram-stability.md#frame-rate)。
 
 ### <a name="late-stage-reprojection-lsr"></a>后期阶段 reprojection (LSR) 
 
@@ -88,7 +88,7 @@ HoloLens 性能可能会受到非常低或非常明亮的光源的负面影响�
 
 ![尝试不同的 reprojection 选项，以体验不同之处。](images\qf-lsr-modes.jpg)
 
-有关详细信息，请参阅全息图[稳定性](/windows/mixed-reality/develop/platform-capabilities-and-apis/hologram-stability)一文中的[reprojection](/windows/mixed-reality/develop/platform-capabilities-and-apis/hologram-stability#reprojection) 。
+有关详细信息，请参阅全息图[稳定性](../platform-capabilities-and-apis/hologram-stability.md)一文中的[reprojection](../platform-capabilities-and-apis/hologram-stability.md#reprojection) 。
 
 ### <a name="z-fighting"></a>Z 冲突
 
@@ -96,7 +96,7 @@ HoloLens 性能可能会受到非常低或非常明亮的光源的负面影响�
 
 ![通过对象放置实现 z 向处理体验。](images\qf-z-fighting.jpg)
 
-有关 z 反击的详细信息，请参阅在[适用于 Unity 的推荐设置](/windows/mixed-reality/develop/unity/recommended-settings-for-unity)一文中[启用深度缓冲区共享](/windows/mixed-reality/develop/unity/recommended-settings-for-unity#enable-depth-buffer-sharing)。
+有关 z 反击的详细信息，请参阅在[适用于 Unity 的推荐设置](./recommended-settings-for-unity.md)一文中[启用深度缓冲区共享](./recommended-settings-for-unity.md#enable-depth-buffer-sharing)。
 
 ### <a name="anti-aliasing"></a>消除锯齿
 
@@ -120,7 +120,7 @@ HoloLens 性能可能会受到非常低或非常明亮的光源的负面影响�
 
 ![选择不同的三角形计数选项可查看帧速率效果。](images\qf-3d-asset-visible-triangles.jpg)
 
-有关详细信息，请参阅 [资产创建过程](/windows/mixed-reality/design/asset-creation-process)。
+有关详细信息，请参阅 [资产创建过程](../../design/asset-creation-process.md)。
 
 ### <a name="shader-passes"></a>着色器通过
 
@@ -136,7 +136,7 @@ HoloLens 性能可能会受到非常低或非常明亮的光源的负面影响�
 
 ![应优化绘图调用以提高性能。](images\qf-3d-asset-draw-calls.jpg)
 
-请参阅 [CPU 到 GPU 的性能建议](/windows/mixed-reality/develop/unity/performance-recommendations-for-unity#cpu-to-gpu-performance-recommendations)。
+请参阅 [CPU 到 GPU 的性能建议](./performance-recommendations-for-unity.md#cpu-to-gpu-performance-recommendations)。
 
 ### <a name="finale"></a>Finale
 
